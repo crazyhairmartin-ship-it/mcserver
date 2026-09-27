@@ -236,11 +236,6 @@ hash = "937c7ae4c8274ee0717546a2ca736099b1640a178b8f06027f62ca310517e413"
 metafile = true
 
 [[files]]
-file = "mods/new-horse-equipment.pw.toml"
-hash = "9f600883613360e0c2294510c2fc853a04badb8d450c427d9b9a0f3a96550fee"
-metafile = true
-
-[[files]]
 file = "mods/open-parties-and-claims.pw.toml"
 hash = "b54e2ac8f9ebf54af08e84db20b9d38cc7f955124f30b8dbcd84f0b7ae7ed9ed"
 metafile = true
