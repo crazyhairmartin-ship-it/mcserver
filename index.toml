@@ -21,6 +21,10 @@ file = "config/cosmeticarmorreworked-common.toml"
 hash = "dd31558c1e5c9b2e679519323a197ff718c12a7f134a2fc10fbbf851449e6254"
 
 [[files]]
+file = "config/gravestone-client.toml"
+hash = "b8e24932dc5f41db8ccdc0d40d6241a4f12fc4366bfb646b513b72b9432aad19"
+
+[[files]]
 file = "config/inventoryprofilesnext/inventoryprofiles.json"
 hash = "82acc60769f676615c426faa31ab4dc73de1e4fbdf4ab590c74185279fbdfbe7"
 
