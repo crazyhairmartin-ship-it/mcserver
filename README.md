@@ -1,6 +1,6 @@
 # Cozy RPG Pack
 
-Minecraft 1.20.1 with Forge 47.4.10. Your mods update themselves every time you launch the game.
+Minecraft 1.20.1 with Forge 47.4.23. Your mods update themselves every time you launch the game.
 
 ## What you need
 

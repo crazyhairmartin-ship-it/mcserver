@@ -1,0 +1,13 @@
+name = "Native Nicknames"
+filename = "native-nicknames-forge-1.1.0+1.20.1.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/wYJmuWYe/versions/vhKbY3xD/native-nicknames-forge-1.1.0%2B1.20.1.jar"
+hash-format = "sha512"
+hash = "d35393fd80aa800a99ed4c641fc638c9fe545960cc250822281213f7d4516d8459af3c3948d0499a5ba47a3ddbc94df2f65dcc08c54509ab015b5df2e83482ec"
+
+[update]
+[update.modrinth]
+mod-id = "wYJmuWYe"
+version = "vhKbY3xD"

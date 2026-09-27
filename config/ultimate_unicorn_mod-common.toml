@@ -1,0 +1,62 @@
+#Region ID
+#Range: 0 ~ 3
+regionId = 1
+#Whether to log the dirt block on common setup
+logDirtBlock = true
+#A magic number
+#Range: > 0
+magicNumber = 42
+#What you want the introduction message to be for the magic number
+magicNumberIntroduction = "The magic number is... "
+#A list of items to log on common setup.
+items = ["minecraft:iron_ingot"]
+#If true, Nightmares will not make fire where they walk.
+disableNightmareFire = true
+#If true, fire made by Nightmares doesn't hurt or spread.
+gentleNightmareFire = true
+#If true, Nightmares will be unable to create fireballs by wing buffeting near fires.
+disableNightmareFireballs = false
+#If true, custom horses do not show custom skins (but may still have custom titles and powers).
+disableCustomHorseSkins = false
+#If true, custom horses do not show custom titles (but may still have custom colors and powers).
+disableCustomHorseTitles = false
+#If true, custom horse powers cannot be used (but they may still show custom skins and titles).
+disableCustomHorsePowers = false
+#If true, the custom horse power "Flame Aura" does not cause damage.
+disableFlameAura = false
+#If true, Kirins do not breathe fire.
+suppressKirinFire = false
+#If true, horse kicks can hurt even passive or friendly mobs.
+horseRearingHurtsFriendlies = false
+#If true, unridden horses are capable of breaking blocks by kicking.
+unriddenHorsesBreakBlocks = false
+#The probability that a unicorn spawn check will succeed.
+#Range: 0.0 ~ 1.0
+unicornSpawnChance = 1.0
+#The probability that a pegasus spawn check will succeed.
+#Range: 0.0 ~ 1.0
+pegasusSpawnChance = 0.35
+#The probability that a destrier spawn check will succeed.
+#Range: 0.0 ~ 1.0
+destrierSpawnChance = 1.0
+#The probability that a nightmare spawn check will succeed.
+#Range: 0.0 ~ 1.0
+nightmareSpawnChance = 0.6
+#The probability that a hippocamp spawn check will succeed.
+#Range: 0.0 ~ 1.0
+hippocampSpawnChance = 1.0
+#The probability that a kirin spawn check will succeed.
+#Range: 0.0 ~ 1.0
+kirinSpawnChance = 0.5
+#The probability that a reindeer spawn check will succeed.
+#Range: 0.0 ~ 1.0
+reindeerSpawnChance = 1.0
+#If true, Wand of Dropsies items do nothing.
+disableDropsyWand = false
+#If true, Wand of Fireball items do nothing.
+disableFireWand = true
+#If true, Wand of Call Lightning items do nothing.
+disableCallLightningWand = true
+#If true, Wand of Force items do nothing.
+disableForceWand = false
+
