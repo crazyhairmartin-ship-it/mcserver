@@ -206,6 +206,11 @@ hash = "463c79deb2f427404efb39ef4109f1158b59f5b672c03e310540f41fb1e8b87c"
 metafile = true
 
 [[files]]
+file = "mods/mimi.pw.toml"
+hash = "33fbcd9a8b89bd4ee05892f89f79f4af26812093432bffca0ea0d260b76ca66b"
+metafile = true
+
+[[files]]
 file = "mods/modernfix.pw.toml"
 hash = "5996e886bd284d7a20287355ab42a7f5df7f6cce90fe74b04223cd55a4fd6c5d"
 metafile = true
