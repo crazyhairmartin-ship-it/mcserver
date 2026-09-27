@@ -1,0 +1,13 @@
+name = "Kane Apollo's Horse Equipment API"
+filename = "horse_equipment_api-1.20.1-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "73f6e631c8401756afa1caaf598b0fd7c31307af"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8814895
+project-id = 1683052

@@ -1,0 +1,13 @@
+name = "New Horse Equipment"
+filename = "new_horse_equipment_mod-1.20.1-1.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "18bdd63f82ceae6b4533cfe04e31e287485fbf90"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8815385
+project-id = 1683118

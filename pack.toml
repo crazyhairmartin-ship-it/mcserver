@@ -1,0 +1,13 @@
+name = "Cozy RPG Pack"
+author = "Dylan"
+version = "1.0.0"
+pack-format = "packwiz:1.1.0"
+
+[index]
+file = "index.toml"
+hash-format = "sha256"
+hash = "95d95008ea6a29a1ce66494a1aea66bc418d0de8b339ebe5ca253d074c6dcb11"
+
+[versions]
+forge = "47.4.10"
+minecraft = "1.20.1"

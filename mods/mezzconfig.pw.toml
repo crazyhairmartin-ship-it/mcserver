@@ -1,0 +1,13 @@
+name = "MezzConfig"
+filename = "mezz_config-1.20.1-forge-0.6.5.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2618da62d653b3ebdb8130a889f6916658976587"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8987763
+project-id = 1689768

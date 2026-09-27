@@ -1,0 +1,13 @@
+name = "Wings Horns & Hooves: The Ultimate Unicorn Mod"
+filename = "ultimate_unicorn_mod-1.20.1-2.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "2eb62d4a46bd4888af1396317f6528f003421eb7"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 8822069
+project-id = 231366
