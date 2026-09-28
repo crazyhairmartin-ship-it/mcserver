@@ -85,6 +85,10 @@ file = "kubejs/client_scripts/hide_duplicates.js"
 hash = "a9fcc99ae037ccaf5b06413fa56c96948ade67872aaba574d89ce868028b75c4"
 
 [[files]]
+file = "kubejs/server_scripts/golden_hours.js"
+hash = "4f07804bdbab5f443d11ae7d35c71a9fe17dd5b4f25f007405e609c7d4706632"
+
+[[files]]
 file = "kubejs/server_scripts/keep_inventory.js"
 hash = "8032ba7d5b5cd998c8cb13a3876cf1731a60bca51b37c245d6eb114462b9e63b"
 
