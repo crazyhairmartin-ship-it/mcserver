@@ -25,6 +25,10 @@ file = "config/defaultoptions/keybindings.txt"
 hash = "ba42f7b142f3d3cd833adb36e5036f5480a51bf1acc2fef62b842913f7187e74"
 
 [[files]]
+file = "config/fml.toml"
+hash = "7628fc0bfac9c538350fd51e9a390f5bb03f65faeb61bc9ae3541e53c614cc22"
+
+[[files]]
 file = "config/gravestone-client.toml"
 hash = "b8e24932dc5f41db8ccdc0d40d6241a4f12fc4366bfb646b513b72b9432aad19"
 
