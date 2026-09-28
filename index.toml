@@ -21,6 +21,10 @@ file = "config/cosmeticarmorreworked-common.toml"
 hash = "dd31558c1e5c9b2e679519323a197ff718c12a7f134a2fc10fbbf851449e6254"
 
 [[files]]
+file = "config/defaultoptions/keybindings.txt"
+hash = "ba42f7b142f3d3cd833adb36e5036f5480a51bf1acc2fef62b842913f7187e74"
+
+[[files]]
 file = "config/gravestone-client.toml"
 hash = "b8e24932dc5f41db8ccdc0d40d6241a4f12fc4366bfb646b513b72b9432aad19"
 
@@ -57,8 +61,20 @@ file = "config/wildernature.toml"
 hash = "56a921cffefdd805104589a136f1739d55aefbd04c552213906d01a5b0ce7c76"
 
 [[files]]
+file = "kubejs/client_scripts/hide_duplicates.js"
+hash = "a9fcc99ae037ccaf5b06413fa56c96948ade67872aaba574d89ce868028b75c4"
+
+[[files]]
 file = "kubejs/server_scripts/keep_inventory.js"
 hash = "8032ba7d5b5cd998c8cb13a3876cf1731a60bca51b37c245d6eb114462b9e63b"
+
+[[files]]
+file = "kubejs/server_scripts/unify_duplicates.js"
+hash = "8f35503a4c3223b22a9e07f02f35148c18f8f0d545f5176cf89c3674364014d9"
+
+[[files]]
+file = "kubejs/startup_scripts/duplicate_groups.js"
+hash = "9af3e3a7a678dd66ac0fdaeeea7c8b77635fb57e0ed6d6ff1e2dd978eb7c0f58"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -193,6 +209,11 @@ metafile = true
 [[files]]
 file = "mods/curios.pw.toml"
 hash = "55d77d596c2d805f28b47ea53725ccaa220d2857177cad3909e48d8c12b2a2cb"
+metafile = true
+
+[[files]]
+file = "mods/default-options.pw.toml"
+hash = "4dd29a42972a5ab03609a0ee76156f005f7a7d3bd332bcdf57b25edd9e1310f9"
 metafile = true
 
 [[files]]
