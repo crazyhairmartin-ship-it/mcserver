@@ -61,6 +61,10 @@ file = "config/wildernature.toml"
 hash = "56a921cffefdd805104589a136f1739d55aefbd04c552213906d01a5b0ce7c76"
 
 [[files]]
+file = "defaultconfigs/hourglass-server.toml"
+hash = "974efddec8d63a4afb1593b8b31fa6480b8c0efa55b02159d79b6ba88aee06ee"
+
+[[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
 hash = "a9fcc99ae037ccaf5b06413fa56c96948ade67872aaba574d89ce868028b75c4"
 
@@ -309,6 +313,11 @@ metafile = true
 [[files]]
 file = "mods/handcrafted.pw.toml"
 hash = "b9a7e71472f5f88229bf2f9e214b223b3900052bdc56075906d7a22acf74568c"
+metafile = true
+
+[[files]]
+file = "mods/hourglass.pw.toml"
+hash = "33c13017e0a59e5743ac644cf37496622a096c925b708e3bd39de676b1c2fc00"
 metafile = true
 
 [[files]]
