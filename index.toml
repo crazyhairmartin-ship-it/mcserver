@@ -795,3 +795,8 @@ metafile = true
 file = "mods/yungs-extras.pw.toml"
 hash = "aedb648ee15bdb7bb3af23cfa4ad565c0fe531f62e89406566bec90659be9a42"
 metafile = true
+
+[[files]]
+file = "shaderpacks/super-duper-vanilla.pw.toml"
+hash = "2b80eb21a1c456256fba2a017fa4dd4007bfdd6dee8a95ea6b8dd1833bb5fa40"
+metafile = true
