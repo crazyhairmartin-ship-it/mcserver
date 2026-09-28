@@ -65,6 +65,18 @@ file = "config/wildernature.toml"
 hash = "56a921cffefdd805104589a136f1739d55aefbd04c552213906d01a5b0ce7c76"
 
 [[files]]
+file = "config/xaero/minimap/profiles/default.cfg"
+hash = "137d5d734fb2cd297de88efef20f6ba709af6b8072d3a6b4d339a03a996848a9"
+
+[[files]]
+file = "config/xaero/minimap/profiles/entity_radar_categories/default.cfg.json"
+hash = "7c024dfbcb188b3c0d1357a5e8e94e27c50322c7e1bf03dbc6ff22a88471232c"
+
+[[files]]
+file = "config/xaero/minimap/profiles/info_display_config/default.cfg.txt"
+hash = "184e654fa1fc8ad09943c97c4e65ab78acb5b3cfca22417a831513d1b6d9bbc6"
+
+[[files]]
 file = "defaultconfigs/hourglass-server.toml"
 hash = "fec3832f24b324ea91f342b8a21f7eca74dbadf7e44437746a255a9863e34f94"
 
