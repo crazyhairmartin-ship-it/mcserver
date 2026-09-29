@@ -226,11 +226,11 @@ hash = "7b2ddb13dbd5c4d0f49e5500319f7b18746e938e60d9dff44830d4cccbcf15e6"
 
 [[files]]
 file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/jei.json"
-hash = "870817b60fce0e24b4fa37a197dfd0dd844f2c249e45a8303b4cb5de21cc8d14"
+hash = "7b8d401a1642bcdd92d2ec1165147d0abde8dd68dbc3413506076df8a2467207"
 
 [[files]]
 file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/keys.json"
-hash = "ad01b9790aed497229ea7790d9e4b31564ab89a7545bd49e4734f09ed176f0e2"
+hash = "973c7273b02bfc1cda6bf0272f208ec1cbd438e5b34cfe8abcc0998ed1af4ed2"
 
 [[files]]
 file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/maps.json"
@@ -303,6 +303,10 @@ hash = "d5799aabf42e458f5e345b5375e1e10881b8354fa8bc893787a548808c658517"
 [[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
 hash = "a9fcc99ae037ccaf5b06413fa56c96948ade67872aaba574d89ce868028b75c4"
+
+[[files]]
+file = "kubejs/client_scripts/jei_hidden.js"
+hash = "ec5bd4f0454814103cc708dd74bd4c992c6ae0f36e7ab0336cd99bd043ed2dc3"
 
 [[files]]
 file = "kubejs/data/kubejs/patchouli_books/fotf_field_guide/book.json"
