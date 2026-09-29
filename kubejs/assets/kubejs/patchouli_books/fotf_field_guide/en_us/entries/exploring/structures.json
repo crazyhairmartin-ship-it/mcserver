@@ -1,0 +1,17 @@
+{
+  "name": "Villages & Dungeons",
+  "icon": "minecraft:filled_map",
+  "category": "kubejs:exploring",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Villages come in many styles (CTOV). Guards protect them, and bounty boards give jobs for rewards.$(br2)Ruins, towers, camps and dungeons are everywhere. Their chests have separate loot for each player."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Big dungeons (When Dungeons Arise, Cataclysm) are dangerous.$(br2)Spawners keep making mobs until you break them or light them up with torches.",
+      "title": "Be Careful"
+    }
+  ]
+}

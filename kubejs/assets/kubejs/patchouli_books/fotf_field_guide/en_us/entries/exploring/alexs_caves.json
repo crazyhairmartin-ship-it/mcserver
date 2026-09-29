@@ -1,0 +1,12 @@
+{
+  "name": "Alex's Caves",
+  "icon": "alexscaves:cave_codex",
+  "category": "kubejs:exploring",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Six rare cave biomes deep underground: dinosaurs, candy, magnets, toxic caves and more.$(br2)They are hard to find. Look up $(l)Cave Tablet$() and $(l)Cave Codex$() in JEI to learn how to track them down."
+    }
+  ]
+}

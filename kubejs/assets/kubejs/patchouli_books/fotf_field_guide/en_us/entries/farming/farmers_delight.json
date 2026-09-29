@@ -1,0 +1,17 @@
+{
+  "name": "Farmer's Delight",
+  "icon": "farmersdelight:cooking_pot",
+  "category": "kubejs:farming",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "New crops (tomatoes, onions, rice, cabbage) and real meals.$(br2)Place a $(l)Cooking Pot$() over a fire or heat source, then add ingredients."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:cutting_board",
+      "text": "Use a knife on a $(l)Cutting Board$() to slice ingredients. Look up any meal with $(l)R$() in JEI."
+    }
+  ]
+}

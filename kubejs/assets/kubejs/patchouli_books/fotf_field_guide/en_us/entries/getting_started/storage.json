@@ -1,0 +1,18 @@
+{
+  "name": "Backpacks & Storage",
+  "icon": "sophisticatedbackpacks:backpack",
+  "category": "kubejs:getting_started",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "sophisticatedbackpacks:backpack",
+      "text": "Craft a $(l)backpack$() for extra space. Press $(l)B$() to open it while wearing it. Upgrades add auto-pickup, feeding and more."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Tom's Simple Storage$() links all your chests to one terminal where you can search everything.$(br2)Right-click an animal or chest while crouching with empty hands to $(l)carry$() it (Carry On).",
+      "title": "More Storage"
+    }
+  ]
+}

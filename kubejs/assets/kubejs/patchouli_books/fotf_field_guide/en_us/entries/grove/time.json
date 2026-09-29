@@ -1,0 +1,12 @@
+{
+  "name": "Days & Nights",
+  "icon": "minecraft:clock",
+  "category": "kubejs:grove",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Days are long here, and sunrises and sunsets last a long time, so enjoy the view!$(br2)The night is skipped when at least half of the players online are sleeping."
+    }
+  ]
+}

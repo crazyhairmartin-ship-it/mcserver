@@ -1,0 +1,17 @@
+{
+  "name": "Alex's Mobs",
+  "icon": "alexsmobs:animal_dictionary",
+  "category": "kubejs:creatures",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Around 90 real and fantasy animals: elephants, raccoons, hummingbirds, whales, crows and many more.$(br2)Some can be tamed, and many drop useful items."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexsmobs:animal_dictionary",
+      "text": "The $(l)Animal Dictionary$() describes every animal and how to tame it."
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Pets & Collars",
+  "icon": "domesticationinnovation:collar_tag",
+  "category": "kubejs:creatures",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Tame an animal by feeding it until hearts appear. Foxes, rabbits, frogs and axolotls can be tamed here too!$(br2)A $(l)name tag$() keeps any animal from despawning."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "domesticationinnovation:collar_tag",
+      "text": "Rename a $(l)Collar Tag$() at an anvil, add pet enchantments there too, then right-click your tamed pet. Pet beds let pets respawn."
+    }
+  ]
+}

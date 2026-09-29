@@ -1,0 +1,12 @@
+{
+  "name": "Voice Chat",
+  "icon": "minecraft:goat_horn",
+  "category": "kubejs:getting_started",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Talk to players near you: hold $(l)Caps Lock$().$(br2)Press $(l)G$() to make or join a $(l)group$(), so friends can hear you anywhere in the world.$(br2)Press $(l)N$() to turn voice chat off."
+    }
+  ]
+}

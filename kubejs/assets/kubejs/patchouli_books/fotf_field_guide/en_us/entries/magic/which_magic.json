@@ -1,0 +1,12 @@
+{
+  "name": "Which Magic?",
+  "icon": "minecraft:enchanted_book",
+  "category": "kubejs:magic",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Iron's Spells$(): easy to start, flashy fights, loot from dungeons.$(br2)$(l)Ars Nouveau$(): design your own spells, flying ritual, cute helpers for your base.$(br2)You can use both!"
+    }
+  ]
+}

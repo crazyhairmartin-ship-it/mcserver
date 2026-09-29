@@ -81,8 +81,220 @@ file = "defaultconfigs/hourglass-server.toml"
 hash = "fec3832f24b324ea91f342b8a21f7eca74dbadf7e44437746a255a9863e34f94"
 
 [[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/categories/building.json"
+hash = "c255d0347682d6db93d0ef765fccf0ec27691b8bc680219da347978c289f84da"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/categories/combat.json"
+hash = "3ad188c24e9e07970c56396e2cd84eb85d5b9b58a3efb3d6dc3755d121aa2767"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/categories/creatures.json"
+hash = "060eff050924e29b11e456c232d487f3248cec14438ad7094208c99865786e6e"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/categories/exploring.json"
+hash = "57efed3d94e41d1a616f6a8c1c1ef904bcaa219be04244283026415b4cd8fb2e"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/categories/farming.json"
+hash = "295cd55d59fb05c5bead52b13949b291236f005b18b3204acb952b8dd518bcda"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/categories/getting_started.json"
+hash = "6c59b031e65b89e48c5c4c91faea38b64fb0a84eac429fcdd15494524ac07bee"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/categories/grove.json"
+hash = "444592122f91dfe5cfbf6dd60c458377b640f680ae1245bf5a8d27488be48cce"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/categories/magic.json"
+hash = "b05ffc4f52cba9e84d3c92687c752b95d73ec22aa01e8d836208754dcbedb0ac"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/categories/travel.json"
+hash = "f2662c542c94d9d5576fa650e71fcfc258afdb28b69bb0f5819a7664aafd6a55"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/building/decor.json"
+hash = "6d7851cbd630829dc061fdadfa2c3b8a7bfe8812a306365c02bd83b7babf33a7"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/building/furniture.json"
+hash = "59095c43624afc91b63678b9b8931836d29e055836853c7025b3f4a56bd1ca1a"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/combat/bosses.json"
+hash = "f455b45ab2622d8f345bf6d523065bcb2d3ab88307fd7dce548d2a74c977785d"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/combat/cosmetics.json"
+hash = "e5f61dad72abdf1ae5a97fd921d40229f75ad5a8e62c268be5f1da4db4b87b01"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/combat/tinkers.json"
+hash = "bfda5c2d1a2fe00716f7e16f75ed2fb3200d896b49628617f781b52b755a7c4e"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/combat/weapons.json"
+hash = "7e663dce9a25dcafb29bff1a56525adde290477e92fbfbbd99b78b20cf5ef91b"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/creatures/alexs_mobs.json"
+hash = "4cf7d4410d04a2510f48e6812d93efa01659589b36ec083a16ee38796230e9b6"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/creatures/bugs.json"
+hash = "a82ebfb8d04ad41f7f79bd83ef3be5d55a67f7e19c28e11fd04f7690b2118d4f"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/creatures/critters.json"
+hash = "45443dce3b5676942e20a72f04e3e119da83fbe23b9b1f938f8d90fa94bd2f4a"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/creatures/pets.json"
+hash = "b9d59246bb13bb14da346faaa7cb2dfdcf3933f7579437104f5c2d61d7928ef5"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/creatures/unicorns.json"
+hash = "edaffa05caec8100ee5216f0a2090094788af81b27ed4415e9317dc69444d863"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/creatures/wildlife.json"
+hash = "4fd7b537cede031764c5a547a535f5a027b23cbdd490abd0fc2d577719acead6"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/exploring/alexs_caves.json"
+hash = "f236a7550d96b2ff9ec3b36816890742e2d8d0eebc5aac3d6e054bf3ce8cf057"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/exploring/compasses.json"
+hash = "7f48913b8c87f82aa16b3130bfde339b8e31fef957df9398dd81f6d09109e3cf"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/exploring/structures.json"
+hash = "571579af2099c427ee7a783c5b5ec87f52c427bb416608a743434fc4d06d23c2"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/exploring/twilight.json"
+hash = "962b0e1a38eda74e3602af23dfebcc5c8ef8d1594ba13b6c766e0da00b0db6ac"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/farming/farmers_delight.json"
+hash = "1c0a3c9500c930b2c548f0346ccf5e4b0a63b04350a3942a816e43c5d927c5bf"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/farming/fishing.json"
+hash = "e39c205ea1d6d6e8de468dd306ac7963b4fcc61e8d045ccb197bba89b47fe071"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/farming/lets_do.json"
+hash = "73c26d4ef43bc239291ae1a7ac20ab40c5f128f96aee049b62db91728f2d56af"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/farming/seasons.json"
+hash = "327ecd4b7039594a44c94c84c14a955d4394be63e02fa40027bdaeaad574df8c"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/claims.json"
+hash = "1b78dcd9794eebea6b7f591a0f8cf0e13ab9889ca77998f98e50b94b8ed5c14e"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/death.json"
+hash = "359e34ef4c56c4475581cd30f5c0e31dbc750764be5412282ecff4b0e5c48fea"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/first_day.json"
+hash = "7b2ddb13dbd5c4d0f49e5500319f7b18746e938e60d9dff44830d4cccbcf15e6"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/jei.json"
+hash = "870817b60fce0e24b4fa37a197dfd0dd844f2c249e45a8303b4cb5de21cc8d14"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/keys.json"
+hash = "ad01b9790aed497229ea7790d9e4b31564ab89a7545bd49e4734f09ed176f0e2"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/maps.json"
+hash = "1db2af0268a1abca674fe145d329b1fa54d64019769edf0cae51ce585da0b293"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/storage.json"
+hash = "4eec49ede91ce42bb8dc680b1c364651964fc532bccce26488ac5f1a770e4e3e"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/voice.json"
+hash = "5fffbba63e7309683223b4def85d3563c82902162b01401741978290afcb5d4b"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/waystones.json"
+hash = "cd004c8c1be4f3254468662f4f11ae14bbe4e1c3f16dc8fc339a704fa15c6d57"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/getting_started/welcome.json"
+hash = "721c88b0876ab3c6067447a3288a3f091601b75a1f835c6b82e14e0aee2ff180"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/grove/rules.json"
+hash = "07be936a2897ae69dc9e308ed64f3226533fb380f200655089b4e75137b02bba"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/grove/safety.json"
+hash = "093709f96d844a2cfb2654dea7264efa7ae5bd2597367a99c76b7cdd3a1e1cd9"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/grove/time.json"
+hash = "6a5d4586853db5f2f2f2b2deac890d35076364f746304b18e32a595c39519f76"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/magic/ars_nouveau.json"
+hash = "10f29c1f5ad690cda56d4b819fa02bf6aa8f29f6f15bed457ef17529dbe6a265"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/magic/irons_spells.json"
+hash = "0fa06d2795f99f501be859435ea5858e69c39207679a8e0438c808b89e1fe8d2"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/magic/which_magic.json"
+hash = "815ddcdf6b7ca56da5619bf02e6b296710445d15ec06ee73aa2864895fd62586"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/travel/aircraft.json"
+hash = "82dde8b777fb4a83811944fcc98f367f8ccc705e36e72c631bf30cd4b27dd27f"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/travel/gliding.json"
+hash = "c993accd744358ab464f0c476d1580629b2ec1f07fa9e72cb6383eb4786e9e5f"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/travel/grappling.json"
+hash = "e45cefdc7104a7a3efdaf7ab679058b75122ea77ce0ea4270334fd5ecd683ce1"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/travel/music.json"
+hash = "f9cbe2581ab79e37874f54be7d17eab1196320959f00c021b88dd13dd87bb909"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/travel/parcool.json"
+hash = "16181eb878f44e428e7b84637f4ee3dc8d02d09dc19242f5daa1a0c0ca331a6f"
+
+[[files]]
+file = "kubejs/assets/kubejs/patchouli_books/fotf_field_guide/en_us/entries/travel/ships.json"
+hash = "d5799aabf42e458f5e345b5375e1e10881b8354fa8bc893787a548808c658517"
+
+[[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
 hash = "a9fcc99ae037ccaf5b06413fa56c96948ade67872aaba574d89ce868028b75c4"
+
+[[files]]
+file = "kubejs/data/kubejs/patchouli_books/fotf_field_guide/book.json"
+hash = "d05924e0e671992458fdb051516740135f7aa8e6923563ab8593112b0c54186b"
+
+[[files]]
+file = "kubejs/server_scripts/field_guide.js"
+hash = "e93f09dc2be14d19a015812aa9d965236204c4e6a384928642218e6fc65fd19d"
 
 [[files]]
 file = "kubejs/server_scripts/golden_hours.js"
@@ -568,6 +780,11 @@ metafile = true
 [[files]]
 file = "mods/parcool.pw.toml"
 hash = "361e6eac214cfbaa592b1e7c136e44e74ee282f686b53eb1f9d7781bb7eabc3e"
+metafile = true
+
+[[files]]
+file = "mods/patchouli.pw.toml"
+hash = "b2cb681aaf3e6085148392a06d40899239dc299aaf5ce0adf168fc225d922c97"
 metafile = true
 
 [[files]]

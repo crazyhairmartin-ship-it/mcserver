@@ -1,0 +1,17 @@
+{
+  "name": "Welcome, Friend!",
+  "icon": "minecraft:oak_sapling",
+  "category": "kubejs:getting_started",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "This book is your field guide to the forest.$(br2)The first chapter covers the basics. The other chapters introduce every big mod and point you to its own guide book when it has one."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Lost this book? Type $(l)/guide$() in chat for a new copy.$(br2)Stuck on anything? Ask in chat. Someone has probably figured it out already.",
+      "title": "Tip"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Tinkers' Construct",
+  "icon": "tconstruct:materials_and_you",
+  "category": "kubejs:combat",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Build your own tools and weapons from parts. Every material behaves differently."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "tconstruct:common/materials_and_you",
+      "text": "Start with $(l)Materials and You$(). Each Tinkers' book unlocks the next step."
+    }
+  ]
+}

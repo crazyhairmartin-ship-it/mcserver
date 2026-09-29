@@ -1,0 +1,17 @@
+{
+  "name": "Music Together",
+  "icon": "mimi:guide",
+  "category": "kubejs:travel",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)MIMI$(): play instruments with friends. You can even plug in a real MIDI keyboard or play MIDI files."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "mimi:guide",
+      "text": "The $(l)MIMI guide$() explains the instruments."
+    }
+  ]
+}

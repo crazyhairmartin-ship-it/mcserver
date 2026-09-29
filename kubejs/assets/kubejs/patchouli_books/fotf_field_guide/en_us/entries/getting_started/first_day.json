@@ -1,0 +1,17 @@
+{
+  "name": "Your First Day",
+  "icon": "minecraft:oak_log",
+  "category": "kubejs:getting_started",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A good first day:$(br)$(li)Punch trees, make tools$(li)Find a village for food and a $(l)Waystone$()$(li)Make a bed before night$(li)Claim your base (see $(l)Your Base$())"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Days here are long and sunsets are slow, so take your time.$(br2)If you die, your items wait in a $(l)gravestone$(). Nothing is lost!",
+      "title": "No Rush"
+    }
+  ]
+}

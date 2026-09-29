@@ -1,0 +1,18 @@
+{
+  "name": "Finding Places",
+  "icon": "naturescompass:naturescompass",
+  "category": "kubejs:exploring",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "naturescompass:naturescompass",
+      "text": "The $(l)Nature's Compass$() points to any biome you pick."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "explorerscompass:explorerscompass",
+      "text": "The $(l)Explorer's Compass$() points to any structure you pick."
+    }
+  ]
+}
