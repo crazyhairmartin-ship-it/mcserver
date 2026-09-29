@@ -1,5 +1,5 @@
 // Friends of the Forest Field Guide (Patchouli book in kubejs/data + kubejs/assets).
-// New players get it (plus the Unicorn Guidebook) on first login; /guide and /guide unicorn give new copies.
+// New players get it on first login (the only starting book); /guide and /guide unicorn give copies.
 
 let $GuideCompoundTag = Java.loadClass('net.minecraft.nbt.CompoundTag')
 
@@ -19,7 +19,6 @@ PlayerEvents.loggedIn(event => {
   if (givenTo.contains(guideUuid)) return
 
   event.player.give(fieldGuide())
-  event.player.give(unicornGuide())
   givenTo.putBoolean(guideUuid, true)
   event.player.tell(Text.green('Welcome to the forest, friend! Check your Field Guide. Lost it? Type /guide'))
 })

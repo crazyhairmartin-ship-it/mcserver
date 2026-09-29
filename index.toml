@@ -5,12 +5,20 @@ file = "config/alexscaves-general.toml"
 hash = "6588029574999e58617203c013180d0e35f2673900e1cff7d7087fbd05a4d6c3"
 
 [[files]]
+file = "config/alexsmobs.toml"
+hash = "8c94dc654ac89e15d65d3123bc9d7eccf48807c9dd4f6f2b3623ee3332dfbe54"
+
+[[files]]
 file = "config/alexsmobs/cachalot_whale_spawns.json"
 hash = "2c7a845e05b02fddbe25b69c2529fb1e1f062aab0482eb3a1fb0698bec49560e"
 
 [[files]]
 file = "config/alexsmobs/orca_spawns.json"
 hash = "17da9d6e15812162f1959d907dd490d3e0491ad21c7bc416fcf53125733e1dc7"
+
+[[files]]
+file = "config/ars_nouveau-common.toml"
+hash = "93d329f4856d0041b94db2bba6d3a73fce420774be07b51d0fd05400ef22ca75"
 
 [[files]]
 file = "config/cataclysm-common.toml"
@@ -37,6 +45,10 @@ file = "config/inventoryprofilesnext/inventoryprofiles.json"
 hash = "82acc60769f676615c426faa31ab4dc73de1e4fbdf4ab590c74185279fbdfbe7"
 
 [[files]]
+file = "config/mimi-common.toml"
+hash = "8a200ea9ebbbfddb0fd1ca970995decd7f2940cbff3a672a9a5581335ae34a0f"
+
+[[files]]
 file = "config/naturalist.json"
 hash = "e180b18c2f250a1d4531cc442f5a4dea18ef67796e25c409845866befa1f30d5"
 
@@ -51,6 +63,10 @@ hash = "f5bb35f7803d99856609674b54fe967d2fb8bd3c8451591003c6a83204909007"
 [[files]]
 file = "config/sophisticatedcore-client.toml"
 hash = "a02244dde2f77ca6abc99a959c4377e90780c97de9b5dab9ed09191e80285426"
+
+[[files]]
+file = "config/tconstruct-common.toml"
+hash = "f83dc8e62f9d22fd0960671c680e360f71f47a0fd94e1c42b7ee625eb6e9c429"
 
 [[files]]
 file = "config/towns_and_towers/structure_enable_or_disable_new.json5"
@@ -294,7 +310,7 @@ hash = "d05924e0e671992458fdb051516740135f7aa8e6923563ab8593112b0c54186b"
 
 [[files]]
 file = "kubejs/server_scripts/field_guide.js"
-hash = "e93f09dc2be14d19a015812aa9d965236204c4e6a384928642218e6fc65fd19d"
+hash = "4050abf663ae1dcf576c8c1c06ffd84bb6fd32fc8137229a203cb6be496fc2f1"
 
 [[files]]
 file = "kubejs/server_scripts/golden_hours.js"
