@@ -1,0 +1,8 @@
+name = "MIMI Android Fix"
+filename = "mimiandroidfix-1.0.0.jar"
+side = "client"
+
+[download]
+url = "https://raw.githubusercontent.com/crazyhairmartin-ship-it/mcserver/main/extras/mimiandroidfix/mimiandroidfix-1.0.0.jar"
+hash-format = "sha512"
+hash = "4a6bf95a0bf42ee02db799f06a1dacf0ce3f2d235ee03250ad61b70313d234377902d2b1a2878d2fb9bf186e432a83b1bf434973c7da7a0e62cc58f0eb019678"

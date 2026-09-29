@@ -738,6 +738,11 @@ hash = "33fbcd9a8b89bd4ee05892f89f79f4af26812093432bffca0ea0d260b76ca66b"
 metafile = true
 
 [[files]]
+file = "mods/mimiandroidfix.pw.toml"
+hash = "683a0330440069fca0f2f663c09cdf5e7b239a0d228723a8372b67b1c4b0d433"
+metafile = true
+
+[[files]]
 file = "mods/modernfix.pw.toml"
 hash = "5996e886bd284d7a20287355ab42a7f5df7f6cce90fe74b04223cd55a4fd6c5d"
 metafile = true

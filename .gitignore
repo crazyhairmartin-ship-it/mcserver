@@ -1,3 +1,7 @@
 # Local test output
 *.jar
 !packwiz-installer-bootstrap.jar
+
+# Tracked on purpose: client-only fix mod served from this repo
+!extras/mimiandroidfix/*.jar
+extras/mimiandroidfix/libs/

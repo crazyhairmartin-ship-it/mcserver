@@ -1,0 +1,8 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "mimiandroidfix.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "client": ["AudioOutputDeviceManagerMixin"],
+  "injectors": { "defaultRequire": 1 }
+}
