@@ -20,7 +20,7 @@ ForgeEvents.onEvent('net.minecraftforge.event.entity.ProjectileImpactEvent', eve
 
 // Alex's Mobs cachalot whales ram their target and, if that target is sitting in a boat, delete the boat
 // outright (Small Ships galleys included). That can't be intercepted, so whales just never target anyone
-// riding a boat or ship: refuse the target when it's picked, and drop it if the target boards mid-chase.
+// riding a boat or ship: refuse the target when it's picked (here), and drop it if the target boards mid-chase.
 const $Cachalot = Java.loadClass('com.github.alexthe666.alexsmobs.entity.EntityCachalotWhale')
 
 function isAboard(entity) {
@@ -31,10 +31,8 @@ ForgeEvents.onEvent('net.minecraftforge.event.entity.living.LivingChangeTargetEv
   if (event.getEntity() instanceof $Cachalot && isAboard(event.getNewTarget())) event.setCanceled(true)
 })
 
-ForgeEvents.onEvent('net.minecraftforge.event.entity.living.LivingEvent$LivingTickEvent', event => {
-  let whale = event.getEntity()
-  if (whale instanceof $Cachalot && isAboard(whale.getTarget())) whale.setTarget(null)
-})
+// Dropping a target that boards mid-chase is done once a second in server_scripts/whale_boat_guard.js,
+// instead of a LivingTickEvent handler that would run for every mob every tick.
 
 // Creepers, ghast fireballs, beds, anything not lit by a player: boats are taken out of the blast.
 ForgeEvents.onEvent('net.minecraftforge.event.level.ExplosionEvent$Detonate', event => {

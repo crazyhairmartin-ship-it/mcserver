@@ -129,12 +129,16 @@ file = "kubejs/server_scripts/unify_duplicates.js"
 hash = "8f35503a4c3223b22a9e07f02f35148c18f8f0d545f5176cf89c3674364014d9"
 
 [[files]]
+file = "kubejs/server_scripts/whale_boat_guard.js"
+hash = "333076f27dc62d5b632287b9bbb76580af8ddb20969f29ec744b9482f6c86b29"
+
+[[files]]
 file = "kubejs/startup_scripts/duplicate_groups.js"
 hash = "9af3e3a7a678dd66ac0fdaeeea7c8b77635fb57e0ed6d6ff1e2dd978eb7c0f58"
 
 [[files]]
 file = "kubejs/startup_scripts/protect_boats.js"
-hash = "027d8942df06232e618dce7365ceb36437591a97c714b5fe33a6187be2012219"
+hash = "5480be8bc6cf67e9a62827bc80d40e718475f12684e5acbd6255cff0ffb262d2"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -1078,6 +1082,11 @@ hash = "99dd2d4ed88608ad2b3eca43678e8751e8aef6f4412da68a31958a0b6e730ec1"
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/ships.json"
 hash = "42b55919ec45ffed9dc84219b3ce460decfc6a29fd0db4d169777fb8f1ec9b74"
+
+[[files]]
+file = "shaderpacks/makeup-ultra-fast-shaders.pw.toml"
+hash = "75c4e8668f661174ae0161fa3262c043b4ff74ba9bdd5b0b72404badb6db33dd"
+metafile = true
 
 [[files]]
 file = "shaderpacks/super-duper-vanilla.pw.toml"
