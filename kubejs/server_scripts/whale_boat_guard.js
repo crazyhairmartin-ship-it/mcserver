@@ -8,8 +8,10 @@ ServerEvents.tick(event => {
   let server = event.server
   if (server.tickCount % 20 != 0) return
 
-  server.getEntities('@e[type=alexsmobs:cachalot_whale]').forEach(whale => {
-    let target = whale.getTarget()
-    if (target != null && target.getVehicle() instanceof $WhaleGuardBoat) whale.setTarget(null)
+  // Cachalots are overworld ocean mobs. KubeJS 6's getEntities() takes no selector, so filter by type.
+  server.overworld().getEntities().forEach(entity => {
+    if (entity.type != 'alexsmobs:cachalot_whale') return
+    let target = entity.getTarget()
+    if (target != null && target.getVehicle() instanceof $WhaleGuardBoat) entity.setTarget(null)
   })
 })
