@@ -1,10 +1,10 @@
-// Friends of the Forest Field Guide (Patchouli book in kubejs/data + kubejs/assets).
+// Friends of the Forest Field Guide (external Patchouli book in pack/patchouli_books/, id patchouli:fotf_field_guide).
 // New players get it on first login (the only starting book); /guide and /guide unicorn give copies.
 
 let $GuideCompoundTag = Java.loadClass('net.minecraft.nbt.CompoundTag')
 
 function fieldGuide() {
-  return Item.of('patchouli:guide_book', { 'patchouli:book': 'kubejs:fotf_field_guide' })
+  return Item.of('patchouli:guide_book', { 'patchouli:book': 'patchouli:fotf_field_guide' })
 }
 
 function unicornGuide() {

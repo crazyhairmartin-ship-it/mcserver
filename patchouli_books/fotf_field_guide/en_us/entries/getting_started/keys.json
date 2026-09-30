@@ -1,0 +1,17 @@
+{
+  "name": "Handy Keys",
+  "icon": "minecraft:tripwire_hook",
+  "category": "patchouli:getting_started",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(l)Ctrl+O$(): show/hide JEI$(li)$(l)B$(): backpack$(li)$(l)V$(): cast spell$(li)$(l)R$(): spell wheel$(li)$(l)Caps Lock$(): talk$(li)$(l)Alt+P$(): parkour skills$(li)$(l)Y$(): minimap settings$(li)$(l)F7$(): shaders on/off"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Change any key in $(l)Options > Controls > Key Binds$(). The search bar there helps.$(br2)$(l)Reset All$() brings back the server's recommended keys.",
+      "title": "Changing Keys"
+    }
+  ]
+}

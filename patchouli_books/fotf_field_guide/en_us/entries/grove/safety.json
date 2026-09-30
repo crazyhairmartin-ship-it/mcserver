@@ -1,0 +1,12 @@
+{
+  "name": "Backups & Help",
+  "icon": "minecraft:chest",
+  "category": "patchouli:grove",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The world is backed up regularly, so big accidents can be undone. Ask Dylan.$(br2)Something broken, or have an idea for the server? Tell Dylan!"
+    }
+  ]
+}

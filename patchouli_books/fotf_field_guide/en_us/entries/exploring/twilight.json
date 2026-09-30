@@ -1,0 +1,12 @@
+{
+  "name": "The Twilight Forest",
+  "icon": "twilightforest:twilight_oak_sapling",
+  "category": "patchouli:exploring",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A magical forest dimension with bosses to beat in order.$(br2)To get there: dig a 2x2 pool of water, surround it with flowers and grass, then throw a $(l)diamond$() into it."
+    }
+  ]
+}

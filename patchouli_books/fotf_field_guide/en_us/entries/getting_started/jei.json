@@ -1,0 +1,17 @@
+{
+  "name": "Looking Things Up",
+  "icon": "minecraft:knowledge_book",
+  "category": "patchouli:getting_started",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)JEI$() is a list of every item in the pack. It starts hidden: press $(l)Ctrl+O$() to show it next to your inventory.$(br2)Hover an item and press:$(li)$(l)R$() to see how to make it$(li)$(l)U$() to see what it is used for"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Type in the search bar at the bottom of JEI to find anything.$(br2)$(l)Jade$() shows the name and mod of whatever you look at, at the top of your screen.$(br2)Hold $(l)Shift$() over items for extra info.",
+      "title": "More Tips"
+    }
+  ]
+}

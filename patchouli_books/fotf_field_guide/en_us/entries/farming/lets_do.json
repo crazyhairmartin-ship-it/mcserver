@@ -1,0 +1,17 @@
+{
+  "name": "The Let's Do Mods",
+  "icon": "vinery:red_grape",
+  "category": "patchouli:farming",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A whole cozy series:$(li)$(l)Farm & Charm$(): farm life$(li)$(l)Bakery$(): breads and cakes$(li)$(l)Vinery$(): grapes and wine$(li)$(l)Brewery$(): beer"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(l)Candlelight$(): dinners$(li)$(l)HerbalBrews$(): tea and coffee$(li)$(l)Meadow$(): cheese$(li)$(l)Beachparty$(): beach fun$(li)$(l)Camping$(): tents$(li)$(l)Furniture$(): more decor",
+      "title": "And More"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Maps & Waypoints",
+  "icon": "minecraft:filled_map",
+  "category": "patchouli:getting_started",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The minimap sits in the corner of your screen. It shows players and your tamed pets.$(br2)Press $(l)M$() for the big world map.$(br2)Right-click on the world map to create a $(l)waypoint$(), so you can find a place again."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Press $(l)Y$() for minimap settings: size, what it shows and more.$(br2)Waypoints show on your minimap to point you in the right direction.",
+      "title": "Settings"
+    }
+  ]
+}

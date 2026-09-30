@@ -1,0 +1,12 @@
+{
+  "name": "Looking Good",
+  "icon": "minecraft:leather_helmet",
+  "category": "patchouli:combat",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Cosmetic Armor$() lets you wear any outfit over your real armor. Look for the extra slots in your inventory.$(br2)Try the funny hats from $(l)Alex's Mobs$()!"
+    }
+  ]
+}

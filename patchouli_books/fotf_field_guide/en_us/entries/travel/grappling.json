@@ -1,0 +1,13 @@
+{
+  "name": "Grappling Hook",
+  "icon": "grapplemod:grapplinghook",
+  "category": "patchouli:travel",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "grapplemod:grapplinghook",
+      "text": "Left-click to throw, again to let go. Space jumps off. Hold Shift and W/S to climb the rope. Upgrade it at a Grappling Hook Modifier."
+    }
+  ]
+}

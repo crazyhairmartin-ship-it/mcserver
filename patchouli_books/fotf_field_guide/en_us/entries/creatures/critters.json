@@ -1,0 +1,17 @@
+{
+  "name": "Critters & Companions",
+  "icon": "crittersandcompanions:dragonfly_wing",
+  "category": "patchouli:creatures",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Small friends to tame by feeding:$(li)Red panda: bamboo$(li)Ferret: raw chicken$(li)Shima enaga: seeds$(li)Snail: carrots$(li)Ladybug: mushrooms$(li)Jumping spider: dragonfly wings"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Dragonfly: spider eyes$(li)Stag beetle: sweet berries$(li)Stick bug: leaves$(li)Roly poly: dead bushes$(li)Weevil: acorns$(br2)Otters, koi and sea bunnies can't be tamed.",
+      "title": "More Critters"
+    }
+  ]
+}

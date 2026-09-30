@@ -1,0 +1,13 @@
+{
+  "name": "Fishing",
+  "icon": "aquaculture:iron_fishing_rod",
+  "category": "patchouli:farming",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "aquaculture:iron_fishing_rod",
+      "text": "$(l)Aquaculture$() adds lots of fish, better rods, hooks and bait. $(l)Lili's Lucky Lures$() adds fishing gear too."
+    }
+  ]
+}

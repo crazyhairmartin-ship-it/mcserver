@@ -1,0 +1,17 @@
+{
+  "name": "Decorations",
+  "icon": "supplementaries:jar",
+  "category": "patchouli:building",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Supplementaries$() and $(l)Amendments$(): jars, signposts, flower boxes, wall lanterns and lots of small details.$(br2)$(l)Snowy Spirit$(): sleds, gingerbread and winter decor."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Comforts$(): sleeping bags for camping trips and hammocks for napping through the day.",
+      "title": "Resting"
+    }
+  ]
+}

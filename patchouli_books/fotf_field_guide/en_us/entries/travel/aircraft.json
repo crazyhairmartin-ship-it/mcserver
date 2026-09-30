@@ -1,0 +1,13 @@
+{
+  "name": "Aircraft",
+  "icon": "immersive_aircraft:gyrodyne",
+  "category": "patchouli:travel",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "immersive_aircraft:gyrodyne",
+      "text": "Start with a $(l)Gyrodyne$(): it needs no fuel. Later build biplanes and airships. Look them up in JEI."
+    }
+  ]
+}

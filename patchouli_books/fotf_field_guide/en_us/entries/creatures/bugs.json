@@ -1,0 +1,18 @@
+{
+  "name": "Butterflies & Bugs",
+  "icon": "butterflies:butterfly_net",
+  "category": "patchouli:creatures",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "butterflies:butterfly_net",
+      "text": "Swing a $(l)Butterfly Net$() to catch butterflies, moths and caterpillars. Collect every species!"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "supplementaries:jar",
+      "text": "Right-click fireflies, dragonflies, snails and leaf insects with an empty $(l)jar$() to keep them. Firefly jars glow!"
+    }
+  ]
+}

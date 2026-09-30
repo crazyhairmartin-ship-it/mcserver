@@ -1,0 +1,13 @@
+{
+  "name": "Ships",
+  "icon": "smallships:oak_cog",
+  "category": "patchouli:travel",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "smallships:oak_cog",
+      "text": "$(l)Small Ships$(): rowboats, cogs, galleys and more, with sails, storage and cannons."
+    }
+  ]
+}

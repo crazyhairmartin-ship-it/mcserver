@@ -1,0 +1,12 @@
+{
+  "name": "Bosses",
+  "icon": "cataclysm:ignitium_ingot",
+  "category": "patchouli:combat",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(l)L_Ender's Cataclysm$() and $(l)Mowzie's Mobs$() add huge bosses in their own arenas.$(br2)They only fight you if you go to them, so the rest of the world stays normal. Bring your best gear!"
+    }
+  ]
+}
