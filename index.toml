@@ -105,6 +105,10 @@ file = "kubejs/client_scripts/jei_hidden.js"
 hash = "ec5bd4f0454814103cc708dd74bd4c992c6ae0f36e7ab0336cd99bd043ed2dc3"
 
 [[files]]
+file = "kubejs/data/biomesoplenty/worldgen/biome/scrubland.json"
+hash = "a4303ddfc53997bea565041f749d68f8c44434e6cd0fb7d0ec5547f7fb7b172d"
+
+[[files]]
 file = "kubejs/server_scripts/field_guide.js"
 hash = "8012e953d71450ff751b0d270cad396ec5dc1776c4edef3802742933f3383195"
 
