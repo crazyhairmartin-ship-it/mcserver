@@ -165,6 +165,18 @@ file = "kubejs/assets/ars_nouveau/textures/model/chest/archwood/right.png"
 hash = "a80da74481364662845c8127a95a421c9db3013b07c782c81a7ba76b8aab2c55"
 
 [[files]]
+file = "kubejs/assets/biomesoplenty/textures/block/umbran_door_top.png"
+hash = "f5b1eadca92452845683ee84af6ad14a85ec98a181551367d649eaff7121b3e0"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/block/umbran_trapdoor.png"
+hash = "146cff971f423bd83b714c7d9b5bf740e88254266933bc51e163910271331ff9"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/item/umbran_door.png"
+hash = "2da9fc41c97250836a6a12c7b6e2a33ec650dec4c19cc8d5ba79e414e98192bd"
+
+[[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
 hash = "a9fcc99ae037ccaf5b06413fa56c96948ade67872aaba574d89ce868028b75c4"
 

@@ -1,0 +1,1 @@
+Umbran door/trapdoor without the face: brace design from the door bottom, top half flipped vertically. Regenerate: put the original BOP umbran textures in tools/umbran/orig/, run brace.py (needs Pillow), copy out/assets/ into kubejs/assets/.
