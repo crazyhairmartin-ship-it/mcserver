@@ -97,6 +97,74 @@ file = "defaultconfigs/hourglass-server.toml"
 hash = "fec3832f24b324ea91f342b8a21f7eca74dbadf7e44437746a255a9863e34f94"
 
 [[files]]
+file = "kubejs/assets/ars_nouveau/entity/boat/archwood.png"
+hash = "c000cbbb67b67f79646fad6d040a2de24819f21fa58e69f601e896dcc90b19b6"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/entity/chest/archwood_chest.png"
+hash = "b436b5a4dc6a528c100d02547aa170bb8974ef29a3d8dd1d69a41fa31f989b4b"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/entity/chest/archwood_chest_left.png"
+hash = "0d5982e3c3f6429f904c0bdaf7debadab5d4f3d7cde3f6b70f183ce46673651e"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/entity/chest/archwood_chest_right.png"
+hash = "a9876d403ba76545792dd2611f7c262d9b38f83a92494959685c8952c9ffb139"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/entity/signs/archwood.png"
+hash = "2a8f93699db2422ec41bcab384d5e5025f3ceaf367f1731cdfdf2e5905a0dba6"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/block/archwood_door_bottom.png"
+hash = "4a3951093cff3ae43ffc32fd039670d9b6c017d48a0823d6e8318636ca26c085"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/block/archwood_door_top.png"
+hash = "219088572a788ea9a2750707621a8dbf84ffc3b3c05f0167055336877adf007e"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/block/archwood_planks.png"
+hash = "2155c5811d099da22d17e245215cf6713624b9f93ffc07b5f92b413e369cbf63"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/block/archwood_trapdoor.png"
+hash = "5fa3be9f9448f01c41f0bba79b56211f2f762807280f9e9f16596829809ed31e"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/entity/boat/archwood.png"
+hash = "c000cbbb67b67f79646fad6d040a2de24819f21fa58e69f601e896dcc90b19b6"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/entity/signs/archwood.png"
+hash = "2a8f93699db2422ec41bcab384d5e5025f3ceaf367f1731cdfdf2e5905a0dba6"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/item/archwood_boat.png"
+hash = "86bd1c66ed4ed9117d1b8772e35474414a5a15651c5492d047f141ab7019deb0"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/item/archwood_door.png"
+hash = "709e5be36547626ea0c2fd5ebcb85c355fe198a171d57f98e6b8426f2ba8d34e"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/item/archwood_sign.png"
+hash = "015a51e9a9f02c7a15ecef0b8c9cb4f7bd01893f767a3165fda130de5f1c9887"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/model/chest/archwood/archwood.png"
+hash = "995ecb57473675006b52c32d7919973519774626599f040cffb7d1268127d4bf"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/model/chest/archwood/left.png"
+hash = "924f7636ce29216a850862b2db98ce71ce685bee3b2bfdc97715ca89fc934a7b"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/model/chest/archwood/right.png"
+hash = "a80da74481364662845c8127a95a421c9db3013b07c782c81a7ba76b8aab2c55"
+
+[[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
 hash = "a9fcc99ae037ccaf5b06413fa56c96948ade67872aaba574d89ce868028b75c4"
 
