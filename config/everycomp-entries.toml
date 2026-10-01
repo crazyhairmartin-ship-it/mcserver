@@ -1,0 +1,276 @@
+
+#Disables certain types. Note that all these configs, like in any other mod, only hide stuff from tabs and disable their recipes
+[types]
+
+	[types.wood_type]
+
+		[types.wood_type.ars_nouveau]
+			archwood = true
+
+		[types.wood_type.twilightforest]
+			twilight_oak = true
+			canopy = true
+			mangrove = true
+			dark = true
+			time = true
+			transformation = true
+			mining = true
+			sorting = true
+
+		[types.wood_type.cataclysm]
+			chorus = true
+
+		[types.wood_type.vinery]
+			dark_cherry = true
+
+		[types.wood_type.beachparty]
+			palm = true
+
+		[types.wood_type.bloomingnature]
+			larch = true
+			baobab = true
+			swamp_oak = true
+			aspen = true
+			fan_palm = true
+			fir = true
+			swamp_cypress = true
+			ebony = true
+			chestnut = true
+
+		[types.wood_type.meadow]
+			pine = true
+
+		[types.wood_type.biomesoplenty]
+			fir = true
+			pine = true
+			maple = true
+			redwood = true
+			mahogany = true
+			jacaranda = true
+			palm = true
+			willow = true
+			dead = true
+			magic = true
+			umbran = true
+			hellbark = true
+			empyreal = true
+
+		[types.wood_type.tconstruct]
+			greenheart = true
+			skyroot = true
+			bloodshroom = true
+			enderbark = true
+
+		[types.wood_type.alexscaves]
+			pewen = true
+			thornwood = true
+
+		[types.wood_type.regions_unexplored]
+			alpha = true
+			baobab = true
+			blackwood = true
+			blue_bioshroom = true
+			brimwood = true
+			cobalt = true
+			cypress = true
+			dead = true
+			eucalyptus = true
+			green_bioshroom = true
+			joshua = true
+			kapok = true
+			larch = true
+			magnolia = true
+			maple = true
+			mauve = true
+			palm = true
+			pine = true
+			pink_bioshroom = true
+			redwood = true
+			socotra = true
+			willow = true
+			yellow_bioshroom = true
+
+	[types.leaves_type]
+
+		[types.leaves_type.twilightforest]
+			thorn = true
+			beanstalk = true
+			twilight_oak = true
+			canopy = true
+			mangrove = true
+			dark = true
+			rainbow_oak = true
+			time = true
+			transformation = true
+			mining = true
+			sorting = true
+
+		[types.leaves_type.vinery]
+			grapevine = true
+			dark_cherry = true
+			apple = true
+
+		[types.leaves_type.beachparty]
+			palm = true
+
+		[types.leaves_type.bloomingnature]
+			larch = true
+			baobab = true
+			orange = true
+			swamp_oak = true
+			aspen = true
+			fan_palm = true
+			fir = true
+			swamp_cypress = true
+			ebony = true
+			chestnut = true
+
+		[types.leaves_type.meadow]
+			pine = true
+
+		[types.leaves_type.biomesoplenty]
+			null = true
+			origin = true
+			flowering_oak = true
+			cypress = true
+			snowblossom = true
+			rainbow_birch = true
+			fir = true
+			pine = true
+			red_maple = true
+			orange_maple = true
+			yellow_maple = true
+			redwood = true
+			mahogany = true
+			jacaranda = true
+			palm = true
+			willow = true
+			dead = true
+			magic = true
+			umbran = true
+			hellbark = true
+			empyreal = true
+
+		[types.leaves_type.ars_nouveau]
+			blue_archwood = true
+			red_archwood = true
+			purple_archwood = true
+			green_archwood = true
+
+		[types.leaves_type.tconstruct]
+			earth_slime = true
+			sky_slime = true
+			ender_slime = true
+
+		[types.leaves_type.alexscaves]
+			ancient = true
+
+		[types.leaves_type.regions_unexplored]
+			alpha = true
+			apple_oak = true
+			bamboo = true
+			baobab = true
+			blackwood = true
+			magnolia = true
+			cypress = true
+			dead = true
+			dead_pine = true
+			eucalyptus = true
+			flowering = true
+			golden_larch = true
+			kapok = true
+			larch = true
+			maple = true
+			mauve = true
+			orange_maple = true
+			palm = true
+			pine = true
+			blue_magnolia = true
+			pink_magnolia = true
+			redwood = true
+			red_maple = true
+			brimwood = true
+			enchanted_birch = true
+			small_oak = true
+			silver_birch = true
+			socotra = true
+			white_magnolia = true
+			willow = true
+			ashen = true
+
+#Disables specific entries
+[entries]
+
+	[entries.wood_type]
+
+		[entries.wood_type.handcrafted]
+			counter = true
+			corner_trim = true
+			fancy_bed = true
+			desk = true
+			shelf = true
+			cupboard = true
+			dining_bench = true
+			bench = true
+			drawer = true
+			pillar_trim = true
+			side_table = true
+			nightstand = true
+			couch = true
+			table = true
+			chair = true
+
+		[entries.wood_type.another_furniture]
+			shelf = true
+			bench = true
+			flower_box = true
+			shutter = true
+			table = true
+			drawer = true
+			chair = true
+
+		[entries.wood_type.refurbished_furniture]
+			storage_cabinet = false
+			storage_jar = false
+			kitchen_cabinetry = false
+			crate = false
+			desk = false
+			chair = false
+			light_ceiling_fan = false
+			cutting_board = false
+			drawer = false
+			table = false
+			mail_box = false
+			dark_ceiling_fan = false
+			kitchen_sink = false
+			toilet = false
+			lattice_fence = false
+			basin = false
+			kitchen_drawer = false
+			lattice_fence_gate = false
+			bath = false
+			kitchen_storage_cabinet = false
+
+		[entries.wood_type.regions_unexplored]
+			branch = false
+
+		[entries.wood_type.twilightforest]
+			banister = false
+			hollow_log_climbable = false
+			hollow_log_horizontal = false
+			hollow_log_vertical = false
+
+		[entries.wood_type.friendsandfoes]
+			beehive = false
+
+		[entries.wood_type.farmersdelight]
+			cabinet = true
+
+	[entries.leaves_type]
+
+		[entries.leaves_type.regions_unexplored]
+			shrub = false
+
+		[entries.leaves_type.refurbished_furniture]
+			hedge = false
+

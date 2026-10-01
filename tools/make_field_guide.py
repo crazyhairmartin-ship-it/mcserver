@@ -47,7 +47,7 @@ CATEGORIES = [
     ('magic', 'Magic', 'irons_spellbooks:copper_spell_book',
      'Two magic mods: one for battle spells, one for building your own spells and magical helpers.'),
     ('combat', 'Combat & Gear', 'minecraft:iron_sword',
-     'Weapons, armor, tools and the bosses worth using them on.'),
+     'Weapons, armor and the bosses worth using them on.'),
     ('exploring', 'Exploring', 'minecraft:filled_map',
      'Villages, dungeons, caves and whole new dimensions.'),
     ('travel', 'Travel & Movement', 'paraglider:paraglider',
@@ -163,12 +163,8 @@ ENTRIES = [
     ]),
 
     # ---------- Combat & Gear ----------
-    ('combat', 'tinkers', 'Tinkers\' Construct', 'tconstruct:materials_and_you', [
-        text('Build your own tools and weapons from parts. Every material behaves differently.'),
-        craft('tconstruct:common/materials_and_you', 'Start with $(l)Materials and You$(). Each Tinkers\' book unlocks the next step.'),
-    ]),
     ('combat', 'weapons', 'Weapons & Shields', 'spartanweaponry:iron_longsword', [
-        text('$(l)Spartan Weaponry$(): daggers, spears, halberds, longbows and more, in every material.$(br2)$(l)Spartan Shields$(): more shields.$(br2)$(l)Simply Swords$(): katanas, glaives and rare legendary weapons from dungeons.'),
+        text('$(l)Spartan Weaponry$(): daggers, spears, halberds, longbows and more, in every material.$(br2)$(l)Spartan Shields$(): more shields.$(br2)$(l)Simply Swords$(): rare runic and legendary weapons, found in dungeons.'),
     ]),
     ('combat', 'bosses', 'Bosses', 'cataclysm:ignitium_ingot', [
         text('$(l)L_Ender\'s Cataclysm$() and $(l)Mowzie\'s Mobs$() add huge bosses in their own arenas.$(br2)They only fight you if you go to them, so the rest of the world stays normal. Bring your best gear!'),

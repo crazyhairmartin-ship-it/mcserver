@@ -1,0 +1,19 @@
+
+#Common configs for the butterflies mod.
+[butterfly_options]
+	#Chance a butterfly has double eggs.
+	#Range: 0.0 ~ 1.0
+	double_egg_chance = 0.0625
+	#Eggs per butterfly.
+	#Range: 0 ~ 1024
+	egg_limit = 1
+	#Butterfly max density in a 32x32x32 area before breeding is disabled (0 ignores).
+	#Range: 0 ~ 1024
+	max_density = 16
+	#If true, butterflies will die naturally.
+	enable_lifespan = false
+	#If true, butterflies will pollinate flowers.
+	enable_pollination = true
+	#If true, hostile butterflies will spawn.
+	enable_hostile_butterflies = true
+

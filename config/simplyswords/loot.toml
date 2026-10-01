@@ -2,7 +2,7 @@
 version = 3
 enableLootDrops = true
 enableLootInVillages = false
-standardLootTableWeight = 0.1
+standardLootTableWeight = 0.0
 rareLootTableWeight = 0.4
 runicLootTableWeight = 0.7
 uniqueLootTableWeight = 0.03

@@ -1,1 +1,1 @@
-Archwood recolor: #948cb0 (option B). Regenerate: put the original Ars Nouveau archwood textures in tools/archwood/orig/, run recolor.py "#948cb0" (needs Pillow), copy out/assets/ into kubejs/assets/.
+Archwood recolor: #9887b6 (option D). Regenerate: put the original Ars Nouveau archwood textures in tools/archwood/orig/, run recolor.py "#9887b6" (needs Pillow), copy out/assets/ into kubejs/assets/.

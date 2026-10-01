@@ -6,7 +6,7 @@ hash = "6588029574999e58617203c013180d0e35f2673900e1cff7d7087fbd05a4d6c3"
 
 [[files]]
 file = "config/alexsmobs.toml"
-hash = "5daaf914f7d9e6627101c49c5e3fe50e5c48e79808e30b53436cf8150e9353bb"
+hash = "5ee675c88237125784bf161a0b75daa1cc5c046f61ad874bc33b6f774e66fa88"
 
 [[files]]
 file = "config/alexsmobs/cachalot_whale_spawns.json"
@@ -21,6 +21,10 @@ file = "config/ars_nouveau-common.toml"
 hash = "93d329f4856d0041b94db2bba6d3a73fce420774be07b51d0fd05400ef22ca75"
 
 [[files]]
+file = "config/butterflies-common.toml"
+hash = "617fd72199b5c4667af801c92b4725bc81ce281e36f4de5e5e653318c4727955"
+
+[[files]]
 file = "config/cataclysm-common.toml"
 hash = "25dda822a512e2cbd7d5b9be0f73d98eac1deee1075ae54f3f9826c3c31310d3"
 
@@ -31,6 +35,14 @@ hash = "dd31558c1e5c9b2e679519323a197ff718c12a7f134a2fc10fbbf851449e6254"
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
 hash = "0c19468dd71b6be4e694e2914b44b4eba984790895aad416ffdedcbbf1da546f"
+
+[[files]]
+file = "config/everycomp-entries.toml"
+hash = "ac0a59dcc5a6b01fcdf5dcb44d4ef3cf04937ecc8b1279b51dfa12aae1134a64"
+
+[[files]]
+file = "config/everycomp-hazardous.toml"
+hash = "4a9407a7e3acc7246a2d7f9c56fc16d6490bdedf623e1582a5e0475df4c7b6be"
 
 [[files]]
 file = "config/fml.toml"
@@ -53,12 +65,16 @@ file = "config/naturalist.json"
 hash = "e180b18c2f250a1d4531cc442f5a4dea18ef67796e25c409845866befa1f30d5"
 
 [[files]]
+file = "config/refurbished_furniture.server.toml"
+hash = "e374eaee1d4f720bca9e1c9d80ba353d67cfe25c1f2e71a98127082a31f937e1"
+
+[[files]]
 file = "config/simplyswords/general.toml"
 hash = "eb18922146826ff4f2ee2e762ad7ad62fb388f912342ac7abcef26e8507c15d4"
 
 [[files]]
 file = "config/simplyswords/loot.toml"
-hash = "f5bb35f7803d99856609674b54fe967d2fb8bd3c8451591003c6a83204909007"
+hash = "efab36ae8fe81c9e52d589cc321c06b145c7aaffb3a9e43b0310ce365fbb1d51"
 
 [[files]]
 file = "config/sophisticatedcore-client.toml"
@@ -97,88 +113,136 @@ file = "defaultconfigs/hourglass-server.toml"
 hash = "fec3832f24b324ea91f342b8a21f7eca74dbadf7e44437746a255a9863e34f94"
 
 [[files]]
+file = "kubejs/assets/alexsmobs/sounds.json"
+hash = "17d0b3f119bf63465152eabf6512cd7443b2ed0dff978a01f8a564bb606b1724"
+
+[[files]]
 file = "kubejs/assets/ars_nouveau/entity/boat/archwood.png"
-hash = "c000cbbb67b67f79646fad6d040a2de24819f21fa58e69f601e896dcc90b19b6"
+hash = "ab8077800ef501ff4937d387af3d28d47d2c768c67489c050f894d8a7cd5842f"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/entity/chest/archwood_chest.png"
-hash = "b436b5a4dc6a528c100d02547aa170bb8974ef29a3d8dd1d69a41fa31f989b4b"
+hash = "fe545e352270017bd071c3c9c5fff0743e25832cbc30910be896c44b72733d7b"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/entity/chest/archwood_chest_left.png"
-hash = "0d5982e3c3f6429f904c0bdaf7debadab5d4f3d7cde3f6b70f183ce46673651e"
+hash = "1a6f3dbcd989140512300c6d57b0c194f083829bfe17b7138d601cfad5e4f4f4"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/entity/chest/archwood_chest_right.png"
-hash = "a9876d403ba76545792dd2611f7c262d9b38f83a92494959685c8952c9ffb139"
+hash = "e9033ee93665735c7a03b3e0639c94ed2dad81aab1d00b0661b7b8a05aee7487"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/entity/signs/archwood.png"
-hash = "2a8f93699db2422ec41bcab384d5e5025f3ceaf367f1731cdfdf2e5905a0dba6"
+hash = "4294d4b35c6ee68cf8f1a39a49708a9a5b6d7d23d8cd1fdcac22c3c26c9b7f85"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/block/archwood_door_bottom.png"
-hash = "4a3951093cff3ae43ffc32fd039670d9b6c017d48a0823d6e8318636ca26c085"
+hash = "eab71c40ecf96885d5930d5351c42d108e8590edc519dde9b3ff4e611723b15f"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/block/archwood_door_top.png"
-hash = "219088572a788ea9a2750707621a8dbf84ffc3b3c05f0167055336877adf007e"
+hash = "1449a916420b8b53468e9f56296bd9bd0a1d35066dc73ffc47f7d16de59ffdaa"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/block/archwood_planks.png"
-hash = "2155c5811d099da22d17e245215cf6713624b9f93ffc07b5f92b413e369cbf63"
+hash = "e0cb89ca40a64c91687dad61b9afb8ee0d4f882d3ecd37010c5af019d75c396d"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/block/archwood_trapdoor.png"
-hash = "5fa3be9f9448f01c41f0bba79b56211f2f762807280f9e9f16596829809ed31e"
+hash = "4a5dafbd9fda532695d422d9d24442ad50d30b3c150181aab0de1e9579746a12"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/entity/boat/archwood.png"
-hash = "c000cbbb67b67f79646fad6d040a2de24819f21fa58e69f601e896dcc90b19b6"
+hash = "ab8077800ef501ff4937d387af3d28d47d2c768c67489c050f894d8a7cd5842f"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/entity/signs/archwood.png"
-hash = "2a8f93699db2422ec41bcab384d5e5025f3ceaf367f1731cdfdf2e5905a0dba6"
+hash = "4294d4b35c6ee68cf8f1a39a49708a9a5b6d7d23d8cd1fdcac22c3c26c9b7f85"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/item/archwood_boat.png"
-hash = "86bd1c66ed4ed9117d1b8772e35474414a5a15651c5492d047f141ab7019deb0"
+hash = "e4ae4248321b6098e50377660f726b5e6dcd0bf44dea5a304cf95232e9f687ee"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/item/archwood_door.png"
-hash = "709e5be36547626ea0c2fd5ebcb85c355fe198a171d57f98e6b8426f2ba8d34e"
+hash = "aaa77933e30e6c6c43fddfdb1f9ede2840e80c4c56062d1edacc4cb15d7014ff"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/item/archwood_sign.png"
-hash = "015a51e9a9f02c7a15ecef0b8c9cb4f7bd01893f767a3165fda130de5f1c9887"
+hash = "b531bf6ac611734b95291fdf008077974dd962a1e3e0ad4957fc6aabd21b5e2a"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/model/chest/archwood/archwood.png"
-hash = "995ecb57473675006b52c32d7919973519774626599f040cffb7d1268127d4bf"
+hash = "fa1f9a94a6ddc6f11634d5e34f684c36e0b9437ed5d7b1c151145b99b7bf0282"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/model/chest/archwood/left.png"
-hash = "924f7636ce29216a850862b2db98ce71ce685bee3b2bfdc97715ca89fc934a7b"
+hash = "8ada70cee108dc9825589c8504b1af3be6a4cff72208e57e1a14a9f40ca448dc"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/model/chest/archwood/right.png"
-hash = "a80da74481364662845c8127a95a421c9db3013b07c782c81a7ba76b8aab2c55"
+hash = "a53858f69c8ed5a7b09aab2dff0833a166f7fd7af4eb07fc63c9c48140314cd7"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/block/umbran_door_bottom.png"
+hash = "d4904bfee53622cdae5d21da9414d70bc40f46ce371422497a2d87c098204977"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/block/umbran_door_top.png"
-hash = "f5b1eadca92452845683ee84af6ad14a85ec98a181551367d649eaff7121b3e0"
+hash = "567468dbdd7a239cfb62827a4a7d71488811efc056a88ec7658a97561e15bfe6"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/block/umbran_planks.png"
+hash = "f1ce8bd85f53e0d10ef94a4c813d8e5f72d02d7d0536ffe12c6641f3916a6d40"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/block/umbran_trapdoor.png"
-hash = "146cff971f423bd83b714c7d9b5bf740e88254266933bc51e163910271331ff9"
+hash = "a1f8bf5a0f7cfe41b2543abbf94f75116c51dbd90249cdf3c807820598eababa"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/entity/boat/umbran.png"
+hash = "47cda020d07a5e90b4a0671a851b3278d1e6994fa54614538815244484e578cb"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/entity/chest_boat/umbran.png"
+hash = "1b341d8bd66798e5d1bfc0315edee0c8249250a4eedfaf2ac82f77ca6dcf10ec"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/entity/signs/hanging/umbran.png"
+hash = "43ce35f64b2b793b246cd319d9ac5263ca25ec366bfa120b1590d4cff00a2d61"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/entity/signs/umbran.png"
+hash = "e16d1d5be95ebd51e925f544d02229119377e148dd6970ce4f16f01773284cc5"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/gui/hanging_signs/umbran.png"
+hash = "3f66e27f6022ad0b532d8063aca27ccad76defd54c7ea729d5e5d0b6841c82a9"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/item/umbran_boat.png"
+hash = "fa666df7b3c10866516848f64101d04c3abe126b52955d44b99e9c564de06be3"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/item/umbran_chest_boat.png"
+hash = "96644fa5cd439feec1516bd3494a5747ddd9ee4864c097c42a9418ab96c8fb6b"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/item/umbran_door.png"
-hash = "2da9fc41c97250836a6a12c7b6e2a33ec650dec4c19cc8d5ba79e414e98192bd"
+hash = "769188567c7cacabdb2252fc01c92c4725bc0087c3882e19ec21ede2b800fd3f"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/item/umbran_hanging_sign.png"
+hash = "b3ec959366d78b9d48ea0f0f021611c23d494471d7e3ff0bdeecf36581ef23c3"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/textures/item/umbran_sign.png"
+hash = "a1f1af3c2cc8619680b3b28df633dcdf96f316c33468cfc59038598d51e0efd2"
 
 [[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
-hash = "a9fcc99ae037ccaf5b06413fa56c96948ade67872aaba574d89ce868028b75c4"
+hash = "0c035630121e5ed9b1c1a50b3ce098adca9020da1f2aa4695d92b02e6e8cda09"
 
 [[files]]
 file = "kubejs/client_scripts/jei_hidden.js"
@@ -189,12 +253,40 @@ file = "kubejs/data/biomesoplenty/worldgen/biome/scrubland.json"
 hash = "a4303ddfc53997bea565041f749d68f8c44434e6cd0fb7d0ec5547f7fb7b172d"
 
 [[files]]
+file = "kubejs/data/tconstruct/forge/biome_modifier/cobalt_ore.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "kubejs/data/tconstruct/forge/biome_modifier/earth_geode.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "kubejs/data/tconstruct/forge/biome_modifier/ender_geode.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "kubejs/data/tconstruct/forge/biome_modifier/ichor_geode.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "kubejs/data/tconstruct/forge/biome_modifier/sky_geode.json"
+hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "kubejs/server_scripts/butterfly_sightings.js"
+hash = "29276a3fa0e2b6d75d903db1947f1eb4e70853c3c687b6b3464b594ccb7d81b0"
+
+[[files]]
 file = "kubejs/server_scripts/field_guide.js"
 hash = "8012e953d71450ff751b0d270cad396ec5dc1776c4edef3802742933f3383195"
 
 [[files]]
 file = "kubejs/server_scripts/golden_hours.js"
 hash = "4f07804bdbab5f443d11ae7d35c71a9fe17dd5b4f25f007405e609c7d4706632"
+
+[[files]]
+file = "kubejs/server_scripts/keep_claimed_mobs.js"
+hash = "ae9320deb3188b1458a2d4cc596bfd93589177d3b3d48a437ee9513a4e5b4a3e"
 
 [[files]]
 file = "kubejs/server_scripts/keep_inventory.js"
@@ -207,6 +299,22 @@ hash = "08d0cf09fccbf79e3391e7496b483041a0d222102eb5955cc01f2124f0ebee73"
 [[files]]
 file = "kubejs/server_scripts/protect_pets.js"
 hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
+
+[[files]]
+file = "kubejs/server_scripts/trim_refurbished.js"
+hash = "397882c7b30ca331caf71639e7d8b69a319c84b18fb714ef8991380298bba513"
+
+[[files]]
+file = "kubejs/server_scripts/trim_simplyswords.js"
+hash = "ad65c303393af3505cc1fc5a7d4809723311f0ebd86c6eb78f981994c67d31ab"
+
+[[files]]
+file = "kubejs/server_scripts/trim_spartan.js"
+hash = "af05651a09e770707b62cf6059d8e861fa74cb21c36030a342b4e0ec96529e8c"
+
+[[files]]
+file = "kubejs/server_scripts/trim_tinkers.js"
+hash = "5e499a0bd92efadf01a7be29f1b1b4f3142da563a3903be3c8f00af4de16cc1a"
 
 [[files]]
 file = "kubejs/server_scripts/unify_duplicates.js"
@@ -223,6 +331,10 @@ hash = "9af3e3a7a678dd66ac0fdaeeea7c8b77635fb57e0ed6d6ff1e2dd978eb7c0f58"
 [[files]]
 file = "kubejs/startup_scripts/protect_boats.js"
 hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
+
+[[files]]
+file = "kubejs/startup_scripts/trimmed_items.js"
+hash = "57873aa01a2bec83dc22583520642b6823000f4a988c4663ba357d4508b6f018"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -387,6 +499,11 @@ metafile = true
 [[files]]
 file = "mods/embeddium.pw.toml"
 hash = "a74b2d65c286896335b454f61f18be630d0f13767626ebb118584907d1d37112"
+metafile = true
+
+[[files]]
+file = "mods/every-compat.pw.toml"
+hash = "46c47e9a2ecf7acfcf1a4a83e3103990982397fc1dbf860075bb7ba521e2d033"
 metafile = true
 
 [[files]]
@@ -969,7 +1086,7 @@ hash = "c255d0347682d6db93d0ef765fccf0ec27691b8bc680219da347978c289f84da"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/categories/combat.json"
-hash = "3ad188c24e9e07970c56396e2cd84eb85d5b9b58a3efb3d6dc3755d121aa2767"
+hash = "ebda31b7a040be7748d495bc49ead28d5f9afeff2c0ec6d72532c6b7ccc6856a"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/categories/creatures.json"
@@ -1009,19 +1126,15 @@ hash = "95ad22bf89fc97fa014ec756f40ce830ed03cd14d0ba53756f62bf4d907a7c94"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/combat/bosses.json"
-hash = "f70a4629f1651ba9a793975371da036fec8c291c2695701b21b4084359f27735"
+hash = "dc136592b8e9e9439cd814ab43ae918d3312488bb74e94c947296d3c065de7fb"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/combat/cosmetics.json"
-hash = "06a2267dc0b38b0bb3c05d291235f134b178af0f2f9f58b768619b4a1dada8fa"
-
-[[files]]
-file = "patchouli_books/fotf_field_guide/en_us/entries/combat/tinkers.json"
-hash = "ad2633a7580d965b5213edf2a9a3f54a652919e93aa6e651f057dcb2785ebe0f"
+hash = "426113a8a602525d8b23a41ded0f49cc5d3e03aa44c0553c55827f24ca9f0aa8"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/combat/weapons.json"
-hash = "f9bd464463f688de703ae51916c5773682b8e0985b7268f82c1ed458d68d7bdd"
+hash = "fd69397200b254e38aa5a21604359e776e0043d4fddd92b3c4f5434c4af196ca"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/creatures/alexs_mobs.json"

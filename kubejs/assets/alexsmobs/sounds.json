@@ -1,0 +1,44 @@
+{
+  "cachalot_whale_click": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "alexsmobs:cachalot_whale_click_0"
+      },
+      {
+        "name": "alexsmobs:cachalot_whale_click_1"
+      },
+      {
+        "name": "alexsmobs:cachalot_whale_click_2"
+      },
+      {
+        "name": "alexsmobs:cachalot_whale_click_0",
+        "volume": 0.0,
+        "weight": 27
+      }
+    ],
+    "subtitle": "alexsmobs.sound.subtitle.cachalot_whale_click"
+  },
+  "cachalot_whale_idle": {
+    "category": "neutral",
+    "replace": true,
+    "sounds": [
+      {
+        "name": "alexsmobs:cachalot_whale_idle_0"
+      },
+      {
+        "name": "alexsmobs:cachalot_whale_idle_1"
+      },
+      {
+        "name": "alexsmobs:cachalot_whale_idle_2"
+      },
+      {
+        "name": "alexsmobs:cachalot_whale_idle_0",
+        "volume": 0.0,
+        "weight": 27
+      }
+    ],
+    "subtitle": "alexsmobs.sound.subtitle.cachalot_whale_idle"
+  }
+}
