@@ -299,12 +299,72 @@ file = "kubejs/assets/biomesoplenty/textures/item/umbran_sign.png"
 hash = "c3ca0d363e59b69c38be90030b01aa30c551c82b02702e7233f0492e0adcc7d4"
 
 [[files]]
+file = "kubejs/assets/endermail/blockstates/locker.json"
+hash = "2d6842df4884d7d7b0dd534f28c5566a4558aaf3ecc09e1a40eb2352501ad7f9"
+
+[[files]]
 file = "kubejs/assets/endermail/models/block/locker.json"
-hash = "4469a4c96abb92d2ce04af0a55c02d7ec4fab9ff74c94f83e34140e8d7bec816"
+hash = "8fa5d2156645ff961dfdf0118955a04e3105eb16a6391eebc87e1ed3e4c9316f"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_archwood.json"
+hash = "090dbc6f4702ca1dc0381bd64594a97401ee1fac16131432a2101a9edc67e244"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_archwood_filled.json"
+hash = "101f3376dd7bc101f836890b8cb2b31fc972863764e15f3f230260cf25e07c34"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_birch.json"
+hash = "b9ab7cb5b8cd95348e326579ac0e513655204154fe11949358bf60ad60dbe73f"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_birch_filled.json"
+hash = "14ecc688e95db5d3164c5b567e31ba8baf415c1095e06ab5ad833579c9a19231"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_cherry.json"
+hash = "2b722d49c13aeeb00798245829d9f095e9ef9867d004fea6a469f5fcecf92c75"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_cherry_filled.json"
+hash = "ec394fee3f6a01a12228fd8d50079793f2eea240f62044b73b393a9648dd50db"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_dark_oak.json"
+hash = "eb274114b2e4f22f59bf1b71c928458b8c657128d3c828e81fcbf355b4bdfabb"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_dark_oak_filled.json"
+hash = "90b882a2b134dbc5d771c2de19dce1ec0ac8b9ffa40313094a3dd76959245a33"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_filled.json"
-hash = "bd17b2899677ba098279bd4e1adb8c3de8aa9e770087d32beeac620bd300b6cc"
+hash = "1228b2545ffa869edd4ab0bb43f3e1144588bb80571fc4d56539faf5794aaa51"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_oak.json"
+hash = "472ed7c068e53436b0dd255c48ddb32ddb0efbad13cd67b6b4bc202ddd15de92"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_oak_filled.json"
+hash = "37bee083278e5d25d80255ece3fbfee683c3e987f7de84d685f35f961b47d43a"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_spruce.json"
+hash = "6de8fcaa524f1491bc7ca1892ff61782cdb7512f0c352f8b8640b0d49fe3dc67"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_spruce_filled.json"
+hash = "32f772bdf8c419aa9582dad0627031be23fb49e7007656935e28a1e141a9a628"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_umbran.json"
+hash = "ea564e55e924a0d4e29ed6e08066d6f61b008d44428aa36f635f0085307e4495"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_umbran_filled.json"
+hash = "aee0b9f1ab299f3f70690798bcfecc90ce5dbb72891e8517b87592cda0c239f4"
 
 [[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
