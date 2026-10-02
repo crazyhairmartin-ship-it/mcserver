@@ -1439,10 +1439,6 @@ file = "kubejs/server_scripts/saddle_recipe.js"
 hash = "412bf83da2aa86b4baf7ae41144bcf05f8f4068bf7b32693f4dd5740f86299fb"
 
 [[files]]
-file = "kubejs/server_scripts/spider_snacks.js"
-hash = "5077334651762d8a7d9d37d911979f7232b1d80eb8d6ef92077375639d8513ad"
-
-[[files]]
 file = "kubejs/server_scripts/trim_simplyswords.js"
 hash = "ad65c303393af3505cc1fc5a7d4809723311f0ebd86c6eb78f981994c67d31ab"
 
@@ -1688,7 +1684,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfmail.pw.toml"
-hash = "e9e20c538a871916401e9f11ab2b27b6c92fda3071d31199a5f2ac2d9124f162"
+hash = "ba52ed58f251ea92daad12167e7e2af509bb4b4919ebddd1a3a09286aa4d926a"
 metafile = true
 
 [[files]]

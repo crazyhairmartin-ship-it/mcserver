@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.state.properties.EnumProperty;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
+import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
@@ -32,6 +33,7 @@ import net.minecraftforge.registries.RegistryObject;
  *   then right-click any mailbox: one of Ender Mail's carriers (wearing a mail cap) takes it to theirs.
  * - Packages: chest + stamp; the package screen has a recipient box and Send button (SendPackagePacket) that send it
  *   to a mailbox, and a received package disappears once it's emptied.
+ * - Tamed jumping spiders heal from spider eyes and rotten flesh (SpiderSnacks).
  *
  * Compiled against SRG-named Minecraft (see build.sh), so vanilla methods appear as m_XXXX_.
  */
@@ -58,6 +60,10 @@ public class FotfMail {
                 PackageInfoPacket::handle, Optional.of(NetworkDirection.PLAY_TO_CLIENT));
         MinecraftForge.EVENT_BUS.addListener(FotfMail::onRightClickBlock);
         MinecraftForge.EVENT_BUS.addListener(Mail::onServerTick);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGHEST, true, PlayerInteractEvent.EntityInteractSpecific.class,
+                SpiderSnacks::onInteractAt);
+        MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGHEST, true, PlayerInteractEvent.EntityInteract.class,
+                SpiderSnacks::onInteract);
         if (FMLEnvironment.dist == Dist.CLIENT) {
             ClientSetup.init(modBus);
         }
