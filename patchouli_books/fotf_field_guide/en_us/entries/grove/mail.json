@@ -1,0 +1,25 @@
+{
+  "name": "Sending Mail",
+  "icon": "endermail:package",
+  "category": "patchouli:grove",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "endermail:package",
+      "text": "Place a $(l)Package$(), put items inside, then seal it with $(l)Packing Tape$().$(br2)Right-click it with a $(l)Stamp$() and enter coordinates or a friend's Locker ID. An enderman delivers it, any distance!"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "endermail:locker",
+      "text": "Place a $(l)Locker$() and give it an ID. Friends can mail you with just the ID, and packages sent within 50 blocks of it land inside.",
+      "title": "Your Mailbox"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "endermail:package_controller",
+      "text": "The $(l)Package Controller$() shows where your package is and whether it arrived.",
+      "title": "Tracking"
+    }
+  ]
+}

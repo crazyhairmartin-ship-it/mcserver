@@ -63,6 +63,9 @@ ENTRIES = [
         text('This book is your field guide to the forest.$(br2)The first chapter covers the basics. The other chapters introduce every big mod and point you to its own guide book when it has one.'),
         text('Lost this book? Type $(l)/guide$() in chat for a new copy.$(br2)Stuck on anything? Ask in chat. Someone has probably figured it out already.', 'Tip'),
     ]),
+    ('getting_started', 'books', 'More Guide Books', 'minecraft:bookshelf', [
+        text('Big mods have their own guide books. Type a command in chat to get one:$(li)$(l)/guide unicorn$(): unicorns$(li)$(l)/guide spells$(): Iron\'s Spells$(li)$(l)/guide ars$(): Ars Nouveau$(li)$(l)/guide animals$(): Alex\'s Mobs$(li)$(l)/guide caves$(): Alex\'s Caves$(li)$(l)/guide music$(): MIMI'),
+    ]),
     ('getting_started', 'first_day', 'Your First Day', 'minecraft:oak_log', [
         text('A good first day:$(br)$(li)Punch trees, make tools$(li)Find a village for food and a $(l)Waystone$()$(li)Make a bed before night$(li)Claim your base (see $(l)Your Base$())'),
         text('Days here are long and sunsets are slow, so take your time.$(br2)If you die, your items wait in a $(l)gravestone$(). Nothing is lost!', 'No Rush'),
@@ -103,10 +106,11 @@ ENTRIES = [
     ('creatures', 'unicorns', 'Unicorns & Magical Horses', 'ultimate_unicorn_mod:unicorn_horn', [
         text('Unicorns, pegasi, hippocamps, reindeer and more live in forests, plains, hills and oceans.$(br2)Tame and ride them like horses. Pegasi fly, and unicorns have magical powers!'),
         spot(UNICORN_BOOK, 'The $(l)Unicorn Guidebook$() explains everything. Get one with $(l)/guide unicorn$().', 'Official Guide'),
+        craft('fotf:saddle', 'Saddles can be crafted here: 5 leather, 1 iron ingot and 2 string.'),
     ]),
     ('creatures', 'alexs_mobs', 'Alex\'s Mobs', 'alexsmobs:animal_dictionary', [
         text('Around 90 real and fantasy animals: elephants, raccoons, hummingbirds, whales, crows and many more.$(br2)Some can be tamed, and many drop useful items.'),
-        craft('alexsmobs:animal_dictionary', 'The $(l)Animal Dictionary$() describes every animal and how to tame it.'),
+        craft('alexsmobs:animal_dictionary', 'The $(l)Animal Dictionary$() describes every animal and how to tame it. Craft one or type $(l)/guide animals$().'),
     ]),
     ('creatures', 'critters', 'Critters & Companions', 'crittersandcompanions:dragonfly_wing', [
         text('Small friends to tame by feeding:$(li)Red panda: bamboo$(li)Ferret: raw chicken$(li)Shima enaga: seeds$(li)Snail: carrots$(li)Ladybug: mushrooms$(li)Jumping spider: dragonfly wings'),
@@ -152,11 +156,11 @@ ENTRIES = [
     # ---------- Magic ----------
     ('magic', 'irons_spells', 'Iron\'s Spells', 'irons_spellbooks:copper_spell_book', [
         text('Battle magic! Find spell $(l)scrolls$() in dungeons, put them in a $(l)spell book$(), then cast.$(br2)$(l)V$() casts your spell, $(l)R$() opens the spell wheel.'),
-        craft('irons_spellbooks:patchouli_book', 'The official guidebook explains schools of magic, gear and bosses.'),
+        spot('patchouli:guide_book{"patchouli:book":"irons_spellbooks:iss_guide_book"}', 'The official guidebook explains schools of magic, gear and bosses. Get one with $(l)/guide spells$().'),
     ]),
     ('magic', 'ars_nouveau', 'Ars Nouveau', 'ars_nouveau:worn_notebook', [
         text('Build your own spells from pieces called glyphs, and make magical helpers that farm, carry items and craft for you.'),
-        craft('ars_nouveau:worn_notebook', 'Craft the $(l)Worn Notebook$() first. It teaches everything, step by step.'),
+        craft('ars_nouveau:worn_notebook', 'Start with the $(l)Worn Notebook$(): craft one or type $(l)/guide ars$(). It teaches everything, step by step.'),
     ]),
     ('magic', 'which_magic', 'Which Magic?', 'minecraft:enchanted_book', [
         text('$(l)Iron\'s Spells$(): easy to start, flashy fights, loot from dungeons.$(br2)$(l)Ars Nouveau$(): design your own spells, flying ritual, cute helpers for your base.$(br2)You can use both!'),
@@ -184,6 +188,7 @@ ENTRIES = [
     ]),
     ('exploring', 'alexs_caves', 'Alex\'s Caves', 'alexscaves:cave_codex', [
         text('Four rare cave biomes deep underground: dinosaurs in the $(l)Primordial Caves$(), the sugary $(l)Candy Cavity$(), the deep-sea $(l)Abyssal Chasm$() and the eerie $(l)Forlorn Hollows$().$(br2)They are hard to find. Look up $(l)Cave Tablet$() and $(l)Cave Codex$() in JEI to learn how to track them down.'),
+        spot('alexscaves:cave_book', 'The $(l)Cave Book$() describes every cave biome. Type $(l)/guide caves$().'),
     ]),
     ('exploring', 'twilight', 'The Twilight Forest', 'twilightforest:twilight_oak_sapling', [
         text('A magical forest dimension with bosses to beat in order.$(br2)To get there: dig a 2x2 pool of water, surround it with flowers and grass, then throw a $(l)diamond$() into it.'),
@@ -209,12 +214,25 @@ ENTRIES = [
     ]),
     ('travel', 'music', 'Music Together', 'mimi:guide', [
         text('$(l)MIMI$(): play instruments with friends. You can even plug in a real MIDI keyboard or play MIDI files.'),
-        craft('mimi:guide', 'The $(l)MIMI guide$() explains the instruments.'),
+        craft('mimi:guide', 'The $(l)MIMI guide$() explains the instruments. Craft one or type $(l)/guide music$().'),
     ]),
 
     # ---------- Grove Rules & Server Info ----------
     ('grove', 'time', 'Days & Nights', 'minecraft:clock', [
         text('Days are long here, and sunrises and sunsets last a long time, so enjoy the view!$(br2)The night is skipped when at least half of the players online are sleeping.'),
+    ]),
+    ('grove', 'mail', 'Sending Mail', 'endermail:package', [
+        spot('endermail:package', 'Place a $(l)Package$(), put items inside, then seal it with $(l)Packing Tape$().$(br2)Right-click it with a $(l)Stamp$() and enter coordinates or a friend\'s Locker ID. An enderman delivers it, any distance!'),
+        spot('endermail:locker', 'Place a $(l)Locker$() and give it an ID. Friends can mail you with just the ID, and packages sent within 50 blocks of it land inside.', 'Your Mailbox'),
+        spot('endermail:package_controller', 'The $(l)Package Controller$() shows where your package is and whether it arrived.', 'Tracking'),
+    ]),
+    ('grove', 'land', 'Claims, Pets & Animals', 'minecraft:lead', [
+        text('Inside claimed land:$(li)Friendly animals never despawn, even without a name tag (not monsters or fish)$(li)Grappling hooks work for everyone$(li)Only your party can build or open chests'),
+        text('Other players can\'t hurt your tamed pets.$(br2)Whales won\'t attack your boats.$(br2)Butterflies, fireflies and critters live in almost every biome. Bring a net and a jar!', 'Friendly Server'),
+    ]),
+    ('grove', 'commands', 'Handy Commands', 'minecraft:command_block', [
+        text('$(li)$(l)/guide$(): a new Field Guide$(li)$(l)/guide <book>$(): other guide books (see $(l)More Guide Books$())$(li)$(l)/nick set <name>$(): change the name others see$(li)$(l)/nick clear$(): back to your real name'),
+        text('Delete junk with the $(l)trash slot$() next to your inventory: drop an item in, and it\'s gone for good. Turn the slot on or off in your inventory.', 'Trash Slot'),
     ]),
     ('grove', 'rules', 'Grove Rules', 'minecraft:oak_sign', [
         text('$(li)Be kind$(li)No griefing or stealing$(li)Ask before building close to someone$(li)Leave the forest nicer than you found it$(li)Have fun!'),

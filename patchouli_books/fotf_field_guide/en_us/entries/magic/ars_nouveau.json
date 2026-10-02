@@ -11,7 +11,7 @@
     {
       "type": "patchouli:crafting",
       "recipe": "ars_nouveau:worn_notebook",
-      "text": "Craft the $(l)Worn Notebook$() first. It teaches everything, step by step."
+      "text": "Start with the $(l)Worn Notebook$(): craft one or type $(l)/guide ars$(). It teaches everything, step by step."
     }
   ]
 }

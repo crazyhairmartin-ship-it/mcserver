@@ -9,9 +9,9 @@
       "text": "Battle magic! Find spell $(l)scrolls$() in dungeons, put them in a $(l)spell book$(), then cast.$(br2)$(l)V$() casts your spell, $(l)R$() opens the spell wheel."
     },
     {
-      "type": "patchouli:crafting",
-      "recipe": "irons_spellbooks:patchouli_book",
-      "text": "The official guidebook explains schools of magic, gear and bosses."
+      "type": "patchouli:spotlight",
+      "item": "patchouli:guide_book{\"patchouli:book\":\"irons_spellbooks:iss_guide_book\"}",
+      "text": "The official guidebook explains schools of magic, gear and bosses. Get one with $(l)/guide spells$()."
     }
   ]
 }

@@ -1,5 +1,6 @@
 // Friends of the Forest Field Guide (external Patchouli book in pack/patchouli_books/, id patchouli:fotf_field_guide).
-// New players get it on first login (the only starting book); /guide and /guide unicorn give copies.
+// New players get it on first login (the only starting book). /guide gives a copy; /guide <name> gives a mod's own
+// guide book (see GUIDE_BOOKS).
 
 let $GuideCompoundTag = Java.loadClass('net.minecraft.nbt.CompoundTag')
 
@@ -7,8 +8,18 @@ function fieldGuide() {
   return Item.of('patchouli:guide_book', { 'patchouli:book': 'patchouli:fotf_field_guide' })
 }
 
-function unicornGuide() {
-  return Item.of('patchouli:guide_book', { 'patchouli:book': 'ultimate_unicorn_mod:unicorn_guide' })
+function patchouliBook(bookId) {
+  return () => Item.of('patchouli:guide_book', { 'patchouli:book': bookId })
+}
+
+// /guide <name> -> that mod's guide book. (Tinkers' books are trimmed along with the rest of Tinkers.)
+let GUIDE_BOOKS = {
+  unicorn: patchouliBook('ultimate_unicorn_mod:unicorn_guide'),
+  spells: patchouliBook('irons_spellbooks:iss_guide_book'),
+  ars: () => Item.of('ars_nouveau:worn_notebook'),
+  music: () => Item.of('mimi:guide'),
+  animals: () => Item.of('alexsmobs:animal_dictionary'),
+  caves: () => Item.of('alexscaves:cave_book'),
 }
 
 PlayerEvents.loggedIn(event => {
@@ -25,13 +36,15 @@ PlayerEvents.loggedIn(event => {
 
 ServerEvents.commandRegistry(event => {
   let Commands = event.commands
-  event.register(Commands.literal('guide')
-    .executes(ctx => {
-      ctx.source.playerOrException.give(fieldGuide())
+  let guide = Commands.literal('guide').executes(ctx => {
+    ctx.source.playerOrException.give(fieldGuide())
+    return 1
+  })
+  Object.keys(GUIDE_BOOKS).forEach(name => {
+    guide.then(Commands.literal(name).executes(ctx => {
+      ctx.source.playerOrException.give(GUIDE_BOOKS[name]())
       return 1
-    })
-    .then(Commands.literal('unicorn').executes(ctx => {
-      ctx.source.playerOrException.give(unicornGuide())
-      return 1
-    })))
+    }))
+  })
+  event.register(guide)
 })

@@ -13,6 +13,11 @@
       "item": "patchouli:guide_book{\"patchouli:book\":\"ultimate_unicorn_mod:unicorn_guide\"}",
       "text": "The $(l)Unicorn Guidebook$() explains everything. Get one with $(l)/guide unicorn$().",
       "title": "Official Guide"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "fotf:saddle",
+      "text": "Saddles can be crafted here: 5 leather, 1 iron ingot and 2 string."
     }
   ]
 }

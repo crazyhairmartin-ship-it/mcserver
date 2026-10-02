@@ -520,7 +520,7 @@ hash = "ab6c957144e6fa572b983394a4d5f1fe9a0456ec5933a19e467834e63e96fa03"
 
 [[files]]
 file = "kubejs/server_scripts/field_guide.js"
-hash = "8012e953d71450ff751b0d270cad396ec5dc1776c4edef3802742933f3383195"
+hash = "f56b913798da5421ef3d3d983148787ff9287561fbc628569211622cc9b0611b"
 
 [[files]]
 file = "kubejs/server_scripts/golden_hours.js"
@@ -541,6 +541,10 @@ hash = "08d0cf09fccbf79e3391e7496b483041a0d222102eb5955cc01f2124f0ebee73"
 [[files]]
 file = "kubejs/server_scripts/protect_pets.js"
 hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
+
+[[files]]
+file = "kubejs/server_scripts/saddle_recipe.js"
+hash = "412bf83da2aa86b4baf7ae41144bcf05f8f4068bf7b32693f4dd5740f86299fb"
 
 [[files]]
 file = "kubejs/server_scripts/trim_simplyswords.js"
@@ -1395,7 +1399,7 @@ hash = "fd69397200b254e38aa5a21604359e776e0043d4fddd92b3c4f5434c4af196ca"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/creatures/alexs_mobs.json"
-hash = "1998551689c39e03cccf95b58cca38f0a2d7df77d7ee1e1dae6933173ffbac48"
+hash = "5cb4fe5d25742d18504af86de57ab35a942881f468234094bb55e0678955be36"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/creatures/bugs.json"
@@ -1411,7 +1415,7 @@ hash = "95f0837fe030a727b0b49942f41538555f7dd4eef69178b85ab91ef339c6a8cd"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/creatures/unicorns.json"
-hash = "c96793627be13bcd368fccb33412ee3ed5e7729d98d1a894002651ef70312612"
+hash = "879570759cdaf40018b7e39ef92ae76089e3f8748d62d547efe825f22ac56e48"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/creatures/wildlife.json"
@@ -1419,7 +1423,7 @@ hash = "371cba1a4d50334a7cba355538a4c35d1c128666ead429c1cab27a6d1217ed20"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/exploring/alexs_caves.json"
-hash = "f3b8e690270acb35bf5d68e5ab270e3e6d9dbde9aa98e5f7fdd675cf0cd7ae83"
+hash = "f1144cb40805ee8e940f23a8af71ce29f9a35001a26fdc3c1368a76844ed9292"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/exploring/compasses.json"
@@ -1450,52 +1454,68 @@ file = "patchouli_books/fotf_field_guide/en_us/entries/farming/seasons.json"
 hash = "82523a186ba41ea756484be25a192b7c35a5433d1a04dd208ae61f0a587ba479"
 
 [[files]]
+file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/books.json"
+hash = "f0dd86d7f5d1b8bb4fbe8fdd3e38a5caa06def1129cb44e4d9b85e026ddcfa90"
+
+[[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/claims.json"
-hash = "88f59305f62e64d492a79898c5d5c9f1b78d13ffacc8d7c3d572e5347709eb2c"
+hash = "916611e75caea169524ca690a4eaadf3752dca1929f90cbbaa8f7ca0ab1a19e0"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/death.json"
-hash = "206763bba296e815698c89cd5fedfccaf61f53743b272c9efe02d3e396241d0b"
+hash = "75ee93ac3c94fc6eaaf211c707dae75986ef710e90cfce7388fc9f1411c3e212"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/first_day.json"
-hash = "72cd336ba84e60135af152e462747b48a184b28a1b6461a488ddab292c04f5ac"
+hash = "dc7c3b9948f9f1b63837aa5f35c3ba6a0de11453c25b0036a1664c2bcce238e7"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/jei.json"
-hash = "358f1878704520a895e4d3783761ab707e4c721b1f85d7c584e6e25bd23be4b3"
+hash = "2152f848c8f7246a7309daec7ba96a7311c85b70e2ce825c9146ce52ce68aa4c"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/keys.json"
-hash = "a55550f7d42ea584e8773a1da2e3b3e8d846b4a1658974d16e59cffffaf6dac6"
+hash = "9acc3f31360aece8637c0e6eeb9ad07545fc788a06b4490701caf88db63fc0c9"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/maps.json"
-hash = "6bdfec2a75703002ea6314f0b06267db1a2c22dc9cc5c912814fcc3b5d1ef959"
+hash = "bf8a064bccc7c70e53244c310693974c63cd85a3027f729d3fbe13074a294187"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/storage.json"
-hash = "29c8a3c18edfc02e3fc39409b36c13a7cad8ffbf68c7962272ab6b81471ba1df"
+hash = "1ff508813617126debc469acdea8d75d1574fe38f5de4b23525e12bd6974732b"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/voice.json"
-hash = "5b7f001bf5d41b9e17679eb6bf055aeb63c8aa1dd86ffc217018334924288cd8"
+hash = "74250d2c0223a11caa204b8f06db9629f189d6d461b24f7c51e7a8e3e4b746a7"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/waystones.json"
-hash = "48014306da554526d9124e9697dbc38ad966749c04a6ffd7d5344480960075ac"
+hash = "3d793931dd4f3ff7fcc3772b39744def3a1162c651afb33ad4db54176292e85d"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/welcome.json"
 hash = "444bbc5532b2d6b8f7cf08a5b3a428050404e850a5aa1864c597aa4ccdb9421c"
 
 [[files]]
+file = "patchouli_books/fotf_field_guide/en_us/entries/grove/commands.json"
+hash = "7552a73b15fadca9890f0d856b21dcee3c8bf73daa976d5308be4cab84eabd0a"
+
+[[files]]
+file = "patchouli_books/fotf_field_guide/en_us/entries/grove/land.json"
+hash = "3a85fbb2a40e686b41e103b18dd09f219c76089ec489c50f108efa10397c3f50"
+
+[[files]]
+file = "patchouli_books/fotf_field_guide/en_us/entries/grove/mail.json"
+hash = "89e810758fad3512e34f0fe1155d9b006f1b668b0579df16959d6ba10d3bbd06"
+
+[[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/grove/rules.json"
-hash = "9dd32475ef934589c2c9ab32f7a44389fd2e8cd8a1eec5ee502e8320acb95196"
+hash = "bdb6abddb874c1410748adc1e6a1d022e6b3b63bfd06c52247269627356fe289"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/grove/safety.json"
-hash = "72e6d1fd7c6ceb4af2627db6f7e6b0fcde99f1866b94ef9cbe0cecc4727f4be3"
+hash = "c5ab26f15c2a278709b7811d2bd57bd6fa23b9ad0e94771cc87a0f1866301865"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/grove/time.json"
@@ -1503,11 +1523,11 @@ hash = "0e7b83371e3c63720fde982d3d88cfe3a834f19a9ca81194096646790443ed46"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/magic/ars_nouveau.json"
-hash = "5cb2fbcaf73284bd0342b58857ba588658c6810c043814b43cb291bc0bb63d29"
+hash = "bab176c0fd27b843585999361c87edf0d35661924993f37db3d2e4548515b9f1"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/magic/irons_spells.json"
-hash = "266aced2624e0dce0bae309f0c53b200a282314e94f7a71cc0bd1abb2ff14030"
+hash = "74904684c4d183f2347bd10e179f91394ea76f0699ca1c911b9a04d2062672e6"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/magic/which_magic.json"
@@ -1527,7 +1547,7 @@ hash = "4d5571ff29e04125f26b955611a570349848bff939df4be90db2da835bee6f1f"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/music.json"
-hash = "ed6a70e11ca211225d4985e5a098aaccd12de9d13ca25f3926d0ee5f6e706546"
+hash = "03620f74d4a55ff418f95b3a88468f59532c0df5ecb4f38e8071ccc51f4b6ca6"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/parcool.json"

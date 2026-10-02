@@ -7,6 +7,11 @@
     {
       "type": "patchouli:text",
       "text": "Four rare cave biomes deep underground: dinosaurs in the $(l)Primordial Caves$(), the sugary $(l)Candy Cavity$(), the deep-sea $(l)Abyssal Chasm$() and the eerie $(l)Forlorn Hollows$().$(br2)They are hard to find. Look up $(l)Cave Tablet$() and $(l)Cave Codex$() in JEI to learn how to track them down."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:cave_book",
+      "text": "The $(l)Cave Book$() describes every cave biome. Type $(l)/guide caves$()."
     }
   ]
 }

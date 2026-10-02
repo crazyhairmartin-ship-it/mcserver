@@ -1,0 +1,17 @@
+{
+  "name": "Claims, Pets & Animals",
+  "icon": "minecraft:lead",
+  "category": "patchouli:grove",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Inside claimed land:$(li)Friendly animals never despawn, even without a name tag (not monsters or fish)$(li)Grappling hooks work for everyone$(li)Only your party can build or open chests"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Other players can't hurt your tamed pets.$(br2)Whales won't attack your boats.$(br2)Butterflies, fireflies and critters live in almost every biome. Bring a net and a jar!",
+      "title": "Friendly Server"
+    }
+  ]
+}
