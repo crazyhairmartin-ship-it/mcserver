@@ -299,6 +299,14 @@ file = "kubejs/assets/biomesoplenty/textures/item/umbran_sign.png"
 hash = "c3ca0d363e59b69c38be90030b01aa30c551c82b02702e7233f0492e0adcc7d4"
 
 [[files]]
+file = "kubejs/assets/endermail/models/block/locker.json"
+hash = "4469a4c96abb92d2ce04af0a55c02d7ec4fab9ff74c94f83e34140e8d7bec816"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_filled.json"
+hash = "bd17b2899677ba098279bd4e1adb8c3de8aa9e770087d32beeac620bd300b6cc"
+
+[[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
 hash = "0c035630121e5ed9b1c1a50b3ce098adca9020da1f2aa4695d92b02e6e8cda09"
 
