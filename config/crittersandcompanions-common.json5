@@ -1,6 +1,7 @@
 // Critters & Companions spawns, widened for this pack:
 // fotf:wildlife/* tags (kubejs/data/fotf/tags/worldgen/biome/wildlife) add the BoP / Regions Unexplored biomes
 // the vanilla tags miss, and land critters spawn about twice as often (they compete with many other animal mods).
+// Dry-country bugs (jumping spiders, weevils, stag beetles, ladybugs) also spawn in the savanna group (scrubland, outback, etc.).
 {
 	configVersion: 2,
 	spawning: {
@@ -13,6 +14,7 @@
 			{ biome_spec: "#fotf:wildlife/jungle", weight: 8, min: 1, max: 2 }
 		],
 		jumping_spider: [
+			{ biome_spec: "#fotf:wildlife/savanna", weight: 4, min: 1, max: 1 },
 			{ biome_spec: "#fotf:wildlife/jungle", weight: 3, min: 1, max: 1 },
 			{ biome_spec: "#fotf:wildlife/forest", weight: 3, min: 1, max: 1 },
 			{ biome_spec: "minecraft:lush_caves", weight: 4, min: 1, max: 1 }
@@ -51,12 +53,14 @@
 			{ biome_spec: "#fotf:wildlife/ice", weight: 4, min: 2, max: 3 }
 		],
 		ladybug: [
+			{ biome_spec: "#fotf:wildlife/savanna", weight: 5, min: 1, max: 2 },
 			{ biome_spec: "#fotf:wildlife/forest", weight: 8, min: 1, max: 3 },
 			{ biome_spec: "#fotf:wildlife/plains", weight: 10, min: 1, max: 2 },
 			{ biome_spec: "minecraft:lush_caves", weight: 10, min: 1, max: 2 },
 			{ biome_spec: "minecraft:cherry_grove", weight: 12, min: 1, max: 2 }
 		],
 		stag_beetle: [
+			{ biome_spec: "#fotf:wildlife/savanna", weight: 4, min: 1, max: 2 },
 			{ biome_spec: "#fotf:wildlife/forest", weight: 6, min: 1, max: 2 },
 			{ biome_spec: "minecraft:lush_caves", weight: 10, min: 1, max: 2 }
 		],
@@ -76,6 +80,7 @@
 			{ biome_spec: "minecraft:lush_caves", weight: 10, min: 1, max: 2 }
 		],
 		weevil: [
+			{ biome_spec: "#fotf:wildlife/savanna", weight: 5, min: 1, max: 3 },
 			{ biome_spec: "#fotf:wildlife/forest", weight: 5, min: 1, max: 3 },
 			{ biome_spec: "#fotf:wildlife/plains", weight: 5, min: 1, max: 3 },
 			{ biome_spec: "minecraft:lush_caves", weight: 10, min: 1, max: 2 }
