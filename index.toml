@@ -195,6 +195,10 @@ file = "kubejs/assets/ars_nouveau/entity/signs/archwood.png"
 hash = "4294d4b35c6ee68cf8f1a39a49708a9a5b6d7d23d8cd1fdcac22c3c26c9b7f85"
 
 [[files]]
+file = "kubejs/assets/ars_nouveau/lang/en_us.json"
+hash = "535e2618fc20602eafff5f88d79b19f716f8a266de1ea81195acfad0c3dfad8c"
+
+[[files]]
 file = "kubejs/assets/ars_nouveau/textures/block/archwood_door_bottom.png"
 hash = "eab71c40ecf96885d5930d5351c42d108e8590edc519dde9b3ff4e611723b15f"
 
@@ -217,6 +221,10 @@ hash = "ab8077800ef501ff4937d387af3d28d47d2c768c67489c050f894d8a7cd5842f"
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/entity/signs/archwood.png"
 hash = "4294d4b35c6ee68cf8f1a39a49708a9a5b6d7d23d8cd1fdcac22c3c26c9b7f85"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/gui/sort_type.png"
+hash = "970cc23700a5371779d3ebfd88129dbf245893999b8ce29e3394b3eaa39afd19"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/item/archwood_boat.png"
@@ -1604,7 +1612,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfmail.pw.toml"
-hash = "aacf27a475291e030cb246ee7ecf68c3e3f288c7ec53d0ee50345986fd2a4ce9"
+hash = "ad32ef7d52cf5d7fd8d429cf658f1fbc6e8dcc045eb905a608b41f0f8eb66584"
 metafile = true
 
 [[files]]

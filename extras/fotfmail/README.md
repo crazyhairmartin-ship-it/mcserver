@@ -17,6 +17,9 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   vanilla model, so those two stay off on GeckoLib mobs.
   Shadow Hands and Blazing Protection bars (the two DI draws all the time) only show while the pet is
   fighting or was just hurt, then linger 5 seconds (`CollarEffectTiming`, client mixin on `LayerPetOverlays`).
+- **Creative-tab sort for the Storage Lectern.** A third sort mode after amount and name: items in creative
+  inventory order (`CreativeTabSort`, client mixin on Ars Nouveau's `AbstractStorageTerminalScreen`). Its icon
+  is the third tile of `kubejs/assets/ars_nouveau/textures/gui/sort_type.png`; tooltip in that folder's lang.
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates
 `src/fotfmail/MailboxWood.java` and every mailbox model, blockstate and recipe list together. Rebuild the jar with
