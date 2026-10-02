@@ -105,6 +105,7 @@ ENTRIES = [
     # ---------- Creatures & Companions ----------
     ('creatures', 'unicorns', 'Unicorns & Magical Horses', 'ultimate_unicorn_mod:unicorn_horn', [
         text('Unicorns, pegasi, hippocamps, reindeer and more live in forests, plains, hills and oceans.$(br2)Tame and ride them like horses. Pegasi fly: hold $(l)Space$() to go up and $(l)Left Ctrl$() to go down. Unicorns have magical powers!'),
+        text('Nightmares fly on speed, not wing power: gallop straight to full speed on open ground, then hold $(l)Space$(). Keep turns gentle. If they slow down, they glide back to the ground.$(br2)Their hoof fire and fireballs here never hurt friends, only monsters.', 'Nightmares'),
         spot(UNICORN_BOOK, 'The $(l)Unicorn Guidebook$() explains everything. Get one with $(l)/guide unicorn$().', 'Official Guide'),
         craft('fotf:saddle', 'Saddles can be crafted here: 5 leather, 1 iron ingot and 2 string.'),
     ]),

@@ -144,7 +144,7 @@ hash = "690bbfe812250957c73cf3ed85483528be81f24f02f93b4506b6242f0e37ea0f"
 
 [[files]]
 file = "config/ultimate_unicorn_mod-common.toml"
-hash = "248926d187eb3bfa7de19bcda564d2e88cefb9957125d736e3fbb36195374444"
+hash = "b1697ebdec89868605e22a5949843253ae0fd6efea80f232f49dd7de1b6afed7"
 
 [[files]]
 file = "config/wildernature.toml"
@@ -649,6 +649,10 @@ hash = "9c0de00c70d542caeb2f103f3272d9193121b20ae053d97fc55a199f5280f746"
 [[files]]
 file = "kubejs/startup_scripts/duplicate_groups.js"
 hash = "95d59a1f89994e1b11235af28beab4072d84c088ce72f9e26113f3ee35718def"
+
+[[files]]
+file = "kubejs/startup_scripts/friendly_fireballs.js"
+hash = "8c1add65c50ab5ee9d0024a42000ae68e570884f7c3542d1881775f6605d1e56"
 
 [[files]]
 file = "kubejs/startup_scripts/protect_boats.js"
@@ -1491,7 +1495,7 @@ hash = "95f0837fe030a727b0b49942f41538555f7dd4eef69178b85ab91ef339c6a8cd"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/creatures/unicorns.json"
-hash = "9ec8bed8dc753787a67b638daf933ff4a824b947368d51a41695fc0970607575"
+hash = "3fa4af497ca9ccb545f2c83670792c6324b9244ff4c27ba42c22518e49ab2921"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/creatures/wildlife.json"
