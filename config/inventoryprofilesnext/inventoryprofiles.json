@@ -12,7 +12,16 @@
         "quick_slot_1_profile": "Default"
     },
     "AutoRefillSettings": {
-        "refill_armor": false,
-        "refill_before_tool_break": false
+        "refill_armor": {
+            "value": false
+        },
+        "refill_before_tool_break": {
+            "value": false
+        }
+    },
+    "GuiSettings": {
+        "enable_profiles_ui": {
+            "value": false
+        }
     }
 }
