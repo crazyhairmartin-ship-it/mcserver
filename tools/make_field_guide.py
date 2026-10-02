@@ -222,10 +222,11 @@ ENTRIES = [
         text('Days are long here, and sunrises and sunsets last a long time, so enjoy the view!$(br2)The night is skipped when at least half of the players online are sleeping.'),
     ]),
     ('grove', 'mail', 'Sending Mail', 'endermail:package', [
-        spot('endermail:package', 'Place a $(l)Package$(), put items inside, then seal it with $(l)Packing Tape$().$(br2)Right-click it with a $(l)Stamp$() and enter coordinates or a friend\'s Locker ID. An enderman delivers it, any distance!'),
+        spot('endermail:package', 'Place a $(l)Package$() and put items inside.$(br2)Then right-click it holding a $(l)Stamp$() and enter coordinates or a friend\'s Locker ID. An enderman mail carrier picks it up and delivers it, any distance!'),
         spot('endermail:locker', 'Craft a birdhouse $(l)Locker$() (8 planks around a Stamp), place it and give it an ID. Friends can mail you with just the ID. A letter peeks out when mail arrives!', 'Your Mailbox'),
         spot('endermail:package_controller', 'The $(l)Package Controller$() shows where your package is and whether it arrived.', 'Tracking'),
-        text('Mail is cheap here:$(li)$(l)Stamps$(): paper + any dye$(li)$(l)Packing Tape$(): paper + string$(li)$(l)Package$(): chest + tape$(li)$(l)Mailbox$(): 8 planks + stamp$(li)$(l)Controller$(): package + paper + redstone', 'Recipes'),
+        text('Send a letter: write in a $(l)Book and Quill$() (paper + feather + any dye), sign it, and mail it in a package. Add a gift too!', 'Letters'),
+        text('Mail is cheap here:$(li)$(l)Stamps$(): paper + any dye$(li)$(l)Packing Tape$(): paper + string$(li)$(l)Package$(): chest + tape, or 3 paper + tape$(li)$(l)Mailbox$(): 8 planks + stamp$(li)$(l)Controller$(): package + paper + redstone', 'Recipes'),
     ]),
     ('grove', 'land', 'Claims, Pets & Animals', 'minecraft:lead', [
         text('Inside claimed land:$(li)Friendly animals never despawn, even without a name tag (not monsters or fish)$(li)Grappling hooks work for everyone$(li)Only your party can build or open chests'),

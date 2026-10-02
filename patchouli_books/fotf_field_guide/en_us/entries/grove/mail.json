@@ -7,7 +7,7 @@
     {
       "type": "patchouli:spotlight",
       "item": "endermail:package",
-      "text": "Place a $(l)Package$(), put items inside, then seal it with $(l)Packing Tape$().$(br2)Right-click it with a $(l)Stamp$() and enter coordinates or a friend's Locker ID. An enderman delivers it, any distance!"
+      "text": "Place a $(l)Package$() and put items inside.$(br2)Then right-click it holding a $(l)Stamp$() and enter coordinates or a friend's Locker ID. An enderman mail carrier picks it up and delivers it, any distance!"
     },
     {
       "type": "patchouli:spotlight",
@@ -23,7 +23,12 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Mail is cheap here:$(li)$(l)Stamps$(): paper + any dye$(li)$(l)Packing Tape$(): paper + string$(li)$(l)Package$(): chest + tape$(li)$(l)Mailbox$(): 8 planks + stamp$(li)$(l)Controller$(): package + paper + redstone",
+      "text": "Send a letter: write in a $(l)Book and Quill$() (paper + feather + any dye), sign it, and mail it in a package. Add a gift too!",
+      "title": "Letters"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Mail is cheap here:$(li)$(l)Stamps$(): paper + any dye$(li)$(l)Packing Tape$(): paper + string$(li)$(l)Package$(): chest + tape, or 3 paper + tape$(li)$(l)Mailbox$(): 8 planks + stamp$(li)$(l)Controller$(): package + paper + redstone",
       "title": "Recipes"
     }
   ]
