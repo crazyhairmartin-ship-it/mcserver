@@ -15,6 +15,8 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   Naturalist and unicorn-mod pets showed nothing. `PetOverlaysGeoLayer` runs DI's own `LayerPetOverlays` from a
   GeckoLib render layer on every GeoEntityRenderer. The immunity-frame glint and zombie-pet overlay redraw a
   vanilla model, so those two stay off on GeckoLib mobs.
+  Shadow Hands and Blazing Protection bars (the two DI draws all the time) only show while the pet is
+  fighting or was just hurt, then linger 5 seconds (`CollarEffectTiming`, client mixin on `LayerPetOverlays`).
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates
 `src/fotfmail/MailboxWood.java` and every mailbox model, blockstate and recipe list together. Rebuild the jar with
