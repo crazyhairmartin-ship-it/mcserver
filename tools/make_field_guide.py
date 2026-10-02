@@ -223,7 +223,7 @@ ENTRIES = [
     ]),
     ('grove', 'mail', 'Sending Mail', 'endermail:package', [
         spot('endermail:package', 'Place a $(l)Package$(), put items inside, then seal it with $(l)Packing Tape$().$(br2)Right-click it with a $(l)Stamp$() and enter coordinates or a friend\'s Locker ID. An enderman delivers it, any distance!'),
-        spot('endermail:locker', 'Place a $(l)Locker$() and give it an ID. Friends can mail you with just the ID, and packages sent within 50 blocks of it land inside.', 'Your Mailbox'),
+        spot('endermail:locker', 'Craft a birdhouse $(l)Locker$() (8 planks around a Stamp), place it and give it an ID. Friends can mail you with just the ID. A letter peeks out when mail arrives!', 'Your Mailbox'),
         spot('endermail:package_controller', 'The $(l)Package Controller$() shows where your package is and whether it arrived.', 'Tracking'),
     ]),
     ('grove', 'land', 'Claims, Pets & Animals', 'minecraft:lead', [

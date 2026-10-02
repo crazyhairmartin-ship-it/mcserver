@@ -607,6 +607,10 @@ file = "kubejs/server_scripts/long_climbing_rope.js"
 hash = "08d0cf09fccbf79e3391e7496b483041a0d222102eb5955cc01f2124f0ebee73"
 
 [[files]]
+file = "kubejs/server_scripts/mailbox_recipe.js"
+hash = "b49ad505d4b8a1eda1fe8bf6e6c83ee114d0a92117f918d3c44aeb3b35d6e75b"
+
+[[files]]
 file = "kubejs/server_scripts/protect_pets.js"
 hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
@@ -1575,7 +1579,7 @@ hash = "3a85fbb2a40e686b41e103b18dd09f219c76089ec489c50f108efa10397c3f50"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/grove/mail.json"
-hash = "89e810758fad3512e34f0fe1155d9b006f1b668b0579df16959d6ba10d3bbd06"
+hash = "8b6cd22335709e48f2248b19c39ab1c24a165d315b03cb4f4448496092baf9c2"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/grove/rules.json"
