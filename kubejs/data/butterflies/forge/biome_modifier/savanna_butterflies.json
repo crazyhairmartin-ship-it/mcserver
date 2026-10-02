@@ -1,6 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#fotf:butterflies/savanna",
+  "biomes": "#fotf:wildlife/savanna",
   "spawners": [
     {
       "type": "butterflies:buckeye",

@@ -41,6 +41,10 @@ file = "config/cosmeticarmorreworked-common.toml"
 hash = "dd31558c1e5c9b2e679519323a197ff718c12a7f134a2fc10fbbf851449e6254"
 
 [[files]]
+file = "config/crittersandcompanions-common.json5"
+hash = "b5900cf223e662e077ab2b38df11b5da138f8bedc26b11b266903b8ef2f1d021"
+
+[[files]]
 file = "config/defaultoptions/keybindings.txt"
 hash = "6a53fa9a742d5137f3144fd891639bc4895fa59ba5788cceb04246f5bbb0ac3a"
 
@@ -272,58 +276,62 @@ hash = "a4303ddfc53997bea565041f749d68f8c44434e6cd0fb7d0ec5547f7fb7b172d"
 
 [[files]]
 file = "kubejs/data/butterflies/forge/biome_modifier/forest_butterflies.json"
-hash = "6e277c8f047f72660ab84c8578aa020fa7a661b9ee3fb98ec86d1f1cc4a2c7a9"
+hash = "334886da19b05c111fc27e8c724ce676a73697166110e6738f74fc858ab28349"
 
 [[files]]
 file = "kubejs/data/butterflies/forge/biome_modifier/hill_butterflies.json"
-hash = "af591d17504628a323f0fce7c35d06364b4e082d3bb349d9eb34080b38a0dc40"
+hash = "fa19d5b0fe3b17095b5ee3b493dd3a4f01e479c77a4b21803f372742253db966"
 
 [[files]]
 file = "kubejs/data/butterflies/forge/biome_modifier/ice_butterflies.json"
-hash = "cdba29d7b0eebfeebf3b0143507da90e564cd39b0c34f738d39c90623c33e807"
+hash = "2c4e6ba736a622c63d6ea3a8f0b81e3d8b4dd45966ee334fe8c232a102c7bc93"
 
 [[files]]
 file = "kubejs/data/butterflies/forge/biome_modifier/jungle_butterflies.json"
-hash = "1403d0dfc6ff94dbb3672b28abd29e777cab912aab58fef3c2a579f91d97c6bc"
+hash = "40259243cf4acb1706617a4c3a9c7f524fb9ba51db044a30b51f1699d41df426"
 
 [[files]]
 file = "kubejs/data/butterflies/forge/biome_modifier/plains_butterflies.json"
-hash = "4101a559784792078d1f0835ebee7d755ff6260b0c992fef6c7047149a1c9813"
+hash = "5953584650a16c795e3f203e7898850d970e95a3c79d344719c2cb938e40b13f"
 
 [[files]]
 file = "kubejs/data/butterflies/forge/biome_modifier/savanna_butterflies.json"
-hash = "88c002251e0939840bffe9cd51891169fa7709b80ba9e567fd426d290a637fa8"
+hash = "2f107e82d0baa0a099d7b4a5c066719eed66ee82cb5e99b7a371d70c4886c259"
 
 [[files]]
 file = "kubejs/data/butterflies/forge/biome_modifier/wetlands_butterflies.json"
-hash = "d891dda642e2582c72a7fd967374c7d58a48f4cb17225a72e7ca3cca40ea0e34"
+hash = "8c307ef8ef240e4f2aa097c715f7e30499299db75d77cbe232927751bd18b6ce"
 
 [[files]]
-file = "kubejs/data/fotf/tags/worldgen/biome/butterflies/forest.json"
+file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/forest.json"
 hash = "9a8d82637e79aefda80926bbfd3a882a63a9c94d8a0e826f99fc31a73a6f1318"
 
 [[files]]
-file = "kubejs/data/fotf/tags/worldgen/biome/butterflies/hill.json"
+file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/hill.json"
 hash = "4974266cc1b1807400fe0304c377ed3df68c08258fc552bd28740bd260ac07b3"
 
 [[files]]
-file = "kubejs/data/fotf/tags/worldgen/biome/butterflies/ice.json"
+file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/ice.json"
 hash = "190d782c08f48e80cc1e5ba287fe3f30e16acea2b4c15d6985696e868622868a"
 
 [[files]]
-file = "kubejs/data/fotf/tags/worldgen/biome/butterflies/jungle.json"
+file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/jungle.json"
 hash = "7800c40a244a670a69452ed1d901c60f3d96bfd1f8059fbd2d4203993d8d16f5"
 
 [[files]]
-file = "kubejs/data/fotf/tags/worldgen/biome/butterflies/plains.json"
+file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/plains.json"
 hash = "d2ce760ca0ed9bf99f808850dc247ea26540cca34e0797422f900ba1045e0611"
 
 [[files]]
-file = "kubejs/data/fotf/tags/worldgen/biome/butterflies/savanna.json"
+file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/river.json"
+hash = "83cb96d344916c6ad7163b5c40c2750c99f8f09d17858cabe089814444bd91c8"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/savanna.json"
 hash = "71e6d22471fb2af2e2eb4561acc68e4ed670d6d5a1a79b093002ecbaa189aa03"
 
 [[files]]
-file = "kubejs/data/fotf/tags/worldgen/biome/butterflies/wetlands.json"
+file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/wetlands.json"
 hash = "7c775ea2f87afc700bdb63e4267621b68bc1e5b0634e227091b666ee6e2c42ef"
 
 [[files]]
@@ -348,7 +356,7 @@ hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
 
 [[files]]
 file = "kubejs/server_scripts/butterfly_sightings.js"
-hash = "7ac814de83a708b29712abdffafed3983924a08f474e9ccfe6bd1a7d3145ddb3"
+hash = "e522cb17e6a30f58e2d8416722a6e4ce686fbaede4d912e2287e6c7cbca9f0a8"
 
 [[files]]
 file = "kubejs/server_scripts/field_guide.js"

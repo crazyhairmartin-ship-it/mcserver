@@ -1,6 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#fotf:butterflies/forest",
+  "biomes": "#fotf:wildlife/forest",
   "spawners": [
     {
       "type": "butterflies:admiral",

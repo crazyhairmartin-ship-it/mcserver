@@ -8,16 +8,16 @@ let SIGHTING_MAX = 4 // butterflies within SIGHTING_RADIUS before we stop adding
 let SIGHTING_RADIUS = 48
 
 // Checked in order: the first biome tag that matches the spot decides the species.
-// fotf:butterflies/* = the mod's own biome tags plus BoP/Regions Unexplored/taiga biomes that lacked them
-// (kubejs/data/fotf/tags/worldgen/biome/butterflies; the mod's spawns use the same tags).
+// fotf:wildlife/* = the vanilla/Forge biome tags plus BoP/Regions Unexplored/taiga biomes that lacked them
+// (kubejs/data/fotf/tags/worldgen/biome/wildlife; butterfly and Critters & Companions spawns use them too).
 let SIGHTING_SPECIES = [
-  ['#fotf:butterflies/jungle', ['morpho', 'glasswing', 'clipper', 'clipperblue', 'clippergreen', 'clipperorange', 'clipperpink', 'clipperpurple']],
-  ['#fotf:butterflies/ice', ['ice', 'clearwing-hummingbird']],
-  ['#fotf:butterflies/savanna', ['buckeye', 'common-crow', 'peacock-pansy-dry']],
-  ['#fotf:butterflies/wetlands', ['admiral', 'cabbage', 'forester', 'hairstreak', 'longwing', 'peacock-pansy-wet']],
-  ['#fotf:butterflies/forest', ['admiral', 'bluemoon', 'commander', 'common', 'emperor', 'forester', 'hairstreak', 'peacock', 'rainbow', 'green-skirt-baron']],
-  ['#fotf:butterflies/plains', ['buckeye', 'cabbage', 'common', 'commongrassyellow', 'heath', 'monarch', 'peacock', 'rainbow', 'swallowtail']],
-  ['#fotf:butterflies/hill', ['chalkhill', 'common-crow', 'common-mime']],
+  ['#fotf:wildlife/jungle', ['morpho', 'glasswing', 'clipper', 'clipperblue', 'clippergreen', 'clipperorange', 'clipperpink', 'clipperpurple']],
+  ['#fotf:wildlife/ice', ['ice', 'clearwing-hummingbird']],
+  ['#fotf:wildlife/savanna', ['buckeye', 'common-crow', 'peacock-pansy-dry']],
+  ['#fotf:wildlife/wetlands', ['admiral', 'cabbage', 'forester', 'hairstreak', 'longwing', 'peacock-pansy-wet']],
+  ['#fotf:wildlife/forest', ['admiral', 'bluemoon', 'commander', 'common', 'emperor', 'forester', 'hairstreak', 'peacock', 'rainbow', 'green-skirt-baron']],
+  ['#fotf:wildlife/plains', ['buckeye', 'cabbage', 'common', 'commongrassyellow', 'heath', 'monarch', 'peacock', 'rainbow', 'swallowtail']],
+  ['#fotf:wildlife/hill', ['chalkhill', 'common-crow', 'common-mime']],
   ['#forge:is_plateau', ['chalkhill', 'common-crow', 'common-mime']],
 ]
 

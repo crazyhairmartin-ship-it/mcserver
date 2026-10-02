@@ -1,6 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#fotf:butterflies/plains",
+  "biomes": "#fotf:wildlife/plains",
   "spawners": [
     {
       "type": "butterflies:buckeye",

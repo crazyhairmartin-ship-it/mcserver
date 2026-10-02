@@ -1,6 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#fotf:butterflies/hill",
+  "biomes": "#fotf:wildlife/hill",
   "spawners": [
     {
       "type": "butterflies:chalkhill",

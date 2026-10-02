@@ -1,0 +1,86 @@
+// Critters & Companions spawns, widened for this pack:
+// fotf:wildlife/* tags (kubejs/data/fotf/tags/worldgen/biome/wildlife) add the BoP / Regions Unexplored biomes
+// the vanilla tags miss, and land critters spawn about twice as often (they compete with many other animal mods).
+{
+	configVersion: 2,
+	spawning: {
+		prevent_monster_spawns_in_lush_caves: false,
+		leaf_insect: [
+			{ biome_spec: "#fotf:wildlife/jungle", weight: 14, min: 1, max: 1 },
+			{ biome_spec: "#fotf:wildlife/forest", weight: 8, min: 1, max: 1 }
+		],
+		red_panda: [
+			{ biome_spec: "#fotf:wildlife/jungle", weight: 8, min: 1, max: 2 }
+		],
+		jumping_spider: [
+			{ biome_spec: "#fotf:wildlife/jungle", weight: 3, min: 1, max: 1 },
+			{ biome_spec: "#fotf:wildlife/forest", weight: 3, min: 1, max: 1 },
+			{ biome_spec: "minecraft:lush_caves", weight: 4, min: 1, max: 1 }
+		],
+		ferret: [
+			{ biome_spec: "#fotf:wildlife/forest", weight: 5, min: 2, max: 3 },
+			{ biome_spec: "#fotf:wildlife/plains", weight: 6, min: 2, max: 3 }
+		],
+		sea_bunny: [
+			{ biome_spec: "minecraft:ocean", weight: 16, min: 1, max: 2 },
+			{ biome_spec: "minecraft:deep_ocean", weight: 16, min: 1, max: 2 },
+			{ biome_spec: "minecraft:warm_ocean", weight: 32, min: 1, max: 4 },
+			{ biome_spec: "minecraft:lukewarm_ocean", weight: 16, min: 1, max: 4 },
+			{ biome_spec: "minecraft:deep_lukewarm_ocean", weight: 16, min: 1, max: 4 }
+		],
+		dumbo_octopus: [
+			{ biome_spec: "minecraft:ocean", weight: 4, min: 1, max: 1 },
+			{ biome_spec: "minecraft:deep_ocean", weight: 4, min: 1, max: 1 },
+			{ biome_spec: "minecraft:warm_ocean", weight: 8, min: 1, max: 1 },
+			{ biome_spec: "minecraft:lukewarm_ocean", weight: 6, min: 1, max: 1 },
+			{ biome_spec: "minecraft:deep_lukewarm_ocean", weight: 6, min: 1, max: 1 }
+		],
+		otter: [
+			{ biome_spec: "#fotf:wildlife/river", weight: 3, min: 2, max: 4 }
+		],
+		koi_fish: [
+			{ biome_spec: "#fotf:wildlife/river", weight: 3, min: 2, max: 5 }
+		],
+		dragonfly: [
+			{ biome_spec: "#fotf:wildlife/river", weight: 6, min: 1, max: 1 },
+			{ biome_spec: "#fotf:wildlife/wetlands", weight: 8, min: 1, max: 1 },
+			{ biome_spec: "minecraft:lush_caves", weight: 10, min: 1, max: 1 }
+		],
+		shima_enaga: [
+			{ biome_spec: "#minecraft:spawns_snow_foxes", weight: 3, min: 2, max: 3 },
+			{ biome_spec: "#fotf:wildlife/ice", weight: 4, min: 2, max: 3 }
+		],
+		ladybug: [
+			{ biome_spec: "#fotf:wildlife/forest", weight: 8, min: 1, max: 3 },
+			{ biome_spec: "#fotf:wildlife/plains", weight: 10, min: 1, max: 2 },
+			{ biome_spec: "minecraft:lush_caves", weight: 10, min: 1, max: 2 },
+			{ biome_spec: "minecraft:cherry_grove", weight: 12, min: 1, max: 2 }
+		],
+		stag_beetle: [
+			{ biome_spec: "#fotf:wildlife/forest", weight: 6, min: 1, max: 2 },
+			{ biome_spec: "minecraft:lush_caves", weight: 10, min: 1, max: 2 }
+		],
+		roly_poly: [
+			{ biome_spec: "#fotf:wildlife/forest", weight: 6, min: 1, max: 3 },
+			{ biome_spec: "#fotf:wildlife/wetlands", weight: 10, min: 1, max: 2 },
+			{ biome_spec: "minecraft:lush_caves", weight: 10, min: 1, max: 2 }
+		],
+		snail: [
+			{ biome_spec: "#fotf:wildlife/forest", weight: 6, min: 1, max: 2 },
+			{ biome_spec: "#fotf:wildlife/wetlands", weight: 10, min: 1, max: 2 },
+			{ biome_spec: "minecraft:lush_caves", weight: 8, min: 1, max: 2 }
+		],
+		stick_bug: [
+			{ biome_spec: "#fotf:wildlife/forest", weight: 6, min: 1, max: 2 },
+			{ biome_spec: "#fotf:wildlife/jungle", weight: 6, min: 1, max: 2 },
+			{ biome_spec: "minecraft:lush_caves", weight: 10, min: 1, max: 2 }
+		],
+		weevil: [
+			{ biome_spec: "#fotf:wildlife/forest", weight: 5, min: 1, max: 3 },
+			{ biome_spec: "#fotf:wildlife/plains", weight: 5, min: 1, max: 3 },
+			{ biome_spec: "minecraft:lush_caves", weight: 10, min: 1, max: 2 }
+		]
+	},
+	necklace: { swim_speed: 0.2, drowned_range_debuff: 0.1, guardian_range_debuff: 0.1 },
+	grapplingHook: { launch_speed: 1.0, max_speed: 2.0, max_distance: 32.0, enable_durability: true }
+}

@@ -1,6 +1,6 @@
 {
   "type": "forge:add_spawns",
-  "biomes": "#fotf:butterflies/ice",
+  "biomes": "#fotf:wildlife/ice",
   "spawners": [
     {
       "type": "butterflies:clearwing-hummingbird",
