@@ -135,6 +135,10 @@ file = "defaultconfigs/hourglass-server.toml"
 hash = "fec3832f24b324ea91f342b8a21f7eca74dbadf7e44437746a255a9863e34f94"
 
 [[files]]
+file = "defaultconfigs/openpartiesandclaims-server.toml"
+hash = "ae5b5a2d93492777ad7716ab24863db75ad759555d03900b57bf471103d8d7a9"
+
+[[files]]
 file = "kubejs/assets/alexsmobs/sounds.json"
 hash = "17d0b3f119bf63465152eabf6512cd7443b2ed0dff978a01f8a564bb606b1724"
 
@@ -356,7 +360,7 @@ hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
 
 [[files]]
 file = "kubejs/server_scripts/butterfly_sightings.js"
-hash = "e522cb17e6a30f58e2d8416722a6e4ce686fbaede4d912e2287e6c7cbca9f0a8"
+hash = "ab6c957144e6fa572b983394a4d5f1fe9a0456ec5933a19e467834e63e96fa03"
 
 [[files]]
 file = "kubejs/server_scripts/field_guide.js"
