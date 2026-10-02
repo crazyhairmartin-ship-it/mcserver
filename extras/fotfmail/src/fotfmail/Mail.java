@@ -20,7 +20,7 @@ import net.minecraftforge.common.extensions.IForgeEntity;
 /**
  * Sends a signed letter to the mailbox whose ID is the letter's title.
  *
- * Same dimension: one of Ender Mail's mail carriers appears a few blocks in front of the mailbox you used and walks
+ * Same dimension: one of Ender Mail's mail carriers appears about 12 blocks in front of the mailbox you used and walks
  * the letter over to the friend's mailbox (CarrierGoal). Ender Mail's own carrier goals are off for these carriers,
  * so its pick-up step (which removes a package block) never runs.
  * Other dimensions: delivered instantly, since carriers can't cross dimensions.
@@ -60,10 +60,7 @@ final class Mail {
                 data.m_128356_(CarrierGoal.TO, pos.m_121878_());
                 carrier.m_21530_(); // never despawn mid-delivery
                 // Arrive a few steps out in front of the mailbox and walk up to it (CarrierGoal does the rest).
-                BlockPos start = CarrierGoal.standableNear(level, CarrierGoal.inFrontOf(level, fromMailbox, 6));
-                if (start == null) {
-                    start = CarrierGoal.standableNear(level, CarrierGoal.inFrontOf(level, fromMailbox, 2));
-                }
+                BlockPos start = CarrierGoal.spotInFront(level, fromMailbox, CarrierGoal.DISTANCE);
                 if (start != null) {
                     carrier.m_6034_(start.m_123341_() + 0.5, start.m_123342_(), start.m_123343_() + 0.5);
                 }

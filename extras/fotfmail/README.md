@@ -7,7 +7,7 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   `kubejs/server_scripts/mail_recipes.js`), and breaking the mailbox keeps it (loot table `copy_state`).
 - **Letters.** `fotfmail:letter`: write on it like a book and quill, sign it with the recipient's mailbox ID as
   the title, then right-click any mailbox. One of Ender Mail's mail carriers (wearing a mail cap, see
-  `MailHatLayer`) appears a few blocks in front of that mailbox, walks up, takes the letter, walks off and
+  `MailHatLayer`) appears about 12 blocks in front of that mailbox, walks up, takes the letter, walks off and
   teleports; then appears in front of the friend's mailbox, walks up, drops the letter in, walks away and
   teleports out (`CarrierGoal`; Ender Mail's own carrier goals and random teleports are off for these carriers).
   If nobody is near the friend's mailbox it's delivered straight in. Other dimensions get it instantly.
