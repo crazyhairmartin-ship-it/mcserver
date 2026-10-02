@@ -24,7 +24,7 @@ import net.minecraftforge.registries.RegistryObject;
  * - Mailboxes (Ender Mail lockers) get a "wood" block state, set from the crafting recipe's planks
  *   (item NBT BlockStateTag) and kept when broken (loot table copy_state).
  * - Letters: write on one like a book and quill, sign it with the recipient's mailbox ID as the title,
- *   then right-click any mailbox to deliver it straight into theirs.
+ *   then right-click any mailbox: one of Ender Mail's carriers (wearing a mail cap) takes it to theirs.
  *
  * Compiled against SRG-named Minecraft (see build.sh), so vanilla methods appear as m_XXXX_.
  */
@@ -60,7 +60,7 @@ public class FotfMail {
         event.setCanceled(true);
         event.setCancellationResult(InteractionResult.m_19078_(level.m_5776_()));
         if (!level.m_5776_() && event.getEntity() instanceof ServerPlayer player) {
-            Mail.send(player, stack);
+            Mail.send(player, event.getPos(), stack);
         }
     }
 }

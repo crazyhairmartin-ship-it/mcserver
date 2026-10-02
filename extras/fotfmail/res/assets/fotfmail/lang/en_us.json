@@ -6,5 +6,6 @@
   "tooltip.fotfmail.send": "Right-click any mailbox to send",
   "message.fotfmail.sent": "Letter sent to mailbox %s!",
   "message.fotfmail.full": "Mailbox %s is full. Ask them to empty it!",
-  "message.fotfmail.no_mailbox": "No mailbox has the ID %s. Check the spelling (it's the title you signed with)."
+  "message.fotfmail.no_mailbox": "No mailbox has the ID %s. Check the spelling (it's the title you signed with).",
+  "message.fotfmail.on_the_way": "A mail carrier is taking your letter to mailbox %s!"
 }

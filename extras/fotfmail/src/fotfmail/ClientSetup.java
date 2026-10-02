@@ -1,12 +1,18 @@
 package fotfmail;
 
 import java.lang.reflect.Method;
+import com.chaosthedude.endermail.client.render.EnderMailmanRenderer;
+import com.chaosthedude.endermail.registry.EnderMailEntities;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.LivingEntityRenderer;
+import net.minecraft.client.renderer.entity.layers.RenderLayer;
 import net.minecraft.client.renderer.item.ClampedItemPropertyFunction;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -22,6 +28,22 @@ final class ClientSetup {
 
     static void init(IEventBus modBus) {
         modBus.addListener(ClientSetup::setup);
+        modBus.addListener(ClientSetup::addLayers);
+    }
+
+    /** Puts the mail cap on Ender Mail's carrier. addLayer is protected in the SRG jar; Forge opens it at runtime. */
+    private static void addLayers(EntityRenderersEvent.AddLayers event) {
+        EntityRenderer<?> renderer = event.getRenderer(EnderMailEntities.ENDER_MAILMAN.get());
+        if (!(renderer instanceof EnderMailmanRenderer carrier)) {
+            return;
+        }
+        try {
+            Method addLayer = LivingEntityRenderer.class.getDeclaredMethod("m_115326_", RenderLayer.class);
+            addLayer.setAccessible(true);
+            addLayer.invoke(carrier, new MailHatLayer(carrier));
+        } catch (ReflectiveOperationException e) {
+            LogManager.getLogger(FotfMail.MODID).error("Couldn't add the mail carrier's hat", e);
+        }
     }
 
     private static void setup(FMLClientSetupEvent event) {

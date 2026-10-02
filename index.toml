@@ -1387,13 +1387,12 @@ file = "kubejs/startup_scripts/duplicate_groups.js"
 hash = "95d59a1f89994e1b11235af28beab4072d84c088ce72f9e26113f3ee35718def"
 
 [[files]]
-<<<<<<< HEAD
 file = "kubejs/startup_scripts/friendly_fireballs.js"
 hash = "8c1add65c50ab5ee9d0024a42000ae68e570884f7c3542d1881775f6605d1e56"
-=======
+
+[[files]]
 file = "kubejs/startup_scripts/mailbox_woods.js"
 hash = "8401f71d28bcb037ad3787668b01e855e49f61d2983bc9f78455b2eac57cfbe7"
->>>>>>> 1ada3c1 (Mail add-on (test): mailboxes in every wood picked by recipe, writable letters sent from any mailbox)
 
 [[files]]
 file = "kubejs/startup_scripts/protect_boats.js"
@@ -1605,7 +1604,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfmail.pw.toml"
-hash = "359c5ba523448f662deb81225206d5bb5486ae165ee93da74ef997bbb4e518a3"
+hash = "01580f5c510fdfddfe88af6d20cb02948c42890c1b9b85a029fc0530ab77dbf4"
 metafile = true
 
 [[files]]

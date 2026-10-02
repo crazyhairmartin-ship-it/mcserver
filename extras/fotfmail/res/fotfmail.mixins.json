@@ -3,6 +3,12 @@
   "minVersion": "0.8",
   "package": "fotfmail.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": ["LockerBlockMixin", "ServerGamePacketListenerImplMixin"],
-  "injectors": { "defaultRequire": 1 }
+  "mixins": [
+    "LockerBlockMixin",
+    "ServerGamePacketListenerImplMixin",
+    "EnderMailmanEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
 }

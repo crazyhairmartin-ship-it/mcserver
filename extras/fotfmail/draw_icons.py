@@ -61,3 +61,28 @@ def sealed():
 letter()
 sealed()
 print('icons drawn')
+
+
+def hat():
+    """64x32 texture for MailHatLayer: crown UV (0,0) 9x3x9, visor (0,12) 9x0.5x3, badge (0,17) 2x2x0.25."""
+    navy, navy_dark, band, visor, gold, gold_dark = (
+        (44, 58, 104, 255), (32, 42, 78, 255), (70, 92, 150, 255), (22, 22, 28, 255), (232, 190, 64, 255), (176, 132, 36, 255))
+    img = Image.new('RGBA', (64, 32), CLEAR)
+    px = img.load()
+    for y in range(0, 12):           # crown: top/bottom faces in rows 0-8, sides in rows 9-11
+        for x in range(0, 36):
+            px[x, y] = navy if y < 9 else (band if y == 11 else navy)
+    for x in range(0, 36, 3):        # a little texture on the top
+        px[x, 4] = navy_dark
+    for y in range(12, 16):          # visor
+        for x in range(0, 24):
+            px[x, y] = visor
+    for y in range(17, 20):          # badge
+        for x in range(0, 6):
+            px[x, y] = gold
+    px[1, 18] = gold_dark
+    img.save('res/assets/fotfmail/textures/entity/mail_hat.png')
+
+
+hat()
+print('hat drawn')
