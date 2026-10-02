@@ -1,0 +1,21 @@
+{
+  "item.fotfmail.letter": "Letter",
+  "item.fotfmail.letter.to": "Letter to %s",
+  "tooltip.fotfmail.write": "Write on it, then sign it with a friend's mailbox ID",
+  "tooltip.fotfmail.from": "From %s",
+  "tooltip.fotfmail.send": "Right-click any mailbox to send",
+  "message.fotfmail.sent": "Letter sent to mailbox %s!",
+  "message.fotfmail.full": "Mailbox %s is full. Ask them to empty it!",
+  "message.fotfmail.no_mailbox": "No mailbox has the ID %s. Check the spelling (it's the title you signed with).",
+  "message.fotfmail.on_the_way": "Letter sent! A mail carrier will come to pick it up for mailbox %s.",
+  "fotfmail.letter.recipient": "Enter Recipient:",
+  "fotfmail.letter.seal_warning": "Signing seals the letter. Then right-click any mailbox to send it!",
+  "fotfmail.package.recipient": "Recipient",
+  "fotfmail.package.send": "Send",
+  "message.fotfmail.package_sent": "Package sent! A mail carrier will come to pick it up for mailbox %s.",
+  "message.fotfmail.package_empty": "Put something in the package first!",
+  "message.fotfmail.package_no_recipient": "Type the recipient's mailbox ID first.",
+  "message.fotfmail.package_other_dimension": "Mailbox %s is in another dimension. Packages can only go to mailboxes in this one.",
+  "fotfmail.package.from": "From:",
+  "fotfmail.package.sent_to": "Sent to:"
+}

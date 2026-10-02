@@ -1,0 +1,492 @@
+[
+ {
+  "key": "oak",
+  "planks": "minecraft:oak_planks",
+  "texture": "minecraft:block/oak_planks"
+ },
+ {
+  "key": "alexscaves_pewen",
+  "planks": "alexscaves:pewen_planks",
+  "texture": "alexscaves:block/pewen/pewen_planks"
+ },
+ {
+  "key": "alexscaves_thornwood",
+  "planks": "alexscaves:thornwood_planks",
+  "texture": "alexscaves:block/thornwood/thornwood_planks"
+ },
+ {
+  "key": "ars_nouveau_archwood",
+  "planks": "ars_nouveau:archwood_planks",
+  "texture": "ars_nouveau:block/archwood_planks"
+ },
+ {
+  "key": "beachparty_palm",
+  "planks": "beachparty:palm_planks",
+  "texture": "beachparty:block/palm_planks"
+ },
+ {
+  "key": "biomesoplenty_dead",
+  "planks": "biomesoplenty:dead_planks",
+  "texture": "biomesoplenty:block/dead_planks"
+ },
+ {
+  "key": "biomesoplenty_empyreal",
+  "planks": "biomesoplenty:empyreal_planks",
+  "texture": "biomesoplenty:block/empyreal_planks"
+ },
+ {
+  "key": "biomesoplenty_fir",
+  "planks": "biomesoplenty:fir_planks",
+  "texture": "biomesoplenty:block/fir_planks"
+ },
+ {
+  "key": "biomesoplenty_hellbark",
+  "planks": "biomesoplenty:hellbark_planks",
+  "texture": "biomesoplenty:block/hellbark_planks"
+ },
+ {
+  "key": "biomesoplenty_jacaranda",
+  "planks": "biomesoplenty:jacaranda_planks",
+  "texture": "biomesoplenty:block/jacaranda_planks"
+ },
+ {
+  "key": "biomesoplenty_magic",
+  "planks": "biomesoplenty:magic_planks",
+  "texture": "biomesoplenty:block/magic_planks"
+ },
+ {
+  "key": "biomesoplenty_mahogany",
+  "planks": "biomesoplenty:mahogany_planks",
+  "texture": "biomesoplenty:block/mahogany_planks"
+ },
+ {
+  "key": "biomesoplenty_maple",
+  "planks": "biomesoplenty:maple_planks",
+  "texture": "biomesoplenty:block/maple_planks"
+ },
+ {
+  "key": "biomesoplenty_palm",
+  "planks": "biomesoplenty:palm_planks",
+  "texture": "biomesoplenty:block/palm_planks"
+ },
+ {
+  "key": "biomesoplenty_pine",
+  "planks": "biomesoplenty:pine_planks",
+  "texture": "biomesoplenty:block/pine_planks"
+ },
+ {
+  "key": "biomesoplenty_redwood",
+  "planks": "biomesoplenty:redwood_planks",
+  "texture": "biomesoplenty:block/redwood_planks"
+ },
+ {
+  "key": "biomesoplenty_umbran",
+  "planks": "biomesoplenty:umbran_planks",
+  "texture": "biomesoplenty:block/umbran_planks"
+ },
+ {
+  "key": "biomesoplenty_willow",
+  "planks": "biomesoplenty:willow_planks",
+  "texture": "biomesoplenty:block/willow_planks"
+ },
+ {
+  "key": "bloomingnature_aspen",
+  "planks": "bloomingnature:aspen_planks",
+  "texture": "bloomingnature:block/aspen_planks"
+ },
+ {
+  "key": "bloomingnature_baobab",
+  "planks": "bloomingnature:baobab_planks",
+  "texture": "bloomingnature:block/baobab_planks"
+ },
+ {
+  "key": "bloomingnature_cactus",
+  "planks": "bloomingnature:cactus_planks",
+  "texture": "bloomingnature:block/cactus_planks"
+ },
+ {
+  "key": "bloomingnature_chestnut",
+  "planks": "bloomingnature:chestnut_planks",
+  "texture": "bloomingnature:block/chestnut_planks"
+ },
+ {
+  "key": "bloomingnature_ebony",
+  "planks": "bloomingnature:ebony_planks",
+  "texture": "bloomingnature:block/ebony_planks"
+ },
+ {
+  "key": "bloomingnature_fan_palm",
+  "planks": "bloomingnature:fan_palm_planks",
+  "texture": "bloomingnature:block/fan_palm_planks"
+ },
+ {
+  "key": "bloomingnature_fir",
+  "planks": "bloomingnature:fir_planks",
+  "texture": "bloomingnature:block/fir_planks"
+ },
+ {
+  "key": "bloomingnature_larch",
+  "planks": "bloomingnature:larch_planks",
+  "texture": "bloomingnature:block/larch_planks"
+ },
+ {
+  "key": "bloomingnature_swamp_cypress",
+  "planks": "bloomingnature:swamp_cypress_planks",
+  "texture": "bloomingnature:block/swamp_cypress_planks"
+ },
+ {
+  "key": "bloomingnature_swamp_oak",
+  "planks": "bloomingnature:swamp_oak_planks",
+  "texture": "bloomingnature:block/swamp_oak_planks_0"
+ },
+ {
+  "key": "cataclysm_chorus",
+  "planks": "cataclysm:chorus_planks",
+  "texture": "cataclysm:block/chorus_planks"
+ },
+ {
+  "key": "meadow_pine",
+  "planks": "meadow:pine_planks",
+  "texture": "meadow:block/pine_planks"
+ },
+ {
+  "key": "acacia",
+  "planks": "minecraft:acacia_planks",
+  "texture": "minecraft:block/acacia_planks"
+ },
+ {
+  "key": "bamboo",
+  "planks": "minecraft:bamboo_planks",
+  "texture": "minecraft:block/bamboo_planks"
+ },
+ {
+  "key": "birch",
+  "planks": "minecraft:birch_planks",
+  "texture": "minecraft:block/birch_planks"
+ },
+ {
+  "key": "cherry",
+  "planks": "minecraft:cherry_planks",
+  "texture": "minecraft:block/cherry_planks"
+ },
+ {
+  "key": "crimson",
+  "planks": "minecraft:crimson_planks",
+  "texture": "minecraft:block/crimson_planks"
+ },
+ {
+  "key": "dark_oak",
+  "planks": "minecraft:dark_oak_planks",
+  "texture": "minecraft:block/dark_oak_planks"
+ },
+ {
+  "key": "jungle",
+  "planks": "minecraft:jungle_planks",
+  "texture": "minecraft:block/jungle_planks"
+ },
+ {
+  "key": "mangrove",
+  "planks": "minecraft:mangrove_planks",
+  "texture": "minecraft:block/mangrove_planks"
+ },
+ {
+  "key": "spruce",
+  "planks": "minecraft:spruce_planks",
+  "texture": "minecraft:block/spruce_planks"
+ },
+ {
+  "key": "warped",
+  "planks": "minecraft:warped_planks",
+  "texture": "minecraft:block/warped_planks"
+ },
+ {
+  "key": "mowziesmobs_painted_acacia",
+  "planks": "mowziesmobs:painted_acacia",
+  "texture": "mowziesmobs:block/painted_acacia"
+ },
+ {
+  "key": "nethervinery_crested_crimson",
+  "planks": "nethervinery:crested_crimson_planks",
+  "texture": "nethervinery:block/crested_crimson_planks"
+ },
+ {
+  "key": "nethervinery_crested_warped",
+  "planks": "nethervinery:crested_warped_planks",
+  "texture": "nethervinery:block/crested_warped_planks"
+ },
+ {
+  "key": "nethervinery_reinforced_crimson",
+  "planks": "nethervinery:reinforced_crimson_planks",
+  "texture": "nethervinery:block/reinforced_crimson_planks"
+ },
+ {
+  "key": "nethervinery_reinforced_warped",
+  "planks": "nethervinery:reinforced_warped_planks",
+  "texture": "nethervinery:block/reinforced_warped_planks"
+ },
+ {
+  "key": "regions_unexplored_alpha",
+  "planks": "regions_unexplored:alpha_planks",
+  "texture": "regions_unexplored:block/alpha_oak_planks"
+ },
+ {
+  "key": "regions_unexplored_baobab",
+  "planks": "regions_unexplored:baobab_planks",
+  "texture": "regions_unexplored:block/baobab_planks"
+ },
+ {
+  "key": "regions_unexplored_black_painted",
+  "planks": "regions_unexplored:black_painted_planks",
+  "texture": "regions_unexplored:block/black_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_blackwood",
+  "planks": "regions_unexplored:blackwood_planks",
+  "texture": "regions_unexplored:block/blackwood_planks"
+ },
+ {
+  "key": "regions_unexplored_blue_bioshroom",
+  "planks": "regions_unexplored:blue_bioshroom_planks",
+  "texture": "regions_unexplored:block/blue_bioshroom_planks"
+ },
+ {
+  "key": "regions_unexplored_blue_painted",
+  "planks": "regions_unexplored:blue_painted_planks",
+  "texture": "regions_unexplored:block/blue_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_brimwood",
+  "planks": "regions_unexplored:brimwood_planks",
+  "texture": "regions_unexplored:block/brimwood_planks"
+ },
+ {
+  "key": "regions_unexplored_brown_painted",
+  "planks": "regions_unexplored:brown_painted_planks",
+  "texture": "regions_unexplored:block/brown_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_cobalt",
+  "planks": "regions_unexplored:cobalt_planks",
+  "texture": "regions_unexplored:block/cobalt_planks"
+ },
+ {
+  "key": "regions_unexplored_cyan_painted",
+  "planks": "regions_unexplored:cyan_painted_planks",
+  "texture": "regions_unexplored:block/cyan_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_cypress",
+  "planks": "regions_unexplored:cypress_planks",
+  "texture": "regions_unexplored:block/cypress_planks"
+ },
+ {
+  "key": "regions_unexplored_dead",
+  "planks": "regions_unexplored:dead_planks",
+  "texture": "regions_unexplored:block/dead_planks"
+ },
+ {
+  "key": "regions_unexplored_eucalyptus",
+  "planks": "regions_unexplored:eucalyptus_planks",
+  "texture": "regions_unexplored:block/eucalyptus_planks"
+ },
+ {
+  "key": "regions_unexplored_gray_painted",
+  "planks": "regions_unexplored:gray_painted_planks",
+  "texture": "regions_unexplored:block/gray_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_green_bioshroom",
+  "planks": "regions_unexplored:green_bioshroom_planks",
+  "texture": "regions_unexplored:block/green_bioshroom_planks"
+ },
+ {
+  "key": "regions_unexplored_green_painted",
+  "planks": "regions_unexplored:green_painted_planks",
+  "texture": "regions_unexplored:block/green_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_joshua",
+  "planks": "regions_unexplored:joshua_planks",
+  "texture": "regions_unexplored:block/joshua_planks"
+ },
+ {
+  "key": "regions_unexplored_kapok",
+  "planks": "regions_unexplored:kapok_planks",
+  "texture": "regions_unexplored:block/kapok_planks"
+ },
+ {
+  "key": "regions_unexplored_larch",
+  "planks": "regions_unexplored:larch_planks",
+  "texture": "regions_unexplored:block/larch_planks"
+ },
+ {
+  "key": "regions_unexplored_light_blue_painted",
+  "planks": "regions_unexplored:light_blue_painted_planks",
+  "texture": "regions_unexplored:block/light_blue_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_light_gray_painted",
+  "planks": "regions_unexplored:light_gray_painted_planks",
+  "texture": "regions_unexplored:block/light_gray_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_lime_painted",
+  "planks": "regions_unexplored:lime_painted_planks",
+  "texture": "regions_unexplored:block/lime_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_magenta_painted",
+  "planks": "regions_unexplored:magenta_painted_planks",
+  "texture": "regions_unexplored:block/magenta_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_magnolia",
+  "planks": "regions_unexplored:magnolia_planks",
+  "texture": "regions_unexplored:block/magnolia_planks"
+ },
+ {
+  "key": "regions_unexplored_maple",
+  "planks": "regions_unexplored:maple_planks",
+  "texture": "regions_unexplored:block/maple_planks"
+ },
+ {
+  "key": "regions_unexplored_mauve",
+  "planks": "regions_unexplored:mauve_planks",
+  "texture": "regions_unexplored:block/mauve_planks"
+ },
+ {
+  "key": "regions_unexplored_orange_painted",
+  "planks": "regions_unexplored:orange_painted_planks",
+  "texture": "regions_unexplored:block/orange_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_palm",
+  "planks": "regions_unexplored:palm_planks",
+  "texture": "regions_unexplored:block/palm_planks"
+ },
+ {
+  "key": "regions_unexplored_pine",
+  "planks": "regions_unexplored:pine_planks",
+  "texture": "regions_unexplored:block/pine_planks"
+ },
+ {
+  "key": "regions_unexplored_pink_bioshroom",
+  "planks": "regions_unexplored:pink_bioshroom_planks",
+  "texture": "regions_unexplored:block/pink_bioshroom_planks"
+ },
+ {
+  "key": "regions_unexplored_pink_painted",
+  "planks": "regions_unexplored:pink_painted_planks",
+  "texture": "regions_unexplored:block/pink_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_purple_painted",
+  "planks": "regions_unexplored:purple_painted_planks",
+  "texture": "regions_unexplored:block/purple_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_red_painted",
+  "planks": "regions_unexplored:red_painted_planks",
+  "texture": "regions_unexplored:block/red_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_redwood",
+  "planks": "regions_unexplored:redwood_planks",
+  "texture": "regions_unexplored:block/redwood_planks"
+ },
+ {
+  "key": "regions_unexplored_socotra",
+  "planks": "regions_unexplored:socotra_planks",
+  "texture": "regions_unexplored:block/socotra_planks"
+ },
+ {
+  "key": "regions_unexplored_white_painted",
+  "planks": "regions_unexplored:white_painted_planks",
+  "texture": "regions_unexplored:block/white_painted_planks"
+ },
+ {
+  "key": "regions_unexplored_willow",
+  "planks": "regions_unexplored:willow_planks",
+  "texture": "regions_unexplored:block/willow_planks"
+ },
+ {
+  "key": "regions_unexplored_yellow_bioshroom",
+  "planks": "regions_unexplored:yellow_bioshroom_planks",
+  "texture": "regions_unexplored:block/yellow_bioshroom_planks"
+ },
+ {
+  "key": "regions_unexplored_yellow_painted",
+  "planks": "regions_unexplored:yellow_painted_planks",
+  "texture": "regions_unexplored:block/yellow_painted_planks"
+ },
+ {
+  "key": "twilightforest_canopy",
+  "planks": "twilightforest:canopy_planks",
+  "texture": "twilightforest:block/wood/planks_canopy_0"
+ },
+ {
+  "key": "twilightforest_cracked_towerwood",
+  "planks": "twilightforest:cracked_towerwood",
+  "texture": "twilightforest:block/cracked_towerwood"
+ },
+ {
+  "key": "twilightforest_dark",
+  "planks": "twilightforest:dark_planks",
+  "texture": "twilightforest:block/wood/planks_darkwood_0"
+ },
+ {
+  "key": "twilightforest_encased_towerwood",
+  "planks": "twilightforest:encased_towerwood",
+  "texture": "twilightforest:block/encased_towerwood"
+ },
+ {
+  "key": "twilightforest_infested_towerwood",
+  "planks": "twilightforest:infested_towerwood",
+  "texture": "twilightforest:block/infested_towerwood"
+ },
+ {
+  "key": "twilightforest_mangrove",
+  "planks": "twilightforest:mangrove_planks",
+  "texture": "twilightforest:block/wood/planks_mangrove_0"
+ },
+ {
+  "key": "twilightforest_mining",
+  "planks": "twilightforest:mining_planks",
+  "texture": "twilightforest:block/wood/planks_mine_0"
+ },
+ {
+  "key": "twilightforest_mossy_towerwood",
+  "planks": "twilightforest:mossy_towerwood",
+  "texture": "twilightforest:block/mossy_towerwood"
+ },
+ {
+  "key": "twilightforest_sorting",
+  "planks": "twilightforest:sorting_planks",
+  "texture": "twilightforest:block/wood/planks_sort_0"
+ },
+ {
+  "key": "twilightforest_time",
+  "planks": "twilightforest:time_planks",
+  "texture": "twilightforest:block/wood/planks_time_0"
+ },
+ {
+  "key": "twilightforest_towerwood",
+  "planks": "twilightforest:towerwood",
+  "texture": "twilightforest:block/towerwood"
+ },
+ {
+  "key": "twilightforest_transformation",
+  "planks": "twilightforest:transformation_planks",
+  "texture": "twilightforest:block/wood/planks_trans_0"
+ },
+ {
+  "key": "twilightforest_twilight_oak",
+  "planks": "twilightforest:twilight_oak_planks",
+  "texture": "twilightforest:block/wood/planks_twilight_oak_0"
+ },
+ {
+  "key": "vinery_dark_cherry",
+  "planks": "vinery:dark_cherry_planks",
+  "texture": "vinery:block/dark_cherry_planks"
+ }
+]

@@ -97,6 +97,10 @@ file = "config/gravestone-client.toml"
 hash = "b8e24932dc5f41db8ccdc0d40d6241a4f12fc4366bfb646b513b72b9432aad19"
 
 [[files]]
+file = "config/inventoryprofilesnext/integrationHints/endermail.json"
+hash = "af46af8a7f186cbe4c78fb73857702121367025290c27e9f97343fa54a03e4e4"
+
+[[files]]
 file = "config/inventoryprofilesnext/inventoryprofiles.json"
 hash = "27659bf76453edcea0d700f984391e5ce817c458a9961838e53804f654ffa237"
 
@@ -195,6 +199,10 @@ file = "kubejs/assets/ars_nouveau/entity/signs/archwood.png"
 hash = "4294d4b35c6ee68cf8f1a39a49708a9a5b6d7d23d8cd1fdcac22c3c26c9b7f85"
 
 [[files]]
+file = "kubejs/assets/ars_nouveau/lang/en_us.json"
+hash = "535e2618fc20602eafff5f88d79b19f716f8a266de1ea81195acfad0c3dfad8c"
+
+[[files]]
 file = "kubejs/assets/ars_nouveau/textures/block/archwood_door_bottom.png"
 hash = "eab71c40ecf96885d5930d5351c42d108e8590edc519dde9b3ff4e611723b15f"
 
@@ -217,6 +225,10 @@ hash = "ab8077800ef501ff4937d387af3d28d47d2c768c67489c050f894d8a7cd5842f"
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/entity/signs/archwood.png"
 hash = "4294d4b35c6ee68cf8f1a39a49708a9a5b6d7d23d8cd1fdcac22c3c26c9b7f85"
+
+[[files]]
+file = "kubejs/assets/ars_nouveau/textures/gui/sort_type.png"
+hash = "970cc23700a5371779d3ebfd88129dbf245893999b8ce29e3394b3eaa39afd19"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/item/archwood_boat.png"
@@ -300,71 +312,871 @@ hash = "c3ca0d363e59b69c38be90030b01aa30c551c82b02702e7233f0492e0adcc7d4"
 
 [[files]]
 file = "kubejs/assets/endermail/blockstates/locker.json"
-hash = "2d6842df4884d7d7b0dd534f28c5566a4558aaf3ecc09e1a40eb2352501ad7f9"
+hash = "ea59ce3bb4fa19f16629bab2e31a82bb21350fc4e62f4bdc6c236489ba3c95cc"
 
 [[files]]
-file = "kubejs/assets/endermail/models/block/locker.json"
-hash = "8fa5d2156645ff961dfdf0118955a04e3105eb16a6391eebc87e1ed3e4c9316f"
+file = "kubejs/assets/endermail/lang/en_us.json"
+hash = "16f48d43a1adf4225fd985a381c26aed01eff22f754de0f2c01fc16cd03604c5"
 
 [[files]]
-file = "kubejs/assets/endermail/models/block/locker_archwood.json"
-hash = "090dbc6f4702ca1dc0381bd64594a97401ee1fac16131432a2101a9edc67e244"
+file = "kubejs/assets/endermail/models/block/locker_acacia.json"
+hash = "f0e1e426126899516e3323e019d723fe43b51eb46c0ff1ad720a30d5ac52bcf6"
 
 [[files]]
-file = "kubejs/assets/endermail/models/block/locker_archwood_filled.json"
-hash = "101f3376dd7bc101f836890b8cb2b31fc972863764e15f3f230260cf25e07c34"
+file = "kubejs/assets/endermail/models/block/locker_acacia_filled.json"
+hash = "e2758d6e3a7a280478ab7ff774600613e29f50aa6fe7f967a700a7298ee8c658"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_alexscaves_pewen.json"
+hash = "c2806c2e90808121a050764b78764d8181f714ae915961102f18bcf8fc1f3e18"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_alexscaves_pewen_filled.json"
+hash = "3ddad25f161e603971fb46470e68769fa26f56578483393ab4870e92c0cbc1ac"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_alexscaves_thornwood.json"
+hash = "bc121a1c9d8bd258a7a0e38021d2ffcb6d2a9351dcbb40788b0f379da74e86a0"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_alexscaves_thornwood_filled.json"
+hash = "6cc00bd41bd6535157a670bcfb7ed7d9f5a579fbd36d42a4cacc089407e16c44"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_ars_nouveau_archwood.json"
+hash = "e2e9cdb02ea81fbe2a09d975b770cb86d5cda7c1a8c2ebd9dd03945fcd84bd66"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_ars_nouveau_archwood_filled.json"
+hash = "4aab7c045c738040ceb8cf1b2064337605120eb9add953e3a24ee464cfb12ed5"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bamboo.json"
+hash = "b2d084230d7b8116cbd0b536032173409fc7fad9ae981086ded990eaa11c91e9"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bamboo_filled.json"
+hash = "dc71bc2392f992f3d4be7080654cf9a4f4af8d63ade4cf3cd9490e9493d3ea98"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_beachparty_palm.json"
+hash = "61ee9afa0c21193406fff17ae8bbfadaaedf6d8b923d4c90030b70a16fbb9d17"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_beachparty_palm_filled.json"
+hash = "2601cf189a57503fdd4f64c7c44835e50d14bd76d4e5eb9eb2004f18a937a22e"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_dead.json"
+hash = "8c4da53702517ac929dca73353090c085b5c1537dee81cd7ce46b42acf4ca2f5"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_dead_filled.json"
+hash = "45b2f02ecf267b4d9ea78edd6c648700c69d8787d644e343ec8b7b7d8ea8d9fa"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_empyreal.json"
+hash = "a021050c70eacb6ce3250bf0f5ac661a8fc70b98727de2449fb2467e5aaf5dfe"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_empyreal_filled.json"
+hash = "377125b697cdc1d76f48a2bb2131f834d139e40b3797660b80bfa9243c1aea70"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_fir.json"
+hash = "2e641ef90a76976094e801a4d98cbde135efc3c54251e9f884e91e23ad7f951b"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_fir_filled.json"
+hash = "1b53b592af67636175c9f0fad00327cf45b02255cb16c12761b07a4c0d54174f"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_hellbark.json"
+hash = "6a84c1e49589799221b784525c8a31c18b5a1b8c623dbd71413992da77fdc67d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_hellbark_filled.json"
+hash = "16232aef84bc9c98b2b6d5179646c2a8a5554728ae0f3b58c9c738683056162d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_jacaranda.json"
+hash = "421d6e4e0342bd3c6bd7ebcba89151536296a2c8d949ec2087f4b04905e44343"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_jacaranda_filled.json"
+hash = "15497af8836ce3591ae0059437604dc922c40b2859408a6961f706b3d87746b3"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_magic.json"
+hash = "1c34c75939cdcc452030de5f6fe30e5ad9db227ae201107b12113d4d7d0a653d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_magic_filled.json"
+hash = "6272161341dfa64a102575e69bce9acd621b7948cf0ff4ec6b722312dc2a7bff"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_mahogany.json"
+hash = "f0b15b933ab259aa10d4d4bd3c81c92cd50ca48e482f16d0541b7f1ca90e55c0"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_mahogany_filled.json"
+hash = "47388e6eda0fddc09b1de8e1082302a3ebb186582273049fd012d440e4861ad0"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_maple.json"
+hash = "8bf04f87c346e5ff1cd9a1a59a2101e8d0f1769ddbcd7c4db854f8872f7bdb1f"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_maple_filled.json"
+hash = "effa76028faa3c8428912c9592b98d8b9f2d0aa99b8e7fac56618ccf64361c10"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_palm.json"
+hash = "dedfe5440b890feaef325c6df0e9eb627802cb2b9791147f8e90478a05a94338"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_palm_filled.json"
+hash = "b11f1b3e0d9720f2d916476b6a48eeebceab0eab3eb97d6a7d8d508824ff4e40"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_pine.json"
+hash = "fe91674d175ef94384e1fea2b8e76a068e6e55d2a9368e81450e99553cd9ebd4"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_pine_filled.json"
+hash = "785fceaa7ed5a0bf83616e62782f333960c2d69d4efca5d5dd45ab04082c1ddc"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_redwood.json"
+hash = "6fb583d2f0525d89af025887ffbe0b17ff5d609488bd822540975fed04b699cf"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_redwood_filled.json"
+hash = "7b755ef8676ab3435cd6f2840c5cbacbd62d6995cdb893780266e71ddc5312bf"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_umbran.json"
+hash = "c396c0d297e2b66d7ddb45fbae4ff105dde5efa5a5226eaaa406945c58e2ee97"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_umbran_filled.json"
+hash = "e8f4d4f9372a6bd3d7a49be6da826c168fffe85e517d02af18e86f986a2c65c3"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_willow.json"
+hash = "739f12c7b8d035c8d19a1e722df403e26d04fdc779cca4bc0cbe6022fc514914"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_biomesoplenty_willow_filled.json"
+hash = "fb80789af34eac8dca479f9dc0b899bcef12ee6b3916c6d465289b49b75df422"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_birch.json"
-hash = "b9ab7cb5b8cd95348e326579ac0e513655204154fe11949358bf60ad60dbe73f"
+hash = "4b2214469b4ee3a66e2a5d4556dc78f8d719dff9e10f65f0b9c94c069efc1a1c"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_birch_filled.json"
-hash = "14ecc688e95db5d3164c5b567e31ba8baf415c1095e06ab5ad833579c9a19231"
+hash = "2fd7b2271fa5e1651bc73fcebab528adb62e52d2a6571aeb105b5a3e14ba9bac"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_aspen.json"
+hash = "d01feca8b81517c415c4b7d0feea0934796f5956f47c6d6c0359526e742516ec"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_aspen_filled.json"
+hash = "ada8a9ba21bf17a33dc5087d9c2008cf0ac51805bfccbe62508425f8d720aad2"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_baobab.json"
+hash = "999964a62e8df558a4a605042db7d7f497a325709cf75fff3f0e633bb547d89c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_baobab_filled.json"
+hash = "30cddb8e682725524634d36ad45be9bc8367bade26e143a0bb29bab26bb663c0"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_cactus.json"
+hash = "d5ddf9a58441c98e4022b05471d0aa512cd84c7d063d316d97a94786e50051fb"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_cactus_filled.json"
+hash = "3e571f14564f0a287f30f55269064a6aec363b8d93e7a97bf16333c320eb8723"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_chestnut.json"
+hash = "19bdb4516c03fb27cc0ce9d34e8aae2ae6b5f71010a36515daa97a62081f4432"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_chestnut_filled.json"
+hash = "9a41053acbb898e0270bca404d7ac3f2ccd20c4640e986b507a37f6f12ba5d57"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_ebony.json"
+hash = "cb2a93fb61c934daf9c0ea8439fb59caa7411aa699c08a54274074f78664dd20"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_ebony_filled.json"
+hash = "1d83767897e15350fd60373dc4cad440926a106670de58c05ad3e6d2710a19ad"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_fan_palm.json"
+hash = "c62c159f00bc644d74e0cf99eb5f6536cc8d3e3c611713f2acc9185e38c8ad04"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_fan_palm_filled.json"
+hash = "03bb3812136e08b265adcdce3f0039e4ede050777a2382e7f8522e2543678552"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_fir.json"
+hash = "0cd4431d43ceb121be6fdfef60b3872319251460a3406acf9d98985f3ff3c884"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_fir_filled.json"
+hash = "2168c0086d9749c022f0761745b2ce1964e3d221b6083a0b45f08f95af7a1d1b"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_larch.json"
+hash = "b359e12241961ce918b7f836583f410ce690a6f93e53b01e759e604bca61aec7"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_larch_filled.json"
+hash = "741330724d6d1f44cac4ed399a0f774155a7c35dd8c28d9b0264eb6e93f87e8b"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_swamp_cypress.json"
+hash = "2d22c269b9464f5bee5d0bf628b135c690ca1396803c2ffea2a549ddc116aeb6"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_swamp_cypress_filled.json"
+hash = "99abd6316eba289856332591104d777edee8e6a47bed5a3d00b5e206cfdd6337"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_swamp_oak.json"
+hash = "3ff0c31c46a19b14814081fd152d6a82c4507db5e5622ba73f7d30cdf86ca046"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_bloomingnature_swamp_oak_filled.json"
+hash = "9f1b73c0aa4b643b71f3541fbba27cdc88a4fe137bd66f7f68d2fa4e03e270cd"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_cataclysm_chorus.json"
+hash = "56e86aa9a455d6d671551b0802b43086ba1ca492654325d5f0e590ad24df2789"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_cataclysm_chorus_filled.json"
+hash = "f453c52a32c78312042c25a7e32d0e09bc897e9d2daaac9c04bd23b335390b4e"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_cherry.json"
-hash = "2b722d49c13aeeb00798245829d9f095e9ef9867d004fea6a469f5fcecf92c75"
+hash = "7713d8459e0f9e0391e49d9847c71987ab11b1f0f392323032749738db46762f"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_cherry_filled.json"
-hash = "ec394fee3f6a01a12228fd8d50079793f2eea240f62044b73b393a9648dd50db"
+hash = "10e78d1f64932e25b13bf5dd390fa2fa61a0c6cf7cab5c204baf9eb210fd480c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_crimson.json"
+hash = "92da7f6ba377e7a6733db7f9b41e696d40256372030ccdc88496b624caff7aba"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_crimson_filled.json"
+hash = "7d3d5455641c9777df701797f9db7a0ddf8e3ff42a746183fc809705e9653c41"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_dark_oak.json"
-hash = "eb274114b2e4f22f59bf1b71c928458b8c657128d3c828e81fcbf355b4bdfabb"
+hash = "e57f7a527452ee7774e632b49b225b04e464596948488449e7fa8f6840fbc195"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_dark_oak_filled.json"
-hash = "90b882a2b134dbc5d771c2de19dce1ec0ac8b9ffa40313094a3dd76959245a33"
+hash = "0ed5f64add19541e942626c50e7d8f8559a3cdec5772a02c686ed1aad99513ce"
 
 [[files]]
-file = "kubejs/assets/endermail/models/block/locker_filled.json"
-hash = "1228b2545ffa869edd4ab0bb43f3e1144588bb80571fc4d56539faf5794aaa51"
+file = "kubejs/assets/endermail/models/block/locker_jungle.json"
+hash = "21913b988987286353a5d1dd1522edca2e8b79e6d5984feaeeec6d2bf80b32af"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_jungle_filled.json"
+hash = "3274df2d1c83e13211a67e7ad98d21c5c1d8e87eb2f4d5c7b745e5ee64d82eb8"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_mangrove.json"
+hash = "9497732b2c5093ed50da811c7aa6f564eb5c08814d40b3a5b967ba520a6a93c6"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_mangrove_filled.json"
+hash = "51833ad4f4d183f2263f0345903f2e41c65102661dfbaab6f8aaf28072c890f9"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_meadow_pine.json"
+hash = "832ddf0c8ea3adda855dbd0625fd8f10fab201806b7814e3eff2a28f253ec06b"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_meadow_pine_filled.json"
+hash = "6bc3028c5af26f7abac36121800783fd59b48df9c27d6956c44e2e95c521c9a5"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_mowziesmobs_painted_acacia.json"
+hash = "573478bc4127bd5fb94b747c4f0d39e8c6a446c798f9d2e5ed11e5b4083681d1"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_mowziesmobs_painted_acacia_filled.json"
+hash = "cb7d9dc641fdd7024dfac0145e6a0837018317a64020fb806e678756b1caa1f8"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_nethervinery_crested_crimson.json"
+hash = "7c4fc56109ba3f90f338785453ba2d17b12842fa4de9c17015a696f541e97842"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_nethervinery_crested_crimson_filled.json"
+hash = "687fd149895a82be9002a9f7a0e899f77fea33918b42e352249bdcd7a8e64a6c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_nethervinery_crested_warped.json"
+hash = "cf50f6833d4df6bc358b52e78618decdc1202eafadef6e7693d7d0b3b25efd7d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_nethervinery_crested_warped_filled.json"
+hash = "4c1685dd7735b4b427d6370a055780481bad1701966026b952a5e268740820f4"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_nethervinery_reinforced_crimson.json"
+hash = "8e9d00fafbd8565bcabb70c165ef52c8589603cd1ea4447b005cd03dd0aec8b2"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_nethervinery_reinforced_crimson_filled.json"
+hash = "728da3be2dae888c6df5393065eaec2dde3e37c934c18e8d41da917173709fcd"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_nethervinery_reinforced_warped.json"
+hash = "64d99249ac63f685271baed9f3ec7053d67c7647e690dc97532f44cf70621e2d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_nethervinery_reinforced_warped_filled.json"
+hash = "7e28476ff09943e0d79086dec4281c8b1b4b7efbff4608c897b5616b3c758c39"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_oak.json"
-hash = "472ed7c068e53436b0dd255c48ddb32ddb0efbad13cd67b6b4bc202ddd15de92"
+hash = "5d575b07ad71912ea18804985046f93835fa3c4ad9bd8d1c25983b5c66d7b654"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_oak_filled.json"
-hash = "37bee083278e5d25d80255ece3fbfee683c3e987f7de84d685f35f961b47d43a"
+hash = "dc7730388672806ebb53c0e32334f3d922360d9f0424ec5c1b9a07d5cc3a6631"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_alpha.json"
+hash = "7d976ff8c2de2264b6ebcf432a9abb15bab2f6978e103d4c49e69c9db2fd8e9d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_alpha_filled.json"
+hash = "9443255c03409b5f79f4a5194c786af685a1a2b5d9c96d1963141fcf43af4456"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_baobab.json"
+hash = "730731e13689af77908e105cec4c38ff3f92d9d8135c8722d2fb50660c387e1c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_baobab_filled.json"
+hash = "58e6f1ca606b2324fce1179b115d08953294cf025718b63f52f3e7dd1138c50c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_black_painted.json"
+hash = "f018e49b4d428903d8a28282a690c17ecbdfe17a64363c79ced7b4b05b4bfa0c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_black_painted_filled.json"
+hash = "f00214ffb8d9bfe73b7f1a1ac09c508809ef85ffd927eddddb105e60e050e043"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_blackwood.json"
+hash = "524b37ecaf3e2e680922946893db89a53449157a88bc0e7ef1f080146cbd7b41"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_blackwood_filled.json"
+hash = "54fafdcd5ebe21f4ce9e0d356eead8c3a386881b2a2314db4d9b695d465fe27d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_blue_bioshroom.json"
+hash = "8e44e3aafbaab12a2c1ce67a3842378023a40a45814e12b1ef64fa159363385f"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_blue_bioshroom_filled.json"
+hash = "c357cf3196b978a946a93c7d785ac69aa5d1681eb5eaf4718415b8ad0a34b5df"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_blue_painted.json"
+hash = "f6618de0917cb8f17298765e1b070ea1bbbc4dc04bd01576bf6cf61e8d9b9721"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_blue_painted_filled.json"
+hash = "32faa9a748fb25b42f3949468f7e06af648444a010a9a980f25ed125e89ef24b"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_brimwood.json"
+hash = "a7cbdd9170b94f98e8e9b80f05136afd26bc14bc187cf10bccc4133279e3cd9b"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_brimwood_filled.json"
+hash = "1e9fa55e287c64474ac8550bf7e4f334f551d0993f88cf83bb75898796e75ceb"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_brown_painted.json"
+hash = "c07874fdca913d00078aca79a8793692ea2ea316e4270045d3da0e53479977a8"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_brown_painted_filled.json"
+hash = "a981bac9688cfaca5f5ef1ef52fb28158f2dee4badc1e4c70b3b5d6ee3ee7a5a"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_cobalt.json"
+hash = "4587e6c1742afe20a3104d57013de5c40f811cbe4b6f99e3c0c39a821816761f"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_cobalt_filled.json"
+hash = "1f6a46f30c896b24db15ce185fbc9b32bc8b09f56e7d4a77cb4612391968eafd"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_cyan_painted.json"
+hash = "60e09e7b8bf45437b84bbdb0009c2fac25037138627e16dce339f747228a070d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_cyan_painted_filled.json"
+hash = "794f5eb724a4fa461d48f26775182ec531a3325e44bd670097e85ccb8b1bf88e"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_cypress.json"
+hash = "b0835f43f78d5004d2963a042e6f16547a0c9d40470e2c5828370dc58aa2bb22"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_cypress_filled.json"
+hash = "3628d7f1eff29a8bca03e2a87555c6d25d3669d869c5c0b735d5cbb7df070f6c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_dead.json"
+hash = "b0e50cafa04139cdfb9b6bb47cbe35a82c24be079d0c1b33f75417583fee800e"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_dead_filled.json"
+hash = "97d301436480c7f4ebd44295650c5fa2531047725dc8ec9148ba4f6079d5af2d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_eucalyptus.json"
+hash = "4d52413768d2abf52b28f21ff2e752bb799a32b79bbc643e44efaf6730544c3d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_eucalyptus_filled.json"
+hash = "dbdc39115707f36a14940e603b9d9e7344f6cc26cf42ee7a4fe0853edbfa15d3"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_gray_painted.json"
+hash = "ece900adb98309f05d14ce2532f717b88bf20ec53e04825053657675aae3981c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_gray_painted_filled.json"
+hash = "2cc044cfbd210858c082fbc0e245619378c2a5051bd39c0bf5c8ebf85316e2b8"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_green_bioshroom.json"
+hash = "5681879b407dbd4ea8409551504b4370dc30221d4dc70dcd53debbbfe5103b6c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_green_bioshroom_filled.json"
+hash = "5bcb4b3a38ce4b1e24e83c312efa2a5c604c95b7fb5bacc2af97dc4852f9d21e"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_green_painted.json"
+hash = "f0ebcf4ba9424a133776f6448ab2006faaf2de5f845666db4644beebef7f63e3"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_green_painted_filled.json"
+hash = "7a44f801eeeed6ac35b0ec4d0210aaea0788e4d043a836a25a77305d4c12183a"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_joshua.json"
+hash = "ae74a7aaf8e037af8c0cbd0775af38cb61cd75c26b159df8ac98d22c5698b06e"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_joshua_filled.json"
+hash = "bdaeed9c7747f9afacd8dffb30bed7d4ea1dadbece56b3fefb55841000fcfaa8"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_kapok.json"
+hash = "6234b78b2fbaa52c811e66552d8aa94d7b02e8ffa4644ca2a8f17eda41a2faaa"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_kapok_filled.json"
+hash = "b3e80f5b87fec3f1029cdab1f94d7cd3fe62ec63ed92faf09ac6320951c460cc"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_larch.json"
+hash = "311bed0fcfaf1a51182126b53bc04f49a1755c2982fcda3aabbbb383ca2dd61e"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_larch_filled.json"
+hash = "7fd88974419816f21746cb08e5f9b243986061486fc283ee4c3f4fd8f75f0b47"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_light_blue_painted.json"
+hash = "a677598abc3a9bda4ec6f172ecce344a2c7adcb712c24cf9ac4781982622940b"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_light_blue_painted_filled.json"
+hash = "006585e510d598b4eb1477e7f0e4f714bec81dd5a527a3fe6f0b1925262efda2"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_light_gray_painted.json"
+hash = "3306a02f453112bf75e2230103712049fe10833a9bf75e22a62996522b2fa5d8"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_light_gray_painted_filled.json"
+hash = "7b14a623f0b84b91ed0ac23bff6998484339a1b430d93084078c1dc5b9afa6ca"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_lime_painted.json"
+hash = "dbbd330f7666b2c4247d7643e8af021404f5c176e198b501c31c158a9c112c28"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_lime_painted_filled.json"
+hash = "5fe35bd4a2c7bb92e63d36df054a0394bbacba6fea238aabe4298c5574b65a08"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_magenta_painted.json"
+hash = "29a3b81fc3ca97a970699fc19f500429a3b5cb59d885a2ef626a31616808078d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_magenta_painted_filled.json"
+hash = "ccde712c7526da603594bd1e1afebdd2d593e3f519550bfdf4c69d7553c030c1"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_magnolia.json"
+hash = "0295df312dc71b1195eccd05b6ddec8bbc4efb6540c5bda848a4d0b7fdbd047a"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_magnolia_filled.json"
+hash = "c51a364feffd0e2c1c950392d07bac5880242d7787a6115cc947bd57906e6a99"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_maple.json"
+hash = "e75c96cf57e75bde063549083627e314b1bd4f7700dba4ecf4efb9d9a7d0e854"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_maple_filled.json"
+hash = "6aa20a96ea03cfac61fc1a3ac346957c2bbc461cde184f889d00b47e1dae7e9f"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_mauve.json"
+hash = "b5e7687ad7d2ee6e5fc779733285492f1311a3102433c063186eaf3b76683d87"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_mauve_filled.json"
+hash = "551aad7eae867b7925fac010856b497b826a75af5d84b6cfeeea26dc9b01f626"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_orange_painted.json"
+hash = "33dbee86d6ca819f1dedfe2bd811ec8ae9dae52b094f999c0349399d1e9ca312"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_orange_painted_filled.json"
+hash = "0d66696d9d01e0e33ef9699c1cd4917941d65f94bee64e5c815c8c1760329ae5"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_palm.json"
+hash = "8695adf586453f3ac90a510d04f242207c1d129b9f0cfe4685a31b1b6612fbe5"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_palm_filled.json"
+hash = "32bbb9b88edba1eddc8d5d12f06fc6b645939b3860527ea73b3a637a1265e762"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_pine.json"
+hash = "a0ee2a806fadd53a8e1767738c4e7ed6666d214f6dd0c77764757ee922a5e145"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_pine_filled.json"
+hash = "e3ce84a56630b17a4edba6a0c1fdb5ac98ff6163c8d780a689a95e5e5d7551f0"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_pink_bioshroom.json"
+hash = "6be471f93a7ca719e62d4e5857a58daab541313da7fe8b7d2802b636b1340880"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_pink_bioshroom_filled.json"
+hash = "1fefe61228b94c5dde9542588a4632bff4c54e937e709c1e6e8d87534af32943"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_pink_painted.json"
+hash = "7541d8fcecf44cdfc584804614cfcba08ec1a9b7b50bc0162f6e690ec31206a8"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_pink_painted_filled.json"
+hash = "4b0721ed443621930c63e11527f3d5a71e7fe42c095799f5555b8ab047c449a2"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_purple_painted.json"
+hash = "99b106539fa0a703c1e2d8f2abe428773eb5cf659a5a1597348663e3d7ccc38f"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_purple_painted_filled.json"
+hash = "5a86a0a3225c0186864932ae6864a587477f53dcc3893d7251b772c507043ba8"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_red_painted.json"
+hash = "52b3f1c795132f03a2ed5c7820ddb4afb46fe23531e2c89b1d2f163f88c25da2"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_red_painted_filled.json"
+hash = "c2e554cae5c88f8d80a8373142bd641a81f88620633fd31b4e7eb557367e477f"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_redwood.json"
+hash = "2e0b3fe5cfb45db5c82109d74034e5403db0624a8fa12fe2db6fcb48e0717dae"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_redwood_filled.json"
+hash = "9b9d6909da594d8a944c4ac116e1806e5f55f54f3986e13af32ae63fece14266"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_socotra.json"
+hash = "02f93fa480c0b6219b8980810c29f06c7c6dda10852ae240b498cffd4d21d27a"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_socotra_filled.json"
+hash = "ed0ec7e8da024fb111b60be6106fe64309cf1df90858aaf86b998d864d54ba36"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_white_painted.json"
+hash = "04a85e3357c1268ddaaa98d0680e162a249bd5f67ddc5c6319a9ce2b270b56a8"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_white_painted_filled.json"
+hash = "3ccbac07e1ac94e39f3d1e29aec4a769555179d4bedc742930a707f97452606e"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_willow.json"
+hash = "acbd22d52ab4c6bc0bed954591c17be432f7660e91e871f23fd3da171a4dc9c4"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_willow_filled.json"
+hash = "1565d84c8a7eba16b25d10c5ec83666364724ead771f9b003b72b590cbd31f84"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_yellow_bioshroom.json"
+hash = "5a1cad07d22837f2a9414e6d6f71f4d7108e153a6bcaaa4b774aaef70fa8e0ae"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_yellow_bioshroom_filled.json"
+hash = "a8bfb28b54d565ee6d4edb8d3f95535973b68bcd90e3d6838dd31edaabc8e730"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_yellow_painted.json"
+hash = "9a5f5fb0529c4d8b99883510353c340c563d56b7c66fd1d85864c339da282532"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_regions_unexplored_yellow_painted_filled.json"
+hash = "2e9acb701c20690541193dba12e894ff5f0bb05588c844ef5d37cb933a463b92"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_spruce.json"
-hash = "6de8fcaa524f1491bc7ca1892ff61782cdb7512f0c352f8b8640b0d49fe3dc67"
+hash = "cd0f6e5b46e031cc39d53ff86bc1904d6906db5a80a11ce624bf89325092a102"
 
 [[files]]
 file = "kubejs/assets/endermail/models/block/locker_spruce_filled.json"
-hash = "32f772bdf8c419aa9582dad0627031be23fb49e7007656935e28a1e141a9a628"
+hash = "68937ff80ec67d54aa491bbbb0a388bb5f750fb6d46c3a9d48e0b07f57663daa"
 
 [[files]]
-file = "kubejs/assets/endermail/models/block/locker_umbran.json"
-hash = "ea564e55e924a0d4e29ed6e08066d6f61b008d44428aa36f635f0085307e4495"
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_canopy.json"
+hash = "fcd3fde8091b30877b31546d1ded86c7a807193b1eedb3c323812e79d4ddb14e"
 
 [[files]]
-file = "kubejs/assets/endermail/models/block/locker_umbran_filled.json"
-hash = "aee0b9f1ab299f3f70690798bcfecc90ce5dbb72891e8517b87592cda0c239f4"
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_canopy_filled.json"
+hash = "9615ef3e1f6291e9da7eeeebd838096ecc0fd964b813d111aa565aa8fb1f5174"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_cracked_towerwood.json"
+hash = "b07080d179a2ece2948da65700a1aefda6b9478821bd7e9c37e843e27a9f8cc2"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_cracked_towerwood_filled.json"
+hash = "c9206c8c06545a4d5a5592151f026d337b2890b0133f1c65a51780eedf9bb472"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_dark.json"
+hash = "7233e722c73ca00ee849531a0c8c327ebc401cb803073595ac2986576cec30d2"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_dark_filled.json"
+hash = "ca153a2718ff65b070a9eedd8d8b9521063ddcd4c66ed7e90291a7fd2f1d3109"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_encased_towerwood.json"
+hash = "792d14e7cc63cfd10c286726a8a9146d2e1287f27fe69b3ac751041490b3fc1c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_encased_towerwood_filled.json"
+hash = "d6a098c4a1109fd5d500fb0df7e976324a932d7982cbb4109b56f526cb918738"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_infested_towerwood.json"
+hash = "c9da2a0c0b2dd2aa68e14af94c1812d4dc8aeed10cad1227c6c74feeb776dbfb"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_infested_towerwood_filled.json"
+hash = "e22c0a2e451fb3195cb7da314ab356caed73fcd0f939e14ce6dbe151718e9b49"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_mangrove.json"
+hash = "f2fa37d6b321f8313bcd86d54dd62109ce014aa4d49359b4acf84cc87fdf373c"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_mangrove_filled.json"
+hash = "844a248b6f901be8fa59925bae5a4fb6215b75a95356c27fa03a2dca3187dcee"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_mining.json"
+hash = "5a36392d127fe132bff92de2a7d384d6a6224197ec61466e7d537f24864eaf96"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_mining_filled.json"
+hash = "42d2811d85ef92a58782af096055f60b74600e30556d330c737504b9e32484b7"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_mossy_towerwood.json"
+hash = "1ce7f79e039a71ea0b62a33c192a0ffa113777bed23ecd3ebc7a3fcad764fe67"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_mossy_towerwood_filled.json"
+hash = "2e85cf26953697cfcf9995eac070048fad1d837db1671126fea198eca1f9e2d9"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_sorting.json"
+hash = "2291ffabdec00c3a47861ffdb357de04f9455e10bd437c133cbe971bb2519cc3"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_sorting_filled.json"
+hash = "9e1330830c3c52d2c7e4c6cad98aba11211d854c53d43fb35f77fffc8c8a85d6"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_time.json"
+hash = "8a37a423865c3a6fd4de47b7de06603cebd2b5cab2d0fa2d6cddcca13e202d7a"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_time_filled.json"
+hash = "6613646e6afb920efa3b14d6f439566eaae9360aca897bd5f6127dc00d5b10f9"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_towerwood.json"
+hash = "43f43ca2be5248cf7ae13f7f5269507ddb87c7cc9c81f45d58c20cdd6f7b5b31"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_towerwood_filled.json"
+hash = "3954ccda48c44c6ae5d2d815a06186cbb6f673c6e1ae05f141e815a3bd0ae722"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_transformation.json"
+hash = "d0d9c14bdaf4ae78bb8fe04fcaa76be5c945405622517b358bf147d80c092381"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_transformation_filled.json"
+hash = "03df923a5208686a9ffd7cb2e272187d86d498b7c3a7e9fa3822949c1a7489f2"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_twilight_oak.json"
+hash = "9e90f02561a3ee8a9848d23fa193e2863fe5b02f8d3ae5070c47ecf471f921f9"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_twilightforest_twilight_oak_filled.json"
+hash = "7f449d2978b0a0aa07868f8c958df951b2e1429bfbf91b08c096bbdd1d73f410"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_vinery_dark_cherry.json"
+hash = "cff56fc67f21dd8b3b21f988d7597483cea76717510e8a7e58dc1149fe6c938d"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_vinery_dark_cherry_filled.json"
+hash = "d0570726b9093a93e9458ba6d5725d7b2ddff26412bdba3b7bf7ab9d0e4e1d96"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_warped.json"
+hash = "b779fe90918791277fd90398a7c27f94b69c81a293f75a02c09f98c5d2875833"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/locker_warped_filled.json"
+hash = "7e9b639090ea58c8c7e40b9e5ba314a0b8f62c1c9eb931569723bfd01e07b14a"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/package.json"
+hash = "614aff003ca0519c3a9ff5f949c4ad1906fa86546ed76f03d4751187e25c93bc"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/stamped_package.json"
+hash = "3df104d7ede24165df1f6046e482ff70bbcd60a692029a0fc92282e0276e5d98"
+
+[[files]]
+file = "kubejs/assets/endermail/models/item/locker.json"
+hash = "28abc3050c9c3901b6dc90805b2b80fb855d95ba310eb22fa08bed55ff6afd18"
+
+[[files]]
+file = "kubejs/assets/endermail/textures/gui/package.png"
+hash = "47592bd77e56feea7ebe77d12c6c5ce826758fb2a832e8a7b9d5c55543ca2b6d"
+
+[[files]]
+file = "kubejs/assets/endermail/textures/item/stamp.png"
+hash = "cdc3d430e6d469b3ea932245832600f64dc01fe6b4c0094e17b60c50e8d54557"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/blockstates/nightmare_fire_block.json"
+hash = "fbb1c04a60548f3285166a915f6db4822e4b4b5561c198d736a59947dcd57354"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_floor0.json"
+hash = "5787d58a06011064dcb215444580350dddbcb9a032e79e9f50b1d1acd75be82d"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_floor1.json"
+hash = "353bb01ec18e4b8e47575e9871272f74520b8153a8af1d4bfcb0d9adbf6f32bd"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_side0.json"
+hash = "7a2c7de1a97a7e6bc0bfa64b71f3af7d905671a69729c953bf18664fd6589584"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_side1.json"
+hash = "a49b41426847a94b0b6b7d4400bcac83e2d902fbea69385f7e78df25e039636b"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_side_alt0.json"
+hash = "47398470ff49576cb8c0d21854d87f2992e189aa632e740e0691673f15355c0d"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_side_alt1.json"
+hash = "b9fa57f82c26a0118a7c18d830dbae688b4ca5e7e7ce0c06d34da69820cb477b"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_up0.json"
+hash = "715d9b2b0c87ec2a1c9ed0010823b1d4fef1aad480ed0ec94a0514648add155c"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_up1.json"
+hash = "6e94d2950997a5df4f8e50f0863b8e41c551b84b3767e45fb51e77e248fabf35"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_up_alt0.json"
+hash = "a904a57592ca3800bf33051e443a1a6474189f2b4cf02f781802529dc24343d2"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_up_alt1.json"
+hash = "19ab6122b0ab56f0cf908e8c9bc0e02261f0302f2cd9979056e34b2e83c12031"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/template_short_fire_floor.json"
+hash = "ecfa2c8fda323a1279fb323eae8a6b4ab16564e5f98082e71a9c638f2f640fcd"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/template_short_fire_side.json"
+hash = "22a1db7f37d5d9f8a048f183202bfb2dbbc3eba1cf8ff252bd438ae508974f73"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/template_short_fire_side_alt.json"
+hash = "11a68c5017e5f2de2ca77404e68def15c6bd5219a185c6706ce8211694e9a356"
 
 [[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
@@ -373,6 +1185,10 @@ hash = "0c035630121e5ed9b1c1a50b3ce098adca9020da1f2aa4695d92b02e6e8cda09"
 [[files]]
 file = "kubejs/client_scripts/jei_hidden.js"
 hash = "ec5bd4f0454814103cc708dd74bd4c992c6ae0f36e7ab0336cd99bd043ed2dc3"
+
+[[files]]
+file = "kubejs/client_scripts/mailbox_tooltip.js"
+hash = "4d0639005b0ad97a26b71ac1a74387e99bfb2ccb844e2edc7ed5169dd5d63fa8"
 
 [[files]]
 file = "kubejs/data/biomesoplenty/worldgen/biome/scrubland.json"
@@ -405,6 +1221,10 @@ hash = "2f107e82d0baa0a099d7b4a5c066719eed66ee82cb5e99b7a371d70c4886c259"
 [[files]]
 file = "kubejs/data/butterflies/forge/biome_modifier/wetlands_butterflies.json"
 hash = "8c307ef8ef240e4f2aa097c715f7e30499299db75d77cbe232927751bd18b6ce"
+
+[[files]]
+file = "kubejs/data/endermail/loot_tables/blocks/locker.json"
+hash = "12cca183dde8ce69ee5de63d2afcc52e910a3b2c713e4d651ba0e733d65f6340"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/biome/meadow_water_buffalo.json"
@@ -608,7 +1428,7 @@ hash = "08d0cf09fccbf79e3391e7496b483041a0d222102eb5955cc01f2124f0ebee73"
 
 [[files]]
 file = "kubejs/server_scripts/mail_recipes.js"
-hash = "954985d1acf0b5f2e02ce993318a6ae21c0becda7da33ee13467bcebea309e8f"
+hash = "07597fd72742665eb4b23e3bbba8eecb63cb319aef547439d5063cf1307cdac0"
 
 [[files]]
 file = "kubejs/server_scripts/protect_pets.js"
@@ -655,12 +1475,16 @@ file = "kubejs/startup_scripts/friendly_fireballs.js"
 hash = "8c1add65c50ab5ee9d0024a42000ae68e570884f7c3542d1881775f6605d1e56"
 
 [[files]]
+file = "kubejs/startup_scripts/mailbox_woods.js"
+hash = "8401f71d28bcb037ad3787668b01e855e49f61d2983bc9f78455b2eac57cfbe7"
+
+[[files]]
 file = "kubejs/startup_scripts/protect_boats.js"
 hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
-hash = "341369f528d2fd64a76359a4c02750a2637c139ef0a78eb0c4c6d2537b3f6440"
+hash = "6cfb9b4e3f15fcf65bb35cd5e8177879cff61538c7ab5d5268a6fdf42ddcbae1"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -860,6 +1684,11 @@ metafile = true
 [[files]]
 file = "mods/ferritecore.pw.toml"
 hash = "5bd0506bc0be25116b234f2b5af9447f60d82ae1cb6c5be4e12d8841f6c2501c"
+metafile = true
+
+[[files]]
+file = "mods/fotfmail.pw.toml"
+hash = "e9e20c538a871916401e9f11ab2b27b6c92fda3071d31199a5f2ac2d9124f162"
 metafile = true
 
 [[files]]
@@ -1587,7 +2416,7 @@ hash = "3a85fbb2a40e686b41e103b18dd09f219c76089ec489c50f108efa10397c3f50"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/grove/mail.json"
-hash = "a699c82126c24ddf8174264ebe996bf32c46126233a6aac374bac8f96f24f1cd"
+hash = "3add224405216bc864eec833cb08492451b0cd69df8fc04b4a1c7b39305d0011"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/grove/rules.json"

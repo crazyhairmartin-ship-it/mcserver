@@ -1,0 +1,64 @@
+package fotfmail.mixin;
+
+import com.chaosthedude.endermail.entity.EnderMailmanEntity;
+import fotfmail.CarrierGoal;
+import fotfmail.Mail;
+import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.world.item.ItemStack;
+import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+
+/**
+ * Ender Mail's carrier. All carriers are invulnerable (setInvulnerable = m_20331_). For fotfmail letters
+ * (persistent data flag "fotfmail_letter"):
+ * - CarrierGoal (priority 0, registerGoals = m_8099_) walks the letter between the two mailboxes
+ * - no random enderman teleports (in daylight or when hurt), which would break the walk
+ * - getPackageStack hands over the letter itself rather than wrapping it in a package (only reached if Ender Mail's
+ *   own delivery somehow runs; its goals are off for letter carriers, see EnderMailmanGoalsMixin)
+ */
+@Mixin(EnderMailmanEntity.class)
+public abstract class EnderMailmanEntityMixin {
+    @Inject(method = "m_8099_", at = @At("TAIL"), remap = false)
+    private void fotfmail$addCarrierGoal(CallbackInfo ci) {
+        EnderMailmanEntity self = (EnderMailmanEntity) (Object) this;
+        ((MobAccessor) self).fotfmail$goalSelector().m_25352_(0, new CarrierGoal(self));
+        self.m_20331_(true); // every mail carrier is invulnerable (rain, water and attacks used to hurt them)
+    }
+
+    @Inject(method = "teleportRandomly", at = @At("HEAD"), cancellable = true, remap = false)
+    private void fotfmail$stayPut(CallbackInfoReturnable<Boolean> cir) {
+        if (CarrierGoal.isLetterCarrier((EnderMailmanEntity) (Object) this)) {
+            cir.setReturnValue(false);
+        }
+    }
+
+    @Inject(method = "getPackageStack", at = @At("HEAD"), cancellable = true, remap = false)
+    private void fotfmail$deliverLetterItself(CallbackInfoReturnable<ItemStack> cir) {
+        EnderMailmanEntity self = (EnderMailmanEntity) (Object) this;
+        NonNullList<ItemStack> contents = self.getContents();
+        if (CarrierGoal.isLetterCarrier(self) && !contents.isEmpty() && !contents.get(0).m_41619_()) {
+            cir.setReturnValue(contents.get(0).m_41777_());
+        }
+    }
+
+    /** Packages dropped in a mailbox are marked received, so they disappear once emptied (PackageBlockEntityMixin). */
+    @Inject(method = "getPackageStack", at = @At("RETURN"), remap = false)
+    private void fotfmail$markReceived(CallbackInfoReturnable<ItemStack> cir) {
+        ItemStack stack = cir.getReturnValue();
+        if (CarrierGoal.isLetterCarrier((EnderMailmanEntity) (Object) this) || stack.m_41619_()) {
+            return;
+        }
+        CompoundTag blockEntityTag = stack.m_41698_("BlockEntityTag");
+        CompoundTag forgeData = blockEntityTag.m_128469_("ForgeData");
+        forgeData.m_128379_("fotfmail_received", true);
+        String from = CarrierGoal.data((EnderMailmanEntity) (Object) this).m_128461_(Mail.FROM_TAG);
+        if (!from.isEmpty()) {
+            forgeData.m_128359_(Mail.FROM_TAG, from);
+        }
+        blockEntityTag.m_128365_("ForgeData", forgeData);
+    }
+}

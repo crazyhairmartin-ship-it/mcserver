@@ -1,0 +1,587 @@
+{
+ "parent": "endermail:block/locker_oak",
+ "overrides": [
+  {
+   "predicate": {
+    "fotfmail:wood": 0.0078125
+   },
+   "model": "endermail:block/locker_alexscaves_pewen"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.015625
+   },
+   "model": "endermail:block/locker_alexscaves_thornwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.0234375
+   },
+   "model": "endermail:block/locker_ars_nouveau_archwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.03125
+   },
+   "model": "endermail:block/locker_beachparty_palm"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.0390625
+   },
+   "model": "endermail:block/locker_biomesoplenty_dead"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.046875
+   },
+   "model": "endermail:block/locker_biomesoplenty_empyreal"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.0546875
+   },
+   "model": "endermail:block/locker_biomesoplenty_fir"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.0625
+   },
+   "model": "endermail:block/locker_biomesoplenty_hellbark"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.0703125
+   },
+   "model": "endermail:block/locker_biomesoplenty_jacaranda"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.078125
+   },
+   "model": "endermail:block/locker_biomesoplenty_magic"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.0859375
+   },
+   "model": "endermail:block/locker_biomesoplenty_mahogany"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.09375
+   },
+   "model": "endermail:block/locker_biomesoplenty_maple"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.1015625
+   },
+   "model": "endermail:block/locker_biomesoplenty_palm"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.109375
+   },
+   "model": "endermail:block/locker_biomesoplenty_pine"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.1171875
+   },
+   "model": "endermail:block/locker_biomesoplenty_redwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.125
+   },
+   "model": "endermail:block/locker_biomesoplenty_umbran"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.1328125
+   },
+   "model": "endermail:block/locker_biomesoplenty_willow"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.140625
+   },
+   "model": "endermail:block/locker_bloomingnature_aspen"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.1484375
+   },
+   "model": "endermail:block/locker_bloomingnature_baobab"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.15625
+   },
+   "model": "endermail:block/locker_bloomingnature_cactus"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.1640625
+   },
+   "model": "endermail:block/locker_bloomingnature_chestnut"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.171875
+   },
+   "model": "endermail:block/locker_bloomingnature_ebony"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.1796875
+   },
+   "model": "endermail:block/locker_bloomingnature_fan_palm"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.1875
+   },
+   "model": "endermail:block/locker_bloomingnature_fir"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.1953125
+   },
+   "model": "endermail:block/locker_bloomingnature_larch"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.203125
+   },
+   "model": "endermail:block/locker_bloomingnature_swamp_cypress"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.2109375
+   },
+   "model": "endermail:block/locker_bloomingnature_swamp_oak"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.21875
+   },
+   "model": "endermail:block/locker_cataclysm_chorus"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.2265625
+   },
+   "model": "endermail:block/locker_meadow_pine"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.234375
+   },
+   "model": "endermail:block/locker_acacia"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.2421875
+   },
+   "model": "endermail:block/locker_bamboo"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.25
+   },
+   "model": "endermail:block/locker_birch"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.2578125
+   },
+   "model": "endermail:block/locker_cherry"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.265625
+   },
+   "model": "endermail:block/locker_crimson"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.2734375
+   },
+   "model": "endermail:block/locker_dark_oak"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.28125
+   },
+   "model": "endermail:block/locker_jungle"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.2890625
+   },
+   "model": "endermail:block/locker_mangrove"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.296875
+   },
+   "model": "endermail:block/locker_spruce"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.3046875
+   },
+   "model": "endermail:block/locker_warped"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.3125
+   },
+   "model": "endermail:block/locker_mowziesmobs_painted_acacia"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.3203125
+   },
+   "model": "endermail:block/locker_nethervinery_crested_crimson"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.328125
+   },
+   "model": "endermail:block/locker_nethervinery_crested_warped"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.3359375
+   },
+   "model": "endermail:block/locker_nethervinery_reinforced_crimson"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.34375
+   },
+   "model": "endermail:block/locker_nethervinery_reinforced_warped"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.3515625
+   },
+   "model": "endermail:block/locker_regions_unexplored_alpha"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.359375
+   },
+   "model": "endermail:block/locker_regions_unexplored_baobab"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.3671875
+   },
+   "model": "endermail:block/locker_regions_unexplored_black_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.375
+   },
+   "model": "endermail:block/locker_regions_unexplored_blackwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.3828125
+   },
+   "model": "endermail:block/locker_regions_unexplored_blue_bioshroom"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.390625
+   },
+   "model": "endermail:block/locker_regions_unexplored_blue_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.3984375
+   },
+   "model": "endermail:block/locker_regions_unexplored_brimwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.40625
+   },
+   "model": "endermail:block/locker_regions_unexplored_brown_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.4140625
+   },
+   "model": "endermail:block/locker_regions_unexplored_cobalt"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.421875
+   },
+   "model": "endermail:block/locker_regions_unexplored_cyan_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.4296875
+   },
+   "model": "endermail:block/locker_regions_unexplored_cypress"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.4375
+   },
+   "model": "endermail:block/locker_regions_unexplored_dead"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.4453125
+   },
+   "model": "endermail:block/locker_regions_unexplored_eucalyptus"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.453125
+   },
+   "model": "endermail:block/locker_regions_unexplored_gray_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.4609375
+   },
+   "model": "endermail:block/locker_regions_unexplored_green_bioshroom"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.46875
+   },
+   "model": "endermail:block/locker_regions_unexplored_green_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.4765625
+   },
+   "model": "endermail:block/locker_regions_unexplored_joshua"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.484375
+   },
+   "model": "endermail:block/locker_regions_unexplored_kapok"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.4921875
+   },
+   "model": "endermail:block/locker_regions_unexplored_larch"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.5
+   },
+   "model": "endermail:block/locker_regions_unexplored_light_blue_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.5078125
+   },
+   "model": "endermail:block/locker_regions_unexplored_light_gray_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.515625
+   },
+   "model": "endermail:block/locker_regions_unexplored_lime_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.5234375
+   },
+   "model": "endermail:block/locker_regions_unexplored_magenta_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.53125
+   },
+   "model": "endermail:block/locker_regions_unexplored_magnolia"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.5390625
+   },
+   "model": "endermail:block/locker_regions_unexplored_maple"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.546875
+   },
+   "model": "endermail:block/locker_regions_unexplored_mauve"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.5546875
+   },
+   "model": "endermail:block/locker_regions_unexplored_orange_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.5625
+   },
+   "model": "endermail:block/locker_regions_unexplored_palm"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.5703125
+   },
+   "model": "endermail:block/locker_regions_unexplored_pine"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.578125
+   },
+   "model": "endermail:block/locker_regions_unexplored_pink_bioshroom"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.5859375
+   },
+   "model": "endermail:block/locker_regions_unexplored_pink_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.59375
+   },
+   "model": "endermail:block/locker_regions_unexplored_purple_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.6015625
+   },
+   "model": "endermail:block/locker_regions_unexplored_red_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.609375
+   },
+   "model": "endermail:block/locker_regions_unexplored_redwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.6171875
+   },
+   "model": "endermail:block/locker_regions_unexplored_socotra"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.625
+   },
+   "model": "endermail:block/locker_regions_unexplored_white_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.6328125
+   },
+   "model": "endermail:block/locker_regions_unexplored_willow"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.640625
+   },
+   "model": "endermail:block/locker_regions_unexplored_yellow_bioshroom"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.6484375
+   },
+   "model": "endermail:block/locker_regions_unexplored_yellow_painted"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.65625
+   },
+   "model": "endermail:block/locker_twilightforest_canopy"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.6640625
+   },
+   "model": "endermail:block/locker_twilightforest_cracked_towerwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.671875
+   },
+   "model": "endermail:block/locker_twilightforest_dark"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.6796875
+   },
+   "model": "endermail:block/locker_twilightforest_encased_towerwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.6875
+   },
+   "model": "endermail:block/locker_twilightforest_infested_towerwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.6953125
+   },
+   "model": "endermail:block/locker_twilightforest_mangrove"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.703125
+   },
+   "model": "endermail:block/locker_twilightforest_mining"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.7109375
+   },
+   "model": "endermail:block/locker_twilightforest_mossy_towerwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.71875
+   },
+   "model": "endermail:block/locker_twilightforest_sorting"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.7265625
+   },
+   "model": "endermail:block/locker_twilightforest_time"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.734375
+   },
+   "model": "endermail:block/locker_twilightforest_towerwood"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.7421875
+   },
+   "model": "endermail:block/locker_twilightforest_transformation"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.75
+   },
+   "model": "endermail:block/locker_twilightforest_twilight_oak"
+  },
+  {
+   "predicate": {
+    "fotfmail:wood": 0.7578125
+   },
+   "model": "endermail:block/locker_vinery_dark_cherry"
+  }
+ ]
+}

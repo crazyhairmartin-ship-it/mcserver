@@ -1,0 +1,41 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "MIT"
+
+[[mods]]
+modId = "fotfmail"
+version = "1.0.0"
+displayName = "Friends of the Forest Mail"
+description = '''
+Add-on for Ender Mail: birdhouse mailboxes in every wood (the crafting planks pick it), and letters you
+write on, sign with a friend's mailbox ID, and send from any mailbox. Also shows Domestication Innovation
+collar effects on GeckoLib pets.
+'''
+
+[[dependencies.fotfmail]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.fotfmail]]
+modId = "endermail"
+mandatory = true
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.fotfmail]]
+modId = "domesticationinnovation"
+mandatory = true
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
+
+[[dependencies.fotfmail]]
+modId = "geckolib"
+mandatory = true
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
