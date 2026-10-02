@@ -229,39 +229,17 @@
 			drawer = true
 			chair = true
 
-		[entries.wood_type.refurbished_furniture]
-			storage_cabinet = false
-			storage_jar = false
-			kitchen_cabinetry = false
-			crate = false
-			desk = false
-			chair = false
-			light_ceiling_fan = false
-			cutting_board = false
-			drawer = false
-			table = false
-			mail_box = false
-			dark_ceiling_fan = false
-			kitchen_sink = false
-			toilet = false
-			lattice_fence = false
-			basin = false
-			kitchen_drawer = false
-			lattice_fence_gate = false
-			bath = false
-			kitchen_storage_cabinet = false
-
 		[entries.wood_type.regions_unexplored]
-			branch = false
+			branch = true
 
 		[entries.wood_type.twilightforest]
-			banister = false
-			hollow_log_climbable = false
-			hollow_log_horizontal = false
-			hollow_log_vertical = false
+			banister = true
+			hollow_log_climbable = true
+			hollow_log_horizontal = true
+			hollow_log_vertical = true
 
 		[entries.wood_type.friendsandfoes]
-			beehive = false
+			beehive = true
 
 		[entries.wood_type.farmersdelight]
 			cabinet = true
@@ -269,8 +247,5 @@
 	[entries.leaves_type]
 
 		[entries.leaves_type.regions_unexplored]
-			shrub = false
-
-		[entries.leaves_type.refurbished_furniture]
-			hedge = false
+			shrub = true
 

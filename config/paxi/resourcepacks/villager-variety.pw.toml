@@ -1,0 +1,13 @@
+name = "Villager Variety"
+filename = "VillagerVariety_BiomeDependent-v2.0.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/sPT9u2eL/versions/2D7KO0eU/VillagerVariety_BiomeDependent-v2.0.zip"
+hash-format = "sha512"
+hash = "4abec670fe3945a904f7a757504555e14b476edf3f793d857053bd47c808c4c8fdbef205fe77f24381c95c44efb343a2af3aa827a1bbc78a47af8a7c08704adb"
+
+[update]
+[update.modrinth]
+mod-id = "sPT9u2eL"
+version = "2D7KO0eU"

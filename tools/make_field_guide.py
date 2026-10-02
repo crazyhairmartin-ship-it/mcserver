@@ -42,7 +42,7 @@ CATEGORIES = [
      'Unicorns, critters, pets and every other friend of the forest.'),
     ('farming', 'Farming & Cooking', 'farmersdelight:cooking_pot',
      'Grow, cook, bake, brew and fish.'),
-    ('building', 'Building & Decor', 'refurbished_furniture:oak_chair',
+    ('building', 'Building & Decor', 'handcrafted:oak_chair',
      'Furniture, decorations and cozy homes.'),
     ('magic', 'Magic', 'irons_spellbooks:copper_spell_book',
      'Two magic mods: one for battle spells, one for building your own spells and magical helpers.'),
@@ -141,8 +141,8 @@ ENTRIES = [
     ]),
 
     # ---------- Building & Decor ----------
-    ('building', 'furniture', 'Furniture', 'refurbished_furniture:oak_chair', [
-        text('Four furniture mods, each with its own style:$(li)$(l)Refurbished Furniture$(): kitchens that really work$(li)$(l)Handcrafted$()$(li)$(l)Another Furniture$()$(li)$(l)Let\'s Do Furniture$()$(br2)Search JEI for "chair", "table" or "sofa".'),
+    ('building', 'furniture', 'Furniture', 'handcrafted:oak_chair', [
+        text('Three furniture mods, each with its own style:$(li)$(l)Handcrafted$()$(li)$(l)Another Furniture$()$(li)$(l)Let\'s Do Furniture$()$(br2)Search JEI for "chair", "table" or "sofa".'),
     ]),
     ('building', 'decor', 'Decorations', 'supplementaries:jar', [
         text('$(l)Supplementaries$() and $(l)Amendments$(): jars, signposts, flower boxes, wall lanterns and lots of small details.$(br2)$(l)Snowy Spirit$(): sleds, gingerbread and winter decor.'),

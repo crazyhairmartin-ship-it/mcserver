@@ -38,11 +38,11 @@ hash = "0c19468dd71b6be4e694e2914b44b4eba984790895aad416ffdedcbbf1da546f"
 
 [[files]]
 file = "config/everycomp-entries.toml"
-hash = "ac0a59dcc5a6b01fcdf5dcb44d4ef3cf04937ecc8b1279b51dfa12aae1134a64"
+hash = "78246ccf2cd87218a4f692a68cac1175cc8dcaade95aae721b6f1ad092c99df6"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
-hash = "4a9407a7e3acc7246a2d7f9c56fc16d6490bdedf623e1582a5e0475df4c7b6be"
+hash = "b9a5bccd9b8dc1a76944fdfa28c6fff0f2d46ea8e9f61655b9629210de79c14c"
 
 [[files]]
 file = "config/fml.toml"
@@ -65,8 +65,18 @@ file = "config/naturalist.json"
 hash = "e180b18c2f250a1d4531cc442f5a4dea18ef67796e25c409845866befa1f30d5"
 
 [[files]]
-file = "config/refurbished_furniture.server.toml"
-hash = "e374eaee1d4f720bca9e1c9d80ba353d67cfe25c1f2e71a98127082a31f937e1"
+file = "config/paxi/resourcepack_load_order.json"
+hash = "4b40c657f874318e6116a4e4b227a444bb1e818f895f25ea79ea9fb8758ada43"
+
+[[files]]
+file = "config/paxi/resourcepacks/brays-zombie-overhaul.pw.toml"
+hash = "988adcefca289dd3f6b9b42eaa6560e44c6a38b40a03476d382781864015e0b9"
+metafile = true
+
+[[files]]
+file = "config/paxi/resourcepacks/villager-variety.pw.toml"
+hash = "e6a8aefa223576e123f4730e107a6d0aeff2960a8d045831103183677b3b5c99"
+metafile = true
 
 [[files]]
 file = "config/simplyswords/general.toml"
@@ -186,59 +196,59 @@ hash = "a53858f69c8ed5a7b09aab2dff0833a166f7fd7af4eb07fc63c9c48140314cd7"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/block/umbran_door_bottom.png"
-hash = "d4904bfee53622cdae5d21da9414d70bc40f46ce371422497a2d87c098204977"
+hash = "3c89beb0ddd7496ae2407753e911610e4f30bbd666a1404c8c7258a537afb4bb"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/block/umbran_door_top.png"
-hash = "567468dbdd7a239cfb62827a4a7d71488811efc056a88ec7658a97561e15bfe6"
+hash = "0e12973cbe8e70146d5a544e761dd02aa2247a08a70f53f1ad4bf4ca4f8a9721"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/block/umbran_planks.png"
-hash = "f1ce8bd85f53e0d10ef94a4c813d8e5f72d02d7d0536ffe12c6641f3916a6d40"
+hash = "6944a086ec7b0b469c8ad3ff6e75cad999883062734e94475f181cb602e19bc0"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/block/umbran_trapdoor.png"
-hash = "a1f8bf5a0f7cfe41b2543abbf94f75116c51dbd90249cdf3c807820598eababa"
+hash = "06d375b09f7d50f8bed66643f878d3a1734ca76dd23f69ae5956cbd868185c67"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/entity/boat/umbran.png"
-hash = "47cda020d07a5e90b4a0671a851b3278d1e6994fa54614538815244484e578cb"
+hash = "a8bfb7bf7f724d024287482c955910f07e13628b1eb439d9630389b134691ede"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/entity/chest_boat/umbran.png"
-hash = "1b341d8bd66798e5d1bfc0315edee0c8249250a4eedfaf2ac82f77ca6dcf10ec"
+hash = "807392a338786025d9ae9c2000c5404c1a77d19dfd579d9a2145cf3ca1f4c4ca"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/entity/signs/hanging/umbran.png"
-hash = "43ce35f64b2b793b246cd319d9ac5263ca25ec366bfa120b1590d4cff00a2d61"
+hash = "430260ddd0e33f6535b72d61a56aedcc62cfb51fe798ca588d8b46e007357e00"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/entity/signs/umbran.png"
-hash = "e16d1d5be95ebd51e925f544d02229119377e148dd6970ce4f16f01773284cc5"
+hash = "48aa5675278e23ce92f383224a21941c210cfff2538222cb3bcdbd60626726a0"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/gui/hanging_signs/umbran.png"
-hash = "3f66e27f6022ad0b532d8063aca27ccad76defd54c7ea729d5e5d0b6841c82a9"
+hash = "7bf193fb204c0ac5aa0ecbb0b2888316bc239590b4f8db76e11ae5da4518770f"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/item/umbran_boat.png"
-hash = "fa666df7b3c10866516848f64101d04c3abe126b52955d44b99e9c564de06be3"
+hash = "d874e0505ed5773799c5e1976b73a66d40bed1326eaee36972ecb375859a6d66"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/item/umbran_chest_boat.png"
-hash = "96644fa5cd439feec1516bd3494a5747ddd9ee4864c097c42a9418ab96c8fb6b"
+hash = "7e64e6c9deb1ebb0e9db6d5bc572d8695f58353c366eb8ccc703b64a37919f9b"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/item/umbran_door.png"
-hash = "769188567c7cacabdb2252fc01c92c4725bc0087c3882e19ec21ede2b800fd3f"
+hash = "ce3652ba2e03545f4dffe6074630356bb364adf07427748ca5a1fcc81d77e8b0"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/item/umbran_hanging_sign.png"
-hash = "b3ec959366d78b9d48ea0f0f021611c23d494471d7e3ff0bdeecf36581ef23c3"
+hash = "0964383809a7146ff3a8a8c8e29223f49f3dcb7236534116d640627a4a911dcd"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/item/umbran_sign.png"
-hash = "a1f1af3c2cc8619680b3b28df633dcdf96f316c33468cfc59038598d51e0efd2"
+hash = "c3ca0d363e59b69c38be90030b01aa30c551c82b02702e7233f0492e0adcc7d4"
 
 [[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
@@ -301,10 +311,6 @@ file = "kubejs/server_scripts/protect_pets.js"
 hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
 [[files]]
-file = "kubejs/server_scripts/trim_refurbished.js"
-hash = "397882c7b30ca331caf71639e7d8b69a319c84b18fb714ef8991380298bba513"
-
-[[files]]
 file = "kubejs/server_scripts/trim_simplyswords.js"
 hash = "ad65c303393af3505cc1fc5a7d4809723311f0ebd86c6eb78f981994c67d31ab"
 
@@ -326,7 +332,7 @@ hash = "9c0de00c70d542caeb2f103f3272d9193121b20ae053d97fc55a199f5280f746"
 
 [[files]]
 file = "kubejs/startup_scripts/duplicate_groups.js"
-hash = "9af3e3a7a678dd66ac0fdaeeea7c8b77635fb57e0ed6d6ff1e2dd978eb7c0f58"
+hash = "95d59a1f89994e1b11235af28beab4072d84c088ce72f9e26113f3ee35718def"
 
 [[files]]
 file = "kubejs/startup_scripts/protect_boats.js"
@@ -334,7 +340,7 @@ hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
-hash = "57873aa01a2bec83dc22583520642b6823000f4a988c4663ba357d4508b6f018"
+hash = "8272e86085c3119b4b8cacebcc19b953adf3b338af092cd3de3d47beb48e696d"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -492,6 +498,11 @@ hash = "a6af059766ea70358690d048898d19e493108e2e06a97542fac696fd5e03589a"
 metafile = true
 
 [[files]]
+file = "mods/elip100s-bathrooms.pw.toml"
+hash = "c1f53f62c48643cbf9c3636a12bfe2b5c6c3edddc7e34607be6f23d58b997e0a"
+metafile = true
+
+[[files]]
 file = "mods/elytra-slot.pw.toml"
 hash = "c94b9427a8d7f0e6aa0a1779c68bde63b98b4adc1968b48adad521f51bde84f3"
 metafile = true
@@ -499,6 +510,21 @@ metafile = true
 [[files]]
 file = "mods/embeddium.pw.toml"
 hash = "a74b2d65c286896335b454f61f18be630d0f13767626ebb118584907d1d37112"
+metafile = true
+
+[[files]]
+file = "mods/ender-mail.pw.toml"
+hash = "383927a9377743678342526bc42fc4296436878c32f590727e7665489acee252"
+metafile = true
+
+[[files]]
+file = "mods/entity-model-features.pw.toml"
+hash = "7f7c6825b59aaba4353b8c5df4a21879357cc3a2b562e80f7403f67791f72008"
+metafile = true
+
+[[files]]
+file = "mods/entitytexturefeatures.pw.toml"
+hash = "b8055eaac5cf52c97a3f18704097ef9ee4ad38927406fb692e0e34fa6ed49307"
 metafile = true
 
 [[files]]
@@ -519,11 +545,6 @@ metafile = true
 [[files]]
 file = "mods/ferritecore.pw.toml"
 hash = "5bd0506bc0be25116b234f2b5af9447f60d82ae1cb6c5be4e12d8841f6c2501c"
-metafile = true
-
-[[files]]
-file = "mods/framework.pw.toml"
-hash = "9e2175476f720e0b2d21b28e91873cecf5555648e2137310e1b7cf98f6b98ab8"
 metafile = true
 
 [[files]]
@@ -732,6 +753,16 @@ hash = "e8b4876d403b4f4daab64bad9704a5b271a33031d1ff8d19d23ebd1e3b8dd39a"
 metafile = true
 
 [[files]]
+file = "mods/macaws-fences-and-walls.pw.toml"
+hash = "754a03e5f088d19287fe2f25b7b3165dd4e44e294838c679b218fcac54a11b5b"
+metafile = true
+
+[[files]]
+file = "mods/macaws-furniture.pw.toml"
+hash = "3706f6817a641198fc325d578d189d502af7c3444148a72e4dc23f214c3611a1"
+metafile = true
+
+[[files]]
 file = "mods/mantle.pw.toml"
 hash = "ce10ba1203319554de02f99d08ad0805cfae496466bbd0fe851bc36b086d3ee0"
 metafile = true
@@ -764,6 +795,11 @@ metafile = true
 [[files]]
 file = "mods/moogs-voyager-structures.pw.toml"
 hash = "a874ad656ec174e8b1e14906f2477eeec898e20d6f2da1485ebb2f16a79ff3d2"
+metafile = true
+
+[[files]]
+file = "mods/more-mob-variants.pw.toml"
+hash = "e8dcf2468e5b23c5ed71ce8c6e5d48ae70b9cb3281eab6c35401b0beecfc8a1c"
 metafile = true
 
 [[files]]
@@ -822,6 +858,11 @@ hash = "b2cb681aaf3e6085148392a06d40899239dc299aaf5ce0adf168fc225d922c97"
 metafile = true
 
 [[files]]
+file = "mods/paxi.pw.toml"
+hash = "de839923acbdec57f0287c4e2a558bf5934d116c91bfe74b2a0beee4611b537f"
+metafile = true
+
+[[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "765987a78e5d8c782d0da2de99998b43b5907d6c41347d3804045ad109e4a586"
 metafile = true
@@ -839,11 +880,6 @@ metafile = true
 [[files]]
 file = "mods/rainbow-reef.pw.toml"
 hash = "cc71b1c8938a6bbb2f7cb1bd0f49d5ffe4b30a04a866ff32c2457b9ebc5919dc"
-metafile = true
-
-[[files]]
-file = "mods/refurbished-furniture.pw.toml"
-hash = "2bcee75d08b33dd6506b7cd3f67ea9d0d2c1bf14e26728fa8e12ef19c895b165"
 metafile = true
 
 [[files]]
@@ -982,6 +1018,11 @@ hash = "00a0cba74675174812eea16aca533adfe9bac7b30a81a7e33dd81bd9343b45c4"
 metafile = true
 
 [[files]]
+file = "mods/trashslot.pw.toml"
+hash = "310605ccc700e5bdc05c2470da918dc3f7babc23eacfa81937367e461efa2a09"
+metafile = true
+
+[[files]]
 file = "mods/travelers-titles.pw.toml"
 hash = "546925f67d4dd17ea5f2717efde7991e8c61540e81319507f1fe1daa016a819f"
 metafile = true
@@ -1082,7 +1123,7 @@ hash = "f63aaeb011341f704d8f5b3394477df3fa34155a23397bbdab124d08a1555492"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/categories/building.json"
-hash = "c255d0347682d6db93d0ef765fccf0ec27691b8bc680219da347978c289f84da"
+hash = "06411869c7cf29d37c9a5a52a796046992fbea0446a493e625833d7fde66fe73"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/categories/combat.json"
@@ -1122,7 +1163,7 @@ hash = "7f7113b527d97d13626a80b15971915dca4aaa74f1a573de8d9c3875a9c941f0"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/building/furniture.json"
-hash = "95ad22bf89fc97fa014ec756f40ce830ed03cd14d0ba53756f62bf4d907a7c94"
+hash = "a8082ca5ebfb6f20ac2bdf7204afbcc1b56f843233548011d5da178b2dfff34d"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/combat/bosses.json"

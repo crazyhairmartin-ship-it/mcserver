@@ -1,0 +1,13 @@
+name = "Elip100's Bathrooms"
+filename = "Elip100's Bathrooms 1.0.6 [1.20.1].jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/T5yjJhrZ/versions/gOuhm4Tx/Elip100%27s%20Bathrooms%201.0.6%20%5B1.20.1%5D.jar"
+hash-format = "sha512"
+hash = "b9fc45819704f9f06867d8f4f41a7619dc700e05bef96df8f9dc317e49811009b0edfcb6c248e0560a00c9656fdd71c035665b9df1970b538434d657260c2e45"
+
+[update]
+[update.modrinth]
+mod-id = "T5yjJhrZ"
+version = "gOuhm4Tx"

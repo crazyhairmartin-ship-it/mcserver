@@ -1,0 +1,13 @@
+name = "Bray's Zombie Overhaul"
+filename = "BraysZombieOverhaul-v1.4.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/5cgIzEsV/versions/YLttPsfB/%C2%A76Bray%27s%20Zombie%20Overhaul%20v1.4.zip"
+hash-format = "sha512"
+hash = "c5cc1d8df3ba1dd4b0aa6a69acfe54c39ce173b6690f8b7172d0b068a2db8880b0586b470b6489516b0465ae86c4322177ae25716b7033be263be817cb055e1a"
+
+[update]
+[update.modrinth]
+mod-id = "5cgIzEsV"
+version = "YLttPsfB"
