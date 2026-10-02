@@ -7,8 +7,10 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   `kubejs/server_scripts/mail_recipes.js`), and breaking the mailbox keeps it (loot table `copy_state`).
 - **Letters.** `fotfmail:letter`: write on it like a book and quill, sign it with the recipient's mailbox ID as
   the title, then right-click any mailbox. One of Ender Mail's mail carriers (wearing a mail cap, see
-  `MailHatLayer`) appears already holding it, teleports to the friend's mailbox about 5 seconds later and drops
-  the letter itself in (not wrapped in a package). Mailboxes in other dimensions get it instantly.
+  `MailHatLayer`) appears a few blocks in front of that mailbox, walks up, takes the letter, walks off and
+  teleports; then appears in front of the friend's mailbox, walks up, drops the letter in, walks away and
+  teleports out (`CarrierGoal`; Ender Mail's own carrier goals and random teleports are off for these carriers).
+  If nobody is near the friend's mailbox it's delivered straight in. Other dimensions get it instantly.
   A signed letter stays the same item and opens as a readable book.
 - **Collar effects on GeckoLib pets.** Domestication Innovation only draws its collar enchantment effects
   (shadow hands, magnet, auras, blazing bars...) on vanilla-style renderers, so Critters & Companions,
@@ -23,7 +25,8 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
 - **Bookwyrms flutter around.** Ars Nouveau's Bookwyrms only move to transfer items or hover at a random chest.
   `BookwyrmWanderGoal` (added by mixin on `EntityBookwyrm.registerGoals`) has idle ones fly between open spots
   around their lectern network now and then, sometimes hovering over a connected lectern (their own plus any
-  lecterns linked to it). Below their transfer and chest-visit goals in priority.
+  lecterns linked to it), only where they can actually fly. Ars's chest visits are cut to about 1 in 5 of the
+  times they'd start (`RandomStorageVisitGoalMixin`) so the wander gets a turn.
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates
 `src/fotfmail/MailboxWood.java` and every mailbox model, blockstate and recipe list together. Rebuild the jar with

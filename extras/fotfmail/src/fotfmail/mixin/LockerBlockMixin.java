@@ -26,9 +26,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(LockerBlock.class)
 public abstract class LockerBlockMixin {
     private static final VoxelShape FOTFMAIL_NORTH_SOUTH = Shapes.m_83110_(
-            Block.m_49796_(7, 0, 7, 9, 6, 9), Block.m_49796_(4, 6, 3, 12, 15.5, 13));
+            Block.m_49796_(6, 0, 6, 10, 5, 10), Block.m_49796_(3, 5, 2, 13, 16, 14));
     private static final VoxelShape FOTFMAIL_EAST_WEST = Shapes.m_83110_(
-            Block.m_49796_(7, 0, 7, 9, 6, 9), Block.m_49796_(3, 6, 4, 13, 15.5, 12));
+            Block.m_49796_(6, 0, 6, 10, 5, 10), Block.m_49796_(2, 5, 3, 14, 16, 13));
 
     @Inject(method = "m_7926_", at = @At("TAIL"), remap = false)
     private void fotfmail$addWood(StateDefinition.Builder<Block, BlockState> builder, CallbackInfo ci) {

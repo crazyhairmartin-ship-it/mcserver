@@ -22,7 +22,7 @@ import net.minecraft.world.level.block.entity.BlockEntity;
  */
 public final class BookwyrmWanderGoal extends Goal {
     private static final int RADIUS = 8;
-    private static final int CHANCE = 20; // ~1 in 20 checks while idle
+    private static final int CHANCE = 8; // ~1 in 8 checks while idle
     private static final int LECTERN_VISIT_CHANCE = 3; // 1 in 3 wanders hover over a lectern
     private static final int MAX_TICKS = 160;
     private static final long NETWORK_REFRESH_TICKS = 1200; // re-scan linked lecterns once a minute

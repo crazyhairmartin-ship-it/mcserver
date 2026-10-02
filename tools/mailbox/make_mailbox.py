@@ -32,25 +32,28 @@ def box(frm, to, tex):
 
 
 BODY = [
-    box([7, 0, 7], [9, 6, 9], 'wood'),                 # post
-    box([4.5, 6, 3.5], [11.5, 7, 12.5], 'wood'),       # floor board
-    box([5, 7, 4], [11, 12, 12], 'wood'),              # house
-    box([6, 12, 4], [10, 13, 12], 'wood'),             # gable, in steps
-    box([7, 13, 4], [9, 14, 12], 'wood'),
-    box([4, 11.5, 3], [6, 12.5, 13], 'wood'),          # roof, stepped down both sides
-    box([10, 11.5, 3], [12, 12.5, 13], 'wood'),
-    box([5, 12.5, 3], [7, 13.5, 13], 'wood'),
-    box([9, 12.5, 3], [11, 13.5, 13], 'wood'),
-    box([6, 13.5, 3], [8, 14.5, 13], 'wood'),
-    box([8, 13.5, 3], [10, 14.5, 13], 'wood'),
-    box([7, 14.5, 3], [9, 15.5, 13], 'wood'),          # ridge
-    box([7, 9, 3.9], [9, 11, 4], 'hole'),              # entry hole
-    box([7.75, 7.75, 2], [8.25, 8.25, 4], 'wood'),     # perch
+    box([6, 0, 6], [10, 5, 10], 'wood'),               # post, as thick as a fence post
+    box([3.5, 5, 2.5], [12.5, 6, 13.5], 'wood'),       # floor board
+    box([4, 6, 3], [12, 12, 13], 'wood'),              # house
+    box([5, 12, 3], [11, 13, 13], 'wood'),             # gable, in steps
+    box([6, 13, 3], [10, 14, 13], 'wood'),
+    box([7, 14, 3], [9, 15, 13], 'wood'),
+    box([3, 11.5, 2], [5, 12.5, 14], 'wood'),          # roof, stepped down both sides
+    box([11, 11.5, 2], [13, 12.5, 14], 'wood'),
+    box([4, 12.5, 2], [6, 13.5, 14], 'wood'),
+    box([10, 12.5, 2], [12, 13.5, 14], 'wood'),
+    box([5, 13.5, 2], [7, 14.5, 14], 'wood'),
+    box([9, 13.5, 2], [11, 14.5, 14], 'wood'),
+    box([6, 14.5, 2], [8, 15.5, 14], 'wood'),
+    box([8, 14.5, 2], [10, 15.5, 14], 'wood'),
+    box([7, 15.5, 2], [9, 16, 14], 'wood'),            # ridge
+    box([6.5, 8, 2.9], [9.5, 10.5, 3], 'hole'),        # entry hole
+    box([7.75, 7, 1], [8.25, 7.5, 3], 'wood'),         # perch
 ]
 
 LETTER = [
-    box([6.75, 9.25, 2.75], [9.25, 10.75, 4.05], 'letter'),  # letter poking out of the hole
-    box([7.75, 9.75, 2.7], [8.25, 10.25, 2.75], 'seal'),     # wax seal
+    box([6.25, 8.5, 1.75], [9.75, 10, 3.05], 'letter'),     # letter poking out of the hole
+    box([7.75, 9, 1.7], [8.25, 9.5, 1.75], 'seal'),         # wax seal
 ]
 
 

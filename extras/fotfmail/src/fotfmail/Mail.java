@@ -7,6 +7,8 @@ import com.chaosthedude.endermail.registry.EnderMailEntities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerLevel;
@@ -18,10 +20,10 @@ import net.minecraftforge.common.extensions.IForgeEntity;
 /**
  * Sends a signed letter to the mailbox whose ID is the letter's title.
  *
- * Same dimension: one of Ender Mail's mail carriers appears at the mailbox you used, already holding the letter
- * (so its pick-up step, which removes a package block, never runs), then teleports to the friend's mailbox
- * about 5 seconds later and drops it in. EnderMailmanEntityMixin makes it hand over the letter itself rather than
- * wrapping it in a package. Other dimensions: delivered instantly, since carriers can't cross dimensions.
+ * Same dimension: one of Ender Mail's mail carriers appears a few blocks in front of the mailbox you used and walks
+ * the letter over to the friend's mailbox (CarrierGoal). Ender Mail's own carrier goals are off for these carriers,
+ * so its pick-up step (which removes a package block) never runs.
+ * Other dimensions: delivered instantly, since carriers can't cross dimensions.
  */
 final class Mail {
     static final String LETTER_TAG = "fotfmail_letter";
@@ -51,11 +53,22 @@ final class Mail {
                 EnderMailmanEntity carrier = new EnderMailmanEntity(EnderMailEntities.ENDER_MAILMAN.get(), level,
                         fromMailbox, pos, id, ItemStack.f_41583_);
                 carrier.setContents(NonNullList.m_122783_(ItemStack.f_41583_, delivered));
-                carrier.setCarryingPackage(true);
-                carrier.setDelivering(true);
-                carrier.updateTimePickedUp();
-                ((IForgeEntity) (Object) carrier).getPersistentData().m_128379_(LETTER_TAG, true);
+                CompoundTag data = ((IForgeEntity) (Object) carrier).getPersistentData();
+                data.m_128379_(LETTER_TAG, true);
+                data.m_128405_(CarrierGoal.PHASE, 0);
+                data.m_128356_(CarrierGoal.FROM, fromMailbox.m_121878_());
+                data.m_128356_(CarrierGoal.TO, pos.m_121878_());
+                carrier.m_21530_(); // never despawn mid-delivery
+                // Arrive a few steps out in front of the mailbox and walk up to it (CarrierGoal does the rest).
+                BlockPos start = CarrierGoal.standableNear(level, CarrierGoal.inFrontOf(level, fromMailbox, 6));
+                if (start == null) {
+                    start = CarrierGoal.standableNear(level, CarrierGoal.inFrontOf(level, fromMailbox, 2));
+                }
+                if (start != null) {
+                    carrier.m_6034_(start.m_123341_() + 0.5, start.m_123342_(), start.m_123343_() + 0.5);
+                }
                 level.m_7967_(carrier);
+                level.m_8767_(ParticleTypes.f_123760_, carrier.m_20185_(), carrier.m_20186_() + 1.0, carrier.m_20189_(), 40, 0.4, 0.9, 0.4, 0.2);
                 carrier.playEndermanSound();
                 tell(player, Component.m_237110_("message.fotfmail.on_the_way", id), ChatFormatting.GREEN);
             } else {
