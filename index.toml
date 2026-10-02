@@ -58,7 +58,7 @@ hash = "193a619593e7506613a00c83d9fa423944d7888aa56c687c213560a722436e7c"
 
 [[files]]
 file = "config/ars_nouveau-common.toml"
-hash = "bae3075b376e7a3573d67593f178196629a20c2d9d47bd3eb6846f9b008690f2"
+hash = "93d329f4856d0041b94db2bba6d3a73fce420774be07b51d0fd05400ef22ca75"
 
 [[files]]
 file = "config/butterflies-common.toml"
@@ -581,10 +581,6 @@ hash = "bcb030026f24b9c434f20eb6bc994cfe9b338953361cdaacf2f1f7f10a0fcaec"
 [[files]]
 file = "kubejs/data/wildernature/tags/worldgen/biome/spawns_squirrel.json"
 hash = "a3c4b3f21824be8a277f02433bfddb79944c1f2ff1a9914ed144a70baf0ef537"
-
-[[files]]
-file = "kubejs/server_scripts/bookwyrm_charm.js"
-hash = "1ac6aa847465d508409e00b781861769913760f0af6beda5feb488af7075d43b"
 
 [[files]]
 file = "kubejs/server_scripts/butterfly_sightings.js"
