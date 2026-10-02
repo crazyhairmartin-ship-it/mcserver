@@ -11,8 +11,8 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)Tom's Simple Storage$() links all your chests to one terminal where you can search everything.$(br2)Right-click an animal or chest while crouching with empty hands to $(l)carry$() it (Carry On).",
-      "title": "More Storage"
+      "text": "Right-click an animal or chest while crouching with empty hands to $(l)carry$() it (Carry On). Chests keep everything inside.",
+      "title": "Carrying Things"
     }
   ]
 }

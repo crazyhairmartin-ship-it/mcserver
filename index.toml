@@ -5,6 +5,22 @@ file = "config/alexscaves-general.toml"
 hash = "6588029574999e58617203c013180d0e35f2673900e1cff7d7087fbd05a4d6c3"
 
 [[files]]
+file = "config/alexscaves_biome_generation/abyssal_chasm.json"
+hash = "921643fad037c51b5503061ad07dd53d54881e90a6ba50f77f64d781d74474e8"
+
+[[files]]
+file = "config/alexscaves_biome_generation/forlorn_hollows.json"
+hash = "4b5093a3efb622eddbbaede4a1f049633f151ce69d330aa491d167edec393f3b"
+
+[[files]]
+file = "config/alexscaves_biome_generation/magnetic_caves.json"
+hash = "b78d1743e7b52950aaafd63fded0600d867cb19aec1de057395ec15dbaf545a1"
+
+[[files]]
+file = "config/alexscaves_biome_generation/toxic_caves.json"
+hash = "7086586cb931640cbe7f612a912f3600a03176f038ee8aa794eacbb709c609f1"
+
+[[files]]
 file = "config/alexsmobs.toml"
 hash = "5ee675c88237125784bf161a0b75daa1cc5c046f61ad874bc33b6f774e66fa88"
 
@@ -34,7 +50,7 @@ hash = "dd31558c1e5c9b2e679519323a197ff718c12a7f134a2fc10fbbf851449e6254"
 
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
-hash = "0c19468dd71b6be4e694e2914b44b4eba984790895aad416ffdedcbbf1da546f"
+hash = "6a53fa9a742d5137f3144fd891639bc4895fa59ba5788cceb04246f5bbb0ac3a"
 
 [[files]]
 file = "config/everycomp-entries.toml"
@@ -42,7 +58,7 @@ hash = "78246ccf2cd87218a4f692a68cac1175cc8dcaade95aae721b6f1ad092c99df6"
 
 [[files]]
 file = "config/everycomp-hazardous.toml"
-hash = "b9a5bccd9b8dc1a76944fdfa28c6fff0f2d46ea8e9f61655b9629210de79c14c"
+hash = "fd1b2e274149138ee316455b3fe6d1690ada49b63dcffd52c52d1859ea0b0490"
 
 [[files]]
 file = "config/fml.toml"
@@ -54,7 +70,7 @@ hash = "b8e24932dc5f41db8ccdc0d40d6241a4f12fc4366bfb646b513b72b9432aad19"
 
 [[files]]
 file = "config/inventoryprofilesnext/inventoryprofiles.json"
-hash = "82acc60769f676615c426faa31ab4dc73de1e4fbdf4ab590c74185279fbdfbe7"
+hash = "e977e056c2b1ff6d19d556125fbecfd7f9e999b1843978b70c7424474e1a7387"
 
 [[files]]
 file = "config/mimi-common.toml"
@@ -315,6 +331,10 @@ file = "kubejs/server_scripts/trim_simplyswords.js"
 hash = "ad65c303393af3505cc1fc5a7d4809723311f0ebd86c6eb78f981994c67d31ab"
 
 [[files]]
+file = "kubejs/server_scripts/trim_sophisticated.js"
+hash = "82a6adc1392a5a6fa7a347502c33d83cbb0b1ff8f9655d6fc776bc2a264bdb4c"
+
+[[files]]
 file = "kubejs/server_scripts/trim_spartan.js"
 hash = "af05651a09e770707b62cf6059d8e861fa74cb21c36030a342b4e0ec96529e8c"
 
@@ -340,7 +360,7 @@ hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
-hash = "8272e86085c3119b4b8cacebcc19b953adf3b338af092cd3de3d47beb48e696d"
+hash = "341369f528d2fd64a76359a4c02750a2637c139ef0a78eb0c4c6d2537b3f6440"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -495,11 +515,6 @@ metafile = true
 [[files]]
 file = "mods/dungeons-and-taverns.pw.toml"
 hash = "a6af059766ea70358690d048898d19e493108e2e06a97542fac696fd5e03589a"
-metafile = true
-
-[[files]]
-file = "mods/elip100s-bathrooms.pw.toml"
-hash = "c1f53f62c48643cbf9c3636a12bfe2b5c6c3edddc7e34607be6f23d58b997e0a"
 metafile = true
 
 [[files]]
@@ -753,16 +768,6 @@ hash = "e8b4876d403b4f4daab64bad9704a5b271a33031d1ff8d19d23ebd1e3b8dd39a"
 metafile = true
 
 [[files]]
-file = "mods/macaws-fences-and-walls.pw.toml"
-hash = "754a03e5f088d19287fe2f25b7b3165dd4e44e294838c679b218fcac54a11b5b"
-metafile = true
-
-[[files]]
-file = "mods/macaws-furniture.pw.toml"
-hash = "3706f6817a641198fc325d578d189d502af7c3444148a72e4dc23f214c3611a1"
-metafile = true
-
-[[files]]
 file = "mods/mantle.pw.toml"
 hash = "ce10ba1203319554de02f99d08ad0805cfae496466bbd0fe851bc36b086d3ee0"
 metafile = true
@@ -1003,11 +1008,6 @@ hash = "170b813fb73ae1f8113e5c47dc2d76e842e1f4b0c1d7bf20e99f0485e12a86ee"
 metafile = true
 
 [[files]]
-file = "mods/toms-storage.pw.toml"
-hash = "edfafd11282b46cca84cce70807e85f8b11e918ead6a1ef7aa7d9e216d98ece3"
-metafile = true
-
-[[files]]
 file = "mods/torchmaster.pw.toml"
 hash = "51e82d9320effbd610ccfe4571c048c7d0f9c98362b9884faabfaa6f63aa9737"
 metafile = true
@@ -1203,7 +1203,7 @@ hash = "371cba1a4d50334a7cba355538a4c35d1c128666ead429c1cab27a6d1217ed20"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/exploring/alexs_caves.json"
-hash = "f877c1403bcbd8a7ed44e33b9f21659f328a41996d9830f0c18a364c31f2835e"
+hash = "9165e1ad9c2463e253849b959a0e3d0df3bdd99ad370b7526419cb0e14adcb06"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/exploring/compasses.json"
@@ -1259,7 +1259,7 @@ hash = "6bdfec2a75703002ea6314f0b06267db1a2c22dc9cc5c912814fcc3b5d1ef959"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/storage.json"
-hash = "547fbad68bfe0902dcb85c5c431e0d9557a13b3254848478ddf18e818299bc55"
+hash = "29c8a3c18edfc02e3fc39409b36c13a7cad8ffbf68c7962272ab6b81471ba1df"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/voice.json"

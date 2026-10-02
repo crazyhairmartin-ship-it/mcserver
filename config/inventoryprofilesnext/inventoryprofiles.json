@@ -10,5 +10,9 @@
     },
     "EditProfiles": {
         "quick_slot_1_profile": "Default"
+    },
+    "AutoRefillSettings": {
+        "refill_armor": true,
+        "refill_before_tool_break": true
     }
 }

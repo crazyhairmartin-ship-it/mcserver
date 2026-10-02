@@ -861,6 +861,8 @@ global.TRIMMED_ITEMS = [
   'tconstruct:yellow_clear_stained_glass',
   'tconstruct:yellow_clear_stained_glass_pane',
   'tconstruct:zombified_piglin_head',
+  // Sophisticated Backpacks: the battery upgrade only stores Forge Energy, which nothing in this pack makes.
+  'sophisticatedbackpacks:battery_upgrade',
 ]
 
 

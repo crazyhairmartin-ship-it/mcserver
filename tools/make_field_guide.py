@@ -92,7 +92,7 @@ ENTRIES = [
     ]),
     ('getting_started', 'storage', 'Backpacks & Storage', 'sophisticatedbackpacks:backpack', [
         spot('sophisticatedbackpacks:backpack', 'Craft a $(l)backpack$() for extra space. Press $(l)B$() to open it while wearing it. Upgrades add auto-pickup, feeding and more.'),
-        text('$(l)Tom\'s Simple Storage$() links all your chests to one terminal where you can search everything.$(br2)Right-click an animal or chest while crouching with empty hands to $(l)carry$() it (Carry On).', 'More Storage'),
+        text('Right-click an animal or chest while crouching with empty hands to $(l)carry$() it (Carry On). Chests keep everything inside.', 'Carrying Things'),
     ]),
     ('getting_started', 'keys', 'Handy Keys', 'minecraft:tripwire_hook', [
         text('$(li)$(l)Ctrl+O$(): show/hide JEI$(li)$(l)B$(): backpack$(li)$(l)V$(): cast spell$(li)$(l)R$(): spell wheel$(li)$(l)Caps Lock$(): talk$(li)$(l)Alt+P$(): parkour skills$(li)$(l)Y$(): minimap settings$(li)$(l)F7$(): shaders on/off'),
@@ -183,7 +183,7 @@ ENTRIES = [
         spot('explorerscompass:explorerscompass', 'The $(l)Explorer\'s Compass$() points to any structure you pick.'),
     ]),
     ('exploring', 'alexs_caves', 'Alex\'s Caves', 'alexscaves:cave_codex', [
-        text('Six rare cave biomes deep underground: dinosaurs, candy, magnets, toxic caves and more.$(br2)They are hard to find. Look up $(l)Cave Tablet$() and $(l)Cave Codex$() in JEI to learn how to track them down.'),
+        text('Two rare cave biomes deep underground: the dinosaur-filled $(l)Primordial Caves$() and the sugary $(l)Candy Cavity$().$(br2)They are hard to find. Look up $(l)Cave Tablet$() and $(l)Cave Codex$() in JEI to learn how to track them down.'),
     ]),
     ('exploring', 'twilight', 'The Twilight Forest', 'twilightforest:twilight_oak_sapling', [
         text('A magical forest dimension with bosses to beat in order.$(br2)To get there: dig a 2x2 pool of water, surround it with flowers and grass, then throw a $(l)diamond$() into it.'),
