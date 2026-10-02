@@ -41,6 +41,10 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   a crooked stamp (`tools/mailbox/make_package.py`, `PackageBlockMixin` for shape/occlusion).
 - **Spider snacks.** Tamed jumping spiders heal from spider eyes and rotten flesh (`SpiderSnacks`). Handled at
   HIGHEST priority on both entity-click events: the spider's own click handling kept a KubeJS version from firing.
+- **Move matching items into the Storage Lectern.** A button above the lectern's own buttons
+  (`AbstractStorageTerminalScreenMixin`) sends `LecternDeposit`: main-inventory stacks whose item is already stored
+  go in via the lectern's `pushStack`. IPN's buttons are hidden on the lectern (config/inventoryprofilesnext/
+  integrationHints/endermail.json), since they can't reach its virtual slots.
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates
 `src/fotfmail/MailboxWood.java` and every mailbox model, blockstate and recipe list together. Rebuild the jar with

@@ -4,5 +4,11 @@
     },
     "com.chaosthedude.endermail.gui.PackageScreen": {
         "ignore": true
+    },
+    "com.hollingsworth.arsnouveau.client.container.CraftingTerminalScreen": {
+        "ignore": true
+    },
+    "com.hollingsworth.arsnouveau.client.container.AbstractStorageTerminalScreen": {
+        "ignore": true
     }
 }

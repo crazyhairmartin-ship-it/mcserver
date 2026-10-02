@@ -17,5 +17,6 @@
   "message.fotfmail.package_no_recipient": "Type the recipient's mailbox ID first.",
   "message.fotfmail.package_other_dimension": "Mailbox %s is in another dimension. Packages can only go to mailboxes in this one.",
   "fotfmail.package.from": "From:",
-  "fotfmail.package.sent_to": "Sent to:"
+  "fotfmail.package.sent_to": "Sent to:",
+  "fotfmail.lectern.deposit": "Move matching items: puts everything in your inventory (not your hotbar) that is already stored here into storage"
 }

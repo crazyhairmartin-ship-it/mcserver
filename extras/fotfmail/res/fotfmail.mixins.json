@@ -15,7 +15,8 @@
     "PackageMenuMixin",
     "PackageBlockEntityMixin",
     "PackageBlockMixin",
-    "FireBlockMixin"
+    "FireBlockMixin",
+    "StorageTerminalMenuAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -26,6 +27,8 @@
     "BookEditScreenMixin",
     "PackageScreenMixin",
     "ScreenWrapperMixin",
-    "BookViewScreenMixin"
+    "BookViewScreenMixin",
+    "ScreenAccessor",
+    "AbstractContainerScreenAccessor"
   ]
 }
