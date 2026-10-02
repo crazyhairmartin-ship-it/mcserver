@@ -1,0 +1,10 @@
+{
+  "item.fotfmail.letter": "Letter",
+  "item.fotfmail.letter.to": "Letter to %s",
+  "tooltip.fotfmail.write": "Write on it, then sign it with a friend's mailbox ID",
+  "tooltip.fotfmail.from": "From %s",
+  "tooltip.fotfmail.send": "Right-click any mailbox to send",
+  "message.fotfmail.sent": "Letter sent to mailbox %s!",
+  "message.fotfmail.full": "Mailbox %s is full. Ask them to empty it!",
+  "message.fotfmail.no_mailbox": "No mailbox has the ID %s. Check the spelling (it's the title you signed with)."
+}

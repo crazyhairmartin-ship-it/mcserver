@@ -1,230 +1,2944 @@
 {
-  "variants": {
-    "facing=north,filled=false": [
-      {
-        "model": "endermail:block/locker_oak"
-      },
-      {
-        "model": "endermail:block/locker_spruce"
-      },
-      {
-        "model": "endermail:block/locker_birch"
-      },
-      {
-        "model": "endermail:block/locker_cherry"
-      },
-      {
-        "model": "endermail:block/locker_dark_oak"
-      },
-      {
-        "model": "endermail:block/locker_archwood"
-      },
-      {
-        "model": "endermail:block/locker_umbran"
-      }
-    ],
-    "facing=north,filled=true": [
-      {
-        "model": "endermail:block/locker_oak_filled"
-      },
-      {
-        "model": "endermail:block/locker_spruce_filled"
-      },
-      {
-        "model": "endermail:block/locker_birch_filled"
-      },
-      {
-        "model": "endermail:block/locker_cherry_filled"
-      },
-      {
-        "model": "endermail:block/locker_dark_oak_filled"
-      },
-      {
-        "model": "endermail:block/locker_archwood_filled"
-      },
-      {
-        "model": "endermail:block/locker_umbran_filled"
-      }
-    ],
-    "facing=east,filled=false": [
-      {
-        "model": "endermail:block/locker_oak",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_spruce",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_birch",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_cherry",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_dark_oak",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_archwood",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_umbran",
-        "y": 90
-      }
-    ],
-    "facing=east,filled=true": [
-      {
-        "model": "endermail:block/locker_oak_filled",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_spruce_filled",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_birch_filled",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_cherry_filled",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_dark_oak_filled",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_archwood_filled",
-        "y": 90
-      },
-      {
-        "model": "endermail:block/locker_umbran_filled",
-        "y": 90
-      }
-    ],
-    "facing=south,filled=false": [
-      {
-        "model": "endermail:block/locker_oak",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_spruce",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_birch",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_cherry",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_dark_oak",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_archwood",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_umbran",
-        "y": 180
-      }
-    ],
-    "facing=south,filled=true": [
-      {
-        "model": "endermail:block/locker_oak_filled",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_spruce_filled",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_birch_filled",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_cherry_filled",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_dark_oak_filled",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_archwood_filled",
-        "y": 180
-      },
-      {
-        "model": "endermail:block/locker_umbran_filled",
-        "y": 180
-      }
-    ],
-    "facing=west,filled=false": [
-      {
-        "model": "endermail:block/locker_oak",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_spruce",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_birch",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_cherry",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_dark_oak",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_archwood",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_umbran",
-        "y": 270
-      }
-    ],
-    "facing=west,filled=true": [
-      {
-        "model": "endermail:block/locker_oak_filled",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_spruce_filled",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_birch_filled",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_cherry_filled",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_dark_oak_filled",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_archwood_filled",
-        "y": 270
-      },
-      {
-        "model": "endermail:block/locker_umbran_filled",
-        "y": 270
-      }
-    ]
+ "variants": {
+  "facing=north,filled=false,wood=oak": {
+   "model": "endermail:block/locker_oak"
+  },
+  "facing=north,filled=false,wood=alexscaves_pewen": {
+   "model": "endermail:block/locker_alexscaves_pewen"
+  },
+  "facing=north,filled=false,wood=alexscaves_thornwood": {
+   "model": "endermail:block/locker_alexscaves_thornwood"
+  },
+  "facing=north,filled=false,wood=ars_nouveau_archwood": {
+   "model": "endermail:block/locker_ars_nouveau_archwood"
+  },
+  "facing=north,filled=false,wood=beachparty_palm": {
+   "model": "endermail:block/locker_beachparty_palm"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_dead": {
+   "model": "endermail:block/locker_biomesoplenty_dead"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_empyreal": {
+   "model": "endermail:block/locker_biomesoplenty_empyreal"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_fir": {
+   "model": "endermail:block/locker_biomesoplenty_fir"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_hellbark": {
+   "model": "endermail:block/locker_biomesoplenty_hellbark"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_jacaranda": {
+   "model": "endermail:block/locker_biomesoplenty_jacaranda"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_magic": {
+   "model": "endermail:block/locker_biomesoplenty_magic"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_mahogany": {
+   "model": "endermail:block/locker_biomesoplenty_mahogany"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_maple": {
+   "model": "endermail:block/locker_biomesoplenty_maple"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_palm": {
+   "model": "endermail:block/locker_biomesoplenty_palm"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_pine": {
+   "model": "endermail:block/locker_biomesoplenty_pine"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_redwood": {
+   "model": "endermail:block/locker_biomesoplenty_redwood"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_umbran": {
+   "model": "endermail:block/locker_biomesoplenty_umbran"
+  },
+  "facing=north,filled=false,wood=biomesoplenty_willow": {
+   "model": "endermail:block/locker_biomesoplenty_willow"
+  },
+  "facing=north,filled=false,wood=bloomingnature_aspen": {
+   "model": "endermail:block/locker_bloomingnature_aspen"
+  },
+  "facing=north,filled=false,wood=bloomingnature_baobab": {
+   "model": "endermail:block/locker_bloomingnature_baobab"
+  },
+  "facing=north,filled=false,wood=bloomingnature_cactus": {
+   "model": "endermail:block/locker_bloomingnature_cactus"
+  },
+  "facing=north,filled=false,wood=bloomingnature_chestnut": {
+   "model": "endermail:block/locker_bloomingnature_chestnut"
+  },
+  "facing=north,filled=false,wood=bloomingnature_ebony": {
+   "model": "endermail:block/locker_bloomingnature_ebony"
+  },
+  "facing=north,filled=false,wood=bloomingnature_fan_palm": {
+   "model": "endermail:block/locker_bloomingnature_fan_palm"
+  },
+  "facing=north,filled=false,wood=bloomingnature_fir": {
+   "model": "endermail:block/locker_bloomingnature_fir"
+  },
+  "facing=north,filled=false,wood=bloomingnature_larch": {
+   "model": "endermail:block/locker_bloomingnature_larch"
+  },
+  "facing=north,filled=false,wood=bloomingnature_swamp_cypress": {
+   "model": "endermail:block/locker_bloomingnature_swamp_cypress"
+  },
+  "facing=north,filled=false,wood=bloomingnature_swamp_oak": {
+   "model": "endermail:block/locker_bloomingnature_swamp_oak"
+  },
+  "facing=north,filled=false,wood=cataclysm_chorus": {
+   "model": "endermail:block/locker_cataclysm_chorus"
+  },
+  "facing=north,filled=false,wood=meadow_pine": {
+   "model": "endermail:block/locker_meadow_pine"
+  },
+  "facing=north,filled=false,wood=acacia": {
+   "model": "endermail:block/locker_acacia"
+  },
+  "facing=north,filled=false,wood=bamboo": {
+   "model": "endermail:block/locker_bamboo"
+  },
+  "facing=north,filled=false,wood=birch": {
+   "model": "endermail:block/locker_birch"
+  },
+  "facing=north,filled=false,wood=cherry": {
+   "model": "endermail:block/locker_cherry"
+  },
+  "facing=north,filled=false,wood=crimson": {
+   "model": "endermail:block/locker_crimson"
+  },
+  "facing=north,filled=false,wood=dark_oak": {
+   "model": "endermail:block/locker_dark_oak"
+  },
+  "facing=north,filled=false,wood=jungle": {
+   "model": "endermail:block/locker_jungle"
+  },
+  "facing=north,filled=false,wood=mangrove": {
+   "model": "endermail:block/locker_mangrove"
+  },
+  "facing=north,filled=false,wood=spruce": {
+   "model": "endermail:block/locker_spruce"
+  },
+  "facing=north,filled=false,wood=warped": {
+   "model": "endermail:block/locker_warped"
+  },
+  "facing=north,filled=false,wood=mowziesmobs_painted_acacia": {
+   "model": "endermail:block/locker_mowziesmobs_painted_acacia"
+  },
+  "facing=north,filled=false,wood=nethervinery_crested_crimson": {
+   "model": "endermail:block/locker_nethervinery_crested_crimson"
+  },
+  "facing=north,filled=false,wood=nethervinery_crested_warped": {
+   "model": "endermail:block/locker_nethervinery_crested_warped"
+  },
+  "facing=north,filled=false,wood=nethervinery_reinforced_crimson": {
+   "model": "endermail:block/locker_nethervinery_reinforced_crimson"
+  },
+  "facing=north,filled=false,wood=nethervinery_reinforced_warped": {
+   "model": "endermail:block/locker_nethervinery_reinforced_warped"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_alpha": {
+   "model": "endermail:block/locker_regions_unexplored_alpha"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_baobab": {
+   "model": "endermail:block/locker_regions_unexplored_baobab"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_black_painted": {
+   "model": "endermail:block/locker_regions_unexplored_black_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_blackwood": {
+   "model": "endermail:block/locker_regions_unexplored_blackwood"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_blue_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_blue_bioshroom"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_blue_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_brimwood": {
+   "model": "endermail:block/locker_regions_unexplored_brimwood"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_brown_painted": {
+   "model": "endermail:block/locker_regions_unexplored_brown_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_cobalt": {
+   "model": "endermail:block/locker_regions_unexplored_cobalt"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_cyan_painted": {
+   "model": "endermail:block/locker_regions_unexplored_cyan_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_cypress": {
+   "model": "endermail:block/locker_regions_unexplored_cypress"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_dead": {
+   "model": "endermail:block/locker_regions_unexplored_dead"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_eucalyptus": {
+   "model": "endermail:block/locker_regions_unexplored_eucalyptus"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_gray_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_green_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_green_bioshroom"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_green_painted": {
+   "model": "endermail:block/locker_regions_unexplored_green_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_joshua": {
+   "model": "endermail:block/locker_regions_unexplored_joshua"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_kapok": {
+   "model": "endermail:block/locker_regions_unexplored_kapok"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_larch": {
+   "model": "endermail:block/locker_regions_unexplored_larch"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_light_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_blue_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_light_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_gray_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_lime_painted": {
+   "model": "endermail:block/locker_regions_unexplored_lime_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_magenta_painted": {
+   "model": "endermail:block/locker_regions_unexplored_magenta_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_magnolia": {
+   "model": "endermail:block/locker_regions_unexplored_magnolia"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_maple": {
+   "model": "endermail:block/locker_regions_unexplored_maple"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_mauve": {
+   "model": "endermail:block/locker_regions_unexplored_mauve"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_orange_painted": {
+   "model": "endermail:block/locker_regions_unexplored_orange_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_palm": {
+   "model": "endermail:block/locker_regions_unexplored_palm"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_pine": {
+   "model": "endermail:block/locker_regions_unexplored_pine"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_pink_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_pink_bioshroom"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_pink_painted": {
+   "model": "endermail:block/locker_regions_unexplored_pink_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_purple_painted": {
+   "model": "endermail:block/locker_regions_unexplored_purple_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_red_painted": {
+   "model": "endermail:block/locker_regions_unexplored_red_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_redwood": {
+   "model": "endermail:block/locker_regions_unexplored_redwood"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_socotra": {
+   "model": "endermail:block/locker_regions_unexplored_socotra"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_white_painted": {
+   "model": "endermail:block/locker_regions_unexplored_white_painted"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_willow": {
+   "model": "endermail:block/locker_regions_unexplored_willow"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_yellow_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_bioshroom"
+  },
+  "facing=north,filled=false,wood=regions_unexplored_yellow_painted": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_painted"
+  },
+  "facing=north,filled=false,wood=twilightforest_canopy": {
+   "model": "endermail:block/locker_twilightforest_canopy"
+  },
+  "facing=north,filled=false,wood=twilightforest_cracked_towerwood": {
+   "model": "endermail:block/locker_twilightforest_cracked_towerwood"
+  },
+  "facing=north,filled=false,wood=twilightforest_dark": {
+   "model": "endermail:block/locker_twilightforest_dark"
+  },
+  "facing=north,filled=false,wood=twilightforest_encased_towerwood": {
+   "model": "endermail:block/locker_twilightforest_encased_towerwood"
+  },
+  "facing=north,filled=false,wood=twilightforest_infested_towerwood": {
+   "model": "endermail:block/locker_twilightforest_infested_towerwood"
+  },
+  "facing=north,filled=false,wood=twilightforest_mangrove": {
+   "model": "endermail:block/locker_twilightforest_mangrove"
+  },
+  "facing=north,filled=false,wood=twilightforest_mining": {
+   "model": "endermail:block/locker_twilightforest_mining"
+  },
+  "facing=north,filled=false,wood=twilightforest_mossy_towerwood": {
+   "model": "endermail:block/locker_twilightforest_mossy_towerwood"
+  },
+  "facing=north,filled=false,wood=twilightforest_sorting": {
+   "model": "endermail:block/locker_twilightforest_sorting"
+  },
+  "facing=north,filled=false,wood=twilightforest_time": {
+   "model": "endermail:block/locker_twilightforest_time"
+  },
+  "facing=north,filled=false,wood=twilightforest_towerwood": {
+   "model": "endermail:block/locker_twilightforest_towerwood"
+  },
+  "facing=north,filled=false,wood=twilightforest_transformation": {
+   "model": "endermail:block/locker_twilightforest_transformation"
+  },
+  "facing=north,filled=false,wood=twilightforest_twilight_oak": {
+   "model": "endermail:block/locker_twilightforest_twilight_oak"
+  },
+  "facing=north,filled=false,wood=vinery_dark_cherry": {
+   "model": "endermail:block/locker_vinery_dark_cherry"
+  },
+  "facing=north,filled=true,wood=oak": {
+   "model": "endermail:block/locker_oak_filled"
+  },
+  "facing=north,filled=true,wood=alexscaves_pewen": {
+   "model": "endermail:block/locker_alexscaves_pewen_filled"
+  },
+  "facing=north,filled=true,wood=alexscaves_thornwood": {
+   "model": "endermail:block/locker_alexscaves_thornwood_filled"
+  },
+  "facing=north,filled=true,wood=ars_nouveau_archwood": {
+   "model": "endermail:block/locker_ars_nouveau_archwood_filled"
+  },
+  "facing=north,filled=true,wood=beachparty_palm": {
+   "model": "endermail:block/locker_beachparty_palm_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_dead": {
+   "model": "endermail:block/locker_biomesoplenty_dead_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_empyreal": {
+   "model": "endermail:block/locker_biomesoplenty_empyreal_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_fir": {
+   "model": "endermail:block/locker_biomesoplenty_fir_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_hellbark": {
+   "model": "endermail:block/locker_biomesoplenty_hellbark_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_jacaranda": {
+   "model": "endermail:block/locker_biomesoplenty_jacaranda_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_magic": {
+   "model": "endermail:block/locker_biomesoplenty_magic_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_mahogany": {
+   "model": "endermail:block/locker_biomesoplenty_mahogany_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_maple": {
+   "model": "endermail:block/locker_biomesoplenty_maple_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_palm": {
+   "model": "endermail:block/locker_biomesoplenty_palm_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_pine": {
+   "model": "endermail:block/locker_biomesoplenty_pine_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_redwood": {
+   "model": "endermail:block/locker_biomesoplenty_redwood_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_umbran": {
+   "model": "endermail:block/locker_biomesoplenty_umbran_filled"
+  },
+  "facing=north,filled=true,wood=biomesoplenty_willow": {
+   "model": "endermail:block/locker_biomesoplenty_willow_filled"
+  },
+  "facing=north,filled=true,wood=bloomingnature_aspen": {
+   "model": "endermail:block/locker_bloomingnature_aspen_filled"
+  },
+  "facing=north,filled=true,wood=bloomingnature_baobab": {
+   "model": "endermail:block/locker_bloomingnature_baobab_filled"
+  },
+  "facing=north,filled=true,wood=bloomingnature_cactus": {
+   "model": "endermail:block/locker_bloomingnature_cactus_filled"
+  },
+  "facing=north,filled=true,wood=bloomingnature_chestnut": {
+   "model": "endermail:block/locker_bloomingnature_chestnut_filled"
+  },
+  "facing=north,filled=true,wood=bloomingnature_ebony": {
+   "model": "endermail:block/locker_bloomingnature_ebony_filled"
+  },
+  "facing=north,filled=true,wood=bloomingnature_fan_palm": {
+   "model": "endermail:block/locker_bloomingnature_fan_palm_filled"
+  },
+  "facing=north,filled=true,wood=bloomingnature_fir": {
+   "model": "endermail:block/locker_bloomingnature_fir_filled"
+  },
+  "facing=north,filled=true,wood=bloomingnature_larch": {
+   "model": "endermail:block/locker_bloomingnature_larch_filled"
+  },
+  "facing=north,filled=true,wood=bloomingnature_swamp_cypress": {
+   "model": "endermail:block/locker_bloomingnature_swamp_cypress_filled"
+  },
+  "facing=north,filled=true,wood=bloomingnature_swamp_oak": {
+   "model": "endermail:block/locker_bloomingnature_swamp_oak_filled"
+  },
+  "facing=north,filled=true,wood=cataclysm_chorus": {
+   "model": "endermail:block/locker_cataclysm_chorus_filled"
+  },
+  "facing=north,filled=true,wood=meadow_pine": {
+   "model": "endermail:block/locker_meadow_pine_filled"
+  },
+  "facing=north,filled=true,wood=acacia": {
+   "model": "endermail:block/locker_acacia_filled"
+  },
+  "facing=north,filled=true,wood=bamboo": {
+   "model": "endermail:block/locker_bamboo_filled"
+  },
+  "facing=north,filled=true,wood=birch": {
+   "model": "endermail:block/locker_birch_filled"
+  },
+  "facing=north,filled=true,wood=cherry": {
+   "model": "endermail:block/locker_cherry_filled"
+  },
+  "facing=north,filled=true,wood=crimson": {
+   "model": "endermail:block/locker_crimson_filled"
+  },
+  "facing=north,filled=true,wood=dark_oak": {
+   "model": "endermail:block/locker_dark_oak_filled"
+  },
+  "facing=north,filled=true,wood=jungle": {
+   "model": "endermail:block/locker_jungle_filled"
+  },
+  "facing=north,filled=true,wood=mangrove": {
+   "model": "endermail:block/locker_mangrove_filled"
+  },
+  "facing=north,filled=true,wood=spruce": {
+   "model": "endermail:block/locker_spruce_filled"
+  },
+  "facing=north,filled=true,wood=warped": {
+   "model": "endermail:block/locker_warped_filled"
+  },
+  "facing=north,filled=true,wood=mowziesmobs_painted_acacia": {
+   "model": "endermail:block/locker_mowziesmobs_painted_acacia_filled"
+  },
+  "facing=north,filled=true,wood=nethervinery_crested_crimson": {
+   "model": "endermail:block/locker_nethervinery_crested_crimson_filled"
+  },
+  "facing=north,filled=true,wood=nethervinery_crested_warped": {
+   "model": "endermail:block/locker_nethervinery_crested_warped_filled"
+  },
+  "facing=north,filled=true,wood=nethervinery_reinforced_crimson": {
+   "model": "endermail:block/locker_nethervinery_reinforced_crimson_filled"
+  },
+  "facing=north,filled=true,wood=nethervinery_reinforced_warped": {
+   "model": "endermail:block/locker_nethervinery_reinforced_warped_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_alpha": {
+   "model": "endermail:block/locker_regions_unexplored_alpha_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_baobab": {
+   "model": "endermail:block/locker_regions_unexplored_baobab_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_black_painted": {
+   "model": "endermail:block/locker_regions_unexplored_black_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_blackwood": {
+   "model": "endermail:block/locker_regions_unexplored_blackwood_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_blue_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_blue_bioshroom_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_blue_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_brimwood": {
+   "model": "endermail:block/locker_regions_unexplored_brimwood_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_brown_painted": {
+   "model": "endermail:block/locker_regions_unexplored_brown_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_cobalt": {
+   "model": "endermail:block/locker_regions_unexplored_cobalt_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_cyan_painted": {
+   "model": "endermail:block/locker_regions_unexplored_cyan_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_cypress": {
+   "model": "endermail:block/locker_regions_unexplored_cypress_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_dead": {
+   "model": "endermail:block/locker_regions_unexplored_dead_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_eucalyptus": {
+   "model": "endermail:block/locker_regions_unexplored_eucalyptus_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_gray_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_green_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_green_bioshroom_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_green_painted": {
+   "model": "endermail:block/locker_regions_unexplored_green_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_joshua": {
+   "model": "endermail:block/locker_regions_unexplored_joshua_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_kapok": {
+   "model": "endermail:block/locker_regions_unexplored_kapok_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_larch": {
+   "model": "endermail:block/locker_regions_unexplored_larch_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_light_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_blue_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_light_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_gray_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_lime_painted": {
+   "model": "endermail:block/locker_regions_unexplored_lime_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_magenta_painted": {
+   "model": "endermail:block/locker_regions_unexplored_magenta_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_magnolia": {
+   "model": "endermail:block/locker_regions_unexplored_magnolia_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_maple": {
+   "model": "endermail:block/locker_regions_unexplored_maple_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_mauve": {
+   "model": "endermail:block/locker_regions_unexplored_mauve_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_orange_painted": {
+   "model": "endermail:block/locker_regions_unexplored_orange_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_palm": {
+   "model": "endermail:block/locker_regions_unexplored_palm_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_pine": {
+   "model": "endermail:block/locker_regions_unexplored_pine_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_pink_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_pink_bioshroom_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_pink_painted": {
+   "model": "endermail:block/locker_regions_unexplored_pink_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_purple_painted": {
+   "model": "endermail:block/locker_regions_unexplored_purple_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_red_painted": {
+   "model": "endermail:block/locker_regions_unexplored_red_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_redwood": {
+   "model": "endermail:block/locker_regions_unexplored_redwood_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_socotra": {
+   "model": "endermail:block/locker_regions_unexplored_socotra_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_white_painted": {
+   "model": "endermail:block/locker_regions_unexplored_white_painted_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_willow": {
+   "model": "endermail:block/locker_regions_unexplored_willow_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_yellow_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_bioshroom_filled"
+  },
+  "facing=north,filled=true,wood=regions_unexplored_yellow_painted": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_painted_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_canopy": {
+   "model": "endermail:block/locker_twilightforest_canopy_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_cracked_towerwood": {
+   "model": "endermail:block/locker_twilightforest_cracked_towerwood_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_dark": {
+   "model": "endermail:block/locker_twilightforest_dark_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_encased_towerwood": {
+   "model": "endermail:block/locker_twilightforest_encased_towerwood_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_infested_towerwood": {
+   "model": "endermail:block/locker_twilightforest_infested_towerwood_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_mangrove": {
+   "model": "endermail:block/locker_twilightforest_mangrove_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_mining": {
+   "model": "endermail:block/locker_twilightforest_mining_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_mossy_towerwood": {
+   "model": "endermail:block/locker_twilightforest_mossy_towerwood_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_sorting": {
+   "model": "endermail:block/locker_twilightforest_sorting_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_time": {
+   "model": "endermail:block/locker_twilightforest_time_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_towerwood": {
+   "model": "endermail:block/locker_twilightforest_towerwood_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_transformation": {
+   "model": "endermail:block/locker_twilightforest_transformation_filled"
+  },
+  "facing=north,filled=true,wood=twilightforest_twilight_oak": {
+   "model": "endermail:block/locker_twilightforest_twilight_oak_filled"
+  },
+  "facing=north,filled=true,wood=vinery_dark_cherry": {
+   "model": "endermail:block/locker_vinery_dark_cherry_filled"
+  },
+  "facing=east,filled=false,wood=oak": {
+   "model": "endermail:block/locker_oak",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=alexscaves_pewen": {
+   "model": "endermail:block/locker_alexscaves_pewen",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=alexscaves_thornwood": {
+   "model": "endermail:block/locker_alexscaves_thornwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=ars_nouveau_archwood": {
+   "model": "endermail:block/locker_ars_nouveau_archwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=beachparty_palm": {
+   "model": "endermail:block/locker_beachparty_palm",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_dead": {
+   "model": "endermail:block/locker_biomesoplenty_dead",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_empyreal": {
+   "model": "endermail:block/locker_biomesoplenty_empyreal",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_fir": {
+   "model": "endermail:block/locker_biomesoplenty_fir",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_hellbark": {
+   "model": "endermail:block/locker_biomesoplenty_hellbark",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_jacaranda": {
+   "model": "endermail:block/locker_biomesoplenty_jacaranda",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_magic": {
+   "model": "endermail:block/locker_biomesoplenty_magic",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_mahogany": {
+   "model": "endermail:block/locker_biomesoplenty_mahogany",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_maple": {
+   "model": "endermail:block/locker_biomesoplenty_maple",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_palm": {
+   "model": "endermail:block/locker_biomesoplenty_palm",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_pine": {
+   "model": "endermail:block/locker_biomesoplenty_pine",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_redwood": {
+   "model": "endermail:block/locker_biomesoplenty_redwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_umbran": {
+   "model": "endermail:block/locker_biomesoplenty_umbran",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=biomesoplenty_willow": {
+   "model": "endermail:block/locker_biomesoplenty_willow",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bloomingnature_aspen": {
+   "model": "endermail:block/locker_bloomingnature_aspen",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bloomingnature_baobab": {
+   "model": "endermail:block/locker_bloomingnature_baobab",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bloomingnature_cactus": {
+   "model": "endermail:block/locker_bloomingnature_cactus",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bloomingnature_chestnut": {
+   "model": "endermail:block/locker_bloomingnature_chestnut",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bloomingnature_ebony": {
+   "model": "endermail:block/locker_bloomingnature_ebony",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bloomingnature_fan_palm": {
+   "model": "endermail:block/locker_bloomingnature_fan_palm",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bloomingnature_fir": {
+   "model": "endermail:block/locker_bloomingnature_fir",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bloomingnature_larch": {
+   "model": "endermail:block/locker_bloomingnature_larch",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bloomingnature_swamp_cypress": {
+   "model": "endermail:block/locker_bloomingnature_swamp_cypress",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bloomingnature_swamp_oak": {
+   "model": "endermail:block/locker_bloomingnature_swamp_oak",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=cataclysm_chorus": {
+   "model": "endermail:block/locker_cataclysm_chorus",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=meadow_pine": {
+   "model": "endermail:block/locker_meadow_pine",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=acacia": {
+   "model": "endermail:block/locker_acacia",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=bamboo": {
+   "model": "endermail:block/locker_bamboo",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=birch": {
+   "model": "endermail:block/locker_birch",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=cherry": {
+   "model": "endermail:block/locker_cherry",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=crimson": {
+   "model": "endermail:block/locker_crimson",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=dark_oak": {
+   "model": "endermail:block/locker_dark_oak",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=jungle": {
+   "model": "endermail:block/locker_jungle",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=mangrove": {
+   "model": "endermail:block/locker_mangrove",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=spruce": {
+   "model": "endermail:block/locker_spruce",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=warped": {
+   "model": "endermail:block/locker_warped",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=mowziesmobs_painted_acacia": {
+   "model": "endermail:block/locker_mowziesmobs_painted_acacia",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=nethervinery_crested_crimson": {
+   "model": "endermail:block/locker_nethervinery_crested_crimson",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=nethervinery_crested_warped": {
+   "model": "endermail:block/locker_nethervinery_crested_warped",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=nethervinery_reinforced_crimson": {
+   "model": "endermail:block/locker_nethervinery_reinforced_crimson",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=nethervinery_reinforced_warped": {
+   "model": "endermail:block/locker_nethervinery_reinforced_warped",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_alpha": {
+   "model": "endermail:block/locker_regions_unexplored_alpha",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_baobab": {
+   "model": "endermail:block/locker_regions_unexplored_baobab",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_black_painted": {
+   "model": "endermail:block/locker_regions_unexplored_black_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_blackwood": {
+   "model": "endermail:block/locker_regions_unexplored_blackwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_blue_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_blue_bioshroom",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_blue_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_brimwood": {
+   "model": "endermail:block/locker_regions_unexplored_brimwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_brown_painted": {
+   "model": "endermail:block/locker_regions_unexplored_brown_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_cobalt": {
+   "model": "endermail:block/locker_regions_unexplored_cobalt",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_cyan_painted": {
+   "model": "endermail:block/locker_regions_unexplored_cyan_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_cypress": {
+   "model": "endermail:block/locker_regions_unexplored_cypress",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_dead": {
+   "model": "endermail:block/locker_regions_unexplored_dead",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_eucalyptus": {
+   "model": "endermail:block/locker_regions_unexplored_eucalyptus",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_gray_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_green_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_green_bioshroom",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_green_painted": {
+   "model": "endermail:block/locker_regions_unexplored_green_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_joshua": {
+   "model": "endermail:block/locker_regions_unexplored_joshua",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_kapok": {
+   "model": "endermail:block/locker_regions_unexplored_kapok",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_larch": {
+   "model": "endermail:block/locker_regions_unexplored_larch",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_light_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_blue_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_light_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_gray_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_lime_painted": {
+   "model": "endermail:block/locker_regions_unexplored_lime_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_magenta_painted": {
+   "model": "endermail:block/locker_regions_unexplored_magenta_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_magnolia": {
+   "model": "endermail:block/locker_regions_unexplored_magnolia",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_maple": {
+   "model": "endermail:block/locker_regions_unexplored_maple",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_mauve": {
+   "model": "endermail:block/locker_regions_unexplored_mauve",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_orange_painted": {
+   "model": "endermail:block/locker_regions_unexplored_orange_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_palm": {
+   "model": "endermail:block/locker_regions_unexplored_palm",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_pine": {
+   "model": "endermail:block/locker_regions_unexplored_pine",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_pink_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_pink_bioshroom",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_pink_painted": {
+   "model": "endermail:block/locker_regions_unexplored_pink_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_purple_painted": {
+   "model": "endermail:block/locker_regions_unexplored_purple_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_red_painted": {
+   "model": "endermail:block/locker_regions_unexplored_red_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_redwood": {
+   "model": "endermail:block/locker_regions_unexplored_redwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_socotra": {
+   "model": "endermail:block/locker_regions_unexplored_socotra",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_white_painted": {
+   "model": "endermail:block/locker_regions_unexplored_white_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_willow": {
+   "model": "endermail:block/locker_regions_unexplored_willow",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_yellow_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_bioshroom",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=regions_unexplored_yellow_painted": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_painted",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_canopy": {
+   "model": "endermail:block/locker_twilightforest_canopy",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_cracked_towerwood": {
+   "model": "endermail:block/locker_twilightforest_cracked_towerwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_dark": {
+   "model": "endermail:block/locker_twilightforest_dark",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_encased_towerwood": {
+   "model": "endermail:block/locker_twilightforest_encased_towerwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_infested_towerwood": {
+   "model": "endermail:block/locker_twilightforest_infested_towerwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_mangrove": {
+   "model": "endermail:block/locker_twilightforest_mangrove",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_mining": {
+   "model": "endermail:block/locker_twilightforest_mining",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_mossy_towerwood": {
+   "model": "endermail:block/locker_twilightforest_mossy_towerwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_sorting": {
+   "model": "endermail:block/locker_twilightforest_sorting",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_time": {
+   "model": "endermail:block/locker_twilightforest_time",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_towerwood": {
+   "model": "endermail:block/locker_twilightforest_towerwood",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_transformation": {
+   "model": "endermail:block/locker_twilightforest_transformation",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=twilightforest_twilight_oak": {
+   "model": "endermail:block/locker_twilightforest_twilight_oak",
+   "y": 90
+  },
+  "facing=east,filled=false,wood=vinery_dark_cherry": {
+   "model": "endermail:block/locker_vinery_dark_cherry",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=oak": {
+   "model": "endermail:block/locker_oak_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=alexscaves_pewen": {
+   "model": "endermail:block/locker_alexscaves_pewen_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=alexscaves_thornwood": {
+   "model": "endermail:block/locker_alexscaves_thornwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=ars_nouveau_archwood": {
+   "model": "endermail:block/locker_ars_nouveau_archwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=beachparty_palm": {
+   "model": "endermail:block/locker_beachparty_palm_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_dead": {
+   "model": "endermail:block/locker_biomesoplenty_dead_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_empyreal": {
+   "model": "endermail:block/locker_biomesoplenty_empyreal_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_fir": {
+   "model": "endermail:block/locker_biomesoplenty_fir_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_hellbark": {
+   "model": "endermail:block/locker_biomesoplenty_hellbark_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_jacaranda": {
+   "model": "endermail:block/locker_biomesoplenty_jacaranda_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_magic": {
+   "model": "endermail:block/locker_biomesoplenty_magic_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_mahogany": {
+   "model": "endermail:block/locker_biomesoplenty_mahogany_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_maple": {
+   "model": "endermail:block/locker_biomesoplenty_maple_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_palm": {
+   "model": "endermail:block/locker_biomesoplenty_palm_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_pine": {
+   "model": "endermail:block/locker_biomesoplenty_pine_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_redwood": {
+   "model": "endermail:block/locker_biomesoplenty_redwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_umbran": {
+   "model": "endermail:block/locker_biomesoplenty_umbran_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=biomesoplenty_willow": {
+   "model": "endermail:block/locker_biomesoplenty_willow_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bloomingnature_aspen": {
+   "model": "endermail:block/locker_bloomingnature_aspen_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bloomingnature_baobab": {
+   "model": "endermail:block/locker_bloomingnature_baobab_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bloomingnature_cactus": {
+   "model": "endermail:block/locker_bloomingnature_cactus_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bloomingnature_chestnut": {
+   "model": "endermail:block/locker_bloomingnature_chestnut_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bloomingnature_ebony": {
+   "model": "endermail:block/locker_bloomingnature_ebony_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bloomingnature_fan_palm": {
+   "model": "endermail:block/locker_bloomingnature_fan_palm_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bloomingnature_fir": {
+   "model": "endermail:block/locker_bloomingnature_fir_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bloomingnature_larch": {
+   "model": "endermail:block/locker_bloomingnature_larch_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bloomingnature_swamp_cypress": {
+   "model": "endermail:block/locker_bloomingnature_swamp_cypress_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bloomingnature_swamp_oak": {
+   "model": "endermail:block/locker_bloomingnature_swamp_oak_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=cataclysm_chorus": {
+   "model": "endermail:block/locker_cataclysm_chorus_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=meadow_pine": {
+   "model": "endermail:block/locker_meadow_pine_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=acacia": {
+   "model": "endermail:block/locker_acacia_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=bamboo": {
+   "model": "endermail:block/locker_bamboo_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=birch": {
+   "model": "endermail:block/locker_birch_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=cherry": {
+   "model": "endermail:block/locker_cherry_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=crimson": {
+   "model": "endermail:block/locker_crimson_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=dark_oak": {
+   "model": "endermail:block/locker_dark_oak_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=jungle": {
+   "model": "endermail:block/locker_jungle_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=mangrove": {
+   "model": "endermail:block/locker_mangrove_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=spruce": {
+   "model": "endermail:block/locker_spruce_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=warped": {
+   "model": "endermail:block/locker_warped_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=mowziesmobs_painted_acacia": {
+   "model": "endermail:block/locker_mowziesmobs_painted_acacia_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=nethervinery_crested_crimson": {
+   "model": "endermail:block/locker_nethervinery_crested_crimson_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=nethervinery_crested_warped": {
+   "model": "endermail:block/locker_nethervinery_crested_warped_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=nethervinery_reinforced_crimson": {
+   "model": "endermail:block/locker_nethervinery_reinforced_crimson_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=nethervinery_reinforced_warped": {
+   "model": "endermail:block/locker_nethervinery_reinforced_warped_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_alpha": {
+   "model": "endermail:block/locker_regions_unexplored_alpha_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_baobab": {
+   "model": "endermail:block/locker_regions_unexplored_baobab_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_black_painted": {
+   "model": "endermail:block/locker_regions_unexplored_black_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_blackwood": {
+   "model": "endermail:block/locker_regions_unexplored_blackwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_blue_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_blue_bioshroom_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_blue_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_brimwood": {
+   "model": "endermail:block/locker_regions_unexplored_brimwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_brown_painted": {
+   "model": "endermail:block/locker_regions_unexplored_brown_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_cobalt": {
+   "model": "endermail:block/locker_regions_unexplored_cobalt_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_cyan_painted": {
+   "model": "endermail:block/locker_regions_unexplored_cyan_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_cypress": {
+   "model": "endermail:block/locker_regions_unexplored_cypress_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_dead": {
+   "model": "endermail:block/locker_regions_unexplored_dead_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_eucalyptus": {
+   "model": "endermail:block/locker_regions_unexplored_eucalyptus_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_gray_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_green_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_green_bioshroom_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_green_painted": {
+   "model": "endermail:block/locker_regions_unexplored_green_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_joshua": {
+   "model": "endermail:block/locker_regions_unexplored_joshua_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_kapok": {
+   "model": "endermail:block/locker_regions_unexplored_kapok_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_larch": {
+   "model": "endermail:block/locker_regions_unexplored_larch_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_light_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_blue_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_light_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_gray_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_lime_painted": {
+   "model": "endermail:block/locker_regions_unexplored_lime_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_magenta_painted": {
+   "model": "endermail:block/locker_regions_unexplored_magenta_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_magnolia": {
+   "model": "endermail:block/locker_regions_unexplored_magnolia_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_maple": {
+   "model": "endermail:block/locker_regions_unexplored_maple_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_mauve": {
+   "model": "endermail:block/locker_regions_unexplored_mauve_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_orange_painted": {
+   "model": "endermail:block/locker_regions_unexplored_orange_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_palm": {
+   "model": "endermail:block/locker_regions_unexplored_palm_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_pine": {
+   "model": "endermail:block/locker_regions_unexplored_pine_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_pink_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_pink_bioshroom_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_pink_painted": {
+   "model": "endermail:block/locker_regions_unexplored_pink_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_purple_painted": {
+   "model": "endermail:block/locker_regions_unexplored_purple_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_red_painted": {
+   "model": "endermail:block/locker_regions_unexplored_red_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_redwood": {
+   "model": "endermail:block/locker_regions_unexplored_redwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_socotra": {
+   "model": "endermail:block/locker_regions_unexplored_socotra_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_white_painted": {
+   "model": "endermail:block/locker_regions_unexplored_white_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_willow": {
+   "model": "endermail:block/locker_regions_unexplored_willow_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_yellow_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_bioshroom_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=regions_unexplored_yellow_painted": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_painted_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_canopy": {
+   "model": "endermail:block/locker_twilightforest_canopy_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_cracked_towerwood": {
+   "model": "endermail:block/locker_twilightforest_cracked_towerwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_dark": {
+   "model": "endermail:block/locker_twilightforest_dark_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_encased_towerwood": {
+   "model": "endermail:block/locker_twilightforest_encased_towerwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_infested_towerwood": {
+   "model": "endermail:block/locker_twilightforest_infested_towerwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_mangrove": {
+   "model": "endermail:block/locker_twilightforest_mangrove_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_mining": {
+   "model": "endermail:block/locker_twilightforest_mining_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_mossy_towerwood": {
+   "model": "endermail:block/locker_twilightforest_mossy_towerwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_sorting": {
+   "model": "endermail:block/locker_twilightforest_sorting_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_time": {
+   "model": "endermail:block/locker_twilightforest_time_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_towerwood": {
+   "model": "endermail:block/locker_twilightforest_towerwood_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_transformation": {
+   "model": "endermail:block/locker_twilightforest_transformation_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=twilightforest_twilight_oak": {
+   "model": "endermail:block/locker_twilightforest_twilight_oak_filled",
+   "y": 90
+  },
+  "facing=east,filled=true,wood=vinery_dark_cherry": {
+   "model": "endermail:block/locker_vinery_dark_cherry_filled",
+   "y": 90
+  },
+  "facing=south,filled=false,wood=oak": {
+   "model": "endermail:block/locker_oak",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=alexscaves_pewen": {
+   "model": "endermail:block/locker_alexscaves_pewen",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=alexscaves_thornwood": {
+   "model": "endermail:block/locker_alexscaves_thornwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=ars_nouveau_archwood": {
+   "model": "endermail:block/locker_ars_nouveau_archwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=beachparty_palm": {
+   "model": "endermail:block/locker_beachparty_palm",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_dead": {
+   "model": "endermail:block/locker_biomesoplenty_dead",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_empyreal": {
+   "model": "endermail:block/locker_biomesoplenty_empyreal",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_fir": {
+   "model": "endermail:block/locker_biomesoplenty_fir",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_hellbark": {
+   "model": "endermail:block/locker_biomesoplenty_hellbark",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_jacaranda": {
+   "model": "endermail:block/locker_biomesoplenty_jacaranda",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_magic": {
+   "model": "endermail:block/locker_biomesoplenty_magic",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_mahogany": {
+   "model": "endermail:block/locker_biomesoplenty_mahogany",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_maple": {
+   "model": "endermail:block/locker_biomesoplenty_maple",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_palm": {
+   "model": "endermail:block/locker_biomesoplenty_palm",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_pine": {
+   "model": "endermail:block/locker_biomesoplenty_pine",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_redwood": {
+   "model": "endermail:block/locker_biomesoplenty_redwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_umbran": {
+   "model": "endermail:block/locker_biomesoplenty_umbran",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=biomesoplenty_willow": {
+   "model": "endermail:block/locker_biomesoplenty_willow",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bloomingnature_aspen": {
+   "model": "endermail:block/locker_bloomingnature_aspen",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bloomingnature_baobab": {
+   "model": "endermail:block/locker_bloomingnature_baobab",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bloomingnature_cactus": {
+   "model": "endermail:block/locker_bloomingnature_cactus",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bloomingnature_chestnut": {
+   "model": "endermail:block/locker_bloomingnature_chestnut",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bloomingnature_ebony": {
+   "model": "endermail:block/locker_bloomingnature_ebony",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bloomingnature_fan_palm": {
+   "model": "endermail:block/locker_bloomingnature_fan_palm",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bloomingnature_fir": {
+   "model": "endermail:block/locker_bloomingnature_fir",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bloomingnature_larch": {
+   "model": "endermail:block/locker_bloomingnature_larch",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bloomingnature_swamp_cypress": {
+   "model": "endermail:block/locker_bloomingnature_swamp_cypress",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bloomingnature_swamp_oak": {
+   "model": "endermail:block/locker_bloomingnature_swamp_oak",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=cataclysm_chorus": {
+   "model": "endermail:block/locker_cataclysm_chorus",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=meadow_pine": {
+   "model": "endermail:block/locker_meadow_pine",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=acacia": {
+   "model": "endermail:block/locker_acacia",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=bamboo": {
+   "model": "endermail:block/locker_bamboo",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=birch": {
+   "model": "endermail:block/locker_birch",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=cherry": {
+   "model": "endermail:block/locker_cherry",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=crimson": {
+   "model": "endermail:block/locker_crimson",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=dark_oak": {
+   "model": "endermail:block/locker_dark_oak",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=jungle": {
+   "model": "endermail:block/locker_jungle",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=mangrove": {
+   "model": "endermail:block/locker_mangrove",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=spruce": {
+   "model": "endermail:block/locker_spruce",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=warped": {
+   "model": "endermail:block/locker_warped",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=mowziesmobs_painted_acacia": {
+   "model": "endermail:block/locker_mowziesmobs_painted_acacia",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=nethervinery_crested_crimson": {
+   "model": "endermail:block/locker_nethervinery_crested_crimson",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=nethervinery_crested_warped": {
+   "model": "endermail:block/locker_nethervinery_crested_warped",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=nethervinery_reinforced_crimson": {
+   "model": "endermail:block/locker_nethervinery_reinforced_crimson",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=nethervinery_reinforced_warped": {
+   "model": "endermail:block/locker_nethervinery_reinforced_warped",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_alpha": {
+   "model": "endermail:block/locker_regions_unexplored_alpha",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_baobab": {
+   "model": "endermail:block/locker_regions_unexplored_baobab",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_black_painted": {
+   "model": "endermail:block/locker_regions_unexplored_black_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_blackwood": {
+   "model": "endermail:block/locker_regions_unexplored_blackwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_blue_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_blue_bioshroom",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_blue_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_brimwood": {
+   "model": "endermail:block/locker_regions_unexplored_brimwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_brown_painted": {
+   "model": "endermail:block/locker_regions_unexplored_brown_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_cobalt": {
+   "model": "endermail:block/locker_regions_unexplored_cobalt",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_cyan_painted": {
+   "model": "endermail:block/locker_regions_unexplored_cyan_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_cypress": {
+   "model": "endermail:block/locker_regions_unexplored_cypress",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_dead": {
+   "model": "endermail:block/locker_regions_unexplored_dead",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_eucalyptus": {
+   "model": "endermail:block/locker_regions_unexplored_eucalyptus",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_gray_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_green_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_green_bioshroom",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_green_painted": {
+   "model": "endermail:block/locker_regions_unexplored_green_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_joshua": {
+   "model": "endermail:block/locker_regions_unexplored_joshua",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_kapok": {
+   "model": "endermail:block/locker_regions_unexplored_kapok",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_larch": {
+   "model": "endermail:block/locker_regions_unexplored_larch",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_light_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_blue_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_light_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_gray_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_lime_painted": {
+   "model": "endermail:block/locker_regions_unexplored_lime_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_magenta_painted": {
+   "model": "endermail:block/locker_regions_unexplored_magenta_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_magnolia": {
+   "model": "endermail:block/locker_regions_unexplored_magnolia",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_maple": {
+   "model": "endermail:block/locker_regions_unexplored_maple",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_mauve": {
+   "model": "endermail:block/locker_regions_unexplored_mauve",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_orange_painted": {
+   "model": "endermail:block/locker_regions_unexplored_orange_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_palm": {
+   "model": "endermail:block/locker_regions_unexplored_palm",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_pine": {
+   "model": "endermail:block/locker_regions_unexplored_pine",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_pink_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_pink_bioshroom",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_pink_painted": {
+   "model": "endermail:block/locker_regions_unexplored_pink_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_purple_painted": {
+   "model": "endermail:block/locker_regions_unexplored_purple_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_red_painted": {
+   "model": "endermail:block/locker_regions_unexplored_red_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_redwood": {
+   "model": "endermail:block/locker_regions_unexplored_redwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_socotra": {
+   "model": "endermail:block/locker_regions_unexplored_socotra",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_white_painted": {
+   "model": "endermail:block/locker_regions_unexplored_white_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_willow": {
+   "model": "endermail:block/locker_regions_unexplored_willow",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_yellow_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_bioshroom",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=regions_unexplored_yellow_painted": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_painted",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_canopy": {
+   "model": "endermail:block/locker_twilightforest_canopy",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_cracked_towerwood": {
+   "model": "endermail:block/locker_twilightforest_cracked_towerwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_dark": {
+   "model": "endermail:block/locker_twilightforest_dark",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_encased_towerwood": {
+   "model": "endermail:block/locker_twilightforest_encased_towerwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_infested_towerwood": {
+   "model": "endermail:block/locker_twilightforest_infested_towerwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_mangrove": {
+   "model": "endermail:block/locker_twilightforest_mangrove",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_mining": {
+   "model": "endermail:block/locker_twilightforest_mining",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_mossy_towerwood": {
+   "model": "endermail:block/locker_twilightforest_mossy_towerwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_sorting": {
+   "model": "endermail:block/locker_twilightforest_sorting",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_time": {
+   "model": "endermail:block/locker_twilightforest_time",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_towerwood": {
+   "model": "endermail:block/locker_twilightforest_towerwood",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_transformation": {
+   "model": "endermail:block/locker_twilightforest_transformation",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=twilightforest_twilight_oak": {
+   "model": "endermail:block/locker_twilightforest_twilight_oak",
+   "y": 180
+  },
+  "facing=south,filled=false,wood=vinery_dark_cherry": {
+   "model": "endermail:block/locker_vinery_dark_cherry",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=oak": {
+   "model": "endermail:block/locker_oak_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=alexscaves_pewen": {
+   "model": "endermail:block/locker_alexscaves_pewen_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=alexscaves_thornwood": {
+   "model": "endermail:block/locker_alexscaves_thornwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=ars_nouveau_archwood": {
+   "model": "endermail:block/locker_ars_nouveau_archwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=beachparty_palm": {
+   "model": "endermail:block/locker_beachparty_palm_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_dead": {
+   "model": "endermail:block/locker_biomesoplenty_dead_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_empyreal": {
+   "model": "endermail:block/locker_biomesoplenty_empyreal_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_fir": {
+   "model": "endermail:block/locker_biomesoplenty_fir_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_hellbark": {
+   "model": "endermail:block/locker_biomesoplenty_hellbark_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_jacaranda": {
+   "model": "endermail:block/locker_biomesoplenty_jacaranda_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_magic": {
+   "model": "endermail:block/locker_biomesoplenty_magic_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_mahogany": {
+   "model": "endermail:block/locker_biomesoplenty_mahogany_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_maple": {
+   "model": "endermail:block/locker_biomesoplenty_maple_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_palm": {
+   "model": "endermail:block/locker_biomesoplenty_palm_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_pine": {
+   "model": "endermail:block/locker_biomesoplenty_pine_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_redwood": {
+   "model": "endermail:block/locker_biomesoplenty_redwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_umbran": {
+   "model": "endermail:block/locker_biomesoplenty_umbran_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=biomesoplenty_willow": {
+   "model": "endermail:block/locker_biomesoplenty_willow_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bloomingnature_aspen": {
+   "model": "endermail:block/locker_bloomingnature_aspen_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bloomingnature_baobab": {
+   "model": "endermail:block/locker_bloomingnature_baobab_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bloomingnature_cactus": {
+   "model": "endermail:block/locker_bloomingnature_cactus_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bloomingnature_chestnut": {
+   "model": "endermail:block/locker_bloomingnature_chestnut_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bloomingnature_ebony": {
+   "model": "endermail:block/locker_bloomingnature_ebony_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bloomingnature_fan_palm": {
+   "model": "endermail:block/locker_bloomingnature_fan_palm_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bloomingnature_fir": {
+   "model": "endermail:block/locker_bloomingnature_fir_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bloomingnature_larch": {
+   "model": "endermail:block/locker_bloomingnature_larch_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bloomingnature_swamp_cypress": {
+   "model": "endermail:block/locker_bloomingnature_swamp_cypress_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bloomingnature_swamp_oak": {
+   "model": "endermail:block/locker_bloomingnature_swamp_oak_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=cataclysm_chorus": {
+   "model": "endermail:block/locker_cataclysm_chorus_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=meadow_pine": {
+   "model": "endermail:block/locker_meadow_pine_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=acacia": {
+   "model": "endermail:block/locker_acacia_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=bamboo": {
+   "model": "endermail:block/locker_bamboo_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=birch": {
+   "model": "endermail:block/locker_birch_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=cherry": {
+   "model": "endermail:block/locker_cherry_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=crimson": {
+   "model": "endermail:block/locker_crimson_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=dark_oak": {
+   "model": "endermail:block/locker_dark_oak_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=jungle": {
+   "model": "endermail:block/locker_jungle_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=mangrove": {
+   "model": "endermail:block/locker_mangrove_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=spruce": {
+   "model": "endermail:block/locker_spruce_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=warped": {
+   "model": "endermail:block/locker_warped_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=mowziesmobs_painted_acacia": {
+   "model": "endermail:block/locker_mowziesmobs_painted_acacia_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=nethervinery_crested_crimson": {
+   "model": "endermail:block/locker_nethervinery_crested_crimson_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=nethervinery_crested_warped": {
+   "model": "endermail:block/locker_nethervinery_crested_warped_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=nethervinery_reinforced_crimson": {
+   "model": "endermail:block/locker_nethervinery_reinforced_crimson_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=nethervinery_reinforced_warped": {
+   "model": "endermail:block/locker_nethervinery_reinforced_warped_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_alpha": {
+   "model": "endermail:block/locker_regions_unexplored_alpha_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_baobab": {
+   "model": "endermail:block/locker_regions_unexplored_baobab_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_black_painted": {
+   "model": "endermail:block/locker_regions_unexplored_black_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_blackwood": {
+   "model": "endermail:block/locker_regions_unexplored_blackwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_blue_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_blue_bioshroom_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_blue_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_brimwood": {
+   "model": "endermail:block/locker_regions_unexplored_brimwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_brown_painted": {
+   "model": "endermail:block/locker_regions_unexplored_brown_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_cobalt": {
+   "model": "endermail:block/locker_regions_unexplored_cobalt_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_cyan_painted": {
+   "model": "endermail:block/locker_regions_unexplored_cyan_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_cypress": {
+   "model": "endermail:block/locker_regions_unexplored_cypress_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_dead": {
+   "model": "endermail:block/locker_regions_unexplored_dead_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_eucalyptus": {
+   "model": "endermail:block/locker_regions_unexplored_eucalyptus_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_gray_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_green_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_green_bioshroom_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_green_painted": {
+   "model": "endermail:block/locker_regions_unexplored_green_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_joshua": {
+   "model": "endermail:block/locker_regions_unexplored_joshua_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_kapok": {
+   "model": "endermail:block/locker_regions_unexplored_kapok_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_larch": {
+   "model": "endermail:block/locker_regions_unexplored_larch_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_light_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_blue_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_light_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_gray_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_lime_painted": {
+   "model": "endermail:block/locker_regions_unexplored_lime_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_magenta_painted": {
+   "model": "endermail:block/locker_regions_unexplored_magenta_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_magnolia": {
+   "model": "endermail:block/locker_regions_unexplored_magnolia_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_maple": {
+   "model": "endermail:block/locker_regions_unexplored_maple_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_mauve": {
+   "model": "endermail:block/locker_regions_unexplored_mauve_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_orange_painted": {
+   "model": "endermail:block/locker_regions_unexplored_orange_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_palm": {
+   "model": "endermail:block/locker_regions_unexplored_palm_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_pine": {
+   "model": "endermail:block/locker_regions_unexplored_pine_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_pink_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_pink_bioshroom_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_pink_painted": {
+   "model": "endermail:block/locker_regions_unexplored_pink_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_purple_painted": {
+   "model": "endermail:block/locker_regions_unexplored_purple_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_red_painted": {
+   "model": "endermail:block/locker_regions_unexplored_red_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_redwood": {
+   "model": "endermail:block/locker_regions_unexplored_redwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_socotra": {
+   "model": "endermail:block/locker_regions_unexplored_socotra_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_white_painted": {
+   "model": "endermail:block/locker_regions_unexplored_white_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_willow": {
+   "model": "endermail:block/locker_regions_unexplored_willow_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_yellow_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_bioshroom_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=regions_unexplored_yellow_painted": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_painted_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_canopy": {
+   "model": "endermail:block/locker_twilightforest_canopy_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_cracked_towerwood": {
+   "model": "endermail:block/locker_twilightforest_cracked_towerwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_dark": {
+   "model": "endermail:block/locker_twilightforest_dark_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_encased_towerwood": {
+   "model": "endermail:block/locker_twilightforest_encased_towerwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_infested_towerwood": {
+   "model": "endermail:block/locker_twilightforest_infested_towerwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_mangrove": {
+   "model": "endermail:block/locker_twilightforest_mangrove_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_mining": {
+   "model": "endermail:block/locker_twilightforest_mining_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_mossy_towerwood": {
+   "model": "endermail:block/locker_twilightforest_mossy_towerwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_sorting": {
+   "model": "endermail:block/locker_twilightforest_sorting_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_time": {
+   "model": "endermail:block/locker_twilightforest_time_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_towerwood": {
+   "model": "endermail:block/locker_twilightforest_towerwood_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_transformation": {
+   "model": "endermail:block/locker_twilightforest_transformation_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=twilightforest_twilight_oak": {
+   "model": "endermail:block/locker_twilightforest_twilight_oak_filled",
+   "y": 180
+  },
+  "facing=south,filled=true,wood=vinery_dark_cherry": {
+   "model": "endermail:block/locker_vinery_dark_cherry_filled",
+   "y": 180
+  },
+  "facing=west,filled=false,wood=oak": {
+   "model": "endermail:block/locker_oak",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=alexscaves_pewen": {
+   "model": "endermail:block/locker_alexscaves_pewen",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=alexscaves_thornwood": {
+   "model": "endermail:block/locker_alexscaves_thornwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=ars_nouveau_archwood": {
+   "model": "endermail:block/locker_ars_nouveau_archwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=beachparty_palm": {
+   "model": "endermail:block/locker_beachparty_palm",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_dead": {
+   "model": "endermail:block/locker_biomesoplenty_dead",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_empyreal": {
+   "model": "endermail:block/locker_biomesoplenty_empyreal",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_fir": {
+   "model": "endermail:block/locker_biomesoplenty_fir",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_hellbark": {
+   "model": "endermail:block/locker_biomesoplenty_hellbark",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_jacaranda": {
+   "model": "endermail:block/locker_biomesoplenty_jacaranda",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_magic": {
+   "model": "endermail:block/locker_biomesoplenty_magic",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_mahogany": {
+   "model": "endermail:block/locker_biomesoplenty_mahogany",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_maple": {
+   "model": "endermail:block/locker_biomesoplenty_maple",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_palm": {
+   "model": "endermail:block/locker_biomesoplenty_palm",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_pine": {
+   "model": "endermail:block/locker_biomesoplenty_pine",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_redwood": {
+   "model": "endermail:block/locker_biomesoplenty_redwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_umbran": {
+   "model": "endermail:block/locker_biomesoplenty_umbran",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=biomesoplenty_willow": {
+   "model": "endermail:block/locker_biomesoplenty_willow",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bloomingnature_aspen": {
+   "model": "endermail:block/locker_bloomingnature_aspen",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bloomingnature_baobab": {
+   "model": "endermail:block/locker_bloomingnature_baobab",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bloomingnature_cactus": {
+   "model": "endermail:block/locker_bloomingnature_cactus",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bloomingnature_chestnut": {
+   "model": "endermail:block/locker_bloomingnature_chestnut",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bloomingnature_ebony": {
+   "model": "endermail:block/locker_bloomingnature_ebony",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bloomingnature_fan_palm": {
+   "model": "endermail:block/locker_bloomingnature_fan_palm",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bloomingnature_fir": {
+   "model": "endermail:block/locker_bloomingnature_fir",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bloomingnature_larch": {
+   "model": "endermail:block/locker_bloomingnature_larch",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bloomingnature_swamp_cypress": {
+   "model": "endermail:block/locker_bloomingnature_swamp_cypress",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bloomingnature_swamp_oak": {
+   "model": "endermail:block/locker_bloomingnature_swamp_oak",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=cataclysm_chorus": {
+   "model": "endermail:block/locker_cataclysm_chorus",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=meadow_pine": {
+   "model": "endermail:block/locker_meadow_pine",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=acacia": {
+   "model": "endermail:block/locker_acacia",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=bamboo": {
+   "model": "endermail:block/locker_bamboo",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=birch": {
+   "model": "endermail:block/locker_birch",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=cherry": {
+   "model": "endermail:block/locker_cherry",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=crimson": {
+   "model": "endermail:block/locker_crimson",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=dark_oak": {
+   "model": "endermail:block/locker_dark_oak",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=jungle": {
+   "model": "endermail:block/locker_jungle",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=mangrove": {
+   "model": "endermail:block/locker_mangrove",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=spruce": {
+   "model": "endermail:block/locker_spruce",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=warped": {
+   "model": "endermail:block/locker_warped",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=mowziesmobs_painted_acacia": {
+   "model": "endermail:block/locker_mowziesmobs_painted_acacia",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=nethervinery_crested_crimson": {
+   "model": "endermail:block/locker_nethervinery_crested_crimson",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=nethervinery_crested_warped": {
+   "model": "endermail:block/locker_nethervinery_crested_warped",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=nethervinery_reinforced_crimson": {
+   "model": "endermail:block/locker_nethervinery_reinforced_crimson",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=nethervinery_reinforced_warped": {
+   "model": "endermail:block/locker_nethervinery_reinforced_warped",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_alpha": {
+   "model": "endermail:block/locker_regions_unexplored_alpha",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_baobab": {
+   "model": "endermail:block/locker_regions_unexplored_baobab",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_black_painted": {
+   "model": "endermail:block/locker_regions_unexplored_black_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_blackwood": {
+   "model": "endermail:block/locker_regions_unexplored_blackwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_blue_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_blue_bioshroom",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_blue_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_brimwood": {
+   "model": "endermail:block/locker_regions_unexplored_brimwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_brown_painted": {
+   "model": "endermail:block/locker_regions_unexplored_brown_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_cobalt": {
+   "model": "endermail:block/locker_regions_unexplored_cobalt",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_cyan_painted": {
+   "model": "endermail:block/locker_regions_unexplored_cyan_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_cypress": {
+   "model": "endermail:block/locker_regions_unexplored_cypress",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_dead": {
+   "model": "endermail:block/locker_regions_unexplored_dead",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_eucalyptus": {
+   "model": "endermail:block/locker_regions_unexplored_eucalyptus",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_gray_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_green_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_green_bioshroom",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_green_painted": {
+   "model": "endermail:block/locker_regions_unexplored_green_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_joshua": {
+   "model": "endermail:block/locker_regions_unexplored_joshua",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_kapok": {
+   "model": "endermail:block/locker_regions_unexplored_kapok",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_larch": {
+   "model": "endermail:block/locker_regions_unexplored_larch",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_light_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_blue_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_light_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_gray_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_lime_painted": {
+   "model": "endermail:block/locker_regions_unexplored_lime_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_magenta_painted": {
+   "model": "endermail:block/locker_regions_unexplored_magenta_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_magnolia": {
+   "model": "endermail:block/locker_regions_unexplored_magnolia",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_maple": {
+   "model": "endermail:block/locker_regions_unexplored_maple",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_mauve": {
+   "model": "endermail:block/locker_regions_unexplored_mauve",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_orange_painted": {
+   "model": "endermail:block/locker_regions_unexplored_orange_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_palm": {
+   "model": "endermail:block/locker_regions_unexplored_palm",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_pine": {
+   "model": "endermail:block/locker_regions_unexplored_pine",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_pink_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_pink_bioshroom",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_pink_painted": {
+   "model": "endermail:block/locker_regions_unexplored_pink_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_purple_painted": {
+   "model": "endermail:block/locker_regions_unexplored_purple_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_red_painted": {
+   "model": "endermail:block/locker_regions_unexplored_red_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_redwood": {
+   "model": "endermail:block/locker_regions_unexplored_redwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_socotra": {
+   "model": "endermail:block/locker_regions_unexplored_socotra",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_white_painted": {
+   "model": "endermail:block/locker_regions_unexplored_white_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_willow": {
+   "model": "endermail:block/locker_regions_unexplored_willow",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_yellow_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_bioshroom",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=regions_unexplored_yellow_painted": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_painted",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_canopy": {
+   "model": "endermail:block/locker_twilightforest_canopy",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_cracked_towerwood": {
+   "model": "endermail:block/locker_twilightforest_cracked_towerwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_dark": {
+   "model": "endermail:block/locker_twilightforest_dark",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_encased_towerwood": {
+   "model": "endermail:block/locker_twilightforest_encased_towerwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_infested_towerwood": {
+   "model": "endermail:block/locker_twilightforest_infested_towerwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_mangrove": {
+   "model": "endermail:block/locker_twilightforest_mangrove",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_mining": {
+   "model": "endermail:block/locker_twilightforest_mining",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_mossy_towerwood": {
+   "model": "endermail:block/locker_twilightforest_mossy_towerwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_sorting": {
+   "model": "endermail:block/locker_twilightforest_sorting",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_time": {
+   "model": "endermail:block/locker_twilightforest_time",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_towerwood": {
+   "model": "endermail:block/locker_twilightforest_towerwood",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_transformation": {
+   "model": "endermail:block/locker_twilightforest_transformation",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=twilightforest_twilight_oak": {
+   "model": "endermail:block/locker_twilightforest_twilight_oak",
+   "y": 270
+  },
+  "facing=west,filled=false,wood=vinery_dark_cherry": {
+   "model": "endermail:block/locker_vinery_dark_cherry",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=oak": {
+   "model": "endermail:block/locker_oak_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=alexscaves_pewen": {
+   "model": "endermail:block/locker_alexscaves_pewen_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=alexscaves_thornwood": {
+   "model": "endermail:block/locker_alexscaves_thornwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=ars_nouveau_archwood": {
+   "model": "endermail:block/locker_ars_nouveau_archwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=beachparty_palm": {
+   "model": "endermail:block/locker_beachparty_palm_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_dead": {
+   "model": "endermail:block/locker_biomesoplenty_dead_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_empyreal": {
+   "model": "endermail:block/locker_biomesoplenty_empyreal_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_fir": {
+   "model": "endermail:block/locker_biomesoplenty_fir_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_hellbark": {
+   "model": "endermail:block/locker_biomesoplenty_hellbark_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_jacaranda": {
+   "model": "endermail:block/locker_biomesoplenty_jacaranda_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_magic": {
+   "model": "endermail:block/locker_biomesoplenty_magic_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_mahogany": {
+   "model": "endermail:block/locker_biomesoplenty_mahogany_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_maple": {
+   "model": "endermail:block/locker_biomesoplenty_maple_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_palm": {
+   "model": "endermail:block/locker_biomesoplenty_palm_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_pine": {
+   "model": "endermail:block/locker_biomesoplenty_pine_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_redwood": {
+   "model": "endermail:block/locker_biomesoplenty_redwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_umbran": {
+   "model": "endermail:block/locker_biomesoplenty_umbran_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=biomesoplenty_willow": {
+   "model": "endermail:block/locker_biomesoplenty_willow_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bloomingnature_aspen": {
+   "model": "endermail:block/locker_bloomingnature_aspen_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bloomingnature_baobab": {
+   "model": "endermail:block/locker_bloomingnature_baobab_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bloomingnature_cactus": {
+   "model": "endermail:block/locker_bloomingnature_cactus_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bloomingnature_chestnut": {
+   "model": "endermail:block/locker_bloomingnature_chestnut_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bloomingnature_ebony": {
+   "model": "endermail:block/locker_bloomingnature_ebony_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bloomingnature_fan_palm": {
+   "model": "endermail:block/locker_bloomingnature_fan_palm_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bloomingnature_fir": {
+   "model": "endermail:block/locker_bloomingnature_fir_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bloomingnature_larch": {
+   "model": "endermail:block/locker_bloomingnature_larch_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bloomingnature_swamp_cypress": {
+   "model": "endermail:block/locker_bloomingnature_swamp_cypress_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bloomingnature_swamp_oak": {
+   "model": "endermail:block/locker_bloomingnature_swamp_oak_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=cataclysm_chorus": {
+   "model": "endermail:block/locker_cataclysm_chorus_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=meadow_pine": {
+   "model": "endermail:block/locker_meadow_pine_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=acacia": {
+   "model": "endermail:block/locker_acacia_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=bamboo": {
+   "model": "endermail:block/locker_bamboo_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=birch": {
+   "model": "endermail:block/locker_birch_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=cherry": {
+   "model": "endermail:block/locker_cherry_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=crimson": {
+   "model": "endermail:block/locker_crimson_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=dark_oak": {
+   "model": "endermail:block/locker_dark_oak_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=jungle": {
+   "model": "endermail:block/locker_jungle_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=mangrove": {
+   "model": "endermail:block/locker_mangrove_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=spruce": {
+   "model": "endermail:block/locker_spruce_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=warped": {
+   "model": "endermail:block/locker_warped_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=mowziesmobs_painted_acacia": {
+   "model": "endermail:block/locker_mowziesmobs_painted_acacia_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=nethervinery_crested_crimson": {
+   "model": "endermail:block/locker_nethervinery_crested_crimson_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=nethervinery_crested_warped": {
+   "model": "endermail:block/locker_nethervinery_crested_warped_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=nethervinery_reinforced_crimson": {
+   "model": "endermail:block/locker_nethervinery_reinforced_crimson_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=nethervinery_reinforced_warped": {
+   "model": "endermail:block/locker_nethervinery_reinforced_warped_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_alpha": {
+   "model": "endermail:block/locker_regions_unexplored_alpha_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_baobab": {
+   "model": "endermail:block/locker_regions_unexplored_baobab_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_black_painted": {
+   "model": "endermail:block/locker_regions_unexplored_black_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_blackwood": {
+   "model": "endermail:block/locker_regions_unexplored_blackwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_blue_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_blue_bioshroom_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_blue_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_brimwood": {
+   "model": "endermail:block/locker_regions_unexplored_brimwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_brown_painted": {
+   "model": "endermail:block/locker_regions_unexplored_brown_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_cobalt": {
+   "model": "endermail:block/locker_regions_unexplored_cobalt_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_cyan_painted": {
+   "model": "endermail:block/locker_regions_unexplored_cyan_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_cypress": {
+   "model": "endermail:block/locker_regions_unexplored_cypress_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_dead": {
+   "model": "endermail:block/locker_regions_unexplored_dead_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_eucalyptus": {
+   "model": "endermail:block/locker_regions_unexplored_eucalyptus_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_gray_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_green_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_green_bioshroom_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_green_painted": {
+   "model": "endermail:block/locker_regions_unexplored_green_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_joshua": {
+   "model": "endermail:block/locker_regions_unexplored_joshua_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_kapok": {
+   "model": "endermail:block/locker_regions_unexplored_kapok_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_larch": {
+   "model": "endermail:block/locker_regions_unexplored_larch_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_light_blue_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_blue_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_light_gray_painted": {
+   "model": "endermail:block/locker_regions_unexplored_light_gray_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_lime_painted": {
+   "model": "endermail:block/locker_regions_unexplored_lime_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_magenta_painted": {
+   "model": "endermail:block/locker_regions_unexplored_magenta_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_magnolia": {
+   "model": "endermail:block/locker_regions_unexplored_magnolia_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_maple": {
+   "model": "endermail:block/locker_regions_unexplored_maple_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_mauve": {
+   "model": "endermail:block/locker_regions_unexplored_mauve_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_orange_painted": {
+   "model": "endermail:block/locker_regions_unexplored_orange_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_palm": {
+   "model": "endermail:block/locker_regions_unexplored_palm_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_pine": {
+   "model": "endermail:block/locker_regions_unexplored_pine_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_pink_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_pink_bioshroom_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_pink_painted": {
+   "model": "endermail:block/locker_regions_unexplored_pink_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_purple_painted": {
+   "model": "endermail:block/locker_regions_unexplored_purple_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_red_painted": {
+   "model": "endermail:block/locker_regions_unexplored_red_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_redwood": {
+   "model": "endermail:block/locker_regions_unexplored_redwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_socotra": {
+   "model": "endermail:block/locker_regions_unexplored_socotra_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_white_painted": {
+   "model": "endermail:block/locker_regions_unexplored_white_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_willow": {
+   "model": "endermail:block/locker_regions_unexplored_willow_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_yellow_bioshroom": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_bioshroom_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=regions_unexplored_yellow_painted": {
+   "model": "endermail:block/locker_regions_unexplored_yellow_painted_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_canopy": {
+   "model": "endermail:block/locker_twilightforest_canopy_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_cracked_towerwood": {
+   "model": "endermail:block/locker_twilightforest_cracked_towerwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_dark": {
+   "model": "endermail:block/locker_twilightforest_dark_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_encased_towerwood": {
+   "model": "endermail:block/locker_twilightforest_encased_towerwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_infested_towerwood": {
+   "model": "endermail:block/locker_twilightforest_infested_towerwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_mangrove": {
+   "model": "endermail:block/locker_twilightforest_mangrove_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_mining": {
+   "model": "endermail:block/locker_twilightforest_mining_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_mossy_towerwood": {
+   "model": "endermail:block/locker_twilightforest_mossy_towerwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_sorting": {
+   "model": "endermail:block/locker_twilightforest_sorting_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_time": {
+   "model": "endermail:block/locker_twilightforest_time_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_towerwood": {
+   "model": "endermail:block/locker_twilightforest_towerwood_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_transformation": {
+   "model": "endermail:block/locker_twilightforest_transformation_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=twilightforest_twilight_oak": {
+   "model": "endermail:block/locker_twilightforest_twilight_oak_filled",
+   "y": 270
+  },
+  "facing=west,filled=true,wood=vinery_dark_cherry": {
+   "model": "endermail:block/locker_vinery_dark_cherry_filled",
+   "y": 270
   }
+ }
 }

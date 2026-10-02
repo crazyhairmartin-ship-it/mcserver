@@ -1,0 +1,5 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": { "layer0": "fotfmail:item/letter" },
+  "overrides": [ { "predicate": { "fotfmail:signed": 1 }, "model": "fotfmail:item/letter_signed" } ]
+}

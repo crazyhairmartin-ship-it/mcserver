@@ -1,28 +1,29 @@
-"""Ender Mail's locker restyled as a wooden birdhouse (original model, vanilla/pack textures).
+"""Birdhouse mailboxes (Ender Mail's locker) in every wood, for the fotfmail add-on.
 
-Empty: just the birdhouse. Mail waiting (the block's filled=true state): a letter pokes out of the entry hole.
-Each box is a single wood throughout. Ender Mail has one locker block, so the blockstate picks a wood per
-placed position (random model list); the item in your inventory shows ITEM_WOOD.
+Each box is one wood throughout. The fotfmail add-on (extras/fotfmail) gives the locker a "wood" block state;
+the crafting recipe (kubejs/server_scripts/mail_recipes.js) sets it from the planks used, and breaking the
+mailbox keeps it (loot table copy_state). A letter pokes out of the entry hole when mail is waiting (filled=true).
 
-Writes kubejs/assets/endermail/models/block/locker_<wood>{,_filled}.json, locker{,_filled}.json (item)
-and kubejs/assets/endermail/blockstates/locker.json. Facing north = entry hole toward -Z.
+Input: tools/mailbox/woods.json (key, planks item, planks texture), built from the server's #minecraft:planks
+minus trimmed items, oak first (oak is the default state and the plain item).
+
+Writes:
+  extras/fotfmail/src/fotfmail/MailboxWood.java         wood enum (block state values, in this order)
+  kubejs/assets/endermail/blockstates/locker.json       facing x filled x wood
+  kubejs/assets/endermail/models/block/locker_<wood>{,_filled}.json
+  kubejs/assets/endermail/models/item/locker.json       per-wood overrides (predicate fotfmail:wood = index/128)
+  kubejs/data/endermail/loot_tables/blocks/locker.json  keeps the wood when broken
+  kubejs/startup_scripts/mailbox_woods.js               global.MAILBOX_WOODS for recipes and tooltips
+Facing north = entry hole toward -Z.
 """
 import json
 import os
+import shutil
 
 PACK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 ASSETS = os.path.join(PACK, 'kubejs', 'assets', 'endermail')
-
-WOODS = {
-    'oak': 'minecraft:block/oak_planks',
-    'spruce': 'minecraft:block/spruce_planks',
-    'birch': 'minecraft:block/birch_planks',
-    'cherry': 'minecraft:block/cherry_planks',
-    'dark_oak': 'minecraft:block/dark_oak_planks',
-    'archwood': 'ars_nouveau:block/archwood_planks',
-    'umbran': 'biomesoplenty:block/umbran_planks',
-}
-ITEM_WOOD = 'oak'
+WOODS = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'woods.json')))
+assert WOODS[0]['key'] == 'oak' and len(WOODS) <= 128
 
 
 def box(frm, to, tex):
@@ -53,34 +54,82 @@ LETTER = [
 ]
 
 
-def model(wood, filled):
-    textures = {'particle': WOODS[wood], 'wood': WOODS[wood], 'hole': 'minecraft:block/black_concrete',
+def model(texture, filled):
+    textures = {'particle': texture, 'wood': texture, 'hole': 'minecraft:block/black_concrete',
                 'letter': 'minecraft:block/white_wool', 'seal': 'minecraft:block/red_concrete'}
     return {'parent': 'minecraft:block/block', 'textures': textures, 'elements': BODY + (LETTER if filled else [])}
 
 
 def write(path, obj):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, 'w') as f:
-        json.dump(obj, f, indent=2)
+    with open(path, 'w', encoding='utf-8') as f:
+        if isinstance(obj, str):
+            f.write(obj)
+        else:
+            json.dump(obj, f, indent=1)
 
 
-for wood in WOODS:
+shutil.rmtree(os.path.join(ASSETS, 'models'), ignore_errors=True)
+for w in WOODS:
     for filled in (False, True):
-        write(os.path.join(ASSETS, 'models', 'block', f'locker_{wood}{"_filled" if filled else ""}.json'), model(wood, filled))
-write(os.path.join(ASSETS, 'models', 'block', 'locker.json'), {'parent': f'endermail:block/locker_{ITEM_WOOD}'})
-write(os.path.join(ASSETS, 'models', 'block', 'locker_filled.json'), {'parent': f'endermail:block/locker_{ITEM_WOOD}_filled'})
+        write(os.path.join(ASSETS, 'models', 'block', f'locker_{w["key"]}{"_filled" if filled else ""}.json'),
+              model(w['texture'], filled))
 
 ROTATION = {'north': 0, 'east': 90, 'south': 180, 'west': 270}
 variants = {}
 for facing, y in ROTATION.items():
     for filled in (False, True):
-        options = []
-        for wood in WOODS:
-            option = {'model': f'endermail:block/locker_{wood}{"_filled" if filled else ""}'}
+        for w in WOODS:
+            variant = {'model': f'endermail:block/locker_{w["key"]}{"_filled" if filled else ""}'}
             if y:
-                option['y'] = y
-            options.append(option)
-        variants[f'facing={facing},filled={str(filled).lower()}'] = options
+                variant['y'] = y
+            variants[f'facing={facing},filled={str(filled).lower()},wood={w["key"]}'] = variant
 write(os.path.join(ASSETS, 'blockstates', 'locker.json'), {'variants': variants})
+
+write(os.path.join(ASSETS, 'models', 'item', 'locker.json'), {
+    'parent': 'endermail:block/locker_oak',
+    'overrides': [{'predicate': {'fotfmail:wood': i / 128}, 'model': f'endermail:block/locker_{w["key"]}'}
+                  for i, w in enumerate(WOODS) if i],
+})
+
+write(os.path.join(PACK, 'kubejs', 'data', 'endermail', 'loot_tables', 'blocks', 'locker.json'), {
+    'type': 'minecraft:block',
+    'pools': [{
+        'rolls': 1,
+        'entries': [{'type': 'minecraft:item', 'name': 'endermail:locker',
+                     'functions': [{'function': 'minecraft:copy_state', 'block': 'endermail:locker',
+                                    'properties': ['wood']}]}],
+        'conditions': [{'condition': 'minecraft:survives_explosion'}],
+    }],
+})
+
+enum_values = ',\n'.join(f'    {w["key"].upper()}("{w["key"]}")' for w in WOODS)
+write(os.path.join(PACK, 'extras', 'fotfmail', 'src', 'fotfmail', 'MailboxWood.java'), f'''package fotfmail;
+
+import net.minecraft.util.StringRepresentable;
+
+/** Mailbox woods: generated by tools/mailbox/make_mailbox.py from tools/mailbox/woods.json. Oak first (default). */
+public enum MailboxWood implements StringRepresentable {{
+{enum_values};
+
+    private final String name;
+
+    MailboxWood(String name) {{
+        this.name = name;
+    }}
+
+    @Override
+    public String m_7912_() {{
+        return name;
+    }}
+}}
+''')
+
+js_woods = ',\n'.join(f"  ['{w['key']}', '{w['planks']}']" for w in WOODS)
+write(os.path.join(PACK, 'kubejs', 'startup_scripts', 'mailbox_woods.js'), f'''// Mailbox woods: [block state value, planks]. Generated by tools/mailbox/make_mailbox.py; must match the
+// fotfmail add-on's MailboxWood enum (extras/fotfmail), so regenerate both together.
+global.MAILBOX_WOODS = [
+{js_woods}
+]
+''')
 print(f'{len(WOODS)} woods written')

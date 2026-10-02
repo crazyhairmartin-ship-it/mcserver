@@ -1,0 +1,8 @@
+name = "Friends of the Forest Mail"
+filename = "fotfmail-1.0.0.jar"
+side = "both"
+
+[download]
+url = "https://raw.githubusercontent.com/crazyhairmartin-ship-it/mcserver/mail-test/extras/fotfmail/fotfmail-1.0.0.jar"
+hash-format = "sha512"
+hash = "70de2d1178f2b07a288da9d6222b176211060636affe42ac78a15c2a9b0451feb20e9f7bb51cf6700ea2833e737e8c3ef9c22f9f0ac8c1ebe116a2111055d0c3"
