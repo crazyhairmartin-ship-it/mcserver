@@ -10,7 +10,8 @@
     "EntityBookwyrmMixin",
     "MobAccessor",
     "EnderMailmanGoalsMixin",
-    "RandomStorageVisitGoalMixin"
+    "RandomStorageVisitGoalMixin",
+    "NightmareFireBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

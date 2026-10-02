@@ -7,7 +7,7 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   `kubejs/server_scripts/mail_recipes.js`), and breaking the mailbox keeps it (loot table `copy_state`).
 - **Letters.** `fotfmail:letter`: write on it like a book and quill, sign it with the recipient's mailbox ID as
   the title, then right-click any mailbox. One of Ender Mail's mail carriers (wearing a mail cap, see
-  `MailHatLayer`) appears about 12 blocks in front of that mailbox, walks up, takes the letter, walks off and
+  `MailHatLayer`) appears 8-12 blocks from that mailbox in a random direction, walks up, takes the letter, walks off and
   teleports; then appears in front of the friend's mailbox, walks up, drops the letter in, walks away and
   teleports out (`CarrierGoal`; Ender Mail's own carrier goals and random teleports are off for these carriers).
   If nobody is near the friend's mailbox it's delivered straight in. Other dimensions get it instantly.
@@ -27,6 +27,8 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   around their lectern network now and then, sometimes hovering over a connected lectern (their own plus any
   lecterns linked to it), only where they can actually fly. Ars's chest visits are cut to about 1 in 5 of the
   times they'd start (`RandomStorageVisitGoalMixin`) so the wander gets a turn.
+- **Nightmare hoof fire burns out about 3x sooner** (`NightmareFireBlockMixin`, Ultimate Unicorn Mod).
+- **Ender Mail carriers are invulnerable** (rain and water used to hurt them).
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates
 `src/fotfmail/MailboxWood.java` and every mailbox model, blockstate and recipe list together. Rebuild the jar with

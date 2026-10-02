@@ -10,6 +10,7 @@ import net.minecraft.core.NonNullList;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.item.ItemStack;
@@ -20,7 +21,7 @@ import net.minecraftforge.common.extensions.IForgeEntity;
 
 /**
  * The walk of an Ender Mail carrier taking a letter (persistent data "fotfmail_letter", set by Mail.send):
- *   (starts DISTANCE blocks in front of the sender's mailbox)
+ *   (starts 8-DISTANCE blocks from the sender's mailbox, any direction)
  *   0 walk up to the sender's mailbox, pause, pick up the letter (shows the parcel in its hands)
  *   1 walk a few blocks away, then teleport
  *   2 appear a few blocks in front of the friend's mailbox (if nobody is near it, deliver straight in instead)
@@ -33,7 +34,7 @@ public final class CarrierGoal extends Goal {
     static final String PHASE = "fotfmail_phase";
     static final String FROM = "fotfmail_from";
     static final String TO = "fotfmail_to";
-    static final int DISTANCE = 12; // how far in front of a mailbox the carrier appears and walks off to
+    static final int DISTANCE = 12; // how far from a mailbox the carrier appears and walks off to (any direction)
     private static final int WALK_TIMEOUT = 400;
     private static final int AWAY_TIMEOUT = 200;
     private static final int PAUSE = 20;
@@ -94,7 +95,7 @@ public final class CarrierGoal extends Goal {
             case 2 -> {
                 poof();
                 ServerLevel level = (ServerLevel) carrier.m_9236_();
-                BlockPos arrival = spotInFront(level, to, DISTANCE);
+                BlockPos arrival = spotAround(level, to, carrier.m_217043_());
                 if (!level.m_143340_(to) || arrival == null) {
                     deliver(to); // nobody near the friend's mailbox: straight in, no walk
                     carrier.m_146870_();
@@ -153,7 +154,7 @@ public final class CarrierGoal extends Goal {
     private boolean walkAwayFrom(BlockPos mailbox) {
         Level level = carrier.m_9236_();
         if (walkTarget == null) {
-            walkTarget = spotInFront(level, mailbox, DISTANCE);
+            walkTarget = spotAround(level, mailbox, carrier.m_217043_());
             if (walkTarget == null) {
                 return true;
             }
@@ -190,6 +191,23 @@ public final class CarrierGoal extends Goal {
         BlockState state = level.m_8055_(mailbox);
         Direction facing = state.m_60734_() instanceof LockerBlock ? state.m_61143_(LockerBlock.FACING) : Direction.NORTH;
         return mailbox.m_5484_(facing, distance);
+    }
+
+    /**
+     * Somewhere to stand 8-DISTANCE blocks from the mailbox in a random direction; falls back to spots in front of it,
+     * closer in, if nothing around is standable.
+     */
+    static BlockPos spotAround(Level level, BlockPos mailbox, RandomSource random) {
+        for (int attempt = 0; attempt < 16; attempt++) {
+            double angle = random.m_188500_() * Math.PI * 2;
+            double distance = 8 + random.m_188500_() * (DISTANCE - 8);
+            BlockPos spot = standableNear(level, mailbox.m_7918_(
+                    (int) Math.round(Math.cos(angle) * distance), 0, (int) Math.round(Math.sin(angle) * distance)));
+            if (spot != null) {
+                return spot;
+            }
+        }
+        return spotInFront(level, mailbox, DISTANCE);
     }
 
     /** Somewhere to stand `distance` blocks in front of the mailbox, trying closer spots if that's blocked. */
