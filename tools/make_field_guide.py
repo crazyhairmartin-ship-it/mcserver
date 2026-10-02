@@ -113,7 +113,7 @@ ENTRIES = [
         craft('alexsmobs:animal_dictionary', 'The $(l)Animal Dictionary$() describes every animal and how to tame it. Craft one or type $(l)/guide animals$().'),
     ]),
     ('creatures', 'critters', 'Critters & Companions', 'crittersandcompanions:dragonfly_wing', [
-        text('Small friends to tame by feeding:$(li)Red panda: bamboo$(li)Ferret: raw chicken$(li)Shima enaga: seeds$(li)Snail: carrots$(li)Ladybug: mushrooms$(li)Jumping spider: dragonfly wings'),
+        text('Small friends to tame by feeding:$(li)Red panda: bamboo$(li)Ferret: raw chicken$(li)Shima enaga: seeds$(li)Snail: carrots$(li)Ladybug: mushrooms$(li)Jumping spider: dragonfly wings (heal it with spider eyes)'),
         text('$(li)Dragonfly: spider eyes$(li)Stag beetle: sweet berries$(li)Stick bug: leaves$(li)Roly poly: dead bushes$(li)Weevil: acorns$(br2)Otters, koi and sea bunnies can\'t be tamed.', 'More Critters'),
     ]),
     ('creatures', 'wildlife', 'More Wildlife', 'minecraft:lead', [
