@@ -126,3 +126,41 @@ def stamp():
 STAMP_OUT = '../../kubejs/assets/endermail/textures/item/stamp.png'
 stamp()
 print('stamp drawn')
+
+
+def letter_gui():
+    """256x256 letter paper for the book screens when the item is a Letter (fotfmail BookEditScreenMixin /
+    BookViewScreenMixin). Only the 192x192 corner is drawn, in the same place as the vanilla book page."""
+    img = Image.new('RGBA', (256, 256), CLEAR)
+    px = img.load()
+    paper, paper_edge, rule, margin = (250, 244, 228, 255), (220, 210, 186, 255), (176, 200, 228, 255), (226, 140, 140, 255)
+    red, blue = (206, 52, 52, 255), (52, 90, 178, 255)
+    x0, y0, x1, y1 = 22, 4, 164, 180
+    for y in range(y0, y1):
+        for x in range(x0, x1):
+            px[x, y] = paper
+    for x in range(x0, x1):                       # edges
+        px[x, y0] = px[x, y1 - 1] = paper_edge
+    for y in range(y0, y1):
+        px[x0, y] = px[x1 - 1, y] = paper_edge
+    for i, (x, y) in enumerate(                   # airmail border: red and blue dashes all the way round
+            [(x, y0 + 2) for x in range(x0 + 2, x1 - 2)] + [(x1 - 3, y) for y in range(y0 + 2, y1 - 2)]
+            + [(x, y1 - 3) for x in range(x1 - 3, x0 + 1, -1)] + [(x0 + 2, y) for y in range(y1 - 3, y0 + 1, -1)]):
+        colour = red if (i // 4) % 2 == 0 else blue
+        px[x, y] = colour
+        if (i // 4) % 2 == 0:
+            pass
+    for line in range(14):                        # ruled lines under each 9px line of text (text starts at y 32)
+        y = 32 + 9 * line + 8
+        if y >= y1 - 8:
+            break
+        for x in range(34, 152):
+            px[x, y] = rule
+    for y in range(12, y1 - 8):                   # margin line
+        px[31, y] = margin
+    img.save('res/assets/fotfmail/textures/gui/letter.png')
+    img.crop((0, 0, 192, 192)).resize((384, 384), Image.NEAREST).save('letter_gui_preview.png')
+
+
+letter_gui()
+print('letter paper drawn')

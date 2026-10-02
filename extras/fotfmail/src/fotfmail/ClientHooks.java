@@ -14,7 +14,7 @@ final class ClientHooks {
 
     static void openLetter(Player player, ItemStack stack, InteractionHand hand) {
         if (LetterItem.isSigned(stack)) {
-            Minecraft.m_91087_().m_91152_(new BookViewScreen(new BookViewScreen.WrittenBookAccess(stack)));
+            Minecraft.m_91087_().m_91152_(new LetterViewScreen(new BookViewScreen.WrittenBookAccess(stack)));
         } else {
             Minecraft.m_91087_().m_91152_(new BookEditScreen(player, stack, hand));
         }

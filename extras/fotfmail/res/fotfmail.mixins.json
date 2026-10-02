@@ -25,6 +25,7 @@
     "AbstractStorageTerminalScreenMixin",
     "BookEditScreenMixin",
     "PackageScreenMixin",
-    "ScreenWrapperMixin"
+    "ScreenWrapperMixin",
+    "BookViewScreenMixin"
   ]
 }

@@ -97,6 +97,10 @@ file = "config/gravestone-client.toml"
 hash = "b8e24932dc5f41db8ccdc0d40d6241a4f12fc4366bfb646b513b72b9432aad19"
 
 [[files]]
+file = "config/inventoryprofilesnext/integrationHints/endermail.json"
+hash = "af46af8a7f186cbe4c78fb73857702121367025290c27e9f97343fa54a03e4e4"
+
+[[files]]
 file = "config/inventoryprofilesnext/inventoryprofiles.json"
 hash = "27659bf76453edcea0d700f984391e5ce817c458a9961838e53804f654ffa237"
 
@@ -1684,7 +1688,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfmail.pw.toml"
-hash = "d824b971711bac683357b2f8c1565bef1fe6fce13a082d65b24340ce57826e32"
+hash = "aa1dc9a5bc7ffe5a4c0a0f4b6411736c7d85f73c051d32360efad53d3dbe70a4"
 metafile = true
 
 [[files]]

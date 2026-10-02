@@ -11,7 +11,8 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   teleports; then appears in front of the friend's mailbox, walks up, drops the letter in, walks away and
   teleports out (`CarrierGoal`; Ender Mail's own carrier goals and random teleports are off for these carriers).
   If nobody is near the friend's mailbox it's delivered straight in. Other dimensions get it instantly.
-  A signed letter stays the same item and opens as a readable book.
+  A signed letter stays the same item and opens as a readable book. Letters are written and read on letter
+  paper instead of the book page (`BookEditScreenMixin`, `BookViewScreenMixin`, texture from `draw_icons.py`).
 - **Collar effects on GeckoLib pets.** Domestication Innovation only draws its collar enchantment effects
   (shadow hands, magnet, auras, blazing bars...) on vanilla-style renderers, so Critters & Companions,
   Naturalist and unicorn-mod pets showed nothing. `PetOverlaysGeoLayer` runs DI's own `LayerPetOverlays` from a
@@ -35,7 +36,7 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   `tools/mailbox/make_package_gui.py`) and a Recipient box + Send button (`PackageScreenMixin`, `SendPackagePacket`
   on the `fotfmail:main` channel). Sending stamps the package for that mailbox and calls an Ender Mail carrier;
   mailboxes only, no coordinates (the stamp screen is off, `ScreenWrapperMixin`). Packages a carrier drops in a
-  mailbox are marked received and disappear once emptied (`PackageBlockEntityMixin`). Drawn as a little chest with
+  mailbox are marked received and disappear when their screen is closed empty (`PackageBlockEntityMixin`). Drawn as a little chest with
   a crooked stamp (`tools/mailbox/make_package.py`, `PackageBlockMixin` for shape/occlusion).
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates
