@@ -17,12 +17,44 @@ file = "config/alexsmobs.toml"
 hash = "5ee675c88237125784bf161a0b75daa1cc5c046f61ad874bc33b6f774e66fa88"
 
 [[files]]
+file = "config/alexsmobs/bald_eagle_spawns.json"
+hash = "818e97dc945c52634c05a56c31b4d4f25ffffae081d13e210c31b2b020026740"
+
+[[files]]
 file = "config/alexsmobs/cachalot_whale_spawns.json"
 hash = "2c7a845e05b02fddbe25b69c2529fb1e1f062aab0482eb3a1fb0698bec49560e"
 
 [[files]]
+file = "config/alexsmobs/caiman_spawns.json"
+hash = "e764160bea69f594b45ee796d94287f1c8ae0621259ffe60ca0e9bb8dafe3a91"
+
+[[files]]
+file = "config/alexsmobs/gelada_monkey_spawns.json"
+hash = "e16519df72e83a7f2283126373afefc05bebce92f8ce7371253e7251f9f5350c"
+
+[[files]]
+file = "config/alexsmobs/moose_spawns.json"
+hash = "e5f090246bc8f946384f5ea81263717572746d55d644d0480edfa2d0bd8c1fc8"
+
+[[files]]
+file = "config/alexsmobs/mudskipper_spawns.json"
+hash = "b395483c40380b1f4dc047a6ecabd9efb6a658c01c2c4b9119bd5a0f0a3158bb"
+
+[[files]]
 file = "config/alexsmobs/orca_spawns.json"
 hash = "17da9d6e15812162f1959d907dd490d3e0491ad21c7bc416fcf53125733e1dc7"
+
+[[files]]
+file = "config/alexsmobs/potoo_spawns.json"
+hash = "e74441563c76550167f41b8d3f9cd206427aef4516a7f3f7686c317f23ac6dc9"
+
+[[files]]
+file = "config/alexsmobs/sugar_glider_spawns.json"
+hash = "a5ffa20dacd6b4ee840080b72b18c198c7342f4ff81a805b7d57011596912569"
+
+[[files]]
+file = "config/alexsmobs/tiger_spawns.json"
+hash = "193a619593e7506613a00c83d9fa423944d7888aa56c687c213560a722436e7c"
 
 [[files]]
 file = "config/ars_nouveau-common.toml"
@@ -307,6 +339,10 @@ file = "kubejs/data/butterflies/forge/biome_modifier/wetlands_butterflies.json"
 hash = "8c307ef8ef240e4f2aa097c715f7e30499299db75d77cbe232927751bd18b6ce"
 
 [[files]]
+file = "kubejs/data/fotf/tags/worldgen/biome/meadow_water_buffalo.json"
+hash = "a5aeda8f0fe7757e25b5a6885b14583ade0b713a9c07624897a6a640e7e0595a"
+
+[[files]]
 file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/forest.json"
 hash = "9a8d82637e79aefda80926bbfd3a882a63a9c94d8a0e826f99fc31a73a6f1318"
 
@@ -337,6 +373,18 @@ hash = "71e6d22471fb2af2e2eb4561acc68e4ed670d6d5a1a79b093002ecbaa189aa03"
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/wetlands.json"
 hash = "7c775ea2f87afc700bdb63e4267621b68bc1e5b0634e227091b666ee6e2c42ef"
+
+[[files]]
+file = "kubejs/data/friendsandfoes/tags/worldgen/biome/has_moobloom/buttercup.json"
+hash = "22928a6bdabe3824921031bc13adf4b79bc663647c6589bef0440e8b4f8099da"
+
+[[files]]
+file = "kubejs/data/meadow/forge/biome_modifier/spawn_buffalo.json"
+hash = "039ecf47d37468805ec6d4d96c7897196304521d5d291f6dbff456b9a0608813"
+
+[[files]]
+file = "kubejs/data/meadow/tags/worldgen/biome/spawns_meadow_wooly_cows.json"
+hash = "0064cf210428ea825773063937544aa0a6402856a8d7a6bfc8042b1fb679072e"
 
 [[files]]
 file = "kubejs/data/naturalist/tags/worldgen/biome/has_bass.json"
@@ -445,6 +493,26 @@ hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
 [[files]]
 file = "kubejs/data/tconstruct/forge/biome_modifier/sky_geode.json"
 hash = "7952921e9d4106984e0f71cf58e061f812a3fc35d12b7a23d0459ff965ce4618"
+
+[[files]]
+file = "kubejs/data/wildernature/tags/worldgen/biome/spawns_dog.json"
+hash = "012895051b39a5df0c961ff650bc04cf68fc998d022781b72acb08b971b28f1f"
+
+[[files]]
+file = "kubejs/data/wildernature/tags/worldgen/biome/spawns_minisheep.json"
+hash = "add76f4698e24d78dbaffe782b0a16e5cce32e58586c0e7256e92c9865e8f6ac"
+
+[[files]]
+file = "kubejs/data/wildernature/tags/worldgen/biome/spawns_raccoon.json"
+hash = "a3c4b3f21824be8a277f02433bfddb79944c1f2ff1a9914ed144a70baf0ef537"
+
+[[files]]
+file = "kubejs/data/wildernature/tags/worldgen/biome/spawns_red_wolf.json"
+hash = "bcb030026f24b9c434f20eb6bc994cfe9b338953361cdaacf2f1f7f10a0fcaec"
+
+[[files]]
+file = "kubejs/data/wildernature/tags/worldgen/biome/spawns_squirrel.json"
+hash = "a3c4b3f21824be8a277f02433bfddb79944c1f2ff1a9914ed144a70baf0ef537"
 
 [[files]]
 file = "kubejs/server_scripts/butterfly_sightings.js"

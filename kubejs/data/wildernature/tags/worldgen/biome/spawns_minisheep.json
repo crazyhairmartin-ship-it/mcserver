@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "#fotf:wildlife/hill",
+    "#minecraft:is_mountain",
+    "#forge:is_mountain",
+    {
+      "id": "regions_unexplored:rocky_meadow",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:highland_fields",
+      "required": false
+    }
+  ]
+}

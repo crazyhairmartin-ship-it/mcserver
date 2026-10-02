@@ -1,0 +1,10 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#fotf:meadow_water_buffalo",
+  "spawners": {
+    "type": "meadow:water_buffalo",
+    "weight": 4,
+    "minCount": 4,
+    "maxCount": 6
+  }
+}
