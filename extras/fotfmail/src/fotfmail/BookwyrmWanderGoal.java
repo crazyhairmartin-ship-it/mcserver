@@ -10,17 +10,19 @@ import java.util.Set;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.ai.goal.Goal;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.pathfinder.Path;
 import net.minecraft.world.level.block.entity.BlockEntity;
 
 /**
  * Bookwyrms (Ars Nouveau) only move to transfer items or to hover at a random linked chest, so idle ones just sit
  * by the chests. This makes them flutter around their lectern network now and then: sometimes hovering over one of
  * the connected lecterns (their own, plus any lecterns linked to it, following chains), otherwise flying to an
- * open spot within RADIUS blocks of one of them. Lower priority than their work, so transfers always come first.
+ * open spot within RADIUS blocks of one of them. Only spots they can actually fly to are picked (lecterns on another
+ * floor need an opening between). Same priority as their chest visits, below transfers, so work always comes first.
  */
 public final class BookwyrmWanderGoal extends Goal {
     private static final int RADIUS = 8;
-    private static final int CHANCE = 40; // ~1 in 40 checks while idle
+    private static final int CHANCE = 20; // ~1 in 20 checks while idle
     private static final int LECTERN_VISIT_CHANCE = 3; // 1 in 3 wanders hover over a lectern
     private static final int MAX_TICKS = 160;
     private static final long NETWORK_REFRESH_TICKS = 1200; // re-scan linked lecterns once a minute
@@ -46,24 +48,25 @@ public final class BookwyrmWanderGoal extends Goal {
         List<BlockPos> lecterns = lecternNetwork();
         BlockPos home = lecterns.isEmpty() ? bookwyrm.m_20183_() : lecterns.get(bookwyrm.m_217043_().m_188503_(lecterns.size()));
         Level level = bookwyrm.m_9236_();
-        if (!lecterns.isEmpty() && bookwyrm.m_217043_().m_188503_(LECTERN_VISIT_CHANCE) == 0 && level.m_46859_(home.m_7494_())) {
-            flyTo(home.m_7494_());
+        if (!lecterns.isEmpty() && bookwyrm.m_217043_().m_188503_(LECTERN_VISIT_CHANCE) == 0
+                && level.m_46859_(home.m_7494_()) && flyTo(home.m_7494_())) {
             return;
         }
-        for (int attempt = 0; attempt < 8; attempt++) {
+        for (int attempt = 0; attempt < 10; attempt++) {
             BlockPos spot = home.m_7918_(
                     bookwyrm.m_217043_().m_188503_(RADIUS * 2 + 1) - RADIUS,
                     bookwyrm.m_217043_().m_188503_(5) - 1,
                     bookwyrm.m_217043_().m_188503_(RADIUS * 2 + 1) - RADIUS);
-            if (level.m_46859_(spot) && level.m_46859_(spot.m_7494_())) {
-                flyTo(spot);
+            if (level.m_46859_(spot) && level.m_46859_(spot.m_7494_()) && flyTo(spot)) {
                 return;
             }
         }
     }
 
-    private void flyTo(BlockPos pos) {
-        bookwyrm.m_21573_().m_26519_(pos.m_123341_() + 0.5, pos.m_123342_() + 0.5, pos.m_123343_() + 0.5, 1.0);
+    /** Starts flying to pos if there's a full path there; false if it can't be reached (e.g. through a floor). */
+    private boolean flyTo(BlockPos pos) {
+        Path path = bookwyrm.m_21573_().m_7864_(pos, 0);
+        return path != null && path.m_77403_() && bookwyrm.m_21573_().m_26536_(path, 1.0);
     }
 
     /** The bookwyrm's own lectern plus every loaded lectern linked to it (directly or through other lecterns). */
