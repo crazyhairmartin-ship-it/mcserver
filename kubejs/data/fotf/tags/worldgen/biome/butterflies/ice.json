@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:is_snowy",
+    {
+      "id": "biomesoplenty:wintry_origin_valley",
+      "required": false
+    }
+  ]
+}

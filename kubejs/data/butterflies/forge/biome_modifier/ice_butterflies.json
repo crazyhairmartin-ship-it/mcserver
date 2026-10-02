@@ -1,0 +1,54 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#fotf:butterflies/ice",
+  "spawners": [
+    {
+      "type": "butterflies:clearwing-hummingbird",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:clearwing-hummingbird_caterpillar",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:clearwing-hummingbird_egg",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:clearwing-hummingbird_chrysalis",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:ice",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:ice_caterpillar",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:ice_egg",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:ice_chrysalis",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    }
+  ]
+}

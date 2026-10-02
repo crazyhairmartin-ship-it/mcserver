@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:is_jungle",
+    {
+      "id": "regions_unexplored:tropics",
+      "required": false
+    }
+  ]
+}

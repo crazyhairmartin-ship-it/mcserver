@@ -1,0 +1,78 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#fotf:butterflies/savanna",
+  "spawners": [
+    {
+      "type": "butterflies:buckeye",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:buckeye_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:buckeye_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:buckeye_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common-crow",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common-crow_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common-crow_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common-crow_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock-pansy-dry",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock-pansy-dry_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock-pansy-dry_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock-pansy-dry_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:is_plains",
+    {
+      "id": "biomesoplenty:origin_valley",
+      "required": false
+    },
+    {
+      "id": "regions_unexplored:glistering_meadow",
+      "required": false
+    }
+  ]
+}

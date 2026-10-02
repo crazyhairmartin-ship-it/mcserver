@@ -1,0 +1,156 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#fotf:butterflies/wetlands",
+  "spawners": [
+    {
+      "type": "butterflies:admiral",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:admiral_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:admiral_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:admiral_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:cabbage",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:cabbage_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:cabbage_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:cabbage_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:forester",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:forester_caterpillar",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:forester_egg",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:forester_chrysalis",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:hairstreak",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:hairstreak_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:hairstreak_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:hairstreak_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:longwing",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:longwing_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:longwing_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:longwing_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock-pansy-wet",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:carpet",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:carpet_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:carpet_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:carpet_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    }
+  ]
+}

@@ -1,0 +1,450 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#fotf:butterflies/plains",
+  "spawners": [
+    {
+      "type": "butterflies:buckeye",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:buckeye_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:buckeye_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:buckeye_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:cabbage",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:cabbage_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:cabbage_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:cabbage_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common-crow",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common-crow_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common-crow_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common-crow_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:common_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:commongrassyellow",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:commongrassyellow_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:commongrassyellow_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:commongrassyellow_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:forester",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:forester_caterpillar",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:forester_egg",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:forester_chrysalis",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:hairstreak",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:hairstreak_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:hairstreak_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:hairstreak_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:heath",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:heath_caterpillar",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:heath_egg",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:heath_chrysalis",
+      "maxCount": 2,
+      "minCount": 1,
+      "weight": 20
+    },
+    {
+      "type": "butterflies:monarch",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:monarch_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:monarch_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:monarch_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock-pansy-dry",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock-pansy-dry_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock-pansy-dry_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock-pansy-dry_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:rainbow",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:rainbow_caterpillar",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:rainbow_egg",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:rainbow_chrysalis",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:swallowtail",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:swallowtail_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:swallowtail_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:swallowtail_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:commongrassyellow-dry",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:peacock-pansy-wet",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:carpet",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:carpet_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:carpet_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:carpet_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:clearwing-hummingbird",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:clearwing-hummingbird_caterpillar",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:clearwing-hummingbird_egg",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:clearwing-hummingbird_chrysalis",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:diamondback",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:diamondback_caterpillar",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:diamondback_egg",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:diamondback_chrysalis",
+      "maxCount": 4,
+      "minCount": 1,
+      "weight": 100
+    },
+    {
+      "type": "butterflies:hummingbird",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:hummingbird_caterpillar",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:hummingbird_egg",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:hummingbird_chrysalis",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:white-lined-sphinx",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:white-lined-sphinx_caterpillar",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:white-lined-sphinx_egg",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    },
+    {
+      "type": "butterflies:white-lined-sphinx_chrysalis",
+      "maxCount": 3,
+      "minCount": 1,
+      "weight": 50
+    }
+  ]
+}
