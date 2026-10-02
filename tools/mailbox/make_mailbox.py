@@ -27,7 +27,20 @@ assert WOODS[0]['key'] == 'oak' and len(WOODS) <= 128
 
 
 def box(frm, to, tex):
-    faces = {d: {'texture': '#' + tex} for d in ('north', 'south', 'east', 'west', 'up', 'down')}
+    """An element with explicit UVs. Minecraft's automatic UVs come from the element's position in the block, which
+    runs off the texture for parts above y 16; parts up there take their UVs as if 8px lower instead."""
+    (x0, y0, z0), (x1, y1, z1) = frm, to
+    if y1 > 16:
+        y0, y1 = y0 - 8, y1 - 8
+    uvs = {
+        'north': [16 - x1, 16 - y1, 16 - x0, 16 - y0],
+        'south': [x0, 16 - y1, x1, 16 - y0],
+        'east': [16 - z1, 16 - y1, 16 - z0, 16 - y0],
+        'west': [z0, 16 - y1, z1, 16 - y0],
+        'up': [x0, z0, x1, z1],
+        'down': [x0, 16 - z1, x1, 16 - z0],
+    }
+    faces = {d: {'texture': '#' + tex, 'uv': [round(v, 3) for v in uv]} for d, uv in uvs.items()}
     return {'from': frm, 'to': to, 'faces': faces}
 
 
