@@ -29,6 +29,7 @@
     "ScreenWrapperMixin",
     "BookViewScreenMixin",
     "ScreenAccessor",
-    "AbstractContainerScreenAccessor"
+    "AbstractContainerScreenAccessor",
+    "UnicornKeyBindingsMixin"
   ]
 }
