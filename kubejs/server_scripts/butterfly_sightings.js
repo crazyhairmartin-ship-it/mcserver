@@ -43,7 +43,7 @@ ServerEvents.tick(event => {
     if (countButterfliesNear(overworld, player.x, player.y, player.z) >= SIGHTING_MAX) return
 
     // A random open-air spot 10-24 blocks away, on the ground.
-    let angle = Math.random() * Math.PI * 2
+    let angle = Math.random() * 6.283185307179586 // 2π (Rhino here has no Math.PI)
     let distance = 10 + Math.random() * 14
     let sx = Math.floor(player.x + Math.cos(angle) * distance)
     let sz = Math.floor(player.z + Math.sin(angle) * distance)
