@@ -36,7 +36,8 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   `tools/mailbox/make_package_gui.py`) and a Recipient box + Send button (`PackageScreenMixin`, `SendPackagePacket`
   on the `fotfmail:main` channel). Sending stamps the package for that mailbox and calls an Ender Mail carrier;
   mailboxes only, no coordinates (the stamp screen is off, `ScreenWrapperMixin`). Packages a carrier drops in a
-  mailbox are marked received and disappear when their screen is closed empty (`PackageBlockEntityMixin`). Drawn as a little chest with
+  mailbox are marked received and disappear when their screen is closed empty (`PackageBlockEntityMixin`). A received
+  package's screen just says who it's from (`PackageInfoPacket`, server -> client when it's opened). Drawn as a little chest with
   a crooked stamp (`tools/mailbox/make_package.py`, `PackageBlockMixin` for shape/occlusion).
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates

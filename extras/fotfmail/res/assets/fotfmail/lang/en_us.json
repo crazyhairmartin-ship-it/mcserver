@@ -15,5 +15,7 @@
   "message.fotfmail.package_sent": "Package sent! A mail carrier will come to pick it up for mailbox %s.",
   "message.fotfmail.package_empty": "Put something in the package first!",
   "message.fotfmail.package_no_recipient": "Type the recipient's mailbox ID first.",
-  "message.fotfmail.package_other_dimension": "Mailbox %s is in another dimension. Packages can only go to mailboxes in this one."
+  "message.fotfmail.package_other_dimension": "Mailbox %s is in another dimension. Packages can only go to mailboxes in this one.",
+  "fotfmail.package.from": "From:",
+  "fotfmail.package.sent_to": "Sent to:"
 }

@@ -56,7 +56,7 @@ public final class CarrierGoal extends Goal {
         return data(carrier).m_128471_(Mail.LETTER_TAG);
     }
 
-    static CompoundTag data(EnderMailmanEntity carrier) {
+    public static CompoundTag data(EnderMailmanEntity carrier) {
         return ((IForgeEntity) (Object) carrier).getPersistentData();
     }
 

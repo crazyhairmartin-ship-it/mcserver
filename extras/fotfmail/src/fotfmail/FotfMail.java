@@ -54,6 +54,8 @@ public class FotfMail {
         ITEMS.register(modBus);
         NETWORK.registerMessage(0, SendPackagePacket.class, SendPackagePacket::encode, SendPackagePacket::decode,
                 SendPackagePacket::handle, Optional.of(NetworkDirection.PLAY_TO_SERVER));
+        NETWORK.registerMessage(1, PackageInfoPacket.class, PackageInfoPacket::encode, PackageInfoPacket::decode,
+                PackageInfoPacket::handle, Optional.of(NetworkDirection.PLAY_TO_CLIENT));
         MinecraftForge.EVENT_BUS.addListener(FotfMail::onRightClickBlock);
         MinecraftForge.EVENT_BUS.addListener(Mail::onServerTick);
         if (FMLEnvironment.dist == Dist.CLIENT) {

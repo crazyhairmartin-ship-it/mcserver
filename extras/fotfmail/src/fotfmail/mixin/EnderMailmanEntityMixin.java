@@ -2,6 +2,7 @@ package fotfmail.mixin;
 
 import com.chaosthedude.endermail.entity.EnderMailmanEntity;
 import fotfmail.CarrierGoal;
+import fotfmail.Mail;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
@@ -54,6 +55,10 @@ public abstract class EnderMailmanEntityMixin {
         CompoundTag blockEntityTag = stack.m_41698_("BlockEntityTag");
         CompoundTag forgeData = blockEntityTag.m_128469_("ForgeData");
         forgeData.m_128379_("fotfmail_received", true);
+        String from = CarrierGoal.data((EnderMailmanEntity) (Object) this).m_128461_(Mail.FROM_TAG);
+        if (!from.isEmpty()) {
+            forgeData.m_128359_(Mail.FROM_TAG, from);
+        }
         blockEntityTag.m_128365_("ForgeData", forgeData);
     }
 }

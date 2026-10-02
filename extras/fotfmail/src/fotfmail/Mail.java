@@ -34,8 +34,10 @@ import net.minecraftforge.common.extensions.IForgeEntity;
  * so its pick-up step (which removes a package block) never runs.
  * Other dimensions: delivered instantly, since carriers can't cross dimensions.
  */
-final class Mail {
+public final class Mail {
     static final String LETTER_TAG = "fotfmail_letter";
+    /** Who sent a package: on the carrier, then in the delivered package's data (BlockEntityTag.ForgeData). */
+    public static final String FROM_TAG = "fotfmail_from";
 
     private Mail() {
     }
@@ -117,12 +119,13 @@ final class Mail {
             return;
         }
         PackageBlock.stampPackage(level, pos, mailbox, id, false);
-        PENDING_PACKAGES.add(new PendingPackage(level.m_46472_(), pos, mailbox, id, level.m_7654_().m_129921_() + CarrierGoal.SEND_DELAY));
+        PENDING_PACKAGES.add(new PendingPackage(level.m_46472_(), pos, mailbox, id, player.m_7755_().getString(),
+                level.m_7654_().m_129921_() + CarrierGoal.SEND_DELAY));
         tell(player, Component.m_237110_("message.fotfmail.package_sent", id), ChatFormatting.GREEN);
     }
 
     /** A stamped package waiting for its carrier, who comes CarrierGoal.SEND_DELAY ticks after it was sent. */
-    private record PendingPackage(ResourceKey<Level> dimension, BlockPos pos, BlockPos mailbox, String id, int dueTick) {
+    private record PendingPackage(ResourceKey<Level> dimension, BlockPos pos, BlockPos mailbox, String id, String from, int dueTick) {
     }
 
     private static final List<PendingPackage> PENDING_PACKAGES = new ArrayList<>();
@@ -149,6 +152,7 @@ final class Mail {
             if (state.m_60734_() instanceof PackageBlock block && block.isStamped(state)) {
                 EnderMailmanEntity carrier = new EnderMailmanEntity(EnderMailEntities.ENDER_MAILMAN.get(), level,
                         pending.pos(), pending.mailbox(), pending.id(), ItemStack.f_41583_);
+                ((IForgeEntity) (Object) carrier).getPersistentData().m_128359_(FROM_TAG, pending.from());
                 level.m_7967_(carrier);
                 carrier.playEndermanSound();
             }
