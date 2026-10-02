@@ -74,7 +74,7 @@ hash = "8a200ea9ebbbfddb0fd1ca970995decd7f2940cbff3a672a9a5581335ae34a0f"
 
 [[files]]
 file = "config/naturalist.json"
-hash = "e180b18c2f250a1d4531cc442f5a4dea18ef67796e25c409845866befa1f30d5"
+hash = "4d6199ff35d84cda391d070e67ff407e77eda90243d7475a848b903a7608dbd1"
 
 [[files]]
 file = "config/paxi/resourcepack_load_order.json"
@@ -341,6 +341,10 @@ hash = "7c775ea2f87afc700bdb63e4267621b68bc1e5b0634e227091b666ee6e2c42ef"
 [[files]]
 file = "kubejs/data/naturalist/tags/worldgen/biome/has_butterfly.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_firefly.json"
+hash = "36db05c43015b5094f40d3cd443e3c9589a25f104b264383e5f69d997e975998"
 
 [[files]]
 file = "kubejs/data/tconstruct/forge/biome_modifier/cobalt_ore.json"
