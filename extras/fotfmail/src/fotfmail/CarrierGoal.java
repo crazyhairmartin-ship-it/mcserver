@@ -21,7 +21,7 @@ import net.minecraftforge.common.extensions.IForgeEntity;
 
 /**
  * The walk of an Ender Mail carrier taking a letter (persistent data "fotfmail_letter", set by Mail.send):
- *   (starts 8-DISTANCE blocks from the sender's mailbox, any direction)
+ *   5 (WAITING) out of sight for SEND_DELAY, then appears 8-DISTANCE blocks from the sender's mailbox, any direction
  *   0 walk up to the sender's mailbox, pause, pick up the letter (shows the parcel in its hands)
  *   1 walk a few blocks away, wait LINGER, then teleport ('in transit' high above the world for TRANSIT ticks)
  *   2 appear 8-DISTANCE blocks from the friend's mailbox (if nobody is near it, deliver straight in instead)
@@ -34,6 +34,8 @@ public final class CarrierGoal extends Goal {
     static final String PHASE = "fotfmail_phase";
     static final String FROM = "fotfmail_from";
     static final String TO = "fotfmail_to";
+    static final int WAITING = 5; // phase: called, not here yet
+    static final int SEND_DELAY = 200; // the carrier shows up this long after you send (10 s)
     static final int DISTANCE = 12; // how far from a mailbox the carrier appears and walks off to (any direction)
     private static final int WALK_TIMEOUT = 400;
     private static final int AWAY_TIMEOUT = 200;
@@ -82,6 +84,22 @@ public final class CarrierGoal extends Goal {
         BlockPos to = BlockPos.m_122022_(data.m_128454_(TO));
         ticks++;
         switch (data.m_128451_(PHASE)) {
+            case WAITING -> {
+                if (ticks < SEND_DELAY) {
+                    carrier.m_21573_().m_26573_();
+                    carrier.m_20256_(net.minecraft.world.phys.Vec3.f_82478_);
+                    return;
+                }
+                BlockPos start = spotAround(carrier.m_9236_(), from, carrier.m_217043_());
+                if (start == null) {
+                    start = from.m_7494_();
+                }
+                carrier.m_20242_(false);
+                carrier.m_6021_(start.m_123341_() + 0.5, start.m_123342_(), start.m_123343_() + 0.5);
+                poof();
+                carrier.playEndermanSound();
+                nextPhase(data, 0);
+            }
             case 0 -> {
                 if (walkUpTo(from)) {
                     carrier.setCarryingPackage(true);

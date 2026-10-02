@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.Unique;
 
 /**
  * The package screen gets the mailbox screen's layout: its 5 slots on the left (PackageMenuMixin) and, on the
- * right, a Recipient box (a mailbox ID, like the mailbox's own ID box) with a Send button. Send / Enter asks the
+ * right, a Recipient label, box (a mailbox ID, like the mailbox's own ID box) and a full-width Send button below it. Send / Enter asks the
  * server to send the package there (SendPackagePacket) and closes the screen.
  * init = m_7856_, keyPressed = m_7933_, renderLabels = m_280003_ (PackageScreen doesn't declare any of them).
  */
@@ -39,11 +39,11 @@ public abstract class PackageScreenMixin extends AbstractContainerScreen<Package
         if (Minecraft.m_91087_().f_91077_ instanceof BlockHitResult hit) {
             fotfmail$packagePos = hit.m_82425_();
         }
-        fotfmail$recipient = new EditBox(f_96547_, f_97735_ + 102, f_97736_ + 20, 44, 18, Component.m_237113_(""));
+        fotfmail$recipient = new EditBox(f_96547_, f_97735_ + 102, f_97736_ + 17, 67, 12, Component.m_237113_(""));
         fotfmail$recipient.m_94199_(12);
         m_142416_(fotfmail$recipient);
         m_142416_(Button.m_253074_(Component.m_237115_("fotfmail.package.send"), button -> fotfmail$send())
-                .m_252987_(f_97735_ + 148, f_97736_ + 19, 22, 20).m_253136_());
+                .m_252987_(f_97735_ + 102, f_97736_ + 31, 67, 14).m_253136_());
     }
 
     @Unique
@@ -72,6 +72,6 @@ public abstract class PackageScreenMixin extends AbstractContainerScreen<Package
     @Override
     protected void m_280003_(GuiGraphics graphics, int mouseX, int mouseY) {
         super.m_280003_(graphics, mouseX, mouseY);
-        graphics.m_280614_(f_96547_, Component.m_237115_("fotfmail.package.recipient"), 102, 9, 4210752, false);
+        graphics.m_280614_(f_96547_, Component.m_237115_("fotfmail.package.recipient"), 102, 6, 4210752, false);
     }
 }

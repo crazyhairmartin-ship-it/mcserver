@@ -27,7 +27,8 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   around their lectern network now and then, sometimes hovering over a connected lectern (their own plus any
   lecterns linked to it), only where they can actually fly. Ars's chest visits are cut to about 1 in 5 of the
   times they'd start (`RandomStorageVisitGoalMixin`) so the wander gets a turn.
-- **Nightmare hoof fire burns out about 3x sooner** (`NightmareFireBlockMixin`, Ultimate Unicorn Mod).
+- **Nightmare hoof fire is a short flicker**: never spreads or burns anything, gone in a second or two (`NightmareFireBlockMixin`, `FireBlockMixin`).
+- **Mail carriers take 10 s to show up** after you send (letters: `CarrierGoal` WAITING phase; packages: `Mail.onServerTick`).
 - **Ender Mail carriers are invulnerable** (rain and water used to hurt them).
 - **Packages addressed on their own screen.** Package = chest + stamp (packing tape is trimmed). The package
   screen gets the mailbox layout: its 5 slots on the left (`PackageMenuMixin`, GUI texture from

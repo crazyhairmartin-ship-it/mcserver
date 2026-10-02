@@ -1099,6 +1099,14 @@ file = "kubejs/assets/endermail/models/block/locker_warped_filled.json"
 hash = "7e9b639090ea58c8c7e40b9e5ba314a0b8f62c1c9eb931569723bfd01e07b14a"
 
 [[files]]
+file = "kubejs/assets/endermail/models/block/package.json"
+hash = "614aff003ca0519c3a9ff5f949c4ad1906fa86546ed76f03d4751187e25c93bc"
+
+[[files]]
+file = "kubejs/assets/endermail/models/block/stamped_package.json"
+hash = "3df104d7ede24165df1f6046e482ff70bbcd60a692029a0fc92282e0276e5d98"
+
+[[files]]
 file = "kubejs/assets/endermail/models/item/locker.json"
 hash = "28abc3050c9c3901b6dc90805b2b80fb855d95ba310eb22fa08bed55ff6afd18"
 
@@ -1676,7 +1684,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfmail.pw.toml"
-hash = "1df09feeabf0851520520a7b9d9b50e5eb78fb165b1c1e71dfbeb3c30ffc1a5f"
+hash = "d824b971711bac683357b2f8c1565bef1fe6fce13a082d65b24340ce57826e32"
 metafile = true
 
 [[files]]

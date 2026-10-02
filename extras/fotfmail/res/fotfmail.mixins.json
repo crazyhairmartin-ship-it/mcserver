@@ -14,7 +14,8 @@
     "NightmareFireBlockMixin",
     "PackageMenuMixin",
     "PackageBlockEntityMixin",
-    "PackageBlockMixin"
+    "PackageBlockMixin",
+    "FireBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -1,7 +1,7 @@
 """Ender Mail's package drawn as a little chest with a stamp slapped on its lid, crooked (vanilla + pack textures).
 
 Writes kubejs/assets/endermail/models/block/package.json and stamped_package.json (the same chest; a sent package
-also gets a string tied around it). The block's shape/occlusion fix is in the fotfmail add-on (PackageBlockMixin).
+also gets string tied around it both ways). The block's shape/occlusion fix is in the fotfmail add-on (PackageBlockMixin).
 Facing north = latch toward -Z. The package screen's GUI texture is made by make_package_gui.py (needs Pillow).
 """
 import json
@@ -31,10 +31,13 @@ CHEST = [
         rotation={'origin': [6.5, 14, 9], 'axis': 'y', 'angle': 22.5}),
 ]
 
-STRING = [
-    box([7.6, 0, 0.8], [8.4, 14.08, 1], 'string'),             # string tied around a package that's been sent
+STRING = [                                                   # string tied around a package that's been sent
+    box([7.6, 0, 0.8], [8.4, 14.08, 1], 'string'),             # front to back
     box([7.6, 0, 15], [8.4, 14.08, 15.2], 'string'),
     box([7.6, 14.04, 1], [8.4, 14.08, 15], 'string'),
+    box([0.8, 0, 7.6], [1, 14.1, 8.4], 'string'),               # left to right, crossing on the lid
+    box([15, 0, 7.6], [15.2, 14.1, 8.4], 'string'),
+    box([1, 14.06, 7.6], [15, 14.1, 8.4], 'string'),
 ]
 
 TEXTURES = {

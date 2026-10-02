@@ -1,36 +1,55 @@
 package fotfmail.mixin;
 
+import com.chaosthedude.endermail.block.PackageBlock;
 import com.chaosthedude.endermail.block.entity.PackageBlockEntity;
 import net.minecraft.core.BlockPos;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
-import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.extensions.IForgeBlockEntity;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /**
- * A package that was delivered (marked "fotfmail_received" by EnderMailmanEntityMixin when the carrier drops it in a
- * mailbox) disappears as soon as its last item is taken out. removeItem = m_7407_, removeItemNoUpdate = m_8016_.
+ * A package that has been delivered disappears as soon as it's empty, breaking like a chest (particles + sound). Delivered = marked "fotfmail_received" when a
+ * carrier drops it in a mailbox (EnderMailmanEntityMixin), or a stamped package (one a carrier set down, or one just
+ * sent that the sender emptied again). Checked whenever items leave it, however they're taken (click = removeItem
+ * m_7407_ / m_8016_, shift-click = setItem m_6836_), and when its screen is closed (stopOpen m_5785_).
  */
 @Mixin(PackageBlockEntity.class)
 public abstract class PackageBlockEntityMixin {
     @Inject(method = {"m_7407_", "m_8016_"}, at = @At("RETURN"), remap = false)
-    private void fotfmail$vanishWhenLooted(CallbackInfoReturnable<ItemStack> cir) {
+    private void fotfmail$afterTake(CallbackInfoReturnable<ItemStack> cir) {
+        fotfmail$vanishIfLooted();
+    }
+
+    @Inject(method = {"m_6836_", "m_5785_"}, at = @At("RETURN"), remap = false)
+    private void fotfmail$afterSetOrClose(CallbackInfo ci) {
+        fotfmail$vanishIfLooted();
+    }
+
+    @Unique
+    private void fotfmail$vanishIfLooted() {
         PackageBlockEntity self = (PackageBlockEntity) (Object) this;
         Level level = self.m_58904_();
-        if (!(level instanceof ServerLevel server) || !self.m_7983_()
-                || !((IForgeBlockEntity) self).getPersistentData().m_128471_("fotfmail_received")) {
+        if (!(level instanceof ServerLevel server) || self.m_58901_() || !self.m_7983_()) {
             return;
         }
         BlockPos pos = self.m_58899_();
+        BlockState state = server.m_8055_(pos);
+        boolean stamped = state.m_60734_() instanceof PackageBlock block && block.isStamped(state);
+        if (!stamped && !((IForgeBlockEntity) self).getPersistentData().m_128471_("fotfmail_received")) {
+            return;
+        }
+        // Break effect as if a chest were broken there: chest particles and the wooden break sound (level event 2001).
+        server.m_46796_(2001, pos, Block.m_49956_(Blocks.f_50087_.m_49966_()));
         server.m_7471_(pos, false);
-        server.m_5594_(null, pos, SoundEvents.f_11713_, SoundSource.BLOCKS, 0.8F, 0.8F);
-        server.m_8767_(ParticleTypes.f_123759_, pos.m_123341_() + 0.5, pos.m_123342_() + 0.5, pos.m_123343_() + 0.5, 12, 0.3, 0.3, 0.3, 0.02);
     }
 }

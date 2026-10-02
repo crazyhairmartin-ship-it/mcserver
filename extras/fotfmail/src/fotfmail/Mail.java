@@ -9,8 +9,14 @@ import com.chaosthedude.endermail.registry.EnderMailEntities;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.NonNullList;
-import net.minecraft.core.particles.ParticleTypes;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.world.level.Level;
+import net.minecraftforge.event.TickEvent;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.server.level.ServerLevel;
@@ -58,18 +64,14 @@ final class Mail {
                 carrier.setContents(NonNullList.m_122783_(ItemStack.f_41583_, delivered));
                 CompoundTag data = ((IForgeEntity) (Object) carrier).getPersistentData();
                 data.m_128379_(LETTER_TAG, true);
-                data.m_128405_(CarrierGoal.PHASE, 0);
+                data.m_128405_(CarrierGoal.PHASE, CarrierGoal.WAITING);
                 data.m_128356_(CarrierGoal.FROM, fromMailbox.m_121878_());
                 data.m_128356_(CarrierGoal.TO, pos.m_121878_());
                 carrier.m_21530_(); // never despawn mid-delivery
-                // Arrive a few steps out in front of the mailbox and walk up to it (CarrierGoal does the rest).
-                BlockPos start = CarrierGoal.spotAround(level, fromMailbox, level.m_213780_());
-                if (start != null) {
-                    carrier.m_6034_(start.m_123341_() + 0.5, start.m_123342_(), start.m_123343_() + 0.5);
-                }
+                // Waits out of sight above the mailbox, then appears nearby and walks up to it (CarrierGoal does the rest).
+                carrier.m_20242_(true);
+                carrier.m_6034_(fromMailbox.m_123341_() + 0.5, level.m_151558_() + 64, fromMailbox.m_123343_() + 0.5);
                 level.m_7967_(carrier);
-                level.m_8767_(ParticleTypes.f_123760_, carrier.m_20185_(), carrier.m_20186_() + 1.0, carrier.m_20189_(), 40, 0.4, 0.9, 0.4, 0.2);
-                carrier.playEndermanSound();
                 tell(player, Component.m_237110_("message.fotfmail.on_the_way", id), ChatFormatting.GREEN);
             } else {
                 mailbox.addPackage(delivered);
@@ -115,10 +117,42 @@ final class Mail {
             return;
         }
         PackageBlock.stampPackage(level, pos, mailbox, id, false);
-        EnderMailmanEntity carrier = new EnderMailmanEntity(EnderMailEntities.ENDER_MAILMAN.get(), level, pos, mailbox, id, ItemStack.f_41583_);
-        level.m_7967_(carrier);
-        carrier.playEndermanSound();
+        PENDING_PACKAGES.add(new PendingPackage(level.m_46472_(), pos, mailbox, id, level.m_7654_().m_129921_() + CarrierGoal.SEND_DELAY));
         tell(player, Component.m_237110_("message.fotfmail.package_sent", id), ChatFormatting.GREEN);
+    }
+
+    /** A stamped package waiting for its carrier, who comes CarrierGoal.SEND_DELAY ticks after it was sent. */
+    private record PendingPackage(ResourceKey<Level> dimension, BlockPos pos, BlockPos mailbox, String id, int dueTick) {
+    }
+
+    private static final List<PendingPackage> PENDING_PACKAGES = new ArrayList<>();
+
+    /** Server tick: calls the carrier for packages whose wait is over (if the package is still there, stamped). */
+    static void onServerTick(TickEvent.ServerTickEvent event) {
+        if (event.phase != TickEvent.Phase.END || PENDING_PACKAGES.isEmpty()) {
+            return;
+        }
+        MinecraftServer server = event.getServer();
+        int now = server.m_129921_();
+        Iterator<PendingPackage> it = PENDING_PACKAGES.iterator();
+        while (it.hasNext()) {
+            PendingPackage pending = it.next();
+            if (now < pending.dueTick()) {
+                continue;
+            }
+            it.remove();
+            ServerLevel level = server.m_129880_(pending.dimension());
+            if (level == null) {
+                continue;
+            }
+            BlockState state = level.m_8055_(pending.pos());
+            if (state.m_60734_() instanceof PackageBlock block && block.isStamped(state)) {
+                EnderMailmanEntity carrier = new EnderMailmanEntity(EnderMailEntities.ENDER_MAILMAN.get(), level,
+                        pending.pos(), pending.mailbox(), pending.id(), ItemStack.f_41583_);
+                level.m_7967_(carrier);
+                carrier.playEndermanSound();
+            }
+        }
     }
 
     private static void tell(ServerPlayer player, MutableComponent message, ChatFormatting color) {
