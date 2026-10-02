@@ -11,7 +11,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /**
- * Ender Mail's carrier, for fotfmail letters (persistent data flag "fotfmail_letter"):
+ * Ender Mail's carrier. All carriers are invulnerable (setInvulnerable = m_20331_). For fotfmail letters
+ * (persistent data flag "fotfmail_letter"):
  * - CarrierGoal (priority 0, registerGoals = m_8099_) walks the letter between the two mailboxes
  * - no random enderman teleports (in daylight or when hurt), which would break the walk
  * - getPackageStack hands over the letter itself rather than wrapping it in a package (only reached if Ender Mail's
@@ -23,6 +24,7 @@ public abstract class EnderMailmanEntityMixin {
     private void fotfmail$addCarrierGoal(CallbackInfo ci) {
         EnderMailmanEntity self = (EnderMailmanEntity) (Object) this;
         ((MobAccessor) self).fotfmail$goalSelector().m_25352_(0, new CarrierGoal(self));
+        self.m_20331_(true); // every mail carrier is invulnerable (rain, water and attacks used to hurt them)
     }
 
     @Inject(method = "teleportRandomly", at = @At("HEAD"), cancellable = true, remap = false)
