@@ -15,7 +15,7 @@ disableNightmareFire = true
 #If true, fire made by Nightmares doesn't hurt or spread.
 gentleNightmareFire = true
 #If true, Nightmares will be unable to create fireballs by wing buffeting near fires.
-disableNightmareFireballs = false
+disableNightmareFireballs = true
 #If true, custom horses do not show custom skins (but may still have custom titles and powers).
 disableCustomHorseSkins = false
 #If true, custom horses do not show custom titles (but may still have custom colors and powers).

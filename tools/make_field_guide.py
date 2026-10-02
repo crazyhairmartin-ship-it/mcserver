@@ -104,7 +104,7 @@ ENTRIES = [
 
     # ---------- Creatures & Companions ----------
     ('creatures', 'unicorns', 'Unicorns & Magical Horses', 'ultimate_unicorn_mod:unicorn_horn', [
-        text('Unicorns, pegasi, hippocamps, reindeer and more live in forests, plains, hills and oceans.$(br2)Tame and ride them like horses. Pegasi fly, and unicorns have magical powers!'),
+        text('Unicorns, pegasi, hippocamps, reindeer and more live in forests, plains, hills and oceans.$(br2)Tame and ride them like horses. Pegasi fly: hold $(l)Space$() to go up and $(l)Left Ctrl$() to go down. Unicorns have magical powers!'),
         spot(UNICORN_BOOK, 'The $(l)Unicorn Guidebook$() explains everything. Get one with $(l)/guide unicorn$().', 'Official Guide'),
         craft('fotf:saddle', 'Saddles can be crafted here: 5 leather, 1 iron ingot and 2 string.'),
     ]),
@@ -113,7 +113,7 @@ ENTRIES = [
         craft('alexsmobs:animal_dictionary', 'The $(l)Animal Dictionary$() describes every animal and how to tame it. Craft one or type $(l)/guide animals$().'),
     ]),
     ('creatures', 'critters', 'Critters & Companions', 'crittersandcompanions:dragonfly_wing', [
-        text('Small friends to tame by feeding:$(li)Red panda: bamboo$(li)Ferret: raw chicken$(li)Shima enaga: seeds$(li)Snail: carrots$(li)Ladybug: mushrooms$(li)Jumping spider: dragonfly wings (heal it with spider eyes)'),
+        text('Small friends to tame by feeding:$(li)Red panda: bamboo$(li)Ferret: raw chicken$(li)Shima enaga: seeds$(li)Snail: carrots$(li)Ladybug: mushrooms$(li)Jumping spider: dragonfly wings (heal it with spider eyes or rotten flesh)'),
         text('$(li)Dragonfly: spider eyes$(li)Stag beetle: sweet berries$(li)Stick bug: leaves$(li)Roly poly: dead bushes$(li)Weevil: acorns$(br2)Otters, koi and sea bunnies can\'t be tamed.', 'More Critters'),
     ]),
     ('creatures', 'wildlife', 'More Wildlife', 'minecraft:lead', [

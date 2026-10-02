@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Unicorns, pegasi, hippocamps, reindeer and more live in forests, plains, hills and oceans.$(br2)Tame and ride them like horses. Pegasi fly, and unicorns have magical powers!"
+      "text": "Unicorns, pegasi, hippocamps, reindeer and more live in forests, plains, hills and oceans.$(br2)Tame and ride them like horses. Pegasi fly: hold $(l)Space$() to go up and $(l)Left Ctrl$() to go down. Unicorns have magical powers!"
     },
     {
       "type": "patchouli:spotlight",

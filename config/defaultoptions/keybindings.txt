@@ -74,8 +74,8 @@ key_gui.xaero_quick_confirm:key.keyboard.right.shift:NONE
 key_gui.xaero_toggle_dimension:key.keyboard.unknown:NONE
 key_key.modernfix.config:key.keyboard.unknown:NONE
 key_key.chargeUnicorn:key.keyboard.f:NONE
-key_key.ascendPegasus:key.keyboard.v:NONE
-key_key.descendPegasus:key.keyboard.c:NONE
+key_key.ascendPegasus:key.keyboard.space:NONE
+key_key.descendPegasus:key.keyboard.left.control:NONE
 key_key.breatheKirin:key.keyboard.g:NONE
 key_key.sophisticatedbackpacks.open_backpack:key.keyboard.b:NONE
 key_key.sophisticatedbackpacks.inventory_interaction:key.keyboard.c:NONE
