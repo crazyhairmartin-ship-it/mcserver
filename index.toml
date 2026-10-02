@@ -1107,6 +1107,62 @@ file = "kubejs/assets/endermail/textures/item/stamp.png"
 hash = "cdc3d430e6d469b3ea932245832600f64dc01fe6b4c0094e17b60c50e8d54557"
 
 [[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/blockstates/nightmare_fire_block.json"
+hash = "fbb1c04a60548f3285166a915f6db4822e4b4b5561c198d736a59947dcd57354"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_floor0.json"
+hash = "5787d58a06011064dcb215444580350dddbcb9a032e79e9f50b1d1acd75be82d"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_floor1.json"
+hash = "353bb01ec18e4b8e47575e9871272f74520b8153a8af1d4bfcb0d9adbf6f32bd"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_side0.json"
+hash = "7a2c7de1a97a7e6bc0bfa64b71f3af7d905671a69729c953bf18664fd6589584"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_side1.json"
+hash = "a49b41426847a94b0b6b7d4400bcac83e2d902fbea69385f7e78df25e039636b"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_side_alt0.json"
+hash = "47398470ff49576cb8c0d21854d87f2992e189aa632e740e0691673f15355c0d"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_side_alt1.json"
+hash = "b9fa57f82c26a0118a7c18d830dbae688b4ca5e7e7ce0c06d34da69820cb477b"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_up0.json"
+hash = "715d9b2b0c87ec2a1c9ed0010823b1d4fef1aad480ed0ec94a0514648add155c"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_up1.json"
+hash = "6e94d2950997a5df4f8e50f0863b8e41c551b84b3767e45fb51e77e248fabf35"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_up_alt0.json"
+hash = "a904a57592ca3800bf33051e443a1a6474189f2b4cf02f781802529dc24343d2"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_up_alt1.json"
+hash = "19ab6122b0ab56f0cf908e8c9bc0e02261f0302f2cd9979056e34b2e83c12031"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/template_short_fire_floor.json"
+hash = "dc26dcbb2ee300f9ef3681de2a079a240a774e55148691316cda3caed09289ea"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/template_short_fire_side.json"
+hash = "b266bc738f16387a8ab37ebf045b3471c2607b574ba7142fbff2bfb9cd9b2395"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/models/block/template_short_fire_side_alt.json"
+hash = "df96b1c2fcbcefdf95a7f94678379ff463ce84f4ee345635d21a4c43a43db198"
+
+[[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
 hash = "0c035630121e5ed9b1c1a50b3ce098adca9020da1f2aa4695d92b02e6e8cda09"
 
