@@ -5,3 +5,4 @@
 # Tracked on purpose: client-only fix mod served from this repo
 !extras/mimiandroidfix/*.jar
 extras/mimiandroidfix/libs/
+!extras/fotfmail/*.jar
