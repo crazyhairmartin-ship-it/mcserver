@@ -6,7 +6,9 @@
   "mixins": [
     "LockerBlockMixin",
     "ServerGamePacketListenerImplMixin",
-    "EnderMailmanEntityMixin"
+    "EnderMailmanEntityMixin",
+    "EntityBookwyrmMixin",
+    "MobAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

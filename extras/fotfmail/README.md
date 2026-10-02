@@ -20,6 +20,10 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
 - **Creative-tab sort for the Storage Lectern.** A third sort mode after amount and name: items in creative
   inventory order (`CreativeTabSort`, client mixin on Ars Nouveau's `AbstractStorageTerminalScreen`). Its icon
   is the third tile of `kubejs/assets/ars_nouveau/textures/gui/sort_type.png`; tooltip in that folder's lang.
+- **Bookwyrms flutter around.** Ars Nouveau's Bookwyrms only move to transfer items or hover at a random chest.
+  `BookwyrmWanderGoal` (added by mixin on `EntityBookwyrm.registerGoals`) has idle ones fly between open spots
+  around their lectern network now and then, sometimes hovering over a connected lectern (their own plus any
+  lecterns linked to it). Below their transfer and chest-visit goals in priority.
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates
 `src/fotfmail/MailboxWood.java` and every mailbox model, blockstate and recipe list together. Rebuild the jar with
