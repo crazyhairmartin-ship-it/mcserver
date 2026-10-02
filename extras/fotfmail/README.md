@@ -1,6 +1,6 @@
 # Friends of the Forest Mail
 
-Small Forge add-on for Ender Mail (both sides).
+Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
 
 - **Mailboxes in every wood.** Adds a `wood` block state to Ender Mail's locker (shown as a birdhouse "Mailbox"
   by `kubejs/assets/endermail`). The crafting recipe's planks set it (item NBT `BlockStateTag.wood`, see
@@ -10,6 +10,11 @@ Small Forge add-on for Ender Mail (both sides).
   `MailHatLayer`) appears already holding it, teleports to the friend's mailbox about 5 seconds later and drops
   the letter itself in (not wrapped in a package). Mailboxes in other dimensions get it instantly.
   A signed letter stays the same item and opens as a readable book.
+- **Collar effects on GeckoLib pets.** Domestication Innovation only draws its collar enchantment effects
+  (shadow hands, magnet, auras, blazing bars...) on vanilla-style renderers, so Critters & Companions,
+  Naturalist and unicorn-mod pets showed nothing. `PetOverlaysGeoLayer` runs DI's own `LayerPetOverlays` from a
+  GeckoLib render layer on every GeoEntityRenderer. The immunity-frame glint and zombie-pet overlay redraw a
+  vanilla model, so those two stay off on GeckoLib mobs.
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates
 `src/fotfmail/MailboxWood.java` and every mailbox model, blockstate and recipe list together. Rebuild the jar with

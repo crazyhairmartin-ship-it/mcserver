@@ -1,6 +1,8 @@
 package fotfmail;
 
+import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Map;
 import com.chaosthedude.endermail.client.render.EnderMailmanRenderer;
 import com.chaosthedude.endermail.registry.EnderMailEntities;
 import net.minecraft.client.renderer.entity.EntityRenderer;
@@ -17,6 +19,7 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
+import software.bernie.geckolib.renderer.GeoEntityRenderer;
 
 /**
  * Item model predicates: fotfmail:wood picks the mailbox item's wood model (index / 128, since predicate
@@ -34,15 +37,37 @@ final class ClientSetup {
     /** Puts the mail cap on Ender Mail's carrier. addLayer is protected in the SRG jar; Forge opens it at runtime. */
     private static void addLayers(EntityRenderersEvent.AddLayers event) {
         EntityRenderer<?> renderer = event.getRenderer(EnderMailEntities.ENDER_MAILMAN.get());
-        if (!(renderer instanceof EnderMailmanRenderer carrier)) {
-            return;
+        if (renderer instanceof EnderMailmanRenderer carrier) {
+            try {
+                Method addLayer = LivingEntityRenderer.class.getDeclaredMethod("m_115326_", RenderLayer.class);
+                addLayer.setAccessible(true);
+                addLayer.invoke(carrier, new MailHatLayer(carrier));
+            } catch (ReflectiveOperationException e) {
+                LogManager.getLogger(FotfMail.MODID).error("Couldn't add the mail carrier's hat", e);
+            }
         }
+        addPetOverlaysToGeckoLibMobs(event);
+    }
+
+    /**
+     * Domestication Innovation's collar effects on GeckoLib mobs (see PetOverlaysGeoLayer). AddLayers.getRenderer
+     * casts to LivingEntityRenderer, which GeckoLib renderers aren't, so this reads the event's renderer map.
+     */
+    @SuppressWarnings({"rawtypes", "unchecked"})
+    private static void addPetOverlaysToGeckoLibMobs(EntityRenderersEvent.AddLayers event) {
         try {
-            Method addLayer = LivingEntityRenderer.class.getDeclaredMethod("m_115326_", RenderLayer.class);
-            addLayer.setAccessible(true);
-            addLayer.invoke(carrier, new MailHatLayer(carrier));
+            Field field = EntityRenderersEvent.AddLayers.class.getDeclaredField("renderers");
+            field.setAccessible(true);
+            int added = 0;
+            for (Object renderer : ((Map<?, ?>) field.get(event)).values()) {
+                if (renderer instanceof GeoEntityRenderer geo) {
+                    geo.addRenderLayer(new PetOverlaysGeoLayer(geo));
+                    added++;
+                }
+            }
+            LogManager.getLogger(FotfMail.MODID).info("Added pet collar effects to {} GeckoLib mobs", added);
         } catch (ReflectiveOperationException e) {
-            LogManager.getLogger(FotfMail.MODID).error("Couldn't add the mail carrier's hat", e);
+            LogManager.getLogger(FotfMail.MODID).error("Couldn't add pet collar effects to GeckoLib mobs", e);
         }
     }
 

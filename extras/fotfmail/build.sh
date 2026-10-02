@@ -15,7 +15,7 @@ MSYS_NO_PATHCONV=1 docker run --rm \
     set -e
     CP=$(find /libs -name "*.jar" ! -name "minecraft-*-client.jar" ! -name "*-extra.jar" ! -name "*-slim.jar" \
            ! -path "*/forge/1.20.1-47.4.10/*" | tr "\n" ":")
-    CP="$CP$(ls /data/libraries/net/minecraftforge/forge/1.20.1-47.4.23/forge-1.20.1-47.4.23-universal.jar):$(ls /data/mods/EnderMail-*.jar)"
+    CP="$CP$(ls /data/libraries/net/minecraftforge/forge/1.20.1-47.4.23/forge-1.20.1-47.4.23-universal.jar):$(ls /data/mods/*.jar | tr "\n" ":")"
     rm -rf build && mkdir -p build/classes
     javac --release 17 -proc:none -nowarn -cp "$CP" -d build/classes $(find src -name "*.java")
     cp -R res/. build/classes/
