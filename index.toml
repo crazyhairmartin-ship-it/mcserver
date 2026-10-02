@@ -339,12 +339,92 @@ file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/wetlands.json"
 hash = "7c775ea2f87afc700bdb63e4267621b68bc1e5b0634e227091b666ee6e2c42ef"
 
 [[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_bass.json"
+hash = "b997a127f8441588b159a55782db587897bfcecb5e61c5460f03cff96fa1d8a9"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_bear.json"
+hash = "b920555e695c81eecd6beae30a1216b8eb468568e74ef4f240f8f55a47f1b619"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_bluejay.json"
+hash = "7cb4f3030f60bfb1a40445ccb5e6308339079c670779d712dd0ca95435438764"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_boar.json"
+hash = "b920555e695c81eecd6beae30a1216b8eb468568e74ef4f240f8f55a47f1b619"
+
+[[files]]
 file = "kubejs/data/naturalist/tags/worldgen/biome/has_butterfly.json"
 hash = "bef4d172fc1bfb34d342e79090726c4a0c272dd404783c3ea022b992e0e0415e"
 
 [[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_canary.json"
+hash = "ae705a25c10936bfecd0a5af7c47e56887678ae65cdb7b99744a8d6988cdfc1e"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_cardinal.json"
+hash = "4e1513fed3fec4f4d2458309f2fbbf79315050d7225d42cffe11e171bb4ee8d5"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_coral_snake.json"
+hash = "bbd666b634041035423e0975cd00a8f3b708af9ecd9ed3f5e3a33d19b98768d4"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_deer.json"
+hash = "b920555e695c81eecd6beae30a1216b8eb468568e74ef4f240f8f55a47f1b619"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_dragonfly.json"
+hash = "1aa55bbff11adb9501b0eb24b5ac10441e500148efefcf94e14dc87456a67e71"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_duck.json"
+hash = "b997a127f8441588b159a55782db587897bfcecb5e61c5460f03cff96fa1d8a9"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_finch.json"
+hash = "b920555e695c81eecd6beae30a1216b8eb468568e74ef4f240f8f55a47f1b619"
+
+[[files]]
 file = "kubejs/data/naturalist/tags/worldgen/biome/has_firefly.json"
 hash = "36db05c43015b5094f40d3cd443e3c9589a25f104b264383e5f69d997e975998"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_hippo.json"
+hash = "a65bd7d41143e00f1edb07c6d33fc4481b54c8f176da7888a5dd6e183d1d3d3b"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_lizard.json"
+hash = "1c895343af8fb62b7a59165d1668a2455ab12caeb920f5543cb1042c29b2110c"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_rattlesnake.json"
+hash = "22de1fb4f119f67cbae6882d8ee8c0b66255812f60b1b2cc89dcddfe9cbdb094"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_robin.json"
+hash = "336f3d8cf8c5b73a88a3d92551bfe8825e96e83c82d59dc2d56fb314431dc007"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_snail.json"
+hash = "377713f36aa895c6a3042d54ae5a874c668f26ec533d7c53d16c13ed04ab4317"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_snake.json"
+hash = "a3c4b3f21824be8a277f02433bfddb79944c1f2ff1a9914ed144a70baf0ef537"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_sparrow.json"
+hash = "012895051b39a5df0c961ff650bc04cf68fc998d022781b72acb08b971b28f1f"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_tortoise.json"
+hash = "d0bb0bcd252ea1fb468b0e4bc6ae6813e2b87e70241e7bc9d862694072dffc55"
+
+[[files]]
+file = "kubejs/data/naturalist/tags/worldgen/biome/has_vulture.json"
+hash = "22de1fb4f119f67cbae6882d8ee8c0b66255812f60b1b2cc89dcddfe9cbdb094"
 
 [[files]]
 file = "kubejs/data/tconstruct/forge/biome_modifier/cobalt_ore.json"
