@@ -15,6 +15,7 @@
   },
   "client": [
     "LayerPetOverlaysMixin",
-    "AbstractStorageTerminalScreenMixin"
+    "AbstractStorageTerminalScreenMixin",
+    "BookEditScreenMixin"
   ]
 }

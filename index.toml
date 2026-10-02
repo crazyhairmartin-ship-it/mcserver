@@ -1103,6 +1103,10 @@ file = "kubejs/assets/endermail/models/item/locker.json"
 hash = "28abc3050c9c3901b6dc90805b2b80fb855d95ba310eb22fa08bed55ff6afd18"
 
 [[files]]
+file = "kubejs/assets/endermail/textures/item/stamp.png"
+hash = "cdc3d430e6d469b3ea932245832600f64dc01fe6b4c0094e17b60c50e8d54557"
+
+[[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
 hash = "0c035630121e5ed9b1c1a50b3ce098adca9020da1f2aa4695d92b02e6e8cda09"
 
@@ -1352,7 +1356,7 @@ hash = "08d0cf09fccbf79e3391e7496b483041a0d222102eb5955cc01f2124f0ebee73"
 
 [[files]]
 file = "kubejs/server_scripts/mail_recipes.js"
-hash = "fb044b7134bb86c3b01a43a03cf005c60dbafcb79eb24f359bf5233324d33e75"
+hash = "45294413ccf09e3bf452166e7563e3f8ec57d5b66af6445ce3d5429c14e732d4"
 
 [[files]]
 file = "kubejs/server_scripts/protect_pets.js"
@@ -1612,7 +1616,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfmail.pw.toml"
-hash = "86f75761a71c82142f4c72a81bec61e30b15796e842c126988659604258d03ca"
+hash = "b01748d0eecc8e85484e4358dc70ec345b72a380f0548675eed73943425fff5a"
 metafile = true
 
 [[files]]
@@ -2340,7 +2344,7 @@ hash = "3a85fbb2a40e686b41e103b18dd09f219c76089ec489c50f108efa10397c3f50"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/grove/mail.json"
-hash = "a8728e01e0ca0bc8eb7642fd7e2d2d7084de59459a74198cf115b335f1927c1a"
+hash = "5940239cc5dbf943c9501067fb118f7c62fd96fca7787307bf3b002773c12325"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/grove/rules.json"

@@ -7,7 +7,7 @@
     {
       "type": "patchouli:spotlight",
       "item": "endermail:locker",
-      "text": "Craft a birdhouse $(l)Mailbox$() from 8 planks around a Stamp. The planks pick its wood!$(br2)Place it and give it an ID, like your name. A letter peeks out when mail arrives.",
+      "text": "Craft a birdhouse $(l)Mailbox$() from 6 planks in a little house shape around a Stamp. The planks pick its wood!$(br2)Place it and give it an ID, like your name. A letter peeks out when mail arrives.",
       "title": "Your Mailbox"
     },
     {
@@ -24,7 +24,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(li)$(l)Letter$(): paper + feather$(li)$(l)Stamps$(): paper + any dye$(li)$(l)Mailbox$(): 8 planks + stamp$(li)$(l)Packing Tape$(): paper + string$(li)$(l)Package$(): chest + tape, or 3 paper + tape$(li)$(l)Package Controller$(): package + paper + redstone (tracks deliveries)",
+      "text": "$(li)$(l)Letter$(): paper + feather$(li)$(l)Stamps$(): paper + any dye$(li)$(l)Mailbox$(): 6 planks + stamp$(li)$(l)Packing Tape$(): paper + string$(li)$(l)Package$(): chest + tape, or 3 paper + tape$(li)$(l)Package Controller$(): package + paper + redstone (tracks deliveries)",
       "title": "Recipes"
     }
   ]

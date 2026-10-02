@@ -86,3 +86,43 @@ def hat():
 
 hat()
 print('hat drawn')
+
+
+def stamp():
+    """16x16 generic postage stamp, replacing Ender Mail's stamp icon (kubejs/assets/endermail/textures/item)."""
+    paper, paper_shade, border = (246, 238, 214, 255), (214, 202, 172, 255), (178, 52, 48, 255)
+    sky, sky_light, sun, hill, hill_dark, trunk, leaf = (
+        (120, 176, 228, 255), (156, 202, 240, 255), (250, 214, 84, 255), (98, 168, 76, 255), (70, 132, 56, 255),
+        (112, 78, 46, 255), (54, 112, 52, 255))
+    img = Image.new('RGBA', (16, 16), CLEAR)
+    px = img.load()
+    for y in range(1, 15):            # stamp paper
+        for x in range(1, 15):
+            px[x, y] = paper
+    for i in range(1, 15, 2):         # perforated edges: every other edge pixel cut away
+        px[i, 1] = px[i, 14] = px[1, i] = px[14, i] = CLEAR
+    for i in range(2, 14):            # shading on the bottom/right edges
+        if px[i, 13][3]:
+            px[i, 13] = paper_shade
+        if px[13, i][3]:
+            px[13, i] = paper_shade
+    for i in range(3, 13):            # red frame
+        px[i, 3] = px[i, 12] = px[3, i] = px[12, i] = border
+    for y in range(4, 12):            # picture: sky
+        for x in range(4, 12):
+            px[x, y] = sky_light if y < 6 else sky
+    for x, y in ((9, 5), (10, 5), (9, 6), (10, 6)):   # sun
+        px[x, y] = sun
+    for x in range(4, 12):            # rolling hill
+        top = 9 if x in (4, 5, 10, 11) else 8
+        for y in range(top, 12):
+            px[x, y] = hill if y == top else hill_dark
+    px[6, 7] = px[6, 6] = leaf        # little tree
+    px[5, 7] = px[7, 7] = leaf
+    px[6, 8] = trunk
+    img.save(STAMP_OUT)
+
+
+STAMP_OUT = '../../kubejs/assets/endermail/textures/item/stamp.png'
+stamp()
+print('stamp drawn')

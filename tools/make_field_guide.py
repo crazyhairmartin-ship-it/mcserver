@@ -223,10 +223,10 @@ ENTRIES = [
         text('Days are long here, and sunrises and sunsets last a long time, so enjoy the view!$(br2)The night is skipped when at least half of the players online are sleeping.'),
     ]),
     ('grove', 'mail', 'Mailboxes & Letters', 'fotfmail:letter', [
-        spot('endermail:locker', 'Craft a birdhouse $(l)Mailbox$() from 8 planks around a Stamp. The planks pick its wood!$(br2)Place it and give it an ID, like your name. A letter peeks out when mail arrives.', 'Your Mailbox'),
+        spot('endermail:locker', 'Craft a birdhouse $(l)Mailbox$() from 6 planks in a little house shape around a Stamp. The planks pick its wood!$(br2)Place it and give it an ID, like your name. A letter peeks out when mail arrives.', 'Your Mailbox'),
         spot('fotfmail:letter', 'Craft a $(l)Letter$() (paper + feather) and right-click to write.$(br2)Press $(l)Sign$() and type your friend\'s mailbox ID as the title, then right-click $(l)any$() mailbox to send it. It lands in theirs right away!', 'Letters'),
         spot('endermail:package', 'Sending items? Place a $(l)Package$() and fill it. Right-click it with a $(l)Stamp$() and enter a mailbox ID or coordinates. An enderman carries it there!', 'Packages'),
-        text('$(li)$(l)Letter$(): paper + feather$(li)$(l)Stamps$(): paper + any dye$(li)$(l)Mailbox$(): 8 planks + stamp$(li)$(l)Packing Tape$(): paper + string$(li)$(l)Package$(): chest + tape, or 3 paper + tape$(li)$(l)Package Controller$(): package + paper + redstone (tracks deliveries)', 'Recipes'),
+        text('$(li)$(l)Letter$(): paper + feather$(li)$(l)Stamps$(): paper + any dye$(li)$(l)Mailbox$(): 6 planks + stamp$(li)$(l)Packing Tape$(): paper + string$(li)$(l)Package$(): chest + tape, or 3 paper + tape$(li)$(l)Package Controller$(): package + paper + redstone (tracks deliveries)', 'Recipes'),
     ]),
     ('grove', 'land', 'Claims, Pets & Animals', 'minecraft:lead', [
         text('Inside claimed land:$(li)Friendly animals never despawn, even without a name tag (not monsters or fish)$(li)Grappling hooks work for everyone$(li)Only your party can build or open chests'),

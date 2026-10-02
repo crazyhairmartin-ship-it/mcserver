@@ -1,5 +1,5 @@
 // Ender Mail made cheap enough to use on day one (the stock recipes need ender pearls, slimeballs and 9 iron).
-// - Mailbox (locker): 8 planks of one wood around a stamp. The fotfmail add-on gives mailboxes a "wood" block
+// - Mailbox (locker): 6 planks of one wood in a little house shape around a stamp. The fotfmail add-on gives mailboxes a "wood" block
 //   state, so the planks pick the birdhouse's wood (global.MAILBOX_WOODS, startup_scripts/mailbox_woods.js).
 // - Letter (fotfmail add-on): paper + feather. Write, sign with a friend's mailbox ID, right-click a mailbox.
 // - Stamp: paper + any dye (4). Packing tape: paper + string (4). Package controller: package + paper + redstone.
@@ -11,7 +11,7 @@ ServerEvents.recipes(event => {
 
   global.MAILBOX_WOODS.forEach(([wood, planks]) => {
     event.shaped(Item.of('endermail:locker', { BlockStateTag: { wood: wood } }), [
-      'PPP',
+      ' P ',
       'PSP',
       'PPP'
     ], {
