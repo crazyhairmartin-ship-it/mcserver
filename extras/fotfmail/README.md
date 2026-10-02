@@ -29,6 +29,13 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   times they'd start (`RandomStorageVisitGoalMixin`) so the wander gets a turn.
 - **Nightmare hoof fire burns out about 3x sooner** (`NightmareFireBlockMixin`, Ultimate Unicorn Mod).
 - **Ender Mail carriers are invulnerable** (rain and water used to hurt them).
+- **Packages addressed on their own screen.** Package = chest + stamp (packing tape is trimmed). The package
+  screen gets the mailbox layout: its 5 slots on the left (`PackageMenuMixin`, GUI texture from
+  `tools/mailbox/make_package_gui.py`) and a Recipient box + Send button (`PackageScreenMixin`, `SendPackagePacket`
+  on the `fotfmail:main` channel). Sending stamps the package for that mailbox and calls an Ender Mail carrier;
+  mailboxes only, no coordinates (the stamp screen is off, `ScreenWrapperMixin`). Packages a carrier drops in a
+  mailbox are marked received and disappear once emptied (`PackageBlockEntityMixin`). Drawn as a little chest with
+  a crooked stamp (`tools/mailbox/make_package.py`, `PackageBlockMixin` for shape/occlusion).
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates
 `src/fotfmail/MailboxWood.java` and every mailbox model, blockstate and recipe list together. Rebuild the jar with

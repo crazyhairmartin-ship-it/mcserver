@@ -863,6 +863,8 @@ global.TRIMMED_ITEMS = [
   'tconstruct:zombified_piglin_head',
   // Sophisticated Backpacks: the battery upgrade only stores Forge Energy, which nothing in this pack makes.
   'sophisticatedbackpacks:battery_upgrade',
+  // Ender Mail: packages are made from a chest + stamp and addressed on their own screen, so tape has no use.
+  'endermail:packing_tape',
 ]
 
 

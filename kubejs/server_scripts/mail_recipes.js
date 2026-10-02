@@ -6,7 +6,7 @@
 // - Package: stock recipe (chest + packing tape), plus an envelope recipe: 3 paper + packing tape.
 // - Book and quill: also paper + feather + any dye, no ink sac needed.
 ServerEvents.recipes(event => {
-  ;['endermail:locker', 'endermail:stamp', 'endermail:packing_tape', 'endermail:package_controller']
+  ;['endermail:locker', 'endermail:stamp', 'endermail:packing_tape', 'endermail:package', 'endermail:package_controller']
     .forEach(id => event.remove({ id: id }))
 
   global.MAILBOX_WOODS.forEach(([wood, planks]) => {
@@ -22,9 +22,8 @@ ServerEvents.recipes(event => {
 
   event.shapeless('fotfmail:letter', ['minecraft:paper', 'minecraft:feather']).id('fotf:letter')
   event.shapeless('4x endermail:stamp', ['minecraft:paper', '#forge:dyes']).id('fotf:stamp')
-  event.shapeless('4x endermail:packing_tape', ['minecraft:paper', '#forge:string']).id('fotf:packing_tape')
   event.shapeless('endermail:package_controller', ['endermail:package', 'minecraft:paper', 'minecraft:redstone'])
     .id('fotf:package_controller')
-  event.shapeless('endermail:package', ['3x minecraft:paper', 'endermail:packing_tape']).id('fotf:envelope')
+  event.shapeless('endermail:package', ['#forge:chests/wooden', 'endermail:stamp']).id('fotf:package')
   event.shapeless('minecraft:writable_book', ['minecraft:paper', 'minecraft:feather', '#forge:dyes']).id('fotf:quick_book_and_quill')
 })

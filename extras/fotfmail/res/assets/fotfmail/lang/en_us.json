@@ -9,5 +9,11 @@
   "message.fotfmail.no_mailbox": "No mailbox has the ID %s. Check the spelling (it's the title you signed with).",
   "message.fotfmail.on_the_way": "A mail carrier is taking your letter to mailbox %s!",
   "fotfmail.letter.recipient": "Enter Recipient:",
-  "fotfmail.letter.seal_warning": "Signing seals the letter. Then right-click any mailbox to send it!"
+  "fotfmail.letter.seal_warning": "Signing seals the letter. Then right-click any mailbox to send it!",
+  "fotfmail.package.recipient": "Recipient",
+  "fotfmail.package.send": "Send",
+  "message.fotfmail.package_sent": "A mail carrier is taking your package to mailbox %s!",
+  "message.fotfmail.package_empty": "Put something in the package first!",
+  "message.fotfmail.package_no_recipient": "Type the recipient's mailbox ID first.",
+  "message.fotfmail.package_other_dimension": "Mailbox %s is in another dimension. Packages can only go to mailboxes in this one."
 }

@@ -1,6 +1,8 @@
 package fotfmail;
 
 import com.chaosthedude.endermail.block.LockerBlock;
+import java.util.Optional;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.Item;
@@ -14,6 +16,9 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.fml.loading.FMLEnvironment;
+import net.minecraftforge.network.NetworkDirection;
+import net.minecraftforge.network.NetworkRegistry;
+import net.minecraftforge.network.simple.SimpleChannel;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
@@ -25,6 +30,8 @@ import net.minecraftforge.registries.RegistryObject;
  *   (item NBT BlockStateTag) and kept when broken (loot table copy_state).
  * - Letters: write on one like a book and quill, sign it with the recipient's mailbox ID as the title,
  *   then right-click any mailbox: one of Ender Mail's carriers (wearing a mail cap) takes it to theirs.
+ * - Packages: chest + stamp; the package screen has a recipient box and Send button (SendPackagePacket) that send it
+ *   to a mailbox, and a received package disappears once it's emptied.
  *
  * Compiled against SRG-named Minecraft (see build.sh), so vanilla methods appear as m_XXXX_.
  */
@@ -34,6 +41,10 @@ public class FotfMail {
 
     public static final EnumProperty<MailboxWood> WOOD = EnumProperty.m_61587_("wood", MailboxWood.class);
 
+    private static final String PROTOCOL = "1";
+    public static final SimpleChannel NETWORK = NetworkRegistry.newSimpleChannel(
+            new ResourceLocation(MODID, "main"), () -> PROTOCOL, PROTOCOL::equals, PROTOCOL::equals);
+
     private static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
     public static final RegistryObject<Item> LETTER = ITEMS.register("letter",
             () -> new LetterItem(new Item.Properties().m_41487_(1)));
@@ -41,6 +52,8 @@ public class FotfMail {
     public FotfMail() {
         IEventBus modBus = FMLJavaModLoadingContext.get().getModEventBus();
         ITEMS.register(modBus);
+        NETWORK.registerMessage(0, SendPackagePacket.class, SendPackagePacket::encode, SendPackagePacket::decode,
+                SendPackagePacket::handle, Optional.of(NetworkDirection.PLAY_TO_SERVER));
         MinecraftForge.EVENT_BUS.addListener(FotfMail::onRightClickBlock);
         if (FMLEnvironment.dist == Dist.CLIENT) {
             ClientSetup.init(modBus);

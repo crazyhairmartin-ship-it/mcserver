@@ -11,7 +11,7 @@ import json
 import os
 import zipfile
 
-HEIGHT_SCALE = 0.5
+HEIGHT_SCALE = 0.4  # 22.4px * 0.4 = 9px: barely over half a block
 CLIENT_JAR = 'C:/Users/Dylan/AppData/Roaming/PrismLauncher/libraries/com/mojang/minecraft/1.20.1/minecraft-1.20.1-client.jar'
 MOD_JAR = glob.glob('C:/Users/Dylan/Documents/Minecraft server/server/data/mods/ultimate_unicorn_mod-*.jar')[0]
 PACK = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))

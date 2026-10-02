@@ -1,6 +1,8 @@
 package fotfmail;
 
+import com.chaosthedude.endermail.block.PackageBlock;
 import com.chaosthedude.endermail.block.entity.LockerBlockEntity;
+import com.chaosthedude.endermail.block.entity.PackageBlockEntity;
 import com.chaosthedude.endermail.data.LockerData;
 import com.chaosthedude.endermail.entity.EnderMailmanEntity;
 import com.chaosthedude.endermail.registry.EnderMailEntities;
@@ -15,10 +17,11 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.extensions.IForgeEntity;
 
 /**
- * Sends a signed letter to the mailbox whose ID is the letter's title.
+ * Sends a signed letter to the mailbox whose ID is the letter's title, and packages from the package screen.
  *
  * Same dimension: one of Ender Mail's mail carriers appears 8-12 blocks from the mailbox you used and walks
  * the letter over to the friend's mailbox (CarrierGoal). Ender Mail's own carrier goals are off for these carriers,
@@ -75,6 +78,47 @@ final class Mail {
             return;
         }
         tell(player, Component.m_237110_("message.fotfmail.no_mailbox", id), ChatFormatting.RED);
+    }
+
+    /**
+     * The package screen's Send button: stamps the package for the recipient's mailbox and calls one of Ender Mail's
+     * carriers, which takes it (removing the block) and drops it into that mailbox. Mailboxes only; no coordinates.
+     */
+    static void sendPackage(ServerPlayer player, BlockPos pos, String recipient) {
+        ServerLevel level = player.m_284548_();
+        String id = recipient.trim();
+        if (player.m_20275_(pos.m_123341_() + 0.5, pos.m_123342_() + 0.5, pos.m_123343_() + 0.5) > 64) {
+            return;
+        }
+        BlockState state = level.m_8055_(pos);
+        if (!(state.m_60734_() instanceof PackageBlock block) || block.isStamped(state)
+                || !(level.m_7702_(pos) instanceof PackageBlockEntity box)) {
+            return;
+        }
+        if (box.m_7983_()) {
+            tell(player, Component.m_237115_("message.fotfmail.package_empty"), ChatFormatting.RED);
+            return;
+        }
+        if (id.isEmpty()) {
+            tell(player, Component.m_237115_("message.fotfmail.package_no_recipient"), ChatFormatting.RED);
+            return;
+        }
+        BlockPos mailbox = LockerData.get(level).getLockers().get(id);
+        if (mailbox == null) {
+            for (ServerLevel other : player.m_20194_().m_129785_()) {
+                if (other != level && LockerData.get(other).getLockers().containsKey(id)) {
+                    tell(player, Component.m_237110_("message.fotfmail.package_other_dimension", id), ChatFormatting.RED);
+                    return;
+                }
+            }
+            tell(player, Component.m_237110_("message.fotfmail.no_mailbox", id), ChatFormatting.RED);
+            return;
+        }
+        PackageBlock.stampPackage(level, pos, mailbox, id, false);
+        EnderMailmanEntity carrier = new EnderMailmanEntity(EnderMailEntities.ENDER_MAILMAN.get(), level, pos, mailbox, id, ItemStack.f_41583_);
+        level.m_7967_(carrier);
+        carrier.playEndermanSound();
+        tell(player, Component.m_237110_("message.fotfmail.package_sent", id), ChatFormatting.GREEN);
     }
 
     private static void tell(ServerPlayer player, MutableComponent message, ChatFormatting color) {

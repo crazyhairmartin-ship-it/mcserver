@@ -23,10 +23,10 @@ import net.minecraftforge.common.extensions.IForgeEntity;
  * The walk of an Ender Mail carrier taking a letter (persistent data "fotfmail_letter", set by Mail.send):
  *   (starts 8-DISTANCE blocks from the sender's mailbox, any direction)
  *   0 walk up to the sender's mailbox, pause, pick up the letter (shows the parcel in its hands)
- *   1 walk a few blocks away, then teleport
- *   2 appear a few blocks in front of the friend's mailbox (if nobody is near it, deliver straight in instead)
+ *   1 walk a few blocks away, wait LINGER, then teleport ('in transit' high above the world for TRANSIT ticks)
+ *   2 appear 8-DISTANCE blocks from the friend's mailbox (if nobody is near it, deliver straight in instead)
  *   3 walk up, pause, drop the letter in
- *   4 walk away empty-handed, then teleport out
+ *   4 walk away empty-handed, wait LINGER, then teleport out
  * Phase and both mailbox positions are in the carrier's persistent data, so a restart resumes the walk.
  * Ender Mail's own carrier goals and random teleports are switched off for these carriers (mixins).
  */
@@ -37,7 +37,9 @@ public final class CarrierGoal extends Goal {
     static final int DISTANCE = 12; // how far from a mailbox the carrier appears and walks off to (any direction)
     private static final int WALK_TIMEOUT = 400;
     private static final int AWAY_TIMEOUT = 200;
-    private static final int PAUSE = 20;
+    private static final int PAUSE = 60; // stands at each mailbox this long (3 s)
+    private static final int LINGER = 60; // waits where it walked off to before teleporting (3 s)
+    private static final int TRANSIT = 80; // 'travelling' between mailboxes, out of sight (4 s)
     private final EnderMailmanEntity carrier;
     private int ticks;
     private int pause;
@@ -88,12 +90,22 @@ public final class CarrierGoal extends Goal {
                 }
             }
             case 1 -> {
-                if (walkAwayFrom(from)) {
+                if (walkAwayFrom(from) && ++pause >= LINGER) {
+                    poof();
+                    carrier.playEndermanSound();
+                    // 'In transit': parked far above the world, out of sight, until it appears at the other mailbox.
+                    carrier.m_20242_(true);
+                    carrier.m_6021_(carrier.m_20185_(), carrier.m_9236_().m_151558_() + 64, carrier.m_20189_());
                     nextPhase(data, 2);
                 }
             }
             case 2 -> {
-                poof();
+                if (ticks < TRANSIT) {
+                    carrier.m_21573_().m_26573_();
+                    carrier.m_20256_(net.minecraft.world.phys.Vec3.f_82478_);
+                    return;
+                }
+                carrier.m_20242_(false);
                 ServerLevel level = (ServerLevel) carrier.m_9236_();
                 BlockPos arrival = spotAround(level, to, carrier.m_217043_());
                 if (!level.m_143340_(to) || arrival == null) {
@@ -113,7 +125,7 @@ public final class CarrierGoal extends Goal {
                 }
             }
             default -> {
-                if (walkAwayFrom(to)) {
+                if (walkAwayFrom(to) && ++pause >= LINGER) {
                     poof();
                     carrier.playEndermanSound();
                     carrier.m_146870_();

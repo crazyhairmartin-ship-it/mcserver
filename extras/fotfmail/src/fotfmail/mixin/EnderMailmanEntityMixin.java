@@ -3,6 +3,7 @@ package fotfmail.mixin;
 import com.chaosthedude.endermail.entity.EnderMailmanEntity;
 import fotfmail.CarrierGoal;
 import net.minecraft.core.NonNullList;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -41,5 +42,18 @@ public abstract class EnderMailmanEntityMixin {
         if (CarrierGoal.isLetterCarrier(self) && !contents.isEmpty() && !contents.get(0).m_41619_()) {
             cir.setReturnValue(contents.get(0).m_41777_());
         }
+    }
+
+    /** Packages dropped in a mailbox are marked received, so they disappear once emptied (PackageBlockEntityMixin). */
+    @Inject(method = "getPackageStack", at = @At("RETURN"), remap = false)
+    private void fotfmail$markReceived(CallbackInfoReturnable<ItemStack> cir) {
+        ItemStack stack = cir.getReturnValue();
+        if (CarrierGoal.isLetterCarrier((EnderMailmanEntity) (Object) this) || stack.m_41619_()) {
+            return;
+        }
+        CompoundTag blockEntityTag = stack.m_41698_("BlockEntityTag");
+        CompoundTag forgeData = blockEntityTag.m_128469_("ForgeData");
+        forgeData.m_128379_("fotfmail_received", true);
+        blockEntityTag.m_128365_("ForgeData", forgeData);
     }
 }

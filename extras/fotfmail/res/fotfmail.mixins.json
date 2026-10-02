@@ -11,7 +11,10 @@
     "MobAccessor",
     "EnderMailmanGoalsMixin",
     "RandomStorageVisitGoalMixin",
-    "NightmareFireBlockMixin"
+    "NightmareFireBlockMixin",
+    "PackageMenuMixin",
+    "PackageBlockEntityMixin",
+    "PackageBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -19,6 +22,8 @@
   "client": [
     "LayerPetOverlaysMixin",
     "AbstractStorageTerminalScreenMixin",
-    "BookEditScreenMixin"
+    "BookEditScreenMixin",
+    "PackageScreenMixin",
+    "ScreenWrapperMixin"
   ]
 }
