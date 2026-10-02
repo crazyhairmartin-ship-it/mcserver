@@ -183,7 +183,7 @@ ENTRIES = [
         spot('explorerscompass:explorerscompass', 'The $(l)Explorer\'s Compass$() points to any structure you pick.'),
     ]),
     ('exploring', 'alexs_caves', 'Alex\'s Caves', 'alexscaves:cave_codex', [
-        text('Two rare cave biomes deep underground: the dinosaur-filled $(l)Primordial Caves$() and the sugary $(l)Candy Cavity$().$(br2)They are hard to find. Look up $(l)Cave Tablet$() and $(l)Cave Codex$() in JEI to learn how to track them down.'),
+        text('Four rare cave biomes deep underground: dinosaurs in the $(l)Primordial Caves$(), the sugary $(l)Candy Cavity$(), the deep-sea $(l)Abyssal Chasm$() and the eerie $(l)Forlorn Hollows$().$(br2)They are hard to find. Look up $(l)Cave Tablet$() and $(l)Cave Codex$() in JEI to learn how to track them down.'),
     ]),
     ('exploring', 'twilight', 'The Twilight Forest', 'twilightforest:twilight_oak_sapling', [
         text('A magical forest dimension with bosses to beat in order.$(br2)To get there: dig a 2x2 pool of water, surround it with flowers and grass, then throw a $(l)diamond$() into it.'),

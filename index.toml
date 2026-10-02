@@ -5,14 +5,6 @@ file = "config/alexscaves-general.toml"
 hash = "6588029574999e58617203c013180d0e35f2673900e1cff7d7087fbd05a4d6c3"
 
 [[files]]
-file = "config/alexscaves_biome_generation/abyssal_chasm.json"
-hash = "921643fad037c51b5503061ad07dd53d54881e90a6ba50f77f64d781d74474e8"
-
-[[files]]
-file = "config/alexscaves_biome_generation/forlorn_hollows.json"
-hash = "4b5093a3efb622eddbbaede4a1f049633f151ce69d330aa491d167edec393f3b"
-
-[[files]]
 file = "config/alexscaves_biome_generation/magnetic_caves.json"
 hash = "b78d1743e7b52950aaafd63fded0600d867cb19aec1de057395ec15dbaf545a1"
 
@@ -1203,7 +1195,7 @@ hash = "371cba1a4d50334a7cba355538a4c35d1c128666ead429c1cab27a6d1217ed20"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/exploring/alexs_caves.json"
-hash = "9165e1ad9c2463e253849b959a0e3d0df3bdd99ad370b7526419cb0e14adcb06"
+hash = "f3b8e690270acb35bf5d68e5ab270e3e6d9dbde9aa98e5f7fdd675cf0cd7ae83"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/exploring/compasses.json"
