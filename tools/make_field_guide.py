@@ -225,6 +225,7 @@ ENTRIES = [
         spot('endermail:package', 'Place a $(l)Package$(), put items inside, then seal it with $(l)Packing Tape$().$(br2)Right-click it with a $(l)Stamp$() and enter coordinates or a friend\'s Locker ID. An enderman delivers it, any distance!'),
         spot('endermail:locker', 'Craft a birdhouse $(l)Locker$() (8 planks around a Stamp), place it and give it an ID. Friends can mail you with just the ID. A letter peeks out when mail arrives!', 'Your Mailbox'),
         spot('endermail:package_controller', 'The $(l)Package Controller$() shows where your package is and whether it arrived.', 'Tracking'),
+        text('Mail is cheap here:$(li)$(l)Stamps$(): paper + any dye$(li)$(l)Packing Tape$(): paper + string$(li)$(l)Package$(): chest + tape$(li)$(l)Mailbox$(): 8 planks + stamp$(li)$(l)Controller$(): package + paper + redstone', 'Recipes'),
     ]),
     ('grove', 'land', 'Claims, Pets & Animals', 'minecraft:lead', [
         text('Inside claimed land:$(li)Friendly animals never despawn, even without a name tag (not monsters or fish)$(li)Grappling hooks work for everyone$(li)Only your party can build or open chests'),

@@ -20,6 +20,11 @@
       "item": "endermail:package_controller",
       "text": "The $(l)Package Controller$() shows where your package is and whether it arrived.",
       "title": "Tracking"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Mail is cheap here:$(li)$(l)Stamps$(): paper + any dye$(li)$(l)Packing Tape$(): paper + string$(li)$(l)Package$(): chest + tape$(li)$(l)Mailbox$(): 8 planks + stamp$(li)$(l)Controller$(): package + paper + redstone",
+      "title": "Recipes"
     }
   ]
 }
