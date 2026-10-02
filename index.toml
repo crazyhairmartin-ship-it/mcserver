@@ -583,6 +583,10 @@ file = "kubejs/data/wildernature/tags/worldgen/biome/spawns_squirrel.json"
 hash = "a3c4b3f21824be8a277f02433bfddb79944c1f2ff1a9914ed144a70baf0ef537"
 
 [[files]]
+file = "kubejs/server_scripts/bookwyrm_charm.js"
+hash = "1ac6aa847465d508409e00b781861769913760f0af6beda5feb488af7075d43b"
+
+[[files]]
 file = "kubejs/server_scripts/butterfly_sightings.js"
 hash = "ab6c957144e6fa572b983394a4d5f1fe9a0456ec5933a19e467834e63e96fa03"
 
