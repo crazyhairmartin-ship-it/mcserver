@@ -2051,18 +2051,8 @@ hash = "a84f8e46ba2d693bfbdec682ca66213e2e0783395c9af34f8b22d460d3952a4c"
 metafile = true
 
 [[files]]
-file = "mods/seasonal-lets-do.pw.toml"
-hash = "76bc3972d55df02338408272aa05f30a5f0bcd65e895649df534f620b1bdd0ff"
-metafile = true
-
-[[files]]
 file = "mods/selene.pw.toml"
 hash = "b3e39831fb574d728076ef95c969e8ca578ab6a3eb499a35718dd9b71d5cdfe4"
-metafile = true
-
-[[files]]
-file = "mods/serene-seasons.pw.toml"
-hash = "0c41a171e535eeab09672ffe05724bcc47081ab05b260bbc3882c43ee3446186"
 metafile = true
 
 [[files]]
@@ -2371,15 +2361,11 @@ hash = "221981cbd624684fb3318ba3427f9d77cd99b693d883956cc6a47a19481e39d8"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/farming/fishing.json"
-hash = "5c019e1d230a5b29c728ec22bff6b34ab7bccc9869c461185348fadd5c7acfb9"
+hash = "cfc0b2bee2be6d4537bdab72f2893cb160ac21d911fcf23832402e551c9c0046"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/farming/lets_do.json"
 hash = "2a96b5dc7f07503bc47f781d0ae4c3a964173923cb0c19af328a713ef620a73f"
-
-[[files]]
-file = "patchouli_books/fotf_field_guide/en_us/entries/farming/seasons.json"
-hash = "82523a186ba41ea756484be25a192b7c35a5433d1a04dd208ae61f0a587ba479"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/books.json"

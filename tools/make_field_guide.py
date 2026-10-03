@@ -138,9 +138,6 @@ ENTRIES = [
         text('A whole cozy series:$(li)$(l)Farm & Charm$(): farm life$(li)$(l)Bakery$(): breads and cakes$(li)$(l)Vinery$(): grapes and wine$(li)$(l)Brewery$(): beer'),
         text('$(li)$(l)Candlelight$(): dinners$(li)$(l)HerbalBrews$(): tea and coffee$(li)$(l)Meadow$(): cheese$(li)$(l)Beachparty$(): beach fun$(li)$(l)Camping$(): tents$(li)$(l)Furniture$(): more decor', 'And More'),
     ]),
-    ('farming', 'seasons', 'Seasons', 'sereneseasons:calendar', [
-        spot('sereneseasons:calendar', 'The year has seasons. Crops only grow in the right seasons, and winter gets cold and snowy.$(br2)A $(l)Calendar$() shows the season. JEI shows which seasons each crop likes.'),
-    ]),
     ('farming', 'fishing', 'Fishing', 'aquaculture:iron_fishing_rod', [
         spot('aquaculture:iron_fishing_rod', '$(l)Aquaculture$() adds lots of fish, better rods, hooks and bait. $(l)Lili\'s Lucky Lures$() adds fishing gear too.'),
     ]),
