@@ -176,7 +176,8 @@ truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dy
   1 point per rank.
 - New/changed nodes: Loyal Guard (Taming: a nearby pet blocks a hit, no damage to you or the pet), Multishot
   (Range, replaces Crossbowman; Steady Hands and Rapid Volley also speed up crossbow reload), Staff Adept (Magic:
-  spell power and cooldowns while holding a staff or wand), Long Net
+  spell power and cooldowns while holding a staff or wand), Gunslinger (Range: firearms reload faster and hit harder; firearms stay
+  their own weapon type), Long Net
   (Foraging: net reach, since net catches never fail), Brain Food (+mana regen after meals), Picnic heals you
   too, Guardian covers party members and pets.
 - **Weapon types**: every weapon in the pack is classified into sword, light, two-handed, polearm, axe, blunt,
