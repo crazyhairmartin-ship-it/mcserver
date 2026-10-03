@@ -123,121 +123,24 @@ swim speed, taming success chance (level-scaled, with a minimum).
 - *Pet scavenging*: your pets sometimes drop found resources near you (tiered loot table).
 - *Pack tactics*: pets deal more damage when attacking the same target as you.
 - *Pet stats*: health/damage/armour/speed/regen for your tamed animals while you're within ~32 blocks.
-- *Revive pets*: a pet that dies leaves a **Pet Memento** holding the whole pet (name, collar, armour, stats).
-  With the perk, using the Memento revives it after a cost (time and/or an item); higher ranks make it cheaper.
-  Covers tamed animals, Ars familiars and other owned companions.
+- *Cheaper revival*: Taming's Soul Mender lowers the cost of the standalone pet revival (below).
 
 ## Tree drafts
 
-Values are starting points for the preview; every number is a config value.
+The trees live in `2026-10-03-skill-trees.html` next to this doc (the `TREES` data in its script is the source of
+truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dylan's feedback):
 
-### Mining (pickaxe)
-| Tier | Nodes |
-|---|---|
-| 1 | Stone Sense R3: +6% mining speed each · Steady Pick R3: 5% save durability each · Deep Lungs R2: +1 armour while below Y 40 each |
-| 2 | Prospector R3: 4% extra ore drops each · Night Eyes: night vision underground after mining 20 blocks in a row · Hard Hat R2: −20% damage from falling blocks and cave mobs' first hit each |
-| 3 choice | **Smelter**: 15% auto-smelt, then R2 +10% · **Gem Hunter**: 6% extra drops on gems (diamond, emerald, lapis, amethyst) R3 |
-| 4 | Vein Tracker R3: Ultimine costs less hunger · Prospector II R3 (needs Prospector 3): +4% extra ore drops · Bedrock Grip R3: +8% speed on deepslate · Ore Nose: chance to drop raw nuggets from plain stone |
-| 5 | Steady Pick II R3 · Tunnel Rat R2: +10% speed in caves · **Capstone choice**: *Motherlode* (2% chance an ore drops triple) or *Forge Heart* (auto-smelt also gives bonus XP orbs and 10% double ingots) |
-
-### Woodcutting (axe)
-| Tier | Nodes |
-|---|---|
-| 1 | Lumberjack R3: +8% chopping speed · Sapling Sense R3: +10% sapling/apple drops · Axe Care R2: 6% save durability |
-| 2 | Timber R3: 5% extra logs · Bark Stripper: stripping gives bark/sticks · Forester R2: saplings you plant grow 15% faster |
-| 3 choice | **Feller**: Ultimine on trees costs no hunger + R2 speed · **Woodworker**: 10% save planks/logs when crafting wood items R3 |
-| 4 | Timber II R3 · Heartwood: 3% chance of a rare modded log/sap drop (BoP/RU woods) · Axe Mastery R3: +1 attack damage with axes · Leaf Cutter R2: leaves drop extra sticks/seeds |
-| 5 | Lumberjack II R3 · **Capstone choice**: *Whole Tree* (5% chance the whole tree drops at once) or *Ancient Grove* (planted saplings 25% chance to grow instantly) |
-
-### Farming (hoe)
-| Tier | Nodes |
-|---|---|
-| 1 | Harvester R3: 5% extra crops · Seed Saver R3: 8% chance to get the seed back on replant · Hoe Care R2 |
-| 2 | Green Thumb R3: crops you plant 6% chance to start a stage later · Rancher R2: breeding cooldown −15% · Fertile Soil R2: crops within 8 blocks of you grow 10% faster |
-| 3 choice | **Gardener**: Green Thumb chance ×2 + R2 extra crops · **Herder**: Twins 6% R3 for farm animals |
-| 4 | Harvester II R3 · Bountiful Bees: honey/comb bonus · Compost King: composter fills faster · Shepherd's Shears R2: extra wool/milk/eggs |
-| 5 | Fertile Soil II R2 · Seed Saver II R2 · **Capstone choice**: *Harvest Moon* (5% chance a harvest drops double everything) or *Golden Herd* (twins also inherit better stats) |
-
-### Fishing (fishing rod)
-| Tier | Nodes |
-|---|---|
-| 1 | Patient Angler R3: −8% bite time · Lucky Line R3: +treasure odds · Rod Care R2 |
-| 2 | Double Catch R3: 4% two fish at once · Bait Saver R2: 15% Aquaculture bait not used · Deep Diver R2: swim speed + longer breath |
-| 3 choice | **Treasure Hunter**: treasure sense ×2 + R2 rarer loot table · **Fishmonger**: extra fish drops R3 + cooking fish gives extra |
-| 4 | Patient Angler II R3 · Storm Fisher: faster bites in rain · Sea Legs R2: boat speed · Lure Master R3: Aquaculture lures stronger |
-| 5 | Double Catch II R3 · **Capstone choice**: *Leviathan Bait* (rare chance of a unique trophy fish) or *Endless Supply* (25% rod durability never used, bait never used) |
-
-### Cooking (Farmer's Delight cooking pot)
-| Tier | Nodes |
-|---|---|
-| 1 | Thrifty Cook R3: 5% save an ingredient · Quick Hands R3: cooking pot / Let's Do stations 8% faster · Taste Tester R2: +1 hunger from your meals |
-| 2 | Extra Serving R3: 5% one extra meal · Hearty Meals R3: +10% saturation · Brewer R2: Let's Do drinks (wine, beer, tea) 8% save ingredient |
-| 3 choice | **Chef**: meal buffs last 50% longer + R2 extra servings · **Baker**: bakery/oven items double 8% R3 |
-| 4 | Thrifty Cook II R3 · Spice Rack: meals give a small random bonus buff · Campfire Cook R2: campfire/smoker 20% faster · Picnic R2: eating near party members heals a little |
-| 5 | Hearty Meals II R3 · **Capstone choice**: *Feast Maker* (feasts/pies give extra slices) or *Master Brewer* (aged drinks age 30% faster and save 15% ingredients) |
-
-### Crafting (crafting table)
-| Tier | Nodes |
-|---|---|
-| 1 | Frugal R3: 4% save an ingredient · Smith R3: crafted tools/armour +8% durability · Smelter R2: furnaces you use 10% faster |
-| 2 | Enchanted Crafts R3: 3% random low enchant on gear crafts · Book Saver: breaking enchanted items become books · Repair Kit R2: anvil repairs cost less XP |
-| 3 choice | **Weaponsmith**: crafted weapons 10% chance of +1 attack damage R3 · **Armourer**: crafted armour 10% chance of +1 toughness R3 |
-| 4 | Frugal II R3 · Enchanted Crafts II R3 (needs I 3): better enchant levels · Salvager R2: grindstone returns materials · Quality Work R3: +durability II |
-| 5 | Smelter II R2 · **Capstone choice**: *Masterwork* (2% crafts come out with two enchantments) or *Endless Workshop* (10% any craft uses no ingredients) |
-
-### Attack (sword)
-| Tier | Nodes |
-|---|---|
-| 1 | Sharpened R3: +0.5 attack damage · Blade Care R3: 5% save weapon durability · Footwork R2: +3% speed in combat |
-| 2 | Crit Training R3: +10% crit damage · Lifeline R2: heal 0.5 heart on crits · Momentum R2: consecutive hits +5% damage (stacks to 3) |
-| 3 choice | **Heavy Arms**: two-handed weapons +10% damage R3 · **Duelist**: daggers/rapiers/swords +8% attack speed R3 |
-| 4 | Sharpened II R3 · Spearman R3: spears/pikes/lances +reach · Axe Master R2: axes disable shields longer · Executioner R2: +15% damage to mobs below 30% HP |
-| 5 | Crit Training II R3 · **Capstone choice**: *Cleave* (two-handed hits splash 30% to nearby mobs) or *Flurry* (every 5th fast hit strikes twice) |
-
-### Range (bow)
-| Tier | Nodes |
-|---|---|
-| 1 | Steady Hands R3: +8% draw speed · Sharp Tips R3: +6% projectile damage · Quiver Care R2: 8% save ammo |
-| 2 | Eagle Eye R3: +10% projectile velocity/range (needs Steady Hands 3) · Thrower R3: thrown weapons +8% damage · Long Shot R2: +XP and damage beyond 20 blocks |
-| 3 choice | **Rapid Volley**: draw speed +15% R3 · **Heavy Draw**: damage +12% R3 |
-| 4 | Quiver Care II R3 · Homing Arrows R3: 5% chance to home · Crossbowman R2: crossbows reload faster · Retriever R2: thrown weapons return chance |
-| 5 | Eagle Eye II R2 · **Capstone choice**: *Fletcher's Luck* (30% save ammo and arrows sometimes drop back on hit) or *Seeker* (homing chance ×3 and headshot-style crits) |
-
-### Defense (shield)
-| Tier | Nodes |
-|---|---|
-| 1 | Toughened R3: +1 armour · Shield Wall R3: −15% knockback while blocking, shield durability lasts 10% longer · Armour Care R2: 5% save armour durability |
-| 2 | Iron Skin R3: +0.5 armour toughness · Shield Thorns R2: 8% reflect 30% of blocked damage · Vitality R2: +2 max health |
-| 3 choice | **Bulwark**: shields block arrows from wider angles + knockback resistance R3 · **Brawler**: +1 armour while wearing no shield, regen after taking hits R3 |
-| 4 | Vitality II R3 · Fire Ward R2: −15% fire damage · Blast Ward R2: −15% explosion damage · Toughened II R3 |
-| 5 | Shield Thorns II R2 · **Capstone choice**: *Second Wind* (survive a killing blow, 5 min cooldown) or *Unbreakable* (armour durability loss −50%) |
-
-### Agility (feather)
-| Tier | Nodes |
-|---|---|
-| 1 | Light Feet R3: −8% stamina drain (ParCool) · Soft Landing R3: −10% fall damage · Runner R2: +3% sprint speed |
-| 2 | Glider R3: −10% Paragliders stamina drain · Swimmer R2: swim speed · Climber R2: faster ParCool climbing/wall-run |
-| 3 choice | **Freerunner**: ParCool moves cost 20% less stamina R3 · **Sky Rider**: glider speed and stamina R3 |
-| 4 | Soft Landing II R3 · Second Breath R2: stamina regenerates faster · Roll Master R2: rolls/dodges negate more damage · Light Feet II R3 |
-| 5 | Runner II R2 · **Capstone choice**: *Featherfall* (no fall damage under 15 blocks) or *Tireless* (stamina drain −40% total) |
-
-### Magic (spellbook)
-| Tier | Nodes |
-|---|---|
-| 1 | Mana Pool R3: +15 max mana (both mods) · Focus R3: +5% spell power · Flow R2: +8% mana regen |
-| 2 | Mana Saver R3: 4% spell costs no mana · Quick Casting R3: −5% cooldowns · Scroll Saver R2: 10% Iron's scroll not used |
-| 3 choice | **Battlemage** (Iron's lean): +10% spell power R3 · **Artificer** (Ars lean): Ars glyph crafting/source costs −10% and familiar/summon strength R3 |
-| 4 | Mana Pool II R3 · Flow II R3 · Mana Saver II R3 · Spell Shield: brief resistance after casting |
-| 5 | Focus II R2 · **Capstone choice**: *Archmage* (12% spells cost no mana, −15% cooldowns) or *Wellspring* (mana regen doubled while not in combat) |
-
-### Taming (lead)
-| Tier | Nodes |
-|---|---|
-| 1 | Gentle Hand R3: +taming success on hard tames · Treat Saver R3: 10% taming/feeding food not used · Caretaker R2: feeding heals pets more |
-| 2 | Pet Scavenging R3: pets sometimes drop found resources · Bonded R2: pets +15% health · Quick Tame R2: tames need fewer attempts |
-| 3 choice | **Beastmaster** (combat pets): pets +15% damage R3 · **Shepherd** (companions): pet scavenging tier up + twins when breeding pets R3 |
-| 4 | Pack Tactics R3: pets +damage on your target · Bonded II R3: armour + regen · Revive Pets R3: Pet Mementos (cost falls per rank) · Swift Paws R2: pet speed |
-| 5 | Gentle Hand II R2 · **Capstone choice**: *Alpha* (pets gain +30% all stats and a chance to stun on hit) or *Kindred Spirit* (free revives and pets scavenge rare loot) |
+- Fewer flat "+% to this skill" nodes; each tree has 3-9 **cross-skill** nodes (marked "feeds <skill>"), e.g.
+  Woodcutting's Axe Mastery and Splitting Blow feed Attack, Defense's Warded Mind and Battlemage Plate feed
+  Magic, Cooking's Well Fed (damage at full hunger), Farming's scythe line (Reaper, Grim Harvest, Reaper's Due),
+  Agility's jump height, quicker casting, light and thrown weapons.
+- Taming leans on breeding: Selective Breeding (babies take the better parent's stats), Breeder (twins, faster
+  growth), Bloodlines (rare variants), Husbandry (more drops from domesticated animals), Prized Stock capstone
+  (stats above the normal max). Only one node (Gentle Hand) is about tame speed/odds.
+- Magic gets **Mana Shield**: with no shield equipped, blocking raises a mana barrier that works like a shield
+  and spends mana per hit; Arcane Aegis makes it reflect damage.
+- Heartwood (rare log drop) was cut.
+- Totals: 43-46 points to fill a tree (choices counted once).
 
 ## Skills that look thin (for discussion)
 
@@ -249,6 +152,14 @@ Values are starting points for the preview; every number is a config value.
   a candidate 13th tree (discover structures, travel distance; perks: loot luck, waystone discounts, map
   reveal, boat/airship speed).
 - **Mining tier 2** "Night Eyes" and "Hard Hat" are filler-ish; worth better ideas during the preview.
+
+## Pet revival (standalone, not a perk)
+
+Everyone has it, skills or not. A tamed animal or owned companion that dies leaves a **Pet Memento** item at
+its death spot (also sent to the owner if they're far away) holding the whole pet: name, collar enchantments,
+armour, saddle, stats and variant. Using the Memento brings the pet back after a base cost (an item such as a
+golden apple or a Pet Memento-specific recipe, plus a short wait). Taming's Soul Mender cuts the cost 25% per
+rank. Lives in the FOTF Skills add-on but works without Pufferfish's Skills. Exact cost decided in the preview.
 
 ## Phases
 

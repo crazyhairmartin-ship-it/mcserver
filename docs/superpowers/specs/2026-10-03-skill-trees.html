@@ -1,0 +1,303 @@
+<title>FOTF Skill Trees</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&family=Alegreya+Sans:wght@400;500;700&family=Spline+Sans+Mono:wght@500&display=swap">
+<style>
+/* Layout: a tab rail of 12 skills, then one tree drawn as five tier bands top to bottom, with a points sandbox bar. */
+:root {
+  --bg: #eef1ea;
+  --panel: #fbfcf8;
+  --ink: #1f2a22;
+  --muted: #5b6a5e;
+  --line: #c9d3c6;
+  --moss: #3f6b47;
+  --moss-soft: #dbe8d8;
+  --brass: #a8761c;
+  --brass-soft: #f3e6c7;
+  --lock: #9aa59b;
+  --choice: #7a4f9a;
+  --choice-soft: #ece2f3;
+  --display: "IM Fell English SC", Georgia, serif;
+  --body: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "Spline Sans Mono", ui-monospace, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141a16; --panel: #1c241e; --ink: #e4ebe3; --muted: #9aab9d; --line: #2f3c33;
+    --moss: #7fbf88; --moss-soft: #22382a; --brass: #e0ad4f; --brass-soft: #3a2f17;
+    --lock: #56625a; --choice: #c39be0; --choice-soft: #2f2438; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141a16; --panel: #1c241e; --ink: #e4ebe3; --muted: #9aab9d; --line: #2f3c33;
+  --moss: #7fbf88; --moss-soft: #22382a; --brass: #e0ad4f; --brass-soft: #3a2f17;
+  --lock: #56625a; --choice: #c39be0; --choice-soft: #2f2438; color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.45; }
+.wrap { max-width: 1100px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 48px; display: grid; gap: 18px; }
+header h1 { font-family: var(--display); font-weight: 400; font-size: clamp(28px, 5vw, 40px); margin: 0; letter-spacing: .01em; text-wrap: balance; }
+header p { margin: 4px 0 0; color: var(--muted); max-width: 68ch; }
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; }
+.tab { font: 500 14px var(--body); border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 999px; padding: 6px 12px; cursor: pointer; }
+.tab[aria-selected="true"] { background: var(--moss); border-color: var(--moss); color: var(--panel); }
+.tab:focus-visible, .node:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--brass); outline-offset: 2px; }
+.bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; position: sticky; top: env(safe-area-inset-top, 0px); z-index: 2; }
+.bar .tree-name { font-family: var(--display); font-size: 24px; }
+.bar .meta { color: var(--muted); }
+.stat { font-family: var(--mono); font-variant-numeric: tabular-nums; font-size: 13px; }
+.stat b { color: var(--brass); font-weight: 500; }
+.bar label { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+.bar input[type=range] { width: 140px; accent-color: var(--moss); }
+.bar button { font: 500 13px var(--body); border: 1px solid var(--line); background: transparent; color: var(--ink); border-radius: 6px; padding: 5px 10px; cursor: pointer; margin-left: auto; }
+.tier { display: grid; grid-template-columns: 112px 1fr; gap: 12px; align-items: start; }
+.tier-label { padding-top: 6px; }
+.tier-label .t { font-family: var(--display); font-size: 20px; line-height: 1; }
+.tier-label .req { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.tier-label .kind { display: inline-block; margin-top: 6px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--moss); }
+.tier.locked .tier-label .t { color: var(--lock); }
+.nodes { display: flex; flex-wrap: wrap; gap: 10px; min-width: 0; }
+.branch { display: flex; flex-wrap: wrap; gap: 10px; padding: 8px; border: 1px dashed var(--choice); border-radius: 12px; background: var(--choice-soft); position: relative; }
+.branch .bname { position: absolute; top: -9px; left: 10px; background: var(--bg); color: var(--choice); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 0 6px; }
+.or { align-self: center; font-family: var(--display); color: var(--choice); font-size: 18px; }
+.node { width: 200px; text-align: left; background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; color: var(--ink); font: inherit; cursor: pointer; display: grid; gap: 4px; }
+.node .name { font-weight: 700; font-size: 15px; }
+.node .desc { color: var(--muted); font-size: 13px; }
+.node .needs { font-size: 12px; color: var(--brass); }
+.node .syn { justify-self: start; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--choice); border: 1px solid var(--choice); border-radius: 999px; padding: 0 7px; }
+.node.cross { border-left: 3px solid var(--choice); }
+.node .pips { display: flex; gap: 4px; }
+.pip { width: 14px; height: 6px; border-radius: 3px; background: var(--line); }
+.pip.on { background: var(--moss); }
+.node.full { border-color: var(--moss); background: var(--moss-soft); }
+.node.cap { border-color: var(--brass); }
+.node.cap .name::after { content: "  capstone"; font: 500 10px var(--body); letter-spacing: .08em; text-transform: uppercase; color: var(--brass); }
+.node.cap.full { background: var(--brass-soft); }
+.node:disabled { cursor: not-allowed; opacity: .5; }
+.node.excluded { opacity: .35; text-decoration: line-through; text-decoration-color: var(--choice); }
+.legend { display: flex; flex-wrap: wrap; gap: 8px 18px; color: var(--muted); font-size: 13px; }
+.legend span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 6px; vertical-align: -1px; background: var(--k); }
+.xp { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 10px 14px; color: var(--muted); }
+.xp b { color: var(--ink); }
+@media (max-width: 640px) {
+  .tier { grid-template-columns: 1fr; gap: 6px; }
+  .node { width: 100%; }
+  .branch { width: 100%; }
+  .bar button { margin-left: 0; }
+}
+@media (prefers-reduced-motion: no-preference) { .node { transition: background .15s, border-color .15s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>FOTF Skill Trees</h1>
+    <p>Draft talent trees for the Friends of the Forest skills system. Click a node to spend a point; tiers open as you spend more in that tree, and purple boxes are pick-one choices. Purple-edged nodes feed another skill. Pet revival is a separate feature everyone has; Taming's Soul Mender makes it cheaper. Every number is a starting value for the in-game preview.</p>
+  </header>
+  <nav class="tabs" role="tablist" id="tabs"></nav>
+  <div class="bar">
+    <span class="tree-name" id="treeName"></span>
+    <span class="stat">Spent <b id="spent">0</b> / <span id="budgetOut">50</span></span>
+    <label for="budget">Skill level <input id="budget" type="range" min="0" max="50" value="50"></label>
+    <span class="stat">Tree total <span id="total"></span> · deepest path <span id="pathCost"></span></span>
+    <button id="reset" type="button">Reset tree</button>
+  </div>
+  <div class="xp" id="xp"></div>
+  <div class="legend">
+    <span style="--k: var(--moss)">Rank taken</span>
+    <span style="--k: var(--choice)">Pick-one choice, or &#8596; feeds another skill</span>
+    <span style="--k: var(--brass)">Capstone / prerequisite</span>
+  </div>
+  <main id="tree" style="display:grid; gap:18px"></main>
+</div>
+
+<script>
+const TIERS = [
+  { n: 1, req: 0, kind: "Open" },
+  { n: 2, req: 5, kind: "Open" },
+  { n: 3, req: 10, kind: "Choice" },
+  { n: 4, req: 15, kind: "Open" },
+  { n: 5, req: 25, kind: "Open + capstone choice" },
+];
+// node: [tier, name, ranks, description, extra]; extra: {b:"A"|"B"} choice branch, {cap:1} capstone (tier 5 choice), {needs:"Name", nr: ranks}
+const N = (t, name, r, d, x = {}) => ({ t, name, r, d, ...x });
+// node: N(tier, name, ranks, description, extra); extra: b "A"|"B" choice branch, cap 1 capstone, needs "Name", syn "Skill" (feeds another skill)
+const TREES = [
+ { id: "mining", name: "Mining", xp: "Mining natural stone, ores and deepslate (rarer ores give more).", nodes: [
+  N(1,"Stone Sense",5,"+4% mining speed per rank"), N(1,"Steady Pick",3,"5% per rank to save pickaxe durability"), N(1,"Miner's Might",5,"+0.3 damage with pickaxes, hammers and maces per rank",{syn:"Attack"}),
+  N(2,"Prospector",5,"3% extra ore drops per rank"), N(2,"Stonehide",3,"Mining grants +1 armour for 30 s per rank",{syn:"Defense"}), N(2,"Deep Delver",2,"+5% damage below Y 40 per rank",{syn:"Attack"}),
+  N(3,"Smelter",3,"Ores auto-smelt: 15%, +10% per extra rank",{b:"A"}), N(3,"Gem Focus",3,"Each gem type you carry gives +2% spell power per rank",{b:"B",syn:"Magic"}),
+  N(4,"Prospector II",5,"+3% extra ore drops per rank",{needs:"Prospector"}), N(4,"Crusher",3,"Hammer and mace hits strip 1 armour from the target per rank",{syn:"Attack"}), N(4,"Bedrock Grip",5,"+6% speed on deepslate per rank"), N(4,"Ore Nose",1,"Plain stone sometimes drops raw nuggets"),
+  N(5,"Tunnel Vision",3,"Ultimine uses 15% less hunger per rank"),
+  N(5,"Motherlode",3,"2% chance an ore drops triple",{cap:1,b:"A"}), N(5,"Earthshaker",3,"Hammer crits stun nearby mobs",{cap:1,b:"B",syn:"Attack"}) ]},
+ { id: "wood", name: "Woodcutting", xp: "Chopping natural logs, including modded trees.", nodes: [
+  N(1,"Lumberjack",5,"+4% chopping speed per rank"), N(1,"Axe Mastery",5,"+0.3 damage with axes per rank",{syn:"Attack"}), N(1,"Sapling Sense",3,"+10% sapling and apple drops per rank"),
+  N(2,"Timber",5,"3% extra logs per rank"), N(2,"Fletcher",3,"Crafting arrows: 10% per rank for extra arrows",{syn:"Range"}), N(2,"Forest Stride",2,"+5% move speed in forests per rank",{syn:"Agility"}),
+  N(3,"Splitting Blow",3,"Axe hits ignore 10% of armour per rank",{b:"A",syn:"Attack"}), N(3,"Woodworker",3,"8% per rank to save wood when crafting wooden items",{b:"B",syn:"Crafting"}),
+  N(4,"Timber II",5,"+3% extra logs per rank",{needs:"Timber"}), N(4,"Bark Skin",3,"+0.5 armour toughness in forests per rank",{syn:"Defense"}), N(4,"Druid's Grove",3,"Spells cost 5% less mana in forests per rank",{syn:"Magic"}), N(4,"Leaf Cutter",2,"Leaves drop extra sticks, seeds and apples"),
+  N(5,"Throwing Axes",3,"Thrown axes and tomahawks +10% damage per rank",{syn:"Range"}),
+  N(5,"Whole Tree",3,"5% chance the whole tree drops at once",{cap:1,b:"A"}), N(5,"Berserker's Axe",3,"Axe kills give 4 s of Strength",{cap:1,b:"B",syn:"Attack"}) ]},
+ { id: "farm", name: "Farming", xp: "Harvesting fully grown crops; breeding farm animals.", nodes: [
+  N(1,"Harvester",5,"3% extra crops per rank"), N(1,"Seed Saver",3,"8% per rank to get the seed back"), N(1,"Reaper",5,"+0.3 damage and a wider sweep with scythes and sickles per rank",{syn:"Attack"}),
+  N(2,"Green Thumb",3,"6% per rank that crops you plant start a stage later"), N(2,"Fertile Soil",3,"Crops near you grow 8% faster per rank"), N(2,"Harvest Feast",3,"Food made from crops you grew restores 10% more per rank",{syn:"Cooking"}),
+  N(3,"Gardener",3,"Green Thumb chance x2 and more extra crops",{b:"A"}), N(3,"Grim Harvest",3,"Scythe kills heal you half a heart per rank",{b:"B",syn:"Attack"}),
+  N(4,"Harvester II",5,"+3% extra crops per rank",{needs:"Harvester"}), N(4,"Earthbound",3,"Standing on grass or farmland slowly regenerates health",{syn:"Defense"}), N(4,"Sweeping Harvest",2,"Scythes harvest mature crops in a 3x3, then 5x5"), N(4,"Bountiful Bees",2,"Bonus honey and honeycomb"), N(4,"Compost King",1,"Composters fill faster"),
+  N(5,"Fertile Soil II",3,"Crops near you grow faster still",{needs:"Fertile Soil"}),
+  N(5,"Harvest Moon",3,"5% chance a harvest drops double everything",{cap:1,b:"A"}), N(5,"Reaper's Due",3,"Scythe sweeps hit every mob in a wide arc at full damage",{cap:1,b:"B",syn:"Attack"}) ]},
+ { id: "fish", name: "Fishing", xp: "Any catch, Aquaculture included.", nodes: [
+  N(1,"Patient Angler",5,"-5% bite time per rank"), N(1,"Lucky Line",3,"Better treasure odds per rank"), N(1,"Trident Master",5,"+0.3 damage with tridents and spears per rank",{syn:"Attack"}),
+  N(2,"Double Catch",3,"4% per rank to catch two"), N(2,"Bait Saver",3,"15% per rank that Aquaculture bait isn't used"), N(2,"Tidecaller",3,"+4% spell power in water or rain per rank",{syn:"Magic"}),
+  N(3,"Treasure Hunter",3,"Treasure odds x2 and a rarer loot table",{b:"A"}), N(3,"Riptide Runner",3,"Faster swimming and boats, longer breath",{b:"B",syn:"Agility"}),
+  N(4,"Patient Angler II",5,"Faster bites still",{needs:"Patient Angler"}), N(4,"Hook Shot",2,"Your rod yanks mobs harder and deals 2 damage",{syn:"Attack"}), N(4,"Sushi Chef",3,"Fish dishes you cook give Water Breathing and extra saturation",{syn:"Cooking"}), N(4,"Lure Master",3,"Aquaculture lures work better"),
+  N(5,"Storm Fisher",2,"Faster bites in rain"), N(5,"Sea Legs",2,"Boats go 5% faster per rank"),
+  N(5,"Leviathan Bait",3,"Rare chance of a unique trophy fish",{cap:1,b:"A"}), N(5,"Sea's Blessing",3,"Dolphin's Grace and Conduit Power while swimming",{cap:1,b:"B",syn:"Agility"}) ]},
+ { id: "cook", name: "Cooking", xp: "Finished meals: Farmer's Delight pots, Let's Do recipes, smoker and furnace food.", nodes: [
+  N(1,"Thrifty Cook",5,"3% per rank to save an ingredient"), N(1,"Quick Hands",5,"Cooking stations 5% faster per rank"), N(1,"Well Fed",5,"+2% damage per rank while your hunger is full",{syn:"Attack"}),
+  N(2,"Extra Serving",3,"5% per rank for one extra meal"), N(2,"Hearty Meals",3,"+10% saturation per rank"), N(2,"Brain Food",3,"Eating a meal restores 5 mana per rank",{syn:"Magic"}),
+  N(3,"Chef",3,"Meal buffs last 50% longer",{b:"A"}), N(3,"Iron Stomach",3,"+2 max health per rank while saturation is above half",{b:"B",syn:"Defense"}),
+  N(4,"Thrifty Cook II",5,"+3% ingredient saving per rank",{needs:"Thrifty Cook"}), N(4,"Trail Rations",3,"Sprinting and ParCool moves drain 10% less hunger per rank",{syn:"Agility"}), N(4,"Brewer",3,"Let's Do drinks save ingredients and their buffs last longer"), N(4,"Pet Treats",2,"Food you cook heals pets more and gives them a short buff",{syn:"Taming"}),
+  N(5,"Picnic",2,"Eating near party members heals them a little"),
+  N(5,"Feast Maker",3,"Feasts and pies give extra slices",{cap:1,b:"A"}), N(5,"Warrior's Feast",3,"Well Fed is doubled and also boosts spells",{cap:1,b:"B",syn:"Attack"}) ]},
+ { id: "craft", name: "Crafting", xp: "Crafting tools, armour, weapons and gear; smithing upgrades; smelting ingots.", nodes: [
+  N(1,"Frugal",5,"3% per rank to save an ingredient"), N(1,"Smith",5,"Crafted gear +5% durability per rank"), N(1,"Whetstone",5,"Weapons you craft or repair get +0.2 damage per rank",{syn:"Attack"}),
+  N(2,"Enchanted Crafts",3,"3% per rank: a random low enchantment on crafted gear"), N(2,"Book Saver",1,"Enchanted items about to break become enchanted books"), N(2,"Repair Kit",2,"Anvil repairs cost less XP"), N(2,"Spellwright",3,"8% per rank to save ingredients on scrolls and Ars items",{syn:"Magic"}),
+  N(3,"Weaponsmith",3,"Crafted weapons 10% chance of +1 damage",{b:"A",syn:"Attack"}), N(3,"Armourer",3,"Crafted armour 10% chance of +1 toughness",{b:"B",syn:"Defense"}),
+  N(4,"Frugal II",5,"+3% ingredient saving per rank",{needs:"Frugal"}), N(4,"Enchanted Crafts II",3,"Better enchantment levels",{needs:"Enchanted Crafts"}), N(4,"Salvager",2,"Grindstones return some materials"), N(4,"Saddler",2,"Saddles and horse armour you craft give mounts +5% speed and armour",{syn:"Taming"}),
+  N(5,"Smelter",3,"Furnaces you use run 10% faster per rank"),
+  N(5,"Masterwork",3,"2% of crafts get two enchantments",{cap:1,b:"A"}), N(5,"Endless Workshop",3,"10% of crafts use no ingredients",{cap:1,b:"B"}) ]},
+ { id: "attack", name: "Attack", xp: "Landed melee hits, by damage dealt.", nodes: [
+  N(1,"Sharpened",5,"+0.3 attack damage per rank"), N(1,"Footwork",5,"+2% move speed in combat per rank"), N(1,"Butcher",3,"Animal kills drop 10% more meat and leather per rank",{syn:"Cooking"}),
+  N(2,"Crit Training",5,"+5% crit damage per rank"), N(2,"Spellblade",3,"Melee hits restore 1 mana per rank",{syn:"Magic"}), N(2,"Momentum",2,"Hits in a row +5% damage (stacks 3)"),
+  N(3,"Heavy Arms",3,"Two-handed weapons +10% damage per rank",{b:"A"}), N(3,"Duelist",3,"Daggers, rapiers and swords +8% attack speed per rank",{b:"B"}),
+  N(4,"Sharpened II",5,"+0.3 attack damage per rank",{needs:"Sharpened"}), N(4,"Hunter's Mark",3,"Melee hits mark a target: your arrows deal +5% to it per rank",{syn:"Range"}), N(4,"Shield Bash",3,"Hitting right after a block deals +20% damage per rank",{syn:"Defense"}), N(4,"Executioner",2,"+15% damage to mobs under 30% health"),
+  N(5,"Lifeline",2,"Crits heal half a heart"),
+  N(5,"Cleave",3,"Two-handed hits splash 30% to nearby mobs",{cap:1,b:"A"}), N(5,"Flurry",3,"Every 5th fast hit strikes twice",{cap:1,b:"B"}) ]},
+ { id: "range", name: "Range", xp: "Landed projectile hits, thrown weapons too; more at long range.", nodes: [
+  N(1,"Steady Hands",5,"+5% draw speed per rank"), N(1,"Sharp Tips",5,"+4% projectile damage per rank"), N(1,"Quiver Care",3,"8% per rank to save ammo"),
+  N(2,"Eagle Eye",3,"+10% projectile speed and range per rank",{needs:"Steady Hands"}), N(2,"Thrower",3,"Thrown weapons +8% damage per rank"), N(2,"Skirmisher",3,"After a shot, +10% move speed for 2 s per rank",{syn:"Agility"}),
+  N(3,"Rapid Volley",3,"Draw speed +15% per rank",{b:"A"}), N(3,"Heavy Draw",3,"Damage +12% per rank",{b:"B"}),
+  N(4,"Homing Arrows",3,"5% per rank: arrows curve to the nearest hostile mob"), N(4,"Falconer",3,"Your pets attack what you shoot, +5% pet damage per rank",{syn:"Taming"}), N(4,"Arcane Arrows",3,"Full-draw shots spend 5 mana for +15% magic damage per rank",{syn:"Magic"}), N(4,"Crossbowman",2,"Crossbows reload faster"), N(4,"Retriever",2,"Thrown weapons may return to you"),
+  N(5,"Quiver Care II",3,"More ammo saving",{needs:"Quiver Care"}),
+  N(5,"Fletcher's Luck",3,"30% save ammo; arrows sometimes drop back on hit",{cap:1,b:"A"}), N(5,"Seeker",3,"Homing chance x3 and precision crits",{cap:1,b:"B"}) ]},
+ { id: "defense", name: "Defense", xp: "Hits taken from mobs, plus hits blocked with a shield.", nodes: [
+  N(1,"Toughened",5,"+0.5 armour per rank"), N(1,"Shield Wall",3,"-15% knockback while blocking; shields last longer"), N(1,"Vitality",5,"+1 max health per rank"),
+  N(2,"Iron Skin",3,"+0.5 armour toughness per rank"), N(2,"Shield Thorns",3,"8% per rank to reflect 30% of a blocked hit"), N(2,"Warded Mind",3,"Each armour piece gives +1% spell power per rank",{syn:"Magic"}),
+  N(3,"Bulwark",3,"Shields cover a wider angle; knockback resistance",{b:"A"}), N(3,"Battlemage Plate",3,"Taking hits restores 2 mana per rank",{b:"B",syn:"Magic"}),
+  N(4,"Vitality II",5,"+1 max health per rank",{needs:"Vitality"}), N(4,"Guardian",3,"Pets near you take 10% less damage per rank",{syn:"Taming"}), N(4,"Counter",2,"A blocked hit makes your next melee hit +15%",{syn:"Attack"}), N(4,"Fire Ward",2,"-15% fire damage per rank"), N(4,"Blast Ward",2,"-15% explosion damage per rank"),
+  N(5,"Armour Care",2,"5% per rank to save armour durability"),
+  N(5,"Second Wind",3,"Survive a killing blow (5 min cooldown)",{cap:1,b:"A"}), N(5,"Unbreakable",3,"Armour loses durability 50% slower",{cap:1,b:"B"}) ]},
+ { id: "agility", name: "Agility", xp: "ParCool moves (wall-run, climb, roll, vault, dodge), sprinting and gliding.", nodes: [
+  N(1,"Light Feet",5,"-5% ParCool stamina drain per rank"), N(1,"Spring Step",3,"Jump higher per rank"), N(1,"Soft Landing",5,"-6% fall damage per rank"),
+  N(2,"Glider",3,"-10% Paragliders stamina drain per rank"), N(2,"Quick Casting",3,"-5% spell cast time per rank",{syn:"Magic"}), N(2,"Light Weapons",3,"Daggers, rapiers and short blades +4% attack speed per rank",{syn:"Attack"}),
+  N(3,"Freerunner",3,"ParCool moves cost 20% less stamina",{b:"A"}), N(3,"Sky Rider",3,"Faster gliding with less stamina",{b:"B"}),
+  N(4,"Throwing Arm",3,"Thrown weapons fly 8% faster and hit 8% harder per rank",{syn:"Range"}), N(4,"Rider",3,"Mounts you ride run 4% faster and jump higher per rank",{syn:"Taming"}), N(4,"Second Breath",3,"Stamina regenerates faster"), N(4,"Roll Master",2,"Rolls and dodges negate more damage"), N(4,"Swimmer",2,"Swim faster"),
+  N(5,"Runner",2,"+3% sprint speed per rank"),
+  N(5,"Featherfall",3,"No fall damage under 15 blocks",{cap:1,b:"A"}), N(5,"Tireless",3,"Stamina drain -40% total",{cap:1,b:"B"}) ]},
+ { id: "magic", name: "Magic", xp: "Casting spells in Ars Nouveau or Iron's Spells, by mana spent.", nodes: [
+  N(1,"Mana Pool",5,"+10 max mana per rank (both mods)"), N(1,"Focus",5,"+3% spell power per rank"), N(1,"Flow",5,"+5% mana regen per rank"),
+  N(2,"Mana Saver",3,"4% per rank: a spell costs no mana"), N(2,"Mana Shield",3,"Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)"), N(2,"Scroll Saver",2,"10% per rank: an Iron's scroll isn't used"),
+  N(3,"Battlemage",3,"Iron's lean: +10% spell power per rank",{b:"A"}), N(3,"Artificer",3,"Ars lean: cheaper glyph crafting, stronger summons",{b:"B"}),
+  N(4,"Mana Pool II",5,"+10 max mana per rank",{needs:"Mana Pool"}), N(4,"Spellbound Steel",3,"After a cast, your next melee hit deals +10% magic damage per rank",{syn:"Attack"}), N(4,"Nature's Mend",3,"Your healing spells also heal nearby pets",{syn:"Taming"}), N(4,"Cooldown Flow",2,"-5% spell cooldowns per rank"),
+  N(5,"Arcane Aegis",2,"Mana Shield reflects 10% of blocked damage as magic per rank",{needs:"Mana Shield",syn:"Defense"}),
+  N(5,"Archmage",3,"12% free spells, -15% cooldowns",{cap:1,b:"A"}), N(5,"Wellspring",3,"Mana regen doubled out of combat",{cap:1,b:"B"}) ]},
+ { id: "taming", name: "Taming", xp: "Taming (rare animals give more), breeding, feeding and healing pets, and your pets landing hits.", nodes: [
+  N(1,"Gentle Hand",3,"Better odds and fewer attempts on hard tames"), N(1,"Treat Saver",3,"10% per rank: taming or feeding food isn't used"), N(1,"Husbandry",5,"Domesticated animals give 4% more wool, milk, eggs, meat and leather per rank",{syn:"Farming"}),
+  N(2,"Selective Breeding",5,"Babies take the better parent's stats, with a 2% per rank chance of a bonus"), N(2,"Bonded",3,"Pets +5% health per rank"), N(2,"Pet Scavenging",3,"Pets sometimes find resources and drop them for you"),
+  N(3,"Beastmaster",3,"Combat pets: +15% damage per rank",{b:"A"}), N(3,"Breeder",3,"6% per rank for twins; babies grow up faster",{b:"B"}),
+  N(4,"Pack Tactics",3,"Pets deal more damage to your target"), N(4,"Bloodlines",3,"Bred animals have a better chance of rare colours and variants"), N(4,"Soul Mender",3,"Reviving a fallen pet costs 25% less per rank"), N(4,"Mount Training",3,"Mounts get +4% speed, jump and health per rank",{syn:"Agility"}), N(4,"Bonded II",3,"Pets gain armour and regen",{needs:"Bonded"}),
+  N(5,"Caretaker",2,"Feeding heals pets more"),
+  N(5,"Alpha",3,"Pets +30% all stats and a chance to stun on hit",{cap:1,b:"A"}), N(5,"Prized Stock",3,"Bred animals can roll stats above the normal maximum",{cap:1,b:"B"}) ]},
+];
+const BRANCH_NAMES = { 3: { A: "Branch A", B: "Branch B" }, 5: { A: "Capstone A", B: "Capstone B" } };
+
+const state = {}; // treeId -> {nodeName: rank}
+let current = TREES[0].id;
+try { const saved = JSON.parse(localStorage.getItem("fotf-trees") || "null"); if (saved) Object.assign(state, saved.state || {}); if (saved && saved.current) current = saved.current; } catch (e) {}
+const save = () => { try { localStorage.setItem("fotf-trees", JSON.stringify({ state, current })); } catch (e) {} };
+const $ = (id) => document.getElementById(id);
+const tree = () => TREES.find(t => t.id === current);
+const ranks = () => (state[current] ||= {});
+const spentIn = (s) => Object.values(s).reduce((a, b) => a + b, 0);
+const budget = () => +$("budget").value;
+
+function excluded(n, s, t) {
+  if (!n.b) return false;
+  return t.nodes.some(o => o.t === n.t && o.b && o.b !== n.b && (s[o.name] || 0) > 0);
+}
+function canAdd(n, s, t) {
+  const r = s[n.name] || 0;
+  if (r >= n.r) return false;
+  if (spentIn(s) >= budget()) return false;
+  if (spentIn(s) < TIERS[n.t - 1].req) return false;
+  if (excluded(n, s, t)) return false;
+  if (n.needs) { const p = t.nodes.find(o => o.name === n.needs); if ((s[n.needs] || 0) < p.r) return false; }
+  return true;
+}
+function pathCost(t) {
+  // total cost if you take every open node and one branch per choice tier (the largest)
+  let total = 0;
+  for (const tier of TIERS) {
+    const ns = t.nodes.filter(n => n.t === tier.n);
+    total += ns.filter(n => !n.b).reduce((a, n) => a + n.r, 0);
+    const a = ns.filter(n => n.b === "A").reduce((x, n) => x + n.r, 0), b = ns.filter(n => n.b === "B").reduce((x, n) => x + n.r, 0);
+    total += Math.max(a, b);
+  }
+  return total;
+}
+function nodeEl(n, s, t) {
+  const r = s[n.name] || 0, ex = excluded(n, s, t), ok = canAdd(n, s, t);
+  const b = document.createElement("button");
+  b.type = "button";
+  b.className = "node" + (n.syn ? " cross" : "") + (r >= n.r ? " full" : "") + (n.cap ? " cap" : "") + (ex ? " excluded" : "");
+  b.disabled = !ok && r < n.r;
+  b.setAttribute("aria-label", `${n.name}, rank ${r} of ${n.r}. ${n.d}`);
+  b.innerHTML = `<span class="name"></span><span class="desc"></span>${n.needs ? '<span class="needs"></span>' : ""}${n.syn ? '<span class="syn"></span>' : ""}<span class="pips">${Array.from({ length: n.r }, (_, i) => `<i class="pip${i < r ? " on" : ""}"></i>`).join("")}</span>`;
+  b.querySelector(".name").textContent = n.name + (n.r > 1 ? `  ${r}/${n.r}` : "");
+  b.querySelector(".desc").textContent = n.d;
+  if (n.needs) b.querySelector(".needs").textContent = `Needs ${n.needs} (all ranks)`;
+  if (n.syn) b.querySelector(".syn").textContent = `\u2194 ${n.syn}`;
+  b.addEventListener("click", () => { if (canAdd(n, s, t)) { s[n.name] = r + 1; save(); render(); } });
+  return b;
+}
+function render() {
+  const t = tree(), s = ranks();
+  document.querySelectorAll(".tab").forEach(el => el.setAttribute("aria-selected", el.dataset.id === current));
+  $("treeName").textContent = t.name;
+  $("spent").textContent = spentIn(s);
+  $("budgetOut").textContent = budget();
+  $("total").textContent = t.nodes.reduce((a, n) => a + n.r, 0);
+  $("pathCost").textContent = pathCost(t);
+  $("xp").innerHTML = "<b>Earns XP from:</b> ";
+  $("xp").append(t.xp);
+  const main = $("tree"); main.innerHTML = "";
+  for (const tier of TIERS) {
+    const row = document.createElement("section");
+    const locked = spentIn(s) < tier.req;
+    row.className = "tier" + (locked ? " locked" : "");
+    row.innerHTML = `<div class="tier-label"><div class="t">Tier ${tier.n}</div><div class="req">${tier.req ? tier.req + " points spent" : "Start"}</div><div class="kind">${tier.kind}</div></div><div class="nodes"></div>`;
+    const box = row.querySelector(".nodes");
+    const ns = t.nodes.filter(n => n.t === tier.n);
+    ns.filter(n => !n.b).forEach(n => box.append(nodeEl(n, s, t)));
+    const A = ns.filter(n => n.b === "A"), B = ns.filter(n => n.b === "B");
+    if (A.length) {
+      [A, B].forEach((grp, i) => {
+        if (i === 1) { const o = document.createElement("span"); o.className = "or"; o.textContent = "or"; box.append(o); }
+        const br = document.createElement("div"); br.className = "branch";
+        br.innerHTML = `<span class="bname">${BRANCH_NAMES[tier.n][i ? "B" : "A"]}</span>`;
+        grp.forEach(n => br.append(nodeEl(n, s, t)));
+        box.append(br);
+      });
+    }
+    main.append(row);
+  }
+}
+const tabs = $("tabs");
+TREES.forEach(t => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "tab"; b.role = "tab"; b.dataset.id = t.id; b.textContent = t.name;
+  b.addEventListener("click", () => { current = t.id; save(); render(); });
+  tabs.append(b);
+});
+$("budget").addEventListener("input", render);
+$("reset").addEventListener("click", () => { state[current] = {}; save(); render(); });
+if (!TREES.some(t => t.id === current)) current = TREES[0].id;
+render();
+</script>
