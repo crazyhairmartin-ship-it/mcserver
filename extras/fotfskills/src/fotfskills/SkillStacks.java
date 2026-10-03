@@ -5,6 +5,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import net.puffish.skillsmod.api.Skill;
 import net.puffish.skillsmod.client.config.skill.ClientSkillConfig;
+import net.puffish.skillsmod.client.config.skill.ClientSkillDefinitionConfig;
 import net.puffish.skillsmod.client.data.ClientCategoryData;
 
 /**
@@ -42,6 +43,20 @@ public final class SkillStacks {
             }
         }
         return total > 1 ? new int[] {owned, total} : null;
+    }
+
+    /**
+     * How a skill is drawn. Tiers the player hasn't reached (not enough points spent in this tree) are drawn
+     * locked/grey, even though Pufferfish would show their first ranks as available; a tier's numeral or OR
+     * tile (ids tier_&lt;n&gt;_label / tier_&lt;n&gt;_or) lights up as unlocked once that tier is open.
+     */
+    public static Skill.State displayState(ClientCategoryData data, ClientSkillConfig skill, Skill.State state) {
+        ClientSkillDefinitionConfig definition = data.getConfig().definitions().get(skill.definitionId());
+        boolean tierOpen = definition == null || data.getSpentPoints() >= definition.requiredSpentPoints();
+        if (skill.id().startsWith("tier_")) {
+            return tierOpen ? Skill.State.UNLOCKED : Skill.State.LOCKED;
+        }
+        return tierOpen || state == Skill.State.UNLOCKED ? state : Skill.State.LOCKED;
     }
 
     /** Whether this skill is the one rank of its stack that gets drawn and clicked. */

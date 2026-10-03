@@ -3,9 +3,9 @@
     "title": "Tier 1 \u00b7 Start",
     "description": "Open from the start.",
     "icon": {
-      "type": "item",
+      "type": "texture",
       "data": {
-        "item": "minecraft:oak_sign"
+        "texture": "fotfskills:textures/gui/skills/tier_1.png"
       }
     },
     "frame": {
@@ -290,9 +290,9 @@
     "title": "Tier 2 \u00b7 5 points",
     "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
-      "type": "item",
+      "type": "texture",
       "data": {
-        "item": "minecraft:oak_sign"
+        "texture": "fotfskills:textures/gui/skills/tier_2.png"
       }
     },
     "frame": {
@@ -505,9 +505,9 @@
     "title": "Tier 3 \u00b7 10 points",
     "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
-      "type": "item",
+      "type": "texture",
       "data": {
-        "item": "minecraft:oak_sign"
+        "texture": "fotfskills:textures/gui/skills/tier_3.png"
       }
     },
     "frame": {
@@ -576,9 +576,9 @@
     "title": "OR",
     "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
-      "type": "item",
+      "type": "texture",
       "data": {
-        "item": "minecraft:lever"
+        "texture": "fotfskills:textures/gui/skills/or.png"
       }
     },
     "frame": {
@@ -647,9 +647,9 @@
     "title": "Tier 4 \u00b7 15 points",
     "description": "Opens once you have spent 15 points in this tree.",
     "icon": {
-      "type": "item",
+      "type": "texture",
       "data": {
-        "item": "minecraft:oak_sign"
+        "texture": "fotfskills:textures/gui/skills/tier_4.png"
       }
     },
     "frame": {
@@ -898,9 +898,9 @@
     "title": "Tier 5 \u00b7 25 points",
     "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
-      "type": "item",
+      "type": "texture",
       "data": {
-        "item": "minecraft:oak_sign"
+        "texture": "fotfskills:textures/gui/skills/tier_5.png"
       }
     },
     "frame": {
@@ -969,9 +969,9 @@
     "title": "OR",
     "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
-      "type": "item",
+      "type": "texture",
       "data": {
-        "item": "minecraft:lever"
+        "texture": "fotfskills:textures/gui/skills/or.png"
       }
     },
     "frame": {

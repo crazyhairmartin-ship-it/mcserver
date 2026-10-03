@@ -5,6 +5,7 @@ import java.util.Optional;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
+import net.puffish.skillsmod.api.Skill;
 import net.puffish.skillsmod.client.config.skill.ClientSkillConfig;
 import net.puffish.skillsmod.client.config.skill.ClientSkillDefinitionConfig;
 import net.puffish.skillsmod.client.data.ClientCategoryData;
@@ -27,6 +28,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  *   window, then draws the screen translated by that offset; mouse handlers and the content scissor get the same
  *   offset so clicks, dragging, scrolling and clipping line up.
  * - Ranks: only one rank of a stacked node is drawn and clickable (SkillStacks), and every stack shows owned/total.
+ * - Tiers: nodes in tiers the player hasn't reached are drawn grey; open tiers' numeral tiles light up.
  */
 @Mixin(value = SkillsScreen.class, remap = false)
 public abstract class SkillsScreenMixin extends Screen {
@@ -115,6 +117,13 @@ public abstract class SkillsScreenMixin extends Screen {
         }
     }
 
+    /** Grey out tiers the player hasn't reached; light up open tiers' numeral tiles (SkillStacks.displayState). */
+    @Redirect(method = "lambda$drawContentWithCategory$22", remap = false,
+            at = @At(value = "INVOKE", target = "Lnet/puffish/skillsmod/client/data/ClientCategoryData;getSkillState(Lnet/puffish/skillsmod/client/config/skill/ClientSkillConfig;)Lnet/puffish/skillsmod/api/Skill$State;", remap = false))
+    private Skill.State fotfskills$tierState(ClientCategoryData data, ClientSkillConfig skill) {
+        return SkillStacks.displayState(data, skill, data.getSkillState(skill));
+    }
+
     @Inject(method = "isInsideSkill", at = @At("HEAD"), cancellable = true, remap = false)
     private void fotfskills$clickShownRankOnly(Vector2i mouse, ClientSkillConfig skill, ClientSkillDefinitionConfig definition,
                                                CallbackInfoReturnable<Boolean> cir) {
@@ -130,7 +139,7 @@ public abstract class SkillsScreenMixin extends Screen {
             at = @At(value = "INVOKE", target = "Lcom/mojang/blaze3d/vertex/PoseStack;m_85849_()V", remap = false))
     private void fotfskills$drawRankCounters(GuiGraphics graphics, double mouseX, double mouseY, ClientCategoryData data, CallbackInfo ci) {
         graphics.m_280168_().m_85836_();
-        graphics.m_280168_().m_252880_(0, 0, 400);
+        graphics.m_280168_().m_252880_(0, 0, 200);   // above item icons, below tooltips (z 400)
         for (ClientSkillConfig skill : data.getConfig().skills().values()) {
             int[] c = SkillStacks.counter(data, skill);
             if (c == null || !SkillStacks.isShown(data, skill)) {

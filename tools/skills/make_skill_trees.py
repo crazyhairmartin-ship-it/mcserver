@@ -4,7 +4,7 @@ Phase 1 (preview): nodes have no rewards (no effects). Run: python tools/skills/
 
 Layout: one tile per node. A node's ranks are separate Pufferfish skills stacked on the same tile and chained
 (rank 2 needs rank 1); the fotfmail add-on draws a stack as one tile with an "n/total" counter. Each tier row
-starts with a label tile ("Tier 3 · 10 points") and choice tiers get an "OR" tile between the two branches.
+starts with a roman-numeral tile ("Tier 3 · 10 points") and choice tiers get an "OR" tile between the branches.
 Label and OR tiles are skills with no connections, so they can never be unlocked.
 """
 import json
@@ -18,8 +18,7 @@ OUT = PACK / 'config' / 'puffish_skills'
 ICONS = json.loads((HERE / 'icons.json').read_text(encoding='utf-8'))
 TILE = 30           # pixels between tiles in a row
 ROW_HEIGHT = 34     # pixels between tier rows
-LABEL_ICON = 'minecraft:oak_sign'
-OR_ICON = 'minecraft:lever'
+NUMERALS = 'fotfskills:textures/gui/skills/'   # tier_<n>.png and or.png, drawn by extras/fotfskills/draw_numerals.py
 PER_RANK = re.compile(r'^(?P<lead>.*?)(?P<sign>[+-]?)(?P<num>\d+(?:\.\d+)?)(?P<unit>%?)(?P<rest>.*?) per rank(?P<tail>.*)$')
 
 
@@ -75,8 +74,8 @@ def description(node, k, tree):
     return text
 
 
-def marker(title, text, icon, req):
-    return {'title': title, 'description': text, 'icon': {'type': 'item', 'data': {'item': icon}},
+def marker(title, text, texture, req):
+    return {'title': title, 'description': text, 'icon': {'type': 'texture', 'data': {'texture': NUMERALS + texture}},
             'frame': {'type': 'advancement', 'data': {'frame': 'task'}}, 'required_spent_points': req}
 
 
@@ -108,13 +107,13 @@ def build_category(tree, tiers):
                         f'Opens once you have spent {req[tier_n]} points in this tree.')
                 if choice:
                     text += ' Pick one branch: taking one locks the other.'
-                definitions[sid] = marker(f'Tier {tier_n} · {points}', text, LABEL_ICON, req[tier_n])
+                definitions[sid] = marker(f'Tier {tier_n} · {points}', text, f'tier_{tier_n}.png', req[tier_n])
                 skills[sid] = {'x': x, 'y': y, 'definition': sid}
                 continue
             if kind == 'or':
                 sid = f'tier_{tier_n}_or'
                 definitions[sid] = marker('OR', 'Pick one of the two branches beside this; taking one locks the other.',
-                                          OR_ICON, req[tier_n])
+                                          'or.png', req[tier_n])
                 skills[sid] = {'x': x, 'y': y, 'definition': sid}
                 continue
             ids = rank_ids(n)

@@ -151,3 +151,9 @@ def test_rank_titles_and_now_next_text():
     # text without a per-rank number still says which rank it is
     taming = g.build_category(tree('taming'), TIERS)['definitions.json']
     assert taming['gentle_hand_2']['description'].startswith('Rank 2/3: Better odds')
+
+
+def test_tier_and_or_tiles_use_numeral_textures():
+    defs = g.build_category(tree('range'), TIERS)['definitions.json']
+    assert defs['tier_3_label']['icon'] == {'type': 'texture', 'data': {'texture': 'fotfskills:textures/gui/skills/tier_3.png'}}
+    assert defs['tier_3_or']['icon'] == {'type': 'texture', 'data': {'texture': 'fotfskills:textures/gui/skills/or.png'}}
