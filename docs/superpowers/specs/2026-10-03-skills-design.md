@@ -183,7 +183,10 @@ truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dy
   scythe, thrown, bow, crossbow (the three firearms count as crossbows) and magic (`2026-10-03-weapons.csv`, 671 weapons from 20 mods,
   trimmed items excluded). The add-on ships these as item tags (`fotfskills:<type>`) so every mod's weapons
   get the matching perks; the CSV is reviewed and hand-corrected before release.
-- Numbers are still rough; a tuning pass happens in the preview.
+- Numbers are still rough; a tuning pass happens in the preview. Damage note (approved design, 2026-10-03):
+  percent bonuses scale with weapon size (+15% is 2.4 damage on a 16-damage two-hander but 0.6 on a 4-damage
+  dagger), so early damage nodes use flat bonuses (+0.5 to +1 damage) and percent bonuses are kept for
+  big-weapon branches; values are checked against real hits in the preview world.
 
 ## Pet revival (standalone, not a perk)
 
