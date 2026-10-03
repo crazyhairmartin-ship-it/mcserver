@@ -2092,6 +2092,11 @@ hash = "3d96144ec0466e2231e8ec1752c7fcc045070616dd5805b16d594482f897e880"
 metafile = true
 
 [[files]]
+file = "mods/spark.pw.toml"
+hash = "735935fb0f43b7556f601967421a1c9fac83f402940af1ce5481afb0f8a91363"
+metafile = true
+
+[[files]]
 file = "mods/spartan-shields.pw.toml"
 hash = "866baca6c0bd619c207a372afb52b4ea99dc06f435f02fdf3363ddb7eef8342e"
 metafile = true
