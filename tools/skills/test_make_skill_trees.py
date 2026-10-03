@@ -41,7 +41,7 @@ def test_tier_gate_and_titles():
     assert defs['crusher_1']['required_spent_points'] == 15
     assert defs['stone_sense_3']['title'] == 'Stone Sense III'
     assert defs['ore_nose_1']['title'] == 'Ore Nose'
-    assert defs['stone_sense_1']['rewards'] == [{'type': 'puffish_skills:dummy', 'data': {}}]
+    assert 'rewards' not in defs['stone_sense_1']  # preview: no effects (dummy is not a config reward type)
 
 
 def test_needs_node_not_root_and_linked():

@@ -1,6 +1,6 @@
 """Turns tools/skills/trees.json into Pufferfish's Skills config (config/puffish_skills/).
 
-Phase 1 (preview): every node uses the dummy reward. Run: python tools/skills/make_skill_trees.py
+Phase 1 (preview): nodes have no rewards (no effects). Run: python tools/skills/make_skill_trees.py
 """
 import json
 import re
@@ -57,7 +57,6 @@ def build_category(tree, tiers):
                     'description': description(n, tree),
                     'icon': {'type': 'item', 'data': {'item': tree['icon']}},
                     'frame': frame(n),
-                    'rewards': [{'type': 'puffish_skills:dummy', 'data': {}}],
                     'cost': n['c'],
                     'required_spent_points': req[n['t']],
                 }
