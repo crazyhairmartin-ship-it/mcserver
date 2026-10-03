@@ -1,0 +1,263 @@
+{
+  "gentle_hand_1": {
+    "x": -176,
+    "y": 0,
+    "definition": "gentle_hand_1",
+    "root": true
+  },
+  "gentle_hand_2": {
+    "x": -150,
+    "y": 0,
+    "definition": "gentle_hand_2"
+  },
+  "gentle_hand_3": {
+    "x": -124,
+    "y": 0,
+    "definition": "gentle_hand_3"
+  },
+  "treat_saver_1": {
+    "x": -76,
+    "y": 0,
+    "definition": "treat_saver_1",
+    "root": true
+  },
+  "treat_saver_2": {
+    "x": -50,
+    "y": 0,
+    "definition": "treat_saver_2"
+  },
+  "treat_saver_3": {
+    "x": -24,
+    "y": 0,
+    "definition": "treat_saver_3"
+  },
+  "husbandry_1": {
+    "x": 24,
+    "y": 0,
+    "definition": "husbandry_1",
+    "root": true
+  },
+  "husbandry_2": {
+    "x": 50,
+    "y": 0,
+    "definition": "husbandry_2"
+  },
+  "husbandry_3": {
+    "x": 76,
+    "y": 0,
+    "definition": "husbandry_3"
+  },
+  "husbandry_4": {
+    "x": 102,
+    "y": 0,
+    "definition": "husbandry_4"
+  },
+  "husbandry_5": {
+    "x": 128,
+    "y": 0,
+    "definition": "husbandry_5"
+  },
+  "selective_breeding_1": {
+    "x": -176,
+    "y": 56,
+    "definition": "selective_breeding_1",
+    "root": true
+  },
+  "selective_breeding_2": {
+    "x": -150,
+    "y": 56,
+    "definition": "selective_breeding_2"
+  },
+  "selective_breeding_3": {
+    "x": -124,
+    "y": 56,
+    "definition": "selective_breeding_3"
+  },
+  "selective_breeding_4": {
+    "x": -98,
+    "y": 56,
+    "definition": "selective_breeding_4"
+  },
+  "selective_breeding_5": {
+    "x": -72,
+    "y": 56,
+    "definition": "selective_breeding_5"
+  },
+  "bonded_1": {
+    "x": -24,
+    "y": 56,
+    "definition": "bonded_1",
+    "root": true
+  },
+  "bonded_2": {
+    "x": 2,
+    "y": 56,
+    "definition": "bonded_2"
+  },
+  "bonded_3": {
+    "x": 28,
+    "y": 56,
+    "definition": "bonded_3"
+  },
+  "pet_scavenging_1": {
+    "x": 76,
+    "y": 56,
+    "definition": "pet_scavenging_1",
+    "root": true
+  },
+  "pet_scavenging_2": {
+    "x": 102,
+    "y": 56,
+    "definition": "pet_scavenging_2"
+  },
+  "pet_scavenging_3": {
+    "x": 128,
+    "y": 56,
+    "definition": "pet_scavenging_3"
+  },
+  "beastmaster_1": {
+    "x": -100,
+    "y": 112,
+    "definition": "beastmaster_1",
+    "root": true
+  },
+  "beastmaster_2": {
+    "x": -74,
+    "y": 112,
+    "definition": "beastmaster_2"
+  },
+  "beastmaster_3": {
+    "x": -48,
+    "y": 112,
+    "definition": "beastmaster_3"
+  },
+  "breeder_1": {
+    "x": 0,
+    "y": 112,
+    "definition": "breeder_1",
+    "root": true
+  },
+  "breeder_2": {
+    "x": 26,
+    "y": 112,
+    "definition": "breeder_2"
+  },
+  "breeder_3": {
+    "x": 52,
+    "y": 112,
+    "definition": "breeder_3"
+  },
+  "pack_tactics_1": {
+    "x": -300,
+    "y": 168,
+    "definition": "pack_tactics_1",
+    "root": true
+  },
+  "pack_tactics_2": {
+    "x": -274,
+    "y": 168,
+    "definition": "pack_tactics_2"
+  },
+  "pack_tactics_3": {
+    "x": -248,
+    "y": 168,
+    "definition": "pack_tactics_3"
+  },
+  "loyal_guard_1": {
+    "x": -200,
+    "y": 168,
+    "definition": "loyal_guard_1",
+    "root": true
+  },
+  "loyal_guard_2": {
+    "x": -174,
+    "y": 168,
+    "definition": "loyal_guard_2"
+  },
+  "loyal_guard_3": {
+    "x": -148,
+    "y": 168,
+    "definition": "loyal_guard_3"
+  },
+  "bloodlines_1": {
+    "x": -100,
+    "y": 168,
+    "definition": "bloodlines_1",
+    "root": true
+  },
+  "bloodlines_2": {
+    "x": -74,
+    "y": 168,
+    "definition": "bloodlines_2"
+  },
+  "bloodlines_3": {
+    "x": -48,
+    "y": 168,
+    "definition": "bloodlines_3"
+  },
+  "soul_mender_1": {
+    "x": 0,
+    "y": 168,
+    "definition": "soul_mender_1",
+    "root": true
+  },
+  "soul_mender_2": {
+    "x": 26,
+    "y": 168,
+    "definition": "soul_mender_2"
+  },
+  "soul_mender_3": {
+    "x": 52,
+    "y": 168,
+    "definition": "soul_mender_3"
+  },
+  "mount_training_1": {
+    "x": 100,
+    "y": 168,
+    "definition": "mount_training_1",
+    "root": true
+  },
+  "mount_training_2": {
+    "x": 126,
+    "y": 168,
+    "definition": "mount_training_2"
+  },
+  "mount_training_3": {
+    "x": 152,
+    "y": 168,
+    "definition": "mount_training_3"
+  },
+  "bonded_ii_1": {
+    "x": 200,
+    "y": 168,
+    "definition": "bonded_ii_1"
+  },
+  "bonded_ii_2": {
+    "x": 226,
+    "y": 168,
+    "definition": "bonded_ii_2"
+  },
+  "bonded_ii_3": {
+    "x": 252,
+    "y": 168,
+    "definition": "bonded_ii_3"
+  },
+  "caretaker_1": {
+    "x": -72,
+    "y": 224,
+    "definition": "caretaker_1",
+    "root": true
+  },
+  "alpha_1": {
+    "x": -24,
+    "y": 224,
+    "definition": "alpha_1",
+    "root": true
+  },
+  "prized_stock_1": {
+    "x": 24,
+    "y": 224,
+    "definition": "prized_stock_1",
+    "root": true
+  }
+}

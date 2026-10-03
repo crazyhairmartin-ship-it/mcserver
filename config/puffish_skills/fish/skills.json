@@ -1,0 +1,252 @@
+{
+  "patient_angler_1": {
+    "x": -202,
+    "y": 0,
+    "definition": "patient_angler_1",
+    "root": true
+  },
+  "patient_angler_2": {
+    "x": -176,
+    "y": 0,
+    "definition": "patient_angler_2"
+  },
+  "patient_angler_3": {
+    "x": -150,
+    "y": 0,
+    "definition": "patient_angler_3"
+  },
+  "patient_angler_4": {
+    "x": -124,
+    "y": 0,
+    "definition": "patient_angler_4"
+  },
+  "patient_angler_5": {
+    "x": -98,
+    "y": 0,
+    "definition": "patient_angler_5"
+  },
+  "lucky_line_1": {
+    "x": -50,
+    "y": 0,
+    "definition": "lucky_line_1",
+    "root": true
+  },
+  "lucky_line_2": {
+    "x": -24,
+    "y": 0,
+    "definition": "lucky_line_2"
+  },
+  "lucky_line_3": {
+    "x": 2,
+    "y": 0,
+    "definition": "lucky_line_3"
+  },
+  "trident_master_1": {
+    "x": 50,
+    "y": 0,
+    "definition": "trident_master_1",
+    "root": true
+  },
+  "trident_master_2": {
+    "x": 76,
+    "y": 0,
+    "definition": "trident_master_2"
+  },
+  "trident_master_3": {
+    "x": 102,
+    "y": 0,
+    "definition": "trident_master_3"
+  },
+  "trident_master_4": {
+    "x": 128,
+    "y": 0,
+    "definition": "trident_master_4"
+  },
+  "trident_master_5": {
+    "x": 154,
+    "y": 0,
+    "definition": "trident_master_5"
+  },
+  "double_catch_1": {
+    "x": -150,
+    "y": 56,
+    "definition": "double_catch_1",
+    "root": true
+  },
+  "double_catch_2": {
+    "x": -124,
+    "y": 56,
+    "definition": "double_catch_2"
+  },
+  "double_catch_3": {
+    "x": -98,
+    "y": 56,
+    "definition": "double_catch_3"
+  },
+  "bait_saver_1": {
+    "x": -50,
+    "y": 56,
+    "definition": "bait_saver_1",
+    "root": true
+  },
+  "bait_saver_2": {
+    "x": -24,
+    "y": 56,
+    "definition": "bait_saver_2"
+  },
+  "bait_saver_3": {
+    "x": 2,
+    "y": 56,
+    "definition": "bait_saver_3"
+  },
+  "tidecaller_1": {
+    "x": 50,
+    "y": 56,
+    "definition": "tidecaller_1",
+    "root": true
+  },
+  "tidecaller_2": {
+    "x": 76,
+    "y": 56,
+    "definition": "tidecaller_2"
+  },
+  "tidecaller_3": {
+    "x": 102,
+    "y": 56,
+    "definition": "tidecaller_3"
+  },
+  "treasure_hunter_1": {
+    "x": -100,
+    "y": 112,
+    "definition": "treasure_hunter_1",
+    "root": true
+  },
+  "treasure_hunter_2": {
+    "x": -74,
+    "y": 112,
+    "definition": "treasure_hunter_2"
+  },
+  "treasure_hunter_3": {
+    "x": -48,
+    "y": 112,
+    "definition": "treasure_hunter_3"
+  },
+  "riptide_runner_1": {
+    "x": 0,
+    "y": 112,
+    "definition": "riptide_runner_1",
+    "root": true
+  },
+  "riptide_runner_2": {
+    "x": 26,
+    "y": 112,
+    "definition": "riptide_runner_2"
+  },
+  "riptide_runner_3": {
+    "x": 52,
+    "y": 112,
+    "definition": "riptide_runner_3"
+  },
+  "patient_angler_ii_1": {
+    "x": -213,
+    "y": 168,
+    "definition": "patient_angler_ii_1"
+  },
+  "patient_angler_ii_2": {
+    "x": -187,
+    "y": 168,
+    "definition": "patient_angler_ii_2"
+  },
+  "patient_angler_ii_3": {
+    "x": -161,
+    "y": 168,
+    "definition": "patient_angler_ii_3"
+  },
+  "patient_angler_ii_4": {
+    "x": -135,
+    "y": 168,
+    "definition": "patient_angler_ii_4"
+  },
+  "patient_angler_ii_5": {
+    "x": -109,
+    "y": 168,
+    "definition": "patient_angler_ii_5"
+  },
+  "hook_shot_1": {
+    "x": -61,
+    "y": 168,
+    "definition": "hook_shot_1",
+    "root": true
+  },
+  "hook_shot_2": {
+    "x": -35,
+    "y": 168,
+    "definition": "hook_shot_2"
+  },
+  "sushi_chef_1": {
+    "x": 13,
+    "y": 168,
+    "definition": "sushi_chef_1",
+    "root": true
+  },
+  "sushi_chef_2": {
+    "x": 39,
+    "y": 168,
+    "definition": "sushi_chef_2"
+  },
+  "sushi_chef_3": {
+    "x": 65,
+    "y": 168,
+    "definition": "sushi_chef_3"
+  },
+  "lure_master_1": {
+    "x": 113,
+    "y": 168,
+    "definition": "lure_master_1",
+    "root": true
+  },
+  "lure_master_2": {
+    "x": 139,
+    "y": 168,
+    "definition": "lure_master_2"
+  },
+  "lure_master_3": {
+    "x": 165,
+    "y": 168,
+    "definition": "lure_master_3"
+  },
+  "storm_fisher_1": {
+    "x": -122,
+    "y": 224,
+    "definition": "storm_fisher_1",
+    "root": true
+  },
+  "storm_fisher_2": {
+    "x": -96,
+    "y": 224,
+    "definition": "storm_fisher_2"
+  },
+  "sea_legs_1": {
+    "x": -48,
+    "y": 224,
+    "definition": "sea_legs_1",
+    "root": true
+  },
+  "sea_legs_2": {
+    "x": -22,
+    "y": 224,
+    "definition": "sea_legs_2"
+  },
+  "leviathan_bait_1": {
+    "x": 26,
+    "y": 224,
+    "definition": "leviathan_bait_1",
+    "root": true
+  },
+  "seas_blessing_1": {
+    "x": 74,
+    "y": 224,
+    "definition": "seas_blessing_1",
+    "root": true
+  }
+}

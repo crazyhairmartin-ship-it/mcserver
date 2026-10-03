@@ -1,0 +1,251 @@
+{
+  "steady_hands_1": {
+    "x": -202,
+    "y": 0,
+    "definition": "steady_hands_1",
+    "root": true
+  },
+  "steady_hands_2": {
+    "x": -176,
+    "y": 0,
+    "definition": "steady_hands_2"
+  },
+  "steady_hands_3": {
+    "x": -150,
+    "y": 0,
+    "definition": "steady_hands_3"
+  },
+  "steady_hands_4": {
+    "x": -124,
+    "y": 0,
+    "definition": "steady_hands_4"
+  },
+  "steady_hands_5": {
+    "x": -98,
+    "y": 0,
+    "definition": "steady_hands_5"
+  },
+  "sharp_tips_1": {
+    "x": -50,
+    "y": 0,
+    "definition": "sharp_tips_1",
+    "root": true
+  },
+  "sharp_tips_2": {
+    "x": -24,
+    "y": 0,
+    "definition": "sharp_tips_2"
+  },
+  "sharp_tips_3": {
+    "x": 2,
+    "y": 0,
+    "definition": "sharp_tips_3"
+  },
+  "sharp_tips_4": {
+    "x": 28,
+    "y": 0,
+    "definition": "sharp_tips_4"
+  },
+  "sharp_tips_5": {
+    "x": 54,
+    "y": 0,
+    "definition": "sharp_tips_5"
+  },
+  "quiver_care_1": {
+    "x": 102,
+    "y": 0,
+    "definition": "quiver_care_1",
+    "root": true
+  },
+  "quiver_care_2": {
+    "x": 128,
+    "y": 0,
+    "definition": "quiver_care_2"
+  },
+  "quiver_care_3": {
+    "x": 154,
+    "y": 0,
+    "definition": "quiver_care_3"
+  },
+  "eagle_eye_1": {
+    "x": -150,
+    "y": 56,
+    "definition": "eagle_eye_1"
+  },
+  "eagle_eye_2": {
+    "x": -124,
+    "y": 56,
+    "definition": "eagle_eye_2"
+  },
+  "eagle_eye_3": {
+    "x": -98,
+    "y": 56,
+    "definition": "eagle_eye_3"
+  },
+  "thrower_1": {
+    "x": -50,
+    "y": 56,
+    "definition": "thrower_1",
+    "root": true
+  },
+  "thrower_2": {
+    "x": -24,
+    "y": 56,
+    "definition": "thrower_2"
+  },
+  "thrower_3": {
+    "x": 2,
+    "y": 56,
+    "definition": "thrower_3"
+  },
+  "skirmisher_1": {
+    "x": 50,
+    "y": 56,
+    "definition": "skirmisher_1",
+    "root": true
+  },
+  "skirmisher_2": {
+    "x": 76,
+    "y": 56,
+    "definition": "skirmisher_2"
+  },
+  "skirmisher_3": {
+    "x": 102,
+    "y": 56,
+    "definition": "skirmisher_3"
+  },
+  "rapid_volley_1": {
+    "x": -100,
+    "y": 112,
+    "definition": "rapid_volley_1",
+    "root": true
+  },
+  "rapid_volley_2": {
+    "x": -74,
+    "y": 112,
+    "definition": "rapid_volley_2"
+  },
+  "rapid_volley_3": {
+    "x": -48,
+    "y": 112,
+    "definition": "rapid_volley_3"
+  },
+  "heavy_draw_1": {
+    "x": 0,
+    "y": 112,
+    "definition": "heavy_draw_1",
+    "root": true
+  },
+  "heavy_draw_2": {
+    "x": 26,
+    "y": 112,
+    "definition": "heavy_draw_2"
+  },
+  "heavy_draw_3": {
+    "x": 52,
+    "y": 112,
+    "definition": "heavy_draw_3"
+  },
+  "homing_arrows_1": {
+    "x": -237,
+    "y": 168,
+    "definition": "homing_arrows_1",
+    "root": true
+  },
+  "homing_arrows_2": {
+    "x": -211,
+    "y": 168,
+    "definition": "homing_arrows_2"
+  },
+  "homing_arrows_3": {
+    "x": -185,
+    "y": 168,
+    "definition": "homing_arrows_3"
+  },
+  "falconer_1": {
+    "x": -137,
+    "y": 168,
+    "definition": "falconer_1",
+    "root": true
+  },
+  "falconer_2": {
+    "x": -111,
+    "y": 168,
+    "definition": "falconer_2"
+  },
+  "falconer_3": {
+    "x": -85,
+    "y": 168,
+    "definition": "falconer_3"
+  },
+  "arcane_arrows_1": {
+    "x": -37,
+    "y": 168,
+    "definition": "arcane_arrows_1",
+    "root": true
+  },
+  "arcane_arrows_2": {
+    "x": -11,
+    "y": 168,
+    "definition": "arcane_arrows_2"
+  },
+  "arcane_arrows_3": {
+    "x": 15,
+    "y": 168,
+    "definition": "arcane_arrows_3"
+  },
+  "multishot_1": {
+    "x": 63,
+    "y": 168,
+    "definition": "multishot_1",
+    "root": true
+  },
+  "multishot_2": {
+    "x": 89,
+    "y": 168,
+    "definition": "multishot_2"
+  },
+  "multishot_3": {
+    "x": 115,
+    "y": 168,
+    "definition": "multishot_3"
+  },
+  "retriever_1": {
+    "x": 163,
+    "y": 168,
+    "definition": "retriever_1",
+    "root": true
+  },
+  "retriever_2": {
+    "x": 189,
+    "y": 168,
+    "definition": "retriever_2"
+  },
+  "quiver_care_ii_1": {
+    "x": -98,
+    "y": 224,
+    "definition": "quiver_care_ii_1"
+  },
+  "quiver_care_ii_2": {
+    "x": -72,
+    "y": 224,
+    "definition": "quiver_care_ii_2"
+  },
+  "quiver_care_ii_3": {
+    "x": -46,
+    "y": 224,
+    "definition": "quiver_care_ii_3"
+  },
+  "fletchers_luck_1": {
+    "x": 2,
+    "y": 224,
+    "definition": "fletchers_luck_1",
+    "root": true
+  },
+  "seeker_1": {
+    "x": 50,
+    "y": 224,
+    "definition": "seeker_1",
+    "root": true
+  }
+}

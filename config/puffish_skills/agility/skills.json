@@ -1,0 +1,242 @@
+{
+  "light_feet_1": {
+    "x": -202,
+    "y": 0,
+    "definition": "light_feet_1",
+    "root": true
+  },
+  "light_feet_2": {
+    "x": -176,
+    "y": 0,
+    "definition": "light_feet_2"
+  },
+  "light_feet_3": {
+    "x": -150,
+    "y": 0,
+    "definition": "light_feet_3"
+  },
+  "light_feet_4": {
+    "x": -124,
+    "y": 0,
+    "definition": "light_feet_4"
+  },
+  "light_feet_5": {
+    "x": -98,
+    "y": 0,
+    "definition": "light_feet_5"
+  },
+  "spring_step_1": {
+    "x": -50,
+    "y": 0,
+    "definition": "spring_step_1",
+    "root": true
+  },
+  "spring_step_2": {
+    "x": -24,
+    "y": 0,
+    "definition": "spring_step_2"
+  },
+  "spring_step_3": {
+    "x": 2,
+    "y": 0,
+    "definition": "spring_step_3"
+  },
+  "soft_landing_1": {
+    "x": 50,
+    "y": 0,
+    "definition": "soft_landing_1",
+    "root": true
+  },
+  "soft_landing_2": {
+    "x": 76,
+    "y": 0,
+    "definition": "soft_landing_2"
+  },
+  "soft_landing_3": {
+    "x": 102,
+    "y": 0,
+    "definition": "soft_landing_3"
+  },
+  "soft_landing_4": {
+    "x": 128,
+    "y": 0,
+    "definition": "soft_landing_4"
+  },
+  "soft_landing_5": {
+    "x": 154,
+    "y": 0,
+    "definition": "soft_landing_5"
+  },
+  "long_rope_1": {
+    "x": -150,
+    "y": 56,
+    "definition": "long_rope_1",
+    "root": true
+  },
+  "long_rope_2": {
+    "x": -124,
+    "y": 56,
+    "definition": "long_rope_2"
+  },
+  "long_rope_3": {
+    "x": -98,
+    "y": 56,
+    "definition": "long_rope_3"
+  },
+  "quick_casting_1": {
+    "x": -50,
+    "y": 56,
+    "definition": "quick_casting_1",
+    "root": true
+  },
+  "quick_casting_2": {
+    "x": -24,
+    "y": 56,
+    "definition": "quick_casting_2"
+  },
+  "quick_casting_3": {
+    "x": 2,
+    "y": 56,
+    "definition": "quick_casting_3"
+  },
+  "light_weapons_1": {
+    "x": 50,
+    "y": 56,
+    "definition": "light_weapons_1",
+    "root": true
+  },
+  "light_weapons_2": {
+    "x": 76,
+    "y": 56,
+    "definition": "light_weapons_2"
+  },
+  "light_weapons_3": {
+    "x": 102,
+    "y": 56,
+    "definition": "light_weapons_3"
+  },
+  "freerunner_1": {
+    "x": -100,
+    "y": 112,
+    "definition": "freerunner_1",
+    "root": true
+  },
+  "freerunner_2": {
+    "x": -74,
+    "y": 112,
+    "definition": "freerunner_2"
+  },
+  "freerunner_3": {
+    "x": -48,
+    "y": 112,
+    "definition": "freerunner_3"
+  },
+  "hookmaster_1": {
+    "x": 0,
+    "y": 112,
+    "definition": "hookmaster_1",
+    "root": true
+  },
+  "hookmaster_2": {
+    "x": 26,
+    "y": 112,
+    "definition": "hookmaster_2"
+  },
+  "hookmaster_3": {
+    "x": 52,
+    "y": 112,
+    "definition": "hookmaster_3"
+  },
+  "throwing_arm_1": {
+    "x": -224,
+    "y": 168,
+    "definition": "throwing_arm_1",
+    "root": true
+  },
+  "throwing_arm_2": {
+    "x": -198,
+    "y": 168,
+    "definition": "throwing_arm_2"
+  },
+  "throwing_arm_3": {
+    "x": -172,
+    "y": 168,
+    "definition": "throwing_arm_3"
+  },
+  "rider_1": {
+    "x": -124,
+    "y": 168,
+    "definition": "rider_1",
+    "root": true
+  },
+  "rider_2": {
+    "x": -98,
+    "y": 168,
+    "definition": "rider_2"
+  },
+  "rider_3": {
+    "x": -72,
+    "y": 168,
+    "definition": "rider_3"
+  },
+  "second_breath_1": {
+    "x": -24,
+    "y": 168,
+    "definition": "second_breath_1",
+    "root": true
+  },
+  "second_breath_2": {
+    "x": 2,
+    "y": 168,
+    "definition": "second_breath_2"
+  },
+  "second_breath_3": {
+    "x": 28,
+    "y": 168,
+    "definition": "second_breath_3"
+  },
+  "motor_reel_1": {
+    "x": 76,
+    "y": 168,
+    "definition": "motor_reel_1",
+    "root": true
+  },
+  "motor_reel_2": {
+    "x": 102,
+    "y": 168,
+    "definition": "motor_reel_2"
+  },
+  "roll_master_1": {
+    "x": 150,
+    "y": 168,
+    "definition": "roll_master_1",
+    "root": true
+  },
+  "roll_master_2": {
+    "x": 176,
+    "y": 168,
+    "definition": "roll_master_2"
+  },
+  "long_rope_ii_1": {
+    "x": -85,
+    "y": 224,
+    "definition": "long_rope_ii_1"
+  },
+  "long_rope_ii_2": {
+    "x": -59,
+    "y": 224,
+    "definition": "long_rope_ii_2"
+  },
+  "featherfall_1": {
+    "x": -11,
+    "y": 224,
+    "definition": "featherfall_1",
+    "root": true
+  },
+  "twin_hooks_1": {
+    "x": 37,
+    "y": 224,
+    "definition": "twin_hooks_1",
+    "root": true
+  }
+}

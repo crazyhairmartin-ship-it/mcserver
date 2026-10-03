@@ -1,0 +1,14 @@
+{
+  "title": "Taming",
+  "description": "Earns XP from: Taming (rare animals give more), breeding, feeding and healing pets, and your pets landing hits.",
+  "icon": {
+    "type": "item",
+    "data": {
+      "item": "minecraft:lead"
+    }
+  },
+  "background": "minecraft:textures/block/hay_block_side.png",
+  "unlocked_by_default": true,
+  "exclusive_root": false,
+  "starting_points": 0
+}

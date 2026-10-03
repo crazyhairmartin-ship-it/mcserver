@@ -1,0 +1,14 @@
+{
+  "title": "Cooking",
+  "description": "Earns XP from: Finished meals: Farmer's Delight pots, Let's Do recipes, smoker and furnace food.",
+  "icon": {
+    "type": "item",
+    "data": {
+      "item": "farmersdelight:cooking_pot"
+    }
+  },
+  "background": "minecraft:textures/block/bricks.png",
+  "unlocked_by_default": true,
+  "exclusive_root": false,
+  "starting_points": 0
+}

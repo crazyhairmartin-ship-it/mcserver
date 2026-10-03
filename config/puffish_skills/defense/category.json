@@ -1,0 +1,14 @@
+{
+  "title": "Defense",
+  "description": "Earns XP from: Hits taken from mobs, plus hits blocked with a shield.",
+  "icon": {
+    "type": "item",
+    "data": {
+      "item": "minecraft:shield"
+    }
+  },
+  "background": "minecraft:textures/block/cobblestone.png",
+  "unlocked_by_default": true,
+  "exclusive_root": false,
+  "starting_points": 0
+}

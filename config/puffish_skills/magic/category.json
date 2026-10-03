@@ -1,0 +1,14 @@
+{
+  "title": "Magic",
+  "description": "Earns XP from: Casting spells in Ars Nouveau or Iron's Spells, by mana spent.",
+  "icon": {
+    "type": "item",
+    "data": {
+      "item": "minecraft:enchanted_book"
+    }
+  },
+  "background": "minecraft:textures/block/purpur_block.png",
+  "unlocked_by_default": true,
+  "exclusive_root": false,
+  "starting_points": 0
+}

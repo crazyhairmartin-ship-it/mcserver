@@ -1,0 +1,256 @@
+{
+  "stone_sense_1": {
+    "x": -202,
+    "y": 0,
+    "definition": "stone_sense_1",
+    "root": true
+  },
+  "stone_sense_2": {
+    "x": -176,
+    "y": 0,
+    "definition": "stone_sense_2"
+  },
+  "stone_sense_3": {
+    "x": -150,
+    "y": 0,
+    "definition": "stone_sense_3"
+  },
+  "stone_sense_4": {
+    "x": -124,
+    "y": 0,
+    "definition": "stone_sense_4"
+  },
+  "stone_sense_5": {
+    "x": -98,
+    "y": 0,
+    "definition": "stone_sense_5"
+  },
+  "steady_pick_1": {
+    "x": -50,
+    "y": 0,
+    "definition": "steady_pick_1",
+    "root": true
+  },
+  "steady_pick_2": {
+    "x": -24,
+    "y": 0,
+    "definition": "steady_pick_2"
+  },
+  "steady_pick_3": {
+    "x": 2,
+    "y": 0,
+    "definition": "steady_pick_3"
+  },
+  "miners_might_1": {
+    "x": 50,
+    "y": 0,
+    "definition": "miners_might_1",
+    "root": true
+  },
+  "miners_might_2": {
+    "x": 76,
+    "y": 0,
+    "definition": "miners_might_2"
+  },
+  "miners_might_3": {
+    "x": 102,
+    "y": 0,
+    "definition": "miners_might_3"
+  },
+  "miners_might_4": {
+    "x": 128,
+    "y": 0,
+    "definition": "miners_might_4"
+  },
+  "miners_might_5": {
+    "x": 154,
+    "y": 0,
+    "definition": "miners_might_5"
+  },
+  "prospector_1": {
+    "x": -163,
+    "y": 56,
+    "definition": "prospector_1",
+    "root": true
+  },
+  "prospector_2": {
+    "x": -137,
+    "y": 56,
+    "definition": "prospector_2"
+  },
+  "prospector_3": {
+    "x": -111,
+    "y": 56,
+    "definition": "prospector_3"
+  },
+  "prospector_4": {
+    "x": -85,
+    "y": 56,
+    "definition": "prospector_4"
+  },
+  "prospector_5": {
+    "x": -59,
+    "y": 56,
+    "definition": "prospector_5"
+  },
+  "stonehide_1": {
+    "x": -11,
+    "y": 56,
+    "definition": "stonehide_1",
+    "root": true
+  },
+  "stonehide_2": {
+    "x": 15,
+    "y": 56,
+    "definition": "stonehide_2"
+  },
+  "stonehide_3": {
+    "x": 41,
+    "y": 56,
+    "definition": "stonehide_3"
+  },
+  "deep_delver_1": {
+    "x": 89,
+    "y": 56,
+    "definition": "deep_delver_1",
+    "root": true
+  },
+  "deep_delver_2": {
+    "x": 115,
+    "y": 56,
+    "definition": "deep_delver_2"
+  },
+  "smelter_1": {
+    "x": -100,
+    "y": 112,
+    "definition": "smelter_1",
+    "root": true
+  },
+  "smelter_2": {
+    "x": -74,
+    "y": 112,
+    "definition": "smelter_2"
+  },
+  "smelter_3": {
+    "x": -48,
+    "y": 112,
+    "definition": "smelter_3"
+  },
+  "gem_focus_1": {
+    "x": 0,
+    "y": 112,
+    "definition": "gem_focus_1",
+    "root": true
+  },
+  "gem_focus_2": {
+    "x": 26,
+    "y": 112,
+    "definition": "gem_focus_2"
+  },
+  "gem_focus_3": {
+    "x": 52,
+    "y": 112,
+    "definition": "gem_focus_3"
+  },
+  "prospector_ii_1": {
+    "x": -226,
+    "y": 168,
+    "definition": "prospector_ii_1"
+  },
+  "prospector_ii_2": {
+    "x": -200,
+    "y": 168,
+    "definition": "prospector_ii_2"
+  },
+  "prospector_ii_3": {
+    "x": -174,
+    "y": 168,
+    "definition": "prospector_ii_3"
+  },
+  "prospector_ii_4": {
+    "x": -148,
+    "y": 168,
+    "definition": "prospector_ii_4"
+  },
+  "prospector_ii_5": {
+    "x": -122,
+    "y": 168,
+    "definition": "prospector_ii_5"
+  },
+  "crusher_1": {
+    "x": -74,
+    "y": 168,
+    "definition": "crusher_1",
+    "root": true
+  },
+  "crusher_2": {
+    "x": -48,
+    "y": 168,
+    "definition": "crusher_2"
+  },
+  "crusher_3": {
+    "x": -22,
+    "y": 168,
+    "definition": "crusher_3"
+  },
+  "bedrock_grip_1": {
+    "x": 26,
+    "y": 168,
+    "definition": "bedrock_grip_1",
+    "root": true
+  },
+  "bedrock_grip_2": {
+    "x": 52,
+    "y": 168,
+    "definition": "bedrock_grip_2"
+  },
+  "bedrock_grip_3": {
+    "x": 78,
+    "y": 168,
+    "definition": "bedrock_grip_3"
+  },
+  "bedrock_grip_4": {
+    "x": 104,
+    "y": 168,
+    "definition": "bedrock_grip_4"
+  },
+  "bedrock_grip_5": {
+    "x": 130,
+    "y": 168,
+    "definition": "bedrock_grip_5"
+  },
+  "ore_nose_1": {
+    "x": 178,
+    "y": 168,
+    "definition": "ore_nose_1",
+    "root": true
+  },
+  "tunnel_vision_1": {
+    "x": -98,
+    "y": 224,
+    "definition": "tunnel_vision_1",
+    "root": true
+  },
+  "tunnel_vision_2": {
+    "x": -72,
+    "y": 224,
+    "definition": "tunnel_vision_2"
+  },
+  "tunnel_vision_3": {
+    "x": -46,
+    "y": 224,
+    "definition": "tunnel_vision_3"
+  },
+  "motherlode_1": {
+    "x": 2,
+    "y": 224,
+    "definition": "motherlode_1",
+    "root": true
+  },
+  "earthshaker_1": {
+    "x": 50,
+    "y": 224,
+    "definition": "earthshaker_1",
+    "root": true
+  }
+}

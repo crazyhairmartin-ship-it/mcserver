@@ -1,0 +1,14 @@
+{
+  "title": "Agility",
+  "description": "Earns XP from: ParCool moves (wall-run, climb, roll, vault, dodge), sprinting, and swinging on the grappling hook.",
+  "icon": {
+    "type": "item",
+    "data": {
+      "item": "minecraft:feather"
+    }
+  },
+  "background": "minecraft:textures/block/white_wool.png",
+  "unlocked_by_default": true,
+  "exclusive_root": false,
+  "starting_points": 0
+}

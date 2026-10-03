@@ -1,0 +1,14 @@
+{
+  "title": "Farming",
+  "description": "Earns XP from: Harvesting fully grown crops; breeding farm animals.",
+  "icon": {
+    "type": "item",
+    "data": {
+      "item": "minecraft:iron_hoe"
+    }
+  },
+  "background": "minecraft:textures/block/farmland_moist.png",
+  "unlocked_by_default": true,
+  "exclusive_root": false,
+  "starting_points": 0
+}

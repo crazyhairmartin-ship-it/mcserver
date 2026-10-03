@@ -1,0 +1,247 @@
+{
+  "toughened_1": {
+    "x": -202,
+    "y": 0,
+    "definition": "toughened_1",
+    "root": true
+  },
+  "toughened_2": {
+    "x": -176,
+    "y": 0,
+    "definition": "toughened_2"
+  },
+  "toughened_3": {
+    "x": -150,
+    "y": 0,
+    "definition": "toughened_3"
+  },
+  "toughened_4": {
+    "x": -124,
+    "y": 0,
+    "definition": "toughened_4"
+  },
+  "toughened_5": {
+    "x": -98,
+    "y": 0,
+    "definition": "toughened_5"
+  },
+  "shield_wall_1": {
+    "x": -50,
+    "y": 0,
+    "definition": "shield_wall_1",
+    "root": true
+  },
+  "shield_wall_2": {
+    "x": -24,
+    "y": 0,
+    "definition": "shield_wall_2"
+  },
+  "shield_wall_3": {
+    "x": 2,
+    "y": 0,
+    "definition": "shield_wall_3"
+  },
+  "vitality_1": {
+    "x": 50,
+    "y": 0,
+    "definition": "vitality_1",
+    "root": true
+  },
+  "vitality_2": {
+    "x": 76,
+    "y": 0,
+    "definition": "vitality_2"
+  },
+  "vitality_3": {
+    "x": 102,
+    "y": 0,
+    "definition": "vitality_3"
+  },
+  "vitality_4": {
+    "x": 128,
+    "y": 0,
+    "definition": "vitality_4"
+  },
+  "vitality_5": {
+    "x": 154,
+    "y": 0,
+    "definition": "vitality_5"
+  },
+  "iron_skin_1": {
+    "x": -150,
+    "y": 56,
+    "definition": "iron_skin_1",
+    "root": true
+  },
+  "iron_skin_2": {
+    "x": -124,
+    "y": 56,
+    "definition": "iron_skin_2"
+  },
+  "iron_skin_3": {
+    "x": -98,
+    "y": 56,
+    "definition": "iron_skin_3"
+  },
+  "shield_thorns_1": {
+    "x": -50,
+    "y": 56,
+    "definition": "shield_thorns_1",
+    "root": true
+  },
+  "shield_thorns_2": {
+    "x": -24,
+    "y": 56,
+    "definition": "shield_thorns_2"
+  },
+  "shield_thorns_3": {
+    "x": 2,
+    "y": 56,
+    "definition": "shield_thorns_3"
+  },
+  "warded_mind_1": {
+    "x": 50,
+    "y": 56,
+    "definition": "warded_mind_1",
+    "root": true
+  },
+  "warded_mind_2": {
+    "x": 76,
+    "y": 56,
+    "definition": "warded_mind_2"
+  },
+  "warded_mind_3": {
+    "x": 102,
+    "y": 56,
+    "definition": "warded_mind_3"
+  },
+  "bulwark_1": {
+    "x": -100,
+    "y": 112,
+    "definition": "bulwark_1",
+    "root": true
+  },
+  "bulwark_2": {
+    "x": -74,
+    "y": 112,
+    "definition": "bulwark_2"
+  },
+  "bulwark_3": {
+    "x": -48,
+    "y": 112,
+    "definition": "bulwark_3"
+  },
+  "battlemage_plate_1": {
+    "x": 0,
+    "y": 112,
+    "definition": "battlemage_plate_1",
+    "root": true
+  },
+  "battlemage_plate_2": {
+    "x": 26,
+    "y": 112,
+    "definition": "battlemage_plate_2"
+  },
+  "battlemage_plate_3": {
+    "x": 52,
+    "y": 112,
+    "definition": "battlemage_plate_3"
+  },
+  "vitality_ii_1": {
+    "x": -237,
+    "y": 168,
+    "definition": "vitality_ii_1"
+  },
+  "vitality_ii_2": {
+    "x": -211,
+    "y": 168,
+    "definition": "vitality_ii_2"
+  },
+  "vitality_ii_3": {
+    "x": -185,
+    "y": 168,
+    "definition": "vitality_ii_3"
+  },
+  "vitality_ii_4": {
+    "x": -159,
+    "y": 168,
+    "definition": "vitality_ii_4"
+  },
+  "vitality_ii_5": {
+    "x": -133,
+    "y": 168,
+    "definition": "vitality_ii_5"
+  },
+  "guardian_1": {
+    "x": -85,
+    "y": 168,
+    "definition": "guardian_1",
+    "root": true
+  },
+  "guardian_2": {
+    "x": -59,
+    "y": 168,
+    "definition": "guardian_2"
+  },
+  "guardian_3": {
+    "x": -33,
+    "y": 168,
+    "definition": "guardian_3"
+  },
+  "counter_1": {
+    "x": 15,
+    "y": 168,
+    "definition": "counter_1",
+    "root": true
+  },
+  "counter_2": {
+    "x": 41,
+    "y": 168,
+    "definition": "counter_2"
+  },
+  "fire_ward_1": {
+    "x": 89,
+    "y": 168,
+    "definition": "fire_ward_1",
+    "root": true
+  },
+  "fire_ward_2": {
+    "x": 115,
+    "y": 168,
+    "definition": "fire_ward_2"
+  },
+  "blast_ward_1": {
+    "x": 163,
+    "y": 168,
+    "definition": "blast_ward_1",
+    "root": true
+  },
+  "blast_ward_2": {
+    "x": 189,
+    "y": 168,
+    "definition": "blast_ward_2"
+  },
+  "armour_care_1": {
+    "x": -85,
+    "y": 224,
+    "definition": "armour_care_1",
+    "root": true
+  },
+  "armour_care_2": {
+    "x": -59,
+    "y": 224,
+    "definition": "armour_care_2"
+  },
+  "second_wind_1": {
+    "x": -11,
+    "y": 224,
+    "definition": "second_wind_1",
+    "root": true
+  },
+  "unbreakable_1": {
+    "x": 37,
+    "y": 224,
+    "definition": "unbreakable_1",
+    "root": true
+  }
+}

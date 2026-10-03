@@ -1,0 +1,1154 @@
+{
+  "stone_sense_1": {
+    "title": "Stone Sense I",
+    "description": "+4% mining speed per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "stone_sense_2": {
+    "title": "Stone Sense II",
+    "description": "+4% mining speed per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "stone_sense_3": {
+    "title": "Stone Sense III",
+    "description": "+4% mining speed per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "stone_sense_4": {
+    "title": "Stone Sense IV",
+    "description": "+4% mining speed per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "stone_sense_5": {
+    "title": "Stone Sense V",
+    "description": "+4% mining speed per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "steady_pick_1": {
+    "title": "Steady Pick I",
+    "description": "5% per rank to save pickaxe durability",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "steady_pick_2": {
+    "title": "Steady Pick II",
+    "description": "5% per rank to save pickaxe durability",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "steady_pick_3": {
+    "title": "Steady Pick III",
+    "description": "5% per rank to save pickaxe durability",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "miners_might_1": {
+    "title": "Miner's Might I",
+    "description": "+0.3 damage with pickaxes, hammers and maces per rank (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "miners_might_2": {
+    "title": "Miner's Might II",
+    "description": "+0.3 damage with pickaxes, hammers and maces per rank (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "miners_might_3": {
+    "title": "Miner's Might III",
+    "description": "+0.3 damage with pickaxes, hammers and maces per rank (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "miners_might_4": {
+    "title": "Miner's Might IV",
+    "description": "+0.3 damage with pickaxes, hammers and maces per rank (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "miners_might_5": {
+    "title": "Miner's Might V",
+    "description": "+0.3 damage with pickaxes, hammers and maces per rank (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 0
+  },
+  "prospector_1": {
+    "title": "Prospector I",
+    "description": "3% extra ore drops per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 5
+  },
+  "prospector_2": {
+    "title": "Prospector II",
+    "description": "3% extra ore drops per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 5
+  },
+  "prospector_3": {
+    "title": "Prospector III",
+    "description": "3% extra ore drops per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 5
+  },
+  "prospector_4": {
+    "title": "Prospector IV",
+    "description": "3% extra ore drops per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 5
+  },
+  "prospector_5": {
+    "title": "Prospector V",
+    "description": "3% extra ore drops per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 5
+  },
+  "stonehide_1": {
+    "title": "Stonehide I",
+    "description": "Mining grants +1 armour for 30 s per rank (feeds Defense)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 5
+  },
+  "stonehide_2": {
+    "title": "Stonehide II",
+    "description": "Mining grants +1 armour for 30 s per rank (feeds Defense)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 5
+  },
+  "stonehide_3": {
+    "title": "Stonehide III",
+    "description": "Mining grants +1 armour for 30 s per rank (feeds Defense)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 5
+  },
+  "deep_delver_1": {
+    "title": "Deep Delver I",
+    "description": "+5% damage below Y 40 per rank (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 5
+  },
+  "deep_delver_2": {
+    "title": "Deep Delver II",
+    "description": "+5% damage below Y 40 per rank (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 5
+  },
+  "smelter_1": {
+    "title": "Smelter I",
+    "description": "Ores auto-smelt: 15%, +10% per extra rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 10
+  },
+  "smelter_2": {
+    "title": "Smelter II",
+    "description": "Ores auto-smelt: 15%, +10% per extra rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 10
+  },
+  "smelter_3": {
+    "title": "Smelter III",
+    "description": "Ores auto-smelt: 15%, +10% per extra rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 10
+  },
+  "gem_focus_1": {
+    "title": "Gem Focus I",
+    "description": "Each gem type you carry gives +2% spell power per rank (feeds Magic)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 10
+  },
+  "gem_focus_2": {
+    "title": "Gem Focus II",
+    "description": "Each gem type you carry gives +2% spell power per rank (feeds Magic)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 10
+  },
+  "gem_focus_3": {
+    "title": "Gem Focus III",
+    "description": "Each gem type you carry gives +2% spell power per rank (feeds Magic)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "goal"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 10
+  },
+  "prospector_ii_1": {
+    "title": "Prospector II I",
+    "description": "+3% extra ore drops per rank Needs Prospector (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "prospector_ii_2": {
+    "title": "Prospector II II",
+    "description": "+3% extra ore drops per rank Needs Prospector (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "prospector_ii_3": {
+    "title": "Prospector II III",
+    "description": "+3% extra ore drops per rank Needs Prospector (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "prospector_ii_4": {
+    "title": "Prospector II IV",
+    "description": "+3% extra ore drops per rank Needs Prospector (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "prospector_ii_5": {
+    "title": "Prospector II V",
+    "description": "+3% extra ore drops per rank Needs Prospector (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "crusher_1": {
+    "title": "Crusher I",
+    "description": "Hammer and mace hits strip 1 armour from the target per rank (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "crusher_2": {
+    "title": "Crusher II",
+    "description": "Hammer and mace hits strip 1 armour from the target per rank (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "crusher_3": {
+    "title": "Crusher III",
+    "description": "Hammer and mace hits strip 1 armour from the target per rank (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "bedrock_grip_1": {
+    "title": "Bedrock Grip I",
+    "description": "+6% speed on deepslate per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "bedrock_grip_2": {
+    "title": "Bedrock Grip II",
+    "description": "+6% speed on deepslate per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "bedrock_grip_3": {
+    "title": "Bedrock Grip III",
+    "description": "+6% speed on deepslate per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "bedrock_grip_4": {
+    "title": "Bedrock Grip IV",
+    "description": "+6% speed on deepslate per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "bedrock_grip_5": {
+    "title": "Bedrock Grip V",
+    "description": "+6% speed on deepslate per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "ore_nose_1": {
+    "title": "Ore Nose",
+    "description": "Plain stone sometimes drops raw nuggets",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "tunnel_vision_1": {
+    "title": "Tunnel Vision I",
+    "description": "Ultimine uses 15% less hunger per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 25
+  },
+  "tunnel_vision_2": {
+    "title": "Tunnel Vision II",
+    "description": "Ultimine uses 15% less hunger per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 25
+  },
+  "tunnel_vision_3": {
+    "title": "Tunnel Vision III",
+    "description": "Ultimine uses 15% less hunger per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 1,
+    "required_spent_points": 25
+  },
+  "motherlode_1": {
+    "title": "Motherlode",
+    "description": "2% chance an ore drops triple",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "challenge"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 3,
+    "required_spent_points": 25
+  },
+  "earthshaker_1": {
+    "title": "Earthshaker",
+    "description": "Hammer crits stun nearby mobs (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_pickaxe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "challenge"
+      }
+    },
+    "rewards": [
+      {
+        "type": "puffish_skills:dummy",
+        "data": {}
+      }
+    ],
+    "cost": 3,
+    "required_spent_points": 25
+  }
+}

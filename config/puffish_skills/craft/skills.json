@@ -1,0 +1,226 @@
+{
+  "frugal_1": {
+    "x": -228,
+    "y": 0,
+    "definition": "frugal_1",
+    "root": true
+  },
+  "frugal_2": {
+    "x": -202,
+    "y": 0,
+    "definition": "frugal_2"
+  },
+  "frugal_3": {
+    "x": -176,
+    "y": 0,
+    "definition": "frugal_3"
+  },
+  "frugal_4": {
+    "x": -150,
+    "y": 0,
+    "definition": "frugal_4"
+  },
+  "frugal_5": {
+    "x": -124,
+    "y": 0,
+    "definition": "frugal_5"
+  },
+  "smith_1": {
+    "x": -76,
+    "y": 0,
+    "definition": "smith_1",
+    "root": true
+  },
+  "smith_2": {
+    "x": -50,
+    "y": 0,
+    "definition": "smith_2"
+  },
+  "smith_3": {
+    "x": -24,
+    "y": 0,
+    "definition": "smith_3"
+  },
+  "smith_4": {
+    "x": 2,
+    "y": 0,
+    "definition": "smith_4"
+  },
+  "smith_5": {
+    "x": 28,
+    "y": 0,
+    "definition": "smith_5"
+  },
+  "whetstone_1": {
+    "x": 76,
+    "y": 0,
+    "definition": "whetstone_1",
+    "root": true
+  },
+  "whetstone_2": {
+    "x": 102,
+    "y": 0,
+    "definition": "whetstone_2"
+  },
+  "whetstone_3": {
+    "x": 128,
+    "y": 0,
+    "definition": "whetstone_3"
+  },
+  "whetstone_4": {
+    "x": 154,
+    "y": 0,
+    "definition": "whetstone_4"
+  },
+  "whetstone_5": {
+    "x": 180,
+    "y": 0,
+    "definition": "whetstone_5"
+  },
+  "enchanted_crafts_1": {
+    "x": -161,
+    "y": 56,
+    "definition": "enchanted_crafts_1",
+    "root": true
+  },
+  "enchanted_crafts_2": {
+    "x": -135,
+    "y": 56,
+    "definition": "enchanted_crafts_2"
+  },
+  "enchanted_crafts_3": {
+    "x": -109,
+    "y": 56,
+    "definition": "enchanted_crafts_3"
+  },
+  "book_saver_1": {
+    "x": -61,
+    "y": 56,
+    "definition": "book_saver_1",
+    "root": true
+  },
+  "repair_kit_1": {
+    "x": -13,
+    "y": 56,
+    "definition": "repair_kit_1",
+    "root": true
+  },
+  "repair_kit_2": {
+    "x": 13,
+    "y": 56,
+    "definition": "repair_kit_2"
+  },
+  "spellwright_1": {
+    "x": 61,
+    "y": 56,
+    "definition": "spellwright_1",
+    "root": true
+  },
+  "spellwright_2": {
+    "x": 87,
+    "y": 56,
+    "definition": "spellwright_2"
+  },
+  "spellwright_3": {
+    "x": 113,
+    "y": 56,
+    "definition": "spellwright_3"
+  },
+  "weaponsmith_1": {
+    "x": -48,
+    "y": 112,
+    "definition": "weaponsmith_1",
+    "root": true
+  },
+  "armourer_1": {
+    "x": 0,
+    "y": 112,
+    "definition": "armourer_1",
+    "root": true
+  },
+  "frugal_ii_1": {
+    "x": -187,
+    "y": 168,
+    "definition": "frugal_ii_1"
+  },
+  "frugal_ii_2": {
+    "x": -161,
+    "y": 168,
+    "definition": "frugal_ii_2"
+  },
+  "frugal_ii_3": {
+    "x": -135,
+    "y": 168,
+    "definition": "frugal_ii_3"
+  },
+  "frugal_ii_4": {
+    "x": -109,
+    "y": 168,
+    "definition": "frugal_ii_4"
+  },
+  "frugal_ii_5": {
+    "x": -83,
+    "y": 168,
+    "definition": "frugal_ii_5"
+  },
+  "enchanted_crafts_ii_1": {
+    "x": -35,
+    "y": 168,
+    "definition": "enchanted_crafts_ii_1"
+  },
+  "enchanted_crafts_ii_2": {
+    "x": -9,
+    "y": 168,
+    "definition": "enchanted_crafts_ii_2"
+  },
+  "salvager_1": {
+    "x": 39,
+    "y": 168,
+    "definition": "salvager_1",
+    "root": true
+  },
+  "salvager_2": {
+    "x": 65,
+    "y": 168,
+    "definition": "salvager_2"
+  },
+  "saddler_1": {
+    "x": 113,
+    "y": 168,
+    "definition": "saddler_1",
+    "root": true
+  },
+  "saddler_2": {
+    "x": 139,
+    "y": 168,
+    "definition": "saddler_2"
+  },
+  "smelter_1": {
+    "x": -98,
+    "y": 224,
+    "definition": "smelter_1",
+    "root": true
+  },
+  "smelter_2": {
+    "x": -72,
+    "y": 224,
+    "definition": "smelter_2"
+  },
+  "smelter_3": {
+    "x": -46,
+    "y": 224,
+    "definition": "smelter_3"
+  },
+  "masterwork_1": {
+    "x": 2,
+    "y": 224,
+    "definition": "masterwork_1",
+    "root": true
+  },
+  "endless_workshop_1": {
+    "x": 50,
+    "y": 224,
+    "definition": "endless_workshop_1",
+    "root": true
+  }
+}
