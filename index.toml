@@ -1662,6 +1662,11 @@ hash = "7f7c6825b59aaba4353b8c5df4a21879357cc3a2b562e80f7403f67791f72008"
 metafile = true
 
 [[files]]
+file = "mods/entityculling.pw.toml"
+hash = "03783bea6895d8acf198ac7d8bce4f91746659d0954f7367d0029b11963edee0"
+metafile = true
+
+[[files]]
 file = "mods/entitytexturefeatures.pw.toml"
 hash = "b8055eaac5cf52c97a3f18704097ef9ee4ad38927406fb692e0e34fa6ed49307"
 metafile = true
@@ -1744,6 +1749,11 @@ metafile = true
 [[files]]
 file = "mods/hourglass.pw.toml"
 hash = "33c13017e0a59e5743ac644cf37496622a096c925b708e3bd39de676b1c2fc00"
+metafile = true
+
+[[files]]
+file = "mods/immediatelyfast.pw.toml"
+hash = "e339ce21a2fcda8c6bdd7183edc37bb1c6e85a1c5a59eca26cbfb7a1b37dd548"
 metafile = true
 
 [[files]]
