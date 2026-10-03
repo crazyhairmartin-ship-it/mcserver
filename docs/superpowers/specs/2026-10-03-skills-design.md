@@ -162,6 +162,28 @@ truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dy
   spent, minimum 5 (a player command or button from the add-on, calling Pufferfish's Category API reset;
   Pufferfish's own commands need operator permission).
 
+## Decisions from revision 4
+
+- **ParCool**: every action has learn cost 0 (done in the pack, `defaultconfigs/parcool-server.toml`); its skill
+  tree key is unbound by default. Agility perks only scale stamina, not unlocks.
+- **Overall level hearts are exponential**: each step gives +1 heart and +5% ParCool stamina; step costs start at
+  8 total levels and grow 20% per step: total levels 8, 18, 29, 43, 60, 79, 103, 132, 166, 208, 257, 317, 388,
+  474, 576 (15 hearts).
+- **Crafting power is guaranteed, not a roll**: Enchanted Crafts always adds a random enchantment (level I, up to
+  II, up to III by rank); Enchanted Crafts II raises the level; Weaponsmith always +1 attack damage; Armourer
+  always +1 toughness; Masterwork always two enchantments. Resource-saving perks (Frugal, Endless Workshop)
+  stay as chances.
+- **Point costs**: all capstones, Weaponsmith and Armourer are single nodes costing 3 points. Other nodes cost
+  1 point per rank.
+- New/changed nodes: Loyal Guard (Taming: a nearby pet takes a hit for you), Multishot (Range), Long Net
+  (Foraging: net reach, since net catches never fail), Brain Food (+mana regen after meals), Picnic heals you
+  too, Guardian covers party members and pets.
+- **Weapon types**: every weapon in the pack is classified into sword, light, two-handed, polearm, axe, blunt,
+  scythe, thrown, bow, crossbow, firearm and magic (`2026-10-03-weapons.csv`, 671 weapons from 20 mods,
+  trimmed items excluded). The add-on ships these as item tags (`fotfskills:<type>`) so every mod's weapons
+  get the matching perks; the CSV is reviewed and hand-corrected before release.
+- Numbers are still rough; a tuning pass happens in the preview.
+
 ## Pet revival (standalone, not a perk)
 
 Everyone has it, skills or not. A tamed animal or owned companion that dies leaves a **Pet Memento** item at
