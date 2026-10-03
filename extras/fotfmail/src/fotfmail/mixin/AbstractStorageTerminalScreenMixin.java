@@ -5,12 +5,14 @@ import com.hollingsworth.arsnouveau.client.container.SortSettings;
 import com.hollingsworth.arsnouveau.client.container.StorageTerminalMenu;
 import com.hollingsworth.arsnouveau.client.container.StoredItemStack;
 import com.hollingsworth.arsnouveau.client.gui.buttons.StateButton;
+import com.hollingsworth.arsnouveau.client.gui.buttons.StorageSettingsButton;
 import fotfmail.CreativeTabSort;
 import fotfmail.FotfMail;
 import fotfmail.LecternDeposit;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -23,7 +25,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
  * - lambda$init$1 is the sort button's click: cycle through 3 modes instead of Ars's 2.
  * - onPacket restores the saved mode (the lectern saves the type number; Ars would wrap 2 back to 0).
  * - init (m_7856_) widens the button's icon sheet to 3 tiles (kubejs/assets/ars_nouveau/textures/gui/sort_type.png)
- *   and adds a "move matching items" button (LecternDeposit).
+ *   and adds "restock" and "move matching items" tabs (LecternDeposit).
  */
 @Mixin(AbstractStorageTerminalScreen.class)
 public abstract class AbstractStorageTerminalScreenMixin {
@@ -69,18 +71,24 @@ public abstract class AbstractStorageTerminalScreenMixin {
 
     @Inject(method = "m_7856_", at = @At("TAIL"), remap = false)
     private void fotfmail$threeSortIcons(CallbackInfo ci) {
-        // "Move matching items" (LecternDeposit), above the lectern's own buttons on the left of the panel.
-        AbstractContainerScreenAccessor screen = (AbstractContainerScreenAccessor) (Object) this;
-        ((ScreenAccessor) (Object) this).fotfmail$addRenderableWidget(
-                Button.m_253074_(Component.m_237113_("\u2193"), button -> FotfMail.NETWORK.sendToServer(new LecternDeposit()))
-                        .m_252987_(screen.fotfmail$leftPos() - 17, screen.fotfmail$topPos() - 1, 22, 12)
-                        .m_257505_(Tooltip.m_257550_(Component.m_237115_("fotfmail.lectern.deposit")))
-                        .m_253136_());
+        // "Restock" and "move matching items" (LecternDeposit) as purple side tabs like the lectern's own, stacked
+        // above them (Ars's sit at topPos + 14, 29, 44).
+        fotfmail$addTab(-16, "lectern_restock", "fotfmail.lectern.restock", true);
+        fotfmail$addTab(-1, "lectern_deposit", "fotfmail.lectern.deposit", false);
         if (buttonSortingType != null) {
             buttonSortingType.imageWidth = 66;
             if (comparator != null && comparator.type() == CreativeTabSort.TYPE) {
                 buttonSortingType.state = CreativeTabSort.TYPE;
             }
         }
+    }
+
+    private void fotfmail$addTab(int y, String icon, String tooltip, boolean restock) {
+        AbstractContainerScreenAccessor screen = (AbstractContainerScreenAccessor) (Object) this;
+        StorageSettingsButton tab = new StorageSettingsButton(screen.fotfmail$leftPos() - 17, screen.fotfmail$topPos() + y,
+                22, 12, 22, 13, 0, new ResourceLocation("fotfmail", "textures/gui/" + icon + ".png"),
+                button -> FotfMail.NETWORK.sendToServer(new LecternDeposit(restock)));
+        tab.m_257544_(Tooltip.m_257550_(Component.m_237115_(tooltip)));
+        ((ScreenAccessor) (Object) this).fotfmail$addRenderableWidget(tab);
     }
 }
