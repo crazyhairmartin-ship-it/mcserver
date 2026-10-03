@@ -1,0 +1,2235 @@
+{
+  "tiers": [
+    {
+      "n": 1,
+      "req": 0
+    },
+    {
+      "n": 2,
+      "req": 5
+    },
+    {
+      "n": 3,
+      "req": 10
+    },
+    {
+      "n": 4,
+      "req": 15
+    },
+    {
+      "n": 5,
+      "req": 25
+    }
+  ],
+  "trees": [
+    {
+      "id": "mining",
+      "name": "Mining",
+      "xp": "Mining natural stone, ores and deepslate (rarer ores give more).",
+      "icon": "minecraft:iron_pickaxe",
+      "background": "minecraft:textures/block/stone.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Stone Sense",
+          "r": 5,
+          "d": "+4% mining speed per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Steady Pick",
+          "r": 3,
+          "d": "5% per rank to save pickaxe durability",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Miner's Might",
+          "r": 5,
+          "d": "+0.3 damage with pickaxes, hammers and maces per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 2,
+          "name": "Prospector",
+          "r": 5,
+          "d": "3% extra ore drops per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Stonehide",
+          "r": 3,
+          "d": "Mining grants +1 armour for 30 s per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Defense"
+        },
+        {
+          "t": 2,
+          "name": "Deep Delver",
+          "r": 2,
+          "d": "+5% damage below Y 40 per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 3,
+          "name": "Smelter",
+          "r": 3,
+          "d": "Ores auto-smelt: 15%, +10% per extra rank",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Gem Focus",
+          "r": 3,
+          "d": "Each gem type you carry gives +2% spell power per rank",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": "Magic"
+        },
+        {
+          "t": 4,
+          "name": "Prospector II",
+          "r": 5,
+          "d": "+3% extra ore drops per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Prospector",
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Crusher",
+          "r": 3,
+          "d": "Hammer and mace hits strip 1 armour from the target per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 4,
+          "name": "Bedrock Grip",
+          "r": 5,
+          "d": "+6% speed on deepslate per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Ore Nose",
+          "r": 1,
+          "d": "Plain stone sometimes drops raw nuggets",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Tunnel Vision",
+          "r": 3,
+          "d": "Ultimine uses 15% less hunger per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Motherlode",
+          "r": 1,
+          "d": "2% chance an ore drops triple",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Earthshaker",
+          "r": 1,
+          "d": "Hammer crits stun nearby mobs",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": "Attack"
+        }
+      ]
+    },
+    {
+      "id": "forage",
+      "name": "Foraging",
+      "xp": "Chopping natural logs; picking berries and wild crops; gathering mushrooms and flowers; harvesting honey; catching butterflies and bugs.",
+      "icon": "minecraft:iron_axe",
+      "background": "minecraft:textures/block/oak_planks.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Lumberjack",
+          "r": 5,
+          "d": "+4% chopping speed per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Axe Mastery",
+          "r": 5,
+          "d": "+0.3 damage with axes per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 1,
+          "name": "Berry Picker",
+          "r": 3,
+          "d": "10% per rank for extra berries from bushes and wild crops",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Timber",
+          "r": 5,
+          "d": "3% extra logs per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Long Net",
+          "r": 3,
+          "d": "Butterfly and bug nets reach 1 block further per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Forest Stride",
+          "r": 2,
+          "d": "+5% move speed in forests per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Agility"
+        },
+        {
+          "t": 3,
+          "name": "Splitting Blow",
+          "r": 3,
+          "d": "Axe hits ignore 10% of armour per rank",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 3,
+          "name": "Wildcrafter",
+          "r": 3,
+          "d": "Mushrooms, flowers and herbs drop 8% extra per rank; teas and potions from them last longer",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": "Cooking"
+        },
+        {
+          "t": 4,
+          "name": "Timber II",
+          "r": 5,
+          "d": "+3% extra logs per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Timber",
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Beekeeper",
+          "r": 3,
+          "d": "Hives give extra honey and comb; bees stay calm when you harvest",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Fletcher",
+          "r": 3,
+          "d": "Crafting arrows: 10% per rank for extra arrows",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Range"
+        },
+        {
+          "t": 4,
+          "name": "Bark Skin",
+          "r": 3,
+          "d": "+0.5 armour toughness in forests per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Defense"
+        },
+        {
+          "t": 4,
+          "name": "Druid's Grove",
+          "r": 3,
+          "d": "Spells cost 5% less mana in forests per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Magic"
+        },
+        {
+          "t": 5,
+          "name": "Throwing Axes",
+          "r": 3,
+          "d": "Thrown axes and tomahawks +10% damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Range"
+        },
+        {
+          "t": 5,
+          "name": "Nature's Bounty",
+          "r": 1,
+          "d": "5% chance any log, berry, mushroom or honey harvest drops triple",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Berserker's Axe",
+          "r": 1,
+          "d": "Axe kills give 4 s of Strength",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": "Attack"
+        }
+      ]
+    },
+    {
+      "id": "farm",
+      "name": "Farming",
+      "xp": "Harvesting fully grown crops; breeding farm animals.",
+      "icon": "minecraft:iron_hoe",
+      "background": "minecraft:textures/block/farmland_moist.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Harvester",
+          "r": 5,
+          "d": "3% extra crops per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Seed Saver",
+          "r": 3,
+          "d": "8% per rank to get the seed back",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Reaper",
+          "r": 5,
+          "d": "+0.3 damage and a wider sweep with scythes and sickles per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 2,
+          "name": "Green Thumb",
+          "r": 3,
+          "d": "6% per rank that crops you plant start a stage later",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Fertile Soil",
+          "r": 3,
+          "d": "Crops near you grow 8% faster per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Harvest Feast",
+          "r": 3,
+          "d": "Food made from crops you grew restores 10% more per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Cooking"
+        },
+        {
+          "t": 3,
+          "name": "Gardener",
+          "r": 3,
+          "d": "Green Thumb chance x2 and more extra crops",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Grim Harvest",
+          "r": 3,
+          "d": "Scythe kills heal you half a heart per rank",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 4,
+          "name": "Harvester II",
+          "r": 5,
+          "d": "+3% extra crops per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Harvester",
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Earthbound",
+          "r": 3,
+          "d": "Standing on grass or farmland slowly regenerates health",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Defense"
+        },
+        {
+          "t": 4,
+          "name": "Sweeping Harvest",
+          "r": 2,
+          "d": "Scythes harvest mature crops in a 3x3, then 5x5",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Irrigator",
+          "r": 2,
+          "d": "Water keeps farmland wet 1 block further per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Compost King",
+          "r": 1,
+          "d": "Composters fill faster",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Fertile Soil II",
+          "r": 3,
+          "d": "Crops near you grow faster still",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Fertile Soil",
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Harvest Moon",
+          "r": 1,
+          "d": "5% chance a harvest drops double everything",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Reaper's Due",
+          "r": 1,
+          "d": "Scythe sweeps hit every mob in a wide arc at full damage",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": "Attack"
+        }
+      ]
+    },
+    {
+      "id": "fish",
+      "name": "Fishing",
+      "xp": "Any catch, Aquaculture included.",
+      "icon": "minecraft:fishing_rod",
+      "background": "minecraft:textures/block/prismarine.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Patient Angler",
+          "r": 5,
+          "d": "-5% bite time per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Lucky Line",
+          "r": 3,
+          "d": "Better treasure odds per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Trident Master",
+          "r": 5,
+          "d": "+0.3 damage with tridents and spears per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 2,
+          "name": "Double Catch",
+          "r": 3,
+          "d": "4% per rank to catch two",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Bait Saver",
+          "r": 3,
+          "d": "15% per rank that Aquaculture bait isn't used",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Tidecaller",
+          "r": 3,
+          "d": "+4% spell power in water or rain per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Magic"
+        },
+        {
+          "t": 3,
+          "name": "Treasure Hunter",
+          "r": 3,
+          "d": "Treasure odds x2 and a rarer loot table",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Riptide Runner",
+          "r": 3,
+          "d": "Faster swimming and boats, longer breath",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": "Agility"
+        },
+        {
+          "t": 4,
+          "name": "Patient Angler II",
+          "r": 5,
+          "d": "Faster bites still",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Patient Angler",
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Hook Shot",
+          "r": 2,
+          "d": "Your rod yanks mobs harder and deals 2 damage",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 4,
+          "name": "Sushi Chef",
+          "r": 3,
+          "d": "Fish dishes you cook give Water Breathing and extra saturation",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Cooking"
+        },
+        {
+          "t": 4,
+          "name": "Lure Master",
+          "r": 3,
+          "d": "Aquaculture lures work better",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Storm Fisher",
+          "r": 2,
+          "d": "Faster bites in rain",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Sea Legs",
+          "r": 2,
+          "d": "Boats go 5% faster per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Leviathan Bait",
+          "r": 1,
+          "d": "Rare chance of a unique trophy fish",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Sea's Blessing",
+          "r": 1,
+          "d": "Dolphin's Grace and Conduit Power while swimming",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": "Agility"
+        }
+      ]
+    },
+    {
+      "id": "cook",
+      "name": "Cooking",
+      "xp": "Finished meals: Farmer's Delight pots, Let's Do recipes, smoker and furnace food.",
+      "icon": "farmersdelight:cooking_pot",
+      "background": "minecraft:textures/block/bricks.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Thrifty Cook",
+          "r": 5,
+          "d": "3% per rank to save an ingredient",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Quick Hands",
+          "r": 5,
+          "d": "Cooking stations 5% faster per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Well Fed",
+          "r": 5,
+          "d": "+2% damage per rank while your hunger is full",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 2,
+          "name": "Extra Serving",
+          "r": 3,
+          "d": "5% per rank for one extra meal",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Hearty Meals",
+          "r": 3,
+          "d": "+10% saturation per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Brain Food",
+          "r": 3,
+          "d": "After eating a meal, +15% mana regen for 60 s per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Magic"
+        },
+        {
+          "t": 3,
+          "name": "Chef",
+          "r": 3,
+          "d": "Meal buffs last 50% longer",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Iron Stomach",
+          "r": 3,
+          "d": "+2 max health per rank while saturation is above half",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": "Defense"
+        },
+        {
+          "t": 4,
+          "name": "Thrifty Cook II",
+          "r": 5,
+          "d": "+3% ingredient saving per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Thrifty Cook",
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Trail Rations",
+          "r": 3,
+          "d": "Sprinting and ParCool moves drain 10% less hunger per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Agility"
+        },
+        {
+          "t": 4,
+          "name": "Brewer",
+          "r": 3,
+          "d": "Let's Do drinks save ingredients and their buffs last longer",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Pet Treats",
+          "r": 2,
+          "d": "Food you cook heals pets more and gives them a short buff",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Taming"
+        },
+        {
+          "t": 5,
+          "name": "Picnic",
+          "r": 2,
+          "d": "Eating near party members heals you and them a little",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Feast Maker",
+          "r": 1,
+          "d": "Feasts and pies give extra slices",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Warrior's Feast",
+          "r": 1,
+          "d": "Well Fed is doubled and also boosts spells",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": "Attack"
+        }
+      ]
+    },
+    {
+      "id": "craft",
+      "name": "Crafting",
+      "xp": "Crafting tools, armour, weapons and gear; smithing upgrades; smelting ingots.",
+      "icon": "minecraft:crafting_table",
+      "background": "minecraft:textures/block/spruce_planks.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Frugal",
+          "r": 5,
+          "d": "3% per rank to save an ingredient",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Smith",
+          "r": 5,
+          "d": "Crafted gear +5% durability per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Whetstone",
+          "r": 5,
+          "d": "Weapons you craft or repair get +0.2 attack damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 2,
+          "name": "Enchanted Crafts",
+          "r": 3,
+          "d": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Book Saver",
+          "r": 1,
+          "d": "Enchanted items about to break become enchanted books",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Repair Kit",
+          "r": 2,
+          "d": "Anvil repairs cost less XP",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Spellwright",
+          "r": 3,
+          "d": "8% per rank to save ingredients on scrolls and Ars items",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Magic"
+        },
+        {
+          "t": 3,
+          "name": "Weaponsmith",
+          "r": 1,
+          "d": "Weapons you craft always get +1 attack damage",
+          "c": 3,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 3,
+          "name": "Armourer",
+          "r": 1,
+          "d": "Armour you craft always gets +1 toughness",
+          "c": 3,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": "Defense"
+        },
+        {
+          "t": 4,
+          "name": "Frugal II",
+          "r": 5,
+          "d": "+3% ingredient saving per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Frugal",
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Enchanted Crafts II",
+          "r": 2,
+          "d": "Enchantments on crafted gear roll one level higher per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Enchanted Crafts",
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Salvager",
+          "r": 2,
+          "d": "Grindstones return some materials",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Saddler",
+          "r": 2,
+          "d": "Saddles and horse armour you craft give mounts +5% speed and armour",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Taming"
+        },
+        {
+          "t": 5,
+          "name": "Smelter",
+          "r": 3,
+          "d": "Furnaces you use run 10% faster per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Masterwork",
+          "r": 1,
+          "d": "Gear you craft always gets two enchantments",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Endless Workshop",
+          "r": 1,
+          "d": "10% of crafts use no ingredients",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        }
+      ]
+    },
+    {
+      "id": "attack",
+      "name": "Attack",
+      "xp": "Landed melee hits, by damage dealt.",
+      "icon": "minecraft:iron_sword",
+      "background": "minecraft:textures/block/polished_andesite.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Sharpened",
+          "r": 5,
+          "d": "+0.3 attack damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Footwork",
+          "r": 5,
+          "d": "+2% move speed in combat per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Butcher",
+          "r": 3,
+          "d": "Animal kills drop 10% more meat and leather per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Cooking"
+        },
+        {
+          "t": 2,
+          "name": "Crit Training",
+          "r": 5,
+          "d": "+5% crit damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Spellblade",
+          "r": 3,
+          "d": "Melee hits restore 1 mana per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Magic"
+        },
+        {
+          "t": 2,
+          "name": "Momentum",
+          "r": 2,
+          "d": "Hits in a row +5% damage (stacks 3)",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Heavy Arms",
+          "r": 3,
+          "d": "Two-handed weapons +10% damage per rank",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Duelist",
+          "r": 3,
+          "d": "Daggers, rapiers and swords +8% attack speed per rank",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Sharpened II",
+          "r": 5,
+          "d": "+0.3 attack damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Sharpened",
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Hunter's Mark",
+          "r": 3,
+          "d": "Melee hits mark a target: your arrows deal +5% to it per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Range"
+        },
+        {
+          "t": 4,
+          "name": "Shield Bash",
+          "r": 3,
+          "d": "Hitting right after a block deals +20% damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Defense"
+        },
+        {
+          "t": 4,
+          "name": "Executioner",
+          "r": 2,
+          "d": "+15% damage to mobs under 30% health",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Lifeline",
+          "r": 2,
+          "d": "Crits heal half a heart",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Cleave",
+          "r": 1,
+          "d": "Two-handed hits splash 30% to nearby mobs",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Flurry",
+          "r": 1,
+          "d": "Every 5th fast hit strikes twice",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        }
+      ]
+    },
+    {
+      "id": "range",
+      "name": "Range",
+      "xp": "Landed projectile hits, thrown weapons too; more at long range.",
+      "icon": "minecraft:bow",
+      "background": "minecraft:textures/block/birch_planks.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Steady Hands",
+          "r": 5,
+          "d": "+5% bow draw and crossbow reload speed per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Sharp Tips",
+          "r": 5,
+          "d": "+4% projectile damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Quiver Care",
+          "r": 3,
+          "d": "8% per rank to save ammo",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Eagle Eye",
+          "r": 3,
+          "d": "+10% projectile speed and range per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Steady Hands",
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Thrower",
+          "r": 3,
+          "d": "Thrown weapons +8% damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Skirmisher",
+          "r": 3,
+          "d": "After a shot, +10% move speed for 2 s per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Agility"
+        },
+        {
+          "t": 3,
+          "name": "Rapid Volley",
+          "r": 3,
+          "d": "Draw and reload speed +15% per rank",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Heavy Draw",
+          "r": 3,
+          "d": "Damage +12% per rank",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Homing Arrows",
+          "r": 3,
+          "d": "5% per rank: arrows curve to the nearest hostile mob",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Falconer",
+          "r": 3,
+          "d": "Your pets attack what you shoot, +5% pet damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Taming"
+        },
+        {
+          "t": 4,
+          "name": "Arcane Arrows",
+          "r": 3,
+          "d": "Full-draw shots spend 5 mana for +15% magic damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Magic"
+        },
+        {
+          "t": 4,
+          "name": "Multishot",
+          "r": 3,
+          "d": "10% per rank to fire two extra arrows for the cost of one",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Retriever",
+          "r": 2,
+          "d": "Thrown weapons may return to you",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Quiver Care II",
+          "r": 3,
+          "d": "More ammo saving",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Quiver Care",
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Fletcher's Luck",
+          "r": 1,
+          "d": "30% save ammo; arrows sometimes drop back on hit",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Seeker",
+          "r": 1,
+          "d": "Homing chance x3 and precision crits",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        }
+      ]
+    },
+    {
+      "id": "defense",
+      "name": "Defense",
+      "xp": "Hits taken from mobs, plus hits blocked with a shield.",
+      "icon": "minecraft:shield",
+      "background": "minecraft:textures/block/cobblestone.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Toughened",
+          "r": 5,
+          "d": "+0.5 armour per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Shield Wall",
+          "r": 3,
+          "d": "-15% knockback while blocking; shields last longer",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Vitality",
+          "r": 5,
+          "d": "+1 max health per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Iron Skin",
+          "r": 3,
+          "d": "+0.5 armour toughness per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Shield Thorns",
+          "r": 3,
+          "d": "8% per rank to reflect 30% of a blocked hit",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Warded Mind",
+          "r": 3,
+          "d": "Each armour piece gives +1% spell power per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Magic"
+        },
+        {
+          "t": 3,
+          "name": "Bulwark",
+          "r": 3,
+          "d": "Shields cover a wider angle; knockback resistance",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Battlemage Plate",
+          "r": 3,
+          "d": "Taking hits restores 2 mana per rank",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": "Magic"
+        },
+        {
+          "t": 4,
+          "name": "Vitality II",
+          "r": 5,
+          "d": "+1 max health per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Vitality",
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Guardian",
+          "r": 3,
+          "d": "Pets and party members near you take 5% less damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Taming"
+        },
+        {
+          "t": 4,
+          "name": "Counter",
+          "r": 2,
+          "d": "A blocked hit makes your next melee hit +15%",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 4,
+          "name": "Fire Ward",
+          "r": 2,
+          "d": "-15% fire damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Blast Ward",
+          "r": 2,
+          "d": "-15% explosion damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Armour Care",
+          "r": 2,
+          "d": "5% per rank to save armour durability",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Second Wind",
+          "r": 1,
+          "d": "Survive a killing blow (5 min cooldown)",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Unbreakable",
+          "r": 1,
+          "d": "Armour loses durability 50% slower",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        }
+      ]
+    },
+    {
+      "id": "agility",
+      "name": "Agility",
+      "xp": "ParCool moves (wall-run, climb, roll, vault, dodge), sprinting, and swinging on the grappling hook.",
+      "icon": "minecraft:feather",
+      "background": "minecraft:textures/block/white_wool.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Light Feet",
+          "r": 5,
+          "d": "-5% ParCool stamina drain per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Spring Step",
+          "r": 3,
+          "d": "Jump higher per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Soft Landing",
+          "r": 5,
+          "d": "-6% fall damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Long Rope",
+          "r": 3,
+          "d": "Grappling hook reaches 4 blocks further per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Quick Casting",
+          "r": 3,
+          "d": "-5% spell cast time per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Magic"
+        },
+        {
+          "t": 2,
+          "name": "Light Weapons",
+          "r": 3,
+          "d": "Daggers, rapiers and short blades +4% attack speed per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 3,
+          "name": "Freerunner",
+          "r": 3,
+          "d": "ParCool moves cost 20% less stamina",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Hookmaster",
+          "r": 3,
+          "d": "The hook throws and reels in faster and swings harder",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Throwing Arm",
+          "r": 3,
+          "d": "Thrown weapons fly 8% faster and hit 8% harder per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Range"
+        },
+        {
+          "t": 4,
+          "name": "Rider",
+          "r": 3,
+          "d": "Mounts you ride run 4% faster and jump higher per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Taming"
+        },
+        {
+          "t": 4,
+          "name": "Second Breath",
+          "r": 3,
+          "d": "ParCool stamina regenerates faster",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Motor Reel",
+          "r": 2,
+          "d": "Hold use to be pulled to the hook, faster per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Roll Master",
+          "r": 2,
+          "d": "Rolls and dodges negate more damage",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Long Rope II",
+          "r": 2,
+          "d": "Grappling hook reaches 4 blocks further per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Long Rope",
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Featherfall",
+          "r": 1,
+          "d": "No fall damage under 15 blocks",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Twin Hooks",
+          "r": 1,
+          "d": "The grappling hook fires two hooks at once",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        }
+      ]
+    },
+    {
+      "id": "magic",
+      "name": "Magic",
+      "xp": "Casting spells in Ars Nouveau or Iron's Spells, by mana spent.",
+      "icon": "minecraft:enchanted_book",
+      "background": "minecraft:textures/block/purpur_block.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Mana Pool",
+          "r": 5,
+          "d": "+10 max mana per rank (both mods)",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Focus",
+          "r": 5,
+          "d": "+3% spell power per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Flow",
+          "r": 5,
+          "d": "+5% mana regen per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Mana Saver",
+          "r": 3,
+          "d": "4% per rank: a spell costs no mana",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Mana Shield",
+          "r": 3,
+          "d": "Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Scroll Saver",
+          "r": 2,
+          "d": "10% per rank: an Iron's scroll isn't used",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Staff Adept",
+          "r": 3,
+          "d": "Holding a staff or wand: +4% spell power and -4% cooldowns per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Battlemage",
+          "r": 3,
+          "d": "Iron's lean: +10% spell power per rank",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Artificer",
+          "r": 3,
+          "d": "Ars lean: cheaper glyph crafting, stronger summons",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Mana Pool II",
+          "r": 5,
+          "d": "+10 max mana per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Mana Pool",
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Spellbound Steel",
+          "r": 3,
+          "d": "After a cast, your next melee hit deals +10% magic damage per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Attack"
+        },
+        {
+          "t": 4,
+          "name": "Nature's Mend",
+          "r": 3,
+          "d": "Your healing spells also heal nearby pets",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Taming"
+        },
+        {
+          "t": 4,
+          "name": "Cooldown Flow",
+          "r": 2,
+          "d": "-5% spell cooldowns per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Arcane Aegis",
+          "r": 2,
+          "d": "Mana Shield reflects 10% of blocked damage as magic per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Mana Shield",
+          "syn": "Defense"
+        },
+        {
+          "t": 5,
+          "name": "Archmage",
+          "r": 1,
+          "d": "12% free spells, -15% cooldowns",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Wellspring",
+          "r": 1,
+          "d": "Mana regen doubled out of combat",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        }
+      ]
+    },
+    {
+      "id": "taming",
+      "name": "Taming",
+      "xp": "Taming (rare animals give more), breeding, feeding and healing pets, and your pets landing hits.",
+      "icon": "minecraft:lead",
+      "background": "minecraft:textures/block/hay_block_side.png",
+      "nodes": [
+        {
+          "t": 1,
+          "name": "Gentle Hand",
+          "r": 3,
+          "d": "Better odds and fewer attempts on hard tames",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Treat Saver",
+          "r": 3,
+          "d": "10% per rank: taming or feeding food isn't used",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 1,
+          "name": "Husbandry",
+          "r": 5,
+          "d": "Domesticated animals give 4% more wool, milk, eggs, meat and leather per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Farming"
+        },
+        {
+          "t": 2,
+          "name": "Selective Breeding",
+          "r": 5,
+          "d": "Babies take the better parent's stats, with a 2% per rank chance of a bonus",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Bonded",
+          "r": 3,
+          "d": "Pets +5% health per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 2,
+          "name": "Pet Scavenging",
+          "r": 3,
+          "d": "Pets sometimes find resources and drop them for you",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Beastmaster",
+          "r": 3,
+          "d": "Combat pets: +15% damage per rank",
+          "c": 1,
+          "b": "A",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 3,
+          "name": "Breeder",
+          "r": 3,
+          "d": "6% per rank for twins; babies grow up faster",
+          "c": 1,
+          "b": "B",
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Pack Tactics",
+          "r": 3,
+          "d": "Pets deal more damage to your target",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Loyal Guard",
+          "r": 3,
+          "d": "8% per rank that a nearby pet leaps in and blocks a hit: no damage to you or the pet",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Defense"
+        },
+        {
+          "t": 4,
+          "name": "Loyal Guard",
+          "r": 3,
+          "d": "8% per rank that a nearby pet leaps in and takes a hit for you",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Defense"
+        },
+        {
+          "t": 4,
+          "name": "Bloodlines",
+          "r": 3,
+          "d": "Bred animals have a better chance of rare colours and variants",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Soul Mender",
+          "r": 3,
+          "d": "Reviving a fallen pet costs 25% less per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 4,
+          "name": "Mount Training",
+          "r": 3,
+          "d": "Mounts get +4% speed, jump and health per rank",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": "Agility"
+        },
+        {
+          "t": 4,
+          "name": "Bonded II",
+          "r": 3,
+          "d": "Pets gain armour and regen",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": "Bonded",
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Caretaker",
+          "r": 1,
+          "d": "Feeding heals pets more",
+          "c": 1,
+          "b": null,
+          "cap": false,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Alpha",
+          "r": 1,
+          "d": "Pets +30% all stats and a chance to stun on hit",
+          "c": 3,
+          "b": "A",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        },
+        {
+          "t": 5,
+          "name": "Prized Stock",
+          "r": 1,
+          "d": "Bred animals can roll stats above the normal maximum",
+          "c": 3,
+          "b": "B",
+          "cap": true,
+          "needs": null,
+          "syn": null
+        }
+      ]
+    }
+  ]
+}
