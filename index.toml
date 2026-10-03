@@ -1435,6 +1435,10 @@ file = "kubejs/server_scripts/mail_recipes.js"
 hash = "07597fd72742665eb4b23e3bbba8eecb63cb319aef547439d5063cf1307cdac0"
 
 [[files]]
+file = "kubejs/server_scripts/no_trampling.js"
+hash = "0b6f33f214c3214467adb176ce9622a2ca1cde7a6404994c12ab117f549dd04d"
+
+[[files]]
 file = "kubejs/server_scripts/protect_pets.js"
 hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
