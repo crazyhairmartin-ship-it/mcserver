@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)ParCool$(): vault, wall-run, climb ledges, slide and roll.$(br2)Unlock moves in the skill tree ($(l)Alt+P$()). To slide: sprint, then press $(l)C$()."
+      "text": "$(l)ParCool$(): vault, wall-run, climb ledges, slide and roll.$(br2)Every move is unlocked from the start. To slide: sprint, then press $(l)C$()."
     },
     {
       "type": "patchouli:crafting",

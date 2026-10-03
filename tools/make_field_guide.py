@@ -98,7 +98,7 @@ ENTRIES = [
         text('Right-click an animal or chest while crouching with empty hands to $(l)carry$() it (Carry On). Chests keep everything inside.', 'Carrying Things'),
     ]),
     ('getting_started', 'keys', 'Handy Keys', 'minecraft:tripwire_hook', [
-        text('$(li)$(l)Ctrl+O$(): show/hide JEI$(li)$(l)B$(): backpack$(li)$(l)V$(): cast spell$(li)$(l)R$(): spell wheel$(li)$(l)Caps Lock$(): talk$(li)$(l)Alt+P$(): parkour skills$(li)$(l)Y$(): minimap settings$(li)$(l)F7$(): shaders on/off'),
+        text('$(li)$(l)Ctrl+O$(): show/hide JEI$(li)$(l)B$(): backpack$(li)$(l)V$(): cast spell$(li)$(l)R$(): spell wheel$(li)$(l)Caps Lock$(): talk$(li)$(l)Y$(): minimap settings$(li)$(l)F7$(): shaders on/off'),
         text('Change any key in $(l)Options > Controls > Key Binds$(). The search bar there helps.$(br2)$(l)Reset All$() brings back the server\'s recommended keys.', 'Changing Keys'),
     ]),
 
@@ -194,7 +194,7 @@ ENTRIES = [
 
     # ---------- Travel & Movement ----------
     ('travel', 'parcool', 'Parkour', 'parcool:parcool_guide', [
-        text('$(l)ParCool$(): vault, wall-run, climb ledges, slide and roll.$(br2)Unlock moves in the skill tree ($(l)Alt+P$()). To slide: sprint, then press $(l)C$().'),
+        text('$(l)ParCool$(): vault, wall-run, climb ledges, slide and roll.$(br2)Every move is unlocked from the start. To slide: sprint, then press $(l)C$().'),
         craft('parcool:parcool_guide', 'The $(l)ParCool Guide$() explains every move.'),
     ]),
     ('travel', 'gliding', 'Gliders & Wings', 'paraglider:paraglider', [
