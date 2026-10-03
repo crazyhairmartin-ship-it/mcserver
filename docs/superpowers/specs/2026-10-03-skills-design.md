@@ -166,16 +166,17 @@ truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dy
 
 - **ParCool**: every action has learn cost 0 (done in the pack, `defaultconfigs/parcool-server.toml`); its skill
   tree key is unbound by default. Agility perks only scale stamina, not unlocks.
-- **Overall level hearts are exponential**: each step gives +1 heart and +5% ParCool stamina; step costs start at
-  8 total levels and grow 20% per step: total levels 8, 18, 29, 43, 60, 79, 103, 132, 166, 208, 257, 317, 388,
-  474, 576 (15 hearts).
+- **Overall level hearts follow a gentle curve** (rev 5; exponential was too steep): each step gives +1 heart and
+  +5% ParCool stamina; step k of 15 needs 580 x (k/15)^1.3 total levels: 17, 42, 72, 104, 139, 176, 215, 256, 299, 342, 388, 434, 482, 530, 580.
 - **Crafting power is guaranteed, not a roll**: Enchanted Crafts always adds a random enchantment (level I, up to
   II, up to III by rank); Enchanted Crafts II raises the level; Weaponsmith always +1 attack damage; Armourer
   always +1 toughness; Masterwork always two enchantments. Resource-saving perks (Frugal, Endless Workshop)
   stay as chances.
 - **Point costs**: all capstones, Weaponsmith and Armourer are single nodes costing 3 points. Other nodes cost
   1 point per rank.
-- New/changed nodes: Loyal Guard (Taming: a nearby pet takes a hit for you), Multishot (Range), Long Net
+- New/changed nodes: Loyal Guard (Taming: a nearby pet blocks a hit, no damage to you or the pet), Multishot
+  (Range, replaces Crossbowman; Steady Hands and Rapid Volley also speed up crossbow reload), Staff Adept (Magic:
+  spell power and cooldowns while holding a staff or wand), Long Net
   (Foraging: net reach, since net catches never fail), Brain Food (+mana regen after meals), Picnic heals you
   too, Guardian covers party members and pets.
 - **Weapon types**: every weapon in the pack is classified into sword, light, two-handed, polearm, axe, blunt,

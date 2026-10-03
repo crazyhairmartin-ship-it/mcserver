@@ -115,8 +115,7 @@ header p { margin: 4px 0 0; color: var(--muted); max-width: 68ch; }
   </div>
   <section class="xp" id="overall">
     <b>Every level counts:</b> your total level (all 12 skills added up, max 600) raises max health and ParCool stamina,
-    replacing Paragliders' spirit gems. Each step gives <b>+1 heart and +5% stamina</b>, starting cheap and getting
-    steeper: total levels <b>8, 18, 29, 43, 60, 79, 103, 132, 166, 208, 257, 317, 388, 474, 576</b> (15 hearts).
+    replacing Paragliders' spirit gems. Each step gives <b>+1 heart and +5% stamina</b>, on a gentle curve (steps get a little longer each time): total levels <b>17, 42, 72, 104, 139, 176, 215, 256, 299, 342, 388, 434, 482, 530, 580</b> (15 hearts).
     <b>Resetting a tree</b> refunds its points for XP levels: 1 level per 2 points spent, minimum 5.
   </section>
   <main id="tree" style="display:grid; gap:18px"></main>
@@ -191,11 +190,11 @@ const TREES = [
   N(5,"Lifeline",2,"Crits heal half a heart"),
   N(5,"Cleave",1,"Two-handed hits splash 30% to nearby mobs",{c:3,cap:1,b:"A"}), N(5,"Flurry",1,"Every 5th fast hit strikes twice",{c:3,cap:1,b:"B"}) ]},
  { id: "range", name: "Range", xp: "Landed projectile hits, thrown weapons too; more at long range.", nodes: [
-  N(1,"Steady Hands",5,"+5% draw speed per rank"), N(1,"Sharp Tips",5,"+4% projectile damage per rank"), N(1,"Quiver Care",3,"8% per rank to save ammo"),
+  N(1,"Steady Hands",5,"+5% bow draw and crossbow reload speed per rank"), N(1,"Sharp Tips",5,"+4% projectile damage per rank"), N(1,"Quiver Care",3,"8% per rank to save ammo"),
   N(2,"Eagle Eye",3,"+10% projectile speed and range per rank",{needs:"Steady Hands"}), N(2,"Thrower",3,"Thrown weapons +8% damage per rank"), N(2,"Skirmisher",3,"After a shot, +10% move speed for 2 s per rank",{syn:"Agility"}),
-  N(3,"Rapid Volley",3,"Draw speed +15% per rank",{b:"A"}), N(3,"Heavy Draw",3,"Damage +12% per rank",{b:"B"}),
+  N(3,"Rapid Volley",3,"Draw and reload speed +15% per rank",{b:"A"}), N(3,"Heavy Draw",3,"Damage +12% per rank",{b:"B"}),
   N(4,"Homing Arrows",3,"5% per rank: arrows curve to the nearest hostile mob"), N(4,"Falconer",3,"Your pets attack what you shoot, +5% pet damage per rank",{syn:"Taming"}), N(4,"Arcane Arrows",3,"Full-draw shots spend 5 mana for +15% magic damage per rank",{syn:"Magic"}), N(4,"Multishot",3,"10% per rank to fire two extra arrows for the cost of one"), N(4,"Retriever",2,"Thrown weapons may return to you"),
-  N(5,"Quiver Care II",3,"More ammo saving",{needs:"Quiver Care"}), N(5,"Crossbowman",2,"Crossbows reload faster"),
+  N(5,"Quiver Care II",3,"More ammo saving",{needs:"Quiver Care"}),
   N(5,"Fletcher's Luck",1,"30% save ammo; arrows sometimes drop back on hit",{c:3,cap:1,b:"A"}), N(5,"Seeker",1,"Homing chance x3 and precision crits",{c:3,cap:1,b:"B"}) ]},
  { id: "defense", name: "Defense", xp: "Hits taken from mobs, plus hits blocked with a shield.", nodes: [
   N(1,"Toughened",5,"+0.5 armour per rank"), N(1,"Shield Wall",3,"-15% knockback while blocking; shields last longer"), N(1,"Vitality",5,"+1 max health per rank"),
@@ -213,7 +212,7 @@ const TREES = [
   N(5,"Featherfall",1,"No fall damage under 15 blocks",{c:3,cap:1,b:"A"}), N(5,"Twin Hooks",1,"The grappling hook fires two hooks at once",{c:3,cap:1,b:"B"}) ]},
  { id: "magic", name: "Magic", xp: "Casting spells in Ars Nouveau or Iron's Spells, by mana spent.", nodes: [
   N(1,"Mana Pool",5,"+10 max mana per rank (both mods)"), N(1,"Focus",5,"+3% spell power per rank"), N(1,"Flow",5,"+5% mana regen per rank"),
-  N(2,"Mana Saver",3,"4% per rank: a spell costs no mana"), N(2,"Mana Shield",3,"Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)"), N(2,"Scroll Saver",2,"10% per rank: an Iron's scroll isn't used"),
+  N(2,"Mana Saver",3,"4% per rank: a spell costs no mana"), N(2,"Mana Shield",3,"Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)"), N(2,"Scroll Saver",2,"10% per rank: an Iron's scroll isn't used"), N(2,"Staff Adept",3,"Holding a staff or wand: +4% spell power and -4% cooldowns per rank"),
   N(3,"Battlemage",3,"Iron's lean: +10% spell power per rank",{b:"A"}), N(3,"Artificer",3,"Ars lean: cheaper glyph crafting, stronger summons",{b:"B"}),
   N(4,"Mana Pool II",5,"+10 max mana per rank",{needs:"Mana Pool"}), N(4,"Spellbound Steel",3,"After a cast, your next melee hit deals +10% magic damage per rank",{syn:"Attack"}), N(4,"Nature's Mend",3,"Your healing spells also heal nearby pets",{syn:"Taming"}), N(4,"Cooldown Flow",2,"-5% spell cooldowns per rank"),
   N(5,"Arcane Aegis",2,"Mana Shield reflects 10% of blocked damage as magic per rank",{needs:"Mana Shield",syn:"Defense"}),
@@ -222,8 +221,8 @@ const TREES = [
   N(1,"Gentle Hand",3,"Better odds and fewer attempts on hard tames"), N(1,"Treat Saver",3,"10% per rank: taming or feeding food isn't used"), N(1,"Husbandry",5,"Domesticated animals give 4% more wool, milk, eggs, meat and leather per rank",{syn:"Farming"}),
   N(2,"Selective Breeding",5,"Babies take the better parent's stats, with a 2% per rank chance of a bonus"), N(2,"Bonded",3,"Pets +5% health per rank"), N(2,"Pet Scavenging",3,"Pets sometimes find resources and drop them for you"),
   N(3,"Beastmaster",3,"Combat pets: +15% damage per rank",{b:"A"}), N(3,"Breeder",3,"6% per rank for twins; babies grow up faster",{b:"B"}),
-  N(4,"Pack Tactics",3,"Pets deal more damage to your target"), N(4,"Loyal Guard",3,"8% per rank that a nearby pet leaps in and takes a hit for you",{syn:"Defense"}), N(4,"Loyal Guard",3,"8% per rank that a nearby pet leaps in and takes a hit for you",{syn:"Defense"}), N(4,"Bloodlines",3,"Bred animals have a better chance of rare colours and variants"), N(4,"Soul Mender",3,"Reviving a fallen pet costs 25% less per rank"), N(4,"Mount Training",3,"Mounts get +4% speed, jump and health per rank",{syn:"Agility"}), N(4,"Bonded II",3,"Pets gain armour and regen",{needs:"Bonded"}),
-  N(5,"Caretaker",2,"Feeding heals pets more"),
+  N(4,"Pack Tactics",3,"Pets deal more damage to your target"), N(4,"Loyal Guard",3,"8% per rank that a nearby pet leaps in and blocks a hit: no damage to you or the pet",{syn:"Defense"}), N(4,"Loyal Guard",3,"8% per rank that a nearby pet leaps in and takes a hit for you",{syn:"Defense"}), N(4,"Bloodlines",3,"Bred animals have a better chance of rare colours and variants"), N(4,"Soul Mender",3,"Reviving a fallen pet costs 25% less per rank"), N(4,"Mount Training",3,"Mounts get +4% speed, jump and health per rank",{syn:"Agility"}), N(4,"Bonded II",3,"Pets gain armour and regen",{needs:"Bonded"}),
+  N(5,"Caretaker",1,"Feeding heals pets more"),
   N(5,"Alpha",1,"Pets +30% all stats and a chance to stun on hit",{c:3,cap:1,b:"A"}), N(5,"Prized Stock",1,"Bred animals can roll stats above the normal maximum",{c:3,cap:1,b:"B"}) ]},
 ];
 const BRANCH_NAMES = { 3: { A: "Branch A", B: "Branch B" }, 5: { A: "Capstone A", B: "Capstone B" } };
