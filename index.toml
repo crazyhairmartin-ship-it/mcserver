@@ -175,6 +175,10 @@ file = "defaultconfigs/openpartiesandclaims-server.toml"
 hash = "ae5b5a2d93492777ad7716ab24863db75ad759555d03900b57bf471103d8d7a9"
 
 [[files]]
+file = "defaultconfigs/parcool-server.toml"
+hash = "1c689b11c59f7b802c4d04db485e2afdcb9745f97195912dd5200a95b5fb33b9"
+
+[[files]]
 file = "kubejs/assets/alexsmobs/sounds.json"
 hash = "17d0b3f119bf63465152eabf6512cd7443b2ed0dff978a01f8a564bb606b1724"
 
