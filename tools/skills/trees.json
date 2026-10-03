@@ -2143,17 +2143,6 @@
         },
         {
           "t": 4,
-          "name": "Loyal Guard",
-          "r": 3,
-          "d": "8% per rank that a nearby pet leaps in and takes a hit for you",
-          "c": 1,
-          "b": null,
-          "cap": false,
-          "needs": null,
-          "syn": "Defense"
-        },
-        {
-          "t": 4,
           "name": "Bloodlines",
           "r": 3,
           "d": "Bred animals have a better chance of rare colours and variants",
