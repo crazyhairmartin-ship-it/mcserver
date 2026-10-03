@@ -1,11 +1,28 @@
 {
-  "toughened_1": {
-    "title": "Toughened I",
-    "description": "+0.5 armour per rank",
+  "tier_1_label": {
+    "title": "Tier 1 \u00b7 Start",
+    "description": "Open from the start.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 0
+  },
+  "toughened_1": {
+    "title": "Toughened (1/5)",
+    "description": "Now: nothing yet. Next: +0.5 armour.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_chestplate"
       }
     },
     "frame": {
@@ -18,12 +35,12 @@
     "required_spent_points": 0
   },
   "toughened_2": {
-    "title": "Toughened II",
-    "description": "+0.5 armour per rank",
+    "title": "Toughened (2/5)",
+    "description": "Now: +0.5 armour. Next: +1 armour.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:iron_chestplate"
       }
     },
     "frame": {
@@ -36,12 +53,12 @@
     "required_spent_points": 0
   },
   "toughened_3": {
-    "title": "Toughened III",
-    "description": "+0.5 armour per rank",
+    "title": "Toughened (3/5)",
+    "description": "Now: +1 armour. Next: +1.5 armour.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:iron_chestplate"
       }
     },
     "frame": {
@@ -54,12 +71,12 @@
     "required_spent_points": 0
   },
   "toughened_4": {
-    "title": "Toughened IV",
-    "description": "+0.5 armour per rank",
+    "title": "Toughened (4/5)",
+    "description": "Now: +1.5 armour. Next: +2 armour.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:iron_chestplate"
       }
     },
     "frame": {
@@ -72,12 +89,12 @@
     "required_spent_points": 0
   },
   "toughened_5": {
-    "title": "Toughened V",
-    "description": "+0.5 armour per rank",
+    "title": "Toughened (5/5)",
+    "description": "Now: +2 armour. Next: +2.5 armour (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:iron_chestplate"
       }
     },
     "frame": {
@@ -90,8 +107,8 @@
     "required_spent_points": 0
   },
   "shield_wall_1": {
-    "title": "Shield Wall I",
-    "description": "-15% knockback while blocking; shields last longer",
+    "title": "Shield Wall (1/3)",
+    "description": "Rank 1/3: -15% knockback while blocking; shields last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -108,8 +125,8 @@
     "required_spent_points": 0
   },
   "shield_wall_2": {
-    "title": "Shield Wall II",
-    "description": "-15% knockback while blocking; shields last longer",
+    "title": "Shield Wall (2/3)",
+    "description": "Rank 2/3: -15% knockback while blocking; shields last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -126,8 +143,8 @@
     "required_spent_points": 0
   },
   "shield_wall_3": {
-    "title": "Shield Wall III",
-    "description": "-15% knockback while blocking; shields last longer",
+    "title": "Shield Wall (3/3)",
+    "description": "Rank 3/3: -15% knockback while blocking; shields last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -144,12 +161,12 @@
     "required_spent_points": 0
   },
   "vitality_1": {
-    "title": "Vitality I",
-    "description": "+1 max health per rank",
+    "title": "Vitality (1/5)",
+    "description": "Now: nothing yet. Next: +1 max health.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:apple"
       }
     },
     "frame": {
@@ -162,12 +179,12 @@
     "required_spent_points": 0
   },
   "vitality_2": {
-    "title": "Vitality II",
-    "description": "+1 max health per rank",
+    "title": "Vitality (2/5)",
+    "description": "Now: +1 max health. Next: +2 max health.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:apple"
       }
     },
     "frame": {
@@ -180,12 +197,12 @@
     "required_spent_points": 0
   },
   "vitality_3": {
-    "title": "Vitality III",
-    "description": "+1 max health per rank",
+    "title": "Vitality (3/5)",
+    "description": "Now: +2 max health. Next: +3 max health.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:apple"
       }
     },
     "frame": {
@@ -198,12 +215,12 @@
     "required_spent_points": 0
   },
   "vitality_4": {
-    "title": "Vitality IV",
-    "description": "+1 max health per rank",
+    "title": "Vitality (4/5)",
+    "description": "Now: +3 max health. Next: +4 max health.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:apple"
       }
     },
     "frame": {
@@ -216,12 +233,12 @@
     "required_spent_points": 0
   },
   "vitality_5": {
-    "title": "Vitality V",
-    "description": "+1 max health per rank",
+    "title": "Vitality (5/5)",
+    "description": "Now: +4 max health. Next: +5 max health (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:apple"
       }
     },
     "frame": {
@@ -233,13 +250,30 @@
     "cost": 1,
     "required_spent_points": 0
   },
-  "iron_skin_1": {
-    "title": "Iron Skin I",
-    "description": "+0.5 armour toughness per rank",
+  "tier_2_label": {
+    "title": "Tier 2 \u00b7 5 points",
+    "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 5
+  },
+  "iron_skin_1": {
+    "title": "Iron Skin (1/3)",
+    "description": "Now: nothing yet. Next: +0.5 armour toughness.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_block"
       }
     },
     "frame": {
@@ -252,12 +286,12 @@
     "required_spent_points": 5
   },
   "iron_skin_2": {
-    "title": "Iron Skin II",
-    "description": "+0.5 armour toughness per rank",
+    "title": "Iron Skin (2/3)",
+    "description": "Now: +0.5 armour toughness. Next: +1 armour toughness.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:iron_block"
       }
     },
     "frame": {
@@ -270,12 +304,12 @@
     "required_spent_points": 5
   },
   "iron_skin_3": {
-    "title": "Iron Skin III",
-    "description": "+0.5 armour toughness per rank",
+    "title": "Iron Skin (3/3)",
+    "description": "Now: +1 armour toughness. Next: +1.5 armour toughness (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:iron_block"
       }
     },
     "frame": {
@@ -288,12 +322,12 @@
     "required_spent_points": 5
   },
   "shield_thorns_1": {
-    "title": "Shield Thorns I",
-    "description": "8% per rank to reflect 30% of a blocked hit",
+    "title": "Shield Thorns (1/3)",
+    "description": "Now: nothing yet. Next: 8% to reflect 30% of a blocked hit.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:cactus"
       }
     },
     "frame": {
@@ -306,12 +340,12 @@
     "required_spent_points": 5
   },
   "shield_thorns_2": {
-    "title": "Shield Thorns II",
-    "description": "8% per rank to reflect 30% of a blocked hit",
+    "title": "Shield Thorns (2/3)",
+    "description": "Now: 8% to reflect 30% of a blocked hit. Next: 16% to reflect 30% of a blocked hit.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:cactus"
       }
     },
     "frame": {
@@ -324,12 +358,12 @@
     "required_spent_points": 5
   },
   "shield_thorns_3": {
-    "title": "Shield Thorns III",
-    "description": "8% per rank to reflect 30% of a blocked hit",
+    "title": "Shield Thorns (3/3)",
+    "description": "Now: 16% to reflect 30% of a blocked hit. Next: 24% to reflect 30% of a blocked hit (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:cactus"
       }
     },
     "frame": {
@@ -342,12 +376,12 @@
     "required_spent_points": 5
   },
   "warded_mind_1": {
-    "title": "Warded Mind I",
-    "description": "Each armour piece gives +1% spell power per rank (feeds Magic)",
+    "title": "Warded Mind (1/3)",
+    "description": "Now: nothing yet. Next: Each armour piece gives +1% spell power. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:amethyst_shard"
       }
     },
     "frame": {
@@ -360,12 +394,12 @@
     "required_spent_points": 5
   },
   "warded_mind_2": {
-    "title": "Warded Mind II",
-    "description": "Each armour piece gives +1% spell power per rank (feeds Magic)",
+    "title": "Warded Mind (2/3)",
+    "description": "Now: Each armour piece gives +1% spell power. Next: Each armour piece gives +2% spell power. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:amethyst_shard"
       }
     },
     "frame": {
@@ -378,12 +412,12 @@
     "required_spent_points": 5
   },
   "warded_mind_3": {
-    "title": "Warded Mind III",
-    "description": "Each armour piece gives +1% spell power per rank (feeds Magic)",
+    "title": "Warded Mind (3/3)",
+    "description": "Now: Each armour piece gives +2% spell power. Next: Each armour piece gives +3% spell power (max). (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:amethyst_shard"
       }
     },
     "frame": {
@@ -395,13 +429,30 @@
     "cost": 1,
     "required_spent_points": 5
   },
-  "bulwark_1": {
-    "title": "Bulwark I",
-    "description": "Shields cover a wider angle; knockback resistance",
+  "tier_3_label": {
+    "title": "Tier 3 \u00b7 10 points",
+    "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "bulwark_1": {
+    "title": "Bulwark (1/3)",
+    "description": "Rank 1/3: Shields cover a wider angle; knockback resistance Pick one: this or Battlemage Plate.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:obsidian"
       }
     },
     "frame": {
@@ -414,12 +465,12 @@
     "required_spent_points": 10
   },
   "bulwark_2": {
-    "title": "Bulwark II",
-    "description": "Shields cover a wider angle; knockback resistance",
+    "title": "Bulwark (2/3)",
+    "description": "Rank 2/3: Shields cover a wider angle; knockback resistance Pick one: this or Battlemage Plate.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:obsidian"
       }
     },
     "frame": {
@@ -432,12 +483,12 @@
     "required_spent_points": 10
   },
   "bulwark_3": {
-    "title": "Bulwark III",
-    "description": "Shields cover a wider angle; knockback resistance",
+    "title": "Bulwark (3/3)",
+    "description": "Rank 3/3: Shields cover a wider angle; knockback resistance Pick one: this or Battlemage Plate.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:obsidian"
       }
     },
     "frame": {
@@ -449,13 +500,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "battlemage_plate_1": {
-    "title": "Battlemage Plate I",
-    "description": "Taking hits restores 2 mana per rank (feeds Magic)",
+  "tier_3_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "battlemage_plate_1": {
+    "title": "Battlemage Plate (1/3)",
+    "description": "Now: nothing yet. Next: Taking hits restores 2 mana. Pick one: this or Bulwark. (feeds Magic)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:diamond_chestplate"
       }
     },
     "frame": {
@@ -468,12 +536,12 @@
     "required_spent_points": 10
   },
   "battlemage_plate_2": {
-    "title": "Battlemage Plate II",
-    "description": "Taking hits restores 2 mana per rank (feeds Magic)",
+    "title": "Battlemage Plate (2/3)",
+    "description": "Now: Taking hits restores 2 mana. Next: Taking hits restores 4 mana. Pick one: this or Bulwark. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:diamond_chestplate"
       }
     },
     "frame": {
@@ -486,12 +554,12 @@
     "required_spent_points": 10
   },
   "battlemage_plate_3": {
-    "title": "Battlemage Plate III",
-    "description": "Taking hits restores 2 mana per rank (feeds Magic)",
+    "title": "Battlemage Plate (3/3)",
+    "description": "Now: Taking hits restores 4 mana. Next: Taking hits restores 6 mana (max). Pick one: this or Bulwark. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:diamond_chestplate"
       }
     },
     "frame": {
@@ -503,13 +571,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "vitality_ii_1": {
-    "title": "Vitality II I",
-    "description": "+1 max health per rank Needs Vitality (all ranks).",
+  "tier_4_label": {
+    "title": "Tier 4 \u00b7 15 points",
+    "description": "Opens once you have spent 15 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 15
+  },
+  "vitality_ii_1": {
+    "title": "Vitality II (1/5)",
+    "description": "Now: nothing yet. Next: +1 max health. Needs Vitality (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:apple"
       }
     },
     "frame": {
@@ -522,12 +607,12 @@
     "required_spent_points": 15
   },
   "vitality_ii_2": {
-    "title": "Vitality II II",
-    "description": "+1 max health per rank Needs Vitality (all ranks).",
+    "title": "Vitality II (2/5)",
+    "description": "Now: +1 max health. Next: +2 max health. Needs Vitality (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:apple"
       }
     },
     "frame": {
@@ -540,12 +625,12 @@
     "required_spent_points": 15
   },
   "vitality_ii_3": {
-    "title": "Vitality II III",
-    "description": "+1 max health per rank Needs Vitality (all ranks).",
+    "title": "Vitality II (3/5)",
+    "description": "Now: +2 max health. Next: +3 max health. Needs Vitality (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:apple"
       }
     },
     "frame": {
@@ -558,12 +643,12 @@
     "required_spent_points": 15
   },
   "vitality_ii_4": {
-    "title": "Vitality II IV",
-    "description": "+1 max health per rank Needs Vitality (all ranks).",
+    "title": "Vitality II (4/5)",
+    "description": "Now: +3 max health. Next: +4 max health. Needs Vitality (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:apple"
       }
     },
     "frame": {
@@ -576,12 +661,12 @@
     "required_spent_points": 15
   },
   "vitality_ii_5": {
-    "title": "Vitality II V",
-    "description": "+1 max health per rank Needs Vitality (all ranks).",
+    "title": "Vitality II (5/5)",
+    "description": "Now: +4 max health. Next: +5 max health (max). Needs Vitality (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:apple"
       }
     },
     "frame": {
@@ -594,12 +679,12 @@
     "required_spent_points": 15
   },
   "guardian_1": {
-    "title": "Guardian I",
-    "description": "Pets and party members near you take 5% less damage per rank (feeds Taming)",
+    "title": "Guardian (1/3)",
+    "description": "Now: nothing yet. Next: Pets and party members near you take 5% less damage. (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:iron_golem_spawn_egg"
       }
     },
     "frame": {
@@ -612,12 +697,12 @@
     "required_spent_points": 15
   },
   "guardian_2": {
-    "title": "Guardian II",
-    "description": "Pets and party members near you take 5% less damage per rank (feeds Taming)",
+    "title": "Guardian (2/3)",
+    "description": "Now: Pets and party members near you take 5% less damage. Next: Pets and party members near you take 10% less damage. (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:iron_golem_spawn_egg"
       }
     },
     "frame": {
@@ -630,12 +715,12 @@
     "required_spent_points": 15
   },
   "guardian_3": {
-    "title": "Guardian III",
-    "description": "Pets and party members near you take 5% less damage per rank (feeds Taming)",
+    "title": "Guardian (3/3)",
+    "description": "Now: Pets and party members near you take 10% less damage. Next: Pets and party members near you take 15% less damage (max). (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:iron_golem_spawn_egg"
       }
     },
     "frame": {
@@ -648,12 +733,12 @@
     "required_spent_points": 15
   },
   "counter_1": {
-    "title": "Counter I",
-    "description": "A blocked hit makes your next melee hit +15% (feeds Attack)",
+    "title": "Counter (1/2)",
+    "description": "Rank 1/2: A blocked hit makes your next melee hit +15% (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:bell"
       }
     },
     "frame": {
@@ -666,12 +751,12 @@
     "required_spent_points": 15
   },
   "counter_2": {
-    "title": "Counter II",
-    "description": "A blocked hit makes your next melee hit +15% (feeds Attack)",
+    "title": "Counter (2/2)",
+    "description": "Rank 2/2: A blocked hit makes your next melee hit +15% (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:bell"
       }
     },
     "frame": {
@@ -684,12 +769,12 @@
     "required_spent_points": 15
   },
   "fire_ward_1": {
-    "title": "Fire Ward I",
-    "description": "-15% fire damage per rank",
+    "title": "Fire Ward (1/2)",
+    "description": "Now: nothing yet. Next: -15% fire damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:magma_cream"
       }
     },
     "frame": {
@@ -702,12 +787,12 @@
     "required_spent_points": 15
   },
   "fire_ward_2": {
-    "title": "Fire Ward II",
-    "description": "-15% fire damage per rank",
+    "title": "Fire Ward (2/2)",
+    "description": "Now: -15% fire damage. Next: -30% fire damage (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:magma_cream"
       }
     },
     "frame": {
@@ -720,12 +805,12 @@
     "required_spent_points": 15
   },
   "blast_ward_1": {
-    "title": "Blast Ward I",
-    "description": "-15% explosion damage per rank",
+    "title": "Blast Ward (1/2)",
+    "description": "Now: nothing yet. Next: -15% explosion damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:gunpowder"
       }
     },
     "frame": {
@@ -738,12 +823,12 @@
     "required_spent_points": 15
   },
   "blast_ward_2": {
-    "title": "Blast Ward II",
-    "description": "-15% explosion damage per rank",
+    "title": "Blast Ward (2/2)",
+    "description": "Now: -15% explosion damage. Next: -30% explosion damage (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:gunpowder"
       }
     },
     "frame": {
@@ -755,13 +840,30 @@
     "cost": 1,
     "required_spent_points": 15
   },
-  "armour_care_1": {
-    "title": "Armour Care I",
-    "description": "5% per rank to save armour durability",
+  "tier_5_label": {
+    "title": "Tier 5 \u00b7 25 points",
+    "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "armour_care_1": {
+    "title": "Armour Care (1/2)",
+    "description": "Now: nothing yet. Next: 5% to save armour durability.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:leather_chestplate"
       }
     },
     "frame": {
@@ -774,12 +876,12 @@
     "required_spent_points": 25
   },
   "armour_care_2": {
-    "title": "Armour Care II",
-    "description": "5% per rank to save armour durability",
+    "title": "Armour Care (2/2)",
+    "description": "Now: 5% to save armour durability. Next: 10% to save armour durability (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:leather_chestplate"
       }
     },
     "frame": {
@@ -793,11 +895,11 @@
   },
   "second_wind_1": {
     "title": "Second Wind",
-    "description": "Survive a killing blow (5 min cooldown)",
+    "description": "Survive a killing blow (5 min cooldown) Pick one: this or Unbreakable.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:totem_of_undying"
       }
     },
     "frame": {
@@ -809,13 +911,30 @@
     "cost": 3,
     "required_spent_points": 25
   },
-  "unbreakable_1": {
-    "title": "Unbreakable",
-    "description": "Armour loses durability 50% slower",
+  "tier_5_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:shield"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "unbreakable_1": {
+    "title": "Unbreakable",
+    "description": "Armour loses durability 50% slower Pick one: this or Second Wind.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:netherite_chestplate"
       }
     },
     "frame": {

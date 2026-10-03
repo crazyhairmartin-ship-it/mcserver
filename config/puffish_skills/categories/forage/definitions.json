@@ -1,7 +1,24 @@
 {
+  "tier_1_label": {
+    "title": "Tier 1 \u00b7 Start",
+    "description": "Open from the start.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 0
+  },
   "lumberjack_1": {
-    "title": "Lumberjack I",
-    "description": "+4% chopping speed per rank",
+    "title": "Lumberjack (1/5)",
+    "description": "Now: nothing yet. Next: +4% chopping speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -18,8 +35,8 @@
     "required_spent_points": 0
   },
   "lumberjack_2": {
-    "title": "Lumberjack II",
-    "description": "+4% chopping speed per rank",
+    "title": "Lumberjack (2/5)",
+    "description": "Now: +4% chopping speed. Next: +8% chopping speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -36,8 +53,8 @@
     "required_spent_points": 0
   },
   "lumberjack_3": {
-    "title": "Lumberjack III",
-    "description": "+4% chopping speed per rank",
+    "title": "Lumberjack (3/5)",
+    "description": "Now: +8% chopping speed. Next: +12% chopping speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -54,8 +71,8 @@
     "required_spent_points": 0
   },
   "lumberjack_4": {
-    "title": "Lumberjack IV",
-    "description": "+4% chopping speed per rank",
+    "title": "Lumberjack (4/5)",
+    "description": "Now: +12% chopping speed. Next: +16% chopping speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -72,8 +89,8 @@
     "required_spent_points": 0
   },
   "lumberjack_5": {
-    "title": "Lumberjack V",
-    "description": "+4% chopping speed per rank",
+    "title": "Lumberjack (5/5)",
+    "description": "Now: +16% chopping speed. Next: +20% chopping speed (max).",
     "icon": {
       "type": "item",
       "data": {
@@ -90,12 +107,12 @@
     "required_spent_points": 0
   },
   "axe_mastery_1": {
-    "title": "Axe Mastery I",
-    "description": "+0.3 damage with axes per rank (feeds Attack)",
+    "title": "Axe Mastery (1/5)",
+    "description": "Now: nothing yet. Next: +0.3 damage with axes. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:diamond_axe"
       }
     },
     "frame": {
@@ -108,12 +125,12 @@
     "required_spent_points": 0
   },
   "axe_mastery_2": {
-    "title": "Axe Mastery II",
-    "description": "+0.3 damage with axes per rank (feeds Attack)",
+    "title": "Axe Mastery (2/5)",
+    "description": "Now: +0.3 damage with axes. Next: +0.6 damage with axes. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:diamond_axe"
       }
     },
     "frame": {
@@ -126,12 +143,12 @@
     "required_spent_points": 0
   },
   "axe_mastery_3": {
-    "title": "Axe Mastery III",
-    "description": "+0.3 damage with axes per rank (feeds Attack)",
+    "title": "Axe Mastery (3/5)",
+    "description": "Now: +0.6 damage with axes. Next: +0.9 damage with axes. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:diamond_axe"
       }
     },
     "frame": {
@@ -144,12 +161,12 @@
     "required_spent_points": 0
   },
   "axe_mastery_4": {
-    "title": "Axe Mastery IV",
-    "description": "+0.3 damage with axes per rank (feeds Attack)",
+    "title": "Axe Mastery (4/5)",
+    "description": "Now: +0.9 damage with axes. Next: +1.2 damage with axes. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:diamond_axe"
       }
     },
     "frame": {
@@ -162,12 +179,12 @@
     "required_spent_points": 0
   },
   "axe_mastery_5": {
-    "title": "Axe Mastery V",
-    "description": "+0.3 damage with axes per rank (feeds Attack)",
+    "title": "Axe Mastery (5/5)",
+    "description": "Now: +1.2 damage with axes. Next: +1.5 damage with axes (max). (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:diamond_axe"
       }
     },
     "frame": {
@@ -180,12 +197,12 @@
     "required_spent_points": 0
   },
   "berry_picker_1": {
-    "title": "Berry Picker I",
-    "description": "10% per rank for extra berries from bushes and wild crops",
+    "title": "Berry Picker (1/3)",
+    "description": "Now: nothing yet. Next: 10% for extra berries from bushes and wild crops.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:sweet_berries"
       }
     },
     "frame": {
@@ -198,12 +215,12 @@
     "required_spent_points": 0
   },
   "berry_picker_2": {
-    "title": "Berry Picker II",
-    "description": "10% per rank for extra berries from bushes and wild crops",
+    "title": "Berry Picker (2/3)",
+    "description": "Now: 10% for extra berries from bushes and wild crops. Next: 20% for extra berries from bushes and wild crops.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:sweet_berries"
       }
     },
     "frame": {
@@ -216,12 +233,12 @@
     "required_spent_points": 0
   },
   "berry_picker_3": {
-    "title": "Berry Picker III",
-    "description": "10% per rank for extra berries from bushes and wild crops",
+    "title": "Berry Picker (3/3)",
+    "description": "Now: 20% for extra berries from bushes and wild crops. Next: 30% for extra berries from bushes and wild crops (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:sweet_berries"
       }
     },
     "frame": {
@@ -233,13 +250,30 @@
     "cost": 1,
     "required_spent_points": 0
   },
-  "timber_1": {
-    "title": "Timber I",
-    "description": "3% extra logs per rank",
+  "tier_2_label": {
+    "title": "Tier 2 \u00b7 5 points",
+    "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 5
+  },
+  "timber_1": {
+    "title": "Timber (1/5)",
+    "description": "Now: nothing yet. Next: 3% extra logs.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_log"
       }
     },
     "frame": {
@@ -252,12 +286,12 @@
     "required_spent_points": 5
   },
   "timber_2": {
-    "title": "Timber II",
-    "description": "3% extra logs per rank",
+    "title": "Timber (2/5)",
+    "description": "Now: 3% extra logs. Next: 6% extra logs.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_log"
       }
     },
     "frame": {
@@ -270,12 +304,12 @@
     "required_spent_points": 5
   },
   "timber_3": {
-    "title": "Timber III",
-    "description": "3% extra logs per rank",
+    "title": "Timber (3/5)",
+    "description": "Now: 6% extra logs. Next: 9% extra logs.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_log"
       }
     },
     "frame": {
@@ -288,12 +322,12 @@
     "required_spent_points": 5
   },
   "timber_4": {
-    "title": "Timber IV",
-    "description": "3% extra logs per rank",
+    "title": "Timber (4/5)",
+    "description": "Now: 9% extra logs. Next: 12% extra logs.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_log"
       }
     },
     "frame": {
@@ -306,12 +340,12 @@
     "required_spent_points": 5
   },
   "timber_5": {
-    "title": "Timber V",
-    "description": "3% extra logs per rank",
+    "title": "Timber (5/5)",
+    "description": "Now: 12% extra logs. Next: 15% extra logs (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_log"
       }
     },
     "frame": {
@@ -324,12 +358,12 @@
     "required_spent_points": 5
   },
   "long_net_1": {
-    "title": "Long Net I",
-    "description": "Butterfly and bug nets reach 1 block further per rank",
+    "title": "Long Net (1/3)",
+    "description": "Now: nothing yet. Next: Butterfly and bug nets reach 1 block further.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:cobweb"
       }
     },
     "frame": {
@@ -342,12 +376,12 @@
     "required_spent_points": 5
   },
   "long_net_2": {
-    "title": "Long Net II",
-    "description": "Butterfly and bug nets reach 1 block further per rank",
+    "title": "Long Net (2/3)",
+    "description": "Now: Butterfly and bug nets reach 1 block further. Next: Butterfly and bug nets reach 2 block further.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:cobweb"
       }
     },
     "frame": {
@@ -360,12 +394,12 @@
     "required_spent_points": 5
   },
   "long_net_3": {
-    "title": "Long Net III",
-    "description": "Butterfly and bug nets reach 1 block further per rank",
+    "title": "Long Net (3/3)",
+    "description": "Now: Butterfly and bug nets reach 2 block further. Next: Butterfly and bug nets reach 3 block further (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:cobweb"
       }
     },
     "frame": {
@@ -378,12 +412,12 @@
     "required_spent_points": 5
   },
   "forest_stride_1": {
-    "title": "Forest Stride I",
-    "description": "+5% move speed in forests per rank (feeds Agility)",
+    "title": "Forest Stride (1/2)",
+    "description": "Now: nothing yet. Next: +5% move speed in forests. (feeds Agility)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_sapling"
       }
     },
     "frame": {
@@ -396,12 +430,12 @@
     "required_spent_points": 5
   },
   "forest_stride_2": {
-    "title": "Forest Stride II",
-    "description": "+5% move speed in forests per rank (feeds Agility)",
+    "title": "Forest Stride (2/2)",
+    "description": "Now: +5% move speed in forests. Next: +10% move speed in forests (max). (feeds Agility)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_sapling"
       }
     },
     "frame": {
@@ -413,13 +447,30 @@
     "cost": 1,
     "required_spent_points": 5
   },
-  "splitting_blow_1": {
-    "title": "Splitting Blow I",
-    "description": "Axe hits ignore 10% of armour per rank (feeds Attack)",
+  "tier_3_label": {
+    "title": "Tier 3 \u00b7 10 points",
+    "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "splitting_blow_1": {
+    "title": "Splitting Blow (1/3)",
+    "description": "Now: nothing yet. Next: Axe hits ignore 10% of armour. Pick one: this or Wildcrafter. (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:stripped_oak_log"
       }
     },
     "frame": {
@@ -432,12 +483,12 @@
     "required_spent_points": 10
   },
   "splitting_blow_2": {
-    "title": "Splitting Blow II",
-    "description": "Axe hits ignore 10% of armour per rank (feeds Attack)",
+    "title": "Splitting Blow (2/3)",
+    "description": "Now: Axe hits ignore 10% of armour. Next: Axe hits ignore 20% of armour. Pick one: this or Wildcrafter. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:stripped_oak_log"
       }
     },
     "frame": {
@@ -450,12 +501,12 @@
     "required_spent_points": 10
   },
   "splitting_blow_3": {
-    "title": "Splitting Blow III",
-    "description": "Axe hits ignore 10% of armour per rank (feeds Attack)",
+    "title": "Splitting Blow (3/3)",
+    "description": "Now: Axe hits ignore 20% of armour. Next: Axe hits ignore 30% of armour (max). Pick one: this or Wildcrafter. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:stripped_oak_log"
       }
     },
     "frame": {
@@ -467,13 +518,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "wildcrafter_1": {
-    "title": "Wildcrafter I",
-    "description": "Mushrooms, flowers and herbs drop 8% extra per rank; teas and potions from them last longer (feeds Cooking)",
+  "tier_3_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "wildcrafter_1": {
+    "title": "Wildcrafter (1/3)",
+    "description": "Now: nothing yet. Next: Mushrooms, flowers and herbs drop 8% extra; teas and potions from them last longer. Pick one: this or Splitting Blow. (feeds Cooking)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:red_mushroom"
       }
     },
     "frame": {
@@ -486,12 +554,12 @@
     "required_spent_points": 10
   },
   "wildcrafter_2": {
-    "title": "Wildcrafter II",
-    "description": "Mushrooms, flowers and herbs drop 8% extra per rank; teas and potions from them last longer (feeds Cooking)",
+    "title": "Wildcrafter (2/3)",
+    "description": "Now: Mushrooms, flowers and herbs drop 8% extra; teas and potions from them last longer. Next: Mushrooms, flowers and herbs drop 16% extra; teas and potions from them last longer. Pick one: this or Splitting Blow. (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:red_mushroom"
       }
     },
     "frame": {
@@ -504,12 +572,12 @@
     "required_spent_points": 10
   },
   "wildcrafter_3": {
-    "title": "Wildcrafter III",
-    "description": "Mushrooms, flowers and herbs drop 8% extra per rank; teas and potions from them last longer (feeds Cooking)",
+    "title": "Wildcrafter (3/3)",
+    "description": "Now: Mushrooms, flowers and herbs drop 16% extra; teas and potions from them last longer. Next: Mushrooms, flowers and herbs drop 24% extra; teas and potions from them last longer (max). Pick one: this or Splitting Blow. (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:red_mushroom"
       }
     },
     "frame": {
@@ -521,13 +589,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "timber_ii_1": {
-    "title": "Timber II I",
-    "description": "+3% extra logs per rank Needs Timber (all ranks).",
+  "tier_4_label": {
+    "title": "Tier 4 \u00b7 15 points",
+    "description": "Opens once you have spent 15 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 15
+  },
+  "timber_ii_1": {
+    "title": "Timber II (1/5)",
+    "description": "Now: nothing yet. Next: +3% extra logs. Needs Timber (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_log"
       }
     },
     "frame": {
@@ -540,12 +625,12 @@
     "required_spent_points": 15
   },
   "timber_ii_2": {
-    "title": "Timber II II",
-    "description": "+3% extra logs per rank Needs Timber (all ranks).",
+    "title": "Timber II (2/5)",
+    "description": "Now: +3% extra logs. Next: +6% extra logs. Needs Timber (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_log"
       }
     },
     "frame": {
@@ -558,12 +643,12 @@
     "required_spent_points": 15
   },
   "timber_ii_3": {
-    "title": "Timber II III",
-    "description": "+3% extra logs per rank Needs Timber (all ranks).",
+    "title": "Timber II (3/5)",
+    "description": "Now: +6% extra logs. Next: +9% extra logs. Needs Timber (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_log"
       }
     },
     "frame": {
@@ -576,12 +661,12 @@
     "required_spent_points": 15
   },
   "timber_ii_4": {
-    "title": "Timber II IV",
-    "description": "+3% extra logs per rank Needs Timber (all ranks).",
+    "title": "Timber II (4/5)",
+    "description": "Now: +9% extra logs. Next: +12% extra logs. Needs Timber (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_log"
       }
     },
     "frame": {
@@ -594,12 +679,12 @@
     "required_spent_points": 15
   },
   "timber_ii_5": {
-    "title": "Timber II V",
-    "description": "+3% extra logs per rank Needs Timber (all ranks).",
+    "title": "Timber II (5/5)",
+    "description": "Now: +12% extra logs. Next: +15% extra logs (max). Needs Timber (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_log"
       }
     },
     "frame": {
@@ -612,12 +697,12 @@
     "required_spent_points": 15
   },
   "beekeeper_1": {
-    "title": "Beekeeper I",
-    "description": "Hives give extra honey and comb; bees stay calm when you harvest",
+    "title": "Beekeeper (1/3)",
+    "description": "Rank 1/3: Hives give extra honey and comb; bees stay calm when you harvest",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:honeycomb"
       }
     },
     "frame": {
@@ -630,12 +715,12 @@
     "required_spent_points": 15
   },
   "beekeeper_2": {
-    "title": "Beekeeper II",
-    "description": "Hives give extra honey and comb; bees stay calm when you harvest",
+    "title": "Beekeeper (2/3)",
+    "description": "Rank 2/3: Hives give extra honey and comb; bees stay calm when you harvest",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:honeycomb"
       }
     },
     "frame": {
@@ -648,12 +733,12 @@
     "required_spent_points": 15
   },
   "beekeeper_3": {
-    "title": "Beekeeper III",
-    "description": "Hives give extra honey and comb; bees stay calm when you harvest",
+    "title": "Beekeeper (3/3)",
+    "description": "Rank 3/3: Hives give extra honey and comb; bees stay calm when you harvest",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:honeycomb"
       }
     },
     "frame": {
@@ -666,12 +751,12 @@
     "required_spent_points": 15
   },
   "fletcher_1": {
-    "title": "Fletcher I",
-    "description": "Crafting arrows: 10% per rank for extra arrows (feeds Range)",
+    "title": "Fletcher (1/3)",
+    "description": "Now: nothing yet. Next: Crafting arrows: 10% for extra arrows. (feeds Range)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:arrow"
       }
     },
     "frame": {
@@ -684,12 +769,12 @@
     "required_spent_points": 15
   },
   "fletcher_2": {
-    "title": "Fletcher II",
-    "description": "Crafting arrows: 10% per rank for extra arrows (feeds Range)",
+    "title": "Fletcher (2/3)",
+    "description": "Now: Crafting arrows: 10% for extra arrows. Next: Crafting arrows: 20% for extra arrows. (feeds Range)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:arrow"
       }
     },
     "frame": {
@@ -702,12 +787,12 @@
     "required_spent_points": 15
   },
   "fletcher_3": {
-    "title": "Fletcher III",
-    "description": "Crafting arrows: 10% per rank for extra arrows (feeds Range)",
+    "title": "Fletcher (3/3)",
+    "description": "Now: Crafting arrows: 20% for extra arrows. Next: Crafting arrows: 30% for extra arrows (max). (feeds Range)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:arrow"
       }
     },
     "frame": {
@@ -720,12 +805,12 @@
     "required_spent_points": 15
   },
   "bark_skin_1": {
-    "title": "Bark Skin I",
-    "description": "+0.5 armour toughness in forests per rank (feeds Defense)",
+    "title": "Bark Skin (1/3)",
+    "description": "Now: nothing yet. Next: +0.5 armour toughness in forests. (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:spruce_log"
       }
     },
     "frame": {
@@ -738,12 +823,12 @@
     "required_spent_points": 15
   },
   "bark_skin_2": {
-    "title": "Bark Skin II",
-    "description": "+0.5 armour toughness in forests per rank (feeds Defense)",
+    "title": "Bark Skin (2/3)",
+    "description": "Now: +0.5 armour toughness in forests. Next: +1 armour toughness in forests. (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:spruce_log"
       }
     },
     "frame": {
@@ -756,12 +841,12 @@
     "required_spent_points": 15
   },
   "bark_skin_3": {
-    "title": "Bark Skin III",
-    "description": "+0.5 armour toughness in forests per rank (feeds Defense)",
+    "title": "Bark Skin (3/3)",
+    "description": "Now: +1 armour toughness in forests. Next: +1.5 armour toughness in forests (max). (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:spruce_log"
       }
     },
     "frame": {
@@ -774,12 +859,12 @@
     "required_spent_points": 15
   },
   "druids_grove_1": {
-    "title": "Druid's Grove I",
-    "description": "Spells cost 5% less mana in forests per rank (feeds Magic)",
+    "title": "Druid's Grove (1/3)",
+    "description": "Now: nothing yet. Next: Spells cost 5% less mana in forests. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:azalea"
       }
     },
     "frame": {
@@ -792,12 +877,12 @@
     "required_spent_points": 15
   },
   "druids_grove_2": {
-    "title": "Druid's Grove II",
-    "description": "Spells cost 5% less mana in forests per rank (feeds Magic)",
+    "title": "Druid's Grove (2/3)",
+    "description": "Now: Spells cost 5% less mana in forests. Next: Spells cost 10% less mana in forests. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:azalea"
       }
     },
     "frame": {
@@ -810,12 +895,12 @@
     "required_spent_points": 15
   },
   "druids_grove_3": {
-    "title": "Druid's Grove III",
-    "description": "Spells cost 5% less mana in forests per rank (feeds Magic)",
+    "title": "Druid's Grove (3/3)",
+    "description": "Now: Spells cost 10% less mana in forests. Next: Spells cost 15% less mana in forests (max). (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:azalea"
       }
     },
     "frame": {
@@ -827,13 +912,30 @@
     "cost": 1,
     "required_spent_points": 15
   },
-  "throwing_axes_1": {
-    "title": "Throwing Axes I",
-    "description": "Thrown axes and tomahawks +10% damage per rank (feeds Range)",
+  "tier_5_label": {
+    "title": "Tier 5 \u00b7 25 points",
+    "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "throwing_axes_1": {
+    "title": "Throwing Axes (1/3)",
+    "description": "Now: nothing yet. Next: Thrown axes and tomahawks +10% damage. (feeds Range)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:stone_axe"
       }
     },
     "frame": {
@@ -846,12 +948,12 @@
     "required_spent_points": 25
   },
   "throwing_axes_2": {
-    "title": "Throwing Axes II",
-    "description": "Thrown axes and tomahawks +10% damage per rank (feeds Range)",
+    "title": "Throwing Axes (2/3)",
+    "description": "Now: Thrown axes and tomahawks +10% damage. Next: Thrown axes and tomahawks +20% damage. (feeds Range)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:stone_axe"
       }
     },
     "frame": {
@@ -864,12 +966,12 @@
     "required_spent_points": 25
   },
   "throwing_axes_3": {
-    "title": "Throwing Axes III",
-    "description": "Thrown axes and tomahawks +10% damage per rank (feeds Range)",
+    "title": "Throwing Axes (3/3)",
+    "description": "Now: Thrown axes and tomahawks +20% damage. Next: Thrown axes and tomahawks +30% damage (max). (feeds Range)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:stone_axe"
       }
     },
     "frame": {
@@ -883,11 +985,11 @@
   },
   "natures_bounty_1": {
     "title": "Nature's Bounty",
-    "description": "5% chance any log, berry, mushroom or honey harvest drops triple",
+    "description": "5% chance any log, berry, mushroom or honey harvest drops triple Pick one: this or Berserker's Axe.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:glow_berries"
       }
     },
     "frame": {
@@ -899,13 +1001,30 @@
     "cost": 3,
     "required_spent_points": 25
   },
-  "berserkers_axe_1": {
-    "title": "Berserker's Axe",
-    "description": "Axe kills give 4 s of Strength (feeds Attack)",
+  "tier_5_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_axe"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "berserkers_axe_1": {
+    "title": "Berserker's Axe",
+    "description": "Axe kills give 4 s of Strength Pick one: this or Nature's Bounty. (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:netherite_axe"
       }
     },
     "frame": {

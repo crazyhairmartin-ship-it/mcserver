@@ -1,7 +1,24 @@
 {
+  "tier_1_label": {
+    "title": "Tier 1 \u00b7 Start",
+    "description": "Open from the start.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 0
+  },
   "patient_angler_1": {
-    "title": "Patient Angler I",
-    "description": "-5% bite time per rank",
+    "title": "Patient Angler (1/5)",
+    "description": "Now: nothing yet. Next: -5% bite time.",
     "icon": {
       "type": "item",
       "data": {
@@ -18,8 +35,8 @@
     "required_spent_points": 0
   },
   "patient_angler_2": {
-    "title": "Patient Angler II",
-    "description": "-5% bite time per rank",
+    "title": "Patient Angler (2/5)",
+    "description": "Now: -5% bite time. Next: -10% bite time.",
     "icon": {
       "type": "item",
       "data": {
@@ -36,8 +53,8 @@
     "required_spent_points": 0
   },
   "patient_angler_3": {
-    "title": "Patient Angler III",
-    "description": "-5% bite time per rank",
+    "title": "Patient Angler (3/5)",
+    "description": "Now: -10% bite time. Next: -15% bite time.",
     "icon": {
       "type": "item",
       "data": {
@@ -54,8 +71,8 @@
     "required_spent_points": 0
   },
   "patient_angler_4": {
-    "title": "Patient Angler IV",
-    "description": "-5% bite time per rank",
+    "title": "Patient Angler (4/5)",
+    "description": "Now: -15% bite time. Next: -20% bite time.",
     "icon": {
       "type": "item",
       "data": {
@@ -72,8 +89,8 @@
     "required_spent_points": 0
   },
   "patient_angler_5": {
-    "title": "Patient Angler V",
-    "description": "-5% bite time per rank",
+    "title": "Patient Angler (5/5)",
+    "description": "Now: -20% bite time. Next: -25% bite time (max).",
     "icon": {
       "type": "item",
       "data": {
@@ -90,12 +107,12 @@
     "required_spent_points": 0
   },
   "lucky_line_1": {
-    "title": "Lucky Line I",
-    "description": "Better treasure odds per rank",
+    "title": "Lucky Line (1/3)",
+    "description": "Rank 1/3: Better treasure odds per rank",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:string"
       }
     },
     "frame": {
@@ -108,12 +125,12 @@
     "required_spent_points": 0
   },
   "lucky_line_2": {
-    "title": "Lucky Line II",
-    "description": "Better treasure odds per rank",
+    "title": "Lucky Line (2/3)",
+    "description": "Rank 2/3: Better treasure odds per rank",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:string"
       }
     },
     "frame": {
@@ -126,12 +143,12 @@
     "required_spent_points": 0
   },
   "lucky_line_3": {
-    "title": "Lucky Line III",
-    "description": "Better treasure odds per rank",
+    "title": "Lucky Line (3/3)",
+    "description": "Rank 3/3: Better treasure odds per rank",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:string"
       }
     },
     "frame": {
@@ -144,12 +161,12 @@
     "required_spent_points": 0
   },
   "trident_master_1": {
-    "title": "Trident Master I",
-    "description": "+0.3 damage with tridents and spears per rank (feeds Attack)",
+    "title": "Trident Master (1/5)",
+    "description": "Now: nothing yet. Next: +0.3 damage with tridents and spears. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:trident"
       }
     },
     "frame": {
@@ -162,12 +179,12 @@
     "required_spent_points": 0
   },
   "trident_master_2": {
-    "title": "Trident Master II",
-    "description": "+0.3 damage with tridents and spears per rank (feeds Attack)",
+    "title": "Trident Master (2/5)",
+    "description": "Now: +0.3 damage with tridents and spears. Next: +0.6 damage with tridents and spears. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:trident"
       }
     },
     "frame": {
@@ -180,12 +197,12 @@
     "required_spent_points": 0
   },
   "trident_master_3": {
-    "title": "Trident Master III",
-    "description": "+0.3 damage with tridents and spears per rank (feeds Attack)",
+    "title": "Trident Master (3/5)",
+    "description": "Now: +0.6 damage with tridents and spears. Next: +0.9 damage with tridents and spears. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:trident"
       }
     },
     "frame": {
@@ -198,12 +215,12 @@
     "required_spent_points": 0
   },
   "trident_master_4": {
-    "title": "Trident Master IV",
-    "description": "+0.3 damage with tridents and spears per rank (feeds Attack)",
+    "title": "Trident Master (4/5)",
+    "description": "Now: +0.9 damage with tridents and spears. Next: +1.2 damage with tridents and spears. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:trident"
       }
     },
     "frame": {
@@ -216,12 +233,12 @@
     "required_spent_points": 0
   },
   "trident_master_5": {
-    "title": "Trident Master V",
-    "description": "+0.3 damage with tridents and spears per rank (feeds Attack)",
+    "title": "Trident Master (5/5)",
+    "description": "Now: +1.2 damage with tridents and spears. Next: +1.5 damage with tridents and spears (max). (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:trident"
       }
     },
     "frame": {
@@ -233,13 +250,30 @@
     "cost": 1,
     "required_spent_points": 0
   },
-  "double_catch_1": {
-    "title": "Double Catch I",
-    "description": "4% per rank to catch two",
+  "tier_2_label": {
+    "title": "Tier 2 \u00b7 5 points",
+    "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 5
+  },
+  "double_catch_1": {
+    "title": "Double Catch (1/3)",
+    "description": "Now: nothing yet. Next: 4% to catch two.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:cod"
       }
     },
     "frame": {
@@ -252,12 +286,12 @@
     "required_spent_points": 5
   },
   "double_catch_2": {
-    "title": "Double Catch II",
-    "description": "4% per rank to catch two",
+    "title": "Double Catch (2/3)",
+    "description": "Now: 4% to catch two. Next: 8% to catch two.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:cod"
       }
     },
     "frame": {
@@ -270,12 +304,12 @@
     "required_spent_points": 5
   },
   "double_catch_3": {
-    "title": "Double Catch III",
-    "description": "4% per rank to catch two",
+    "title": "Double Catch (3/3)",
+    "description": "Now: 8% to catch two. Next: 12% to catch two (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:cod"
       }
     },
     "frame": {
@@ -288,12 +322,12 @@
     "required_spent_points": 5
   },
   "bait_saver_1": {
-    "title": "Bait Saver I",
-    "description": "15% per rank that Aquaculture bait isn't used",
+    "title": "Bait Saver (1/3)",
+    "description": "Now: nothing yet. Next: 15% that Aquaculture bait isn't used.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:spider_eye"
       }
     },
     "frame": {
@@ -306,12 +340,12 @@
     "required_spent_points": 5
   },
   "bait_saver_2": {
-    "title": "Bait Saver II",
-    "description": "15% per rank that Aquaculture bait isn't used",
+    "title": "Bait Saver (2/3)",
+    "description": "Now: 15% that Aquaculture bait isn't used. Next: 30% that Aquaculture bait isn't used.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:spider_eye"
       }
     },
     "frame": {
@@ -324,12 +358,12 @@
     "required_spent_points": 5
   },
   "bait_saver_3": {
-    "title": "Bait Saver III",
-    "description": "15% per rank that Aquaculture bait isn't used",
+    "title": "Bait Saver (3/3)",
+    "description": "Now: 30% that Aquaculture bait isn't used. Next: 45% that Aquaculture bait isn't used (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:spider_eye"
       }
     },
     "frame": {
@@ -342,12 +376,12 @@
     "required_spent_points": 5
   },
   "tidecaller_1": {
-    "title": "Tidecaller I",
-    "description": "+4% spell power in water or rain per rank (feeds Magic)",
+    "title": "Tidecaller (1/3)",
+    "description": "Now: nothing yet. Next: +4% spell power in water or rain. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:heart_of_the_sea"
       }
     },
     "frame": {
@@ -360,12 +394,12 @@
     "required_spent_points": 5
   },
   "tidecaller_2": {
-    "title": "Tidecaller II",
-    "description": "+4% spell power in water or rain per rank (feeds Magic)",
+    "title": "Tidecaller (2/3)",
+    "description": "Now: +4% spell power in water or rain. Next: +8% spell power in water or rain. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:heart_of_the_sea"
       }
     },
     "frame": {
@@ -378,12 +412,12 @@
     "required_spent_points": 5
   },
   "tidecaller_3": {
-    "title": "Tidecaller III",
-    "description": "+4% spell power in water or rain per rank (feeds Magic)",
+    "title": "Tidecaller (3/3)",
+    "description": "Now: +8% spell power in water or rain. Next: +12% spell power in water or rain (max). (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:heart_of_the_sea"
       }
     },
     "frame": {
@@ -395,13 +429,30 @@
     "cost": 1,
     "required_spent_points": 5
   },
-  "treasure_hunter_1": {
-    "title": "Treasure Hunter I",
-    "description": "Treasure odds x2 and a rarer loot table",
+  "tier_3_label": {
+    "title": "Tier 3 \u00b7 10 points",
+    "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "treasure_hunter_1": {
+    "title": "Treasure Hunter (1/3)",
+    "description": "Rank 1/3: Treasure odds x2 and a rarer loot table Pick one: this or Riptide Runner.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:name_tag"
       }
     },
     "frame": {
@@ -414,12 +465,12 @@
     "required_spent_points": 10
   },
   "treasure_hunter_2": {
-    "title": "Treasure Hunter II",
-    "description": "Treasure odds x2 and a rarer loot table",
+    "title": "Treasure Hunter (2/3)",
+    "description": "Rank 2/3: Treasure odds x2 and a rarer loot table Pick one: this or Riptide Runner.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:name_tag"
       }
     },
     "frame": {
@@ -432,12 +483,12 @@
     "required_spent_points": 10
   },
   "treasure_hunter_3": {
-    "title": "Treasure Hunter III",
-    "description": "Treasure odds x2 and a rarer loot table",
+    "title": "Treasure Hunter (3/3)",
+    "description": "Rank 3/3: Treasure odds x2 and a rarer loot table Pick one: this or Riptide Runner.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:name_tag"
       }
     },
     "frame": {
@@ -449,13 +500,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "riptide_runner_1": {
-    "title": "Riptide Runner I",
-    "description": "Faster swimming and boats, longer breath (feeds Agility)",
+  "tier_3_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "riptide_runner_1": {
+    "title": "Riptide Runner (1/3)",
+    "description": "Rank 1/3: Faster swimming and boats, longer breath Pick one: this or Treasure Hunter. (feeds Agility)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_boat"
       }
     },
     "frame": {
@@ -468,12 +536,12 @@
     "required_spent_points": 10
   },
   "riptide_runner_2": {
-    "title": "Riptide Runner II",
-    "description": "Faster swimming and boats, longer breath (feeds Agility)",
+    "title": "Riptide Runner (2/3)",
+    "description": "Rank 2/3: Faster swimming and boats, longer breath Pick one: this or Treasure Hunter. (feeds Agility)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:oak_boat"
       }
     },
     "frame": {
@@ -486,12 +554,12 @@
     "required_spent_points": 10
   },
   "riptide_runner_3": {
-    "title": "Riptide Runner III",
-    "description": "Faster swimming and boats, longer breath (feeds Agility)",
+    "title": "Riptide Runner (3/3)",
+    "description": "Rank 3/3: Faster swimming and boats, longer breath Pick one: this or Treasure Hunter. (feeds Agility)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:oak_boat"
       }
     },
     "frame": {
@@ -503,9 +571,26 @@
     "cost": 1,
     "required_spent_points": 10
   },
+  "tier_4_label": {
+    "title": "Tier 4 \u00b7 15 points",
+    "description": "Opens once you have spent 15 points in this tree.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 15
+  },
   "patient_angler_ii_1": {
-    "title": "Patient Angler II I",
-    "description": "Faster bites still Needs Patient Angler (all ranks).",
+    "title": "Patient Angler II (1/5)",
+    "description": "Rank 1/5: Faster bites still Needs Patient Angler (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -522,8 +607,8 @@
     "required_spent_points": 15
   },
   "patient_angler_ii_2": {
-    "title": "Patient Angler II II",
-    "description": "Faster bites still Needs Patient Angler (all ranks).",
+    "title": "Patient Angler II (2/5)",
+    "description": "Rank 2/5: Faster bites still Needs Patient Angler (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -540,8 +625,8 @@
     "required_spent_points": 15
   },
   "patient_angler_ii_3": {
-    "title": "Patient Angler II III",
-    "description": "Faster bites still Needs Patient Angler (all ranks).",
+    "title": "Patient Angler II (3/5)",
+    "description": "Rank 3/5: Faster bites still Needs Patient Angler (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -558,8 +643,8 @@
     "required_spent_points": 15
   },
   "patient_angler_ii_4": {
-    "title": "Patient Angler II IV",
-    "description": "Faster bites still Needs Patient Angler (all ranks).",
+    "title": "Patient Angler II (4/5)",
+    "description": "Rank 4/5: Faster bites still Needs Patient Angler (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -576,8 +661,8 @@
     "required_spent_points": 15
   },
   "patient_angler_ii_5": {
-    "title": "Patient Angler II V",
-    "description": "Faster bites still Needs Patient Angler (all ranks).",
+    "title": "Patient Angler II (5/5)",
+    "description": "Rank 5/5: Faster bites still Needs Patient Angler (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -594,12 +679,12 @@
     "required_spent_points": 15
   },
   "hook_shot_1": {
-    "title": "Hook Shot I",
-    "description": "Your rod yanks mobs harder and deals 2 damage (feeds Attack)",
+    "title": "Hook Shot (1/2)",
+    "description": "Rank 1/2: Your rod yanks mobs harder and deals 2 damage (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:tripwire_hook"
       }
     },
     "frame": {
@@ -612,12 +697,12 @@
     "required_spent_points": 15
   },
   "hook_shot_2": {
-    "title": "Hook Shot II",
-    "description": "Your rod yanks mobs harder and deals 2 damage (feeds Attack)",
+    "title": "Hook Shot (2/2)",
+    "description": "Rank 2/2: Your rod yanks mobs harder and deals 2 damage (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:tripwire_hook"
       }
     },
     "frame": {
@@ -630,12 +715,12 @@
     "required_spent_points": 15
   },
   "sushi_chef_1": {
-    "title": "Sushi Chef I",
-    "description": "Fish dishes you cook give Water Breathing and extra saturation (feeds Cooking)",
+    "title": "Sushi Chef (1/3)",
+    "description": "Rank 1/3: Fish dishes you cook give Water Breathing and extra saturation (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:cooked_salmon"
       }
     },
     "frame": {
@@ -648,12 +733,12 @@
     "required_spent_points": 15
   },
   "sushi_chef_2": {
-    "title": "Sushi Chef II",
-    "description": "Fish dishes you cook give Water Breathing and extra saturation (feeds Cooking)",
+    "title": "Sushi Chef (2/3)",
+    "description": "Rank 2/3: Fish dishes you cook give Water Breathing and extra saturation (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:cooked_salmon"
       }
     },
     "frame": {
@@ -666,12 +751,12 @@
     "required_spent_points": 15
   },
   "sushi_chef_3": {
-    "title": "Sushi Chef III",
-    "description": "Fish dishes you cook give Water Breathing and extra saturation (feeds Cooking)",
+    "title": "Sushi Chef (3/3)",
+    "description": "Rank 3/3: Fish dishes you cook give Water Breathing and extra saturation (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:cooked_salmon"
       }
     },
     "frame": {
@@ -684,12 +769,12 @@
     "required_spent_points": 15
   },
   "lure_master_1": {
-    "title": "Lure Master I",
-    "description": "Aquaculture lures work better",
+    "title": "Lure Master (1/3)",
+    "description": "Rank 1/3: Aquaculture lures work better",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:glow_ink_sac"
       }
     },
     "frame": {
@@ -702,12 +787,12 @@
     "required_spent_points": 15
   },
   "lure_master_2": {
-    "title": "Lure Master II",
-    "description": "Aquaculture lures work better",
+    "title": "Lure Master (2/3)",
+    "description": "Rank 2/3: Aquaculture lures work better",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:glow_ink_sac"
       }
     },
     "frame": {
@@ -720,12 +805,12 @@
     "required_spent_points": 15
   },
   "lure_master_3": {
-    "title": "Lure Master III",
-    "description": "Aquaculture lures work better",
+    "title": "Lure Master (3/3)",
+    "description": "Rank 3/3: Aquaculture lures work better",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:glow_ink_sac"
       }
     },
     "frame": {
@@ -737,13 +822,30 @@
     "cost": 1,
     "required_spent_points": 15
   },
-  "storm_fisher_1": {
-    "title": "Storm Fisher I",
-    "description": "Faster bites in rain",
+  "tier_5_label": {
+    "title": "Tier 5 \u00b7 25 points",
+    "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "storm_fisher_1": {
+    "title": "Storm Fisher (1/2)",
+    "description": "Rank 1/2: Faster bites in rain",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lightning_rod"
       }
     },
     "frame": {
@@ -756,12 +858,12 @@
     "required_spent_points": 25
   },
   "storm_fisher_2": {
-    "title": "Storm Fisher II",
-    "description": "Faster bites in rain",
+    "title": "Storm Fisher (2/2)",
+    "description": "Rank 2/2: Faster bites in rain",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:lightning_rod"
       }
     },
     "frame": {
@@ -774,12 +876,12 @@
     "required_spent_points": 25
   },
   "sea_legs_1": {
-    "title": "Sea Legs I",
-    "description": "Boats go 5% faster per rank",
+    "title": "Sea Legs (1/2)",
+    "description": "Now: nothing yet. Next: Boats go 5% faster.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:birch_boat"
       }
     },
     "frame": {
@@ -792,12 +894,12 @@
     "required_spent_points": 25
   },
   "sea_legs_2": {
-    "title": "Sea Legs II",
-    "description": "Boats go 5% faster per rank",
+    "title": "Sea Legs (2/2)",
+    "description": "Now: Boats go 5% faster. Next: Boats go 10% faster (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:birch_boat"
       }
     },
     "frame": {
@@ -811,11 +913,11 @@
   },
   "leviathan_bait_1": {
     "title": "Leviathan Bait",
-    "description": "Rare chance of a unique trophy fish",
+    "description": "Rare chance of a unique trophy fish Pick one: this or Sea's Blessing.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:tropical_fish"
       }
     },
     "frame": {
@@ -827,13 +929,30 @@
     "cost": 3,
     "required_spent_points": 25
   },
-  "seas_blessing_1": {
-    "title": "Sea's Blessing",
-    "description": "Dolphin's Grace and Conduit Power while swimming (feeds Agility)",
+  "tier_5_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:fishing_rod"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "seas_blessing_1": {
+    "title": "Sea's Blessing",
+    "description": "Dolphin's Grace and Conduit Power while swimming Pick one: this or Leviathan Bait. (feeds Agility)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:nautilus_shell"
       }
     },
     "frame": {

@@ -1,245 +1,280 @@
 {
+  "tier_1_label": {
+    "x": -45,
+    "y": 0,
+    "definition": "tier_1_label"
+  },
   "harvester_1": {
-    "x": -202,
+    "x": -15,
     "y": 0,
     "definition": "harvester_1",
     "root": true
   },
   "harvester_2": {
-    "x": -176,
+    "x": -15,
     "y": 0,
     "definition": "harvester_2"
   },
   "harvester_3": {
-    "x": -150,
+    "x": -15,
     "y": 0,
     "definition": "harvester_3"
   },
   "harvester_4": {
-    "x": -124,
+    "x": -15,
     "y": 0,
     "definition": "harvester_4"
   },
   "harvester_5": {
-    "x": -98,
+    "x": -15,
     "y": 0,
     "definition": "harvester_5"
   },
   "seed_saver_1": {
-    "x": -50,
+    "x": 15,
     "y": 0,
     "definition": "seed_saver_1",
     "root": true
   },
   "seed_saver_2": {
-    "x": -24,
+    "x": 15,
     "y": 0,
     "definition": "seed_saver_2"
   },
   "seed_saver_3": {
-    "x": 2,
+    "x": 15,
     "y": 0,
     "definition": "seed_saver_3"
   },
   "reaper_1": {
-    "x": 50,
+    "x": 45,
     "y": 0,
     "definition": "reaper_1",
     "root": true
   },
   "reaper_2": {
-    "x": 76,
+    "x": 45,
     "y": 0,
     "definition": "reaper_2"
   },
   "reaper_3": {
-    "x": 102,
+    "x": 45,
     "y": 0,
     "definition": "reaper_3"
   },
   "reaper_4": {
-    "x": 128,
+    "x": 45,
     "y": 0,
     "definition": "reaper_4"
   },
   "reaper_5": {
-    "x": 154,
+    "x": 45,
     "y": 0,
     "definition": "reaper_5"
   },
+  "tier_2_label": {
+    "x": -45,
+    "y": 40,
+    "definition": "tier_2_label"
+  },
   "green_thumb_1": {
-    "x": -150,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "green_thumb_1",
     "root": true
   },
   "green_thumb_2": {
-    "x": -124,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "green_thumb_2"
   },
   "green_thumb_3": {
-    "x": -98,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "green_thumb_3"
   },
   "fertile_soil_1": {
-    "x": -50,
-    "y": 56,
+    "x": 15,
+    "y": 40,
     "definition": "fertile_soil_1",
     "root": true
   },
   "fertile_soil_2": {
-    "x": -24,
-    "y": 56,
+    "x": 15,
+    "y": 40,
     "definition": "fertile_soil_2"
   },
   "fertile_soil_3": {
-    "x": 2,
-    "y": 56,
+    "x": 15,
+    "y": 40,
     "definition": "fertile_soil_3"
   },
   "harvest_feast_1": {
-    "x": 50,
-    "y": 56,
+    "x": 45,
+    "y": 40,
     "definition": "harvest_feast_1",
     "root": true
   },
   "harvest_feast_2": {
-    "x": 76,
-    "y": 56,
+    "x": 45,
+    "y": 40,
     "definition": "harvest_feast_2"
   },
   "harvest_feast_3": {
-    "x": 102,
-    "y": 56,
+    "x": 45,
+    "y": 40,
     "definition": "harvest_feast_3"
   },
+  "tier_3_label": {
+    "x": -45,
+    "y": 80,
+    "definition": "tier_3_label"
+  },
   "gardener_1": {
-    "x": -100,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "gardener_1",
     "root": true
   },
   "gardener_2": {
-    "x": -74,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "gardener_2"
   },
   "gardener_3": {
-    "x": -48,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "gardener_3"
   },
+  "tier_3_or": {
+    "x": 15,
+    "y": 80,
+    "definition": "tier_3_or"
+  },
   "grim_harvest_1": {
-    "x": 0,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "grim_harvest_1",
     "root": true
   },
   "grim_harvest_2": {
-    "x": 26,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "grim_harvest_2"
   },
   "grim_harvest_3": {
-    "x": 52,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "grim_harvest_3"
   },
+  "tier_4_label": {
+    "x": -75,
+    "y": 120,
+    "definition": "tier_4_label"
+  },
   "harvester_ii_1": {
-    "x": -224,
-    "y": 168,
+    "x": -45,
+    "y": 120,
     "definition": "harvester_ii_1"
   },
   "harvester_ii_2": {
-    "x": -198,
-    "y": 168,
+    "x": -45,
+    "y": 120,
     "definition": "harvester_ii_2"
   },
   "harvester_ii_3": {
-    "x": -172,
-    "y": 168,
+    "x": -45,
+    "y": 120,
     "definition": "harvester_ii_3"
   },
   "harvester_ii_4": {
-    "x": -146,
-    "y": 168,
+    "x": -45,
+    "y": 120,
     "definition": "harvester_ii_4"
   },
   "harvester_ii_5": {
-    "x": -120,
-    "y": 168,
+    "x": -45,
+    "y": 120,
     "definition": "harvester_ii_5"
   },
   "earthbound_1": {
-    "x": -72,
-    "y": 168,
+    "x": -15,
+    "y": 120,
     "definition": "earthbound_1",
     "root": true
   },
   "earthbound_2": {
-    "x": -46,
-    "y": 168,
+    "x": -15,
+    "y": 120,
     "definition": "earthbound_2"
   },
   "earthbound_3": {
-    "x": -20,
-    "y": 168,
+    "x": -15,
+    "y": 120,
     "definition": "earthbound_3"
   },
   "sweeping_harvest_1": {
-    "x": 28,
-    "y": 168,
+    "x": 15,
+    "y": 120,
     "definition": "sweeping_harvest_1",
     "root": true
   },
   "sweeping_harvest_2": {
-    "x": 54,
-    "y": 168,
+    "x": 15,
+    "y": 120,
     "definition": "sweeping_harvest_2"
   },
   "irrigator_1": {
-    "x": 102,
-    "y": 168,
+    "x": 45,
+    "y": 120,
     "definition": "irrigator_1",
     "root": true
   },
   "irrigator_2": {
-    "x": 128,
-    "y": 168,
+    "x": 45,
+    "y": 120,
     "definition": "irrigator_2"
   },
   "compost_king_1": {
-    "x": 176,
-    "y": 168,
+    "x": 75,
+    "y": 120,
     "definition": "compost_king_1",
     "root": true
   },
+  "tier_5_label": {
+    "x": -60,
+    "y": 160,
+    "definition": "tier_5_label"
+  },
   "fertile_soil_ii_1": {
-    "x": -98,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "fertile_soil_ii_1"
   },
   "fertile_soil_ii_2": {
-    "x": -72,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "fertile_soil_ii_2"
   },
   "fertile_soil_ii_3": {
-    "x": -46,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "fertile_soil_ii_3"
   },
   "harvest_moon_1": {
-    "x": 2,
-    "y": 224,
+    "x": 0,
+    "y": 160,
     "definition": "harvest_moon_1",
     "root": true
   },
+  "tier_5_or": {
+    "x": 30,
+    "y": 160,
+    "definition": "tier_5_or"
+  },
   "reapers_due_1": {
-    "x": 50,
-    "y": 224,
+    "x": 60,
+    "y": 160,
     "definition": "reapers_due_1",
     "root": true
   }

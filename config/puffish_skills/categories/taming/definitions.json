@@ -1,11 +1,28 @@
 {
-  "gentle_hand_1": {
-    "title": "Gentle Hand I",
-    "description": "Better odds and fewer attempts on hard tames",
+  "tier_1_label": {
+    "title": "Tier 1 \u00b7 Start",
+    "description": "Open from the start.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 0
+  },
+  "gentle_hand_1": {
+    "title": "Gentle Hand (1/3)",
+    "description": "Rank 1/3: Better odds and fewer attempts on hard tames",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -18,12 +35,12 @@
     "required_spent_points": 0
   },
   "gentle_hand_2": {
-    "title": "Gentle Hand II",
-    "description": "Better odds and fewer attempts on hard tames",
+    "title": "Gentle Hand (2/3)",
+    "description": "Rank 2/3: Better odds and fewer attempts on hard tames",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -36,12 +53,12 @@
     "required_spent_points": 0
   },
   "gentle_hand_3": {
-    "title": "Gentle Hand III",
-    "description": "Better odds and fewer attempts on hard tames",
+    "title": "Gentle Hand (3/3)",
+    "description": "Rank 3/3: Better odds and fewer attempts on hard tames",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -54,12 +71,12 @@
     "required_spent_points": 0
   },
   "treat_saver_1": {
-    "title": "Treat Saver I",
-    "description": "10% per rank: taming or feeding food isn't used",
+    "title": "Treat Saver (1/3)",
+    "description": "Now: nothing yet. Next: 10%: taming or feeding food isn't used.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:carrot"
       }
     },
     "frame": {
@@ -72,12 +89,12 @@
     "required_spent_points": 0
   },
   "treat_saver_2": {
-    "title": "Treat Saver II",
-    "description": "10% per rank: taming or feeding food isn't used",
+    "title": "Treat Saver (2/3)",
+    "description": "Now: 10%: taming or feeding food isn't used. Next: 20%: taming or feeding food isn't used.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:carrot"
       }
     },
     "frame": {
@@ -90,12 +107,12 @@
     "required_spent_points": 0
   },
   "treat_saver_3": {
-    "title": "Treat Saver III",
-    "description": "10% per rank: taming or feeding food isn't used",
+    "title": "Treat Saver (3/3)",
+    "description": "Now: 20%: taming or feeding food isn't used. Next: 30%: taming or feeding food isn't used (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:carrot"
       }
     },
     "frame": {
@@ -108,12 +125,12 @@
     "required_spent_points": 0
   },
   "husbandry_1": {
-    "title": "Husbandry I",
-    "description": "Domesticated animals give 4% more wool, milk, eggs, meat and leather per rank (feeds Farming)",
+    "title": "Husbandry (1/5)",
+    "description": "Now: nothing yet. Next: Domesticated animals give 4% more wool, milk, eggs, meat and leather. (feeds Farming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:egg"
       }
     },
     "frame": {
@@ -126,12 +143,12 @@
     "required_spent_points": 0
   },
   "husbandry_2": {
-    "title": "Husbandry II",
-    "description": "Domesticated animals give 4% more wool, milk, eggs, meat and leather per rank (feeds Farming)",
+    "title": "Husbandry (2/5)",
+    "description": "Now: Domesticated animals give 4% more wool, milk, eggs, meat and leather. Next: Domesticated animals give 8% more wool, milk, eggs, meat and leather. (feeds Farming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:egg"
       }
     },
     "frame": {
@@ -144,12 +161,12 @@
     "required_spent_points": 0
   },
   "husbandry_3": {
-    "title": "Husbandry III",
-    "description": "Domesticated animals give 4% more wool, milk, eggs, meat and leather per rank (feeds Farming)",
+    "title": "Husbandry (3/5)",
+    "description": "Now: Domesticated animals give 8% more wool, milk, eggs, meat and leather. Next: Domesticated animals give 12% more wool, milk, eggs, meat and leather. (feeds Farming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:egg"
       }
     },
     "frame": {
@@ -162,12 +179,12 @@
     "required_spent_points": 0
   },
   "husbandry_4": {
-    "title": "Husbandry IV",
-    "description": "Domesticated animals give 4% more wool, milk, eggs, meat and leather per rank (feeds Farming)",
+    "title": "Husbandry (4/5)",
+    "description": "Now: Domesticated animals give 12% more wool, milk, eggs, meat and leather. Next: Domesticated animals give 16% more wool, milk, eggs, meat and leather. (feeds Farming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:egg"
       }
     },
     "frame": {
@@ -180,12 +197,12 @@
     "required_spent_points": 0
   },
   "husbandry_5": {
-    "title": "Husbandry V",
-    "description": "Domesticated animals give 4% more wool, milk, eggs, meat and leather per rank (feeds Farming)",
+    "title": "Husbandry (5/5)",
+    "description": "Now: Domesticated animals give 16% more wool, milk, eggs, meat and leather. Next: Domesticated animals give 20% more wool, milk, eggs, meat and leather (max). (feeds Farming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:egg"
       }
     },
     "frame": {
@@ -197,13 +214,30 @@
     "cost": 1,
     "required_spent_points": 0
   },
-  "selective_breeding_1": {
-    "title": "Selective Breeding I",
-    "description": "Babies take the better parent's stats, with a 2% per rank chance of a bonus",
+  "tier_2_label": {
+    "title": "Tier 2 \u00b7 5 points",
+    "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 5
+  },
+  "selective_breeding_1": {
+    "title": "Selective Breeding (1/5)",
+    "description": "Now: nothing yet. Next: Babies take the better parent's stats, with a 2% chance of a bonus.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:golden_carrot"
       }
     },
     "frame": {
@@ -216,12 +250,12 @@
     "required_spent_points": 5
   },
   "selective_breeding_2": {
-    "title": "Selective Breeding II",
-    "description": "Babies take the better parent's stats, with a 2% per rank chance of a bonus",
+    "title": "Selective Breeding (2/5)",
+    "description": "Now: Babies take the better parent's stats, with a 2% chance of a bonus. Next: Babies take the better parent's stats, with a 4% chance of a bonus.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:golden_carrot"
       }
     },
     "frame": {
@@ -234,12 +268,12 @@
     "required_spent_points": 5
   },
   "selective_breeding_3": {
-    "title": "Selective Breeding III",
-    "description": "Babies take the better parent's stats, with a 2% per rank chance of a bonus",
+    "title": "Selective Breeding (3/5)",
+    "description": "Now: Babies take the better parent's stats, with a 4% chance of a bonus. Next: Babies take the better parent's stats, with a 6% chance of a bonus.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:golden_carrot"
       }
     },
     "frame": {
@@ -252,12 +286,12 @@
     "required_spent_points": 5
   },
   "selective_breeding_4": {
-    "title": "Selective Breeding IV",
-    "description": "Babies take the better parent's stats, with a 2% per rank chance of a bonus",
+    "title": "Selective Breeding (4/5)",
+    "description": "Now: Babies take the better parent's stats, with a 6% chance of a bonus. Next: Babies take the better parent's stats, with a 8% chance of a bonus.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:golden_carrot"
       }
     },
     "frame": {
@@ -270,12 +304,12 @@
     "required_spent_points": 5
   },
   "selective_breeding_5": {
-    "title": "Selective Breeding V",
-    "description": "Babies take the better parent's stats, with a 2% per rank chance of a bonus",
+    "title": "Selective Breeding (5/5)",
+    "description": "Now: Babies take the better parent's stats, with a 8% chance of a bonus. Next: Babies take the better parent's stats, with a 10% chance of a bonus (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:golden_carrot"
       }
     },
     "frame": {
@@ -288,8 +322,8 @@
     "required_spent_points": 5
   },
   "bonded_1": {
-    "title": "Bonded I",
-    "description": "Pets +5% health per rank",
+    "title": "Bonded (1/3)",
+    "description": "Now: nothing yet. Next: Pets +5% health.",
     "icon": {
       "type": "item",
       "data": {
@@ -306,8 +340,8 @@
     "required_spent_points": 5
   },
   "bonded_2": {
-    "title": "Bonded II",
-    "description": "Pets +5% health per rank",
+    "title": "Bonded (2/3)",
+    "description": "Now: Pets +5% health. Next: Pets +10% health.",
     "icon": {
       "type": "item",
       "data": {
@@ -324,8 +358,8 @@
     "required_spent_points": 5
   },
   "bonded_3": {
-    "title": "Bonded III",
-    "description": "Pets +5% health per rank",
+    "title": "Bonded (3/3)",
+    "description": "Now: Pets +10% health. Next: Pets +15% health (max).",
     "icon": {
       "type": "item",
       "data": {
@@ -342,12 +376,12 @@
     "required_spent_points": 5
   },
   "pet_scavenging_1": {
-    "title": "Pet Scavenging I",
-    "description": "Pets sometimes find resources and drop them for you",
+    "title": "Pet Scavenging (1/3)",
+    "description": "Rank 1/3: Pets sometimes find resources and drop them for you",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:bone"
       }
     },
     "frame": {
@@ -360,12 +394,12 @@
     "required_spent_points": 5
   },
   "pet_scavenging_2": {
-    "title": "Pet Scavenging II",
-    "description": "Pets sometimes find resources and drop them for you",
+    "title": "Pet Scavenging (2/3)",
+    "description": "Rank 2/3: Pets sometimes find resources and drop them for you",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:bone"
       }
     },
     "frame": {
@@ -378,12 +412,12 @@
     "required_spent_points": 5
   },
   "pet_scavenging_3": {
-    "title": "Pet Scavenging III",
-    "description": "Pets sometimes find resources and drop them for you",
+    "title": "Pet Scavenging (3/3)",
+    "description": "Rank 3/3: Pets sometimes find resources and drop them for you",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:bone"
       }
     },
     "frame": {
@@ -395,13 +429,30 @@
     "cost": 1,
     "required_spent_points": 5
   },
-  "beastmaster_1": {
-    "title": "Beastmaster I",
-    "description": "Combat pets: +15% damage per rank",
+  "tier_3_label": {
+    "title": "Tier 3 \u00b7 10 points",
+    "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "beastmaster_1": {
+    "title": "Beastmaster (1/3)",
+    "description": "Now: nothing yet. Next: Combat pets: +15% damage. Pick one: this or Breeder.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:wolf_spawn_egg"
       }
     },
     "frame": {
@@ -414,12 +465,12 @@
     "required_spent_points": 10
   },
   "beastmaster_2": {
-    "title": "Beastmaster II",
-    "description": "Combat pets: +15% damage per rank",
+    "title": "Beastmaster (2/3)",
+    "description": "Now: Combat pets: +15% damage. Next: Combat pets: +30% damage. Pick one: this or Breeder.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:wolf_spawn_egg"
       }
     },
     "frame": {
@@ -432,12 +483,12 @@
     "required_spent_points": 10
   },
   "beastmaster_3": {
-    "title": "Beastmaster III",
-    "description": "Combat pets: +15% damage per rank",
+    "title": "Beastmaster (3/3)",
+    "description": "Now: Combat pets: +30% damage. Next: Combat pets: +45% damage (max). Pick one: this or Breeder.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:wolf_spawn_egg"
       }
     },
     "frame": {
@@ -449,13 +500,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "breeder_1": {
-    "title": "Breeder I",
-    "description": "6% per rank for twins; babies grow up faster",
+  "tier_3_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "breeder_1": {
+    "title": "Breeder (1/3)",
+    "description": "Now: nothing yet. Next: 6% for twins; babies grow up faster. Pick one: this or Beastmaster.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:cow_spawn_egg"
       }
     },
     "frame": {
@@ -468,12 +536,12 @@
     "required_spent_points": 10
   },
   "breeder_2": {
-    "title": "Breeder II",
-    "description": "6% per rank for twins; babies grow up faster",
+    "title": "Breeder (2/3)",
+    "description": "Now: 6% for twins; babies grow up faster. Next: 12% for twins; babies grow up faster. Pick one: this or Beastmaster.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:cow_spawn_egg"
       }
     },
     "frame": {
@@ -486,12 +554,12 @@
     "required_spent_points": 10
   },
   "breeder_3": {
-    "title": "Breeder III",
-    "description": "6% per rank for twins; babies grow up faster",
+    "title": "Breeder (3/3)",
+    "description": "Now: 12% for twins; babies grow up faster. Next: 18% for twins; babies grow up faster (max). Pick one: this or Beastmaster.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:cow_spawn_egg"
       }
     },
     "frame": {
@@ -503,13 +571,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "pack_tactics_1": {
-    "title": "Pack Tactics I",
-    "description": "Pets deal more damage to your target",
+  "tier_4_label": {
+    "title": "Tier 4 \u00b7 15 points",
+    "description": "Opens once you have spent 15 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 15
+  },
+  "pack_tactics_1": {
+    "title": "Pack Tactics (1/3)",
+    "description": "Rank 1/3: Pets deal more damage to your target",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:fox_spawn_egg"
       }
     },
     "frame": {
@@ -522,12 +607,12 @@
     "required_spent_points": 15
   },
   "pack_tactics_2": {
-    "title": "Pack Tactics II",
-    "description": "Pets deal more damage to your target",
+    "title": "Pack Tactics (2/3)",
+    "description": "Rank 2/3: Pets deal more damage to your target",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:fox_spawn_egg"
       }
     },
     "frame": {
@@ -540,12 +625,12 @@
     "required_spent_points": 15
   },
   "pack_tactics_3": {
-    "title": "Pack Tactics III",
-    "description": "Pets deal more damage to your target",
+    "title": "Pack Tactics (3/3)",
+    "description": "Rank 3/3: Pets deal more damage to your target",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:fox_spawn_egg"
       }
     },
     "frame": {
@@ -558,12 +643,12 @@
     "required_spent_points": 15
   },
   "loyal_guard_1": {
-    "title": "Loyal Guard I",
-    "description": "8% per rank that a nearby pet leaps in and blocks a hit: no damage to you or the pet (feeds Defense)",
+    "title": "Loyal Guard (1/3)",
+    "description": "Now: nothing yet. Next: 8% that a nearby pet leaps in and blocks a hit: no damage to you or the pet. (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:shield"
       }
     },
     "frame": {
@@ -576,12 +661,12 @@
     "required_spent_points": 15
   },
   "loyal_guard_2": {
-    "title": "Loyal Guard II",
-    "description": "8% per rank that a nearby pet leaps in and blocks a hit: no damage to you or the pet (feeds Defense)",
+    "title": "Loyal Guard (2/3)",
+    "description": "Now: 8% that a nearby pet leaps in and blocks a hit: no damage to you or the pet. Next: 16% that a nearby pet leaps in and blocks a hit: no damage to you or the pet. (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:shield"
       }
     },
     "frame": {
@@ -594,12 +679,12 @@
     "required_spent_points": 15
   },
   "loyal_guard_3": {
-    "title": "Loyal Guard III",
-    "description": "8% per rank that a nearby pet leaps in and blocks a hit: no damage to you or the pet (feeds Defense)",
+    "title": "Loyal Guard (3/3)",
+    "description": "Now: 16% that a nearby pet leaps in and blocks a hit: no damage to you or the pet. Next: 24% that a nearby pet leaps in and blocks a hit: no damage to you or the pet (max). (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:shield"
       }
     },
     "frame": {
@@ -612,12 +697,12 @@
     "required_spent_points": 15
   },
   "bloodlines_1": {
-    "title": "Bloodlines I",
-    "description": "Bred animals have a better chance of rare colours and variants",
+    "title": "Bloodlines (1/3)",
+    "description": "Rank 1/3: Bred animals have a better chance of rare colours and variants",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:lime_dye"
       }
     },
     "frame": {
@@ -630,12 +715,12 @@
     "required_spent_points": 15
   },
   "bloodlines_2": {
-    "title": "Bloodlines II",
-    "description": "Bred animals have a better chance of rare colours and variants",
+    "title": "Bloodlines (2/3)",
+    "description": "Rank 2/3: Bred animals have a better chance of rare colours and variants",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:lime_dye"
       }
     },
     "frame": {
@@ -648,12 +733,12 @@
     "required_spent_points": 15
   },
   "bloodlines_3": {
-    "title": "Bloodlines III",
-    "description": "Bred animals have a better chance of rare colours and variants",
+    "title": "Bloodlines (3/3)",
+    "description": "Rank 3/3: Bred animals have a better chance of rare colours and variants",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:lime_dye"
       }
     },
     "frame": {
@@ -666,12 +751,12 @@
     "required_spent_points": 15
   },
   "soul_mender_1": {
-    "title": "Soul Mender I",
-    "description": "Reviving a fallen pet costs 25% less per rank",
+    "title": "Soul Mender (1/3)",
+    "description": "Now: nothing yet. Next: Reviving a fallen pet costs 25% less.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:totem_of_undying"
       }
     },
     "frame": {
@@ -684,12 +769,12 @@
     "required_spent_points": 15
   },
   "soul_mender_2": {
-    "title": "Soul Mender II",
-    "description": "Reviving a fallen pet costs 25% less per rank",
+    "title": "Soul Mender (2/3)",
+    "description": "Now: Reviving a fallen pet costs 25% less. Next: Reviving a fallen pet costs 50% less.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:totem_of_undying"
       }
     },
     "frame": {
@@ -702,12 +787,12 @@
     "required_spent_points": 15
   },
   "soul_mender_3": {
-    "title": "Soul Mender III",
-    "description": "Reviving a fallen pet costs 25% less per rank",
+    "title": "Soul Mender (3/3)",
+    "description": "Now: Reviving a fallen pet costs 50% less. Next: Reviving a fallen pet costs 75% less (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:totem_of_undying"
       }
     },
     "frame": {
@@ -720,12 +805,12 @@
     "required_spent_points": 15
   },
   "mount_training_1": {
-    "title": "Mount Training I",
-    "description": "Mounts get +4% speed, jump and health per rank (feeds Agility)",
+    "title": "Mount Training (1/3)",
+    "description": "Now: nothing yet. Next: Mounts get +4% speed, jump and health. (feeds Agility)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:saddle"
       }
     },
     "frame": {
@@ -738,12 +823,12 @@
     "required_spent_points": 15
   },
   "mount_training_2": {
-    "title": "Mount Training II",
-    "description": "Mounts get +4% speed, jump and health per rank (feeds Agility)",
+    "title": "Mount Training (2/3)",
+    "description": "Now: Mounts get +4% speed, jump and health. Next: Mounts get +8% speed, jump and health. (feeds Agility)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:saddle"
       }
     },
     "frame": {
@@ -756,12 +841,12 @@
     "required_spent_points": 15
   },
   "mount_training_3": {
-    "title": "Mount Training III",
-    "description": "Mounts get +4% speed, jump and health per rank (feeds Agility)",
+    "title": "Mount Training (3/3)",
+    "description": "Now: Mounts get +8% speed, jump and health. Next: Mounts get +12% speed, jump and health (max). (feeds Agility)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:saddle"
       }
     },
     "frame": {
@@ -774,8 +859,8 @@
     "required_spent_points": 15
   },
   "bonded_ii_1": {
-    "title": "Bonded II I",
-    "description": "Pets gain armour and regen Needs Bonded (all ranks).",
+    "title": "Bonded II (1/3)",
+    "description": "Rank 1/3: Pets gain armour and regen Needs Bonded (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -792,8 +877,8 @@
     "required_spent_points": 15
   },
   "bonded_ii_2": {
-    "title": "Bonded II II",
-    "description": "Pets gain armour and regen Needs Bonded (all ranks).",
+    "title": "Bonded II (2/3)",
+    "description": "Rank 2/3: Pets gain armour and regen Needs Bonded (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -810,8 +895,8 @@
     "required_spent_points": 15
   },
   "bonded_ii_3": {
-    "title": "Bonded II III",
-    "description": "Pets gain armour and regen Needs Bonded (all ranks).",
+    "title": "Bonded II (3/3)",
+    "description": "Rank 3/3: Pets gain armour and regen Needs Bonded (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -827,13 +912,30 @@
     "cost": 1,
     "required_spent_points": 15
   },
+  "tier_5_label": {
+    "title": "Tier 5 \u00b7 25 points",
+    "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
   "caretaker_1": {
     "title": "Caretaker",
     "description": "Feeding heals pets more",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:hay_block"
       }
     },
     "frame": {
@@ -847,11 +949,11 @@
   },
   "alpha_1": {
     "title": "Alpha",
-    "description": "Pets +30% all stats and a chance to stun on hit",
+    "description": "Pets +30% all stats and a chance to stun on hit Pick one: this or Prized Stock.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:diamond_horse_armor"
       }
     },
     "frame": {
@@ -863,13 +965,30 @@
     "cost": 3,
     "required_spent_points": 25
   },
-  "prized_stock_1": {
-    "title": "Prized Stock",
-    "description": "Bred animals can roll stats above the normal maximum",
+  "tier_5_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:lead"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "prized_stock_1": {
+    "title": "Prized Stock",
+    "description": "Bred animals can roll stats above the normal maximum Pick one: this or Alpha.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:golden_apple"
       }
     },
     "frame": {

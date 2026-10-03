@@ -1,260 +1,295 @@
 {
+  "tier_1_label": {
+    "x": -45,
+    "y": 0,
+    "definition": "tier_1_label"
+  },
   "mana_pool_1": {
-    "x": -228,
+    "x": -15,
     "y": 0,
     "definition": "mana_pool_1",
     "root": true
   },
   "mana_pool_2": {
-    "x": -202,
+    "x": -15,
     "y": 0,
     "definition": "mana_pool_2"
   },
   "mana_pool_3": {
-    "x": -176,
+    "x": -15,
     "y": 0,
     "definition": "mana_pool_3"
   },
   "mana_pool_4": {
-    "x": -150,
+    "x": -15,
     "y": 0,
     "definition": "mana_pool_4"
   },
   "mana_pool_5": {
-    "x": -124,
+    "x": -15,
     "y": 0,
     "definition": "mana_pool_5"
   },
   "focus_1": {
-    "x": -76,
+    "x": 15,
     "y": 0,
     "definition": "focus_1",
     "root": true
   },
   "focus_2": {
-    "x": -50,
+    "x": 15,
     "y": 0,
     "definition": "focus_2"
   },
   "focus_3": {
-    "x": -24,
+    "x": 15,
     "y": 0,
     "definition": "focus_3"
   },
   "focus_4": {
-    "x": 2,
+    "x": 15,
     "y": 0,
     "definition": "focus_4"
   },
   "focus_5": {
-    "x": 28,
+    "x": 15,
     "y": 0,
     "definition": "focus_5"
   },
   "flow_1": {
-    "x": 76,
+    "x": 45,
     "y": 0,
     "definition": "flow_1",
     "root": true
   },
   "flow_2": {
-    "x": 102,
+    "x": 45,
     "y": 0,
     "definition": "flow_2"
   },
   "flow_3": {
-    "x": 128,
+    "x": 45,
     "y": 0,
     "definition": "flow_3"
   },
   "flow_4": {
-    "x": 154,
+    "x": 45,
     "y": 0,
     "definition": "flow_4"
   },
   "flow_5": {
-    "x": 180,
+    "x": 45,
     "y": 0,
     "definition": "flow_5"
   },
+  "tier_2_label": {
+    "x": -60,
+    "y": 40,
+    "definition": "tier_2_label"
+  },
   "mana_saver_1": {
-    "x": -187,
-    "y": 56,
+    "x": -30,
+    "y": 40,
     "definition": "mana_saver_1",
     "root": true
   },
   "mana_saver_2": {
-    "x": -161,
-    "y": 56,
+    "x": -30,
+    "y": 40,
     "definition": "mana_saver_2"
   },
   "mana_saver_3": {
-    "x": -135,
-    "y": 56,
+    "x": -30,
+    "y": 40,
     "definition": "mana_saver_3"
   },
   "mana_shield_1": {
-    "x": -87,
-    "y": 56,
+    "x": 0,
+    "y": 40,
     "definition": "mana_shield_1",
     "root": true
   },
   "mana_shield_2": {
-    "x": -61,
-    "y": 56,
+    "x": 0,
+    "y": 40,
     "definition": "mana_shield_2"
   },
   "mana_shield_3": {
-    "x": -35,
-    "y": 56,
+    "x": 0,
+    "y": 40,
     "definition": "mana_shield_3"
   },
   "scroll_saver_1": {
-    "x": 13,
-    "y": 56,
+    "x": 30,
+    "y": 40,
     "definition": "scroll_saver_1",
     "root": true
   },
   "scroll_saver_2": {
-    "x": 39,
-    "y": 56,
+    "x": 30,
+    "y": 40,
     "definition": "scroll_saver_2"
   },
   "staff_adept_1": {
-    "x": 87,
-    "y": 56,
+    "x": 60,
+    "y": 40,
     "definition": "staff_adept_1",
     "root": true
   },
   "staff_adept_2": {
-    "x": 113,
-    "y": 56,
+    "x": 60,
+    "y": 40,
     "definition": "staff_adept_2"
   },
   "staff_adept_3": {
-    "x": 139,
-    "y": 56,
+    "x": 60,
+    "y": 40,
     "definition": "staff_adept_3"
   },
+  "tier_3_label": {
+    "x": -45,
+    "y": 80,
+    "definition": "tier_3_label"
+  },
   "battlemage_1": {
-    "x": -100,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "battlemage_1",
     "root": true
   },
   "battlemage_2": {
-    "x": -74,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "battlemage_2"
   },
   "battlemage_3": {
-    "x": -48,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "battlemage_3"
   },
+  "tier_3_or": {
+    "x": 15,
+    "y": 80,
+    "definition": "tier_3_or"
+  },
   "artificer_1": {
-    "x": 0,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "artificer_1",
     "root": true
   },
   "artificer_2": {
-    "x": 26,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "artificer_2"
   },
   "artificer_3": {
-    "x": 52,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "artificer_3"
   },
+  "tier_4_label": {
+    "x": -60,
+    "y": 120,
+    "definition": "tier_4_label"
+  },
   "mana_pool_ii_1": {
-    "x": -213,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "mana_pool_ii_1"
   },
   "mana_pool_ii_2": {
-    "x": -187,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "mana_pool_ii_2"
   },
   "mana_pool_ii_3": {
-    "x": -161,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "mana_pool_ii_3"
   },
   "mana_pool_ii_4": {
-    "x": -135,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "mana_pool_ii_4"
   },
   "mana_pool_ii_5": {
-    "x": -109,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "mana_pool_ii_5"
   },
   "spellbound_steel_1": {
-    "x": -61,
-    "y": 168,
+    "x": 0,
+    "y": 120,
     "definition": "spellbound_steel_1",
     "root": true
   },
   "spellbound_steel_2": {
-    "x": -35,
-    "y": 168,
+    "x": 0,
+    "y": 120,
     "definition": "spellbound_steel_2"
   },
   "spellbound_steel_3": {
-    "x": -9,
-    "y": 168,
+    "x": 0,
+    "y": 120,
     "definition": "spellbound_steel_3"
   },
   "natures_mend_1": {
-    "x": 39,
-    "y": 168,
+    "x": 30,
+    "y": 120,
     "definition": "natures_mend_1",
     "root": true
   },
   "natures_mend_2": {
-    "x": 65,
-    "y": 168,
+    "x": 30,
+    "y": 120,
     "definition": "natures_mend_2"
   },
   "natures_mend_3": {
-    "x": 91,
-    "y": 168,
+    "x": 30,
+    "y": 120,
     "definition": "natures_mend_3"
   },
   "cooldown_flow_1": {
-    "x": 139,
-    "y": 168,
+    "x": 60,
+    "y": 120,
     "definition": "cooldown_flow_1",
     "root": true
   },
   "cooldown_flow_2": {
-    "x": 165,
-    "y": 168,
+    "x": 60,
+    "y": 120,
     "definition": "cooldown_flow_2"
   },
+  "tier_5_label": {
+    "x": -60,
+    "y": 160,
+    "definition": "tier_5_label"
+  },
   "arcane_aegis_1": {
-    "x": -85,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "arcane_aegis_1"
   },
   "arcane_aegis_2": {
-    "x": -59,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "arcane_aegis_2"
   },
   "archmage_1": {
-    "x": -11,
-    "y": 224,
+    "x": 0,
+    "y": 160,
     "definition": "archmage_1",
     "root": true
   },
+  "tier_5_or": {
+    "x": 30,
+    "y": 160,
+    "definition": "tier_5_or"
+  },
   "wellspring_1": {
-    "x": 37,
-    "y": 224,
+    "x": 60,
+    "y": 160,
     "definition": "wellspring_1",
     "root": true
   }

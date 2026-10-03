@@ -1,7 +1,24 @@
 {
+  "tier_1_label": {
+    "title": "Tier 1 \u00b7 Start",
+    "description": "Open from the start.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 0
+  },
   "sharpened_1": {
-    "title": "Sharpened I",
-    "description": "+0.3 attack damage per rank",
+    "title": "Sharpened (1/5)",
+    "description": "Now: nothing yet. Next: +0.3 attack damage.",
     "icon": {
       "type": "item",
       "data": {
@@ -18,8 +35,8 @@
     "required_spent_points": 0
   },
   "sharpened_2": {
-    "title": "Sharpened II",
-    "description": "+0.3 attack damage per rank",
+    "title": "Sharpened (2/5)",
+    "description": "Now: +0.3 attack damage. Next: +0.6 attack damage.",
     "icon": {
       "type": "item",
       "data": {
@@ -36,8 +53,8 @@
     "required_spent_points": 0
   },
   "sharpened_3": {
-    "title": "Sharpened III",
-    "description": "+0.3 attack damage per rank",
+    "title": "Sharpened (3/5)",
+    "description": "Now: +0.6 attack damage. Next: +0.9 attack damage.",
     "icon": {
       "type": "item",
       "data": {
@@ -54,8 +71,8 @@
     "required_spent_points": 0
   },
   "sharpened_4": {
-    "title": "Sharpened IV",
-    "description": "+0.3 attack damage per rank",
+    "title": "Sharpened (4/5)",
+    "description": "Now: +0.9 attack damage. Next: +1.2 attack damage.",
     "icon": {
       "type": "item",
       "data": {
@@ -72,8 +89,8 @@
     "required_spent_points": 0
   },
   "sharpened_5": {
-    "title": "Sharpened V",
-    "description": "+0.3 attack damage per rank",
+    "title": "Sharpened (5/5)",
+    "description": "Now: +1.2 attack damage. Next: +1.5 attack damage (max).",
     "icon": {
       "type": "item",
       "data": {
@@ -90,12 +107,12 @@
     "required_spent_points": 0
   },
   "footwork_1": {
-    "title": "Footwork I",
-    "description": "+2% move speed in combat per rank",
+    "title": "Footwork (1/5)",
+    "description": "Now: nothing yet. Next: +2% move speed in combat.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:leather_boots"
       }
     },
     "frame": {
@@ -108,12 +125,12 @@
     "required_spent_points": 0
   },
   "footwork_2": {
-    "title": "Footwork II",
-    "description": "+2% move speed in combat per rank",
+    "title": "Footwork (2/5)",
+    "description": "Now: +2% move speed in combat. Next: +4% move speed in combat.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:leather_boots"
       }
     },
     "frame": {
@@ -126,12 +143,12 @@
     "required_spent_points": 0
   },
   "footwork_3": {
-    "title": "Footwork III",
-    "description": "+2% move speed in combat per rank",
+    "title": "Footwork (3/5)",
+    "description": "Now: +4% move speed in combat. Next: +6% move speed in combat.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:leather_boots"
       }
     },
     "frame": {
@@ -144,12 +161,12 @@
     "required_spent_points": 0
   },
   "footwork_4": {
-    "title": "Footwork IV",
-    "description": "+2% move speed in combat per rank",
+    "title": "Footwork (4/5)",
+    "description": "Now: +6% move speed in combat. Next: +8% move speed in combat.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:leather_boots"
       }
     },
     "frame": {
@@ -162,12 +179,12 @@
     "required_spent_points": 0
   },
   "footwork_5": {
-    "title": "Footwork V",
-    "description": "+2% move speed in combat per rank",
+    "title": "Footwork (5/5)",
+    "description": "Now: +8% move speed in combat. Next: +10% move speed in combat (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:leather_boots"
       }
     },
     "frame": {
@@ -180,12 +197,12 @@
     "required_spent_points": 0
   },
   "butcher_1": {
-    "title": "Butcher I",
-    "description": "Animal kills drop 10% more meat and leather per rank (feeds Cooking)",
+    "title": "Butcher (1/3)",
+    "description": "Now: nothing yet. Next: Animal kills drop 10% more meat and leather. (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:porkchop"
       }
     },
     "frame": {
@@ -198,12 +215,12 @@
     "required_spent_points": 0
   },
   "butcher_2": {
-    "title": "Butcher II",
-    "description": "Animal kills drop 10% more meat and leather per rank (feeds Cooking)",
+    "title": "Butcher (2/3)",
+    "description": "Now: Animal kills drop 10% more meat and leather. Next: Animal kills drop 20% more meat and leather. (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:porkchop"
       }
     },
     "frame": {
@@ -216,12 +233,12 @@
     "required_spent_points": 0
   },
   "butcher_3": {
-    "title": "Butcher III",
-    "description": "Animal kills drop 10% more meat and leather per rank (feeds Cooking)",
+    "title": "Butcher (3/3)",
+    "description": "Now: Animal kills drop 20% more meat and leather. Next: Animal kills drop 30% more meat and leather (max). (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:porkchop"
       }
     },
     "frame": {
@@ -233,13 +250,30 @@
     "cost": 1,
     "required_spent_points": 0
   },
-  "crit_training_1": {
-    "title": "Crit Training I",
-    "description": "+5% crit damage per rank",
+  "tier_2_label": {
+    "title": "Tier 2 \u00b7 5 points",
+    "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 5
+  },
+  "crit_training_1": {
+    "title": "Crit Training (1/5)",
+    "description": "Now: nothing yet. Next: +5% crit damage.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:diamond_sword"
       }
     },
     "frame": {
@@ -252,12 +286,12 @@
     "required_spent_points": 5
   },
   "crit_training_2": {
-    "title": "Crit Training II",
-    "description": "+5% crit damage per rank",
+    "title": "Crit Training (2/5)",
+    "description": "Now: +5% crit damage. Next: +10% crit damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:diamond_sword"
       }
     },
     "frame": {
@@ -270,12 +304,12 @@
     "required_spent_points": 5
   },
   "crit_training_3": {
-    "title": "Crit Training III",
-    "description": "+5% crit damage per rank",
+    "title": "Crit Training (3/5)",
+    "description": "Now: +10% crit damage. Next: +15% crit damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:diamond_sword"
       }
     },
     "frame": {
@@ -288,12 +322,12 @@
     "required_spent_points": 5
   },
   "crit_training_4": {
-    "title": "Crit Training IV",
-    "description": "+5% crit damage per rank",
+    "title": "Crit Training (4/5)",
+    "description": "Now: +15% crit damage. Next: +20% crit damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:diamond_sword"
       }
     },
     "frame": {
@@ -306,12 +340,12 @@
     "required_spent_points": 5
   },
   "crit_training_5": {
-    "title": "Crit Training V",
-    "description": "+5% crit damage per rank",
+    "title": "Crit Training (5/5)",
+    "description": "Now: +20% crit damage. Next: +25% crit damage (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:diamond_sword"
       }
     },
     "frame": {
@@ -324,12 +358,12 @@
     "required_spent_points": 5
   },
   "spellblade_1": {
-    "title": "Spellblade I",
-    "description": "Melee hits restore 1 mana per rank (feeds Magic)",
+    "title": "Spellblade (1/3)",
+    "description": "Now: nothing yet. Next: Melee hits restore 1 mana. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:lapis_lazuli"
       }
     },
     "frame": {
@@ -342,12 +376,12 @@
     "required_spent_points": 5
   },
   "spellblade_2": {
-    "title": "Spellblade II",
-    "description": "Melee hits restore 1 mana per rank (feeds Magic)",
+    "title": "Spellblade (2/3)",
+    "description": "Now: Melee hits restore 1 mana. Next: Melee hits restore 2 mana. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:lapis_lazuli"
       }
     },
     "frame": {
@@ -360,12 +394,12 @@
     "required_spent_points": 5
   },
   "spellblade_3": {
-    "title": "Spellblade III",
-    "description": "Melee hits restore 1 mana per rank (feeds Magic)",
+    "title": "Spellblade (3/3)",
+    "description": "Now: Melee hits restore 2 mana. Next: Melee hits restore 3 mana (max). (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:lapis_lazuli"
       }
     },
     "frame": {
@@ -378,12 +412,12 @@
     "required_spent_points": 5
   },
   "momentum_1": {
-    "title": "Momentum I",
-    "description": "Hits in a row +5% damage (stacks 3)",
+    "title": "Momentum (1/2)",
+    "description": "Rank 1/2: Hits in a row +5% damage (stacks 3)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:blaze_powder"
       }
     },
     "frame": {
@@ -396,12 +430,12 @@
     "required_spent_points": 5
   },
   "momentum_2": {
-    "title": "Momentum II",
-    "description": "Hits in a row +5% damage (stacks 3)",
+    "title": "Momentum (2/2)",
+    "description": "Rank 2/2: Hits in a row +5% damage (stacks 3)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:blaze_powder"
       }
     },
     "frame": {
@@ -413,13 +447,30 @@
     "cost": 1,
     "required_spent_points": 5
   },
-  "heavy_arms_1": {
-    "title": "Heavy Arms I",
-    "description": "Two-handed weapons +10% damage per rank",
+  "tier_3_label": {
+    "title": "Tier 3 \u00b7 10 points",
+    "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "heavy_arms_1": {
+    "title": "Heavy Arms (1/3)",
+    "description": "Now: nothing yet. Next: Two-handed weapons +10% damage. Pick one: this or Duelist.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:netherite_sword"
       }
     },
     "frame": {
@@ -432,12 +483,12 @@
     "required_spent_points": 10
   },
   "heavy_arms_2": {
-    "title": "Heavy Arms II",
-    "description": "Two-handed weapons +10% damage per rank",
+    "title": "Heavy Arms (2/3)",
+    "description": "Now: Two-handed weapons +10% damage. Next: Two-handed weapons +20% damage. Pick one: this or Duelist.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:netherite_sword"
       }
     },
     "frame": {
@@ -450,12 +501,12 @@
     "required_spent_points": 10
   },
   "heavy_arms_3": {
-    "title": "Heavy Arms III",
-    "description": "Two-handed weapons +10% damage per rank",
+    "title": "Heavy Arms (3/3)",
+    "description": "Now: Two-handed weapons +20% damage. Next: Two-handed weapons +30% damage (max). Pick one: this or Duelist.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:netherite_sword"
       }
     },
     "frame": {
@@ -467,13 +518,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "duelist_1": {
-    "title": "Duelist I",
-    "description": "Daggers, rapiers and swords +8% attack speed per rank",
+  "tier_3_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "duelist_1": {
+    "title": "Duelist (1/3)",
+    "description": "Now: nothing yet. Next: Daggers, rapiers and swords +8% attack speed. Pick one: this or Heavy Arms.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:golden_sword"
       }
     },
     "frame": {
@@ -486,12 +554,12 @@
     "required_spent_points": 10
   },
   "duelist_2": {
-    "title": "Duelist II",
-    "description": "Daggers, rapiers and swords +8% attack speed per rank",
+    "title": "Duelist (2/3)",
+    "description": "Now: Daggers, rapiers and swords +8% attack speed. Next: Daggers, rapiers and swords +16% attack speed. Pick one: this or Heavy Arms.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:golden_sword"
       }
     },
     "frame": {
@@ -504,12 +572,12 @@
     "required_spent_points": 10
   },
   "duelist_3": {
-    "title": "Duelist III",
-    "description": "Daggers, rapiers and swords +8% attack speed per rank",
+    "title": "Duelist (3/3)",
+    "description": "Now: Daggers, rapiers and swords +16% attack speed. Next: Daggers, rapiers and swords +24% attack speed (max). Pick one: this or Heavy Arms.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:golden_sword"
       }
     },
     "frame": {
@@ -521,9 +589,26 @@
     "cost": 1,
     "required_spent_points": 10
   },
+  "tier_4_label": {
+    "title": "Tier 4 \u00b7 15 points",
+    "description": "Opens once you have spent 15 points in this tree.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 15
+  },
   "sharpened_ii_1": {
-    "title": "Sharpened II I",
-    "description": "+0.3 attack damage per rank Needs Sharpened (all ranks).",
+    "title": "Sharpened II (1/5)",
+    "description": "Now: nothing yet. Next: +0.3 attack damage. Needs Sharpened (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -540,8 +625,8 @@
     "required_spent_points": 15
   },
   "sharpened_ii_2": {
-    "title": "Sharpened II II",
-    "description": "+0.3 attack damage per rank Needs Sharpened (all ranks).",
+    "title": "Sharpened II (2/5)",
+    "description": "Now: +0.3 attack damage. Next: +0.6 attack damage. Needs Sharpened (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -558,8 +643,8 @@
     "required_spent_points": 15
   },
   "sharpened_ii_3": {
-    "title": "Sharpened II III",
-    "description": "+0.3 attack damage per rank Needs Sharpened (all ranks).",
+    "title": "Sharpened II (3/5)",
+    "description": "Now: +0.6 attack damage. Next: +0.9 attack damage. Needs Sharpened (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -576,8 +661,8 @@
     "required_spent_points": 15
   },
   "sharpened_ii_4": {
-    "title": "Sharpened II IV",
-    "description": "+0.3 attack damage per rank Needs Sharpened (all ranks).",
+    "title": "Sharpened II (4/5)",
+    "description": "Now: +0.9 attack damage. Next: +1.2 attack damage. Needs Sharpened (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -594,8 +679,8 @@
     "required_spent_points": 15
   },
   "sharpened_ii_5": {
-    "title": "Sharpened II V",
-    "description": "+0.3 attack damage per rank Needs Sharpened (all ranks).",
+    "title": "Sharpened II (5/5)",
+    "description": "Now: +1.2 attack damage. Next: +1.5 attack damage (max). Needs Sharpened (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -612,12 +697,12 @@
     "required_spent_points": 15
   },
   "hunters_mark_1": {
-    "title": "Hunter's Mark I",
-    "description": "Melee hits mark a target: your arrows deal +5% to it per rank (feeds Range)",
+    "title": "Hunter's Mark (1/3)",
+    "description": "Now: nothing yet. Next: Melee hits mark a target: your arrows deal +5% to it. (feeds Range)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:target"
       }
     },
     "frame": {
@@ -630,12 +715,12 @@
     "required_spent_points": 15
   },
   "hunters_mark_2": {
-    "title": "Hunter's Mark II",
-    "description": "Melee hits mark a target: your arrows deal +5% to it per rank (feeds Range)",
+    "title": "Hunter's Mark (2/3)",
+    "description": "Now: Melee hits mark a target: your arrows deal +5% to it. Next: Melee hits mark a target: your arrows deal +10% to it. (feeds Range)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:target"
       }
     },
     "frame": {
@@ -648,12 +733,12 @@
     "required_spent_points": 15
   },
   "hunters_mark_3": {
-    "title": "Hunter's Mark III",
-    "description": "Melee hits mark a target: your arrows deal +5% to it per rank (feeds Range)",
+    "title": "Hunter's Mark (3/3)",
+    "description": "Now: Melee hits mark a target: your arrows deal +10% to it. Next: Melee hits mark a target: your arrows deal +15% to it (max). (feeds Range)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:target"
       }
     },
     "frame": {
@@ -666,12 +751,12 @@
     "required_spent_points": 15
   },
   "shield_bash_1": {
-    "title": "Shield Bash I",
-    "description": "Hitting right after a block deals +20% damage per rank (feeds Defense)",
+    "title": "Shield Bash (1/3)",
+    "description": "Now: nothing yet. Next: Hitting right after a block deals +20% damage. (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:shield"
       }
     },
     "frame": {
@@ -684,12 +769,12 @@
     "required_spent_points": 15
   },
   "shield_bash_2": {
-    "title": "Shield Bash II",
-    "description": "Hitting right after a block deals +20% damage per rank (feeds Defense)",
+    "title": "Shield Bash (2/3)",
+    "description": "Now: Hitting right after a block deals +20% damage. Next: Hitting right after a block deals +40% damage. (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:shield"
       }
     },
     "frame": {
@@ -702,12 +787,12 @@
     "required_spent_points": 15
   },
   "shield_bash_3": {
-    "title": "Shield Bash III",
-    "description": "Hitting right after a block deals +20% damage per rank (feeds Defense)",
+    "title": "Shield Bash (3/3)",
+    "description": "Now: Hitting right after a block deals +40% damage. Next: Hitting right after a block deals +60% damage (max). (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:shield"
       }
     },
     "frame": {
@@ -720,12 +805,12 @@
     "required_spent_points": 15
   },
   "executioner_1": {
-    "title": "Executioner I",
-    "description": "+15% damage to mobs under 30% health",
+    "title": "Executioner (1/2)",
+    "description": "Rank 1/2: +15% damage to mobs under 30% health",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:wither_skeleton_skull"
       }
     },
     "frame": {
@@ -738,12 +823,12 @@
     "required_spent_points": 15
   },
   "executioner_2": {
-    "title": "Executioner II",
-    "description": "+15% damage to mobs under 30% health",
+    "title": "Executioner (2/2)",
+    "description": "Rank 2/2: +15% damage to mobs under 30% health",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:wither_skeleton_skull"
       }
     },
     "frame": {
@@ -755,13 +840,30 @@
     "cost": 1,
     "required_spent_points": 15
   },
-  "lifeline_1": {
-    "title": "Lifeline I",
-    "description": "Crits heal half a heart",
+  "tier_5_label": {
+    "title": "Tier 5 \u00b7 25 points",
+    "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "lifeline_1": {
+    "title": "Lifeline (1/2)",
+    "description": "Rank 1/2: Crits heal half a heart",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:glistering_melon_slice"
       }
     },
     "frame": {
@@ -774,12 +876,12 @@
     "required_spent_points": 25
   },
   "lifeline_2": {
-    "title": "Lifeline II",
-    "description": "Crits heal half a heart",
+    "title": "Lifeline (2/2)",
+    "description": "Rank 2/2: Crits heal half a heart",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:glistering_melon_slice"
       }
     },
     "frame": {
@@ -793,11 +895,11 @@
   },
   "cleave_1": {
     "title": "Cleave",
-    "description": "Two-handed hits splash 30% to nearby mobs",
+    "description": "Two-handed hits splash 30% to nearby mobs Pick one: this or Flurry.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:netherite_axe"
       }
     },
     "frame": {
@@ -809,13 +911,30 @@
     "cost": 3,
     "required_spent_points": 25
   },
-  "flurry_1": {
-    "title": "Flurry",
-    "description": "Every 5th fast hit strikes twice",
+  "tier_5_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_sword"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "flurry_1": {
+    "title": "Flurry",
+    "description": "Every 5th fast hit strikes twice Pick one: this or Cleave.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:feather"
       }
     },
     "frame": {

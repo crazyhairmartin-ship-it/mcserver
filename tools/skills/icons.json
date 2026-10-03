@@ -1,0 +1,87 @@
+{
+  "mining": {
+    "Stone Sense": "minecraft:iron_pickaxe", "Steady Pick": "minecraft:golden_pickaxe", "Miner's Might": "minecraft:anvil",
+    "Prospector": "minecraft:raw_iron", "Stonehide": "minecraft:cobblestone", "Deep Delver": "minecraft:deepslate",
+    "Smelter": "minecraft:blast_furnace", "Gem Focus": "minecraft:amethyst_shard", "Crusher": "minecraft:grindstone",
+    "Bedrock Grip": "minecraft:cobbled_deepslate", "Ore Nose": "minecraft:iron_nugget", "Tunnel Vision": "minecraft:torch",
+    "Motherlode": "minecraft:diamond", "Earthshaker": "minecraft:tnt"
+  },
+  "forage": {
+    "Lumberjack": "minecraft:iron_axe", "Axe Mastery": "minecraft:diamond_axe", "Berry Picker": "minecraft:sweet_berries",
+    "Timber": "minecraft:oak_log", "Long Net": "minecraft:cobweb", "Forest Stride": "minecraft:oak_sapling",
+    "Splitting Blow": "minecraft:stripped_oak_log", "Wildcrafter": "minecraft:red_mushroom", "Beekeeper": "minecraft:honeycomb",
+    "Fletcher": "minecraft:arrow", "Bark Skin": "minecraft:spruce_log", "Druid's Grove": "minecraft:azalea",
+    "Throwing Axes": "minecraft:stone_axe", "Nature's Bounty": "minecraft:glow_berries", "Berserker's Axe": "minecraft:netherite_axe"
+  },
+  "farm": {
+    "Harvester": "minecraft:wheat", "Seed Saver": "minecraft:wheat_seeds", "Reaper": "minecraft:iron_hoe",
+    "Green Thumb": "minecraft:bone_meal", "Fertile Soil": "minecraft:farmland", "Harvest Feast": "minecraft:bread",
+    "Gardener": "minecraft:flower_pot", "Grim Harvest": "minecraft:wither_rose", "Earthbound": "minecraft:grass_block",
+    "Sweeping Harvest": "minecraft:diamond_hoe", "Irrigator": "minecraft:water_bucket", "Compost King": "minecraft:composter",
+    "Harvest Moon": "minecraft:pumpkin", "Reaper's Due": "minecraft:netherite_hoe"
+  },
+  "fish": {
+    "Patient Angler": "minecraft:fishing_rod", "Lucky Line": "minecraft:string", "Trident Master": "minecraft:trident",
+    "Double Catch": "minecraft:cod", "Bait Saver": "minecraft:spider_eye", "Tidecaller": "minecraft:heart_of_the_sea",
+    "Treasure Hunter": "minecraft:name_tag", "Riptide Runner": "minecraft:oak_boat", "Hook Shot": "minecraft:tripwire_hook",
+    "Sushi Chef": "minecraft:cooked_salmon", "Lure Master": "minecraft:glow_ink_sac", "Storm Fisher": "minecraft:lightning_rod",
+    "Sea Legs": "minecraft:birch_boat", "Leviathan Bait": "minecraft:tropical_fish", "Sea's Blessing": "minecraft:nautilus_shell"
+  },
+  "cook": {
+    "Thrifty Cook": "minecraft:bowl", "Quick Hands": "minecraft:smoker", "Well Fed": "minecraft:cooked_beef",
+    "Extra Serving": "minecraft:mushroom_stew", "Hearty Meals": "minecraft:rabbit_stew", "Brain Food": "minecraft:glow_berries",
+    "Chef": "minecraft:cake", "Iron Stomach": "minecraft:golden_carrot", "Trail Rations": "minecraft:cookie",
+    "Brewer": "minecraft:honey_bottle", "Pet Treats": "minecraft:bone", "Picnic": "minecraft:apple",
+    "Feast Maker": "minecraft:pumpkin_pie", "Warrior's Feast": "minecraft:golden_apple"
+  },
+  "craft": {
+    "Frugal": "minecraft:crafting_table", "Smith": "minecraft:smithing_table", "Whetstone": "minecraft:flint",
+    "Enchanted Crafts": "minecraft:enchanting_table", "Book Saver": "minecraft:enchanted_book", "Repair Kit": "minecraft:anvil",
+    "Spellwright": "minecraft:writable_book", "Weaponsmith": "minecraft:iron_sword", "Armourer": "minecraft:iron_chestplate",
+    "Salvager": "minecraft:grindstone", "Saddler": "minecraft:saddle", "Smelter": "minecraft:furnace",
+    "Masterwork": "minecraft:nether_star", "Endless Workshop": "minecraft:emerald"
+  },
+  "attack": {
+    "Sharpened": "minecraft:iron_sword", "Footwork": "minecraft:leather_boots", "Butcher": "minecraft:porkchop",
+    "Crit Training": "minecraft:diamond_sword", "Spellblade": "minecraft:lapis_lazuli", "Momentum": "minecraft:blaze_powder",
+    "Heavy Arms": "minecraft:netherite_sword", "Duelist": "minecraft:golden_sword", "Hunter's Mark": "minecraft:target",
+    "Shield Bash": "minecraft:shield", "Executioner": "minecraft:wither_skeleton_skull", "Lifeline": "minecraft:glistering_melon_slice",
+    "Cleave": "minecraft:netherite_axe", "Flurry": "minecraft:feather"
+  },
+  "range": {
+    "Steady Hands": "minecraft:bow", "Sharp Tips": "minecraft:flint", "Quiver Care": "minecraft:arrow",
+    "Eagle Eye": "minecraft:spyglass", "Thrower": "minecraft:snowball", "Skirmisher": "minecraft:rabbit_foot",
+    "Rapid Volley": "minecraft:crossbow", "Heavy Draw": "minecraft:obsidian", "Homing Arrows": "minecraft:spectral_arrow",
+    "Falconer": "minecraft:feather", "Arcane Arrows": "minecraft:tipped_arrow", "Multishot": "minecraft:firework_rocket",
+    "Retriever": "minecraft:lead", "Fletcher's Luck": "minecraft:rabbit_hide", "Seeker": "minecraft:ender_eye"
+  },
+  "defense": {
+    "Toughened": "minecraft:iron_chestplate", "Shield Wall": "minecraft:shield", "Vitality": "minecraft:apple",
+    "Iron Skin": "minecraft:iron_block", "Shield Thorns": "minecraft:cactus", "Warded Mind": "minecraft:amethyst_shard",
+    "Bulwark": "minecraft:obsidian", "Battlemage Plate": "minecraft:diamond_chestplate", "Guardian": "minecraft:iron_golem_spawn_egg",
+    "Counter": "minecraft:bell", "Fire Ward": "minecraft:magma_cream", "Blast Ward": "minecraft:gunpowder",
+    "Armour Care": "minecraft:leather_chestplate", "Second Wind": "minecraft:totem_of_undying", "Unbreakable": "minecraft:netherite_chestplate"
+  },
+  "agility": {
+    "Light Feet": "minecraft:leather_boots", "Spring Step": "minecraft:slime_ball", "Soft Landing": "minecraft:hay_block",
+    "Long Rope": "grapplemod:grapplinghook", "Quick Casting": "minecraft:clock", "Light Weapons": "minecraft:stone_sword",
+    "Freerunner": "minecraft:sugar", "Hookmaster": "minecraft:tripwire_hook", "Throwing Arm": "minecraft:snowball",
+    "Rider": "minecraft:saddle", "Second Breath": "minecraft:potion", "Motor Reel": "minecraft:piston",
+    "Roll Master": "minecraft:rabbit_foot", "Featherfall": "minecraft:feather", "Twin Hooks": "minecraft:chain"
+  },
+  "magic": {
+    "Mana Pool": "minecraft:lapis_block", "Focus": "minecraft:amethyst_cluster", "Flow": "minecraft:experience_bottle",
+    "Mana Saver": "minecraft:lapis_lazuli", "Mana Shield": "minecraft:light_blue_stained_glass", "Scroll Saver": "minecraft:paper",
+    "Staff Adept": "minecraft:blaze_rod", "Battlemage": "minecraft:fire_charge", "Artificer": "minecraft:enchanting_table",
+    "Spellbound Steel": "minecraft:enchanted_book", "Nature's Mend": "minecraft:glistering_melon_slice", "Cooldown Flow": "minecraft:clock",
+    "Arcane Aegis": "minecraft:end_crystal", "Archmage": "minecraft:dragon_breath", "Wellspring": "minecraft:conduit"
+  },
+  "taming": {
+    "Gentle Hand": "minecraft:wheat", "Treat Saver": "minecraft:carrot", "Husbandry": "minecraft:egg",
+    "Selective Breeding": "minecraft:golden_carrot", "Bonded": "minecraft:lead", "Pet Scavenging": "minecraft:bone",
+    "Beastmaster": "minecraft:wolf_spawn_egg", "Breeder": "minecraft:cow_spawn_egg", "Pack Tactics": "minecraft:fox_spawn_egg",
+    "Loyal Guard": "minecraft:shield", "Bloodlines": "minecraft:lime_dye", "Soul Mender": "minecraft:totem_of_undying",
+    "Mount Training": "minecraft:saddle", "Caretaker": "minecraft:hay_block", "Alpha": "minecraft:diamond_horse_armor",
+    "Prized Stock": "minecraft:golden_apple"
+  }
+}

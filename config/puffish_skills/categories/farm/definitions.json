@@ -1,11 +1,28 @@
 {
-  "harvester_1": {
-    "title": "Harvester I",
-    "description": "3% extra crops per rank",
+  "tier_1_label": {
+    "title": "Tier 1 \u00b7 Start",
+    "description": "Open from the start.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 0
+  },
+  "harvester_1": {
+    "title": "Harvester (1/5)",
+    "description": "Now: nothing yet. Next: 3% extra crops.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -18,12 +35,12 @@
     "required_spent_points": 0
   },
   "harvester_2": {
-    "title": "Harvester II",
-    "description": "3% extra crops per rank",
+    "title": "Harvester (2/5)",
+    "description": "Now: 3% extra crops. Next: 6% extra crops.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -36,12 +53,12 @@
     "required_spent_points": 0
   },
   "harvester_3": {
-    "title": "Harvester III",
-    "description": "3% extra crops per rank",
+    "title": "Harvester (3/5)",
+    "description": "Now: 6% extra crops. Next: 9% extra crops.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -54,12 +71,12 @@
     "required_spent_points": 0
   },
   "harvester_4": {
-    "title": "Harvester IV",
-    "description": "3% extra crops per rank",
+    "title": "Harvester (4/5)",
+    "description": "Now: 9% extra crops. Next: 12% extra crops.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -72,12 +89,12 @@
     "required_spent_points": 0
   },
   "harvester_5": {
-    "title": "Harvester V",
-    "description": "3% extra crops per rank",
+    "title": "Harvester (5/5)",
+    "description": "Now: 12% extra crops. Next: 15% extra crops (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -90,12 +107,12 @@
     "required_spent_points": 0
   },
   "seed_saver_1": {
-    "title": "Seed Saver I",
-    "description": "8% per rank to get the seed back",
+    "title": "Seed Saver (1/3)",
+    "description": "Now: nothing yet. Next: 8% to get the seed back.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat_seeds"
       }
     },
     "frame": {
@@ -108,12 +125,12 @@
     "required_spent_points": 0
   },
   "seed_saver_2": {
-    "title": "Seed Saver II",
-    "description": "8% per rank to get the seed back",
+    "title": "Seed Saver (2/3)",
+    "description": "Now: 8% to get the seed back. Next: 16% to get the seed back.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat_seeds"
       }
     },
     "frame": {
@@ -126,12 +143,12 @@
     "required_spent_points": 0
   },
   "seed_saver_3": {
-    "title": "Seed Saver III",
-    "description": "8% per rank to get the seed back",
+    "title": "Seed Saver (3/3)",
+    "description": "Now: 16% to get the seed back. Next: 24% to get the seed back (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat_seeds"
       }
     },
     "frame": {
@@ -144,8 +161,8 @@
     "required_spent_points": 0
   },
   "reaper_1": {
-    "title": "Reaper I",
-    "description": "+0.3 damage and a wider sweep with scythes and sickles per rank (feeds Attack)",
+    "title": "Reaper (1/5)",
+    "description": "Now: nothing yet. Next: +0.3 damage and a wider sweep with scythes and sickles. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
@@ -162,8 +179,8 @@
     "required_spent_points": 0
   },
   "reaper_2": {
-    "title": "Reaper II",
-    "description": "+0.3 damage and a wider sweep with scythes and sickles per rank (feeds Attack)",
+    "title": "Reaper (2/5)",
+    "description": "Now: +0.3 damage and a wider sweep with scythes and sickles. Next: +0.6 damage and a wider sweep with scythes and sickles. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
@@ -180,8 +197,8 @@
     "required_spent_points": 0
   },
   "reaper_3": {
-    "title": "Reaper III",
-    "description": "+0.3 damage and a wider sweep with scythes and sickles per rank (feeds Attack)",
+    "title": "Reaper (3/5)",
+    "description": "Now: +0.6 damage and a wider sweep with scythes and sickles. Next: +0.9 damage and a wider sweep with scythes and sickles. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
@@ -198,8 +215,8 @@
     "required_spent_points": 0
   },
   "reaper_4": {
-    "title": "Reaper IV",
-    "description": "+0.3 damage and a wider sweep with scythes and sickles per rank (feeds Attack)",
+    "title": "Reaper (4/5)",
+    "description": "Now: +0.9 damage and a wider sweep with scythes and sickles. Next: +1.2 damage and a wider sweep with scythes and sickles. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
@@ -216,8 +233,8 @@
     "required_spent_points": 0
   },
   "reaper_5": {
-    "title": "Reaper V",
-    "description": "+0.3 damage and a wider sweep with scythes and sickles per rank (feeds Attack)",
+    "title": "Reaper (5/5)",
+    "description": "Now: +1.2 damage and a wider sweep with scythes and sickles. Next: +1.5 damage and a wider sweep with scythes and sickles (max). (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
@@ -233,13 +250,30 @@
     "cost": 1,
     "required_spent_points": 0
   },
-  "green_thumb_1": {
-    "title": "Green Thumb I",
-    "description": "6% per rank that crops you plant start a stage later",
+  "tier_2_label": {
+    "title": "Tier 2 \u00b7 5 points",
+    "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 5
+  },
+  "green_thumb_1": {
+    "title": "Green Thumb (1/3)",
+    "description": "Now: nothing yet. Next: 6% that crops you plant start a stage later.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:bone_meal"
       }
     },
     "frame": {
@@ -252,12 +286,12 @@
     "required_spent_points": 5
   },
   "green_thumb_2": {
-    "title": "Green Thumb II",
-    "description": "6% per rank that crops you plant start a stage later",
+    "title": "Green Thumb (2/3)",
+    "description": "Now: 6% that crops you plant start a stage later. Next: 12% that crops you plant start a stage later.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:bone_meal"
       }
     },
     "frame": {
@@ -270,12 +304,12 @@
     "required_spent_points": 5
   },
   "green_thumb_3": {
-    "title": "Green Thumb III",
-    "description": "6% per rank that crops you plant start a stage later",
+    "title": "Green Thumb (3/3)",
+    "description": "Now: 12% that crops you plant start a stage later. Next: 18% that crops you plant start a stage later (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:bone_meal"
       }
     },
     "frame": {
@@ -288,12 +322,12 @@
     "required_spent_points": 5
   },
   "fertile_soil_1": {
-    "title": "Fertile Soil I",
-    "description": "Crops near you grow 8% faster per rank",
+    "title": "Fertile Soil (1/3)",
+    "description": "Now: nothing yet. Next: Crops near you grow 8% faster.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:farmland"
       }
     },
     "frame": {
@@ -306,12 +340,12 @@
     "required_spent_points": 5
   },
   "fertile_soil_2": {
-    "title": "Fertile Soil II",
-    "description": "Crops near you grow 8% faster per rank",
+    "title": "Fertile Soil (2/3)",
+    "description": "Now: Crops near you grow 8% faster. Next: Crops near you grow 16% faster.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:farmland"
       }
     },
     "frame": {
@@ -324,12 +358,12 @@
     "required_spent_points": 5
   },
   "fertile_soil_3": {
-    "title": "Fertile Soil III",
-    "description": "Crops near you grow 8% faster per rank",
+    "title": "Fertile Soil (3/3)",
+    "description": "Now: Crops near you grow 16% faster. Next: Crops near you grow 24% faster (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:farmland"
       }
     },
     "frame": {
@@ -342,12 +376,12 @@
     "required_spent_points": 5
   },
   "harvest_feast_1": {
-    "title": "Harvest Feast I",
-    "description": "Food made from crops you grew restores 10% more per rank (feeds Cooking)",
+    "title": "Harvest Feast (1/3)",
+    "description": "Now: nothing yet. Next: Food made from crops you grew restores 10% more. (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:bread"
       }
     },
     "frame": {
@@ -360,12 +394,12 @@
     "required_spent_points": 5
   },
   "harvest_feast_2": {
-    "title": "Harvest Feast II",
-    "description": "Food made from crops you grew restores 10% more per rank (feeds Cooking)",
+    "title": "Harvest Feast (2/3)",
+    "description": "Now: Food made from crops you grew restores 10% more. Next: Food made from crops you grew restores 20% more. (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:bread"
       }
     },
     "frame": {
@@ -378,12 +412,12 @@
     "required_spent_points": 5
   },
   "harvest_feast_3": {
-    "title": "Harvest Feast III",
-    "description": "Food made from crops you grew restores 10% more per rank (feeds Cooking)",
+    "title": "Harvest Feast (3/3)",
+    "description": "Now: Food made from crops you grew restores 20% more. Next: Food made from crops you grew restores 30% more (max). (feeds Cooking)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:bread"
       }
     },
     "frame": {
@@ -395,13 +429,30 @@
     "cost": 1,
     "required_spent_points": 5
   },
-  "gardener_1": {
-    "title": "Gardener I",
-    "description": "Green Thumb chance x2 and more extra crops",
+  "tier_3_label": {
+    "title": "Tier 3 \u00b7 10 points",
+    "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "gardener_1": {
+    "title": "Gardener (1/3)",
+    "description": "Rank 1/3: Green Thumb chance x2 and more extra crops Pick one: this or Grim Harvest.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:flower_pot"
       }
     },
     "frame": {
@@ -414,12 +465,12 @@
     "required_spent_points": 10
   },
   "gardener_2": {
-    "title": "Gardener II",
-    "description": "Green Thumb chance x2 and more extra crops",
+    "title": "Gardener (2/3)",
+    "description": "Rank 2/3: Green Thumb chance x2 and more extra crops Pick one: this or Grim Harvest.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:flower_pot"
       }
     },
     "frame": {
@@ -432,12 +483,12 @@
     "required_spent_points": 10
   },
   "gardener_3": {
-    "title": "Gardener III",
-    "description": "Green Thumb chance x2 and more extra crops",
+    "title": "Gardener (3/3)",
+    "description": "Rank 3/3: Green Thumb chance x2 and more extra crops Pick one: this or Grim Harvest.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:flower_pot"
       }
     },
     "frame": {
@@ -449,13 +500,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "grim_harvest_1": {
-    "title": "Grim Harvest I",
-    "description": "Scythe kills heal you half a heart per rank (feeds Attack)",
+  "tier_3_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "grim_harvest_1": {
+    "title": "Grim Harvest (1/3)",
+    "description": "Rank 1/3: Scythe kills heal you half a heart per rank Pick one: this or Gardener. (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:wither_rose"
       }
     },
     "frame": {
@@ -468,12 +536,12 @@
     "required_spent_points": 10
   },
   "grim_harvest_2": {
-    "title": "Grim Harvest II",
-    "description": "Scythe kills heal you half a heart per rank (feeds Attack)",
+    "title": "Grim Harvest (2/3)",
+    "description": "Rank 2/3: Scythe kills heal you half a heart per rank Pick one: this or Gardener. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wither_rose"
       }
     },
     "frame": {
@@ -486,12 +554,12 @@
     "required_spent_points": 10
   },
   "grim_harvest_3": {
-    "title": "Grim Harvest III",
-    "description": "Scythe kills heal you half a heart per rank (feeds Attack)",
+    "title": "Grim Harvest (3/3)",
+    "description": "Rank 3/3: Scythe kills heal you half a heart per rank Pick one: this or Gardener. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wither_rose"
       }
     },
     "frame": {
@@ -503,13 +571,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "harvester_ii_1": {
-    "title": "Harvester II I",
-    "description": "+3% extra crops per rank Needs Harvester (all ranks).",
+  "tier_4_label": {
+    "title": "Tier 4 \u00b7 15 points",
+    "description": "Opens once you have spent 15 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 15
+  },
+  "harvester_ii_1": {
+    "title": "Harvester II (1/5)",
+    "description": "Now: nothing yet. Next: +3% extra crops. Needs Harvester (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -522,12 +607,12 @@
     "required_spent_points": 15
   },
   "harvester_ii_2": {
-    "title": "Harvester II II",
-    "description": "+3% extra crops per rank Needs Harvester (all ranks).",
+    "title": "Harvester II (2/5)",
+    "description": "Now: +3% extra crops. Next: +6% extra crops. Needs Harvester (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -540,12 +625,12 @@
     "required_spent_points": 15
   },
   "harvester_ii_3": {
-    "title": "Harvester II III",
-    "description": "+3% extra crops per rank Needs Harvester (all ranks).",
+    "title": "Harvester II (3/5)",
+    "description": "Now: +6% extra crops. Next: +9% extra crops. Needs Harvester (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -558,12 +643,12 @@
     "required_spent_points": 15
   },
   "harvester_ii_4": {
-    "title": "Harvester II IV",
-    "description": "+3% extra crops per rank Needs Harvester (all ranks).",
+    "title": "Harvester II (4/5)",
+    "description": "Now: +9% extra crops. Next: +12% extra crops. Needs Harvester (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -576,12 +661,12 @@
     "required_spent_points": 15
   },
   "harvester_ii_5": {
-    "title": "Harvester II V",
-    "description": "+3% extra crops per rank Needs Harvester (all ranks).",
+    "title": "Harvester II (5/5)",
+    "description": "Now: +12% extra crops. Next: +15% extra crops (max). Needs Harvester (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:wheat"
       }
     },
     "frame": {
@@ -594,12 +679,12 @@
     "required_spent_points": 15
   },
   "earthbound_1": {
-    "title": "Earthbound I",
-    "description": "Standing on grass or farmland slowly regenerates health (feeds Defense)",
+    "title": "Earthbound (1/3)",
+    "description": "Rank 1/3: Standing on grass or farmland slowly regenerates health (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:grass_block"
       }
     },
     "frame": {
@@ -612,12 +697,12 @@
     "required_spent_points": 15
   },
   "earthbound_2": {
-    "title": "Earthbound II",
-    "description": "Standing on grass or farmland slowly regenerates health (feeds Defense)",
+    "title": "Earthbound (2/3)",
+    "description": "Rank 2/3: Standing on grass or farmland slowly regenerates health (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:grass_block"
       }
     },
     "frame": {
@@ -630,12 +715,12 @@
     "required_spent_points": 15
   },
   "earthbound_3": {
-    "title": "Earthbound III",
-    "description": "Standing on grass or farmland slowly regenerates health (feeds Defense)",
+    "title": "Earthbound (3/3)",
+    "description": "Rank 3/3: Standing on grass or farmland slowly regenerates health (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:grass_block"
       }
     },
     "frame": {
@@ -648,12 +733,12 @@
     "required_spent_points": 15
   },
   "sweeping_harvest_1": {
-    "title": "Sweeping Harvest I",
-    "description": "Scythes harvest mature crops in a 3x3, then 5x5",
+    "title": "Sweeping Harvest (1/2)",
+    "description": "Rank 1/2: Scythes harvest mature crops in a 3x3, then 5x5",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:diamond_hoe"
       }
     },
     "frame": {
@@ -666,12 +751,12 @@
     "required_spent_points": 15
   },
   "sweeping_harvest_2": {
-    "title": "Sweeping Harvest II",
-    "description": "Scythes harvest mature crops in a 3x3, then 5x5",
+    "title": "Sweeping Harvest (2/2)",
+    "description": "Rank 2/2: Scythes harvest mature crops in a 3x3, then 5x5",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:diamond_hoe"
       }
     },
     "frame": {
@@ -684,12 +769,12 @@
     "required_spent_points": 15
   },
   "irrigator_1": {
-    "title": "Irrigator I",
-    "description": "Water keeps farmland wet 1 block further per rank",
+    "title": "Irrigator (1/2)",
+    "description": "Now: nothing yet. Next: Water keeps farmland wet 1 block further.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:water_bucket"
       }
     },
     "frame": {
@@ -702,12 +787,12 @@
     "required_spent_points": 15
   },
   "irrigator_2": {
-    "title": "Irrigator II",
-    "description": "Water keeps farmland wet 1 block further per rank",
+    "title": "Irrigator (2/2)",
+    "description": "Now: Water keeps farmland wet 1 block further. Next: Water keeps farmland wet 2 block further (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:water_bucket"
       }
     },
     "frame": {
@@ -725,7 +810,7 @@
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:composter"
       }
     },
     "frame": {
@@ -737,13 +822,30 @@
     "cost": 1,
     "required_spent_points": 15
   },
-  "fertile_soil_ii_1": {
-    "title": "Fertile Soil II I",
-    "description": "Crops near you grow faster still Needs Fertile Soil (all ranks).",
+  "tier_5_label": {
+    "title": "Tier 5 \u00b7 25 points",
+    "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "fertile_soil_ii_1": {
+    "title": "Fertile Soil II (1/3)",
+    "description": "Rank 1/3: Crops near you grow faster still Needs Fertile Soil (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:farmland"
       }
     },
     "frame": {
@@ -756,12 +858,12 @@
     "required_spent_points": 25
   },
   "fertile_soil_ii_2": {
-    "title": "Fertile Soil II II",
-    "description": "Crops near you grow faster still Needs Fertile Soil (all ranks).",
+    "title": "Fertile Soil II (2/3)",
+    "description": "Rank 2/3: Crops near you grow faster still Needs Fertile Soil (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:farmland"
       }
     },
     "frame": {
@@ -774,12 +876,12 @@
     "required_spent_points": 25
   },
   "fertile_soil_ii_3": {
-    "title": "Fertile Soil II III",
-    "description": "Crops near you grow faster still Needs Fertile Soil (all ranks).",
+    "title": "Fertile Soil II (3/3)",
+    "description": "Rank 3/3: Crops near you grow faster still Needs Fertile Soil (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:farmland"
       }
     },
     "frame": {
@@ -793,11 +895,11 @@
   },
   "harvest_moon_1": {
     "title": "Harvest Moon",
-    "description": "5% chance a harvest drops double everything",
+    "description": "5% chance a harvest drops double everything Pick one: this or Reaper's Due.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:pumpkin"
       }
     },
     "frame": {
@@ -809,13 +911,30 @@
     "cost": 3,
     "required_spent_points": 25
   },
-  "reapers_due_1": {
-    "title": "Reaper's Due",
-    "description": "Scythe sweeps hit every mob in a wide arc at full damage (feeds Attack)",
+  "tier_5_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_hoe"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "reapers_due_1": {
+    "title": "Reaper's Due",
+    "description": "Scythe sweeps hit every mob in a wide arc at full damage Pick one: this or Harvest Moon. (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:netherite_hoe"
       }
     },
     "frame": {

@@ -1,7 +1,24 @@
 {
+  "tier_1_label": {
+    "title": "Tier 1 \u00b7 Start",
+    "description": "Open from the start.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 0
+  },
   "steady_hands_1": {
-    "title": "Steady Hands I",
-    "description": "+5% bow draw and crossbow reload speed per rank",
+    "title": "Steady Hands (1/5)",
+    "description": "Now: nothing yet. Next: +5% bow draw and crossbow reload speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -18,8 +35,8 @@
     "required_spent_points": 0
   },
   "steady_hands_2": {
-    "title": "Steady Hands II",
-    "description": "+5% bow draw and crossbow reload speed per rank",
+    "title": "Steady Hands (2/5)",
+    "description": "Now: +5% bow draw and crossbow reload speed. Next: +10% bow draw and crossbow reload speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -36,8 +53,8 @@
     "required_spent_points": 0
   },
   "steady_hands_3": {
-    "title": "Steady Hands III",
-    "description": "+5% bow draw and crossbow reload speed per rank",
+    "title": "Steady Hands (3/5)",
+    "description": "Now: +10% bow draw and crossbow reload speed. Next: +15% bow draw and crossbow reload speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -54,8 +71,8 @@
     "required_spent_points": 0
   },
   "steady_hands_4": {
-    "title": "Steady Hands IV",
-    "description": "+5% bow draw and crossbow reload speed per rank",
+    "title": "Steady Hands (4/5)",
+    "description": "Now: +15% bow draw and crossbow reload speed. Next: +20% bow draw and crossbow reload speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -72,8 +89,8 @@
     "required_spent_points": 0
   },
   "steady_hands_5": {
-    "title": "Steady Hands V",
-    "description": "+5% bow draw and crossbow reload speed per rank",
+    "title": "Steady Hands (5/5)",
+    "description": "Now: +20% bow draw and crossbow reload speed. Next: +25% bow draw and crossbow reload speed (max).",
     "icon": {
       "type": "item",
       "data": {
@@ -90,12 +107,12 @@
     "required_spent_points": 0
   },
   "sharp_tips_1": {
-    "title": "Sharp Tips I",
-    "description": "+4% projectile damage per rank",
+    "title": "Sharp Tips (1/5)",
+    "description": "Now: nothing yet. Next: +4% projectile damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:flint"
       }
     },
     "frame": {
@@ -108,12 +125,12 @@
     "required_spent_points": 0
   },
   "sharp_tips_2": {
-    "title": "Sharp Tips II",
-    "description": "+4% projectile damage per rank",
+    "title": "Sharp Tips (2/5)",
+    "description": "Now: +4% projectile damage. Next: +8% projectile damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:flint"
       }
     },
     "frame": {
@@ -126,12 +143,12 @@
     "required_spent_points": 0
   },
   "sharp_tips_3": {
-    "title": "Sharp Tips III",
-    "description": "+4% projectile damage per rank",
+    "title": "Sharp Tips (3/5)",
+    "description": "Now: +8% projectile damage. Next: +12% projectile damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:flint"
       }
     },
     "frame": {
@@ -144,12 +161,12 @@
     "required_spent_points": 0
   },
   "sharp_tips_4": {
-    "title": "Sharp Tips IV",
-    "description": "+4% projectile damage per rank",
+    "title": "Sharp Tips (4/5)",
+    "description": "Now: +12% projectile damage. Next: +16% projectile damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:flint"
       }
     },
     "frame": {
@@ -162,12 +179,12 @@
     "required_spent_points": 0
   },
   "sharp_tips_5": {
-    "title": "Sharp Tips V",
-    "description": "+4% projectile damage per rank",
+    "title": "Sharp Tips (5/5)",
+    "description": "Now: +16% projectile damage. Next: +20% projectile damage (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:flint"
       }
     },
     "frame": {
@@ -180,12 +197,12 @@
     "required_spent_points": 0
   },
   "quiver_care_1": {
-    "title": "Quiver Care I",
-    "description": "8% per rank to save ammo",
+    "title": "Quiver Care (1/3)",
+    "description": "Now: nothing yet. Next: 8% to save ammo.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:arrow"
       }
     },
     "frame": {
@@ -198,12 +215,12 @@
     "required_spent_points": 0
   },
   "quiver_care_2": {
-    "title": "Quiver Care II",
-    "description": "8% per rank to save ammo",
+    "title": "Quiver Care (2/3)",
+    "description": "Now: 8% to save ammo. Next: 16% to save ammo.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:arrow"
       }
     },
     "frame": {
@@ -216,12 +233,12 @@
     "required_spent_points": 0
   },
   "quiver_care_3": {
-    "title": "Quiver Care III",
-    "description": "8% per rank to save ammo",
+    "title": "Quiver Care (3/3)",
+    "description": "Now: 16% to save ammo. Next: 24% to save ammo (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:arrow"
       }
     },
     "frame": {
@@ -233,13 +250,30 @@
     "cost": 1,
     "required_spent_points": 0
   },
-  "eagle_eye_1": {
-    "title": "Eagle Eye I",
-    "description": "+10% projectile speed and range per rank Needs Steady Hands (all ranks).",
+  "tier_2_label": {
+    "title": "Tier 2 \u00b7 5 points",
+    "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 5
+  },
+  "eagle_eye_1": {
+    "title": "Eagle Eye (1/3)",
+    "description": "Now: nothing yet. Next: +10% projectile speed and range. Needs Steady Hands (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:spyglass"
       }
     },
     "frame": {
@@ -252,12 +286,12 @@
     "required_spent_points": 5
   },
   "eagle_eye_2": {
-    "title": "Eagle Eye II",
-    "description": "+10% projectile speed and range per rank Needs Steady Hands (all ranks).",
+    "title": "Eagle Eye (2/3)",
+    "description": "Now: +10% projectile speed and range. Next: +20% projectile speed and range. Needs Steady Hands (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:spyglass"
       }
     },
     "frame": {
@@ -270,12 +304,12 @@
     "required_spent_points": 5
   },
   "eagle_eye_3": {
-    "title": "Eagle Eye III",
-    "description": "+10% projectile speed and range per rank Needs Steady Hands (all ranks).",
+    "title": "Eagle Eye (3/3)",
+    "description": "Now: +20% projectile speed and range. Next: +30% projectile speed and range (max). Needs Steady Hands (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:spyglass"
       }
     },
     "frame": {
@@ -288,12 +322,12 @@
     "required_spent_points": 5
   },
   "thrower_1": {
-    "title": "Thrower I",
-    "description": "Thrown weapons +8% damage per rank",
+    "title": "Thrower (1/3)",
+    "description": "Now: nothing yet. Next: Thrown weapons +8% damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:snowball"
       }
     },
     "frame": {
@@ -306,12 +340,12 @@
     "required_spent_points": 5
   },
   "thrower_2": {
-    "title": "Thrower II",
-    "description": "Thrown weapons +8% damage per rank",
+    "title": "Thrower (2/3)",
+    "description": "Now: Thrown weapons +8% damage. Next: Thrown weapons +16% damage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:snowball"
       }
     },
     "frame": {
@@ -324,12 +358,12 @@
     "required_spent_points": 5
   },
   "thrower_3": {
-    "title": "Thrower III",
-    "description": "Thrown weapons +8% damage per rank",
+    "title": "Thrower (3/3)",
+    "description": "Now: Thrown weapons +16% damage. Next: Thrown weapons +24% damage (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:snowball"
       }
     },
     "frame": {
@@ -342,12 +376,12 @@
     "required_spent_points": 5
   },
   "skirmisher_1": {
-    "title": "Skirmisher I",
-    "description": "After a shot, +10% move speed for 2 s per rank (feeds Agility)",
+    "title": "Skirmisher (1/3)",
+    "description": "Now: nothing yet. Next: After a shot, +10% move speed for 2 s. (feeds Agility)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:rabbit_foot"
       }
     },
     "frame": {
@@ -360,12 +394,12 @@
     "required_spent_points": 5
   },
   "skirmisher_2": {
-    "title": "Skirmisher II",
-    "description": "After a shot, +10% move speed for 2 s per rank (feeds Agility)",
+    "title": "Skirmisher (2/3)",
+    "description": "Now: After a shot, +10% move speed for 2 s. Next: After a shot, +20% move speed for 2 s. (feeds Agility)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:rabbit_foot"
       }
     },
     "frame": {
@@ -378,12 +412,12 @@
     "required_spent_points": 5
   },
   "skirmisher_3": {
-    "title": "Skirmisher III",
-    "description": "After a shot, +10% move speed for 2 s per rank (feeds Agility)",
+    "title": "Skirmisher (3/3)",
+    "description": "Now: After a shot, +20% move speed for 2 s. Next: After a shot, +30% move speed for 2 s (max). (feeds Agility)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:rabbit_foot"
       }
     },
     "frame": {
@@ -395,13 +429,30 @@
     "cost": 1,
     "required_spent_points": 5
   },
-  "rapid_volley_1": {
-    "title": "Rapid Volley I",
-    "description": "Draw and reload speed +15% per rank",
+  "tier_3_label": {
+    "title": "Tier 3 \u00b7 10 points",
+    "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "rapid_volley_1": {
+    "title": "Rapid Volley (1/3)",
+    "description": "Now: nothing yet. Next: Draw and reload speed +15%. Pick one: this or Heavy Draw.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:crossbow"
       }
     },
     "frame": {
@@ -414,12 +465,12 @@
     "required_spent_points": 10
   },
   "rapid_volley_2": {
-    "title": "Rapid Volley II",
-    "description": "Draw and reload speed +15% per rank",
+    "title": "Rapid Volley (2/3)",
+    "description": "Now: Draw and reload speed +15%. Next: Draw and reload speed +30%. Pick one: this or Heavy Draw.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:crossbow"
       }
     },
     "frame": {
@@ -432,12 +483,12 @@
     "required_spent_points": 10
   },
   "rapid_volley_3": {
-    "title": "Rapid Volley III",
-    "description": "Draw and reload speed +15% per rank",
+    "title": "Rapid Volley (3/3)",
+    "description": "Now: Draw and reload speed +30%. Next: Draw and reload speed +45% (max). Pick one: this or Heavy Draw.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:crossbow"
       }
     },
     "frame": {
@@ -449,13 +500,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "heavy_draw_1": {
-    "title": "Heavy Draw I",
-    "description": "Damage +12% per rank",
+  "tier_3_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "heavy_draw_1": {
+    "title": "Heavy Draw (1/3)",
+    "description": "Now: nothing yet. Next: Damage +12%. Pick one: this or Rapid Volley.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:obsidian"
       }
     },
     "frame": {
@@ -468,12 +536,12 @@
     "required_spent_points": 10
   },
   "heavy_draw_2": {
-    "title": "Heavy Draw II",
-    "description": "Damage +12% per rank",
+    "title": "Heavy Draw (2/3)",
+    "description": "Now: Damage +12%. Next: Damage +24%. Pick one: this or Rapid Volley.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:obsidian"
       }
     },
     "frame": {
@@ -486,12 +554,12 @@
     "required_spent_points": 10
   },
   "heavy_draw_3": {
-    "title": "Heavy Draw III",
-    "description": "Damage +12% per rank",
+    "title": "Heavy Draw (3/3)",
+    "description": "Now: Damage +24%. Next: Damage +36% (max). Pick one: this or Rapid Volley.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:obsidian"
       }
     },
     "frame": {
@@ -503,13 +571,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "homing_arrows_1": {
-    "title": "Homing Arrows I",
-    "description": "5% per rank: arrows curve to the nearest hostile mob",
+  "tier_4_label": {
+    "title": "Tier 4 \u00b7 15 points",
+    "description": "Opens once you have spent 15 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 15
+  },
+  "homing_arrows_1": {
+    "title": "Homing Arrows (1/3)",
+    "description": "Now: nothing yet. Next: 5%: arrows curve to the nearest hostile mob.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:spectral_arrow"
       }
     },
     "frame": {
@@ -522,12 +607,12 @@
     "required_spent_points": 15
   },
   "homing_arrows_2": {
-    "title": "Homing Arrows II",
-    "description": "5% per rank: arrows curve to the nearest hostile mob",
+    "title": "Homing Arrows (2/3)",
+    "description": "Now: 5%: arrows curve to the nearest hostile mob. Next: 10%: arrows curve to the nearest hostile mob.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:spectral_arrow"
       }
     },
     "frame": {
@@ -540,12 +625,12 @@
     "required_spent_points": 15
   },
   "homing_arrows_3": {
-    "title": "Homing Arrows III",
-    "description": "5% per rank: arrows curve to the nearest hostile mob",
+    "title": "Homing Arrows (3/3)",
+    "description": "Now: 10%: arrows curve to the nearest hostile mob. Next: 15%: arrows curve to the nearest hostile mob (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:spectral_arrow"
       }
     },
     "frame": {
@@ -558,12 +643,12 @@
     "required_spent_points": 15
   },
   "falconer_1": {
-    "title": "Falconer I",
-    "description": "Your pets attack what you shoot, +5% pet damage per rank (feeds Taming)",
+    "title": "Falconer (1/3)",
+    "description": "Now: nothing yet. Next: Your pets attack what you shoot, +5% pet damage. (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:feather"
       }
     },
     "frame": {
@@ -576,12 +661,12 @@
     "required_spent_points": 15
   },
   "falconer_2": {
-    "title": "Falconer II",
-    "description": "Your pets attack what you shoot, +5% pet damage per rank (feeds Taming)",
+    "title": "Falconer (2/3)",
+    "description": "Now: Your pets attack what you shoot, +5% pet damage. Next: Your pets attack what you shoot, +10% pet damage. (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:feather"
       }
     },
     "frame": {
@@ -594,12 +679,12 @@
     "required_spent_points": 15
   },
   "falconer_3": {
-    "title": "Falconer III",
-    "description": "Your pets attack what you shoot, +5% pet damage per rank (feeds Taming)",
+    "title": "Falconer (3/3)",
+    "description": "Now: Your pets attack what you shoot, +10% pet damage. Next: Your pets attack what you shoot, +15% pet damage (max). (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:feather"
       }
     },
     "frame": {
@@ -612,12 +697,12 @@
     "required_spent_points": 15
   },
   "arcane_arrows_1": {
-    "title": "Arcane Arrows I",
-    "description": "Full-draw shots spend 5 mana for +15% magic damage per rank (feeds Magic)",
+    "title": "Arcane Arrows (1/3)",
+    "description": "Now: nothing yet. Next: Full-draw shots spend 5 mana for +15% magic damage. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:tipped_arrow"
       }
     },
     "frame": {
@@ -630,12 +715,12 @@
     "required_spent_points": 15
   },
   "arcane_arrows_2": {
-    "title": "Arcane Arrows II",
-    "description": "Full-draw shots spend 5 mana for +15% magic damage per rank (feeds Magic)",
+    "title": "Arcane Arrows (2/3)",
+    "description": "Now: Full-draw shots spend 5 mana for +15% magic damage. Next: Full-draw shots spend 10 mana for +15% magic damage. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:tipped_arrow"
       }
     },
     "frame": {
@@ -648,12 +733,12 @@
     "required_spent_points": 15
   },
   "arcane_arrows_3": {
-    "title": "Arcane Arrows III",
-    "description": "Full-draw shots spend 5 mana for +15% magic damage per rank (feeds Magic)",
+    "title": "Arcane Arrows (3/3)",
+    "description": "Now: Full-draw shots spend 10 mana for +15% magic damage. Next: Full-draw shots spend 15 mana for +15% magic damage (max). (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:tipped_arrow"
       }
     },
     "frame": {
@@ -666,12 +751,12 @@
     "required_spent_points": 15
   },
   "multishot_1": {
-    "title": "Multishot I",
-    "description": "10% per rank to fire two extra arrows for the cost of one",
+    "title": "Multishot (1/3)",
+    "description": "Now: nothing yet. Next: 10% to fire two extra arrows for the cost of one.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:firework_rocket"
       }
     },
     "frame": {
@@ -684,12 +769,12 @@
     "required_spent_points": 15
   },
   "multishot_2": {
-    "title": "Multishot II",
-    "description": "10% per rank to fire two extra arrows for the cost of one",
+    "title": "Multishot (2/3)",
+    "description": "Now: 10% to fire two extra arrows for the cost of one. Next: 20% to fire two extra arrows for the cost of one.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:firework_rocket"
       }
     },
     "frame": {
@@ -702,12 +787,12 @@
     "required_spent_points": 15
   },
   "multishot_3": {
-    "title": "Multishot III",
-    "description": "10% per rank to fire two extra arrows for the cost of one",
+    "title": "Multishot (3/3)",
+    "description": "Now: 20% to fire two extra arrows for the cost of one. Next: 30% to fire two extra arrows for the cost of one (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:firework_rocket"
       }
     },
     "frame": {
@@ -720,12 +805,12 @@
     "required_spent_points": 15
   },
   "retriever_1": {
-    "title": "Retriever I",
-    "description": "Thrown weapons may return to you",
+    "title": "Retriever (1/2)",
+    "description": "Rank 1/2: Thrown weapons may return to you",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:lead"
       }
     },
     "frame": {
@@ -738,12 +823,12 @@
     "required_spent_points": 15
   },
   "retriever_2": {
-    "title": "Retriever II",
-    "description": "Thrown weapons may return to you",
+    "title": "Retriever (2/2)",
+    "description": "Rank 2/2: Thrown weapons may return to you",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:lead"
       }
     },
     "frame": {
@@ -755,13 +840,30 @@
     "cost": 1,
     "required_spent_points": 15
   },
-  "quiver_care_ii_1": {
-    "title": "Quiver Care II I",
-    "description": "More ammo saving Needs Quiver Care (all ranks).",
+  "tier_5_label": {
+    "title": "Tier 5 \u00b7 25 points",
+    "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "quiver_care_ii_1": {
+    "title": "Quiver Care II (1/3)",
+    "description": "Rank 1/3: More ammo saving Needs Quiver Care (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:arrow"
       }
     },
     "frame": {
@@ -774,12 +876,12 @@
     "required_spent_points": 25
   },
   "quiver_care_ii_2": {
-    "title": "Quiver Care II II",
-    "description": "More ammo saving Needs Quiver Care (all ranks).",
+    "title": "Quiver Care II (2/3)",
+    "description": "Rank 2/3: More ammo saving Needs Quiver Care (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:arrow"
       }
     },
     "frame": {
@@ -792,12 +894,12 @@
     "required_spent_points": 25
   },
   "quiver_care_ii_3": {
-    "title": "Quiver Care II III",
-    "description": "More ammo saving Needs Quiver Care (all ranks).",
+    "title": "Quiver Care II (3/3)",
+    "description": "Rank 3/3: More ammo saving Needs Quiver Care (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:arrow"
       }
     },
     "frame": {
@@ -811,11 +913,11 @@
   },
   "fletchers_luck_1": {
     "title": "Fletcher's Luck",
-    "description": "30% save ammo; arrows sometimes drop back on hit",
+    "description": "30% save ammo; arrows sometimes drop back on hit Pick one: this or Seeker.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:rabbit_hide"
       }
     },
     "frame": {
@@ -827,13 +929,30 @@
     "cost": 3,
     "required_spent_points": 25
   },
-  "seeker_1": {
-    "title": "Seeker",
-    "description": "Homing chance x3 and precision crits",
+  "tier_5_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:bow"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "seeker_1": {
+    "title": "Seeker",
+    "description": "Homing chance x3 and precision crits Pick one: this or Fletcher's Luck.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:ender_eye"
       }
     },
     "frame": {

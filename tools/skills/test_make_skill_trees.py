@@ -39,8 +39,6 @@ def test_tier_gate_and_titles():
     assert defs['stone_sense_1']['required_spent_points'] == 0
     assert defs['prospector_1']['required_spent_points'] == 5
     assert defs['crusher_1']['required_spent_points'] == 15
-    assert defs['stone_sense_3']['title'] == 'Stone Sense III'
-    assert defs['ore_nose_1']['title'] == 'Ore Nose'
     assert 'rewards' not in defs['stone_sense_1']  # preview: no effects (dummy is not a config reward type)
 
 
@@ -68,12 +66,16 @@ def test_capstones_cost_three_single_rank():
     assert defs['weaponsmith_1']['frame']['data']['frame'] == 'goal'
 
 
-def test_layout_no_overlap_and_endpoints_exist():
+def test_layout_one_tile_per_node_and_endpoints_exist():
     for t in DATA['trees']:
         files = g.build_category(t, TIERS)
         skills = files['skills.json']
-        spots = [(s['x'], s['y']) for s in skills.values()]
-        assert len(spots) == len(set(spots)), t['id']
+        tiles = {}
+        for n in t['nodes']:
+            spots = {(skills[i]['x'], skills[i]['y']) for i in g.rank_ids(n)}
+            assert len(spots) == 1, (t['id'], n['name'])    # every rank on the same tile
+            tiles[n['name']] = spots.pop()
+        assert len(set(tiles.values())) == len(tiles), t['id']  # different nodes never share a tile
         conns = files['connections.json']
         for pair in conns['normal']['unidirectional'] + conns['exclusive']['bidirectional']:
             assert all(p in skills for p in pair), (t['id'], pair)
@@ -98,3 +100,54 @@ def test_generator_removes_stale_categories(tmp_path):
     config = json.loads((out / 'config.json').read_text())
     assert config['version'] == 3 and len(config['categories']) == 12
     assert (out / 'categories' / 'forage' / 'definitions.json').exists()  # Pufferfish reads categories/<id>/
+
+
+def test_every_node_has_its_own_icon_and_trees_vary():
+    for t in DATA['trees']:
+        defs = g.build_category(t, TIERS)['definitions.json']
+        nodes = [d for sid, d in defs.items() if not sid.startswith('tier_')]
+        icons = {d['icon']['data']['item'] for d in nodes}
+        assert len(icons) >= 10, (t['id'], len(icons))
+        for n in t['nodes']:
+            assert g.base_name(n['name']) in g.ICONS[t['id']], (t['id'], n['name'])
+    assert g.build_category(tree('mining'), TIERS)['definitions.json']['prospector_ii_1']['icon']['data']['item'] == 'minecraft:raw_iron'
+
+
+def test_tier_labels_show_points_and_never_unlock():
+    files = g.build_category(tree('range'), TIERS)
+    defs, skills, conns = files['definitions.json'], files['skills.json'], files['connections.json']
+    linked = {i for pair in conns['normal']['unidirectional'] + conns['exclusive']['bidirectional'] for i in pair}
+    for tier in TIERS:
+        sid = f'tier_{tier["n"]}_label'
+        assert sid in skills and 'root' not in skills[sid] and sid not in linked
+        assert defs[sid]['title'].startswith(f'Tier {tier["n"]}')
+    assert '10 points' in defs['tier_3_label']['title'] and 'Pick one' in defs['tier_3_label']['description']
+    assert 'Start' in defs['tier_1_label']['title']
+
+
+def test_or_marker_sits_between_choice_branches():
+    files = g.build_category(tree('range'), TIERS)
+    skills = files['skills.json']
+    assert files['definitions.json']['tier_3_or']['title'] == 'OR'
+    a, o, b = skills['rapid_volley_1']['x'], skills['tier_3_or']['x'], skills['heavy_draw_1']['x']
+    assert a < o < b and skills['tier_3_or']['y'] == skills['rapid_volley_1']['y']
+    assert 'tier_4_or' not in skills
+
+
+def test_choice_nodes_name_the_other_branch():
+    defs = g.build_category(tree('range'), TIERS)['definitions.json']
+    assert 'Pick one: this or Heavy Draw' in defs['rapid_volley_1']['description']
+    assert 'Pick one: this or Rapid Volley' in defs['heavy_draw_3']['description']
+
+
+def test_rank_titles_and_now_next_text():
+    defs = g.build_category(tree('mining'), TIERS)['definitions.json']
+    assert defs['stone_sense_1']['title'] == 'Stone Sense (1/5)'
+    assert defs['stone_sense_2']['description'].startswith('Now: +4% mining speed. Next: +8% mining speed.')
+    assert defs['stone_sense_1']['description'].startswith('Now: nothing yet. Next: +4% mining speed.')
+    assert defs['stone_sense_5']['description'].startswith('Now: +16% mining speed. Next: +20% mining speed (max).')
+    assert defs['ore_nose_1']['title'] == 'Ore Nose'
+    assert defs['ore_nose_1']['description'].startswith('Plain stone sometimes drops raw nuggets')
+    # text without a per-rank number still says which rank it is
+    taming = g.build_category(tree('taming'), TIERS)['definitions.json']
+    assert taming['gentle_hand_2']['description'].startswith('Rank 2/3: Better odds')

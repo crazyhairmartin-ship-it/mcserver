@@ -1,262 +1,297 @@
 {
+  "tier_1_label": {
+    "x": -45,
+    "y": 0,
+    "definition": "tier_1_label"
+  },
   "gentle_hand_1": {
-    "x": -176,
+    "x": -15,
     "y": 0,
     "definition": "gentle_hand_1",
     "root": true
   },
   "gentle_hand_2": {
-    "x": -150,
+    "x": -15,
     "y": 0,
     "definition": "gentle_hand_2"
   },
   "gentle_hand_3": {
-    "x": -124,
+    "x": -15,
     "y": 0,
     "definition": "gentle_hand_3"
   },
   "treat_saver_1": {
-    "x": -76,
+    "x": 15,
     "y": 0,
     "definition": "treat_saver_1",
     "root": true
   },
   "treat_saver_2": {
-    "x": -50,
+    "x": 15,
     "y": 0,
     "definition": "treat_saver_2"
   },
   "treat_saver_3": {
-    "x": -24,
+    "x": 15,
     "y": 0,
     "definition": "treat_saver_3"
   },
   "husbandry_1": {
-    "x": 24,
+    "x": 45,
     "y": 0,
     "definition": "husbandry_1",
     "root": true
   },
   "husbandry_2": {
-    "x": 50,
+    "x": 45,
     "y": 0,
     "definition": "husbandry_2"
   },
   "husbandry_3": {
-    "x": 76,
+    "x": 45,
     "y": 0,
     "definition": "husbandry_3"
   },
   "husbandry_4": {
-    "x": 102,
+    "x": 45,
     "y": 0,
     "definition": "husbandry_4"
   },
   "husbandry_5": {
-    "x": 128,
+    "x": 45,
     "y": 0,
     "definition": "husbandry_5"
   },
+  "tier_2_label": {
+    "x": -45,
+    "y": 40,
+    "definition": "tier_2_label"
+  },
   "selective_breeding_1": {
-    "x": -176,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "selective_breeding_1",
     "root": true
   },
   "selective_breeding_2": {
-    "x": -150,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "selective_breeding_2"
   },
   "selective_breeding_3": {
-    "x": -124,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "selective_breeding_3"
   },
   "selective_breeding_4": {
-    "x": -98,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "selective_breeding_4"
   },
   "selective_breeding_5": {
-    "x": -72,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "selective_breeding_5"
   },
   "bonded_1": {
-    "x": -24,
-    "y": 56,
+    "x": 15,
+    "y": 40,
     "definition": "bonded_1",
     "root": true
   },
   "bonded_2": {
-    "x": 2,
-    "y": 56,
+    "x": 15,
+    "y": 40,
     "definition": "bonded_2"
   },
   "bonded_3": {
-    "x": 28,
-    "y": 56,
+    "x": 15,
+    "y": 40,
     "definition": "bonded_3"
   },
   "pet_scavenging_1": {
-    "x": 76,
-    "y": 56,
+    "x": 45,
+    "y": 40,
     "definition": "pet_scavenging_1",
     "root": true
   },
   "pet_scavenging_2": {
-    "x": 102,
-    "y": 56,
+    "x": 45,
+    "y": 40,
     "definition": "pet_scavenging_2"
   },
   "pet_scavenging_3": {
-    "x": 128,
-    "y": 56,
+    "x": 45,
+    "y": 40,
     "definition": "pet_scavenging_3"
   },
+  "tier_3_label": {
+    "x": -45,
+    "y": 80,
+    "definition": "tier_3_label"
+  },
   "beastmaster_1": {
-    "x": -100,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "beastmaster_1",
     "root": true
   },
   "beastmaster_2": {
-    "x": -74,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "beastmaster_2"
   },
   "beastmaster_3": {
-    "x": -48,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "beastmaster_3"
   },
+  "tier_3_or": {
+    "x": 15,
+    "y": 80,
+    "definition": "tier_3_or"
+  },
   "breeder_1": {
-    "x": 0,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "breeder_1",
     "root": true
   },
   "breeder_2": {
-    "x": 26,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "breeder_2"
   },
   "breeder_3": {
-    "x": 52,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "breeder_3"
   },
+  "tier_4_label": {
+    "x": -90,
+    "y": 120,
+    "definition": "tier_4_label"
+  },
   "pack_tactics_1": {
-    "x": -300,
-    "y": 168,
+    "x": -60,
+    "y": 120,
     "definition": "pack_tactics_1",
     "root": true
   },
   "pack_tactics_2": {
-    "x": -274,
-    "y": 168,
+    "x": -60,
+    "y": 120,
     "definition": "pack_tactics_2"
   },
   "pack_tactics_3": {
-    "x": -248,
-    "y": 168,
+    "x": -60,
+    "y": 120,
     "definition": "pack_tactics_3"
   },
   "loyal_guard_1": {
-    "x": -200,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "loyal_guard_1",
     "root": true
   },
   "loyal_guard_2": {
-    "x": -174,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "loyal_guard_2"
   },
   "loyal_guard_3": {
-    "x": -148,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "loyal_guard_3"
   },
   "bloodlines_1": {
-    "x": -100,
-    "y": 168,
+    "x": 0,
+    "y": 120,
     "definition": "bloodlines_1",
     "root": true
   },
   "bloodlines_2": {
-    "x": -74,
-    "y": 168,
+    "x": 0,
+    "y": 120,
     "definition": "bloodlines_2"
   },
   "bloodlines_3": {
-    "x": -48,
-    "y": 168,
+    "x": 0,
+    "y": 120,
     "definition": "bloodlines_3"
   },
   "soul_mender_1": {
-    "x": 0,
-    "y": 168,
+    "x": 30,
+    "y": 120,
     "definition": "soul_mender_1",
     "root": true
   },
   "soul_mender_2": {
-    "x": 26,
-    "y": 168,
+    "x": 30,
+    "y": 120,
     "definition": "soul_mender_2"
   },
   "soul_mender_3": {
-    "x": 52,
-    "y": 168,
+    "x": 30,
+    "y": 120,
     "definition": "soul_mender_3"
   },
   "mount_training_1": {
-    "x": 100,
-    "y": 168,
+    "x": 60,
+    "y": 120,
     "definition": "mount_training_1",
     "root": true
   },
   "mount_training_2": {
-    "x": 126,
-    "y": 168,
+    "x": 60,
+    "y": 120,
     "definition": "mount_training_2"
   },
   "mount_training_3": {
-    "x": 152,
-    "y": 168,
+    "x": 60,
+    "y": 120,
     "definition": "mount_training_3"
   },
   "bonded_ii_1": {
-    "x": 200,
-    "y": 168,
+    "x": 90,
+    "y": 120,
     "definition": "bonded_ii_1"
   },
   "bonded_ii_2": {
-    "x": 226,
-    "y": 168,
+    "x": 90,
+    "y": 120,
     "definition": "bonded_ii_2"
   },
   "bonded_ii_3": {
-    "x": 252,
-    "y": 168,
+    "x": 90,
+    "y": 120,
     "definition": "bonded_ii_3"
   },
+  "tier_5_label": {
+    "x": -60,
+    "y": 160,
+    "definition": "tier_5_label"
+  },
   "caretaker_1": {
-    "x": -72,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "caretaker_1",
     "root": true
   },
   "alpha_1": {
-    "x": -24,
-    "y": 224,
+    "x": 0,
+    "y": 160,
     "definition": "alpha_1",
     "root": true
   },
+  "tier_5_or": {
+    "x": 30,
+    "y": 160,
+    "definition": "tier_5_or"
+  },
   "prized_stock_1": {
-    "x": 24,
-    "y": 224,
+    "x": 60,
+    "y": 160,
     "definition": "prized_stock_1",
     "root": true
   }

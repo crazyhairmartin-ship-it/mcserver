@@ -1,7 +1,24 @@
 {
+  "tier_1_label": {
+    "title": "Tier 1 \u00b7 Start",
+    "description": "Open from the start.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 0
+  },
   "frugal_1": {
-    "title": "Frugal I",
-    "description": "3% per rank to save an ingredient",
+    "title": "Frugal (1/5)",
+    "description": "Now: nothing yet. Next: 3% to save an ingredient.",
     "icon": {
       "type": "item",
       "data": {
@@ -18,8 +35,8 @@
     "required_spent_points": 0
   },
   "frugal_2": {
-    "title": "Frugal II",
-    "description": "3% per rank to save an ingredient",
+    "title": "Frugal (2/5)",
+    "description": "Now: 3% to save an ingredient. Next: 6% to save an ingredient.",
     "icon": {
       "type": "item",
       "data": {
@@ -36,8 +53,8 @@
     "required_spent_points": 0
   },
   "frugal_3": {
-    "title": "Frugal III",
-    "description": "3% per rank to save an ingredient",
+    "title": "Frugal (3/5)",
+    "description": "Now: 6% to save an ingredient. Next: 9% to save an ingredient.",
     "icon": {
       "type": "item",
       "data": {
@@ -54,8 +71,8 @@
     "required_spent_points": 0
   },
   "frugal_4": {
-    "title": "Frugal IV",
-    "description": "3% per rank to save an ingredient",
+    "title": "Frugal (4/5)",
+    "description": "Now: 9% to save an ingredient. Next: 12% to save an ingredient.",
     "icon": {
       "type": "item",
       "data": {
@@ -72,8 +89,8 @@
     "required_spent_points": 0
   },
   "frugal_5": {
-    "title": "Frugal V",
-    "description": "3% per rank to save an ingredient",
+    "title": "Frugal (5/5)",
+    "description": "Now: 12% to save an ingredient. Next: 15% to save an ingredient (max).",
     "icon": {
       "type": "item",
       "data": {
@@ -90,12 +107,12 @@
     "required_spent_points": 0
   },
   "smith_1": {
-    "title": "Smith I",
-    "description": "Crafted gear +5% durability per rank",
+    "title": "Smith (1/5)",
+    "description": "Now: nothing yet. Next: Crafted gear +5% durability.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:smithing_table"
       }
     },
     "frame": {
@@ -108,12 +125,12 @@
     "required_spent_points": 0
   },
   "smith_2": {
-    "title": "Smith II",
-    "description": "Crafted gear +5% durability per rank",
+    "title": "Smith (2/5)",
+    "description": "Now: Crafted gear +5% durability. Next: Crafted gear +10% durability.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:smithing_table"
       }
     },
     "frame": {
@@ -126,12 +143,12 @@
     "required_spent_points": 0
   },
   "smith_3": {
-    "title": "Smith III",
-    "description": "Crafted gear +5% durability per rank",
+    "title": "Smith (3/5)",
+    "description": "Now: Crafted gear +10% durability. Next: Crafted gear +15% durability.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:smithing_table"
       }
     },
     "frame": {
@@ -144,12 +161,12 @@
     "required_spent_points": 0
   },
   "smith_4": {
-    "title": "Smith IV",
-    "description": "Crafted gear +5% durability per rank",
+    "title": "Smith (4/5)",
+    "description": "Now: Crafted gear +15% durability. Next: Crafted gear +20% durability.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:smithing_table"
       }
     },
     "frame": {
@@ -162,12 +179,12 @@
     "required_spent_points": 0
   },
   "smith_5": {
-    "title": "Smith V",
-    "description": "Crafted gear +5% durability per rank",
+    "title": "Smith (5/5)",
+    "description": "Now: Crafted gear +20% durability. Next: Crafted gear +25% durability (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:smithing_table"
       }
     },
     "frame": {
@@ -180,12 +197,12 @@
     "required_spent_points": 0
   },
   "whetstone_1": {
-    "title": "Whetstone I",
-    "description": "Weapons you craft or repair get +0.2 attack damage per rank (feeds Attack)",
+    "title": "Whetstone (1/5)",
+    "description": "Now: nothing yet. Next: Weapons you craft or repair get +0.2 attack damage. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:flint"
       }
     },
     "frame": {
@@ -198,12 +215,12 @@
     "required_spent_points": 0
   },
   "whetstone_2": {
-    "title": "Whetstone II",
-    "description": "Weapons you craft or repair get +0.2 attack damage per rank (feeds Attack)",
+    "title": "Whetstone (2/5)",
+    "description": "Now: Weapons you craft or repair get +0.2 attack damage. Next: Weapons you craft or repair get +0.4 attack damage. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:flint"
       }
     },
     "frame": {
@@ -216,12 +233,12 @@
     "required_spent_points": 0
   },
   "whetstone_3": {
-    "title": "Whetstone III",
-    "description": "Weapons you craft or repair get +0.2 attack damage per rank (feeds Attack)",
+    "title": "Whetstone (3/5)",
+    "description": "Now: Weapons you craft or repair get +0.4 attack damage. Next: Weapons you craft or repair get +0.6 attack damage. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:flint"
       }
     },
     "frame": {
@@ -234,12 +251,12 @@
     "required_spent_points": 0
   },
   "whetstone_4": {
-    "title": "Whetstone IV",
-    "description": "Weapons you craft or repair get +0.2 attack damage per rank (feeds Attack)",
+    "title": "Whetstone (4/5)",
+    "description": "Now: Weapons you craft or repair get +0.6 attack damage. Next: Weapons you craft or repair get +0.8 attack damage. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:flint"
       }
     },
     "frame": {
@@ -252,12 +269,12 @@
     "required_spent_points": 0
   },
   "whetstone_5": {
-    "title": "Whetstone V",
-    "description": "Weapons you craft or repair get +0.2 attack damage per rank (feeds Attack)",
+    "title": "Whetstone (5/5)",
+    "description": "Now: Weapons you craft or repair get +0.8 attack damage. Next: Weapons you craft or repair get +1 attack damage (max). (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:flint"
       }
     },
     "frame": {
@@ -269,13 +286,30 @@
     "cost": 1,
     "required_spent_points": 0
   },
-  "enchanted_crafts_1": {
-    "title": "Enchanted Crafts I",
-    "description": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+  "tier_2_label": {
+    "title": "Tier 2 \u00b7 5 points",
+    "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 5
+  },
+  "enchanted_crafts_1": {
+    "title": "Enchanted Crafts (1/3)",
+    "description": "Rank 1/3: Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:enchanting_table"
       }
     },
     "frame": {
@@ -288,12 +322,12 @@
     "required_spent_points": 5
   },
   "enchanted_crafts_2": {
-    "title": "Enchanted Crafts II",
-    "description": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+    "title": "Enchanted Crafts (2/3)",
+    "description": "Rank 2/3: Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:enchanting_table"
       }
     },
     "frame": {
@@ -306,12 +340,12 @@
     "required_spent_points": 5
   },
   "enchanted_crafts_3": {
-    "title": "Enchanted Crafts III",
-    "description": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+    "title": "Enchanted Crafts (3/3)",
+    "description": "Rank 3/3: Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:enchanting_table"
       }
     },
     "frame": {
@@ -329,7 +363,7 @@
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:enchanted_book"
       }
     },
     "frame": {
@@ -342,12 +376,12 @@
     "required_spent_points": 5
   },
   "repair_kit_1": {
-    "title": "Repair Kit I",
-    "description": "Anvil repairs cost less XP",
+    "title": "Repair Kit (1/2)",
+    "description": "Rank 1/2: Anvil repairs cost less XP",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:anvil"
       }
     },
     "frame": {
@@ -360,12 +394,12 @@
     "required_spent_points": 5
   },
   "repair_kit_2": {
-    "title": "Repair Kit II",
-    "description": "Anvil repairs cost less XP",
+    "title": "Repair Kit (2/2)",
+    "description": "Rank 2/2: Anvil repairs cost less XP",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:anvil"
       }
     },
     "frame": {
@@ -378,12 +412,12 @@
     "required_spent_points": 5
   },
   "spellwright_1": {
-    "title": "Spellwright I",
-    "description": "8% per rank to save ingredients on scrolls and Ars items (feeds Magic)",
+    "title": "Spellwright (1/3)",
+    "description": "Now: nothing yet. Next: 8% to save ingredients on scrolls and Ars items. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:writable_book"
       }
     },
     "frame": {
@@ -396,12 +430,12 @@
     "required_spent_points": 5
   },
   "spellwright_2": {
-    "title": "Spellwright II",
-    "description": "8% per rank to save ingredients on scrolls and Ars items (feeds Magic)",
+    "title": "Spellwright (2/3)",
+    "description": "Now: 8% to save ingredients on scrolls and Ars items. Next: 16% to save ingredients on scrolls and Ars items. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:writable_book"
       }
     },
     "frame": {
@@ -414,12 +448,12 @@
     "required_spent_points": 5
   },
   "spellwright_3": {
-    "title": "Spellwright III",
-    "description": "8% per rank to save ingredients on scrolls and Ars items (feeds Magic)",
+    "title": "Spellwright (3/3)",
+    "description": "Now: 16% to save ingredients on scrolls and Ars items. Next: 24% to save ingredients on scrolls and Ars items (max). (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:writable_book"
       }
     },
     "frame": {
@@ -431,13 +465,30 @@
     "cost": 1,
     "required_spent_points": 5
   },
-  "weaponsmith_1": {
-    "title": "Weaponsmith",
-    "description": "Weapons you craft always get +1 attack damage (feeds Attack)",
+  "tier_3_label": {
+    "title": "Tier 3 \u00b7 10 points",
+    "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "weaponsmith_1": {
+    "title": "Weaponsmith",
+    "description": "Weapons you craft always get +1 attack damage Pick one: this or Armourer. (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_sword"
       }
     },
     "frame": {
@@ -447,15 +498,32 @@
       }
     },
     "cost": 3,
+    "required_spent_points": 10
+  },
+  "tier_3_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
     "required_spent_points": 10
   },
   "armourer_1": {
     "title": "Armourer",
-    "description": "Armour you craft always gets +1 toughness (feeds Defense)",
+    "description": "Armour you craft always gets +1 toughness Pick one: this or Weaponsmith. (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:iron_chestplate"
       }
     },
     "frame": {
@@ -467,9 +535,26 @@
     "cost": 3,
     "required_spent_points": 10
   },
+  "tier_4_label": {
+    "title": "Tier 4 \u00b7 15 points",
+    "description": "Opens once you have spent 15 points in this tree.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 15
+  },
   "frugal_ii_1": {
-    "title": "Frugal II I",
-    "description": "+3% ingredient saving per rank Needs Frugal (all ranks).",
+    "title": "Frugal II (1/5)",
+    "description": "Now: nothing yet. Next: +3% ingredient saving. Needs Frugal (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -486,8 +571,8 @@
     "required_spent_points": 15
   },
   "frugal_ii_2": {
-    "title": "Frugal II II",
-    "description": "+3% ingredient saving per rank Needs Frugal (all ranks).",
+    "title": "Frugal II (2/5)",
+    "description": "Now: +3% ingredient saving. Next: +6% ingredient saving. Needs Frugal (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -504,8 +589,8 @@
     "required_spent_points": 15
   },
   "frugal_ii_3": {
-    "title": "Frugal II III",
-    "description": "+3% ingredient saving per rank Needs Frugal (all ranks).",
+    "title": "Frugal II (3/5)",
+    "description": "Now: +6% ingredient saving. Next: +9% ingredient saving. Needs Frugal (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -522,8 +607,8 @@
     "required_spent_points": 15
   },
   "frugal_ii_4": {
-    "title": "Frugal II IV",
-    "description": "+3% ingredient saving per rank Needs Frugal (all ranks).",
+    "title": "Frugal II (4/5)",
+    "description": "Now: +9% ingredient saving. Next: +12% ingredient saving. Needs Frugal (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -540,8 +625,8 @@
     "required_spent_points": 15
   },
   "frugal_ii_5": {
-    "title": "Frugal II V",
-    "description": "+3% ingredient saving per rank Needs Frugal (all ranks).",
+    "title": "Frugal II (5/5)",
+    "description": "Now: +12% ingredient saving. Next: +15% ingredient saving (max). Needs Frugal (all ranks).",
     "icon": {
       "type": "item",
       "data": {
@@ -558,12 +643,12 @@
     "required_spent_points": 15
   },
   "enchanted_crafts_ii_1": {
-    "title": "Enchanted Crafts II I",
-    "description": "Enchantments on crafted gear roll one level higher per rank Needs Enchanted Crafts (all ranks).",
+    "title": "Enchanted Crafts II (1/2)",
+    "description": "Rank 1/2: Enchantments on crafted gear roll one level higher per rank Needs Enchanted Crafts (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:enchanting_table"
       }
     },
     "frame": {
@@ -576,12 +661,12 @@
     "required_spent_points": 15
   },
   "enchanted_crafts_ii_2": {
-    "title": "Enchanted Crafts II II",
-    "description": "Enchantments on crafted gear roll one level higher per rank Needs Enchanted Crafts (all ranks).",
+    "title": "Enchanted Crafts II (2/2)",
+    "description": "Rank 2/2: Enchantments on crafted gear roll one level higher per rank Needs Enchanted Crafts (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:enchanting_table"
       }
     },
     "frame": {
@@ -594,12 +679,12 @@
     "required_spent_points": 15
   },
   "salvager_1": {
-    "title": "Salvager I",
-    "description": "Grindstones return some materials",
+    "title": "Salvager (1/2)",
+    "description": "Rank 1/2: Grindstones return some materials",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:grindstone"
       }
     },
     "frame": {
@@ -612,12 +697,12 @@
     "required_spent_points": 15
   },
   "salvager_2": {
-    "title": "Salvager II",
-    "description": "Grindstones return some materials",
+    "title": "Salvager (2/2)",
+    "description": "Rank 2/2: Grindstones return some materials",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:grindstone"
       }
     },
     "frame": {
@@ -630,12 +715,12 @@
     "required_spent_points": 15
   },
   "saddler_1": {
-    "title": "Saddler I",
-    "description": "Saddles and horse armour you craft give mounts +5% speed and armour (feeds Taming)",
+    "title": "Saddler (1/2)",
+    "description": "Rank 1/2: Saddles and horse armour you craft give mounts +5% speed and armour (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:saddle"
       }
     },
     "frame": {
@@ -648,12 +733,12 @@
     "required_spent_points": 15
   },
   "saddler_2": {
-    "title": "Saddler II",
-    "description": "Saddles and horse armour you craft give mounts +5% speed and armour (feeds Taming)",
+    "title": "Saddler (2/2)",
+    "description": "Rank 2/2: Saddles and horse armour you craft give mounts +5% speed and armour (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:saddle"
       }
     },
     "frame": {
@@ -665,13 +750,30 @@
     "cost": 1,
     "required_spent_points": 15
   },
-  "smelter_1": {
-    "title": "Smelter I",
-    "description": "Furnaces you use run 10% faster per rank",
+  "tier_5_label": {
+    "title": "Tier 5 \u00b7 25 points",
+    "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "smelter_1": {
+    "title": "Smelter (1/3)",
+    "description": "Now: nothing yet. Next: Furnaces you use run 10% faster.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:furnace"
       }
     },
     "frame": {
@@ -684,12 +786,12 @@
     "required_spent_points": 25
   },
   "smelter_2": {
-    "title": "Smelter II",
-    "description": "Furnaces you use run 10% faster per rank",
+    "title": "Smelter (2/3)",
+    "description": "Now: Furnaces you use run 10% faster. Next: Furnaces you use run 20% faster.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:furnace"
       }
     },
     "frame": {
@@ -702,12 +804,12 @@
     "required_spent_points": 25
   },
   "smelter_3": {
-    "title": "Smelter III",
-    "description": "Furnaces you use run 10% faster per rank",
+    "title": "Smelter (3/3)",
+    "description": "Now: Furnaces you use run 20% faster. Next: Furnaces you use run 30% faster (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:furnace"
       }
     },
     "frame": {
@@ -721,11 +823,11 @@
   },
   "masterwork_1": {
     "title": "Masterwork",
-    "description": "Gear you craft always gets two enchantments",
+    "description": "Gear you craft always gets two enchantments Pick one: this or Endless Workshop.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:nether_star"
       }
     },
     "frame": {
@@ -737,13 +839,30 @@
     "cost": 3,
     "required_spent_points": 25
   },
-  "endless_workshop_1": {
-    "title": "Endless Workshop",
-    "description": "10% of crafts use no ingredients",
+  "tier_5_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:crafting_table"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "endless_workshop_1": {
+    "title": "Endless Workshop",
+    "description": "10% of crafts use no ingredients Pick one: this or Masterwork.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:emerald"
       }
     },
     "frame": {

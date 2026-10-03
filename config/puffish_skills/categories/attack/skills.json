@@ -1,245 +1,280 @@
 {
+  "tier_1_label": {
+    "x": -45,
+    "y": 0,
+    "definition": "tier_1_label"
+  },
   "sharpened_1": {
-    "x": -202,
+    "x": -15,
     "y": 0,
     "definition": "sharpened_1",
     "root": true
   },
   "sharpened_2": {
-    "x": -176,
+    "x": -15,
     "y": 0,
     "definition": "sharpened_2"
   },
   "sharpened_3": {
-    "x": -150,
+    "x": -15,
     "y": 0,
     "definition": "sharpened_3"
   },
   "sharpened_4": {
-    "x": -124,
+    "x": -15,
     "y": 0,
     "definition": "sharpened_4"
   },
   "sharpened_5": {
-    "x": -98,
+    "x": -15,
     "y": 0,
     "definition": "sharpened_5"
   },
   "footwork_1": {
-    "x": -50,
+    "x": 15,
     "y": 0,
     "definition": "footwork_1",
     "root": true
   },
   "footwork_2": {
-    "x": -24,
+    "x": 15,
     "y": 0,
     "definition": "footwork_2"
   },
   "footwork_3": {
-    "x": 2,
+    "x": 15,
     "y": 0,
     "definition": "footwork_3"
   },
   "footwork_4": {
-    "x": 28,
+    "x": 15,
     "y": 0,
     "definition": "footwork_4"
   },
   "footwork_5": {
-    "x": 54,
+    "x": 15,
     "y": 0,
     "definition": "footwork_5"
   },
   "butcher_1": {
-    "x": 102,
+    "x": 45,
     "y": 0,
     "definition": "butcher_1",
     "root": true
   },
   "butcher_2": {
-    "x": 128,
+    "x": 45,
     "y": 0,
     "definition": "butcher_2"
   },
   "butcher_3": {
-    "x": 154,
+    "x": 45,
     "y": 0,
     "definition": "butcher_3"
   },
+  "tier_2_label": {
+    "x": -45,
+    "y": 40,
+    "definition": "tier_2_label"
+  },
   "crit_training_1": {
-    "x": -163,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "crit_training_1",
     "root": true
   },
   "crit_training_2": {
-    "x": -137,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "crit_training_2"
   },
   "crit_training_3": {
-    "x": -111,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "crit_training_3"
   },
   "crit_training_4": {
-    "x": -85,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "crit_training_4"
   },
   "crit_training_5": {
-    "x": -59,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "crit_training_5"
   },
   "spellblade_1": {
-    "x": -11,
-    "y": 56,
+    "x": 15,
+    "y": 40,
     "definition": "spellblade_1",
     "root": true
   },
   "spellblade_2": {
     "x": 15,
-    "y": 56,
+    "y": 40,
     "definition": "spellblade_2"
   },
   "spellblade_3": {
-    "x": 41,
-    "y": 56,
+    "x": 15,
+    "y": 40,
     "definition": "spellblade_3"
   },
   "momentum_1": {
-    "x": 89,
-    "y": 56,
+    "x": 45,
+    "y": 40,
     "definition": "momentum_1",
     "root": true
   },
   "momentum_2": {
-    "x": 115,
-    "y": 56,
+    "x": 45,
+    "y": 40,
     "definition": "momentum_2"
   },
+  "tier_3_label": {
+    "x": -45,
+    "y": 80,
+    "definition": "tier_3_label"
+  },
   "heavy_arms_1": {
-    "x": -100,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "heavy_arms_1",
     "root": true
   },
   "heavy_arms_2": {
-    "x": -74,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "heavy_arms_2"
   },
   "heavy_arms_3": {
-    "x": -48,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "heavy_arms_3"
   },
+  "tier_3_or": {
+    "x": 15,
+    "y": 80,
+    "definition": "tier_3_or"
+  },
   "duelist_1": {
-    "x": 0,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "duelist_1",
     "root": true
   },
   "duelist_2": {
-    "x": 26,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "duelist_2"
   },
   "duelist_3": {
-    "x": 52,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "duelist_3"
   },
+  "tier_4_label": {
+    "x": -60,
+    "y": 120,
+    "definition": "tier_4_label"
+  },
   "sharpened_ii_1": {
-    "x": -213,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "sharpened_ii_1"
   },
   "sharpened_ii_2": {
-    "x": -187,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "sharpened_ii_2"
   },
   "sharpened_ii_3": {
-    "x": -161,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "sharpened_ii_3"
   },
   "sharpened_ii_4": {
-    "x": -135,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "sharpened_ii_4"
   },
   "sharpened_ii_5": {
-    "x": -109,
-    "y": 168,
+    "x": -30,
+    "y": 120,
     "definition": "sharpened_ii_5"
   },
   "hunters_mark_1": {
-    "x": -61,
-    "y": 168,
+    "x": 0,
+    "y": 120,
     "definition": "hunters_mark_1",
     "root": true
   },
   "hunters_mark_2": {
-    "x": -35,
-    "y": 168,
+    "x": 0,
+    "y": 120,
     "definition": "hunters_mark_2"
   },
   "hunters_mark_3": {
-    "x": -9,
-    "y": 168,
+    "x": 0,
+    "y": 120,
     "definition": "hunters_mark_3"
   },
   "shield_bash_1": {
-    "x": 39,
-    "y": 168,
+    "x": 30,
+    "y": 120,
     "definition": "shield_bash_1",
     "root": true
   },
   "shield_bash_2": {
-    "x": 65,
-    "y": 168,
+    "x": 30,
+    "y": 120,
     "definition": "shield_bash_2"
   },
   "shield_bash_3": {
-    "x": 91,
-    "y": 168,
+    "x": 30,
+    "y": 120,
     "definition": "shield_bash_3"
   },
   "executioner_1": {
-    "x": 139,
-    "y": 168,
+    "x": 60,
+    "y": 120,
     "definition": "executioner_1",
     "root": true
   },
   "executioner_2": {
-    "x": 165,
-    "y": 168,
+    "x": 60,
+    "y": 120,
     "definition": "executioner_2"
   },
+  "tier_5_label": {
+    "x": -60,
+    "y": 160,
+    "definition": "tier_5_label"
+  },
   "lifeline_1": {
-    "x": -85,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "lifeline_1",
     "root": true
   },
   "lifeline_2": {
-    "x": -59,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "lifeline_2"
   },
   "cleave_1": {
-    "x": -11,
-    "y": 224,
+    "x": 0,
+    "y": 160,
     "definition": "cleave_1",
     "root": true
   },
+  "tier_5_or": {
+    "x": 30,
+    "y": 160,
+    "definition": "tier_5_or"
+  },
   "flurry_1": {
-    "x": 37,
-    "y": 224,
+    "x": 60,
+    "y": 160,
     "definition": "flurry_1",
     "root": true
   }

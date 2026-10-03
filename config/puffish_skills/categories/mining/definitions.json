@@ -1,7 +1,24 @@
 {
+  "tier_1_label": {
+    "title": "Tier 1 \u00b7 Start",
+    "description": "Open from the start.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 0
+  },
   "stone_sense_1": {
-    "title": "Stone Sense I",
-    "description": "+4% mining speed per rank",
+    "title": "Stone Sense (1/5)",
+    "description": "Now: nothing yet. Next: +4% mining speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -18,8 +35,8 @@
     "required_spent_points": 0
   },
   "stone_sense_2": {
-    "title": "Stone Sense II",
-    "description": "+4% mining speed per rank",
+    "title": "Stone Sense (2/5)",
+    "description": "Now: +4% mining speed. Next: +8% mining speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -36,8 +53,8 @@
     "required_spent_points": 0
   },
   "stone_sense_3": {
-    "title": "Stone Sense III",
-    "description": "+4% mining speed per rank",
+    "title": "Stone Sense (3/5)",
+    "description": "Now: +8% mining speed. Next: +12% mining speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -54,8 +71,8 @@
     "required_spent_points": 0
   },
   "stone_sense_4": {
-    "title": "Stone Sense IV",
-    "description": "+4% mining speed per rank",
+    "title": "Stone Sense (4/5)",
+    "description": "Now: +12% mining speed. Next: +16% mining speed.",
     "icon": {
       "type": "item",
       "data": {
@@ -72,8 +89,8 @@
     "required_spent_points": 0
   },
   "stone_sense_5": {
-    "title": "Stone Sense V",
-    "description": "+4% mining speed per rank",
+    "title": "Stone Sense (5/5)",
+    "description": "Now: +16% mining speed. Next: +20% mining speed (max).",
     "icon": {
       "type": "item",
       "data": {
@@ -90,12 +107,12 @@
     "required_spent_points": 0
   },
   "steady_pick_1": {
-    "title": "Steady Pick I",
-    "description": "5% per rank to save pickaxe durability",
+    "title": "Steady Pick (1/3)",
+    "description": "Now: nothing yet. Next: 5% to save pickaxe durability.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:golden_pickaxe"
       }
     },
     "frame": {
@@ -108,12 +125,12 @@
     "required_spent_points": 0
   },
   "steady_pick_2": {
-    "title": "Steady Pick II",
-    "description": "5% per rank to save pickaxe durability",
+    "title": "Steady Pick (2/3)",
+    "description": "Now: 5% to save pickaxe durability. Next: 10% to save pickaxe durability.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:golden_pickaxe"
       }
     },
     "frame": {
@@ -126,12 +143,12 @@
     "required_spent_points": 0
   },
   "steady_pick_3": {
-    "title": "Steady Pick III",
-    "description": "5% per rank to save pickaxe durability",
+    "title": "Steady Pick (3/3)",
+    "description": "Now: 10% to save pickaxe durability. Next: 15% to save pickaxe durability (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:golden_pickaxe"
       }
     },
     "frame": {
@@ -144,12 +161,12 @@
     "required_spent_points": 0
   },
   "miners_might_1": {
-    "title": "Miner's Might I",
-    "description": "+0.3 damage with pickaxes, hammers and maces per rank (feeds Attack)",
+    "title": "Miner's Might (1/5)",
+    "description": "Now: nothing yet. Next: +0.3 damage with pickaxes, hammers and maces. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:anvil"
       }
     },
     "frame": {
@@ -162,12 +179,12 @@
     "required_spent_points": 0
   },
   "miners_might_2": {
-    "title": "Miner's Might II",
-    "description": "+0.3 damage with pickaxes, hammers and maces per rank (feeds Attack)",
+    "title": "Miner's Might (2/5)",
+    "description": "Now: +0.3 damage with pickaxes, hammers and maces. Next: +0.6 damage with pickaxes, hammers and maces. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:anvil"
       }
     },
     "frame": {
@@ -180,12 +197,12 @@
     "required_spent_points": 0
   },
   "miners_might_3": {
-    "title": "Miner's Might III",
-    "description": "+0.3 damage with pickaxes, hammers and maces per rank (feeds Attack)",
+    "title": "Miner's Might (3/5)",
+    "description": "Now: +0.6 damage with pickaxes, hammers and maces. Next: +0.9 damage with pickaxes, hammers and maces. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:anvil"
       }
     },
     "frame": {
@@ -198,12 +215,12 @@
     "required_spent_points": 0
   },
   "miners_might_4": {
-    "title": "Miner's Might IV",
-    "description": "+0.3 damage with pickaxes, hammers and maces per rank (feeds Attack)",
+    "title": "Miner's Might (4/5)",
+    "description": "Now: +0.9 damage with pickaxes, hammers and maces. Next: +1.2 damage with pickaxes, hammers and maces. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:anvil"
       }
     },
     "frame": {
@@ -216,12 +233,12 @@
     "required_spent_points": 0
   },
   "miners_might_5": {
-    "title": "Miner's Might V",
-    "description": "+0.3 damage with pickaxes, hammers and maces per rank (feeds Attack)",
+    "title": "Miner's Might (5/5)",
+    "description": "Now: +1.2 damage with pickaxes, hammers and maces. Next: +1.5 damage with pickaxes, hammers and maces (max). (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:anvil"
       }
     },
     "frame": {
@@ -233,13 +250,30 @@
     "cost": 1,
     "required_spent_points": 0
   },
-  "prospector_1": {
-    "title": "Prospector I",
-    "description": "3% extra ore drops per rank",
+  "tier_2_label": {
+    "title": "Tier 2 \u00b7 5 points",
+    "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 5
+  },
+  "prospector_1": {
+    "title": "Prospector (1/5)",
+    "description": "Now: nothing yet. Next: 3% extra ore drops.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:raw_iron"
       }
     },
     "frame": {
@@ -252,12 +286,12 @@
     "required_spent_points": 5
   },
   "prospector_2": {
-    "title": "Prospector II",
-    "description": "3% extra ore drops per rank",
+    "title": "Prospector (2/5)",
+    "description": "Now: 3% extra ore drops. Next: 6% extra ore drops.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:raw_iron"
       }
     },
     "frame": {
@@ -270,12 +304,12 @@
     "required_spent_points": 5
   },
   "prospector_3": {
-    "title": "Prospector III",
-    "description": "3% extra ore drops per rank",
+    "title": "Prospector (3/5)",
+    "description": "Now: 6% extra ore drops. Next: 9% extra ore drops.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:raw_iron"
       }
     },
     "frame": {
@@ -288,12 +322,12 @@
     "required_spent_points": 5
   },
   "prospector_4": {
-    "title": "Prospector IV",
-    "description": "3% extra ore drops per rank",
+    "title": "Prospector (4/5)",
+    "description": "Now: 9% extra ore drops. Next: 12% extra ore drops.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:raw_iron"
       }
     },
     "frame": {
@@ -306,12 +340,12 @@
     "required_spent_points": 5
   },
   "prospector_5": {
-    "title": "Prospector V",
-    "description": "3% extra ore drops per rank",
+    "title": "Prospector (5/5)",
+    "description": "Now: 12% extra ore drops. Next: 15% extra ore drops (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:raw_iron"
       }
     },
     "frame": {
@@ -324,12 +358,12 @@
     "required_spent_points": 5
   },
   "stonehide_1": {
-    "title": "Stonehide I",
-    "description": "Mining grants +1 armour for 30 s per rank (feeds Defense)",
+    "title": "Stonehide (1/3)",
+    "description": "Now: nothing yet. Next: Mining grants +1 armour for 30 s. (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:cobblestone"
       }
     },
     "frame": {
@@ -342,12 +376,12 @@
     "required_spent_points": 5
   },
   "stonehide_2": {
-    "title": "Stonehide II",
-    "description": "Mining grants +1 armour for 30 s per rank (feeds Defense)",
+    "title": "Stonehide (2/3)",
+    "description": "Now: Mining grants +1 armour for 30 s. Next: Mining grants +2 armour for 30 s. (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:cobblestone"
       }
     },
     "frame": {
@@ -360,12 +394,12 @@
     "required_spent_points": 5
   },
   "stonehide_3": {
-    "title": "Stonehide III",
-    "description": "Mining grants +1 armour for 30 s per rank (feeds Defense)",
+    "title": "Stonehide (3/3)",
+    "description": "Now: Mining grants +2 armour for 30 s. Next: Mining grants +3 armour for 30 s (max). (feeds Defense)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:cobblestone"
       }
     },
     "frame": {
@@ -378,12 +412,12 @@
     "required_spent_points": 5
   },
   "deep_delver_1": {
-    "title": "Deep Delver I",
-    "description": "+5% damage below Y 40 per rank (feeds Attack)",
+    "title": "Deep Delver (1/2)",
+    "description": "Now: nothing yet. Next: +5% damage below Y 40. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:deepslate"
       }
     },
     "frame": {
@@ -396,12 +430,12 @@
     "required_spent_points": 5
   },
   "deep_delver_2": {
-    "title": "Deep Delver II",
-    "description": "+5% damage below Y 40 per rank (feeds Attack)",
+    "title": "Deep Delver (2/2)",
+    "description": "Now: +5% damage below Y 40. Next: +10% damage below Y 40 (max). (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:deepslate"
       }
     },
     "frame": {
@@ -413,13 +447,30 @@
     "cost": 1,
     "required_spent_points": 5
   },
-  "smelter_1": {
-    "title": "Smelter I",
-    "description": "Ores auto-smelt: 15%, +10% per extra rank",
+  "tier_3_label": {
+    "title": "Tier 3 \u00b7 10 points",
+    "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "smelter_1": {
+    "title": "Smelter (1/3)",
+    "description": "Rank 1/3: Ores auto-smelt: 15%, +10% per extra rank Pick one: this or Gem Focus.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:blast_furnace"
       }
     },
     "frame": {
@@ -432,12 +483,12 @@
     "required_spent_points": 10
   },
   "smelter_2": {
-    "title": "Smelter II",
-    "description": "Ores auto-smelt: 15%, +10% per extra rank",
+    "title": "Smelter (2/3)",
+    "description": "Rank 2/3: Ores auto-smelt: 15%, +10% per extra rank Pick one: this or Gem Focus.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:blast_furnace"
       }
     },
     "frame": {
@@ -450,12 +501,12 @@
     "required_spent_points": 10
   },
   "smelter_3": {
-    "title": "Smelter III",
-    "description": "Ores auto-smelt: 15%, +10% per extra rank",
+    "title": "Smelter (3/3)",
+    "description": "Rank 3/3: Ores auto-smelt: 15%, +10% per extra rank Pick one: this or Gem Focus.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:blast_furnace"
       }
     },
     "frame": {
@@ -467,13 +518,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "gem_focus_1": {
-    "title": "Gem Focus I",
-    "description": "Each gem type you carry gives +2% spell power per rank (feeds Magic)",
+  "tier_3_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "gem_focus_1": {
+    "title": "Gem Focus (1/3)",
+    "description": "Now: nothing yet. Next: Each gem type you carry gives +2% spell power. Pick one: this or Smelter. (feeds Magic)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:amethyst_shard"
       }
     },
     "frame": {
@@ -486,12 +554,12 @@
     "required_spent_points": 10
   },
   "gem_focus_2": {
-    "title": "Gem Focus II",
-    "description": "Each gem type you carry gives +2% spell power per rank (feeds Magic)",
+    "title": "Gem Focus (2/3)",
+    "description": "Now: Each gem type you carry gives +2% spell power. Next: Each gem type you carry gives +4% spell power. Pick one: this or Smelter. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:amethyst_shard"
       }
     },
     "frame": {
@@ -504,12 +572,12 @@
     "required_spent_points": 10
   },
   "gem_focus_3": {
-    "title": "Gem Focus III",
-    "description": "Each gem type you carry gives +2% spell power per rank (feeds Magic)",
+    "title": "Gem Focus (3/3)",
+    "description": "Now: Each gem type you carry gives +4% spell power. Next: Each gem type you carry gives +6% spell power (max). Pick one: this or Smelter. (feeds Magic)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:amethyst_shard"
       }
     },
     "frame": {
@@ -521,13 +589,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "prospector_ii_1": {
-    "title": "Prospector II I",
-    "description": "+3% extra ore drops per rank Needs Prospector (all ranks).",
+  "tier_4_label": {
+    "title": "Tier 4 \u00b7 15 points",
+    "description": "Opens once you have spent 15 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 15
+  },
+  "prospector_ii_1": {
+    "title": "Prospector II (1/5)",
+    "description": "Now: nothing yet. Next: +3% extra ore drops. Needs Prospector (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:raw_iron"
       }
     },
     "frame": {
@@ -540,12 +625,12 @@
     "required_spent_points": 15
   },
   "prospector_ii_2": {
-    "title": "Prospector II II",
-    "description": "+3% extra ore drops per rank Needs Prospector (all ranks).",
+    "title": "Prospector II (2/5)",
+    "description": "Now: +3% extra ore drops. Next: +6% extra ore drops. Needs Prospector (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:raw_iron"
       }
     },
     "frame": {
@@ -558,12 +643,12 @@
     "required_spent_points": 15
   },
   "prospector_ii_3": {
-    "title": "Prospector II III",
-    "description": "+3% extra ore drops per rank Needs Prospector (all ranks).",
+    "title": "Prospector II (3/5)",
+    "description": "Now: +6% extra ore drops. Next: +9% extra ore drops. Needs Prospector (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:raw_iron"
       }
     },
     "frame": {
@@ -576,12 +661,12 @@
     "required_spent_points": 15
   },
   "prospector_ii_4": {
-    "title": "Prospector II IV",
-    "description": "+3% extra ore drops per rank Needs Prospector (all ranks).",
+    "title": "Prospector II (4/5)",
+    "description": "Now: +9% extra ore drops. Next: +12% extra ore drops. Needs Prospector (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:raw_iron"
       }
     },
     "frame": {
@@ -594,12 +679,12 @@
     "required_spent_points": 15
   },
   "prospector_ii_5": {
-    "title": "Prospector II V",
-    "description": "+3% extra ore drops per rank Needs Prospector (all ranks).",
+    "title": "Prospector II (5/5)",
+    "description": "Now: +12% extra ore drops. Next: +15% extra ore drops (max). Needs Prospector (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:raw_iron"
       }
     },
     "frame": {
@@ -612,12 +697,12 @@
     "required_spent_points": 15
   },
   "crusher_1": {
-    "title": "Crusher I",
-    "description": "Hammer and mace hits strip 1 armour from the target per rank (feeds Attack)",
+    "title": "Crusher (1/3)",
+    "description": "Now: nothing yet. Next: Hammer and mace hits strip 1 armour from the target. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:grindstone"
       }
     },
     "frame": {
@@ -630,12 +715,12 @@
     "required_spent_points": 15
   },
   "crusher_2": {
-    "title": "Crusher II",
-    "description": "Hammer and mace hits strip 1 armour from the target per rank (feeds Attack)",
+    "title": "Crusher (2/3)",
+    "description": "Now: Hammer and mace hits strip 1 armour from the target. Next: Hammer and mace hits strip 2 armour from the target. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:grindstone"
       }
     },
     "frame": {
@@ -648,12 +733,12 @@
     "required_spent_points": 15
   },
   "crusher_3": {
-    "title": "Crusher III",
-    "description": "Hammer and mace hits strip 1 armour from the target per rank (feeds Attack)",
+    "title": "Crusher (3/3)",
+    "description": "Now: Hammer and mace hits strip 2 armour from the target. Next: Hammer and mace hits strip 3 armour from the target (max). (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:grindstone"
       }
     },
     "frame": {
@@ -666,12 +751,12 @@
     "required_spent_points": 15
   },
   "bedrock_grip_1": {
-    "title": "Bedrock Grip I",
-    "description": "+6% speed on deepslate per rank",
+    "title": "Bedrock Grip (1/5)",
+    "description": "Now: nothing yet. Next: +6% speed on deepslate.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:cobbled_deepslate"
       }
     },
     "frame": {
@@ -684,12 +769,12 @@
     "required_spent_points": 15
   },
   "bedrock_grip_2": {
-    "title": "Bedrock Grip II",
-    "description": "+6% speed on deepslate per rank",
+    "title": "Bedrock Grip (2/5)",
+    "description": "Now: +6% speed on deepslate. Next: +12% speed on deepslate.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:cobbled_deepslate"
       }
     },
     "frame": {
@@ -702,12 +787,12 @@
     "required_spent_points": 15
   },
   "bedrock_grip_3": {
-    "title": "Bedrock Grip III",
-    "description": "+6% speed on deepslate per rank",
+    "title": "Bedrock Grip (3/5)",
+    "description": "Now: +12% speed on deepslate. Next: +18% speed on deepslate.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:cobbled_deepslate"
       }
     },
     "frame": {
@@ -720,12 +805,12 @@
     "required_spent_points": 15
   },
   "bedrock_grip_4": {
-    "title": "Bedrock Grip IV",
-    "description": "+6% speed on deepslate per rank",
+    "title": "Bedrock Grip (4/5)",
+    "description": "Now: +18% speed on deepslate. Next: +24% speed on deepslate.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:cobbled_deepslate"
       }
     },
     "frame": {
@@ -738,12 +823,12 @@
     "required_spent_points": 15
   },
   "bedrock_grip_5": {
-    "title": "Bedrock Grip V",
-    "description": "+6% speed on deepslate per rank",
+    "title": "Bedrock Grip (5/5)",
+    "description": "Now: +24% speed on deepslate. Next: +30% speed on deepslate (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:cobbled_deepslate"
       }
     },
     "frame": {
@@ -761,7 +846,7 @@
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:iron_nugget"
       }
     },
     "frame": {
@@ -773,13 +858,30 @@
     "cost": 1,
     "required_spent_points": 15
   },
-  "tunnel_vision_1": {
-    "title": "Tunnel Vision I",
-    "description": "Ultimine uses 15% less hunger per rank",
+  "tier_5_label": {
+    "title": "Tier 5 \u00b7 25 points",
+    "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "tunnel_vision_1": {
+    "title": "Tunnel Vision (1/3)",
+    "description": "Now: nothing yet. Next: Ultimine uses 15% less hunger.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:torch"
       }
     },
     "frame": {
@@ -792,12 +894,12 @@
     "required_spent_points": 25
   },
   "tunnel_vision_2": {
-    "title": "Tunnel Vision II",
-    "description": "Ultimine uses 15% less hunger per rank",
+    "title": "Tunnel Vision (2/3)",
+    "description": "Now: Ultimine uses 15% less hunger. Next: Ultimine uses 30% less hunger.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:torch"
       }
     },
     "frame": {
@@ -810,12 +912,12 @@
     "required_spent_points": 25
   },
   "tunnel_vision_3": {
-    "title": "Tunnel Vision III",
-    "description": "Ultimine uses 15% less hunger per rank",
+    "title": "Tunnel Vision (3/3)",
+    "description": "Now: Ultimine uses 30% less hunger. Next: Ultimine uses 45% less hunger (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:torch"
       }
     },
     "frame": {
@@ -829,11 +931,11 @@
   },
   "motherlode_1": {
     "title": "Motherlode",
-    "description": "2% chance an ore drops triple",
+    "description": "2% chance an ore drops triple Pick one: this or Earthshaker.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:diamond"
       }
     },
     "frame": {
@@ -845,13 +947,30 @@
     "cost": 3,
     "required_spent_points": 25
   },
-  "earthshaker_1": {
-    "title": "Earthshaker",
-    "description": "Hammer crits stun nearby mobs (feeds Attack)",
+  "tier_5_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:iron_pickaxe"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "earthshaker_1": {
+    "title": "Earthshaker",
+    "description": "Hammer crits stun nearby mobs Pick one: this or Motherlode. (feeds Attack)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:tnt"
       }
     },
     "frame": {

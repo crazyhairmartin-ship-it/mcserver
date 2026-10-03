@@ -1,11 +1,28 @@
 {
-  "mana_pool_1": {
-    "title": "Mana Pool I",
-    "description": "+10 max mana per rank (both mods)",
+  "tier_1_label": {
+    "title": "Tier 1 \u00b7 Start",
+    "description": "Open from the start.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 0
+  },
+  "mana_pool_1": {
+    "title": "Mana Pool (1/5)",
+    "description": "Now: nothing yet. Next: +10 max mana (both mods).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lapis_block"
       }
     },
     "frame": {
@@ -18,12 +35,12 @@
     "required_spent_points": 0
   },
   "mana_pool_2": {
-    "title": "Mana Pool II",
-    "description": "+10 max mana per rank (both mods)",
+    "title": "Mana Pool (2/5)",
+    "description": "Now: +10 max mana (both mods). Next: +20 max mana (both mods).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lapis_block"
       }
     },
     "frame": {
@@ -36,12 +53,12 @@
     "required_spent_points": 0
   },
   "mana_pool_3": {
-    "title": "Mana Pool III",
-    "description": "+10 max mana per rank (both mods)",
+    "title": "Mana Pool (3/5)",
+    "description": "Now: +20 max mana (both mods). Next: +30 max mana (both mods).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lapis_block"
       }
     },
     "frame": {
@@ -54,12 +71,12 @@
     "required_spent_points": 0
   },
   "mana_pool_4": {
-    "title": "Mana Pool IV",
-    "description": "+10 max mana per rank (both mods)",
+    "title": "Mana Pool (4/5)",
+    "description": "Now: +30 max mana (both mods). Next: +40 max mana (both mods).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lapis_block"
       }
     },
     "frame": {
@@ -72,12 +89,12 @@
     "required_spent_points": 0
   },
   "mana_pool_5": {
-    "title": "Mana Pool V",
-    "description": "+10 max mana per rank (both mods)",
+    "title": "Mana Pool (5/5)",
+    "description": "Now: +40 max mana (both mods). Next: +50 max mana (both mods) (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lapis_block"
       }
     },
     "frame": {
@@ -90,12 +107,12 @@
     "required_spent_points": 0
   },
   "focus_1": {
-    "title": "Focus I",
-    "description": "+3% spell power per rank",
+    "title": "Focus (1/5)",
+    "description": "Now: nothing yet. Next: +3% spell power.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:amethyst_cluster"
       }
     },
     "frame": {
@@ -108,12 +125,12 @@
     "required_spent_points": 0
   },
   "focus_2": {
-    "title": "Focus II",
-    "description": "+3% spell power per rank",
+    "title": "Focus (2/5)",
+    "description": "Now: +3% spell power. Next: +6% spell power.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:amethyst_cluster"
       }
     },
     "frame": {
@@ -126,12 +143,12 @@
     "required_spent_points": 0
   },
   "focus_3": {
-    "title": "Focus III",
-    "description": "+3% spell power per rank",
+    "title": "Focus (3/5)",
+    "description": "Now: +6% spell power. Next: +9% spell power.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:amethyst_cluster"
       }
     },
     "frame": {
@@ -144,12 +161,12 @@
     "required_spent_points": 0
   },
   "focus_4": {
-    "title": "Focus IV",
-    "description": "+3% spell power per rank",
+    "title": "Focus (4/5)",
+    "description": "Now: +9% spell power. Next: +12% spell power.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:amethyst_cluster"
       }
     },
     "frame": {
@@ -162,12 +179,12 @@
     "required_spent_points": 0
   },
   "focus_5": {
-    "title": "Focus V",
-    "description": "+3% spell power per rank",
+    "title": "Focus (5/5)",
+    "description": "Now: +12% spell power. Next: +15% spell power (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:amethyst_cluster"
       }
     },
     "frame": {
@@ -180,12 +197,12 @@
     "required_spent_points": 0
   },
   "flow_1": {
-    "title": "Flow I",
-    "description": "+5% mana regen per rank",
+    "title": "Flow (1/5)",
+    "description": "Now: nothing yet. Next: +5% mana regen.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:experience_bottle"
       }
     },
     "frame": {
@@ -198,12 +215,12 @@
     "required_spent_points": 0
   },
   "flow_2": {
-    "title": "Flow II",
-    "description": "+5% mana regen per rank",
+    "title": "Flow (2/5)",
+    "description": "Now: +5% mana regen. Next: +10% mana regen.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:experience_bottle"
       }
     },
     "frame": {
@@ -216,12 +233,12 @@
     "required_spent_points": 0
   },
   "flow_3": {
-    "title": "Flow III",
-    "description": "+5% mana regen per rank",
+    "title": "Flow (3/5)",
+    "description": "Now: +10% mana regen. Next: +15% mana regen.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:experience_bottle"
       }
     },
     "frame": {
@@ -234,12 +251,12 @@
     "required_spent_points": 0
   },
   "flow_4": {
-    "title": "Flow IV",
-    "description": "+5% mana regen per rank",
+    "title": "Flow (4/5)",
+    "description": "Now: +15% mana regen. Next: +20% mana regen.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:experience_bottle"
       }
     },
     "frame": {
@@ -252,12 +269,12 @@
     "required_spent_points": 0
   },
   "flow_5": {
-    "title": "Flow V",
-    "description": "+5% mana regen per rank",
+    "title": "Flow (5/5)",
+    "description": "Now: +20% mana regen. Next: +25% mana regen (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:experience_bottle"
       }
     },
     "frame": {
@@ -269,13 +286,30 @@
     "cost": 1,
     "required_spent_points": 0
   },
-  "mana_saver_1": {
-    "title": "Mana Saver I",
-    "description": "4% per rank: a spell costs no mana",
+  "tier_2_label": {
+    "title": "Tier 2 \u00b7 5 points",
+    "description": "Opens once you have spent 5 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 5
+  },
+  "mana_saver_1": {
+    "title": "Mana Saver (1/3)",
+    "description": "Now: nothing yet. Next: 4%: a spell costs no mana.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lapis_lazuli"
       }
     },
     "frame": {
@@ -288,12 +322,12 @@
     "required_spent_points": 5
   },
   "mana_saver_2": {
-    "title": "Mana Saver II",
-    "description": "4% per rank: a spell costs no mana",
+    "title": "Mana Saver (2/3)",
+    "description": "Now: 4%: a spell costs no mana. Next: 8%: a spell costs no mana.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lapis_lazuli"
       }
     },
     "frame": {
@@ -306,12 +340,12 @@
     "required_spent_points": 5
   },
   "mana_saver_3": {
-    "title": "Mana Saver III",
-    "description": "4% per rank: a spell costs no mana",
+    "title": "Mana Saver (3/3)",
+    "description": "Now: 8%: a spell costs no mana. Next: 12%: a spell costs no mana (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lapis_lazuli"
       }
     },
     "frame": {
@@ -324,12 +358,12 @@
     "required_spent_points": 5
   },
   "mana_shield_1": {
-    "title": "Mana Shield I",
-    "description": "Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
+    "title": "Mana Shield (1/3)",
+    "description": "Rank 1/3: Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:light_blue_stained_glass"
       }
     },
     "frame": {
@@ -342,12 +376,12 @@
     "required_spent_points": 5
   },
   "mana_shield_2": {
-    "title": "Mana Shield II",
-    "description": "Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
+    "title": "Mana Shield (2/3)",
+    "description": "Rank 2/3: Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:light_blue_stained_glass"
       }
     },
     "frame": {
@@ -360,12 +394,12 @@
     "required_spent_points": 5
   },
   "mana_shield_3": {
-    "title": "Mana Shield III",
-    "description": "Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
+    "title": "Mana Shield (3/3)",
+    "description": "Rank 3/3: Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:light_blue_stained_glass"
       }
     },
     "frame": {
@@ -378,12 +412,12 @@
     "required_spent_points": 5
   },
   "scroll_saver_1": {
-    "title": "Scroll Saver I",
-    "description": "10% per rank: an Iron's scroll isn't used",
+    "title": "Scroll Saver (1/2)",
+    "description": "Now: nothing yet. Next: 10%: an Iron's scroll isn't used.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:paper"
       }
     },
     "frame": {
@@ -396,12 +430,12 @@
     "required_spent_points": 5
   },
   "scroll_saver_2": {
-    "title": "Scroll Saver II",
-    "description": "10% per rank: an Iron's scroll isn't used",
+    "title": "Scroll Saver (2/2)",
+    "description": "Now: 10%: an Iron's scroll isn't used. Next: 20%: an Iron's scroll isn't used (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:paper"
       }
     },
     "frame": {
@@ -414,12 +448,12 @@
     "required_spent_points": 5
   },
   "staff_adept_1": {
-    "title": "Staff Adept I",
-    "description": "Holding a staff or wand: +4% spell power and -4% cooldowns per rank",
+    "title": "Staff Adept (1/3)",
+    "description": "Now: nothing yet. Next: Holding a staff or wand: +4% spell power and -4% cooldowns.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:blaze_rod"
       }
     },
     "frame": {
@@ -432,12 +466,12 @@
     "required_spent_points": 5
   },
   "staff_adept_2": {
-    "title": "Staff Adept II",
-    "description": "Holding a staff or wand: +4% spell power and -4% cooldowns per rank",
+    "title": "Staff Adept (2/3)",
+    "description": "Now: Holding a staff or wand: +4% spell power and -4% cooldowns. Next: Holding a staff or wand: +8% spell power and -4% cooldowns.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:blaze_rod"
       }
     },
     "frame": {
@@ -450,12 +484,12 @@
     "required_spent_points": 5
   },
   "staff_adept_3": {
-    "title": "Staff Adept III",
-    "description": "Holding a staff or wand: +4% spell power and -4% cooldowns per rank",
+    "title": "Staff Adept (3/3)",
+    "description": "Now: Holding a staff or wand: +8% spell power and -4% cooldowns. Next: Holding a staff or wand: +12% spell power and -4% cooldowns (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:blaze_rod"
       }
     },
     "frame": {
@@ -467,13 +501,30 @@
     "cost": 1,
     "required_spent_points": 5
   },
-  "battlemage_1": {
-    "title": "Battlemage I",
-    "description": "Iron's lean: +10% spell power per rank",
+  "tier_3_label": {
+    "title": "Tier 3 \u00b7 10 points",
+    "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "battlemage_1": {
+    "title": "Battlemage (1/3)",
+    "description": "Now: nothing yet. Next: Iron's lean: +10% spell power. Pick one: this or Artificer.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:fire_charge"
       }
     },
     "frame": {
@@ -486,12 +537,12 @@
     "required_spent_points": 10
   },
   "battlemage_2": {
-    "title": "Battlemage II",
-    "description": "Iron's lean: +10% spell power per rank",
+    "title": "Battlemage (2/3)",
+    "description": "Now: Iron's lean: +10% spell power. Next: Iron's lean: +20% spell power. Pick one: this or Artificer.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:fire_charge"
       }
     },
     "frame": {
@@ -504,12 +555,12 @@
     "required_spent_points": 10
   },
   "battlemage_3": {
-    "title": "Battlemage III",
-    "description": "Iron's lean: +10% spell power per rank",
+    "title": "Battlemage (3/3)",
+    "description": "Now: Iron's lean: +20% spell power. Next: Iron's lean: +30% spell power (max). Pick one: this or Artificer.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:fire_charge"
       }
     },
     "frame": {
@@ -521,13 +572,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "artificer_1": {
-    "title": "Artificer I",
-    "description": "Ars lean: cheaper glyph crafting, stronger summons",
+  "tier_3_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 10
+  },
+  "artificer_1": {
+    "title": "Artificer (1/3)",
+    "description": "Rank 1/3: Ars lean: cheaper glyph crafting, stronger summons Pick one: this or Battlemage.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:enchanting_table"
       }
     },
     "frame": {
@@ -540,12 +608,12 @@
     "required_spent_points": 10
   },
   "artificer_2": {
-    "title": "Artificer II",
-    "description": "Ars lean: cheaper glyph crafting, stronger summons",
+    "title": "Artificer (2/3)",
+    "description": "Rank 2/3: Ars lean: cheaper glyph crafting, stronger summons Pick one: this or Battlemage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:enchanting_table"
       }
     },
     "frame": {
@@ -558,12 +626,12 @@
     "required_spent_points": 10
   },
   "artificer_3": {
-    "title": "Artificer III",
-    "description": "Ars lean: cheaper glyph crafting, stronger summons",
+    "title": "Artificer (3/3)",
+    "description": "Rank 3/3: Ars lean: cheaper glyph crafting, stronger summons Pick one: this or Battlemage.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:enchanting_table"
       }
     },
     "frame": {
@@ -575,13 +643,30 @@
     "cost": 1,
     "required_spent_points": 10
   },
-  "mana_pool_ii_1": {
-    "title": "Mana Pool II I",
-    "description": "+10 max mana per rank Needs Mana Pool (all ranks).",
+  "tier_4_label": {
+    "title": "Tier 4 \u00b7 15 points",
+    "description": "Opens once you have spent 15 points in this tree.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 15
+  },
+  "mana_pool_ii_1": {
+    "title": "Mana Pool II (1/5)",
+    "description": "Now: nothing yet. Next: +10 max mana. Needs Mana Pool (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lapis_block"
       }
     },
     "frame": {
@@ -594,12 +679,12 @@
     "required_spent_points": 15
   },
   "mana_pool_ii_2": {
-    "title": "Mana Pool II II",
-    "description": "+10 max mana per rank Needs Mana Pool (all ranks).",
+    "title": "Mana Pool II (2/5)",
+    "description": "Now: +10 max mana. Next: +20 max mana. Needs Mana Pool (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lapis_block"
       }
     },
     "frame": {
@@ -612,12 +697,12 @@
     "required_spent_points": 15
   },
   "mana_pool_ii_3": {
-    "title": "Mana Pool II III",
-    "description": "+10 max mana per rank Needs Mana Pool (all ranks).",
+    "title": "Mana Pool II (3/5)",
+    "description": "Now: +20 max mana. Next: +30 max mana. Needs Mana Pool (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lapis_block"
       }
     },
     "frame": {
@@ -630,12 +715,12 @@
     "required_spent_points": 15
   },
   "mana_pool_ii_4": {
-    "title": "Mana Pool II IV",
-    "description": "+10 max mana per rank Needs Mana Pool (all ranks).",
+    "title": "Mana Pool II (4/5)",
+    "description": "Now: +30 max mana. Next: +40 max mana. Needs Mana Pool (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lapis_block"
       }
     },
     "frame": {
@@ -648,12 +733,12 @@
     "required_spent_points": 15
   },
   "mana_pool_ii_5": {
-    "title": "Mana Pool II V",
-    "description": "+10 max mana per rank Needs Mana Pool (all ranks).",
+    "title": "Mana Pool II (5/5)",
+    "description": "Now: +40 max mana. Next: +50 max mana (max). Needs Mana Pool (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lapis_block"
       }
     },
     "frame": {
@@ -666,8 +751,8 @@
     "required_spent_points": 15
   },
   "spellbound_steel_1": {
-    "title": "Spellbound Steel I",
-    "description": "After a cast, your next melee hit deals +10% magic damage per rank (feeds Attack)",
+    "title": "Spellbound Steel (1/3)",
+    "description": "Now: nothing yet. Next: After a cast, your next melee hit deals +10% magic damage. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
@@ -684,8 +769,8 @@
     "required_spent_points": 15
   },
   "spellbound_steel_2": {
-    "title": "Spellbound Steel II",
-    "description": "After a cast, your next melee hit deals +10% magic damage per rank (feeds Attack)",
+    "title": "Spellbound Steel (2/3)",
+    "description": "Now: After a cast, your next melee hit deals +10% magic damage. Next: After a cast, your next melee hit deals +20% magic damage. (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
@@ -702,8 +787,8 @@
     "required_spent_points": 15
   },
   "spellbound_steel_3": {
-    "title": "Spellbound Steel III",
-    "description": "After a cast, your next melee hit deals +10% magic damage per rank (feeds Attack)",
+    "title": "Spellbound Steel (3/3)",
+    "description": "Now: After a cast, your next melee hit deals +20% magic damage. Next: After a cast, your next melee hit deals +30% magic damage (max). (feeds Attack)",
     "icon": {
       "type": "item",
       "data": {
@@ -720,12 +805,12 @@
     "required_spent_points": 15
   },
   "natures_mend_1": {
-    "title": "Nature's Mend I",
-    "description": "Your healing spells also heal nearby pets (feeds Taming)",
+    "title": "Nature's Mend (1/3)",
+    "description": "Rank 1/3: Your healing spells also heal nearby pets (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:glistering_melon_slice"
       }
     },
     "frame": {
@@ -738,12 +823,12 @@
     "required_spent_points": 15
   },
   "natures_mend_2": {
-    "title": "Nature's Mend II",
-    "description": "Your healing spells also heal nearby pets (feeds Taming)",
+    "title": "Nature's Mend (2/3)",
+    "description": "Rank 2/3: Your healing spells also heal nearby pets (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:glistering_melon_slice"
       }
     },
     "frame": {
@@ -756,12 +841,12 @@
     "required_spent_points": 15
   },
   "natures_mend_3": {
-    "title": "Nature's Mend III",
-    "description": "Your healing spells also heal nearby pets (feeds Taming)",
+    "title": "Nature's Mend (3/3)",
+    "description": "Rank 3/3: Your healing spells also heal nearby pets (feeds Taming)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:glistering_melon_slice"
       }
     },
     "frame": {
@@ -774,12 +859,12 @@
     "required_spent_points": 15
   },
   "cooldown_flow_1": {
-    "title": "Cooldown Flow I",
-    "description": "-5% spell cooldowns per rank",
+    "title": "Cooldown Flow (1/2)",
+    "description": "Now: nothing yet. Next: -5% spell cooldowns.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:clock"
       }
     },
     "frame": {
@@ -792,12 +877,12 @@
     "required_spent_points": 15
   },
   "cooldown_flow_2": {
-    "title": "Cooldown Flow II",
-    "description": "-5% spell cooldowns per rank",
+    "title": "Cooldown Flow (2/2)",
+    "description": "Now: -5% spell cooldowns. Next: -10% spell cooldowns (max).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:clock"
       }
     },
     "frame": {
@@ -809,13 +894,30 @@
     "cost": 1,
     "required_spent_points": 15
   },
-  "arcane_aegis_1": {
-    "title": "Arcane Aegis I",
-    "description": "Mana Shield reflects 10% of blocked damage as magic per rank (feeds Defense) Needs Mana Shield (all ranks).",
+  "tier_5_label": {
+    "title": "Tier 5 \u00b7 25 points",
+    "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:oak_sign"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "arcane_aegis_1": {
+    "title": "Arcane Aegis (1/2)",
+    "description": "Now: nothing yet. Next: Mana Shield reflects 10% of blocked damage as magic. (feeds Defense) Needs Mana Shield (all ranks).",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:end_crystal"
       }
     },
     "frame": {
@@ -828,12 +930,12 @@
     "required_spent_points": 25
   },
   "arcane_aegis_2": {
-    "title": "Arcane Aegis II",
-    "description": "Mana Shield reflects 10% of blocked damage as magic per rank (feeds Defense) Needs Mana Shield (all ranks).",
+    "title": "Arcane Aegis (2/2)",
+    "description": "Now: Mana Shield reflects 10% of blocked damage as magic. Next: Mana Shield reflects 20% of blocked damage as magic (max). (feeds Defense) Needs Mana Shield (all ranks).",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:end_crystal"
       }
     },
     "frame": {
@@ -847,11 +949,11 @@
   },
   "archmage_1": {
     "title": "Archmage",
-    "description": "12% free spells, -15% cooldowns",
+    "description": "12% free spells, -15% cooldowns Pick one: this or Wellspring.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:dragon_breath"
       }
     },
     "frame": {
@@ -863,13 +965,30 @@
     "cost": 3,
     "required_spent_points": 25
   },
-  "wellspring_1": {
-    "title": "Wellspring",
-    "description": "Mana regen doubled out of combat",
+  "tier_5_or": {
+    "title": "OR",
+    "description": "Pick one of the two branches beside this; taking one locks the other.",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:lever"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "required_spent_points": 25
+  },
+  "wellspring_1": {
+    "title": "Wellspring",
+    "description": "Mana regen doubled out of combat Pick one: this or Archmage.",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:conduit"
       }
     },
     "frame": {

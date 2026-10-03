@@ -1,271 +1,306 @@
 {
+  "tier_1_label": {
+    "x": -45,
+    "y": 0,
+    "definition": "tier_1_label"
+  },
   "lumberjack_1": {
-    "x": -202,
+    "x": -15,
     "y": 0,
     "definition": "lumberjack_1",
     "root": true
   },
   "lumberjack_2": {
-    "x": -176,
+    "x": -15,
     "y": 0,
     "definition": "lumberjack_2"
   },
   "lumberjack_3": {
-    "x": -150,
+    "x": -15,
     "y": 0,
     "definition": "lumberjack_3"
   },
   "lumberjack_4": {
-    "x": -124,
+    "x": -15,
     "y": 0,
     "definition": "lumberjack_4"
   },
   "lumberjack_5": {
-    "x": -98,
+    "x": -15,
     "y": 0,
     "definition": "lumberjack_5"
   },
   "axe_mastery_1": {
-    "x": -50,
+    "x": 15,
     "y": 0,
     "definition": "axe_mastery_1",
     "root": true
   },
   "axe_mastery_2": {
-    "x": -24,
+    "x": 15,
     "y": 0,
     "definition": "axe_mastery_2"
   },
   "axe_mastery_3": {
-    "x": 2,
+    "x": 15,
     "y": 0,
     "definition": "axe_mastery_3"
   },
   "axe_mastery_4": {
-    "x": 28,
+    "x": 15,
     "y": 0,
     "definition": "axe_mastery_4"
   },
   "axe_mastery_5": {
-    "x": 54,
+    "x": 15,
     "y": 0,
     "definition": "axe_mastery_5"
   },
   "berry_picker_1": {
-    "x": 102,
+    "x": 45,
     "y": 0,
     "definition": "berry_picker_1",
     "root": true
   },
   "berry_picker_2": {
-    "x": 128,
+    "x": 45,
     "y": 0,
     "definition": "berry_picker_2"
   },
   "berry_picker_3": {
-    "x": 154,
+    "x": 45,
     "y": 0,
     "definition": "berry_picker_3"
   },
+  "tier_2_label": {
+    "x": -45,
+    "y": 40,
+    "definition": "tier_2_label"
+  },
   "timber_1": {
-    "x": -163,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "timber_1",
     "root": true
   },
   "timber_2": {
-    "x": -137,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "timber_2"
   },
   "timber_3": {
-    "x": -111,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "timber_3"
   },
   "timber_4": {
-    "x": -85,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "timber_4"
   },
   "timber_5": {
-    "x": -59,
-    "y": 56,
+    "x": -15,
+    "y": 40,
     "definition": "timber_5"
   },
   "long_net_1": {
-    "x": -11,
-    "y": 56,
+    "x": 15,
+    "y": 40,
     "definition": "long_net_1",
     "root": true
   },
   "long_net_2": {
     "x": 15,
-    "y": 56,
+    "y": 40,
     "definition": "long_net_2"
   },
   "long_net_3": {
-    "x": 41,
-    "y": 56,
+    "x": 15,
+    "y": 40,
     "definition": "long_net_3"
   },
   "forest_stride_1": {
-    "x": 89,
-    "y": 56,
+    "x": 45,
+    "y": 40,
     "definition": "forest_stride_1",
     "root": true
   },
   "forest_stride_2": {
-    "x": 115,
-    "y": 56,
+    "x": 45,
+    "y": 40,
     "definition": "forest_stride_2"
   },
+  "tier_3_label": {
+    "x": -45,
+    "y": 80,
+    "definition": "tier_3_label"
+  },
   "splitting_blow_1": {
-    "x": -100,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "splitting_blow_1",
     "root": true
   },
   "splitting_blow_2": {
-    "x": -74,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "splitting_blow_2"
   },
   "splitting_blow_3": {
-    "x": -48,
-    "y": 112,
+    "x": -15,
+    "y": 80,
     "definition": "splitting_blow_3"
   },
+  "tier_3_or": {
+    "x": 15,
+    "y": 80,
+    "definition": "tier_3_or"
+  },
   "wildcrafter_1": {
-    "x": 0,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "wildcrafter_1",
     "root": true
   },
   "wildcrafter_2": {
-    "x": 26,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "wildcrafter_2"
   },
   "wildcrafter_3": {
-    "x": 52,
-    "y": 112,
+    "x": 45,
+    "y": 80,
     "definition": "wildcrafter_3"
   },
+  "tier_4_label": {
+    "x": -75,
+    "y": 120,
+    "definition": "tier_4_label"
+  },
   "timber_ii_1": {
-    "x": -276,
-    "y": 168,
+    "x": -45,
+    "y": 120,
     "definition": "timber_ii_1"
   },
   "timber_ii_2": {
-    "x": -250,
-    "y": 168,
+    "x": -45,
+    "y": 120,
     "definition": "timber_ii_2"
   },
   "timber_ii_3": {
-    "x": -224,
-    "y": 168,
+    "x": -45,
+    "y": 120,
     "definition": "timber_ii_3"
   },
   "timber_ii_4": {
-    "x": -198,
-    "y": 168,
+    "x": -45,
+    "y": 120,
     "definition": "timber_ii_4"
   },
   "timber_ii_5": {
-    "x": -172,
-    "y": 168,
+    "x": -45,
+    "y": 120,
     "definition": "timber_ii_5"
   },
   "beekeeper_1": {
-    "x": -124,
-    "y": 168,
+    "x": -15,
+    "y": 120,
     "definition": "beekeeper_1",
     "root": true
   },
   "beekeeper_2": {
-    "x": -98,
-    "y": 168,
+    "x": -15,
+    "y": 120,
     "definition": "beekeeper_2"
   },
   "beekeeper_3": {
-    "x": -72,
-    "y": 168,
+    "x": -15,
+    "y": 120,
     "definition": "beekeeper_3"
   },
   "fletcher_1": {
-    "x": -24,
-    "y": 168,
+    "x": 15,
+    "y": 120,
     "definition": "fletcher_1",
     "root": true
   },
   "fletcher_2": {
-    "x": 2,
-    "y": 168,
+    "x": 15,
+    "y": 120,
     "definition": "fletcher_2"
   },
   "fletcher_3": {
-    "x": 28,
-    "y": 168,
+    "x": 15,
+    "y": 120,
     "definition": "fletcher_3"
   },
   "bark_skin_1": {
-    "x": 76,
-    "y": 168,
+    "x": 45,
+    "y": 120,
     "definition": "bark_skin_1",
     "root": true
   },
   "bark_skin_2": {
-    "x": 102,
-    "y": 168,
+    "x": 45,
+    "y": 120,
     "definition": "bark_skin_2"
   },
   "bark_skin_3": {
-    "x": 128,
-    "y": 168,
+    "x": 45,
+    "y": 120,
     "definition": "bark_skin_3"
   },
   "druids_grove_1": {
-    "x": 176,
-    "y": 168,
+    "x": 75,
+    "y": 120,
     "definition": "druids_grove_1",
     "root": true
   },
   "druids_grove_2": {
-    "x": 202,
-    "y": 168,
+    "x": 75,
+    "y": 120,
     "definition": "druids_grove_2"
   },
   "druids_grove_3": {
-    "x": 228,
-    "y": 168,
+    "x": 75,
+    "y": 120,
     "definition": "druids_grove_3"
   },
+  "tier_5_label": {
+    "x": -60,
+    "y": 160,
+    "definition": "tier_5_label"
+  },
   "throwing_axes_1": {
-    "x": -98,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "throwing_axes_1",
     "root": true
   },
   "throwing_axes_2": {
-    "x": -72,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "throwing_axes_2"
   },
   "throwing_axes_3": {
-    "x": -46,
-    "y": 224,
+    "x": -30,
+    "y": 160,
     "definition": "throwing_axes_3"
   },
   "natures_bounty_1": {
-    "x": 2,
-    "y": 224,
+    "x": 0,
+    "y": 160,
     "definition": "natures_bounty_1",
     "root": true
   },
+  "tier_5_or": {
+    "x": 30,
+    "y": 160,
+    "definition": "tier_5_or"
+  },
   "berserkers_axe_1": {
-    "x": 50,
-    "y": 224,
+    "x": 60,
+    "y": 160,
     "definition": "berserkers_axe_1",
     "root": true
   }
