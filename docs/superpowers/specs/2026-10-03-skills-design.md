@@ -75,7 +75,7 @@ nodes stay at 3. Per-rank amounts are rebalanced in the preview. Arrows ("needs 
 | Skill | XP from |
 |---|---|
 | Mining | Mining natural stone/ores/deepslate (rarer ores worth more) |
-| Woodcutting | Chopping natural logs, incl. modded trees |
+| Foraging | Chopping natural logs (incl. modded trees), picking berries and wild crops, gathering mushrooms and flowers, harvesting honey, catching butterflies and bugs |
 | Farming | Harvesting fully grown crops; breeding farm animals |
 | Fishing | Any catch (Aquaculture included) |
 | Cooking | Finished meals: Farmer's Delight pots, Let's Do recipes, smoker/furnace food |
@@ -83,11 +83,11 @@ nodes stay at 3. Per-rank amounts are rebalanced in the preview. Arrows ("needs 
 | Attack | Landed melee hits, by damage dealt |
 | Range | Landed projectile hits (thrown weapons too), more at long range |
 | Defense | Hits taken from mobs (damage absorbed) and hits blocked with a shield (full credit) |
-| Agility | ParCool moves (wall-run, climb, roll, vault, dodge), sprinting, gliding |
+| Agility | ParCool moves (wall-run, climb, roll, vault, dodge), sprinting, grappling-hook swinging |
 | Magic | Casting spells in either mod, by mana spent |
 | Taming | Taming (rare animals worth more), feeding/healing pets, your pets landing hits |
 
-Anti-farming: built-in per-mob and per-chunk limits; player-placed blocks give no Mining/Woodcutting XP;
+Anti-farming: built-in per-mob and per-chunk limits; player-placed blocks give no Mining/Foraging XP;
 falls, fire, drowning and self-inflicted damage give no Defense XP.
 
 Custom sources needed (add-on): spell cast (Ars + Iron's), shield block (Forge `ShieldBlockEvent`), tame
@@ -103,7 +103,7 @@ save taming food, save durability.
 servings (meals), twins (breeding).
 
 **Activity boosts**: mining/chopping/harvesting speed, fishing bite speed, bow/crossbow draw speed,
-projectile range (velocity), cooking-pot speed, ParCool + Paragliders stamina drain, less fall damage,
+projectile range (velocity), cooking-pot speed, ParCool stamina drain, grappling-hook range/speed, less fall damage,
 swim speed, taming success chance (level-scaled, with a minimum).
 
 **Unique and conditional**:
@@ -142,16 +142,25 @@ truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dy
 - Heartwood (rare log drop) was cut.
 - Totals: 43-46 points to fill a tree (choices counted once).
 
-## Skills that look thin (for discussion)
+## Decisions from revision 3
 
-- **Woodcutting** has the least unique to do. Suggest widening it into **Foraging**: logs plus berries,
-  mushrooms, flowers, beehives, catching butterflies and bugs (Bok's Butterflies, bug nets).
-- **Brewing** (Let's Do Vinery/Brewery/HerbalBrews, potions) is folded into Cooking; it could be its own tree if
-  Cooking feels crowded.
-- **Exploring** has no tree but lots of content (dungeons, structures, waystones, compasses, boats, airships):
-  a candidate 13th tree (discover structures, travel distance; perks: loot luck, waystone discounts, map
-  reveal, boat/airship speed).
-- **Mining tier 2** "Night Eyes" and "Hard Hat" are filler-ish; worth better ideas during the preview.
+- **Woodcutting is now Foraging**: logs plus berries, mushrooms, flowers, herbs, honey and bug catching
+  (nodes: Berry Picker, Bug Catcher, Wildcrafter, Beekeeper, Nature's Bounty capstone).
+- **No Exploring tree.** Brewing stays inside Cooking.
+- **Grappling hook (Grappling Hook - Reforged)**: keep only the basic grappling hook. Remove every other hook
+  item (motor, double motor, ender, magnet, rocket, smart, rocket/double variants, launcher, repeller, the
+  boots) and all upgrade items plus the modifier block (recipes removed, hidden in JEI). The upgrades come back
+  as Agility nodes applied per player by the add-on: Long Rope / Long Rope II (range), Hookmaster (throw, reel,
+  swing), Motor Reel (pull to the hook), Twin Hooks capstone (double hook). ParCool's grapple stays unused.
+  New item model and texture for the hook (separate small task).
+- **Paragliders is removed** (gliders, goddess statues, spirit orbs, heart containers, stamina vessels). Its
+  health and stamina growth moves to **overall level**: total of all 12 skill levels (max 600); every 40 total
+  levels gives +1 heart and +5% ParCool max stamina (up to +15 hearts at 600). Do the removal in the same
+  release as skills so nobody loses their spirit-gem hearts in between. Statues already placed in the world
+  disappear with the mod.
+- **Tree reset**: a player can reset one tree and get its points back, paying XP levels: 1 level per 2 points
+  spent, minimum 5 (a player command or button from the add-on, calling Pufferfish's Category API reset;
+  Pufferfish's own commands need operator permission).
 
 ## Pet revival (standalone, not a perk)
 

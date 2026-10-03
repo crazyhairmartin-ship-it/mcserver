@@ -106,6 +106,11 @@ header p { margin: 4px 0 0; color: var(--muted); max-width: 68ch; }
     <span style="--k: var(--choice)">Pick-one choice, or &#8596; feeds another skill</span>
     <span style="--k: var(--brass)">Capstone / prerequisite</span>
   </div>
+  <section class="xp" id="overall">
+    <b>Every level counts:</b> your total level (all 12 skills added up, max 600) raises max health and ParCool stamina,
+    replacing Paragliders' spirit gems: <b>+1 heart and +5% stamina every 40 total levels</b> (up to +15 hearts).
+    <b>Resetting a tree</b> refunds its points for XP levels: 1 level per 2 points spent, minimum 5.
+  </section>
   <main id="tree" style="display:grid; gap:18px"></main>
 </div>
 
@@ -128,18 +133,18 @@ const TREES = [
   N(4,"Prospector II",5,"+3% extra ore drops per rank",{needs:"Prospector"}), N(4,"Crusher",3,"Hammer and mace hits strip 1 armour from the target per rank",{syn:"Attack"}), N(4,"Bedrock Grip",5,"+6% speed on deepslate per rank"), N(4,"Ore Nose",1,"Plain stone sometimes drops raw nuggets"),
   N(5,"Tunnel Vision",3,"Ultimine uses 15% less hunger per rank"),
   N(5,"Motherlode",3,"2% chance an ore drops triple",{cap:1,b:"A"}), N(5,"Earthshaker",3,"Hammer crits stun nearby mobs",{cap:1,b:"B",syn:"Attack"}) ]},
- { id: "wood", name: "Woodcutting", xp: "Chopping natural logs, including modded trees.", nodes: [
-  N(1,"Lumberjack",5,"+4% chopping speed per rank"), N(1,"Axe Mastery",5,"+0.3 damage with axes per rank",{syn:"Attack"}), N(1,"Sapling Sense",3,"+10% sapling and apple drops per rank"),
-  N(2,"Timber",5,"3% extra logs per rank"), N(2,"Fletcher",3,"Crafting arrows: 10% per rank for extra arrows",{syn:"Range"}), N(2,"Forest Stride",2,"+5% move speed in forests per rank",{syn:"Agility"}),
-  N(3,"Splitting Blow",3,"Axe hits ignore 10% of armour per rank",{b:"A",syn:"Attack"}), N(3,"Woodworker",3,"8% per rank to save wood when crafting wooden items",{b:"B",syn:"Crafting"}),
-  N(4,"Timber II",5,"+3% extra logs per rank",{needs:"Timber"}), N(4,"Bark Skin",3,"+0.5 armour toughness in forests per rank",{syn:"Defense"}), N(4,"Druid's Grove",3,"Spells cost 5% less mana in forests per rank",{syn:"Magic"}), N(4,"Leaf Cutter",2,"Leaves drop extra sticks, seeds and apples"),
+ { id: "forage", name: "Foraging", xp: "Chopping natural logs; picking berries and wild crops; gathering mushrooms and flowers; harvesting honey; catching butterflies and bugs.", nodes: [
+  N(1,"Lumberjack",5,"+4% chopping speed per rank"), N(1,"Axe Mastery",5,"+0.3 damage with axes per rank",{syn:"Attack"}), N(1,"Berry Picker",3,"10% per rank for extra berries from bushes and wild crops"),
+  N(2,"Timber",5,"3% extra logs per rank"), N(2,"Bug Catcher",3,"Nets catch butterflies and bugs more reliably; 10% per rank for a second one"), N(2,"Forest Stride",2,"+5% move speed in forests per rank",{syn:"Agility"}),
+  N(3,"Splitting Blow",3,"Axe hits ignore 10% of armour per rank",{b:"A",syn:"Attack"}), N(3,"Wildcrafter",3,"Mushrooms, flowers and herbs drop 8% extra per rank; teas and potions from them last longer",{b:"B",syn:"Cooking"}),
+  N(4,"Timber II",5,"+3% extra logs per rank",{needs:"Timber"}), N(4,"Beekeeper",3,"Hives give extra honey and comb; bees stay calm when you harvest"), N(4,"Fletcher",3,"Crafting arrows: 10% per rank for extra arrows",{syn:"Range"}), N(4,"Bark Skin",3,"+0.5 armour toughness in forests per rank",{syn:"Defense"}), N(4,"Druid's Grove",3,"Spells cost 5% less mana in forests per rank",{syn:"Magic"}),
   N(5,"Throwing Axes",3,"Thrown axes and tomahawks +10% damage per rank",{syn:"Range"}),
-  N(5,"Whole Tree",3,"5% chance the whole tree drops at once",{cap:1,b:"A"}), N(5,"Berserker's Axe",3,"Axe kills give 4 s of Strength",{cap:1,b:"B",syn:"Attack"}) ]},
+  N(5,"Nature's Bounty",3,"5% chance any log, berry, mushroom or honey harvest drops triple",{cap:1,b:"A"}), N(5,"Berserker's Axe",3,"Axe kills give 4 s of Strength",{cap:1,b:"B",syn:"Attack"}) ]},
  { id: "farm", name: "Farming", xp: "Harvesting fully grown crops; breeding farm animals.", nodes: [
   N(1,"Harvester",5,"3% extra crops per rank"), N(1,"Seed Saver",3,"8% per rank to get the seed back"), N(1,"Reaper",5,"+0.3 damage and a wider sweep with scythes and sickles per rank",{syn:"Attack"}),
   N(2,"Green Thumb",3,"6% per rank that crops you plant start a stage later"), N(2,"Fertile Soil",3,"Crops near you grow 8% faster per rank"), N(2,"Harvest Feast",3,"Food made from crops you grew restores 10% more per rank",{syn:"Cooking"}),
   N(3,"Gardener",3,"Green Thumb chance x2 and more extra crops",{b:"A"}), N(3,"Grim Harvest",3,"Scythe kills heal you half a heart per rank",{b:"B",syn:"Attack"}),
-  N(4,"Harvester II",5,"+3% extra crops per rank",{needs:"Harvester"}), N(4,"Earthbound",3,"Standing on grass or farmland slowly regenerates health",{syn:"Defense"}), N(4,"Sweeping Harvest",2,"Scythes harvest mature crops in a 3x3, then 5x5"), N(4,"Bountiful Bees",2,"Bonus honey and honeycomb"), N(4,"Compost King",1,"Composters fill faster"),
+  N(4,"Harvester II",5,"+3% extra crops per rank",{needs:"Harvester"}), N(4,"Earthbound",3,"Standing on grass or farmland slowly regenerates health",{syn:"Defense"}), N(4,"Sweeping Harvest",2,"Scythes harvest mature crops in a 3x3, then 5x5"), N(4,"Irrigator",2,"Water keeps farmland wet 1 block further per rank"),N(4,"Compost King",1,"Composters fill faster"),
   N(5,"Fertile Soil II",3,"Crops near you grow faster still",{needs:"Fertile Soil"}),
   N(5,"Harvest Moon",3,"5% chance a harvest drops double everything",{cap:1,b:"A"}), N(5,"Reaper's Due",3,"Scythe sweeps hit every mob in a wide arc at full damage",{cap:1,b:"B",syn:"Attack"}) ]},
  { id: "fish", name: "Fishing", xp: "Any catch, Aquaculture included.", nodes: [
@@ -184,13 +189,13 @@ const TREES = [
   N(4,"Vitality II",5,"+1 max health per rank",{needs:"Vitality"}), N(4,"Guardian",3,"Pets near you take 10% less damage per rank",{syn:"Taming"}), N(4,"Counter",2,"A blocked hit makes your next melee hit +15%",{syn:"Attack"}), N(4,"Fire Ward",2,"-15% fire damage per rank"), N(4,"Blast Ward",2,"-15% explosion damage per rank"),
   N(5,"Armour Care",2,"5% per rank to save armour durability"),
   N(5,"Second Wind",3,"Survive a killing blow (5 min cooldown)",{cap:1,b:"A"}), N(5,"Unbreakable",3,"Armour loses durability 50% slower",{cap:1,b:"B"}) ]},
- { id: "agility", name: "Agility", xp: "ParCool moves (wall-run, climb, roll, vault, dodge), sprinting and gliding.", nodes: [
+ { id: "agility", name: "Agility", xp: "ParCool moves (wall-run, climb, roll, vault, dodge), sprinting, and swinging on the grappling hook.", nodes: [
   N(1,"Light Feet",5,"-5% ParCool stamina drain per rank"), N(1,"Spring Step",3,"Jump higher per rank"), N(1,"Soft Landing",5,"-6% fall damage per rank"),
-  N(2,"Glider",3,"-10% Paragliders stamina drain per rank"), N(2,"Quick Casting",3,"-5% spell cast time per rank",{syn:"Magic"}), N(2,"Light Weapons",3,"Daggers, rapiers and short blades +4% attack speed per rank",{syn:"Attack"}),
-  N(3,"Freerunner",3,"ParCool moves cost 20% less stamina",{b:"A"}), N(3,"Sky Rider",3,"Faster gliding with less stamina",{b:"B"}),
-  N(4,"Throwing Arm",3,"Thrown weapons fly 8% faster and hit 8% harder per rank",{syn:"Range"}), N(4,"Rider",3,"Mounts you ride run 4% faster and jump higher per rank",{syn:"Taming"}), N(4,"Second Breath",3,"Stamina regenerates faster"), N(4,"Roll Master",2,"Rolls and dodges negate more damage"), N(4,"Swimmer",2,"Swim faster"),
-  N(5,"Runner",2,"+3% sprint speed per rank"),
-  N(5,"Featherfall",3,"No fall damage under 15 blocks",{cap:1,b:"A"}), N(5,"Tireless",3,"Stamina drain -40% total",{cap:1,b:"B"}) ]},
+  N(2,"Long Rope",3,"Grappling hook reaches 4 blocks further per rank"), N(2,"Quick Casting",3,"-5% spell cast time per rank",{syn:"Magic"}), N(2,"Light Weapons",3,"Daggers, rapiers and short blades +4% attack speed per rank",{syn:"Attack"}),
+  N(3,"Freerunner",3,"ParCool moves cost 20% less stamina",{b:"A"}), N(3,"Hookmaster",3,"The hook throws and reels in faster and swings harder",{b:"B"}),
+  N(4,"Throwing Arm",3,"Thrown weapons fly 8% faster and hit 8% harder per rank",{syn:"Range"}), N(4,"Rider",3,"Mounts you ride run 4% faster and jump higher per rank",{syn:"Taming"}), N(4,"Second Breath",3,"ParCool stamina regenerates faster"), N(4,"Motor Reel",2,"Hold use to be pulled to the hook, faster per rank"), N(4,"Roll Master",2,"Rolls and dodges negate more damage"),
+  N(5,"Long Rope II",2,"Grappling hook reaches 4 blocks further per rank",{needs:"Long Rope"}),
+  N(5,"Featherfall",3,"No fall damage under 15 blocks",{cap:1,b:"A"}), N(5,"Twin Hooks",3,"The grappling hook fires two hooks at once",{cap:1,b:"B"}) ]},
  { id: "magic", name: "Magic", xp: "Casting spells in Ars Nouveau or Iron's Spells, by mana spent.", nodes: [
   N(1,"Mana Pool",5,"+10 max mana per rank (both mods)"), N(1,"Focus",5,"+3% spell power per rank"), N(1,"Flow",5,"+5% mana regen per rank"),
   N(2,"Mana Saver",3,"4% per rank: a spell costs no mana"), N(2,"Mana Shield",3,"Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)"), N(2,"Scroll Saver",2,"10% per rank: an Iron's scroll isn't used"),
