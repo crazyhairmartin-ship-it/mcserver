@@ -167,7 +167,7 @@ truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dy
 - **ParCool**: every action has learn cost 0 (done in the pack, `defaultconfigs/parcool-server.toml`); its skill
   tree key is unbound by default. Agility perks only scale stamina, not unlocks.
 - **Overall level hearts follow a gentle curve** (rev 5; exponential was too steep): each step gives +1 heart and
-  +5% ParCool stamina; step k of 15 needs 580 x (k/15)^1.3 total levels: 17, 42, 72, 104, 139, 176, 215, 256, 299, 342, 388, 434, 482, 530, 580.
+  +5% ParCool stamina; step k of 15 needs 256 x (k/15)^1.3 total levels (all 15 hearts by total level 256): 8, 19, 32, 46, 61, 78, 95, 113, 132, 151, 171, 192, 213, 234, 256.
 - **Crafting power is guaranteed, not a roll**: Enchanted Crafts always adds a random enchantment (level I, up to
   II, up to III by rank); Enchanted Crafts II raises the level; Weaponsmith always +1 attack damage; Armourer
   always +1 toughness; Masterwork always two enchantments. Resource-saving perks (Frugal, Endless Workshop)
