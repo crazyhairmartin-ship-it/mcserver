@@ -84,202 +84,202 @@
   },
   "tier_2_label": {
     "x": -45,
-    "y": 40,
+    "y": 34,
     "definition": "tier_2_label"
   },
   "extra_serving_1": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "extra_serving_1",
     "root": true
   },
   "extra_serving_2": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "extra_serving_2"
   },
   "extra_serving_3": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "extra_serving_3"
   },
   "hearty_meals_1": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "hearty_meals_1",
     "root": true
   },
   "hearty_meals_2": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "hearty_meals_2"
   },
   "hearty_meals_3": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "hearty_meals_3"
   },
   "brain_food_1": {
     "x": 45,
-    "y": 40,
+    "y": 34,
     "definition": "brain_food_1",
     "root": true
   },
   "brain_food_2": {
     "x": 45,
-    "y": 40,
+    "y": 34,
     "definition": "brain_food_2"
   },
   "brain_food_3": {
     "x": 45,
-    "y": 40,
+    "y": 34,
     "definition": "brain_food_3"
   },
   "tier_3_label": {
     "x": -45,
-    "y": 80,
+    "y": 68,
     "definition": "tier_3_label"
   },
   "chef_1": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "chef_1",
     "root": true
   },
   "chef_2": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "chef_2"
   },
   "chef_3": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "chef_3"
   },
   "tier_3_or": {
     "x": 15,
-    "y": 80,
+    "y": 68,
     "definition": "tier_3_or"
   },
   "iron_stomach_1": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "iron_stomach_1",
     "root": true
   },
   "iron_stomach_2": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "iron_stomach_2"
   },
   "iron_stomach_3": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "iron_stomach_3"
   },
   "tier_4_label": {
     "x": -60,
-    "y": 120,
+    "y": 102,
     "definition": "tier_4_label"
   },
   "thrifty_cook_ii_1": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "thrifty_cook_ii_1"
   },
   "thrifty_cook_ii_2": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "thrifty_cook_ii_2"
   },
   "thrifty_cook_ii_3": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "thrifty_cook_ii_3"
   },
   "thrifty_cook_ii_4": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "thrifty_cook_ii_4"
   },
   "thrifty_cook_ii_5": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "thrifty_cook_ii_5"
   },
   "trail_rations_1": {
     "x": 0,
-    "y": 120,
+    "y": 102,
     "definition": "trail_rations_1",
     "root": true
   },
   "trail_rations_2": {
     "x": 0,
-    "y": 120,
+    "y": 102,
     "definition": "trail_rations_2"
   },
   "trail_rations_3": {
     "x": 0,
-    "y": 120,
+    "y": 102,
     "definition": "trail_rations_3"
   },
   "brewer_1": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "brewer_1",
     "root": true
   },
   "brewer_2": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "brewer_2"
   },
   "brewer_3": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "brewer_3"
   },
   "pet_treats_1": {
     "x": 60,
-    "y": 120,
+    "y": 102,
     "definition": "pet_treats_1",
     "root": true
   },
   "pet_treats_2": {
     "x": 60,
-    "y": 120,
+    "y": 102,
     "definition": "pet_treats_2"
   },
   "tier_5_label": {
     "x": -60,
-    "y": 160,
+    "y": 136,
     "definition": "tier_5_label"
   },
   "picnic_1": {
     "x": -30,
-    "y": 160,
+    "y": 136,
     "definition": "picnic_1",
     "root": true
   },
   "picnic_2": {
     "x": -30,
-    "y": 160,
+    "y": 136,
     "definition": "picnic_2"
   },
   "feast_maker_1": {
     "x": 0,
-    "y": 160,
+    "y": 136,
     "definition": "feast_maker_1",
     "root": true
   },
   "tier_5_or": {
     "x": 30,
-    "y": 160,
+    "y": 136,
     "definition": "tier_5_or"
   },
   "warriors_feast_1": {
     "x": 60,
-    "y": 160,
+    "y": 136,
     "definition": "warriors_feast_1",
     "root": true
   }

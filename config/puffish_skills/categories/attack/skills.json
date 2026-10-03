@@ -74,207 +74,207 @@
   },
   "tier_2_label": {
     "x": -45,
-    "y": 40,
+    "y": 34,
     "definition": "tier_2_label"
   },
   "crit_training_1": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "crit_training_1",
     "root": true
   },
   "crit_training_2": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "crit_training_2"
   },
   "crit_training_3": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "crit_training_3"
   },
   "crit_training_4": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "crit_training_4"
   },
   "crit_training_5": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "crit_training_5"
   },
   "spellblade_1": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "spellblade_1",
     "root": true
   },
   "spellblade_2": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "spellblade_2"
   },
   "spellblade_3": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "spellblade_3"
   },
   "momentum_1": {
     "x": 45,
-    "y": 40,
+    "y": 34,
     "definition": "momentum_1",
     "root": true
   },
   "momentum_2": {
     "x": 45,
-    "y": 40,
+    "y": 34,
     "definition": "momentum_2"
   },
   "tier_3_label": {
     "x": -45,
-    "y": 80,
+    "y": 68,
     "definition": "tier_3_label"
   },
   "heavy_arms_1": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "heavy_arms_1",
     "root": true
   },
   "heavy_arms_2": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "heavy_arms_2"
   },
   "heavy_arms_3": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "heavy_arms_3"
   },
   "tier_3_or": {
     "x": 15,
-    "y": 80,
+    "y": 68,
     "definition": "tier_3_or"
   },
   "duelist_1": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "duelist_1",
     "root": true
   },
   "duelist_2": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "duelist_2"
   },
   "duelist_3": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "duelist_3"
   },
   "tier_4_label": {
     "x": -60,
-    "y": 120,
+    "y": 102,
     "definition": "tier_4_label"
   },
   "sharpened_ii_1": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "sharpened_ii_1"
   },
   "sharpened_ii_2": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "sharpened_ii_2"
   },
   "sharpened_ii_3": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "sharpened_ii_3"
   },
   "sharpened_ii_4": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "sharpened_ii_4"
   },
   "sharpened_ii_5": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "sharpened_ii_5"
   },
   "hunters_mark_1": {
     "x": 0,
-    "y": 120,
+    "y": 102,
     "definition": "hunters_mark_1",
     "root": true
   },
   "hunters_mark_2": {
     "x": 0,
-    "y": 120,
+    "y": 102,
     "definition": "hunters_mark_2"
   },
   "hunters_mark_3": {
     "x": 0,
-    "y": 120,
+    "y": 102,
     "definition": "hunters_mark_3"
   },
   "shield_bash_1": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "shield_bash_1",
     "root": true
   },
   "shield_bash_2": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "shield_bash_2"
   },
   "shield_bash_3": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "shield_bash_3"
   },
   "executioner_1": {
     "x": 60,
-    "y": 120,
+    "y": 102,
     "definition": "executioner_1",
     "root": true
   },
   "executioner_2": {
     "x": 60,
-    "y": 120,
+    "y": 102,
     "definition": "executioner_2"
   },
   "tier_5_label": {
     "x": -60,
-    "y": 160,
+    "y": 136,
     "definition": "tier_5_label"
   },
   "lifeline_1": {
     "x": -30,
-    "y": 160,
+    "y": 136,
     "definition": "lifeline_1",
     "root": true
   },
   "lifeline_2": {
     "x": -30,
-    "y": 160,
+    "y": 136,
     "definition": "lifeline_2"
   },
   "cleave_1": {
     "x": 0,
-    "y": 160,
+    "y": 136,
     "definition": "cleave_1",
     "root": true
   },
   "tier_5_or": {
     "x": 30,
-    "y": 160,
+    "y": 136,
     "definition": "tier_5_or"
   },
   "flurry_1": {
     "x": 60,
-    "y": 160,
+    "y": 136,
     "definition": "flurry_1",
     "root": true
   }

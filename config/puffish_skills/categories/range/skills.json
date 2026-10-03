@@ -74,212 +74,212 @@
   },
   "tier_2_label": {
     "x": -45,
-    "y": 40,
+    "y": 34,
     "definition": "tier_2_label"
   },
   "eagle_eye_1": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "eagle_eye_1"
   },
   "eagle_eye_2": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "eagle_eye_2"
   },
   "eagle_eye_3": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "eagle_eye_3"
   },
   "thrower_1": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "thrower_1",
     "root": true
   },
   "thrower_2": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "thrower_2"
   },
   "thrower_3": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "thrower_3"
   },
   "skirmisher_1": {
     "x": 45,
-    "y": 40,
+    "y": 34,
     "definition": "skirmisher_1",
     "root": true
   },
   "skirmisher_2": {
     "x": 45,
-    "y": 40,
+    "y": 34,
     "definition": "skirmisher_2"
   },
   "skirmisher_3": {
     "x": 45,
-    "y": 40,
+    "y": 34,
     "definition": "skirmisher_3"
   },
   "tier_3_label": {
     "x": -45,
-    "y": 80,
+    "y": 68,
     "definition": "tier_3_label"
   },
   "rapid_volley_1": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "rapid_volley_1",
     "root": true
   },
   "rapid_volley_2": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "rapid_volley_2"
   },
   "rapid_volley_3": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "rapid_volley_3"
   },
   "tier_3_or": {
     "x": 15,
-    "y": 80,
+    "y": 68,
     "definition": "tier_3_or"
   },
   "heavy_draw_1": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "heavy_draw_1",
     "root": true
   },
   "heavy_draw_2": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "heavy_draw_2"
   },
   "heavy_draw_3": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "heavy_draw_3"
   },
   "tier_4_label": {
     "x": -75,
-    "y": 120,
+    "y": 102,
     "definition": "tier_4_label"
   },
   "homing_arrows_1": {
     "x": -45,
-    "y": 120,
+    "y": 102,
     "definition": "homing_arrows_1",
     "root": true
   },
   "homing_arrows_2": {
     "x": -45,
-    "y": 120,
+    "y": 102,
     "definition": "homing_arrows_2"
   },
   "homing_arrows_3": {
     "x": -45,
-    "y": 120,
+    "y": 102,
     "definition": "homing_arrows_3"
   },
   "falconer_1": {
     "x": -15,
-    "y": 120,
+    "y": 102,
     "definition": "falconer_1",
     "root": true
   },
   "falconer_2": {
     "x": -15,
-    "y": 120,
+    "y": 102,
     "definition": "falconer_2"
   },
   "falconer_3": {
     "x": -15,
-    "y": 120,
+    "y": 102,
     "definition": "falconer_3"
   },
   "arcane_arrows_1": {
     "x": 15,
-    "y": 120,
+    "y": 102,
     "definition": "arcane_arrows_1",
     "root": true
   },
   "arcane_arrows_2": {
     "x": 15,
-    "y": 120,
+    "y": 102,
     "definition": "arcane_arrows_2"
   },
   "arcane_arrows_3": {
     "x": 15,
-    "y": 120,
+    "y": 102,
     "definition": "arcane_arrows_3"
   },
   "multishot_1": {
     "x": 45,
-    "y": 120,
+    "y": 102,
     "definition": "multishot_1",
     "root": true
   },
   "multishot_2": {
     "x": 45,
-    "y": 120,
+    "y": 102,
     "definition": "multishot_2"
   },
   "multishot_3": {
     "x": 45,
-    "y": 120,
+    "y": 102,
     "definition": "multishot_3"
   },
   "retriever_1": {
     "x": 75,
-    "y": 120,
+    "y": 102,
     "definition": "retriever_1",
     "root": true
   },
   "retriever_2": {
     "x": 75,
-    "y": 120,
+    "y": 102,
     "definition": "retriever_2"
   },
   "tier_5_label": {
     "x": -60,
-    "y": 160,
+    "y": 136,
     "definition": "tier_5_label"
   },
   "quiver_care_ii_1": {
     "x": -30,
-    "y": 160,
+    "y": 136,
     "definition": "quiver_care_ii_1"
   },
   "quiver_care_ii_2": {
     "x": -30,
-    "y": 160,
+    "y": 136,
     "definition": "quiver_care_ii_2"
   },
   "quiver_care_ii_3": {
     "x": -30,
-    "y": 160,
+    "y": 136,
     "definition": "quiver_care_ii_3"
   },
   "fletchers_luck_1": {
     "x": 0,
-    "y": 160,
+    "y": 136,
     "definition": "fletchers_luck_1",
     "root": true
   },
   "tier_5_or": {
     "x": 30,
-    "y": 160,
+    "y": 136,
     "definition": "tier_5_or"
   },
   "seeker_1": {
     "x": 60,
-    "y": 160,
+    "y": 136,
     "definition": "seeker_1",
     "root": true
   }

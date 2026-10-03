@@ -17,7 +17,7 @@ PACK = HERE.parent.parent
 OUT = PACK / 'config' / 'puffish_skills'
 ICONS = json.loads((HERE / 'icons.json').read_text(encoding='utf-8'))
 TILE = 30           # pixels between tiles in a row
-ROW_HEIGHT = 40     # pixels between tier rows
+ROW_HEIGHT = 34     # pixels between tier rows
 LABEL_ICON = 'minecraft:oak_sign'
 OR_ICON = 'minecraft:lever'
 PER_RANK = re.compile(r'^(?P<lead>.*?)(?P<sign>[+-]?)(?P<num>\d+(?:\.\d+)?)(?P<unit>%?)(?P<rest>.*?) per rank(?P<tail>.*)$')

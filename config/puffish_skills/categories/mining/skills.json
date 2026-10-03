@@ -74,217 +74,217 @@
   },
   "tier_2_label": {
     "x": -45,
-    "y": 40,
+    "y": 34,
     "definition": "tier_2_label"
   },
   "prospector_1": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "prospector_1",
     "root": true
   },
   "prospector_2": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "prospector_2"
   },
   "prospector_3": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "prospector_3"
   },
   "prospector_4": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "prospector_4"
   },
   "prospector_5": {
     "x": -15,
-    "y": 40,
+    "y": 34,
     "definition": "prospector_5"
   },
   "stonehide_1": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "stonehide_1",
     "root": true
   },
   "stonehide_2": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "stonehide_2"
   },
   "stonehide_3": {
     "x": 15,
-    "y": 40,
+    "y": 34,
     "definition": "stonehide_3"
   },
   "deep_delver_1": {
     "x": 45,
-    "y": 40,
+    "y": 34,
     "definition": "deep_delver_1",
     "root": true
   },
   "deep_delver_2": {
     "x": 45,
-    "y": 40,
+    "y": 34,
     "definition": "deep_delver_2"
   },
   "tier_3_label": {
     "x": -45,
-    "y": 80,
+    "y": 68,
     "definition": "tier_3_label"
   },
   "smelter_1": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "smelter_1",
     "root": true
   },
   "smelter_2": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "smelter_2"
   },
   "smelter_3": {
     "x": -15,
-    "y": 80,
+    "y": 68,
     "definition": "smelter_3"
   },
   "tier_3_or": {
     "x": 15,
-    "y": 80,
+    "y": 68,
     "definition": "tier_3_or"
   },
   "gem_focus_1": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "gem_focus_1",
     "root": true
   },
   "gem_focus_2": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "gem_focus_2"
   },
   "gem_focus_3": {
     "x": 45,
-    "y": 80,
+    "y": 68,
     "definition": "gem_focus_3"
   },
   "tier_4_label": {
     "x": -60,
-    "y": 120,
+    "y": 102,
     "definition": "tier_4_label"
   },
   "prospector_ii_1": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "prospector_ii_1"
   },
   "prospector_ii_2": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "prospector_ii_2"
   },
   "prospector_ii_3": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "prospector_ii_3"
   },
   "prospector_ii_4": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "prospector_ii_4"
   },
   "prospector_ii_5": {
     "x": -30,
-    "y": 120,
+    "y": 102,
     "definition": "prospector_ii_5"
   },
   "crusher_1": {
     "x": 0,
-    "y": 120,
+    "y": 102,
     "definition": "crusher_1",
     "root": true
   },
   "crusher_2": {
     "x": 0,
-    "y": 120,
+    "y": 102,
     "definition": "crusher_2"
   },
   "crusher_3": {
     "x": 0,
-    "y": 120,
+    "y": 102,
     "definition": "crusher_3"
   },
   "bedrock_grip_1": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "bedrock_grip_1",
     "root": true
   },
   "bedrock_grip_2": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "bedrock_grip_2"
   },
   "bedrock_grip_3": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "bedrock_grip_3"
   },
   "bedrock_grip_4": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "bedrock_grip_4"
   },
   "bedrock_grip_5": {
     "x": 30,
-    "y": 120,
+    "y": 102,
     "definition": "bedrock_grip_5"
   },
   "ore_nose_1": {
     "x": 60,
-    "y": 120,
+    "y": 102,
     "definition": "ore_nose_1",
     "root": true
   },
   "tier_5_label": {
     "x": -60,
-    "y": 160,
+    "y": 136,
     "definition": "tier_5_label"
   },
   "tunnel_vision_1": {
     "x": -30,
-    "y": 160,
+    "y": 136,
     "definition": "tunnel_vision_1",
     "root": true
   },
   "tunnel_vision_2": {
     "x": -30,
-    "y": 160,
+    "y": 136,
     "definition": "tunnel_vision_2"
   },
   "tunnel_vision_3": {
     "x": -30,
-    "y": 160,
+    "y": 136,
     "definition": "tunnel_vision_3"
   },
   "motherlode_1": {
     "x": 0,
-    "y": 160,
+    "y": 136,
     "definition": "motherlode_1",
     "root": true
   },
   "tier_5_or": {
     "x": 30,
-    "y": 160,
+    "y": 136,
     "definition": "tier_5_or"
   },
   "earthshaker_1": {
     "x": 60,
-    "y": 160,
+    "y": 136,
     "definition": "earthshaker_1",
     "root": true
   }

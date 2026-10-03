@@ -1,0 +1,26 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "MIT"
+
+[[mods]]
+modId = "fotfskills"
+version = "1.0.0"
+displayName = "Friends of the Forest Skills"
+description = '''
+Add-on for Pufferfish's Skills: a compact, advancement-sized skill window, and node ranks drawn as one tile
+with an owned/total counter. Later: the custom perks and XP sources for the FOTF skill trees.
+'''
+
+[[dependencies.fotfskills]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.fotfskills]]
+modId = "puffish_skills"
+mandatory = true
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"
