@@ -176,12 +176,11 @@ truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dy
   1 point per rank.
 - New/changed nodes: Loyal Guard (Taming: a nearby pet blocks a hit, no damage to you or the pet), Multishot
   (Range, replaces Crossbowman; Steady Hands and Rapid Volley also speed up crossbow reload), Staff Adept (Magic:
-  spell power and cooldowns while holding a staff or wand), Gunslinger (Range: firearms reload faster and hit harder; firearms stay
-  their own weapon type), Long Net
+  spell power and cooldowns while holding a staff or wand), Long Net
   (Foraging: net reach, since net catches never fail), Brain Food (+mana regen after meals), Picnic heals you
   too, Guardian covers party members and pets.
 - **Weapon types**: every weapon in the pack is classified into sword, light, two-handed, polearm, axe, blunt,
-  scythe, thrown, bow, crossbow, firearm and magic (`2026-10-03-weapons.csv`, 671 weapons from 20 mods,
+  scythe, thrown, bow, crossbow (the three firearms count as crossbows) and magic (`2026-10-03-weapons.csv`, 671 weapons from 20 mods,
   trimmed items excluded). The add-on ships these as item tags (`fotfskills:<type>`) so every mod's weapons
   get the matching perks; the CSV is reviewed and hand-corrected before release.
 - Numbers are still rough; a tuning pass happens in the preview.
