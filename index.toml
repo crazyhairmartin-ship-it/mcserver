@@ -1,14 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = ".pytest_cache/CACHEDIR.TAG"
-hash = "37dc88ef9a0abeddbe81053a6dd8fdfb13afb613045ea1eb4a5c815a74a3bde4"
-
-[[files]]
-file = ".pytest_cache/v/cache/nodeids"
-hash = "8019932dc0a3a24278a2f88971393f5a396c4cd32c941a0ef57334556b4c81e8"
-
-[[files]]
 file = "config/alexscaves-general.toml"
 hash = "6588029574999e58617203c013180d0e35f2673900e1cff7d7087fbd05a4d6c3"
 

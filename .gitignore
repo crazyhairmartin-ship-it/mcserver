@@ -8,3 +8,5 @@ extras/mimiandroidfix/libs/
 !extras/fotfmail/*.jar
 tools/grapple/preview.png
 .superpowers/
+.pytest_cache/
+__pycache__/
