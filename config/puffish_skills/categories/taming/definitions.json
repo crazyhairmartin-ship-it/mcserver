@@ -17,8 +17,8 @@
     "required_spent_points": 0
   },
   "gentle_hand_1": {
-    "title": "Gentle Hand (1/3)",
-    "description": "Rank 1/3: Better odds and fewer attempts on hard tames",
+    "title": "Gentle Hand",
+    "description": "Better odds and fewer attempts on hard tames",
     "icon": {
       "type": "item",
       "data": {
@@ -35,8 +35,8 @@
     "required_spent_points": 0
   },
   "gentle_hand_2": {
-    "title": "Gentle Hand (2/3)",
-    "description": "Rank 2/3: Better odds and fewer attempts on hard tames",
+    "title": "Gentle Hand",
+    "description": "Better odds and fewer attempts on hard tames",
     "icon": {
       "type": "item",
       "data": {
@@ -53,8 +53,8 @@
     "required_spent_points": 0
   },
   "gentle_hand_3": {
-    "title": "Gentle Hand (3/3)",
-    "description": "Rank 3/3: Better odds and fewer attempts on hard tames",
+    "title": "Gentle Hand",
+    "description": "Better odds and fewer attempts on hard tames",
     "icon": {
       "type": "item",
       "data": {
@@ -71,8 +71,8 @@
     "required_spent_points": 0
   },
   "treat_saver_1": {
-    "title": "Treat Saver (1/3)",
-    "description": "Now: nothing yet. Next: 10%: taming or feeding food isn't used.",
+    "title": "Treat Saver",
+    "description": "10%: taming or feeding food isn't used",
     "icon": {
       "type": "item",
       "data": {
@@ -89,8 +89,8 @@
     "required_spent_points": 0
   },
   "treat_saver_2": {
-    "title": "Treat Saver (2/3)",
-    "description": "Now: 10%: taming or feeding food isn't used. Next: 20%: taming or feeding food isn't used.",
+    "title": "Treat Saver",
+    "description": "20%: taming or feeding food isn't used",
     "icon": {
       "type": "item",
       "data": {
@@ -107,8 +107,8 @@
     "required_spent_points": 0
   },
   "treat_saver_3": {
-    "title": "Treat Saver (3/3)",
-    "description": "Now: 20%: taming or feeding food isn't used. Next: 30%: taming or feeding food isn't used (max).",
+    "title": "Treat Saver",
+    "description": "30%: taming or feeding food isn't used",
     "icon": {
       "type": "item",
       "data": {
@@ -125,8 +125,8 @@
     "required_spent_points": 0
   },
   "husbandry_1": {
-    "title": "Husbandry (1/5)",
-    "description": "Now: nothing yet. Next: Domesticated animals give 4% more wool, milk, eggs, meat and leather. (feeds Farming)",
+    "title": "Husbandry",
+    "description": "Domesticated animals give 4% more wool, milk, eggs, meat and leather",
     "icon": {
       "type": "item",
       "data": {
@@ -143,8 +143,8 @@
     "required_spent_points": 0
   },
   "husbandry_2": {
-    "title": "Husbandry (2/5)",
-    "description": "Now: Domesticated animals give 4% more wool, milk, eggs, meat and leather. Next: Domesticated animals give 8% more wool, milk, eggs, meat and leather. (feeds Farming)",
+    "title": "Husbandry",
+    "description": "Domesticated animals give 8% more wool, milk, eggs, meat and leather",
     "icon": {
       "type": "item",
       "data": {
@@ -161,8 +161,8 @@
     "required_spent_points": 0
   },
   "husbandry_3": {
-    "title": "Husbandry (3/5)",
-    "description": "Now: Domesticated animals give 8% more wool, milk, eggs, meat and leather. Next: Domesticated animals give 12% more wool, milk, eggs, meat and leather. (feeds Farming)",
+    "title": "Husbandry",
+    "description": "Domesticated animals give 12% more wool, milk, eggs, meat and leather",
     "icon": {
       "type": "item",
       "data": {
@@ -179,8 +179,8 @@
     "required_spent_points": 0
   },
   "husbandry_4": {
-    "title": "Husbandry (4/5)",
-    "description": "Now: Domesticated animals give 12% more wool, milk, eggs, meat and leather. Next: Domesticated animals give 16% more wool, milk, eggs, meat and leather. (feeds Farming)",
+    "title": "Husbandry",
+    "description": "Domesticated animals give 16% more wool, milk, eggs, meat and leather",
     "icon": {
       "type": "item",
       "data": {
@@ -197,8 +197,8 @@
     "required_spent_points": 0
   },
   "husbandry_5": {
-    "title": "Husbandry (5/5)",
-    "description": "Now: Domesticated animals give 16% more wool, milk, eggs, meat and leather. Next: Domesticated animals give 20% more wool, milk, eggs, meat and leather (max). (feeds Farming)",
+    "title": "Husbandry",
+    "description": "Domesticated animals give 20% more wool, milk, eggs, meat and leather",
     "icon": {
       "type": "item",
       "data": {
@@ -232,8 +232,8 @@
     "required_spent_points": 5
   },
   "selective_breeding_1": {
-    "title": "Selective Breeding (1/5)",
-    "description": "Now: nothing yet. Next: Babies take the better parent's stats, with a 2% chance of a bonus.",
+    "title": "Selective Breeding",
+    "description": "Babies take the better parent's stats, with a 2% chance of a bonus",
     "icon": {
       "type": "item",
       "data": {
@@ -250,8 +250,8 @@
     "required_spent_points": 5
   },
   "selective_breeding_2": {
-    "title": "Selective Breeding (2/5)",
-    "description": "Now: Babies take the better parent's stats, with a 2% chance of a bonus. Next: Babies take the better parent's stats, with a 4% chance of a bonus.",
+    "title": "Selective Breeding",
+    "description": "Babies take the better parent's stats, with a 4% chance of a bonus",
     "icon": {
       "type": "item",
       "data": {
@@ -268,8 +268,8 @@
     "required_spent_points": 5
   },
   "selective_breeding_3": {
-    "title": "Selective Breeding (3/5)",
-    "description": "Now: Babies take the better parent's stats, with a 4% chance of a bonus. Next: Babies take the better parent's stats, with a 6% chance of a bonus.",
+    "title": "Selective Breeding",
+    "description": "Babies take the better parent's stats, with a 6% chance of a bonus",
     "icon": {
       "type": "item",
       "data": {
@@ -286,8 +286,8 @@
     "required_spent_points": 5
   },
   "selective_breeding_4": {
-    "title": "Selective Breeding (4/5)",
-    "description": "Now: Babies take the better parent's stats, with a 6% chance of a bonus. Next: Babies take the better parent's stats, with a 8% chance of a bonus.",
+    "title": "Selective Breeding",
+    "description": "Babies take the better parent's stats, with a 8% chance of a bonus",
     "icon": {
       "type": "item",
       "data": {
@@ -304,8 +304,8 @@
     "required_spent_points": 5
   },
   "selective_breeding_5": {
-    "title": "Selective Breeding (5/5)",
-    "description": "Now: Babies take the better parent's stats, with a 8% chance of a bonus. Next: Babies take the better parent's stats, with a 10% chance of a bonus (max).",
+    "title": "Selective Breeding",
+    "description": "Babies take the better parent's stats, with a 10% chance of a bonus",
     "icon": {
       "type": "item",
       "data": {
@@ -322,8 +322,8 @@
     "required_spent_points": 5
   },
   "bonded_1": {
-    "title": "Bonded (1/3)",
-    "description": "Now: nothing yet. Next: Pets +5% health.",
+    "title": "Bonded",
+    "description": "Pets +5% health",
     "icon": {
       "type": "item",
       "data": {
@@ -340,8 +340,8 @@
     "required_spent_points": 5
   },
   "bonded_2": {
-    "title": "Bonded (2/3)",
-    "description": "Now: Pets +5% health. Next: Pets +10% health.",
+    "title": "Bonded",
+    "description": "Pets +10% health",
     "icon": {
       "type": "item",
       "data": {
@@ -358,8 +358,8 @@
     "required_spent_points": 5
   },
   "bonded_3": {
-    "title": "Bonded (3/3)",
-    "description": "Now: Pets +10% health. Next: Pets +15% health (max).",
+    "title": "Bonded",
+    "description": "Pets +15% health",
     "icon": {
       "type": "item",
       "data": {
@@ -376,8 +376,8 @@
     "required_spent_points": 5
   },
   "pet_scavenging_1": {
-    "title": "Pet Scavenging (1/3)",
-    "description": "Rank 1/3: Pets sometimes find resources and drop them for you",
+    "title": "Pet Scavenging",
+    "description": "Pets sometimes find resources and drop them for you",
     "icon": {
       "type": "item",
       "data": {
@@ -394,8 +394,8 @@
     "required_spent_points": 5
   },
   "pet_scavenging_2": {
-    "title": "Pet Scavenging (2/3)",
-    "description": "Rank 2/3: Pets sometimes find resources and drop them for you",
+    "title": "Pet Scavenging",
+    "description": "Pets sometimes find resources and drop them for you",
     "icon": {
       "type": "item",
       "data": {
@@ -412,8 +412,8 @@
     "required_spent_points": 5
   },
   "pet_scavenging_3": {
-    "title": "Pet Scavenging (3/3)",
-    "description": "Rank 3/3: Pets sometimes find resources and drop them for you",
+    "title": "Pet Scavenging",
+    "description": "Pets sometimes find resources and drop them for you",
     "icon": {
       "type": "item",
       "data": {
@@ -447,8 +447,8 @@
     "required_spent_points": 10
   },
   "beastmaster_1": {
-    "title": "Beastmaster (1/3)",
-    "description": "Now: nothing yet. Next: Combat pets: +15% damage. Pick one: this or Breeder.",
+    "title": "Beastmaster",
+    "description": "Combat pets: +15% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -462,11 +462,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Breeder."
   },
   "beastmaster_2": {
-    "title": "Beastmaster (2/3)",
-    "description": "Now: Combat pets: +15% damage. Next: Combat pets: +30% damage. Pick one: this or Breeder.",
+    "title": "Beastmaster",
+    "description": "Combat pets: +30% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -480,11 +481,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Breeder."
   },
   "beastmaster_3": {
-    "title": "Beastmaster (3/3)",
-    "description": "Now: Combat pets: +30% damage. Next: Combat pets: +45% damage (max). Pick one: this or Breeder.",
+    "title": "Beastmaster",
+    "description": "Combat pets: +45% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -498,7 +500,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Breeder."
   },
   "tier_3_or": {
     "title": "OR",
@@ -518,8 +521,8 @@
     "required_spent_points": 10
   },
   "breeder_1": {
-    "title": "Breeder (1/3)",
-    "description": "Now: nothing yet. Next: 6% for twins; babies grow up faster. Pick one: this or Beastmaster.",
+    "title": "Breeder",
+    "description": "6% for twins; babies grow up faster",
     "icon": {
       "type": "item",
       "data": {
@@ -533,11 +536,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Beastmaster."
   },
   "breeder_2": {
-    "title": "Breeder (2/3)",
-    "description": "Now: 6% for twins; babies grow up faster. Next: 12% for twins; babies grow up faster. Pick one: this or Beastmaster.",
+    "title": "Breeder",
+    "description": "12% for twins; babies grow up faster",
     "icon": {
       "type": "item",
       "data": {
@@ -551,11 +555,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Beastmaster."
   },
   "breeder_3": {
-    "title": "Breeder (3/3)",
-    "description": "Now: 12% for twins; babies grow up faster. Next: 18% for twins; babies grow up faster (max). Pick one: this or Beastmaster.",
+    "title": "Breeder",
+    "description": "18% for twins; babies grow up faster",
     "icon": {
       "type": "item",
       "data": {
@@ -569,7 +574,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Beastmaster."
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -589,8 +595,8 @@
     "required_spent_points": 15
   },
   "pack_tactics_1": {
-    "title": "Pack Tactics (1/3)",
-    "description": "Rank 1/3: Pets deal more damage to your target",
+    "title": "Pack Tactics",
+    "description": "Pets deal more damage to your target",
     "icon": {
       "type": "item",
       "data": {
@@ -607,8 +613,8 @@
     "required_spent_points": 15
   },
   "pack_tactics_2": {
-    "title": "Pack Tactics (2/3)",
-    "description": "Rank 2/3: Pets deal more damage to your target",
+    "title": "Pack Tactics",
+    "description": "Pets deal more damage to your target",
     "icon": {
       "type": "item",
       "data": {
@@ -625,8 +631,8 @@
     "required_spent_points": 15
   },
   "pack_tactics_3": {
-    "title": "Pack Tactics (3/3)",
-    "description": "Rank 3/3: Pets deal more damage to your target",
+    "title": "Pack Tactics",
+    "description": "Pets deal more damage to your target",
     "icon": {
       "type": "item",
       "data": {
@@ -643,8 +649,8 @@
     "required_spent_points": 15
   },
   "loyal_guard_1": {
-    "title": "Loyal Guard (1/3)",
-    "description": "Now: nothing yet. Next: 8% that a nearby pet leaps in and blocks a hit: no damage to you or the pet. (feeds Defense)",
+    "title": "Loyal Guard",
+    "description": "8% that a nearby pet leaps in and blocks a hit: no damage to you or the pet",
     "icon": {
       "type": "item",
       "data": {
@@ -661,8 +667,8 @@
     "required_spent_points": 15
   },
   "loyal_guard_2": {
-    "title": "Loyal Guard (2/3)",
-    "description": "Now: 8% that a nearby pet leaps in and blocks a hit: no damage to you or the pet. Next: 16% that a nearby pet leaps in and blocks a hit: no damage to you or the pet. (feeds Defense)",
+    "title": "Loyal Guard",
+    "description": "16% that a nearby pet leaps in and blocks a hit: no damage to you or the pet",
     "icon": {
       "type": "item",
       "data": {
@@ -679,8 +685,8 @@
     "required_spent_points": 15
   },
   "loyal_guard_3": {
-    "title": "Loyal Guard (3/3)",
-    "description": "Now: 16% that a nearby pet leaps in and blocks a hit: no damage to you or the pet. Next: 24% that a nearby pet leaps in and blocks a hit: no damage to you or the pet (max). (feeds Defense)",
+    "title": "Loyal Guard",
+    "description": "24% that a nearby pet leaps in and blocks a hit: no damage to you or the pet",
     "icon": {
       "type": "item",
       "data": {
@@ -697,8 +703,8 @@
     "required_spent_points": 15
   },
   "bloodlines_1": {
-    "title": "Bloodlines (1/3)",
-    "description": "Rank 1/3: Bred animals have a better chance of rare colours and variants",
+    "title": "Bloodlines",
+    "description": "Bred animals have a better chance of rare colours and variants",
     "icon": {
       "type": "item",
       "data": {
@@ -715,8 +721,8 @@
     "required_spent_points": 15
   },
   "bloodlines_2": {
-    "title": "Bloodlines (2/3)",
-    "description": "Rank 2/3: Bred animals have a better chance of rare colours and variants",
+    "title": "Bloodlines",
+    "description": "Bred animals have a better chance of rare colours and variants",
     "icon": {
       "type": "item",
       "data": {
@@ -733,8 +739,8 @@
     "required_spent_points": 15
   },
   "bloodlines_3": {
-    "title": "Bloodlines (3/3)",
-    "description": "Rank 3/3: Bred animals have a better chance of rare colours and variants",
+    "title": "Bloodlines",
+    "description": "Bred animals have a better chance of rare colours and variants",
     "icon": {
       "type": "item",
       "data": {
@@ -751,8 +757,8 @@
     "required_spent_points": 15
   },
   "soul_mender_1": {
-    "title": "Soul Mender (1/3)",
-    "description": "Now: nothing yet. Next: Reviving a fallen pet costs 25% less.",
+    "title": "Soul Mender",
+    "description": "Reviving a fallen pet costs 25% less",
     "icon": {
       "type": "item",
       "data": {
@@ -769,8 +775,8 @@
     "required_spent_points": 15
   },
   "soul_mender_2": {
-    "title": "Soul Mender (2/3)",
-    "description": "Now: Reviving a fallen pet costs 25% less. Next: Reviving a fallen pet costs 50% less.",
+    "title": "Soul Mender",
+    "description": "Reviving a fallen pet costs 50% less",
     "icon": {
       "type": "item",
       "data": {
@@ -787,8 +793,8 @@
     "required_spent_points": 15
   },
   "soul_mender_3": {
-    "title": "Soul Mender (3/3)",
-    "description": "Now: Reviving a fallen pet costs 50% less. Next: Reviving a fallen pet costs 75% less (max).",
+    "title": "Soul Mender",
+    "description": "Reviving a fallen pet costs 75% less",
     "icon": {
       "type": "item",
       "data": {
@@ -805,8 +811,8 @@
     "required_spent_points": 15
   },
   "mount_training_1": {
-    "title": "Mount Training (1/3)",
-    "description": "Now: nothing yet. Next: Mounts get +4% speed, jump and health. (feeds Agility)",
+    "title": "Mount Training",
+    "description": "Mounts get +4% speed, jump and health",
     "icon": {
       "type": "item",
       "data": {
@@ -823,8 +829,8 @@
     "required_spent_points": 15
   },
   "mount_training_2": {
-    "title": "Mount Training (2/3)",
-    "description": "Now: Mounts get +4% speed, jump and health. Next: Mounts get +8% speed, jump and health. (feeds Agility)",
+    "title": "Mount Training",
+    "description": "Mounts get +8% speed, jump and health",
     "icon": {
       "type": "item",
       "data": {
@@ -841,8 +847,8 @@
     "required_spent_points": 15
   },
   "mount_training_3": {
-    "title": "Mount Training (3/3)",
-    "description": "Now: Mounts get +8% speed, jump and health. Next: Mounts get +12% speed, jump and health (max). (feeds Agility)",
+    "title": "Mount Training",
+    "description": "Mounts get +12% speed, jump and health",
     "icon": {
       "type": "item",
       "data": {
@@ -859,8 +865,8 @@
     "required_spent_points": 15
   },
   "bonded_ii_1": {
-    "title": "Bonded II (1/3)",
-    "description": "Rank 1/3: Pets gain armour and regen Needs Bonded (all ranks).",
+    "title": "Bonded II",
+    "description": "Pets gain armour and regen",
     "icon": {
       "type": "item",
       "data": {
@@ -874,11 +880,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Bonded (all ranks)."
   },
   "bonded_ii_2": {
-    "title": "Bonded II (2/3)",
-    "description": "Rank 2/3: Pets gain armour and regen Needs Bonded (all ranks).",
+    "title": "Bonded II",
+    "description": "Pets gain armour and regen",
     "icon": {
       "type": "item",
       "data": {
@@ -892,11 +899,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Bonded (all ranks)."
   },
   "bonded_ii_3": {
-    "title": "Bonded II (3/3)",
-    "description": "Rank 3/3: Pets gain armour and regen Needs Bonded (all ranks).",
+    "title": "Bonded II",
+    "description": "Pets gain armour and regen",
     "icon": {
       "type": "item",
       "data": {
@@ -910,7 +918,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Bonded (all ranks)."
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",
@@ -949,7 +958,7 @@
   },
   "alpha_1": {
     "title": "Alpha",
-    "description": "Pets +30% all stats and a chance to stun on hit Pick one: this or Prized Stock.",
+    "description": "Pets +30% all stats and a chance to stun on hit",
     "icon": {
       "type": "item",
       "data": {
@@ -963,7 +972,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Prized Stock."
   },
   "tier_5_or": {
     "title": "OR",
@@ -984,7 +994,7 @@
   },
   "prized_stock_1": {
     "title": "Prized Stock",
-    "description": "Bred animals can roll stats above the normal maximum Pick one: this or Alpha.",
+    "description": "Bred animals can roll stats above the normal maximum",
     "icon": {
       "type": "item",
       "data": {
@@ -998,6 +1008,7 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Alpha."
   }
 }

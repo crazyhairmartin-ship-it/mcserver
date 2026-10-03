@@ -17,8 +17,8 @@
     "required_spent_points": 0
   },
   "lumberjack_1": {
-    "title": "Lumberjack (1/5)",
-    "description": "Now: nothing yet. Next: +4% chopping speed.",
+    "title": "Lumberjack",
+    "description": "+4% chopping speed",
     "icon": {
       "type": "item",
       "data": {
@@ -35,8 +35,8 @@
     "required_spent_points": 0
   },
   "lumberjack_2": {
-    "title": "Lumberjack (2/5)",
-    "description": "Now: +4% chopping speed. Next: +8% chopping speed.",
+    "title": "Lumberjack",
+    "description": "+8% chopping speed",
     "icon": {
       "type": "item",
       "data": {
@@ -53,8 +53,8 @@
     "required_spent_points": 0
   },
   "lumberjack_3": {
-    "title": "Lumberjack (3/5)",
-    "description": "Now: +8% chopping speed. Next: +12% chopping speed.",
+    "title": "Lumberjack",
+    "description": "+12% chopping speed",
     "icon": {
       "type": "item",
       "data": {
@@ -71,8 +71,8 @@
     "required_spent_points": 0
   },
   "lumberjack_4": {
-    "title": "Lumberjack (4/5)",
-    "description": "Now: +12% chopping speed. Next: +16% chopping speed.",
+    "title": "Lumberjack",
+    "description": "+16% chopping speed",
     "icon": {
       "type": "item",
       "data": {
@@ -89,8 +89,8 @@
     "required_spent_points": 0
   },
   "lumberjack_5": {
-    "title": "Lumberjack (5/5)",
-    "description": "Now: +16% chopping speed. Next: +20% chopping speed (max).",
+    "title": "Lumberjack",
+    "description": "+20% chopping speed",
     "icon": {
       "type": "item",
       "data": {
@@ -107,8 +107,8 @@
     "required_spent_points": 0
   },
   "axe_mastery_1": {
-    "title": "Axe Mastery (1/5)",
-    "description": "Now: nothing yet. Next: +0.3 damage with axes. (feeds Attack)",
+    "title": "Axe Mastery",
+    "description": "+0.3 damage with axes",
     "icon": {
       "type": "item",
       "data": {
@@ -125,8 +125,8 @@
     "required_spent_points": 0
   },
   "axe_mastery_2": {
-    "title": "Axe Mastery (2/5)",
-    "description": "Now: +0.3 damage with axes. Next: +0.6 damage with axes. (feeds Attack)",
+    "title": "Axe Mastery",
+    "description": "+0.6 damage with axes",
     "icon": {
       "type": "item",
       "data": {
@@ -143,8 +143,8 @@
     "required_spent_points": 0
   },
   "axe_mastery_3": {
-    "title": "Axe Mastery (3/5)",
-    "description": "Now: +0.6 damage with axes. Next: +0.9 damage with axes. (feeds Attack)",
+    "title": "Axe Mastery",
+    "description": "+0.9 damage with axes",
     "icon": {
       "type": "item",
       "data": {
@@ -161,8 +161,8 @@
     "required_spent_points": 0
   },
   "axe_mastery_4": {
-    "title": "Axe Mastery (4/5)",
-    "description": "Now: +0.9 damage with axes. Next: +1.2 damage with axes. (feeds Attack)",
+    "title": "Axe Mastery",
+    "description": "+1.2 damage with axes",
     "icon": {
       "type": "item",
       "data": {
@@ -179,8 +179,8 @@
     "required_spent_points": 0
   },
   "axe_mastery_5": {
-    "title": "Axe Mastery (5/5)",
-    "description": "Now: +1.2 damage with axes. Next: +1.5 damage with axes (max). (feeds Attack)",
+    "title": "Axe Mastery",
+    "description": "+1.5 damage with axes",
     "icon": {
       "type": "item",
       "data": {
@@ -197,8 +197,8 @@
     "required_spent_points": 0
   },
   "berry_picker_1": {
-    "title": "Berry Picker (1/3)",
-    "description": "Now: nothing yet. Next: 10% for extra berries from bushes and wild crops.",
+    "title": "Berry Picker",
+    "description": "10% for extra berries from bushes and wild crops",
     "icon": {
       "type": "item",
       "data": {
@@ -215,8 +215,8 @@
     "required_spent_points": 0
   },
   "berry_picker_2": {
-    "title": "Berry Picker (2/3)",
-    "description": "Now: 10% for extra berries from bushes and wild crops. Next: 20% for extra berries from bushes and wild crops.",
+    "title": "Berry Picker",
+    "description": "20% for extra berries from bushes and wild crops",
     "icon": {
       "type": "item",
       "data": {
@@ -233,8 +233,8 @@
     "required_spent_points": 0
   },
   "berry_picker_3": {
-    "title": "Berry Picker (3/3)",
-    "description": "Now: 20% for extra berries from bushes and wild crops. Next: 30% for extra berries from bushes and wild crops (max).",
+    "title": "Berry Picker",
+    "description": "30% for extra berries from bushes and wild crops",
     "icon": {
       "type": "item",
       "data": {
@@ -268,8 +268,8 @@
     "required_spent_points": 5
   },
   "timber_1": {
-    "title": "Timber (1/5)",
-    "description": "Now: nothing yet. Next: 3% extra logs.",
+    "title": "Timber",
+    "description": "3% extra logs",
     "icon": {
       "type": "item",
       "data": {
@@ -286,8 +286,8 @@
     "required_spent_points": 5
   },
   "timber_2": {
-    "title": "Timber (2/5)",
-    "description": "Now: 3% extra logs. Next: 6% extra logs.",
+    "title": "Timber",
+    "description": "6% extra logs",
     "icon": {
       "type": "item",
       "data": {
@@ -304,8 +304,8 @@
     "required_spent_points": 5
   },
   "timber_3": {
-    "title": "Timber (3/5)",
-    "description": "Now: 6% extra logs. Next: 9% extra logs.",
+    "title": "Timber",
+    "description": "9% extra logs",
     "icon": {
       "type": "item",
       "data": {
@@ -322,8 +322,8 @@
     "required_spent_points": 5
   },
   "timber_4": {
-    "title": "Timber (4/5)",
-    "description": "Now: 9% extra logs. Next: 12% extra logs.",
+    "title": "Timber",
+    "description": "12% extra logs",
     "icon": {
       "type": "item",
       "data": {
@@ -340,8 +340,8 @@
     "required_spent_points": 5
   },
   "timber_5": {
-    "title": "Timber (5/5)",
-    "description": "Now: 12% extra logs. Next: 15% extra logs (max).",
+    "title": "Timber",
+    "description": "15% extra logs",
     "icon": {
       "type": "item",
       "data": {
@@ -358,8 +358,8 @@
     "required_spent_points": 5
   },
   "long_net_1": {
-    "title": "Long Net (1/3)",
-    "description": "Now: nothing yet. Next: Butterfly and bug nets reach 1 block further.",
+    "title": "Long Net",
+    "description": "Butterfly and bug nets reach 1 block further",
     "icon": {
       "type": "item",
       "data": {
@@ -376,8 +376,8 @@
     "required_spent_points": 5
   },
   "long_net_2": {
-    "title": "Long Net (2/3)",
-    "description": "Now: Butterfly and bug nets reach 1 block further. Next: Butterfly and bug nets reach 2 block further.",
+    "title": "Long Net",
+    "description": "Butterfly and bug nets reach 2 block further",
     "icon": {
       "type": "item",
       "data": {
@@ -394,8 +394,8 @@
     "required_spent_points": 5
   },
   "long_net_3": {
-    "title": "Long Net (3/3)",
-    "description": "Now: Butterfly and bug nets reach 2 block further. Next: Butterfly and bug nets reach 3 block further (max).",
+    "title": "Long Net",
+    "description": "Butterfly and bug nets reach 3 block further",
     "icon": {
       "type": "item",
       "data": {
@@ -412,8 +412,8 @@
     "required_spent_points": 5
   },
   "forest_stride_1": {
-    "title": "Forest Stride (1/2)",
-    "description": "Now: nothing yet. Next: +5% move speed in forests. (feeds Agility)",
+    "title": "Forest Stride",
+    "description": "+5% move speed in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -430,8 +430,8 @@
     "required_spent_points": 5
   },
   "forest_stride_2": {
-    "title": "Forest Stride (2/2)",
-    "description": "Now: +5% move speed in forests. Next: +10% move speed in forests (max). (feeds Agility)",
+    "title": "Forest Stride",
+    "description": "+10% move speed in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -465,8 +465,8 @@
     "required_spent_points": 10
   },
   "splitting_blow_1": {
-    "title": "Splitting Blow (1/3)",
-    "description": "Now: nothing yet. Next: Axe hits ignore 10% of armour. Pick one: this or Wildcrafter. (feeds Attack)",
+    "title": "Splitting Blow",
+    "description": "Axe hits ignore 10% of armour",
     "icon": {
       "type": "item",
       "data": {
@@ -480,11 +480,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Wildcrafter."
   },
   "splitting_blow_2": {
-    "title": "Splitting Blow (2/3)",
-    "description": "Now: Axe hits ignore 10% of armour. Next: Axe hits ignore 20% of armour. Pick one: this or Wildcrafter. (feeds Attack)",
+    "title": "Splitting Blow",
+    "description": "Axe hits ignore 20% of armour",
     "icon": {
       "type": "item",
       "data": {
@@ -498,11 +499,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Wildcrafter."
   },
   "splitting_blow_3": {
-    "title": "Splitting Blow (3/3)",
-    "description": "Now: Axe hits ignore 20% of armour. Next: Axe hits ignore 30% of armour (max). Pick one: this or Wildcrafter. (feeds Attack)",
+    "title": "Splitting Blow",
+    "description": "Axe hits ignore 30% of armour",
     "icon": {
       "type": "item",
       "data": {
@@ -516,7 +518,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Wildcrafter."
   },
   "tier_3_or": {
     "title": "OR",
@@ -536,8 +539,8 @@
     "required_spent_points": 10
   },
   "wildcrafter_1": {
-    "title": "Wildcrafter (1/3)",
-    "description": "Now: nothing yet. Next: Mushrooms, flowers and herbs drop 8% extra; teas and potions from them last longer. Pick one: this or Splitting Blow. (feeds Cooking)",
+    "title": "Wildcrafter",
+    "description": "Mushrooms, flowers and herbs drop 8% extra; teas and potions from them last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -551,11 +554,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Splitting Blow."
   },
   "wildcrafter_2": {
-    "title": "Wildcrafter (2/3)",
-    "description": "Now: Mushrooms, flowers and herbs drop 8% extra; teas and potions from them last longer. Next: Mushrooms, flowers and herbs drop 16% extra; teas and potions from them last longer. Pick one: this or Splitting Blow. (feeds Cooking)",
+    "title": "Wildcrafter",
+    "description": "Mushrooms, flowers and herbs drop 16% extra; teas and potions from them last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -569,11 +573,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Splitting Blow."
   },
   "wildcrafter_3": {
-    "title": "Wildcrafter (3/3)",
-    "description": "Now: Mushrooms, flowers and herbs drop 16% extra; teas and potions from them last longer. Next: Mushrooms, flowers and herbs drop 24% extra; teas and potions from them last longer (max). Pick one: this or Splitting Blow. (feeds Cooking)",
+    "title": "Wildcrafter",
+    "description": "Mushrooms, flowers and herbs drop 24% extra; teas and potions from them last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -587,7 +592,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Splitting Blow."
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -607,8 +613,8 @@
     "required_spent_points": 15
   },
   "timber_ii_1": {
-    "title": "Timber II (1/5)",
-    "description": "Now: nothing yet. Next: +3% extra logs. Needs Timber (all ranks).",
+    "title": "Timber II",
+    "description": "+3% extra logs",
     "icon": {
       "type": "item",
       "data": {
@@ -622,11 +628,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Timber (all ranks)."
   },
   "timber_ii_2": {
-    "title": "Timber II (2/5)",
-    "description": "Now: +3% extra logs. Next: +6% extra logs. Needs Timber (all ranks).",
+    "title": "Timber II",
+    "description": "+6% extra logs",
     "icon": {
       "type": "item",
       "data": {
@@ -640,11 +647,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Timber (all ranks)."
   },
   "timber_ii_3": {
-    "title": "Timber II (3/5)",
-    "description": "Now: +6% extra logs. Next: +9% extra logs. Needs Timber (all ranks).",
+    "title": "Timber II",
+    "description": "+9% extra logs",
     "icon": {
       "type": "item",
       "data": {
@@ -658,11 +666,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Timber (all ranks)."
   },
   "timber_ii_4": {
-    "title": "Timber II (4/5)",
-    "description": "Now: +9% extra logs. Next: +12% extra logs. Needs Timber (all ranks).",
+    "title": "Timber II",
+    "description": "+12% extra logs",
     "icon": {
       "type": "item",
       "data": {
@@ -676,11 +685,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Timber (all ranks)."
   },
   "timber_ii_5": {
-    "title": "Timber II (5/5)",
-    "description": "Now: +12% extra logs. Next: +15% extra logs (max). Needs Timber (all ranks).",
+    "title": "Timber II",
+    "description": "+15% extra logs",
     "icon": {
       "type": "item",
       "data": {
@@ -694,11 +704,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Timber (all ranks)."
   },
   "beekeeper_1": {
-    "title": "Beekeeper (1/3)",
-    "description": "Rank 1/3: Hives give extra honey and comb; bees stay calm when you harvest",
+    "title": "Beekeeper",
+    "description": "Hives give extra honey and comb; bees stay calm when you harvest",
     "icon": {
       "type": "item",
       "data": {
@@ -715,8 +726,8 @@
     "required_spent_points": 15
   },
   "beekeeper_2": {
-    "title": "Beekeeper (2/3)",
-    "description": "Rank 2/3: Hives give extra honey and comb; bees stay calm when you harvest",
+    "title": "Beekeeper",
+    "description": "Hives give extra honey and comb; bees stay calm when you harvest",
     "icon": {
       "type": "item",
       "data": {
@@ -733,8 +744,8 @@
     "required_spent_points": 15
   },
   "beekeeper_3": {
-    "title": "Beekeeper (3/3)",
-    "description": "Rank 3/3: Hives give extra honey and comb; bees stay calm when you harvest",
+    "title": "Beekeeper",
+    "description": "Hives give extra honey and comb; bees stay calm when you harvest",
     "icon": {
       "type": "item",
       "data": {
@@ -751,8 +762,8 @@
     "required_spent_points": 15
   },
   "fletcher_1": {
-    "title": "Fletcher (1/3)",
-    "description": "Now: nothing yet. Next: Crafting arrows: 10% for extra arrows. (feeds Range)",
+    "title": "Fletcher",
+    "description": "Crafting arrows: 10% for extra arrows",
     "icon": {
       "type": "item",
       "data": {
@@ -769,8 +780,8 @@
     "required_spent_points": 15
   },
   "fletcher_2": {
-    "title": "Fletcher (2/3)",
-    "description": "Now: Crafting arrows: 10% for extra arrows. Next: Crafting arrows: 20% for extra arrows. (feeds Range)",
+    "title": "Fletcher",
+    "description": "Crafting arrows: 20% for extra arrows",
     "icon": {
       "type": "item",
       "data": {
@@ -787,8 +798,8 @@
     "required_spent_points": 15
   },
   "fletcher_3": {
-    "title": "Fletcher (3/3)",
-    "description": "Now: Crafting arrows: 20% for extra arrows. Next: Crafting arrows: 30% for extra arrows (max). (feeds Range)",
+    "title": "Fletcher",
+    "description": "Crafting arrows: 30% for extra arrows",
     "icon": {
       "type": "item",
       "data": {
@@ -805,8 +816,8 @@
     "required_spent_points": 15
   },
   "bark_skin_1": {
-    "title": "Bark Skin (1/3)",
-    "description": "Now: nothing yet. Next: +0.5 armour toughness in forests. (feeds Defense)",
+    "title": "Bark Skin",
+    "description": "+0.5 armour toughness in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -823,8 +834,8 @@
     "required_spent_points": 15
   },
   "bark_skin_2": {
-    "title": "Bark Skin (2/3)",
-    "description": "Now: +0.5 armour toughness in forests. Next: +1 armour toughness in forests. (feeds Defense)",
+    "title": "Bark Skin",
+    "description": "+1 armour toughness in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -841,8 +852,8 @@
     "required_spent_points": 15
   },
   "bark_skin_3": {
-    "title": "Bark Skin (3/3)",
-    "description": "Now: +1 armour toughness in forests. Next: +1.5 armour toughness in forests (max). (feeds Defense)",
+    "title": "Bark Skin",
+    "description": "+1.5 armour toughness in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -859,8 +870,8 @@
     "required_spent_points": 15
   },
   "druids_grove_1": {
-    "title": "Druid's Grove (1/3)",
-    "description": "Now: nothing yet. Next: Spells cost 5% less mana in forests. (feeds Magic)",
+    "title": "Druid's Grove",
+    "description": "Spells cost 5% less mana in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -877,8 +888,8 @@
     "required_spent_points": 15
   },
   "druids_grove_2": {
-    "title": "Druid's Grove (2/3)",
-    "description": "Now: Spells cost 5% less mana in forests. Next: Spells cost 10% less mana in forests. (feeds Magic)",
+    "title": "Druid's Grove",
+    "description": "Spells cost 10% less mana in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -895,8 +906,8 @@
     "required_spent_points": 15
   },
   "druids_grove_3": {
-    "title": "Druid's Grove (3/3)",
-    "description": "Now: Spells cost 10% less mana in forests. Next: Spells cost 15% less mana in forests (max). (feeds Magic)",
+    "title": "Druid's Grove",
+    "description": "Spells cost 15% less mana in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -930,8 +941,8 @@
     "required_spent_points": 25
   },
   "throwing_axes_1": {
-    "title": "Throwing Axes (1/3)",
-    "description": "Now: nothing yet. Next: Thrown axes and tomahawks +10% damage. (feeds Range)",
+    "title": "Throwing Axes",
+    "description": "Thrown axes and tomahawks +10% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -948,8 +959,8 @@
     "required_spent_points": 25
   },
   "throwing_axes_2": {
-    "title": "Throwing Axes (2/3)",
-    "description": "Now: Thrown axes and tomahawks +10% damage. Next: Thrown axes and tomahawks +20% damage. (feeds Range)",
+    "title": "Throwing Axes",
+    "description": "Thrown axes and tomahawks +20% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -966,8 +977,8 @@
     "required_spent_points": 25
   },
   "throwing_axes_3": {
-    "title": "Throwing Axes (3/3)",
-    "description": "Now: Thrown axes and tomahawks +20% damage. Next: Thrown axes and tomahawks +30% damage (max). (feeds Range)",
+    "title": "Throwing Axes",
+    "description": "Thrown axes and tomahawks +30% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -985,7 +996,7 @@
   },
   "natures_bounty_1": {
     "title": "Nature's Bounty",
-    "description": "5% chance any log, berry, mushroom or honey harvest drops triple Pick one: this or Berserker's Axe.",
+    "description": "5% chance any log, berry, mushroom or honey harvest drops triple",
     "icon": {
       "type": "item",
       "data": {
@@ -999,7 +1010,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Berserker's Axe."
   },
   "tier_5_or": {
     "title": "OR",
@@ -1020,7 +1032,7 @@
   },
   "berserkers_axe_1": {
     "title": "Berserker's Axe",
-    "description": "Axe kills give 4 s of Strength Pick one: this or Nature's Bounty. (feeds Attack)",
+    "description": "Axe kills give 4 s of Strength",
     "icon": {
       "type": "item",
       "data": {
@@ -1034,6 +1046,7 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Nature's Bounty."
   }
 }

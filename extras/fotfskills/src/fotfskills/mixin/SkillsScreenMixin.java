@@ -1,6 +1,10 @@
 package fotfskills.mixin;
 
 import fotfskills.SkillStacks;
+import fotfskills.SkillTooltips;
+import java.util.List;
+import net.minecraft.util.FormattedCharSequence;
+import net.puffish.skillsmod.client.config.ClientCategoryConfig;
 import java.util.Optional;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.Screen;
@@ -29,6 +33,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  *   offset so clicks, dragging, scrolling and clipping line up.
  * - Ranks: only one rank of a stacked node is drawn and clickable (SkillStacks), and every stack shows owned/total.
  * - Tiers: nodes in tiers the player hasn't reached are drawn grey; open tiers' numeral tiles light up.
+ * - Tooltips: owned effect in white, next rank in grey (SkillTooltips).
  */
 @Mixin(value = SkillsScreen.class, remap = false)
 public abstract class SkillsScreenMixin extends Screen {
@@ -132,6 +137,29 @@ public abstract class SkillsScreenMixin extends Screen {
                 cir.setReturnValue(false);
             }
         });
+    }
+
+    @Unique
+    private ClientCategoryData fotfskills$tooltipData;
+    @Unique
+    private ClientSkillConfig fotfskills$tooltipSkill;
+
+    /** Remembers which skill the hover tooltip is for (lambda$drawContentWithCategory$21 builds it). */
+    @Inject(method = "lambda$drawContentWithCategory$21", at = @At("HEAD"), remap = false)
+    private void fotfskills$rememberTooltipSkill(ClientCategoryConfig config, ClientCategoryData data,
+                                                 @org.spongepowered.asm.mixin.injection.Coerce Object connections,
+                                                 GuiGraphics graphics, ClientSkillConfig skill, CallbackInfo ci) {
+        fotfskills$tooltipData = data;
+        fotfskills$tooltipSkill = skill;
+    }
+
+    /** Current effect in white, next rank in grey (SkillTooltips); tier/OR tiles keep the original tooltip. */
+    @Redirect(method = "lambda$drawContentWithCategory$21", remap = false,
+            at = @At(value = "INVOKE", target = "Lnet/puffish/skillsmod/client/gui/SkillsScreen;m_257959_(Ljava/util/List;)V", remap = false))
+    private void fotfskills$rankTooltip(SkillsScreen screen, List<FormattedCharSequence> original) {
+        List<FormattedCharSequence> lines = fotfskills$tooltipData == null ? null
+                : SkillTooltips.build(this.f_96541_, fotfskills$tooltipData, fotfskills$tooltipSkill);
+        this.m_257959_(lines != null ? lines : original);
     }
 
     /** Draws owned/total on every rank stack, inside the tree's transform (just before it is popped). */

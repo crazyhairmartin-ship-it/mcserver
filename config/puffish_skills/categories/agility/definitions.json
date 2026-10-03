@@ -17,8 +17,8 @@
     "required_spent_points": 0
   },
   "light_feet_1": {
-    "title": "Light Feet (1/5)",
-    "description": "Now: nothing yet. Next: -5% ParCool stamina drain.",
+    "title": "Light Feet",
+    "description": "-5% ParCool stamina drain",
     "icon": {
       "type": "item",
       "data": {
@@ -35,8 +35,8 @@
     "required_spent_points": 0
   },
   "light_feet_2": {
-    "title": "Light Feet (2/5)",
-    "description": "Now: -5% ParCool stamina drain. Next: -10% ParCool stamina drain.",
+    "title": "Light Feet",
+    "description": "-10% ParCool stamina drain",
     "icon": {
       "type": "item",
       "data": {
@@ -53,8 +53,8 @@
     "required_spent_points": 0
   },
   "light_feet_3": {
-    "title": "Light Feet (3/5)",
-    "description": "Now: -10% ParCool stamina drain. Next: -15% ParCool stamina drain.",
+    "title": "Light Feet",
+    "description": "-15% ParCool stamina drain",
     "icon": {
       "type": "item",
       "data": {
@@ -71,8 +71,8 @@
     "required_spent_points": 0
   },
   "light_feet_4": {
-    "title": "Light Feet (4/5)",
-    "description": "Now: -15% ParCool stamina drain. Next: -20% ParCool stamina drain.",
+    "title": "Light Feet",
+    "description": "-20% ParCool stamina drain",
     "icon": {
       "type": "item",
       "data": {
@@ -89,8 +89,8 @@
     "required_spent_points": 0
   },
   "light_feet_5": {
-    "title": "Light Feet (5/5)",
-    "description": "Now: -20% ParCool stamina drain. Next: -25% ParCool stamina drain (max).",
+    "title": "Light Feet",
+    "description": "-25% ParCool stamina drain",
     "icon": {
       "type": "item",
       "data": {
@@ -107,8 +107,8 @@
     "required_spent_points": 0
   },
   "spring_step_1": {
-    "title": "Spring Step (1/3)",
-    "description": "Rank 1/3: Jump higher per rank",
+    "title": "Spring Step",
+    "description": "Jump higher per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -125,8 +125,8 @@
     "required_spent_points": 0
   },
   "spring_step_2": {
-    "title": "Spring Step (2/3)",
-    "description": "Rank 2/3: Jump higher per rank",
+    "title": "Spring Step",
+    "description": "Jump higher per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -143,8 +143,8 @@
     "required_spent_points": 0
   },
   "spring_step_3": {
-    "title": "Spring Step (3/3)",
-    "description": "Rank 3/3: Jump higher per rank",
+    "title": "Spring Step",
+    "description": "Jump higher per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -161,8 +161,8 @@
     "required_spent_points": 0
   },
   "soft_landing_1": {
-    "title": "Soft Landing (1/5)",
-    "description": "Now: nothing yet. Next: -6% fall damage.",
+    "title": "Soft Landing",
+    "description": "-6% fall damage",
     "icon": {
       "type": "item",
       "data": {
@@ -179,8 +179,8 @@
     "required_spent_points": 0
   },
   "soft_landing_2": {
-    "title": "Soft Landing (2/5)",
-    "description": "Now: -6% fall damage. Next: -12% fall damage.",
+    "title": "Soft Landing",
+    "description": "-12% fall damage",
     "icon": {
       "type": "item",
       "data": {
@@ -197,8 +197,8 @@
     "required_spent_points": 0
   },
   "soft_landing_3": {
-    "title": "Soft Landing (3/5)",
-    "description": "Now: -12% fall damage. Next: -18% fall damage.",
+    "title": "Soft Landing",
+    "description": "-18% fall damage",
     "icon": {
       "type": "item",
       "data": {
@@ -215,8 +215,8 @@
     "required_spent_points": 0
   },
   "soft_landing_4": {
-    "title": "Soft Landing (4/5)",
-    "description": "Now: -18% fall damage. Next: -24% fall damage.",
+    "title": "Soft Landing",
+    "description": "-24% fall damage",
     "icon": {
       "type": "item",
       "data": {
@@ -233,8 +233,8 @@
     "required_spent_points": 0
   },
   "soft_landing_5": {
-    "title": "Soft Landing (5/5)",
-    "description": "Now: -24% fall damage. Next: -30% fall damage (max).",
+    "title": "Soft Landing",
+    "description": "-30% fall damage",
     "icon": {
       "type": "item",
       "data": {
@@ -268,8 +268,8 @@
     "required_spent_points": 5
   },
   "long_rope_1": {
-    "title": "Long Rope (1/3)",
-    "description": "Now: nothing yet. Next: Grappling hook reaches 4 blocks further.",
+    "title": "Long Rope",
+    "description": "Grappling hook reaches 4 blocks further",
     "icon": {
       "type": "item",
       "data": {
@@ -286,8 +286,8 @@
     "required_spent_points": 5
   },
   "long_rope_2": {
-    "title": "Long Rope (2/3)",
-    "description": "Now: Grappling hook reaches 4 blocks further. Next: Grappling hook reaches 8 blocks further.",
+    "title": "Long Rope",
+    "description": "Grappling hook reaches 8 blocks further",
     "icon": {
       "type": "item",
       "data": {
@@ -304,8 +304,8 @@
     "required_spent_points": 5
   },
   "long_rope_3": {
-    "title": "Long Rope (3/3)",
-    "description": "Now: Grappling hook reaches 8 blocks further. Next: Grappling hook reaches 12 blocks further (max).",
+    "title": "Long Rope",
+    "description": "Grappling hook reaches 12 blocks further",
     "icon": {
       "type": "item",
       "data": {
@@ -322,8 +322,8 @@
     "required_spent_points": 5
   },
   "quick_casting_1": {
-    "title": "Quick Casting (1/3)",
-    "description": "Now: nothing yet. Next: -5% spell cast time. (feeds Magic)",
+    "title": "Quick Casting",
+    "description": "-5% spell cast time",
     "icon": {
       "type": "item",
       "data": {
@@ -340,8 +340,8 @@
     "required_spent_points": 5
   },
   "quick_casting_2": {
-    "title": "Quick Casting (2/3)",
-    "description": "Now: -5% spell cast time. Next: -10% spell cast time. (feeds Magic)",
+    "title": "Quick Casting",
+    "description": "-10% spell cast time",
     "icon": {
       "type": "item",
       "data": {
@@ -358,8 +358,8 @@
     "required_spent_points": 5
   },
   "quick_casting_3": {
-    "title": "Quick Casting (3/3)",
-    "description": "Now: -10% spell cast time. Next: -15% spell cast time (max). (feeds Magic)",
+    "title": "Quick Casting",
+    "description": "-15% spell cast time",
     "icon": {
       "type": "item",
       "data": {
@@ -376,8 +376,8 @@
     "required_spent_points": 5
   },
   "light_weapons_1": {
-    "title": "Light Weapons (1/3)",
-    "description": "Now: nothing yet. Next: Daggers, rapiers and short blades +4% attack speed. (feeds Attack)",
+    "title": "Light Weapons",
+    "description": "Daggers, rapiers and short blades +4% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -394,8 +394,8 @@
     "required_spent_points": 5
   },
   "light_weapons_2": {
-    "title": "Light Weapons (2/3)",
-    "description": "Now: Daggers, rapiers and short blades +4% attack speed. Next: Daggers, rapiers and short blades +8% attack speed. (feeds Attack)",
+    "title": "Light Weapons",
+    "description": "Daggers, rapiers and short blades +8% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -412,8 +412,8 @@
     "required_spent_points": 5
   },
   "light_weapons_3": {
-    "title": "Light Weapons (3/3)",
-    "description": "Now: Daggers, rapiers and short blades +8% attack speed. Next: Daggers, rapiers and short blades +12% attack speed (max). (feeds Attack)",
+    "title": "Light Weapons",
+    "description": "Daggers, rapiers and short blades +12% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -447,8 +447,8 @@
     "required_spent_points": 10
   },
   "freerunner_1": {
-    "title": "Freerunner (1/3)",
-    "description": "Rank 1/3: ParCool moves cost 20% less stamina Pick one: this or Hookmaster.",
+    "title": "Freerunner",
+    "description": "ParCool moves cost 20% less stamina",
     "icon": {
       "type": "item",
       "data": {
@@ -462,11 +462,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Hookmaster."
   },
   "freerunner_2": {
-    "title": "Freerunner (2/3)",
-    "description": "Rank 2/3: ParCool moves cost 20% less stamina Pick one: this or Hookmaster.",
+    "title": "Freerunner",
+    "description": "ParCool moves cost 20% less stamina",
     "icon": {
       "type": "item",
       "data": {
@@ -480,11 +481,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Hookmaster."
   },
   "freerunner_3": {
-    "title": "Freerunner (3/3)",
-    "description": "Rank 3/3: ParCool moves cost 20% less stamina Pick one: this or Hookmaster.",
+    "title": "Freerunner",
+    "description": "ParCool moves cost 20% less stamina",
     "icon": {
       "type": "item",
       "data": {
@@ -498,7 +500,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Hookmaster."
   },
   "tier_3_or": {
     "title": "OR",
@@ -518,8 +521,8 @@
     "required_spent_points": 10
   },
   "hookmaster_1": {
-    "title": "Hookmaster (1/3)",
-    "description": "Rank 1/3: The hook throws and reels in faster and swings harder Pick one: this or Freerunner.",
+    "title": "Hookmaster",
+    "description": "The hook throws and reels in faster and swings harder",
     "icon": {
       "type": "item",
       "data": {
@@ -533,11 +536,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Freerunner."
   },
   "hookmaster_2": {
-    "title": "Hookmaster (2/3)",
-    "description": "Rank 2/3: The hook throws and reels in faster and swings harder Pick one: this or Freerunner.",
+    "title": "Hookmaster",
+    "description": "The hook throws and reels in faster and swings harder",
     "icon": {
       "type": "item",
       "data": {
@@ -551,11 +555,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Freerunner."
   },
   "hookmaster_3": {
-    "title": "Hookmaster (3/3)",
-    "description": "Rank 3/3: The hook throws and reels in faster and swings harder Pick one: this or Freerunner.",
+    "title": "Hookmaster",
+    "description": "The hook throws and reels in faster and swings harder",
     "icon": {
       "type": "item",
       "data": {
@@ -569,7 +574,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Freerunner."
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -589,8 +595,8 @@
     "required_spent_points": 15
   },
   "throwing_arm_1": {
-    "title": "Throwing Arm (1/3)",
-    "description": "Now: nothing yet. Next: Thrown weapons fly 8% faster and hit 8% harder. (feeds Range)",
+    "title": "Throwing Arm",
+    "description": "Thrown weapons fly 8% faster and hit 8% harder",
     "icon": {
       "type": "item",
       "data": {
@@ -607,8 +613,8 @@
     "required_spent_points": 15
   },
   "throwing_arm_2": {
-    "title": "Throwing Arm (2/3)",
-    "description": "Now: Thrown weapons fly 8% faster and hit 8% harder. Next: Thrown weapons fly 16% faster and hit 8% harder. (feeds Range)",
+    "title": "Throwing Arm",
+    "description": "Thrown weapons fly 16% faster and hit 8% harder",
     "icon": {
       "type": "item",
       "data": {
@@ -625,8 +631,8 @@
     "required_spent_points": 15
   },
   "throwing_arm_3": {
-    "title": "Throwing Arm (3/3)",
-    "description": "Now: Thrown weapons fly 16% faster and hit 8% harder. Next: Thrown weapons fly 24% faster and hit 8% harder (max). (feeds Range)",
+    "title": "Throwing Arm",
+    "description": "Thrown weapons fly 24% faster and hit 8% harder",
     "icon": {
       "type": "item",
       "data": {
@@ -643,8 +649,8 @@
     "required_spent_points": 15
   },
   "rider_1": {
-    "title": "Rider (1/3)",
-    "description": "Now: nothing yet. Next: Mounts you ride run 4% faster and jump higher. (feeds Taming)",
+    "title": "Rider",
+    "description": "Mounts you ride run 4% faster and jump higher",
     "icon": {
       "type": "item",
       "data": {
@@ -661,8 +667,8 @@
     "required_spent_points": 15
   },
   "rider_2": {
-    "title": "Rider (2/3)",
-    "description": "Now: Mounts you ride run 4% faster and jump higher. Next: Mounts you ride run 8% faster and jump higher. (feeds Taming)",
+    "title": "Rider",
+    "description": "Mounts you ride run 8% faster and jump higher",
     "icon": {
       "type": "item",
       "data": {
@@ -679,8 +685,8 @@
     "required_spent_points": 15
   },
   "rider_3": {
-    "title": "Rider (3/3)",
-    "description": "Now: Mounts you ride run 8% faster and jump higher. Next: Mounts you ride run 12% faster and jump higher (max). (feeds Taming)",
+    "title": "Rider",
+    "description": "Mounts you ride run 12% faster and jump higher",
     "icon": {
       "type": "item",
       "data": {
@@ -697,8 +703,8 @@
     "required_spent_points": 15
   },
   "second_breath_1": {
-    "title": "Second Breath (1/3)",
-    "description": "Rank 1/3: ParCool stamina regenerates faster",
+    "title": "Second Breath",
+    "description": "ParCool stamina regenerates faster",
     "icon": {
       "type": "item",
       "data": {
@@ -715,8 +721,8 @@
     "required_spent_points": 15
   },
   "second_breath_2": {
-    "title": "Second Breath (2/3)",
-    "description": "Rank 2/3: ParCool stamina regenerates faster",
+    "title": "Second Breath",
+    "description": "ParCool stamina regenerates faster",
     "icon": {
       "type": "item",
       "data": {
@@ -733,8 +739,8 @@
     "required_spent_points": 15
   },
   "second_breath_3": {
-    "title": "Second Breath (3/3)",
-    "description": "Rank 3/3: ParCool stamina regenerates faster",
+    "title": "Second Breath",
+    "description": "ParCool stamina regenerates faster",
     "icon": {
       "type": "item",
       "data": {
@@ -751,8 +757,8 @@
     "required_spent_points": 15
   },
   "motor_reel_1": {
-    "title": "Motor Reel (1/2)",
-    "description": "Rank 1/2: Hold use to be pulled to the hook, faster per rank",
+    "title": "Motor Reel",
+    "description": "Hold use to be pulled to the hook, faster per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -769,8 +775,8 @@
     "required_spent_points": 15
   },
   "motor_reel_2": {
-    "title": "Motor Reel (2/2)",
-    "description": "Rank 2/2: Hold use to be pulled to the hook, faster per rank",
+    "title": "Motor Reel",
+    "description": "Hold use to be pulled to the hook, faster per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -787,8 +793,8 @@
     "required_spent_points": 15
   },
   "roll_master_1": {
-    "title": "Roll Master (1/2)",
-    "description": "Rank 1/2: Rolls and dodges negate more damage",
+    "title": "Roll Master",
+    "description": "Rolls and dodges negate more damage",
     "icon": {
       "type": "item",
       "data": {
@@ -805,8 +811,8 @@
     "required_spent_points": 15
   },
   "roll_master_2": {
-    "title": "Roll Master (2/2)",
-    "description": "Rank 2/2: Rolls and dodges negate more damage",
+    "title": "Roll Master",
+    "description": "Rolls and dodges negate more damage",
     "icon": {
       "type": "item",
       "data": {
@@ -840,8 +846,8 @@
     "required_spent_points": 25
   },
   "long_rope_ii_1": {
-    "title": "Long Rope II (1/2)",
-    "description": "Now: nothing yet. Next: Grappling hook reaches 4 blocks further. Needs Long Rope (all ranks).",
+    "title": "Long Rope II",
+    "description": "Grappling hook reaches 4 blocks further",
     "icon": {
       "type": "item",
       "data": {
@@ -855,11 +861,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Needs Long Rope (all ranks)."
   },
   "long_rope_ii_2": {
-    "title": "Long Rope II (2/2)",
-    "description": "Now: Grappling hook reaches 4 blocks further. Next: Grappling hook reaches 8 blocks further (max). Needs Long Rope (all ranks).",
+    "title": "Long Rope II",
+    "description": "Grappling hook reaches 8 blocks further",
     "icon": {
       "type": "item",
       "data": {
@@ -873,11 +880,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Needs Long Rope (all ranks)."
   },
   "featherfall_1": {
     "title": "Featherfall",
-    "description": "No fall damage under 15 blocks Pick one: this or Twin Hooks.",
+    "description": "No fall damage under 15 blocks",
     "icon": {
       "type": "item",
       "data": {
@@ -891,7 +899,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Twin Hooks."
   },
   "tier_5_or": {
     "title": "OR",
@@ -912,7 +921,7 @@
   },
   "twin_hooks_1": {
     "title": "Twin Hooks",
-    "description": "The grappling hook fires two hooks at once Pick one: this or Featherfall.",
+    "description": "The grappling hook fires two hooks at once",
     "icon": {
       "type": "item",
       "data": {
@@ -926,6 +935,7 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Featherfall."
   }
 }

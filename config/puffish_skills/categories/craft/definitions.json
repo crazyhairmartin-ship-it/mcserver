@@ -17,8 +17,8 @@
     "required_spent_points": 0
   },
   "frugal_1": {
-    "title": "Frugal (1/5)",
-    "description": "Now: nothing yet. Next: 3% to save an ingredient.",
+    "title": "Frugal",
+    "description": "3% to save an ingredient",
     "icon": {
       "type": "item",
       "data": {
@@ -35,8 +35,8 @@
     "required_spent_points": 0
   },
   "frugal_2": {
-    "title": "Frugal (2/5)",
-    "description": "Now: 3% to save an ingredient. Next: 6% to save an ingredient.",
+    "title": "Frugal",
+    "description": "6% to save an ingredient",
     "icon": {
       "type": "item",
       "data": {
@@ -53,8 +53,8 @@
     "required_spent_points": 0
   },
   "frugal_3": {
-    "title": "Frugal (3/5)",
-    "description": "Now: 6% to save an ingredient. Next: 9% to save an ingredient.",
+    "title": "Frugal",
+    "description": "9% to save an ingredient",
     "icon": {
       "type": "item",
       "data": {
@@ -71,8 +71,8 @@
     "required_spent_points": 0
   },
   "frugal_4": {
-    "title": "Frugal (4/5)",
-    "description": "Now: 9% to save an ingredient. Next: 12% to save an ingredient.",
+    "title": "Frugal",
+    "description": "12% to save an ingredient",
     "icon": {
       "type": "item",
       "data": {
@@ -89,8 +89,8 @@
     "required_spent_points": 0
   },
   "frugal_5": {
-    "title": "Frugal (5/5)",
-    "description": "Now: 12% to save an ingredient. Next: 15% to save an ingredient (max).",
+    "title": "Frugal",
+    "description": "15% to save an ingredient",
     "icon": {
       "type": "item",
       "data": {
@@ -107,8 +107,8 @@
     "required_spent_points": 0
   },
   "smith_1": {
-    "title": "Smith (1/5)",
-    "description": "Now: nothing yet. Next: Crafted gear +5% durability.",
+    "title": "Smith",
+    "description": "Crafted gear +5% durability",
     "icon": {
       "type": "item",
       "data": {
@@ -125,8 +125,8 @@
     "required_spent_points": 0
   },
   "smith_2": {
-    "title": "Smith (2/5)",
-    "description": "Now: Crafted gear +5% durability. Next: Crafted gear +10% durability.",
+    "title": "Smith",
+    "description": "Crafted gear +10% durability",
     "icon": {
       "type": "item",
       "data": {
@@ -143,8 +143,8 @@
     "required_spent_points": 0
   },
   "smith_3": {
-    "title": "Smith (3/5)",
-    "description": "Now: Crafted gear +10% durability. Next: Crafted gear +15% durability.",
+    "title": "Smith",
+    "description": "Crafted gear +15% durability",
     "icon": {
       "type": "item",
       "data": {
@@ -161,8 +161,8 @@
     "required_spent_points": 0
   },
   "smith_4": {
-    "title": "Smith (4/5)",
-    "description": "Now: Crafted gear +15% durability. Next: Crafted gear +20% durability.",
+    "title": "Smith",
+    "description": "Crafted gear +20% durability",
     "icon": {
       "type": "item",
       "data": {
@@ -179,8 +179,8 @@
     "required_spent_points": 0
   },
   "smith_5": {
-    "title": "Smith (5/5)",
-    "description": "Now: Crafted gear +20% durability. Next: Crafted gear +25% durability (max).",
+    "title": "Smith",
+    "description": "Crafted gear +25% durability",
     "icon": {
       "type": "item",
       "data": {
@@ -197,8 +197,8 @@
     "required_spent_points": 0
   },
   "whetstone_1": {
-    "title": "Whetstone (1/5)",
-    "description": "Now: nothing yet. Next: Weapons you craft or repair get +0.2 attack damage. (feeds Attack)",
+    "title": "Whetstone",
+    "description": "Weapons you craft or repair get +0.2 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -215,8 +215,8 @@
     "required_spent_points": 0
   },
   "whetstone_2": {
-    "title": "Whetstone (2/5)",
-    "description": "Now: Weapons you craft or repair get +0.2 attack damage. Next: Weapons you craft or repair get +0.4 attack damage. (feeds Attack)",
+    "title": "Whetstone",
+    "description": "Weapons you craft or repair get +0.4 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -233,8 +233,8 @@
     "required_spent_points": 0
   },
   "whetstone_3": {
-    "title": "Whetstone (3/5)",
-    "description": "Now: Weapons you craft or repair get +0.4 attack damage. Next: Weapons you craft or repair get +0.6 attack damage. (feeds Attack)",
+    "title": "Whetstone",
+    "description": "Weapons you craft or repair get +0.6 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -251,8 +251,8 @@
     "required_spent_points": 0
   },
   "whetstone_4": {
-    "title": "Whetstone (4/5)",
-    "description": "Now: Weapons you craft or repair get +0.6 attack damage. Next: Weapons you craft or repair get +0.8 attack damage. (feeds Attack)",
+    "title": "Whetstone",
+    "description": "Weapons you craft or repair get +0.8 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -269,8 +269,8 @@
     "required_spent_points": 0
   },
   "whetstone_5": {
-    "title": "Whetstone (5/5)",
-    "description": "Now: Weapons you craft or repair get +0.8 attack damage. Next: Weapons you craft or repair get +1 attack damage (max). (feeds Attack)",
+    "title": "Whetstone",
+    "description": "Weapons you craft or repair get +1 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -304,8 +304,8 @@
     "required_spent_points": 5
   },
   "enchanted_crafts_1": {
-    "title": "Enchanted Crafts (1/3)",
-    "description": "Rank 1/3: Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+    "title": "Enchanted Crafts",
+    "description": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
     "icon": {
       "type": "item",
       "data": {
@@ -322,8 +322,8 @@
     "required_spent_points": 5
   },
   "enchanted_crafts_2": {
-    "title": "Enchanted Crafts (2/3)",
-    "description": "Rank 2/3: Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+    "title": "Enchanted Crafts",
+    "description": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
     "icon": {
       "type": "item",
       "data": {
@@ -340,8 +340,8 @@
     "required_spent_points": 5
   },
   "enchanted_crafts_3": {
-    "title": "Enchanted Crafts (3/3)",
-    "description": "Rank 3/3: Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+    "title": "Enchanted Crafts",
+    "description": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
     "icon": {
       "type": "item",
       "data": {
@@ -376,8 +376,8 @@
     "required_spent_points": 5
   },
   "repair_kit_1": {
-    "title": "Repair Kit (1/2)",
-    "description": "Rank 1/2: Anvil repairs cost less XP",
+    "title": "Repair Kit",
+    "description": "Anvil repairs cost less XP",
     "icon": {
       "type": "item",
       "data": {
@@ -394,8 +394,8 @@
     "required_spent_points": 5
   },
   "repair_kit_2": {
-    "title": "Repair Kit (2/2)",
-    "description": "Rank 2/2: Anvil repairs cost less XP",
+    "title": "Repair Kit",
+    "description": "Anvil repairs cost less XP",
     "icon": {
       "type": "item",
       "data": {
@@ -412,8 +412,8 @@
     "required_spent_points": 5
   },
   "spellwright_1": {
-    "title": "Spellwright (1/3)",
-    "description": "Now: nothing yet. Next: 8% to save ingredients on scrolls and Ars items. (feeds Magic)",
+    "title": "Spellwright",
+    "description": "8% to save ingredients on scrolls and Ars items",
     "icon": {
       "type": "item",
       "data": {
@@ -430,8 +430,8 @@
     "required_spent_points": 5
   },
   "spellwright_2": {
-    "title": "Spellwright (2/3)",
-    "description": "Now: 8% to save ingredients on scrolls and Ars items. Next: 16% to save ingredients on scrolls and Ars items. (feeds Magic)",
+    "title": "Spellwright",
+    "description": "16% to save ingredients on scrolls and Ars items",
     "icon": {
       "type": "item",
       "data": {
@@ -448,8 +448,8 @@
     "required_spent_points": 5
   },
   "spellwright_3": {
-    "title": "Spellwright (3/3)",
-    "description": "Now: 16% to save ingredients on scrolls and Ars items. Next: 24% to save ingredients on scrolls and Ars items (max). (feeds Magic)",
+    "title": "Spellwright",
+    "description": "24% to save ingredients on scrolls and Ars items",
     "icon": {
       "type": "item",
       "data": {
@@ -484,7 +484,7 @@
   },
   "weaponsmith_1": {
     "title": "Weaponsmith",
-    "description": "Weapons you craft always get +1 attack damage Pick one: this or Armourer. (feeds Attack)",
+    "description": "Weapons you craft always get +1 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -498,7 +498,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Armourer."
   },
   "tier_3_or": {
     "title": "OR",
@@ -519,7 +520,7 @@
   },
   "armourer_1": {
     "title": "Armourer",
-    "description": "Armour you craft always gets +1 toughness Pick one: this or Weaponsmith. (feeds Defense)",
+    "description": "Armour you craft always gets +1 toughness",
     "icon": {
       "type": "item",
       "data": {
@@ -533,7 +534,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Weaponsmith."
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -553,8 +555,8 @@
     "required_spent_points": 15
   },
   "frugal_ii_1": {
-    "title": "Frugal II (1/5)",
-    "description": "Now: nothing yet. Next: +3% ingredient saving. Needs Frugal (all ranks).",
+    "title": "Frugal II",
+    "description": "+3% ingredient saving",
     "icon": {
       "type": "item",
       "data": {
@@ -568,11 +570,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Frugal (all ranks)."
   },
   "frugal_ii_2": {
-    "title": "Frugal II (2/5)",
-    "description": "Now: +3% ingredient saving. Next: +6% ingredient saving. Needs Frugal (all ranks).",
+    "title": "Frugal II",
+    "description": "+6% ingredient saving",
     "icon": {
       "type": "item",
       "data": {
@@ -586,11 +589,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Frugal (all ranks)."
   },
   "frugal_ii_3": {
-    "title": "Frugal II (3/5)",
-    "description": "Now: +6% ingredient saving. Next: +9% ingredient saving. Needs Frugal (all ranks).",
+    "title": "Frugal II",
+    "description": "+9% ingredient saving",
     "icon": {
       "type": "item",
       "data": {
@@ -604,11 +608,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Frugal (all ranks)."
   },
   "frugal_ii_4": {
-    "title": "Frugal II (4/5)",
-    "description": "Now: +9% ingredient saving. Next: +12% ingredient saving. Needs Frugal (all ranks).",
+    "title": "Frugal II",
+    "description": "+12% ingredient saving",
     "icon": {
       "type": "item",
       "data": {
@@ -622,11 +627,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Frugal (all ranks)."
   },
   "frugal_ii_5": {
-    "title": "Frugal II (5/5)",
-    "description": "Now: +12% ingredient saving. Next: +15% ingredient saving (max). Needs Frugal (all ranks).",
+    "title": "Frugal II",
+    "description": "+15% ingredient saving",
     "icon": {
       "type": "item",
       "data": {
@@ -640,11 +646,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Frugal (all ranks)."
   },
   "enchanted_crafts_ii_1": {
-    "title": "Enchanted Crafts II (1/2)",
-    "description": "Rank 1/2: Enchantments on crafted gear roll one level higher per rank Needs Enchanted Crafts (all ranks).",
+    "title": "Enchanted Crafts II",
+    "description": "Enchantments on crafted gear roll one level higher per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -658,11 +665,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Enchanted Crafts (all ranks)."
   },
   "enchanted_crafts_ii_2": {
-    "title": "Enchanted Crafts II (2/2)",
-    "description": "Rank 2/2: Enchantments on crafted gear roll one level higher per rank Needs Enchanted Crafts (all ranks).",
+    "title": "Enchanted Crafts II",
+    "description": "Enchantments on crafted gear roll one level higher per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -676,11 +684,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Enchanted Crafts (all ranks)."
   },
   "salvager_1": {
-    "title": "Salvager (1/2)",
-    "description": "Rank 1/2: Grindstones return some materials",
+    "title": "Salvager",
+    "description": "Grindstones return some materials",
     "icon": {
       "type": "item",
       "data": {
@@ -697,8 +706,8 @@
     "required_spent_points": 15
   },
   "salvager_2": {
-    "title": "Salvager (2/2)",
-    "description": "Rank 2/2: Grindstones return some materials",
+    "title": "Salvager",
+    "description": "Grindstones return some materials",
     "icon": {
       "type": "item",
       "data": {
@@ -715,8 +724,8 @@
     "required_spent_points": 15
   },
   "saddler_1": {
-    "title": "Saddler (1/2)",
-    "description": "Rank 1/2: Saddles and horse armour you craft give mounts +5% speed and armour (feeds Taming)",
+    "title": "Saddler",
+    "description": "Saddles and horse armour you craft give mounts +5% speed and armour",
     "icon": {
       "type": "item",
       "data": {
@@ -733,8 +742,8 @@
     "required_spent_points": 15
   },
   "saddler_2": {
-    "title": "Saddler (2/2)",
-    "description": "Rank 2/2: Saddles and horse armour you craft give mounts +5% speed and armour (feeds Taming)",
+    "title": "Saddler",
+    "description": "Saddles and horse armour you craft give mounts +5% speed and armour",
     "icon": {
       "type": "item",
       "data": {
@@ -768,8 +777,8 @@
     "required_spent_points": 25
   },
   "smelter_1": {
-    "title": "Smelter (1/3)",
-    "description": "Now: nothing yet. Next: Furnaces you use run 10% faster.",
+    "title": "Smelter",
+    "description": "Furnaces you use run 10% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -786,8 +795,8 @@
     "required_spent_points": 25
   },
   "smelter_2": {
-    "title": "Smelter (2/3)",
-    "description": "Now: Furnaces you use run 10% faster. Next: Furnaces you use run 20% faster.",
+    "title": "Smelter",
+    "description": "Furnaces you use run 20% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -804,8 +813,8 @@
     "required_spent_points": 25
   },
   "smelter_3": {
-    "title": "Smelter (3/3)",
-    "description": "Now: Furnaces you use run 20% faster. Next: Furnaces you use run 30% faster (max).",
+    "title": "Smelter",
+    "description": "Furnaces you use run 30% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -823,7 +832,7 @@
   },
   "masterwork_1": {
     "title": "Masterwork",
-    "description": "Gear you craft always gets two enchantments Pick one: this or Endless Workshop.",
+    "description": "Gear you craft always gets two enchantments",
     "icon": {
       "type": "item",
       "data": {
@@ -837,7 +846,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Endless Workshop."
   },
   "tier_5_or": {
     "title": "OR",
@@ -858,7 +868,7 @@
   },
   "endless_workshop_1": {
     "title": "Endless Workshop",
-    "description": "10% of crafts use no ingredients Pick one: this or Masterwork.",
+    "description": "10% of crafts use no ingredients",
     "icon": {
       "type": "item",
       "data": {
@@ -872,6 +882,7 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Masterwork."
   }
 }

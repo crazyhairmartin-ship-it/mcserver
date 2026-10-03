@@ -17,8 +17,8 @@
     "required_spent_points": 0
   },
   "steady_hands_1": {
-    "title": "Steady Hands (1/5)",
-    "description": "Now: nothing yet. Next: +5% bow draw and crossbow reload speed.",
+    "title": "Steady Hands",
+    "description": "+5% bow draw and crossbow reload speed",
     "icon": {
       "type": "item",
       "data": {
@@ -35,8 +35,8 @@
     "required_spent_points": 0
   },
   "steady_hands_2": {
-    "title": "Steady Hands (2/5)",
-    "description": "Now: +5% bow draw and crossbow reload speed. Next: +10% bow draw and crossbow reload speed.",
+    "title": "Steady Hands",
+    "description": "+10% bow draw and crossbow reload speed",
     "icon": {
       "type": "item",
       "data": {
@@ -53,8 +53,8 @@
     "required_spent_points": 0
   },
   "steady_hands_3": {
-    "title": "Steady Hands (3/5)",
-    "description": "Now: +10% bow draw and crossbow reload speed. Next: +15% bow draw and crossbow reload speed.",
+    "title": "Steady Hands",
+    "description": "+15% bow draw and crossbow reload speed",
     "icon": {
       "type": "item",
       "data": {
@@ -71,8 +71,8 @@
     "required_spent_points": 0
   },
   "steady_hands_4": {
-    "title": "Steady Hands (4/5)",
-    "description": "Now: +15% bow draw and crossbow reload speed. Next: +20% bow draw and crossbow reload speed.",
+    "title": "Steady Hands",
+    "description": "+20% bow draw and crossbow reload speed",
     "icon": {
       "type": "item",
       "data": {
@@ -89,8 +89,8 @@
     "required_spent_points": 0
   },
   "steady_hands_5": {
-    "title": "Steady Hands (5/5)",
-    "description": "Now: +20% bow draw and crossbow reload speed. Next: +25% bow draw and crossbow reload speed (max).",
+    "title": "Steady Hands",
+    "description": "+25% bow draw and crossbow reload speed",
     "icon": {
       "type": "item",
       "data": {
@@ -107,8 +107,8 @@
     "required_spent_points": 0
   },
   "sharp_tips_1": {
-    "title": "Sharp Tips (1/5)",
-    "description": "Now: nothing yet. Next: +4% projectile damage.",
+    "title": "Sharp Tips",
+    "description": "+4% projectile damage",
     "icon": {
       "type": "item",
       "data": {
@@ -125,8 +125,8 @@
     "required_spent_points": 0
   },
   "sharp_tips_2": {
-    "title": "Sharp Tips (2/5)",
-    "description": "Now: +4% projectile damage. Next: +8% projectile damage.",
+    "title": "Sharp Tips",
+    "description": "+8% projectile damage",
     "icon": {
       "type": "item",
       "data": {
@@ -143,8 +143,8 @@
     "required_spent_points": 0
   },
   "sharp_tips_3": {
-    "title": "Sharp Tips (3/5)",
-    "description": "Now: +8% projectile damage. Next: +12% projectile damage.",
+    "title": "Sharp Tips",
+    "description": "+12% projectile damage",
     "icon": {
       "type": "item",
       "data": {
@@ -161,8 +161,8 @@
     "required_spent_points": 0
   },
   "sharp_tips_4": {
-    "title": "Sharp Tips (4/5)",
-    "description": "Now: +12% projectile damage. Next: +16% projectile damage.",
+    "title": "Sharp Tips",
+    "description": "+16% projectile damage",
     "icon": {
       "type": "item",
       "data": {
@@ -179,8 +179,8 @@
     "required_spent_points": 0
   },
   "sharp_tips_5": {
-    "title": "Sharp Tips (5/5)",
-    "description": "Now: +16% projectile damage. Next: +20% projectile damage (max).",
+    "title": "Sharp Tips",
+    "description": "+20% projectile damage",
     "icon": {
       "type": "item",
       "data": {
@@ -197,8 +197,8 @@
     "required_spent_points": 0
   },
   "quiver_care_1": {
-    "title": "Quiver Care (1/3)",
-    "description": "Now: nothing yet. Next: 8% to save ammo.",
+    "title": "Quiver Care",
+    "description": "8% to save ammo",
     "icon": {
       "type": "item",
       "data": {
@@ -215,8 +215,8 @@
     "required_spent_points": 0
   },
   "quiver_care_2": {
-    "title": "Quiver Care (2/3)",
-    "description": "Now: 8% to save ammo. Next: 16% to save ammo.",
+    "title": "Quiver Care",
+    "description": "16% to save ammo",
     "icon": {
       "type": "item",
       "data": {
@@ -233,8 +233,8 @@
     "required_spent_points": 0
   },
   "quiver_care_3": {
-    "title": "Quiver Care (3/3)",
-    "description": "Now: 16% to save ammo. Next: 24% to save ammo (max).",
+    "title": "Quiver Care",
+    "description": "24% to save ammo",
     "icon": {
       "type": "item",
       "data": {
@@ -268,8 +268,8 @@
     "required_spent_points": 5
   },
   "eagle_eye_1": {
-    "title": "Eagle Eye (1/3)",
-    "description": "Now: nothing yet. Next: +10% projectile speed and range. Needs Steady Hands (all ranks).",
+    "title": "Eagle Eye",
+    "description": "+10% projectile speed and range",
     "icon": {
       "type": "item",
       "data": {
@@ -283,11 +283,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "extra_description": "Needs Steady Hands (all ranks)."
   },
   "eagle_eye_2": {
-    "title": "Eagle Eye (2/3)",
-    "description": "Now: +10% projectile speed and range. Next: +20% projectile speed and range. Needs Steady Hands (all ranks).",
+    "title": "Eagle Eye",
+    "description": "+20% projectile speed and range",
     "icon": {
       "type": "item",
       "data": {
@@ -301,11 +302,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "extra_description": "Needs Steady Hands (all ranks)."
   },
   "eagle_eye_3": {
-    "title": "Eagle Eye (3/3)",
-    "description": "Now: +20% projectile speed and range. Next: +30% projectile speed and range (max). Needs Steady Hands (all ranks).",
+    "title": "Eagle Eye",
+    "description": "+30% projectile speed and range",
     "icon": {
       "type": "item",
       "data": {
@@ -319,11 +321,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "extra_description": "Needs Steady Hands (all ranks)."
   },
   "thrower_1": {
-    "title": "Thrower (1/3)",
-    "description": "Now: nothing yet. Next: Thrown weapons +8% damage.",
+    "title": "Thrower",
+    "description": "Thrown weapons +8% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -340,8 +343,8 @@
     "required_spent_points": 5
   },
   "thrower_2": {
-    "title": "Thrower (2/3)",
-    "description": "Now: Thrown weapons +8% damage. Next: Thrown weapons +16% damage.",
+    "title": "Thrower",
+    "description": "Thrown weapons +16% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -358,8 +361,8 @@
     "required_spent_points": 5
   },
   "thrower_3": {
-    "title": "Thrower (3/3)",
-    "description": "Now: Thrown weapons +16% damage. Next: Thrown weapons +24% damage (max).",
+    "title": "Thrower",
+    "description": "Thrown weapons +24% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -376,8 +379,8 @@
     "required_spent_points": 5
   },
   "skirmisher_1": {
-    "title": "Skirmisher (1/3)",
-    "description": "Now: nothing yet. Next: After a shot, +10% move speed for 2 s. (feeds Agility)",
+    "title": "Skirmisher",
+    "description": "After a shot, +10% move speed for 2 s",
     "icon": {
       "type": "item",
       "data": {
@@ -394,8 +397,8 @@
     "required_spent_points": 5
   },
   "skirmisher_2": {
-    "title": "Skirmisher (2/3)",
-    "description": "Now: After a shot, +10% move speed for 2 s. Next: After a shot, +20% move speed for 2 s. (feeds Agility)",
+    "title": "Skirmisher",
+    "description": "After a shot, +20% move speed for 2 s",
     "icon": {
       "type": "item",
       "data": {
@@ -412,8 +415,8 @@
     "required_spent_points": 5
   },
   "skirmisher_3": {
-    "title": "Skirmisher (3/3)",
-    "description": "Now: After a shot, +20% move speed for 2 s. Next: After a shot, +30% move speed for 2 s (max). (feeds Agility)",
+    "title": "Skirmisher",
+    "description": "After a shot, +30% move speed for 2 s",
     "icon": {
       "type": "item",
       "data": {
@@ -447,8 +450,8 @@
     "required_spent_points": 10
   },
   "rapid_volley_1": {
-    "title": "Rapid Volley (1/3)",
-    "description": "Now: nothing yet. Next: Draw and reload speed +15%. Pick one: this or Heavy Draw.",
+    "title": "Rapid Volley",
+    "description": "Draw and reload speed +15%",
     "icon": {
       "type": "item",
       "data": {
@@ -462,11 +465,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Heavy Draw."
   },
   "rapid_volley_2": {
-    "title": "Rapid Volley (2/3)",
-    "description": "Now: Draw and reload speed +15%. Next: Draw and reload speed +30%. Pick one: this or Heavy Draw.",
+    "title": "Rapid Volley",
+    "description": "Draw and reload speed +30%",
     "icon": {
       "type": "item",
       "data": {
@@ -480,11 +484,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Heavy Draw."
   },
   "rapid_volley_3": {
-    "title": "Rapid Volley (3/3)",
-    "description": "Now: Draw and reload speed +30%. Next: Draw and reload speed +45% (max). Pick one: this or Heavy Draw.",
+    "title": "Rapid Volley",
+    "description": "Draw and reload speed +45%",
     "icon": {
       "type": "item",
       "data": {
@@ -498,7 +503,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Heavy Draw."
   },
   "tier_3_or": {
     "title": "OR",
@@ -518,8 +524,8 @@
     "required_spent_points": 10
   },
   "heavy_draw_1": {
-    "title": "Heavy Draw (1/3)",
-    "description": "Now: nothing yet. Next: Damage +12%. Pick one: this or Rapid Volley.",
+    "title": "Heavy Draw",
+    "description": "Damage +12%",
     "icon": {
       "type": "item",
       "data": {
@@ -533,11 +539,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Rapid Volley."
   },
   "heavy_draw_2": {
-    "title": "Heavy Draw (2/3)",
-    "description": "Now: Damage +12%. Next: Damage +24%. Pick one: this or Rapid Volley.",
+    "title": "Heavy Draw",
+    "description": "Damage +24%",
     "icon": {
       "type": "item",
       "data": {
@@ -551,11 +558,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Rapid Volley."
   },
   "heavy_draw_3": {
-    "title": "Heavy Draw (3/3)",
-    "description": "Now: Damage +24%. Next: Damage +36% (max). Pick one: this or Rapid Volley.",
+    "title": "Heavy Draw",
+    "description": "Damage +36%",
     "icon": {
       "type": "item",
       "data": {
@@ -569,7 +577,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Rapid Volley."
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -589,8 +598,8 @@
     "required_spent_points": 15
   },
   "homing_arrows_1": {
-    "title": "Homing Arrows (1/3)",
-    "description": "Now: nothing yet. Next: 5%: arrows curve to the nearest hostile mob.",
+    "title": "Homing Arrows",
+    "description": "5%: arrows curve to the nearest hostile mob",
     "icon": {
       "type": "item",
       "data": {
@@ -607,8 +616,8 @@
     "required_spent_points": 15
   },
   "homing_arrows_2": {
-    "title": "Homing Arrows (2/3)",
-    "description": "Now: 5%: arrows curve to the nearest hostile mob. Next: 10%: arrows curve to the nearest hostile mob.",
+    "title": "Homing Arrows",
+    "description": "10%: arrows curve to the nearest hostile mob",
     "icon": {
       "type": "item",
       "data": {
@@ -625,8 +634,8 @@
     "required_spent_points": 15
   },
   "homing_arrows_3": {
-    "title": "Homing Arrows (3/3)",
-    "description": "Now: 10%: arrows curve to the nearest hostile mob. Next: 15%: arrows curve to the nearest hostile mob (max).",
+    "title": "Homing Arrows",
+    "description": "15%: arrows curve to the nearest hostile mob",
     "icon": {
       "type": "item",
       "data": {
@@ -643,8 +652,8 @@
     "required_spent_points": 15
   },
   "falconer_1": {
-    "title": "Falconer (1/3)",
-    "description": "Now: nothing yet. Next: Your pets attack what you shoot, +5% pet damage. (feeds Taming)",
+    "title": "Falconer",
+    "description": "Your pets attack what you shoot, +5% pet damage",
     "icon": {
       "type": "item",
       "data": {
@@ -661,8 +670,8 @@
     "required_spent_points": 15
   },
   "falconer_2": {
-    "title": "Falconer (2/3)",
-    "description": "Now: Your pets attack what you shoot, +5% pet damage. Next: Your pets attack what you shoot, +10% pet damage. (feeds Taming)",
+    "title": "Falconer",
+    "description": "Your pets attack what you shoot, +10% pet damage",
     "icon": {
       "type": "item",
       "data": {
@@ -679,8 +688,8 @@
     "required_spent_points": 15
   },
   "falconer_3": {
-    "title": "Falconer (3/3)",
-    "description": "Now: Your pets attack what you shoot, +10% pet damage. Next: Your pets attack what you shoot, +15% pet damage (max). (feeds Taming)",
+    "title": "Falconer",
+    "description": "Your pets attack what you shoot, +15% pet damage",
     "icon": {
       "type": "item",
       "data": {
@@ -697,8 +706,8 @@
     "required_spent_points": 15
   },
   "arcane_arrows_1": {
-    "title": "Arcane Arrows (1/3)",
-    "description": "Now: nothing yet. Next: Full-draw shots spend 5 mana for +15% magic damage. (feeds Magic)",
+    "title": "Arcane Arrows",
+    "description": "Full-draw shots spend 5 mana for +15% magic damage",
     "icon": {
       "type": "item",
       "data": {
@@ -715,8 +724,8 @@
     "required_spent_points": 15
   },
   "arcane_arrows_2": {
-    "title": "Arcane Arrows (2/3)",
-    "description": "Now: Full-draw shots spend 5 mana for +15% magic damage. Next: Full-draw shots spend 10 mana for +15% magic damage. (feeds Magic)",
+    "title": "Arcane Arrows",
+    "description": "Full-draw shots spend 10 mana for +15% magic damage",
     "icon": {
       "type": "item",
       "data": {
@@ -733,8 +742,8 @@
     "required_spent_points": 15
   },
   "arcane_arrows_3": {
-    "title": "Arcane Arrows (3/3)",
-    "description": "Now: Full-draw shots spend 10 mana for +15% magic damage. Next: Full-draw shots spend 15 mana for +15% magic damage (max). (feeds Magic)",
+    "title": "Arcane Arrows",
+    "description": "Full-draw shots spend 15 mana for +15% magic damage",
     "icon": {
       "type": "item",
       "data": {
@@ -751,8 +760,8 @@
     "required_spent_points": 15
   },
   "multishot_1": {
-    "title": "Multishot (1/3)",
-    "description": "Now: nothing yet. Next: 10% to fire two extra arrows for the cost of one.",
+    "title": "Multishot",
+    "description": "10% to fire two extra arrows for the cost of one",
     "icon": {
       "type": "item",
       "data": {
@@ -769,8 +778,8 @@
     "required_spent_points": 15
   },
   "multishot_2": {
-    "title": "Multishot (2/3)",
-    "description": "Now: 10% to fire two extra arrows for the cost of one. Next: 20% to fire two extra arrows for the cost of one.",
+    "title": "Multishot",
+    "description": "20% to fire two extra arrows for the cost of one",
     "icon": {
       "type": "item",
       "data": {
@@ -787,8 +796,8 @@
     "required_spent_points": 15
   },
   "multishot_3": {
-    "title": "Multishot (3/3)",
-    "description": "Now: 20% to fire two extra arrows for the cost of one. Next: 30% to fire two extra arrows for the cost of one (max).",
+    "title": "Multishot",
+    "description": "30% to fire two extra arrows for the cost of one",
     "icon": {
       "type": "item",
       "data": {
@@ -805,8 +814,8 @@
     "required_spent_points": 15
   },
   "retriever_1": {
-    "title": "Retriever (1/2)",
-    "description": "Rank 1/2: Thrown weapons may return to you",
+    "title": "Retriever",
+    "description": "Thrown weapons may return to you",
     "icon": {
       "type": "item",
       "data": {
@@ -823,8 +832,8 @@
     "required_spent_points": 15
   },
   "retriever_2": {
-    "title": "Retriever (2/2)",
-    "description": "Rank 2/2: Thrown weapons may return to you",
+    "title": "Retriever",
+    "description": "Thrown weapons may return to you",
     "icon": {
       "type": "item",
       "data": {
@@ -858,8 +867,8 @@
     "required_spent_points": 25
   },
   "quiver_care_ii_1": {
-    "title": "Quiver Care II (1/3)",
-    "description": "Rank 1/3: More ammo saving Needs Quiver Care (all ranks).",
+    "title": "Quiver Care II",
+    "description": "More ammo saving",
     "icon": {
       "type": "item",
       "data": {
@@ -873,11 +882,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Needs Quiver Care (all ranks)."
   },
   "quiver_care_ii_2": {
-    "title": "Quiver Care II (2/3)",
-    "description": "Rank 2/3: More ammo saving Needs Quiver Care (all ranks).",
+    "title": "Quiver Care II",
+    "description": "More ammo saving",
     "icon": {
       "type": "item",
       "data": {
@@ -891,11 +901,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Needs Quiver Care (all ranks)."
   },
   "quiver_care_ii_3": {
-    "title": "Quiver Care II (3/3)",
-    "description": "Rank 3/3: More ammo saving Needs Quiver Care (all ranks).",
+    "title": "Quiver Care II",
+    "description": "More ammo saving",
     "icon": {
       "type": "item",
       "data": {
@@ -909,11 +920,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Needs Quiver Care (all ranks)."
   },
   "fletchers_luck_1": {
     "title": "Fletcher's Luck",
-    "description": "30% save ammo; arrows sometimes drop back on hit Pick one: this or Seeker.",
+    "description": "30% save ammo; arrows sometimes drop back on hit",
     "icon": {
       "type": "item",
       "data": {
@@ -927,7 +939,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Seeker."
   },
   "tier_5_or": {
     "title": "OR",
@@ -948,7 +961,7 @@
   },
   "seeker_1": {
     "title": "Seeker",
-    "description": "Homing chance x3 and precision crits Pick one: this or Fletcher's Luck.",
+    "description": "Homing chance x3 and precision crits",
     "icon": {
       "type": "item",
       "data": {
@@ -962,6 +975,7 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Fletcher's Luck."
   }
 }

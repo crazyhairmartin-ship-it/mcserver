@@ -50,28 +50,25 @@ def effect_at(match, amount):
 
 
 def rank_text(node, k):
-    """What rank k's tooltip says: what you have with k-1 ranks, and what rank k adds."""
-    if node['r'] == 1:
-        return node['d']
+    """The effect a node has with k ranks, e.g. '+8% mining speed' for Stone Sense rank 2.
+
+    The add-on's tooltip shows the owned rank's text in white and the next rank's in grey.
+    """
     m = PER_RANK.match(node['d'])
-    if not m:
-        return f'Rank {k}/{node["r"]}: {node["d"]}'
-    step = float(m['num'])
-    now = 'nothing yet' if k == 1 else effect_at(m, step * (k - 1))
-    nxt = effect_at(m, step * k) + (' (max)' if k == node['r'] else '')
-    return f'Now: {now}. Next: {nxt}.'
+    if node['r'] == 1 or not m:
+        return node['d']
+    return effect_at(m, float(m['num']) * k)
 
 
-def description(node, k, tree):
-    text = rank_text(node, k)
+def extras(node, tree):
+    """Extra tooltip line: choice partner and prerequisite (shown in its own colour by the add-on)."""
+    parts = []
     if node['b']:
         others = [o['name'] for o in tree['nodes'] if o['t'] == node['t'] and o['b'] and o['b'] != node['b']]
-        text += f' Pick one: this or {" / ".join(others)}.'
-    if node['syn']:
-        text += f' (feeds {node["syn"]})'
+        parts.append(f'Pick one: this or {" / ".join(others)}.')
     if node['needs']:
-        text += f' Needs {node["needs"]} (all ranks).'
-    return text
+        parts.append(f'Needs {node["needs"]} (all ranks).')
+    return ' '.join(parts)
 
 
 def marker(title, text, texture, req):
@@ -119,13 +116,15 @@ def build_category(tree, tiers):
             ids = rank_ids(n)
             for k, sid in enumerate(ids, start=1):
                 definitions[sid] = {
-                    'title': n['name'] + (f' ({k}/{n["r"]})' if n['r'] > 1 else ''),
-                    'description': description(n, k, tree),
+                    'title': n['name'],
+                    'description': rank_text(n, k),
                     'icon': {'type': 'item', 'data': {'item': icons.get(base_name(n['name']), tree['icon'])}},
                     'frame': frame(n),
                     'cost': n['c'],
                     'required_spent_points': req[n['t']],
                 }
+                if extras(n, tree):
+                    definitions[sid]['extra_description'] = extras(n, tree)
                 skills[sid] = {'x': x, 'y': y, 'definition': sid}
                 if k == 1 and not n['needs']:
                     skills[sid]['root'] = True

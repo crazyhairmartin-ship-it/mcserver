@@ -17,8 +17,8 @@
     "required_spent_points": 0
   },
   "sharpened_1": {
-    "title": "Sharpened (1/5)",
-    "description": "Now: nothing yet. Next: +0.3 attack damage.",
+    "title": "Sharpened",
+    "description": "+0.3 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -35,8 +35,8 @@
     "required_spent_points": 0
   },
   "sharpened_2": {
-    "title": "Sharpened (2/5)",
-    "description": "Now: +0.3 attack damage. Next: +0.6 attack damage.",
+    "title": "Sharpened",
+    "description": "+0.6 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -53,8 +53,8 @@
     "required_spent_points": 0
   },
   "sharpened_3": {
-    "title": "Sharpened (3/5)",
-    "description": "Now: +0.6 attack damage. Next: +0.9 attack damage.",
+    "title": "Sharpened",
+    "description": "+0.9 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -71,8 +71,8 @@
     "required_spent_points": 0
   },
   "sharpened_4": {
-    "title": "Sharpened (4/5)",
-    "description": "Now: +0.9 attack damage. Next: +1.2 attack damage.",
+    "title": "Sharpened",
+    "description": "+1.2 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -89,8 +89,8 @@
     "required_spent_points": 0
   },
   "sharpened_5": {
-    "title": "Sharpened (5/5)",
-    "description": "Now: +1.2 attack damage. Next: +1.5 attack damage (max).",
+    "title": "Sharpened",
+    "description": "+1.5 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -107,8 +107,8 @@
     "required_spent_points": 0
   },
   "footwork_1": {
-    "title": "Footwork (1/5)",
-    "description": "Now: nothing yet. Next: +2% move speed in combat.",
+    "title": "Footwork",
+    "description": "+2% move speed in combat",
     "icon": {
       "type": "item",
       "data": {
@@ -125,8 +125,8 @@
     "required_spent_points": 0
   },
   "footwork_2": {
-    "title": "Footwork (2/5)",
-    "description": "Now: +2% move speed in combat. Next: +4% move speed in combat.",
+    "title": "Footwork",
+    "description": "+4% move speed in combat",
     "icon": {
       "type": "item",
       "data": {
@@ -143,8 +143,8 @@
     "required_spent_points": 0
   },
   "footwork_3": {
-    "title": "Footwork (3/5)",
-    "description": "Now: +4% move speed in combat. Next: +6% move speed in combat.",
+    "title": "Footwork",
+    "description": "+6% move speed in combat",
     "icon": {
       "type": "item",
       "data": {
@@ -161,8 +161,8 @@
     "required_spent_points": 0
   },
   "footwork_4": {
-    "title": "Footwork (4/5)",
-    "description": "Now: +6% move speed in combat. Next: +8% move speed in combat.",
+    "title": "Footwork",
+    "description": "+8% move speed in combat",
     "icon": {
       "type": "item",
       "data": {
@@ -179,8 +179,8 @@
     "required_spent_points": 0
   },
   "footwork_5": {
-    "title": "Footwork (5/5)",
-    "description": "Now: +8% move speed in combat. Next: +10% move speed in combat (max).",
+    "title": "Footwork",
+    "description": "+10% move speed in combat",
     "icon": {
       "type": "item",
       "data": {
@@ -197,8 +197,8 @@
     "required_spent_points": 0
   },
   "butcher_1": {
-    "title": "Butcher (1/3)",
-    "description": "Now: nothing yet. Next: Animal kills drop 10% more meat and leather. (feeds Cooking)",
+    "title": "Butcher",
+    "description": "Animal kills drop 10% more meat and leather",
     "icon": {
       "type": "item",
       "data": {
@@ -215,8 +215,8 @@
     "required_spent_points": 0
   },
   "butcher_2": {
-    "title": "Butcher (2/3)",
-    "description": "Now: Animal kills drop 10% more meat and leather. Next: Animal kills drop 20% more meat and leather. (feeds Cooking)",
+    "title": "Butcher",
+    "description": "Animal kills drop 20% more meat and leather",
     "icon": {
       "type": "item",
       "data": {
@@ -233,8 +233,8 @@
     "required_spent_points": 0
   },
   "butcher_3": {
-    "title": "Butcher (3/3)",
-    "description": "Now: Animal kills drop 20% more meat and leather. Next: Animal kills drop 30% more meat and leather (max). (feeds Cooking)",
+    "title": "Butcher",
+    "description": "Animal kills drop 30% more meat and leather",
     "icon": {
       "type": "item",
       "data": {
@@ -268,8 +268,8 @@
     "required_spent_points": 5
   },
   "crit_training_1": {
-    "title": "Crit Training (1/5)",
-    "description": "Now: nothing yet. Next: +5% crit damage.",
+    "title": "Crit Training",
+    "description": "+5% crit damage",
     "icon": {
       "type": "item",
       "data": {
@@ -286,8 +286,8 @@
     "required_spent_points": 5
   },
   "crit_training_2": {
-    "title": "Crit Training (2/5)",
-    "description": "Now: +5% crit damage. Next: +10% crit damage.",
+    "title": "Crit Training",
+    "description": "+10% crit damage",
     "icon": {
       "type": "item",
       "data": {
@@ -304,8 +304,8 @@
     "required_spent_points": 5
   },
   "crit_training_3": {
-    "title": "Crit Training (3/5)",
-    "description": "Now: +10% crit damage. Next: +15% crit damage.",
+    "title": "Crit Training",
+    "description": "+15% crit damage",
     "icon": {
       "type": "item",
       "data": {
@@ -322,8 +322,8 @@
     "required_spent_points": 5
   },
   "crit_training_4": {
-    "title": "Crit Training (4/5)",
-    "description": "Now: +15% crit damage. Next: +20% crit damage.",
+    "title": "Crit Training",
+    "description": "+20% crit damage",
     "icon": {
       "type": "item",
       "data": {
@@ -340,8 +340,8 @@
     "required_spent_points": 5
   },
   "crit_training_5": {
-    "title": "Crit Training (5/5)",
-    "description": "Now: +20% crit damage. Next: +25% crit damage (max).",
+    "title": "Crit Training",
+    "description": "+25% crit damage",
     "icon": {
       "type": "item",
       "data": {
@@ -358,8 +358,8 @@
     "required_spent_points": 5
   },
   "spellblade_1": {
-    "title": "Spellblade (1/3)",
-    "description": "Now: nothing yet. Next: Melee hits restore 1 mana. (feeds Magic)",
+    "title": "Spellblade",
+    "description": "Melee hits restore 1 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -376,8 +376,8 @@
     "required_spent_points": 5
   },
   "spellblade_2": {
-    "title": "Spellblade (2/3)",
-    "description": "Now: Melee hits restore 1 mana. Next: Melee hits restore 2 mana. (feeds Magic)",
+    "title": "Spellblade",
+    "description": "Melee hits restore 2 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -394,8 +394,8 @@
     "required_spent_points": 5
   },
   "spellblade_3": {
-    "title": "Spellblade (3/3)",
-    "description": "Now: Melee hits restore 2 mana. Next: Melee hits restore 3 mana (max). (feeds Magic)",
+    "title": "Spellblade",
+    "description": "Melee hits restore 3 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -412,8 +412,8 @@
     "required_spent_points": 5
   },
   "momentum_1": {
-    "title": "Momentum (1/2)",
-    "description": "Rank 1/2: Hits in a row +5% damage (stacks 3)",
+    "title": "Momentum",
+    "description": "Hits in a row +5% damage (stacks 3)",
     "icon": {
       "type": "item",
       "data": {
@@ -430,8 +430,8 @@
     "required_spent_points": 5
   },
   "momentum_2": {
-    "title": "Momentum (2/2)",
-    "description": "Rank 2/2: Hits in a row +5% damage (stacks 3)",
+    "title": "Momentum",
+    "description": "Hits in a row +5% damage (stacks 3)",
     "icon": {
       "type": "item",
       "data": {
@@ -465,8 +465,8 @@
     "required_spent_points": 10
   },
   "heavy_arms_1": {
-    "title": "Heavy Arms (1/3)",
-    "description": "Now: nothing yet. Next: Two-handed weapons +10% damage. Pick one: this or Duelist.",
+    "title": "Heavy Arms",
+    "description": "Two-handed weapons +10% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -480,11 +480,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Duelist."
   },
   "heavy_arms_2": {
-    "title": "Heavy Arms (2/3)",
-    "description": "Now: Two-handed weapons +10% damage. Next: Two-handed weapons +20% damage. Pick one: this or Duelist.",
+    "title": "Heavy Arms",
+    "description": "Two-handed weapons +20% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -498,11 +499,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Duelist."
   },
   "heavy_arms_3": {
-    "title": "Heavy Arms (3/3)",
-    "description": "Now: Two-handed weapons +20% damage. Next: Two-handed weapons +30% damage (max). Pick one: this or Duelist.",
+    "title": "Heavy Arms",
+    "description": "Two-handed weapons +30% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -516,7 +518,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Duelist."
   },
   "tier_3_or": {
     "title": "OR",
@@ -536,8 +539,8 @@
     "required_spent_points": 10
   },
   "duelist_1": {
-    "title": "Duelist (1/3)",
-    "description": "Now: nothing yet. Next: Daggers, rapiers and swords +8% attack speed. Pick one: this or Heavy Arms.",
+    "title": "Duelist",
+    "description": "Daggers, rapiers and swords +8% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -551,11 +554,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Heavy Arms."
   },
   "duelist_2": {
-    "title": "Duelist (2/3)",
-    "description": "Now: Daggers, rapiers and swords +8% attack speed. Next: Daggers, rapiers and swords +16% attack speed. Pick one: this or Heavy Arms.",
+    "title": "Duelist",
+    "description": "Daggers, rapiers and swords +16% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -569,11 +573,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Heavy Arms."
   },
   "duelist_3": {
-    "title": "Duelist (3/3)",
-    "description": "Now: Daggers, rapiers and swords +16% attack speed. Next: Daggers, rapiers and swords +24% attack speed (max). Pick one: this or Heavy Arms.",
+    "title": "Duelist",
+    "description": "Daggers, rapiers and swords +24% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -587,7 +592,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Heavy Arms."
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -607,8 +613,8 @@
     "required_spent_points": 15
   },
   "sharpened_ii_1": {
-    "title": "Sharpened II (1/5)",
-    "description": "Now: nothing yet. Next: +0.3 attack damage. Needs Sharpened (all ranks).",
+    "title": "Sharpened II",
+    "description": "+0.3 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -622,11 +628,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Sharpened (all ranks)."
   },
   "sharpened_ii_2": {
-    "title": "Sharpened II (2/5)",
-    "description": "Now: +0.3 attack damage. Next: +0.6 attack damage. Needs Sharpened (all ranks).",
+    "title": "Sharpened II",
+    "description": "+0.6 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -640,11 +647,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Sharpened (all ranks)."
   },
   "sharpened_ii_3": {
-    "title": "Sharpened II (3/5)",
-    "description": "Now: +0.6 attack damage. Next: +0.9 attack damage. Needs Sharpened (all ranks).",
+    "title": "Sharpened II",
+    "description": "+0.9 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -658,11 +666,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Sharpened (all ranks)."
   },
   "sharpened_ii_4": {
-    "title": "Sharpened II (4/5)",
-    "description": "Now: +0.9 attack damage. Next: +1.2 attack damage. Needs Sharpened (all ranks).",
+    "title": "Sharpened II",
+    "description": "+1.2 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -676,11 +685,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Sharpened (all ranks)."
   },
   "sharpened_ii_5": {
-    "title": "Sharpened II (5/5)",
-    "description": "Now: +1.2 attack damage. Next: +1.5 attack damage (max). Needs Sharpened (all ranks).",
+    "title": "Sharpened II",
+    "description": "+1.5 attack damage",
     "icon": {
       "type": "item",
       "data": {
@@ -694,11 +704,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Sharpened (all ranks)."
   },
   "hunters_mark_1": {
-    "title": "Hunter's Mark (1/3)",
-    "description": "Now: nothing yet. Next: Melee hits mark a target: your arrows deal +5% to it. (feeds Range)",
+    "title": "Hunter's Mark",
+    "description": "Melee hits mark a target: your arrows deal +5% to it",
     "icon": {
       "type": "item",
       "data": {
@@ -715,8 +726,8 @@
     "required_spent_points": 15
   },
   "hunters_mark_2": {
-    "title": "Hunter's Mark (2/3)",
-    "description": "Now: Melee hits mark a target: your arrows deal +5% to it. Next: Melee hits mark a target: your arrows deal +10% to it. (feeds Range)",
+    "title": "Hunter's Mark",
+    "description": "Melee hits mark a target: your arrows deal +10% to it",
     "icon": {
       "type": "item",
       "data": {
@@ -733,8 +744,8 @@
     "required_spent_points": 15
   },
   "hunters_mark_3": {
-    "title": "Hunter's Mark (3/3)",
-    "description": "Now: Melee hits mark a target: your arrows deal +10% to it. Next: Melee hits mark a target: your arrows deal +15% to it (max). (feeds Range)",
+    "title": "Hunter's Mark",
+    "description": "Melee hits mark a target: your arrows deal +15% to it",
     "icon": {
       "type": "item",
       "data": {
@@ -751,8 +762,8 @@
     "required_spent_points": 15
   },
   "shield_bash_1": {
-    "title": "Shield Bash (1/3)",
-    "description": "Now: nothing yet. Next: Hitting right after a block deals +20% damage. (feeds Defense)",
+    "title": "Shield Bash",
+    "description": "Hitting right after a block deals +20% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -769,8 +780,8 @@
     "required_spent_points": 15
   },
   "shield_bash_2": {
-    "title": "Shield Bash (2/3)",
-    "description": "Now: Hitting right after a block deals +20% damage. Next: Hitting right after a block deals +40% damage. (feeds Defense)",
+    "title": "Shield Bash",
+    "description": "Hitting right after a block deals +40% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -787,8 +798,8 @@
     "required_spent_points": 15
   },
   "shield_bash_3": {
-    "title": "Shield Bash (3/3)",
-    "description": "Now: Hitting right after a block deals +40% damage. Next: Hitting right after a block deals +60% damage (max). (feeds Defense)",
+    "title": "Shield Bash",
+    "description": "Hitting right after a block deals +60% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -805,8 +816,8 @@
     "required_spent_points": 15
   },
   "executioner_1": {
-    "title": "Executioner (1/2)",
-    "description": "Rank 1/2: +15% damage to mobs under 30% health",
+    "title": "Executioner",
+    "description": "+15% damage to mobs under 30% health",
     "icon": {
       "type": "item",
       "data": {
@@ -823,8 +834,8 @@
     "required_spent_points": 15
   },
   "executioner_2": {
-    "title": "Executioner (2/2)",
-    "description": "Rank 2/2: +15% damage to mobs under 30% health",
+    "title": "Executioner",
+    "description": "+15% damage to mobs under 30% health",
     "icon": {
       "type": "item",
       "data": {
@@ -858,8 +869,8 @@
     "required_spent_points": 25
   },
   "lifeline_1": {
-    "title": "Lifeline (1/2)",
-    "description": "Rank 1/2: Crits heal half a heart",
+    "title": "Lifeline",
+    "description": "Crits heal half a heart",
     "icon": {
       "type": "item",
       "data": {
@@ -876,8 +887,8 @@
     "required_spent_points": 25
   },
   "lifeline_2": {
-    "title": "Lifeline (2/2)",
-    "description": "Rank 2/2: Crits heal half a heart",
+    "title": "Lifeline",
+    "description": "Crits heal half a heart",
     "icon": {
       "type": "item",
       "data": {
@@ -895,7 +906,7 @@
   },
   "cleave_1": {
     "title": "Cleave",
-    "description": "Two-handed hits splash 30% to nearby mobs Pick one: this or Flurry.",
+    "description": "Two-handed hits splash 30% to nearby mobs",
     "icon": {
       "type": "item",
       "data": {
@@ -909,7 +920,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Flurry."
   },
   "tier_5_or": {
     "title": "OR",
@@ -930,7 +942,7 @@
   },
   "flurry_1": {
     "title": "Flurry",
-    "description": "Every 5th fast hit strikes twice Pick one: this or Cleave.",
+    "description": "Every 5th fast hit strikes twice",
     "icon": {
       "type": "item",
       "data": {
@@ -944,6 +956,7 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Cleave."
   }
 }

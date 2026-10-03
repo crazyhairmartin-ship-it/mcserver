@@ -17,8 +17,8 @@
     "required_spent_points": 0
   },
   "stone_sense_1": {
-    "title": "Stone Sense (1/5)",
-    "description": "Now: nothing yet. Next: +4% mining speed.",
+    "title": "Stone Sense",
+    "description": "+4% mining speed",
     "icon": {
       "type": "item",
       "data": {
@@ -35,8 +35,8 @@
     "required_spent_points": 0
   },
   "stone_sense_2": {
-    "title": "Stone Sense (2/5)",
-    "description": "Now: +4% mining speed. Next: +8% mining speed.",
+    "title": "Stone Sense",
+    "description": "+8% mining speed",
     "icon": {
       "type": "item",
       "data": {
@@ -53,8 +53,8 @@
     "required_spent_points": 0
   },
   "stone_sense_3": {
-    "title": "Stone Sense (3/5)",
-    "description": "Now: +8% mining speed. Next: +12% mining speed.",
+    "title": "Stone Sense",
+    "description": "+12% mining speed",
     "icon": {
       "type": "item",
       "data": {
@@ -71,8 +71,8 @@
     "required_spent_points": 0
   },
   "stone_sense_4": {
-    "title": "Stone Sense (4/5)",
-    "description": "Now: +12% mining speed. Next: +16% mining speed.",
+    "title": "Stone Sense",
+    "description": "+16% mining speed",
     "icon": {
       "type": "item",
       "data": {
@@ -89,8 +89,8 @@
     "required_spent_points": 0
   },
   "stone_sense_5": {
-    "title": "Stone Sense (5/5)",
-    "description": "Now: +16% mining speed. Next: +20% mining speed (max).",
+    "title": "Stone Sense",
+    "description": "+20% mining speed",
     "icon": {
       "type": "item",
       "data": {
@@ -107,8 +107,8 @@
     "required_spent_points": 0
   },
   "steady_pick_1": {
-    "title": "Steady Pick (1/3)",
-    "description": "Now: nothing yet. Next: 5% to save pickaxe durability.",
+    "title": "Steady Pick",
+    "description": "5% to save pickaxe durability",
     "icon": {
       "type": "item",
       "data": {
@@ -125,8 +125,8 @@
     "required_spent_points": 0
   },
   "steady_pick_2": {
-    "title": "Steady Pick (2/3)",
-    "description": "Now: 5% to save pickaxe durability. Next: 10% to save pickaxe durability.",
+    "title": "Steady Pick",
+    "description": "10% to save pickaxe durability",
     "icon": {
       "type": "item",
       "data": {
@@ -143,8 +143,8 @@
     "required_spent_points": 0
   },
   "steady_pick_3": {
-    "title": "Steady Pick (3/3)",
-    "description": "Now: 10% to save pickaxe durability. Next: 15% to save pickaxe durability (max).",
+    "title": "Steady Pick",
+    "description": "15% to save pickaxe durability",
     "icon": {
       "type": "item",
       "data": {
@@ -161,8 +161,8 @@
     "required_spent_points": 0
   },
   "miners_might_1": {
-    "title": "Miner's Might (1/5)",
-    "description": "Now: nothing yet. Next: +0.3 damage with pickaxes, hammers and maces. (feeds Attack)",
+    "title": "Miner's Might",
+    "description": "+0.3 damage with pickaxes, hammers and maces",
     "icon": {
       "type": "item",
       "data": {
@@ -179,8 +179,8 @@
     "required_spent_points": 0
   },
   "miners_might_2": {
-    "title": "Miner's Might (2/5)",
-    "description": "Now: +0.3 damage with pickaxes, hammers and maces. Next: +0.6 damage with pickaxes, hammers and maces. (feeds Attack)",
+    "title": "Miner's Might",
+    "description": "+0.6 damage with pickaxes, hammers and maces",
     "icon": {
       "type": "item",
       "data": {
@@ -197,8 +197,8 @@
     "required_spent_points": 0
   },
   "miners_might_3": {
-    "title": "Miner's Might (3/5)",
-    "description": "Now: +0.6 damage with pickaxes, hammers and maces. Next: +0.9 damage with pickaxes, hammers and maces. (feeds Attack)",
+    "title": "Miner's Might",
+    "description": "+0.9 damage with pickaxes, hammers and maces",
     "icon": {
       "type": "item",
       "data": {
@@ -215,8 +215,8 @@
     "required_spent_points": 0
   },
   "miners_might_4": {
-    "title": "Miner's Might (4/5)",
-    "description": "Now: +0.9 damage with pickaxes, hammers and maces. Next: +1.2 damage with pickaxes, hammers and maces. (feeds Attack)",
+    "title": "Miner's Might",
+    "description": "+1.2 damage with pickaxes, hammers and maces",
     "icon": {
       "type": "item",
       "data": {
@@ -233,8 +233,8 @@
     "required_spent_points": 0
   },
   "miners_might_5": {
-    "title": "Miner's Might (5/5)",
-    "description": "Now: +1.2 damage with pickaxes, hammers and maces. Next: +1.5 damage with pickaxes, hammers and maces (max). (feeds Attack)",
+    "title": "Miner's Might",
+    "description": "+1.5 damage with pickaxes, hammers and maces",
     "icon": {
       "type": "item",
       "data": {
@@ -268,8 +268,8 @@
     "required_spent_points": 5
   },
   "prospector_1": {
-    "title": "Prospector (1/5)",
-    "description": "Now: nothing yet. Next: 3% extra ore drops.",
+    "title": "Prospector",
+    "description": "3% extra ore drops",
     "icon": {
       "type": "item",
       "data": {
@@ -286,8 +286,8 @@
     "required_spent_points": 5
   },
   "prospector_2": {
-    "title": "Prospector (2/5)",
-    "description": "Now: 3% extra ore drops. Next: 6% extra ore drops.",
+    "title": "Prospector",
+    "description": "6% extra ore drops",
     "icon": {
       "type": "item",
       "data": {
@@ -304,8 +304,8 @@
     "required_spent_points": 5
   },
   "prospector_3": {
-    "title": "Prospector (3/5)",
-    "description": "Now: 6% extra ore drops. Next: 9% extra ore drops.",
+    "title": "Prospector",
+    "description": "9% extra ore drops",
     "icon": {
       "type": "item",
       "data": {
@@ -322,8 +322,8 @@
     "required_spent_points": 5
   },
   "prospector_4": {
-    "title": "Prospector (4/5)",
-    "description": "Now: 9% extra ore drops. Next: 12% extra ore drops.",
+    "title": "Prospector",
+    "description": "12% extra ore drops",
     "icon": {
       "type": "item",
       "data": {
@@ -340,8 +340,8 @@
     "required_spent_points": 5
   },
   "prospector_5": {
-    "title": "Prospector (5/5)",
-    "description": "Now: 12% extra ore drops. Next: 15% extra ore drops (max).",
+    "title": "Prospector",
+    "description": "15% extra ore drops",
     "icon": {
       "type": "item",
       "data": {
@@ -358,8 +358,8 @@
     "required_spent_points": 5
   },
   "stonehide_1": {
-    "title": "Stonehide (1/3)",
-    "description": "Now: nothing yet. Next: Mining grants +1 armour for 30 s. (feeds Defense)",
+    "title": "Stonehide",
+    "description": "Mining grants +1 armour for 30 s",
     "icon": {
       "type": "item",
       "data": {
@@ -376,8 +376,8 @@
     "required_spent_points": 5
   },
   "stonehide_2": {
-    "title": "Stonehide (2/3)",
-    "description": "Now: Mining grants +1 armour for 30 s. Next: Mining grants +2 armour for 30 s. (feeds Defense)",
+    "title": "Stonehide",
+    "description": "Mining grants +2 armour for 30 s",
     "icon": {
       "type": "item",
       "data": {
@@ -394,8 +394,8 @@
     "required_spent_points": 5
   },
   "stonehide_3": {
-    "title": "Stonehide (3/3)",
-    "description": "Now: Mining grants +2 armour for 30 s. Next: Mining grants +3 armour for 30 s (max). (feeds Defense)",
+    "title": "Stonehide",
+    "description": "Mining grants +3 armour for 30 s",
     "icon": {
       "type": "item",
       "data": {
@@ -412,8 +412,8 @@
     "required_spent_points": 5
   },
   "deep_delver_1": {
-    "title": "Deep Delver (1/2)",
-    "description": "Now: nothing yet. Next: +5% damage below Y 40. (feeds Attack)",
+    "title": "Deep Delver",
+    "description": "+5% damage below Y 40",
     "icon": {
       "type": "item",
       "data": {
@@ -430,8 +430,8 @@
     "required_spent_points": 5
   },
   "deep_delver_2": {
-    "title": "Deep Delver (2/2)",
-    "description": "Now: +5% damage below Y 40. Next: +10% damage below Y 40 (max). (feeds Attack)",
+    "title": "Deep Delver",
+    "description": "+10% damage below Y 40",
     "icon": {
       "type": "item",
       "data": {
@@ -465,8 +465,8 @@
     "required_spent_points": 10
   },
   "smelter_1": {
-    "title": "Smelter (1/3)",
-    "description": "Rank 1/3: Ores auto-smelt: 15%, +10% per extra rank Pick one: this or Gem Focus.",
+    "title": "Smelter",
+    "description": "Ores auto-smelt: 15%, +10% per extra rank",
     "icon": {
       "type": "item",
       "data": {
@@ -480,11 +480,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Gem Focus."
   },
   "smelter_2": {
-    "title": "Smelter (2/3)",
-    "description": "Rank 2/3: Ores auto-smelt: 15%, +10% per extra rank Pick one: this or Gem Focus.",
+    "title": "Smelter",
+    "description": "Ores auto-smelt: 15%, +10% per extra rank",
     "icon": {
       "type": "item",
       "data": {
@@ -498,11 +499,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Gem Focus."
   },
   "smelter_3": {
-    "title": "Smelter (3/3)",
-    "description": "Rank 3/3: Ores auto-smelt: 15%, +10% per extra rank Pick one: this or Gem Focus.",
+    "title": "Smelter",
+    "description": "Ores auto-smelt: 15%, +10% per extra rank",
     "icon": {
       "type": "item",
       "data": {
@@ -516,7 +518,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Gem Focus."
   },
   "tier_3_or": {
     "title": "OR",
@@ -536,8 +539,8 @@
     "required_spent_points": 10
   },
   "gem_focus_1": {
-    "title": "Gem Focus (1/3)",
-    "description": "Now: nothing yet. Next: Each gem type you carry gives +2% spell power. Pick one: this or Smelter. (feeds Magic)",
+    "title": "Gem Focus",
+    "description": "Each gem type you carry gives +2% spell power",
     "icon": {
       "type": "item",
       "data": {
@@ -551,11 +554,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Smelter."
   },
   "gem_focus_2": {
-    "title": "Gem Focus (2/3)",
-    "description": "Now: Each gem type you carry gives +2% spell power. Next: Each gem type you carry gives +4% spell power. Pick one: this or Smelter. (feeds Magic)",
+    "title": "Gem Focus",
+    "description": "Each gem type you carry gives +4% spell power",
     "icon": {
       "type": "item",
       "data": {
@@ -569,11 +573,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Smelter."
   },
   "gem_focus_3": {
-    "title": "Gem Focus (3/3)",
-    "description": "Now: Each gem type you carry gives +4% spell power. Next: Each gem type you carry gives +6% spell power (max). Pick one: this or Smelter. (feeds Magic)",
+    "title": "Gem Focus",
+    "description": "Each gem type you carry gives +6% spell power",
     "icon": {
       "type": "item",
       "data": {
@@ -587,7 +592,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Smelter."
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -607,8 +613,8 @@
     "required_spent_points": 15
   },
   "prospector_ii_1": {
-    "title": "Prospector II (1/5)",
-    "description": "Now: nothing yet. Next: +3% extra ore drops. Needs Prospector (all ranks).",
+    "title": "Prospector II",
+    "description": "+3% extra ore drops",
     "icon": {
       "type": "item",
       "data": {
@@ -622,11 +628,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Prospector (all ranks)."
   },
   "prospector_ii_2": {
-    "title": "Prospector II (2/5)",
-    "description": "Now: +3% extra ore drops. Next: +6% extra ore drops. Needs Prospector (all ranks).",
+    "title": "Prospector II",
+    "description": "+6% extra ore drops",
     "icon": {
       "type": "item",
       "data": {
@@ -640,11 +647,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Prospector (all ranks)."
   },
   "prospector_ii_3": {
-    "title": "Prospector II (3/5)",
-    "description": "Now: +6% extra ore drops. Next: +9% extra ore drops. Needs Prospector (all ranks).",
+    "title": "Prospector II",
+    "description": "+9% extra ore drops",
     "icon": {
       "type": "item",
       "data": {
@@ -658,11 +666,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Prospector (all ranks)."
   },
   "prospector_ii_4": {
-    "title": "Prospector II (4/5)",
-    "description": "Now: +9% extra ore drops. Next: +12% extra ore drops. Needs Prospector (all ranks).",
+    "title": "Prospector II",
+    "description": "+12% extra ore drops",
     "icon": {
       "type": "item",
       "data": {
@@ -676,11 +685,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Prospector (all ranks)."
   },
   "prospector_ii_5": {
-    "title": "Prospector II (5/5)",
-    "description": "Now: +12% extra ore drops. Next: +15% extra ore drops (max). Needs Prospector (all ranks).",
+    "title": "Prospector II",
+    "description": "+15% extra ore drops",
     "icon": {
       "type": "item",
       "data": {
@@ -694,11 +704,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Prospector (all ranks)."
   },
   "crusher_1": {
-    "title": "Crusher (1/3)",
-    "description": "Now: nothing yet. Next: Hammer and mace hits strip 1 armour from the target. (feeds Attack)",
+    "title": "Crusher",
+    "description": "Hammer and mace hits strip 1 armour from the target",
     "icon": {
       "type": "item",
       "data": {
@@ -715,8 +726,8 @@
     "required_spent_points": 15
   },
   "crusher_2": {
-    "title": "Crusher (2/3)",
-    "description": "Now: Hammer and mace hits strip 1 armour from the target. Next: Hammer and mace hits strip 2 armour from the target. (feeds Attack)",
+    "title": "Crusher",
+    "description": "Hammer and mace hits strip 2 armour from the target",
     "icon": {
       "type": "item",
       "data": {
@@ -733,8 +744,8 @@
     "required_spent_points": 15
   },
   "crusher_3": {
-    "title": "Crusher (3/3)",
-    "description": "Now: Hammer and mace hits strip 2 armour from the target. Next: Hammer and mace hits strip 3 armour from the target (max). (feeds Attack)",
+    "title": "Crusher",
+    "description": "Hammer and mace hits strip 3 armour from the target",
     "icon": {
       "type": "item",
       "data": {
@@ -751,8 +762,8 @@
     "required_spent_points": 15
   },
   "bedrock_grip_1": {
-    "title": "Bedrock Grip (1/5)",
-    "description": "Now: nothing yet. Next: +6% speed on deepslate.",
+    "title": "Bedrock Grip",
+    "description": "+6% speed on deepslate",
     "icon": {
       "type": "item",
       "data": {
@@ -769,8 +780,8 @@
     "required_spent_points": 15
   },
   "bedrock_grip_2": {
-    "title": "Bedrock Grip (2/5)",
-    "description": "Now: +6% speed on deepslate. Next: +12% speed on deepslate.",
+    "title": "Bedrock Grip",
+    "description": "+12% speed on deepslate",
     "icon": {
       "type": "item",
       "data": {
@@ -787,8 +798,8 @@
     "required_spent_points": 15
   },
   "bedrock_grip_3": {
-    "title": "Bedrock Grip (3/5)",
-    "description": "Now: +12% speed on deepslate. Next: +18% speed on deepslate.",
+    "title": "Bedrock Grip",
+    "description": "+18% speed on deepslate",
     "icon": {
       "type": "item",
       "data": {
@@ -805,8 +816,8 @@
     "required_spent_points": 15
   },
   "bedrock_grip_4": {
-    "title": "Bedrock Grip (4/5)",
-    "description": "Now: +18% speed on deepslate. Next: +24% speed on deepslate.",
+    "title": "Bedrock Grip",
+    "description": "+24% speed on deepslate",
     "icon": {
       "type": "item",
       "data": {
@@ -823,8 +834,8 @@
     "required_spent_points": 15
   },
   "bedrock_grip_5": {
-    "title": "Bedrock Grip (5/5)",
-    "description": "Now: +24% speed on deepslate. Next: +30% speed on deepslate (max).",
+    "title": "Bedrock Grip",
+    "description": "+30% speed on deepslate",
     "icon": {
       "type": "item",
       "data": {
@@ -876,8 +887,8 @@
     "required_spent_points": 25
   },
   "tunnel_vision_1": {
-    "title": "Tunnel Vision (1/3)",
-    "description": "Now: nothing yet. Next: Ultimine uses 15% less hunger.",
+    "title": "Tunnel Vision",
+    "description": "Ultimine uses 15% less hunger",
     "icon": {
       "type": "item",
       "data": {
@@ -894,8 +905,8 @@
     "required_spent_points": 25
   },
   "tunnel_vision_2": {
-    "title": "Tunnel Vision (2/3)",
-    "description": "Now: Ultimine uses 15% less hunger. Next: Ultimine uses 30% less hunger.",
+    "title": "Tunnel Vision",
+    "description": "Ultimine uses 30% less hunger",
     "icon": {
       "type": "item",
       "data": {
@@ -912,8 +923,8 @@
     "required_spent_points": 25
   },
   "tunnel_vision_3": {
-    "title": "Tunnel Vision (3/3)",
-    "description": "Now: Ultimine uses 30% less hunger. Next: Ultimine uses 45% less hunger (max).",
+    "title": "Tunnel Vision",
+    "description": "Ultimine uses 45% less hunger",
     "icon": {
       "type": "item",
       "data": {
@@ -931,7 +942,7 @@
   },
   "motherlode_1": {
     "title": "Motherlode",
-    "description": "2% chance an ore drops triple Pick one: this or Earthshaker.",
+    "description": "2% chance an ore drops triple",
     "icon": {
       "type": "item",
       "data": {
@@ -945,7 +956,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Earthshaker."
   },
   "tier_5_or": {
     "title": "OR",
@@ -966,7 +978,7 @@
   },
   "earthshaker_1": {
     "title": "Earthshaker",
-    "description": "Hammer crits stun nearby mobs Pick one: this or Motherlode. (feeds Attack)",
+    "description": "Hammer crits stun nearby mobs",
     "icon": {
       "type": "item",
       "data": {
@@ -980,6 +992,7 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Motherlode."
   }
 }

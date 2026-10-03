@@ -136,21 +136,23 @@ def test_or_marker_sits_between_choice_branches():
 
 def test_choice_nodes_name_the_other_branch():
     defs = g.build_category(tree('range'), TIERS)['definitions.json']
-    assert 'Pick one: this or Heavy Draw' in defs['rapid_volley_1']['description']
-    assert 'Pick one: this or Rapid Volley' in defs['heavy_draw_3']['description']
+    assert 'Pick one: this or Heavy Draw' in defs['rapid_volley_1']['extra_description']
+    assert 'Pick one: this or Rapid Volley' in defs['heavy_draw_3']['extra_description']
 
 
-def test_rank_titles_and_now_next_text():
+def test_rank_text_is_that_ranks_effect_and_extras_are_separate():
     defs = g.build_category(tree('mining'), TIERS)['definitions.json']
-    assert defs['stone_sense_1']['title'] == 'Stone Sense (1/5)'
-    assert defs['stone_sense_2']['description'].startswith('Now: +4% mining speed. Next: +8% mining speed.')
-    assert defs['stone_sense_1']['description'].startswith('Now: nothing yet. Next: +4% mining speed.')
-    assert defs['stone_sense_5']['description'].startswith('Now: +16% mining speed. Next: +20% mining speed (max).')
-    assert defs['ore_nose_1']['title'] == 'Ore Nose'
-    assert defs['ore_nose_1']['description'].startswith('Plain stone sometimes drops raw nuggets')
-    # text without a per-rank number still says which rank it is
+    assert defs['stone_sense_1']['title'] == 'Stone Sense' and defs['stone_sense_5']['title'] == 'Stone Sense'
+    assert defs['stone_sense_1']['description'] == '+4% mining speed'
+    assert defs['stone_sense_2']['description'] == '+8% mining speed'
+    assert defs['stone_sense_5']['description'] == '+20% mining speed'
+    assert defs['miners_might_3']['description'] == '+0.9 damage with pickaxes, hammers and maces'
+    assert 'extra_description' not in defs['miners_might_3']   # no 'feeds' text in tooltips
+    assert defs['prospector_ii_1']['extra_description'] == 'Needs Prospector (all ranks).'
+    assert defs['ore_nose_1']['description'] == 'Plain stone sometimes drops raw nuggets'
+    assert 'extra_description' not in defs['ore_nose_1']
     taming = g.build_category(tree('taming'), TIERS)['definitions.json']
-    assert taming['gentle_hand_2']['description'].startswith('Rank 2/3: Better odds')
+    assert taming['gentle_hand_2']['description'] == 'Better odds and fewer attempts on hard tames'
 
 
 def test_tier_and_or_tiles_use_numeral_textures():

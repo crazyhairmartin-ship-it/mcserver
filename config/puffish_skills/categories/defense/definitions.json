@@ -17,8 +17,8 @@
     "required_spent_points": 0
   },
   "toughened_1": {
-    "title": "Toughened (1/5)",
-    "description": "Now: nothing yet. Next: +0.5 armour.",
+    "title": "Toughened",
+    "description": "+0.5 armour",
     "icon": {
       "type": "item",
       "data": {
@@ -35,8 +35,8 @@
     "required_spent_points": 0
   },
   "toughened_2": {
-    "title": "Toughened (2/5)",
-    "description": "Now: +0.5 armour. Next: +1 armour.",
+    "title": "Toughened",
+    "description": "+1 armour",
     "icon": {
       "type": "item",
       "data": {
@@ -53,8 +53,8 @@
     "required_spent_points": 0
   },
   "toughened_3": {
-    "title": "Toughened (3/5)",
-    "description": "Now: +1 armour. Next: +1.5 armour.",
+    "title": "Toughened",
+    "description": "+1.5 armour",
     "icon": {
       "type": "item",
       "data": {
@@ -71,8 +71,8 @@
     "required_spent_points": 0
   },
   "toughened_4": {
-    "title": "Toughened (4/5)",
-    "description": "Now: +1.5 armour. Next: +2 armour.",
+    "title": "Toughened",
+    "description": "+2 armour",
     "icon": {
       "type": "item",
       "data": {
@@ -89,8 +89,8 @@
     "required_spent_points": 0
   },
   "toughened_5": {
-    "title": "Toughened (5/5)",
-    "description": "Now: +2 armour. Next: +2.5 armour (max).",
+    "title": "Toughened",
+    "description": "+2.5 armour",
     "icon": {
       "type": "item",
       "data": {
@@ -107,8 +107,8 @@
     "required_spent_points": 0
   },
   "shield_wall_1": {
-    "title": "Shield Wall (1/3)",
-    "description": "Rank 1/3: -15% knockback while blocking; shields last longer",
+    "title": "Shield Wall",
+    "description": "-15% knockback while blocking; shields last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -125,8 +125,8 @@
     "required_spent_points": 0
   },
   "shield_wall_2": {
-    "title": "Shield Wall (2/3)",
-    "description": "Rank 2/3: -15% knockback while blocking; shields last longer",
+    "title": "Shield Wall",
+    "description": "-15% knockback while blocking; shields last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -143,8 +143,8 @@
     "required_spent_points": 0
   },
   "shield_wall_3": {
-    "title": "Shield Wall (3/3)",
-    "description": "Rank 3/3: -15% knockback while blocking; shields last longer",
+    "title": "Shield Wall",
+    "description": "-15% knockback while blocking; shields last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -161,8 +161,8 @@
     "required_spent_points": 0
   },
   "vitality_1": {
-    "title": "Vitality (1/5)",
-    "description": "Now: nothing yet. Next: +1 max health.",
+    "title": "Vitality",
+    "description": "+1 max health",
     "icon": {
       "type": "item",
       "data": {
@@ -179,8 +179,8 @@
     "required_spent_points": 0
   },
   "vitality_2": {
-    "title": "Vitality (2/5)",
-    "description": "Now: +1 max health. Next: +2 max health.",
+    "title": "Vitality",
+    "description": "+2 max health",
     "icon": {
       "type": "item",
       "data": {
@@ -197,8 +197,8 @@
     "required_spent_points": 0
   },
   "vitality_3": {
-    "title": "Vitality (3/5)",
-    "description": "Now: +2 max health. Next: +3 max health.",
+    "title": "Vitality",
+    "description": "+3 max health",
     "icon": {
       "type": "item",
       "data": {
@@ -215,8 +215,8 @@
     "required_spent_points": 0
   },
   "vitality_4": {
-    "title": "Vitality (4/5)",
-    "description": "Now: +3 max health. Next: +4 max health.",
+    "title": "Vitality",
+    "description": "+4 max health",
     "icon": {
       "type": "item",
       "data": {
@@ -233,8 +233,8 @@
     "required_spent_points": 0
   },
   "vitality_5": {
-    "title": "Vitality (5/5)",
-    "description": "Now: +4 max health. Next: +5 max health (max).",
+    "title": "Vitality",
+    "description": "+5 max health",
     "icon": {
       "type": "item",
       "data": {
@@ -268,8 +268,8 @@
     "required_spent_points": 5
   },
   "iron_skin_1": {
-    "title": "Iron Skin (1/3)",
-    "description": "Now: nothing yet. Next: +0.5 armour toughness.",
+    "title": "Iron Skin",
+    "description": "+0.5 armour toughness",
     "icon": {
       "type": "item",
       "data": {
@@ -286,8 +286,8 @@
     "required_spent_points": 5
   },
   "iron_skin_2": {
-    "title": "Iron Skin (2/3)",
-    "description": "Now: +0.5 armour toughness. Next: +1 armour toughness.",
+    "title": "Iron Skin",
+    "description": "+1 armour toughness",
     "icon": {
       "type": "item",
       "data": {
@@ -304,8 +304,8 @@
     "required_spent_points": 5
   },
   "iron_skin_3": {
-    "title": "Iron Skin (3/3)",
-    "description": "Now: +1 armour toughness. Next: +1.5 armour toughness (max).",
+    "title": "Iron Skin",
+    "description": "+1.5 armour toughness",
     "icon": {
       "type": "item",
       "data": {
@@ -322,8 +322,8 @@
     "required_spent_points": 5
   },
   "shield_thorns_1": {
-    "title": "Shield Thorns (1/3)",
-    "description": "Now: nothing yet. Next: 8% to reflect 30% of a blocked hit.",
+    "title": "Shield Thorns",
+    "description": "8% to reflect 30% of a blocked hit",
     "icon": {
       "type": "item",
       "data": {
@@ -340,8 +340,8 @@
     "required_spent_points": 5
   },
   "shield_thorns_2": {
-    "title": "Shield Thorns (2/3)",
-    "description": "Now: 8% to reflect 30% of a blocked hit. Next: 16% to reflect 30% of a blocked hit.",
+    "title": "Shield Thorns",
+    "description": "16% to reflect 30% of a blocked hit",
     "icon": {
       "type": "item",
       "data": {
@@ -358,8 +358,8 @@
     "required_spent_points": 5
   },
   "shield_thorns_3": {
-    "title": "Shield Thorns (3/3)",
-    "description": "Now: 16% to reflect 30% of a blocked hit. Next: 24% to reflect 30% of a blocked hit (max).",
+    "title": "Shield Thorns",
+    "description": "24% to reflect 30% of a blocked hit",
     "icon": {
       "type": "item",
       "data": {
@@ -376,8 +376,8 @@
     "required_spent_points": 5
   },
   "warded_mind_1": {
-    "title": "Warded Mind (1/3)",
-    "description": "Now: nothing yet. Next: Each armour piece gives +1% spell power. (feeds Magic)",
+    "title": "Warded Mind",
+    "description": "Each armour piece gives +1% spell power",
     "icon": {
       "type": "item",
       "data": {
@@ -394,8 +394,8 @@
     "required_spent_points": 5
   },
   "warded_mind_2": {
-    "title": "Warded Mind (2/3)",
-    "description": "Now: Each armour piece gives +1% spell power. Next: Each armour piece gives +2% spell power. (feeds Magic)",
+    "title": "Warded Mind",
+    "description": "Each armour piece gives +2% spell power",
     "icon": {
       "type": "item",
       "data": {
@@ -412,8 +412,8 @@
     "required_spent_points": 5
   },
   "warded_mind_3": {
-    "title": "Warded Mind (3/3)",
-    "description": "Now: Each armour piece gives +2% spell power. Next: Each armour piece gives +3% spell power (max). (feeds Magic)",
+    "title": "Warded Mind",
+    "description": "Each armour piece gives +3% spell power",
     "icon": {
       "type": "item",
       "data": {
@@ -447,8 +447,8 @@
     "required_spent_points": 10
   },
   "bulwark_1": {
-    "title": "Bulwark (1/3)",
-    "description": "Rank 1/3: Shields cover a wider angle; knockback resistance Pick one: this or Battlemage Plate.",
+    "title": "Bulwark",
+    "description": "Shields cover a wider angle; knockback resistance",
     "icon": {
       "type": "item",
       "data": {
@@ -462,11 +462,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Battlemage Plate."
   },
   "bulwark_2": {
-    "title": "Bulwark (2/3)",
-    "description": "Rank 2/3: Shields cover a wider angle; knockback resistance Pick one: this or Battlemage Plate.",
+    "title": "Bulwark",
+    "description": "Shields cover a wider angle; knockback resistance",
     "icon": {
       "type": "item",
       "data": {
@@ -480,11 +481,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Battlemage Plate."
   },
   "bulwark_3": {
-    "title": "Bulwark (3/3)",
-    "description": "Rank 3/3: Shields cover a wider angle; knockback resistance Pick one: this or Battlemage Plate.",
+    "title": "Bulwark",
+    "description": "Shields cover a wider angle; knockback resistance",
     "icon": {
       "type": "item",
       "data": {
@@ -498,7 +500,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Battlemage Plate."
   },
   "tier_3_or": {
     "title": "OR",
@@ -518,8 +521,8 @@
     "required_spent_points": 10
   },
   "battlemage_plate_1": {
-    "title": "Battlemage Plate (1/3)",
-    "description": "Now: nothing yet. Next: Taking hits restores 2 mana. Pick one: this or Bulwark. (feeds Magic)",
+    "title": "Battlemage Plate",
+    "description": "Taking hits restores 2 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -533,11 +536,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Bulwark."
   },
   "battlemage_plate_2": {
-    "title": "Battlemage Plate (2/3)",
-    "description": "Now: Taking hits restores 2 mana. Next: Taking hits restores 4 mana. Pick one: this or Bulwark. (feeds Magic)",
+    "title": "Battlemage Plate",
+    "description": "Taking hits restores 4 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -551,11 +555,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Bulwark."
   },
   "battlemage_plate_3": {
-    "title": "Battlemage Plate (3/3)",
-    "description": "Now: Taking hits restores 4 mana. Next: Taking hits restores 6 mana (max). Pick one: this or Bulwark. (feeds Magic)",
+    "title": "Battlemage Plate",
+    "description": "Taking hits restores 6 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -569,7 +574,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Bulwark."
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -589,8 +595,8 @@
     "required_spent_points": 15
   },
   "vitality_ii_1": {
-    "title": "Vitality II (1/5)",
-    "description": "Now: nothing yet. Next: +1 max health. Needs Vitality (all ranks).",
+    "title": "Vitality II",
+    "description": "+1 max health",
     "icon": {
       "type": "item",
       "data": {
@@ -604,11 +610,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Vitality (all ranks)."
   },
   "vitality_ii_2": {
-    "title": "Vitality II (2/5)",
-    "description": "Now: +1 max health. Next: +2 max health. Needs Vitality (all ranks).",
+    "title": "Vitality II",
+    "description": "+2 max health",
     "icon": {
       "type": "item",
       "data": {
@@ -622,11 +629,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Vitality (all ranks)."
   },
   "vitality_ii_3": {
-    "title": "Vitality II (3/5)",
-    "description": "Now: +2 max health. Next: +3 max health. Needs Vitality (all ranks).",
+    "title": "Vitality II",
+    "description": "+3 max health",
     "icon": {
       "type": "item",
       "data": {
@@ -640,11 +648,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Vitality (all ranks)."
   },
   "vitality_ii_4": {
-    "title": "Vitality II (4/5)",
-    "description": "Now: +3 max health. Next: +4 max health. Needs Vitality (all ranks).",
+    "title": "Vitality II",
+    "description": "+4 max health",
     "icon": {
       "type": "item",
       "data": {
@@ -658,11 +667,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Vitality (all ranks)."
   },
   "vitality_ii_5": {
-    "title": "Vitality II (5/5)",
-    "description": "Now: +4 max health. Next: +5 max health (max). Needs Vitality (all ranks).",
+    "title": "Vitality II",
+    "description": "+5 max health",
     "icon": {
       "type": "item",
       "data": {
@@ -676,11 +686,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Vitality (all ranks)."
   },
   "guardian_1": {
-    "title": "Guardian (1/3)",
-    "description": "Now: nothing yet. Next: Pets and party members near you take 5% less damage. (feeds Taming)",
+    "title": "Guardian",
+    "description": "Pets and party members near you take 5% less damage",
     "icon": {
       "type": "item",
       "data": {
@@ -697,8 +708,8 @@
     "required_spent_points": 15
   },
   "guardian_2": {
-    "title": "Guardian (2/3)",
-    "description": "Now: Pets and party members near you take 5% less damage. Next: Pets and party members near you take 10% less damage. (feeds Taming)",
+    "title": "Guardian",
+    "description": "Pets and party members near you take 10% less damage",
     "icon": {
       "type": "item",
       "data": {
@@ -715,8 +726,8 @@
     "required_spent_points": 15
   },
   "guardian_3": {
-    "title": "Guardian (3/3)",
-    "description": "Now: Pets and party members near you take 10% less damage. Next: Pets and party members near you take 15% less damage (max). (feeds Taming)",
+    "title": "Guardian",
+    "description": "Pets and party members near you take 15% less damage",
     "icon": {
       "type": "item",
       "data": {
@@ -733,8 +744,8 @@
     "required_spent_points": 15
   },
   "counter_1": {
-    "title": "Counter (1/2)",
-    "description": "Rank 1/2: A blocked hit makes your next melee hit +15% (feeds Attack)",
+    "title": "Counter",
+    "description": "A blocked hit makes your next melee hit +15%",
     "icon": {
       "type": "item",
       "data": {
@@ -751,8 +762,8 @@
     "required_spent_points": 15
   },
   "counter_2": {
-    "title": "Counter (2/2)",
-    "description": "Rank 2/2: A blocked hit makes your next melee hit +15% (feeds Attack)",
+    "title": "Counter",
+    "description": "A blocked hit makes your next melee hit +15%",
     "icon": {
       "type": "item",
       "data": {
@@ -769,8 +780,8 @@
     "required_spent_points": 15
   },
   "fire_ward_1": {
-    "title": "Fire Ward (1/2)",
-    "description": "Now: nothing yet. Next: -15% fire damage.",
+    "title": "Fire Ward",
+    "description": "-15% fire damage",
     "icon": {
       "type": "item",
       "data": {
@@ -787,8 +798,8 @@
     "required_spent_points": 15
   },
   "fire_ward_2": {
-    "title": "Fire Ward (2/2)",
-    "description": "Now: -15% fire damage. Next: -30% fire damage (max).",
+    "title": "Fire Ward",
+    "description": "-30% fire damage",
     "icon": {
       "type": "item",
       "data": {
@@ -805,8 +816,8 @@
     "required_spent_points": 15
   },
   "blast_ward_1": {
-    "title": "Blast Ward (1/2)",
-    "description": "Now: nothing yet. Next: -15% explosion damage.",
+    "title": "Blast Ward",
+    "description": "-15% explosion damage",
     "icon": {
       "type": "item",
       "data": {
@@ -823,8 +834,8 @@
     "required_spent_points": 15
   },
   "blast_ward_2": {
-    "title": "Blast Ward (2/2)",
-    "description": "Now: -15% explosion damage. Next: -30% explosion damage (max).",
+    "title": "Blast Ward",
+    "description": "-30% explosion damage",
     "icon": {
       "type": "item",
       "data": {
@@ -858,8 +869,8 @@
     "required_spent_points": 25
   },
   "armour_care_1": {
-    "title": "Armour Care (1/2)",
-    "description": "Now: nothing yet. Next: 5% to save armour durability.",
+    "title": "Armour Care",
+    "description": "5% to save armour durability",
     "icon": {
       "type": "item",
       "data": {
@@ -876,8 +887,8 @@
     "required_spent_points": 25
   },
   "armour_care_2": {
-    "title": "Armour Care (2/2)",
-    "description": "Now: 5% to save armour durability. Next: 10% to save armour durability (max).",
+    "title": "Armour Care",
+    "description": "10% to save armour durability",
     "icon": {
       "type": "item",
       "data": {
@@ -895,7 +906,7 @@
   },
   "second_wind_1": {
     "title": "Second Wind",
-    "description": "Survive a killing blow (5 min cooldown) Pick one: this or Unbreakable.",
+    "description": "Survive a killing blow (5 min cooldown)",
     "icon": {
       "type": "item",
       "data": {
@@ -909,7 +920,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Unbreakable."
   },
   "tier_5_or": {
     "title": "OR",
@@ -930,7 +942,7 @@
   },
   "unbreakable_1": {
     "title": "Unbreakable",
-    "description": "Armour loses durability 50% slower Pick one: this or Second Wind.",
+    "description": "Armour loses durability 50% slower",
     "icon": {
       "type": "item",
       "data": {
@@ -944,6 +956,7 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Second Wind."
   }
 }

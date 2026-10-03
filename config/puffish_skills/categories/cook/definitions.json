@@ -17,8 +17,8 @@
     "required_spent_points": 0
   },
   "thrifty_cook_1": {
-    "title": "Thrifty Cook (1/5)",
-    "description": "Now: nothing yet. Next: 3% to save an ingredient.",
+    "title": "Thrifty Cook",
+    "description": "3% to save an ingredient",
     "icon": {
       "type": "item",
       "data": {
@@ -35,8 +35,8 @@
     "required_spent_points": 0
   },
   "thrifty_cook_2": {
-    "title": "Thrifty Cook (2/5)",
-    "description": "Now: 3% to save an ingredient. Next: 6% to save an ingredient.",
+    "title": "Thrifty Cook",
+    "description": "6% to save an ingredient",
     "icon": {
       "type": "item",
       "data": {
@@ -53,8 +53,8 @@
     "required_spent_points": 0
   },
   "thrifty_cook_3": {
-    "title": "Thrifty Cook (3/5)",
-    "description": "Now: 6% to save an ingredient. Next: 9% to save an ingredient.",
+    "title": "Thrifty Cook",
+    "description": "9% to save an ingredient",
     "icon": {
       "type": "item",
       "data": {
@@ -71,8 +71,8 @@
     "required_spent_points": 0
   },
   "thrifty_cook_4": {
-    "title": "Thrifty Cook (4/5)",
-    "description": "Now: 9% to save an ingredient. Next: 12% to save an ingredient.",
+    "title": "Thrifty Cook",
+    "description": "12% to save an ingredient",
     "icon": {
       "type": "item",
       "data": {
@@ -89,8 +89,8 @@
     "required_spent_points": 0
   },
   "thrifty_cook_5": {
-    "title": "Thrifty Cook (5/5)",
-    "description": "Now: 12% to save an ingredient. Next: 15% to save an ingredient (max).",
+    "title": "Thrifty Cook",
+    "description": "15% to save an ingredient",
     "icon": {
       "type": "item",
       "data": {
@@ -107,8 +107,8 @@
     "required_spent_points": 0
   },
   "quick_hands_1": {
-    "title": "Quick Hands (1/5)",
-    "description": "Now: nothing yet. Next: Cooking stations 5% faster.",
+    "title": "Quick Hands",
+    "description": "Cooking stations 5% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -125,8 +125,8 @@
     "required_spent_points": 0
   },
   "quick_hands_2": {
-    "title": "Quick Hands (2/5)",
-    "description": "Now: Cooking stations 5% faster. Next: Cooking stations 10% faster.",
+    "title": "Quick Hands",
+    "description": "Cooking stations 10% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -143,8 +143,8 @@
     "required_spent_points": 0
   },
   "quick_hands_3": {
-    "title": "Quick Hands (3/5)",
-    "description": "Now: Cooking stations 10% faster. Next: Cooking stations 15% faster.",
+    "title": "Quick Hands",
+    "description": "Cooking stations 15% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -161,8 +161,8 @@
     "required_spent_points": 0
   },
   "quick_hands_4": {
-    "title": "Quick Hands (4/5)",
-    "description": "Now: Cooking stations 15% faster. Next: Cooking stations 20% faster.",
+    "title": "Quick Hands",
+    "description": "Cooking stations 20% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -179,8 +179,8 @@
     "required_spent_points": 0
   },
   "quick_hands_5": {
-    "title": "Quick Hands (5/5)",
-    "description": "Now: Cooking stations 20% faster. Next: Cooking stations 25% faster (max).",
+    "title": "Quick Hands",
+    "description": "Cooking stations 25% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -197,8 +197,8 @@
     "required_spent_points": 0
   },
   "well_fed_1": {
-    "title": "Well Fed (1/5)",
-    "description": "Now: nothing yet. Next: +2% damage while your hunger is full. (feeds Attack)",
+    "title": "Well Fed",
+    "description": "+2% damage while your hunger is full",
     "icon": {
       "type": "item",
       "data": {
@@ -215,8 +215,8 @@
     "required_spent_points": 0
   },
   "well_fed_2": {
-    "title": "Well Fed (2/5)",
-    "description": "Now: +2% damage while your hunger is full. Next: +4% damage while your hunger is full. (feeds Attack)",
+    "title": "Well Fed",
+    "description": "+4% damage while your hunger is full",
     "icon": {
       "type": "item",
       "data": {
@@ -233,8 +233,8 @@
     "required_spent_points": 0
   },
   "well_fed_3": {
-    "title": "Well Fed (3/5)",
-    "description": "Now: +4% damage while your hunger is full. Next: +6% damage while your hunger is full. (feeds Attack)",
+    "title": "Well Fed",
+    "description": "+6% damage while your hunger is full",
     "icon": {
       "type": "item",
       "data": {
@@ -251,8 +251,8 @@
     "required_spent_points": 0
   },
   "well_fed_4": {
-    "title": "Well Fed (4/5)",
-    "description": "Now: +6% damage while your hunger is full. Next: +8% damage while your hunger is full. (feeds Attack)",
+    "title": "Well Fed",
+    "description": "+8% damage while your hunger is full",
     "icon": {
       "type": "item",
       "data": {
@@ -269,8 +269,8 @@
     "required_spent_points": 0
   },
   "well_fed_5": {
-    "title": "Well Fed (5/5)",
-    "description": "Now: +8% damage while your hunger is full. Next: +10% damage while your hunger is full (max). (feeds Attack)",
+    "title": "Well Fed",
+    "description": "+10% damage while your hunger is full",
     "icon": {
       "type": "item",
       "data": {
@@ -304,8 +304,8 @@
     "required_spent_points": 5
   },
   "extra_serving_1": {
-    "title": "Extra Serving (1/3)",
-    "description": "Now: nothing yet. Next: 5% for one extra meal.",
+    "title": "Extra Serving",
+    "description": "5% for one extra meal",
     "icon": {
       "type": "item",
       "data": {
@@ -322,8 +322,8 @@
     "required_spent_points": 5
   },
   "extra_serving_2": {
-    "title": "Extra Serving (2/3)",
-    "description": "Now: 5% for one extra meal. Next: 10% for one extra meal.",
+    "title": "Extra Serving",
+    "description": "10% for one extra meal",
     "icon": {
       "type": "item",
       "data": {
@@ -340,8 +340,8 @@
     "required_spent_points": 5
   },
   "extra_serving_3": {
-    "title": "Extra Serving (3/3)",
-    "description": "Now: 10% for one extra meal. Next: 15% for one extra meal (max).",
+    "title": "Extra Serving",
+    "description": "15% for one extra meal",
     "icon": {
       "type": "item",
       "data": {
@@ -358,8 +358,8 @@
     "required_spent_points": 5
   },
   "hearty_meals_1": {
-    "title": "Hearty Meals (1/3)",
-    "description": "Now: nothing yet. Next: +10% saturation.",
+    "title": "Hearty Meals",
+    "description": "+10% saturation",
     "icon": {
       "type": "item",
       "data": {
@@ -376,8 +376,8 @@
     "required_spent_points": 5
   },
   "hearty_meals_2": {
-    "title": "Hearty Meals (2/3)",
-    "description": "Now: +10% saturation. Next: +20% saturation.",
+    "title": "Hearty Meals",
+    "description": "+20% saturation",
     "icon": {
       "type": "item",
       "data": {
@@ -394,8 +394,8 @@
     "required_spent_points": 5
   },
   "hearty_meals_3": {
-    "title": "Hearty Meals (3/3)",
-    "description": "Now: +20% saturation. Next: +30% saturation (max).",
+    "title": "Hearty Meals",
+    "description": "+30% saturation",
     "icon": {
       "type": "item",
       "data": {
@@ -412,8 +412,8 @@
     "required_spent_points": 5
   },
   "brain_food_1": {
-    "title": "Brain Food (1/3)",
-    "description": "Now: nothing yet. Next: After eating a meal, +15% mana regen for 60 s. (feeds Magic)",
+    "title": "Brain Food",
+    "description": "After eating a meal, +15% mana regen for 60 s",
     "icon": {
       "type": "item",
       "data": {
@@ -430,8 +430,8 @@
     "required_spent_points": 5
   },
   "brain_food_2": {
-    "title": "Brain Food (2/3)",
-    "description": "Now: After eating a meal, +15% mana regen for 60 s. Next: After eating a meal, +30% mana regen for 60 s. (feeds Magic)",
+    "title": "Brain Food",
+    "description": "After eating a meal, +30% mana regen for 60 s",
     "icon": {
       "type": "item",
       "data": {
@@ -448,8 +448,8 @@
     "required_spent_points": 5
   },
   "brain_food_3": {
-    "title": "Brain Food (3/3)",
-    "description": "Now: After eating a meal, +30% mana regen for 60 s. Next: After eating a meal, +45% mana regen for 60 s (max). (feeds Magic)",
+    "title": "Brain Food",
+    "description": "After eating a meal, +45% mana regen for 60 s",
     "icon": {
       "type": "item",
       "data": {
@@ -483,8 +483,8 @@
     "required_spent_points": 10
   },
   "chef_1": {
-    "title": "Chef (1/3)",
-    "description": "Rank 1/3: Meal buffs last 50% longer Pick one: this or Iron Stomach.",
+    "title": "Chef",
+    "description": "Meal buffs last 50% longer",
     "icon": {
       "type": "item",
       "data": {
@@ -498,11 +498,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Iron Stomach."
   },
   "chef_2": {
-    "title": "Chef (2/3)",
-    "description": "Rank 2/3: Meal buffs last 50% longer Pick one: this or Iron Stomach.",
+    "title": "Chef",
+    "description": "Meal buffs last 50% longer",
     "icon": {
       "type": "item",
       "data": {
@@ -516,11 +517,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Iron Stomach."
   },
   "chef_3": {
-    "title": "Chef (3/3)",
-    "description": "Rank 3/3: Meal buffs last 50% longer Pick one: this or Iron Stomach.",
+    "title": "Chef",
+    "description": "Meal buffs last 50% longer",
     "icon": {
       "type": "item",
       "data": {
@@ -534,7 +536,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Iron Stomach."
   },
   "tier_3_or": {
     "title": "OR",
@@ -554,8 +557,8 @@
     "required_spent_points": 10
   },
   "iron_stomach_1": {
-    "title": "Iron Stomach (1/3)",
-    "description": "Now: nothing yet. Next: +2 max health while saturation is above half. Pick one: this or Chef. (feeds Defense)",
+    "title": "Iron Stomach",
+    "description": "+2 max health while saturation is above half",
     "icon": {
       "type": "item",
       "data": {
@@ -569,11 +572,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Chef."
   },
   "iron_stomach_2": {
-    "title": "Iron Stomach (2/3)",
-    "description": "Now: +2 max health while saturation is above half. Next: +4 max health while saturation is above half. Pick one: this or Chef. (feeds Defense)",
+    "title": "Iron Stomach",
+    "description": "+4 max health while saturation is above half",
     "icon": {
       "type": "item",
       "data": {
@@ -587,11 +591,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Chef."
   },
   "iron_stomach_3": {
-    "title": "Iron Stomach (3/3)",
-    "description": "Now: +4 max health while saturation is above half. Next: +6 max health while saturation is above half (max). Pick one: this or Chef. (feeds Defense)",
+    "title": "Iron Stomach",
+    "description": "+6 max health while saturation is above half",
     "icon": {
       "type": "item",
       "data": {
@@ -605,7 +610,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Chef."
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -625,8 +631,8 @@
     "required_spent_points": 15
   },
   "thrifty_cook_ii_1": {
-    "title": "Thrifty Cook II (1/5)",
-    "description": "Now: nothing yet. Next: +3% ingredient saving. Needs Thrifty Cook (all ranks).",
+    "title": "Thrifty Cook II",
+    "description": "+3% ingredient saving",
     "icon": {
       "type": "item",
       "data": {
@@ -640,11 +646,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Thrifty Cook (all ranks)."
   },
   "thrifty_cook_ii_2": {
-    "title": "Thrifty Cook II (2/5)",
-    "description": "Now: +3% ingredient saving. Next: +6% ingredient saving. Needs Thrifty Cook (all ranks).",
+    "title": "Thrifty Cook II",
+    "description": "+6% ingredient saving",
     "icon": {
       "type": "item",
       "data": {
@@ -658,11 +665,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Thrifty Cook (all ranks)."
   },
   "thrifty_cook_ii_3": {
-    "title": "Thrifty Cook II (3/5)",
-    "description": "Now: +6% ingredient saving. Next: +9% ingredient saving. Needs Thrifty Cook (all ranks).",
+    "title": "Thrifty Cook II",
+    "description": "+9% ingredient saving",
     "icon": {
       "type": "item",
       "data": {
@@ -676,11 +684,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Thrifty Cook (all ranks)."
   },
   "thrifty_cook_ii_4": {
-    "title": "Thrifty Cook II (4/5)",
-    "description": "Now: +9% ingredient saving. Next: +12% ingredient saving. Needs Thrifty Cook (all ranks).",
+    "title": "Thrifty Cook II",
+    "description": "+12% ingredient saving",
     "icon": {
       "type": "item",
       "data": {
@@ -694,11 +703,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Thrifty Cook (all ranks)."
   },
   "thrifty_cook_ii_5": {
-    "title": "Thrifty Cook II (5/5)",
-    "description": "Now: +12% ingredient saving. Next: +15% ingredient saving (max). Needs Thrifty Cook (all ranks).",
+    "title": "Thrifty Cook II",
+    "description": "+15% ingredient saving",
     "icon": {
       "type": "item",
       "data": {
@@ -712,11 +722,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Thrifty Cook (all ranks)."
   },
   "trail_rations_1": {
-    "title": "Trail Rations (1/3)",
-    "description": "Now: nothing yet. Next: Sprinting and ParCool moves drain 10% less hunger. (feeds Agility)",
+    "title": "Trail Rations",
+    "description": "Sprinting and ParCool moves drain 10% less hunger",
     "icon": {
       "type": "item",
       "data": {
@@ -733,8 +744,8 @@
     "required_spent_points": 15
   },
   "trail_rations_2": {
-    "title": "Trail Rations (2/3)",
-    "description": "Now: Sprinting and ParCool moves drain 10% less hunger. Next: Sprinting and ParCool moves drain 20% less hunger. (feeds Agility)",
+    "title": "Trail Rations",
+    "description": "Sprinting and ParCool moves drain 20% less hunger",
     "icon": {
       "type": "item",
       "data": {
@@ -751,8 +762,8 @@
     "required_spent_points": 15
   },
   "trail_rations_3": {
-    "title": "Trail Rations (3/3)",
-    "description": "Now: Sprinting and ParCool moves drain 20% less hunger. Next: Sprinting and ParCool moves drain 30% less hunger (max). (feeds Agility)",
+    "title": "Trail Rations",
+    "description": "Sprinting and ParCool moves drain 30% less hunger",
     "icon": {
       "type": "item",
       "data": {
@@ -769,8 +780,8 @@
     "required_spent_points": 15
   },
   "brewer_1": {
-    "title": "Brewer (1/3)",
-    "description": "Rank 1/3: Let's Do drinks save ingredients and their buffs last longer",
+    "title": "Brewer",
+    "description": "Let's Do drinks save ingredients and their buffs last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -787,8 +798,8 @@
     "required_spent_points": 15
   },
   "brewer_2": {
-    "title": "Brewer (2/3)",
-    "description": "Rank 2/3: Let's Do drinks save ingredients and their buffs last longer",
+    "title": "Brewer",
+    "description": "Let's Do drinks save ingredients and their buffs last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -805,8 +816,8 @@
     "required_spent_points": 15
   },
   "brewer_3": {
-    "title": "Brewer (3/3)",
-    "description": "Rank 3/3: Let's Do drinks save ingredients and their buffs last longer",
+    "title": "Brewer",
+    "description": "Let's Do drinks save ingredients and their buffs last longer",
     "icon": {
       "type": "item",
       "data": {
@@ -823,8 +834,8 @@
     "required_spent_points": 15
   },
   "pet_treats_1": {
-    "title": "Pet Treats (1/2)",
-    "description": "Rank 1/2: Food you cook heals pets more and gives them a short buff (feeds Taming)",
+    "title": "Pet Treats",
+    "description": "Food you cook heals pets more and gives them a short buff",
     "icon": {
       "type": "item",
       "data": {
@@ -841,8 +852,8 @@
     "required_spent_points": 15
   },
   "pet_treats_2": {
-    "title": "Pet Treats (2/2)",
-    "description": "Rank 2/2: Food you cook heals pets more and gives them a short buff (feeds Taming)",
+    "title": "Pet Treats",
+    "description": "Food you cook heals pets more and gives them a short buff",
     "icon": {
       "type": "item",
       "data": {
@@ -876,8 +887,8 @@
     "required_spent_points": 25
   },
   "picnic_1": {
-    "title": "Picnic (1/2)",
-    "description": "Rank 1/2: Eating near party members heals you and them a little",
+    "title": "Picnic",
+    "description": "Eating near party members heals you and them a little",
     "icon": {
       "type": "item",
       "data": {
@@ -894,8 +905,8 @@
     "required_spent_points": 25
   },
   "picnic_2": {
-    "title": "Picnic (2/2)",
-    "description": "Rank 2/2: Eating near party members heals you and them a little",
+    "title": "Picnic",
+    "description": "Eating near party members heals you and them a little",
     "icon": {
       "type": "item",
       "data": {
@@ -913,7 +924,7 @@
   },
   "feast_maker_1": {
     "title": "Feast Maker",
-    "description": "Feasts and pies give extra slices Pick one: this or Warrior's Feast.",
+    "description": "Feasts and pies give extra slices",
     "icon": {
       "type": "item",
       "data": {
@@ -927,7 +938,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Warrior's Feast."
   },
   "tier_5_or": {
     "title": "OR",
@@ -948,7 +960,7 @@
   },
   "warriors_feast_1": {
     "title": "Warrior's Feast",
-    "description": "Well Fed is doubled and also boosts spells Pick one: this or Feast Maker. (feeds Attack)",
+    "description": "Well Fed is doubled and also boosts spells",
     "icon": {
       "type": "item",
       "data": {
@@ -962,6 +974,7 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Feast Maker."
   }
 }

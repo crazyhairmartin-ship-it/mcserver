@@ -17,8 +17,8 @@
     "required_spent_points": 0
   },
   "patient_angler_1": {
-    "title": "Patient Angler (1/5)",
-    "description": "Now: nothing yet. Next: -5% bite time.",
+    "title": "Patient Angler",
+    "description": "-5% bite time",
     "icon": {
       "type": "item",
       "data": {
@@ -35,8 +35,8 @@
     "required_spent_points": 0
   },
   "patient_angler_2": {
-    "title": "Patient Angler (2/5)",
-    "description": "Now: -5% bite time. Next: -10% bite time.",
+    "title": "Patient Angler",
+    "description": "-10% bite time",
     "icon": {
       "type": "item",
       "data": {
@@ -53,8 +53,8 @@
     "required_spent_points": 0
   },
   "patient_angler_3": {
-    "title": "Patient Angler (3/5)",
-    "description": "Now: -10% bite time. Next: -15% bite time.",
+    "title": "Patient Angler",
+    "description": "-15% bite time",
     "icon": {
       "type": "item",
       "data": {
@@ -71,8 +71,8 @@
     "required_spent_points": 0
   },
   "patient_angler_4": {
-    "title": "Patient Angler (4/5)",
-    "description": "Now: -15% bite time. Next: -20% bite time.",
+    "title": "Patient Angler",
+    "description": "-20% bite time",
     "icon": {
       "type": "item",
       "data": {
@@ -89,8 +89,8 @@
     "required_spent_points": 0
   },
   "patient_angler_5": {
-    "title": "Patient Angler (5/5)",
-    "description": "Now: -20% bite time. Next: -25% bite time (max).",
+    "title": "Patient Angler",
+    "description": "-25% bite time",
     "icon": {
       "type": "item",
       "data": {
@@ -107,8 +107,8 @@
     "required_spent_points": 0
   },
   "lucky_line_1": {
-    "title": "Lucky Line (1/3)",
-    "description": "Rank 1/3: Better treasure odds per rank",
+    "title": "Lucky Line",
+    "description": "Better treasure odds per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -125,8 +125,8 @@
     "required_spent_points": 0
   },
   "lucky_line_2": {
-    "title": "Lucky Line (2/3)",
-    "description": "Rank 2/3: Better treasure odds per rank",
+    "title": "Lucky Line",
+    "description": "Better treasure odds per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -143,8 +143,8 @@
     "required_spent_points": 0
   },
   "lucky_line_3": {
-    "title": "Lucky Line (3/3)",
-    "description": "Rank 3/3: Better treasure odds per rank",
+    "title": "Lucky Line",
+    "description": "Better treasure odds per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -161,8 +161,8 @@
     "required_spent_points": 0
   },
   "trident_master_1": {
-    "title": "Trident Master (1/5)",
-    "description": "Now: nothing yet. Next: +0.3 damage with tridents and spears. (feeds Attack)",
+    "title": "Trident Master",
+    "description": "+0.3 damage with tridents and spears",
     "icon": {
       "type": "item",
       "data": {
@@ -179,8 +179,8 @@
     "required_spent_points": 0
   },
   "trident_master_2": {
-    "title": "Trident Master (2/5)",
-    "description": "Now: +0.3 damage with tridents and spears. Next: +0.6 damage with tridents and spears. (feeds Attack)",
+    "title": "Trident Master",
+    "description": "+0.6 damage with tridents and spears",
     "icon": {
       "type": "item",
       "data": {
@@ -197,8 +197,8 @@
     "required_spent_points": 0
   },
   "trident_master_3": {
-    "title": "Trident Master (3/5)",
-    "description": "Now: +0.6 damage with tridents and spears. Next: +0.9 damage with tridents and spears. (feeds Attack)",
+    "title": "Trident Master",
+    "description": "+0.9 damage with tridents and spears",
     "icon": {
       "type": "item",
       "data": {
@@ -215,8 +215,8 @@
     "required_spent_points": 0
   },
   "trident_master_4": {
-    "title": "Trident Master (4/5)",
-    "description": "Now: +0.9 damage with tridents and spears. Next: +1.2 damage with tridents and spears. (feeds Attack)",
+    "title": "Trident Master",
+    "description": "+1.2 damage with tridents and spears",
     "icon": {
       "type": "item",
       "data": {
@@ -233,8 +233,8 @@
     "required_spent_points": 0
   },
   "trident_master_5": {
-    "title": "Trident Master (5/5)",
-    "description": "Now: +1.2 damage with tridents and spears. Next: +1.5 damage with tridents and spears (max). (feeds Attack)",
+    "title": "Trident Master",
+    "description": "+1.5 damage with tridents and spears",
     "icon": {
       "type": "item",
       "data": {
@@ -268,8 +268,8 @@
     "required_spent_points": 5
   },
   "double_catch_1": {
-    "title": "Double Catch (1/3)",
-    "description": "Now: nothing yet. Next: 4% to catch two.",
+    "title": "Double Catch",
+    "description": "4% to catch two",
     "icon": {
       "type": "item",
       "data": {
@@ -286,8 +286,8 @@
     "required_spent_points": 5
   },
   "double_catch_2": {
-    "title": "Double Catch (2/3)",
-    "description": "Now: 4% to catch two. Next: 8% to catch two.",
+    "title": "Double Catch",
+    "description": "8% to catch two",
     "icon": {
       "type": "item",
       "data": {
@@ -304,8 +304,8 @@
     "required_spent_points": 5
   },
   "double_catch_3": {
-    "title": "Double Catch (3/3)",
-    "description": "Now: 8% to catch two. Next: 12% to catch two (max).",
+    "title": "Double Catch",
+    "description": "12% to catch two",
     "icon": {
       "type": "item",
       "data": {
@@ -322,8 +322,8 @@
     "required_spent_points": 5
   },
   "bait_saver_1": {
-    "title": "Bait Saver (1/3)",
-    "description": "Now: nothing yet. Next: 15% that Aquaculture bait isn't used.",
+    "title": "Bait Saver",
+    "description": "15% that Aquaculture bait isn't used",
     "icon": {
       "type": "item",
       "data": {
@@ -340,8 +340,8 @@
     "required_spent_points": 5
   },
   "bait_saver_2": {
-    "title": "Bait Saver (2/3)",
-    "description": "Now: 15% that Aquaculture bait isn't used. Next: 30% that Aquaculture bait isn't used.",
+    "title": "Bait Saver",
+    "description": "30% that Aquaculture bait isn't used",
     "icon": {
       "type": "item",
       "data": {
@@ -358,8 +358,8 @@
     "required_spent_points": 5
   },
   "bait_saver_3": {
-    "title": "Bait Saver (3/3)",
-    "description": "Now: 30% that Aquaculture bait isn't used. Next: 45% that Aquaculture bait isn't used (max).",
+    "title": "Bait Saver",
+    "description": "45% that Aquaculture bait isn't used",
     "icon": {
       "type": "item",
       "data": {
@@ -376,8 +376,8 @@
     "required_spent_points": 5
   },
   "tidecaller_1": {
-    "title": "Tidecaller (1/3)",
-    "description": "Now: nothing yet. Next: +4% spell power in water or rain. (feeds Magic)",
+    "title": "Tidecaller",
+    "description": "+4% spell power in water or rain",
     "icon": {
       "type": "item",
       "data": {
@@ -394,8 +394,8 @@
     "required_spent_points": 5
   },
   "tidecaller_2": {
-    "title": "Tidecaller (2/3)",
-    "description": "Now: +4% spell power in water or rain. Next: +8% spell power in water or rain. (feeds Magic)",
+    "title": "Tidecaller",
+    "description": "+8% spell power in water or rain",
     "icon": {
       "type": "item",
       "data": {
@@ -412,8 +412,8 @@
     "required_spent_points": 5
   },
   "tidecaller_3": {
-    "title": "Tidecaller (3/3)",
-    "description": "Now: +8% spell power in water or rain. Next: +12% spell power in water or rain (max). (feeds Magic)",
+    "title": "Tidecaller",
+    "description": "+12% spell power in water or rain",
     "icon": {
       "type": "item",
       "data": {
@@ -447,8 +447,8 @@
     "required_spent_points": 10
   },
   "treasure_hunter_1": {
-    "title": "Treasure Hunter (1/3)",
-    "description": "Rank 1/3: Treasure odds x2 and a rarer loot table Pick one: this or Riptide Runner.",
+    "title": "Treasure Hunter",
+    "description": "Treasure odds x2 and a rarer loot table",
     "icon": {
       "type": "item",
       "data": {
@@ -462,11 +462,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Riptide Runner."
   },
   "treasure_hunter_2": {
-    "title": "Treasure Hunter (2/3)",
-    "description": "Rank 2/3: Treasure odds x2 and a rarer loot table Pick one: this or Riptide Runner.",
+    "title": "Treasure Hunter",
+    "description": "Treasure odds x2 and a rarer loot table",
     "icon": {
       "type": "item",
       "data": {
@@ -480,11 +481,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Riptide Runner."
   },
   "treasure_hunter_3": {
-    "title": "Treasure Hunter (3/3)",
-    "description": "Rank 3/3: Treasure odds x2 and a rarer loot table Pick one: this or Riptide Runner.",
+    "title": "Treasure Hunter",
+    "description": "Treasure odds x2 and a rarer loot table",
     "icon": {
       "type": "item",
       "data": {
@@ -498,7 +500,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Riptide Runner."
   },
   "tier_3_or": {
     "title": "OR",
@@ -518,8 +521,8 @@
     "required_spent_points": 10
   },
   "riptide_runner_1": {
-    "title": "Riptide Runner (1/3)",
-    "description": "Rank 1/3: Faster swimming and boats, longer breath Pick one: this or Treasure Hunter. (feeds Agility)",
+    "title": "Riptide Runner",
+    "description": "Faster swimming and boats, longer breath",
     "icon": {
       "type": "item",
       "data": {
@@ -533,11 +536,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Treasure Hunter."
   },
   "riptide_runner_2": {
-    "title": "Riptide Runner (2/3)",
-    "description": "Rank 2/3: Faster swimming and boats, longer breath Pick one: this or Treasure Hunter. (feeds Agility)",
+    "title": "Riptide Runner",
+    "description": "Faster swimming and boats, longer breath",
     "icon": {
       "type": "item",
       "data": {
@@ -551,11 +555,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Treasure Hunter."
   },
   "riptide_runner_3": {
-    "title": "Riptide Runner (3/3)",
-    "description": "Rank 3/3: Faster swimming and boats, longer breath Pick one: this or Treasure Hunter. (feeds Agility)",
+    "title": "Riptide Runner",
+    "description": "Faster swimming and boats, longer breath",
     "icon": {
       "type": "item",
       "data": {
@@ -569,7 +574,8 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 10
+    "required_spent_points": 10,
+    "extra_description": "Pick one: this or Treasure Hunter."
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -589,8 +595,8 @@
     "required_spent_points": 15
   },
   "patient_angler_ii_1": {
-    "title": "Patient Angler II (1/5)",
-    "description": "Rank 1/5: Faster bites still Needs Patient Angler (all ranks).",
+    "title": "Patient Angler II",
+    "description": "Faster bites still",
     "icon": {
       "type": "item",
       "data": {
@@ -604,11 +610,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Patient Angler (all ranks)."
   },
   "patient_angler_ii_2": {
-    "title": "Patient Angler II (2/5)",
-    "description": "Rank 2/5: Faster bites still Needs Patient Angler (all ranks).",
+    "title": "Patient Angler II",
+    "description": "Faster bites still",
     "icon": {
       "type": "item",
       "data": {
@@ -622,11 +629,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Patient Angler (all ranks)."
   },
   "patient_angler_ii_3": {
-    "title": "Patient Angler II (3/5)",
-    "description": "Rank 3/5: Faster bites still Needs Patient Angler (all ranks).",
+    "title": "Patient Angler II",
+    "description": "Faster bites still",
     "icon": {
       "type": "item",
       "data": {
@@ -640,11 +648,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Patient Angler (all ranks)."
   },
   "patient_angler_ii_4": {
-    "title": "Patient Angler II (4/5)",
-    "description": "Rank 4/5: Faster bites still Needs Patient Angler (all ranks).",
+    "title": "Patient Angler II",
+    "description": "Faster bites still",
     "icon": {
       "type": "item",
       "data": {
@@ -658,11 +667,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Patient Angler (all ranks)."
   },
   "patient_angler_ii_5": {
-    "title": "Patient Angler II (5/5)",
-    "description": "Rank 5/5: Faster bites still Needs Patient Angler (all ranks).",
+    "title": "Patient Angler II",
+    "description": "Faster bites still",
     "icon": {
       "type": "item",
       "data": {
@@ -676,11 +686,12 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "extra_description": "Needs Patient Angler (all ranks)."
   },
   "hook_shot_1": {
-    "title": "Hook Shot (1/2)",
-    "description": "Rank 1/2: Your rod yanks mobs harder and deals 2 damage (feeds Attack)",
+    "title": "Hook Shot",
+    "description": "Your rod yanks mobs harder and deals 2 damage",
     "icon": {
       "type": "item",
       "data": {
@@ -697,8 +708,8 @@
     "required_spent_points": 15
   },
   "hook_shot_2": {
-    "title": "Hook Shot (2/2)",
-    "description": "Rank 2/2: Your rod yanks mobs harder and deals 2 damage (feeds Attack)",
+    "title": "Hook Shot",
+    "description": "Your rod yanks mobs harder and deals 2 damage",
     "icon": {
       "type": "item",
       "data": {
@@ -715,8 +726,8 @@
     "required_spent_points": 15
   },
   "sushi_chef_1": {
-    "title": "Sushi Chef (1/3)",
-    "description": "Rank 1/3: Fish dishes you cook give Water Breathing and extra saturation (feeds Cooking)",
+    "title": "Sushi Chef",
+    "description": "Fish dishes you cook give Water Breathing and extra saturation",
     "icon": {
       "type": "item",
       "data": {
@@ -733,8 +744,8 @@
     "required_spent_points": 15
   },
   "sushi_chef_2": {
-    "title": "Sushi Chef (2/3)",
-    "description": "Rank 2/3: Fish dishes you cook give Water Breathing and extra saturation (feeds Cooking)",
+    "title": "Sushi Chef",
+    "description": "Fish dishes you cook give Water Breathing and extra saturation",
     "icon": {
       "type": "item",
       "data": {
@@ -751,8 +762,8 @@
     "required_spent_points": 15
   },
   "sushi_chef_3": {
-    "title": "Sushi Chef (3/3)",
-    "description": "Rank 3/3: Fish dishes you cook give Water Breathing and extra saturation (feeds Cooking)",
+    "title": "Sushi Chef",
+    "description": "Fish dishes you cook give Water Breathing and extra saturation",
     "icon": {
       "type": "item",
       "data": {
@@ -769,8 +780,8 @@
     "required_spent_points": 15
   },
   "lure_master_1": {
-    "title": "Lure Master (1/3)",
-    "description": "Rank 1/3: Aquaculture lures work better",
+    "title": "Lure Master",
+    "description": "Aquaculture lures work better",
     "icon": {
       "type": "item",
       "data": {
@@ -787,8 +798,8 @@
     "required_spent_points": 15
   },
   "lure_master_2": {
-    "title": "Lure Master (2/3)",
-    "description": "Rank 2/3: Aquaculture lures work better",
+    "title": "Lure Master",
+    "description": "Aquaculture lures work better",
     "icon": {
       "type": "item",
       "data": {
@@ -805,8 +816,8 @@
     "required_spent_points": 15
   },
   "lure_master_3": {
-    "title": "Lure Master (3/3)",
-    "description": "Rank 3/3: Aquaculture lures work better",
+    "title": "Lure Master",
+    "description": "Aquaculture lures work better",
     "icon": {
       "type": "item",
       "data": {
@@ -840,8 +851,8 @@
     "required_spent_points": 25
   },
   "storm_fisher_1": {
-    "title": "Storm Fisher (1/2)",
-    "description": "Rank 1/2: Faster bites in rain",
+    "title": "Storm Fisher",
+    "description": "Faster bites in rain",
     "icon": {
       "type": "item",
       "data": {
@@ -858,8 +869,8 @@
     "required_spent_points": 25
   },
   "storm_fisher_2": {
-    "title": "Storm Fisher (2/2)",
-    "description": "Rank 2/2: Faster bites in rain",
+    "title": "Storm Fisher",
+    "description": "Faster bites in rain",
     "icon": {
       "type": "item",
       "data": {
@@ -876,8 +887,8 @@
     "required_spent_points": 25
   },
   "sea_legs_1": {
-    "title": "Sea Legs (1/2)",
-    "description": "Now: nothing yet. Next: Boats go 5% faster.",
+    "title": "Sea Legs",
+    "description": "Boats go 5% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -894,8 +905,8 @@
     "required_spent_points": 25
   },
   "sea_legs_2": {
-    "title": "Sea Legs (2/2)",
-    "description": "Now: Boats go 5% faster. Next: Boats go 10% faster (max).",
+    "title": "Sea Legs",
+    "description": "Boats go 10% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -913,7 +924,7 @@
   },
   "leviathan_bait_1": {
     "title": "Leviathan Bait",
-    "description": "Rare chance of a unique trophy fish Pick one: this or Sea's Blessing.",
+    "description": "Rare chance of a unique trophy fish",
     "icon": {
       "type": "item",
       "data": {
@@ -927,7 +938,8 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Sea's Blessing."
   },
   "tier_5_or": {
     "title": "OR",
@@ -948,7 +960,7 @@
   },
   "seas_blessing_1": {
     "title": "Sea's Blessing",
-    "description": "Dolphin's Grace and Conduit Power while swimming Pick one: this or Leviathan Bait. (feeds Agility)",
+    "description": "Dolphin's Grace and Conduit Power while swimming",
     "icon": {
       "type": "item",
       "data": {
@@ -962,6 +974,7 @@
       }
     },
     "cost": 3,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "extra_description": "Pick one: this or Leviathan Bait."
   }
 }
