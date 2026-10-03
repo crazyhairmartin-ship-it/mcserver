@@ -91,10 +91,10 @@ def test_full_tree_fits_level_cap():
 
 def test_generator_removes_stale_categories(tmp_path):
     out = tmp_path / 'puffish_skills'
-    (out / 'wood').mkdir(parents=True)
-    (out / 'wood' / 'skills.json').write_text('{}')
+    (out / 'categories' / 'wood').mkdir(parents=True)
+    (out / 'categories' / 'wood' / 'skills.json').write_text('{}')
     g.write_config(DATA, out)
-    assert not (out / 'wood').exists()
+    assert not (out / 'categories' / 'wood').exists()
     config = json.loads((out / 'config.json').read_text())
     assert config['version'] == 3 and len(config['categories']) == 12
-    assert (out / 'forage' / 'definitions.json').exists()
+    assert (out / 'categories' / 'forage' / 'definitions.json').exists()  # Pufferfish reads categories/<id>/

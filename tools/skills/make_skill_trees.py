@@ -96,8 +96,8 @@ def write_config(data, out_dir):
     ids = []
     for tree in data['trees']:
         ids.append(tree['id'])
-        cat_dir = out_dir / tree['id']
-        cat_dir.mkdir()
+        cat_dir = out_dir / 'categories' / tree['id']      # Pufferfish reads config/puffish_skills/categories/<id>/
+        cat_dir.mkdir(parents=True)
         for name, content in build_category(tree, data['tiers']).items():
             (cat_dir / name).write_text(json.dumps(content, indent=2) + '\n', encoding='utf-8')
     config = {'version': 3, 'show_warnings': True, 'categories': ids}

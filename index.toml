@@ -127,200 +127,200 @@ hash = "e6a8aefa223576e123f4730e107a6d0aeff2960a8d045831103183677b3b5c99"
 metafile = true
 
 [[files]]
-file = "config/puffish_skills/agility/category.json"
+file = "config/puffish_skills/categories/agility/category.json"
 hash = "c58d9f6a7f6f4a1bed9d144d2eac006d8a33edd89fd01b40639dc75f4a2bef0f"
 
 [[files]]
-file = "config/puffish_skills/agility/connections.json"
+file = "config/puffish_skills/categories/agility/connections.json"
 hash = "327c9bab43ad8d15c1e72b395f38a37a6313d68003f55927f9d7658788349747"
 
 [[files]]
-file = "config/puffish_skills/agility/definitions.json"
+file = "config/puffish_skills/categories/agility/definitions.json"
 hash = "d9a16ddcb163a8505f51f71b3a89254646e1ae727cc85fe479892f9bd78fb5ec"
 
 [[files]]
-file = "config/puffish_skills/agility/skills.json"
+file = "config/puffish_skills/categories/agility/skills.json"
 hash = "ad235abe61d19b3c47c3c174482545c9ddb0ea9e2435a38abfe49237c65ad9f2"
 
 [[files]]
-file = "config/puffish_skills/attack/category.json"
+file = "config/puffish_skills/categories/attack/category.json"
 hash = "fc56b04295d6e8ec06b25cfca15ffd51cb41ba1b4ae6bd7be690f2bf7050d5a2"
 
 [[files]]
-file = "config/puffish_skills/attack/connections.json"
+file = "config/puffish_skills/categories/attack/connections.json"
 hash = "7cfc5c9deb7b3286c6d0442272b479756869f12e749c5a17023e04c1ec65f40f"
 
 [[files]]
-file = "config/puffish_skills/attack/definitions.json"
+file = "config/puffish_skills/categories/attack/definitions.json"
 hash = "9d2a57198a54f8bff382246d1a4cd1dbdc1817188fe96b85770dda798de49200"
 
 [[files]]
-file = "config/puffish_skills/attack/skills.json"
+file = "config/puffish_skills/categories/attack/skills.json"
 hash = "a0aee86d526e271f4b84b79e64a45606b7d42fa233d30b522d5ed7dca602d6f7"
+
+[[files]]
+file = "config/puffish_skills/categories/cook/category.json"
+hash = "af1f1bb9c7e02dba2c849076cde703a52803c4647323fe4345b4bc67872f702e"
+
+[[files]]
+file = "config/puffish_skills/categories/cook/connections.json"
+hash = "bf246692520cb2f14f8e09cb26521cc70889f2ff00462ab53d985c0f4345bd49"
+
+[[files]]
+file = "config/puffish_skills/categories/cook/definitions.json"
+hash = "f9483dd919d790b058d71fec83a53b227f07edb5e22d36e04a327bb4c44758be"
+
+[[files]]
+file = "config/puffish_skills/categories/cook/skills.json"
+hash = "76c1dcc541f0e2c2e96019c0f6c7ef6e523d4d35c3284d0af7abe695a4effce5"
+
+[[files]]
+file = "config/puffish_skills/categories/craft/category.json"
+hash = "5f213ca7f23389f013103ba1eb968609c018d94b2fa9f5092e36ceb4f4824914"
+
+[[files]]
+file = "config/puffish_skills/categories/craft/connections.json"
+hash = "5ad1bf5727fe9883bbaee483dbdb65804b93f0af09b397a0a0e56c53eebb46cd"
+
+[[files]]
+file = "config/puffish_skills/categories/craft/definitions.json"
+hash = "1138a5113a12ad17c3a957342ef3e41c609529a82a370c9459697302fe0237fe"
+
+[[files]]
+file = "config/puffish_skills/categories/craft/skills.json"
+hash = "5f10a07861539efb5fc337d41e6864d46391e1495bf8b84afa36fa61581e2855"
+
+[[files]]
+file = "config/puffish_skills/categories/defense/category.json"
+hash = "6b322aa3ea29183ca8115cdee5f265e3be22e239905fc527fe1bb46641243aea"
+
+[[files]]
+file = "config/puffish_skills/categories/defense/connections.json"
+hash = "74e68c8fc6e40edc5329352ecb99f1181700dffebbb1a820275568dd3f7c3165"
+
+[[files]]
+file = "config/puffish_skills/categories/defense/definitions.json"
+hash = "1c7fd2690f2e8c3fc81499c1aa0769c157c4a7d7ba51b2c012ab8bbd291c714b"
+
+[[files]]
+file = "config/puffish_skills/categories/defense/skills.json"
+hash = "3ca7a669b798ca4f3d04ddb0a6c177e0e96a2a59fda3925d39aef940d9e08509"
+
+[[files]]
+file = "config/puffish_skills/categories/farm/category.json"
+hash = "d020252138d734be9daa442b58fa93c58c493a482eb51c2e62e9c198adc970c2"
+
+[[files]]
+file = "config/puffish_skills/categories/farm/connections.json"
+hash = "cac3dbda533354e273d7d43b8ad1d0f5a164ce42b8bdc6302c71adf69a111c2b"
+
+[[files]]
+file = "config/puffish_skills/categories/farm/definitions.json"
+hash = "79027782d086f01b134ec8f3dd211dc835f62dd5160a04b69953879ec800a611"
+
+[[files]]
+file = "config/puffish_skills/categories/farm/skills.json"
+hash = "7df488239c02a3df463312ef85a90d0faa214f3c32136933e94dd5e3dd7aeac7"
+
+[[files]]
+file = "config/puffish_skills/categories/fish/category.json"
+hash = "32bbc28898b186091601920dc4f14883d339cac9f7b7d2032256c26099b97dab"
+
+[[files]]
+file = "config/puffish_skills/categories/fish/connections.json"
+hash = "8805eaef5fb6f976326ff56c8657e118d8a3771b395bcd0f8062e1288a7cd1f1"
+
+[[files]]
+file = "config/puffish_skills/categories/fish/definitions.json"
+hash = "c2e2842bf69f1704ab917d672da54de4b0237d1d4e565c8d7fc5a7c4c8f3154b"
+
+[[files]]
+file = "config/puffish_skills/categories/fish/skills.json"
+hash = "1fca5b06986b5854b1898861e0bad40fbdb894d5adf0ace3bdfabfef17ded1d2"
+
+[[files]]
+file = "config/puffish_skills/categories/forage/category.json"
+hash = "0cd63c0ad498ed086836b7e8d9e20126fbc66e551457b8869b577ed4444eddc2"
+
+[[files]]
+file = "config/puffish_skills/categories/forage/connections.json"
+hash = "b368dc529bcf1e95e02ab116765973273b5c5a0087b5bc4280206f734cc58f45"
+
+[[files]]
+file = "config/puffish_skills/categories/forage/definitions.json"
+hash = "afb2c535683b7b6cea7b753a30e3fb10285c46a95e0abeb796dffb39b4a4715a"
+
+[[files]]
+file = "config/puffish_skills/categories/forage/skills.json"
+hash = "2c308f112e6c35c1c0f58faa408e4de917b977633a007d361625317c7a75a2c2"
+
+[[files]]
+file = "config/puffish_skills/categories/magic/category.json"
+hash = "6dabb56e0a4023b83a234d750892e78a92aae9a37f6a94673cfd1c3d7ebe9402"
+
+[[files]]
+file = "config/puffish_skills/categories/magic/connections.json"
+hash = "ed2eeb4621d550891d2d9c35772d7315ed8ad59b23e17981a550bb006fa9d7f2"
+
+[[files]]
+file = "config/puffish_skills/categories/magic/definitions.json"
+hash = "340cbe18301e7ad74949c75434b0f66e65c0922adc8b9ad027a6146395e64d39"
+
+[[files]]
+file = "config/puffish_skills/categories/magic/skills.json"
+hash = "0e7b42bb189f29fcb8cf2026b47d39671d3db199bf96541cf9a2319cdfc6465c"
+
+[[files]]
+file = "config/puffish_skills/categories/mining/category.json"
+hash = "eb3464f443940ecb9c6506c5715835d5e2f30893477cfc46768a833a9d2febe4"
+
+[[files]]
+file = "config/puffish_skills/categories/mining/connections.json"
+hash = "90d30fe0798a7a01a2a5821f8ff432d5082d0abddef02108149d2de5437feb08"
+
+[[files]]
+file = "config/puffish_skills/categories/mining/definitions.json"
+hash = "97e63d5bb499a38cd7641ea810a95195413cfd6319f821cbc4729c0ef22f7dbf"
+
+[[files]]
+file = "config/puffish_skills/categories/mining/skills.json"
+hash = "3c87c25d125d97ae7b4ace6030e66de76def8f9c8578d9e7b4c6de8d87996bee"
+
+[[files]]
+file = "config/puffish_skills/categories/range/category.json"
+hash = "b374382f7f4652a8f871ccf5c5a9c8e7b0f5de8cd0516fa5683f2d86e43c8153"
+
+[[files]]
+file = "config/puffish_skills/categories/range/connections.json"
+hash = "32ce79186dd880273fbf8e3e8a8248913c38e842561708deba5e60c46ca98c5d"
+
+[[files]]
+file = "config/puffish_skills/categories/range/definitions.json"
+hash = "57787b1bee3fe0b5a072371315ea68fb0fb2bc953cf779cc2a067470e0c377c4"
+
+[[files]]
+file = "config/puffish_skills/categories/range/skills.json"
+hash = "984024f628de2cbd150411da3f37639afa0c9a4dbcf8d5850ecd6c8552099492"
+
+[[files]]
+file = "config/puffish_skills/categories/taming/category.json"
+hash = "251b2aed4c15f1528ec42323359a8232ba62d49598695632a52cb41b8b8e73b0"
+
+[[files]]
+file = "config/puffish_skills/categories/taming/connections.json"
+hash = "6eaa514c6fda0ff30e6957af2bce62d3f121e1fb67edf2040ffa732305002c5d"
+
+[[files]]
+file = "config/puffish_skills/categories/taming/definitions.json"
+hash = "9741706da0da346129442434fdbf7d0c5fd8c7308608680219898eb87baf832f"
+
+[[files]]
+file = "config/puffish_skills/categories/taming/skills.json"
+hash = "b9b64d306041f0e701932522d8f0091c7eda4af0bc7aadbffefc65058e8e7d02"
 
 [[files]]
 file = "config/puffish_skills/config.json"
 hash = "48ee22c33683c5ec4dd6f48eb2d0cb0830d1fadf6c170dd0416f00e8601bcde7"
-
-[[files]]
-file = "config/puffish_skills/cook/category.json"
-hash = "af1f1bb9c7e02dba2c849076cde703a52803c4647323fe4345b4bc67872f702e"
-
-[[files]]
-file = "config/puffish_skills/cook/connections.json"
-hash = "bf246692520cb2f14f8e09cb26521cc70889f2ff00462ab53d985c0f4345bd49"
-
-[[files]]
-file = "config/puffish_skills/cook/definitions.json"
-hash = "f9483dd919d790b058d71fec83a53b227f07edb5e22d36e04a327bb4c44758be"
-
-[[files]]
-file = "config/puffish_skills/cook/skills.json"
-hash = "76c1dcc541f0e2c2e96019c0f6c7ef6e523d4d35c3284d0af7abe695a4effce5"
-
-[[files]]
-file = "config/puffish_skills/craft/category.json"
-hash = "5f213ca7f23389f013103ba1eb968609c018d94b2fa9f5092e36ceb4f4824914"
-
-[[files]]
-file = "config/puffish_skills/craft/connections.json"
-hash = "5ad1bf5727fe9883bbaee483dbdb65804b93f0af09b397a0a0e56c53eebb46cd"
-
-[[files]]
-file = "config/puffish_skills/craft/definitions.json"
-hash = "1138a5113a12ad17c3a957342ef3e41c609529a82a370c9459697302fe0237fe"
-
-[[files]]
-file = "config/puffish_skills/craft/skills.json"
-hash = "5f10a07861539efb5fc337d41e6864d46391e1495bf8b84afa36fa61581e2855"
-
-[[files]]
-file = "config/puffish_skills/defense/category.json"
-hash = "6b322aa3ea29183ca8115cdee5f265e3be22e239905fc527fe1bb46641243aea"
-
-[[files]]
-file = "config/puffish_skills/defense/connections.json"
-hash = "74e68c8fc6e40edc5329352ecb99f1181700dffebbb1a820275568dd3f7c3165"
-
-[[files]]
-file = "config/puffish_skills/defense/definitions.json"
-hash = "1c7fd2690f2e8c3fc81499c1aa0769c157c4a7d7ba51b2c012ab8bbd291c714b"
-
-[[files]]
-file = "config/puffish_skills/defense/skills.json"
-hash = "3ca7a669b798ca4f3d04ddb0a6c177e0e96a2a59fda3925d39aef940d9e08509"
-
-[[files]]
-file = "config/puffish_skills/farm/category.json"
-hash = "d020252138d734be9daa442b58fa93c58c493a482eb51c2e62e9c198adc970c2"
-
-[[files]]
-file = "config/puffish_skills/farm/connections.json"
-hash = "cac3dbda533354e273d7d43b8ad1d0f5a164ce42b8bdc6302c71adf69a111c2b"
-
-[[files]]
-file = "config/puffish_skills/farm/definitions.json"
-hash = "79027782d086f01b134ec8f3dd211dc835f62dd5160a04b69953879ec800a611"
-
-[[files]]
-file = "config/puffish_skills/farm/skills.json"
-hash = "7df488239c02a3df463312ef85a90d0faa214f3c32136933e94dd5e3dd7aeac7"
-
-[[files]]
-file = "config/puffish_skills/fish/category.json"
-hash = "32bbc28898b186091601920dc4f14883d339cac9f7b7d2032256c26099b97dab"
-
-[[files]]
-file = "config/puffish_skills/fish/connections.json"
-hash = "8805eaef5fb6f976326ff56c8657e118d8a3771b395bcd0f8062e1288a7cd1f1"
-
-[[files]]
-file = "config/puffish_skills/fish/definitions.json"
-hash = "c2e2842bf69f1704ab917d672da54de4b0237d1d4e565c8d7fc5a7c4c8f3154b"
-
-[[files]]
-file = "config/puffish_skills/fish/skills.json"
-hash = "1fca5b06986b5854b1898861e0bad40fbdb894d5adf0ace3bdfabfef17ded1d2"
-
-[[files]]
-file = "config/puffish_skills/forage/category.json"
-hash = "0cd63c0ad498ed086836b7e8d9e20126fbc66e551457b8869b577ed4444eddc2"
-
-[[files]]
-file = "config/puffish_skills/forage/connections.json"
-hash = "b368dc529bcf1e95e02ab116765973273b5c5a0087b5bc4280206f734cc58f45"
-
-[[files]]
-file = "config/puffish_skills/forage/definitions.json"
-hash = "afb2c535683b7b6cea7b753a30e3fb10285c46a95e0abeb796dffb39b4a4715a"
-
-[[files]]
-file = "config/puffish_skills/forage/skills.json"
-hash = "2c308f112e6c35c1c0f58faa408e4de917b977633a007d361625317c7a75a2c2"
-
-[[files]]
-file = "config/puffish_skills/magic/category.json"
-hash = "6dabb56e0a4023b83a234d750892e78a92aae9a37f6a94673cfd1c3d7ebe9402"
-
-[[files]]
-file = "config/puffish_skills/magic/connections.json"
-hash = "ed2eeb4621d550891d2d9c35772d7315ed8ad59b23e17981a550bb006fa9d7f2"
-
-[[files]]
-file = "config/puffish_skills/magic/definitions.json"
-hash = "340cbe18301e7ad74949c75434b0f66e65c0922adc8b9ad027a6146395e64d39"
-
-[[files]]
-file = "config/puffish_skills/magic/skills.json"
-hash = "0e7b42bb189f29fcb8cf2026b47d39671d3db199bf96541cf9a2319cdfc6465c"
-
-[[files]]
-file = "config/puffish_skills/mining/category.json"
-hash = "eb3464f443940ecb9c6506c5715835d5e2f30893477cfc46768a833a9d2febe4"
-
-[[files]]
-file = "config/puffish_skills/mining/connections.json"
-hash = "90d30fe0798a7a01a2a5821f8ff432d5082d0abddef02108149d2de5437feb08"
-
-[[files]]
-file = "config/puffish_skills/mining/definitions.json"
-hash = "97e63d5bb499a38cd7641ea810a95195413cfd6319f821cbc4729c0ef22f7dbf"
-
-[[files]]
-file = "config/puffish_skills/mining/skills.json"
-hash = "3c87c25d125d97ae7b4ace6030e66de76def8f9c8578d9e7b4c6de8d87996bee"
-
-[[files]]
-file = "config/puffish_skills/range/category.json"
-hash = "b374382f7f4652a8f871ccf5c5a9c8e7b0f5de8cd0516fa5683f2d86e43c8153"
-
-[[files]]
-file = "config/puffish_skills/range/connections.json"
-hash = "32ce79186dd880273fbf8e3e8a8248913c38e842561708deba5e60c46ca98c5d"
-
-[[files]]
-file = "config/puffish_skills/range/definitions.json"
-hash = "57787b1bee3fe0b5a072371315ea68fb0fb2bc953cf779cc2a067470e0c377c4"
-
-[[files]]
-file = "config/puffish_skills/range/skills.json"
-hash = "984024f628de2cbd150411da3f37639afa0c9a4dbcf8d5850ecd6c8552099492"
-
-[[files]]
-file = "config/puffish_skills/taming/category.json"
-hash = "251b2aed4c15f1528ec42323359a8232ba62d49598695632a52cb41b8b8e73b0"
-
-[[files]]
-file = "config/puffish_skills/taming/connections.json"
-hash = "6eaa514c6fda0ff30e6957af2bce62d3f121e1fb67edf2040ffa732305002c5d"
-
-[[files]]
-file = "config/puffish_skills/taming/definitions.json"
-hash = "9741706da0da346129442434fdbf7d0c5fd8c7308608680219898eb87baf832f"
-
-[[files]]
-file = "config/puffish_skills/taming/skills.json"
-hash = "b9b64d306041f0e701932522d8f0091c7eda4af0bc7aadbffefc65058e8e7d02"
 
 [[files]]
 file = "config/simplyswords/general.toml"
