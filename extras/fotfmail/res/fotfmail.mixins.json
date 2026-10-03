@@ -16,7 +16,8 @@
     "PackageBlockEntityMixin",
     "PackageBlockMixin",
     "FireBlockMixin",
-    "StorageTerminalMenuAccessor"
+    "StorageTerminalMenuAccessor",
+    "FarmBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1
