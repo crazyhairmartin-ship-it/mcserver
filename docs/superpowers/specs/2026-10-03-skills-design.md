@@ -65,7 +65,9 @@ so balancing is a config edit. Perks of the same type add up (three ranks of +5%
 | 4 | 15 | Open |
 | 5 | 25 | Open extras + capstone choice |
 
-"R3" = a node with 3 ranks, built as a chain of 3 linked nodes costing 1 point each. Arrows ("needs X") are
+"R3" = a node with 3 ranks, built as a chain of linked nodes costing 1 point each. Nodes in open tiers drafted
+as R3 get **5 ranks**, so a full tree costs 40–49 points (close to the level-50 cap); choice and capstone
+nodes stay at 3. Per-rank amounts are rebalanced in the preview. Arrows ("needs X") are
 `required_skills`. Branch nodes in a choice tier are exclusive with the other branch.
 
 ## XP sources
