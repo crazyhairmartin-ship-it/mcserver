@@ -20,6 +20,7 @@ import net.minecraft.world.item.EnchantedBookItem;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.EnchantmentInstance;
+import net.minecraftforge.event.ItemAttributeModifierEvent;
 import net.minecraftforge.event.entity.player.AnvilRepairEvent;
 import net.minecraftforge.event.entity.player.PlayerDestroyItemEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
@@ -28,7 +29,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
 /**
- * Crafted gear (crafting grid): Enchanted Crafts I/II and Masterwork (guaranteed random enchantments), Smith (a
+ * Crafted gear (crafting grid, including shift-click via ItemCraftedByMixin): Enchanted Crafts I/II and Masterwork (guaranteed random enchantments), Smith (a
  * durability-saving chance stored on the item), Whetstone / Weaponsmith (+attack damage on weapons) and Armourer
  * (+toughness on armour), each applied once per item. Whetstone also applies to anvil repairs. Book Saver turns a
  * breaking enchanted tool into a book; Repair Kit refunds part of an anvil's XP cost.
@@ -37,13 +38,11 @@ public final class CraftPerks {
     public static final String SMITH = "FotfSmith";
     private static final String STATS_DONE = "FotfStats";
     private static final String WHET_DONE = "FotfWhet";
-
-    @SubscribeEvent
-    public void onCraft(PlayerEvent.ItemCraftedEvent event) {
-        if (event.getEntity() instanceof ServerPlayer player) {
-            improve(player, event.getCrafting());
-        }
-    }
+    private static final String PERK_ENCHANTED = "FotfEnchanted";
+    private static final String BONUS_DAMAGE = "FotfBonusDamage";
+    private static final String BONUS_TOUGHNESS = "FotfBonusToughness";
+    private static final UUID DAMAGE_ID = UUID.nameUUIDFromBytes("fotfskills:crafted_damage".getBytes());
+    private static final UUID TOUGHNESS_ID = UUID.nameUUIDFromBytes("fotfskills:crafted_toughness".getBytes());
 
     /** Crafted gear only: damageable items. */
     public static void improve(ServerPlayer player, ItemStack stack) {
@@ -57,6 +56,7 @@ public final class CraftPerks {
             for (int i = 0; i < count; i++) {
                 enchant(stack, cap, bonus);
             }
+            stack.m_41784_().m_128379_(PERK_ENCHANTED, true);      // never turned into books by Book Saver
         }
         double smith = Perks.get(player, "smith");
         if (smith > 0) {
@@ -66,11 +66,11 @@ public final class CraftPerks {
             EquipmentSlot slot = LivingEntity.m_147233_(stack);
             double damage = Perks.get(player, "whetstone") + Perks.get(player, "weaponsmith");
             if (slot == EquipmentSlot.MAINHAND && damage > 0 && hasDefault(stack, slot, Attributes.f_22281_)) {
-                addModifier(stack, slot, Attributes.f_22281_, damage);
+                stack.m_41784_().m_128347_(BONUS_DAMAGE, damage);
                 stack.m_41784_().m_128379_(STATS_DONE, true);
                 stack.m_41784_().m_128379_(WHET_DONE, true);
             } else if (stack.m_41720_() instanceof ArmorItem && Perks.get(player, "armourer") > 0) {
-                addModifier(stack, slot, Attributes.f_22285_, Perks.get(player, "armourer"));
+                stack.m_41784_().m_128347_(BONUS_TOUGHNESS, Perks.get(player, "armourer"));
                 stack.m_41784_().m_128379_(STATS_DONE, true);
             }
         }
@@ -87,7 +87,7 @@ public final class CraftPerks {
         EquipmentSlot slot = LivingEntity.m_147233_(out);
         if (whet > 0 && out.m_41763_() && slot == EquipmentSlot.MAINHAND && !out.m_41784_().m_128441_(WHET_DONE)
                 && hasDefault(out, slot, Attributes.f_22281_)) {
-            addModifier(out, slot, Attributes.f_22281_, whet);
+            out.m_41784_().m_128347_(BONUS_DAMAGE, out.m_41784_().m_128459_(BONUS_DAMAGE) + whet);
             out.m_41784_().m_128379_(WHET_DONE, true);
         }
         if (player.f_36096_ instanceof AnvilMenu anvil) {
@@ -100,7 +100,10 @@ public final class CraftPerks {
 
     @SubscribeEvent
     public void onBreak(PlayerDestroyItemEvent event) {
-        if (!(event.getEntity() instanceof ServerPlayer player) || Perks.get(player, "book_saver") <= 0) {
+        ItemStack original = event.getOriginal();
+        if (!(event.getEntity() instanceof ServerPlayer player) || Perks.get(player, "book_saver") <= 0
+                || !BookSaverRule.isBreak(original.m_41763_(), original.m_41773_(), original.m_41776_(),
+                        original.m_41783_() != null && original.m_41783_().m_128441_(PERK_ENCHANTED))) {
             return;
         }
         Map<Enchantment, Integer> enchants = EnchantmentHelper.m_44831_(event.getOriginal());
@@ -131,14 +134,35 @@ public final class CraftPerks {
         return stack.m_41720_().m_7167_(slot).containsKey(attribute);
     }
 
-    /** An NBT modifier turns off the item's default attributes, so the slot's defaults are copied in first. */
-    private static void addModifier(ItemStack stack, EquipmentSlot slot, Attribute attribute, double amount) {
-        CompoundTag tag = stack.m_41784_();
-        if (!tag.m_128441_("AttributeModifiers")) {
-            Multimap<Attribute, AttributeModifier> defaults = stack.m_41720_().m_7167_(slot);
-            defaults.forEach((attr, modifier) -> stack.m_41643_(attr, modifier, slot));
+    /**
+     * Whetstone / Weaponsmith / Armourer bonuses are numbers on the item (FotfBonusDamage / FotfBonusToughness) added
+     * on top of whatever the item itself provides; writing NBT attribute modifiers would replace a modded item's own
+     * (stack-sensitive) stats.
+     */
+    @SubscribeEvent
+    public void onAttributes(ItemAttributeModifierEvent event) {
+        CompoundTag tag = event.getItemStack().m_41783_();
+        if (tag == null) {
+            return;
         }
-        stack.m_41643_(attribute, new AttributeModifier(UUID.randomUUID(), "fotfskills crafted", amount,
-                AttributeModifier.Operation.ADDITION), slot);
+        if (tag.m_128441_(BONUS_DAMAGE) && event.getSlotType() == EquipmentSlot.MAINHAND) {
+            event.addModifier(Attributes.f_22281_, new AttributeModifier(DAMAGE_ID, "fotfskills crafted", tag.m_128459_(BONUS_DAMAGE),
+                    AttributeModifier.Operation.ADDITION));
+        }
+        if (tag.m_128441_(BONUS_TOUGHNESS) && event.getSlotType() == LivingEntity.m_147233_(event.getItemStack())) {
+            event.addModifier(Attributes.f_22285_, new AttributeModifier(TOUGHNESS_ID, "fotfskills crafted", tag.m_128459_(BONUS_TOUGHNESS),
+                    AttributeModifier.Operation.ADDITION));
+        }
+    }
+
+    /** Any menu with a crafting grid: a vanilla result slot, or a slot backed by a CraftingContainer. */
+    public static boolean craftingGrid(net.minecraft.world.inventory.AbstractContainerMenu menu) {
+        for (net.minecraft.world.inventory.Slot slot : menu.f_38839_) {
+            if (slot instanceof net.minecraft.world.inventory.ResultSlot
+                    || slot.f_40218_ instanceof net.minecraft.world.inventory.CraftingContainer) {
+                return true;
+            }
+        }
+        return false;
     }
 }

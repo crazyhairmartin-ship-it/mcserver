@@ -9,7 +9,8 @@ public final class TuningTest {
         check(Math.abs((1 - 0.9) / (1 - 0.9 * f) - 1.1) < 1e-9, "10% faster top speed");
         check(Tuning.enchantLevel(1, 0, 5, 0.99) == 1, "Enchanted Crafts I: always level I");
         check(Tuning.enchantLevel(3, 0, 5, 0.99) == 3 && Tuning.enchantLevel(3, 0, 5, 0.0) == 1, "rank III: up to III");
-        check(Tuning.enchantLevel(3, 2, 4, 0.99) == 4, "Enchanted Crafts II adds levels, capped at the max");
+        check(Tuning.enchantLevel(3, 2, 4, 0.99) == 3, "Enchanted Crafts II adds levels, never above III (low-level enchantments, spec)");
+        check(Tuning.enchantLevel(1, 1, 5, 0.0) == 2, "bonus raises a level-I roll to II");
         check(Tuning.enchantLevel(3, 1, 1, 0.5) == 1, "single-level enchantments stay at I");
         System.out.println("TuningTest ok");
     }

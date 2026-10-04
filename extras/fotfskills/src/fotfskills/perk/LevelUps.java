@@ -28,6 +28,8 @@ public final class LevelUps {
     private static final String FIREWORK = "{Fireworks:{Flight:1b,Explosions:[{Type:1b,Flicker:1b,Trail:1b,"
             + "Colors:[I;16766720,5635925,5636095],FadeColors:[I;16777215]}]}}";
 
+    private static final LevelGate GATE = new LevelGate();
+
     private LevelUps() {
     }
 
@@ -44,6 +46,9 @@ public final class LevelUps {
             return;
         }
         int level = category.getExperience().map(e -> e.getLevel(player)).orElse(0);
+        if (!GATE.announce(player.m_20148_(), categoryId.m_135815_(), level)) {
+            return;                       // points came back (tree reset) or were granted: no new level
+        }
         String name = NAMES.getOrDefault(categoryId.m_135815_(), categoryId.m_135815_());
         if (level >= CAP) {
             player.m_213846_(Component.m_237113_("§6§l" + name + " mastered! §r§eLevel " + CAP + " — every node is yours to take."));
@@ -57,6 +62,11 @@ public final class LevelUps {
     }
 
     private static void fireworks(ServerPlayer player) {
+        if (!player.m_9236_().m_45527_(player.m_20183_().m_7494_())) {    // underground: rockets would explode on the ceiling
+            ((net.minecraft.server.level.ServerLevel) player.m_9236_()).m_8767_(net.minecraft.core.particles.ParticleTypes.f_123767_,
+                    player.m_20185_(), player.m_20186_() + 1, player.m_20189_(), 80, 0.6, 0.8, 0.6, 0.4);
+            return;
+        }
         try {
             CompoundTag tag = TagParser.m_129359_(FIREWORK);
             for (int i = 0; i < 3; i++) {

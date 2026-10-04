@@ -16,6 +16,8 @@ import net.puffish.skillsmod.api.SkillsAPI;
 
 /** Taming, hits taken and shield blocks (Defense, capped per attacker), and sprinting/climbing distance (Agility). */
 public final class ForgeXpEvents {
+    /** Animals Forge's tame event already paid for this tick (vanilla horses fire it; the unicorn mod's may not). */
+    public static final java.util.Set<net.minecraft.world.entity.Entity> TAMED_BY_EVENT = java.util.Collections.newSetFromMap(new java.util.WeakHashMap<>());
     private final Map<UUID, double[]> lastPos = new HashMap<>();
     private final Map<UUID, MoveBank> banks = new HashMap<>();
     /** At most 30 damage per attacker per 5 minutes earns Defense XP (hits and blocks together). */
@@ -25,6 +27,7 @@ public final class ForgeXpEvents {
     public void onTame(AnimalTameEvent event) {
         if (event.getTamer() instanceof ServerPlayer player) {
             AmountSource.award(player, "tame", 1);
+            TAMED_BY_EVENT.add(event.getAnimal());
         }
     }
 

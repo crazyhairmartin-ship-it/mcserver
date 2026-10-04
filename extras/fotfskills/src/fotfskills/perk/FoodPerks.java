@@ -51,10 +51,11 @@ public final class FoodPerks {
         double chef = Perks.get(player, "chef");
         if (chef > 0) {
             for (Pair<MobEffectInstance, Float> pair : food.m_38749_()) {
-                MobEffectInstance active = player.m_21124_(pair.getFirst().m_19544_());
-                if (active != null) {
-                    player.m_7292_(new MobEffectInstance(active.m_19544_(), (int) (active.m_19557_() * (1 + chef)),
-                            active.m_19564_(), active.m_19571_(), active.m_19572_()));
+                MobEffectInstance base = pair.getFirst();
+                MobEffectInstance active = player.m_21124_(base.m_19544_());
+                if (active != null && active.m_19564_() == base.m_19564_()) {      // the meal's own effect landed
+                    player.m_7292_(new MobEffectInstance(base.m_19544_(), chefDuration(base.m_19557_(), chef),
+                            base.m_19564_(), base.m_19571_(), base.m_19572_()));
                 }
             }
         }
@@ -77,5 +78,10 @@ public final class FoodPerks {
             }
         }
         return false;
+    }
+
+    /** Chef: the food's own effect duration, stretched once (never the time an effect already has left). */
+    public static int chefDuration(int foodDuration, double chef) {
+        return (int) Math.round(foodDuration * (1 + chef));
     }
 }

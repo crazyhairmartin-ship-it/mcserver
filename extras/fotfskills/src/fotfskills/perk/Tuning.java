@@ -10,9 +10,9 @@ public final class Tuning {
         return (1 - 0.1 / (1 + faster)) / 0.9;
     }
 
-    /** A level uniform in 1..cap, plus bonus, within 1..maxLevel. */
+    /** A level uniform in 1..cap, plus bonus, within 1..maxLevel and never above III (low-level enchantments, spec). */
     public static int enchantLevel(int cap, int bonus, int maxLevel, double roll) {
         int level = 1 + (int) Math.floor(roll * Math.max(cap, 1)) + bonus;
-        return Math.max(1, Math.min(level, maxLevel));
+        return Math.max(1, Math.min(level, Math.min(maxLevel, 3)));
     }
 }
