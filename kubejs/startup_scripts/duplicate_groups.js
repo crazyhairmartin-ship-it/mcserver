@@ -37,6 +37,10 @@ global.DUPLICATE_GROUPS = [
   { name: 'fish_oil', items: ['alexsmobs:fish_oil', 'wildernature:fish_oil'], tags: [] },
   { name: 'silk', items: ['butterflies:silk', 'crittersandcompanions:silk'], tags: [] },
   { name: 'pearl', items: ['crittersandcompanions:pearl', 'alexscaves:pearl'], tags: [] },
+  { name: 'flint_knife', items: ['farmersdelight:flint_knife', 'aquaculture:wooden_fillet_knife', 'aquaculture:stone_fillet_knife'], tags: [] },
+  { name: 'iron_knife', items: ['farmersdelight:iron_knife', 'aquaculture:iron_fillet_knife'], tags: [] },
+  { name: 'golden_knife', items: ['farmersdelight:golden_knife', 'aquaculture:gold_fillet_knife'], tags: [] },
+  { name: 'diamond_knife', items: ['farmersdelight:diamond_knife', 'aquaculture:diamond_fillet_knife'], tags: [] },
   { name: 'canvas', items: ['farmersdelight:canvas', 'furniture:canvas'], tags: [] },
 ]
 

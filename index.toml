@@ -320,7 +320,7 @@ hash = "22e9ce365ce151cf11782593f6934c04c4d36ff01ac78493932905478a577506"
 
 [[files]]
 file = "config/puffish_skills/categories/mining/experience.json"
-hash = "2db805d147766dfbf7e301a9d4c0b6c03d6407ee924991fefcfee3fdd1b9f6f6"
+hash = "151073d754f6c750bc73dff4e1b84507f1eb9020e99812ff6515bb550a3676df"
 
 [[files]]
 file = "config/puffish_skills/categories/mining/skills.json"
@@ -1843,6 +1843,10 @@ file = "kubejs/server_scripts/saddle_recipe.js"
 hash = "412bf83da2aa86b4baf7ae41144bcf05f8f4068bf7b32693f4dd5740f86299fb"
 
 [[files]]
+file = "kubejs/server_scripts/trim_aquaculture.js"
+hash = "6025b8605db77c3f6a6858af034680cfbc9126435774b31fa31d1b2b98e74f8b"
+
+[[files]]
 file = "kubejs/server_scripts/trim_ars.js"
 hash = "c386d46f86fa335b8c7497ab3bfc7859d48c0603279ba2e05bb7fc6a2c9d8011"
 
@@ -1876,7 +1880,7 @@ hash = "9c0de00c70d542caeb2f103f3272d9193121b20ae053d97fc55a199f5280f746"
 
 [[files]]
 file = "kubejs/startup_scripts/duplicate_groups.js"
-hash = "8056cc2c4fa1199ef18455c61ee797b39f5128b6519645d7caad4907d79f7006"
+hash = "8a49609af757de514533e14998eb772daeb878d090af14049ffd6a8eae2cccaa"
 
 [[files]]
 file = "kubejs/startup_scripts/friendly_fireballs.js"
