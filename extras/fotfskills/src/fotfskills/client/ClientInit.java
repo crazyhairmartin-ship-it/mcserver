@@ -9,5 +9,6 @@ public final class ClientInit {
 
     public static void register() {
         MinecraftForge.EVENT_BUS.register(new BuffsOverlay());
+        MinecraftForge.EVENT_BUS.register(new DoubleJump());
     }
 }

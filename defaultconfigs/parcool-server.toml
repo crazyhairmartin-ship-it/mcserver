@@ -4,7 +4,7 @@
 	[Action.parcool]
 
 		[Action.parcool.grapple]
-			available = true
+			available = false
 			#Range: 0 ~ 32767
 			cost_start = 0
 			#Range: 0 ~ 32767
@@ -268,7 +268,7 @@
 			learn_cost = 0
 
 [Game]
-	enable_skill_tree = true
+	enable_skill_tree = false
 	damage_without_glove = true
 
 [GrapplingHook]

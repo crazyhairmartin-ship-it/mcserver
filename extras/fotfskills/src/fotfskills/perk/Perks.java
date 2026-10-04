@@ -66,7 +66,9 @@ public final class Perks {
             Map.entry("brewer_duration", 1.0), Map.entry("brewer_save", 0.95), Map.entry("feast_maker", 0.95),
             Map.entry("salvager", 0.95), Map.entry("irrigator", 5.0), Map.entry("artificer_glyph", 0.9),
             Map.entry("artificer_summon", 2.0), Map.entry("bloodlines", 0.95), Map.entry("breed_cooldown", 0.9),
-            Map.entry("source_gain", 0.9), Map.entry("apparatus_save", 0.9));
+            Map.entry("source_gain", 0.9), Map.entry("apparatus_save", 0.9),
+            Map.entry("pc_freerunner", 1.0), Map.entry("pc_spring", 1.0), Map.entry("pc_skydive", 1.0),
+            Map.entry("pc_trick", 1.0), Map.entry("dodge_distance", 1.0), Map.entry("double_jump", 1.0));
 
     public static final PerkTotals TOTALS = new PerkTotals(perk -> CAPS.getOrDefault(perk, 0.0));
 

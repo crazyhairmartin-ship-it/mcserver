@@ -52,6 +52,16 @@ public final class PerkSync {
                     context.get().setPacketHandled(true);
                 })
                 .add();
+        CHANNEL.messageBuilder(DoubleJumped.class, 2, NetworkDirection.PLAY_TO_SERVER)
+                .encoder((msg, buf) -> { }).decoder(buf -> new DoubleJumped())
+                .consumerMainThread((msg, context) -> {
+                    ServerPlayer player = context.get().getSender();
+                    if (player != null && Perks.get(player, "double_jump") > 0) {
+                        player.f_19789_ = 0;                 // the landing after a double jump is safe
+                    }
+                    context.get().setPacketHandled(true);
+                })
+                .add();
         CHANNEL.messageBuilder(Buffs.class, 1, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Buffs::encode).decoder(Buffs::decode)
                 .consumerMainThread((msg, context) -> {
@@ -59,6 +69,14 @@ public final class PerkSync {
                     context.get().setPacketHandled(true);
                 })
                 .add();
+    }
+
+    /** Client to server: the player used Double Jump (the server clears their fall distance). */
+    public record DoubleJumped() {
+    }
+
+    public static void sendDoubleJump() {
+        CHANNEL.sendToServer(new DoubleJumped());
     }
 
     /** The player's active situational buffs, shown beside the inventory (sent when the list changes). */
