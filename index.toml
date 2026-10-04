@@ -1,6 +1,38 @@
 hash-format = "sha256"
 
 [[files]]
+file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/plan-path"
+hash = "ba7519145bfadbca92e839b51abfaacc760a6ed2449ec037a38ae3e04be0a403"
+
+[[files]]
+file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/progress.md"
+hash = "ec015ff3f525b19dfcd29a7f2aaabe2f4cb0002f6ac1048bbfee177c5d7cc145"
+
+[[files]]
+file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-1-brief.md"
+hash = "afb0a4c3c6f9c18e5cf821ac60d091e53635e24f93afa83688293c3945738e38"
+
+[[files]]
+file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-1-tests.log"
+hash = "b5df3802e9828684862921e48456270ce167316d7a58abed38b9c182d151601e"
+
+[[files]]
+file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-2-brief.md"
+hash = "0b59ff9ef8345597d192cea780321bcad71633682e09a76c5e251e82b32968e6"
+
+[[files]]
+file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-2-tests.log"
+hash = "b5df3802e9828684862921e48456270ce167316d7a58abed38b9c182d151601e"
+
+[[files]]
+file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-3-brief.md"
+hash = "f3b3e7e46b7ef0ce9292512c6dd316440c3f621640b2c946a5c98afe74c27464"
+
+[[files]]
+file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-3-tests.log"
+hash = "460ce8e0f2b0e5ae89000e53e24d7ace891c0092a7ab181a067451a351411d66"
+
+[[files]]
 file = "config/alexscaves-general.toml"
 hash = "6588029574999e58617203c013180d0e35f2673900e1cff7d7087fbd05a4d6c3"
 
@@ -1713,7 +1745,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfmail.pw.toml"
-hash = "50e260d2a3f55944d18825d1b28376c3bd5dd0674dee207b8d346fab92f92d5a"
+hash = "753006f8647e980412b22f028f9ce454976d744fd93e25554405a7a6d81cf186"
 metafile = true
 
 [[files]]
