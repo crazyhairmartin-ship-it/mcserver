@@ -58,7 +58,9 @@ public final class Perks {
             Map.entry("arcane_arrows", 2.0), Map.entry("retriever", 0.95), Map.entry("shield_wall", 0.9),
             Map.entry("bulwark", 0.6), Map.entry("mana_shield", 5.0), Map.entry("arcane_aegis", 1.0),
             Map.entry("wellspring", 2.0), Map.entry("druids_grove", 0.9),
-            Map.entry("earthshaker", 1.0), Map.entry("reapers_due", 1.0));
+            Map.entry("earthshaker", 1.0), Map.entry("reapers_due", 1.0),
+            Map.entry("hook_range", 30.0), Map.entry("hook_speed", 2.0), Map.entry("hook_motor", 10.0),
+            Map.entry("hook_double", 1.0), Map.entry("soul_mender", 1.0));
 
     public static final PerkTotals TOTALS = new PerkTotals(perk -> CAPS.getOrDefault(perk, 0.0));
 

@@ -95,6 +95,10 @@ public final class ConditionalStats {
         if (Perks.get(player, "seas_blessing") > 0 && player.m_20069_()) {
             labels.add("Sea's Blessing");
         }
+        int total = TotalLevel.get(player.m_20148_());
+        if (total > 0) {
+            labels.add(0, "Total level " + total + " (+" + HeartCurve.steps(total) + " hearts)");
+        }
         if (!labels.equals(sentLabels.get(player.m_20148_()))) {
             sentLabels.put(player.m_20148_(), labels);
             PerkSync.sendBuffs(player, labels);

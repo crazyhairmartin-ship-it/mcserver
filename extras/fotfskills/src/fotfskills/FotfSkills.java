@@ -47,6 +47,10 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new CombatPerks());
         MinecraftForge.EVENT_BUS.register(new WeaponPerks());
         MinecraftForge.EVENT_BUS.register(new ConditionalStats());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.perk.TotalLevel());
+        if (ModList.get().isLoaded("grapplemod")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.perk.GrapplePerks());
+        }
         MinecraftForge.EVENT_BUS.register(new PetPerks());
         MinecraftForge.EVENT_BUS.register(new BreedingPerks());
         MinecraftForge.EVENT_BUS.register(new FarmPerks());
