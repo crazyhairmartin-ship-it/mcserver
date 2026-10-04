@@ -1,28 +1,31 @@
 // Items that different mods add as copies of the same thing.
-// First item in each group is the one we keep visible in JEI; the rest are hidden.
+// First item in each group is the one we keep visible in JEI; the rest are hidden, and drops or pickups of them
+// turn into the first item (server_scripts/convert_duplicates.js).
 // Every recipe that asks for one of them accepts any item in its group
 // (see server_scripts/unify_duplicates.js and client_scripts/hide_duplicates.js).
 // `tags`: extra forge/c tags every item in the group should share, so tag-based recipes accept all of them.
 
 global.DUPLICATE_GROUPS = [
-  { name: 'tomato', items: ['farmersdelight:tomato', 'farm_and_charm:tomato'],
+  { name: 'tomato', items: ['farm_and_charm:tomato', 'farmersdelight:tomato'],
     tags: ['forge:crops/tomato', 'forge:vegetables/tomato', 'forge:vegetables', 'c:crops/tomato', 'c:vegetables'] },
-  { name: 'tomato_seeds', items: ['farmersdelight:tomato_seeds', 'farm_and_charm:tomato_seeds'],
+  { name: 'tomato_seeds', items: ['farm_and_charm:tomato_seeds', 'farmersdelight:tomato_seeds'],
     tags: ['forge:seeds/tomato', 'forge:seeds', 'c:seeds'] },
-  { name: 'rotten_tomato', items: ['farmersdelight:rotten_tomato', 'farm_and_charm:rotten_tomato'], tags: [] },
-  { name: 'onion', items: ['farmersdelight:onion', 'farm_and_charm:onion'],
+  { name: 'rotten_tomato', items: ['farm_and_charm:rotten_tomato', 'farmersdelight:rotten_tomato'], tags: [] },
+  { name: 'onion', items: ['farm_and_charm:onion', 'farmersdelight:onion'],
     tags: ['forge:crops/onion', 'forge:vegetables/onion', 'forge:vegetables', 'c:crops/onion', 'c:vegetables'] },
-  { name: 'minced_beef', items: ['farmersdelight:minced_beef', 'farm_and_charm:minced_beef'],
+  { name: 'minced_beef', items: ['farm_and_charm:minced_beef', 'farmersdelight:minced_beef'],
     tags: ['forge:raw_beef', 'c:raw_beef'] },
-  { name: 'raw_pasta', items: ['farmersdelight:raw_pasta', 'farm_and_charm:raw_pasta'],
+  { name: 'raw_pasta', items: ['farm_and_charm:raw_pasta', 'farmersdelight:raw_pasta'],
     tags: ['forge:pasta', 'forge:pasta/raw_pasta', 'c:pasta'] },
   { name: 'dough', items: ['farm_and_charm:dough', 'bakery:dough'],
     tags: ['forge:dough', 'c:dough'] },
-  { name: 'bacon', items: ['farmersdelight:bacon', 'farm_and_charm:bacon'],
+  { name: 'bacon', items: ['farm_and_charm:bacon', 'farmersdelight:bacon'],
     tags: ['forge:raw_bacon', 'forge:raw_pork', 'c:raw_bacon', 'c:raw_pork'] },
-  { name: 'dog_food', items: ['farmersdelight:dog_food', 'farm_and_charm:dog_food'], tags: [] },
-  { name: 'onion_soup', items: ['farmersdelight:onion_soup', 'farm_and_charm:onion_soup'], tags: [] },
-  { name: 'apple_pie_slice', items: ['farmersdelight:apple_pie_slice', 'bakery:apple_pie_slice'], tags: [] },
+  { name: 'dog_food', items: ['farm_and_charm:dog_food', 'farmersdelight:dog_food'], tags: [] },
+  { name: 'onion_soup', items: ['farm_and_charm:onion_soup', 'farmersdelight:onion_soup'], tags: [] },
+  { name: 'apple_pie', items: ['bakery:apple_pie', 'farmersdelight:apple_pie'], tags: [] },
+  { name: 'dumplings', items: ['brewery:dumplings', 'farmersdelight:dumplings'], tags: [] },
+  { name: 'apple_pie_slice', items: ['bakery:apple_pie_slice', 'farmersdelight:apple_pie_slice'], tags: [] },
   { name: 'venison', items: ['naturalist:venison', 'wildernature:venison'], tags: [] },
   { name: 'cooked_venison', items: ['naturalist:cooked_venison', 'wildernature:cooked_venison'], tags: [] },
   { name: 'raw_catfish', items: ['naturalist:catfish', 'alexsmobs:raw_catfish'],

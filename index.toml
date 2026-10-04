@@ -423,8 +423,16 @@ file = "defaultconfigs/parcool-server.toml"
 hash = "1c689b11c59f7b802c4d04db485e2afdcb9745f97195912dd5200a95b5fb33b9"
 
 [[files]]
+file = "kubejs/assets/alexscaves/lang/en_us.json"
+hash = "03a618205b0659894850c0d2443a9016af82682a54da77814202d0e6f6522867"
+
+[[files]]
 file = "kubejs/assets/alexsmobs/sounds.json"
 hash = "17d0b3f119bf63465152eabf6512cd7443b2ed0dff978a01f8a564bb606b1724"
+
+[[files]]
+file = "kubejs/assets/aquaculture/lang/en_us.json"
+hash = "c7a6df08b49c5e0cde1db5ec13481f1d0d0ae56e5c7043d6bcd90a6156427e8e"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/entity/boat/archwood.png"
@@ -448,7 +456,7 @@ hash = "4294d4b35c6ee68cf8f1a39a49708a9a5b6d7d23d8cd1fdcac22c3c26c9b7f85"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/lang/en_us.json"
-hash = "535e2618fc20602eafff5f88d79b19f716f8a266de1ea81195acfad0c3dfad8c"
+hash = "1d908b7c155d5eff2c71646845dee6b216b262ab6a7fd96c6e05403f2b939f86"
 
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/block/archwood_door_bottom.png"
@@ -501,6 +509,18 @@ hash = "8ada70cee108dc9825589c8504b1af3be6a4cff72208e57e1a14a9f40ca448dc"
 [[files]]
 file = "kubejs/assets/ars_nouveau/textures/model/chest/archwood/right.png"
 hash = "a53858f69c8ed5a7b09aab2dff0833a166f7fd7af4eb07fc63c9c48140314cd7"
+
+[[files]]
+file = "kubejs/assets/bakery/lang/en_us.json"
+hash = "aa0f044312837c9605a5abd5f7150433c7b649d840c7cf17baf8da9ff5433ed5"
+
+[[files]]
+file = "kubejs/assets/beachparty/lang/en_us.json"
+hash = "9029d4e68ea75a6f959bc4e8046ee4506d6a2b2ac188cbc2c320cdbb2f6c8fd2"
+
+[[files]]
+file = "kubejs/assets/biomesoplenty/lang/en_us.json"
+hash = "0c2efcff94105d13222e81508fbb6fb8d5b902104f0ce509c200f46c0694fa82"
 
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/block/umbran_door_bottom.png"
@@ -557,6 +577,26 @@ hash = "0964383809a7146ff3a8a8c8e29223f49f3dcb7236534116d640627a4a911dcd"
 [[files]]
 file = "kubejs/assets/biomesoplenty/textures/item/umbran_sign.png"
 hash = "c3ca0d363e59b69c38be90030b01aa30c551c82b02702e7233f0492e0adcc7d4"
+
+[[files]]
+file = "kubejs/assets/bloomingnature/lang/en_us.json"
+hash = "386ac6c21f54018cf1a5c2526ce0eb593ab64ce8c0e79d8f2d1f4abd342d0edc"
+
+[[files]]
+file = "kubejs/assets/brewery/lang/en_us.json"
+hash = "ae9b82284787b757f5011dea0de89c20cff9775b25109da5b00fefed209b1930"
+
+[[files]]
+file = "kubejs/assets/candlelight/lang/en_us.json"
+hash = "d5c201e46969c889ffc0dd026c1c6f6fb98a699311cad7064ee6c6468246d7fb"
+
+[[files]]
+file = "kubejs/assets/cataclysm/lang/en_us.json"
+hash = "c11d990e16237836b566dc3d79d9bb6d6645cb7cc912032ea9aad3a20e3d98b4"
+
+[[files]]
+file = "kubejs/assets/crittersandcompanions/lang/en_us.json"
+hash = "f8d22cc7eee16e5bac539a61e65567bade77fbe341764c422451d2f9b3ce7fe7"
 
 [[files]]
 file = "kubejs/assets/endermail/blockstates/locker.json"
@@ -1371,6 +1411,10 @@ file = "kubejs/assets/endermail/textures/item/stamp.png"
 hash = "cdc3d430e6d469b3ea932245832600f64dc01fe6b4c0094e17b60c50e8d54557"
 
 [[files]]
+file = "kubejs/assets/farm_and_charm/lang/en_us.json"
+hash = "a373c24c52d830dfa7e431fe8882f32351b0e2051c03c6a65a165375a31f16bb"
+
+[[files]]
 file = "kubejs/assets/grapplemod/textures/item/entity_hook.png"
 hash = "c739225d9aac0c6ac4f70f146686de93fbd79f97cf6689d8c91c66a19cde6003"
 
@@ -1383,8 +1427,72 @@ file = "kubejs/assets/grapplemod/textures/item/rope.png"
 hash = "dece5ee277c667096a47ecc2bf0de1c5bee38a6beb66b29627cbd289c7df5688"
 
 [[files]]
+file = "kubejs/assets/guardvillagers/lang/en_us.json"
+hash = "35bf1870c7bdbc5a85736f84d65bc52897c7335d3bf694e1905fb65b3dfd5448"
+
+[[files]]
+file = "kubejs/assets/herbalbrews/lang/en_us.json"
+hash = "96d3982bb9fa2ce340ca6e47f54ec1149120c937898f78167fd1171b21b9e7c1"
+
+[[files]]
+file = "kubejs/assets/immersive_aircraft/lang/en_us.json"
+hash = "0c5d3af7f23dfe09929ebe96b85a217051cf73d7eec839d9f837fff443b0ecc9"
+
+[[files]]
+file = "kubejs/assets/irons_spellbooks/lang/en_us.json"
+hash = "b7428784ef1274d4f41d14533e0b69806df6d068e5f2789bb9e299f447d2b3df"
+
+[[files]]
+file = "kubejs/assets/lilis_lucky_lures/lang/en_us.json"
+hash = "9e7973b9e0109729d5a26605aef4d58bd55080209c48ca3a265158cabb11d37e"
+
+[[files]]
+file = "kubejs/assets/meadow/lang/en_us.json"
+hash = "4d3973b9da6f15bb398c65b014f81183ebd6a39e3df47218216c722140362a8f"
+
+[[files]]
+file = "kubejs/assets/mimi/lang/en_us.json"
+hash = "a7b205b9614a3442e66e7dcb2d0ef9b0899d6c195dc051137b13895c672450a1"
+
+[[files]]
+file = "kubejs/assets/naturalist/lang/en_us.json"
+hash = "215c20bf62acca60456003efb5f7f4cb80ae812196a1eb3a7923b1e611a4e236"
+
+[[files]]
+file = "kubejs/assets/nethervinery/lang/en_us.json"
+hash = "62e2fd3f04564b819115e3898578c04a8836bcb83b81093bc343f23ac39e12a6"
+
+[[files]]
 file = "kubejs/assets/openpartiesandclaims/lang/en_us.json"
 hash = "e90f4be8b0ca9a3ce2bb5b2b4f5508027e415a80aa917a92930162d16750b258"
+
+[[files]]
+file = "kubejs/assets/parcool/lang/en_us.json"
+hash = "6fda2af893056b2d6df7645f251529a14bc8b4faa9af373ce6dd549a89c04c57"
+
+[[files]]
+file = "kubejs/assets/rainbowreef/lang/en_us.json"
+hash = "ec6d13d5408cc8159147f8a6be458a1f87776c4bb7be0a781679bb8aab351c3c"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/lang/en_us.json"
+hash = "af1b667f9aee7204032c0a280c54b35133930c26fa16dc6d1f4e5267d0aefa85"
+
+[[files]]
+file = "kubejs/assets/smallships/lang/en_us.json"
+hash = "96df043022faf4866033d117f88d082eb4b1244645ac20dcb3c8d9545690f3ba"
+
+[[files]]
+file = "kubejs/assets/snowyspirit/lang/en_us.json"
+hash = "50a42ae5529fe1c70b05ec1a1c47fca2e9f0b6dff54bfe15071bb96a36e5851b"
+
+[[files]]
+file = "kubejs/assets/supplementaries/lang/en_us.json"
+hash = "e0827bd1cbedf185fbe0e35dbd3c5bb404347c25bd3ec2721d1e03862b26dfe0"
+
+[[files]]
+file = "kubejs/assets/twilightforest/lang/en_us.json"
+hash = "09d33e2731ed1d302fa60e4dbac935cc3f1598aa8d4491dafc8953d46f6cfa8f"
 
 [[files]]
 file = "kubejs/assets/ultimate_unicorn_mod/blockstates/nightmare_fire_block.json"
@@ -1441,6 +1549,10 @@ hash = "22a1db7f37d5d9f8a048f183202bfb2dbbc3eba1cf8ff252bd438ae508974f73"
 [[files]]
 file = "kubejs/assets/ultimate_unicorn_mod/models/block/template_short_fire_side_alt.json"
 hash = "11a68c5017e5f2de2ca77404e68def15c6bd5219a185c6706ce8211694e9a356"
+
+[[files]]
+file = "kubejs/assets/wildernature/lang/en_us.json"
+hash = "ed1dd1560a6e7a900e61709af69801cd7f385751c934f7a2355bc4ed9ae0ed32"
 
 [[files]]
 file = "kubejs/client_scripts/hide_duplicates.js"
@@ -1687,6 +1799,10 @@ file = "kubejs/server_scripts/butterfly_sightings.js"
 hash = "ab6c957144e6fa572b983394a4d5f1fe9a0456ec5933a19e467834e63e96fa03"
 
 [[files]]
+file = "kubejs/server_scripts/convert_duplicates.js"
+hash = "d43b8afe8c5e323e8259c967fdf48d8328ea6c9df7fab42ea5c2dd3960ffc1ee"
+
+[[files]]
 file = "kubejs/server_scripts/field_guide.js"
 hash = "f56b913798da5421ef3d3d983148787ff9287561fbc628569211622cc9b0611b"
 
@@ -1744,7 +1860,7 @@ hash = "5e499a0bd92efadf01a7be29f1b1b4f3142da563a3903be3c8f00af4de16cc1a"
 
 [[files]]
 file = "kubejs/server_scripts/unify_duplicates.js"
-hash = "8f35503a4c3223b22a9e07f02f35148c18f8f0d545f5176cf89c3674364014d9"
+hash = "c345005684bd913b4aab90222c7407471ef26a49a3d541db3b4aa0a5173b0cee"
 
 [[files]]
 file = "kubejs/server_scripts/whale_boat_guard.js"
@@ -1752,7 +1868,7 @@ hash = "9c0de00c70d542caeb2f103f3272d9193121b20ae053d97fc55a199f5280f746"
 
 [[files]]
 file = "kubejs/startup_scripts/duplicate_groups.js"
-hash = "95d59a1f89994e1b11235af28beab4072d84c088ce72f9e26113f3ee35718def"
+hash = "047e46b133998345b5b0b4d9008e0ab983badf642b616b790b632e6a59a2c387"
 
 [[files]]
 file = "kubejs/startup_scripts/friendly_fireballs.js"
