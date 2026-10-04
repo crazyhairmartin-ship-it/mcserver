@@ -919,7 +919,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "falconer",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "falconer_2": {
     "title": "Falconer",
@@ -937,7 +946,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "falconer",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "falconer_3": {
     "title": "Falconer",
@@ -955,7 +973,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "falconer",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "arcane_arrows_1": {
     "title": "Arcane Arrows",

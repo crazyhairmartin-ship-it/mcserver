@@ -841,7 +841,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_speed",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_jump",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "rider_2": {
     "title": "Rider",
@@ -859,7 +875,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_speed",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_jump",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "rider_3": {
     "title": "Rider",
@@ -877,7 +909,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_speed",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_jump",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "second_breath_1": {
     "title": "Second Breath",

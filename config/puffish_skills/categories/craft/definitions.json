@@ -829,7 +829,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_speed",
+          "value": 0.05
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_armor",
+          "value": 2
+        }
+      }
+    ]
   },
   "saddler_2": {
     "title": "Saddler",
@@ -847,7 +863,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_speed",
+          "value": 0.05
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_armor",
+          "value": 2
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",

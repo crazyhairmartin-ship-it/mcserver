@@ -259,6 +259,15 @@
           "value": 1
         }
       }
+    ],
+    "guardian": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "guardian",
+          "value": 0.05
+        }
+      }
     ]
   },
   "magic": {
@@ -388,6 +397,15 @@
           "value": 0.1
         }
       }
+    ],
+    "natures_mend": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "natures_mend",
+          "value": 1
+        }
+      }
     ]
   },
   "agility": {
@@ -450,6 +468,22 @@
         "data": {
           "perk": "pct_thrown",
           "value": 0.08
+        }
+      }
+    ],
+    "rider": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_speed",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_jump",
+          "value": 0.04
         }
       }
     ]
@@ -857,6 +891,15 @@
           "value": 0.1
         }
       }
+    ],
+    "pet_treats": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_treats",
+          "value": 5
+        }
+      }
     ]
   },
   "craft": {
@@ -884,6 +927,22 @@
         "data": {
           "perk": "craft_free",
           "value": 0.1
+        }
+      }
+    ],
+    "saddler": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_speed",
+          "value": 0.05
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_armor",
+          "value": 2
         }
       }
     ]
@@ -978,6 +1037,15 @@
           "value": 0.1
         }
       }
+    ],
+    "falconer": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "falconer",
+          "value": 0.05
+        }
+      }
     ]
   },
   "taming": {
@@ -996,6 +1064,172 @@
         "data": {
           "perk": "animal_drops",
           "value": 0.04
+        }
+      }
+    ],
+    "gentle_hand": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "gentle_hand",
+          "value": 0.1
+        }
+      }
+    ],
+    "selective_breeding": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "breed_bonus",
+          "value": 0.02
+        }
+      }
+    ],
+    "bonded": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_health",
+          "value": 0.05
+        }
+      }
+    ],
+    "pet_scavenging": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "scavenging",
+          "value": 0.1
+        }
+      }
+    ],
+    "beastmaster": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_damage",
+          "value": 0.15
+        }
+      }
+    ],
+    "breeder": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "twins",
+          "value": 0.06
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "growth",
+          "value": 0.1
+        }
+      }
+    ],
+    "pack_tactics": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pack_tactics",
+          "value": 0.1
+        }
+      }
+    ],
+    "loyal_guard": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "loyal_guard",
+          "value": 0.08
+        }
+      }
+    ],
+    "mount_training": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_speed",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_jump",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_health",
+          "value": 0.04
+        }
+      }
+    ],
+    "bonded_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_armor",
+          "value": 2
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_regen",
+          "value": 0.5
+        }
+      }
+    ],
+    "caretaker": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "caretaker",
+          "value": 2
+        }
+      }
+    ],
+    "alpha": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_health",
+          "value": 0.3
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_damage",
+          "value": 0.3
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_speed",
+          "value": 0.3
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_stun",
+          "value": 0.1
+        }
+      }
+    ],
+    "prized_stock": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "prized_stock",
+          "value": 0.1
         }
       }
     ]

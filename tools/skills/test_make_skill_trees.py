@@ -270,3 +270,14 @@ def test_weapon_and_conditional_nodes_are_wired():
     magic = g.build_category(tree('magic'), TIERS, XP, PERKS)['definitions.json']
     assert {'type': 'puffish_skills:attribute', 'data': {'attribute': 'irons_spellbooks:spell_power', 'value': 0.1,
             'operation': 'multiply_base'}} in magic['battlemage_1']['rewards']
+
+
+def test_pet_and_mount_nodes_are_wired():
+    expect = {('taming', 'bonded_3'): ('pet_health', 0.05), ('taming', 'alpha_1'): ('pet_stun', 0.1),
+              ('taming', 'breeder_2'): ('twins', 0.06), ('taming', 'gentle_hand_1'): ('gentle_hand', 0.1),
+              ('range', 'falconer_1'): ('falconer', 0.05), ('defense', 'guardian_1'): ('guardian', 0.05),
+              ('agility', 'rider_1'): ('ride_speed', 0.04), ('craft', 'saddler_1'): ('ride_armor', 2),
+              ('cook', 'pet_treats_1'): ('pet_treats', 5), ('magic', 'natures_mend_1'): ('natures_mend', 1)}
+    for (tree_id, sid), (perk, value) in expect.items():
+        defs = g.build_category(tree(tree_id), TIERS, XP, PERKS)['definitions.json']
+        assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': value}} in defs[sid]['rewards'], sid

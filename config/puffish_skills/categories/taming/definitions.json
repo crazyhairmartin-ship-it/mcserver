@@ -32,7 +32,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "gentle_hand",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "gentle_hand_2": {
     "title": "Gentle Hand",
@@ -50,7 +59,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "gentle_hand",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "gentle_hand_3": {
     "title": "Gentle Hand",
@@ -68,7 +86,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "gentle_hand",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "treat_saver_1": {
     "title": "Treat Saver",
@@ -319,7 +346,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "breed_bonus",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "selective_breeding_2": {
     "title": "Selective Breeding",
@@ -337,7 +373,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "breed_bonus",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "selective_breeding_3": {
     "title": "Selective Breeding",
@@ -355,7 +400,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "breed_bonus",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "selective_breeding_4": {
     "title": "Selective Breeding",
@@ -373,7 +427,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "breed_bonus",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "selective_breeding_5": {
     "title": "Selective Breeding",
@@ -391,7 +454,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "breed_bonus",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "bonded_1": {
     "title": "Bonded",
@@ -409,7 +481,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_health",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "bonded_2": {
     "title": "Bonded",
@@ -427,7 +508,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_health",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "bonded_3": {
     "title": "Bonded",
@@ -445,7 +535,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_health",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "pet_scavenging_1": {
     "title": "Pet Scavenging",
@@ -463,7 +562,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "scavenging",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "pet_scavenging_2": {
     "title": "Pet Scavenging",
@@ -481,7 +589,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "scavenging",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "pet_scavenging_3": {
     "title": "Pet Scavenging",
@@ -499,7 +616,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "scavenging",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
@@ -535,7 +661,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Breeder."
+    "extra_description": "Pick one: this or Breeder.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_damage",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "beastmaster_2": {
     "title": "Beastmaster",
@@ -554,7 +689,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Breeder."
+    "extra_description": "Pick one: this or Breeder.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_damage",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "beastmaster_3": {
     "title": "Beastmaster",
@@ -573,7 +717,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Breeder."
+    "extra_description": "Pick one: this or Breeder.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_damage",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -609,7 +762,23 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Beastmaster."
+    "extra_description": "Pick one: this or Beastmaster.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "twins",
+          "value": 0.06
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "growth",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "breeder_2": {
     "title": "Breeder",
@@ -628,7 +797,23 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Beastmaster."
+    "extra_description": "Pick one: this or Beastmaster.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "twins",
+          "value": 0.06
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "growth",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "breeder_3": {
     "title": "Breeder",
@@ -647,7 +832,23 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Beastmaster."
+    "extra_description": "Pick one: this or Beastmaster.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "twins",
+          "value": 0.06
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "growth",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -682,7 +883,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pack_tactics",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "pack_tactics_2": {
     "title": "Pack Tactics",
@@ -700,7 +910,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pack_tactics",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "pack_tactics_3": {
     "title": "Pack Tactics",
@@ -718,7 +937,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pack_tactics",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "loyal_guard_1": {
     "title": "Loyal Guard",
@@ -736,7 +964,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "loyal_guard",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "loyal_guard_2": {
     "title": "Loyal Guard",
@@ -754,7 +991,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "loyal_guard",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "loyal_guard_3": {
     "title": "Loyal Guard",
@@ -772,7 +1018,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "loyal_guard",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "bloodlines_1": {
     "title": "Bloodlines",
@@ -898,7 +1153,30 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_speed",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_jump",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_health",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "mount_training_2": {
     "title": "Mount Training",
@@ -916,7 +1194,30 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_speed",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_jump",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_health",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "mount_training_3": {
     "title": "Mount Training",
@@ -934,7 +1235,30 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_speed",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_jump",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mount_health",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "bonded_ii_1": {
     "title": "Bonded II",
@@ -953,7 +1277,23 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Bonded (all ranks)."
+    "extra_description": "Needs Bonded (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_armor",
+          "value": 2
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_regen",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "bonded_ii_2": {
     "title": "Bonded II",
@@ -972,7 +1312,23 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Bonded (all ranks)."
+    "extra_description": "Needs Bonded (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_armor",
+          "value": 2
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_regen",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "bonded_ii_3": {
     "title": "Bonded II",
@@ -991,7 +1347,23 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Bonded (all ranks)."
+    "extra_description": "Needs Bonded (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_armor",
+          "value": 2
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_regen",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",
@@ -1026,7 +1398,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "caretaker",
+          "value": 2
+        }
+      }
+    ]
   },
   "alpha_1": {
     "title": "Alpha",
@@ -1045,7 +1426,37 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Prized Stock."
+    "extra_description": "Pick one: this or Prized Stock.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_health",
+          "value": 0.3
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_damage",
+          "value": 0.3
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_speed",
+          "value": 0.3
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_stun",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "tier_5_or": {
     "title": "OR",
@@ -1081,6 +1492,15 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Alpha."
+    "extra_description": "Pick one: this or Alpha.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "prized_stock",
+          "value": 0.1
+        }
+      }
+    ]
   }
 }

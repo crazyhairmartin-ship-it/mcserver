@@ -1243,7 +1243,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "natures_mend",
+          "value": 1
+        }
+      }
+    ]
   },
   "natures_mend_2": {
     "title": "Nature's Mend",
@@ -1261,7 +1270,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "natures_mend",
+          "value": 1
+        }
+      }
+    ]
   },
   "natures_mend_3": {
     "title": "Nature's Mend",
@@ -1279,7 +1297,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "natures_mend",
+          "value": 1
+        }
+      }
+    ]
   },
   "cooldown_flow_1": {
     "title": "Cooldown Flow",

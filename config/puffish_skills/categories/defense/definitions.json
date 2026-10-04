@@ -966,7 +966,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "guardian",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "guardian_2": {
     "title": "Guardian",
@@ -984,7 +993,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "guardian",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "guardian_3": {
     "title": "Guardian",
@@ -1002,7 +1020,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "guardian",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "counter_1": {
     "title": "Counter",
