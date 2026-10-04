@@ -1,6 +1,6 @@
 package fotfskills.perk;
 
-import fotfskills.world.IrrigatedFarmland;
+import fotfskills.world.RankedBlocks;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.common.ToolActions;
@@ -19,6 +19,6 @@ public final class IrrigatorPerks {
                 || !(event.getPlayer() instanceof ServerPlayer player) || !(event.getLevel() instanceof ServerLevel level)) {
             return;
         }
-        IrrigatedFarmland.of(level).set(event.getPos(), (int) Math.round(Perks.get(player, "irrigator")));
+        RankedBlocks.of(level, RankedBlocks.IRRIGATED).set(event.getPos(), (int) Math.round(Perks.get(player, "irrigator")));
     }
 }

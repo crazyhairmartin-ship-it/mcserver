@@ -1,7 +1,7 @@
 package fotfskills.mixin;
 
 import fotfskills.perk.Irrigation;
-import fotfskills.world.IrrigatedFarmland;
+import fotfskills.world.RankedBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.FluidTags;
@@ -23,7 +23,7 @@ public abstract class FarmBlockIrrigatorMixin {
         if (cir.getReturnValueZ() || !(reader instanceof ServerLevel level)) {
             return;
         }
-        int rank = IrrigatedFarmland.of(level).rank(pos);
+        int rank = RankedBlocks.of(level, RankedBlocks.IRRIGATED).rank(pos);
         if (rank <= 0) {
             return;
         }

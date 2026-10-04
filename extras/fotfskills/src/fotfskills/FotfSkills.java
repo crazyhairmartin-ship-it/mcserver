@@ -66,6 +66,9 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SalvagePerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.IrrigatorPerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SummonPerks());
+        if (ModList.get().isLoaded("ars_nouveau")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SourcePerks());
+        }
         if (ModList.get().isLoaded("butterflies")) {
             MinecraftForge.EVENT_BUS.register(new fotfskills.perk.NetReach());
         }
