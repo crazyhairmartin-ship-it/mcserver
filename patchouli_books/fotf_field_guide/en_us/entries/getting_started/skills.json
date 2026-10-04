@@ -15,7 +15,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)/fotfskills perks$() lists every perk you have. Situational buffs (forests, combat, full hunger...) and your total level: click the $(l)star button$() beside your inventory.$(br2)Level-up messages are short: open chat and point at one to read the details.$(br2)$(l)/fotfskills levelups off$() hides them; $(l)on$() brings them back.",
+      "text": "$(l)/fotfskills perks$() lists every perk you have. Click the $(l)star button$() beside your inventory for your character screen: health, stamina, mana, active buffs, and a tab per skill with its level, XP and nodes.$(br2)Level-up messages are short: open chat and point at one to read the details.$(br2)$(l)/fotfskills levelups off$() hides them; $(l)on$() brings them back.",
       "title": "Perks"
     },
     {
