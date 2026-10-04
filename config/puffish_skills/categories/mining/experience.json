@@ -8,87 +8,28 @@
   },
   "sources": [
     {
-      "type": "puffish_skills:mine_block",
+      "type": "fotfskills:break",
       "data": {
-        "variables": {
-          "stone": {
-            "operations": [
-              {
-                "type": "get_mined_block_state"
-              },
-              {
-                "type": "puffish_skills:test",
-                "data": {
-                  "block": "#minecraft:base_stone_overworld"
-                }
-              }
-            ]
-          },
-          "nether": {
-            "operations": [
-              {
-                "type": "get_mined_block_state"
-              },
-              {
-                "type": "puffish_skills:test",
-                "data": {
-                  "block": "#minecraft:base_stone_nether"
-                }
-              }
-            ]
-          },
-          "ore": {
-            "operations": [
-              {
-                "type": "get_mined_block_state"
-              },
-              {
-                "type": "puffish_skills:test",
-                "data": {
-                  "block": "#forge:ores"
-                }
-              }
-            ]
-          },
-          "gem": {
-            "operations": [
-              {
-                "type": "get_mined_block_state"
-              },
-              {
-                "type": "puffish_skills:test",
-                "data": {
-                  "block": "#forge:ores/diamond"
-                }
-              }
-            ]
-          },
-          "emerald": {
-            "operations": [
-              {
-                "type": "get_mined_block_state"
-              },
-              {
-                "type": "puffish_skills:test",
-                "data": {
-                  "block": "#forge:ores/emerald"
-                }
-              }
-            ]
-          }
-        },
-        "experience": [
+        "rules": [
           {
-            "condition": "gem | emerald",
-            "expression": "20"
+            "block": "#forge:ores/diamond",
+            "experience": 20
           },
           {
-            "condition": "ore",
-            "expression": "6"
+            "block": "#forge:ores/emerald",
+            "experience": 20
           },
           {
-            "condition": "stone | nether",
-            "expression": "1"
+            "block": "#forge:ores",
+            "experience": 6
+          },
+          {
+            "block": "#minecraft:base_stone_overworld",
+            "experience": 1
+          },
+          {
+            "block": "#minecraft:base_stone_nether",
+            "experience": 1
           }
         ]
       }

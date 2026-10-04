@@ -229,3 +229,13 @@ def test_perks_only_name_real_nodes_and_valid_operations():
             for r in rewards:
                 assert r['type'] == 'puffish_skills:attribute'
                 assert r['data']['operation'] in {'addition', 'multiply_base', 'multiply_total'}
+
+
+def test_gathering_xp_uses_the_placed_block_aware_source():
+    for tree_id in ('mining', 'forage', 'farm'):
+        types = [s['type'] for s in g.build_category(tree(tree_id), TIERS, xp=XP)['experience.json']['sources']]
+        assert 'fotfskills:break' in types, tree_id
+        assert not {'puffish_skills:mine_block', 'puffish_skills:break_block'} & set(types), tree_id
+    farm = g.build_category(tree('farm'), TIERS, xp=XP)['experience.json']['sources']
+    rules = next(s for s in farm if s['type'] == 'fotfskills:break')['data']['rules']
+    assert rules == [{'mature_crop': True, 'experience': 3}]

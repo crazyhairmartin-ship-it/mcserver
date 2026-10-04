@@ -18,6 +18,14 @@ public final class XpSources {
         source("cook", "per_nutrition");
         source("craft_gear", "per_item");
         source("move", "meters_per_xp");
+        SkillsAPI.registerExperienceSource(new ResourceLocation("fotfskills", "break"), context -> context.getData()
+                .andThen(data -> {
+                    try {
+                        return Result.<BreakSource, Problem>success(new BreakSource(BreakRules.parse(data.getJson().getAsJsonObject())));
+                    } catch (RuntimeException e) {
+                        return Result.<BreakSource, Problem>failure(Problem.message("fotfskills:break rules: " + e.getMessage()));
+                    }
+                }));
     }
 
     private static void source(String kind, String key) {

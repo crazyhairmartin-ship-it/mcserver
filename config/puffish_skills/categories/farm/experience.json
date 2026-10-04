@@ -8,46 +8,12 @@
   },
   "sources": [
     {
-      "type": "puffish_skills:break_block",
+      "type": "fotfskills:break",
       "data": {
-        "variables": {
-          "crop": {
-            "operations": [
-              {
-                "type": "get_broken_block_state"
-              },
-              {
-                "type": "puffish_skills:test",
-                "data": {
-                  "block": "#minecraft:crops",
-                  "state": {
-                    "age": "7"
-                  }
-                }
-              }
-            ]
-          },
-          "beet": {
-            "operations": [
-              {
-                "type": "get_broken_block_state"
-              },
-              {
-                "type": "puffish_skills:test",
-                "data": {
-                  "block": "minecraft:beetroots",
-                  "state": {
-                    "age": "3"
-                  }
-                }
-              }
-            ]
-          }
-        },
-        "experience": [
+        "rules": [
           {
-            "condition": "crop | beet",
-            "expression": "3"
+            "mature_crop": true,
+            "experience": 3
           }
         ]
       }
