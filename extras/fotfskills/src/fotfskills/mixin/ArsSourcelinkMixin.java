@@ -8,7 +8,7 @@ import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
-/** Sourcecraft: a sourcelink placed by a player with the perk makes 10% more source per rank (getManaEvent's amount). */
+/** Sourcecraft: a sourcelink placed by a player with the perk makes 33% more source per rank (double at max) (getManaEvent's amount). */
 @Pseudo
 @Mixin(targets = "com.hollingsworth.arsnouveau.common.block.tile.SourcelinkTile", remap = false)
 public abstract class ArsSourcelinkMixin {
@@ -19,6 +19,6 @@ public abstract class ArsSourcelinkMixin {
             return amount;
         }
         int rank = RankedBlocks.of(level, RankedBlocks.SOURCELINKS).rank(tile.m_58899_());
-        return rank <= 0 ? amount : amount + Math.round(amount * rank * 0.1f);
+        return rank <= 0 ? amount : amount + Math.round(amount * rank / 100f);      // rank = percent bonus
     }
 }

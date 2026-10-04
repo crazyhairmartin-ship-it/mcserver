@@ -56,7 +56,9 @@ public final class FishingPerks {
             for (int i = 0; i < 3; i++) {
                 treasure.m_287195_(params).forEach(stack -> ItemHandlerHelper.giveItemToPlayer(player, stack));
             }
-            player.m_5661_(Component.m_237113_("§6You hauled up a Leviathan's Hoard!"), true);
+            level.m_7654_().m_129892_().m_230957_(level.m_7654_().m_129893_().m_81324_(),
+                    "puffish_skills experience add " + player.m_36316_().getName() + " fish 250");
+            player.m_213846_(Component.m_237113_("§6You hauled up a Leviathan's Hoard! §e+250 Fishing XP"));
         } else {
             java.util.List<net.minecraft.world.item.Item> fish = ForgeRegistries.ITEMS.getValues().stream()
                     .filter(i -> "FishItem".equals(i.getClass().getSimpleName())
@@ -71,7 +73,8 @@ public final class FishingPerks {
             ItemHandlerHelper.giveItemToPlayer(player, trophy);
             level.m_7654_().m_129892_().m_230957_(level.m_7654_().m_129893_().m_81324_(),
                     "puffish_skills experience add " + player.m_36316_().getName() + " fish 250");
-            player.m_5661_(Component.m_237113_("§6A record catch! §e+250 Fishing XP"), true);
+            ItemHandlerHelper.giveItemToPlayer(player, new ItemStack(ModItems.SKILL_TONIC.get()));
+            player.m_213846_(Component.m_237113_("§6A record catch! §e+250 Fishing XP and a Skill Tonic"));
         }
     }
 

@@ -27,7 +27,18 @@ public final class ReturnHelper {
         if (flag == null) {
             return false;
         }
-        thrown.m_20088_().m_135381_(flag, (byte) 1);
+        thrown.m_20088_().m_135381_(flag, (byte) 3);
+        if (flag == spartanReturn) {
+            try {                                       // Spartan's own return: start it now, as its tick would
+                Field returning = Class.forName(SPARTAN).getDeclaredField("isReturning");
+                returning.setAccessible(true);
+                returning.setBoolean(thrown, true);
+                thrown.m_36790_(true);                  // no physics while flying back
+                thrown.m_20242_(true);                  // no gravity
+            } catch (ReflectiveOperationException | LinkageError e) {
+                return false;
+            }
+        }
         return true;
     }
 

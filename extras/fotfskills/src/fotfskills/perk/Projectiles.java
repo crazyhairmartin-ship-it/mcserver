@@ -31,12 +31,22 @@ public final class Projectiles {
         return thrownItem ? Kind.THROWN : Kind.OTHER;
     }
 
+    /** Anything flying as Spartan Weaponry's thrown weapon counts as thrown (daggers and other throwable melee weapons too). */
+    static boolean spartanThrown(Projectile projectile) {
+        for (Class<?> c = projectile.getClass(); c != null; c = c.getSuperclass()) {
+            if (c.getName().equals("com.oblivioussp.spartanweaponry.entity.projectile.ThrowingWeaponEntity")) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static Kind kind(Projectile projectile) {
         if (arrows == null) {
             arrows = TagKey.m_203882_(ForgeRegistries.Keys.ITEMS, new ResourceLocation("minecraft", "arrows"));
         }
         ItemStack item = item(projectile);
-        return kind(projectile instanceof AbstractArrow, item.m_204117_(arrows), Weapons.is(item, "thrown"));
+        return kind(projectile instanceof AbstractArrow, item.m_204117_(arrows), Weapons.is(item, "thrown") || spartanThrown(projectile));
     }
 
     /** The item a projectile stands for (arrow or thrown weapon pickup, or a thrown item's stack); EMPTY otherwise. */

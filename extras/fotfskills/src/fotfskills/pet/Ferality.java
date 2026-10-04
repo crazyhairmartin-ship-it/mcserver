@@ -41,7 +41,7 @@ public final class Ferality {
             level.m_8767_(ParticleTypes.f_123792_, pet.m_20185_(), pet.m_20186_() + pet.m_20206_(), pet.m_20189_(), 8, 0.4, 0.3, 0.4, 0.1);
             level.m_5594_(null, pet.m_20183_(), SoundEvents.f_12619_, SoundSource.NEUTRAL, 1.2f, 0.8f);
         }
-        owner.m_5661_(Component.m_237113_("§c" + pet.m_5446_().getString() + " becomes feral!"), true);
+        owner.m_213846_(Component.m_237113_("§c" + pet.m_5446_().getString() + " becomes feral!"));
     }
 
     private static boolean isSummon(Class<?> type) {

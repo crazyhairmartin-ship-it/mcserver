@@ -34,6 +34,7 @@ import net.minecraftforge.fml.common.Mod;
 public final class FotfSkills {
     public FotfSkills() {
         XpSources.register();
+        fotfskills.perk.ModItems.register(net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus());
         PerkReward.register();
         fotfskills.perk.LevelUps.register();
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.FotfCommands());

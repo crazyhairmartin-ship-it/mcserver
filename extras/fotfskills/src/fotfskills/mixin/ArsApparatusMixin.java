@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
 
 /**
- * Sourcecraft: the enchanting apparatus asks less source of a player with the perk (10% less per rank). Both the
+ * Sourcecraft: the enchanting apparatus asks less source of a player with the perk (half price at max rank). Both the
  * "enough source nearby?" check and the charge read the recipe's cost, so both see the reduced cost.
  */
 @Pseudo

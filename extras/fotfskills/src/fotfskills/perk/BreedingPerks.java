@@ -88,7 +88,8 @@ public final class BreedingPerks {
 
     /** Faster growth for every baby; better-parent stats (and bonuses) for foals. */
     private static void shape(ServerPlayer player, AgeableMob child, AgeableMob a, AgeableMob b) {
-        if (Perks.roll(player, "bloodlines")) {
+        double rareChance = Perks.get(player, "bloodlines") * (child instanceof net.minecraft.world.entity.animal.Sheep ? 2 : 1);
+        if (Perks.random() < rareChance) {           // sheep have so many colours they get twice the chance
             rare(child);
         }
         double growth = Perks.get(player, "growth");

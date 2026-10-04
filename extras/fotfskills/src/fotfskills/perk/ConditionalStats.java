@@ -95,6 +95,8 @@ public final class ConditionalStats {
         if (Perks.get(player, "seas_blessing") > 0 && player.m_20069_()) {
             labels.add("Sea's Blessing");
         }
+        label(labels, player.m_20202_() instanceof net.minecraft.world.entity.vehicle.Boat ? Perks.get(player, "sea_legs") : 0,
+                "Sea Legs", "% boat speed");
         int total = TotalLevel.get(player.m_20148_());
         if (total > 0) {
             labels.add(0, "Total level " + total + " (+" + HeartCurve.steps(total) + " hearts)");

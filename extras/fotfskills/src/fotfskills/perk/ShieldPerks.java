@@ -52,7 +52,8 @@ public final class ShieldPerks {
                 level.m_8767_(net.minecraft.core.particles.ParticleTypes.f_123808_, x, y, z, 24, 0.35, 0.5, 0.35, 0.15);
                 level.m_8767_(net.minecraft.core.particles.ParticleTypes.f_123810_, x, y, z, 6, 0.3, 0.4, 0.3, 0.02);
             }
-            player.m_6330_(net.minecraft.sounds.SoundEvents.f_144243_, net.minecraft.sounds.SoundSource.PLAYERS, 0.8f, 1.6f);
+            player.m_9236_().m_5594_(null, player.m_20183_(), net.minecraft.sounds.SoundEvents.f_12346_,
+                    net.minecraft.sounds.SoundSource.PLAYERS, 1.0f, 1.3f);      // shield block, a little brighter
             double aegis = Perks.get(player, "arcane_aegis");
             if (aegis > 0) {
                 living.m_6469_(player.m_269291_().m_269425_(), (float) (event.getAmount() * aegis));

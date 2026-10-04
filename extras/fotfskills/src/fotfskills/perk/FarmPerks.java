@@ -115,6 +115,10 @@ public final class FarmPerks {
                 continue;
             }
             Block block = now.m_60734_();
+            IntegerProperty harvestAge = age(now);
+            if (harvestAge != null && c.before.m_61143_(harvestAge) > now.m_61143_(harvestAge)) {
+                sweepByHand(c.player, c.level, c.pos, c.before, harvestAge);
+            }
             if (block instanceof ComposterBlock) {
                 int before = c.before.m_61143_(ComposterBlock.f_51913_);
                 int after = now.m_61143_(ComposterBlock.f_51913_);
@@ -139,6 +143,28 @@ public final class FarmPerks {
             }
         }
         clicks.clear();
+    }
+
+    /** Sweeping Harvest for crops picked by right-click: picks the same mature crop around it the same way. */
+    private static void sweepByHand(ServerPlayer player, ServerLevel level, BlockPos pos, BlockState mature, IntegerProperty age) {
+        int radius = Math.min(2, (int) Math.round(Perks.get(player, "sweeping_harvest")));
+        if (sweeping || radius <= 0 || !Weapons.is(player.m_21205_(), "scythe")) {
+            return;
+        }
+        int ripe = java.util.Collections.max(age.m_6908_());
+        sweeping = true;
+        try {
+            for (BlockPos other : BlockPos.m_121940_(pos.m_7918_(-radius, -1, -radius), pos.m_7918_(radius, 1, radius))) {
+                BlockState state = level.m_8055_(other);
+                if (!other.equals(pos) && state.m_60734_() == mature.m_60734_() && state.m_61143_(age) == ripe) {
+                    state.m_60664_(level, player, net.minecraft.world.InteractionHand.MAIN_HAND,
+                            new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.m_82512_(other),
+                                    net.minecraft.core.Direction.UP, other.m_7949_(), false));
+                }
+            }
+        } finally {
+            sweeping = false;
+        }
     }
 
     private static IntegerProperty age(BlockState state) {

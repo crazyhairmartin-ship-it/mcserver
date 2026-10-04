@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
 
-/** Longer dodges: ParCool scales the dodge by your top speed; everyone gets 30% more, Roll Master +10% per rank. */
+/** Longer dodges: ParCool scales the dodge by your top speed; everyone gets 60% more (faster and further), Roll Master +10% per rank. */
 @Pseudo
 @Mixin(targets = "com.alrex.parcool.common.action.impl.Dodge", remap = false)
 public abstract class ParcoolDodgeMixin {
@@ -16,6 +16,6 @@ public abstract class ParcoolDodgeMixin {
     private double fotfskills$furtherDodge(double speed) {
         Minecraft mc = Minecraft.m_91087_();
         double bonus = mc.f_91074_ == null ? 0 : Perks.get(mc.f_91074_, "dodge_distance");
-        return speed * (1.3 + bonus);
+        return speed * (1.6 + bonus);
     }
 }

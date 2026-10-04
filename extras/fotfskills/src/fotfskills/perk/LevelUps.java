@@ -33,6 +33,11 @@ public final class LevelUps {
     private LevelUps() {
     }
 
+    /** "Foraging" for "forage", and so on. */
+    public static String displayName(String skill) {
+        return NAMES.getOrDefault(skill, skill);
+    }
+
     public static void register() {
         SkillsAPI.registerNewPointEvent(LevelUps::onNewPoint);
         net.minecraftforge.common.MinecraftForge.EVENT_BUS.addListener(LevelUps::onServerStarted);
@@ -69,7 +74,7 @@ public final class LevelUps {
             player.m_6330_(SoundEvents.f_12496_, SoundSource.PLAYERS, 1.0f, 1.0f);
             fireworks(player);
         } else {
-            player.m_213846_(withDetails("§6" + name + " §e" + level, "§f" + name + " reached level §e" + level
+            player.m_213846_(withDetails("§6" + name + " reached level §e" + level, "§f" + name + " reached level §e" + level
                     + "§f: a new skill point is ready.\n§7/fotfskills levelups off hides these messages"));
             player.m_6330_(SoundEvents.f_12275_, SoundSource.PLAYERS, 0.6f, 1.4f);
         }

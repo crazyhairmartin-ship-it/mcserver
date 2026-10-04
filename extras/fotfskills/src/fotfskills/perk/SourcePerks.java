@@ -9,7 +9,7 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 /**
- * Sourcecraft: an Ars Nouveau sourcelink remembers its placer's rank (10% more source per rank, applied by
+ * Sourcecraft: an Ars Nouveau sourcelink remembers its placer's rank (33% more source per rank, double at max; applied by
  * ArsSourcelinkMixin). The cheaper enchanting apparatus half is ArsApparatusMixin.
  */
 public final class SourcePerks {
@@ -21,7 +21,7 @@ public final class SourcePerks {
         }
         BlockEntity placed = level.m_7702_(event.getPos());
         if (placed != null && isSourcelink(placed.getClass())) {
-            RankedBlocks.of(level, RankedBlocks.SOURCELINKS).set(event.getPos(), (int) Math.round(Perks.get(player, "source_gain") * 10));
+            RankedBlocks.of(level, RankedBlocks.SOURCELINKS).set(event.getPos(), (int) Math.round(Perks.get(player, "source_gain") * 100));
         }
     }
 

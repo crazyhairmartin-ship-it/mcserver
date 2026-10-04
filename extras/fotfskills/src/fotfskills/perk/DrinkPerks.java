@@ -23,6 +23,19 @@ public final class DrinkPerks {
     private static final Set<String> LETS_DO = Set.of("brewery", "vinery", "nethervinery", "herbalbrews", "beachparty",
             "farm_and_charm", "bakery", "candlelight", "meadow", "camping");
     private final Map<UUID, Map<MobEffect, Integer>> before = new HashMap<>();
+    private final Map<UUID, Map<net.minecraft.world.item.Item, Integer>> inventoryBefore = new HashMap<>();
+
+    private static Map<net.minecraft.world.item.Item, Integer> counts(ServerPlayer player) {
+        Map<net.minecraft.world.item.Item, Integer> counts = new HashMap<>();
+        net.minecraft.world.entity.player.Inventory inv = player.m_150109_();
+        for (int i = 0; i < inv.m_6643_(); i++) {
+            ItemStack s = inv.m_8020_(i);
+            if (!s.m_41619_()) {
+                counts.merge(s.m_41720_(), s.m_41613_(), Integer::sum);
+            }
+        }
+        return counts;
+    }
 
     static boolean letsDoDrink(ItemStack stack) {
         ResourceLocation id = ForgeRegistries.ITEMS.getKey(stack.m_41720_());
@@ -38,6 +51,7 @@ public final class DrinkPerks {
                 snapshot.put(effect.m_19544_(), effect.m_19557_());
             }
             before.put(player.m_20148_(), snapshot);
+            inventoryBefore.put(player.m_20148_(), counts(player));
         }
     }
 
@@ -58,13 +72,17 @@ public final class DrinkPerks {
                         effect.m_19572_(), effect.m_19575_()));
             }
         }
+        Map<net.minecraft.world.item.Item, Integer> had = inventoryBefore.remove(player.m_20148_());
         if (Perks.roll(player, "brewer_save")) {
             ItemStack drink = event.getItem();                     // the stack as it was before the sip
-            boolean wasStack = drink.m_41613_() > 1;
-            event.setResultStack(drink.m_255036_(drink.m_41613_()));   // the sipped drink comes back (no empty cup)
-            net.minecraft.world.item.Item cup = drink.m_41720_().m_41469_();
-            if (wasStack && cup != null) {                         // stacked drinks put their cup in the inventory: take it
-                player.m_150109_().m_36022_(s -> s.m_150930_(cup), 1, player.f_36095_.m_39730_());
+            event.setResultStack(drink.m_255036_(drink.m_41613_()));   // the sipped drink comes back
+            if (had != null) {                                     // and any empty cup the drink handed out goes again
+                counts(player).forEach((item, n) -> {
+                    int extra = n - had.getOrDefault(item, 0);
+                    if (extra > 0 && item != drink.m_41720_()) {
+                        player.m_150109_().m_36022_(st -> st.m_150930_(item), extra, player.f_36095_.m_39730_());
+                    }
+                });
             }
         }
     }
