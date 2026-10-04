@@ -76,7 +76,7 @@ nodes stay at 3. Per-rank amounts are rebalanced in the preview. Arrows ("needs 
 |---|---|
 | Mining | Mining natural stone/ores/deepslate (rarer ores worth more) |
 | Foraging | Chopping natural logs (incl. modded trees), picking berries and wild crops, gathering mushrooms and flowers, harvesting honey, catching butterflies and bugs |
-| Farming | Harvesting fully grown crops; breeding farm animals |
+| Farming | Harvesting fully grown crops; breeding farm animals (breeding also gives Taming XP, confirmed by Dylan 2026-10-04) |
 | Fishing | Any catch (Aquaculture included) |
 | Cooking | Finished meals: Farmer's Delight pots, Let's Do recipes, smoker/furnace food |
 | Crafting | Crafting tools/armour/weapons/gear; smithing-table upgrades; smelting ingots |
