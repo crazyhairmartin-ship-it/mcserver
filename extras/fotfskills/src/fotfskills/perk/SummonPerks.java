@@ -15,7 +15,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 /**
  * Artificer: summons from Ars Nouveau (wolves, steeds, vexes, undead...) and Iron's Spells (summoned wolves, skeletons,
  * vexes, polar bears...) get more health and damage. The summoner is looked up a tick after the summon joins, once its
- * mod has set the owner. Each mod's own lookup is registered only when that mod is loaded.
+ * mod has set the owner. Each mod's own lookup is registered only when that mod is loaded. Summons also stop picking
+ * fights with passive or neutral mobs (butterflies, animals) unless those attacked the summon or its owner, or the
+ * owner attacked them.
  */
 public final class SummonPerks {
     private static final List<Function<Entity, Entity>> OWNERS = new ArrayList<>();
@@ -29,6 +31,24 @@ public final class SummonPerks {
     public void onJoin(EntityJoinLevelEvent event) {
         if (!event.getLevel().f_46443_ && !event.loadedFromDisk() && event.getEntity() instanceof LivingEntity living) {
             fresh.add(living);
+        }
+    }
+
+    @SubscribeEvent
+    public void onTarget(net.minecraftforge.event.entity.living.LivingChangeTargetEvent event) {
+        LivingEntity target = event.getNewTarget();
+        if (target == null || target instanceof net.minecraft.world.entity.monster.Enemy
+                || target instanceof net.minecraft.world.entity.player.Player || event.getEntity().m_9236_().f_46443_) {
+            return;
+        }
+        for (Function<Entity, Entity> lookup : OWNERS) {
+            Entity owner = lookup.apply(event.getEntity());
+            if (owner instanceof LivingEntity living) {
+                if (event.getEntity().m_21188_() != target && living.m_21188_() != target && living.m_21214_() != target) {
+                    event.setCanceled(true);       // a summon only fights hostiles, or whatever attacked it or its owner
+                }
+                return;
+            }
         }
     }
 

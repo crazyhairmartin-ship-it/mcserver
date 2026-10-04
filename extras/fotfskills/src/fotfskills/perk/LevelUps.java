@@ -35,6 +35,20 @@ public final class LevelUps {
 
     public static void register() {
         SkillsAPI.registerNewPointEvent(LevelUps::onNewPoint);
+        net.minecraftforge.common.MinecraftForge.EVENT_BUS.addListener(LevelUps::onServerStarted);
+    }
+
+    /** Our message replaces Pufferfish's own "You have a new skill point" line (which levelups off couldn't hide). */
+    private static void onServerStarted(net.minecraftforge.event.server.ServerStartedEvent event) {
+        net.minecraft.server.MinecraftServer server = event.getServer();
+        server.m_129892_().m_230957_(server.m_129893_().m_81324_(), "gamerule puffish_skills:announceNewPoints false");
+    }
+
+    /** A short chat line; the rest shows when you hover over it with chat open. */
+    private static Component withDetails(String line, String details) {
+        net.minecraft.network.chat.HoverEvent hover = new net.minecraft.network.chat.HoverEvent(
+                net.minecraft.network.chat.HoverEvent.Action.f_130831_, Component.m_237113_(details));
+        return Component.m_237113_(line).m_130938_(style -> style.m_131144_(hover));
     }
 
     private static void onNewPoint(ServerPlayer player, ResourceLocation categoryId) {
@@ -51,12 +65,12 @@ public final class LevelUps {
         }
         String name = NAMES.getOrDefault(categoryId.m_135815_(), categoryId.m_135815_());
         if (level >= CAP) {
-            player.m_213846_(Component.m_237113_("§6§l" + name + " mastered! §r§eLevel " + CAP + " — every node is yours to take."));
+            player.m_213846_(withDetails("§6§l" + name + " mastered!", "§eLevel " + CAP + ": every node is yours to take."));
             player.m_6330_(SoundEvents.f_12496_, SoundSource.PLAYERS, 1.0f, 1.0f);
             fireworks(player);
         } else {
-            player.m_213846_(Component.m_237113_("§6" + name + "§f reached level §e" + level
-                    + "§f — a new skill point is ready. §7(/fotfskills levelups off to hide)"));
+            player.m_213846_(withDetails("§6" + name + " §e" + level, "§f" + name + " reached level §e" + level
+                    + "§f: a new skill point is ready.\n§7/fotfskills levelups off hides these messages"));
             player.m_6330_(SoundEvents.f_12275_, SoundSource.PLAYERS, 0.6f, 1.4f);
         }
     }
