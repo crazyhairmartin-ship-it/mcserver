@@ -302,7 +302,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "berry_picker",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "berry_picker_2": {
     "title": "Berry Picker",
@@ -320,7 +329,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "berry_picker",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "berry_picker_3": {
     "title": "Berry Picker",
@@ -338,7 +356,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "berry_picker",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "tier_2_label": {
     "title": "Tier 2 \u00b7 5 points",
@@ -975,7 +1002,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "beekeeper",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "beekeeper_2": {
     "title": "Beekeeper",
@@ -993,7 +1029,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "beekeeper",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "beekeeper_3": {
     "title": "Beekeeper",
@@ -1011,7 +1056,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "beekeeper",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "fletcher_1": {
     "title": "Fletcher",

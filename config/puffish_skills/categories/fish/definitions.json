@@ -167,7 +167,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "lucky_line_2": {
     "title": "Lucky Line",
@@ -185,7 +195,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "lucky_line_3": {
     "title": "Lucky Line",
@@ -203,7 +223,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "trident_master_1": {
     "title": "Trident Master",
@@ -607,7 +637,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Riptide Runner."
+    "extra_description": "Pick one: this or Riptide Runner.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "value": 2,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "treasure_hunter_2": {
     "title": "Treasure Hunter",
@@ -626,7 +666,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Riptide Runner."
+    "extra_description": "Pick one: this or Riptide Runner.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "value": 2,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "treasure_hunter_3": {
     "title": "Treasure Hunter",
@@ -645,7 +695,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Riptide Runner."
+    "extra_description": "Pick one: this or Riptide Runner.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "value": 2,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -924,7 +984,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_shot",
+          "value": 1
+        }
+      }
+    ]
   },
   "hook_shot_2": {
     "title": "Hook Shot",
@@ -942,7 +1011,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_shot",
+          "value": 1
+        }
+      }
+    ]
   },
   "sushi_chef_1": {
     "title": "Sushi Chef",
@@ -960,7 +1038,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sushi_chef",
+          "value": 1
+        }
+      }
+    ]
   },
   "sushi_chef_2": {
     "title": "Sushi Chef",
@@ -978,7 +1065,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sushi_chef",
+          "value": 1
+        }
+      }
+    ]
   },
   "sushi_chef_3": {
     "title": "Sushi Chef",
@@ -996,7 +1092,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sushi_chef",
+          "value": 1
+        }
+      }
+    ]
   },
   "lure_master_1": {
     "title": "Lure Master",
@@ -1139,7 +1244,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sea_legs",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "sea_legs_2": {
     "title": "Sea Legs",
@@ -1157,7 +1271,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sea_legs",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "leviathan_bait_1": {
     "title": "Leviathan Bait",
@@ -1176,7 +1299,16 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Sea's Blessing."
+    "extra_description": "Pick one: this or Sea's Blessing.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "leviathan",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "tier_5_or": {
     "title": "OR",

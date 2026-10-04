@@ -167,7 +167,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "smith",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "smith_2": {
     "title": "Smith",
@@ -185,7 +194,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "smith",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "smith_3": {
     "title": "Smith",
@@ -203,7 +221,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "smith",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "smith_4": {
     "title": "Smith",
@@ -221,7 +248,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "smith",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "smith_5": {
     "title": "Smith",
@@ -239,7 +275,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "smith",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "whetstone_1": {
     "title": "Whetstone",
@@ -257,7 +302,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "whetstone",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "whetstone_2": {
     "title": "Whetstone",
@@ -275,7 +329,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "whetstone",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "whetstone_3": {
     "title": "Whetstone",
@@ -293,7 +356,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "whetstone",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "whetstone_4": {
     "title": "Whetstone",
@@ -311,7 +383,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "whetstone",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "whetstone_5": {
     "title": "Whetstone",
@@ -329,7 +410,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "whetstone",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "tier_2_label": {
     "title": "Tier 2 \u00b7 5 points",
@@ -364,7 +454,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "enchant_level",
+          "value": 1
+        }
+      }
+    ]
   },
   "enchanted_crafts_2": {
     "title": "Enchanted Crafts",
@@ -382,7 +481,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "enchant_level",
+          "value": 1
+        }
+      }
+    ]
   },
   "enchanted_crafts_3": {
     "title": "Enchanted Crafts",
@@ -400,7 +508,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "enchant_level",
+          "value": 1
+        }
+      }
+    ]
   },
   "book_saver_1": {
     "title": "Book Saver",
@@ -418,7 +535,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "book_saver",
+          "value": 1
+        }
+      }
+    ]
   },
   "repair_kit_1": {
     "title": "Repair Kit",
@@ -436,7 +562,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "repair_kit",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "repair_kit_2": {
     "title": "Repair Kit",
@@ -454,7 +589,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "repair_kit",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "spellwright_1": {
     "title": "Spellwright",
@@ -472,7 +616,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spell_save",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "spellwright_2": {
     "title": "Spellwright",
@@ -490,7 +643,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spell_save",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "spellwright_3": {
     "title": "Spellwright",
@@ -508,7 +670,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spell_save",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
@@ -544,7 +715,16 @@
     },
     "cost": 3,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Armourer."
+    "extra_description": "Pick one: this or Armourer.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "weaponsmith",
+          "value": 1
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -580,7 +760,16 @@
     },
     "cost": 3,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Weaponsmith."
+    "extra_description": "Pick one: this or Weaponsmith.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armourer",
+          "value": 1
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -756,7 +945,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Enchanted Crafts (all ranks)."
+    "extra_description": "Needs Enchanted Crafts (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "enchant_bonus",
+          "value": 1
+        }
+      }
+    ]
   },
   "enchanted_crafts_ii_2": {
     "title": "Enchanted Crafts II",
@@ -775,7 +973,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Enchanted Crafts (all ranks)."
+    "extra_description": "Needs Enchanted Crafts (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "enchant_bonus",
+          "value": 1
+        }
+      }
+    ]
   },
   "salvager_1": {
     "title": "Salvager",
@@ -969,7 +1176,16 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Endless Workshop."
+    "extra_description": "Pick one: this or Endless Workshop.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "masterwork",
+          "value": 1
+        }
+      }
+    ]
   },
   "tier_5_or": {
     "title": "OR",

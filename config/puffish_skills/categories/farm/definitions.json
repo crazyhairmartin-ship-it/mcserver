@@ -400,7 +400,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "green_thumb",
+          "value": 0.06
+        }
+      }
+    ]
   },
   "green_thumb_2": {
     "title": "Green Thumb",
@@ -418,7 +427,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "green_thumb",
+          "value": 0.06
+        }
+      }
+    ]
   },
   "green_thumb_3": {
     "title": "Green Thumb",
@@ -436,7 +454,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "green_thumb",
+          "value": 0.06
+        }
+      }
+    ]
   },
   "fertile_soil_1": {
     "title": "Fertile Soil",
@@ -454,7 +481,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fertile_soil",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "fertile_soil_2": {
     "title": "Fertile Soil",
@@ -472,7 +508,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fertile_soil",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "fertile_soil_3": {
     "title": "Fertile Soil",
@@ -490,7 +535,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fertile_soil",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "harvest_feast_1": {
     "title": "Harvest Feast",
@@ -508,7 +562,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "harvest_feast",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "harvest_feast_2": {
     "title": "Harvest Feast",
@@ -526,7 +589,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "harvest_feast",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "harvest_feast_3": {
     "title": "Harvest Feast",
@@ -544,7 +616,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "harvest_feast",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
@@ -580,7 +661,23 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Grim Harvest."
+    "extra_description": "Pick one: this or Grim Harvest.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "green_thumb",
+          "value": 0.06
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crop_drops",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "gardener_2": {
     "title": "Gardener",
@@ -599,7 +696,23 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Grim Harvest."
+    "extra_description": "Pick one: this or Grim Harvest.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "green_thumb",
+          "value": 0.06
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crop_drops",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "gardener_3": {
     "title": "Gardener",
@@ -618,7 +731,23 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Grim Harvest."
+    "extra_description": "Pick one: this or Grim Harvest.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "green_thumb",
+          "value": 0.06
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crop_drops",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -975,7 +1104,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sweeping_harvest",
+          "value": 1
+        }
+      }
+    ]
   },
   "sweeping_harvest_2": {
     "title": "Sweeping Harvest",
@@ -993,7 +1131,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sweeping_harvest",
+          "value": 1
+        }
+      }
+    ]
   },
   "irrigator_1": {
     "title": "Irrigator",
@@ -1047,7 +1194,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "compost_king",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",
@@ -1083,7 +1239,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Fertile Soil (all ranks)."
+    "extra_description": "Needs Fertile Soil (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fertile_soil",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "fertile_soil_ii_2": {
     "title": "Fertile Soil II",
@@ -1102,7 +1267,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Fertile Soil (all ranks)."
+    "extra_description": "Needs Fertile Soil (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fertile_soil",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "fertile_soil_ii_3": {
     "title": "Fertile Soil II",
@@ -1121,7 +1295,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Fertile Soil (all ranks)."
+    "extra_description": "Needs Fertile Soil (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fertile_soil",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "harvest_moon_1": {
     "title": "Harvest Moon",

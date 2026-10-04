@@ -587,6 +587,24 @@
           "value": 0.02
         }
       }
+    ],
+    "smelter": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "autosmelt",
+          "value": 0.12
+        }
+      }
+    ],
+    "ore_nose": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_nose",
+          "value": 0.03
+        }
+      }
     ]
   },
   "forage": {
@@ -697,6 +715,24 @@
           "value": 4
         }
       }
+    ],
+    "berry_picker": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "berry_picker",
+          "value": 0.1
+        }
+      }
+    ],
+    "beekeeper": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "beekeeper",
+          "value": 0.2
+        }
+      }
     ]
   },
   "farm": {
@@ -759,6 +795,76 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "earthbound",
+          "value": 0.5
+        }
+      }
+    ],
+    "green_thumb": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "green_thumb",
+          "value": 0.06
+        }
+      }
+    ],
+    "gardener": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "green_thumb",
+          "value": 0.06
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crop_drops",
+          "value": 0.02
+        }
+      }
+    ],
+    "fertile_soil": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fertile_soil",
+          "value": 0.08
+        }
+      }
+    ],
+    "fertile_soil_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fertile_soil",
+          "value": 0.08
+        }
+      }
+    ],
+    "harvest_feast": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "harvest_feast",
+          "value": 0.1
+        }
+      }
+    ],
+    "sweeping_harvest": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sweeping_harvest",
+          "value": 1
+        }
+      }
+    ],
+    "compost_king": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "compost_king",
           "value": 0.5
         }
       }
@@ -837,6 +943,62 @@
           "value": 1
         }
       }
+    ],
+    "lucky_line": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ],
+    "treasure_hunter": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.luck",
+          "value": 2,
+          "operation": "addition"
+        }
+      }
+    ],
+    "leviathan_bait": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "leviathan",
+          "value": 0.02
+        }
+      }
+    ],
+    "hook_shot": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_shot",
+          "value": 1
+        }
+      }
+    ],
+    "sushi_chef": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sushi_chef",
+          "value": 1
+        }
+      }
+    ],
+    "sea_legs": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sea_legs",
+          "value": 0.05
+        }
+      }
     ]
   },
   "cook": {
@@ -900,6 +1062,60 @@
           "value": 5
         }
       }
+    ],
+    "thrifty_cook": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ],
+    "thrifty_cook_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ],
+    "hearty_meals": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hearty_meals",
+          "value": 0.1
+        }
+      }
+    ],
+    "chef": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "chef",
+          "value": 0.17
+        }
+      }
+    ],
+    "trail_rations": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "trail_rations",
+          "value": 0.1
+        }
+      }
+    ],
+    "picnic": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "picnic",
+          "value": 1
+        }
+      }
     ]
   },
   "craft": {
@@ -943,6 +1159,96 @@
         "data": {
           "perk": "ride_armor",
           "value": 2
+        }
+      }
+    ],
+    "smith": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "smith",
+          "value": 0.05
+        }
+      }
+    ],
+    "whetstone": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "whetstone",
+          "value": 0.2
+        }
+      }
+    ],
+    "enchanted_crafts": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "enchant_level",
+          "value": 1
+        }
+      }
+    ],
+    "enchanted_crafts_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "enchant_bonus",
+          "value": 1
+        }
+      }
+    ],
+    "weaponsmith": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "weaponsmith",
+          "value": 1
+        }
+      }
+    ],
+    "armourer": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armourer",
+          "value": 1
+        }
+      }
+    ],
+    "masterwork": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "masterwork",
+          "value": 1
+        }
+      }
+    ],
+    "book_saver": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "book_saver",
+          "value": 1
+        }
+      }
+    ],
+    "repair_kit": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "repair_kit",
+          "value": 0.15
+        }
+      }
+    ],
+    "spellwright": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spell_save",
+          "value": 0.08
         }
       }
     ]

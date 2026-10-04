@@ -688,7 +688,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Gem Focus."
+    "extra_description": "Pick one: this or Gem Focus.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "autosmelt",
+          "value": 0.12
+        }
+      }
+    ]
   },
   "smelter_2": {
     "title": "Smelter",
@@ -707,7 +716,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Gem Focus."
+    "extra_description": "Pick one: this or Gem Focus.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "autosmelt",
+          "value": 0.12
+        }
+      }
+    ]
   },
   "smelter_3": {
     "title": "Smelter",
@@ -726,7 +744,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Gem Focus."
+    "extra_description": "Pick one: this or Gem Focus.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "autosmelt",
+          "value": 0.12
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -1218,7 +1245,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_nose",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",

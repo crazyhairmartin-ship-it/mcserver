@@ -32,7 +32,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "thrifty_cook_2": {
     "title": "Thrifty Cook",
@@ -50,7 +59,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "thrifty_cook_3": {
     "title": "Thrifty Cook",
@@ -68,7 +86,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "thrifty_cook_4": {
     "title": "Thrifty Cook",
@@ -86,7 +113,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "thrifty_cook_5": {
     "title": "Thrifty Cook",
@@ -104,7 +140,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "quick_hands_1": {
     "title": "Quick Hands",
@@ -445,7 +490,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hearty_meals",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "hearty_meals_2": {
     "title": "Hearty Meals",
@@ -463,7 +517,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hearty_meals",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "hearty_meals_3": {
     "title": "Hearty Meals",
@@ -481,7 +544,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hearty_meals",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "brain_food_1": {
     "title": "Brain Food",
@@ -598,7 +670,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Iron Stomach."
+    "extra_description": "Pick one: this or Iron Stomach.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "chef",
+          "value": 0.17
+        }
+      }
+    ]
   },
   "chef_2": {
     "title": "Chef",
@@ -617,7 +698,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Iron Stomach."
+    "extra_description": "Pick one: this or Iron Stomach.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "chef",
+          "value": 0.17
+        }
+      }
+    ]
   },
   "chef_3": {
     "title": "Chef",
@@ -636,7 +726,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Iron Stomach."
+    "extra_description": "Pick one: this or Iron Stomach.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "chef",
+          "value": 0.17
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -773,7 +872,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Thrifty Cook (all ranks)."
+    "extra_description": "Needs Thrifty Cook (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "thrifty_cook_ii_2": {
     "title": "Thrifty Cook II",
@@ -792,7 +900,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Thrifty Cook (all ranks)."
+    "extra_description": "Needs Thrifty Cook (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "thrifty_cook_ii_3": {
     "title": "Thrifty Cook II",
@@ -811,7 +928,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Thrifty Cook (all ranks)."
+    "extra_description": "Needs Thrifty Cook (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "thrifty_cook_ii_4": {
     "title": "Thrifty Cook II",
@@ -830,7 +956,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Thrifty Cook (all ranks)."
+    "extra_description": "Needs Thrifty Cook (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "thrifty_cook_ii_5": {
     "title": "Thrifty Cook II",
@@ -849,7 +984,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Thrifty Cook (all ranks)."
+    "extra_description": "Needs Thrifty Cook (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cook_save",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "trail_rations_1": {
     "title": "Trail Rations",
@@ -867,7 +1011,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "trail_rations",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "trail_rations_2": {
     "title": "Trail Rations",
@@ -885,7 +1038,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "trail_rations",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "trail_rations_3": {
     "title": "Trail Rations",
@@ -903,7 +1065,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "trail_rations",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "brewer_1": {
     "title": "Brewer",
@@ -1046,7 +1217,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "picnic",
+          "value": 1
+        }
+      }
+    ]
   },
   "picnic_2": {
     "title": "Picnic",
@@ -1064,7 +1244,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "picnic",
+          "value": 1
+        }
+      }
+    ]
   },
   "feast_maker_1": {
     "title": "Feast Maker",
