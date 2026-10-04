@@ -90,9 +90,9 @@ def functions():
                     give('alexsmobs:raw_catfish 2'), 'setblock ~2 ~ ~ farmersdelight:wild_tomatoes',
                     'setblock ~2 ~ ~1 farmersdelight:wild_onions',
                     'setblock ~-2 ~ ~ chest{Items:[{Slot:0b,id:"farmersdelight:tomato_seeds",Count:8b},'
-                    '{Slot:1b,id:"wildernature:venison",Count:4b},{Slot:2b,id:"bakery:dough",Count:4b}]}',
+                    '{Slot:1b,id:"wildernature:venison",Count:4b},{Slot:2b,id:"wildernature:fish_oil",Count:4b}]}',
                     tell('Farming merge: the items you just got should already be Farm & Charm / kept versions. '
-                         'Break the wild crops (east) and empty the chest (west).')]
+                         'Break the wild crops (east) and empty the chest (west): tomato seeds, venison and fish oil should convert.')]
     out['help'] = [tell('FOTF test kit', 'gold'),
                    tell('/function fotftest:start  - survival, heal, daytime, +100 XP levels'),
                    tell('/function fotftest:tree/<tree>  - unlock every node in a tree (both branches)'),
