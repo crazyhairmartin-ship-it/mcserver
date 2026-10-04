@@ -13,7 +13,7 @@ PACK = HERE.parent.parent
 CSV = PACK / 'docs' / 'superpowers' / 'specs' / '2026-10-03-weapons.csv'
 OUT = PACK / 'extras' / 'fotfskills' / 'res' / 'data' / 'fotfskills' / 'tags' / 'items'
 TYPES = ['sword', 'light', 'two_handed', 'polearm', 'axe', 'blunt', 'scythe', 'thrown', 'bow', 'crossbow', 'magic']
-VANILLA = {'sword': ['#minecraft:swords'], 'axe': ['#minecraft:axes'], 'polearm': ['minecraft:trident'],
+VANILLA = {'scythe': ['#minecraft:hoes'], 'sword': ['#minecraft:swords'], 'axe': ['#minecraft:axes'], 'polearm': ['minecraft:trident'],
            'thrown': ['minecraft:trident'], 'bow': ['minecraft:bow'], 'crossbow': ['minecraft:crossbow']}
 
 

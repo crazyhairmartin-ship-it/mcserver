@@ -1,12 +1,17 @@
 {
   "replace": false,
   "values": [
+    "#minecraft:hoes",
     {
       "id": "farm_and_charm:pitchfork",
       "required": false
     },
     {
       "id": "irons_spellbooks:decrepit_scythe",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:hellrazor",
       "required": false
     },
     {
