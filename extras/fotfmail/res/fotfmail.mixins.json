@@ -12,6 +12,7 @@
     "EnderMailmanGoalsMixin",
     "RandomStorageVisitGoalMixin",
     "NightmareFireBlockMixin",
+    "NightmareWalkFireMixin",
     "PackageMenuMixin",
     "PackageBlockEntityMixin",
     "PackageBlockMixin",

@@ -136,7 +136,7 @@ hash = "327c9bab43ad8d15c1e72b395f38a37a6313d68003f55927f9d7658788349747"
 
 [[files]]
 file = "config/puffish_skills/categories/agility/definitions.json"
-hash = "ef5857da2b36503303b31e7aedbd673ceb47eb40326ffb9d1c6f82e03c0c5aee"
+hash = "7b405c0410db4827d8414a2c73212729521d017b8390e7511c081a192836adc9"
 
 [[files]]
 file = "config/puffish_skills/categories/agility/experience.json"
@@ -156,7 +156,7 @@ hash = "7cfc5c9deb7b3286c6d0442272b479756869f12e749c5a17023e04c1ec65f40f"
 
 [[files]]
 file = "config/puffish_skills/categories/attack/definitions.json"
-hash = "3bf6f1e95e75df29ccb01943591ae799bc39dede07fbbb94c4381b4eb81bb287"
+hash = "e8606b8173421e0cdb733238a6f6ace912d2b9eda436cb369d17bf5b12019a18"
 
 [[files]]
 file = "config/puffish_skills/categories/attack/experience.json"
@@ -176,7 +176,7 @@ hash = "bf246692520cb2f14f8e09cb26521cc70889f2ff00462ab53d985c0f4345bd49"
 
 [[files]]
 file = "config/puffish_skills/categories/cook/definitions.json"
-hash = "9499f62f99631718b02d75d430cde0e26adfbb9a879171119567ef5f663eb1bf"
+hash = "e72dd67471dc8d3d90c1a431a4994546ad8e52d18f12721dcdf9bfe5f139cc27"
 
 [[files]]
 file = "config/puffish_skills/categories/cook/experience.json"
@@ -216,7 +216,7 @@ hash = "74e68c8fc6e40edc5329352ecb99f1181700dffebbb1a820275568dd3f7c3165"
 
 [[files]]
 file = "config/puffish_skills/categories/defense/definitions.json"
-hash = "f24f9a8b2d332dfe070fa44785ee882211349d4cb06bee6e6587df609f815b0f"
+hash = "5b0030ccc0e8bf13634fd6bc563c6ed3688e30415413410df77900141b034a04"
 
 [[files]]
 file = "config/puffish_skills/categories/defense/experience.json"
@@ -236,7 +236,7 @@ hash = "cac3dbda533354e273d7d43b8ad1d0f5a164ce42b8bdc6302c71adf69a111c2b"
 
 [[files]]
 file = "config/puffish_skills/categories/farm/definitions.json"
-hash = "41605382f4d7b0c22721616a47ee776f3dca30e75e06467fb3d385fa73a7b31e"
+hash = "48860188000440c89a93d3216226bbe3b27d8a0da3f5a70b80d848a661b73f40"
 
 [[files]]
 file = "config/puffish_skills/categories/farm/experience.json"
@@ -256,7 +256,7 @@ hash = "8805eaef5fb6f976326ff56c8657e118d8a3771b395bcd0f8062e1288a7cd1f1"
 
 [[files]]
 file = "config/puffish_skills/categories/fish/definitions.json"
-hash = "e18aca0c86b1f6d0bdd600b4c0502fa909e9fcc98b6e2c508643ac703664742c"
+hash = "5980e0fe66c94de2bc13a0b90958c466c8ecf17efe4fab7b46f0b502a741ef2f"
 
 [[files]]
 file = "config/puffish_skills/categories/fish/experience.json"
@@ -276,7 +276,7 @@ hash = "b368dc529bcf1e95e02ab116765973273b5c5a0087b5bc4280206f734cc58f45"
 
 [[files]]
 file = "config/puffish_skills/categories/forage/definitions.json"
-hash = "669b423145c29f8ac4148d543a04ff3e102a7ffd460139e355800ffca8c0fde1"
+hash = "4fc5ca01094c40e7c8ee858d2a32746d75963c20d60f23b7771b4bebe398e976"
 
 [[files]]
 file = "config/puffish_skills/categories/forage/experience.json"
@@ -296,7 +296,7 @@ hash = "ed2eeb4621d550891d2d9c35772d7315ed8ad59b23e17981a550bb006fa9d7f2"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/definitions.json"
-hash = "0143f10a62629ef1cbc9065cfafe033187f9013cd8ae09fc96b8b669ab0cf44b"
+hash = "52dd9d0ee3e3bbf3778897e9dbb232be9d1b74b63394043ba81dcc547e997c4d"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/experience.json"
@@ -316,7 +316,7 @@ hash = "90d30fe0798a7a01a2a5821f8ff432d5082d0abddef02108149d2de5437feb08"
 
 [[files]]
 file = "config/puffish_skills/categories/mining/definitions.json"
-hash = "890171ccee1cb2c2d0ea616c774ef33513555b051533b60fa7f9af4ff11e495e"
+hash = "399609e28db7d365d51c92dbad464074e1d78faeb07329541d840cc43ee9919b"
 
 [[files]]
 file = "config/puffish_skills/categories/mining/experience.json"
@@ -336,7 +336,7 @@ hash = "32ce79186dd880273fbf8e3e8a8248913c38e842561708deba5e60c46ca98c5d"
 
 [[files]]
 file = "config/puffish_skills/categories/range/definitions.json"
-hash = "b340548bb08e86a322822f3e1aea39b21af40028d7960dc508dc44b7c6103920"
+hash = "1485934eb7931af5e958f0d6d23e407165f7c5ea00a4bd04a53f2a22514e0882"
 
 [[files]]
 file = "config/puffish_skills/categories/range/experience.json"
@@ -1957,12 +1957,12 @@ metafile = true
 
 [[files]]
 file = "mods/fotfmail.pw.toml"
-hash = "50e260d2a3f55944d18825d1b28376c3bd5dd0674dee207b8d346fab92f92d5a"
+hash = "753006f8647e980412b22f028f9ce454976d744fd93e25554405a7a6d81cf186"
 metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "6e298bf00a1653aaaae48c4b385f508b7144f2e5b13860bceaf7870261ee1286"
+hash = "a4080f7cc94148db84133bc5ac219dc4cce50aef4d424cbc57090e223a1bdc83"
 metafile = true
 
 [[files]]
