@@ -1836,6 +1836,13 @@
           "perk": "prized_stock",
           "value": 0.1
         }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "breed_cooldown",
+          "value": 0.5
+        }
       }
     ],
     "soul_mender": [
@@ -1857,4 +1864,4 @@
       }
     ]
   }
-}
+}

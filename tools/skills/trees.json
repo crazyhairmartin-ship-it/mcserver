@@ -2200,7 +2200,7 @@
           "t": 5,
           "name": "Prized Stock",
           "r": 1,
-          "d": "Bred animals can roll stats above the normal maximum",
+          "d": "Bred animals can roll stats above the normal maximum; parents can breed again in half the time",
           "c": 3,
           "b": "B",
           "cap": true,
@@ -2210,4 +2210,4 @@
       ]
     }
   ]
-}
+}

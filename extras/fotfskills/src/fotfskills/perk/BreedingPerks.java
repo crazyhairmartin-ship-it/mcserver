@@ -11,17 +11,18 @@ import net.minecraftforge.event.entity.living.BabyEntitySpawnEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-/** Breeder (twins, faster growth), Selective Breeding, Prized Stock (foal stats) and Bloodlines (rare looks) on player-caused breeding. */
+/** Breeder (twins, faster growth), Selective Breeding, Prized Stock (foal stats, shorter breeding cooldown) and Bloodlines (rare looks) on player-caused breeding. */
 public final class BreedingPerks {
     private static final Attribute[] HORSE_STATS = {Attributes.f_22276_, Attributes.f_22279_, Attributes.f_22288_};
     private static final double[] VANILLA_MAX = {30, 0.3375, 1.0};
     private record Grow(AgeableMob child, int age) {
     }
     private static final java.util.List<Grow> GROWTH = new java.util.ArrayList<>();
+    private static final java.util.List<Grow> COOLDOWN = new java.util.ArrayList<>();
 
     @SubscribeEvent
     public void onServerTick(net.minecraftforge.event.TickEvent.ServerTickEvent event) {
-        if (event.phase != net.minecraftforge.event.TickEvent.Phase.END || GROWTH.isEmpty()) {
+        if (event.phase != net.minecraftforge.event.TickEvent.Phase.END || (GROWTH.isEmpty() && COOLDOWN.isEmpty())) {
             return;
         }
         for (Grow g : GROWTH) {
@@ -30,6 +31,12 @@ public final class BreedingPerks {
             }
         }
         GROWTH.clear();
+        for (Grow g : COOLDOWN) {
+            if (g.child.m_6084_() && g.child.m_146764_() > g.age) {
+                g.child.m_146762_(g.age);            // parents: vanilla set 6000 ticks after the event
+            }
+        }
+        COOLDOWN.clear();
     }
 
     @SubscribeEvent(priority = EventPriority.LOW)
@@ -40,6 +47,12 @@ public final class BreedingPerks {
         }
         AgeableMob child = event.getChild();
         shape(player, child, a, b);
+        double cut = Perks.get(player, "breed_cooldown");
+        if (cut > 0) {
+            int cooldown = Breeding.cooldown(6000, cut);
+            COOLDOWN.add(new Grow(a, cooldown));
+            COOLDOWN.add(new Grow(b, cooldown));
+        }
         if (Perks.roll(player, "twins") && a.m_9236_() instanceof ServerLevel level) {
             AgeableMob twin = a.m_142606_(level, b);
             if (twin != null) {

@@ -1612,7 +1612,7 @@
   },
   "prized_stock_1": {
     "title": "Prized Stock",
-    "description": "Bred animals can roll stats above the normal maximum",
+    "description": "Bred animals can roll stats above the normal maximum; parents can breed again in half the time",
     "icon": {
       "type": "item",
       "data": {
@@ -1634,6 +1634,13 @@
         "data": {
           "perk": "prized_stock",
           "value": 0.1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "breed_cooldown",
+          "value": 0.5
         }
       }
     ]

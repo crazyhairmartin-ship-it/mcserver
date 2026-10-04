@@ -46,6 +46,10 @@ public final class DeferredNodesTest {
         check((horse & 0xFF) <= 6 && (horse >> 8) >= 1 && (horse >> 8) <= 4, "horse with markings");
         check(Bloodlines.rare("alexsmobs:elephant", random).isEmpty(), "modded animals unchanged");
 
+        // Prized Stock: parents can breed again sooner (vanilla cooldown 6000 ticks)
+        check(Breeding.cooldown(6000, 0.5) == 3000, "half the breeding cooldown");
+        check(Breeding.cooldown(6000, 0) == 6000 && Breeding.cooldown(6000, 2) == 600, "no perk unchanged; never under 30 s");
+
         // Seeker fix: Arcane Arrows only spends mana on a real full draw, not a crit Seeker added
         check(!RangePerks.arcaneShot(false, 1), "Seeker crit on a quick shot: no mana spent");
         check(RangePerks.arcaneShot(true, 1) && !RangePerks.arcaneShot(true, 0), "full draw with the perk only");
