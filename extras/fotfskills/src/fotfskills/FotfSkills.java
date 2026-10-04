@@ -4,6 +4,7 @@ import fotfskills.perk.ArsMana;
 import fotfskills.perk.ArsPerks;
 import fotfskills.perk.BlockPerks;
 import fotfskills.perk.CombatPerks;
+import fotfskills.perk.ConditionalStats;
 import fotfskills.perk.IronsMana;
 import fotfskills.perk.IronsPerks;
 import fotfskills.perk.Mana;
@@ -30,6 +31,7 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new ItemPerks());
         MinecraftForge.EVENT_BUS.register(new CombatPerks());
         MinecraftForge.EVENT_BUS.register(new WeaponPerks());
+        MinecraftForge.EVENT_BUS.register(new ConditionalStats());
         MinecraftForge.EVENT_BUS.register(new ForgeXpEvents());
         if (ModList.get().isLoaded("ars_nouveau")) {
             MinecraftForge.EVENT_BUS.register(new ArsPerks());

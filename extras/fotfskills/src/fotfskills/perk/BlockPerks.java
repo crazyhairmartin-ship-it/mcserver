@@ -58,6 +58,9 @@ public final class BlockPerks {
         }
         BlockFacts facts = new BlockFacts(state);
         SkillsAPI.updateExperienceSources(player, BreakSource.class, source -> source.rules().experience(facts));
+        if (facts.hasTag("forge:ores") || facts.hasTag("minecraft:base_stone_overworld") || facts.hasTag("minecraft:base_stone_nether")) {
+            CombatState.of(player).lastStoneMined = CombatState.now(player);      // Stonehide
+        }
 
         boolean silk = EnchantmentHelper.m_44843_(Enchantments.f_44985_, tool) > 0;
         boolean fortune = EnchantmentHelper.m_44843_(Enchantments.f_44987_, tool) > 0;
