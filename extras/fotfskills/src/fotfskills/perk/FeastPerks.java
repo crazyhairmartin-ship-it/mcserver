@@ -13,8 +13,8 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 /**
- * Feast Maker: taking a serving from a feast, pie or cake (any block with a "servings" or "bites" property: Farmer's
- * Delight feasts and pies, Let's Do cakes, vanilla cake) has a chance to leave the block as it was, so the slice is free.
+ * Feast Maker: taking a serving from a feast, pie or cake (any block with a "servings", "bites" or "cuts" property:
+ * Farmer's Delight feasts and pies, Let's Do pies and cakes, vanilla cake) has a chance to leave the block as it was, so the slice is free.
  * Checked at the end of the tick the player right-clicked, once the block has handed out its serving.
  */
 public final class FeastPerks {

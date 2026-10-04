@@ -19,6 +19,7 @@ public final class DeferredNodesTest {
         // Feast Maker: a serving was taken when servings drops by 1 or bites rises by 1
         check(ServingRule.taken("servings", 4, 3), "feast serving taken");
         check(ServingRule.taken("bites", 0, 1), "pie / cake slice taken");
+        check(ServingRule.taken("cuts", 1, 2), "Let's Do pie / cake slice taken (cuts)");
         check(!ServingRule.taken("servings", 3, 3) && !ServingRule.taken("bites", 2, 1), "nothing taken");
         check(!ServingRule.taken("age", 1, 2), "other properties never count");
 
