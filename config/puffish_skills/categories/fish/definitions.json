@@ -484,7 +484,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bait_saver",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "bait_saver_2": {
     "title": "Bait Saver",
@@ -502,7 +511,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bait_saver",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "bait_saver_3": {
     "title": "Bait Saver",
@@ -520,7 +538,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bait_saver",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tidecaller_1": {
     "title": "Tidecaller",
@@ -1159,7 +1186,7 @@
   },
   "lure_master_1": {
     "title": "Lure Master",
-    "description": "Aquaculture lures work better",
+    "description": "Fish bite 8% faster while your Aquaculture rod has bait",
     "icon": {
       "type": "item",
       "data": {
@@ -1173,11 +1200,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "lure_master",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "lure_master_2": {
     "title": "Lure Master",
-    "description": "Aquaculture lures work better",
+    "description": "Fish bite 16% faster while your Aquaculture rod has bait",
     "icon": {
       "type": "item",
       "data": {
@@ -1191,11 +1227,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "lure_master",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "lure_master_3": {
     "title": "Lure Master",
-    "description": "Aquaculture lures work better",
+    "description": "Fish bite 24% faster while your Aquaculture rod has bait",
     "icon": {
       "type": "item",
       "data": {
@@ -1209,11 +1254,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "lure_master",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "lure_master_4": {
     "title": "Lure Master",
-    "description": "Aquaculture lures work better",
+    "description": "Fish bite 32% faster while your Aquaculture rod has bait",
     "icon": {
       "type": "item",
       "data": {
@@ -1227,7 +1281,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "lure_master",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",

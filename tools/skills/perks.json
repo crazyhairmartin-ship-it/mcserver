@@ -435,6 +435,22 @@
           "value": 1
         }
       }
+    ],
+    "artificer": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "artificer_glyph",
+          "value": 0.15
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "artificer_summon",
+          "value": 0.15
+        }
+      }
     ]
   },
   "agility": {
@@ -728,6 +744,15 @@
           "value": 1
         }
       }
+    ],
+    "tunnel_vision": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "tunnel_vision",
+          "value": 0.15
+        }
+      }
     ]
   },
   "forage": {
@@ -863,6 +888,15 @@
         "data": {
           "perk": "druids_grove",
           "value": 0.05
+        }
+      }
+    ],
+    "long_net": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "long_net",
+          "value": 1
         }
       }
     ]
@@ -1009,6 +1043,15 @@
           "value": 1
         }
       }
+    ],
+    "irrigator": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "irrigator",
+          "value": 1
+        }
+      }
     ]
   },
   "fish": {
@@ -1140,6 +1183,24 @@
           "value": 0.05
         }
       }
+    ],
+    "bait_saver": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bait_saver",
+          "value": 0.15
+        }
+      }
+    ],
+    "lure_master": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "lure_master",
+          "value": 0.08
+        }
+      }
     ]
   },
   "cook": {
@@ -1255,6 +1316,40 @@
         "data": {
           "perk": "picnic",
           "value": 1
+        }
+      }
+    ],
+    "quick_hands": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "quick_hands",
+          "value": 0.05
+        }
+      }
+    ],
+    "brewer": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "brewer_duration",
+          "value": 0.1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "brewer_save",
+          "value": 0.1
+        }
+      }
+    ],
+    "feast_maker": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "feast_maker",
+          "value": 0.34
         }
       }
     ]
@@ -1390,6 +1485,24 @@
         "data": {
           "perk": "spell_save",
           "value": 0.08
+        }
+      }
+    ],
+    "salvager": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "salvager",
+          "value": 0.15
+        }
+      }
+    ],
+    "smelter": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "furnace_speed",
+          "value": 0.1
         }
       }
     ]
@@ -1733,6 +1846,15 @@
           "value": 0.15
         }
       }
+    ],
+    "bloodlines": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bloodlines",
+          "value": 0.05
+        }
+      }
     ]
   }
-}
+}

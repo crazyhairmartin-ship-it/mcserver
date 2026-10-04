@@ -49,6 +49,7 @@ public final class RangePerks {
             return;
         }
         long now = CombatState.now(player);
+        boolean fullDraw = arrow.m_36792_();      // read before Seeker marks every arrow as a crit
         double seeker = Perks.get(player, "seeker");
         if (Perks.random() < Perks.get(player, "homing") * (1 + 2 * seeker)) {
             homers.add(new Homer(arrow, now + 60));
@@ -56,7 +57,7 @@ public final class RangePerks {
         if (seeker > 0) {
             arrow.m_36762_(true);
         }
-        if (arrow.m_36792_() && Perks.get(player, "arcane_arrows") > 0 && Mana.spend(player, 5)) {
+        if (arcaneShot(fullDraw, Perks.get(player, "arcane_arrows")) && Mana.spend(player, 5)) {
             arcane.add(arrow);
         }
         if (Perks.roll(player, "multishot") && event.getLevel() instanceof ServerLevel level) {
@@ -73,6 +74,11 @@ public final class RangePerks {
                 level.m_7967_(extra);
             }
         }
+    }
+
+    /** Arcane Arrows spends mana only on a real full-draw shot (Seeker's crits don't count). */
+    static boolean arcaneShot(boolean fullDraw, double arcaneArrows) {
+        return fullDraw && arcaneArrows > 0;
     }
 
     @SubscribeEvent

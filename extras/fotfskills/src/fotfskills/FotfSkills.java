@@ -60,6 +60,21 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new CraftPerks());
         MinecraftForge.EVENT_BUS.register(new RangePerks());
         MinecraftForge.EVENT_BUS.register(new ShieldPerks());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.perk.StationBoost());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.perk.FeastPerks());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.perk.DrinkPerks());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SalvagePerks());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.perk.IrrigatorPerks());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SummonPerks());
+        if (ModList.get().isLoaded("butterflies")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.perk.NetReach());
+        }
+        if (ModList.get().isLoaded("ars_nouveau")) {
+            fotfskills.perk.SummonPerks.registerOwner(fotfskills.perk.ModSummons::ars);
+        }
+        if (ModList.get().isLoaded("irons_spellbooks")) {
+            fotfskills.perk.SummonPerks.registerOwner(fotfskills.perk.ModSummons::irons);
+        }
         if (ModList.get().isLoaded("openpartiesandclaims")) {
             Parties.register(OpacParties::same);
         }

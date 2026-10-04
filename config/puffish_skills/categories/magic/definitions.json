@@ -867,7 +867,7 @@
   },
   "artificer_1": {
     "title": "Artificer",
-    "description": "Ars lean: cheaper glyph crafting, stronger summons",
+    "description": "Ars lean: glyphs cost 15% less XP; Ars and Iron's summons get +15% health and damage per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -882,11 +882,27 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Battlemage."
+    "extra_description": "Pick one: this or Battlemage.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "artificer_glyph",
+          "value": 0.15
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "artificer_summon",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "artificer_2": {
     "title": "Artificer",
-    "description": "Ars lean: cheaper glyph crafting, stronger summons",
+    "description": "Ars lean: glyphs cost 30% less XP; Ars and Iron's summons get +15% health and damage per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -901,11 +917,27 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Battlemage."
+    "extra_description": "Pick one: this or Battlemage.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "artificer_glyph",
+          "value": 0.15
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "artificer_summon",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "artificer_3": {
     "title": "Artificer",
-    "description": "Ars lean: cheaper glyph crafting, stronger summons",
+    "description": "Ars lean: glyphs cost 45% less XP; Ars and Iron's summons get +15% health and damage per rank",
     "icon": {
       "type": "item",
       "data": {
@@ -920,7 +952,23 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Battlemage."
+    "extra_description": "Pick one: this or Battlemage.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "artificer_glyph",
+          "value": 0.15
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "artificer_summon",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",

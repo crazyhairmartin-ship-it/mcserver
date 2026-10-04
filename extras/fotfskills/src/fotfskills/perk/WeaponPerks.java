@@ -110,10 +110,10 @@ public final class WeaponPerks {
             state.markedUntil = now + 200;
             double cleave = Perks.get(player, "cleave");
             if (cleave > 0 && Weapons.is(weapon, "two_handed")) {
-                splash(player, target, (float) (amount * cleave), 2.5, false);
+                splash(player, target, target, (float) (amount * cleave), 2.5);
             }
             if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe")) {
-                splash(player, player, amount, 3, true);   // Reaper's Due: every hostile mob in front, full damage
+                splash(player, player, target, amount, 3);   // Reaper's Due: every hostile mob around you, full damage
             }
         } else if (direct instanceof Projectile projectile) {
             Projectiles.Kind kind = Projectiles.kind(projectile);
@@ -272,12 +272,12 @@ public final class WeaponPerks {
      * Cleave / Reaper's Due: damage to hostile mobs around center (never pets, villagers, players or armour stands);
      * frontOnly keeps only mobs in front of the player.
      */
-    private void splash(ServerPlayer player, LivingEntity center, float damage, double radius, boolean frontOnly) {
+    /** Hits every hostile mob within radius of center, except center itself and the mob the swing already hit. */
+    private void splash(ServerPlayer player, LivingEntity center, LivingEntity alreadyHit, float damage, double radius) {
         splashing = true;
         try {
             for (LivingEntity other : center.m_9236_().m_45976_(LivingEntity.class, center.m_20191_().m_82400_(radius))) {
-                if (other == center || !(other instanceof Enemy)
-                        || (frontOnly && other.m_20182_().m_82546_(player.m_20182_()).m_82526_(player.m_20154_()) <= 0)) {
+                if (other == center || other == alreadyHit || !(other instanceof Enemy)) {
                     continue;
                 }
                 other.m_6469_(player.m_269291_().m_269075_(player), damage);

@@ -1068,7 +1068,7 @@
   },
   "salvager_1": {
     "title": "Salvager",
-    "description": "Grindstones return some materials",
+    "description": "15% that disenchanting gear on a grindstone gives back one of its repair material",
     "icon": {
       "type": "item",
       "data": {
@@ -1082,11 +1082,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "salvager",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "salvager_2": {
     "title": "Salvager",
-    "description": "Grindstones return some materials",
+    "description": "30% that disenchanting gear on a grindstone gives back one of its repair material",
     "icon": {
       "type": "item",
       "data": {
@@ -1100,11 +1109,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "salvager",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "salvager_3": {
     "title": "Salvager",
-    "description": "Grindstones return some materials",
+    "description": "45% that disenchanting gear on a grindstone gives back one of its repair material",
     "icon": {
       "type": "item",
       "data": {
@@ -1118,7 +1136,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "salvager",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "saddler_1": {
     "title": "Saddler",
@@ -1241,7 +1268,7 @@
   },
   "smelter_1": {
     "title": "Smelter",
-    "description": "Furnaces you use run 10% faster",
+    "description": "Furnaces, smokers and blast furnaces you use run 10% faster for 5 minutes",
     "icon": {
       "type": "item",
       "data": {
@@ -1255,11 +1282,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "furnace_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "smelter_2": {
     "title": "Smelter",
-    "description": "Furnaces you use run 20% faster",
+    "description": "Furnaces, smokers and blast furnaces you use run 20% faster for 5 minutes",
     "icon": {
       "type": "item",
       "data": {
@@ -1273,11 +1309,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "furnace_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "smelter_3": {
     "title": "Smelter",
-    "description": "Furnaces you use run 30% faster",
+    "description": "Furnaces, smokers and blast furnaces you use run 30% faster for 5 minutes",
     "icon": {
       "type": "item",
       "data": {
@@ -1291,11 +1336,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "furnace_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "smelter_4": {
     "title": "Smelter",
-    "description": "Furnaces you use run 40% faster",
+    "description": "Furnaces, smokers and blast furnaces you use run 40% faster for 5 minutes",
     "icon": {
       "type": "item",
       "data": {
@@ -1309,7 +1363,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "furnace_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "masterwork_1": {
     "title": "Masterwork",

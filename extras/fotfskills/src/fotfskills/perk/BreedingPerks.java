@@ -11,7 +11,7 @@ import net.minecraftforge.event.entity.living.BabyEntitySpawnEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
-/** Breeder (twins, faster growth), Selective Breeding and Prized Stock (foal stats) on player-caused breeding. */
+/** Breeder (twins, faster growth), Selective Breeding, Prized Stock (foal stats) and Bloodlines (rare looks) on player-caused breeding. */
 public final class BreedingPerks {
     private static final Attribute[] HORSE_STATS = {Attributes.f_22276_, Attributes.f_22279_, Attributes.f_22288_};
     private static final double[] VANILLA_MAX = {30, 0.3375, 1.0};
@@ -51,8 +51,33 @@ public final class BreedingPerks {
         }
     }
 
+    /** Bloodlines: rewrite the baby's saved look (Bloodlines.rare) and load it back before it joins the world. */
+    private static void rare(AgeableMob child) {
+        net.minecraft.resources.ResourceLocation id = net.minecraft.world.entity.EntityType.m_20613_(child.m_6095_());
+        java.util.Map<String, Object> look = Bloodlines.rare(id.toString(), new java.util.Random());
+        if (look.isEmpty()) {
+            return;
+        }
+        net.minecraft.nbt.CompoundTag tag = child.m_20240_(new net.minecraft.nbt.CompoundTag());
+        look.forEach((key, value) -> {
+            if (value instanceof Integer i) {
+                tag.m_128405_(key, i);
+            } else if (value instanceof Byte b) {
+                tag.m_128344_(key, b);
+            } else if (value instanceof Boolean b) {
+                tag.m_128379_(key, b);
+            } else {
+                tag.m_128359_(key, value.toString());
+            }
+        });
+        child.m_20258_(tag);
+    }
+
     /** Faster growth for every baby; better-parent stats (and bonuses) for foals. */
     private static void shape(ServerPlayer player, AgeableMob child, AgeableMob a, AgeableMob b) {
+        if (Perks.roll(player, "bloodlines")) {
+            rare(child);
+        }
         double growth = Perks.get(player, "growth");
         if (growth > 0) {
             GROWTH.add(new Grow(child, (int) (-24000 * (1 - growth))));   // set next tick: vanilla's setBaby resets age

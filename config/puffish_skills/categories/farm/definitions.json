@@ -1252,7 +1252,7 @@
   },
   "irrigator_1": {
     "title": "Irrigator",
-    "description": "Water keeps farmland wet 1 block further",
+    "description": "Farmland you till finds water 1 block further away",
     "icon": {
       "type": "item",
       "data": {
@@ -1266,11 +1266,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "irrigator",
+          "value": 1
+        }
+      }
+    ]
   },
   "irrigator_2": {
     "title": "Irrigator",
-    "description": "Water keeps farmland wet 2 block further",
+    "description": "Farmland you till finds water 2 block further away",
     "icon": {
       "type": "item",
       "data": {
@@ -1284,11 +1293,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "irrigator",
+          "value": 1
+        }
+      }
+    ]
   },
   "irrigator_3": {
     "title": "Irrigator",
-    "description": "Water keeps farmland wet 3 block further",
+    "description": "Farmland you till finds water 3 block further away",
     "icon": {
       "type": "item",
       "data": {
@@ -1302,7 +1320,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "irrigator",
+          "value": 1
+        }
+      }
+    ]
   },
   "compost_king_1": {
     "title": "Compost King",
@@ -1507,7 +1534,7 @@
   },
   "reapers_due_1": {
     "title": "Reaper's Due",
-    "description": "Scythe sweeps hit every mob in a wide arc at full damage",
+    "description": "Scythe swings hit every hostile mob around you (full circle) at full damage",
     "icon": {
       "type": "item",
       "data": {

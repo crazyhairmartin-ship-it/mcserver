@@ -1370,7 +1370,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "tunnel_vision",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tunnel_vision_2": {
     "title": "Tunnel Vision",
@@ -1388,7 +1397,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "tunnel_vision",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tunnel_vision_3": {
     "title": "Tunnel Vision",
@@ -1406,7 +1424,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "tunnel_vision",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tunnel_vision_4": {
     "title": "Tunnel Vision",
@@ -1424,7 +1451,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "tunnel_vision",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "motherlode_1": {
     "title": "Motherlode",

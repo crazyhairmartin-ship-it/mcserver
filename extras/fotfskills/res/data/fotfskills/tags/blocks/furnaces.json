@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:furnace",
+    "minecraft:smoker",
+    "minecraft:blast_furnace",
+    {
+      "id": "meadow:furnace_cobblestone",
+      "required": false
+    }
+  ]
+}

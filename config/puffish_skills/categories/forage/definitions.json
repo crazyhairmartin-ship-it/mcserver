@@ -535,7 +535,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "long_net",
+          "value": 1
+        }
+      }
+    ]
   },
   "long_net_2": {
     "title": "Long Net",
@@ -553,7 +562,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "long_net",
+          "value": 1
+        }
+      }
+    ]
   },
   "long_net_3": {
     "title": "Long Net",
@@ -571,7 +589,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "long_net",
+          "value": 1
+        }
+      }
+    ]
   },
   "forest_stride_1": {
     "title": "Forest Stride",

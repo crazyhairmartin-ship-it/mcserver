@@ -1085,7 +1085,7 @@
   },
   "bloodlines_1": {
     "title": "Bloodlines",
-    "description": "Bred animals have a better chance of rare colours and variants",
+    "description": "5% that a bred vanilla animal is born a rare look (blue axolotl, pink sheep, brown panda, screaming goat...)",
     "icon": {
       "type": "item",
       "data": {
@@ -1099,11 +1099,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bloodlines",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "bloodlines_2": {
     "title": "Bloodlines",
-    "description": "Bred animals have a better chance of rare colours and variants",
+    "description": "10% that a bred vanilla animal is born a rare look (blue axolotl, pink sheep, brown panda, screaming goat...)",
     "icon": {
       "type": "item",
       "data": {
@@ -1117,11 +1126,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bloodlines",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "bloodlines_3": {
     "title": "Bloodlines",
-    "description": "Bred animals have a better chance of rare colours and variants",
+    "description": "15% that a bred vanilla animal is born a rare look (blue axolotl, pink sheep, brown panda, screaming goat...)",
     "icon": {
       "type": "item",
       "data": {
@@ -1135,11 +1153,20 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bloodlines",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "bloodlines_4": {
     "title": "Bloodlines",
-    "description": "Bred animals have a better chance of rare colours and variants",
+    "description": "20% that a bred vanilla animal is born a rare look (blue axolotl, pink sheep, brown panda, screaming goat...)",
     "icon": {
       "type": "item",
       "data": {
@@ -1153,7 +1180,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bloodlines",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "soul_mender_1": {
     "title": "Soul Mender",
