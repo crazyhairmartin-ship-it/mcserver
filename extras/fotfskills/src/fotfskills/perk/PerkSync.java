@@ -125,6 +125,25 @@ public final class PerkSync {
         CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new Buffs(lines));
     }
 
+    /** Attack damage from skills (Sharpened...): the player's own additions, without what they're holding. */
+    public static double skillAttack(ServerPlayer player) {
+        net.minecraft.world.entity.ai.attributes.AttributeInstance attack =
+                player.m_21051_(net.minecraft.world.entity.ai.attributes.Attributes.f_22281_);
+        if (attack == null) {
+            return 0;
+        }
+        java.util.Set<java.util.UUID> held = new HashSet<>();
+        player.m_21205_().m_41638_(net.minecraft.world.entity.EquipmentSlot.MAINHAND)
+                .get(net.minecraft.world.entity.ai.attributes.Attributes.f_22281_).forEach(m -> held.add(m.m_22209_()));
+        double sum = 0;
+        for (net.minecraft.world.entity.ai.attributes.AttributeModifier m : attack.m_22122_()) {
+            if (!held.contains(m.m_22209_()) && m.m_22217_() == net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation.ADDITION) {
+                sum += m.m_22218_();
+            }
+        }
+        return sum;
+    }
+
     public static synchronized void markDirty(ServerPlayer player) {
         DIRTY.add(player);
     }
@@ -144,7 +163,9 @@ public final class PerkSync {
         }
         for (ServerPlayer player : send) {
             if (!player.m_213877_()) {
-                CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new Totals(Perks.TOTALS.snapshot(player.m_20148_())));
+                Map<String, Double> values = new java.util.HashMap<>(Perks.TOTALS.snapshot(player.m_20148_()));
+                values.put("skill_attack", skillAttack(player));    // the client never sees attack-damage modifiers
+                CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new Totals(values));
             }
         }
     }

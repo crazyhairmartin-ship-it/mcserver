@@ -30,10 +30,17 @@ public final class ConditionalStats {
     private static final TagKey<Biome> FOREST = TagKey.m_203882_(ForgeRegistries.Keys.BIOMES, new ResourceLocation("minecraft", "is_forest"));
     private static final TagKey<Item> GEMS = TagKey.m_203882_(ForgeRegistries.Keys.ITEMS, new ResourceLocation("forge", "gems"));
 
+    private static final java.util.Map<java.util.UUID, Double> SENT_ATTACK = new java.util.concurrent.ConcurrentHashMap<>();
+
     @SubscribeEvent
     public void onTick(TickEvent.PlayerTickEvent event) {
         if (event.phase != TickEvent.Phase.END || !(event.player instanceof ServerPlayer player) || player.f_19797_ % 10 != 0) {
             return;
+        }
+        double attack = PerkSync.skillAttack(player);
+        Double sent = SENT_ATTACK.put(player.m_20148_(), attack);
+        if (sent == null || Math.abs(sent - attack) > 1e-6) {
+            PerkSync.markDirty(player);                  // Sharpened changed: refresh the weapon tooltips
         }
         CombatState state = CombatState.of(player);
         long now = CombatState.now(player);

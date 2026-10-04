@@ -10,6 +10,11 @@ public final class ClientPerks {
     private ClientPerks() {
     }
 
+    /** A value the server sent without a perk cap (e.g. "skill_attack"). */
+    public static double raw(String key) {
+        return totals.getOrDefault(key, 0.0);
+    }
+
     static double get(String perk) {
         return totals.getOrDefault(perk, 0.0);
     }

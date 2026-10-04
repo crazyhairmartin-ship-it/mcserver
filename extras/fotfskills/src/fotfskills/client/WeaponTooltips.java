@@ -42,7 +42,7 @@ public final class WeaponTooltips {
         List<Component> tip = event.getToolTip();
         if (!types.isEmpty()) {
             double weapon = 1 + additions(stack.m_41638_(EquipmentSlot.MAINHAND).get(Attributes.f_22281_));
-            double skill = skillAttack(player);
+            double skill = fotfskills.perk.ClientPerks.raw("skill_attack");
             double enchant = EnchantmentHelper.m_44833_(stack, MobType.f_21640_);
             DamageBreakdown d = DamageBreakdown.of(weapon, skill, enchant, types, p -> Perks.get(player, p));
             tip.add(Component.m_237113_("§6" + DamageBreakdown.fmt(d.total()) + " damage with your skills"));
@@ -71,20 +71,4 @@ public final class WeaponTooltips {
         return sum;
     }
 
-    /** Attack damage from skills: the player's own attack bonuses, without whatever they're holding right now. */
-    private static double skillAttack(Player player) {
-        AttributeInstance attack = player.m_21051_(Attributes.f_22281_);
-        if (attack == null) {
-            return 0;
-        }
-        Set<java.util.UUID> held = new HashSet<>();
-        player.m_21205_().m_41638_(EquipmentSlot.MAINHAND).get(Attributes.f_22281_).forEach(m -> held.add(m.m_22209_()));
-        double sum = 0;
-        for (AttributeModifier m : attack.m_22122_()) {
-            if (!held.contains(m.m_22209_()) && m.m_22217_() == AttributeModifier.Operation.ADDITION) {
-                sum += m.m_22218_();
-            }
-        }
-        return sum;
-    }
 }
