@@ -196,7 +196,7 @@ truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dy
   - Defense is slower: 0.5 XP per damage, capped per attacker.
   - Attack is a bit slower: 0.6 per damage.
   - Faster: fishing (25 per catch), Agility (1 XP per 2 m sprinting or climbing), Crafting (25 per piece of gear, 2 per real recipe with 2+ item types, 2 per smelted ingot) and Taming (75 per tame including horses, 1 per pet damage, 10 per breed).
-- **Ultimine**: the first block a player breaks in a tick gives full gathering XP; the rest of the vein gives a quarter (logs: 60%, since trees are small).
+- **Ultimine**: the first block a player breaks in a tick gives full gathering XP; the rest of the vein gives a quarter (ores always give full XP; logs 60%, since trees are small).
 - **Level-up messages** name the skill and level, play a sound, and level 50 adds fireworks. `/fotfskills levelups off|on` toggles them per player.
 - **New commands and display**:
   - `/fotfskills perks` lists perk totals.

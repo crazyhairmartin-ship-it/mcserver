@@ -63,8 +63,9 @@ public final class BlockPerks {
             return;
         }
         BlockFacts facts = new BlockFacts(state);
-        double factor = BreakTick.share(CombatState.of(player).breaks.factor(level.m_46467_()),   // Ultimine: rest of the
-                facts.hasTag("minecraft:logs"));                                               // vein 1/4, logs 60%
+        BreakTick.Kind kind = facts.hasTag("forge:ores") ? BreakTick.Kind.ORE
+                : facts.hasTag("minecraft:logs") ? BreakTick.Kind.LOG : BreakTick.Kind.OTHER;
+        double factor = BreakTick.share(CombatState.of(player).breaks.factor(level.m_46467_()), kind);   // Ultimine
         SkillsAPI.updateExperienceSources(player, BreakSource.class,
                 source -> BreakTick.scale(source.rules().experience(facts), factor, Perks.random()));
         if (facts.hasTag("forge:ores") || facts.hasTag("minecraft:base_stone_overworld") || facts.hasTag("minecraft:base_stone_nether")) {
