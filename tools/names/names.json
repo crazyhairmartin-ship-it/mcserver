@@ -1,0 +1,169 @@
+{
+  "species": [
+    {
+      "mod": "regions_unexplored",
+      "word": "Maple",
+      "to": "Sugar Maple"
+    },
+    {
+      "mod": "regions_unexplored",
+      "word": "Pine",
+      "to": "Scots Pine"
+    },
+    {
+      "mod": "regions_unexplored",
+      "word": "Redwood",
+      "to": "Sequoia"
+    },
+    {
+      "mod": "regions_unexplored",
+      "word": "Willow",
+      "to": "Weeping Willow"
+    },
+    {
+      "mod": "regions_unexplored",
+      "word": "Palm",
+      "to": "Date Palm"
+    },
+    {
+      "mod": "regions_unexplored",
+      "word": "Dead",
+      "to": "Bleached"
+    },
+    {
+      "mod": "regions_unexplored",
+      "word": "Cypress",
+      "to": "Bald Cypress"
+    },
+    {
+      "mod": "bloomingnature",
+      "word": "Larch",
+      "to": "Tamarack"
+    },
+    {
+      "mod": "bloomingnature",
+      "word": "Baobab",
+      "to": "Monkeybread"
+    },
+    {
+      "mod": "bloomingnature",
+      "word": "Fir",
+      "to": "Silver Fir"
+    },
+    {
+      "mod": "meadow",
+      "word": "Limestone",
+      "to": "Alpine Limestone"
+    },
+    {
+      "mod": "beachparty",
+      "word": "Palm",
+      "to": "Coconut Palm"
+    },
+    {
+      "mod": "meadow",
+      "word": "Pine",
+      "to": "Mountain Pine"
+    },
+    {
+      "mod": "regions_unexplored",
+      "word": "Red Maple",
+      "to": "Red Sugar Maple"
+    },
+    {
+      "mod": "regions_unexplored",
+      "word": "Orange Maple",
+      "to": "Orange Sugar Maple"
+    }
+  ],
+  "renames": {
+    "regions_unexplored:ash": "Volcanic Ash",
+    "bakery:strawberry_crate": "Crate of Strawberries",
+    "wildernature:bounty_board": "Hunter's Bounty Board",
+    "snowyspirit:candy_cane": "Honeyed Candy Cane",
+    "snowyspirit:candy_cane_block": "Honeyed Candy Cane Block",
+    "smallships:cannon_ball": "Powder Shot",
+    "meadow:chiseled_limestone_bricks": "Chiseled Alpine Limestone",
+    "bakery:chocolate_box": "Truffle Box",
+    "candlelight:cooking_pan": "Copper Pan",
+    "candlelight:cooking_pot": "Copper Cooking Pot",
+    "farm_and_charm:cooking_pot": "Iron Stockpot",
+    "nethervinery:crimson_lattice": "Crimson Trellis",
+    "nethervinery:warped_lattice": "Warped Trellis",
+    "meadow:doormat": "Woven Wheat Mat",
+    "alexscaves:fertilizer": "Guano Fertilizer",
+    "irons_spellbooks:firefly_jar": "Arcane Firefly Jar",
+    "mimi:flute": "Concert Flute",
+    "supplementaries:flute": "Bamboo Flute",
+    "brewery:gingerbread": "Gingerbread Loaf",
+    "alexscaves:gingerbread_door": "Candied Gingerbread Door",
+    "alexscaves:gingerbread_slab": "Candied Gingerbread Slab",
+    "alexscaves:gingerbread_stairs": "Candied Gingerbread Stairs",
+    "cataclysm:goddess_statue": "Ancient Goddess Statue",
+    "crittersandcompanions:grappling_hook": "Silk Grapple",
+    "parcool:grappling_hook": "Climbing Hook",
+    "bloomingnature:coconut_hanging": "Coconut Cluster",
+    "bakery:jar": "Pantry Jar",
+    "aquaculture:message_in_a_bottle": "Message in a Drift Bottle",
+    "irons_spellbooks:pedestal": "Scribe's Pedestal",
+    "alexscaves:potted_fiddlehead": "Potted Primordial Fiddlehead",
+    "brewery:rope": "Barley Twine",
+    "meadow:climbing_rope": "Climbing Rope",
+    "supplementaries:rope": "Flax Rope",
+    "immersive_aircraft:sail": "Cloth Sail",
+    "smallships:sail": "Rigged Sail",
+    "cataclysm:soul_render": "Cursium Soul Render",
+    "lilis_lucky_lures:spear": "Iron Fishing Spear",
+    "cataclysm:stone_tiles": "Ancient Stone Tiles",
+    "cataclysm:stone_tile_slab": "Ancient Stone Tile Slab",
+    "cataclysm:stone_tile_stairs": "Ancient Stone Tile Stairs",
+    "cataclysm:stone_tile_wall": "Ancient Stone Tile Wall",
+    "farm_and_charm:stove": "Baker's Stove",
+    "herbalbrews:stove": "Tea Stove",
+    "beachparty:thatch": "Palm Thatch",
+    "cataclysm:void_stone": "Abyssal Stone",
+    "ars_nouveau:warp_scroll": "Arcane Warp Scroll",
+    "biomesoplenty:huge_lily_pad": "Broad Lily Pad",
+    "herbalbrews:hibiscus": "Tea Hibiscus",
+    "herbalbrews:lavender": "Culinary Lavender",
+    "herbalbrews:potted_lavender": "Potted Culinary Lavender",
+    "bloomingnature:hyssop": "Blue Hyssop",
+    "bloomingnature:golden_rod": "Meadow Goldenrod",
+    "bloomingnature:reed": "Marsh Reed",
+    "candlelight:rose": "Garden Rose",
+    "candlelight:potted_rose": "Potted Garden Rose",
+    "naturalist:duckweed": "Pond Duckweed",
+    "bloomingnature:barrel_cactus": "Golden Barrel Cactus",
+    "regions_unexplored:clover": "White Clover",
+    "biomesoplenty:barley": "Barley Grass",
+    "regions_unexplored:barley": "Steppe Barley",
+    "bloomingnature:cattail": "Bulrush",
+    "naturalist:cattail": "Marsh Cattail",
+    "regions_unexplored:cattail": "Reedmace",
+    "regions_unexplored:spanish_moss": "Old Man's Beard",
+    "regions_unexplored:spanish_moss_plant": "Old Man's Beard",
+    "aquaculture:catfish_bucket": "Bucket of Channel Catfish",
+    "rainbowreef:jellyfish_bucket": "Bucket of Reef Jellyfish",
+    "wildernature:bison_spawn_egg": "Plains Bison Spawn Egg",
+    "naturalist:bluejay_spawn_egg": "Forest Bluejay Spawn Egg",
+    "twilightforest:boar_spawn_egg": "Twilight Boar Spawn Egg",
+    "wildernature:boar_spawn_egg": "Wild Boar Spawn Egg",
+    "naturalist:catfish_spawn_egg": "River Catfish Spawn Egg",
+    "rainbowreef:crab_spawn_egg": "Reef Crab Spawn Egg",
+    "twilightforest:deer_spawn_egg": "Twilight Deer Spawn Egg",
+    "wildernature:deer_spawn_egg": "Red Deer Spawn Egg",
+    "crittersandcompanions:dragonfly_spawn_egg": "Pond Dragonfly Spawn Egg",
+    "naturalist:elephant_spawn_egg": "Savanna Elephant Spawn Egg",
+    "guardvillagers:illusioner_spawn_egg": "Rogue Illusioner Spawn Egg",
+    "twilightforest:naga_spawn_egg": "Twilight Naga Spawn Egg",
+    "twilightforest:penguin_spawn_egg": "Twilight Penguin Spawn Egg",
+    "wildernature:raccoon_spawn_egg": "Masked Raccoon Spawn Egg",
+    "naturalist:rattlesnake_spawn_egg": "Desert Rattlesnake Spawn Egg",
+    "crittersandcompanions:snail_spawn_egg": "Garden Snail Spawn Egg",
+    "twilightforest:squirrel_spawn_egg": "Twilight Squirrel Spawn Egg"
+  },
+  "skip": [
+    "geckolib:fertilizer",
+    "supplementaries:structure_temp"
+  ]
+}
