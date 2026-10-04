@@ -21,7 +21,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 /**
  * Melee weapons show the damage one swing does with your skills; hold Shift for what makes it up. Thrown weapons also
- * show your thrown-damage bonus. Situational bonuses (Momentum, Counter, crits) aren't counted.
+ * show your thrown-damage bonus.
  */
 public final class WeaponTooltips {
     private static final String[] MELEE = {"sword", "light", "two_handed", "polearm", "axe", "blunt", "scythe", "pickaxe"};
@@ -48,7 +48,6 @@ public final class WeaponTooltips {
             tip.add(Component.m_237113_("§6" + DamageBreakdown.fmt(d.total()) + " damage with your skills"));
             if (Screen.m_96638_()) {
                 d.lines().forEach(line -> tip.add(Component.m_237113_("§7  " + line)));
-                tip.add(Component.m_237113_("§8  Not counted: crits, Momentum, Counter and other situational bonuses"));
             } else {
                 tip.add(Component.m_237113_("§8Hold Shift for the breakdown"));
             }
