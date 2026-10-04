@@ -13,6 +13,9 @@ public final class BreakTickTest {
         check(BreakTick.scale(6, 0.25, 0.99) == 1, "6 x 0.25 = 1.5: 1 plus a 50% chance of 1 more (roll missed)");
         check(BreakTick.scale(6, 0.25, 0.1) == 2, "roll hit");
         check(BreakTick.scale(1, 0.25, 0.3) == 0 && BreakTick.scale(1, 0.25, 0.2) == 1, "stone: 1 XP a quarter of the time");
+        check(BreakTick.share(0.25, true) == 0.6, "felled logs after the first give 60%");
+        check(BreakTick.share(0.25, false) == 0.25, "ore and stone after the first still give 25%");
+        check(BreakTick.share(1.0, true) == 1.0, "the first block of the tick is always full XP");
         System.out.println("BreakTickTest ok");
     }
 
