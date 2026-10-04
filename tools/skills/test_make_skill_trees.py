@@ -204,3 +204,32 @@ def test_written_config_has_experience_per_category(tmp_path):
     g.write_config(DATA, tmp_path, xp=XP)
     for t in DATA['trees']:
         assert (tmp_path / 'categories' / t['id'] / 'experience.json').exists()
+
+
+PERKS = json.loads((Path(__file__).parent / 'perks.json').read_text(encoding='utf-8'))
+
+
+def test_stat_nodes_get_one_attribute_reward_per_rank():
+    defs = g.build_category(tree('attack'), TIERS, XP, PERKS)['definitions.json']
+    reward = {'type': 'puffish_skills:attribute',
+              'data': {'attribute': 'minecraft:generic.attack_damage', 'value': 0.3, 'operation': 'addition'}}
+    for k in range(1, 6):
+        assert defs[f'sharpened_{k}']['rewards'] == [reward]
+    assert 'rewards' not in defs['momentum_1']          # not a plain attribute: phase 2b/3
+    assert 'rewards' not in defs['tier_1_label']
+
+
+def test_mana_pool_raises_both_mods():
+    defs = g.build_category(tree('magic'), TIERS, XP, PERKS)['definitions.json']
+    attrs = {r['data']['attribute'] for r in defs['mana_pool_1']['rewards']}
+    assert attrs == {'irons_spellbooks:max_mana', 'ars_nouveau:ars_nouveau.perk.max_mana'}
+
+
+def test_perks_only_name_real_nodes_and_valid_operations():
+    for tree_id, nodes in PERKS.items():
+        slugs = {g.slug(n['name']) for n in tree(tree_id)['nodes']}
+        for node_slug, rewards in nodes.items():
+            assert node_slug in slugs, (tree_id, node_slug)
+            for r in rewards:
+                assert r['type'] == 'puffish_skills:attribute'
+                assert r['data']['operation'] in {'addition', 'multiply_base', 'multiply_total'}

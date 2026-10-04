@@ -32,7 +32,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "toughened_2": {
     "title": "Toughened",
@@ -50,7 +60,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "toughened_3": {
     "title": "Toughened",
@@ -68,7 +88,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "toughened_4": {
     "title": "Toughened",
@@ -86,7 +116,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "toughened_5": {
     "title": "Toughened",
@@ -104,7 +144,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "shield_wall_1": {
     "title": "Shield Wall",
@@ -176,7 +226,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "vitality_2": {
     "title": "Vitality",
@@ -194,7 +254,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "vitality_3": {
     "title": "Vitality",
@@ -212,7 +282,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "vitality_4": {
     "title": "Vitality",
@@ -230,7 +310,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "vitality_5": {
     "title": "Vitality",
@@ -248,7 +338,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "tier_2_label": {
     "title": "Tier 2 \u00b7 5 points",
@@ -283,7 +383,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor_toughness",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "iron_skin_2": {
     "title": "Iron Skin",
@@ -301,7 +411,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor_toughness",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "iron_skin_3": {
     "title": "Iron Skin",
@@ -319,7 +439,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor_toughness",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "shield_thorns_1": {
     "title": "Shield Thorns",
@@ -611,7 +741,17 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Vitality (all ranks)."
+    "extra_description": "Needs Vitality (all ranks).",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "vitality_ii_2": {
     "title": "Vitality II",
@@ -630,7 +770,17 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Vitality (all ranks)."
+    "extra_description": "Needs Vitality (all ranks).",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "vitality_ii_3": {
     "title": "Vitality II",
@@ -649,7 +799,17 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Vitality (all ranks)."
+    "extra_description": "Needs Vitality (all ranks).",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "vitality_ii_4": {
     "title": "Vitality II",
@@ -668,7 +828,17 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Vitality (all ranks)."
+    "extra_description": "Needs Vitality (all ranks).",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "vitality_ii_5": {
     "title": "Vitality II",
@@ -687,7 +857,17 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Vitality (all ranks)."
+    "extra_description": "Needs Vitality (all ranks).",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "guardian_1": {
     "title": "Guardian",

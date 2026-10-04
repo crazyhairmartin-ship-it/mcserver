@@ -140,6 +140,9 @@ def build_category(tree, tiers, xp=None, perks=None):
                 }
                 if extras(n, tree):
                     definitions[sid]['extra_description'] = extras(n, tree)
+                rewards = (perks or {}).get(tree['id'], {}).get(slug(n['name']))
+                if rewards:
+                    definitions[sid]['rewards'] = rewards
                 skills[sid] = {'x': x, 'y': y, 'definition': sid}
                 if k == 1 and not n['needs']:
                     skills[sid]['root'] = True

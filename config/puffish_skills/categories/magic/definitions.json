@@ -32,7 +32,25 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "mana_pool_2": {
     "title": "Mana Pool",
@@ -50,7 +68,25 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "mana_pool_3": {
     "title": "Mana Pool",
@@ -68,7 +104,25 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "mana_pool_4": {
     "title": "Mana Pool",
@@ -86,7 +140,25 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "mana_pool_5": {
     "title": "Mana Pool",
@@ -104,7 +176,25 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "focus_1": {
     "title": "Focus",
@@ -122,7 +212,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:spell_power",
+          "value": 0.03,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "focus_2": {
     "title": "Focus",
@@ -140,7 +240,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:spell_power",
+          "value": 0.03,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "focus_3": {
     "title": "Focus",
@@ -158,7 +268,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:spell_power",
+          "value": 0.03,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "focus_4": {
     "title": "Focus",
@@ -176,7 +296,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:spell_power",
+          "value": 0.03,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "focus_5": {
     "title": "Focus",
@@ -194,7 +324,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:spell_power",
+          "value": 0.03,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "flow_1": {
     "title": "Flow",
@@ -212,7 +352,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:mana_regen",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "flow_2": {
     "title": "Flow",
@@ -230,7 +380,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:mana_regen",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "flow_3": {
     "title": "Flow",
@@ -248,7 +408,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:mana_regen",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "flow_4": {
     "title": "Flow",
@@ -266,7 +436,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:mana_regen",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "flow_5": {
     "title": "Flow",
@@ -284,7 +464,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:mana_regen",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "tier_2_label": {
     "title": "Tier 2 \u00b7 5 points",
@@ -683,7 +873,25 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Mana Pool (all ranks)."
+    "extra_description": "Needs Mana Pool (all ranks).",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "mana_pool_ii_2": {
     "title": "Mana Pool II",
@@ -702,7 +910,25 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Mana Pool (all ranks)."
+    "extra_description": "Needs Mana Pool (all ranks).",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "mana_pool_ii_3": {
     "title": "Mana Pool II",
@@ -721,7 +947,25 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Mana Pool (all ranks)."
+    "extra_description": "Needs Mana Pool (all ranks).",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "mana_pool_ii_4": {
     "title": "Mana Pool II",
@@ -740,7 +984,25 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Mana Pool (all ranks)."
+    "extra_description": "Needs Mana Pool (all ranks).",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "mana_pool_ii_5": {
     "title": "Mana Pool II",
@@ -759,7 +1021,25 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Mana Pool (all ranks)."
+    "extra_description": "Needs Mana Pool (all ranks).",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "spellbound_steel_1": {
     "title": "Spellbound Steel",
@@ -885,7 +1165,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:cooldown_reduction",
+          "value": 0.05,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "cooldown_flow_2": {
     "title": "Cooldown Flow",
@@ -903,7 +1193,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:cooldown_reduction",
+          "value": 0.05,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",
