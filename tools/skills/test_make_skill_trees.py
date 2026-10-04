@@ -330,7 +330,7 @@ def test_xp_rates_after_playtest_1():
 def test_phase4_nodes_are_wired():
     expect = {('agility', 'long_rope_1'): ('hook_range', 4), ('agility', 'long_rope_ii_1'): ('hook_range', 4),
               ('agility', 'hookmaster_1'): ('hook_speed', 0.15), ('agility', 'motor_reel_1'): ('hook_motor', 1),
-              ('agility', 'twin_hooks_1'): ('hook_double', 1), ('taming', 'soul_mender_1'): ('soul_mender', 0.25)}
+              ('agility', 'twin_hooks_1'): ('hook_double', 1), ('taming', 'soul_mender_1'): ('soul_mender', 0.15)}
     for (tree_id, sid), (perk, value) in expect.items():
         defs = g.build_category(tree(tree_id), TIERS, XP, PERKS)['definitions.json']
         assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': value}} in defs[sid]['rewards'], sid
@@ -339,3 +339,8 @@ def test_phase4_nodes_are_wired():
             'operation': 'multiply_base'}} in agility['light_feet_1']['rewards']
     assert agility['second_breath_1']['rewards'][0]['data']['attribute'] == 'parcool:parcool.stamina_recovery'
     assert agility['roll_master_1']['rewards'][0]['data']['attribute'] == 'parcool:parcool.breakfall.damage_reduction'
+
+
+def test_soul_mender_spares_pets_instead_of_cheaper_revival():
+    node = next(n for n in tree('taming')['nodes'] if n['name'] == 'Soul Mender')
+    assert 'killing blow' in node['d'] and 'revive' not in node['d'].lower()

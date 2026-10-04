@@ -75,7 +75,7 @@ ENTRIES = [
         text('Trees have five tiers. Spending points in a tree opens the next tier (5, 10, 15, then 25 points). Tiers marked $(l)OR$() let you pick one of two branches. Hover a node to see what it does now (white) and what the next rank adds (grey). A full tree costs exactly 50 points.', 'Skill Trees'),
         text('$(l)/fotfskills perks$() lists every perk you have. Situational buffs (forests, combat, full hunger...) show beside your inventory when active.$(br2)$(l)/fotfskills levelups off$() hides level-up messages; $(l)on$() brings them back.', 'Perks'),
         text('Your $(l)total level$() (all 12 skills added up) gives extra hearts and ParCool stamina: the first at total level 8, all 15 by 256.$(br2)$(l)/fotfskills reset <tree>$() gives a tree\'s points back for 1 XP level per 2 points spent (at least 5).', 'Hearts & Resets'),
-        spot('fotfskills:pet_memento', 'When a pet dies it leaves a $(l)Pet Memento$(). Use it on a block with a golden apple in your inventory to bring your pet back. Taming\'s Soul Mender can save the apple.'),
+        text('Place a $(l)Pet Bed$() and let your pet walk onto it once: if it dies, it comes back at its bed the next morning (someone has to be nearby at sunrise).$(br2)Taming\'s $(l)Soul Mender$() gives a chance that a pet survives a killing blow on full health.', 'Pets'),
     ]),
     ('getting_started', 'jei', 'Looking Things Up', 'minecraft:knowledge_book', [
         text('$(l)JEI$() is a list of every item in the pack. It starts hidden: press $(l)Ctrl+O$() to show it next to your inventory.$(br2)Hover an item and press:$(li)$(l)R$() to see how to make it$(li)$(l)U$() to see what it is used for'),

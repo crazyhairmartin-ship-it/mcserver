@@ -1,10 +1,10 @@
 package fotfskills.perk;
 
-import fotfskills.pet.MementoData;
+import fotfskills.pet.PetSaveData;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 
-/** Phase 4 review fixes: mementos never carry inventories or leads, and only plain or skill-managed hooks are rewritten. */
+/** Phase 4 review fixes: respawned pets never carry inventories or leads, and only plain or skill-managed hooks are rewritten. */
 public final class ReviewFixes4Test {
     public static void main(String[] args) {
         CompoundTag donkey = new CompoundTag();
@@ -19,7 +19,7 @@ public final class ReviewFixes4Test {
         donkey.m_128379_("ChestedHorse", true);
         donkey.m_128376_("Fire", (short) 120);
         donkey.m_128359_("CustomName", "{\"text\":\"Biscuit\"}");
-        MementoData.strip(donkey);
+        PetSaveData.strip(donkey);
         for (String key : new String[] {"Items", "SaddleItem", "ArmorItem", "DecorItem", "HandItems", "ArmorItems", "Leash", "ActiveEffects"}) {
             check(!donkey.m_128441_(key), key + " removed (it already dropped or would duplicate)");
         }

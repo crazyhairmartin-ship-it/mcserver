@@ -1157,7 +1157,7 @@
   },
   "soul_mender_1": {
     "title": "Soul Mender",
-    "description": "Reviving a fallen pet costs 25% less",
+    "description": "15% that a pet survives a killing blow on full health",
     "icon": {
       "type": "item",
       "data": {
@@ -1177,14 +1177,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "soul_mender",
-          "value": 0.25
+          "value": 0.15
         }
       }
     ]
   },
   "soul_mender_2": {
     "title": "Soul Mender",
-    "description": "Reviving a fallen pet costs 50% less",
+    "description": "30% that a pet survives a killing blow on full health",
     "icon": {
       "type": "item",
       "data": {
@@ -1204,14 +1204,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "soul_mender",
-          "value": 0.25
+          "value": 0.15
         }
       }
     ]
   },
   "soul_mender_3": {
     "title": "Soul Mender",
-    "description": "Reviving a fallen pet costs 75% less",
+    "description": "45% that a pet survives a killing blow on full health",
     "icon": {
       "type": "item",
       "data": {
@@ -1231,7 +1231,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "soul_mender",
-          "value": 0.25
+          "value": 0.15
         }
       }
     ]

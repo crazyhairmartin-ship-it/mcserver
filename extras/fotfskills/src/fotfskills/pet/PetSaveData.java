@@ -3,14 +3,15 @@ package fotfskills.pet;
 import net.minecraft.nbt.CompoundTag;
 
 /**
- * What a Pet Memento keeps of a fallen pet: everything except what already dropped on death or would come back
- * twice (chest, saddle, armour, carpet, held and worn items, the lead) and the state that killed it (fire, effects).
+ * What a respawned pet keeps (Domestication Innovation's pet-bed respawn): everything except what already dropped on
+ * death and would come back twice (chest, saddle, armour, carpet, held and worn items, the lead) and the state that
+ * killed it (fire, effects).
  */
-public final class MementoData {
+public final class PetSaveData {
     private static final String[] DROPPED = {"Items", "SaddleItem", "ArmorItem", "DecorItem", "HandItems", "ArmorItems",
             "Leash", "Inventory", "ActiveEffects", "Passengers", "DeathTime", "HurtTime"};
 
-    private MementoData() {
+    private PetSaveData() {
     }
 
     public static void strip(CompoundTag pet) {

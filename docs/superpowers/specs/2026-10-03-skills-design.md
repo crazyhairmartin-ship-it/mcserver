@@ -209,7 +209,7 @@ truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dy
   - Roll Master raises breakfall damage reduction.
 - **Total-level hearts** are live in the add-on (+1 heart and +5% ParCool max stamina per step). Paragliders is removed from the skills branch; it leaves the live server with the release merge.
 - **Tree reset**: `/fotfskills reset <tree>` costs 1 XP level per 2 points spent, minimum 5.
-- **Pet revival**: a Pet Memento drops when an owned animal dies (or goes to a far-away owner). Using it on a block costs one golden apple; Soul Mender gives a 25% chance per rank to keep the apple.
+- **Pet revival** uses Domestication Innovation's Pet Bed instead of a custom item (Dylan, 2026-10-04). A pet that has touched its bed respawns there at the next sunrise. The add-on strips the chest, saddle, armour and lead from DI's saved copy so they don't duplicate. **Soul Mender** becomes a 15% chance per rank that a pet survives a killing blow on full health. The Pet Memento item is removed.
 - **Deferred nodes** (mod-specific or block-machine based, tuning phase): Tunnel Vision, Long Net, Bait Saver, Lure Master, Brewer, Feast Maker, Quick Hands, Crafting's Smelter, Salvager, Irrigator, Artificer, Bloodlines.
 
 ## Pet revival (standalone, not a perk)

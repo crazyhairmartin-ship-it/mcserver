@@ -24,9 +24,9 @@
       "title": "Hearts & Resets"
     },
     {
-      "type": "patchouli:spotlight",
-      "item": "fotfskills:pet_memento",
-      "text": "When a pet dies it leaves a $(l)Pet Memento$(). Use it on a block with a golden apple in your inventory to bring your pet back. Taming's Soul Mender can save the apple."
+      "type": "patchouli:text",
+      "text": "Place a $(l)Pet Bed$() and let your pet walk onto it once: if it dies, it comes back at its bed the next morning (someone has to be nearby at sunrise).$(br2)Taming's $(l)Soul Mender$() gives a chance that a pet survives a killing blow on full health.",
+      "title": "Pets"
     }
   ]
 }
