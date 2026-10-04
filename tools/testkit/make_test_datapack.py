@@ -86,6 +86,7 @@ def functions():
                     tell('Survival, healed, fed, daytime, +100 XP levels. Perks behave differently in creative.')]
     out['clear'] = ['kill @e[type=!player,type=!item_frame,type=!armor_stand,distance=..40,tag=!keep]',
                     tell('Cleared mobs and items within 40 blocks.')]
+    out['clearinv'] = ['clear @s', tell('Inventory cleared.')]
     out['merge'] = [give('farmersdelight:tomato 4'), give('farmersdelight:onion 4'), give('farmersdelight:bacon 2'),
                     give('alexsmobs:raw_catfish 2'), 'setblock ~2 ~ ~ farmersdelight:wild_tomatoes',
                     'setblock ~2 ~ ~1 farmersdelight:wild_onions',
@@ -100,6 +101,7 @@ def functions():
                    tell('/function fotftest:kit/<tree>  - the items that tree\'s tests need'),
                    tell('/function fotftest:merge  - farming merge and drop conversion test'),
                    tell('/function fotftest:clear  - remove mobs and items nearby'),
+                   tell('/function fotftest:clearinv  - empty your inventory'),
                    tell('Trees: ' + ' '.join(TREES), 'gray')]
     return out
 
