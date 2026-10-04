@@ -1491,6 +1491,22 @@ file = "kubejs/data/endermail/loot_tables/blocks/locker.json"
 hash = "12cca183dde8ce69ee5de63d2afcc52e910a3b2c713e4d651ba0e733d65f6340"
 
 [[files]]
+file = "kubejs/data/fotf/forge/biome_modifier/farm_animals_forest.json"
+hash = "309db60b004c12e1dee4154201ab5e95991ee11a86252f9b901c8d4d069d4a4e"
+
+[[files]]
+file = "kubejs/data/fotf/forge/biome_modifier/farm_animals_hill.json"
+hash = "62ce3685a68fa0f2a3d0d983453b263c026424aaef5bcdf8a9020ee97f5889f2"
+
+[[files]]
+file = "kubejs/data/fotf/forge/biome_modifier/farm_animals_plains.json"
+hash = "1dbc20b9a559595989eca3b15053e623802e79c11cd9ef2c0585cf6e581806c5"
+
+[[files]]
+file = "kubejs/data/fotf/forge/biome_modifier/farm_animals_savanna.json"
+hash = "27ee68f5e10148c355d1ab32cd790c513d8788b49b4e4b6870994655f058661e"
+
+[[files]]
 file = "kubejs/data/fotf/tags/worldgen/biome/meadow_water_buffalo.json"
 hash = "a5aeda8f0fe7757e25b5a6885b14583ade0b713a9c07624897a6a640e7e0595a"
 
