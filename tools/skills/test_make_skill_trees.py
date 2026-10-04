@@ -287,7 +287,7 @@ def test_crafting_cooking_farming_fishing_nodes_are_wired():
     expect = {('mining', 'smelter_1'): ('autosmelt', 0.12), ('farm', 'green_thumb_1'): ('green_thumb', 0.06),
               ('farm', 'sweeping_harvest_2'): ('sweeping_harvest', 1), ('cook', 'hearty_meals_1'): ('hearty_meals', 0.1),
               ('craft', 'enchanted_crafts_1'): ('enchant_level', 1), ('craft', 'masterwork_1'): ('masterwork', 1),
-              ('fish', 'sea_legs_1'): ('sea_legs', 0.05), ('forage', 'berry_picker_1'): ('berry_picker', 0.1)}
+              ('fish', 'sea_legs_1'): ('sea_legs', 0.1), ('forage', 'berry_picker_1'): ('berry_picker', 0.1)}
     for (tree_id, sid), (perk, value) in expect.items():
         defs = g.build_category(tree(tree_id), TIERS, XP, PERKS)['definitions.json']
         assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': value}} in defs[sid]['rewards'], sid

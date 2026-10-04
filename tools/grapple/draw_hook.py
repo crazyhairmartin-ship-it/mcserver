@@ -16,7 +16,7 @@ OUT = os.path.join(HERE, '..', '..', 'kubejs', 'assets', 'grapplemod', 'textures
 
 OUTLINE = (34, 30, 30, 255)
 IRON = {'light': (206, 213, 220, 255), 'mid': (140, 148, 158, 255), 'dark': (84, 90, 100, 255), 'shine': (240, 244, 247, 255)}
-ROPE = {'light': (179, 123, 67, 255), 'mid': (123, 79, 30, 255), 'dark': (81, 45, 19, 255)}   # Farmer's Delight rope palette
+ROPE = {'light': (173, 144, 94, 255), 'mid': (148, 113, 74, 255), 'dark': (110, 83, 60, 255)}   # jute (Supplementaries rope palette)
 
 
 def line(a, b):
@@ -83,13 +83,36 @@ def paint(iron, rope, extra_rope_line=()):
     return img
 
 
+def wound_coil(cx, cy, r_in=1.3, r_out=5.0, gaps=(2.5, 3.8)):
+    """A hank of rope wound in turns: light rope with darker lines between the turns."""
+    rope, seams = set(), set()
+    for y in range(16):
+        for x in range(16):
+            d = math.hypot(x + 0.5 - cx, y + 0.5 - cy)
+            if r_in <= d <= r_out:
+                (seams if any(abs(d - g) < 0.35 for g in gaps) else rope).add((x, y))
+    return rope, seams
+
+
+def paint_coil(img, rope, seams, cx=5.5, cy=10.5):
+    """Lit from the top left: the near side of each turn is lighter, the far side darker; dark lines between turns."""
+    for (x, y) in rope:
+        dx, dy = x + 0.5 - cx, y + 0.5 - cy
+        lit = -(dx + dy) / (math.hypot(dx, dy) * 1.414 + 1e-6)
+        img.putpixel((x, y), (205, 178, 124, 255) if lit > 0.6 else ROPE['light'] if lit > 0.1 else ROPE['mid'])
+    for (x, y) in seams:
+        img.putpixel((x, y), ROPE['dark'])
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
-    rope_coil = coil(3.5, 12.5)
-    tie = {(4, 11), (3, 10)}                                       # rope tied through the eye
-
-    item = paint(grapnel() | eye(), rope_coil | tie)
-    held = paint(set(), rope_coil, extra_rope_line=line((4, 10), (14, 1)) - rope_coil)
+    rope, seams = wound_coil(5.5, 10.5)
+    tail = line((8, 7), (10, 5))                                   # the rope's end runs up to the hook
+    hook = grapnel(1, -1) | eye(5, -4)
+    item = paint(hook - rope - seams, (set(tail) | rope | seams))
+    paint_coil(item, rope, seams)
+    held = paint(set(), set(tail) | set(line((10, 5), (14, 1))) | rope | seams)
+    paint_coil(held, rope, seams)
     flying = paint(grapnel(-2, 2) | eye(-2, 2), set())
 
     item.save(os.path.join(OUT, 'grapplinghook.png'))
@@ -104,12 +127,6 @@ def main():
     os.makedirs(entity_dir, exist_ok=True)
     braid.save(os.path.join(entity_dir, 'rope.png'))
     flying.save(os.path.join(OUT, 'entity_hook.png'))
-
-    preview = Image.new('RGBA', (3 * 192 + 40, 192), (58, 64, 60, 255))
-    for i, im in enumerate((item, held, flying)):
-        big = im.resize((192, 192), Image.NEAREST)
-        preview.paste(big, (i * 212, 0), big)
-    preview.save(os.path.join(HERE, 'preview.png'))
     print('hook textures written')
 
 

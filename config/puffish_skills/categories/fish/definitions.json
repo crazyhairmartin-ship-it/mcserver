@@ -1392,33 +1392,6 @@
   },
   "sea_legs_1": {
     "title": "Sea Legs",
-    "description": "Boats go 5% faster",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:birch_boat"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 25,
-    "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "sea_legs",
-          "value": 0.05
-        }
-      }
-    ]
-  },
-  "sea_legs_2": {
-    "title": "Sea Legs",
     "description": "Boats go 10% faster",
     "icon": {
       "type": "item",
@@ -1439,14 +1412,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "sea_legs",
-          "value": 0.05
+          "value": 0.1
         }
       }
     ]
   },
-  "sea_legs_3": {
+  "sea_legs_2": {
     "title": "Sea Legs",
-    "description": "Boats go 15% faster",
+    "description": "Boats go 20% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -1466,14 +1439,41 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "sea_legs",
-          "value": 0.05
+          "value": 0.1
+        }
+      }
+    ]
+  },
+  "sea_legs_3": {
+    "title": "Sea Legs",
+    "description": "Boats go 30% faster",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:birch_boat"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sea_legs",
+          "value": 0.1
         }
       }
     ]
   },
   "leviathan_bait_1": {
     "title": "Leviathan Bait",
-    "description": "5% per catch: a Leviathan's Hoard (three treasure rolls) or a record Aquaculture fish worth 250 Fishing XP",
+    "description": "5% per catch: a Leviathan's Hoard (three treasure rolls and 250 Fishing XP) or a record Aquaculture fish with 250 Fishing XP and a Skill Tonic",
     "icon": {
       "type": "item",
       "data": {

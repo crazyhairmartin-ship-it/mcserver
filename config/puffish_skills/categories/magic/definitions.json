@@ -662,7 +662,7 @@
   },
   "sourcecraft_1": {
     "title": "Sourcecraft",
-    "description": "Sourcelinks you place make +10% more source and the enchanting apparatus uses -10% less source",
+    "description": "Sourcelinks you place make +33% more source and the enchanting apparatus uses -17% less source (double source, half cost at max)",
     "icon": {
       "type": "item",
       "data": {
@@ -682,21 +682,21 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "source_gain",
-          "value": 0.1
+          "value": 0.33
         }
       },
       {
         "type": "fotfskills:perk",
         "data": {
           "perk": "apparatus_save",
-          "value": 0.1
+          "value": 0.17
         }
       }
     ]
   },
   "sourcecraft_2": {
     "title": "Sourcecraft",
-    "description": "Sourcelinks you place make +20% more source and the enchanting apparatus uses -20% less source",
+    "description": "Sourcelinks you place make +66% more source and the enchanting apparatus uses -34% less source (double source, half cost at max)",
     "icon": {
       "type": "item",
       "data": {
@@ -716,21 +716,21 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "source_gain",
-          "value": 0.1
+          "value": 0.33
         }
       },
       {
         "type": "fotfskills:perk",
         "data": {
           "perk": "apparatus_save",
-          "value": 0.1
+          "value": 0.17
         }
       }
     ]
   },
   "sourcecraft_3": {
     "title": "Sourcecraft",
-    "description": "Sourcelinks you place make +30% more source and the enchanting apparatus uses -30% less source",
+    "description": "Sourcelinks you place make +99% more source and the enchanting apparatus uses -51% less source (double source, half cost at max)",
     "icon": {
       "type": "item",
       "data": {
@@ -750,14 +750,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "source_gain",
-          "value": 0.1
+          "value": 0.33
         }
       },
       {
         "type": "fotfskills:perk",
         "data": {
           "perk": "apparatus_save",
-          "value": 0.1
+          "value": 0.17
         }
       }
     ]
