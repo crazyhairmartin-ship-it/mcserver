@@ -2,6 +2,7 @@
 
 grapplinghook.png  the item: iron grapnel (three prongs) top-right, shaft, rope coil bottom-left
 rope.png           shown while the hook is out: the coil with the line running off toward the hook
+entity/rope.png    the line stretched between you and the hook: a 2x16 braid in the same palette
 entity_hook.png    the flying hook (also the "hook" item model): just the grapnel
 Writes into kubejs/assets/grapplemod/textures/item/ plus an enlarged preview next to this script.
 """
@@ -15,7 +16,7 @@ OUT = os.path.join(HERE, '..', '..', 'kubejs', 'assets', 'grapplemod', 'textures
 
 OUTLINE = (34, 30, 30, 255)
 IRON = {'light': (206, 213, 220, 255), 'mid': (140, 148, 158, 255), 'dark': (84, 90, 100, 255), 'shine': (240, 244, 247, 255)}
-ROPE = {'light': (214, 170, 104, 255), 'mid': (170, 122, 64, 255), 'dark': (112, 76, 38, 255)}
+ROPE = {'light': (179, 123, 67, 255), 'mid': (123, 79, 30, 255), 'dark': (81, 45, 19, 255)}   # Farmer's Delight rope palette
 
 
 def line(a, b):
@@ -93,6 +94,15 @@ def main():
 
     item.save(os.path.join(OUT, 'grapplinghook.png'))
     held.save(os.path.join(OUT, 'rope.png'))
+    braid = Image.new('RGBA', (2, 16))
+    twist = [('light', 'dark'), ('mid', 'mid'), ('dark', 'light'), ('mid', 'mid')]   # strands crossing, like the pack's rope
+    for y in range(16):
+        left, right = twist[y % 4]
+        braid.putpixel((0, y), ROPE[left])
+        braid.putpixel((1, y), ROPE[right])
+    entity_dir = os.path.join(OUT, '..', 'entity')
+    os.makedirs(entity_dir, exist_ok=True)
+    braid.save(os.path.join(entity_dir, 'rope.png'))
     flying.save(os.path.join(OUT, 'entity_hook.png'))
 
     preview = Image.new('RGBA', (3 * 192 + 40, 192), (58, 64, 60, 255))
