@@ -1283,7 +1283,7 @@
   },
   "retriever_1": {
     "title": "Retriever",
-    "description": "Thrown weapons may return to you",
+    "description": "25% that a thrown weapon flies back to you when it hits",
     "icon": {
       "type": "item",
       "data": {
@@ -1310,7 +1310,7 @@
   },
   "retriever_2": {
     "title": "Retriever",
-    "description": "Thrown weapons may return to you",
+    "description": "50% that a thrown weapon flies back to you when it hits",
     "icon": {
       "type": "item",
       "data": {
@@ -1354,7 +1354,7 @@
   },
   "quiver_care_ii_1": {
     "title": "Quiver Care II",
-    "description": "More ammo saving",
+    "description": "8% that an arrow isn't used",
     "icon": {
       "type": "item",
       "data": {
@@ -1382,7 +1382,7 @@
   },
   "quiver_care_ii_2": {
     "title": "Quiver Care II",
-    "description": "More ammo saving",
+    "description": "16% that an arrow isn't used",
     "icon": {
       "type": "item",
       "data": {
@@ -1410,7 +1410,7 @@
   },
   "quiver_care_ii_3": {
     "title": "Quiver Care II",
-    "description": "More ammo saving",
+    "description": "24% that an arrow isn't used",
     "icon": {
       "type": "item",
       "data": {
@@ -1438,7 +1438,7 @@
   },
   "quiver_care_ii_4": {
     "title": "Quiver Care II",
-    "description": "More ammo saving",
+    "description": "32% that an arrow isn't used",
     "icon": {
       "type": "item",
       "data": {

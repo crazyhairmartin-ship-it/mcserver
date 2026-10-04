@@ -150,10 +150,10 @@ def test_rank_text_is_that_ranks_effect_and_extras_are_separate():
     assert defs['miners_might_3']['description'] == '+0.9 damage with pickaxes, hammers and maces'
     assert 'extra_description' not in defs['miners_might_3']   # no 'feeds' text in tooltips
     assert defs['prospector_ii_1']['extra_description'] == 'Needs Prospector (all ranks).'
-    assert defs['ore_nose_1']['description'] == 'Plain stone sometimes drops raw nuggets'
+    assert defs['ore_nose_1']['description'] == '3% chance that stone you mine also drops a raw ore nugget'
     assert 'extra_description' not in defs['ore_nose_1']
     taming = g.build_category(tree('taming'), TIERS)['definitions.json']
-    assert taming['gentle_hand_2']['description'] == 'Better odds and fewer attempts on hard tames'
+    assert taming['gentle_hand_2']['description'] == '20% that a failed taming attempt succeeds anyway'
 
 
 def test_tier_and_or_tiles_use_numeral_textures():
@@ -168,7 +168,7 @@ def test_rank_text_scales_every_amount_but_not_durations_or_costs():
     assert g.rank_text(node('range', 'Arcane Arrows'), 2) == 'Full-draw shots spend 5 mana for +30% magic damage'
     assert g.rank_text(node('mining', 'Stonehide'), 2) == 'Mining grants +2 armour for 30 s'
     assert g.rank_text(node('agility', 'Long Rope'), 3) == 'Grappling hook reaches 12 blocks further'
-    assert g.rank_text(node('farm', 'Grim Harvest'), 3) == 'Scythe kills heal you half a heart per rank'   # no number: unchanged
+    assert g.rank_text(node('farm', 'Grim Harvest'), 3) == 'Scythe kills heal you 3 health'
 
 
 XP = json.loads((Path(__file__).parent / 'xp.json').read_text(encoding='utf-8'))
@@ -330,7 +330,7 @@ def test_xp_rates_after_playtest_1():
 def test_phase4_nodes_are_wired():
     expect = {('agility', 'long_rope_1'): ('hook_range', 4), ('agility', 'long_rope_ii_1'): ('hook_range', 4),
               ('agility', 'hookmaster_1'): ('hook_speed', 0.15), ('agility', 'motor_reel_1'): ('hook_motor', 1),
-              ('agility', 'twin_hooks_1'): ('hook_double', 1), ('taming', 'soul_mender_1'): ('soul_mender', 0.15)}
+              ('agility', 'double_jump_1'): ('double_jump', 1), ('taming', 'ferality_1'): ('ferality', 0.15)}
     for (tree_id, sid), (perk, value) in expect.items():
         defs = g.build_category(tree(tree_id), TIERS, XP, PERKS)['definitions.json']
         assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': value}} in defs[sid]['rewards'], sid
@@ -341,6 +341,25 @@ def test_phase4_nodes_are_wired():
     assert agility['roll_master_1']['rewards'][0]['data']['attribute'] == 'parcool:parcool.breakfall.damage_reduction'
 
 
-def test_soul_mender_spares_pets_instead_of_cheaper_revival():
-    node = next(n for n in tree('taming')['nodes'] if n['name'] == 'Soul Mender')
-    assert 'killing blow' in node['d'] and 'revive' not in node['d'].lower()
+def test_ferality_spares_pets_and_makes_them_feral():
+    node = next(n for n in tree('taming')['nodes'] if n['name'] == 'Ferality')
+    assert 'killing blow' in node['d'] and 'Strength II' in node['d']
+
+
+def test_every_description_has_a_number():
+    for t in DATA['trees']:
+        for n in t['nodes']:
+            assert any(ch.isdigit() for ch in n['d']), (t['id'], n['name'], n['d'])
+
+
+def test_agility_nodes_unlock_parcool_moves():
+    agility = g.build_category(tree('agility'), TIERS, XP, PERKS)['definitions.json']
+    for sid, perk in [('freerunner_1', 'pc_freerunner'), ('spring_step_1', 'pc_spring'), ('featherfall_1', 'pc_skydive'),
+                      ('double_jump_1', 'pc_trick')]:
+        assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': 1}} in agility[sid]['rewards'], sid
+
+
+def test_magic_rework_tier3_is_spell_power_or_summons():
+    names = {n['name']: n for n in tree('magic')['nodes']}
+    assert names['Battlemage']['b'] == 'A' and names['Summoner']['b'] == 'B' and names['Summoner']['t'] == 3
+    assert names['Sourcecraft']['t'] == 2 and 'Artificer' not in names

@@ -1393,7 +1393,7 @@
   },
   "lifeline_1": {
     "title": "Lifeline",
-    "description": "Crits heal half a heart",
+    "description": "Critical hits heal you 1 health",
     "icon": {
       "type": "item",
       "data": {
@@ -1420,7 +1420,7 @@
   },
   "lifeline_2": {
     "title": "Lifeline",
-    "description": "Crits heal half a heart",
+    "description": "Critical hits heal you 2 health",
     "icon": {
       "type": "item",
       "data": {
@@ -1447,7 +1447,7 @@
   },
   "lifeline_3": {
     "title": "Lifeline",
-    "description": "Crits heal half a heart",
+    "description": "Critical hits heal you 3 health",
     "icon": {
       "type": "item",
       "data": {

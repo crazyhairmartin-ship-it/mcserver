@@ -1015,7 +1015,7 @@
   },
   "beekeeper_1": {
     "title": "Beekeeper",
-    "description": "Hives give extra honey and comb; bees stay calm when you harvest",
+    "description": "20% that harvesting a full hive gives 2 extra honeycomb; bees within 16 blocks stay calm",
     "icon": {
       "type": "item",
       "data": {
@@ -1042,7 +1042,7 @@
   },
   "beekeeper_2": {
     "title": "Beekeeper",
-    "description": "Hives give extra honey and comb; bees stay calm when you harvest",
+    "description": "40% that harvesting a full hive gives 2 extra honeycomb; bees within 16 blocks stay calm",
     "icon": {
       "type": "item",
       "data": {
@@ -1069,7 +1069,7 @@
   },
   "beekeeper_3": {
     "title": "Beekeeper",
-    "description": "Hives give extra honey and comb; bees stay calm when you harvest",
+    "description": "60% that harvesting a full hive gives 2 extra honeycomb; bees within 16 blocks stay calm",
     "icon": {
       "type": "item",
       "data": {
@@ -1258,7 +1258,7 @@
   },
   "druids_grove_1": {
     "title": "Druid's Grove",
-    "description": "Spells cost 5% less mana in forests",
+    "description": "Iron's spells cost 5% less mana in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -1285,7 +1285,7 @@
   },
   "druids_grove_2": {
     "title": "Druid's Grove",
-    "description": "Spells cost 10% less mana in forests",
+    "description": "Iron's spells cost 10% less mana in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -1312,7 +1312,7 @@
   },
   "druids_grove_3": {
     "title": "Druid's Grove",
-    "description": "Spells cost 15% less mana in forests",
+    "description": "Iron's spells cost 15% less mana in forests",
     "icon": {
       "type": "item",
       "data": {

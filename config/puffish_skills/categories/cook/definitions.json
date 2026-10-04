@@ -1313,7 +1313,7 @@
   },
   "pet_treats_1": {
     "title": "Pet Treats",
-    "description": "Food you cook heals pets more and gives them a short buff",
+    "description": "Feeding your pet gives it 5 seconds of Regeneration",
     "icon": {
       "type": "item",
       "data": {
@@ -1340,7 +1340,7 @@
   },
   "pet_treats_2": {
     "title": "Pet Treats",
-    "description": "Food you cook heals pets more and gives them a short buff",
+    "description": "Feeding your pet gives it 10 seconds of Regeneration",
     "icon": {
       "type": "item",
       "data": {
@@ -1367,7 +1367,7 @@
   },
   "pet_treats_3": {
     "title": "Pet Treats",
-    "description": "Food you cook heals pets more and gives them a short buff",
+    "description": "Feeding your pet gives it 15 seconds of Regeneration",
     "icon": {
       "type": "item",
       "data": {
@@ -1411,7 +1411,7 @@
   },
   "picnic_1": {
     "title": "Picnic",
-    "description": "Eating near party members heals you and them a little",
+    "description": "Eating heals you and party members within 8 blocks 1 health",
     "icon": {
       "type": "item",
       "data": {
@@ -1438,7 +1438,7 @@
   },
   "picnic_2": {
     "title": "Picnic",
-    "description": "Eating near party members heals you and them a little",
+    "description": "Eating heals you and party members within 16 blocks 1 health",
     "icon": {
       "type": "item",
       "data": {
@@ -1465,7 +1465,7 @@
   },
   "picnic_3": {
     "title": "Picnic",
-    "description": "Eating near party members heals you and them a little",
+    "description": "Eating heals you and party members within 24 blocks 1 health",
     "icon": {
       "type": "item",
       "data": {
@@ -1492,7 +1492,7 @@
   },
   "feast_maker_1": {
     "title": "Feast Maker",
-    "description": "A third of the servings you take from feasts, pies and cakes are free",
+    "description": "34% chance a serving you take from a feast, pie or cake is free",
     "icon": {
       "type": "item",
       "data": {
@@ -1537,7 +1537,7 @@
   },
   "warriors_feast_1": {
     "title": "Warrior's Feast",
-    "description": "Well Fed is doubled and also boosts spells",
+    "description": "With a full hunger bar: Well Fed's damage bonus +10% and +10% spell power",
     "icon": {
       "type": "item",
       "data": {

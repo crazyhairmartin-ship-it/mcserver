@@ -18,7 +18,7 @@
   },
   "gentle_hand_1": {
     "title": "Gentle Hand",
-    "description": "Better odds and fewer attempts on hard tames",
+    "description": "10% that a failed taming attempt succeeds anyway",
     "icon": {
       "type": "item",
       "data": {
@@ -45,7 +45,7 @@
   },
   "gentle_hand_2": {
     "title": "Gentle Hand",
-    "description": "Better odds and fewer attempts on hard tames",
+    "description": "20% that a failed taming attempt succeeds anyway",
     "icon": {
       "type": "item",
       "data": {
@@ -72,7 +72,7 @@
   },
   "gentle_hand_3": {
     "title": "Gentle Hand",
-    "description": "Better odds and fewer attempts on hard tames",
+    "description": "30% that a failed taming attempt succeeds anyway",
     "icon": {
       "type": "item",
       "data": {
@@ -548,7 +548,7 @@
   },
   "pet_scavenging_1": {
     "title": "Pet Scavenging",
-    "description": "Pets sometimes find resources and drop them for you",
+    "description": "Every 2 minutes, 10% that a pet near you finds and drops a useful item",
     "icon": {
       "type": "item",
       "data": {
@@ -575,7 +575,7 @@
   },
   "pet_scavenging_2": {
     "title": "Pet Scavenging",
-    "description": "Pets sometimes find resources and drop them for you",
+    "description": "Every 2 minutes, 20% that a pet near you finds and drops a useful item",
     "icon": {
       "type": "item",
       "data": {
@@ -602,7 +602,7 @@
   },
   "pet_scavenging_3": {
     "title": "Pet Scavenging",
-    "description": "Pets sometimes find resources and drop them for you",
+    "description": "Every 2 minutes, 30% that a pet near you finds and drops a useful item",
     "icon": {
       "type": "item",
       "data": {
@@ -869,7 +869,7 @@
   },
   "pack_tactics_1": {
     "title": "Pack Tactics",
-    "description": "Pets deal more damage to your target",
+    "description": "Your pets deal 10% more damage to your target",
     "icon": {
       "type": "item",
       "data": {
@@ -896,7 +896,7 @@
   },
   "pack_tactics_2": {
     "title": "Pack Tactics",
-    "description": "Pets deal more damage to your target",
+    "description": "Your pets deal 20% more damage to your target",
     "icon": {
       "type": "item",
       "data": {
@@ -923,7 +923,7 @@
   },
   "pack_tactics_3": {
     "title": "Pack Tactics",
-    "description": "Pets deal more damage to your target",
+    "description": "Your pets deal 30% more damage to your target",
     "icon": {
       "type": "item",
       "data": {
@@ -950,7 +950,7 @@
   },
   "pack_tactics_4": {
     "title": "Pack Tactics",
-    "description": "Pets deal more damage to your target",
+    "description": "Your pets deal 40% more damage to your target",
     "icon": {
       "type": "item",
       "data": {
@@ -1191,13 +1191,13 @@
       }
     ]
   },
-  "soul_mender_1": {
-    "title": "Soul Mender",
-    "description": "15% that a pet survives a killing blow on full health",
+  "ferality_1": {
+    "title": "Ferality",
+    "description": "15% that a pet survives a killing blow, heals fully and gains 4 absorption hearts and Strength II for 15 seconds",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:totem_of_undying"
+        "item": "minecraft:bone"
       }
     },
     "frame": {
@@ -1212,19 +1212,19 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "soul_mender",
+          "perk": "ferality",
           "value": 0.15
         }
       }
     ]
   },
-  "soul_mender_2": {
-    "title": "Soul Mender",
-    "description": "30% that a pet survives a killing blow on full health",
+  "ferality_2": {
+    "title": "Ferality",
+    "description": "30% that a pet survives a killing blow, heals fully and gains 4 absorption hearts and Strength II for 15 seconds",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:totem_of_undying"
+        "item": "minecraft:bone"
       }
     },
     "frame": {
@@ -1239,19 +1239,19 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "soul_mender",
+          "perk": "ferality",
           "value": 0.15
         }
       }
     ]
   },
-  "soul_mender_3": {
-    "title": "Soul Mender",
-    "description": "45% that a pet survives a killing blow on full health",
+  "ferality_3": {
+    "title": "Ferality",
+    "description": "45% that a pet survives a killing blow, heals fully and gains 4 absorption hearts and Strength II for 15 seconds",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:totem_of_undying"
+        "item": "minecraft:bone"
       }
     },
     "frame": {
@@ -1266,7 +1266,7 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "soul_mender",
+          "perk": "ferality",
           "value": 0.15
         }
       }
@@ -1397,7 +1397,7 @@
   },
   "bonded_ii_1": {
     "title": "Bonded II",
-    "description": "Pets gain armour and regen",
+    "description": "Pets near you gain +2 armour and heal +0.5 health every 5 seconds",
     "icon": {
       "type": "item",
       "data": {
@@ -1432,7 +1432,7 @@
   },
   "bonded_ii_2": {
     "title": "Bonded II",
-    "description": "Pets gain armour and regen",
+    "description": "Pets near you gain +4 armour and heal +1 health every 5 seconds",
     "icon": {
       "type": "item",
       "data": {
@@ -1467,7 +1467,7 @@
   },
   "bonded_ii_3": {
     "title": "Bonded II",
-    "description": "Pets gain armour and regen",
+    "description": "Pets near you gain +6 armour and heal +1.5 health every 5 seconds",
     "icon": {
       "type": "item",
       "data": {
@@ -1519,7 +1519,7 @@
   },
   "caretaker_1": {
     "title": "Caretaker",
-    "description": "Feeding heals pets more",
+    "description": "Feeding your pet heals it 1 extra heart",
     "icon": {
       "type": "item",
       "data": {
@@ -1612,7 +1612,7 @@
   },
   "prized_stock_1": {
     "title": "Prized Stock",
-    "description": "Bred animals can roll stats above the normal maximum; parents can breed again in half the time",
+    "description": "Bred horses can roll stats up to 10% above the normal maximum; parents can breed again 50% sooner",
     "icon": {
       "type": "item",
       "data": {

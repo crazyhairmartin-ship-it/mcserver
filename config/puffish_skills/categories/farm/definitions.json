@@ -822,7 +822,7 @@
   },
   "grim_harvest_1": {
     "title": "Grim Harvest",
-    "description": "Scythe kills heal you half a heart per rank",
+    "description": "Scythe kills heal you 1 health",
     "icon": {
       "type": "item",
       "data": {
@@ -850,7 +850,7 @@
   },
   "grim_harvest_2": {
     "title": "Grim Harvest",
-    "description": "Scythe kills heal you half a heart per rank",
+    "description": "Scythe kills heal you 2 health",
     "icon": {
       "type": "item",
       "data": {
@@ -878,7 +878,7 @@
   },
   "grim_harvest_3": {
     "title": "Grim Harvest",
-    "description": "Scythe kills heal you half a heart per rank",
+    "description": "Scythe kills heal you 3 health",
     "icon": {
       "type": "item",
       "data": {
@@ -1063,7 +1063,7 @@
   },
   "earthbound_1": {
     "title": "Earthbound",
-    "description": "Standing on grass or farmland slowly regenerates health",
+    "description": "Standing on grass or farmland heals you 0.5 health every 5 seconds",
     "icon": {
       "type": "item",
       "data": {
@@ -1090,7 +1090,7 @@
   },
   "earthbound_2": {
     "title": "Earthbound",
-    "description": "Standing on grass or farmland slowly regenerates health",
+    "description": "Standing on grass or farmland heals you 1 health every 5 seconds",
     "icon": {
       "type": "item",
       "data": {
@@ -1117,7 +1117,7 @@
   },
   "earthbound_3": {
     "title": "Earthbound",
-    "description": "Standing on grass or farmland slowly regenerates health",
+    "description": "Standing on grass or farmland heals you 1.5 health every 5 seconds",
     "icon": {
       "type": "item",
       "data": {
@@ -1144,7 +1144,7 @@
   },
   "earthbound_4": {
     "title": "Earthbound",
-    "description": "Standing on grass or farmland slowly regenerates health",
+    "description": "Standing on grass or farmland heals you 2 health every 5 seconds",
     "icon": {
       "type": "item",
       "data": {
@@ -1333,7 +1333,7 @@
   },
   "compost_king_1": {
     "title": "Compost King",
-    "description": "Composters fill faster",
+    "description": "50% chance each item you put in a composter fills an extra layer",
     "icon": {
       "type": "item",
       "data": {
@@ -1377,7 +1377,7 @@
   },
   "fertile_soil_ii_1": {
     "title": "Fertile Soil II",
-    "description": "Crops near you grow faster still",
+    "description": "Crops within 4 blocks of you grow 8% faster (on top of Fertile Soil)",
     "icon": {
       "type": "item",
       "data": {
@@ -1405,7 +1405,7 @@
   },
   "fertile_soil_ii_2": {
     "title": "Fertile Soil II",
-    "description": "Crops near you grow faster still",
+    "description": "Crops within 4 blocks of you grow 16% faster (on top of Fertile Soil)",
     "icon": {
       "type": "item",
       "data": {
@@ -1433,7 +1433,7 @@
   },
   "fertile_soil_ii_3": {
     "title": "Fertile Soil II",
-    "description": "Crops near you grow faster still",
+    "description": "Crops within 4 blocks of you grow 24% faster (on top of Fertile Soil)",
     "icon": {
       "type": "item",
       "data": {
@@ -1461,7 +1461,7 @@
   },
   "fertile_soil_ii_4": {
     "title": "Fertile Soil II",
-    "description": "Crops near you grow faster still",
+    "description": "Crops within 4 blocks of you grow 32% faster (on top of Fertile Soil)",
     "icon": {
       "type": "item",
       "data": {
@@ -1534,7 +1534,7 @@
   },
   "reapers_due_1": {
     "title": "Reaper's Due",
-    "description": "Scythe swings hit every hostile mob around you (full circle) at full damage",
+    "description": "Scythe swings hit every hostile mob within 3 blocks around you at full damage",
     "icon": {
       "type": "item",
       "data": {

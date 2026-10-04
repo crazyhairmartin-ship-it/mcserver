@@ -436,14 +436,23 @@
         }
       }
     ],
-    "artificer": [
+    "sourcecraft": [
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "artificer_glyph",
-          "value": 0.15
+          "perk": "source_gain",
+          "value": 0.1
         }
       },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "apparatus_save",
+          "value": 0.1
+        }
+      }
+    ],
+    "summoner": [
       {
         "type": "fotfskills:perk",
         "data": {
@@ -480,6 +489,13 @@
           "perk": "fall_immunity",
           "value": 15
         }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_skydive",
+          "value": 1
+        }
       }
     ],
     "spring_step": [
@@ -488,6 +504,13 @@
         "data": {
           "perk": "jump_boost",
           "value": 0.05
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_spring",
+          "value": 1
         }
       }
     ],
@@ -568,15 +591,6 @@
         }
       }
     ],
-    "twin_hooks": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "hook_double",
-          "value": 1
-        }
-      }
-    ],
     "light_feet": [
       {
         "type": "puffish_skills:attribute",
@@ -594,6 +608,13 @@
           "attribute": "parcool:parcool.max_stamina",
           "value": 0.08,
           "operation": "multiply_base"
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_freerunner",
+          "value": 1
         }
       }
     ],
@@ -614,6 +635,29 @@
           "attribute": "parcool:parcool.breakfall.damage_reduction",
           "value": 0.1,
           "operation": "addition"
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dodge_distance",
+          "value": 0.1
+        }
+      }
+    ],
+    "double_jump": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "double_jump",
+          "value": 1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_trick",
+          "value": 1
         }
       }
     ]
@@ -1153,7 +1197,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "leviathan",
-          "value": 0.02
+          "value": 0.05
         }
       }
     ],
@@ -1845,21 +1889,21 @@
         }
       }
     ],
-    "soul_mender": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "soul_mender",
-          "value": 0.15
-        }
-      }
-    ],
     "bloodlines": [
       {
         "type": "fotfskills:perk",
         "data": {
           "perk": "bloodlines",
           "value": 0.05
+        }
+      }
+    ],
+    "ferality": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ferality",
+          "value": 0.15
         }
       }
     ]

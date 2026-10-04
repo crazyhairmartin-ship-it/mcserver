@@ -153,7 +153,7 @@
   },
   "lucky_line_1": {
     "title": "Lucky Line",
-    "description": "Better treasure odds per rank",
+    "description": "+1 Luck: better treasure and fish odds",
     "icon": {
       "type": "item",
       "data": {
@@ -181,7 +181,7 @@
   },
   "lucky_line_2": {
     "title": "Lucky Line",
-    "description": "Better treasure odds per rank",
+    "description": "+2 Luck: better treasure and fish odds",
     "icon": {
       "type": "item",
       "data": {
@@ -209,7 +209,7 @@
   },
   "lucky_line_3": {
     "title": "Lucky Line",
-    "description": "Better treasure odds per rank",
+    "description": "+3 Luck: better treasure and fish odds",
     "icon": {
       "type": "item",
       "data": {
@@ -753,7 +753,7 @@
   },
   "riptide_runner_1": {
     "title": "Riptide Runner",
-    "description": "Faster swimming and boats, longer breath",
+    "description": "+10% swim speed",
     "icon": {
       "type": "item",
       "data": {
@@ -782,7 +782,7 @@
   },
   "riptide_runner_2": {
     "title": "Riptide Runner",
-    "description": "Faster swimming and boats, longer breath",
+    "description": "+20% swim speed",
     "icon": {
       "type": "item",
       "data": {
@@ -811,7 +811,7 @@
   },
   "riptide_runner_3": {
     "title": "Riptide Runner",
-    "description": "Faster swimming and boats, longer breath",
+    "description": "+30% swim speed",
     "icon": {
       "type": "item",
       "data": {
@@ -857,7 +857,7 @@
   },
   "patient_angler_ii_1": {
     "title": "Patient Angler II",
-    "description": "Faster bites still",
+    "description": "-5% bite time",
     "icon": {
       "type": "item",
       "data": {
@@ -885,7 +885,7 @@
   },
   "patient_angler_ii_2": {
     "title": "Patient Angler II",
-    "description": "Faster bites still",
+    "description": "-10% bite time",
     "icon": {
       "type": "item",
       "data": {
@@ -913,7 +913,7 @@
   },
   "patient_angler_ii_3": {
     "title": "Patient Angler II",
-    "description": "Faster bites still",
+    "description": "-15% bite time",
     "icon": {
       "type": "item",
       "data": {
@@ -941,7 +941,7 @@
   },
   "patient_angler_ii_4": {
     "title": "Patient Angler II",
-    "description": "Faster bites still",
+    "description": "-20% bite time",
     "icon": {
       "type": "item",
       "data": {
@@ -969,7 +969,7 @@
   },
   "patient_angler_ii_5": {
     "title": "Patient Angler II",
-    "description": "Faster bites still",
+    "description": "-25% bite time",
     "icon": {
       "type": "item",
       "data": {
@@ -1078,7 +1078,7 @@
   },
   "sushi_chef_1": {
     "title": "Sushi Chef",
-    "description": "Fish dishes you cook give Water Breathing and extra saturation",
+    "description": "Fish dishes you eat give 30 s of Water Breathing and +2 saturation",
     "icon": {
       "type": "item",
       "data": {
@@ -1105,7 +1105,7 @@
   },
   "sushi_chef_2": {
     "title": "Sushi Chef",
-    "description": "Fish dishes you cook give Water Breathing and extra saturation",
+    "description": "Fish dishes you eat give 30 s of Water Breathing and +4 saturation",
     "icon": {
       "type": "item",
       "data": {
@@ -1132,7 +1132,7 @@
   },
   "sushi_chef_3": {
     "title": "Sushi Chef",
-    "description": "Fish dishes you cook give Water Breathing and extra saturation",
+    "description": "Fish dishes you eat give 30 s of Water Breathing and +6 saturation",
     "icon": {
       "type": "item",
       "data": {
@@ -1159,7 +1159,7 @@
   },
   "sushi_chef_4": {
     "title": "Sushi Chef",
-    "description": "Fish dishes you cook give Water Breathing and extra saturation",
+    "description": "Fish dishes you eat give 30 s of Water Breathing and +8 saturation",
     "icon": {
       "type": "item",
       "data": {
@@ -1311,7 +1311,7 @@
   },
   "storm_fisher_1": {
     "title": "Storm Fisher",
-    "description": "Faster bites in rain",
+    "description": "-10% bite time while it rains",
     "icon": {
       "type": "item",
       "data": {
@@ -1338,7 +1338,7 @@
   },
   "storm_fisher_2": {
     "title": "Storm Fisher",
-    "description": "Faster bites in rain",
+    "description": "-20% bite time while it rains",
     "icon": {
       "type": "item",
       "data": {
@@ -1365,7 +1365,7 @@
   },
   "storm_fisher_3": {
     "title": "Storm Fisher",
-    "description": "Faster bites in rain",
+    "description": "-30% bite time while it rains",
     "icon": {
       "type": "item",
       "data": {
@@ -1473,7 +1473,7 @@
   },
   "leviathan_bait_1": {
     "title": "Leviathan Bait",
-    "description": "Rare chance of a unique trophy fish",
+    "description": "5% per catch: a Leviathan's Hoard (three treasure rolls) or a record Aquaculture fish worth 250 Fishing XP",
     "icon": {
       "type": "item",
       "data": {
@@ -1494,7 +1494,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "leviathan",
-          "value": 0.02
+          "value": 0.05
         }
       }
     ]
@@ -1518,7 +1518,7 @@
   },
   "seas_blessing_1": {
     "title": "Sea's Blessing",
-    "description": "Dolphin's Grace and Conduit Power while swimming",
+    "description": "Dolphin's Grace and Conduit Power (level 1) while you're in water",
     "icon": {
       "type": "item",
       "data": {

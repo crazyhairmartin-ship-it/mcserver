@@ -1312,7 +1312,7 @@
   },
   "ore_nose_1": {
     "title": "Ore Nose",
-    "description": "Plain stone sometimes drops raw nuggets",
+    "description": "3% chance that stone you mine also drops a raw ore nugget",
     "icon": {
       "type": "item",
       "data": {
@@ -1509,7 +1509,7 @@
   },
   "earthshaker_1": {
     "title": "Earthshaker",
-    "description": "Hammer crits stun nearby mobs",
+    "description": "Critical hits with hammers and maces stun hostile mobs within 3 blocks (Slowness IV, 1.5 s)",
     "icon": {
       "type": "item",
       "data": {

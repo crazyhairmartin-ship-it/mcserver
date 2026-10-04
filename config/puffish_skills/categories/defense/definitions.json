@@ -687,7 +687,7 @@
   },
   "bulwark_1": {
     "title": "Bulwark",
-    "description": "Shields cover a wider angle; knockback resistance",
+    "description": "While blocking: the shield covers a 10% wider angle and you get +10% knockback resistance",
     "icon": {
       "type": "item",
       "data": {
@@ -715,7 +715,7 @@
   },
   "bulwark_2": {
     "title": "Bulwark",
-    "description": "Shields cover a wider angle; knockback resistance",
+    "description": "While blocking: the shield covers a 20% wider angle and you get +20% knockback resistance",
     "icon": {
       "type": "item",
       "data": {
@@ -743,7 +743,7 @@
   },
   "bulwark_3": {
     "title": "Bulwark",
-    "description": "Shields cover a wider angle; knockback resistance",
+    "description": "While blocking: the shield covers a 30% wider angle and you get +30% knockback resistance",
     "icon": {
       "type": "item",
       "data": {

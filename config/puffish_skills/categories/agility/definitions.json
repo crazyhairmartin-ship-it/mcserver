@@ -18,7 +18,7 @@
   },
   "light_feet_1": {
     "title": "Light Feet",
-    "description": "-5% ParCool stamina drain",
+    "description": "+5% ParCool max stamina",
     "icon": {
       "type": "item",
       "data": {
@@ -46,7 +46,7 @@
   },
   "light_feet_2": {
     "title": "Light Feet",
-    "description": "-10% ParCool stamina drain",
+    "description": "+10% ParCool max stamina",
     "icon": {
       "type": "item",
       "data": {
@@ -74,7 +74,7 @@
   },
   "light_feet_3": {
     "title": "Light Feet",
-    "description": "-15% ParCool stamina drain",
+    "description": "+15% ParCool max stamina",
     "icon": {
       "type": "item",
       "data": {
@@ -102,7 +102,7 @@
   },
   "light_feet_4": {
     "title": "Light Feet",
-    "description": "-20% ParCool stamina drain",
+    "description": "+20% ParCool max stamina",
     "icon": {
       "type": "item",
       "data": {
@@ -130,7 +130,7 @@
   },
   "light_feet_5": {
     "title": "Light Feet",
-    "description": "-25% ParCool stamina drain",
+    "description": "+25% ParCool max stamina",
     "icon": {
       "type": "item",
       "data": {
@@ -158,7 +158,7 @@
   },
   "spring_step_1": {
     "title": "Spring Step",
-    "description": "Jump higher per rank",
+    "description": "Jump 5% higher; unlocks Wall Jump, Long Jump and Charge Jump",
     "icon": {
       "type": "item",
       "data": {
@@ -179,13 +179,20 @@
         "data": {
           "perk": "jump_boost",
           "value": 0.05
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_spring",
+          "value": 1
         }
       }
     ]
   },
   "spring_step_2": {
     "title": "Spring Step",
-    "description": "Jump higher per rank",
+    "description": "Jump 10% higher; unlocks Wall Jump, Long Jump and Charge Jump",
     "icon": {
       "type": "item",
       "data": {
@@ -207,12 +214,19 @@
           "perk": "jump_boost",
           "value": 0.05
         }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_spring",
+          "value": 1
+        }
       }
     ]
   },
   "spring_step_3": {
     "title": "Spring Step",
-    "description": "Jump higher per rank",
+    "description": "Jump 15% higher; unlocks Wall Jump, Long Jump and Charge Jump",
     "icon": {
       "type": "item",
       "data": {
@@ -233,6 +247,13 @@
         "data": {
           "perk": "jump_boost",
           "value": 0.05
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_spring",
+          "value": 1
         }
       }
     ]
@@ -681,7 +702,7 @@
   },
   "freerunner_1": {
     "title": "Freerunner",
-    "description": "ParCool moves cost 20% less stamina",
+    "description": "+8% ParCool max stamina; unlocks Wall Run, Horizontal Wall Run and Cast Away",
     "icon": {
       "type": "item",
       "data": {
@@ -704,13 +725,20 @@
           "attribute": "parcool:parcool.max_stamina",
           "value": 0.08,
           "operation": "multiply_base"
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_freerunner",
+          "value": 1
         }
       }
     ]
   },
   "freerunner_2": {
     "title": "Freerunner",
-    "description": "ParCool moves cost 20% less stamina",
+    "description": "+16% ParCool max stamina; unlocks Wall Run, Horizontal Wall Run and Cast Away",
     "icon": {
       "type": "item",
       "data": {
@@ -734,12 +762,19 @@
           "value": 0.08,
           "operation": "multiply_base"
         }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_freerunner",
+          "value": 1
+        }
       }
     ]
   },
   "freerunner_3": {
     "title": "Freerunner",
-    "description": "ParCool moves cost 20% less stamina",
+    "description": "+24% ParCool max stamina; unlocks Wall Run, Horizontal Wall Run and Cast Away",
     "icon": {
       "type": "item",
       "data": {
@@ -762,6 +797,13 @@
           "attribute": "parcool:parcool.max_stamina",
           "value": 0.08,
           "operation": "multiply_base"
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_freerunner",
+          "value": 1
         }
       }
     ]
@@ -785,7 +827,7 @@
   },
   "hookmaster_1": {
     "title": "Hookmaster",
-    "description": "The hook throws and reels in faster and swings harder",
+    "description": "The grappling hook throws and pulls you 15% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -813,7 +855,7 @@
   },
   "hookmaster_2": {
     "title": "Hookmaster",
-    "description": "The hook throws and reels in faster and swings harder",
+    "description": "The grappling hook throws and pulls you 30% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -841,7 +883,7 @@
   },
   "hookmaster_3": {
     "title": "Hookmaster",
-    "description": "The hook throws and reels in faster and swings harder",
+    "description": "The grappling hook throws and pulls you 45% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -1158,7 +1200,7 @@
   },
   "second_breath_1": {
     "title": "Second Breath",
-    "description": "ParCool stamina regenerates faster",
+    "description": "ParCool stamina recovers 10% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -1186,7 +1228,7 @@
   },
   "second_breath_2": {
     "title": "Second Breath",
-    "description": "ParCool stamina regenerates faster",
+    "description": "ParCool stamina recovers 20% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -1214,7 +1256,7 @@
   },
   "second_breath_3": {
     "title": "Second Breath",
-    "description": "ParCool stamina regenerates faster",
+    "description": "ParCool stamina recovers 30% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -1242,7 +1284,7 @@
   },
   "second_breath_4": {
     "title": "Second Breath",
-    "description": "ParCool stamina regenerates faster",
+    "description": "ParCool stamina recovers 40% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -1270,7 +1312,7 @@
   },
   "motor_reel_1": {
     "title": "Motor Reel",
-    "description": "Hold use to be pulled to the hook, faster per rank",
+    "description": "Hold use to be pulled to the hook; +25% reel speed after the first",
     "icon": {
       "type": "item",
       "data": {
@@ -1297,7 +1339,7 @@
   },
   "motor_reel_2": {
     "title": "Motor Reel",
-    "description": "Hold use to be pulled to the hook, faster per rank",
+    "description": "Hold use to be pulled to the hook; +50% reel speed after the first",
     "icon": {
       "type": "item",
       "data": {
@@ -1324,7 +1366,7 @@
   },
   "motor_reel_3": {
     "title": "Motor Reel",
-    "description": "Hold use to be pulled to the hook, faster per rank",
+    "description": "Hold use to be pulled to the hook; +75% reel speed after the first",
     "icon": {
       "type": "item",
       "data": {
@@ -1351,7 +1393,7 @@
   },
   "roll_master_1": {
     "title": "Roll Master",
-    "description": "Rolls and dodges negate more damage",
+    "description": "Rolls and dodges negate 10% more damage and dodges go 10% further",
     "icon": {
       "type": "item",
       "data": {
@@ -1373,13 +1415,20 @@
           "attribute": "parcool:parcool.breakfall.damage_reduction",
           "value": 0.1,
           "operation": "addition"
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dodge_distance",
+          "value": 0.1
         }
       }
     ]
   },
   "roll_master_2": {
     "title": "Roll Master",
-    "description": "Rolls and dodges negate more damage",
+    "description": "Rolls and dodges negate 20% more damage and dodges go 20% further",
     "icon": {
       "type": "item",
       "data": {
@@ -1402,12 +1451,19 @@
           "value": 0.1,
           "operation": "addition"
         }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dodge_distance",
+          "value": 0.1
+        }
       }
     ]
   },
   "roll_master_3": {
     "title": "Roll Master",
-    "description": "Rolls and dodges negate more damage",
+    "description": "Rolls and dodges negate 30% more damage and dodges go 30% further",
     "icon": {
       "type": "item",
       "data": {
@@ -1429,6 +1485,13 @@
           "attribute": "parcool:parcool.breakfall.damage_reduction",
           "value": 0.1,
           "operation": "addition"
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dodge_distance",
+          "value": 0.1
         }
       }
     ]
@@ -1536,7 +1599,7 @@
   },
   "featherfall_1": {
     "title": "Featherfall",
-    "description": "No fall damage under 15 blocks",
+    "description": "No fall damage from falls under 15 blocks; unlocks Skydive",
     "icon": {
       "type": "item",
       "data": {
@@ -1551,13 +1614,20 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Twin Hooks.",
+    "extra_description": "Pick one: this or Double Jump.",
     "rewards": [
       {
         "type": "fotfskills:perk",
         "data": {
           "perk": "fall_immunity",
           "value": 15
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_skydive",
+          "value": 1
         }
       }
     ]
@@ -1579,13 +1649,13 @@
     },
     "required_spent_points": 25
   },
-  "twin_hooks_1": {
-    "title": "Twin Hooks",
-    "description": "The grappling hook fires two hooks at once",
+  "double_jump_1": {
+    "title": "Double Jump",
+    "description": "Press jump again in mid-air for 1 extra jump; unlocks Trick Jump (flips on normal jumps)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:chain"
+        "item": "minecraft:feather"
       }
     },
     "frame": {
@@ -1601,7 +1671,14 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "hook_double",
+          "perk": "double_jump",
+          "value": 1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pc_trick",
           "value": 1
         }
       }

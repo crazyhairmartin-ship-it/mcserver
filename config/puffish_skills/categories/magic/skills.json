@@ -25,11 +25,6 @@
     "y": 0,
     "definition": "mana_pool_4"
   },
-  "mana_pool_5": {
-    "x": -15,
-    "y": 0,
-    "definition": "mana_pool_5"
-  },
   "focus_1": {
     "x": 15,
     "y": 0,
@@ -50,11 +45,6 @@
     "x": 15,
     "y": 0,
     "definition": "focus_4"
-  },
-  "focus_5": {
-    "x": 15,
-    "y": 0,
-    "definition": "focus_5"
   },
   "flow_1": {
     "x": 45,
@@ -77,68 +67,79 @@
     "y": 0,
     "definition": "flow_4"
   },
-  "flow_5": {
-    "x": 45,
-    "y": 0,
-    "definition": "flow_5"
-  },
   "tier_2_label": {
-    "x": -45,
+    "x": -60,
     "y": 34,
     "definition": "tier_2_label"
   },
   "mana_saver_1": {
-    "x": -15,
+    "x": -30,
     "y": 34,
     "definition": "mana_saver_1",
     "root": true
   },
   "mana_saver_2": {
-    "x": -15,
+    "x": -30,
     "y": 34,
     "definition": "mana_saver_2"
   },
   "mana_saver_3": {
-    "x": -15,
+    "x": -30,
     "y": 34,
     "definition": "mana_saver_3"
   },
   "mana_saver_4": {
-    "x": -15,
+    "x": -30,
     "y": 34,
     "definition": "mana_saver_4"
   },
   "mana_shield_1": {
-    "x": 15,
+    "x": 0,
     "y": 34,
     "definition": "mana_shield_1",
     "root": true
   },
   "mana_shield_2": {
-    "x": 15,
+    "x": 0,
     "y": 34,
     "definition": "mana_shield_2"
   },
   "mana_shield_3": {
-    "x": 15,
+    "x": 0,
     "y": 34,
     "definition": "mana_shield_3"
   },
   "staff_adept_1": {
-    "x": 45,
+    "x": 30,
     "y": 34,
     "definition": "staff_adept_1",
     "root": true
   },
   "staff_adept_2": {
-    "x": 45,
+    "x": 30,
     "y": 34,
     "definition": "staff_adept_2"
   },
   "staff_adept_3": {
-    "x": 45,
+    "x": 30,
     "y": 34,
     "definition": "staff_adept_3"
+  },
+  "sourcecraft_1": {
+    "x": 60,
+    "y": 34,
+    "definition": "sourcecraft_1",
+    "root": true
+  },
+  "sourcecraft_2": {
+    "x": 60,
+    "y": 34,
+    "definition": "sourcecraft_2"
+  },
+  "sourcecraft_3": {
+    "x": 60,
+    "y": 34,
+    "definition": "sourcecraft_3"
   },
   "tier_3_label": {
     "x": -45,
@@ -166,21 +167,21 @@
     "y": 68,
     "definition": "tier_3_or"
   },
-  "artificer_1": {
+  "summoner_1": {
     "x": 45,
     "y": 68,
-    "definition": "artificer_1",
+    "definition": "summoner_1",
     "root": true
   },
-  "artificer_2": {
+  "summoner_2": {
     "x": 45,
     "y": 68,
-    "definition": "artificer_2"
+    "definition": "summoner_2"
   },
-  "artificer_3": {
+  "summoner_3": {
     "x": 45,
     "y": 68,
-    "definition": "artificer_3"
+    "definition": "summoner_3"
   },
   "tier_4_label": {
     "x": -60,

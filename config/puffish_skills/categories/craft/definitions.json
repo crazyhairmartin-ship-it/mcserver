@@ -440,7 +440,7 @@
   },
   "enchanted_crafts_1": {
     "title": "Enchanted Crafts",
-    "description": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+    "description": "Gear you craft always gets a random enchantment, up to level 1 (max III)",
     "icon": {
       "type": "item",
       "data": {
@@ -467,7 +467,7 @@
   },
   "enchanted_crafts_2": {
     "title": "Enchanted Crafts",
-    "description": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+    "description": "Gear you craft always gets a random enchantment, up to level 2 (max III)",
     "icon": {
       "type": "item",
       "data": {
@@ -494,7 +494,7 @@
   },
   "enchanted_crafts_3": {
     "title": "Enchanted Crafts",
-    "description": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+    "description": "Gear you craft always gets a random enchantment, up to level 3 (max III)",
     "icon": {
       "type": "item",
       "data": {
@@ -521,7 +521,7 @@
   },
   "enchanted_crafts_4": {
     "title": "Enchanted Crafts",
-    "description": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
+    "description": "Gear you craft always gets a random enchantment, up to level 4 (max III)",
     "icon": {
       "type": "item",
       "data": {
@@ -548,7 +548,7 @@
   },
   "book_saver_1": {
     "title": "Book Saver",
-    "description": "Enchanted items about to break become enchanted books",
+    "description": "Enchanted gear about to break turns into an enchanted book keeping 100% of its enchantments",
     "icon": {
       "type": "item",
       "data": {
@@ -575,7 +575,7 @@
   },
   "repair_kit_1": {
     "title": "Repair Kit",
-    "description": "Anvil repairs cost less XP",
+    "description": "Anvil repairs cost 15% less XP",
     "icon": {
       "type": "item",
       "data": {
@@ -602,7 +602,7 @@
   },
   "repair_kit_2": {
     "title": "Repair Kit",
-    "description": "Anvil repairs cost less XP",
+    "description": "Anvil repairs cost 30% less XP",
     "icon": {
       "type": "item",
       "data": {
@@ -629,7 +629,7 @@
   },
   "repair_kit_3": {
     "title": "Repair Kit",
-    "description": "Anvil repairs cost less XP",
+    "description": "Anvil repairs cost 45% less XP",
     "icon": {
       "type": "item",
       "data": {
@@ -656,7 +656,7 @@
   },
   "spellwright_1": {
     "title": "Spellwright",
-    "description": "8% to save ingredients on scrolls and Ars items",
+    "description": "8% to save ingredients on Iron's scrolls and Ars items",
     "icon": {
       "type": "item",
       "data": {
@@ -683,7 +683,7 @@
   },
   "spellwright_2": {
     "title": "Spellwright",
-    "description": "16% to save ingredients on scrolls and Ars items",
+    "description": "16% to save ingredients on Iron's scrolls and Ars items",
     "icon": {
       "type": "item",
       "data": {
@@ -710,7 +710,7 @@
   },
   "spellwright_3": {
     "title": "Spellwright",
-    "description": "24% to save ingredients on scrolls and Ars items",
+    "description": "24% to save ingredients on Iron's scrolls and Ars items",
     "icon": {
       "type": "item",
       "data": {
@@ -984,7 +984,7 @@
   },
   "enchanted_crafts_ii_1": {
     "title": "Enchanted Crafts II",
-    "description": "Enchantments on crafted gear roll one level higher per rank",
+    "description": "Enchantments on gear you craft roll 1 level higher",
     "icon": {
       "type": "item",
       "data": {
@@ -1012,7 +1012,7 @@
   },
   "enchanted_crafts_ii_2": {
     "title": "Enchanted Crafts II",
-    "description": "Enchantments on crafted gear roll one level higher per rank",
+    "description": "Enchantments on gear you craft roll 2 level higher",
     "icon": {
       "type": "item",
       "data": {
@@ -1040,7 +1040,7 @@
   },
   "enchanted_crafts_ii_3": {
     "title": "Enchanted Crafts II",
-    "description": "Enchantments on crafted gear roll one level higher per rank",
+    "description": "Enchantments on gear you craft roll 3 level higher",
     "icon": {
       "type": "item",
       "data": {
@@ -1376,7 +1376,7 @@
   },
   "masterwork_1": {
     "title": "Masterwork",
-    "description": "Gear you craft always gets two enchantments",
+    "description": "Gear you craft always gets 2 enchantments",
     "icon": {
       "type": "item",
       "data": {

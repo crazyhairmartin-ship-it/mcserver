@@ -18,7 +18,7 @@
   },
   "mana_pool_1": {
     "title": "Mana Pool",
-    "description": "+10 max mana (shared Ars and Iron's pool)",
+    "description": "+10 max mana",
     "icon": {
       "type": "item",
       "data": {
@@ -46,7 +46,7 @@
   },
   "mana_pool_2": {
     "title": "Mana Pool",
-    "description": "+20 max mana (shared Ars and Iron's pool)",
+    "description": "+20 max mana",
     "icon": {
       "type": "item",
       "data": {
@@ -74,7 +74,7 @@
   },
   "mana_pool_3": {
     "title": "Mana Pool",
-    "description": "+30 max mana (shared Ars and Iron's pool)",
+    "description": "+30 max mana",
     "icon": {
       "type": "item",
       "data": {
@@ -102,35 +102,7 @@
   },
   "mana_pool_4": {
     "title": "Mana Pool",
-    "description": "+40 max mana (shared Ars and Iron's pool)",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:lapis_block"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 0,
-    "rewards": [
-      {
-        "type": "puffish_skills:attribute",
-        "data": {
-          "attribute": "irons_spellbooks:max_mana",
-          "value": 10,
-          "operation": "addition"
-        }
-      }
-    ]
-  },
-  "mana_pool_5": {
-    "title": "Mana Pool",
-    "description": "+50 max mana (shared Ars and Iron's pool)",
+    "description": "+40 max mana",
     "icon": {
       "type": "item",
       "data": {
@@ -268,34 +240,6 @@
       }
     ]
   },
-  "focus_5": {
-    "title": "Focus",
-    "description": "+15% spell power",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:amethyst_cluster"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 0,
-    "rewards": [
-      {
-        "type": "puffish_skills:attribute",
-        "data": {
-          "attribute": "irons_spellbooks:spell_power",
-          "value": 0.03,
-          "operation": "multiply_base"
-        }
-      }
-    ]
-  },
   "flow_1": {
     "title": "Flow",
     "description": "+5% mana regen",
@@ -383,34 +327,6 @@
   "flow_4": {
     "title": "Flow",
     "description": "+20% mana regen",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:experience_bottle"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 0,
-    "rewards": [
-      {
-        "type": "puffish_skills:attribute",
-        "data": {
-          "attribute": "irons_spellbooks:mana_regen",
-          "value": 0.05,
-          "operation": "multiply_base"
-        }
-      }
-    ]
-  },
-  "flow_5": {
-    "title": "Flow",
-    "description": "+25% mana regen",
     "icon": {
       "type": "item",
       "data": {
@@ -563,7 +479,7 @@
   },
   "mana_shield_1": {
     "title": "Mana Shield",
-    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front, using mana per hit (cheaper per rank)",
+    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front for 2 mana per damage (1 at rank 3)",
     "icon": {
       "type": "item",
       "data": {
@@ -590,7 +506,7 @@
   },
   "mana_shield_2": {
     "title": "Mana Shield",
-    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front, using mana per hit (cheaper per rank)",
+    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front for 2 mana per damage (1 at rank 3)",
     "icon": {
       "type": "item",
       "data": {
@@ -617,7 +533,7 @@
   },
   "mana_shield_3": {
     "title": "Mana Shield",
-    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front, using mana per hit (cheaper per rank)",
+    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front for 2 mana per damage (1 at rank 3)",
     "icon": {
       "type": "item",
       "data": {
@@ -744,6 +660,108 @@
       }
     ]
   },
+  "sourcecraft_1": {
+    "title": "Sourcecraft",
+    "description": "Sourcelinks you place make +10% more source and the enchanting apparatus uses -10% less source",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "ars_nouveau:source_gem"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "source_gain",
+          "value": 0.1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "apparatus_save",
+          "value": 0.1
+        }
+      }
+    ]
+  },
+  "sourcecraft_2": {
+    "title": "Sourcecraft",
+    "description": "Sourcelinks you place make +20% more source and the enchanting apparatus uses -20% less source",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "ars_nouveau:source_gem"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "source_gain",
+          "value": 0.1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "apparatus_save",
+          "value": 0.1
+        }
+      }
+    ]
+  },
+  "sourcecraft_3": {
+    "title": "Sourcecraft",
+    "description": "Sourcelinks you place make +30% more source and the enchanting apparatus uses -30% less source",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "ars_nouveau:source_gem"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "source_gain",
+          "value": 0.1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "apparatus_save",
+          "value": 0.1
+        }
+      }
+    ]
+  },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
     "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
@@ -763,7 +781,7 @@
   },
   "battlemage_1": {
     "title": "Battlemage",
-    "description": "Iron's lean: +10% spell power",
+    "description": "+10% spell power",
     "icon": {
       "type": "item",
       "data": {
@@ -778,7 +796,7 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Artificer.",
+    "extra_description": "Pick one: this or Summoner.",
     "rewards": [
       {
         "type": "puffish_skills:attribute",
@@ -792,7 +810,7 @@
   },
   "battlemage_2": {
     "title": "Battlemage",
-    "description": "Iron's lean: +20% spell power",
+    "description": "+20% spell power",
     "icon": {
       "type": "item",
       "data": {
@@ -807,7 +825,7 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Artificer.",
+    "extra_description": "Pick one: this or Summoner.",
     "rewards": [
       {
         "type": "puffish_skills:attribute",
@@ -821,7 +839,7 @@
   },
   "battlemage_3": {
     "title": "Battlemage",
-    "description": "Iron's lean: +30% spell power",
+    "description": "+30% spell power",
     "icon": {
       "type": "item",
       "data": {
@@ -836,7 +854,7 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Artificer.",
+    "extra_description": "Pick one: this or Summoner.",
     "rewards": [
       {
         "type": "puffish_skills:attribute",
@@ -865,13 +883,13 @@
     },
     "required_spent_points": 10
   },
-  "artificer_1": {
-    "title": "Artificer",
-    "description": "Ars lean: glyphs cost 15% less XP; Ars and Iron's summons get +15% health and damage per rank",
+  "summoner_1": {
+    "title": "Summoner",
+    "description": "Your summons (Iron's and Ars) get +15% health and damage",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanting_table"
+        "item": "minecraft:skeleton_skull"
       }
     },
     "frame": {
@@ -884,13 +902,6 @@
     "required_spent_points": 10,
     "extra_description": "Pick one: this or Battlemage.",
     "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "artificer_glyph",
-          "value": 0.15
-        }
-      },
       {
         "type": "fotfskills:perk",
         "data": {
@@ -900,13 +911,13 @@
       }
     ]
   },
-  "artificer_2": {
-    "title": "Artificer",
-    "description": "Ars lean: glyphs cost 30% less XP; Ars and Iron's summons get +15% health and damage per rank",
+  "summoner_2": {
+    "title": "Summoner",
+    "description": "Your summons (Iron's and Ars) get +30% health and damage",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanting_table"
+        "item": "minecraft:skeleton_skull"
       }
     },
     "frame": {
@@ -919,13 +930,6 @@
     "required_spent_points": 10,
     "extra_description": "Pick one: this or Battlemage.",
     "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "artificer_glyph",
-          "value": 0.15
-        }
-      },
       {
         "type": "fotfskills:perk",
         "data": {
@@ -935,13 +939,13 @@
       }
     ]
   },
-  "artificer_3": {
-    "title": "Artificer",
-    "description": "Ars lean: glyphs cost 45% less XP; Ars and Iron's summons get +15% health and damage per rank",
+  "summoner_3": {
+    "title": "Summoner",
+    "description": "Your summons (Iron's and Ars) get +45% health and damage",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanting_table"
+        "item": "minecraft:skeleton_skull"
       }
     },
     "frame": {
@@ -954,13 +958,6 @@
     "required_spent_points": 10,
     "extra_description": "Pick one: this or Battlemage.",
     "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "artificer_glyph",
-          "value": 0.15
-        }
-      },
       {
         "type": "fotfskills:perk",
         "data": {
@@ -1242,7 +1239,7 @@
   },
   "natures_mend_1": {
     "title": "Nature's Mend",
-    "description": "Your healing spells also heal nearby pets",
+    "description": "Your healing spells also heal pets within range by 1 heart per spell level",
     "icon": {
       "type": "item",
       "data": {
@@ -1269,7 +1266,7 @@
   },
   "natures_mend_2": {
     "title": "Nature's Mend",
-    "description": "Your healing spells also heal nearby pets",
+    "description": "Your healing spells also heal pets within range by 2 heart per spell level",
     "icon": {
       "type": "item",
       "data": {
@@ -1296,7 +1293,7 @@
   },
   "natures_mend_3": {
     "title": "Nature's Mend",
-    "description": "Your healing spells also heal nearby pets",
+    "description": "Your healing spells also heal pets within range by 3 heart per spell level",
     "icon": {
       "type": "item",
       "data": {
@@ -1323,7 +1320,7 @@
   },
   "natures_mend_4": {
     "title": "Nature's Mend",
-    "description": "Your healing spells also heal nearby pets",
+    "description": "Your healing spells also heal pets within range by 4 heart per spell level",
     "icon": {
       "type": "item",
       "data": {
@@ -1588,7 +1585,7 @@
   },
   "wellspring_1": {
     "title": "Wellspring",
-    "description": "Mana regen doubled out of combat",
+    "description": "Mana regen +100% when you haven't fought for 10 seconds",
     "icon": {
       "type": "item",
       "data": {

@@ -14,10 +14,6 @@
         "mana_pool_4"
       ],
       [
-        "mana_pool_4",
-        "mana_pool_5"
-      ],
-      [
         "focus_1",
         "focus_2"
       ],
@@ -30,10 +26,6 @@
         "focus_4"
       ],
       [
-        "focus_4",
-        "focus_5"
-      ],
-      [
         "flow_1",
         "flow_2"
       ],
@@ -44,10 +36,6 @@
       [
         "flow_3",
         "flow_4"
-      ],
-      [
-        "flow_4",
-        "flow_5"
       ],
       [
         "mana_saver_1",
@@ -78,6 +66,14 @@
         "staff_adept_3"
       ],
       [
+        "sourcecraft_1",
+        "sourcecraft_2"
+      ],
+      [
+        "sourcecraft_2",
+        "sourcecraft_3"
+      ],
+      [
         "battlemage_1",
         "battlemage_2"
       ],
@@ -86,12 +82,12 @@
         "battlemage_3"
       ],
       [
-        "artificer_1",
-        "artificer_2"
+        "summoner_1",
+        "summoner_2"
       ],
       [
-        "artificer_2",
-        "artificer_3"
+        "summoner_2",
+        "summoner_3"
       ],
       [
         "mana_pool_ii_1",
@@ -150,7 +146,7 @@
         "arcane_aegis_3"
       ],
       [
-        "mana_pool_5",
+        "mana_pool_4",
         "mana_pool_ii_1"
       ],
       [
@@ -163,7 +159,7 @@
     "bidirectional": [
       [
         "battlemage_1",
-        "artificer_1"
+        "summoner_1"
       ],
       [
         "archmage_1",

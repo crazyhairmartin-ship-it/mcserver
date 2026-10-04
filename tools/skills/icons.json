@@ -67,12 +67,12 @@
     "Long Rope": "grapplemod:grapplinghook", "Quick Casting": "minecraft:clock", "Light Weapons": "minecraft:stone_sword",
     "Freerunner": "minecraft:sugar", "Hookmaster": "minecraft:tripwire_hook", "Throwing Arm": "minecraft:snowball",
     "Rider": "minecraft:saddle", "Second Breath": "minecraft:potion", "Motor Reel": "minecraft:piston",
-    "Roll Master": "minecraft:rabbit_foot", "Featherfall": "minecraft:feather", "Twin Hooks": "minecraft:chain"
+    "Roll Master": "minecraft:rabbit_foot", "Featherfall": "minecraft:feather", "Double Jump": "minecraft:feather"
   },
   "magic": {
     "Mana Pool": "minecraft:lapis_block", "Focus": "minecraft:amethyst_cluster", "Flow": "minecraft:experience_bottle",
     "Mana Saver": "minecraft:lapis_lazuli", "Mana Shield": "minecraft:light_blue_stained_glass", "Scroll Saver": "minecraft:paper",
-    "Staff Adept": "minecraft:blaze_rod", "Battlemage": "minecraft:fire_charge", "Artificer": "minecraft:enchanting_table",
+    "Staff Adept": "minecraft:blaze_rod", "Battlemage": "minecraft:fire_charge", "Summoner": "minecraft:skeleton_skull", "Sourcecraft": "ars_nouveau:source_gem",
     "Spellbound Steel": "minecraft:enchanted_book", "Nature's Mend": "minecraft:glistering_melon_slice", "Cooldown Flow": "minecraft:clock",
     "Arcane Aegis": "minecraft:end_crystal", "Archmage": "minecraft:dragon_breath", "Wellspring": "minecraft:conduit"
   },
@@ -80,7 +80,7 @@
     "Gentle Hand": "minecraft:wheat", "Treat Saver": "minecraft:carrot", "Husbandry": "minecraft:egg",
     "Selective Breeding": "minecraft:golden_carrot", "Bonded": "minecraft:lead", "Pet Scavenging": "minecraft:bone",
     "Beastmaster": "minecraft:wolf_spawn_egg", "Breeder": "minecraft:cow_spawn_egg", "Pack Tactics": "minecraft:fox_spawn_egg",
-    "Loyal Guard": "minecraft:shield", "Bloodlines": "minecraft:lime_dye", "Soul Mender": "minecraft:totem_of_undying",
+    "Loyal Guard": "minecraft:shield", "Bloodlines": "minecraft:lime_dye", "Ferality": "minecraft:bone",
     "Mount Training": "minecraft:saddle", "Caretaker": "minecraft:hay_block", "Alpha": "minecraft:diamond_horse_armor",
     "Prized Stock": "minecraft:golden_apple"
   }
