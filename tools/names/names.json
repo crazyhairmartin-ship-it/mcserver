@@ -164,6 +164,9 @@
   },
   "skip": [
     "geckolib:fertilizer",
-    "supplementaries:structure_temp"
+    "supplementaries:structure_temp",
+    "bakery:dough",
+    "naturalist:fish_fillet",
+    "naturalist:cooked_fish_fillet"
   ]
 }
