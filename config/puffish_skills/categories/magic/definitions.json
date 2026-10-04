@@ -680,7 +680,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "staff_spell",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "staff_cooldown",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "staff_adept_2": {
     "title": "Staff Adept",
@@ -698,7 +714,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "staff_spell",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "staff_cooldown",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "staff_adept_3": {
     "title": "Staff Adept",
@@ -716,7 +748,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "staff_spell",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "staff_cooldown",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
@@ -752,7 +800,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Artificer."
+    "extra_description": "Pick one: this or Artificer.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:spell_power",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "battlemage_2": {
     "title": "Battlemage",
@@ -771,7 +829,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Artificer."
+    "extra_description": "Pick one: this or Artificer.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:spell_power",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "battlemage_3": {
     "title": "Battlemage",
@@ -790,7 +858,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Artificer."
+    "extra_description": "Pick one: this or Artificer.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:spell_power",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -1084,7 +1162,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spellbound_steel",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "spellbound_steel_2": {
     "title": "Spellbound Steel",
@@ -1102,7 +1189,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spellbound_steel",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "spellbound_steel_3": {
     "title": "Spellbound Steel",
@@ -1120,7 +1216,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spellbound_steel",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "natures_mend_1": {
     "title": "Nature's Mend",

@@ -122,7 +122,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "jump_boost",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "spring_step_2": {
     "title": "Spring Step",
@@ -140,7 +149,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "jump_boost",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "spring_step_3": {
     "title": "Spring Step",
@@ -158,7 +176,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "jump_boost",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "soft_landing_1": {
     "title": "Soft Landing",
@@ -466,7 +493,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "light_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "light_weapons_2": {
     "title": "Light Weapons",
@@ -484,7 +520,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "light_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "light_weapons_3": {
     "title": "Light Weapons",
@@ -502,7 +547,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "light_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
@@ -685,7 +739,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "thrown_speed",
+          "value": 0.08
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "throwing_arm_2": {
     "title": "Throwing Arm",
@@ -703,7 +773,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "thrown_speed",
+          "value": 0.08
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "throwing_arm_3": {
     "title": "Throwing Arm",
@@ -721,7 +807,23 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "thrown_speed",
+          "value": 0.08
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "rider_1": {
     "title": "Rider",

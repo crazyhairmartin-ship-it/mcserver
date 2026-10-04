@@ -167,7 +167,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_axe",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "axe_mastery_2": {
     "title": "Axe Mastery",
@@ -185,7 +194,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_axe",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "axe_mastery_3": {
     "title": "Axe Mastery",
@@ -203,7 +221,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_axe",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "axe_mastery_4": {
     "title": "Axe Mastery",
@@ -221,7 +248,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_axe",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "axe_mastery_5": {
     "title": "Axe Mastery",
@@ -239,7 +275,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_axe",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "berry_picker_1": {
     "title": "Berry Picker",
@@ -517,7 +562,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "forest_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "forest_stride_2": {
     "title": "Forest Stride",
@@ -535,7 +589,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "forest_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
@@ -571,7 +634,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Wildcrafter."
+    "extra_description": "Pick one: this or Wildcrafter.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armor_pierce_axe",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "splitting_blow_2": {
     "title": "Splitting Blow",
@@ -590,7 +662,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Wildcrafter."
+    "extra_description": "Pick one: this or Wildcrafter.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armor_pierce_axe",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "splitting_blow_3": {
     "title": "Splitting Blow",
@@ -609,7 +690,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Wildcrafter."
+    "extra_description": "Pick one: this or Wildcrafter.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armor_pierce_axe",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -1020,7 +1110,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "forest_toughness",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "bark_skin_2": {
     "title": "Bark Skin",
@@ -1038,7 +1137,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "forest_toughness",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "bark_skin_3": {
     "title": "Bark Skin",
@@ -1056,7 +1164,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "forest_toughness",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "druids_grove_1": {
     "title": "Druid's Grove",
@@ -1145,7 +1262,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown_axe",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "throwing_axes_2": {
     "title": "Throwing Axes",
@@ -1163,7 +1289,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown_axe",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "throwing_axes_3": {
     "title": "Throwing Axes",
@@ -1181,7 +1316,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown_axe",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "natures_bounty_1": {
     "title": "Nature's Bounty",
@@ -1245,6 +1389,15 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Nature's Bounty."
+    "extra_description": "Pick one: this or Nature's Bounty.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "berserker",
+          "value": 4
+        }
+      }
+    ]
   }
 }

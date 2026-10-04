@@ -401,7 +401,16 @@
     },
     "cost": 1,
     "required_spent_points": 5,
-    "extra_description": "Needs Steady Hands (all ranks)."
+    "extra_description": "Needs Steady Hands (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "eagle_eye_2": {
     "title": "Eagle Eye",
@@ -420,7 +429,16 @@
     },
     "cost": 1,
     "required_spent_points": 5,
-    "extra_description": "Needs Steady Hands (all ranks)."
+    "extra_description": "Needs Steady Hands (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "eagle_eye_3": {
     "title": "Eagle Eye",
@@ -439,7 +457,16 @@
     },
     "cost": 1,
     "required_spent_points": 5,
-    "extra_description": "Needs Steady Hands (all ranks)."
+    "extra_description": "Needs Steady Hands (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "thrower_1": {
     "title": "Thrower",
@@ -457,7 +484,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "thrower_2": {
     "title": "Thrower",
@@ -475,7 +511,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "thrower_3": {
     "title": "Thrower",
@@ -493,7 +538,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "skirmisher_1": {
     "title": "Skirmisher",
@@ -511,7 +565,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "skirmish_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "skirmisher_2": {
     "title": "Skirmisher",
@@ -529,7 +592,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "skirmish_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "skirmisher_3": {
     "title": "Skirmisher",
@@ -547,7 +619,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "skirmish_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",

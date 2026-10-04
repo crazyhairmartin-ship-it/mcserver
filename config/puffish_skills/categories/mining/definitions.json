@@ -248,7 +248,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_pickaxe_blunt",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "miners_might_2": {
     "title": "Miner's Might",
@@ -266,7 +275,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_pickaxe_blunt",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "miners_might_3": {
     "title": "Miner's Might",
@@ -284,7 +302,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_pickaxe_blunt",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "miners_might_4": {
     "title": "Miner's Might",
@@ -302,7 +329,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_pickaxe_blunt",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "miners_might_5": {
     "title": "Miner's Might",
@@ -320,7 +356,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_pickaxe_blunt",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "tier_2_label": {
     "title": "Tier 2 \u00b7 5 points",
@@ -490,7 +535,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "stonehide",
+          "value": 1
+        }
+      }
+    ]
   },
   "stonehide_2": {
     "title": "Stonehide",
@@ -508,7 +562,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "stonehide",
+          "value": 1
+        }
+      }
+    ]
   },
   "stonehide_3": {
     "title": "Stonehide",
@@ -526,7 +589,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "stonehide",
+          "value": 1
+        }
+      }
+    ]
   },
   "deep_delver_1": {
     "title": "Deep Delver",
@@ -690,7 +762,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Smelter."
+    "extra_description": "Pick one: this or Smelter.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "gem_spell",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "gem_focus_2": {
     "title": "Gem Focus",
@@ -709,7 +790,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Smelter."
+    "extra_description": "Pick one: this or Smelter.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "gem_spell",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "gem_focus_3": {
     "title": "Gem Focus",
@@ -728,7 +818,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Smelter."
+    "extra_description": "Pick one: this or Smelter.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "gem_spell",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -903,7 +1002,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crush_armor",
+          "value": 1
+        }
+      }
+    ]
   },
   "crusher_2": {
     "title": "Crusher",
@@ -921,7 +1029,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crush_armor",
+          "value": 1
+        }
+      }
+    ]
   },
   "crusher_3": {
     "title": "Crusher",
@@ -939,7 +1056,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crush_armor",
+          "value": 1
+        }
+      }
+    ]
   },
   "bedrock_grip_1": {
     "title": "Bedrock Grip",

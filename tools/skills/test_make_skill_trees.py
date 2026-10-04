@@ -212,7 +212,7 @@ def test_stat_nodes_get_one_attribute_reward_per_rank():
               'data': {'attribute': 'minecraft:generic.attack_damage', 'value': 0.3, 'operation': 'addition'}}
     for k in range(1, 6):
         assert defs[f'sharpened_{k}']['rewards'] == [reward]
-    assert 'rewards' not in defs['momentum_1']          # not a plain attribute: phase 2b/3
+    assert defs['momentum_1']['rewards'] == [{'type': 'fotfskills:perk', 'data': {'perk': 'momentum', 'value': 0.05}}]   # a perk, not an attribute
     assert 'rewards' not in defs['tier_1_label']
 
 
@@ -257,3 +257,16 @@ def test_gathering_xp_uses_the_placed_block_aware_source():
     farm = g.build_category(tree('farm'), TIERS, xp=XP)['experience.json']['sources']
     rules = next(s for s in farm if s['type'] == 'fotfskills:break')['data']['rules']
     assert rules == [{'mature_crop': True, 'experience': 3}]
+
+
+def test_weapon_and_conditional_nodes_are_wired():
+    expect = {('mining', 'miners_might_2'): ('dmg_pickaxe_blunt', 0.3), ('forage', 'axe_mastery_1'): ('dmg_axe', 0.3),
+              ('attack', 'heavy_arms_1'): ('pct_two_handed', 0.1), ('defense', 'second_wind_1'): ('second_wind', 1),
+              ('agility', 'throwing_arm_1'): ('thrown_speed', 0.08), ('magic', 'staff_adept_1'): ('staff_cooldown', 0.04),
+              ('cook', 'warriors_feast_1'): ('feast_spell', 0.1), ('fish', 'seas_blessing_1'): ('seas_blessing', 1)}
+    for (tree_id, sid), (perk, value) in expect.items():
+        defs = g.build_category(tree(tree_id), TIERS, XP, PERKS)['definitions.json']
+        assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': value}} in defs[sid]['rewards'], sid
+    magic = g.build_category(tree('magic'), TIERS, XP, PERKS)['definitions.json']
+    assert {'type': 'puffish_skills:attribute', 'data': {'attribute': 'irons_spellbooks:spell_power', 'value': 0.1,
+            'operation': 'multiply_base'}} in magic['battlemage_1']['rewards']

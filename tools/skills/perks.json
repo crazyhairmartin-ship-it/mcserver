@@ -46,6 +46,96 @@
           "value": 0.1
         }
       }
+    ],
+    "footwork": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "combat_speed",
+          "value": 0.02
+        }
+      }
+    ],
+    "spellblade": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spellblade_mana",
+          "value": 1
+        }
+      }
+    ],
+    "momentum": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "momentum",
+          "value": 0.05
+        }
+      }
+    ],
+    "heavy_arms": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_two_handed",
+          "value": 0.1
+        }
+      }
+    ],
+    "duelist": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "duelist_speed",
+          "value": 0.08
+        }
+      }
+    ],
+    "hunters_mark": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hunters_mark",
+          "value": 0.05
+        }
+      }
+    ],
+    "shield_bash": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "shield_bash",
+          "value": 0.2
+        }
+      }
+    ],
+    "lifeline": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "lifeline",
+          "value": 1
+        }
+      }
+    ],
+    "cleave": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cleave",
+          "value": 0.3
+        }
+      }
+    ],
+    "flurry": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "flurry",
+          "value": 1
+        }
+      }
     ]
   },
   "defense": {
@@ -122,6 +212,51 @@
         "data": {
           "perk": "armour_durability",
           "value": 0.5
+        }
+      }
+    ],
+    "shield_thorns": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "shield_thorns",
+          "value": 0.08
+        }
+      }
+    ],
+    "warded_mind": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "warded_spell",
+          "value": 0.01
+        }
+      }
+    ],
+    "battlemage_plate": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "battlemage_mana",
+          "value": 2
+        }
+      }
+    ],
+    "counter": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "counter",
+          "value": 0.15
+        }
+      }
+    ],
+    "second_wind": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "second_wind",
+          "value": 1
         }
       }
     ]
@@ -218,6 +353,41 @@
           "operation": "addition"
         }
       }
+    ],
+    "staff_adept": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "staff_spell",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "staff_cooldown",
+          "value": 0.04
+        }
+      }
+    ],
+    "battlemage": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:spell_power",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ],
+    "spellbound_steel": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spellbound_steel",
+          "value": 0.1
+        }
+      }
     ]
   },
   "agility": {
@@ -246,6 +416,40 @@
         "data": {
           "perk": "fall_immunity",
           "value": 15
+        }
+      }
+    ],
+    "spring_step": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "jump_boost",
+          "value": 0.05
+        }
+      }
+    ],
+    "light_weapons": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "light_speed",
+          "value": 0.04
+        }
+      }
+    ],
+    "throwing_arm": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "thrown_speed",
+          "value": 0.08
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown",
+          "value": 0.08
         }
       }
     ]
@@ -313,6 +517,42 @@
           "value": 0.02
         }
       }
+    ],
+    "miners_might": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_pickaxe_blunt",
+          "value": 0.3
+        }
+      }
+    ],
+    "stonehide": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "stonehide",
+          "value": 1
+        }
+      }
+    ],
+    "crusher": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crush_armor",
+          "value": 1
+        }
+      }
+    ],
+    "gem_focus": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "gem_spell",
+          "value": 0.02
+        }
+      }
     ]
   },
   "forage": {
@@ -369,6 +609,60 @@
           "value": 0.05
         }
       }
+    ],
+    "axe_mastery": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_axe",
+          "value": 0.3
+        }
+      }
+    ],
+    "splitting_blow": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armor_pierce_axe",
+          "value": 0.1
+        }
+      }
+    ],
+    "forest_stride": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "forest_speed",
+          "value": 0.05
+        }
+      }
+    ],
+    "bark_skin": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "forest_toughness",
+          "value": 0.5
+        }
+      }
+    ],
+    "throwing_axes": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown_axe",
+          "value": 0.1
+        }
+      }
+    ],
+    "berserkers_axe": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "berserker",
+          "value": 4
+        }
+      }
     ]
   },
   "farm": {
@@ -405,6 +699,33 @@
         "data": {
           "perk": "harvest_double",
           "value": 0.05
+        }
+      }
+    ],
+    "reaper": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_scythe",
+          "value": 0.3
+        }
+      }
+    ],
+    "grim_harvest": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "grim_harvest",
+          "value": 1
+        }
+      }
+    ],
+    "earthbound": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "earthbound",
+          "value": 0.5
         }
       }
     ]
@@ -445,6 +766,43 @@
           "value": 0.04
         }
       }
+    ],
+    "trident_master": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_polearm",
+          "value": 0.3
+        }
+      }
+    ],
+    "tidecaller": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "tide_spell",
+          "value": 0.04
+        }
+      }
+    ],
+    "riptide_runner": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "forge:swim_speed",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ],
+    "seas_blessing": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "seas_blessing",
+          "value": 1
+        }
+      }
     ]
   },
   "cook": {
@@ -463,6 +821,40 @@
         "data": {
           "perk": "well_fed",
           "value": 0.02
+        }
+      }
+    ],
+    "iron_stomach": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "iron_stomach",
+          "value": 2
+        }
+      }
+    ],
+    "brain_food": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "brain_regen",
+          "value": 0.15
+        }
+      }
+    ],
+    "warriors_feast": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "well_fed",
+          "value": 0.1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "feast_spell",
+          "value": 0.1
         }
       }
     ]
@@ -557,6 +949,33 @@
         "data": {
           "perk": "ammo_save",
           "value": 0.3
+        }
+      }
+    ],
+    "eagle_eye": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_speed",
+          "value": 0.1
+        }
+      }
+    ],
+    "thrower": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown",
+          "value": 0.08
+        }
+      }
+    ],
+    "skirmisher": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "skirmish_speed",
+          "value": 0.1
         }
       }
     ]

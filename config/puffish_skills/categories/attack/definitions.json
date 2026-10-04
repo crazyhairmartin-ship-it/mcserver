@@ -172,7 +172,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "combat_speed",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "footwork_2": {
     "title": "Footwork",
@@ -190,7 +199,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "combat_speed",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "footwork_3": {
     "title": "Footwork",
@@ -208,7 +226,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "combat_speed",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "footwork_4": {
     "title": "Footwork",
@@ -226,7 +253,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "combat_speed",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "footwork_5": {
     "title": "Footwork",
@@ -244,7 +280,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "combat_speed",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "butcher_1": {
     "title": "Butcher",
@@ -495,7 +540,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spellblade_mana",
+          "value": 1
+        }
+      }
+    ]
   },
   "spellblade_2": {
     "title": "Spellblade",
@@ -513,7 +567,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spellblade_mana",
+          "value": 1
+        }
+      }
+    ]
   },
   "spellblade_3": {
     "title": "Spellblade",
@@ -531,7 +594,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spellblade_mana",
+          "value": 1
+        }
+      }
+    ]
   },
   "momentum_1": {
     "title": "Momentum",
@@ -549,7 +621,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "momentum",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "momentum_2": {
     "title": "Momentum",
@@ -567,7 +648,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "momentum",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
@@ -603,7 +693,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Duelist."
+    "extra_description": "Pick one: this or Duelist.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_two_handed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "heavy_arms_2": {
     "title": "Heavy Arms",
@@ -622,7 +721,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Duelist."
+    "extra_description": "Pick one: this or Duelist.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_two_handed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "heavy_arms_3": {
     "title": "Heavy Arms",
@@ -641,7 +749,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Duelist."
+    "extra_description": "Pick one: this or Duelist.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_two_handed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -677,7 +794,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Heavy Arms."
+    "extra_description": "Pick one: this or Heavy Arms.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "duelist_speed",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "duelist_2": {
     "title": "Duelist",
@@ -696,7 +822,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Heavy Arms."
+    "extra_description": "Pick one: this or Heavy Arms.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "duelist_speed",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "duelist_3": {
     "title": "Duelist",
@@ -715,7 +850,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Heavy Arms."
+    "extra_description": "Pick one: this or Heavy Arms.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "duelist_speed",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -895,7 +1039,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hunters_mark",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "hunters_mark_2": {
     "title": "Hunter's Mark",
@@ -913,7 +1066,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hunters_mark",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "hunters_mark_3": {
     "title": "Hunter's Mark",
@@ -931,7 +1093,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hunters_mark",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "shield_bash_1": {
     "title": "Shield Bash",
@@ -949,7 +1120,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "shield_bash",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "shield_bash_2": {
     "title": "Shield Bash",
@@ -967,7 +1147,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "shield_bash",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "shield_bash_3": {
     "title": "Shield Bash",
@@ -985,7 +1174,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "shield_bash",
+          "value": 0.2
+        }
+      }
+    ]
   },
   "executioner_1": {
     "title": "Executioner",
@@ -1074,7 +1272,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "lifeline",
+          "value": 1
+        }
+      }
+    ]
   },
   "lifeline_2": {
     "title": "Lifeline",
@@ -1092,7 +1299,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "lifeline",
+          "value": 1
+        }
+      }
+    ]
   },
   "cleave_1": {
     "title": "Cleave",
@@ -1111,7 +1327,16 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Flurry."
+    "extra_description": "Pick one: this or Flurry.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "cleave",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "tier_5_or": {
     "title": "OR",
@@ -1147,6 +1372,15 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Cleave."
+    "extra_description": "Pick one: this or Cleave.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "flurry",
+          "value": 1
+        }
+      }
+    ]
   }
 }

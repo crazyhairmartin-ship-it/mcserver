@@ -248,7 +248,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_scythe",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "reaper_2": {
     "title": "Reaper",
@@ -266,7 +275,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_scythe",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "reaper_3": {
     "title": "Reaper",
@@ -284,7 +302,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_scythe",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "reaper_4": {
     "title": "Reaper",
@@ -302,7 +329,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_scythe",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "reaper_5": {
     "title": "Reaper",
@@ -320,7 +356,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_scythe",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "tier_2_label": {
     "title": "Tier 2 \u00b7 5 points",
@@ -609,7 +654,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Gardener."
+    "extra_description": "Pick one: this or Gardener.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "grim_harvest",
+          "value": 1
+        }
+      }
+    ]
   },
   "grim_harvest_2": {
     "title": "Grim Harvest",
@@ -628,7 +682,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Gardener."
+    "extra_description": "Pick one: this or Gardener.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "grim_harvest",
+          "value": 1
+        }
+      }
+    ]
   },
   "grim_harvest_3": {
     "title": "Grim Harvest",
@@ -647,7 +710,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Gardener."
+    "extra_description": "Pick one: this or Gardener.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "grim_harvest",
+          "value": 1
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -822,7 +894,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "earthbound",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "earthbound_2": {
     "title": "Earthbound",
@@ -840,7 +921,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "earthbound",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "earthbound_3": {
     "title": "Earthbound",
@@ -858,7 +948,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "earthbound",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "sweeping_harvest_1": {
     "title": "Sweeping Harvest",

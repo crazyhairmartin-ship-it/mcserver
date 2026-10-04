@@ -499,7 +499,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "brain_regen",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "brain_food_2": {
     "title": "Brain Food",
@@ -517,7 +526,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "brain_regen",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "brain_food_3": {
     "title": "Brain Food",
@@ -535,7 +553,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "brain_regen",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
@@ -645,7 +672,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Chef."
+    "extra_description": "Pick one: this or Chef.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "iron_stomach",
+          "value": 2
+        }
+      }
+    ]
   },
   "iron_stomach_2": {
     "title": "Iron Stomach",
@@ -664,7 +700,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Chef."
+    "extra_description": "Pick one: this or Chef.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "iron_stomach",
+          "value": 2
+        }
+      }
+    ]
   },
   "iron_stomach_3": {
     "title": "Iron Stomach",
@@ -683,7 +728,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Chef."
+    "extra_description": "Pick one: this or Chef.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "iron_stomach",
+          "value": 2
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -1047,6 +1101,22 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Feast Maker."
+    "extra_description": "Pick one: this or Feast Maker.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "well_fed",
+          "value": 0.1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "feast_spell",
+          "value": 0.1
+        }
+      }
+    ]
   }
 }

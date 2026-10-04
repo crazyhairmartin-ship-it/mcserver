@@ -221,7 +221,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_polearm",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "trident_master_2": {
     "title": "Trident Master",
@@ -239,7 +248,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_polearm",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "trident_master_3": {
     "title": "Trident Master",
@@ -257,7 +275,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_polearm",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "trident_master_4": {
     "title": "Trident Master",
@@ -275,7 +302,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_polearm",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "trident_master_5": {
     "title": "Trident Master",
@@ -293,7 +329,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "dmg_polearm",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "tier_2_label": {
     "title": "Tier 2 \u00b7 5 points",
@@ -463,7 +508,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "tide_spell",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "tidecaller_2": {
     "title": "Tidecaller",
@@ -481,7 +535,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "tide_spell",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "tidecaller_3": {
     "title": "Tidecaller",
@@ -499,7 +562,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "tide_spell",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
@@ -609,7 +681,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Treasure Hunter."
+    "extra_description": "Pick one: this or Treasure Hunter.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "forge:swim_speed",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "riptide_runner_2": {
     "title": "Riptide Runner",
@@ -628,7 +710,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Treasure Hunter."
+    "extra_description": "Pick one: this or Treasure Hunter.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "forge:swim_speed",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "riptide_runner_3": {
     "title": "Riptide Runner",
@@ -647,7 +739,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Treasure Hunter."
+    "extra_description": "Pick one: this or Treasure Hunter.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "forge:swim_speed",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -1110,6 +1212,15 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Leviathan Bait."
+    "extra_description": "Pick one: this or Leviathan Bait.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "seas_blessing",
+          "value": 1
+        }
+      }
+    ]
   }
 }
