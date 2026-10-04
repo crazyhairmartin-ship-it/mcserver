@@ -7,7 +7,8 @@
   "client": [
     "SkillsScreenMixin",
     "ArsManaHudMixin",
-    "ParcoolDodgeMixin"
+    "ParcoolDodgeMixin",
+    "ContainerScreenAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
