@@ -15,7 +15,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)/fotfskills perks$() lists every perk you have. Situational buffs (forests, combat, full hunger...) show beside your inventory when active.$(br2)$(l)/fotfskills levelups off$() hides level-up messages; $(l)on$() brings them back.",
+      "text": "$(l)/fotfskills perks$() lists every perk you have. Situational buffs (forests, combat, full hunger...) and your total level: click the $(l)star button$() beside your inventory.$(br2)Level-up messages are short: open chat and point at one to read the details.$(br2)$(l)/fotfskills levelups off$() hides them; $(l)on$() brings them back.",
       "title": "Perks"
     },
     {
@@ -25,7 +25,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Place a $(l)Pet Bed$() and let your pet walk onto it once: if it dies, it comes back at its bed the next morning (someone has to be nearby at sunrise).$(br2)Taming's $(l)Soul Mender$() gives a chance that a pet survives a killing blow on full health.",
+      "text": "Place a $(l)Pet Bed$() and let your pet walk onto it once: if it dies, it comes back at its bed the next morning (someone has to be nearby at sunrise).$(br2)Taming's $(l)Ferality$() gives a chance that a pet survives a killing blow and turns feral: full health, extra hearts and Strength II for 15 seconds.",
       "title": "Pets"
     }
   ]

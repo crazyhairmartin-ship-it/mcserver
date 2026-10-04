@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Build your own spells from pieces called glyphs, and make magical helpers that farm, carry items and craft for you."
+      "text": "Ars magic without the spells: gather $(l)source$(), build its machines, perform rituals and bind familiars and helpers that farm, carry items and craft for you. (Spellcasting is Iron's job here.)$(br2)Ars mage armour and mana enchantments still raise your mana."
     },
     {
       "type": "patchouli:crafting",

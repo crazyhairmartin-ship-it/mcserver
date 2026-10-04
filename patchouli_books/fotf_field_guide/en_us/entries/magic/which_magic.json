@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)Iron's Spells$(): easy to start, flashy fights, loot from dungeons.$(br2)$(l)Ars Nouveau$(): design your own spells, flying ritual, cute helpers for your base.$(br2)You can use both!"
+      "text": "$(l)Iron's Spells$() is where you cast spells.$(br2)$(l)Ars Nouveau$() is for source, rituals and helpers for your base, and its gear adds to your one mana bar.$(br2)Both feed the Magic skill tree."
     }
   ]
 }

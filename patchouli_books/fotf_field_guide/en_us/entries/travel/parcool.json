@@ -6,7 +6,12 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)ParCool$(): vault, wall-run, climb ledges, slide and roll.$(br2)Every move is unlocked from the start. To slide: sprint, then press $(l)C$()."
+      "text": "$(l)ParCool$(): parkour moves. Free from the start: sprint ($(l)Ctrl$()), crawl and slide ($(l)C$(), while sprinting to slide), vault, hang on ledges and climb up, pole climb, slide down walls, ziplines, fast swim, dive, breakfall and dodge ($(l)Mouse 4$())."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The athletic moves come from the $(l)Agility$() tree:$(li)$(l)Freerunner$(): wall run (sprint-jump along a wall, then press dodge), horizontal wall run, cast away (look away from the wall while hanging, then jump)$(li)$(l)Spring Step$(): wall jump, long jump (sprint a while, then tap sneak), charge jump$(li)$(l)Featherfall$(): skydive (crawl key while falling)$(li)$(l)Double Jump$(): jump again in mid-air, plus trick jumps",
+      "title": "Agility Moves"
     },
     {
       "type": "patchouli:crafting",

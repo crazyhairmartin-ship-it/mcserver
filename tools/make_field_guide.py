@@ -73,9 +73,9 @@ ENTRIES = [
     ('getting_started', 'skills', 'Skills & Levels', 'minecraft:experience_bottle', [
         text('You get better at things by doing them. There are 12 skills: Mining, Foraging, Farming, Fishing, Cooking, Crafting, Attack, Range, Defense, Agility, Magic and Taming. Each level up to 50 gives a point to spend in that skill\'s tree. Press $(l)K$() to open the skill menu.'),
         text('Trees have five tiers. Spending points in a tree opens the next tier (5, 10, 15, then 25 points). Tiers marked $(l)OR$() let you pick one of two branches. Hover a node to see what it does now (white) and what the next rank adds (grey). A full tree costs exactly 50 points.', 'Skill Trees'),
-        text('$(l)/fotfskills perks$() lists every perk you have. Situational buffs (forests, combat, full hunger...) show beside your inventory when active.$(br2)$(l)/fotfskills levelups off$() hides level-up messages; $(l)on$() brings them back.', 'Perks'),
+        text('$(l)/fotfskills perks$() lists every perk you have. Situational buffs (forests, combat, full hunger...) and your total level: click the $(l)star button$() beside your inventory.$(br2)Level-up messages are short: open chat and point at one to read the details.$(br2)$(l)/fotfskills levelups off$() hides them; $(l)on$() brings them back.', 'Perks'),
         text('Your $(l)total level$() (all 12 skills added up) gives extra hearts and ParCool stamina: the first at total level 8, all 15 by 256.$(br2)$(l)/fotfskills reset <tree>$() gives a tree\'s points back for 1 XP level per 2 points spent (at least 5).', 'Hearts & Resets'),
-        text('Place a $(l)Pet Bed$() and let your pet walk onto it once: if it dies, it comes back at its bed the next morning (someone has to be nearby at sunrise).$(br2)Taming\'s $(l)Soul Mender$() gives a chance that a pet survives a killing blow on full health.', 'Pets'),
+        text('Place a $(l)Pet Bed$() and let your pet walk onto it once: if it dies, it comes back at its bed the next morning (someone has to be nearby at sunrise).$(br2)Taming\'s $(l)Ferality$() gives a chance that a pet survives a killing blow and turns feral: full health, extra hearts and Strength II for 15 seconds.', 'Pets'),
     ]),
     ('getting_started', 'jei', 'Looking Things Up', 'minecraft:knowledge_book', [
         text('$(l)JEI$() is a list of every item in the pack. It starts hidden: press $(l)Ctrl+O$() to show it next to your inventory.$(br2)Hover an item and press:$(li)$(l)R$() to see how to make it$(li)$(l)U$() to see what it is used for'),
@@ -160,15 +160,15 @@ ENTRIES = [
 
     # ---------- Magic ----------
     ('magic', 'irons_spells', 'Iron\'s Spells', 'irons_spellbooks:copper_spell_book', [
-        text('Battle magic! Find spell $(l)scrolls$() in dungeons, put them in a $(l)spell book$(), then cast.$(br2)$(l)V$() casts your spell, $(l)R$() opens the spell wheel.'),
+        text('The pack\'s spell system. Find spell $(l)scrolls$() in dungeons, put them in a $(l)spell book$(), then cast.$(br2)$(l)V$() casts your spell, $(l)R$() opens the spell wheel.'),
         spot('patchouli:guide_book{"patchouli:book":"irons_spellbooks:iss_guide_book"}', 'The official guidebook explains schools of magic, gear and bosses. Get one with $(l)/guide spells$().'),
     ]),
     ('magic', 'ars_nouveau', 'Ars Nouveau', 'ars_nouveau:worn_notebook', [
-        text('Build your own spells from pieces called glyphs, and make magical helpers that farm, carry items and craft for you.'),
+        text('Ars magic without the spells: gather $(l)source$(), build its machines, perform rituals and bind familiars and helpers that farm, carry items and craft for you. (Spellcasting is Iron\'s job here.)$(br2)Ars mage armour and mana enchantments still raise your mana.'),
         craft('ars_nouveau:worn_notebook', 'Start with the $(l)Worn Notebook$(): craft one or type $(l)/guide ars$(). It teaches everything, step by step.'),
     ]),
     ('magic', 'which_magic', 'Which Magic?', 'minecraft:enchanted_book', [
-        text('$(l)Iron\'s Spells$(): easy to start, flashy fights, loot from dungeons.$(br2)$(l)Ars Nouveau$(): design your own spells, flying ritual, cute helpers for your base.$(br2)You can use both!'),
+        text('$(l)Iron\'s Spells$() is where you cast spells.$(br2)$(l)Ars Nouveau$() is for source, rituals and helpers for your base, and its gear adds to your one mana bar.$(br2)Both feed the Magic skill tree.'),
     ]),
 
     # ---------- Combat & Gear ----------
@@ -201,14 +201,15 @@ ENTRIES = [
 
     # ---------- Travel & Movement ----------
     ('travel', 'parcool', 'Parkour', 'parcool:parcool_guide', [
-        text('$(l)ParCool$(): vault, wall-run, climb ledges, slide and roll.$(br2)Every move is unlocked from the start. To slide: sprint, then press $(l)C$().'),
+        text('$(l)ParCool$(): parkour moves. Free from the start: sprint ($(l)Ctrl$()), crawl and slide ($(l)C$(), while sprinting to slide), vault, hang on ledges and climb up, pole climb, slide down walls, ziplines, fast swim, dive, breakfall and dodge ($(l)Mouse 4$()).'),
+        text('The athletic moves come from the $(l)Agility$() tree:$(li)$(l)Freerunner$(): wall run (sprint-jump along a wall, then press dodge), horizontal wall run, cast away (look away from the wall while hanging, then jump)$(li)$(l)Spring Step$(): wall jump, long jump (sprint a while, then tap sneak), charge jump$(li)$(l)Featherfall$(): skydive (crawl key while falling)$(li)$(l)Double Jump$(): jump again in mid-air, plus trick jumps', 'Agility Moves'),
         craft('parcool:parcool_guide', 'The $(l)ParCool Guide$() explains every move.'),
     ]),
     ('travel', 'gliding', 'Elytra', 'minecraft:elytra', [
         spot('minecraft:elytra', 'Elytra go in their own slot, so you can still wear a chestplate.'),
     ]),
     ('travel', 'grappling', 'Grappling Hook', 'grapplemod:grapplinghook', [
-        spot('grapplemod:grapplinghook', 'Left-click to throw, again to let go. Space jumps off. Hold Shift and W/S to climb the rope. Upgrades come from the $(l)Agility$() skill tree: Long Rope (longer rope), Hookmaster (faster throw, better swing), Motor Reel (pulls you in) and Twin Hooks (two hooks).'),
+        spot('grapplemod:grapplinghook', 'Left-click to throw, again to let go. Space jumps off. Hold Shift and W/S to climb the rope. Upgrades come from the $(l)Agility$() skill tree: Long Rope (longer rope), Hookmaster (faster throw, better swing) and Motor Reel (pulls you in).'),
     ]),
     ('travel', 'aircraft', 'Aircraft', 'immersive_aircraft:gyrodyne', [
         spot('immersive_aircraft:gyrodyne', 'Start with a $(l)Gyrodyne$(): it needs no fuel. Later build biplanes and airships. Look them up in JEI.'),
