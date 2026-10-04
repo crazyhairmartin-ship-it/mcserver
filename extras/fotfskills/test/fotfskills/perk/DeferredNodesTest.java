@@ -50,6 +50,16 @@ public final class DeferredNodesTest {
         check(Breeding.cooldown(6000, 0.5) == 3000, "half the breeding cooldown");
         check(Breeding.cooldown(6000, 0) == 6000 && Breeding.cooldown(6000, 2) == 600, "no perk unchanged; never under 30 s");
 
+        // Steady Hands: deterministic extra draw ticks (client and server agree)
+        int drawn = 0, drawTicks = 0;
+        for (int elapsed = 0; drawn < 20; drawTicks++) {
+            int e = DrawRule.extra(elapsed, 0.25);
+            drawn += 1 + e;
+            elapsed += 1 + e;
+        }
+        check(drawTicks >= 16 && drawTicks <= 17, "25% faster: a 20-tick draw takes 16-17 ticks (got " + drawTicks + ")");
+        check(DrawRule.extra(5, 0) == 0, "no perk, no extra");
+
         // Seeker fix: Arcane Arrows only spends mana on a real full draw, not a crit Seeker added
         check(!RangePerks.arcaneShot(false, 1), "Seeker crit on a quick shot: no mana spent");
         check(RangePerks.arcaneShot(true, 1) && !RangePerks.arcaneShot(true, 0), "full draw with the perk only");

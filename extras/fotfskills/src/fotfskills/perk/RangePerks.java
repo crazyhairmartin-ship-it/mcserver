@@ -28,7 +28,8 @@ import net.minecraftforge.items.ItemHandlerHelper;
 /**
  * Arrows: Homing Arrows and Seeker (curve toward the nearest hostile mob; Seeker triples the chance and makes them
  * crits), Multishot (two extra un-pickable arrows), Arcane Arrows (a full-draw arrow spends 5 mana for bonus damage).
- * Thrown weapons: Retriever (may come straight back to your inventory on impact).
+ * Thrown weapons: Retriever (may fly back to you on impact: Spartan weapons and tridents use their own return, so the
+ * catch keeps the right ammo count and nothing is left on the ground; other mods' weapons go straight to the inventory).
  */
 public final class RangePerks {
     private record Homer(AbstractArrow arrow, long until) {
@@ -143,9 +144,9 @@ public final class RangePerks {
         if (thrown instanceof ThrownTrident && EnchantmentHelper.m_44843_(Enchantments.f_44955_, Projectiles.item(thrown)) > 0) {
             return;                                   // Loyalty already brings it back
         }
-        if (Perks.roll(player, "retriever")) {
+        if (Perks.roll(player, "retriever") && !ReturnHelper.sendBack(thrown)) {
             thrown.f_36705_ = AbstractArrow.Pickup.CREATIVE_ONLY;
-            retrieving.add(new Retrieve(player, thrown));     // the hit still lands; the weapon comes back next tick
+            retrieving.add(new Retrieve(player, thrown));     // other mods' weapons: back to the inventory next tick
         }
     }
 }

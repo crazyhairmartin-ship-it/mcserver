@@ -13,7 +13,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.UseAnim;
 import net.minecraftforge.event.entity.living.LivingEntityUseItemEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
 /**
@@ -60,7 +59,13 @@ public final class DrinkPerks {
             }
         }
         if (Perks.roll(player, "brewer_save")) {
-            ItemHandlerHelper.giveItemToPlayer(player, event.getItem().m_255036_(1));
+            ItemStack drink = event.getItem();                     // the stack as it was before the sip
+            boolean wasStack = drink.m_41613_() > 1;
+            event.setResultStack(drink.m_255036_(drink.m_41613_()));   // the sipped drink comes back (no empty cup)
+            net.minecraft.world.item.Item cup = drink.m_41720_().m_41469_();
+            if (wasStack && cup != null) {                         // stacked drinks put their cup in the inventory: take it
+                player.m_150109_().m_36022_(s -> s.m_150930_(cup), 1, player.f_36095_.m_39730_());
+            }
         }
     }
 }

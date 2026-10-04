@@ -48,13 +48,22 @@ public final class CombatPerks {
         }
     }
 
-    /** Steady Hands / Rapid Volley: an extra tick of draw with the perk's chance (server decides arrow power). */
+    /**
+     * Steady Hands / Rapid Volley: bows, crossbows and charged throwing weapons (tridents, javelins, knives) draw faster.
+     * Runs on the client too (synced perk totals) with a deterministic rule, so the animation and the server agree.
+     */
     @SubscribeEvent
     public void onUseTick(LivingEntityUseItemEvent.Tick event) {
-        if (event.getEntity() instanceof ServerPlayer player
-                && (event.getItem().m_41720_() instanceof BowItem || event.getItem().m_41720_() instanceof CrossbowItem)
-                && Perks.random() < Perks.get(player, "draw_speed") && event.getDuration() > 1) {
-            event.setDuration(event.getDuration() - 1);
+        if (!(event.getEntity() instanceof net.minecraft.world.entity.player.Player player)) {
+            return;
+        }
+        ItemStack item = event.getItem();
+        if (!(item.m_41720_() instanceof BowItem || item.m_41720_() instanceof CrossbowItem || Weapons.is(item, "thrown"))) {
+            return;
+        }
+        int extra = DrawRule.extra(item.m_41779_() - event.getDuration(), Perks.get(player, "draw_speed"));
+        if (extra > 0 && event.getDuration() > extra) {
+            event.setDuration(event.getDuration() - extra);
         }
     }
 
