@@ -189,11 +189,7 @@ def test_combat_xp_is_from_hits_and_defense_ignores_environment():
     assert types['attack'] == ['puffish_skills:deal_damage']
     assert types['range'] == ['puffish_skills:deal_damage']
     assert 'puffish_skills:kill_entity' not in sum(types.values(), [])
-    assert set(types['defense']) == {'puffish_skills:take_damage', 'fotfskills:shield_block'}
-    defense = g.build_category(tree('defense'), TIERS, xp=XP)['experience.json']['sources']
-    taken = [s for s in defense if s['type'] == 'puffish_skills:take_damage']
-    assert len(taken) == 2   # one source for melee hits, one for projectile hits: falls/fire/drowning match neither
-    assert {op['type'] for s in taken for op in s['data']['variables']['counts']['operations']} >= {'get_damage_source'}
+    assert set(types['defense']) == {'fotfskills:take_hit', 'fotfskills:shield_block'}   # per-attacker limit, no self/environment damage
 
 
 def test_no_experience_file_without_xp_data():

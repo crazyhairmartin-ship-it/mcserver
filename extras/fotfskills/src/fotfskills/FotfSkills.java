@@ -1,6 +1,5 @@
 package fotfskills;
 
-import fotfskills.xp.ArsCastXp;
 import fotfskills.xp.ForgeXpEvents;
 import fotfskills.xp.IronsCastXp;
 import fotfskills.xp.XpSources;
@@ -16,9 +15,6 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new ForgeXpEvents());
         if (ModList.get().isLoaded("irons_spellbooks")) {
             MinecraftForge.EVENT_BUS.register(new IronsCastXp());
-        }
-        if (ModList.get().isLoaded("ars_nouveau")) {
-            MinecraftForge.EVENT_BUS.register(new ArsCastXp());
         }
     }
 }

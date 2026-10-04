@@ -5,16 +5,21 @@ import java.util.Map;
 import java.util.UUID;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraftforge.event.TickEvent;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraftforge.event.entity.living.AnimalTameEvent;
+import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.event.entity.living.ShieldBlockEvent;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.puffish.skillsmod.api.SkillsAPI;
 
-/** Taming, shield blocks (Defense) and sprinting/climbing distance (Agility). */
+/** Taming, hits taken and shield blocks (Defense, capped per attacker), and sprinting/climbing distance (Agility). */
 public final class ForgeXpEvents {
     private final Map<UUID, double[]> lastPos = new HashMap<>();
     private final Map<UUID, MoveBank> banks = new HashMap<>();
+    /** At most 30 damage per attacker per 5 minutes earns Defense XP (hits and blocks together). */
+    private final HitLimiter limiter = new HitLimiter(30, 6000);
 
     @SubscribeEvent
     public void onTame(AnimalTameEvent event) {
@@ -25,9 +30,23 @@ public final class ForgeXpEvents {
 
     @SubscribeEvent
     public void onShieldBlock(ShieldBlockEvent event) {
-        if (event.getEntity() instanceof ServerPlayer player && event.getDamageSource().m_7639_() != null
-                && event.getDamageSource().m_7639_() != player) {
-            AmountSource.award(player, "shield_block", event.getBlockedDamage());
+        if (event.getEntity() instanceof ServerPlayer player) {
+            defense(player, event.getDamageSource().m_7639_(), event.getBlockedDamage(), "shield_block");
+        }
+    }
+
+    /** Hits from living attackers only: falls, fire, drowning and your own arrows or TNT give nothing. */
+    @SubscribeEvent
+    public void onHurt(LivingHurtEvent event) {
+        if (event.getEntity() instanceof ServerPlayer player) {
+            defense(player, event.getSource().m_7639_(), event.getAmount(), "take_hit");
+        }
+    }
+
+    private void defense(ServerPlayer player, Entity attacker, float amount, String kind) {
+        if (attacker instanceof LivingEntity && attacker != player) {
+            double granted = limiter.grant(player.m_20148_(), attacker.m_20148_(), amount, player.m_9236_().m_46467_());
+            AmountSource.award(player, kind, granted);
         }
     }
 
@@ -56,5 +75,6 @@ public final class ForgeXpEvents {
         UUID id = event.getEntity().m_20148_();
         lastPos.remove(id);
         banks.remove(id);
+        limiter.removePlayer(id);
     }
 }

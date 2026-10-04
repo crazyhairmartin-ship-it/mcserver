@@ -13,6 +13,7 @@ public final class XpSources {
     public static void register() {
         source("cast_spell", "per_mana");
         source("tame", "experience");
+        source("take_hit", "per_damage");
         source("shield_block", "per_damage");
         source("cook", "per_nutrition");
         source("craft_gear", "per_item");
