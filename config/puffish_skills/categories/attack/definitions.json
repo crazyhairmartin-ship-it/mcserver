@@ -605,6 +605,33 @@
       }
     ]
   },
+  "spellblade_4": {
+    "title": "Spellblade",
+    "description": "Melee hits restore 4 mana",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lapis_lazuli"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spellblade_mana",
+          "value": 1
+        }
+      }
+    ]
+  },
   "momentum_1": {
     "title": "Momentum",
     "description": "Hits in a row +5% damage (stacks 3)",
@@ -633,6 +660,33 @@
     ]
   },
   "momentum_2": {
+    "title": "Momentum",
+    "description": "Hits in a row +5% damage (stacks 3)",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:blaze_powder"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "momentum",
+          "value": 0.05
+        }
+      }
+    ]
+  },
+  "momentum_3": {
     "title": "Momentum",
     "description": "Hits in a row +5% damage (stacks 3)",
     "icon": {
@@ -1104,6 +1158,33 @@
       }
     ]
   },
+  "hunters_mark_4": {
+    "title": "Hunter's Mark",
+    "description": "Melee hits mark a target: your arrows deal +20% to it",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:target"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hunters_mark",
+          "value": 0.05
+        }
+      }
+    ]
+  },
   "shield_bash_1": {
     "title": "Shield Bash",
     "description": "Hitting right after a block deals +20% damage",
@@ -1185,6 +1266,33 @@
       }
     ]
   },
+  "shield_bash_4": {
+    "title": "Shield Bash",
+    "description": "Hitting right after a block deals +80% damage",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:shield"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "shield_bash",
+          "value": 0.2
+        }
+      }
+    ]
+  },
   "executioner_1": {
     "title": "Executioner",
     "description": "+15% damage to mobs under 30% health",
@@ -1213,6 +1321,33 @@
     ]
   },
   "executioner_2": {
+    "title": "Executioner",
+    "description": "+15% damage to mobs under 30% health",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:wither_skeleton_skull"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "executioner",
+          "value": 0.15
+        }
+      }
+    ]
+  },
+  "executioner_3": {
     "title": "Executioner",
     "description": "+15% damage to mobs under 30% health",
     "icon": {
@@ -1284,6 +1419,33 @@
     ]
   },
   "lifeline_2": {
+    "title": "Lifeline",
+    "description": "Crits heal half a heart",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:glistering_melon_slice"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "lifeline",
+          "value": 1
+        }
+      }
+    ]
+  },
+  "lifeline_3": {
     "title": "Lifeline",
     "description": "Crits heal half a heart",
     "icon": {

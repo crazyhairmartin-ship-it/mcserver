@@ -73,7 +73,7 @@ public final class FarmPerks {
 
     /** Sweeping Harvest: called from BlockPerks.onBroken for a mature crop broken with a scythe. */
     public static void sweep(ServerPlayer player, BlockPos pos, BlockState state) {
-        int radius = (int) Math.round(Perks.get(player, "sweeping_harvest"));
+        int radius = Math.min(2, (int) Math.round(Perks.get(player, "sweeping_harvest")));   // 3x3, then 5x5
         if (sweeping || radius <= 0 || !Weapons.is(player.m_21205_(), "scythe")) {
             return;
         }

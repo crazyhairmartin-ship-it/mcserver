@@ -474,6 +474,33 @@
       }
     ]
   },
+  "extra_serving_4": {
+    "title": "Extra Serving",
+    "description": "20% for one extra meal",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:mushroom_stew"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "extra_serving",
+          "value": 0.05
+        }
+      }
+    ]
+  },
   "hearty_meals_1": {
     "title": "Hearty Meals",
     "description": "+10% saturation",
@@ -1076,6 +1103,33 @@
       }
     ]
   },
+  "trail_rations_4": {
+    "title": "Trail Rations",
+    "description": "Sprinting and ParCool moves drain 40% less hunger",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:cookie"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "trail_rations",
+          "value": 0.1
+        }
+      }
+    ]
+  },
   "brewer_1": {
     "title": "Brewer",
     "description": "Let's Do drinks save ingredients and their buffs last longer",
@@ -1113,6 +1167,24 @@
     "required_spent_points": 15
   },
   "brewer_3": {
+    "title": "Brewer",
+    "description": "Let's Do drinks save ingredients and their buffs last longer",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:honey_bottle"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "brewer_4": {
     "title": "Brewer",
     "description": "Let's Do drinks save ingredients and their buffs last longer",
     "icon": {
@@ -1184,6 +1256,33 @@
       }
     ]
   },
+  "pet_treats_3": {
+    "title": "Pet Treats",
+    "description": "Food you cook heals pets more and gives them a short buff",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:bone"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pet_treats",
+          "value": 5
+        }
+      }
+    ]
+  },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",
     "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
@@ -1229,6 +1328,33 @@
     ]
   },
   "picnic_2": {
+    "title": "Picnic",
+    "description": "Eating near party members heals you and them a little",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:apple"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "picnic",
+          "value": 1
+        }
+      }
+    ]
+  },
+  "picnic_3": {
     "title": "Picnic",
     "description": "Eating near party members heals you and them a little",
     "icon": {

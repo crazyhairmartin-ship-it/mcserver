@@ -43,6 +43,9 @@ public final class ItemPerks {
                 }
             }
         }
+        if (craftingGrid && Refund.eligible(ids)) {
+            fotfskills.xp.AmountSource.award(player, "craft_any", 1);    // any real recipe (no compress/decompress loops)
+        }
         if (craftingGrid && Refund.eligible(ids) && !refundable.isEmpty()) {
             if (Perks.roll(player, "craft_free")) {
                 refundable.forEach(stack -> ItemHandlerHelper.giveItemToPlayer(player, stack));

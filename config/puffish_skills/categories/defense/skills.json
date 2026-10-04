@@ -93,6 +93,11 @@
     "y": 34,
     "definition": "iron_skin_3"
   },
+  "iron_skin_4": {
+    "x": -15,
+    "y": 34,
+    "definition": "iron_skin_4"
+  },
   "shield_thorns_1": {
     "x": 15,
     "y": 34,
@@ -213,6 +218,11 @@
     "y": 102,
     "definition": "guardian_3"
   },
+  "guardian_4": {
+    "x": -15,
+    "y": 102,
+    "definition": "guardian_4"
+  },
   "counter_1": {
     "x": 15,
     "y": 102,
@@ -223,6 +233,11 @@
     "x": 15,
     "y": 102,
     "definition": "counter_2"
+  },
+  "counter_3": {
+    "x": 15,
+    "y": 102,
+    "definition": "counter_3"
   },
   "fire_ward_1": {
     "x": 45,
@@ -235,6 +250,11 @@
     "y": 102,
     "definition": "fire_ward_2"
   },
+  "fire_ward_3": {
+    "x": 45,
+    "y": 102,
+    "definition": "fire_ward_3"
+  },
   "blast_ward_1": {
     "x": 75,
     "y": 102,
@@ -245,6 +265,11 @@
     "x": 75,
     "y": 102,
     "definition": "blast_ward_2"
+  },
+  "blast_ward_3": {
+    "x": 75,
+    "y": 102,
+    "definition": "blast_ward_3"
   },
   "tier_5_label": {
     "x": -60,
@@ -261,6 +286,11 @@
     "x": -30,
     "y": 136,
     "definition": "armour_care_2"
+  },
+  "armour_care_3": {
+    "x": -30,
+    "y": 136,
+    "definition": "armour_care_3"
   },
   "second_wind_1": {
     "x": 0,

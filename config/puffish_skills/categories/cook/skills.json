@@ -103,6 +103,11 @@
     "y": 34,
     "definition": "extra_serving_3"
   },
+  "extra_serving_4": {
+    "x": -15,
+    "y": 34,
+    "definition": "extra_serving_4"
+  },
   "hearty_meals_1": {
     "x": 15,
     "y": 34,
@@ -223,6 +228,11 @@
     "y": 102,
     "definition": "trail_rations_3"
   },
+  "trail_rations_4": {
+    "x": 0,
+    "y": 102,
+    "definition": "trail_rations_4"
+  },
   "brewer_1": {
     "x": 30,
     "y": 102,
@@ -239,6 +249,11 @@
     "y": 102,
     "definition": "brewer_3"
   },
+  "brewer_4": {
+    "x": 30,
+    "y": 102,
+    "definition": "brewer_4"
+  },
   "pet_treats_1": {
     "x": 60,
     "y": 102,
@@ -249,6 +264,11 @@
     "x": 60,
     "y": 102,
     "definition": "pet_treats_2"
+  },
+  "pet_treats_3": {
+    "x": 60,
+    "y": 102,
+    "definition": "pet_treats_3"
   },
   "tier_5_label": {
     "x": -60,
@@ -265,6 +285,11 @@
     "x": -30,
     "y": 136,
     "definition": "picnic_2"
+  },
+  "picnic_3": {
+    "x": -30,
+    "y": 136,
+    "definition": "picnic_3"
   },
   "feast_maker_1": {
     "x": 0,

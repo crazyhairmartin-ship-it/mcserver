@@ -47,6 +47,9 @@ public final class ShieldPerks {
         double cost = event.getAmount() * 4 / (1 + shield);
         if (Mana.spend(player, cost)) {
             event.setCanceled(true);
+            player.m_5661_(net.minecraft.network.chat.Component.m_237113_("\u00a7bMana Shield \u00a77blocked " + Math.round(event.getAmount())
+                    + " damage (-" + Math.round(cost) + " mana)"), true);
+            player.m_6330_(net.minecraft.sounds.SoundEvents.f_144243_, net.minecraft.sounds.SoundSource.PLAYERS, 0.8f, 1.6f);
             double aegis = Perks.get(player, "arcane_aegis");
             if (aegis > 0) {
                 living.m_6469_(player.m_269291_().m_269425_(), (float) (event.getAmount() * aegis));

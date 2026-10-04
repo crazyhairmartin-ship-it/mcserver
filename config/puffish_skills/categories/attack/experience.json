@@ -32,7 +32,7 @@
         "experience": [
           {
             "condition": "melee",
-            "expression": "max(damage, 1)"
+            "expression": "max(damage * 0.6, 1)"
           }
         ],
         "anti_farming_per_entity": {

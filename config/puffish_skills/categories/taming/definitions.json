@@ -948,6 +948,33 @@
       }
     ]
   },
+  "pack_tactics_4": {
+    "title": "Pack Tactics",
+    "description": "Pets deal more damage to your target",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:fox_spawn_egg"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pack_tactics",
+          "value": 0.1
+        }
+      }
+    ]
+  },
   "loyal_guard_1": {
     "title": "Loyal Guard",
     "description": "8% that a nearby pet leaps in and blocks a hit: no damage to you or the pet",
@@ -1029,6 +1056,33 @@
       }
     ]
   },
+  "loyal_guard_4": {
+    "title": "Loyal Guard",
+    "description": "32% that a nearby pet leaps in and blocks a hit: no damage to you or the pet",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:shield"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "loyal_guard",
+          "value": 0.08
+        }
+      }
+    ]
+  },
   "bloodlines_1": {
     "title": "Bloodlines",
     "description": "Bred animals have a better chance of rare colours and variants",
@@ -1066,6 +1120,24 @@
     "required_spent_points": 15
   },
   "bloodlines_3": {
+    "title": "Bloodlines",
+    "description": "Bred animals have a better chance of rare colours and variants",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lime_dye"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "bloodlines_4": {
     "title": "Bloodlines",
     "description": "Bred animals have a better chance of rare colours and variants",
     "icon": {

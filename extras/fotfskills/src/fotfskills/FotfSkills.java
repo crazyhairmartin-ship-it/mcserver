@@ -35,6 +35,11 @@ public final class FotfSkills {
     public FotfSkills() {
         XpSources.register();
         PerkReward.register();
+        fotfskills.perk.LevelUps.register();
+        MinecraftForge.EVENT_BUS.register(new fotfskills.perk.FotfCommands());
+        if (net.minecraftforge.fml.loading.FMLEnvironment.dist.isClient()) {
+            fotfskills.client.ClientInit.register();
+        }
         PerkSync.register();
         MinecraftForge.EVENT_BUS.register(new PerkSync());
         MinecraftForge.EVENT_BUS.register(new BlockPerks());

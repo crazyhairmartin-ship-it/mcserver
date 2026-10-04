@@ -1022,6 +1022,33 @@
       }
     ]
   },
+  "hook_shot_3": {
+    "title": "Hook Shot",
+    "description": "Your rod yanks mobs harder and deals 2 damage",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:tripwire_hook"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_shot",
+          "value": 1
+        }
+      }
+    ]
+  },
   "sushi_chef_1": {
     "title": "Sushi Chef",
     "description": "Fish dishes you cook give Water Breathing and extra saturation",
@@ -1103,6 +1130,33 @@
       }
     ]
   },
+  "sushi_chef_4": {
+    "title": "Sushi Chef",
+    "description": "Fish dishes you cook give Water Breathing and extra saturation",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:cooked_salmon"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sushi_chef",
+          "value": 1
+        }
+      }
+    ]
+  },
   "lure_master_1": {
     "title": "Lure Master",
     "description": "Aquaculture lures work better",
@@ -1140,6 +1194,24 @@
     "required_spent_points": 15
   },
   "lure_master_3": {
+    "title": "Lure Master",
+    "description": "Aquaculture lures work better",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:glow_ink_sac"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "lure_master_4": {
     "title": "Lure Master",
     "description": "Aquaculture lures work better",
     "icon": {
@@ -1228,6 +1300,33 @@
       }
     ]
   },
+  "storm_fisher_3": {
+    "title": "Storm Fisher",
+    "description": "Faster bites in rain",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lightning_rod"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "rain_bite_speed",
+          "value": 0.1
+        }
+      }
+    ]
+  },
   "sea_legs_1": {
     "title": "Sea Legs",
     "description": "Boats go 5% faster",
@@ -1258,6 +1357,33 @@
   "sea_legs_2": {
     "title": "Sea Legs",
     "description": "Boats go 10% faster",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:birch_boat"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sea_legs",
+          "value": 0.05
+        }
+      }
+    ]
+  },
+  "sea_legs_3": {
+    "title": "Sea Legs",
+    "description": "Boats go 15% faster",
     "icon": {
       "type": "item",
       "data": {

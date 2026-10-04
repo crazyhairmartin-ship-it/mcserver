@@ -100,7 +100,7 @@
         "type": "puffish_skills:fish_item",
         "data": {
           "variables": {},
-          "experience": "8"
+          "experience": "25"
         }
       }
     ],
@@ -116,7 +116,13 @@
       {
         "type": "fotfskills:craft_gear",
         "data": {
-          "per_item": 5
+          "per_item": 25
+        }
+      },
+      {
+        "type": "fotfskills:craft_any",
+        "data": {
+          "per_item": 2
         }
       },
       {
@@ -140,7 +146,7 @@
           "experience": [
             {
               "condition": "ingot",
-              "expression": "1"
+              "expression": "2"
             }
           ]
         }
@@ -172,7 +178,7 @@
           "experience": [
             {
               "condition": "melee",
-              "expression": "max(damage, 1)"
+              "expression": "max(damage * 0.6, 1)"
             }
           ],
           "anti_farming_per_entity": {
@@ -222,13 +228,13 @@
       {
         "type": "fotfskills:take_hit",
         "data": {
-          "per_damage": 1.5
+          "per_damage": 0.5
         }
       },
       {
         "type": "fotfskills:shield_block",
         "data": {
-          "per_damage": 1.5
+          "per_damage": 0.5
         }
       }
     ],
@@ -236,7 +242,7 @@
       {
         "type": "fotfskills:move",
         "data": {
-          "meters_per_xp": 20
+          "meters_per_xp": 2
         }
       }
     ],
@@ -252,7 +258,7 @@
       {
         "type": "fotfskills:tame",
         "data": {
-          "experience": 30
+          "experience": 75
         }
       },
       {
@@ -268,7 +274,7 @@
               ]
             }
           },
-          "experience": "max(damage * 0.75, 1)",
+          "experience": "max(damage * 1.0, 1)",
           "anti_farming_per_entity": {
             "limit_per_entity": 40,
             "reset_after_seconds": 300
@@ -296,7 +302,7 @@
           "experience": [
             {
               "condition": "bred",
-              "expression": "6"
+              "expression": "10"
             }
           ]
         }

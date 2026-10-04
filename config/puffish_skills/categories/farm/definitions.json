@@ -465,6 +465,33 @@
       }
     ]
   },
+  "green_thumb_4": {
+    "title": "Green Thumb",
+    "description": "24% that crops you plant start a stage later",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:bone_meal"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "green_thumb",
+          "value": 0.06
+        }
+      }
+    ]
+  },
   "fertile_soil_1": {
     "title": "Fertile Soil",
     "description": "Crops near you grow 8% faster",
@@ -522,6 +549,33 @@
   "fertile_soil_3": {
     "title": "Fertile Soil",
     "description": "Crops near you grow 24% faster",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:farmland"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fertile_soil",
+          "value": 0.08
+        }
+      }
+    ]
+  },
+  "fertile_soil_4": {
+    "title": "Fertile Soil",
+    "description": "Crops near you grow 32% faster",
     "icon": {
       "type": "item",
       "data": {
@@ -1088,6 +1142,33 @@
       }
     ]
   },
+  "earthbound_4": {
+    "title": "Earthbound",
+    "description": "Standing on grass or farmland slowly regenerates health",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:grass_block"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "earthbound",
+          "value": 0.5
+        }
+      }
+    ]
+  },
   "sweeping_harvest_1": {
     "title": "Sweeping Harvest",
     "description": "Scythes harvest mature crops in a 3x3, then 5x5",
@@ -1142,6 +1223,33 @@
       }
     ]
   },
+  "sweeping_harvest_3": {
+    "title": "Sweeping Harvest",
+    "description": "Scythes harvest mature crops in a 3x3, then 5x5",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:diamond_hoe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "sweeping_harvest",
+          "value": 1
+        }
+      }
+    ]
+  },
   "irrigator_1": {
     "title": "Irrigator",
     "description": "Water keeps farmland wet 1 block further",
@@ -1163,6 +1271,24 @@
   "irrigator_2": {
     "title": "Irrigator",
     "description": "Water keeps farmland wet 2 block further",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:water_bucket"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "irrigator_3": {
+    "title": "Irrigator",
+    "description": "Water keeps farmland wet 3 block further",
     "icon": {
       "type": "item",
       "data": {
@@ -1279,6 +1405,34 @@
     ]
   },
   "fertile_soil_ii_3": {
+    "title": "Fertile Soil II",
+    "description": "Crops near you grow faster still",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:farmland"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "extra_description": "Needs Fertile Soil (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fertile_soil",
+          "value": 0.08
+        }
+      }
+    ]
+  },
+  "fertile_soil_ii_4": {
     "title": "Fertile Soil II",
     "description": "Crops near you grow faster still",
     "icon": {

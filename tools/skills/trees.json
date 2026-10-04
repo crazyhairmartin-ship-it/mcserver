@@ -76,7 +76,7 @@
         {
           "t": 2,
           "name": "Stonehide",
-          "r": 3,
+          "r": 4,
           "d": "Mining grants +1 armour for 30 s per rank",
           "c": 1,
           "b": null,
@@ -87,7 +87,7 @@
         {
           "t": 2,
           "name": "Deep Delver",
-          "r": 2,
+          "r": 3,
           "d": "+5% damage below Y 40 per rank",
           "c": 1,
           "b": null,
@@ -131,7 +131,7 @@
         {
           "t": 4,
           "name": "Crusher",
-          "r": 3,
+          "r": 4,
           "d": "Hammer and mace hits strip 1 armour from the target per rank",
           "c": 1,
           "b": null,
@@ -164,7 +164,7 @@
         {
           "t": 5,
           "name": "Tunnel Vision",
-          "r": 3,
+          "r": 4,
           "d": "Ultimine uses 15% less hunger per rank",
           "c": 1,
           "b": null,
@@ -349,7 +349,7 @@
         {
           "t": 5,
           "name": "Throwing Axes",
-          "r": 3,
+          "r": 4,
           "d": "Thrown axes and tomahawks +10% damage per rank",
           "c": 1,
           "b": null,
@@ -424,7 +424,7 @@
         {
           "t": 2,
           "name": "Green Thumb",
-          "r": 3,
+          "r": 4,
           "d": "6% per rank that crops you plant start a stage later",
           "c": 1,
           "b": null,
@@ -435,7 +435,7 @@
         {
           "t": 2,
           "name": "Fertile Soil",
-          "r": 3,
+          "r": 4,
           "d": "Crops near you grow 8% faster per rank",
           "c": 1,
           "b": null,
@@ -490,7 +490,7 @@
         {
           "t": 4,
           "name": "Earthbound",
-          "r": 3,
+          "r": 4,
           "d": "Standing on grass or farmland slowly regenerates health",
           "c": 1,
           "b": null,
@@ -501,7 +501,7 @@
         {
           "t": 4,
           "name": "Sweeping Harvest",
-          "r": 2,
+          "r": 3,
           "d": "Scythes harvest mature crops in a 3x3, then 5x5",
           "c": 1,
           "b": null,
@@ -512,7 +512,7 @@
         {
           "t": 4,
           "name": "Irrigator",
-          "r": 2,
+          "r": 3,
           "d": "Water keeps farmland wet 1 block further per rank",
           "c": 1,
           "b": null,
@@ -534,7 +534,7 @@
         {
           "t": 5,
           "name": "Fertile Soil II",
-          "r": 3,
+          "r": 4,
           "d": "Crops near you grow faster still",
           "c": 1,
           "b": null,
@@ -675,7 +675,7 @@
         {
           "t": 4,
           "name": "Hook Shot",
-          "r": 2,
+          "r": 3,
           "d": "Your rod yanks mobs harder and deals 2 damage",
           "c": 1,
           "b": null,
@@ -686,7 +686,7 @@
         {
           "t": 4,
           "name": "Sushi Chef",
-          "r": 3,
+          "r": 4,
           "d": "Fish dishes you cook give Water Breathing and extra saturation",
           "c": 1,
           "b": null,
@@ -697,7 +697,7 @@
         {
           "t": 4,
           "name": "Lure Master",
-          "r": 3,
+          "r": 4,
           "d": "Aquaculture lures work better",
           "c": 1,
           "b": null,
@@ -708,7 +708,7 @@
         {
           "t": 5,
           "name": "Storm Fisher",
-          "r": 2,
+          "r": 3,
           "d": "Faster bites in rain",
           "c": 1,
           "b": null,
@@ -719,7 +719,7 @@
         {
           "t": 5,
           "name": "Sea Legs",
-          "r": 2,
+          "r": 3,
           "d": "Boats go 5% faster per rank",
           "c": 1,
           "b": null,
@@ -794,7 +794,7 @@
         {
           "t": 2,
           "name": "Extra Serving",
-          "r": 3,
+          "r": 4,
           "d": "5% per rank for one extra meal",
           "c": 1,
           "b": null,
@@ -860,7 +860,7 @@
         {
           "t": 4,
           "name": "Trail Rations",
-          "r": 3,
+          "r": 4,
           "d": "Sprinting and ParCool moves drain 10% less hunger per rank",
           "c": 1,
           "b": null,
@@ -871,7 +871,7 @@
         {
           "t": 4,
           "name": "Brewer",
-          "r": 3,
+          "r": 4,
           "d": "Let's Do drinks save ingredients and their buffs last longer",
           "c": 1,
           "b": null,
@@ -882,7 +882,7 @@
         {
           "t": 4,
           "name": "Pet Treats",
-          "r": 2,
+          "r": 3,
           "d": "Food you cook heals pets more and gives them a short buff",
           "c": 1,
           "b": null,
@@ -893,7 +893,7 @@
         {
           "t": 5,
           "name": "Picnic",
-          "r": 2,
+          "r": 3,
           "d": "Eating near party members heals you and them a little",
           "c": 1,
           "b": null,
@@ -968,7 +968,7 @@
         {
           "t": 2,
           "name": "Enchanted Crafts",
-          "r": 3,
+          "r": 4,
           "d": "Gear you craft always gets a random enchantment: level I, then up to II, then up to III",
           "c": 1,
           "b": null,
@@ -990,7 +990,7 @@
         {
           "t": 2,
           "name": "Repair Kit",
-          "r": 2,
+          "r": 3,
           "d": "Anvil repairs cost less XP",
           "c": 1,
           "b": null,
@@ -1045,7 +1045,7 @@
         {
           "t": 4,
           "name": "Enchanted Crafts II",
-          "r": 2,
+          "r": 3,
           "d": "Enchantments on crafted gear roll one level higher per rank",
           "c": 1,
           "b": null,
@@ -1056,7 +1056,7 @@
         {
           "t": 4,
           "name": "Salvager",
-          "r": 2,
+          "r": 3,
           "d": "Grindstones return some materials",
           "c": 1,
           "b": null,
@@ -1067,7 +1067,7 @@
         {
           "t": 4,
           "name": "Saddler",
-          "r": 2,
+          "r": 3,
           "d": "Saddles and horse armour you craft give mounts +5% speed and armour",
           "c": 1,
           "b": null,
@@ -1078,7 +1078,7 @@
         {
           "t": 5,
           "name": "Smelter",
-          "r": 3,
+          "r": 4,
           "d": "Furnaces you use run 10% faster per rank",
           "c": 1,
           "b": null,
@@ -1164,7 +1164,7 @@
         {
           "t": 2,
           "name": "Spellblade",
-          "r": 3,
+          "r": 4,
           "d": "Melee hits restore 1 mana per rank",
           "c": 1,
           "b": null,
@@ -1175,7 +1175,7 @@
         {
           "t": 2,
           "name": "Momentum",
-          "r": 2,
+          "r": 3,
           "d": "Hits in a row +5% damage (stacks 3)",
           "c": 1,
           "b": null,
@@ -1219,7 +1219,7 @@
         {
           "t": 4,
           "name": "Hunter's Mark",
-          "r": 3,
+          "r": 4,
           "d": "Melee hits mark a target: your arrows deal +5% to it per rank",
           "c": 1,
           "b": null,
@@ -1230,7 +1230,7 @@
         {
           "t": 4,
           "name": "Shield Bash",
-          "r": 3,
+          "r": 4,
           "d": "Hitting right after a block deals +20% damage per rank",
           "c": 1,
           "b": null,
@@ -1241,7 +1241,7 @@
         {
           "t": 4,
           "name": "Executioner",
-          "r": 2,
+          "r": 3,
           "d": "+15% damage to mobs under 30% health",
           "c": 1,
           "b": null,
@@ -1252,7 +1252,7 @@
         {
           "t": 5,
           "name": "Lifeline",
-          "r": 2,
+          "r": 3,
           "d": "Crits heal half a heart",
           "c": 1,
           "b": null,
@@ -1382,7 +1382,7 @@
         {
           "t": 4,
           "name": "Homing Arrows",
-          "r": 3,
+          "r": 4,
           "d": "5% per rank: arrows curve to the nearest hostile mob",
           "c": 1,
           "b": null,
@@ -1393,7 +1393,7 @@
         {
           "t": 4,
           "name": "Falconer",
-          "r": 3,
+          "r": 4,
           "d": "Your pets attack what you shoot, +5% pet damage per rank",
           "c": 1,
           "b": null,
@@ -1404,7 +1404,7 @@
         {
           "t": 4,
           "name": "Arcane Arrows",
-          "r": 3,
+          "r": 4,
           "d": "Full-draw shots spend 5 mana for +15% magic damage per rank",
           "c": 1,
           "b": null,
@@ -1415,7 +1415,7 @@
         {
           "t": 4,
           "name": "Multishot",
-          "r": 3,
+          "r": 4,
           "d": "10% per rank to fire two extra arrows for the cost of one",
           "c": 1,
           "b": null,
@@ -1437,7 +1437,7 @@
         {
           "t": 5,
           "name": "Quiver Care II",
-          "r": 3,
+          "r": 4,
           "d": "More ammo saving",
           "c": 1,
           "b": null,
@@ -1512,7 +1512,7 @@
         {
           "t": 2,
           "name": "Iron Skin",
-          "r": 3,
+          "r": 4,
           "d": "+0.5 armour toughness per rank",
           "c": 1,
           "b": null,
@@ -1578,7 +1578,7 @@
         {
           "t": 4,
           "name": "Guardian",
-          "r": 3,
+          "r": 4,
           "d": "Pets and party members near you take 5% less damage per rank",
           "c": 1,
           "b": null,
@@ -1589,7 +1589,7 @@
         {
           "t": 4,
           "name": "Counter",
-          "r": 2,
+          "r": 3,
           "d": "A blocked hit makes your next melee hit +15%",
           "c": 1,
           "b": null,
@@ -1600,7 +1600,7 @@
         {
           "t": 4,
           "name": "Fire Ward",
-          "r": 2,
+          "r": 3,
           "d": "-15% fire damage per rank",
           "c": 1,
           "b": null,
@@ -1611,7 +1611,7 @@
         {
           "t": 4,
           "name": "Blast Ward",
-          "r": 2,
+          "r": 3,
           "d": "-15% explosion damage per rank",
           "c": 1,
           "b": null,
@@ -1622,7 +1622,7 @@
         {
           "t": 5,
           "name": "Armour Care",
-          "r": 2,
+          "r": 3,
           "d": "5% per rank to save armour durability",
           "c": 1,
           "b": null,
@@ -1697,7 +1697,7 @@
         {
           "t": 2,
           "name": "Long Rope",
-          "r": 3,
+          "r": 4,
           "d": "Grappling hook reaches 4 blocks further per rank",
           "c": 1,
           "b": null,
@@ -1752,7 +1752,7 @@
         {
           "t": 4,
           "name": "Throwing Arm",
-          "r": 3,
+          "r": 4,
           "d": "Thrown weapons fly 8% faster and hit 8% harder per rank",
           "c": 1,
           "b": null,
@@ -1763,7 +1763,7 @@
         {
           "t": 4,
           "name": "Rider",
-          "r": 3,
+          "r": 4,
           "d": "Mounts you ride run 4% faster and jump higher per rank",
           "c": 1,
           "b": null,
@@ -1774,7 +1774,7 @@
         {
           "t": 4,
           "name": "Second Breath",
-          "r": 3,
+          "r": 4,
           "d": "ParCool stamina regenerates faster",
           "c": 1,
           "b": null,
@@ -1785,7 +1785,7 @@
         {
           "t": 4,
           "name": "Motor Reel",
-          "r": 2,
+          "r": 3,
           "d": "Hold use to be pulled to the hook, faster per rank",
           "c": 1,
           "b": null,
@@ -1796,7 +1796,7 @@
         {
           "t": 4,
           "name": "Roll Master",
-          "r": 2,
+          "r": 3,
           "d": "Rolls and dodges negate more damage",
           "c": 1,
           "b": null,
@@ -1807,7 +1807,7 @@
         {
           "t": 5,
           "name": "Long Rope II",
-          "r": 2,
+          "r": 3,
           "d": "Grappling hook reaches 4 blocks further per rank",
           "c": 1,
           "b": null,
@@ -1882,7 +1882,7 @@
         {
           "t": 2,
           "name": "Mana Saver",
-          "r": 3,
+          "r": 4,
           "d": "4% per rank: a spell costs no mana",
           "c": 1,
           "b": null,
@@ -1894,18 +1894,7 @@
           "t": 2,
           "name": "Mana Shield",
           "r": 3,
-          "d": "Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
-          "c": 1,
-          "b": null,
-          "cap": false,
-          "needs": null,
-          "syn": null
-        },
-        {
-          "t": 2,
-          "name": "Scroll Saver",
-          "r": 2,
-          "d": "10% per rank: an Iron's scroll isn't used",
+          "d": "Crouch with no shield in hand: a mana barrier blocks hits from the front, using mana per hit (cheaper per rank)",
           "c": 1,
           "b": null,
           "cap": false,
@@ -1959,7 +1948,7 @@
         {
           "t": 4,
           "name": "Spellbound Steel",
-          "r": 3,
+          "r": 4,
           "d": "After a cast, your next melee hit deals +10% magic damage per rank",
           "c": 1,
           "b": null,
@@ -1970,7 +1959,7 @@
         {
           "t": 4,
           "name": "Nature's Mend",
-          "r": 3,
+          "r": 4,
           "d": "Your healing spells also heal nearby pets",
           "c": 1,
           "b": null,
@@ -1981,7 +1970,7 @@
         {
           "t": 4,
           "name": "Cooldown Flow",
-          "r": 2,
+          "r": 3,
           "d": "-5% spell cooldowns per rank",
           "c": 1,
           "b": null,
@@ -1992,7 +1981,7 @@
         {
           "t": 5,
           "name": "Arcane Aegis",
-          "r": 2,
+          "r": 3,
           "d": "Mana Shield reflects 10% of blocked damage as magic per rank",
           "c": 1,
           "b": null,
@@ -2122,7 +2111,7 @@
         {
           "t": 4,
           "name": "Pack Tactics",
-          "r": 3,
+          "r": 4,
           "d": "Pets deal more damage to your target",
           "c": 1,
           "b": null,
@@ -2133,7 +2122,7 @@
         {
           "t": 4,
           "name": "Loyal Guard",
-          "r": 3,
+          "r": 4,
           "d": "8% per rank that a nearby pet leaps in and blocks a hit: no damage to you or the pet",
           "c": 1,
           "b": null,
@@ -2144,7 +2133,7 @@
         {
           "t": 4,
           "name": "Bloodlines",
-          "r": 3,
+          "r": 4,
           "d": "Bred animals have a better chance of rare colours and variants",
           "c": 1,
           "b": null,

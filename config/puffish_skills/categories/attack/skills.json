@@ -119,6 +119,11 @@
     "y": 34,
     "definition": "spellblade_3"
   },
+  "spellblade_4": {
+    "x": 15,
+    "y": 34,
+    "definition": "spellblade_4"
+  },
   "momentum_1": {
     "x": 45,
     "y": 34,
@@ -129,6 +134,11 @@
     "x": 45,
     "y": 34,
     "definition": "momentum_2"
+  },
+  "momentum_3": {
+    "x": 45,
+    "y": 34,
+    "definition": "momentum_3"
   },
   "tier_3_label": {
     "x": -45,
@@ -218,6 +228,11 @@
     "y": 102,
     "definition": "hunters_mark_3"
   },
+  "hunters_mark_4": {
+    "x": 0,
+    "y": 102,
+    "definition": "hunters_mark_4"
+  },
   "shield_bash_1": {
     "x": 30,
     "y": 102,
@@ -234,6 +249,11 @@
     "y": 102,
     "definition": "shield_bash_3"
   },
+  "shield_bash_4": {
+    "x": 30,
+    "y": 102,
+    "definition": "shield_bash_4"
+  },
   "executioner_1": {
     "x": 60,
     "y": 102,
@@ -244,6 +264,11 @@
     "x": 60,
     "y": 102,
     "definition": "executioner_2"
+  },
+  "executioner_3": {
+    "x": 60,
+    "y": 102,
+    "definition": "executioner_3"
   },
   "tier_5_label": {
     "x": -60,
@@ -260,6 +285,11 @@
     "x": -30,
     "y": 136,
     "definition": "lifeline_2"
+  },
+  "lifeline_3": {
+    "x": -30,
+    "y": 136,
+    "definition": "lifeline_3"
   },
   "cleave_1": {
     "x": 0,

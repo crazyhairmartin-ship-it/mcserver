@@ -2,6 +2,7 @@ package fotfskills.perk;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
@@ -76,6 +77,29 @@ public final class ConditionalStats {
                 + (now - state.lastCombat > 200 ? Perks.get(player, "wellspring") : 0),
                 AttributeModifier.Operation.MULTIPLY_BASE);
 
+        java.util.List<String> labels = new java.util.ArrayList<>();
+        label(labels, forest ? Perks.get(player, "forest_speed") : 0, "Forest Stride", "% speed");
+        label(labels, forest ? Perks.get(player, "forest_toughness") : 0, "Bark Skin", " toughness", false);
+        label(labels, inCombat ? Perks.get(player, "combat_speed") : 0, "Footwork", "% speed");
+        label(labels, now - state.lastShot <= 40 ? Perks.get(player, "skirmish_speed") : 0, "Skirmisher", "% speed");
+        label(labels, now - state.lastStoneMined <= 600 ? Perks.get(player, "stonehide") : 0, "Stonehide", " armour", false);
+        label(labels, player.m_36324_().m_38722_() > 10 ? Perks.get(player, "iron_stomach") : 0, "Iron Stomach", " health", false);
+        label(labels, attackSpeed, "Weapon speed", "% attack speed");
+        label(labels, spell, "Spell power", "%");
+        label(labels, staff ? Perks.get(player, "staff_cooldown") : 0, "Staff Adept", "% faster cooldowns");
+        label(labels, (now - state.lastMeal <= 1200 ? Perks.get(player, "brain_regen") : 0)
+                + (now - state.lastCombat > 200 ? Perks.get(player, "wellspring") : 0), "Mana regen", "%");
+        label(labels, player.m_36324_().m_38702_() >= 20 ? Perks.get(player, "well_fed") : 0, "Well Fed", "% damage");
+        label(labels, player.m_20186_() < 40 ? Perks.get(player, "deep_delver") : 0, "Deep Delver", "% damage");
+        label(labels, player.m_21254_() ? Perks.get(player, "bulwark") : 0, "Bulwark", " knockback resistance", false);
+        if (Perks.get(player, "seas_blessing") > 0 && player.m_20069_()) {
+            labels.add("Sea's Blessing");
+        }
+        if (!labels.equals(sentLabels.get(player.m_20148_()))) {
+            sentLabels.put(player.m_20148_(), labels);
+            PerkSync.sendBuffs(player, labels);
+        }
+
         if (player.f_19797_ % 100 == 0 && Perks.get(player, "earthbound") > 0) {
             ResourceLocation below = ForgeRegistries.BLOCKS.getKey(player.m_9236_().m_8055_(player.m_20097_()).m_60734_());
             if (below != null && (below.m_135815_().equals("grass_block") || below.m_135815_().equals("farmland"))) {
@@ -90,5 +114,17 @@ public final class ConditionalStats {
 
     private static Attribute attribute(String namespace, String path) {
         return ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation(namespace, path));
+    }
+
+    private final java.util.Map<UUID, java.util.List<String>> sentLabels = new java.util.concurrent.ConcurrentHashMap<>();
+
+    private static void label(java.util.List<String> labels, double value, String name, String unit) {
+        label(labels, value, name, unit, true);
+    }
+
+    private static void label(java.util.List<String> labels, double value, String name, String unit, boolean percent) {
+        if (value > 0) {
+            labels.add(name + " +" + (percent ? Math.round(value * 100) : Math.round(value * 10) / 10.0) + unit);
+        }
     }
 }

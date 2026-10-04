@@ -574,9 +574,36 @@
       }
     ]
   },
+  "mana_saver_4": {
+    "title": "Mana Saver",
+    "description": "16%: a spell costs no mana",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:lapis_lazuli"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "free_spell",
+          "value": 0.04
+        }
+      }
+    ]
+  },
   "mana_shield_1": {
     "title": "Mana Shield",
-    "description": "Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
+    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front, using mana per hit (cheaper per rank)",
     "icon": {
       "type": "item",
       "data": {
@@ -603,7 +630,7 @@
   },
   "mana_shield_2": {
     "title": "Mana Shield",
-    "description": "Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
+    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front, using mana per hit (cheaper per rank)",
     "icon": {
       "type": "item",
       "data": {
@@ -630,7 +657,7 @@
   },
   "mana_shield_3": {
     "title": "Mana Shield",
-    "description": "Block with no shield: a mana barrier blocks like one, using mana per hit (cheaper per rank)",
+    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front, using mana per hit (cheaper per rank)",
     "icon": {
       "type": "item",
       "data": {
@@ -651,60 +678,6 @@
         "data": {
           "perk": "mana_shield",
           "value": 1
-        }
-      }
-    ]
-  },
-  "scroll_saver_1": {
-    "title": "Scroll Saver",
-    "description": "10%: an Iron's scroll isn't used",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:paper"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 5,
-    "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "scroll_saver",
-          "value": 0.1
-        }
-      }
-    ]
-  },
-  "scroll_saver_2": {
-    "title": "Scroll Saver",
-    "description": "20%: an Iron's scroll isn't used",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:paper"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 5,
-    "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "scroll_saver",
-          "value": 0.1
         }
       }
     ]
@@ -1272,6 +1245,33 @@
       }
     ]
   },
+  "spellbound_steel_4": {
+    "title": "Spellbound Steel",
+    "description": "After a cast, your next melee hit deals +40% magic damage",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:enchanted_book"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "spellbound_steel",
+          "value": 0.1
+        }
+      }
+    ]
+  },
   "natures_mend_1": {
     "title": "Nature's Mend",
     "description": "Your healing spells also heal nearby pets",
@@ -1327,6 +1327,33 @@
     ]
   },
   "natures_mend_3": {
+    "title": "Nature's Mend",
+    "description": "Your healing spells also heal nearby pets",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:glistering_melon_slice"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "natures_mend",
+          "value": 1
+        }
+      }
+    ]
+  },
+  "natures_mend_4": {
     "title": "Nature's Mend",
     "description": "Your healing spells also heal nearby pets",
     "icon": {
@@ -1409,6 +1436,34 @@
       }
     ]
   },
+  "cooldown_flow_3": {
+    "title": "Cooldown Flow",
+    "description": "-15% spell cooldowns",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:clock"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:cooldown_reduction",
+          "value": 0.05,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",
     "description": "Opens once you have spent 25 points in this tree. Pick one branch: taking one locks the other.",
@@ -1457,6 +1512,34 @@
   "arcane_aegis_2": {
     "title": "Arcane Aegis",
     "description": "Mana Shield reflects 20% of blocked damage as magic",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:end_crystal"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "extra_description": "Needs Mana Shield (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "arcane_aegis",
+          "value": 0.1
+        }
+      }
+    ]
+  },
+  "arcane_aegis_3": {
+    "title": "Arcane Aegis",
+    "description": "Mana Shield reflects 30% of blocked damage as magic",
     "icon": {
       "type": "item",
       "data": {

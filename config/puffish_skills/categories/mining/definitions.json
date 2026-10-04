@@ -600,6 +600,33 @@
       }
     ]
   },
+  "stonehide_4": {
+    "title": "Stonehide",
+    "description": "Mining grants +4 armour for 30 s",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:cobblestone"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "stonehide",
+          "value": 1
+        }
+      }
+    ]
+  },
   "deep_delver_1": {
     "title": "Deep Delver",
     "description": "+5% damage below Y 40",
@@ -630,6 +657,33 @@
   "deep_delver_2": {
     "title": "Deep Delver",
     "description": "+10% damage below Y 40",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:deepslate"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "deep_delver",
+          "value": 0.05
+        }
+      }
+    ]
+  },
+  "deep_delver_3": {
+    "title": "Deep Delver",
+    "description": "+15% damage below Y 40",
     "icon": {
       "type": "item",
       "data": {
@@ -1094,6 +1148,33 @@
       }
     ]
   },
+  "crusher_4": {
+    "title": "Crusher",
+    "description": "Hammer and mace hits strip 4 armour from the target",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:grindstone"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crush_armor",
+          "value": 1
+        }
+      }
+    ]
+  },
   "bedrock_grip_1": {
     "title": "Bedrock Grip",
     "description": "+6% speed on deepslate",
@@ -1312,6 +1393,24 @@
   "tunnel_vision_3": {
     "title": "Tunnel Vision",
     "description": "Ultimine uses 45% less hunger",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:torch"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25
+  },
+  "tunnel_vision_4": {
+    "title": "Tunnel Vision",
+    "description": "Ultimine uses 60% less hunger",
     "icon": {
       "type": "item",
       "data": {

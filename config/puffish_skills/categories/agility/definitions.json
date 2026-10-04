@@ -393,6 +393,24 @@
     "cost": 1,
     "required_spent_points": 5
   },
+  "long_rope_4": {
+    "title": "Long Rope",
+    "description": "Grappling hook reaches 16 blocks further",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "grapplemod:grapplinghook"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5
+  },
   "quick_casting_1": {
     "title": "Quick Casting",
     "description": "-5% spell cast time",
@@ -825,6 +843,40 @@
       }
     ]
   },
+  "throwing_arm_4": {
+    "title": "Throwing Arm",
+    "description": "Thrown weapons fly 32% faster and hit 32% harder",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:snowball"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "thrown_speed",
+          "value": 0.08
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown",
+          "value": 0.08
+        }
+      }
+    ]
+  },
   "rider_1": {
     "title": "Rider",
     "description": "Mounts you ride run 4% faster and jump higher",
@@ -927,6 +979,40 @@
       }
     ]
   },
+  "rider_4": {
+    "title": "Rider",
+    "description": "Mounts you ride run 16% faster and jump higher",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:saddle"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_speed",
+          "value": 0.04
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ride_jump",
+          "value": 0.04
+        }
+      }
+    ]
+  },
   "second_breath_1": {
     "title": "Second Breath",
     "description": "ParCool stamina regenerates faster",
@@ -981,6 +1067,24 @@
     "cost": 1,
     "required_spent_points": 15
   },
+  "second_breath_4": {
+    "title": "Second Breath",
+    "description": "ParCool stamina regenerates faster",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:potion"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15
+  },
   "motor_reel_1": {
     "title": "Motor Reel",
     "description": "Hold use to be pulled to the hook, faster per rank",
@@ -1017,6 +1121,24 @@
     "cost": 1,
     "required_spent_points": 15
   },
+  "motor_reel_3": {
+    "title": "Motor Reel",
+    "description": "Hold use to be pulled to the hook, faster per rank",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:piston"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15
+  },
   "roll_master_1": {
     "title": "Roll Master",
     "description": "Rolls and dodges negate more damage",
@@ -1036,6 +1158,24 @@
     "required_spent_points": 15
   },
   "roll_master_2": {
+    "title": "Roll Master",
+    "description": "Rolls and dodges negate more damage",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:rabbit_foot"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15
+  },
+  "roll_master_3": {
     "title": "Roll Master",
     "description": "Rolls and dodges negate more damage",
     "icon": {
@@ -1092,6 +1232,25 @@
   "long_rope_ii_2": {
     "title": "Long Rope II",
     "description": "Grappling hook reaches 8 blocks further",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "grapplemod:grapplinghook"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "extra_description": "Needs Long Rope (all ranks)."
+  },
+  "long_rope_ii_3": {
+    "title": "Long Rope II",
+    "description": "Grappling hook reaches 12 blocks further",
     "icon": {
       "type": "item",
       "data": {

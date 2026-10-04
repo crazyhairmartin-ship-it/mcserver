@@ -10,13 +10,13 @@
     {
       "type": "fotfskills:take_hit",
       "data": {
-        "per_damage": 1.5
+        "per_damage": 0.5
       }
     },
     {
       "type": "fotfskills:shield_block",
       "data": {
-        "per_damage": 1.5
+        "per_damage": 0.5
       }
     }
   ]

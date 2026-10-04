@@ -478,6 +478,34 @@
       }
     ]
   },
+  "iron_skin_4": {
+    "title": "Iron Skin",
+    "description": "+2 armour toughness",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_block"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor_toughness",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ]
+  },
   "shield_thorns_1": {
     "title": "Shield Thorns",
     "description": "8% to reflect 30% of a blocked hit",
@@ -1085,6 +1113,33 @@
       }
     ]
   },
+  "guardian_4": {
+    "title": "Guardian",
+    "description": "Pets and party members near you take 20% less damage",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:iron_golem_spawn_egg"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "guardian",
+          "value": 0.05
+        }
+      }
+    ]
+  },
   "counter_1": {
     "title": "Counter",
     "description": "A blocked hit makes your next melee hit +15%",
@@ -1113,6 +1168,33 @@
     ]
   },
   "counter_2": {
+    "title": "Counter",
+    "description": "A blocked hit makes your next melee hit +15%",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:bell"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "counter",
+          "value": 0.15
+        }
+      }
+    ]
+  },
+  "counter_3": {
     "title": "Counter",
     "description": "A blocked hit makes your next melee hit +15%",
     "icon": {
@@ -1193,6 +1275,33 @@
       }
     ]
   },
+  "fire_ward_3": {
+    "title": "Fire Ward",
+    "description": "-45% fire damage",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:magma_cream"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fire_ward",
+          "value": 0.15
+        }
+      }
+    ]
+  },
   "blast_ward_1": {
     "title": "Blast Ward",
     "description": "-15% explosion damage",
@@ -1223,6 +1332,33 @@
   "blast_ward_2": {
     "title": "Blast Ward",
     "description": "-30% explosion damage",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:gunpowder"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "blast_ward",
+          "value": 0.15
+        }
+      }
+    ]
+  },
+  "blast_ward_3": {
+    "title": "Blast Ward",
+    "description": "-45% explosion damage",
     "icon": {
       "type": "item",
       "data": {
@@ -1294,6 +1430,33 @@
   "armour_care_2": {
     "title": "Armour Care",
     "description": "10% to save armour durability",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:leather_chestplate"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armour_durability",
+          "value": 0.05
+        }
+      }
+    ]
+  },
+  "armour_care_3": {
+    "title": "Armour Care",
+    "description": "15% to save armour durability",
     "icon": {
       "type": "item",
       "data": {

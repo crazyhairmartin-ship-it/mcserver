@@ -52,6 +52,34 @@ public final class PerkSync {
                     context.get().setPacketHandled(true);
                 })
                 .add();
+        CHANNEL.messageBuilder(Buffs.class, 1, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(Buffs::encode).decoder(Buffs::decode)
+                .consumerMainThread((msg, context) -> {
+                    ClientBuffs.set(msg.lines());
+                    context.get().setPacketHandled(true);
+                })
+                .add();
+    }
+
+    /** The player's active situational buffs, shown beside the inventory (sent when the list changes). */
+    public record Buffs(java.util.List<String> lines) {
+        static void encode(Buffs msg, FriendlyByteBuf buf) {
+            buf.m_130130_(msg.lines.size());
+            msg.lines.forEach(buf::m_130070_);
+        }
+
+        static Buffs decode(FriendlyByteBuf buf) {
+            int n = buf.m_130242_();
+            java.util.List<String> lines = new java.util.ArrayList<>();
+            for (int i = 0; i < n; i++) {
+                lines.add(buf.m_130277_());
+            }
+            return new Buffs(lines);
+        }
+    }
+
+    public static void sendBuffs(ServerPlayer player, java.util.List<String> lines) {
+        CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), new Buffs(lines));
     }
 
     public static synchronized void markDirty(ServerPlayer player) {

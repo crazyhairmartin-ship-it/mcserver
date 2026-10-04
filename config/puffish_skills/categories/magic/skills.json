@@ -83,66 +83,60 @@
     "definition": "flow_5"
   },
   "tier_2_label": {
-    "x": -60,
+    "x": -45,
     "y": 34,
     "definition": "tier_2_label"
   },
   "mana_saver_1": {
-    "x": -30,
+    "x": -15,
     "y": 34,
     "definition": "mana_saver_1",
     "root": true
   },
   "mana_saver_2": {
-    "x": -30,
+    "x": -15,
     "y": 34,
     "definition": "mana_saver_2"
   },
   "mana_saver_3": {
-    "x": -30,
+    "x": -15,
     "y": 34,
     "definition": "mana_saver_3"
   },
+  "mana_saver_4": {
+    "x": -15,
+    "y": 34,
+    "definition": "mana_saver_4"
+  },
   "mana_shield_1": {
-    "x": 0,
+    "x": 15,
     "y": 34,
     "definition": "mana_shield_1",
     "root": true
   },
   "mana_shield_2": {
-    "x": 0,
+    "x": 15,
     "y": 34,
     "definition": "mana_shield_2"
   },
   "mana_shield_3": {
-    "x": 0,
+    "x": 15,
     "y": 34,
     "definition": "mana_shield_3"
   },
-  "scroll_saver_1": {
-    "x": 30,
-    "y": 34,
-    "definition": "scroll_saver_1",
-    "root": true
-  },
-  "scroll_saver_2": {
-    "x": 30,
-    "y": 34,
-    "definition": "scroll_saver_2"
-  },
   "staff_adept_1": {
-    "x": 60,
+    "x": 45,
     "y": 34,
     "definition": "staff_adept_1",
     "root": true
   },
   "staff_adept_2": {
-    "x": 60,
+    "x": 45,
     "y": 34,
     "definition": "staff_adept_2"
   },
   "staff_adept_3": {
-    "x": 60,
+    "x": 45,
     "y": 34,
     "definition": "staff_adept_3"
   },
@@ -234,6 +228,11 @@
     "y": 102,
     "definition": "spellbound_steel_3"
   },
+  "spellbound_steel_4": {
+    "x": 0,
+    "y": 102,
+    "definition": "spellbound_steel_4"
+  },
   "natures_mend_1": {
     "x": 30,
     "y": 102,
@@ -250,6 +249,11 @@
     "y": 102,
     "definition": "natures_mend_3"
   },
+  "natures_mend_4": {
+    "x": 30,
+    "y": 102,
+    "definition": "natures_mend_4"
+  },
   "cooldown_flow_1": {
     "x": 60,
     "y": 102,
@@ -260,6 +264,11 @@
     "x": 60,
     "y": 102,
     "definition": "cooldown_flow_2"
+  },
+  "cooldown_flow_3": {
+    "x": 60,
+    "y": 102,
+    "definition": "cooldown_flow_3"
   },
   "tier_5_label": {
     "x": -60,
@@ -275,6 +284,11 @@
     "x": -30,
     "y": 136,
     "definition": "arcane_aegis_2"
+  },
+  "arcane_aegis_3": {
+    "x": -30,
+    "y": 136,
+    "definition": "arcane_aegis_3"
   },
   "archmage_1": {
     "x": 0,

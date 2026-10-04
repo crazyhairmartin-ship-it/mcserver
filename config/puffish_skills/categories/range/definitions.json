@@ -930,6 +930,33 @@
       }
     ]
   },
+  "homing_arrows_4": {
+    "title": "Homing Arrows",
+    "description": "20%: arrows curve to the nearest hostile mob",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:spectral_arrow"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "homing",
+          "value": 0.05
+        }
+      }
+    ]
+  },
   "falconer_1": {
     "title": "Falconer",
     "description": "Your pets attack what you shoot, +5% pet damage",
@@ -987,6 +1014,33 @@
   "falconer_3": {
     "title": "Falconer",
     "description": "Your pets attack what you shoot, +15% pet damage",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:feather"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "falconer",
+          "value": 0.05
+        }
+      }
+    ]
+  },
+  "falconer_4": {
+    "title": "Falconer",
+    "description": "Your pets attack what you shoot, +20% pet damage",
     "icon": {
       "type": "item",
       "data": {
@@ -1092,6 +1146,33 @@
       }
     ]
   },
+  "arcane_arrows_4": {
+    "title": "Arcane Arrows",
+    "description": "Full-draw shots spend 5 mana for +60% magic damage",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:tipped_arrow"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "arcane_arrows",
+          "value": 0.15
+        }
+      }
+    ]
+  },
   "multishot_1": {
     "title": "Multishot",
     "description": "10% to fire two extra arrows for the cost of one",
@@ -1149,6 +1230,33 @@
   "multishot_3": {
     "title": "Multishot",
     "description": "30% to fire two extra arrows for the cost of one",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:firework_rocket"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "multishot",
+          "value": 0.1
+        }
+      }
+    ]
+  },
+  "multishot_4": {
+    "title": "Multishot",
+    "description": "40% to fire two extra arrows for the cost of one",
     "icon": {
       "type": "item",
       "data": {
@@ -1301,6 +1409,34 @@
     ]
   },
   "quiver_care_ii_3": {
+    "title": "Quiver Care II",
+    "description": "More ammo saving",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:arrow"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "extra_description": "Needs Quiver Care (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.08
+        }
+      }
+    ]
+  },
+  "quiver_care_ii_4": {
     "title": "Quiver Care II",
     "description": "More ammo saving",
     "icon": {

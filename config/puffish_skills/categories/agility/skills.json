@@ -93,6 +93,11 @@
     "y": 34,
     "definition": "long_rope_3"
   },
+  "long_rope_4": {
+    "x": -15,
+    "y": 34,
+    "definition": "long_rope_4"
+  },
   "quick_casting_1": {
     "x": 15,
     "y": 34,
@@ -188,6 +193,11 @@
     "y": 102,
     "definition": "throwing_arm_3"
   },
+  "throwing_arm_4": {
+    "x": -45,
+    "y": 102,
+    "definition": "throwing_arm_4"
+  },
   "rider_1": {
     "x": -15,
     "y": 102,
@@ -203,6 +213,11 @@
     "x": -15,
     "y": 102,
     "definition": "rider_3"
+  },
+  "rider_4": {
+    "x": -15,
+    "y": 102,
+    "definition": "rider_4"
   },
   "second_breath_1": {
     "x": 15,
@@ -220,6 +235,11 @@
     "y": 102,
     "definition": "second_breath_3"
   },
+  "second_breath_4": {
+    "x": 15,
+    "y": 102,
+    "definition": "second_breath_4"
+  },
   "motor_reel_1": {
     "x": 45,
     "y": 102,
@@ -231,6 +251,11 @@
     "y": 102,
     "definition": "motor_reel_2"
   },
+  "motor_reel_3": {
+    "x": 45,
+    "y": 102,
+    "definition": "motor_reel_3"
+  },
   "roll_master_1": {
     "x": 75,
     "y": 102,
@@ -241,6 +266,11 @@
     "x": 75,
     "y": 102,
     "definition": "roll_master_2"
+  },
+  "roll_master_3": {
+    "x": 75,
+    "y": 102,
+    "definition": "roll_master_3"
   },
   "tier_5_label": {
     "x": -60,
@@ -256,6 +286,11 @@
     "x": -30,
     "y": 136,
     "definition": "long_rope_ii_2"
+  },
+  "long_rope_ii_3": {
+    "x": -30,
+    "y": 136,
+    "definition": "long_rope_ii_3"
   },
   "featherfall_1": {
     "x": 0,

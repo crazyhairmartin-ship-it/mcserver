@@ -14,6 +14,8 @@ public final class CombatState {
     public final Streak momentum = new Streak(60, 3);
     public final Streak flurry = new Streak(40, 5);
     public final SwingGate swing = new SwingGate();
+    /** Gathering XP for vein-mined blocks (same tick as another break) is cut to a quarter. */
+    public final BreakTick breaks = new BreakTick(0.25);
     public UUID markedTarget;
     public UUID falconTarget;
     public long falconUntil;

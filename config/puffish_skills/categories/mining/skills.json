@@ -119,6 +119,11 @@
     "y": 34,
     "definition": "stonehide_3"
   },
+  "stonehide_4": {
+    "x": 15,
+    "y": 34,
+    "definition": "stonehide_4"
+  },
   "deep_delver_1": {
     "x": 45,
     "y": 34,
@@ -129,6 +134,11 @@
     "x": 45,
     "y": 34,
     "definition": "deep_delver_2"
+  },
+  "deep_delver_3": {
+    "x": 45,
+    "y": 34,
+    "definition": "deep_delver_3"
   },
   "tier_3_label": {
     "x": -45,
@@ -218,6 +228,11 @@
     "y": 102,
     "definition": "crusher_3"
   },
+  "crusher_4": {
+    "x": 0,
+    "y": 102,
+    "definition": "crusher_4"
+  },
   "bedrock_grip_1": {
     "x": 30,
     "y": 102,
@@ -270,6 +285,11 @@
     "x": -30,
     "y": 136,
     "definition": "tunnel_vision_3"
+  },
+  "tunnel_vision_4": {
+    "x": -30,
+    "y": 136,
+    "definition": "tunnel_vision_4"
   },
   "motherlode_1": {
     "x": 0,

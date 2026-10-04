@@ -103,6 +103,11 @@
     "y": 34,
     "definition": "enchanted_crafts_3"
   },
+  "enchanted_crafts_4": {
+    "x": -30,
+    "y": 34,
+    "definition": "enchanted_crafts_4"
+  },
   "book_saver_1": {
     "x": 0,
     "y": 34,
@@ -119,6 +124,11 @@
     "x": 30,
     "y": 34,
     "definition": "repair_kit_2"
+  },
+  "repair_kit_3": {
+    "x": 30,
+    "y": 34,
+    "definition": "repair_kit_3"
   },
   "spellwright_1": {
     "x": 60,
@@ -198,6 +208,11 @@
     "y": 102,
     "definition": "enchanted_crafts_ii_2"
   },
+  "enchanted_crafts_ii_3": {
+    "x": 0,
+    "y": 102,
+    "definition": "enchanted_crafts_ii_3"
+  },
   "salvager_1": {
     "x": 30,
     "y": 102,
@@ -209,6 +224,11 @@
     "y": 102,
     "definition": "salvager_2"
   },
+  "salvager_3": {
+    "x": 30,
+    "y": 102,
+    "definition": "salvager_3"
+  },
   "saddler_1": {
     "x": 60,
     "y": 102,
@@ -219,6 +239,11 @@
     "x": 60,
     "y": 102,
     "definition": "saddler_2"
+  },
+  "saddler_3": {
+    "x": 60,
+    "y": 102,
+    "definition": "saddler_3"
   },
   "tier_5_label": {
     "x": -60,
@@ -240,6 +265,11 @@
     "x": -30,
     "y": 136,
     "definition": "smelter_3"
+  },
+  "smelter_4": {
+    "x": -30,
+    "y": 136,
+    "definition": "smelter_4"
   },
   "masterwork_1": {
     "x": 0,

@@ -89,7 +89,7 @@ def test_full_tree_fits_level_cap():
             row = [n for n in t['nodes'] if n['t'] == tier['n']]
             total += sum(n['r'] * n['c'] for n in row if not n['b'])
             total += max([sum(n['r'] * n['c'] for n in row if n['b'] == br) for br in 'AB'] or [0])
-        assert 40 <= total <= 50, (t['id'], total)
+        assert total == 50, (t['id'], total)   # every tree fills at exactly the level cap (Dylan, playtest 1)
 
 
 def test_generator_removes_stale_categories(tmp_path):
@@ -301,9 +301,27 @@ def test_range_shield_magic_specials_are_wired():
               ('range', 'multishot_1'): ('multishot', 0.1), ('range', 'arcane_arrows_1'): ('arcane_arrows', 0.15),
               ('range', 'retriever_1'): ('retriever', 0.25), ('defense', 'shield_wall_1'): ('shield_wall', 0.15),
               ('defense', 'bulwark_1'): ('bulwark', 0.1), ('magic', 'mana_shield_1'): ('mana_shield', 1),
-              ('magic', 'arcane_aegis_1'): ('arcane_aegis', 0.1), ('magic', 'scroll_saver_1'): ('scroll_saver', 0.1),
               ('magic', 'wellspring_1'): ('wellspring', 1), ('forage', 'druids_grove_1'): ('druids_grove', 0.05),
               ('mining', 'earthshaker_1'): ('earthshaker', 1), ('farm', 'reapers_due_1'): ('reapers_due', 1)}
     for (tree_id, sid), (perk, value) in expect.items():
         defs = g.build_category(tree(tree_id), TIERS, XP, PERKS)['definitions.json']
         assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': value}} in defs[sid]['rewards'], sid
+
+
+def test_scroll_saver_is_removed():
+    assert 'Scroll Saver' not in {n['name'] for n in tree('magic')['nodes']}
+    assert 'scroll_saver' not in PERKS.get('magic', {})
+
+
+def test_xp_rates_after_playtest_1():
+    src = XP['sources']
+    def data(tree_id, kind):
+        return next(s['data'] for s in src[tree_id] if s['type'] == kind)
+    assert data('fish', 'puffish_skills:fish_item')['experience'] == '25'                    # was too slow
+    assert data('agility', 'fotfskills:move')['meters_per_xp'] == 2                          # was way too slow
+    assert data('defense', 'fotfskills:take_hit')['per_damage'] == 0.5                       # was way too fast
+    assert data('defense', 'fotfskills:shield_block')['per_damage'] == 0.5
+    assert 'damage * 0.6' in data('attack', 'puffish_skills:deal_damage')['experience'][0]['expression']   # a bit fast
+    assert data('craft', 'fotfskills:craft_gear')['per_item'] == 25                          # was too slow
+    assert data('craft', 'fotfskills:craft_any')['per_item'] == 2                            # any real recipe counts
+    assert data('taming', 'fotfskills:tame')['experience'] == 75                             # relatively faster

@@ -1408,6 +1408,33 @@
       }
     ]
   },
+  "throwing_axes_4": {
+    "title": "Throwing Axes",
+    "description": "Thrown axes and tomahawks +40% damage",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:stone_axe"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pct_thrown_axe",
+          "value": 0.1
+        }
+      }
+    ]
+  },
   "natures_bounty_1": {
     "title": "Nature's Bounty",
     "description": "5% chance any log, berry, mushroom or honey harvest drops triple",

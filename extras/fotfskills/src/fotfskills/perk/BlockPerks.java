@@ -63,7 +63,9 @@ public final class BlockPerks {
             return;
         }
         BlockFacts facts = new BlockFacts(state);
-        SkillsAPI.updateExperienceSources(player, BreakSource.class, source -> source.rules().experience(facts));
+        double factor = CombatState.of(player).breaks.factor(level.m_46467_());     // Ultimine: rest of the vein gives 1/4
+        SkillsAPI.updateExperienceSources(player, BreakSource.class,
+                source -> BreakTick.scale(source.rules().experience(facts), factor, Perks.random()));
         if (facts.hasTag("forge:ores") || facts.hasTag("minecraft:base_stone_overworld") || facts.hasTag("minecraft:base_stone_nether")) {
             CombatState.of(player).lastStoneMined = CombatState.now(player);      // Stonehide
         }

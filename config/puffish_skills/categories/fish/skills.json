@@ -208,6 +208,11 @@
     "y": 102,
     "definition": "hook_shot_2"
   },
+  "hook_shot_3": {
+    "x": 0,
+    "y": 102,
+    "definition": "hook_shot_3"
+  },
   "sushi_chef_1": {
     "x": 30,
     "y": 102,
@@ -223,6 +228,11 @@
     "x": 30,
     "y": 102,
     "definition": "sushi_chef_3"
+  },
+  "sushi_chef_4": {
+    "x": 30,
+    "y": 102,
+    "definition": "sushi_chef_4"
   },
   "lure_master_1": {
     "x": 60,
@@ -240,6 +250,11 @@
     "y": 102,
     "definition": "lure_master_3"
   },
+  "lure_master_4": {
+    "x": 60,
+    "y": 102,
+    "definition": "lure_master_4"
+  },
   "tier_5_label": {
     "x": -75,
     "y": 136,
@@ -256,6 +271,11 @@
     "y": 136,
     "definition": "storm_fisher_2"
   },
+  "storm_fisher_3": {
+    "x": -45,
+    "y": 136,
+    "definition": "storm_fisher_3"
+  },
   "sea_legs_1": {
     "x": -15,
     "y": 136,
@@ -266,6 +286,11 @@
     "x": -15,
     "y": 136,
     "definition": "sea_legs_2"
+  },
+  "sea_legs_3": {
+    "x": -15,
+    "y": 136,
+    "definition": "sea_legs_3"
   },
   "leviathan_bait_1": {
     "x": 15,

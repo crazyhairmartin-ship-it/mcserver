@@ -13,6 +13,7 @@ import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.ThrownTrident;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.phys.EntityHitResult;
@@ -34,6 +35,9 @@ public final class RangePerks {
     }
 
     private final List<Homer> homers = new ArrayList<>();
+    private record Retrieve(ServerPlayer player, AbstractArrow thrown) {
+    }
+    private final List<Retrieve> retrieving = new ArrayList<>();
     private final Set<Projectile> clones = Collections.newSetFromMap(new WeakHashMap<>());
     private final Set<Projectile> arcane = Collections.newSetFromMap(new WeakHashMap<>());
 
@@ -73,7 +77,18 @@ public final class RangePerks {
 
     @SubscribeEvent
     public void onServerTick(TickEvent.ServerTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || homers.isEmpty()) {
+        if (event.phase != TickEvent.Phase.END) {
+            return;
+        }
+        for (Retrieve r : retrieving) {
+            if (!r.thrown.m_213877_()) {          // still in the world (stuck or bouncing): take it back, give the item
+                ItemStack item = Projectiles.item(r.thrown).m_41777_();
+                r.thrown.m_146870_();
+                ItemHandlerHelper.giveItemToPlayer(r.player, item);
+            }
+        }
+        retrieving.clear();
+        if (homers.isEmpty()) {
             return;
         }
         homers.removeIf(h -> {
@@ -97,6 +112,7 @@ public final class RangePerks {
                 Vec3 v = arrow.m_20184_();
                 double[] s = Homing.steer(new double[] {v.f_82479_, v.f_82480_, v.f_82481_}, new double[] {to.f_82479_, to.f_82480_, to.f_82481_}, 0.25);
                 arrow.m_20256_(new Vec3(s[0], s[1], s[2]));
+                arrow.f_19812_ = true;          // send the new motion to clients so the curve is visible
             }
             return false;
         });
@@ -122,9 +138,8 @@ public final class RangePerks {
             return;                                   // Loyalty already brings it back
         }
         if (Perks.roll(player, "retriever")) {
-            ItemHandlerHelper.giveItemToPlayer(player, Projectiles.item(thrown).m_41777_());
             thrown.f_36705_ = AbstractArrow.Pickup.CREATIVE_ONLY;
-            thrown.m_146870_();
+            retrieving.add(new Retrieve(player, thrown));     // the hit still lands; the weapon comes back next tick
         }
     }
 }

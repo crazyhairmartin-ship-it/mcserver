@@ -93,6 +93,11 @@
     "y": 34,
     "definition": "green_thumb_3"
   },
+  "green_thumb_4": {
+    "x": -15,
+    "y": 34,
+    "definition": "green_thumb_4"
+  },
   "fertile_soil_1": {
     "x": 15,
     "y": 34,
@@ -108,6 +113,11 @@
     "x": 15,
     "y": 34,
     "definition": "fertile_soil_3"
+  },
+  "fertile_soil_4": {
+    "x": 15,
+    "y": 34,
+    "definition": "fertile_soil_4"
   },
   "harvest_feast_1": {
     "x": 45,
@@ -213,6 +223,11 @@
     "y": 102,
     "definition": "earthbound_3"
   },
+  "earthbound_4": {
+    "x": -15,
+    "y": 102,
+    "definition": "earthbound_4"
+  },
   "sweeping_harvest_1": {
     "x": 15,
     "y": 102,
@@ -224,6 +239,11 @@
     "y": 102,
     "definition": "sweeping_harvest_2"
   },
+  "sweeping_harvest_3": {
+    "x": 15,
+    "y": 102,
+    "definition": "sweeping_harvest_3"
+  },
   "irrigator_1": {
     "x": 45,
     "y": 102,
@@ -234,6 +254,11 @@
     "x": 45,
     "y": 102,
     "definition": "irrigator_2"
+  },
+  "irrigator_3": {
+    "x": 45,
+    "y": 102,
+    "definition": "irrigator_3"
   },
   "compost_king_1": {
     "x": 75,
@@ -260,6 +285,11 @@
     "x": -30,
     "y": 136,
     "definition": "fertile_soil_ii_3"
+  },
+  "fertile_soil_ii_4": {
+    "x": -30,
+    "y": 136,
+    "definition": "fertile_soil_ii_4"
   },
   "harvest_moon_1": {
     "x": 0,

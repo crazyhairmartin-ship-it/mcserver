@@ -10,7 +10,7 @@
     {
       "type": "fotfskills:tame",
       "data": {
-        "experience": 30
+        "experience": 75
       }
     },
     {
@@ -26,7 +26,7 @@
             ]
           }
         },
-        "experience": "max(damage * 0.75, 1)",
+        "experience": "max(damage * 1.0, 1)",
         "anti_farming_per_entity": {
           "limit_per_entity": 40,
           "reset_after_seconds": 300
@@ -54,7 +54,7 @@
         "experience": [
           {
             "condition": "bred",
-            "expression": "6"
+            "expression": "10"
           }
         ]
       }

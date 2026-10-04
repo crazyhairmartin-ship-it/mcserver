@@ -17,6 +17,7 @@ public final class XpSources {
         source("shield_block", "per_damage");
         source("cook", "per_nutrition");
         source("craft_gear", "per_item");
+        source("craft_any", "per_item");
         source("move", "meters_per_xp");
         SkillsAPI.registerExperienceSource(new ResourceLocation("fotfskills", "break"), context -> context.getData()
                 .andThen(data -> {
