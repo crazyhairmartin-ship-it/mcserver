@@ -12,6 +12,26 @@
       "data": {
         "rules": [
           {
+            "block": "minecraft:ancient_debris",
+            "experience": 60
+          },
+          {
+            "block": "irons_spellbooks:mithril_ore",
+            "experience": 40
+          },
+          {
+            "block": "irons_spellbooks:deepslate_mithril_ore",
+            "experience": 40
+          },
+          {
+            "block": "meadow:alpine_diamond_ore",
+            "experience": 20
+          },
+          {
+            "block": "meadow:alpine_emerald_ore",
+            "experience": 20
+          },
+          {
             "block": "#forge:ores/diamond",
             "experience": 20
           },
