@@ -2,14 +2,12 @@ package fotfskills.perk;
 
 import java.util.HashSet;
 import java.util.Set;
-import java.util.UUID;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.ai.attributes.Attribute;
-import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.item.Item;
@@ -44,15 +42,15 @@ public final class ConditionalStats {
 
         double speed = (forest ? Perks.get(player, "forest_speed") : 0) + (inCombat ? Perks.get(player, "combat_speed") : 0)
                 + (now - state.lastShot <= 40 ? Perks.get(player, "skirmish_speed") : 0);
-        set(player, Attributes.f_22279_, "speed", speed, AttributeModifier.Operation.MULTIPLY_TOTAL);
-        set(player, Attributes.f_22285_, "toughness", forest ? Perks.get(player, "forest_toughness") : 0, AttributeModifier.Operation.ADDITION);
-        set(player, Attributes.f_22284_, "armor", now - state.lastStoneMined <= 600 ? Perks.get(player, "stonehide") : 0,
+        Modifiers.set(player, Attributes.f_22279_, "speed", speed, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        Modifiers.set(player, Attributes.f_22285_, "toughness", forest ? Perks.get(player, "forest_toughness") : 0, AttributeModifier.Operation.ADDITION);
+        Modifiers.set(player, Attributes.f_22284_, "armor", now - state.lastStoneMined <= 600 ? Perks.get(player, "stonehide") : 0,
                 AttributeModifier.Operation.ADDITION);
-        set(player, Attributes.f_22276_, "health", player.m_36324_().m_38722_() > 10 ? Perks.get(player, "iron_stomach") : 0,
+        Modifiers.set(player, Attributes.f_22276_, "health", player.m_36324_().m_38722_() > 10 ? Perks.get(player, "iron_stomach") : 0,
                 AttributeModifier.Operation.ADDITION);
         double attackSpeed = (Weapons.is(held, "light") || Weapons.is(held, "sword") ? Perks.get(player, "duelist_speed") : 0)
                 + (Weapons.is(held, "light") ? Perks.get(player, "light_speed") : 0);
-        set(player, Attributes.f_22283_, "attack_speed", attackSpeed, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        Modifiers.set(player, Attributes.f_22283_, "attack_speed", attackSpeed, AttributeModifier.Operation.MULTIPLY_TOTAL);
 
         boolean staff = Weapons.is(held, "magic");
         int armourPieces = 0;
@@ -69,10 +67,10 @@ public final class ConditionalStats {
                 + armourPieces * Perks.get(player, "warded_spell") + gems.size() * Perks.get(player, "gem_spell")
                 + (staff ? Perks.get(player, "staff_spell") : 0)
                 + (player.m_36324_().m_38702_() >= 20 ? Perks.get(player, "feast_spell") : 0);
-        set(player, attribute("irons_spellbooks", "spell_power"), "spell", spell, AttributeModifier.Operation.MULTIPLY_BASE);
-        set(player, attribute("irons_spellbooks", "cooldown_reduction"), "cooldown", staff ? Perks.get(player, "staff_cooldown") : 0,
+        Modifiers.set(player, attribute("irons_spellbooks", "spell_power"), "spell", spell, AttributeModifier.Operation.MULTIPLY_BASE);
+        Modifiers.set(player, attribute("irons_spellbooks", "cooldown_reduction"), "cooldown", staff ? Perks.get(player, "staff_cooldown") : 0,
                 AttributeModifier.Operation.ADDITION);
-        set(player, attribute("irons_spellbooks", "mana_regen"), "regen", now - state.lastMeal <= 1200 ? Perks.get(player, "brain_regen") : 0,
+        Modifiers.set(player, attribute("irons_spellbooks", "mana_regen"), "regen", now - state.lastMeal <= 1200 ? Perks.get(player, "brain_regen") : 0,
                 AttributeModifier.Operation.MULTIPLY_BASE);
 
         if (player.f_19797_ % 100 == 0 && Perks.get(player, "earthbound") > 0) {
@@ -89,34 +87,5 @@ public final class ConditionalStats {
 
     private static Attribute attribute(String namespace, String path) {
         return ForgeRegistries.ATTRIBUTES.getValue(new ResourceLocation(namespace, path));
-    }
-
-    private static UUID uuid(String key) {
-        return UUID.nameUUIDFromBytes(("fotfskills:stat:" + key).getBytes());
-    }
-
-    /** Adds, updates or removes this stat's modifier so the attribute carries exactly value. */
-    private static void set(ServerPlayer player, Attribute attribute, String key, double value, AttributeModifier.Operation op) {
-        if (attribute == null) {
-            return;
-        }
-        AttributeInstance instance = player.m_21051_(attribute);
-        if (instance == null) {
-            return;
-        }
-        UUID id = uuid(key);
-        AttributeModifier old = instance.m_22111_(id);
-        if (old != null && old.m_22218_() == value) {
-            return;
-        }
-        if (old != null) {
-            instance.m_22120_(id);
-        }
-        if (value != 0) {
-            instance.m_22118_(new AttributeModifier(id, "fotfskills " + key, value, op));
-        }
-        if (attribute == Attributes.f_22276_ && player.m_21223_() > player.m_21233_()) {
-            player.m_21153_(player.m_21233_());        // removing Iron Stomach health trims, never kills
-        }
     }
 }

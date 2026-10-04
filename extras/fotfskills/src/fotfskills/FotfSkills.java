@@ -3,6 +3,7 @@ package fotfskills;
 import fotfskills.perk.ArsMana;
 import fotfskills.perk.ArsPerks;
 import fotfskills.perk.BlockPerks;
+import fotfskills.perk.BreedingPerks;
 import fotfskills.perk.CombatPerks;
 import fotfskills.perk.ConditionalStats;
 import fotfskills.perk.IronsMana;
@@ -10,7 +11,10 @@ import fotfskills.perk.IronsPerks;
 import fotfskills.perk.Mana;
 import fotfskills.perk.ItemPerks;
 import fotfskills.perk.PerkReward;
+import fotfskills.perk.OpacParties;
+import fotfskills.perk.Parties;
 import fotfskills.perk.PerkSync;
+import fotfskills.perk.PetPerks;
 import fotfskills.perk.WeaponPerks;
 import fotfskills.xp.ForgeXpEvents;
 import fotfskills.xp.IronsCastXp;
@@ -32,6 +36,11 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new CombatPerks());
         MinecraftForge.EVENT_BUS.register(new WeaponPerks());
         MinecraftForge.EVENT_BUS.register(new ConditionalStats());
+        MinecraftForge.EVENT_BUS.register(new PetPerks());
+        MinecraftForge.EVENT_BUS.register(new BreedingPerks());
+        if (ModList.get().isLoaded("openpartiesandclaims")) {
+            Parties.register(OpacParties::same);
+        }
         MinecraftForge.EVENT_BUS.register(new ForgeXpEvents());
         if (ModList.get().isLoaded("ars_nouveau")) {
             MinecraftForge.EVENT_BUS.register(new ArsPerks());

@@ -15,6 +15,8 @@ public final class CombatState {
     public final Streak flurry = new Streak(40, 5);
     public final SwingGate swing = new SwingGate();
     public UUID markedTarget;
+    public UUID falconTarget;
+    public long falconUntil;
     public long markedUntil;
 
     public static CombatState of(ServerPlayer player) {

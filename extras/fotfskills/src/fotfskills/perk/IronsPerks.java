@@ -11,6 +11,9 @@ public final class IronsPerks {
     public void onCast(SpellOnCastEvent event) {
         if (event.getEntity() instanceof ServerPlayer caster) {
             CombatState.of(caster).lastCast = CombatState.now(caster);      // Spellbound Steel
+            if (event.getSpellId().contains("heal")) {                       // Nature's Mend
+                PetPerks.healPets(caster, 2 * event.getSpellLevel() * Perks.get(caster, "natures_mend"));
+            }
         }
         if (event.getEntity() instanceof ServerPlayer player && Perks.roll(player, "free_spell")) {
             event.setManaCost(0);
