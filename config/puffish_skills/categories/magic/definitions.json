@@ -467,7 +467,7 @@
   },
   "staff_adept_2": {
     "title": "Staff Adept",
-    "description": "Holding a staff or wand: +8% spell power and -4% cooldowns",
+    "description": "Holding a staff or wand: +8% spell power and -8% cooldowns",
     "icon": {
       "type": "item",
       "data": {
@@ -485,7 +485,7 @@
   },
   "staff_adept_3": {
     "title": "Staff Adept",
-    "description": "Holding a staff or wand: +12% spell power and -4% cooldowns",
+    "description": "Holding a staff or wand: +12% spell power and -12% cooldowns",
     "icon": {
       "type": "item",
       "data": {

@@ -614,7 +614,7 @@
   },
   "throwing_arm_2": {
     "title": "Throwing Arm",
-    "description": "Thrown weapons fly 16% faster and hit 8% harder",
+    "description": "Thrown weapons fly 16% faster and hit 16% harder",
     "icon": {
       "type": "item",
       "data": {
@@ -632,7 +632,7 @@
   },
   "throwing_arm_3": {
     "title": "Throwing Arm",
-    "description": "Thrown weapons fly 24% faster and hit 8% harder",
+    "description": "Thrown weapons fly 24% faster and hit 24% harder",
     "icon": {
       "type": "item",
       "data": {

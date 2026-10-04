@@ -3,7 +3,7 @@
 Phase 1 (preview): nodes have no rewards (no effects). Run: python tools/skills/make_skill_trees.py
 
 Layout: one tile per node. A node's ranks are separate Pufferfish skills stacked on the same tile and chained
-(rank 2 needs rank 1); the fotfmail add-on draws a stack as one tile with an "n/total" counter. Each tier row
+(rank 2 needs rank 1); the fotfskills add-on draws a stack as one tile with an "n/total" counter. Each tier row
 starts with a roman-numeral tile ("Tier 3 · 10 points") and choice tiers get an "OR" tile between the branches.
 Label and OR tiles are skills with no connections, so they can never be unlocked.
 """
@@ -19,7 +19,8 @@ ICONS = json.loads((HERE / 'icons.json').read_text(encoding='utf-8'))
 TILE = 30           # pixels between tiles in a row
 ROW_HEIGHT = 34     # pixels between tier rows
 NUMERALS = 'fotfskills:textures/gui/skills/'   # tier_<n>.png and or.png, drawn by extras/fotfskills/draw_numerals.py
-PER_RANK = re.compile(r'^(?P<lead>.*?)(?P<sign>[+-]?)(?P<num>\d+(?:\.\d+)?)(?P<unit>%?)(?P<rest>.*?) per rank(?P<tail>.*)$')
+PER_RANK = re.compile(r'^(?P<clause>.*?) per rank(?P<tail>.*)$')
+AMOUNT = re.compile(r'(?P<sign>[+-]?)(?P<num>\d+(?:\.\d+)?)(?P<unit>%?)')
 
 
 def slug(name):
@@ -44,20 +45,26 @@ def fmt(value):
     return f'{value:.2f}'.rstrip('0').rstrip('.')
 
 
-def effect_at(match, amount):
-    m = match
-    return f'{m["lead"]}{m["sign"]}{fmt(amount)}{m["unit"]}{m["rest"]}{m["tail"]}'.strip()
-
-
 def rank_text(node, k):
     """The effect a node has with k ranks, e.g. '+8% mining speed' for Stone Sense rank 2.
 
-    The add-on's tooltip shows the owned rank's text in white and the next rank's in grey.
+    In the clause before "per rank", every signed or percent amount scales with k ('+1 armour', '8% faster');
+    plain numbers ('for 30 s', 'spend 5 mana', 'Y 40') stay fixed. A clause with no signed or percent amount
+    scales its first number ('reaches 4 blocks further'). The add-on's tooltip shows the owned rank's text in
+    white and the next rank's in grey.
     """
     m = PER_RANK.match(node['d'])
     if node['r'] == 1 or not m:
         return node['d']
-    return effect_at(m, float(m['num']) * k)
+    amounts = list(AMOUNT.finditer(m['clause']))
+    if not amounts:
+        return node['d']
+    scaled = [a for a in amounts if a['sign'] or a['unit']] or amounts[:1]
+    clause = m['clause']
+    for a in reversed(scaled):
+        text = f'{a["sign"]}{fmt(float(a["num"]) * k)}{a["unit"]}'
+        clause = clause[:a.start()] + text + clause[a.end():]
+    return f'{clause}{m["tail"]}'.strip()
 
 
 def extras(node, tree):

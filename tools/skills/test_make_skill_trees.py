@@ -159,3 +159,12 @@ def test_tier_and_or_tiles_use_numeral_textures():
     defs = g.build_category(tree('range'), TIERS)['definitions.json']
     assert defs['tier_3_label']['icon'] == {'type': 'texture', 'data': {'texture': 'fotfskills:textures/gui/skills/tier_3.png'}}
     assert defs['tier_3_or']['icon'] == {'type': 'texture', 'data': {'texture': 'fotfskills:textures/gui/skills/or.png'}}
+
+
+def test_rank_text_scales_every_amount_but_not_durations_or_costs():
+    assert g.rank_text(node('agility', 'Throwing Arm'), 2) == 'Thrown weapons fly 16% faster and hit 16% harder'
+    assert g.rank_text(node('magic', 'Staff Adept'), 3) == 'Holding a staff or wand: +12% spell power and -12% cooldowns'
+    assert g.rank_text(node('range', 'Arcane Arrows'), 2) == 'Full-draw shots spend 5 mana for +30% magic damage'
+    assert g.rank_text(node('mining', 'Stonehide'), 2) == 'Mining grants +2 armour for 30 s'
+    assert g.rank_text(node('agility', 'Long Rope'), 3) == 'Grappling hook reaches 12 blocks further'
+    assert g.rank_text(node('farm', 'Grim Harvest'), 3) == 'Scythe kills heal you half a heart per rank'   # no number: unchanged

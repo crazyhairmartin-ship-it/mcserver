@@ -725,7 +725,7 @@
   },
   "arcane_arrows_2": {
     "title": "Arcane Arrows",
-    "description": "Full-draw shots spend 10 mana for +15% magic damage",
+    "description": "Full-draw shots spend 5 mana for +30% magic damage",
     "icon": {
       "type": "item",
       "data": {
@@ -743,7 +743,7 @@
   },
   "arcane_arrows_3": {
     "title": "Arcane Arrows",
-    "description": "Full-draw shots spend 15 mana for +15% magic damage",
+    "description": "Full-draw shots spend 5 mana for +45% magic damage",
     "icon": {
       "type": "item",
       "data": {

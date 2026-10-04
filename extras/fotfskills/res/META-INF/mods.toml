@@ -21,6 +21,8 @@ side = "BOTH"
 [[dependencies.fotfskills]]
 modId = "puffish_skills"
 mandatory = true
-versionRange = "*"
+# The client mixin targets Pufferfish 0.19.1 internals (lambda names, private members). A Pufferfish update
+# needs fotfskills rebuilt and checked; until then Forge shows "missing dependency" instead of crashing.
+versionRange = "[0.19.1,0.19.2)"
 ordering = "AFTER"
 side = "BOTH"
