@@ -1,0 +1,746 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:swords",
+    {
+      "id": "alexsmobs:skelewag_sword",
+      "required": false
+    },
+    {
+      "id": "aquaculture:neptunium_sword",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:enchanters_sword",
+      "required": false
+    },
+    {
+      "id": "bakery:rolling_pin",
+      "required": false
+    },
+    {
+      "id": "beachparty:pool_noodle",
+      "required": false
+    },
+    {
+      "id": "cataclysm:black_steel_sword",
+      "required": false
+    },
+    {
+      "id": "cataclysm:khopesh",
+      "required": false
+    },
+    {
+      "id": "cataclysm:meat_shredder",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_incinerator",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:amethyst_rapier",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:boreal_blade",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:claymore",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:hellrazor",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:keeper_flamberge",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:legionnaire_flamberge",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:magehunter",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:misery",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:spellbreaker",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:twilight_gale",
+      "required": false
+    },
+    {
+      "id": "minecraft:diamond_sword",
+      "required": false
+    },
+    {
+      "id": "minecraft:golden_sword",
+      "required": false
+    },
+    {
+      "id": "minecraft:iron_sword",
+      "required": false
+    },
+    {
+      "id": "minecraft:netherite_sword",
+      "required": false
+    },
+    {
+      "id": "minecraft:stone_sword",
+      "required": false
+    },
+    {
+      "id": "minecraft:wooden_sword",
+      "required": false
+    },
+    {
+      "id": "simplyswords:arcanethyst",
+      "required": false
+    },
+    {
+      "id": "simplyswords:awakened_lichblade",
+      "required": false
+    },
+    {
+      "id": "simplyswords:bloodwake",
+      "required": false
+    },
+    {
+      "id": "simplyswords:bramblethorn",
+      "required": false
+    },
+    {
+      "id": "simplyswords:brimstone_claymore",
+      "required": false
+    },
+    {
+      "id": "simplyswords:caelestis",
+      "required": false
+    },
+    {
+      "id": "simplyswords:chompolotl",
+      "required": false
+    },
+    {
+      "id": "simplyswords:dawnquiver",
+      "required": false
+    },
+    {
+      "id": "simplyswords:decaying_relic",
+      "required": false
+    },
+    {
+      "id": "simplyswords:dormant_relic",
+      "required": false
+    },
+    {
+      "id": "simplyswords:dreadwhisper",
+      "required": false
+    },
+    {
+      "id": "simplyswords:emberblade",
+      "required": false
+    },
+    {
+      "id": "simplyswords:emberlash",
+      "required": false
+    },
+    {
+      "id": "simplyswords:enigma",
+      "required": false
+    },
+    {
+      "id": "simplyswords:flamewind",
+      "required": false
+    },
+    {
+      "id": "simplyswords:frostfall",
+      "required": false
+    },
+    {
+      "id": "simplyswords:gloampiercer",
+      "required": false
+    },
+    {
+      "id": "simplyswords:harbinger",
+      "required": false
+    },
+    {
+      "id": "simplyswords:hearthflame",
+      "required": false
+    },
+    {
+      "id": "simplyswords:hiveheart",
+      "required": false
+    },
+    {
+      "id": "simplyswords:icewhisper",
+      "required": false
+    },
+    {
+      "id": "simplyswords:ionbound_stormscale",
+      "required": false
+    },
+    {
+      "id": "simplyswords:livyatan",
+      "required": false
+    },
+    {
+      "id": "simplyswords:magiblade",
+      "required": false
+    },
+    {
+      "id": "simplyswords:mjolnir",
+      "required": false
+    },
+    {
+      "id": "simplyswords:molten_edge",
+      "required": false
+    },
+    {
+      "id": "simplyswords:ribboncleaver",
+      "required": false
+    },
+    {
+      "id": "simplyswords:riftmane",
+      "required": false
+    },
+    {
+      "id": "simplyswords:righteous_relic",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_claymore",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_cutlass",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_katana",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_longsword",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_rapier",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_twinblade",
+      "required": false
+    },
+    {
+      "id": "simplyswords:shadowsting",
+      "required": false
+    },
+    {
+      "id": "simplyswords:slumbering_lichblade",
+      "required": false
+    },
+    {
+      "id": "simplyswords:soulkeeper",
+      "required": false
+    },
+    {
+      "id": "simplyswords:soulpyre",
+      "required": false
+    },
+    {
+      "id": "simplyswords:soulrender",
+      "required": false
+    },
+    {
+      "id": "simplyswords:soulstalker",
+      "required": false
+    },
+    {
+      "id": "simplyswords:soulstealer",
+      "required": false
+    },
+    {
+      "id": "simplyswords:stars_edge",
+      "required": false
+    },
+    {
+      "id": "simplyswords:stormbringer",
+      "required": false
+    },
+    {
+      "id": "simplyswords:storms_edge",
+      "required": false
+    },
+    {
+      "id": "simplyswords:stormscale",
+      "required": false
+    },
+    {
+      "id": "simplyswords:sunfire",
+      "required": false
+    },
+    {
+      "id": "simplyswords:sword_on_a_stick",
+      "required": false
+    },
+    {
+      "id": "simplyswords:tainted_relic",
+      "required": false
+    },
+    {
+      "id": "simplyswords:tempest",
+      "required": false
+    },
+    {
+      "id": "simplyswords:the_devourer",
+      "required": false
+    },
+    {
+      "id": "simplyswords:thunderbrand",
+      "required": false
+    },
+    {
+      "id": "simplyswords:toxic_longsword",
+      "required": false
+    },
+    {
+      "id": "simplyswords:twisted_blade",
+      "required": false
+    },
+    {
+      "id": "simplyswords:waking_lichblade",
+      "required": false
+    },
+    {
+      "id": "simplyswords:watcher_claymore",
+      "required": false
+    },
+    {
+      "id": "simplyswords:waxweaver",
+      "required": false
+    },
+    {
+      "id": "simplyswords:whisperwind",
+      "required": false
+    },
+    {
+      "id": "simplyswords:wickpiercer",
+      "required": false
+    },
+    {
+      "id": "simplyswords:wraithfang",
+      "required": false
+    },
+    {
+      "id": "simplyswords:wraithmaw",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:cestus",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:studded_cestus",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_longsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_saber",
+      "required": false
+    },
+    {
+      "id": "twilightforest:fiery_sword",
+      "required": false
+    },
+    {
+      "id": "twilightforest:giant_sword",
+      "required": false
+    },
+    {
+      "id": "twilightforest:glass_sword",
+      "required": false
+    },
+    {
+      "id": "twilightforest:ice_sword",
+      "required": false
+    },
+    {
+      "id": "twilightforest:ironwood_sword",
+      "required": false
+    },
+    {
+      "id": "twilightforest:knightmetal_sword",
+      "required": false
+    },
+    {
+      "id": "twilightforest:steeleaf_sword",
+      "required": false
+    }
+  ]
+}

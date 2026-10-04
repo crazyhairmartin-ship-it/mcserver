@@ -1,0 +1,102 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:crossbow",
+    {
+      "id": "ars_nouveau:spell_crossbow",
+      "required": false
+    },
+    {
+      "id": "cataclysm:void_assault_shoulder_weapon",
+      "required": false
+    },
+    {
+      "id": "cataclysm:wither_assault_shoulder_weapon",
+      "required": false
+    },
+    {
+      "id": "immersive_aircraft:heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:autoloader_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:leather_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "wildernature:blunderbuss",
+      "required": false
+    }
+  ]
+}

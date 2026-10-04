@@ -1,0 +1,77 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "alexscaves:sea_staff",
+      "required": false
+    },
+    {
+      "id": "alexscaves:sugar_staff",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:dominion_wand",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:wand",
+      "required": false
+    },
+    {
+      "id": "grapplemod:launcheritem",
+      "required": false
+    },
+    {
+      "id": "grapplemod:staffupgradeitem",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:artificer_cane",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:blood_staff",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:graybeard_staff",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:hither_thither_wand",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:ice_staff",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:lightning_rod",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:pyrium_staff",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:staff_of_the_nines",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:sculptor_staff",
+      "required": false
+    },
+    {
+      "id": "twilightforest:fortification_scepter",
+      "required": false
+    },
+    {
+      "id": "twilightforest:twilight_scepter",
+      "required": false
+    },
+    {
+      "id": "twilightforest:zombie_scepter",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,338 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:trident",
+    {
+      "id": "alexscaves:chocolate_ice_cream_scoop",
+      "required": false
+    },
+    {
+      "id": "alexscaves:cinder_brick",
+      "required": false
+    },
+    {
+      "id": "alexscaves:depth_charge",
+      "required": false
+    },
+    {
+      "id": "alexscaves:guano",
+      "required": false
+    },
+    {
+      "id": "alexscaves:sweetberry_ice_cream_scoop",
+      "required": false
+    },
+    {
+      "id": "alexscaves:vanilla_ice_cream_scoop",
+      "required": false
+    },
+    {
+      "id": "grapplemod:throwupgradeitem",
+      "required": false
+    },
+    {
+      "id": "minecraft:lingering_potion",
+      "required": false
+    },
+    {
+      "id": "minecraft:splash_potion",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_chakram",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_boomerang",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_javelin",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_tomahawk",
+      "required": false
+    },
+    {
+      "id": "supplementaries:slingshot",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,817 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "alexscaves:ortholance",
+      "required": false
+    },
+    {
+      "id": "cataclysm:brontes",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ceraunus",
+      "required": false
+    },
+    {
+      "id": "cataclysm:coral_bardiche",
+      "required": false
+    },
+    {
+      "id": "cataclysm:infernal_forge",
+      "required": false
+    },
+    {
+      "id": "cataclysm:soul_render",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_annihilator",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_immolator",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_incinerator",
+      "required": false
+    },
+    {
+      "id": "cataclysm:void_forge",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:claymore",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:decrepit_scythe",
+      "required": false
+    },
+    {
+      "id": "simplyswords:brimstone_claymore",
+      "required": false
+    },
+    {
+      "id": "simplyswords:magiscythe",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_claymore",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_glaive",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_greataxe",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_greathammer",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_halberd",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_scythe",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_warglaive",
+      "required": false
+    },
+    {
+      "id": "simplyswords:watcher_claymore",
+      "required": false
+    },
+    {
+      "id": "simplyswords:watching_warglaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_warhammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_battle_hammer",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_glaive",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_greatsword",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_lance",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_scythe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_warhammer",
+      "required": false
+    }
+  ]
+}

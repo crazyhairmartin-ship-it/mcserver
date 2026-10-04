@@ -1,0 +1,294 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:axes",
+    {
+      "id": "aquaculture:neptunium_axe",
+      "required": false
+    },
+    {
+      "id": "cataclysm:black_steel_axe",
+      "required": false
+    },
+    {
+      "id": "cataclysm:coral_bardiche",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_annihilator",
+      "required": false
+    },
+    {
+      "id": "minecraft:diamond_axe",
+      "required": false
+    },
+    {
+      "id": "minecraft:golden_axe",
+      "required": false
+    },
+    {
+      "id": "minecraft:iron_axe",
+      "required": false
+    },
+    {
+      "id": "minecraft:netherite_axe",
+      "required": false
+    },
+    {
+      "id": "minecraft:stone_axe",
+      "required": false
+    },
+    {
+      "id": "minecraft:wooden_axe",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:wrought_axe",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_greataxe",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_battleaxe",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_tomahawk",
+      "required": false
+    },
+    {
+      "id": "twilightforest:diamond_minotaur_axe",
+      "required": false
+    },
+    {
+      "id": "twilightforest:gold_minotaur_axe",
+      "required": false
+    },
+    {
+      "id": "twilightforest:ironwood_axe",
+      "required": false
+    },
+    {
+      "id": "twilightforest:knightmetal_axe",
+      "required": false
+    },
+    {
+      "id": "twilightforest:steeleaf_axe",
+      "required": false
+    }
+  ]
+}

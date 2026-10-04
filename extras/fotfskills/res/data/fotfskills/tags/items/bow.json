@@ -1,0 +1,114 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:bow",
+    {
+      "id": "alexscaves:dreadbow",
+      "required": false
+    },
+    {
+      "id": "aquaculture:neptunium_bow",
+      "required": false
+    },
+    {
+      "id": "ars_nouveau:spell_bow",
+      "required": false
+    },
+    {
+      "id": "cataclysm:cursed_bow",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:blowgun",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:leather_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_longbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_longbow",
+      "required": false
+    },
+    {
+      "id": "twilightforest:ender_bow",
+      "required": false
+    },
+    {
+      "id": "twilightforest:ice_bow",
+      "required": false
+    },
+    {
+      "id": "twilightforest:seeker_bow",
+      "required": false
+    },
+    {
+      "id": "twilightforest:triple_bow",
+      "required": false
+    }
+  ]
+}

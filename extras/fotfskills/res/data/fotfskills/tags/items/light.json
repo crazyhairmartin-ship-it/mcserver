@@ -1,0 +1,385 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "alexscaves:desolate_dagger",
+      "required": false
+    },
+    {
+      "id": "alexscaves:sharpened_candy_cane",
+      "required": false
+    },
+    {
+      "id": "alexsmobs:tendon_whip",
+      "required": false
+    },
+    {
+      "id": "aquaculture:diamond_fillet_knife",
+      "required": false
+    },
+    {
+      "id": "aquaculture:gold_fillet_knife",
+      "required": false
+    },
+    {
+      "id": "aquaculture:iron_fillet_knife",
+      "required": false
+    },
+    {
+      "id": "aquaculture:neptunium_fillet_knife",
+      "required": false
+    },
+    {
+      "id": "aquaculture:stone_fillet_knife",
+      "required": false
+    },
+    {
+      "id": "aquaculture:wooden_fillet_knife",
+      "required": false
+    },
+    {
+      "id": "bakery:bread_knife",
+      "required": false
+    },
+    {
+      "id": "cataclysm:athame",
+      "required": false
+    },
+    {
+      "id": "cataclysm:tidal_claws",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:diamond_knife",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:flint_knife",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:golden_knife",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:iron_knife",
+      "required": false
+    },
+    {
+      "id": "farmersdelight:netherite_knife",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:amethyst_rapier",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:naga_fang_dagger",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_cutlass",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_rapier",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_sai",
+      "required": false
+    },
+    {
+      "id": "simplyswords:runic_twinblade",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_rapier",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_throwing_knife",
+      "required": false
+    }
+  ]
+}
