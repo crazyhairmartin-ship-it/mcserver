@@ -10,12 +10,15 @@ public final class ManaMath {
         return Math.max(0, arsMax - arsBase);
     }
 
+    /** Ars's playerOnTick adds its "per second" regen on both tick phases, so players really got twice the value. */
+    public static final int ARS_TICK_PHASES = 2;
+
     /**
-     * Iron's regen stat bonus giving the same extra mana per second as Ars's regen above its base. Iron's regen adds
-     * max x 0.01 x regen x multiplier every 10 ticks, i.e. max x 0.02 x regen x multiplier per second.
+     * Iron's regen stat bonus giving the same extra mana per second as Ars's regen above its base really gave. Iron's
+     * regen adds max x 0.01 x regen x multiplier every 10 ticks, i.e. max x 0.02 x regen x multiplier per second.
      */
     public static double regenBonus(double arsRegenPerSecond, double arsBaseRegen, double ironsMax, double multiplier) {
-        double extra = arsRegenPerSecond - arsBaseRegen;
+        double extra = (arsRegenPerSecond - arsBaseRegen) * ARS_TICK_PHASES;
         double perRegenPoint = ironsMax * 0.02 * multiplier;
         if (extra <= 0 || perRegenPoint <= 0) {
             return 0;

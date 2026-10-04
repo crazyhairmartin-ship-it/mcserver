@@ -41,6 +41,20 @@ Dylan: "I really wish there was a way we could make both mods' mana effects comb
 - **Creative mode** keeps each mod's own creative rules.
 - **Client side:** only the server cap is redirected. The client cap holds the synced shared values.
 
+## After review (2026-10-04)
+
+- **Ars regen counts twice.** Ars applies its per-second regen on both tick phases, so the conversion doubles the extra to keep the same real mana per second.
+- **Bonuses on login and respawn.** They are applied immediately, so nothing clamps the pool to the smaller max before the first refresh.
+- **No-change writes don't clamp.** Ars calls add mana with 0 every few ticks; that no longer clamps the pool.
+- **Ars's own max** is recorded where Ars calculates it.
+- **Known, accepted for now:**
+  - Death and leaving the End empty the pool (Iron's `manaSpawnPercent` 0). This is Iron's rule.
+  - Ars's spell book cost bar shows Ars's own max, not the pool's.
+  - Wellspring doesn't multiply the converted Ars regen bonus.
+  - Familiar reserve below Ars's base costs nothing.
+  - Iron's bar can lag after an Ars refill that lands exactly on max.
+  - With a full pool and an Ars book in hand, no bar shows (Iron's "contextual" bar setting).
+
 ## Testing
 
 - A pure unit test covers the bonus and regen conversion math (ManaMath).

@@ -10,13 +10,12 @@ import org.spongepowered.asm.mixin.Pseudo;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 /**
  * Shared mana: on the server, a player's Ars Nouveau mana capability reads and writes Iron's Spells mana (current, set,
- * max). Ars's add/remove go through these, so every Ars spend and refill uses the one pool. Ars's computed max is
- * recorded for the bonus (ManaMergeTicker). Mobs and the client copy keep Ars's own behaviour.
+ * max). Ars's add/remove go through these, so every Ars spend and refill uses the one pool (Ars's own computed max
+ * is recorded in ArsManaRegenMixin). Mobs and the client copy keep Ars's own behaviour.
  */
 @Pseudo
 @Mixin(targets = "com.hollingsworth.arsnouveau.common.capability.ManaCap", remap = false)
@@ -41,7 +40,9 @@ public abstract class ArsManaCapMixin {
     private void fotfskills$set(double mana, CallbackInfoReturnable<Double> cir) {
         ServerPlayer player = fotfskills$player();
         if (player != null) {
-            cir.setReturnValue(IronsMana.set(player, mana));
+            double current = IronsMana.get(player);
+            // Ars calls addMana(0) every few ticks (its regen is off): a no-change write must not clamp the pool
+            cir.setReturnValue(Math.abs(mana - current) < 1e-6 ? current : IronsMana.set(player, mana));
         }
     }
 
@@ -53,11 +54,4 @@ public abstract class ArsManaCapMixin {
         }
     }
 
-    @Inject(method = "setMaxMana", at = @At("HEAD"), remap = false)
-    private void fotfskills$recordArsMax(int max, CallbackInfo ci) {
-        ServerPlayer player = fotfskills$player();
-        if (player != null) {
-            ManaMerge.recordArsMax(player.m_20148_(), max);
-        }
-    }
 }

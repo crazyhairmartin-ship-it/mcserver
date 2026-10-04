@@ -16,6 +16,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Pseudo
 @Mixin(targets = "com.hollingsworth.arsnouveau.api.util.ManaUtil", remap = false)
 public abstract class ArsManaRegenMixin {
+    /** Ars's own max for this player (glyphs, book tier, gear, reserve): the part above its base joins the pool. */
+    @Inject(method = "calcMaxMana", at = @At("RETURN"), remap = false)
+    private static void fotfskills$recordArsMax(Player player, CallbackInfoReturnable<Object> cir) {
+        if (ManaMerge.active() && player instanceof ServerPlayer server && cir.getReturnValue() != null) {
+            ManaMerge.recordArsMax(server.m_20148_(), ((com.hollingsworth.arsnouveau.api.util.ManaUtil.Mana) cir.getReturnValue()).getRealMax());
+        }
+    }
+
     @Inject(method = "getManaRegen", at = @At("RETURN"), cancellable = true, remap = false)
     private static void fotfskills$oneRegen(Player player, CallbackInfoReturnable<Double> cir) {
         if (ManaMerge.active() && player instanceof ServerPlayer server) {

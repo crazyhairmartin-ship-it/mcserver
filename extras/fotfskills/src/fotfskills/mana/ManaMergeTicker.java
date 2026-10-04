@@ -17,9 +17,35 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 public final class ManaMergeTicker {
     @SubscribeEvent
     public void onTick(TickEvent.PlayerTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || !(event.player instanceof ServerPlayer player) || player.f_19797_ % 20 != 15) {
-            return;
+        if (event.phase == TickEvent.Phase.END && event.player instanceof ServerPlayer player && player.f_19797_ % 20 == 15) {
+            apply(player);
         }
+    }
+
+    /** The bonuses aren't saved: apply them before the first tick so nothing clamps the pool to the smaller max. */
+    @SubscribeEvent
+    public void onLogin(PlayerEvent.PlayerLoggedInEvent event) {
+        if (event.getEntity() instanceof ServerPlayer player) {
+            measure(player);
+            apply(player);
+        }
+    }
+
+    @SubscribeEvent
+    public void onRespawn(PlayerEvent.PlayerRespawnEvent event) {
+        if (event.getEntity() instanceof ServerPlayer player) {
+            measure(player);
+            apply(player);
+        }
+    }
+
+    /** Asks Ars for this player's max and regen now (the mixins record them). */
+    private static void measure(ServerPlayer player) {
+        com.hollingsworth.arsnouveau.api.util.ManaUtil.calcMaxMana(player);
+        com.hollingsworth.arsnouveau.api.util.ManaUtil.getManaRegen(player);
+    }
+
+    private static void apply(ServerPlayer player) {
         Integer arsMax = ManaMerge.arsMax(player.m_20148_());
         int maxBonus = arsMax == null ? 0 : ManaMath.maxBonus(arsMax, ServerConfig.INIT_MAX_MANA.get());
         Modifiers.set(player, AttributeRegistry.MAX_MANA.get(), "ars_max_bonus", maxBonus, AttributeModifier.Operation.ADDITION);
