@@ -294,3 +294,16 @@ def test_crafting_cooking_farming_fishing_nodes_are_wired():
     fish = g.build_category(tree('fish'), TIERS, XP, PERKS)['definitions.json']
     assert {'type': 'puffish_skills:attribute', 'data': {'attribute': 'minecraft:generic.luck', 'value': 1,
             'operation': 'addition'}} in fish['lucky_line_1']['rewards']
+
+
+def test_range_shield_magic_specials_are_wired():
+    expect = {('range', 'homing_arrows_1'): ('homing', 0.05), ('range', 'seeker_1'): ('seeker', 1),
+              ('range', 'multishot_1'): ('multishot', 0.1), ('range', 'arcane_arrows_1'): ('arcane_arrows', 0.15),
+              ('range', 'retriever_1'): ('retriever', 0.25), ('defense', 'shield_wall_1'): ('shield_wall', 0.15),
+              ('defense', 'bulwark_1'): ('bulwark', 0.1), ('magic', 'mana_shield_1'): ('mana_shield', 1),
+              ('magic', 'arcane_aegis_1'): ('arcane_aegis', 0.1), ('magic', 'scroll_saver_1'): ('scroll_saver', 0.1),
+              ('magic', 'wellspring_1'): ('wellspring', 1), ('forage', 'druids_grove_1'): ('druids_grove', 0.05),
+              ('mining', 'earthshaker_1'): ('earthshaker', 1), ('farm', 'reapers_due_1'): ('reapers_due', 1)}
+    for (tree_id, sid), (perk, value) in expect.items():
+        defs = g.build_category(tree(tree_id), TIERS, XP, PERKS)['definitions.json']
+        assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': value}} in defs[sid]['rewards'], sid

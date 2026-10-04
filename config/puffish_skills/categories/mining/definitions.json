@@ -1389,6 +1389,15 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Motherlode."
+    "extra_description": "Pick one: this or Motherlode.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "earthshaker",
+          "value": 1
+        }
+      }
+    ]
   }
 }

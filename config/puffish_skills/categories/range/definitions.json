@@ -865,7 +865,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "homing",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "homing_arrows_2": {
     "title": "Homing Arrows",
@@ -883,7 +892,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "homing",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "homing_arrows_3": {
     "title": "Homing Arrows",
@@ -901,7 +919,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "homing",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "falconer_1": {
     "title": "Falconer",
@@ -1000,7 +1027,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "arcane_arrows",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "arcane_arrows_2": {
     "title": "Arcane Arrows",
@@ -1018,7 +1054,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "arcane_arrows",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "arcane_arrows_3": {
     "title": "Arcane Arrows",
@@ -1036,7 +1081,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "arcane_arrows",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "multishot_1": {
     "title": "Multishot",
@@ -1054,7 +1108,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "multishot",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "multishot_2": {
     "title": "Multishot",
@@ -1072,7 +1135,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "multishot",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "multishot_3": {
     "title": "Multishot",
@@ -1090,7 +1162,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "multishot",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "retriever_1": {
     "title": "Retriever",
@@ -1108,7 +1189,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "retriever",
+          "value": 0.25
+        }
+      }
+    ]
   },
   "retriever_2": {
     "title": "Retriever",
@@ -1126,7 +1216,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "retriever",
+          "value": 0.25
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",
@@ -1291,6 +1390,15 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Fletcher's Luck."
+    "extra_description": "Pick one: this or Fletcher's Luck.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "seeker",
+          "value": 1
+        }
+      }
+    ]
   }
 }

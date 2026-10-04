@@ -268,6 +268,24 @@
           "value": 0.05
         }
       }
+    ],
+    "shield_wall": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "shield_wall",
+          "value": 0.15
+        }
+      }
+    ],
+    "bulwark": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bulwark",
+          "value": 0.1
+        }
+      }
     ]
   },
   "magic": {
@@ -403,6 +421,42 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "natures_mend",
+          "value": 1
+        }
+      }
+    ],
+    "mana_shield": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mana_shield",
+          "value": 1
+        }
+      }
+    ],
+    "arcane_aegis": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "arcane_aegis",
+          "value": 0.1
+        }
+      }
+    ],
+    "scroll_saver": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "scroll_saver",
+          "value": 0.1
+        }
+      }
+    ],
+    "wellspring": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "wellspring",
           "value": 1
         }
       }
@@ -605,6 +659,15 @@
           "value": 0.03
         }
       }
+    ],
+    "earthshaker": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "earthshaker",
+          "value": 1
+        }
+      }
     ]
   },
   "forage": {
@@ -731,6 +794,15 @@
         "data": {
           "perk": "beekeeper",
           "value": 0.2
+        }
+      }
+    ],
+    "druids_grove": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "druids_grove",
+          "value": 0.05
         }
       }
     ]
@@ -866,6 +938,15 @@
         "data": {
           "perk": "compost_king",
           "value": 0.5
+        }
+      }
+    ],
+    "reapers_due": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "reapers_due",
+          "value": 1
         }
       }
     ]
@@ -1350,6 +1431,51 @@
         "data": {
           "perk": "falconer",
           "value": 0.05
+        }
+      }
+    ],
+    "homing_arrows": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "homing",
+          "value": 0.05
+        }
+      }
+    ],
+    "seeker": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "seeker",
+          "value": 1
+        }
+      }
+    ],
+    "multishot": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "multishot",
+          "value": 0.1
+        }
+      }
+    ],
+    "arcane_arrows": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "arcane_arrows",
+          "value": 0.15
+        }
+      }
+    ],
+    "retriever": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "retriever",
+          "value": 0.25
         }
       }
     ]

@@ -590,7 +590,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mana_shield",
+          "value": 1
+        }
+      }
+    ]
   },
   "mana_shield_2": {
     "title": "Mana Shield",
@@ -608,7 +617,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mana_shield",
+          "value": 1
+        }
+      }
+    ]
   },
   "mana_shield_3": {
     "title": "Mana Shield",
@@ -626,7 +644,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mana_shield",
+          "value": 1
+        }
+      }
+    ]
   },
   "scroll_saver_1": {
     "title": "Scroll Saver",
@@ -644,7 +671,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "scroll_saver",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "scroll_saver_2": {
     "title": "Scroll Saver",
@@ -662,7 +698,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "scroll_saver",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "staff_adept_1": {
     "title": "Staff Adept",
@@ -1398,7 +1443,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Mana Shield (all ranks)."
+    "extra_description": "Needs Mana Shield (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "arcane_aegis",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "arcane_aegis_2": {
     "title": "Arcane Aegis",
@@ -1417,7 +1471,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Mana Shield (all ranks)."
+    "extra_description": "Needs Mana Shield (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "arcane_aegis",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "archmage_1": {
     "title": "Archmage",
@@ -1489,6 +1552,15 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Archmage."
+    "extra_description": "Pick one: this or Archmage.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "wellspring",
+          "value": 1
+        }
+      }
+    ]
   }
 }

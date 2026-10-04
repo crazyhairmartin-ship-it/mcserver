@@ -1368,6 +1368,15 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Harvest Moon."
+    "extra_description": "Pick one: this or Harvest Moon.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "reapers_due",
+          "value": 1
+        }
+      }
+    ]
   }
 }

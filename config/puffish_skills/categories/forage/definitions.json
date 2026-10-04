@@ -1245,7 +1245,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "druids_grove",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "druids_grove_2": {
     "title": "Druid's Grove",
@@ -1263,7 +1272,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "druids_grove",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "druids_grove_3": {
     "title": "Druid's Grove",
@@ -1281,7 +1299,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "druids_grove",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",

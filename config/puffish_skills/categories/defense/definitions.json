@@ -172,7 +172,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "shield_wall",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "shield_wall_2": {
     "title": "Shield Wall",
@@ -190,7 +199,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "shield_wall",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "shield_wall_3": {
     "title": "Shield Wall",
@@ -208,7 +226,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "shield_wall",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "vitality_1": {
     "title": "Vitality",
@@ -647,7 +674,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Battlemage Plate."
+    "extra_description": "Pick one: this or Battlemage Plate.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bulwark",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "bulwark_2": {
     "title": "Bulwark",
@@ -666,7 +702,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Battlemage Plate."
+    "extra_description": "Pick one: this or Battlemage Plate.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bulwark",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "bulwark_3": {
     "title": "Bulwark",
@@ -685,7 +730,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Battlemage Plate."
+    "extra_description": "Pick one: this or Battlemage Plate.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bulwark",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
