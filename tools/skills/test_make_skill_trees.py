@@ -216,10 +216,10 @@ def test_stat_nodes_get_one_attribute_reward_per_rank():
     assert 'rewards' not in defs['tier_1_label']
 
 
-def test_mana_pool_raises_both_mods():
+def test_mana_pool_raises_the_shared_pool():
     defs = g.build_category(tree('magic'), TIERS, XP, PERKS)['definitions.json']
     attrs = {r['data']['attribute'] for r in defs['mana_pool_1']['rewards']}
-    assert attrs == {'irons_spellbooks:max_mana', 'ars_nouveau:ars_nouveau.perk.max_mana'}
+    assert attrs == {'irons_spellbooks:max_mana'}   # shared mana: one pool, so Mana Pool counts once
 
 
 PERK_IDS = set(re.findall(r'Map\.entry\("([a-z_]+)"',
