@@ -1,6 +1,10 @@
 """Turns tools/skills/trees.json into Pufferfish's Skills config (config/puffish_skills/).
 
-Phase 1 (preview): nodes have no rewards (no effects). Run: python tools/skills/make_skill_trees.py
+Run: python tools/skills/make_skill_trees.py
+
+XP: tools/skills/xp.json -> categories/<id>/experience.json (curve, level cap, sources; fotfskills:* types come
+from the add-on). Rewards: tools/skills/perks.json -> each rank definition's "rewards" (phase 2a: attributes).
+Node ids must stay <slug>_<k>: the add-on's client mixin groups ranks by that pattern.
 
 Layout: one tile per node. A node's ranks are separate Pufferfish skills stacked on the same tile and chained
 (rank 2 needs rank 1); the fotfskills add-on draws a stack as one tile with an "n/total" counter. Each tier row
@@ -21,6 +25,10 @@ ROW_HEIGHT = 34     # pixels between tier rows
 NUMERALS = 'fotfskills:textures/gui/skills/'   # tier_<n>.png and or.png, drawn by extras/fotfskills/draw_numerals.py
 PER_RANK = re.compile(r'^(?P<clause>.*?) per rank(?P<tail>.*)$')
 AMOUNT = re.compile(r'(?P<sign>[+-]?)(?P<num>\d+(?:\.\d+)?)(?P<unit>%?)')
+
+
+def load(name):
+    return json.loads((HERE / name).read_text(encoding='utf-8'))
 
 
 def slug(name):
@@ -83,7 +91,7 @@ def marker(title, text, texture, req):
             'frame': {'type': 'advancement', 'data': {'frame': 'task'}}, 'required_spent_points': req}
 
 
-def build_category(tree, tiers):
+def build_category(tree, tiers, xp=None, perks=None):
     req = {t['n']: t['req'] for t in tiers}
     by_name = {n['name']: n for n in tree['nodes']}
     icons = ICONS[tree['id']]
@@ -154,11 +162,18 @@ def build_category(tree, tiers):
         'starting_points': 0,
     }
     connections = {'normal': {'unidirectional': uni}, 'exclusive': {'bidirectional': exclusive}}
-    return {'category.json': category, 'definitions.json': definitions, 'skills.json': skills,
-            'connections.json': connections}
+    files = {'category.json': category, 'definitions.json': definitions, 'skills.json': skills,
+             'connections.json': connections}
+    if xp is not None:
+        files['experience.json'] = {
+            'level_limit': xp['level_limit'],
+            'experience_per_level': {'type': 'expression', 'data': {'expression': xp['curve']}},
+            'sources': xp['sources'][tree['id']],
+        }
+    return files
 
 
-def write_config(data, out_dir):
+def write_config(data, out_dir, xp=None, perks=None):
     out_dir = Path(out_dir)
     if out_dir.exists():
         shutil.rmtree(out_dir)          # drop stale categories (e.g. a renamed tree)
@@ -168,7 +183,7 @@ def write_config(data, out_dir):
         ids.append(tree['id'])
         cat_dir = out_dir / 'categories' / tree['id']      # Pufferfish reads config/puffish_skills/categories/<id>/
         cat_dir.mkdir(parents=True)
-        for name, content in build_category(tree, data['tiers']).items():
+        for name, content in build_category(tree, data['tiers'], xp, perks).items():
             (cat_dir / name).write_text(json.dumps(content, indent=2) + '\n', encoding='utf-8')
     config = {'version': 3, 'show_warnings': True, 'categories': ids}
     (out_dir / 'config.json').write_text(json.dumps(config, indent=2) + '\n', encoding='utf-8')
@@ -176,7 +191,7 @@ def write_config(data, out_dir):
 
 def main():
     data = json.loads((HERE / 'trees.json').read_text(encoding='utf-8'))
-    write_config(data, OUT)
+    write_config(data, OUT, load('xp.json'), load('perks.json') if (HERE / 'perks.json').exists() else None)
     print(f'wrote {len(data["trees"])} categories to {OUT}')
 
 

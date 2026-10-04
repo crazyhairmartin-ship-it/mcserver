@@ -1,0 +1,77 @@
+{
+  "level_limit": 50,
+  "experience_per_level": {
+    "type": "expression",
+    "data": {
+      "expression": "30 + 12 * level ^ 1.35"
+    }
+  },
+  "sources": [
+    {
+      "type": "puffish_skills:take_damage",
+      "data": {
+        "variables": {
+          "damage": {
+            "operations": [
+              {
+                "type": "get_taken_damage"
+              }
+            ]
+          },
+          "counts": {
+            "operations": [
+              {
+                "type": "get_damage_source"
+              },
+              {
+                "type": "puffish_skills:is_melee"
+              }
+            ]
+          }
+        },
+        "experience": [
+          {
+            "condition": "counts",
+            "expression": "max(damage * 1.5, 1)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "puffish_skills:take_damage",
+      "data": {
+        "variables": {
+          "damage": {
+            "operations": [
+              {
+                "type": "get_taken_damage"
+              }
+            ]
+          },
+          "counts": {
+            "operations": [
+              {
+                "type": "get_damage_source"
+              },
+              {
+                "type": "puffish_skills:is_projectile"
+              }
+            ]
+          }
+        },
+        "experience": [
+          {
+            "condition": "counts",
+            "expression": "max(damage * 1.5, 1)"
+          }
+        ]
+      }
+    },
+    {
+      "type": "fotfskills:shield_block",
+      "data": {
+        "per_damage": 1.5
+      }
+    }
+  ]
+}

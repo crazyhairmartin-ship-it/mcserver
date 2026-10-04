@@ -1,0 +1,43 @@
+{
+  "level_limit": 50,
+  "experience_per_level": {
+    "type": "expression",
+    "data": {
+      "expression": "30 + 12 * level ^ 1.35"
+    }
+  },
+  "sources": [
+    {
+      "type": "fotfskills:craft_gear",
+      "data": {
+        "per_item": 5
+      }
+    },
+    {
+      "type": "puffish_skills:smelt_item",
+      "data": {
+        "variables": {
+          "ingot": {
+            "operations": [
+              {
+                "type": "get_smelted_item_stack"
+              },
+              {
+                "type": "puffish_skills:test",
+                "data": {
+                  "item": "#forge:ingots"
+                }
+              }
+            ]
+          }
+        },
+        "experience": [
+          {
+            "condition": "ingot",
+            "expression": "1"
+          }
+        ]
+      }
+    }
+  ]
+}

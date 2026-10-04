@@ -1,0 +1,82 @@
+{
+  "level_limit": 50,
+  "experience_per_level": {
+    "type": "expression",
+    "data": {
+      "expression": "30 + 12 * level ^ 1.35"
+    }
+  },
+  "sources": [
+    {
+      "type": "puffish_skills:break_block",
+      "data": {
+        "variables": {
+          "crop": {
+            "operations": [
+              {
+                "type": "get_broken_block_state"
+              },
+              {
+                "type": "puffish_skills:test",
+                "data": {
+                  "block": "#minecraft:crops",
+                  "state": {
+                    "age": "7"
+                  }
+                }
+              }
+            ]
+          },
+          "beet": {
+            "operations": [
+              {
+                "type": "get_broken_block_state"
+              },
+              {
+                "type": "puffish_skills:test",
+                "data": {
+                  "block": "minecraft:beetroots",
+                  "state": {
+                    "age": "3"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "experience": [
+          {
+            "condition": "crop | beet",
+            "expression": "3"
+          }
+        ]
+      }
+    },
+    {
+      "type": "puffish_skills:increase_stat",
+      "data": {
+        "variables": {
+          "bred": {
+            "operations": [
+              {
+                "type": "get_stat"
+              },
+              {
+                "type": "puffish_skills:test",
+                "data": {
+                  "stat": "minecraft.custom:minecraft.animals_bred"
+                }
+              }
+            ]
+          }
+        },
+        "experience": [
+          {
+            "condition": "bred",
+            "expression": "6"
+          }
+        ]
+      }
+    }
+  ]
+}

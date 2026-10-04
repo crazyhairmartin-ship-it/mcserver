@@ -1,0 +1,106 @@
+{
+  "level_limit": 50,
+  "curve": "30 + 12 * level ^ 1.35",
+  "sources": {
+    "mining": [
+      {"type": "puffish_skills:mine_block", "data": {
+        "variables": {
+          "stone": {"operations": [{"type": "get_mined_block_state"}, {"type": "puffish_skills:test", "data": {"block": "#minecraft:base_stone_overworld"}}]},
+          "nether": {"operations": [{"type": "get_mined_block_state"}, {"type": "puffish_skills:test", "data": {"block": "#minecraft:base_stone_nether"}}]},
+          "ore": {"operations": [{"type": "get_mined_block_state"}, {"type": "puffish_skills:test", "data": {"block": "#forge:ores"}}]},
+          "gem": {"operations": [{"type": "get_mined_block_state"}, {"type": "puffish_skills:test", "data": {"block": "#forge:ores/diamond"}}]},
+          "emerald": {"operations": [{"type": "get_mined_block_state"}, {"type": "puffish_skills:test", "data": {"block": "#forge:ores/emerald"}}]}
+        },
+        "experience": [
+          {"condition": "gem | emerald", "expression": "20"},
+          {"condition": "ore", "expression": "6"},
+          {"condition": "stone | nether", "expression": "1"}
+        ]}}
+    ],
+    "forage": [
+      {"type": "puffish_skills:mine_block", "data": {
+        "variables": {"log": {"operations": [{"type": "get_mined_block_state"}, {"type": "puffish_skills:test", "data": {"block": "#minecraft:logs"}}]}},
+        "experience": [{"condition": "log", "expression": "2"}]}},
+      {"type": "puffish_skills:break_block", "data": {
+        "variables": {
+          "flower": {"operations": [{"type": "get_broken_block_state"}, {"type": "puffish_skills:test", "data": {"block": "#minecraft:flowers"}}]},
+          "brown": {"operations": [{"type": "get_broken_block_state"}, {"type": "puffish_skills:test", "data": {"block": "minecraft:brown_mushroom"}}]},
+          "red": {"operations": [{"type": "get_broken_block_state"}, {"type": "puffish_skills:test", "data": {"block": "minecraft:red_mushroom"}}]}
+        },
+        "experience": [{"condition": "flower | brown | red", "expression": "1"}]}}
+    ],
+    "farm": [
+      {"type": "puffish_skills:break_block", "data": {
+        "variables": {
+          "crop": {"operations": [{"type": "get_broken_block_state"}, {"type": "puffish_skills:test", "data": {"block": "#minecraft:crops", "state": {"age": "7"}}}]},
+          "beet": {"operations": [{"type": "get_broken_block_state"}, {"type": "puffish_skills:test", "data": {"block": "minecraft:beetroots", "state": {"age": "3"}}}]}
+        },
+        "experience": [{"condition": "crop | beet", "expression": "3"}]}},
+      {"type": "puffish_skills:increase_stat", "data": {
+        "variables": {"bred": {"operations": [{"type": "get_stat"}, {"type": "puffish_skills:test", "data": {"stat": "minecraft.custom:minecraft.animals_bred"}}]}},
+        "experience": [{"condition": "bred", "expression": "6"}]}}
+    ],
+    "fish": [
+      {"type": "puffish_skills:fish_item", "data": {"variables": {}, "experience": "8"}}
+    ],
+    "cook": [
+      {"type": "fotfskills:cook", "data": {"per_nutrition": 1.0}}
+    ],
+    "craft": [
+      {"type": "fotfskills:craft_gear", "data": {"per_item": 5}},
+      {"type": "puffish_skills:smelt_item", "data": {
+        "variables": {"ingot": {"operations": [{"type": "get_smelted_item_stack"}, {"type": "puffish_skills:test", "data": {"item": "#forge:ingots"}}]}},
+        "experience": [{"condition": "ingot", "expression": "1"}]}}
+    ],
+    "attack": [
+      {"type": "puffish_skills:deal_damage", "data": {
+        "variables": {
+          "damage": {"operations": [{"type": "get_dealt_damage"}]},
+          "melee": {"operations": [{"type": "get_damage_source"}, {"type": "puffish_skills:is_melee"}]}
+        },
+        "experience": [{"condition": "melee", "expression": "max(damage, 1)"}],
+        "anti_farming_per_entity": {"limit_per_entity": 40, "reset_after_seconds": 300}}}
+    ],
+    "range": [
+      {"type": "puffish_skills:deal_damage", "data": {
+        "variables": {
+          "damage": {"operations": [{"type": "get_dealt_damage"}]},
+          "projectile": {"operations": [{"type": "get_damage_source"}, {"type": "puffish_skills:is_projectile"}]}
+        },
+        "experience": [{"condition": "projectile", "expression": "max(damage, 1)"}],
+        "anti_farming_per_entity": {"limit_per_entity": 40, "reset_after_seconds": 300}}}
+    ],
+    "defense": [
+      {"type": "puffish_skills:take_damage", "data": {
+        "variables": {
+          "damage": {"operations": [{"type": "get_taken_damage"}]},
+          "counts": {"operations": [{"type": "get_damage_source"}, {"type": "puffish_skills:is_melee"}]}
+        },
+        "experience": [{"condition": "counts", "expression": "max(damage * 1.5, 1)"}]}},
+      {"type": "puffish_skills:take_damage", "data": {
+        "variables": {
+          "damage": {"operations": [{"type": "get_taken_damage"}]},
+          "counts": {"operations": [{"type": "get_damage_source"}, {"type": "puffish_skills:is_projectile"}]}
+        },
+        "experience": [{"condition": "counts", "expression": "max(damage * 1.5, 1)"}]}},
+      {"type": "fotfskills:shield_block", "data": {"per_damage": 1.5}}
+    ],
+    "agility": [
+      {"type": "fotfskills:move", "data": {"meters_per_xp": 20}}
+    ],
+    "magic": [
+      {"type": "fotfskills:cast_spell", "data": {"per_mana": 0.25}}
+    ],
+    "taming": [
+      {"type": "fotfskills:tame", "data": {"experience": 30}},
+      {"type": "puffish_skills:deal_damage", "data": {
+        "tamed": "only",
+        "variables": {"damage": {"operations": [{"type": "get_dealt_damage"}]}},
+        "experience": "max(damage * 0.75, 1)",
+        "anti_farming_per_entity": {"limit_per_entity": 40, "reset_after_seconds": 300}}},
+      {"type": "puffish_skills:increase_stat", "data": {
+        "variables": {"bred": {"operations": [{"type": "get_stat"}, {"type": "puffish_skills:test", "data": {"stat": "minecraft.custom:minecraft.animals_bred"}}]}},
+        "experience": [{"condition": "bred", "expression": "6"}]}}
+    ]
+  }
+}

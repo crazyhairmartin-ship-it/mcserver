@@ -168,3 +168,39 @@ def test_rank_text_scales_every_amount_but_not_durations_or_costs():
     assert g.rank_text(node('mining', 'Stonehide'), 2) == 'Mining grants +2 armour for 30 s'
     assert g.rank_text(node('agility', 'Long Rope'), 3) == 'Grappling hook reaches 12 blocks further'
     assert g.rank_text(node('farm', 'Grim Harvest'), 3) == 'Scythe kills heal you half a heart per rank'   # no number: unchanged
+
+
+XP = json.loads((Path(__file__).parent / 'xp.json').read_text(encoding='utf-8'))
+
+
+def test_every_tree_has_xp_sources_and_the_spec_curve():
+    for t in DATA['trees']:
+        exp = g.build_category(t, TIERS, xp=XP)['experience.json']
+        assert exp['level_limit'] == 50
+        assert exp['experience_per_level'] == {'type': 'expression', 'data': {'expression': '30 + 12 * level ^ 1.35'}}
+        assert exp['sources'], t['id']
+        for s in exp['sources']:
+            assert s['type'].startswith(('puffish_skills:', 'fotfskills:')) and 'data' in s
+
+
+def test_combat_xp_is_from_hits_and_defense_ignores_environment():
+    types = {t['id']: [s['type'] for s in g.build_category(t, TIERS, xp=XP)['experience.json']['sources']]
+             for t in DATA['trees']}
+    assert types['attack'] == ['puffish_skills:deal_damage']
+    assert types['range'] == ['puffish_skills:deal_damage']
+    assert 'puffish_skills:kill_entity' not in sum(types.values(), [])
+    assert set(types['defense']) == {'puffish_skills:take_damage', 'fotfskills:shield_block'}
+    defense = g.build_category(tree('defense'), TIERS, xp=XP)['experience.json']['sources']
+    taken = [s for s in defense if s['type'] == 'puffish_skills:take_damage']
+    assert len(taken) == 2   # one source for melee hits, one for projectile hits: falls/fire/drowning match neither
+    assert {op['type'] for s in taken for op in s['data']['variables']['counts']['operations']} >= {'get_damage_source'}
+
+
+def test_no_experience_file_without_xp_data():
+    assert 'experience.json' not in g.build_category(tree('mining'), TIERS)
+
+
+def test_written_config_has_experience_per_category(tmp_path):
+    g.write_config(DATA, tmp_path, xp=XP)
+    for t in DATA['trees']:
+        assert (tmp_path / 'categories' / t['id'] / 'experience.json').exists()

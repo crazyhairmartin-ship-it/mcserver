@@ -1,0 +1,89 @@
+{
+  "level_limit": 50,
+  "experience_per_level": {
+    "type": "expression",
+    "data": {
+      "expression": "30 + 12 * level ^ 1.35"
+    }
+  },
+  "sources": [
+    {
+      "type": "puffish_skills:mine_block",
+      "data": {
+        "variables": {
+          "log": {
+            "operations": [
+              {
+                "type": "get_mined_block_state"
+              },
+              {
+                "type": "puffish_skills:test",
+                "data": {
+                  "block": "#minecraft:logs"
+                }
+              }
+            ]
+          }
+        },
+        "experience": [
+          {
+            "condition": "log",
+            "expression": "2"
+          }
+        ]
+      }
+    },
+    {
+      "type": "puffish_skills:break_block",
+      "data": {
+        "variables": {
+          "flower": {
+            "operations": [
+              {
+                "type": "get_broken_block_state"
+              },
+              {
+                "type": "puffish_skills:test",
+                "data": {
+                  "block": "#minecraft:flowers"
+                }
+              }
+            ]
+          },
+          "brown": {
+            "operations": [
+              {
+                "type": "get_broken_block_state"
+              },
+              {
+                "type": "puffish_skills:test",
+                "data": {
+                  "block": "minecraft:brown_mushroom"
+                }
+              }
+            ]
+          },
+          "red": {
+            "operations": [
+              {
+                "type": "get_broken_block_state"
+              },
+              {
+                "type": "puffish_skills:test",
+                "data": {
+                  "block": "minecraft:red_mushroom"
+                }
+              }
+            ]
+          }
+        },
+        "experience": [
+          {
+            "condition": "flower | brown | red",
+            "expression": "1"
+          }
+        ]
+      }
+    }
+  ]
+}
