@@ -62,6 +62,23 @@ public final class PerkSync {
                     context.get().setPacketHandled(true);
                 })
                 .add();
+        CHANNEL.messageBuilder(ProfileRequest.class, 3, NetworkDirection.PLAY_TO_SERVER)
+                .encoder((msg, buf) -> { }).decoder(buf -> new ProfileRequest())
+                .consumerMainThread((msg, context) -> {
+                    ServerPlayer player = context.get().getSender();
+                    if (player != null) {
+                        CHANNEL.send(PacketDistributor.PLAYER.with(() -> player), SkillProfile.of(player));
+                    }
+                    context.get().setPacketHandled(true);
+                })
+                .add();
+        CHANNEL.messageBuilder(SkillProfile.class, 4, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder(SkillProfile::encode).decoder(SkillProfile::decode)
+                .consumerMainThread((msg, context) -> {
+                    SkillProfile.latest = msg;
+                    context.get().setPacketHandled(true);
+                })
+                .add();
         CHANNEL.messageBuilder(Buffs.class, 1, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Buffs::encode).decoder(Buffs::decode)
                 .consumerMainThread((msg, context) -> {
@@ -73,6 +90,14 @@ public final class PerkSync {
 
     /** Client to server: the player used Double Jump (the server clears their fall distance). */
     public record DoubleJumped() {
+    }
+
+    /** Client to server: the character screen opened and wants this player's skills. */
+    public record ProfileRequest() {
+    }
+
+    public static void requestProfile() {
+        CHANNEL.sendToServer(new ProfileRequest());
     }
 
     public static void sendDoubleJump() {

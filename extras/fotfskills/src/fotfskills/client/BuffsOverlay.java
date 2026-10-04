@@ -21,9 +21,9 @@ public final class BuffsOverlay {
         if (!(event.getScreen() instanceof InventoryScreen inventory)) {
             return;
         }
-        button = Button.m_253074_(Component.m_237113_("✦"), b -> Minecraft.m_91087_().m_91152_(new BuffsScreen(inventory)))
+        button = Button.m_253074_(Component.m_237113_("✦"), b -> Minecraft.m_91087_().m_91152_(new CharacterScreen(inventory)))
                 .m_252987_(0, 0, 16, 16)
-                .m_257505_(Tooltip.m_257550_(Component.m_237113_("Skill buffs and total level")))
+                .m_257505_(Tooltip.m_257550_(Component.m_237113_("Character: skills, buffs, health, stamina and mana")))
                 .m_253136_();
         place(inventory);
         event.addListener(button);
