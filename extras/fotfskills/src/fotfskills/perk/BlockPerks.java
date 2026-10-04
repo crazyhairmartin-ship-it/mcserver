@@ -4,6 +4,12 @@ import fotfskills.world.PlacedBlocks;
 import fotfskills.xp.BreakSource;
 import java.util.List;
 import net.minecraft.core.BlockPos;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.SimpleContainer;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.crafting.RecipeType;
+import net.minecraft.world.phys.AABB;
+import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.item.ItemStack;
@@ -74,6 +80,7 @@ public final class BlockPerks {
             copies += Perks.roll(player, "log_drops") ? 1 : 0;
             copies += Perks.roll(player, "bounty_triple") ? 2 : 0;
         } else if (facts.matureCrop()) {
+            FarmPerks.sweep(player, pos, state);
             copies += Perks.roll(player, "crop_drops") ? 1 : 0;
             copies += Perks.roll(player, "harvest_double") ? 1 : 0;
             if (Perks.roll(player, "seed_back")) {
@@ -82,6 +89,13 @@ public final class BlockPerks {
         } else if (facts.hasTag("minecraft:flowers") || facts.id().endsWith("_mushroom")) {
             copies += Perks.roll(player, "wild_drops") ? 1 : 0;
             copies += facts.id().endsWith("_mushroom") && Perks.roll(player, "bounty_triple") ? 2 : 0;
+        }
+        if (facts.hasTag("forge:ores") && !silk && Perks.roll(player, "autosmelt")) {
+            autosmelt(level, pos);
+        }
+        if (facts.hasTag("minecraft:base_stone_overworld") && Perks.roll(player, "ore_nose")) {
+            Block.m_49840_(level, pos, new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft",
+                    Perks.random() < 0.7 ? "iron_nugget" : "gold_nugget"))));
         }
         if (copies > 0 && !silk) {
             List<ItemStack> drops = Block.m_49874_(state, level, pos, blockEntity, player, tool);
@@ -108,6 +122,23 @@ public final class BlockPerks {
         }
         if (bonus > 0) {
             event.setNewSpeed((float) (event.getNewSpeed() * (1 + bonus)));
+        }
+    }
+
+    /** Auto-smelt: this break's fresh drops at pos (spawned this tick) become their smelting result. */
+    private static void autosmelt(ServerLevel level, BlockPos pos) {
+        for (ItemEntity drop : level.m_45976_(ItemEntity.class, new AABB(pos).m_82400_(0.75))) {
+            if (drop.f_19797_ != 0) {
+                continue;
+            }
+            ItemStack stack = drop.m_32055_();
+            level.m_7465_().m_44015_(RecipeType.f_44108_, new SimpleContainer(stack.m_41777_()), level).ifPresent(recipe -> {
+                ItemStack result = recipe.m_8043_(level.m_9598_()).m_41777_();
+                if (!result.m_41619_()) {
+                    result.m_41764_(stack.m_41613_() * result.m_41613_());
+                    drop.m_32045_(result);
+                }
+            });
         }
     }
 }

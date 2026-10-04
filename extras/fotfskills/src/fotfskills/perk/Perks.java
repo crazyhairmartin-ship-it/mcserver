@@ -43,7 +43,17 @@ public final class Perks {
             Map.entry("pack_tactics", 2.0), Map.entry("falconer", 2.0), Map.entry("loyal_guard", 0.95),
             Map.entry("guardian", 0.9), Map.entry("caretaker", 20.0), Map.entry("pet_treats", 20.0),
             Map.entry("natures_mend", 5.0), Map.entry("gentle_hand", 0.95), Map.entry("breed_bonus", 0.95),
-            Map.entry("twins", 0.95), Map.entry("growth", 0.9), Map.entry("prized_stock", 1.0), Map.entry("scavenging", 0.95));
+            Map.entry("twins", 0.95), Map.entry("growth", 0.9), Map.entry("prized_stock", 1.0), Map.entry("scavenging", 0.95),
+            Map.entry("autosmelt", 0.95), Map.entry("ore_nose", 0.95), Map.entry("berry_picker", 0.95),
+            Map.entry("beekeeper", 0.95), Map.entry("green_thumb", 0.95), Map.entry("fertile_soil", 2.0),
+            Map.entry("harvest_feast", 2.0), Map.entry("sweeping_harvest", 2.0), Map.entry("compost_king", 0.95),
+            Map.entry("hook_shot", 10.0), Map.entry("sushi_chef", 10.0), Map.entry("leviathan", 0.2),
+            Map.entry("sea_legs", 1.0), Map.entry("cook_save", 0.95), Map.entry("hearty_meals", 2.0),
+            Map.entry("chef", 2.0), Map.entry("trail_rations", 0.9), Map.entry("picnic", 10.0),
+            Map.entry("smith", 0.95), Map.entry("whetstone", 5.0), Map.entry("weaponsmith", 5.0),
+            Map.entry("armourer", 5.0), Map.entry("enchant_level", 5.0), Map.entry("enchant_bonus", 5.0),
+            Map.entry("masterwork", 1.0), Map.entry("book_saver", 1.0), Map.entry("repair_kit", 0.9),
+            Map.entry("spell_save", 0.95));
 
     public static final PerkTotals TOTALS = new PerkTotals(perk -> CAPS.getOrDefault(perk, 0.0));
 

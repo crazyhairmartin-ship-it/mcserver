@@ -19,7 +19,11 @@ public abstract class ItemStackDurabilityMixin {
         if (player == null || amount <= 0) {
             return amount;
         }
-        Object item = ((ItemStack) (Object) this).m_41720_();
+        ItemStack stack = (ItemStack) (Object) this;
+        if (stack.m_41783_() != null && stack.m_41783_().m_128441_(fotfskills.perk.CraftPerks.SMITH)) {
+            amount = Chance.reduce(amount, stack.m_41783_().m_128457_(fotfskills.perk.CraftPerks.SMITH), Perks::random);
+        }
+        Object item = stack.m_41720_();
         String perk = item instanceof PickaxeItem ? "pickaxe_durability" : item instanceof ArmorItem ? "armour_durability" : null;
         return perk == null ? amount : Chance.reduce(amount, Perks.get(player, perk), Perks::random);
     }

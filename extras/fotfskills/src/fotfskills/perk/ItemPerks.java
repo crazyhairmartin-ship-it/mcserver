@@ -46,7 +46,7 @@ public final class ItemPerks {
         if (craftingGrid && Refund.eligible(ids) && !refundable.isEmpty()) {
             if (Perks.roll(player, "craft_free")) {
                 refundable.forEach(stack -> ItemHandlerHelper.giveItemToPlayer(player, stack));
-            } else if (Perks.roll(player, "craft_save")) {
+            } else if (Perks.random() < saveChance(player, event.getCrafting())) {
                 ItemHandlerHelper.giveItemToPlayer(player, refundable.get(ThreadLocalRandom.current().nextInt(refundable.size())));
             }
         }
@@ -61,5 +61,19 @@ public final class ItemPerks {
         if (event.getEntity() instanceof ServerPlayer player && Perks.roll(player, "double_catch")) {
             event.getDrops().forEach(stack -> ItemHandlerHelper.giveItemToPlayer(player, stack.m_41777_()));
         }
+    }
+
+    /** Frugal for any craft, plus Thrifty Cook for food and Spellwright for Iron's / Ars items. */
+    private static double saveChance(ServerPlayer player, ItemStack result) {
+        ResourceLocation key = ForgeRegistries.ITEMS.getKey(result.m_41720_());
+        String ns = key == null ? "" : key.m_135827_();
+        double chance = Perks.get(player, "craft_save");
+        if (result.m_41614_()) {
+            chance += Perks.get(player, "cook_save");
+        }
+        if (ns.equals("irons_spellbooks") || ns.equals("ars_nouveau")) {
+            chance += Perks.get(player, "spell_save");
+        }
+        return Math.min(chance, 0.95);
     }
 }

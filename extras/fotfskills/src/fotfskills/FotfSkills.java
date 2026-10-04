@@ -5,6 +5,10 @@ import fotfskills.perk.ArsPerks;
 import fotfskills.perk.BlockPerks;
 import fotfskills.perk.BreedingPerks;
 import fotfskills.perk.CombatPerks;
+import fotfskills.perk.CraftPerks;
+import fotfskills.perk.FarmPerks;
+import fotfskills.perk.FishingPerks;
+import fotfskills.perk.FoodPerks;
 import fotfskills.perk.ConditionalStats;
 import fotfskills.perk.IronsMana;
 import fotfskills.perk.IronsPerks;
@@ -38,6 +42,10 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new ConditionalStats());
         MinecraftForge.EVENT_BUS.register(new PetPerks());
         MinecraftForge.EVENT_BUS.register(new BreedingPerks());
+        MinecraftForge.EVENT_BUS.register(new FarmPerks());
+        MinecraftForge.EVENT_BUS.register(new FoodPerks());
+        MinecraftForge.EVENT_BUS.register(new FishingPerks());
+        MinecraftForge.EVENT_BUS.register(new CraftPerks());
         if (ModList.get().isLoaded("openpartiesandclaims")) {
             Parties.register(OpacParties::same);
         }
