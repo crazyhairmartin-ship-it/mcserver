@@ -262,7 +262,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "animal_drops",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "butcher_2": {
     "title": "Butcher",
@@ -280,7 +289,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "animal_drops",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "butcher_3": {
     "title": "Butcher",
@@ -298,7 +316,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "animal_drops",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "tier_2_label": {
     "title": "Tier 2 \u00b7 5 points",
@@ -333,7 +360,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crit_damage",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "crit_training_2": {
     "title": "Crit Training",
@@ -351,7 +387,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crit_damage",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "crit_training_3": {
     "title": "Crit Training",
@@ -369,7 +414,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crit_damage",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "crit_training_4": {
     "title": "Crit Training",
@@ -387,7 +441,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crit_damage",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "crit_training_5": {
     "title": "Crit Training",
@@ -405,7 +468,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crit_damage",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "spellblade_1": {
     "title": "Spellblade",
@@ -931,7 +1003,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "executioner",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "executioner_2": {
     "title": "Executioner",
@@ -949,7 +1030,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "executioner",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",

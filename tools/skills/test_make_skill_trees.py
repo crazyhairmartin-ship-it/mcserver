@@ -1,4 +1,5 @@
 import json
+import re
 from pathlib import Path
 
 import make_skill_trees as g
@@ -221,14 +222,31 @@ def test_mana_pool_raises_both_mods():
     assert attrs == {'irons_spellbooks:max_mana', 'ars_nouveau:ars_nouveau.perk.max_mana'}
 
 
-def test_perks_only_name_real_nodes_and_valid_operations():
+PERK_IDS = set(re.findall(r'Map\.entry\("([a-z_]+)"',
+                          (Path(__file__).parents[2] / 'extras/fotfskills/src/fotfskills/perk/Perks.java').read_text(encoding='utf-8')))
+
+
+def test_perks_only_name_real_nodes_and_known_perks():
+    assert 'ore_drops' in PERK_IDS
     for tree_id, nodes in PERKS.items():
         slugs = {g.slug(n['name']) for n in tree(tree_id)['nodes']}
         for node_slug, rewards in nodes.items():
             assert node_slug in slugs, (tree_id, node_slug)
             for r in rewards:
-                assert r['type'] == 'puffish_skills:attribute'
-                assert r['data']['operation'] in {'addition', 'multiply_base', 'multiply_total'}
+                if r['type'] == 'puffish_skills:attribute':
+                    assert r['data']['operation'] in {'addition', 'multiply_base', 'multiply_total'}
+                else:
+                    assert r['type'] == 'fotfskills:perk' and r['data']['perk'] in PERK_IDS, r
+                    assert r['data']['value'] > 0
+
+
+def test_common_perk_nodes_are_wired():
+    expect = {('mining', 'prospector_1'): ('ore_drops', 0.03), ('range', 'quiver_care_2'): ('ammo_save', 0.08),
+              ('craft', 'endless_workshop_1'): ('craft_free', 0.1), ('fish', 'patient_angler_1'): ('bite_speed', 0.05),
+              ('agility', 'featherfall_1'): ('fall_immunity', 15), ('defense', 'unbreakable_1'): ('armour_durability', 0.5)}
+    for (tree_id, sid), (perk, value) in expect.items():
+        defs = g.build_category(tree(tree_id), TIERS, XP, PERKS)['definitions.json']
+        assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': value}} in defs[sid]['rewards'], sid
 
 
 def test_gathering_xp_uses_the_placed_block_aware_source():

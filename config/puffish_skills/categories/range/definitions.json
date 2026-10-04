@@ -32,7 +32,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "draw_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "steady_hands_2": {
     "title": "Steady Hands",
@@ -50,7 +59,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "draw_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "steady_hands_3": {
     "title": "Steady Hands",
@@ -68,7 +86,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "draw_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "steady_hands_4": {
     "title": "Steady Hands",
@@ -86,7 +113,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "draw_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "steady_hands_5": {
     "title": "Steady Hands",
@@ -104,7 +140,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "draw_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "sharp_tips_1": {
     "title": "Sharp Tips",
@@ -122,7 +167,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_damage",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "sharp_tips_2": {
     "title": "Sharp Tips",
@@ -140,7 +194,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_damage",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "sharp_tips_3": {
     "title": "Sharp Tips",
@@ -158,7 +221,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_damage",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "sharp_tips_4": {
     "title": "Sharp Tips",
@@ -176,7 +248,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_damage",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "sharp_tips_5": {
     "title": "Sharp Tips",
@@ -194,7 +275,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_damage",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "quiver_care_1": {
     "title": "Quiver Care",
@@ -212,7 +302,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "quiver_care_2": {
     "title": "Quiver Care",
@@ -230,7 +329,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "quiver_care_3": {
     "title": "Quiver Care",
@@ -248,7 +356,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "tier_2_label": {
     "title": "Tier 2 \u00b7 5 points",
@@ -466,7 +583,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Heavy Draw."
+    "extra_description": "Pick one: this or Heavy Draw.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "draw_speed",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "rapid_volley_2": {
     "title": "Rapid Volley",
@@ -485,7 +611,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Heavy Draw."
+    "extra_description": "Pick one: this or Heavy Draw.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "draw_speed",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "rapid_volley_3": {
     "title": "Rapid Volley",
@@ -504,7 +639,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Heavy Draw."
+    "extra_description": "Pick one: this or Heavy Draw.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "draw_speed",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -540,7 +684,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Rapid Volley."
+    "extra_description": "Pick one: this or Rapid Volley.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_damage",
+          "value": 0.12
+        }
+      }
+    ]
   },
   "heavy_draw_2": {
     "title": "Heavy Draw",
@@ -559,7 +712,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Rapid Volley."
+    "extra_description": "Pick one: this or Rapid Volley.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_damage",
+          "value": 0.12
+        }
+      }
+    ]
   },
   "heavy_draw_3": {
     "title": "Heavy Draw",
@@ -578,7 +740,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Rapid Volley."
+    "extra_description": "Pick one: this or Rapid Volley.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_damage",
+          "value": 0.12
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -883,7 +1054,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Quiver Care (all ranks)."
+    "extra_description": "Needs Quiver Care (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "quiver_care_ii_2": {
     "title": "Quiver Care II",
@@ -902,7 +1082,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Quiver Care (all ranks)."
+    "extra_description": "Needs Quiver Care (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "quiver_care_ii_3": {
     "title": "Quiver Care II",
@@ -921,7 +1110,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Quiver Care (all ranks)."
+    "extra_description": "Needs Quiver Care (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "fletchers_luck_1": {
     "title": "Fletcher's Luck",
@@ -940,7 +1138,16 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Seeker."
+    "extra_description": "Pick one: this or Seeker.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.3
+        }
+      }
+    ]
   },
   "tier_5_or": {
     "title": "OR",

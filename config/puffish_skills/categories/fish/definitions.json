@@ -32,7 +32,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "patient_angler_2": {
     "title": "Patient Angler",
@@ -50,7 +59,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "patient_angler_3": {
     "title": "Patient Angler",
@@ -68,7 +86,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "patient_angler_4": {
     "title": "Patient Angler",
@@ -86,7 +113,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "patient_angler_5": {
     "title": "Patient Angler",
@@ -104,7 +140,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "lucky_line_1": {
     "title": "Lucky Line",
@@ -283,7 +328,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "double_catch",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "double_catch_2": {
     "title": "Double Catch",
@@ -301,7 +355,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "double_catch",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "double_catch_3": {
     "title": "Double Catch",
@@ -319,7 +382,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "double_catch",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "bait_saver_1": {
     "title": "Bait Saver",
@@ -611,7 +683,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Patient Angler (all ranks)."
+    "extra_description": "Needs Patient Angler (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "patient_angler_ii_2": {
     "title": "Patient Angler II",
@@ -630,7 +711,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Patient Angler (all ranks)."
+    "extra_description": "Needs Patient Angler (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "patient_angler_ii_3": {
     "title": "Patient Angler II",
@@ -649,7 +739,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Patient Angler (all ranks)."
+    "extra_description": "Needs Patient Angler (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "patient_angler_ii_4": {
     "title": "Patient Angler II",
@@ -668,7 +767,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Patient Angler (all ranks)."
+    "extra_description": "Needs Patient Angler (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "patient_angler_ii_5": {
     "title": "Patient Angler II",
@@ -687,7 +795,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Patient Angler (all ranks)."
+    "extra_description": "Needs Patient Angler (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "hook_shot_1": {
     "title": "Hook Shot",
@@ -866,7 +983,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "rain_bite_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "storm_fisher_2": {
     "title": "Storm Fisher",
@@ -884,7 +1010,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "rain_bite_speed",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "sea_legs_1": {
     "title": "Sea Legs",

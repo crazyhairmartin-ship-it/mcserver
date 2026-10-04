@@ -509,7 +509,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "free_spell",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "mana_saver_2": {
     "title": "Mana Saver",
@@ -527,7 +536,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "free_spell",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "mana_saver_3": {
     "title": "Mana Saver",
@@ -545,7 +563,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "free_spell",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "mana_shield_1": {
     "title": "Mana Shield",
@@ -1277,7 +1304,24 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Wellspring."
+    "extra_description": "Pick one: this or Wellspring.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "free_spell",
+          "value": 0.12
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:cooldown_reduction",
+          "value": 0.15,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "tier_5_or": {
     "title": "OR",

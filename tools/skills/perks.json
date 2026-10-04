@@ -1,28 +1,584 @@
 {
   "attack": {
-    "sharpened":    [{"type": "puffish_skills:attribute", "data": {"attribute": "minecraft:generic.attack_damage", "value": 0.3, "operation": "addition"}}],
-    "sharpened_ii": [{"type": "puffish_skills:attribute", "data": {"attribute": "minecraft:generic.attack_damage", "value": 0.3, "operation": "addition"}}]
+    "sharpened": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.attack_damage",
+          "value": 0.3,
+          "operation": "addition"
+        }
+      }
+    ],
+    "sharpened_ii": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.attack_damage",
+          "value": 0.3,
+          "operation": "addition"
+        }
+      }
+    ],
+    "crit_training": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crit_damage",
+          "value": 0.05
+        }
+      }
+    ],
+    "executioner": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "executioner",
+          "value": 0.15
+        }
+      }
+    ],
+    "butcher": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "animal_drops",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "defense": {
-    "toughened":   [{"type": "puffish_skills:attribute", "data": {"attribute": "minecraft:generic.armor", "value": 0.5, "operation": "addition"}}],
-    "vitality":    [{"type": "puffish_skills:attribute", "data": {"attribute": "minecraft:generic.max_health", "value": 1, "operation": "addition"}}],
-    "vitality_ii": [{"type": "puffish_skills:attribute", "data": {"attribute": "minecraft:generic.max_health", "value": 1, "operation": "addition"}}],
-    "iron_skin":   [{"type": "puffish_skills:attribute", "data": {"attribute": "minecraft:generic.armor_toughness", "value": 0.5, "operation": "addition"}}]
+    "toughened": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ],
+    "vitality": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ],
+    "vitality_ii": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.max_health",
+          "value": 1,
+          "operation": "addition"
+        }
+      }
+    ],
+    "iron_skin": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "minecraft:generic.armor_toughness",
+          "value": 0.5,
+          "operation": "addition"
+        }
+      }
+    ],
+    "fire_ward": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fire_ward",
+          "value": 0.15
+        }
+      }
+    ],
+    "blast_ward": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "blast_ward",
+          "value": 0.15
+        }
+      }
+    ],
+    "armour_care": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armour_durability",
+          "value": 0.05
+        }
+      }
+    ],
+    "unbreakable": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armour_durability",
+          "value": 0.5
+        }
+      }
+    ]
   },
   "magic": {
     "mana_pool": [
-      {"type": "puffish_skills:attribute", "data": {"attribute": "irons_spellbooks:max_mana", "value": 10, "operation": "addition"}},
-      {"type": "puffish_skills:attribute", "data": {"attribute": "ars_nouveau:ars_nouveau.perk.max_mana", "value": 10, "operation": "addition"}}
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
     ],
     "mana_pool_ii": [
-      {"type": "puffish_skills:attribute", "data": {"attribute": "irons_spellbooks:max_mana", "value": 10, "operation": "addition"}},
-      {"type": "puffish_skills:attribute", "data": {"attribute": "ars_nouveau:ars_nouveau.perk.max_mana", "value": 10, "operation": "addition"}}
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "ars_nouveau:ars_nouveau.perk.max_mana",
+          "value": 10,
+          "operation": "addition"
+        }
+      }
     ],
-    "focus":         [{"type": "puffish_skills:attribute", "data": {"attribute": "irons_spellbooks:spell_power", "value": 0.03, "operation": "multiply_base"}}],
-    "flow":          [{"type": "puffish_skills:attribute", "data": {"attribute": "irons_spellbooks:mana_regen", "value": 0.05, "operation": "multiply_base"}}],
-    "cooldown_flow": [{"type": "puffish_skills:attribute", "data": {"attribute": "irons_spellbooks:cooldown_reduction", "value": 0.05, "operation": "addition"}}]
+    "focus": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:spell_power",
+          "value": 0.03,
+          "operation": "multiply_base"
+        }
+      }
+    ],
+    "flow": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:mana_regen",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ],
+    "cooldown_flow": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:cooldown_reduction",
+          "value": 0.05,
+          "operation": "addition"
+        }
+      }
+    ],
+    "mana_saver": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "free_spell",
+          "value": 0.04
+        }
+      }
+    ],
+    "archmage": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "free_spell",
+          "value": 0.12
+        }
+      },
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:cooldown_reduction",
+          "value": 0.15,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "agility": {
-    "quick_casting": [{"type": "puffish_skills:attribute", "data": {"attribute": "irons_spellbooks:cast_time_reduction", "value": 0.05, "operation": "addition"}}]
+    "quick_casting": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "irons_spellbooks:cast_time_reduction",
+          "value": 0.05,
+          "operation": "addition"
+        }
+      }
+    ],
+    "soft_landing": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fall_reduction",
+          "value": 0.06
+        }
+      }
+    ],
+    "featherfall": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fall_immunity",
+          "value": 15
+        }
+      }
+    ]
+  },
+  "mining": {
+    "stone_sense": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mining_speed",
+          "value": 0.04
+        }
+      }
+    ],
+    "steady_pick": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pickaxe_durability",
+          "value": 0.05
+        }
+      }
+    ],
+    "prospector": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ],
+    "prospector_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ],
+    "bedrock_grip": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "deepslate_speed",
+          "value": 0.06
+        }
+      }
+    ],
+    "deep_delver": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "deep_delver",
+          "value": 0.05
+        }
+      }
+    ],
+    "motherlode": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_triple",
+          "value": 0.02
+        }
+      }
+    ]
+  },
+  "forage": {
+    "lumberjack": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "chop_speed",
+          "value": 0.04
+        }
+      }
+    ],
+    "timber": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ],
+    "timber_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ],
+    "wildcrafter": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "wild_drops",
+          "value": 0.08
+        }
+      }
+    ],
+    "fletcher": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "craft_arrows",
+          "value": 0.1
+        }
+      }
+    ],
+    "natures_bounty": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bounty_triple",
+          "value": 0.05
+        }
+      }
+    ]
+  },
+  "farm": {
+    "harvester": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crop_drops",
+          "value": 0.03
+        }
+      }
+    ],
+    "harvester_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "crop_drops",
+          "value": 0.03
+        }
+      }
+    ],
+    "seed_saver": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "seed_back",
+          "value": 0.08
+        }
+      }
+    ],
+    "harvest_moon": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "harvest_double",
+          "value": 0.05
+        }
+      }
+    ]
+  },
+  "fish": {
+    "patient_angler": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ],
+    "patient_angler_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bite_speed",
+          "value": 0.05
+        }
+      }
+    ],
+    "storm_fisher": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "rain_bite_speed",
+          "value": 0.1
+        }
+      }
+    ],
+    "double_catch": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "double_catch",
+          "value": 0.04
+        }
+      }
+    ]
+  },
+  "cook": {
+    "extra_serving": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "extra_serving",
+          "value": 0.05
+        }
+      }
+    ],
+    "well_fed": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "well_fed",
+          "value": 0.02
+        }
+      }
+    ]
+  },
+  "craft": {
+    "frugal": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "craft_save",
+          "value": 0.03
+        }
+      }
+    ],
+    "frugal_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "craft_save",
+          "value": 0.03
+        }
+      }
+    ],
+    "endless_workshop": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "craft_free",
+          "value": 0.1
+        }
+      }
+    ]
+  },
+  "range": {
+    "steady_hands": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "draw_speed",
+          "value": 0.05
+        }
+      }
+    ],
+    "rapid_volley": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "draw_speed",
+          "value": 0.15
+        }
+      }
+    ],
+    "sharp_tips": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_damage",
+          "value": 0.04
+        }
+      }
+    ],
+    "heavy_draw": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "projectile_damage",
+          "value": 0.12
+        }
+      }
+    ],
+    "quiver_care": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.08
+        }
+      }
+    ],
+    "quiver_care_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.08
+        }
+      }
+    ],
+    "fletchers_luck": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ammo_save",
+          "value": 0.3
+        }
+      }
+    ]
+  },
+  "taming": {
+    "treat_saver": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "treat_saver",
+          "value": 0.1
+        }
+      }
+    ],
+    "husbandry": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "animal_drops",
+          "value": 0.04
+        }
+      }
+    ]
   }
 }

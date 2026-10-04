@@ -212,7 +212,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "well_fed",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "well_fed_2": {
     "title": "Well Fed",
@@ -230,7 +239,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "well_fed",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "well_fed_3": {
     "title": "Well Fed",
@@ -248,7 +266,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "well_fed",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "well_fed_4": {
     "title": "Well Fed",
@@ -266,7 +293,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "well_fed",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "well_fed_5": {
     "title": "Well Fed",
@@ -284,7 +320,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "well_fed",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "tier_2_label": {
     "title": "Tier 2 \u00b7 5 points",
@@ -319,7 +364,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "extra_serving",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "extra_serving_2": {
     "title": "Extra Serving",
@@ -337,7 +391,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "extra_serving",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "extra_serving_3": {
     "title": "Extra Serving",
@@ -355,7 +418,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "extra_serving",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "hearty_meals_1": {
     "title": "Hearty Meals",

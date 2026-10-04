@@ -32,7 +32,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mining_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "stone_sense_2": {
     "title": "Stone Sense",
@@ -50,7 +59,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mining_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "stone_sense_3": {
     "title": "Stone Sense",
@@ -68,7 +86,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mining_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "stone_sense_4": {
     "title": "Stone Sense",
@@ -86,7 +113,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mining_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "stone_sense_5": {
     "title": "Stone Sense",
@@ -104,7 +140,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "mining_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "steady_pick_1": {
     "title": "Steady Pick",
@@ -122,7 +167,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pickaxe_durability",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "steady_pick_2": {
     "title": "Steady Pick",
@@ -140,7 +194,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pickaxe_durability",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "steady_pick_3": {
     "title": "Steady Pick",
@@ -158,7 +221,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "pickaxe_durability",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "miners_might_1": {
     "title": "Miner's Might",
@@ -283,7 +355,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "prospector_2": {
     "title": "Prospector",
@@ -301,7 +382,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "prospector_3": {
     "title": "Prospector",
@@ -319,7 +409,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "prospector_4": {
     "title": "Prospector",
@@ -337,7 +436,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "prospector_5": {
     "title": "Prospector",
@@ -355,7 +463,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "stonehide_1": {
     "title": "Stonehide",
@@ -427,7 +544,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "deep_delver",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "deep_delver_2": {
     "title": "Deep Delver",
@@ -445,7 +571,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "deep_delver",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
@@ -629,7 +764,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Prospector (all ranks)."
+    "extra_description": "Needs Prospector (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "prospector_ii_2": {
     "title": "Prospector II",
@@ -648,7 +792,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Prospector (all ranks)."
+    "extra_description": "Needs Prospector (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "prospector_ii_3": {
     "title": "Prospector II",
@@ -667,7 +820,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Prospector (all ranks)."
+    "extra_description": "Needs Prospector (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "prospector_ii_4": {
     "title": "Prospector II",
@@ -686,7 +848,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Prospector (all ranks)."
+    "extra_description": "Needs Prospector (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "prospector_ii_5": {
     "title": "Prospector II",
@@ -705,7 +876,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Prospector (all ranks)."
+    "extra_description": "Needs Prospector (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "crusher_1": {
     "title": "Crusher",
@@ -777,7 +957,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "deepslate_speed",
+          "value": 0.06
+        }
+      }
+    ]
   },
   "bedrock_grip_2": {
     "title": "Bedrock Grip",
@@ -795,7 +984,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "deepslate_speed",
+          "value": 0.06
+        }
+      }
+    ]
   },
   "bedrock_grip_3": {
     "title": "Bedrock Grip",
@@ -813,7 +1011,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "deepslate_speed",
+          "value": 0.06
+        }
+      }
+    ]
   },
   "bedrock_grip_4": {
     "title": "Bedrock Grip",
@@ -831,7 +1038,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "deepslate_speed",
+          "value": 0.06
+        }
+      }
+    ]
   },
   "bedrock_grip_5": {
     "title": "Bedrock Grip",
@@ -849,7 +1065,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "deepslate_speed",
+          "value": 0.06
+        }
+      }
+    ]
   },
   "ore_nose_1": {
     "title": "Ore Nose",
@@ -957,7 +1182,16 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Earthshaker."
+    "extra_description": "Pick one: this or Earthshaker.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ore_triple",
+          "value": 0.02
+        }
+      }
+    ]
   },
   "tier_5_or": {
     "title": "OR",

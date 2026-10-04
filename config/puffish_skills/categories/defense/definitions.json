@@ -975,7 +975,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fire_ward",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "fire_ward_2": {
     "title": "Fire Ward",
@@ -993,7 +1002,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "fire_ward",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "blast_ward_1": {
     "title": "Blast Ward",
@@ -1011,7 +1029,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "blast_ward",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "blast_ward_2": {
     "title": "Blast Ward",
@@ -1029,7 +1056,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "blast_ward",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",
@@ -1064,7 +1100,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armour_durability",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "armour_care_2": {
     "title": "Armour Care",
@@ -1082,7 +1127,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 25
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armour_durability",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "second_wind_1": {
     "title": "Second Wind",
@@ -1137,6 +1191,15 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Second Wind."
+    "extra_description": "Pick one: this or Second Wind.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "armour_durability",
+          "value": 0.5
+        }
+      }
+    ]
   }
 }

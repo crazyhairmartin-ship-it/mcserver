@@ -32,7 +32,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "chop_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "lumberjack_2": {
     "title": "Lumberjack",
@@ -50,7 +59,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "chop_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "lumberjack_3": {
     "title": "Lumberjack",
@@ -68,7 +86,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "chop_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "lumberjack_4": {
     "title": "Lumberjack",
@@ -86,7 +113,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "chop_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "lumberjack_5": {
     "title": "Lumberjack",
@@ -104,7 +140,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "chop_speed",
+          "value": 0.04
+        }
+      }
+    ]
   },
   "axe_mastery_1": {
     "title": "Axe Mastery",
@@ -283,7 +328,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "timber_2": {
     "title": "Timber",
@@ -301,7 +355,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "timber_3": {
     "title": "Timber",
@@ -319,7 +382,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "timber_4": {
     "title": "Timber",
@@ -337,7 +409,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "timber_5": {
     "title": "Timber",
@@ -355,7 +436,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "long_net_1": {
     "title": "Long Net",
@@ -555,7 +645,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Splitting Blow."
+    "extra_description": "Pick one: this or Splitting Blow.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "wild_drops",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "wildcrafter_2": {
     "title": "Wildcrafter",
@@ -574,7 +673,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Splitting Blow."
+    "extra_description": "Pick one: this or Splitting Blow.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "wild_drops",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "wildcrafter_3": {
     "title": "Wildcrafter",
@@ -593,7 +701,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Splitting Blow."
+    "extra_description": "Pick one: this or Splitting Blow.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "wild_drops",
+          "value": 0.08
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -629,7 +746,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Timber (all ranks)."
+    "extra_description": "Needs Timber (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "timber_ii_2": {
     "title": "Timber II",
@@ -648,7 +774,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Timber (all ranks)."
+    "extra_description": "Needs Timber (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "timber_ii_3": {
     "title": "Timber II",
@@ -667,7 +802,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Timber (all ranks)."
+    "extra_description": "Needs Timber (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "timber_ii_4": {
     "title": "Timber II",
@@ -686,7 +830,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Timber (all ranks)."
+    "extra_description": "Needs Timber (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "timber_ii_5": {
     "title": "Timber II",
@@ -705,7 +858,16 @@
     },
     "cost": 1,
     "required_spent_points": 15,
-    "extra_description": "Needs Timber (all ranks)."
+    "extra_description": "Needs Timber (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "log_drops",
+          "value": 0.03
+        }
+      }
+    ]
   },
   "beekeeper_1": {
     "title": "Beekeeper",
@@ -777,7 +939,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "craft_arrows",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "fletcher_2": {
     "title": "Fletcher",
@@ -795,7 +966,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "craft_arrows",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "fletcher_3": {
     "title": "Fletcher",
@@ -813,7 +993,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "craft_arrows",
+          "value": 0.1
+        }
+      }
+    ]
   },
   "bark_skin_1": {
     "title": "Bark Skin",
@@ -1011,7 +1200,16 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Berserker's Axe."
+    "extra_description": "Pick one: this or Berserker's Axe.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "bounty_triple",
+          "value": 0.05
+        }
+      }
+    ]
   },
   "tier_5_or": {
     "title": "OR",
