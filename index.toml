@@ -1724,7 +1724,7 @@ hash = "412bf83da2aa86b4baf7ae41144bcf05f8f4068bf7b32693f4dd5740f86299fb"
 
 [[files]]
 file = "kubejs/server_scripts/trim_grapplemod.js"
-hash = "b28f62a2b93e731e1c84c346aed8c1bc5ab628a08d6813a2b26c00dc59f0a45e"
+hash = "fec451ea319fa836af52aa76fa7fc835fa40d0b271a59fdb5354de2f022b06cd"
 
 [[files]]
 file = "kubejs/server_scripts/trim_simplyswords.js"
@@ -1768,7 +1768,7 @@ hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
-hash = "5d3cae90af23472adad536c3a12e805e2c199edd04f06f5ce068ce9fab43f254"
+hash = "94aa9408fcf0b8024915823b7e061e6d7a1a295b9937018626f61867ef29be5e"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -1982,7 +1982,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "e0d5bcf4869c8c12a63b22c54d9df6c66e0290d3af11ad28ae8cd185a9923199"
+hash = "ef272a710cc40babb6e9a520e2d1be622426fa0308c14785ddd1fe2fce50d843"
 metafile = true
 
 [[files]]
@@ -2578,7 +2578,7 @@ hash = "b05ffc4f52cba9e84d3c92687c752b95d73ec22aa01e8d836208754dcbedb0ac"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/categories/travel.json"
-hash = "9b7122af338a6e4288b5e11fabc16ceffb46ae2f8d1bd436cfd1749c13b28e7b"
+hash = "190ed13e57e5136cf1e801107f2714d82224aec044234db321f24dfeeb320cc5"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/building/decor.json"
@@ -2658,11 +2658,11 @@ hash = "f0dd86d7f5d1b8bb4fbe8fdd3e38a5caa06def1129cb44e4d9b85e026ddcfa90"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/claims.json"
-hash = "916611e75caea169524ca690a4eaadf3752dca1929f90cbbaa8f7ca0ab1a19e0"
+hash = "8678e72e385eab6760ac6f5a1383171b64861f773c2aecca111d709cda5709ca"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/death.json"
-hash = "75ee93ac3c94fc6eaaf211c707dae75986ef710e90cfce7388fc9f1411c3e212"
+hash = "fb7bd19d3483fb1baa985a67f72fe0ae421e0759030555e918127fb5c2cfef1d"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/first_day.json"
@@ -2670,31 +2670,31 @@ hash = "dc7c3b9948f9f1b63837aa5f35c3ba6a0de11453c25b0036a1664c2bcce238e7"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/jei.json"
-hash = "2152f848c8f7246a7309daec7ba96a7311c85b70e2ce825c9146ce52ce68aa4c"
+hash = "307bf3f5cae42cb4bd05f3a5457ba2b86186fcda862910bdd79cdfe903a4be68"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/keys.json"
-hash = "f742b3a9ee82d825cb97d670247cfd9c7b8decf8ce95e5af9d31a5151218128a"
+hash = "ab1284df8303b4578978babc3f539b9e6a64a8803c519d8570e991bbc04e41a1"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/maps.json"
-hash = "bf8a064bccc7c70e53244c310693974c63cd85a3027f729d3fbe13074a294187"
+hash = "f20753f968157ce2c6fc4ff63a3d469b518a939b5874a39e135d75d6e6a09717"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/skills.json"
-hash = "060b02e24537dd0062f228417f70a7b400dd8be9900c7d94e1ed43da315f6dae"
+hash = "ddd94818dc450104501a9c4a821370c388754daef334b3e8504f49bd2d7918fe"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/storage.json"
-hash = "1ff508813617126debc469acdea8d75d1574fe38f5de4b23525e12bd6974732b"
+hash = "4c829e2499272cac054a74d9733fe0a136f4bc26bf0c187f42ec4b25384a1e86"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/voice.json"
-hash = "74250d2c0223a11caa204b8f06db9629f189d6d461b24f7c51e7a8e3e4b746a7"
+hash = "f5ed5827b9f0f44d7aa2bd60f3910f34d2c311ba38c1f0e2007d364882b50dc7"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/waystones.json"
-hash = "3d793931dd4f3ff7fcc3772b39744def3a1162c651afb33ad4db54176292e85d"
+hash = "db4511a1aaab9913e52b5acd3fe659c44c36b24216d72efcb223c9235ac93ed7"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/welcome.json"
@@ -2742,11 +2742,11 @@ hash = "3be4890e6b240370f7b8de310031448a893f24a9a1e438b49a91cfb0740f8190"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/gliding.json"
-hash = "851e7ef60d2f1be179b91de82598882cb634211e8fe579e3916aeedba4333629"
+hash = "0987dfd0d53cd0927b550b6a68afe2f99d799eb3d6382efcb5b45ee58e708aa1"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/grappling.json"
-hash = "a44985077289ed6c5573cceee7435cef4dac45aa46a421fbe572269735fe548d"
+hash = "189644e079f02f5b48937ab5550fce98bc4197041b2663eaeee0240799679daf"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/music.json"

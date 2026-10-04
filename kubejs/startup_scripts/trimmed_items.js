@@ -1014,28 +1014,19 @@ global.TINKERS_KEEP = [
 global.TRIMMED_ITEMS = global.TRIMMED_ITEMS.concat([
   'grapplemod:baseupgradeitem',
   'grapplemod:block_grapple_modifier',
-  'grapplemod:doublejumpboots',
-  'grapplemod:doublemotorhook',
   'grapplemod:doubleupgradeitem',
-  'grapplemod:enderhook',
   'grapplemod:forcefieldupgradeitem',
   'grapplemod:launcheritem',
   'grapplemod:limitsupgradeitem',
   'grapplemod:longfallboots',
-  'grapplemod:magnethook',
   'grapplemod:magnetupgradeitem',
-  'grapplemod:motorhook',
   'grapplemod:motorupgradeitem',
   'grapplemod:repeller',
-  'grapplemod:rocketdoublemotorhook',
-  'grapplemod:rockethook',
   'grapplemod:rocketupgradeitem',
   'grapplemod:ropeupgradeitem',
-  'grapplemod:smarthook',
   'grapplemod:staffupgradeitem',
   'grapplemod:swingupgradeitem',
-  'grapplemod:throwupgradeitem',
-  'grapplemod:wallrunboots'
+  'grapplemod:throwupgradeitem'
 ])
 
 // Simply Swords weapon types, used by trim_simplyswords.js.

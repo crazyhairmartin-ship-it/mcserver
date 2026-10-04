@@ -50,8 +50,8 @@ CATEGORIES = [
      'Weapons, armor and the bosses worth using them on.'),
     ('exploring', 'Exploring', 'minecraft:filled_map',
      'Villages, dungeons, caves and whole new dimensions.'),
-    ('travel', 'Travel & Movement', 'paraglider:paraglider',
-     'Parkour, gliders, grappling hooks, airships and boats.'),
+    ('travel', 'Travel & Movement', 'minecraft:elytra',
+     'Parkour, grappling hooks, airships and boats.'),
     ('grove', 'Grove Rules & Server Info', 'minecraft:clock',
      'How this server works, and how we treat each other.'),
 ]
@@ -69,6 +69,13 @@ ENTRIES = [
     ('getting_started', 'first_day', 'Your First Day', 'minecraft:oak_log', [
         text('A good first day:$(br)$(li)Punch trees, make tools$(li)Find a village for food and a $(l)Waystone$()$(li)Make a bed before night$(li)Claim your base (see $(l)Your Base$())'),
         text('Days here are long and sunsets are slow, so take your time.$(br2)If you die, your items wait in a $(l)gravestone$(). Nothing is lost!', 'No Rush'),
+    ]),
+    ('getting_started', 'skills', 'Skills & Levels', 'minecraft:experience_bottle', [
+        text('You get better at things by doing them. There are 12 skills: Mining, Foraging, Farming, Fishing, Cooking, Crafting, Attack, Range, Defense, Agility, Magic and Taming. Each level up to 50 gives a point to spend in that skill\'s tree. Press $(l)K$() to open the skill menu.'),
+        text('Trees have five tiers. Spending points in a tree opens the next tier (5, 10, 15, then 25 points). Tiers marked $(l)OR$() let you pick one of two branches. Hover a node to see what it does now (white) and what the next rank adds (grey). A full tree costs exactly 50 points.', 'Skill Trees'),
+        text('$(l)/fotfskills perks$() lists every perk you have. Situational buffs (forests, combat, full hunger...) show beside your inventory when active.$(br2)$(l)/fotfskills levelups off$() hides level-up messages; $(l)on$() brings them back.', 'Perks'),
+        text('Your $(l)total level$() (all 12 skills added up) gives extra hearts and ParCool stamina: the first at total level 8, all 15 by 256.$(br2)$(l)/fotfskills reset <tree>$() gives a tree\'s points back for 1 XP level per 2 points spent (at least 5).', 'Hearts & Resets'),
+        spot('fotfskills:pet_memento', 'When a pet dies it leaves a $(l)Pet Memento$(). Use it on a block with a golden apple in your inventory to bring your pet back. Taming\'s Soul Mender can save the apple.'),
     ]),
     ('getting_started', 'jei', 'Looking Things Up', 'minecraft:knowledge_book', [
         text('$(l)JEI$() is a list of every item in the pack. It starts hidden: press $(l)Ctrl+O$() to show it next to your inventory.$(br2)Hover an item and press:$(li)$(l)R$() to see how to make it$(li)$(l)U$() to see what it is used for'),
@@ -197,12 +204,11 @@ ENTRIES = [
         text('$(l)ParCool$(): vault, wall-run, climb ledges, slide and roll.$(br2)Every move is unlocked from the start. To slide: sprint, then press $(l)C$().'),
         craft('parcool:parcool_guide', 'The $(l)ParCool Guide$() explains every move.'),
     ]),
-    ('travel', 'gliding', 'Gliders & Wings', 'paraglider:paraglider', [
-        spot('paraglider:paraglider', 'Jump from high places and glide. Campfires push you up. Gliding uses stamina, and goddess statues increase it.'),
+    ('travel', 'gliding', 'Elytra', 'minecraft:elytra', [
         spot('minecraft:elytra', 'Elytra go in their own slot, so you can still wear a chestplate.'),
     ]),
     ('travel', 'grappling', 'Grappling Hook', 'grapplemod:grapplinghook', [
-        spot('grapplemod:grapplinghook', 'Left-click to throw, again to let go. Space jumps off. Hold Shift and W/S to climb the rope. Upgrade it at a Grappling Hook Modifier.'),
+        spot('grapplemod:grapplinghook', 'Left-click to throw, again to let go. Space jumps off. Hold Shift and W/S to climb the rope. Upgrades come from the $(l)Agility$() skill tree: Long Rope (longer rope), Hookmaster (faster throw, better swing), Motor Reel (pulls you in) and Twin Hooks (two hooks).'),
     ]),
     ('travel', 'aircraft', 'Aircraft', 'immersive_aircraft:gyrodyne', [
         spot('immersive_aircraft:gyrodyne', 'Start with a $(l)Gyrodyne$(): it needs no fuel. Later build biplanes and airships. Look them up in JEI.'),

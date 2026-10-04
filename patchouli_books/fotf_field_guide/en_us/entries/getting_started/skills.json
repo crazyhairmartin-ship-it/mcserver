@@ -6,19 +6,22 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "You get better at things by doing them. There are 12 skills: Mining, Foraging, Farming, Fishing, Cooking, Crafting, Attack, Range, Defense, Agility, Magic and Taming. Each level up to 50 gives a point to spend in that skill's tree. Press $(k:key.puffish_skills.open) (K) to open the skill menu."
+      "text": "You get better at things by doing them. There are 12 skills: Mining, Foraging, Farming, Fishing, Cooking, Crafting, Attack, Range, Defense, Agility, Magic and Taming. Each level up to 50 gives a point to spend in that skill's tree. Press $(l)K$() to open the skill menu."
     },
     {
       "type": "patchouli:text",
-      "text": "Trees have five tiers. Spending points in a tree opens the next tier (5, 10, 15, then 25 points). Tiers marked $(l)OR$() let you pick one of two branches. Hover a node to see what it does now (white) and what the next rank adds (grey). A full tree costs exactly 50 points."
+      "text": "Trees have five tiers. Spending points in a tree opens the next tier (5, 10, 15, then 25 points). Tiers marked $(l)OR$() let you pick one of two branches. Hover a node to see what it does now (white) and what the next rank adds (grey). A full tree costs exactly 50 points.",
+      "title": "Skill Trees"
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)/fotfskills perks$() lists every perk you have. Situational buffs (forests, combat, full hunger...) show beside your inventory when active.$(br2)$(l)/fotfskills levelups off$() hides level-up messages; $(l)on$() brings them back."
+      "text": "$(l)/fotfskills perks$() lists every perk you have. Situational buffs (forests, combat, full hunger...) show beside your inventory when active.$(br2)$(l)/fotfskills levelups off$() hides level-up messages; $(l)on$() brings them back.",
+      "title": "Perks"
     },
     {
       "type": "patchouli:text",
-      "text": "Your $(l)total level$() (all 12 skills added up) gives extra hearts and ParCool stamina: the first at total level 8, all 15 by 256.$(br2)$(l)/fotfskills reset <tree>$() gives a tree's points back for 1 XP level per 2 points spent (at least 5)."
+      "text": "Your $(l)total level$() (all 12 skills added up) gives extra hearts and ParCool stamina: the first at total level 8, all 15 by 256.$(br2)$(l)/fotfskills reset <tree>$() gives a tree's points back for 1 XP level per 2 points spent (at least 5).",
+      "title": "Hearts & Resets"
     },
     {
       "type": "patchouli:spotlight",
