@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "fotfskills.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": ["ItemStackCraftedMixin", "ArsSpellResolverMixin", "ItemStackDurabilityMixin", "FishingHookMixin", "AbstractArrowAccessor"],
+  "mixins": ["ItemStackCraftedMixin", "ArsSpellResolverMixin", "ItemStackDurabilityMixin", "FishingHookMixin", "AbstractArrowAccessor", "ServerPlayerGameModeMixin", "AnimalTreatMixin"],
   "client": [
     "SkillsScreenMixin"
   ],

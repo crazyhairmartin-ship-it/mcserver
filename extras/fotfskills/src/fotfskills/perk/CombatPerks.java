@@ -7,8 +7,10 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.entity.animal.horse.AbstractHorse;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -108,19 +110,33 @@ public final class CombatPerks {
         }
     }
 
-    /** Butcher / Husbandry: animals you kill may drop an extra copy of each meat, leather or feather stack. */
+    /**
+     * Butcher / Husbandry: animals you kill may drop an extra copy of each meat, leather or feather stack. Only loot:
+     * horses/donkeys/llamas (their chests spill into the drops), held or worn items and stacks with NBT are skipped.
+     */
     @SubscribeEvent
     public void onDrops(LivingDropsEvent event) {
-        if (!(event.getEntity() instanceof Animal animal) || !(event.getSource().m_7639_() instanceof ServerPlayer player)) {
+        if (!(event.getEntity() instanceof Animal animal) || animal instanceof AbstractHorse
+                || !(event.getSource().m_7639_() instanceof ServerPlayer player)) {
             return;
         }
         for (ItemEntity drop : new ArrayList<>(event.getDrops())) {
             ItemStack stack = drop.m_32055_();
             ResourceLocation key = ForgeRegistries.ITEMS.getKey(stack.m_41720_());
-            boolean animalGood = stack.m_41614_() || (key != null && HIDES.contains(key.toString()));
+            boolean animalGood = (stack.m_41614_() || (key != null && HIDES.contains(key.toString())))
+                    && !stack.m_41782_() && !equipped(animal, stack);
             if (animalGood && Perks.roll(player, "animal_drops")) {
                 event.getDrops().add(new ItemEntity(animal.m_9236_(), animal.m_20185_(), animal.m_20186_(), animal.m_20189_(), stack.m_41777_()));
             }
         }
+    }
+
+    private static boolean equipped(Animal animal, ItemStack stack) {
+        for (EquipmentSlot slot : EquipmentSlot.values()) {
+            if (ItemStack.m_41656_(animal.m_6844_(slot), stack)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

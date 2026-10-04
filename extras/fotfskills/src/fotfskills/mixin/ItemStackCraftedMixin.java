@@ -7,6 +7,7 @@ import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.inventory.AbstractContainerMenu;
+import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.inventory.MerchantMenu;
 import net.minecraft.world.inventory.ResultSlot;
 import net.minecraft.world.inventory.Slot;
@@ -50,10 +51,13 @@ public abstract class ItemStackCraftedMixin {
         }
     }
 
-    /** Any menu with a vanilla crafting result slot (table, inventory, backpack crafting upgrade, storage terminals). */
+    /**
+     * Any menu with a crafting grid: a vanilla result slot (table, inventory, backpack crafting upgrade, storage
+     * terminals) or any slot backed by a CraftingContainer (Tinkers crafting station, other modded tables).
+     */
     private static boolean hasCraftingGrid(AbstractContainerMenu menu) {
         for (Slot slot : menu.f_38839_) {
-            if (slot instanceof ResultSlot) {
+            if (slot instanceof ResultSlot || slot.f_40218_ instanceof CraftingContainer) {
                 return true;
             }
         }

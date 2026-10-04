@@ -7,6 +7,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.Container;
+import net.minecraft.world.inventory.CraftingContainer;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.entity.player.ItemFishedEvent;
@@ -26,6 +27,7 @@ public final class ItemPerks {
             return;
         }
         Container grid = event.getInventory();
+        boolean craftingGrid = grid instanceof CraftingContainer;   // not Tinkers stations/worktables (tool in slot 0)
         List<ItemStack> refundable = new ArrayList<>();
         List<String> ids = new ArrayList<>();
         for (int i = 0; i < grid.m_6643_(); i++) {
@@ -33,14 +35,15 @@ public final class ItemPerks {
             if (!stack.m_41619_()) {
                 ResourceLocation key = ForgeRegistries.ITEMS.getKey(stack.m_41720_());
                 ids.add(key == null ? "" : key.toString());
-                if (!stack.m_41720_().m_41470_()) {      // no bucket/bottle remainder
+                if (!stack.m_41720_().m_41470_()
+                        && Refund.refundableStack(stack.m_41763_(), stack.m_41741_(), stack.m_41782_())) {
                     ItemStack one = stack.m_41777_();
                     one.m_41764_(1);
                     refundable.add(one);
                 }
             }
         }
-        if (Refund.eligible(ids) && !refundable.isEmpty()) {
+        if (craftingGrid && Refund.eligible(ids) && !refundable.isEmpty()) {
             if (Perks.roll(player, "craft_free")) {
                 refundable.forEach(stack -> ItemHandlerHelper.giveItemToPlayer(player, stack));
             } else if (Perks.roll(player, "craft_save")) {

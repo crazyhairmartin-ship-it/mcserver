@@ -10,14 +10,21 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.piston.PistonStructureResolver;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.event.level.PistonEvent;
 import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.puffish.skillsmod.api.SkillsAPI;
 
-/** Gathering: break XP (natural blocks only), extra drops, seed back, and mining/chopping speed. */
+/**
+ * Gathering: break XP (natural blocks only), extra drops, seed back, and mining/chopping speed. XP and drops are paid
+ * from ServerPlayerGameModeMixin after a block is really destroyed: BreakEvent is also posted as a "may I break?"
+ * check (Ars spells, claim checks) that breaks nothing.
+ */
 public final class BlockPerks {
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onPlace(BlockEvent.EntityPlaceEvent event) {
@@ -27,15 +34,24 @@ public final class BlockPerks {
         }
     }
 
-    /** LOWEST and skip cancelled: a claim mod that stops the break also stops XP and extra drops. */
+    /** Before a piston moves blocks (and only if the move will happen), their placed marks move with them. */
     @SubscribeEvent(priority = EventPriority.LOWEST)
-    public void onBreak(BlockEvent.BreakEvent event) {
-        if (event.isCanceled() || !(event.getPlayer() instanceof ServerPlayer player)
-                || !(event.getLevel() instanceof ServerLevel level)) {
+    public void onPiston(PistonEvent.Pre event) {
+        if (event.isCanceled() || !(event.getLevel() instanceof ServerLevel level)) {
             return;
         }
-        BlockPos pos = event.getPos();
-        BlockState state = event.getState();
+        PistonStructureResolver structure = event.getStructureHelper();
+        if (structure == null || !structure.m_60422_()) {
+            return;
+        }
+        PlacedBlocks placed = PlacedBlocks.of(level);
+        structure.m_60437_().forEach(placed::remove);
+        placed.move(structure.m_60436_(), structure.m_155942_());
+    }
+
+    /** A block the player really destroyed (state, block entity and tool captured before the break). */
+    public static void onBroken(ServerPlayer player, ServerLevel level, BlockPos pos, BlockState state, BlockEntity blockEntity,
+                                ItemStack tool) {
         boolean placed = PlacedBlocks.of(level).remove(pos);
         if (placed || player.m_7500_() || (state.m_60834_() && !player.m_36298_(state))) {
             return;
@@ -43,7 +59,6 @@ public final class BlockPerks {
         BlockFacts facts = new BlockFacts(state);
         SkillsAPI.updateExperienceSources(player, BreakSource.class, source -> source.rules().experience(facts));
 
-        ItemStack tool = player.m_21205_();
         boolean silk = EnchantmentHelper.m_44843_(Enchantments.f_44985_, tool) > 0;
         boolean fortune = EnchantmentHelper.m_44843_(Enchantments.f_44987_, tool) > 0;
         int copies = 0;
@@ -66,7 +81,7 @@ public final class BlockPerks {
             copies += facts.id().endsWith("_mushroom") && Perks.roll(player, "bounty_triple") ? 2 : 0;
         }
         if (copies > 0 && !silk) {
-            List<ItemStack> drops = Block.m_49874_(state, level, pos, level.m_7702_(pos), player, tool);
+            List<ItemStack> drops = Block.m_49874_(state, level, pos, blockEntity, player, tool);
             for (int i = 0; i < copies; i++) {
                 for (ItemStack drop : drops) {
                     Block.m_49840_(level, pos, drop.m_41777_());
