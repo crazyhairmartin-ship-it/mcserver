@@ -51,6 +51,11 @@ public record DamageBreakdown(double total, List<String> lines) {
         return new DamageBreakdown(flat * (1 + pct), lines);
     }
 
+    /** Special attacks (weapon abilities) scale by the ratio the weapon type's perks give a swing. */
+    public static double abilityMultiplier(double weapon, Set<String> types, Function<String, Double> perk) {
+        return weapon <= 0 ? 1.0 : of(weapon, 0, 0, types, perk).total() / weapon;
+    }
+
     public static String fmt(double v) {
         double r = Math.round(v * 10) / 10.0;
         return r == Math.floor(r) ? String.valueOf((long) r) : String.valueOf(r);

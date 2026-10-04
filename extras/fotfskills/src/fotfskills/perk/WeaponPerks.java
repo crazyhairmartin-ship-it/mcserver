@@ -56,6 +56,10 @@ public final class WeaponPerks {
         long now = CombatState.now(player);
         state.lastCombat = now;
         float amount = event.getAmount();
+        if (abilityHit(player, direct, event.getSource())) {   // a weapon's special attack: same boost as its swings
+            event.setAmount((float) (amount * abilityMultiplier(player, player.m_21205_())));
+            return;
+        }
         if (direct == player && "player".equals(event.getSource().m_19385_())) {   // a real swing, not thorns or spells
             boolean swing = state.swing.first(now);          // the main target; sweep targets share the tick
             ItemStack weapon = player.m_21205_();
@@ -272,6 +276,45 @@ public final class WeaponPerks {
      * Cleave / Reaper's Due: damage to hostile mobs around center (never pets, villagers, players or armour stands);
      * frontOnly keeps only mobs in front of the player.
      */
+    private static final java.util.Set<String> WEAPON_MODS = java.util.Set.of("simplyswords", "cataclysm", "mowziesmobs",
+            "alexscaves", "twilightforest");
+    private static final String[] MELEE = {"sword", "light", "two_handed", "polearm", "axe", "blunt", "scythe", "pickaxe"};
+
+    /**
+     * A weapon mod's special attack: damage from that mod (its damage type or the entity it sent) that isn't a plain
+     * swing and isn't an arrow or thrown weapon (those have their own perks). Iron's spells scale with spell power instead.
+     */
+    private static boolean abilityHit(ServerPlayer player, Entity direct, net.minecraft.world.damagesource.DamageSource source) {
+        if ((direct == player && "player".equals(source.m_19385_()))
+                || (direct instanceof Projectile p && Projectiles.kind(p) != Projectiles.Kind.OTHER)) {
+            return false;
+        }
+        String typeMod = source.m_269150_().m_203543_().map(k -> k.m_135782_().m_135827_()).orElse("");
+        String entityMod = direct == null || direct == player ? ""
+                : net.minecraft.world.entity.EntityType.m_20613_(direct.m_6095_()).m_135827_();
+        return WEAPON_MODS.contains(typeMod) || WEAPON_MODS.contains(entityMod);
+    }
+
+    private static double abilityMultiplier(ServerPlayer player, ItemStack weapon) {
+        java.util.Set<String> types = new java.util.HashSet<>();
+        for (String type : MELEE) {
+            if (Weapons.is(weapon, type)) {
+                types.add(type);
+            }
+        }
+        if (types.isEmpty()) {
+            return 1.0;
+        }
+        double base = 1;
+        for (net.minecraft.world.entity.ai.attributes.AttributeModifier m
+                : weapon.m_41638_(net.minecraft.world.entity.EquipmentSlot.MAINHAND).get(Attributes.f_22281_)) {
+            if (m.m_22217_() == net.minecraft.world.entity.ai.attributes.AttributeModifier.Operation.ADDITION) {
+                base += m.m_22218_();
+            }
+        }
+        return DamageBreakdown.abilityMultiplier(base, types, p -> Perks.get(player, p));
+    }
+
     /** Hits every hostile mob within radius of center, except center itself and the mob the swing already hit. */
     private void splash(ServerPlayer player, LivingEntity center, LivingEntity alreadyHit, float damage, double radius) {
         splashing = true;

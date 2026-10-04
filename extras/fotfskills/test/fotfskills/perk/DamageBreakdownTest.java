@@ -18,6 +18,10 @@ public final class DamageBreakdownTest {
 
         DamageBreakdown plain = DamageBreakdown.of(4.0, 0, 0, Set.of("sword"), p -> 0.0);
         check(plain.total() == 4.0 && plain.lines().size() == 1, "no perks: just the weapon line");
+        // Special attacks scale by the same ratio the weapon's type perks give a swing (not Sharpened or enchantments)
+        check(Math.abs(DamageBreakdown.abilityMultiplier(10.0, Set.of("two_handed"), p -> perks.getOrDefault(p, 0.0)) - 1.3) < 1e-9, "two-handed ability x1.3");
+        check(Math.abs(DamageBreakdown.abilityMultiplier(6.0, Set.of("axe"), p -> perks.getOrDefault(p, 0.0)) - 1.25) < 1e-9, "axe ability: (6+1.5)/6");
+        check(DamageBreakdown.abilityMultiplier(0, Set.of("axe"), p -> 1.0) == 1.0, "no weapon damage: unchanged");
         System.out.println("DamageBreakdownTest ok");
     }
 
