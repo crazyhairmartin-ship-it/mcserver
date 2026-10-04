@@ -1,9 +1,24 @@
 package fotfskills;
 
+import fotfskills.xp.ArsCastXp;
+import fotfskills.xp.ForgeXpEvents;
+import fotfskills.xp.IronsCastXp;
+import fotfskills.xp.XpSources;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.common.Mod;
 
-/** Friends of the Forest Skills: add-on for Pufferfish's Skills (screen tweaks now; perks and XP sources later). */
-@Mod(FotfSkills.MOD_ID)
+/** FOTF Skills: client skill-window tweaks (mixins) plus the custom XP sources for the skill trees. */
+@Mod("fotfskills")
 public final class FotfSkills {
-    public static final String MOD_ID = "fotfskills";
+    public FotfSkills() {
+        XpSources.register();
+        MinecraftForge.EVENT_BUS.register(new ForgeXpEvents());
+        if (ModList.get().isLoaded("irons_spellbooks")) {
+            MinecraftForge.EVENT_BUS.register(new IronsCastXp());
+        }
+        if (ModList.get().isLoaded("ars_nouveau")) {
+            MinecraftForge.EVENT_BUS.register(new ArsCastXp());
+        }
+    }
 }

@@ -136,7 +136,11 @@ hash = "327c9bab43ad8d15c1e72b395f38a37a6313d68003f55927f9d7658788349747"
 
 [[files]]
 file = "config/puffish_skills/categories/agility/definitions.json"
-hash = "ec0200b116c06d19aa5cc3f8fc0ab4cd58ccee0b20c0e23064722dae65315737"
+hash = "2dc00e6c6ccf53fe671a1866d25684d9a47a15cf6bca407e30c0a54ac41c3950"
+
+[[files]]
+file = "config/puffish_skills/categories/agility/experience.json"
+hash = "3314c500e75fc538f1a73d7a70608c375e464fc0fa04aebf86613e9046d9b64d"
 
 [[files]]
 file = "config/puffish_skills/categories/agility/skills.json"
@@ -152,7 +156,11 @@ hash = "7cfc5c9deb7b3286c6d0442272b479756869f12e749c5a17023e04c1ec65f40f"
 
 [[files]]
 file = "config/puffish_skills/categories/attack/definitions.json"
-hash = "3f69612a0330c96cfc961f47c3ef0aae0f69800d44112a6a9958fad4ee8db8f1"
+hash = "a4f9b9e2d26e36157dc079c72826641a20fe0abfbb6823fa5306f2db3dfa8692"
+
+[[files]]
+file = "config/puffish_skills/categories/attack/experience.json"
+hash = "08104dd800f682889b00a361460278aeef3f3aede2396dc979d76920d9482f14"
 
 [[files]]
 file = "config/puffish_skills/categories/attack/skills.json"
@@ -171,6 +179,10 @@ file = "config/puffish_skills/categories/cook/definitions.json"
 hash = "56f4dd712394b17a414d99953f3fc984011f0a1259b4c3a1e003d7b71a397541"
 
 [[files]]
+file = "config/puffish_skills/categories/cook/experience.json"
+hash = "ecc1bec6a094c4d636c7e32180b58db88942755283e8d0b81f3ba2a0266047bc"
+
+[[files]]
 file = "config/puffish_skills/categories/cook/skills.json"
 hash = "fc5b721c30bc10efe388d05acba7057eb1b621cc50906c3dab0f6f88e66a7279"
 
@@ -187,6 +199,10 @@ file = "config/puffish_skills/categories/craft/definitions.json"
 hash = "cff492cef8ff165584b6b32234c5b38281275e0b8ad4abe9bed26c05394354f7"
 
 [[files]]
+file = "config/puffish_skills/categories/craft/experience.json"
+hash = "832b1a458c351d9a013443992db7072d47576afdc0b894084222c2a5266fd4ee"
+
+[[files]]
 file = "config/puffish_skills/categories/craft/skills.json"
 hash = "d0e19d0ba7042cd87d9338034291bcde8aca550c902c101e6efc410a3766e85a"
 
@@ -200,7 +216,11 @@ hash = "74e68c8fc6e40edc5329352ecb99f1181700dffebbb1a820275568dd3f7c3165"
 
 [[files]]
 file = "config/puffish_skills/categories/defense/definitions.json"
-hash = "8ce35f430d5e4a25c5368966ea2a53da6cad1c1338e04d2f655f326d2e5314ed"
+hash = "b5751291ffb0f0fc41a45721a4755157c7116d5a4e33ef2551de4c34aac903f0"
+
+[[files]]
+file = "config/puffish_skills/categories/defense/experience.json"
+hash = "27fe3f1a53e9a3304a80338ca7233f35f34d9b85b9dd88f0ffce920c71067444"
 
 [[files]]
 file = "config/puffish_skills/categories/defense/skills.json"
@@ -219,6 +239,10 @@ file = "config/puffish_skills/categories/farm/definitions.json"
 hash = "f6bd92e14dd414655b046bfdb430544bb329307adb09b7f0dc9ae2eaed56da70"
 
 [[files]]
+file = "config/puffish_skills/categories/farm/experience.json"
+hash = "8c6440afa034adee5387e747829ebc1debaa5fc724687059657b5e1ede01a0a5"
+
+[[files]]
 file = "config/puffish_skills/categories/farm/skills.json"
 hash = "2ddf6d23262915524613ca198e705a289fb00a27baf05fb58619ed131f55b15c"
 
@@ -233,6 +257,10 @@ hash = "8805eaef5fb6f976326ff56c8657e118d8a3771b395bcd0f8062e1288a7cd1f1"
 [[files]]
 file = "config/puffish_skills/categories/fish/definitions.json"
 hash = "6cbdf8e175a5fbe94ed7ed1d95cc7c7a7ba4761f2deb256c5b5c5f9da4f0dea7"
+
+[[files]]
+file = "config/puffish_skills/categories/fish/experience.json"
+hash = "2f15f2e1e746f6f65622ff927dc6a9412ea82fc5300dcf0fe2984b7c44101c80"
 
 [[files]]
 file = "config/puffish_skills/categories/fish/skills.json"
@@ -251,6 +279,10 @@ file = "config/puffish_skills/categories/forage/definitions.json"
 hash = "acec4d5d0cbaf94d6ccc09771109f7b48c92f6f5e471db0614ffe43c1949fead"
 
 [[files]]
+file = "config/puffish_skills/categories/forage/experience.json"
+hash = "80fa8800a2097d706ba03eaa652d2d848ef39de63484e45920ebc710869a3f3d"
+
+[[files]]
 file = "config/puffish_skills/categories/forage/skills.json"
 hash = "4c51aa9c0eccb13b462884fd252b22db946f7bd6e874426b2755a366bcafa890"
 
@@ -264,7 +296,11 @@ hash = "ed2eeb4621d550891d2d9c35772d7315ed8ad59b23e17981a550bb006fa9d7f2"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/definitions.json"
-hash = "6ef2ee8aa28e584e59b8b35b91ea95e6c62b3479bae4215093bcd90e11625866"
+hash = "f1a40cdacc515c21a901372af3ceacfa91a56467b1b53e474d9c645af9363fd3"
+
+[[files]]
+file = "config/puffish_skills/categories/magic/experience.json"
+hash = "d3e6108415e12d7ab4fa4fd4c780d833ecfb85ca06dd7737f0b1d50ad35fe761"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/skills.json"
@@ -283,6 +319,10 @@ file = "config/puffish_skills/categories/mining/definitions.json"
 hash = "cadc74bcd64660041f7eb28335d0db346ba973e47b986e58f1909afdbec5f4d1"
 
 [[files]]
+file = "config/puffish_skills/categories/mining/experience.json"
+hash = "2816bcecf79f26471dcc2731324ca1a490831df602c9c73e8b1bf249bb3d0918"
+
+[[files]]
 file = "config/puffish_skills/categories/mining/skills.json"
 hash = "d83567a437e77b02e7d259bb3f6c2855b8466cfb6975172236da03c0eb53ee5b"
 
@@ -299,6 +339,10 @@ file = "config/puffish_skills/categories/range/definitions.json"
 hash = "29425613c5a6ecbec840b8b370a3dde92dfce6d8fa78521ce6e401465380061a"
 
 [[files]]
+file = "config/puffish_skills/categories/range/experience.json"
+hash = "44d61a1a3c94fde8c4abcbcb21a03e248e8b0f72892b5da1afe7bcf21f9faf1f"
+
+[[files]]
 file = "config/puffish_skills/categories/range/skills.json"
 hash = "21e10b27ce45193620a90423e848150a72406f0dbb7bd934f83d243006e6c85c"
 
@@ -313,6 +357,10 @@ hash = "6eaa514c6fda0ff30e6957af2bce62d3f121e1fb67edf2040ffa732305002c5d"
 [[files]]
 file = "config/puffish_skills/categories/taming/definitions.json"
 hash = "585a5fa90336e2a22776268c31ae52fa2e3f1ef792cf517c953e6e6d5aa5d0ba"
+
+[[files]]
+file = "config/puffish_skills/categories/taming/experience.json"
+hash = "c490a65c49ec0e39d84775146b06cef5f83a0735665476c349ef36f98b68a8eb"
 
 [[files]]
 file = "config/puffish_skills/categories/taming/skills.json"
@@ -1914,7 +1962,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "8b89da09967c369746f9080d504e898a254adb6437221114735a2e963f79feff"
+hash = "d1854aae4b0dba37572bf2ffd0b742353d7d8a89208ba0ede2456ff589c08732"
 metafile = true
 
 [[files]]
