@@ -22,6 +22,7 @@ public abstract class ArsSpellResolverMixin {
         SpellResolver resolver = (SpellResolver) (Object) this;
         if (resolver.spellContext.getUnwrappedCaster() instanceof ServerPlayer player && !player.m_7500_()) {
             AmountSource.award(player, "cast_spell", resolver.getResolveCost());
+            fotfskills.perk.CombatState.of(player).lastCast = fotfskills.perk.CombatState.now(player);   // Spellbound Steel
         }
     }
 }

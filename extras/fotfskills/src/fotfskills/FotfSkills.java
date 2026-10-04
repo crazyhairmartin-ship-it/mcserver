@@ -1,12 +1,16 @@
 package fotfskills;
 
+import fotfskills.perk.ArsMana;
 import fotfskills.perk.ArsPerks;
 import fotfskills.perk.BlockPerks;
 import fotfskills.perk.CombatPerks;
+import fotfskills.perk.IronsMana;
 import fotfskills.perk.IronsPerks;
+import fotfskills.perk.Mana;
 import fotfskills.perk.ItemPerks;
 import fotfskills.perk.PerkReward;
 import fotfskills.perk.PerkSync;
+import fotfskills.perk.WeaponPerks;
 import fotfskills.xp.ForgeXpEvents;
 import fotfskills.xp.IronsCastXp;
 import fotfskills.xp.XpSources;
@@ -25,13 +29,16 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new BlockPerks());
         MinecraftForge.EVENT_BUS.register(new ItemPerks());
         MinecraftForge.EVENT_BUS.register(new CombatPerks());
+        MinecraftForge.EVENT_BUS.register(new WeaponPerks());
         MinecraftForge.EVENT_BUS.register(new ForgeXpEvents());
         if (ModList.get().isLoaded("ars_nouveau")) {
             MinecraftForge.EVENT_BUS.register(new ArsPerks());
+            Mana.register(ArsMana::add);
         }
         if (ModList.get().isLoaded("irons_spellbooks")) {
             MinecraftForge.EVENT_BUS.register(new IronsCastXp());
             MinecraftForge.EVENT_BUS.register(new IronsPerks());
+            Mana.register(IronsMana::add);
         }
     }
 }
