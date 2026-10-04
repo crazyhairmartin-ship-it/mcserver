@@ -325,3 +325,17 @@ def test_xp_rates_after_playtest_1():
     assert data('craft', 'fotfskills:craft_gear')['per_item'] == 25                          # was too slow
     assert data('craft', 'fotfskills:craft_any')['per_item'] == 2                            # any real recipe counts
     assert data('taming', 'fotfskills:tame')['experience'] == 75                             # relatively faster
+
+
+def test_phase4_nodes_are_wired():
+    expect = {('agility', 'long_rope_1'): ('hook_range', 4), ('agility', 'long_rope_ii_1'): ('hook_range', 4),
+              ('agility', 'hookmaster_1'): ('hook_speed', 0.15), ('agility', 'motor_reel_1'): ('hook_motor', 1),
+              ('agility', 'twin_hooks_1'): ('hook_double', 1), ('taming', 'soul_mender_1'): ('soul_mender', 0.25)}
+    for (tree_id, sid), (perk, value) in expect.items():
+        defs = g.build_category(tree(tree_id), TIERS, XP, PERKS)['definitions.json']
+        assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': value}} in defs[sid]['rewards'], sid
+    agility = g.build_category(tree('agility'), TIERS, XP, PERKS)['definitions.json']
+    assert {'type': 'puffish_skills:attribute', 'data': {'attribute': 'parcool:parcool.max_stamina', 'value': 0.05,
+            'operation': 'multiply_base'}} in agility['light_feet_1']['rewards']
+    assert agility['second_breath_1']['rewards'][0]['data']['attribute'] == 'parcool:parcool.stamina_recovery'
+    assert agility['roll_master_1']['rewards'][0]['data']['attribute'] == 'parcool:parcool.breakfall.damage_reduction'

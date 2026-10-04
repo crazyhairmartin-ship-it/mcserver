@@ -1009,5 +1009,34 @@ global.TINKERS_KEEP = [
   'tconstruct:stripped_skyroot_wood'
 ]
 
+// Grappling Hook - Reforged: only the basic grappling hook stays. Its upgrades (rope length, throw and swing,
+// motor, double hook) come from the Agility skill tree instead (fotfskills GrapplePerks).
+global.TRIMMED_ITEMS = global.TRIMMED_ITEMS.concat([
+  'grapplemod:baseupgradeitem',
+  'grapplemod:block_grapple_modifier',
+  'grapplemod:doublejumpboots',
+  'grapplemod:doublemotorhook',
+  'grapplemod:doubleupgradeitem',
+  'grapplemod:enderhook',
+  'grapplemod:forcefieldupgradeitem',
+  'grapplemod:launcheritem',
+  'grapplemod:limitsupgradeitem',
+  'grapplemod:longfallboots',
+  'grapplemod:magnethook',
+  'grapplemod:magnetupgradeitem',
+  'grapplemod:motorhook',
+  'grapplemod:motorupgradeitem',
+  'grapplemod:repeller',
+  'grapplemod:rocketdoublemotorhook',
+  'grapplemod:rockethook',
+  'grapplemod:rocketupgradeitem',
+  'grapplemod:ropeupgradeitem',
+  'grapplemod:smarthook',
+  'grapplemod:staffupgradeitem',
+  'grapplemod:swingupgradeitem',
+  'grapplemod:throwupgradeitem',
+  'grapplemod:wallrunboots'
+])
+
 // Simply Swords weapon types, used by trim_simplyswords.js.
 global.SIMPLYSWORDS_WEAPONS = ['chakram', 'claymore', 'cutlass', 'glaive', 'greataxe', 'greathammer', 'halberd', 'katana', 'longsword', 'rapier', 'sai', 'scythe', 'spear', 'twinblade', 'warglaive']

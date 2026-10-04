@@ -78,7 +78,7 @@ hash = "93ce54c6f1b110f983b56c84278fb3cb9df21077454f10a70c9dd2572a2ee383"
 
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
-hash = "a4c14307370eeab8165c17a75b9c0338e4f9e656a371655ad694b3940a7eb927"
+hash = "05122fb753844c2eed68e946764e26c6bd64e055f79f8526fb1d2c82a6ce5444"
 
 [[files]]
 file = "config/everycomp-entries.toml"
@@ -136,7 +136,7 @@ hash = "b8142185ec1d4ba83d16da45af80debe903edfedd0fda1cd41bec30c6aa1cf53"
 
 [[files]]
 file = "config/puffish_skills/categories/agility/definitions.json"
-hash = "4d70a38462a526f29778ca2667a173b99f60006054c87171c4b8df7c4ba7594a"
+hash = "3eeaec01bdc964e0432250d3866166a70fe037859545a6feb522f9a06c473005"
 
 [[files]]
 file = "config/puffish_skills/categories/agility/experience.json"
@@ -356,7 +356,7 @@ hash = "918fca1dd34e892bc46963c7f1cc79a8260546194015d785c6bc416ebb53c5e9"
 
 [[files]]
 file = "config/puffish_skills/categories/taming/definitions.json"
-hash = "e4a6b8f2c2c7c45ce01b55a70f918b5b1fb31b27ce3b139d81d650ac084c5a87"
+hash = "9afb89a98fd906dd4a6e3dcea9f8736d6a9f6ef9452293a3e35dab383928267e"
 
 [[files]]
 file = "config/puffish_skills/categories/taming/experience.json"
@@ -1723,6 +1723,10 @@ file = "kubejs/server_scripts/saddle_recipe.js"
 hash = "412bf83da2aa86b4baf7ae41144bcf05f8f4068bf7b32693f4dd5740f86299fb"
 
 [[files]]
+file = "kubejs/server_scripts/trim_grapplemod.js"
+hash = "b28f62a2b93e731e1c84c346aed8c1bc5ab628a08d6813a2b26c00dc59f0a45e"
+
+[[files]]
 file = "kubejs/server_scripts/trim_simplyswords.js"
 hash = "ad65c303393af3505cc1fc5a7d4809723311f0ebd86c6eb78f981994c67d31ab"
 
@@ -1764,7 +1768,7 @@ hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
-hash = "6cfb9b4e3f15fcf65bb35cd5e8177879cff61538c7ab5d5268a6fdf42ddcbae1"
+hash = "5d3cae90af23472adad536c3a12e805e2c199edd04f06f5ce068ce9fab43f254"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -1978,7 +1982,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "434997163cd3be9428820d81bfec4078b5795b3b4592a4e7554ced5f7f886b16"
+hash = "b3879603e72731f2df5ccca0d27a510bfc9048e1dd06a76f026d57075f52f73d"
 metafile = true
 
 [[files]]
@@ -2269,11 +2273,6 @@ metafile = true
 [[files]]
 file = "mods/open-parties-and-claims.pw.toml"
 hash = "b54e2ac8f9ebf54af08e84db20b9d38cc7f955124f30b8dbcd84f0b7ae7ed9ed"
-metafile = true
-
-[[files]]
-file = "mods/paragliders.pw.toml"
-hash = "e0d9db82e60f58d505d8fdb2cc2e0ed73510385582c2ca10e7934fd9fb81517e"
 metafile = true
 
 [[files]]
@@ -2579,7 +2578,7 @@ hash = "b05ffc4f52cba9e84d3c92687c752b95d73ec22aa01e8d836208754dcbedb0ac"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/categories/travel.json"
-hash = "f2662c542c94d9d5576fa650e71fcfc258afdb28b69bb0f5819a7664aafd6a55"
+hash = "9b7122af338a6e4288b5e11fabc16ceffb46ae2f8d1bd436cfd1749c13b28e7b"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/building/decor.json"
@@ -2682,6 +2681,10 @@ file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/maps.json
 hash = "bf8a064bccc7c70e53244c310693974c63cd85a3027f729d3fbe13074a294187"
 
 [[files]]
+file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/skills.json"
+hash = "060b02e24537dd0062f228417f70a7b400dd8be9900c7d94e1ed43da315f6dae"
+
+[[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/storage.json"
 hash = "1ff508813617126debc469acdea8d75d1574fe38f5de4b23525e12bd6974732b"
 
@@ -2739,11 +2742,11 @@ hash = "3be4890e6b240370f7b8de310031448a893f24a9a1e438b49a91cfb0740f8190"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/gliding.json"
-hash = "c14ec039d8aaf85a3158239c7e4102b337505a43c3122686c2d766e54b165376"
+hash = "851e7ef60d2f1be179b91de82598882cb634211e8fe579e3916aeedba4333629"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/grappling.json"
-hash = "4d5571ff29e04125f26b955611a570349848bff939df4be90db2da835bee6f1f"
+hash = "a44985077289ed6c5573cceee7435cef4dac45aa46a421fbe572269735fe548d"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/music.json"

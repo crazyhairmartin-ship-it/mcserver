@@ -1,14 +1,9 @@
 {
-  "name": "Gliders & Wings",
-  "icon": "paraglider:paraglider",
+  "name": "Elytra",
+  "icon": "minecraft:elytra",
   "category": "patchouli:travel",
   "sortnum": 1,
   "pages": [
-    {
-      "type": "patchouli:spotlight",
-      "item": "paraglider:paraglider",
-      "text": "Jump from high places and glide. Campfires push you up. Gliding uses stamina, and goddess statues increase it."
-    },
     {
       "type": "patchouli:spotlight",
       "item": "minecraft:elytra",

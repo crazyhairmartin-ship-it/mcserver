@@ -531,6 +531,91 @@
           "value": 0.04
         }
       }
+    ],
+    "long_rope": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_range",
+          "value": 4
+        }
+      }
+    ],
+    "long_rope_ii": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_range",
+          "value": 4
+        }
+      }
+    ],
+    "hookmaster": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_speed",
+          "value": 0.15
+        }
+      }
+    ],
+    "motor_reel": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_motor",
+          "value": 1
+        }
+      }
+    ],
+    "twin_hooks": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_double",
+          "value": 1
+        }
+      }
+    ],
+    "light_feet": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.max_stamina",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ],
+    "freerunner": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.max_stamina",
+          "value": 0.08,
+          "operation": "multiply_base"
+        }
+      }
+    ],
+    "second_breath": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.stamina_recovery",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ],
+    "roll_master": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.breakfall.damage_reduction",
+          "value": 0.1,
+          "operation": "addition"
+        }
+      }
     ]
   },
   "mining": {
@@ -1653,6 +1738,15 @@
         "data": {
           "perk": "prized_stock",
           "value": 0.1
+        }
+      }
+    ],
+    "soul_mender": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "soul_mender",
+          "value": 0.25
         }
       }
     ]

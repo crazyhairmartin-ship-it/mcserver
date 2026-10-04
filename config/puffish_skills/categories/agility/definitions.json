@@ -32,7 +32,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.max_stamina",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "light_feet_2": {
     "title": "Light Feet",
@@ -50,7 +60,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.max_stamina",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "light_feet_3": {
     "title": "Light Feet",
@@ -68,7 +88,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.max_stamina",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "light_feet_4": {
     "title": "Light Feet",
@@ -86,7 +116,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.max_stamina",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "light_feet_5": {
     "title": "Light Feet",
@@ -104,7 +144,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 0
+    "required_spent_points": 0,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.max_stamina",
+          "value": 0.05,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "spring_step_1": {
     "title": "Spring Step",
@@ -355,7 +405,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_range",
+          "value": 4
+        }
+      }
+    ]
   },
   "long_rope_2": {
     "title": "Long Rope",
@@ -373,7 +432,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_range",
+          "value": 4
+        }
+      }
+    ]
   },
   "long_rope_3": {
     "title": "Long Rope",
@@ -391,7 +459,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_range",
+          "value": 4
+        }
+      }
+    ]
   },
   "long_rope_4": {
     "title": "Long Rope",
@@ -409,7 +486,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 5
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_range",
+          "value": 4
+        }
+      }
+    ]
   },
   "quick_casting_1": {
     "title": "Quick Casting",
@@ -610,7 +696,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Hookmaster."
+    "extra_description": "Pick one: this or Hookmaster.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.max_stamina",
+          "value": 0.08,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "freerunner_2": {
     "title": "Freerunner",
@@ -629,7 +725,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Hookmaster."
+    "extra_description": "Pick one: this or Hookmaster.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.max_stamina",
+          "value": 0.08,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "freerunner_3": {
     "title": "Freerunner",
@@ -648,7 +754,17 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Hookmaster."
+    "extra_description": "Pick one: this or Hookmaster.",
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.max_stamina",
+          "value": 0.08,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "tier_3_or": {
     "title": "OR",
@@ -684,7 +800,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Freerunner."
+    "extra_description": "Pick one: this or Freerunner.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_speed",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "hookmaster_2": {
     "title": "Hookmaster",
@@ -703,7 +828,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Freerunner."
+    "extra_description": "Pick one: this or Freerunner.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_speed",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "hookmaster_3": {
     "title": "Hookmaster",
@@ -722,7 +856,16 @@
     },
     "cost": 1,
     "required_spent_points": 10,
-    "extra_description": "Pick one: this or Freerunner."
+    "extra_description": "Pick one: this or Freerunner.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_speed",
+          "value": 0.15
+        }
+      }
+    ]
   },
   "tier_4_label": {
     "title": "Tier 4 \u00b7 15 points",
@@ -1029,7 +1172,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.stamina_recovery",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "second_breath_2": {
     "title": "Second Breath",
@@ -1047,7 +1200,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.stamina_recovery",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "second_breath_3": {
     "title": "Second Breath",
@@ -1065,7 +1228,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.stamina_recovery",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "second_breath_4": {
     "title": "Second Breath",
@@ -1083,7 +1256,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.stamina_recovery",
+          "value": 0.1,
+          "operation": "multiply_base"
+        }
+      }
+    ]
   },
   "motor_reel_1": {
     "title": "Motor Reel",
@@ -1101,7 +1284,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_motor",
+          "value": 1
+        }
+      }
+    ]
   },
   "motor_reel_2": {
     "title": "Motor Reel",
@@ -1119,7 +1311,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_motor",
+          "value": 1
+        }
+      }
+    ]
   },
   "motor_reel_3": {
     "title": "Motor Reel",
@@ -1137,7 +1338,16 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_motor",
+          "value": 1
+        }
+      }
+    ]
   },
   "roll_master_1": {
     "title": "Roll Master",
@@ -1155,7 +1365,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.breakfall.damage_reduction",
+          "value": 0.1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "roll_master_2": {
     "title": "Roll Master",
@@ -1173,7 +1393,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.breakfall.damage_reduction",
+          "value": 0.1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "roll_master_3": {
     "title": "Roll Master",
@@ -1191,7 +1421,17 @@
       }
     },
     "cost": 1,
-    "required_spent_points": 15
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "puffish_skills:attribute",
+        "data": {
+          "attribute": "parcool:parcool.breakfall.damage_reduction",
+          "value": 0.1,
+          "operation": "addition"
+        }
+      }
+    ]
   },
   "tier_5_label": {
     "title": "Tier 5 \u00b7 25 points",
@@ -1227,7 +1467,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Long Rope (all ranks)."
+    "extra_description": "Needs Long Rope (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_range",
+          "value": 4
+        }
+      }
+    ]
   },
   "long_rope_ii_2": {
     "title": "Long Rope II",
@@ -1246,7 +1495,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Long Rope (all ranks)."
+    "extra_description": "Needs Long Rope (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_range",
+          "value": 4
+        }
+      }
+    ]
   },
   "long_rope_ii_3": {
     "title": "Long Rope II",
@@ -1265,7 +1523,16 @@
     },
     "cost": 1,
     "required_spent_points": 25,
-    "extra_description": "Needs Long Rope (all ranks)."
+    "extra_description": "Needs Long Rope (all ranks).",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_range",
+          "value": 4
+        }
+      }
+    ]
   },
   "featherfall_1": {
     "title": "Featherfall",
@@ -1329,6 +1596,15 @@
     },
     "cost": 3,
     "required_spent_points": 25,
-    "extra_description": "Pick one: this or Featherfall."
+    "extra_description": "Pick one: this or Featherfall.",
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "hook_double",
+          "value": 1
+        }
+      }
+    ]
   }
 }
