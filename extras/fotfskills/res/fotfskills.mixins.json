@@ -3,9 +3,10 @@
   "minVersion": "0.8",
   "package": "fotfskills.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": ["ItemStackCraftedMixin", "ArsSpellResolverMixin", "ItemStackDurabilityMixin", "FishingHookMixin", "AbstractArrowAccessor", "ServerPlayerGameModeMixin", "AnimalTreatMixin", "ServerLevelTameMixin", "PlayerExhaustionMixin", "LivingEntityBlockMixin", "AbstractHorseTameMixin", "ItemCraftedByMixin", "PetBedRespawnMixin"],
+  "mixins": ["ItemStackCraftedMixin", "ArsSpellResolverMixin", "ItemStackDurabilityMixin", "FishingHookMixin", "AbstractArrowAccessor", "ServerPlayerGameModeMixin", "AnimalTreatMixin", "ServerLevelTameMixin", "PlayerExhaustionMixin", "LivingEntityBlockMixin", "AbstractHorseTameMixin", "ItemCraftedByMixin", "PetBedRespawnMixin", "ArsManaCapMixin", "ArsManaRegenMixin"],
   "client": [
-    "SkillsScreenMixin"
+    "SkillsScreenMixin",
+    "ArsManaHudMixin"
   ],
   "injectors": {
     "defaultRequire": 1

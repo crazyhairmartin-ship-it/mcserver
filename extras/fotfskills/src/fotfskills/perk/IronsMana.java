@@ -23,4 +23,19 @@ public final class IronsMana {
         data.setMana((float) (data.getMana() - amount));
         return true;
     }
+
+    public static double get(ServerPlayer player) {
+        return MagicData.getPlayerMagicData(player).getMana();
+    }
+
+    public static double max(ServerPlayer player) {
+        return player.m_21133_(AttributeRegistry.MAX_MANA.get());
+    }
+
+    /** Sets Iron's mana within 0..max and returns the new value (shared mana: Ars's set mana lands here). */
+    public static double set(ServerPlayer player, double mana) {
+        float value = (float) Math.max(0, Math.min(max(player), mana));
+        MagicData.getPlayerMagicData(player).setMana(value);
+        return value;
+    }
 }

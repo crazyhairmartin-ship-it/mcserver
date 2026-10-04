@@ -23,6 +23,9 @@ public final class ArsPerks {
 
     @SubscribeEvent
     public void onRegen(ManaRegenCalcEvent event) {
+        if (fotfskills.mana.ManaMerge.active()) {
+            return;                                         // shared mana: Iron's Wellspring covers the pool
+        }
         if (event.getEntity() instanceof ServerPlayer player && CombatState.now(player) - CombatState.of(player).lastCombat > 200) {
             event.setRegen(event.getRegen() * (1 + Perks.get(player, "wellspring")));
         }
