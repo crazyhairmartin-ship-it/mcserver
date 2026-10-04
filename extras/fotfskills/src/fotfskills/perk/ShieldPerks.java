@@ -44,7 +44,7 @@ public final class ShieldPerks {
         if (to.m_82526_(player.m_20154_()) <= 0) {
             return;                                     // only hits from in front
         }
-        double cost = event.getAmount() * 4 / (1 + shield);
+        double cost = event.getAmount() * 40 / (1 + shield);      // 20 mana per damage at rank 1, 10 at rank 3
         if (Mana.spend(player, cost)) {
             event.setCanceled(true);
             if (player.m_9236_() instanceof net.minecraft.server.level.ServerLevel level) {   // the barrier flashes where it took the hit

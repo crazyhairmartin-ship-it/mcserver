@@ -145,26 +145,49 @@ public final class FarmPerks {
         clicks.clear();
     }
 
-    /** Sweeping Harvest for crops picked by right-click: picks the same mature crop around it the same way. */
+    /**
+     * Sweeping Harvest for crops picked by right-click: finds each nearby plant of the same crop by its base (2 blocks up or
+     * down, for tall plants on stepped rows) and picks it on the same half the player clicked, if that half is ripe.
+     */
     private static void sweepByHand(ServerPlayer player, ServerLevel level, BlockPos pos, BlockState mature, IntegerProperty age) {
         int radius = Math.min(2, (int) Math.round(Perks.get(player, "sweeping_harvest")));
         if (sweeping || radius <= 0 || !Weapons.is(player.m_21205_(), "scythe")) {
             return;
         }
+        net.minecraft.world.level.block.Block crop = mature.m_60734_();
         int ripe = java.util.Collections.max(age.m_6908_());
+        BlockPos clickedBase = base(level, pos, crop);
+        int half = pos.m_123342_() - clickedBase.m_123342_();
         sweeping = true;
         try {
-            for (BlockPos other : BlockPos.m_121940_(pos.m_7918_(-radius, -1, -radius), pos.m_7918_(radius, 1, radius))) {
-                BlockState state = level.m_8055_(other);
-                if (!other.equals(pos) && state.m_60734_() == mature.m_60734_() && state.m_61143_(age) == ripe) {
+            java.util.Set<BlockPos> bases = new java.util.HashSet<>();
+            for (BlockPos p : BlockPos.m_121940_(pos.m_7918_(-radius, -2, -radius), pos.m_7918_(radius, 2, radius))) {
+                if (level.m_8055_(p).m_60734_() == crop) {
+                    bases.add(base(level, p.m_7949_(), crop));
+                }
+            }
+            bases.remove(clickedBase);
+            for (BlockPos plant : bases) {
+                BlockPos target = plant.m_6630_(half);
+                BlockState state = level.m_8055_(target);
+                if (state.m_60734_() == crop && (!state.m_61138_(age) || state.m_61143_(age) == ripe)) {
                     state.m_60664_(level, player, net.minecraft.world.InteractionHand.MAIN_HAND,
-                            new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.m_82512_(other),
-                                    net.minecraft.core.Direction.UP, other.m_7949_(), false));
+                            new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.m_82512_(target),
+                                    net.minecraft.core.Direction.UP, target, false));
                 }
             }
         } finally {
             sweeping = false;
         }
+    }
+
+    /** The bottom block of a plant: walk down while the block below is the same crop. */
+    private static BlockPos base(ServerLevel level, BlockPos pos, net.minecraft.world.level.block.Block crop) {
+        BlockPos p = pos;
+        for (int i = 0; i < 4 && level.m_8055_(p.m_7495_()).m_60734_() == crop; i++) {
+            p = p.m_7495_();
+        }
+        return p;
     }
 
     private static IntegerProperty age(BlockState state) {

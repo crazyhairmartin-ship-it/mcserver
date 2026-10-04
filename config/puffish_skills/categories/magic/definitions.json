@@ -479,7 +479,7 @@
   },
   "mana_shield_1": {
     "title": "Mana Shield",
-    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front for 2 mana per damage (1 at rank 3)",
+    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front for 20 mana per damage (10 at rank 3)",
     "icon": {
       "type": "item",
       "data": {
@@ -506,7 +506,7 @@
   },
   "mana_shield_2": {
     "title": "Mana Shield",
-    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front for 2 mana per damage (1 at rank 3)",
+    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front for 20 mana per damage (10 at rank 3)",
     "icon": {
       "type": "item",
       "data": {
@@ -533,7 +533,7 @@
   },
   "mana_shield_3": {
     "title": "Mana Shield",
-    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front for 2 mana per damage (1 at rank 3)",
+    "description": "Crouch with no shield in hand: a mana barrier blocks hits from the front for 20 mana per damage (10 at rank 3)",
     "icon": {
       "type": "item",
       "data": {

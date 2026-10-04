@@ -13,6 +13,12 @@ public final class IronsMana {
         MagicData data = MagicData.getPlayerMagicData(player);
         double max = player.m_21133_(AttributeRegistry.MAX_MANA.get());
         data.setMana((float) Math.min(max, data.getMana() + amount));
+        sync(player, data);
+    }
+
+    private static void sync(ServerPlayer player, MagicData data) {
+        io.redspace.ironsspellbooks.setup.PacketDistributor.sendToPlayer(player,
+                new io.redspace.ironsspellbooks.network.SyncManaPacket(data));
     }
 
     public static boolean spend(ServerPlayer player, double amount) {
@@ -21,6 +27,7 @@ public final class IronsMana {
             return false;
         }
         data.setMana((float) (data.getMana() - amount));
+        sync(player, data);
         return true;
     }
 
