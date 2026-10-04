@@ -14,4 +14,13 @@ public final class IronsMana {
         double max = player.m_21133_(AttributeRegistry.MAX_MANA.get());
         data.setMana((float) Math.min(max, data.getMana() + amount));
     }
+
+    public static boolean spend(ServerPlayer player, double amount) {
+        MagicData data = MagicData.getPlayerMagicData(player);
+        if (data.getMana() < amount) {
+            return false;
+        }
+        data.setMana((float) (data.getMana() - amount));
+        return true;
+    }
 }

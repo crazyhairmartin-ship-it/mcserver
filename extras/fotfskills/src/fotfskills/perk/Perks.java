@@ -53,7 +53,12 @@ public final class Perks {
             Map.entry("smith", 0.95), Map.entry("whetstone", 5.0), Map.entry("weaponsmith", 5.0),
             Map.entry("armourer", 5.0), Map.entry("enchant_level", 5.0), Map.entry("enchant_bonus", 5.0),
             Map.entry("masterwork", 1.0), Map.entry("book_saver", 1.0), Map.entry("repair_kit", 0.9),
-            Map.entry("spell_save", 0.95));
+            Map.entry("spell_save", 0.95),
+            Map.entry("homing", 0.95), Map.entry("seeker", 1.0), Map.entry("multishot", 0.95),
+            Map.entry("arcane_arrows", 2.0), Map.entry("retriever", 0.95), Map.entry("shield_wall", 0.9),
+            Map.entry("bulwark", 0.6), Map.entry("mana_shield", 5.0), Map.entry("arcane_aegis", 1.0),
+            Map.entry("scroll_saver", 0.95), Map.entry("wellspring", 2.0), Map.entry("druids_grove", 0.9),
+            Map.entry("earthshaker", 1.0), Map.entry("reapers_due", 1.0));
 
     public static final PerkTotals TOTALS = new PerkTotals(perk -> CAPS.getOrDefault(perk, 0.0));
 

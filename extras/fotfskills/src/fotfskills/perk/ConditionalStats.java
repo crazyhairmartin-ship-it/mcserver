@@ -43,6 +43,8 @@ public final class ConditionalStats {
         double speed = (forest ? Perks.get(player, "forest_speed") : 0) + (inCombat ? Perks.get(player, "combat_speed") : 0)
                 + (now - state.lastShot <= 40 ? Perks.get(player, "skirmish_speed") : 0);
         Modifiers.set(player, Attributes.f_22279_, "speed", speed, AttributeModifier.Operation.MULTIPLY_TOTAL);
+        Modifiers.set(player, Attributes.f_22278_, "bulwark_kb", player.m_21254_() ? Perks.get(player, "bulwark") : 0,
+                AttributeModifier.Operation.ADDITION);
         Modifiers.set(player, Attributes.f_22285_, "toughness", forest ? Perks.get(player, "forest_toughness") : 0, AttributeModifier.Operation.ADDITION);
         Modifiers.set(player, Attributes.f_22284_, "armor", now - state.lastStoneMined <= 600 ? Perks.get(player, "stonehide") : 0,
                 AttributeModifier.Operation.ADDITION);
@@ -70,7 +72,8 @@ public final class ConditionalStats {
         Modifiers.set(player, attribute("irons_spellbooks", "spell_power"), "spell", spell, AttributeModifier.Operation.MULTIPLY_BASE);
         Modifiers.set(player, attribute("irons_spellbooks", "cooldown_reduction"), "cooldown", staff ? Perks.get(player, "staff_cooldown") : 0,
                 AttributeModifier.Operation.ADDITION);
-        Modifiers.set(player, attribute("irons_spellbooks", "mana_regen"), "regen", now - state.lastMeal <= 1200 ? Perks.get(player, "brain_regen") : 0,
+        Modifiers.set(player, attribute("irons_spellbooks", "mana_regen"), "regen", (now - state.lastMeal <= 1200 ? Perks.get(player, "brain_regen") : 0)
+                + (now - state.lastCombat > 200 ? Perks.get(player, "wellspring") : 0),
                 AttributeModifier.Operation.MULTIPLY_BASE);
 
         if (player.f_19797_ % 100 == 0 && Perks.get(player, "earthbound") > 0) {

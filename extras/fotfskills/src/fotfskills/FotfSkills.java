@@ -19,6 +19,8 @@ import fotfskills.perk.OpacParties;
 import fotfskills.perk.Parties;
 import fotfskills.perk.PerkSync;
 import fotfskills.perk.PetPerks;
+import fotfskills.perk.RangePerks;
+import fotfskills.perk.ShieldPerks;
 import fotfskills.perk.WeaponPerks;
 import fotfskills.xp.ForgeXpEvents;
 import fotfskills.xp.IronsCastXp;
@@ -46,6 +48,8 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new FoodPerks());
         MinecraftForge.EVENT_BUS.register(new FishingPerks());
         MinecraftForge.EVENT_BUS.register(new CraftPerks());
+        MinecraftForge.EVENT_BUS.register(new RangePerks());
+        MinecraftForge.EVENT_BUS.register(new ShieldPerks());
         if (ModList.get().isLoaded("openpartiesandclaims")) {
             Parties.register(OpacParties::same);
         }
@@ -53,11 +57,13 @@ public final class FotfSkills {
         if (ModList.get().isLoaded("ars_nouveau")) {
             MinecraftForge.EVENT_BUS.register(new ArsPerks());
             Mana.register(ArsMana::add);
+            Mana.registerSpender(ArsMana::spend);
         }
         if (ModList.get().isLoaded("irons_spellbooks")) {
             MinecraftForge.EVENT_BUS.register(new IronsCastXp());
             MinecraftForge.EVENT_BUS.register(new IronsPerks());
             Mana.register(IronsMana::add);
+            Mana.registerSpender(IronsMana::spend);
         }
     }
 }

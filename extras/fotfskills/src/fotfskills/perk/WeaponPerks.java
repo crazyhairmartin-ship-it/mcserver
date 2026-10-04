@@ -110,7 +110,10 @@ public final class WeaponPerks {
             state.markedUntil = now + 200;
             double cleave = Perks.get(player, "cleave");
             if (cleave > 0 && Weapons.is(weapon, "two_handed")) {
-                splash(player, target, (float) (amount * cleave));
+                splash(player, target, (float) (amount * cleave), 2.5, false);
+            }
+            if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe")) {
+                splash(player, player, amount, 3, true);   // Reaper's Due: every hostile mob in front, full damage
             }
         } else if (direct instanceof Projectile projectile) {
             Projectiles.Kind kind = Projectiles.kind(projectile);
@@ -162,6 +165,13 @@ public final class WeaponPerks {
     public void onCrit(CriticalHitEvent event) {
         if (event.getEntity() instanceof ServerPlayer player && (event.isVanillaCritical() || event.getDamageModifier() > 1)) {
             player.m_5634_((float) Perks.get(player, "lifeline"));
+            if (Perks.get(player, "earthshaker") > 0 && Weapons.is(player.m_21205_(), "blunt")) {   // Earthshaker
+                for (LivingEntity mob : event.getTarget().m_9236_().m_45976_(LivingEntity.class, event.getTarget().m_20191_().m_82400_(3))) {
+                    if (mob instanceof Enemy) {
+                        mob.m_7292_(new MobEffectInstance(MobEffects.f_19597_, 30, 3, false, true));
+                    }
+                }
+            }
         }
     }
 
@@ -258,12 +268,16 @@ public final class WeaponPerks {
         crushed.put(target, now + 100);
     }
 
-    /** Cleave: part of a two-handed hit splashes to hostile mobs around the target (never pets, villagers, players or armour stands). */
-    private void splash(ServerPlayer player, LivingEntity target, float damage) {
+    /**
+     * Cleave / Reaper's Due: damage to hostile mobs around center (never pets, villagers, players or armour stands);
+     * frontOnly keeps only mobs in front of the player.
+     */
+    private void splash(ServerPlayer player, LivingEntity center, float damage, double radius, boolean frontOnly) {
         splashing = true;
         try {
-            for (LivingEntity other : target.m_9236_().m_45976_(LivingEntity.class, target.m_20191_().m_82400_(2.5))) {
-                if (other == target || !(other instanceof Enemy)) {
+            for (LivingEntity other : center.m_9236_().m_45976_(LivingEntity.class, center.m_20191_().m_82400_(radius))) {
+                if (other == center || !(other instanceof Enemy)
+                        || (frontOnly && other.m_20182_().m_82546_(player.m_20182_()).m_82526_(player.m_20154_()) <= 0)) {
                     continue;
                 }
                 other.m_6469_(player.m_269291_().m_269075_(player), damage);

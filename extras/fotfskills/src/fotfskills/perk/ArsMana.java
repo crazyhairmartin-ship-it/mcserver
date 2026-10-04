@@ -11,4 +11,14 @@ public final class ArsMana {
     public static void add(ServerPlayer player, double amount) {
         CapabilityRegistry.getMana(player).ifPresent(mana -> mana.addMana(amount));
     }
+
+    public static boolean spend(ServerPlayer player, double amount) {
+        return CapabilityRegistry.getMana(player).map(mana -> {
+            if (mana.getCurrentMana() < amount) {
+                return false;
+            }
+            mana.removeMana(amount);
+            return true;
+        }).orElse(false);
+    }
 }

@@ -21,4 +21,20 @@ public final class Mana {
             BRIDGES.forEach(bridge -> bridge.accept(player, amount));
         }
     }
+
+    private static final List<java.util.function.BiPredicate<ServerPlayer, Double>> SPENDERS = new ArrayList<>();
+
+    public static void registerSpender(java.util.function.BiPredicate<ServerPlayer, Double> spender) {
+        SPENDERS.add(spender);
+    }
+
+    /** Takes amount from the first magic mod that has that much; false if none does. */
+    public static boolean spend(ServerPlayer player, double amount) {
+        for (var spender : SPENDERS) {
+            if (spender.test(player, amount)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
