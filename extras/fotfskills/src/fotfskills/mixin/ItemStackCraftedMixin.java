@@ -1,5 +1,7 @@
 package fotfskills.mixin;
 
+import fotfskills.perk.Chance;
+import fotfskills.perk.Perks;
 import fotfskills.xp.AmountSource;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.player.Player;
@@ -36,6 +38,12 @@ public abstract class ItemStackCraftedMixin {
             FoodProperties food = stack.m_41720_().m_41473_();   // Item.getFoodProperties()
             if (food != null) {
                 AmountSource.award(server, "cook", (double) food.m_38744_() * amount);
+                int extra = Chance.successes(amount, Perks.get(server, "extra_serving"), Perks::random);
+                if (extra > 0) {
+                    ItemStack bonus = stack.m_41777_();
+                    bonus.m_41764_(extra);
+                    net.minecraftforge.items.ItemHandlerHelper.giveItemToPlayer(server, bonus);
+                }
             }
         } else if (stack.m_41763_()) {
             AmountSource.award(server, "craft_gear", amount);
