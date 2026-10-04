@@ -1,58 +1,6 @@
 hash-format = "sha256"
 
 [[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/plan-path"
-hash = "ba7519145bfadbca92e839b51abfaacc760a6ed2449ec037a38ae3e04be0a403"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/progress.md"
-hash = "caaf8d525d9215c834dd1ef3827b81ad468c89650e34d1636876d2ff0b411144"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/review-827c74e..ffff49c.diff"
-hash = "885f41a4976998107c2d239bd27b939dcaa8601c22c14fc4e458400f39309315"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-1-brief.md"
-hash = "afb0a4c3c6f9c18e5cf821ac60d091e53635e24f93afa83688293c3945738e38"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-1-tests.log"
-hash = "b5df3802e9828684862921e48456270ce167316d7a58abed38b9c182d151601e"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-2-brief.md"
-hash = "0b59ff9ef8345597d192cea780321bcad71633682e09a76c5e251e82b32968e6"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-2-tests.log"
-hash = "b5df3802e9828684862921e48456270ce167316d7a58abed38b9c182d151601e"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-3-brief.md"
-hash = "f3b3e7e46b7ef0ce9292512c6dd316440c3f621640b2c946a5c98afe74c27464"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-3-tests.log"
-hash = "460ce8e0f2b0e5ae89000e53e24d7ace891c0092a7ab181a067451a351411d66"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-4-brief.md"
-hash = "a89cadd603ae5c48291c3fb11ed1689b370cdf6933605362c2ba91f31b4f8a08"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-4-tests.log"
-hash = "372143e008ec2b4626a1f4ff56fd578db02576a8296ffa7a672e829602c4b890"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-5-brief.md"
-hash = "afc0d76cb2247a8e23cbcc29750b266daf37df5ceade0e40e3b6f81fd1957b7c"
-
-[[files]]
-file = ".superpowers/sdd/2026-10-04-skills-phase3a-weapons-and-combat/task-5-tests.log"
-hash = "5691b4523534770c8dd19511baa87a55b5326c05438e63b5d0e05ca3144d5291"
-
-[[files]]
 file = "config/alexscaves-general.toml"
 hash = "6588029574999e58617203c013180d0e35f2673900e1cff7d7087fbd05a4d6c3"
 
@@ -1495,6 +1443,10 @@ file = "kubejs/server_scripts/butterfly_sightings.js"
 hash = "ab6c957144e6fa572b983394a4d5f1fe9a0456ec5933a19e467834e63e96fa03"
 
 [[files]]
+file = "kubejs/server_scripts/convert_duplicates.js"
+hash = "d43b8afe8c5e323e8259c967fdf48d8328ea6c9df7fab42ea5c2dd3960ffc1ee"
+
+[[files]]
 file = "kubejs/server_scripts/field_guide.js"
 hash = "f56b913798da5421ef3d3d983148787ff9287561fbc628569211622cc9b0611b"
 
@@ -1556,7 +1508,7 @@ hash = "9c0de00c70d542caeb2f103f3272d9193121b20ae053d97fc55a199f5280f746"
 
 [[files]]
 file = "kubejs/startup_scripts/duplicate_groups.js"
-hash = "95d59a1f89994e1b11235af28beab4072d84c088ce72f9e26113f3ee35718def"
+hash = "e5509f03879ceeb5b990e91a3cdd60ac02a1f89c8150a27c37215e731723a056"
 
 [[files]]
 file = "kubejs/startup_scripts/friendly_fireballs.js"

@@ -1,5 +1,6 @@
 // Items that different mods add as copies of the same thing.
-// First item in each group is the one we keep visible in JEI; the rest are hidden.
+// First item in each group is the one we keep visible in JEI; the rest are hidden, and drops or pickups of them
+// turn into the first item (server_scripts/convert_duplicates.js).
 // Every recipe that asks for one of them accepts any item in its group
 // (see server_scripts/unify_duplicates.js and client_scripts/hide_duplicates.js).
 // `tags`: extra forge/c tags every item in the group should share, so tag-based recipes accept all of them.
@@ -22,6 +23,8 @@ global.DUPLICATE_GROUPS = [
     tags: ['forge:raw_bacon', 'forge:raw_pork', 'c:raw_bacon', 'c:raw_pork'] },
   { name: 'dog_food', items: ['farmersdelight:dog_food', 'farm_and_charm:dog_food'], tags: [] },
   { name: 'onion_soup', items: ['farmersdelight:onion_soup', 'farm_and_charm:onion_soup'], tags: [] },
+  { name: 'apple_pie', items: ['farmersdelight:apple_pie', 'bakery:apple_pie'], tags: [] },
+  { name: 'dumplings', items: ['farmersdelight:dumplings', 'brewery:dumplings'], tags: [] },
   { name: 'apple_pie_slice', items: ['farmersdelight:apple_pie_slice', 'bakery:apple_pie_slice'], tags: [] },
   { name: 'venison', items: ['naturalist:venison', 'wildernature:venison'], tags: [] },
   { name: 'cooked_venison', items: ['naturalist:cooked_venison', 'wildernature:cooked_venison'], tags: [] },
