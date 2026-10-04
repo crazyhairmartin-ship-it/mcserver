@@ -73,17 +73,19 @@ public final class FarmPerks {
 
     /** Sweeping Harvest: called from BlockPerks.onBroken for a mature crop broken with a scythe. */
     public static void sweep(ServerPlayer player, BlockPos pos, BlockState state) {
-        int radius = Math.min(2, (int) Math.round(Perks.get(player, "sweeping_harvest")));   // 3x3, then 5x5
+        int radius = Math.min(2, (int) Math.round(Perks.get(player, "sweeping_harvest")));   // 3x3x3, then 5x3x5
         if (sweeping || radius <= 0 || !Weapons.is(player.m_21205_(), "scythe")) {
             return;
         }
         sweeping = true;
         try {
-            for (int dx = -radius; dx <= radius; dx++) {
-                for (int dz = -radius; dz <= radius; dz++) {
-                    BlockPos other = pos.m_7918_(dx, 0, dz);
-                    if ((dx != 0 || dz != 0) && new BlockFacts(player.m_9236_().m_8055_(other)).matureCrop()) {
-                        player.f_8941_.m_9280_(other);      // through the game mode: claims, XP and drop perks apply
+            for (int dy = -1; dy <= 1; dy++) {             // one block up and down, for sloped and terraced fields
+                for (int dx = -radius; dx <= radius; dx++) {
+                    for (int dz = -radius; dz <= radius; dz++) {
+                        BlockPos other = pos.m_7918_(dx, dy, dz);
+                        if ((dx != 0 || dy != 0 || dz != 0) && new BlockFacts(player.m_9236_().m_8055_(other)).matureCrop()) {
+                            player.f_8941_.m_9280_(other);      // through the game mode: claims, XP and drop perks apply
+                        }
                     }
                 }
             }
