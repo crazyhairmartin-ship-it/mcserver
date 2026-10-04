@@ -1,5 +1,7 @@
 package fotfskills;
 
+import fotfskills.perk.PerkReward;
+import fotfskills.perk.PerkSync;
 import fotfskills.xp.ForgeXpEvents;
 import fotfskills.xp.IronsCastXp;
 import fotfskills.xp.XpSources;
@@ -12,6 +14,9 @@ import net.minecraftforge.fml.common.Mod;
 public final class FotfSkills {
     public FotfSkills() {
         XpSources.register();
+        PerkReward.register();
+        PerkSync.register();
+        MinecraftForge.EVENT_BUS.register(new PerkSync());
         MinecraftForge.EVENT_BUS.register(new ForgeXpEvents());
         if (ModList.get().isLoaded("irons_spellbooks")) {
             MinecraftForge.EVENT_BUS.register(new IronsCastXp());
