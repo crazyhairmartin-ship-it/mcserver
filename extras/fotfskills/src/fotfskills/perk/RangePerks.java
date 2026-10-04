@@ -27,7 +27,7 @@ import net.minecraftforge.items.ItemHandlerHelper;
 
 /**
  * Arrows: Homing Arrows and Seeker (curve toward the nearest hostile mob; Seeker triples the chance and makes them
- * crits), Multishot (two extra un-pickable arrows), Arcane Arrows (a full-draw arrow spends 5 mana for bonus damage).
+ * crits, and does the same for thrown weapons), Multishot (two extra un-pickable arrows), Arcane Arrows (a full-draw arrow spends 5 mana for bonus damage).
  * Thrown weapons: Retriever (may fly back to you on impact: Spartan weapons and tridents use their own return, so the
  * catch keeps the right ammo count and nothing is left on the ground; other mods' weapons go straight to the inventory).
  */
@@ -45,18 +45,25 @@ public final class RangePerks {
     @SubscribeEvent
     public void onJoin(EntityJoinLevelEvent event) {
         if (event.loadedFromDisk() || event.getLevel().f_46443_ || !(event.getEntity() instanceof AbstractArrow arrow)
-                || !(arrow.m_19749_() instanceof ServerPlayer player) || arrow.f_19797_ > 0 || clones.contains(arrow)
-                || Projectiles.kind(arrow) != Projectiles.Kind.ARROW) {
+                || !(arrow.m_19749_() instanceof ServerPlayer player) || arrow.f_19797_ > 0 || clones.contains(arrow)) {
+            return;
+        }
+        Projectiles.Kind kind = Projectiles.kind(arrow);
+        if (kind != Projectiles.Kind.ARROW && kind != Projectiles.Kind.THROWN) {
             return;
         }
         long now = CombatState.now(player);
         boolean fullDraw = arrow.m_36792_();      // read before Seeker marks every arrow as a crit
         double seeker = Perks.get(player, "seeker");
-        if (Perks.random() < Perks.get(player, "homing") * (1 + 2 * seeker)) {
+        boolean seeks = kind == Projectiles.Kind.ARROW || seeker > 0;   // thrown weapons home only with Seeker
+        if (seeks && Perks.random() < Perks.get(player, "homing") * (1 + 2 * seeker)) {
             homers.add(new Homer(arrow, now + 60));
         }
         if (seeker > 0) {
             arrow.m_36762_(true);
+        }
+        if (kind == Projectiles.Kind.THROWN) {
+            return;                               // Arcane Arrows and Multishot are for arrows only
         }
         if (arcaneShot(fullDraw, Perks.get(player, "arcane_arrows")) && Mana.spend(player, 5)) {
             arcane.add(arrow);
