@@ -1427,7 +1427,7 @@
           "t": 4,
           "name": "Retriever",
           "r": 2,
-          "d": "25% per rank that a thrown weapon flies back to you when it hits",
+          "d": "50% per rank that a thrown weapon flies back to you when it hits (always at max)",
           "c": 1,
           "b": null,
           "cap": false,

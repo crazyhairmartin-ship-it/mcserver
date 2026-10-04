@@ -1283,7 +1283,7 @@
   },
   "retriever_1": {
     "title": "Retriever",
-    "description": "25% that a thrown weapon flies back to you when it hits",
+    "description": "50% that a thrown weapon flies back to you when it hits (always at max)",
     "icon": {
       "type": "item",
       "data": {
@@ -1303,14 +1303,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "retriever",
-          "value": 0.25
+          "value": 0.5
         }
       }
     ]
   },
   "retriever_2": {
     "title": "Retriever",
-    "description": "50% that a thrown weapon flies back to you when it hits",
+    "description": "100% that a thrown weapon flies back to you when it hits (always at max)",
     "icon": {
       "type": "item",
       "data": {
@@ -1330,7 +1330,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "retriever",
-          "value": 0.25
+          "value": 0.5
         }
       }
     ]
