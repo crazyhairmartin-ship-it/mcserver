@@ -239,11 +239,6 @@
     "y": 102,
     "definition": "sweeping_harvest_2"
   },
-  "sweeping_harvest_3": {
-    "x": 15,
-    "y": 102,
-    "definition": "sweeping_harvest_3"
-  },
   "irrigator_1": {
     "x": 45,
     "y": 102,
@@ -265,6 +260,11 @@
     "y": 102,
     "definition": "compost_king_1",
     "root": true
+  },
+  "compost_king_2": {
+    "x": 75,
+    "y": 102,
+    "definition": "compost_king_2"
   },
   "tier_5_label": {
     "x": -60,

@@ -46,7 +46,7 @@ public final class Perks {
             Map.entry("twins", 0.95), Map.entry("growth", 0.9), Map.entry("prized_stock", 1.0), Map.entry("scavenging", 0.95),
             Map.entry("autosmelt", 0.95), Map.entry("ore_nose", 0.95), Map.entry("berry_picker", 0.95),
             Map.entry("beekeeper", 0.95), Map.entry("green_thumb", 0.95), Map.entry("fertile_soil", 2.0),
-            Map.entry("harvest_feast", 2.0), Map.entry("sweeping_harvest", 2.0), Map.entry("compost_king", 0.95),
+            Map.entry("harvest_feast", 2.0), Map.entry("sweeping_harvest", 2.0), Map.entry("compost_king", 1.0),
             Map.entry("hook_shot", 10.0), Map.entry("sushi_chef", 10.0), Map.entry("leviathan", 0.2),
             Map.entry("sea_legs", 1.0), Map.entry("cook_save", 0.95), Map.entry("hearty_meals", 2.0),
             Map.entry("chef", 2.0), Map.entry("trail_rations", 0.9), Map.entry("picnic", 10.0),

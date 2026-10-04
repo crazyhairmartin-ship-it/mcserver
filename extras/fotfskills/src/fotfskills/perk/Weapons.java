@@ -20,7 +20,7 @@ public final class Weapons {
             return false;
         }
         TagKey<Item> tag = TAGS.computeIfAbsent(type, t -> TagKey.m_203882_(ForgeRegistries.Keys.ITEMS,
-                t.equals("pickaxe") ? new ResourceLocation("minecraft", "pickaxes") : new ResourceLocation("fotfskills", t)));
+                t.equals("pickaxe") ? new ResourceLocation("minecraft", "pickaxes") : t.equals("hoe") ? new ResourceLocation("minecraft", "hoes") : new ResourceLocation("fotfskills", t)));
         return stack.m_204117_(tag);
     }
 }

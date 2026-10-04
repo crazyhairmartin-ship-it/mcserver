@@ -26,7 +26,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 /**
  * Farming and foraging extras: Green Thumb (planted crops start a stage later), Fertile Soil (crops near you get extra
- * growth ticks), Sweeping Harvest (scythes reap mature crops around the broken one), and right-click harvests checked
+ * growth ticks), Sweeping Harvest (hoes and scythes reap mature crops around the broken one), and right-click harvests checked
  * one tick later: Berry Picker (a bush's age went down: berries picked), Beekeeper (a full hive was emptied), Compost
  * King (a composter filled a layer).
  */
@@ -71,10 +71,10 @@ public final class FarmPerks {
         }
     }
 
-    /** Sweeping Harvest: called from BlockPerks.onBroken for a mature crop broken with a scythe. */
+    /** Sweeping Harvest: called from BlockPerks.onBroken for a mature crop broken with a hoe or scythe. */
     public static void sweep(ServerPlayer player, BlockPos pos, BlockState state) {
         int radius = Math.min(2, (int) Math.round(Perks.get(player, "sweeping_harvest")));   // 3x3x3, then 5x3x5
-        if (sweeping || radius <= 0 || !Weapons.is(player.m_21205_(), "scythe")) {
+        if (sweeping || radius <= 0 || !(Weapons.is(player.m_21205_(), "scythe") || Weapons.is(player.m_21205_(), "hoe"))) {
             return;
         }
         sweeping = true;
@@ -148,7 +148,7 @@ public final class FarmPerks {
     /** Sweeping Harvest for crops picked by right-click: picks the same mature crop around it the same way. */
     private static void sweepByHand(ServerPlayer player, ServerLevel level, BlockPos pos, BlockState mature, IntegerProperty age) {
         int radius = Math.min(2, (int) Math.round(Perks.get(player, "sweeping_harvest")));
-        if (sweeping || radius <= 0 || !Weapons.is(player.m_21205_(), "scythe")) {
+        if (sweeping || radius <= 0 || !(Weapons.is(player.m_21205_(), "scythe") || Weapons.is(player.m_21205_(), "hoe"))) {
             return;
         }
         int ripe = java.util.Collections.max(age.m_6908_());

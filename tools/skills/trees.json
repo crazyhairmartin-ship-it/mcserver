@@ -501,8 +501,8 @@
         {
           "t": 4,
           "name": "Sweeping Harvest",
-          "r": 3,
-          "d": "Scythes harvest mature crops in a 3x3, then 5x5",
+          "r": 2,
+          "d": "Hoes and scythes harvest the mature crops around the one you pick: 3x3 at rank 1, 5x5 at rank 2 (one block up and down too)",
           "c": 1,
           "b": null,
           "cap": false,
@@ -523,8 +523,8 @@
         {
           "t": 4,
           "name": "Compost King",
-          "r": 1,
-          "d": "50% chance each item you put in a composter fills an extra layer",
+          "r": 2,
+          "d": "50% per rank that each item you put in a composter fills an extra layer",
           "c": 1,
           "b": null,
           "cap": false,

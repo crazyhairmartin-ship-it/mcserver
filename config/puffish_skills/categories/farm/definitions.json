@@ -1171,7 +1171,7 @@
   },
   "sweeping_harvest_1": {
     "title": "Sweeping Harvest",
-    "description": "Scythes harvest mature crops in a 3x3, then 5x5",
+    "description": "Hoes and scythes harvest the mature crops around the one you pick: 3x3 at rank 1, 5x5 at rank 2 (one block up and down too)",
     "icon": {
       "type": "item",
       "data": {
@@ -1198,34 +1198,7 @@
   },
   "sweeping_harvest_2": {
     "title": "Sweeping Harvest",
-    "description": "Scythes harvest mature crops in a 3x3, then 5x5",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:diamond_hoe"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 15,
-    "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "sweeping_harvest",
-          "value": 1
-        }
-      }
-    ]
-  },
-  "sweeping_harvest_3": {
-    "title": "Sweeping Harvest",
-    "description": "Scythes harvest mature crops in a 3x3, then 5x5",
+    "description": "Hoes and scythes harvest the mature crops around the one you pick: 3x3 at rank 1, 5x5 at rank 2 (one block up and down too)",
     "icon": {
       "type": "item",
       "data": {
@@ -1333,7 +1306,34 @@
   },
   "compost_king_1": {
     "title": "Compost King",
-    "description": "50% chance each item you put in a composter fills an extra layer",
+    "description": "50% that each item you put in a composter fills an extra layer",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:composter"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "compost_king",
+          "value": 0.5
+        }
+      }
+    ]
+  },
+  "compost_king_2": {
+    "title": "Compost King",
+    "description": "100% that each item you put in a composter fills an extra layer",
     "icon": {
       "type": "item",
       "data": {
