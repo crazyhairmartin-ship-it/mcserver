@@ -256,7 +256,7 @@ hash = "23efc03b939b62cee78047a1a5ba1f84c28588503baa722618ac51b21bd55121"
 
 [[files]]
 file = "config/puffish_skills/categories/fish/definitions.json"
-hash = "89475f17c0e8ae7c55cd9aa1c5dfb27428df24a00997d39d8b9c074f3f5853e6"
+hash = "52a64abaf112443c7e665f79c2e242a599cbe661263ada93126d05d480b75d69"
 
 [[files]]
 file = "config/puffish_skills/categories/fish/experience.json"
@@ -296,7 +296,7 @@ hash = "1ed025433eace9cf2635e33e06e971621987c2d2d6145876ad46a7de7ac480bc"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/definitions.json"
-hash = "6a875fa3de4145415895808e14fb119379c8c182d8236c2dd229dc9308d6392b"
+hash = "e6b30b8058efed704419379f6aa8d810d00e68406f4720a93283f515ce252c68"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/experience.json"
@@ -356,7 +356,7 @@ hash = "8bb794db1e4f5dcead448c8b5c48123f565b65eb53d3fe3add7530926c64c5c2"
 
 [[files]]
 file = "config/puffish_skills/categories/taming/definitions.json"
-hash = "e3aca9f7b9719dde363d3d79036c1d39586f51939338ba94a3425c7b03f7257f"
+hash = "63f1438d5068c1a589d794f64846f60fe3a8819e760c1deae5f1e99d6952536c"
 
 [[files]]
 file = "config/puffish_skills/categories/taming/experience.json"
@@ -1416,7 +1416,7 @@ hash = "a373c24c52d830dfa7e431fe8882f32351b0e2051c03c6a65a165375a31f16bb"
 
 [[files]]
 file = "kubejs/assets/grapplemod/textures/entity/rope.png"
-hash = "9e6cd36155fa11aac1de64a218968a46878e7ba73f9f044b3503b1070c733775"
+hash = "86c2295da012e42b6f6cd9d454241d961908d3ceb7f58274cfd75a81be5cd629"
 
 [[files]]
 file = "kubejs/assets/grapplemod/textures/item/entity_hook.png"
@@ -1424,11 +1424,11 @@ hash = "c739225d9aac0c6ac4f70f146686de93fbd79f97cf6689d8c91c66a19cde6003"
 
 [[files]]
 file = "kubejs/assets/grapplemod/textures/item/grapplinghook.png"
-hash = "a1e9a90b09703137cec5f7715b7d61eb30589275b9a90cecd087db10cb6b8257"
+hash = "7411fc0818717c4934ef6b897cbe41d16b236ead154eccb982e2d5663b6f2947"
 
 [[files]]
 file = "kubejs/assets/grapplemod/textures/item/rope.png"
-hash = "9ae6732e8b7a469eccd14cbef7f3b8bb3c7f0c1f4462ce470bf4b761a0f60aa3"
+hash = "5da88cc9bca04ae648f96ea94ce8bb2a78b4f1a64fc1a5111cdfa9be75068d2b"
 
 [[files]]
 file = "kubejs/assets/guardvillagers/lang/en_us.json"
@@ -1896,7 +1896,7 @@ hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
-hash = "a2d140681c84e62bf9653d4d9eb6b64bb74a817a848a99a01b0bcfe91814740a"
+hash = "d8eb2ff000aada489ae979bb830f54a769cca76d6ddce48c008bc5b8d7c9b5cb"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -2110,7 +2110,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "bdbabadca7e258bc68a698b6ac3616756ad93b7cfef65cd0b546a36a7ef954fc"
+hash = "a4886d6d310f222a77fea5e573d2f8ef9291b052296b89416dd1edf7fa80a360"
 metafile = true
 
 [[files]]
@@ -2810,7 +2810,7 @@ hash = "f20753f968157ce2c6fc4ff63a3d469b518a939b5874a39e135d75d6e6a09717"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/skills.json"
-hash = "cb0c2a975b9737e54eb0613003fde6cf8d7be012a254efb926c3f1d1ce65af22"
+hash = "8ea48591b2cee02703cf9d346fe2a5b891ba026f51a01b34470294f9c43c1b7e"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/storage.json"
@@ -2882,7 +2882,7 @@ hash = "03620f74d4a55ff418f95b3a88468f59532c0df5ecb4f38e8071ccc51f4b6ca6"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/parcool.json"
-hash = "3346fb6a464a5f7c1747da95f648b376a57869b20d083023885a15e4d26c1c0a"
+hash = "21e14b2e5db05a729ad98533bc5c51a7fd5ed8cd7fc6561a1a83de2ea5b252f0"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/ships.json"
