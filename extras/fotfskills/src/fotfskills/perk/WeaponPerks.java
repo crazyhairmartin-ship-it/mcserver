@@ -1,24 +1,20 @@
 package fotfskills.perk;
 
-import fotfskills.mixin.AbstractArrowAccessor;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.OwnableEntity;
+import net.minecraft.world.entity.monster.Enemy;
 import net.minecraft.world.entity.ai.attributes.AttributeInstance;
 import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.event.TickEvent;
 import net.minecraftforge.event.entity.EntityJoinLevelEvent;
@@ -36,10 +32,11 @@ import net.minecraftforge.registries.ForgeRegistries;
 
 /** Weapon-type damage and the conditional combat perks (Attack, Defense, Range, plus cross-tree weapon nodes). */
 public final class WeaponPerks {
-    private static final TagKey<Item> ARROWS = TagKey.m_203882_(ForgeRegistries.Keys.ITEMS, new ResourceLocation("minecraft", "arrows"));
     private static final UUID CRUSH = UUID.nameUUIDFromBytes("fotfskills:crush".getBytes());
     /** Crushed targets: entity -> tick the armour debuff ends. */
     private final Map<LivingEntity, Long> crushed = new ConcurrentHashMap<>();
+    /** Second Wind cooldowns by player; kept across logout so relogging doesn't reset it. */
+    private static final Map<UUID, Cooldown> SECOND_WIND = new ConcurrentHashMap<>();
     /** Guards Cleave's splash so it never chains. */
     private boolean splashing;
 
@@ -59,7 +56,8 @@ public final class WeaponPerks {
         long now = CombatState.now(player);
         state.lastCombat = now;
         float amount = event.getAmount();
-        if (direct == player) {
+        if (direct == player && "player".equals(event.getSource().m_19385_())) {   // a real swing, not thorns or spells
+            boolean swing = state.swing.first(now);          // the main target; sweep targets share the tick
             ItemStack weapon = player.m_21205_();
             if (Weapons.is(weapon, "pickaxe") || Weapons.is(weapon, "blunt")) {
                 amount += Perks.get(player, "dmg_pickaxe_blunt");
@@ -80,22 +78,22 @@ public final class WeaponPerks {
                 pct += Perks.get(player, "pct_two_handed");
             }
             double momentum = Perks.get(player, "momentum");
-            if (momentum > 0) {
+            if (swing && momentum > 0) {
                 pct += momentum * (state.momentum.hit(now) - 1);
             }
-            if (now - state.lastBlock <= 40) {
+            if (swing && now - state.lastBlock <= 40) {
                 pct += Perks.get(player, "shield_bash");
             }
-            if (state.counterReady) {
+            if (swing && state.counterReady) {
                 pct += Perks.get(player, "counter");
                 state.counterReady = false;
             }
-            if (now - state.lastCast <= 200 && Perks.get(player, "spellbound_steel") > 0) {
+            if (swing && now - state.lastCast <= 200 && Perks.get(player, "spellbound_steel") > 0) {
                 pct += Perks.get(player, "spellbound_steel");
                 state.lastCast = -100000;          // the next hit only
             }
             amount *= (float) (1 + pct);
-            if ((Weapons.is(weapon, "light") || Weapons.is(weapon, "sword")) && Perks.get(player, "flurry") > 0
+            if (swing && (Weapons.is(weapon, "light") || Weapons.is(weapon, "sword")) && Perks.get(player, "flurry") > 0
                     && state.flurry.hit(now) == 5) {
                 amount *= 2;                        // Flurry: every 5th quick hit strikes twice
                 state.flurry.reset();
@@ -103,24 +101,27 @@ public final class WeaponPerks {
             if (Weapons.is(weapon, "blunt") && Perks.get(player, "crush_armor") > 0) {
                 crush(target, Perks.get(player, "crush_armor"), now);
             }
+            event.setAmount(amount);
+            if (!swing) {
+                return;
+            }
             Mana.add(player, Perks.get(player, "spellblade_mana"));
             state.markedTarget = target.m_20148_();
             state.markedUntil = now + 200;
-            event.setAmount(amount);
             double cleave = Perks.get(player, "cleave");
             if (cleave > 0 && Weapons.is(weapon, "two_handed")) {
                 splash(player, target, (float) (amount * cleave));
             }
         } else if (direct instanceof Projectile projectile) {
+            Projectiles.Kind kind = Projectiles.kind(projectile);
             double pct = 0;
-            if (thrown(projectile)) {
+            if (kind == Projectiles.Kind.THROWN) {
                 pct += Perks.get(player, "pct_thrown");
-                ItemStack item = projectile instanceof AbstractArrow arrow ? ((AbstractArrowAccessor) arrow).fotfskills$pickupItem() : ItemStack.f_41583_;
-                if (Weapons.is(item, "axe")) {
+                if (Weapons.is(Projectiles.item(projectile), "axe")) {
                     pct += Perks.get(player, "pct_thrown_axe");
                 }
             }
-            if (target.m_20148_().equals(state.markedTarget) && now <= state.markedUntil) {
+            if (kind == Projectiles.Kind.ARROW && target.m_20148_().equals(state.markedTarget) && now <= state.markedUntil) {
                 pct += Perks.get(player, "hunters_mark");
             }
             event.setAmount((float) (amount * (1 + pct)));
@@ -134,8 +135,9 @@ public final class WeaponPerks {
                 && Perks.get(player, "second_wind") > 0 && !holdingTotem(player)) {
             CombatState state = CombatState.of(player);
             long now = CombatState.now(player);
-            if (state.secondWind.ready(now)) {
-                state.secondWind.trigger(now);
+            Cooldown cooldown = SECOND_WIND.computeIfAbsent(player.m_20148_(), id -> new Cooldown(6000));
+            if (cooldown.ready(now)) {
+                cooldown.trigger(now);
                 event.setAmount(Math.max(0, player.m_21223_() - 1));
             }
         }
@@ -173,19 +175,23 @@ public final class WeaponPerks {
         state.counterReady = Perks.get(player, "counter") > 0;
         Entity attacker = event.getDamageSource().m_7639_();
         if (attacker instanceof LivingEntity living && attacker != player && Perks.roll(player, "shield_thorns")) {
-            living.m_6469_(player.m_269291_().m_269075_(player), event.getBlockedDamage() * 0.3f);
+            living.m_6469_(player.m_269291_().m_269374_(player), event.getBlockedDamage() * 0.3f);   // thorns, not a swing
         }
     }
 
-    /** Projectiles a player fires: Eagle Eye (all) and Throwing Arm (thrown) speed; marks the shot for Skirmisher. */
+    /** Arrows and thrown weapons a player fires: Eagle Eye (both) and Throwing Arm (thrown) speed; marks the shot for Skirmisher. */
     @SubscribeEvent
     public void onJoin(EntityJoinLevelEvent event) {
         if (event.loadedFromDisk() || event.getLevel().f_46443_ || !(event.getEntity() instanceof Projectile projectile)
                 || !(projectile.m_19749_() instanceof ServerPlayer player) || projectile.f_19797_ > 0) {
             return;
         }
+        Projectiles.Kind kind = Projectiles.kind(projectile);
+        if (kind == Projectiles.Kind.OTHER) {
+            return;                                 // spells, pearls, bobbers, snowballs, fireworks
+        }
         CombatState.of(player).lastShot = CombatState.now(player);
-        double speed = Perks.get(player, "projectile_speed") + (thrown(projectile) ? Perks.get(player, "thrown_speed") : 0);
+        double speed = Perks.get(player, "projectile_speed") + (kind == Projectiles.Kind.THROWN ? Perks.get(player, "thrown_speed") : 0);
         if (speed > 0) {
             projectile.m_20256_(projectile.m_20184_().m_82490_(1 + speed));
         }
@@ -233,14 +239,6 @@ public final class WeaponPerks {
         CombatState.forget(event.getEntity().m_20148_());
     }
 
-    /** Thrown weapons: any player projectile except a normal arrow (tridents, javelins, tomahawks, knives). */
-    private static boolean thrown(Projectile projectile) {
-        if (projectile instanceof AbstractArrow arrow) {
-            return !((AbstractArrowAccessor) arrow).fotfskills$pickupItem().m_204117_(ARROWS);
-        }
-        return true;
-    }
-
     private static boolean holdingTotem(Player player) {
         ResourceLocation totem = new ResourceLocation("minecraft", "totem_of_undying");
         return totem.equals(ForgeRegistries.ITEMS.getKey(player.m_21205_().m_41720_()))
@@ -260,13 +258,12 @@ public final class WeaponPerks {
         crushed.put(target, now + 100);
     }
 
-    /** Cleave: part of a two-handed hit splashes to mobs around the target; never players or the attacker's pets. */
+    /** Cleave: part of a two-handed hit splashes to hostile mobs around the target (never pets, villagers, players or armour stands). */
     private void splash(ServerPlayer player, LivingEntity target, float damage) {
         splashing = true;
         try {
             for (LivingEntity other : target.m_9236_().m_45976_(LivingEntity.class, target.m_20191_().m_82400_(2.5))) {
-                if (other == target || other == player || other instanceof Player
-                        || (other instanceof OwnableEntity pet && player.m_20148_().equals(pet.m_21805_()))) {
+                if (other == target || !(other instanceof Enemy)) {
                     continue;
                 }
                 other.m_6469_(player.m_269291_().m_269075_(player), damage);

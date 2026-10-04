@@ -89,7 +89,7 @@ public final class CombatPerks {
             if (direct instanceof Projectile) {
                 bonus += Perks.get(player, "projectile_damage");
             }
-            if (direct == player && target.m_21223_() < 0.3f * target.m_21233_()) {
+            if (direct == player && "player".equals(event.getSource().m_19385_()) && target.m_21223_() < 0.3f * target.m_21233_()) {
                 bonus += Perks.get(player, "executioner");
             }
             if (player.m_20186_() < 40) {

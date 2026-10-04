@@ -13,7 +13,7 @@ public final class CombatState {
     public boolean counterReady;
     public final Streak momentum = new Streak(60, 3);
     public final Streak flurry = new Streak(40, 5);
-    public final Cooldown secondWind = new Cooldown(6000);
+    public final SwingGate swing = new SwingGate();
     public UUID markedTarget;
     public long markedUntil;
 
