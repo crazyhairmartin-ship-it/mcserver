@@ -53,7 +53,7 @@ public final class FotfSkills {
         }
         MinecraftForge.EVENT_BUS.register(new PetPerks());
         MinecraftForge.EVENT_BUS.register(new BreedingPerks());
-        MinecraftForge.EVENT_BUS.register(new fotfskills.pet.SoulMender());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.pet.Ferality());
         MinecraftForge.EVENT_BUS.register(new FarmPerks());
         MinecraftForge.EVENT_BUS.register(new FoodPerks());
         MinecraftForge.EVENT_BUS.register(new FishingPerks());

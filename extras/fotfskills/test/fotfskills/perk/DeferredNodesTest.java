@@ -38,8 +38,12 @@ public final class DeferredNodesTest {
         // Bloodlines: rare looks for vanilla babies
         Random random = new Random(1);
         check(Bloodlines.rare("minecraft:axolotl", random).equals(Map.of("Variant", 4)), "blue axolotl");
-        Object colour = Bloodlines.rare("minecraft:sheep", random).get("Color");
-        check(colour.equals((byte) 6) || colour.equals((byte) 12), "pink or brown sheep");
+        java.util.Set<Object> colours = new java.util.HashSet<>();
+        for (int i = 0; i < 400; i++) {
+            colours.add(Bloodlines.rare("minecraft:sheep", random).get("Color"));
+        }
+        check(colours.equals(java.util.Set.of((byte) 15, (byte) 7, (byte) 8, (byte) 12, (byte) 9, (byte) 3, (byte) 11,
+                (byte) 4, (byte) 1, (byte) 14, (byte) 6)), "sheep: the 11 rare colours, nothing else: " + colours);
         check(Bloodlines.rare("minecraft:goat", random).equals(Map.of("IsScreamingGoat", true)), "screaming goat");
         check(Bloodlines.rare("minecraft:panda", random).equals(Map.of("MainGene", "brown", "HiddenGene", "brown")), "brown panda");
         int horse = (int) Bloodlines.rare("minecraft:horse", random).get("Variant");

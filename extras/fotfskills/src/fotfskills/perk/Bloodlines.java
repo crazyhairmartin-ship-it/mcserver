@@ -4,11 +4,14 @@ import java.util.Map;
 import java.util.Random;
 
 /**
- * Bloodlines: the NBT that turns a vanilla baby into one of its rare looks (blue axolotl, pink or brown sheep, brown
+ * Bloodlines: the NBT that turns a vanilla baby into one of its rare looks (blue axolotl, a sheep in one of 11 colours, brown
  * panda or mooshroom, screaming goat, snow fox, salt-and-pepper or black-and-white rabbit, blue parrot, marked horse).
  * Empty for anything else, so modded animals keep their own genetics.
  */
 public final class Bloodlines {
+    /** Black, gray, light gray, brown, cyan, light blue, blue, yellow, orange, red, pink: all equally likely. */
+    private static final Byte[] SHEEP = {15, 7, 8, 12, 9, 3, 11, 4, 1, 14, 6};
+
     private Bloodlines() {
     }
 
@@ -17,7 +20,7 @@ public final class Bloodlines {
             case "minecraft:axolotl":
                 return Map.of("Variant", 4);
             case "minecraft:sheep":
-                return Map.of("Color", random.nextBoolean() ? (byte) 6 : (byte) 12);
+                return Map.of("Color", SHEEP[random.nextInt(SHEEP.length)]);
             case "minecraft:panda":
                 return Map.of("MainGene", "brown", "HiddenGene", "brown");
             case "minecraft:mooshroom":

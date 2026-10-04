@@ -60,7 +60,7 @@ public final class Perks {
             Map.entry("wellspring", 2.0), Map.entry("druids_grove", 0.9),
             Map.entry("earthshaker", 1.0), Map.entry("reapers_due", 1.0),
             Map.entry("hook_range", 30.0), Map.entry("hook_speed", 2.0), Map.entry("hook_motor", 10.0),
-            Map.entry("hook_double", 1.0), Map.entry("soul_mender", 1.0),
+            Map.entry("hook_double", 1.0), Map.entry("ferality", 1.0),
             Map.entry("tunnel_vision", 0.9), Map.entry("long_net", 5.0), Map.entry("bait_saver", 0.95),
             Map.entry("lure_master", 0.6), Map.entry("quick_hands", 1.0), Map.entry("furnace_speed", 1.0),
             Map.entry("brewer_duration", 1.0), Map.entry("brewer_save", 0.95), Map.entry("feast_maker", 0.95),

@@ -18,7 +18,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.items.ItemHandlerHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 
-/** Hook Shot (the bobber hits mobs), Leviathan Bait (rare trophy fish), Sea Legs (faster boats, on the driver's client). */
+/** Hook Shot (the bobber hits mobs), Leviathan Bait (a hoard or a record catch), Sea Legs (faster boats, on the driver's client). */
 public final class FishingPerks {
     @SubscribeEvent
     public void onHookHit(ProjectileImpactEvent event) {
@@ -34,13 +34,44 @@ public final class FishingPerks {
         }
     }
 
+    /**
+     * Leviathan Bait: each catch has the perk's chance (5%) of something special, split evenly: a Leviathan's Hoard
+     * (three rolls of the fishing treasure table) or a record catch (a random Aquaculture fish, named and glinting, ready
+     * for a fish mount) worth 250 bonus Fishing XP.
+     */
     @SubscribeEvent
     public void onFished(ItemFishedEvent event) {
-        if (event.getEntity() instanceof ServerPlayer player && Perks.roll(player, "leviathan")) {
-            ItemStack trophy = new ItemStack(ForgeRegistries.ITEMS.getValue(new ResourceLocation("minecraft", "tropical_fish")));
-            trophy.m_41714_(Component.m_237113_("Leviathan Trophy"));
+        if (!(event.getEntity() instanceof ServerPlayer player) || !Perks.roll(player, "leviathan")
+                || !(player.m_9236_() instanceof net.minecraft.server.level.ServerLevel level)) {
+            return;
+        }
+        if (Perks.random() < 0.5) {
+            net.minecraft.world.level.storage.loot.LootParams params = new net.minecraft.world.level.storage.loot.LootParams.Builder(level)
+                    .m_287286_(net.minecraft.world.level.storage.loot.parameters.LootContextParams.f_81460_, player.m_20182_())
+                    .m_287286_(net.minecraft.world.level.storage.loot.parameters.LootContextParams.f_81463_, player.m_21205_())
+                    .m_287286_(net.minecraft.world.level.storage.loot.parameters.LootContextParams.f_81455_, player)
+                    .m_287235_(net.minecraft.world.level.storage.loot.parameters.LootContextParamSets.f_81414_);
+            net.minecraft.world.level.storage.loot.LootTable treasure = level.m_7654_().m_278653_()
+                    .m_278676_(net.minecraft.world.level.storage.loot.BuiltInLootTables.f_78722_);
+            for (int i = 0; i < 3; i++) {
+                treasure.m_287195_(params).forEach(stack -> ItemHandlerHelper.giveItemToPlayer(player, stack));
+            }
+            player.m_5661_(Component.m_237113_("§6You hauled up a Leviathan's Hoard!"), true);
+        } else {
+            java.util.List<net.minecraft.world.item.Item> fish = ForgeRegistries.ITEMS.getValues().stream()
+                    .filter(i -> "FishItem".equals(i.getClass().getSimpleName())
+                            && "aquaculture".equals(ForgeRegistries.ITEMS.getKey(i).m_135827_()))
+                    .toList();
+            if (fish.isEmpty()) {
+                return;
+            }
+            ItemStack trophy = new ItemStack(fish.get(level.f_46441_.m_188503_(fish.size())));
+            trophy.m_41714_(Component.m_237113_("§6Record " + trophy.m_41720_().m_41466_().getString()));
             trophy.m_41663_(net.minecraft.world.item.enchantment.Enchantments.f_44986_, 1);   // glint
             ItemHandlerHelper.giveItemToPlayer(player, trophy);
+            level.m_7654_().m_129892_().m_230957_(level.m_7654_().m_129893_().m_81324_(),
+                    "puffish_skills experience add " + player.m_36316_().getName() + " fish 250");
+            player.m_5661_(Component.m_237113_("§6A record catch! §e+250 Fishing XP"), true);
         }
     }
 
