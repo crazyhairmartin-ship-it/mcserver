@@ -43,9 +43,11 @@ public final class PetPerks {
     private static final String[] KEYS = {"pet_health", "pet_damage", "pet_armor", "pet_speed", "pet_jump"};
     /** Animals carrying fotfskills pet modifiers, so they can be cleared when no longer in range. */
     private final List<LivingEntity> buffed = new ArrayList<>();
-    private record Attempt(ServerPlayer player, TamableAnimal animal, InteractionHand hand, Item item, int before) {
+    /** Gentle Hand: who just tried to tame which animal (rolled only on vanilla's failed-tame smoke). */
+    private static final TameAttempts ATTEMPTS = new TameAttempts();
+    private record Tame(ServerPlayer player, TamableAnimal animal) {
     }
-    private final List<Attempt> attempts = new ArrayList<>();
+    private static final List<Tame> TAMES = new ArrayList<>();
     private long ticks;
 
     @SubscribeEvent
@@ -53,7 +55,7 @@ public final class PetPerks {
         if (event.phase != TickEvent.Phase.END) {
             return;
         }
-        resolveTamingAttempts();
+        finishTames();
         if (++ticks % 20 != 0) {
             return;
         }
@@ -74,8 +76,16 @@ public final class PetPerks {
                 if (regen > 0 && ticks % 100 == 0) {
                     pet.m_5634_((float) regen);
                 }
-                if (ticks % 2400 == 0 && Perks.roll(player, "scavenging") && pet.m_20280_(player) < 16 * 16) {
-                    scavenge(pet);
+            }
+            if (ticks % 2400 == 0 && Perks.roll(player, "scavenging")) {
+                List<LivingEntity> finders = new ArrayList<>();
+                for (LivingEntity pet : ownedNear(player, 16)) {
+                    if (!(pet instanceof TamableAnimal sitter && sitter.m_21827_())) {
+                        finders.add(pet);
+                    }
+                }
+                if (!finders.isEmpty()) {         // one find per player, however many pets (no AFK pens)
+                    scavenge(finders.get((int) (Perks.random() * finders.size())));
                 }
             }
             if (player.m_20202_() instanceof LivingEntity mount) {
@@ -135,7 +145,8 @@ public final class PetPerks {
         float amount = event.getAmount();
 
         // Falconer: the owner's arrow marks the target and sends nearby pets at it.
-        if (attacker instanceof ServerPlayer shooter && direct instanceof Projectile && owner(target) == null
+        if (attacker instanceof ServerPlayer shooter && direct instanceof Projectile
+                && !(target instanceof OwnableEntity owned && owned.m_21805_() != null)
                 && !(target instanceof Player) && Perks.get(shooter, "falconer") > 0) {
             CombatState state = CombatState.of(shooter);
             state.falconTarget = target.m_20148_();
@@ -149,7 +160,7 @@ public final class PetPerks {
 
         // Pack Tactics (owner's melee target) and Falconer (owner's arrow target) damage; Alpha stun.
         ServerPlayer petOwner = owner(attacker);
-        if (petOwner != null && target != petOwner) {
+        if (petOwner != null && !(target instanceof Player)) {   // never boosts pets against players
             CombatState state = CombatState.of(petOwner);
             long now = CombatState.now(petOwner);
             double pct = 0;
@@ -216,26 +227,35 @@ public final class PetPerks {
             }
         }
         if (animal instanceof TamableAnimal tamable && !tamable.m_21824_() && Perks.get(player, "gentle_hand") > 0) {
-            attempts.add(new Attempt(player, tamable, event.getHand(), held.m_41720_(), held.m_41613_()));
+            ATTEMPTS.tried(tamable.m_20148_(), player.m_20148_(), player.m_9236_().m_46467_());
         }
     }
 
-    /** One tick after a taming attempt: if the taming item was used up but the animal is still wild, roll Gentle Hand. */
-    private void resolveTamingAttempts() {
-        if (attempts.isEmpty()) {
+    /** Called from ServerLevelTameMixin when a wild tamable animal shows the failed-tame smoke. */
+    public static void failedTame(TamableAnimal animal) {
+        if (!(animal.m_9236_() instanceof net.minecraft.server.level.ServerLevel level)) {
             return;
         }
-        for (Attempt a : attempts) {
-            ItemStack now = a.player.m_21120_(a.hand);
-            int count = now.m_150930_(a.item) ? now.m_41613_() : 0;
-            if (count == a.before - 1 && !a.animal.m_21824_() && a.animal.m_6084_() && Perks.roll(a.player, "gentle_hand")) {
-                a.animal.m_21828_(a.player);
-                a.animal.m_21839_(true);
-                a.animal.m_9236_().m_7605_(a.animal, (byte) 7);     // hearts
-                AmountSource.award(a.player, "tame", 1);
+        UUID playerId = ATTEMPTS.failed(animal.m_20148_(), (byte) 6, level.m_46467_());
+        ServerPlayer player = playerId == null ? null : level.m_7654_().m_6846_().m_11259_(playerId);
+        if (player != null && Perks.roll(player, "gentle_hand")) {
+            TAMES.add(new Tame(player, animal));      // tamed after vanilla's interaction finishes
+        }
+    }
+
+    private void finishTames() {
+        if (TAMES.isEmpty()) {
+            return;
+        }
+        for (Tame t : new ArrayList<>(TAMES)) {
+            if (!t.animal.m_21824_() && t.animal.m_6084_() && !t.player.m_213877_()) {
+                t.animal.m_21828_(t.player);
+                t.animal.m_21839_(true);
+                t.animal.m_9236_().m_7605_(t.animal, (byte) 7);     // hearts
+                AmountSource.award(t.player, "tame", 1);
             }
         }
-        attempts.clear();
+        TAMES.clear();
     }
 
     /** Nature's Mend: called when the player casts a healing spell. */

@@ -15,6 +15,22 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 public final class BreedingPerks {
     private static final Attribute[] HORSE_STATS = {Attributes.f_22276_, Attributes.f_22279_, Attributes.f_22288_};
     private static final double[] VANILLA_MAX = {30, 0.3375, 1.0};
+    private record Grow(AgeableMob child, int age) {
+    }
+    private static final java.util.List<Grow> GROWTH = new java.util.ArrayList<>();
+
+    @SubscribeEvent
+    public void onServerTick(net.minecraftforge.event.TickEvent.ServerTickEvent event) {
+        if (event.phase != net.minecraftforge.event.TickEvent.Phase.END || GROWTH.isEmpty()) {
+            return;
+        }
+        for (Grow g : GROWTH) {
+            if (g.child.m_6084_() && g.child.m_146764_() < g.age) {
+                g.child.m_146762_(g.age);
+            }
+        }
+        GROWTH.clear();
+    }
 
     @SubscribeEvent(priority = EventPriority.LOW)
     public void onBaby(BabyEntitySpawnEvent event) {
@@ -39,7 +55,7 @@ public final class BreedingPerks {
     private static void shape(ServerPlayer player, AgeableMob child, AgeableMob a, AgeableMob b) {
         double growth = Perks.get(player, "growth");
         if (growth > 0) {
-            child.m_146762_((int) (-24000 * (1 - growth)));
+            GROWTH.add(new Grow(child, (int) (-24000 * (1 - growth))));   // set next tick: vanilla's setBaby resets age
         }
         if (Perks.get(player, "breed_bonus") > 0 && child instanceof AbstractHorse && a instanceof AbstractHorse && b instanceof AbstractHorse) {
             double prized = Perks.get(player, "prized_stock");
