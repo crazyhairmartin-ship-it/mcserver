@@ -1,6 +1,6 @@
 # FOTF Skills: design
 
-Status: draft for review (2026-10-03)
+Status: approved; phases 1-4 built on skills-preview (2026-10-04)
 
 ## What we're building
 
@@ -187,6 +187,30 @@ truth; published as the "FOTF Skill Trees" artifact). Revision 2 (2026-10-03, Dy
   percent bonuses scale with weapon size (+15% is 2.4 damage on a 16-damage two-hander but 0.6 on a 4-damage
   dagger), so early damage nodes use flat bonuses (+0.5 to +1 damage) and percent bonuses are kept for
   big-weapon branches; values are checked against real hits in the preview world.
+
+## Decisions from playtest 1 and phase 4 (2026-10-04)
+
+- **Every tree fills at exactly 50 points** (the level cap). Ranks were added to open-tier nodes to get there.
+- **Scroll Saver is removed** from Magic.
+- **XP rates** (capstone at level 25 needs about 10,100 XP; level 50 about 50,500):
+  - Defense is slower: 0.5 XP per damage, capped per attacker.
+  - Attack is a bit slower: 0.6 per damage.
+  - Faster: fishing (25 per catch), Agility (1 XP per 2 m sprinting or climbing), Crafting (25 per piece of gear, 2 per real recipe with 2+ item types, 2 per smelted ingot) and Taming (75 per tame including horses, 1 per pet damage, 10 per breed).
+- **Ultimine**: the first block a player breaks in a tick gives full gathering XP; the rest of the vein gives a quarter.
+- **Level-up messages** name the skill and level, play a sound, and level 50 adds fireworks. `/fotfskills levelups off|on` toggles them per player.
+- **New commands and display**:
+  - `/fotfskills perks` lists perk totals.
+  - Active situational buffs and the total level show beside the inventory.
+- **Mana Shield** triggers while crouching with no shield in hand (Minecraft has no block action without a shield).
+- **Grappling hook**: the Agility nodes write the hook's own customization (rope +4 blocks per Long Rope rank up to 60, Hookmaster +15% throw and swing per rank, Motor Reel motor, Twin Hooks double hook). Every other hook and upgrade item is trimmed (no recipe, hidden in JEI).
+- **ParCool**:
+  - Light Feet and Freerunner raise ParCool max stamina (5% / 8% per rank); ParCool has no drain multiplier.
+  - Second Breath raises stamina recovery.
+  - Roll Master raises breakfall damage reduction.
+- **Total-level hearts** are live in the add-on (+1 heart and +5% ParCool max stamina per step). Paragliders is removed from the skills branch; it leaves the live server with the release merge.
+- **Tree reset**: `/fotfskills reset <tree>` costs 1 XP level per 2 points spent, minimum 5.
+- **Pet revival**: a Pet Memento drops when an owned animal dies (or goes to a far-away owner). Using it on a block costs one golden apple; Soul Mender gives a 25% chance per rank to keep the apple.
+- **Deferred nodes** (mod-specific or block-machine based, tuning phase): Tunnel Vision, Long Net, Bait Saver, Lure Master, Brewer, Feast Maker, Quick Hands, Crafting's Smelter, Salvager, Irrigator, Artificer, Bloodlines.
 
 ## Pet revival (standalone, not a perk)
 
