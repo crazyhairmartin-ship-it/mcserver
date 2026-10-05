@@ -35,6 +35,7 @@ public final class FotfSkills {
     public FotfSkills() {
         XpSources.register();
         fotfskills.perk.ModItems.register(net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus());
+        fotfskills.world.RemovedBlocks.register(net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus());
         PerkReward.register();
         fotfskills.perk.LevelUps.register();
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.FotfCommands());
@@ -55,6 +56,7 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new PetPerks());
         MinecraftForge.EVENT_BUS.register(new BreedingPerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.pet.Ferality());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.world.RemovedBlocks());
         if (ModList.get().isLoaded("ultimate_unicorn_mod")) {
             MinecraftForge.EVENT_BUS.register(new fotfskills.world.HorseSwim());
         }
