@@ -276,7 +276,7 @@ public final class WeaponPerks {
      * Cleave / Reaper's Due: damage to hostile mobs around center (never pets, villagers, players or armour stands);
      * frontOnly keeps only mobs in front of the player.
      */
-    private static final java.util.Set<String> WEAPON_MODS = java.util.Set.of("cataclysm", "mowziesmobs",
+    private static final java.util.Set<String> WEAPON_MODS = java.util.Set.of("cataclysm", "mowziesmobs", "alexsmobs",
             "alexscaves", "twilightforest");
     private static final String[] MELEE = {"sword", "light", "two_handed", "polearm", "axe", "blunt", "scythe", "pickaxe"};
 
@@ -299,7 +299,11 @@ public final class WeaponPerks {
         if (Weapons.is(weapon, "magic")) {          // magic weapons' special attacks scale with spell power, not weapon perks
             net.minecraft.world.entity.ai.attributes.Attribute spell = net.minecraftforge.registries.ForgeRegistries.ATTRIBUTES
                     .getValue(new net.minecraft.resources.ResourceLocation("irons_spellbooks", "spell_power"));
-            return spell == null || player.m_21051_(spell) == null ? 1.0 : Math.max(0, player.m_21133_(spell));
+            double power = spell == null || player.m_21051_(spell) == null ? 1.0 : Math.max(0, player.m_21133_(spell));
+            if (Weapons.is(weapon, "thrown")) {     // thrown + magic: the thrown-weapon perks boost the ability too
+                power *= 1 + Perks.get(player, "pct_thrown") + (Weapons.is(weapon, "axe") ? Perks.get(player, "pct_thrown_axe") : 0);
+            }
+            return power;
         }
         java.util.Set<String> types = new java.util.HashSet<>();
         for (String type : MELEE) {
