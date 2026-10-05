@@ -1,7 +1,7 @@
 """Draws new 16x16 textures for Grappling Hook - Reforged's basic hook (KubeJS asset overrides).
 
-grapplinghook.png  the item: iron grapnel (three prongs) top-right, shaft, rope coil bottom-left
-rope.png           shown while the hook is out: the coil with the line running off toward the hook
+grapplinghook.png  the item and rope.png (shown while the hook is out) are Dylan's hand-drawn textures now: this script
+                   never writes them (they used to be drawn here from the coil below)
 entity/rope.png    the line stretched between you and the hook: a 2x16 braid in the same palette
 entity_hook.png    the flying hook (also the "hook" item model): just the grapnel
 Writes into kubejs/assets/grapplemod/textures/item/ plus an enlarged preview next to this script.
@@ -115,8 +115,7 @@ def main():
     paint_coil(held, rope, seams)
     flying = paint(grapnel(-2, 2) | eye(-2, 2), set())
 
-    item.save(os.path.join(OUT, 'grapplinghook.png'))
-    held.save(os.path.join(OUT, 'rope.png'))
+    # item and held are no longer saved: grapplinghook.png and rope.png are Dylan's hand-drawn versions
     braid = Image.new('RGBA', (2, 16))
     twist = [('light', 'dark'), ('mid', 'mid'), ('dark', 'light'), ('mid', 'mid')]   # strands crossing, like the pack's rope
     for y in range(16):
