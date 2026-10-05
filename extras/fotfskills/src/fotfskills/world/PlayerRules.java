@@ -21,8 +21,8 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 /**
- * Opt-in PvP: /pvp on|off (off by default, saved per player). A player can only hurt another player, with any weapon,
- * projectile or pet, when both have it on; turning it off needs 10 seconds out of combat.
+ * Opt-in PvP: /pvp on|off (off by default, saved per player). A player (or their projectile or pet) can only hurt another
+ * player or that player's pets when both have it on; turning it off needs 10 seconds out of combat.
  * Also clears the Paragliders "Heart Containers" health bonus still saved on players from before that mod was removed.
  */
 public final class PlayerRules {
@@ -51,9 +51,11 @@ public final class PlayerRules {
         return null;
     }
 
+    /** Players and their pets are both covered: hurting another player's pet counts as PvP too. */
     @SubscribeEvent(priority = EventPriority.HIGH)
     public void onAttack(LivingAttackEvent event) {
-        if (!(event.getEntity() instanceof ServerPlayer target)) {
+        Player target = responsible(event.getEntity());
+        if (target == null || event.getEntity().m_9236_().f_46443_) {
             return;
         }
         Player attacker = responsible(event.getSource().m_7639_());

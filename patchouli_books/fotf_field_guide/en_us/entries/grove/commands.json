@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(li)$(l)/guide$(): a new Field Guide$(li)$(l)/guide <book>$(): other guide books (see $(l)More Guide Books$())$(li)$(l)/nick set <name>$(): change the name others see$(li)$(l)/nick clear$(): back to your real name$(li)$(l)/pvp on$() or $(l)off$(): fight other players who also turned it on (off by default)"
+      "text": "$(li)$(l)/guide$(): a new Field Guide$(li)$(l)/guide <book>$(): other guide books (see $(l)More Guide Books$())$(li)$(l)/nick set <name>$(): change the name others see$(li)$(l)/nick clear$(): back to your real name$(li)$(l)/pvp on$() or $(l)off$(): fight other players and their pets, if they turned it on too (off by default)"
     },
     {
       "type": "patchouli:text",
