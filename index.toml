@@ -2068,11 +2068,6 @@ hash = "58bf97ca61f74ea9a540f6e6090aef631155748c49b83a7a338b34d8dece9109"
 metafile = true
 
 [[files]]
-file = "mods/controllable.pw.toml"
-hash = "c9331a4134e668e02d39fa0f3937319465b6a58714ab83634fc5dd823776bac2"
-metafile = true
-
-[[files]]
 file = "mods/controlling.pw.toml"
 hash = "cf8c5f2a139a2571d0d4b8be2b7463255cca721ae4a5741ec71595b7ab530e71"
 metafile = true
@@ -2180,11 +2175,6 @@ metafile = true
 [[files]]
 file = "mods/fotfskills.pw.toml"
 hash = "3c6f07ac3b1468fb2fb0fe762eede9216008beb35f5e963f050050d9599f93ba"
-metafile = true
-
-[[files]]
-file = "mods/framework.pw.toml"
-hash = "0950d940873bf98167d6e2d4ec0aa54dd05de766dbca62799935016f8f9c7194"
 metafile = true
 
 [[files]]
