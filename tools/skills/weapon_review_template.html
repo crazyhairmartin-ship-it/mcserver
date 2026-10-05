@@ -37,6 +37,8 @@ main { padding: 8px 16px 40px; max-width: 1100px; margin: 0 auto; }
 .row.changed.done { border-left-color: var(--changed); }
 .name { font-weight: 600; overflow-wrap: anywhere; }
 .meta { color: var(--muted); font-size: 12px; overflow-wrap: anywhere; }
+.ability { grid-column: 1 / -1; font-size: 12px; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 6px; margin: 0; padding-left: 16px; }
+.ability li { margin: 1px 0; }
 .chips { display: flex; flex-wrap: wrap; gap: 4px; }
 .chip { border: 1px solid var(--line); background: var(--chip); color: var(--ink); border-radius: 999px; padding: 3px 9px; font: inherit; font-size: 12px; cursor: pointer; }
 .chip.on { background: var(--on); border-color: var(--on); color: var(--on-ink); }
@@ -57,11 +59,12 @@ main { padding: 8px 16px 40px; max-width: 1100px; margin: 0 auto; }
 <body>
 <header>
   <h1>FOTF Weapon Sorter</h1>
-  <p class="sub">Toggle the categories each item should count as, then press Confirm. Skill perks use these categories (Sword perks hit swords, Scythe perks hit scythes and so on).</p>
+  <p class="sub">Toggle the categories each item should count as, then press Confirm. Skill perks use these categories (Sword perks hit swords, Scythe perks hit scythes and so on). Each weapon's own ability text is listed under it. Add <b>magic</b> when its special attack is a spell: that attack then scales with spell power instead of weapon perks, while normal swings keep the other categories.</p>
   <div class="bar">
     <input type="search" id="q" placeholder="Search name or id">
     <select id="mod"><option value="">All mods</option></select>
     <select id="type"><option value="">Any category</option><option value="-">No category</option></select>
+    <label class="check"><input type="checkbox" id="abil"> Only with abilities</label>
     <label class="check"><input type="checkbox" id="todo"> Only unconfirmed</label>
     <label class="check"><input type="checkbox" id="chg"> Only changed</label>
   </div>
@@ -95,6 +98,7 @@ function visible() {
     if (type === "-" ? ts.length : type && !ts.includes(type)) return false;
     if ($("todo").checked && isDone(it)) return false;
     if ($("chg").checked && !isChanged(it)) return false;
+    if ($("abil").checked && !(it.ability && it.ability.length)) return false;
     return !q || it.name.toLowerCase().includes(q) || it.id.includes(q);
   });
 }
@@ -108,7 +112,8 @@ function rowHtml(it) {
   const meta = [it.id, it.tool && "tool: " + it.tool, it.damage && "dmg " + it.damage].filter(Boolean).join(" · ");
   const cls = "row" + (isChanged(it) ? " changed" : "") + (isDone(it) ? " done" : "");
   return `<div class="${cls}" data-id="${it.id}"><div><div class="name"></div><div class="meta"></div></div>` +
-    `<div class="chips">${chips}</div><button class="confirm${isDone(it) ? " on" : ""}">${isDone(it) ? "Confirmed" : "Confirm"}</button></div>`;
+    `<div class="chips">${chips}</div><button class="confirm${isDone(it) ? " on" : ""}">${isDone(it) ? "Confirmed" : "Confirm"}</button>` +
+    (it.ability && it.ability.length ? '<ul class="ability"></ul>' : "") + `</div>`;
 }
 
 function render() {
@@ -125,8 +130,15 @@ function render() {
     const it = byId[el.dataset.id];
     el.querySelector(".name").textContent = it.name;
     el.querySelector(".meta").textContent = [it.id, it.tool && "tool: " + it.tool, it.damage && "dmg " + it.damage].filter(Boolean).join(" · ");
+    fillAbility(el, it);
   }
   counts();
+}
+
+function fillAbility(el, it) {
+  const ul = el.querySelector(".ability");
+  if (!ul) return;
+  for (const line of it.ability) { const li = document.createElement("li"); li.textContent = line; ul.appendChild(li); }
 }
 
 function counts(extra) {
@@ -140,6 +152,7 @@ function refreshRow(el, it) {
   const fresh = tmp.firstChild;
   fresh.querySelector(".name").textContent = it.name;
   fresh.querySelector(".meta").textContent = el.querySelector(".meta").textContent;
+  fillAbility(fresh, it);
   el.replaceWith(fresh);
 }
 
@@ -168,7 +181,7 @@ $("list").addEventListener("click", e => {
   refreshRow(el, it);
   save(it);
 });
-for (const id of ["q", "mod", "type", "todo", "chg"]) $(id).addEventListener("input", render);
+for (const id of ["q", "mod", "type", "todo", "chg", "abil"]) $(id).addEventListener("input", render);
 
 render();
 (async () => {
