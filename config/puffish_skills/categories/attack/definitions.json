@@ -526,7 +526,7 @@
   },
   "spellblade_1": {
     "title": "Spellblade",
-    "description": "Melee hits restore 1 mana",
+    "description": "Melee hits restore 10 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -546,14 +546,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "spellblade_mana",
-          "value": 1
+          "value": 10
         }
       }
     ]
   },
   "spellblade_2": {
     "title": "Spellblade",
-    "description": "Melee hits restore 2 mana",
+    "description": "Melee hits restore 20 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -573,14 +573,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "spellblade_mana",
-          "value": 1
+          "value": 10
         }
       }
     ]
   },
   "spellblade_3": {
     "title": "Spellblade",
-    "description": "Melee hits restore 3 mana",
+    "description": "Melee hits restore 30 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -600,14 +600,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "spellblade_mana",
-          "value": 1
+          "value": 10
         }
       }
     ]
   },
   "spellblade_4": {
     "title": "Spellblade",
-    "description": "Melee hits restore 4 mana",
+    "description": "Melee hits restore 40 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -627,7 +627,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "spellblade_mana",
-          "value": 1
+          "value": 10
         }
       }
     ]
@@ -732,7 +732,7 @@
   },
   "heavy_arms_1": {
     "title": "Heavy Arms",
-    "description": "Two-handed weapons +10% damage, off hand empty",
+    "description": "Two-handed weapons +10% damage when your off hand is empty",
     "icon": {
       "type": "item",
       "data": {
@@ -760,7 +760,7 @@
   },
   "heavy_arms_2": {
     "title": "Heavy Arms",
-    "description": "Two-handed weapons +20% damage, off hand empty",
+    "description": "Two-handed weapons +20% damage when your off hand is empty",
     "icon": {
       "type": "item",
       "data": {
@@ -788,7 +788,7 @@
   },
   "heavy_arms_3": {
     "title": "Heavy Arms",
-    "description": "Two-handed weapons +30% damage, off hand empty",
+    "description": "Two-handed weapons +30% damage when your off hand is empty",
     "icon": {
       "type": "item",
       "data": {
@@ -1474,7 +1474,7 @@
   },
   "cleave_1": {
     "title": "Cleave",
-    "description": "Two-handed hits splash 30% to nearby mobs, off hand empty",
+    "description": "Two-handed hits splash 30% to nearby mobs when your off hand is empty",
     "icon": {
       "type": "item",
       "data": {
@@ -1519,7 +1519,7 @@
   },
   "flurry_1": {
     "title": "Flurry",
-    "description": "Every 5th fast hit strikes twice",
+    "description": "Every 5th hit strikes twice",
     "icon": {
       "type": "item",
       "data": {

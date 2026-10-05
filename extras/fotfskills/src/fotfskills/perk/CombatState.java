@@ -12,7 +12,7 @@ public final class CombatState {
     public long lastStoneMined = -100000, lastMeal = -100000;
     public boolean counterReady;
     public final Streak momentum = new Streak(60, 3);
-    public final Streak flurry = new Streak(40, 5);
+    public final Streak flurry = new Streak(Long.MAX_VALUE / 4, 5);   // every 5th melee hit, no time limit
     public final SwingGate swing = new SwingGate();
     /** Gathering XP for vein-mined blocks (same tick as another break) is cut to a quarter. */
     public final BreakTick breaks = new BreakTick(0.25);

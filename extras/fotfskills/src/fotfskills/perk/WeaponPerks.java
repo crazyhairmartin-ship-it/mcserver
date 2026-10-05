@@ -97,8 +97,7 @@ public final class WeaponPerks {
                 state.lastCast = -100000;          // the next hit only
             }
             amount *= (float) (1 + pct);
-            if (swing && (Weapons.is(weapon, "light") || Weapons.is(weapon, "sword")) && Perks.get(player, "flurry") > 0
-                    && state.flurry.hit(now) == 5) {
+            if (swing && Perks.get(player, "flurry") > 0 && state.flurry.hit(now) == 5) {
                 amount *= 2;                        // Flurry: every 5th quick hit strikes twice
                 state.flurry.reset();
             }

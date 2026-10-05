@@ -28,7 +28,7 @@ public final class Perks {
             Map.entry("momentum", 1.0), Map.entry("flurry", 1.0), Map.entry("cleave", 1.0), Map.entry("lifeline", 4.0),
             Map.entry("grim_harvest", 6.0), Map.entry("berserker", 20.0), Map.entry("hunters_mark", 1.0),
             Map.entry("shield_bash", 2.0), Map.entry("counter", 2.0), Map.entry("shield_thorns", 0.95),
-            Map.entry("second_wind", 1.0), Map.entry("spellbound_steel", 1.0), Map.entry("spellblade_mana", 10.0),
+            Map.entry("second_wind", 1.0), Map.entry("spellbound_steel", 1.0), Map.entry("spellblade_mana", 40.0),
             Map.entry("battlemage_mana", 20.0), Map.entry("projectile_speed", 1.0), Map.entry("thrown_speed", 1.0),
             Map.entry("jump_boost", 0.5), Map.entry("forest_speed", 1.0), Map.entry("forest_toughness", 10.0),
             Map.entry("combat_speed", 1.0), Map.entry("skirmish_speed", 1.0), Map.entry("stonehide", 10.0),
