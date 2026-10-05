@@ -55,6 +55,9 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new PetPerks());
         MinecraftForge.EVENT_BUS.register(new BreedingPerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.pet.Ferality());
+        if (ModList.get().isLoaded("ultimate_unicorn_mod")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.world.HorseSwim());
+        }
         MinecraftForge.EVENT_BUS.register(new FarmPerks());
         MinecraftForge.EVENT_BUS.register(new FoodPerks());
         MinecraftForge.EVENT_BUS.register(new FishingPerks());

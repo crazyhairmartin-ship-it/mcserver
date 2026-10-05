@@ -11,7 +11,6 @@ Textures: the wing squares of the pegasus and nightmare skins are redrawn as fea
 edge, long secondaries on the inner panel, and fanned primaries with gaps between their tips on the outer panel - in
 each skin's own colours. Writes into kubejs/assets/ultimate_unicorn_mod/ plus a preview next to this script.
 """
-import colorsys
 import io
 import json
 import math
@@ -29,15 +28,17 @@ OUT = PACK / 'kubejs' / 'assets' / 'ultimate_unicorn_mod'
 JAR = PACK.parent / 'server-test' / 'data' / 'mods' / 'ultimate_unicorn_mod-1.20.1-2.0.0.jar'
 GEO = 'assets/ultimate_unicorn_mod/geo/magical_horse_model.geo.json'
 TEX = 'assets/ultimate_unicorn_mod/textures/entity/'
-SCALE = 0.55
+SCALE = 0.72                                     # the wing bones' size: the nightmare's wings fill it
 WINGS = ('rightWing', 'rightWingTip', 'leftWing', 'leftWingTip')
 ROOTS = {'rightWing': 'rightWing', 'rightWingTip': 'rightWing', 'leftWing': 'leftWing', 'leftWingTip': 'leftWing'}
 INNER, TIP = (0, 122), (0, 164)                  # top-left of each panel's top-face square; the underside sits 42 px right
-SKINS = {                                        # skin -> (shade of the top face, base colour taken from the old wing)
-    'pegasus_blue.png': None,
-    'pegasus_big_blue.png': None,
-    'nightmare_black.png': (52, 46, 60),         # the old wing is pure black: give it dark slate feathers instead
-    'nightmare_big_red.png': None,
+# skin -> feather length (1 fills the wing bones; pegasi draw shorter feathers so their wings look smaller) and colours:
+# light (shaft), vane from mid to dark, rim (feather edge)
+SKINS = {
+    'pegasus_blue.png': (0.76, dict(light=(250, 252, 255), mid=(232, 236, 242), dark=(198, 206, 218), rim=(150, 160, 178))),
+    'pegasus_big_blue.png': (0.76, dict(light=(242, 248, 255), mid=(206, 220, 236), dark=(166, 186, 210), rim=(112, 134, 166))),
+    'nightmare_black.png': (1.0, dict(light=(140, 20, 20), mid=(34, 26, 28), dark=(16, 12, 14), rim=(58, 8, 8))),
+    'nightmare_big_red.png': (1.0, dict(light=(196, 42, 30), mid=(140, 18, 16), dark=(84, 8, 8), rim=(20, 6, 6))),
 }
 
 
@@ -70,6 +71,12 @@ def shrink(geo):
             if name.startswith('left'):
                 uv[1] += 1                      # the left wing read its squares one row too high
             cube['uv'] = box_faces(uv, cube['size'])
+            if name.startswith('left'):         # "mirror" doesn't flip top and bottom faces: flip them so the tips point out
+                for face in ('up', 'down'):
+                    if face in cube['uv'] and cube['size'][1] < 0.5:
+                        f = cube['uv'][face]
+                        f['uv'] = [f['uv'][0] + f['uv_size'][0], f['uv'][1]]
+                        f['uv_size'] = [-f['uv_size'][0], f['uv_size'][1]]
             cube['origin'] = scaled(cube['origin'], root)
             cube['size'] = [round(s * SCALE, 4) if s > 0.5 else s for s in cube['size']]
     return geo
@@ -82,8 +89,8 @@ def lerp(a, b, t):
 
 
 def shade(c, k):
-    h, l, s = colorsys.rgb_to_hls(*(x / 255 for x in c))
-    return tuple(round(x * 255) for x in colorsys.hls_to_rgb(h, max(0, min(1, l * k)), s))
+    """Lighter (k > 1) or darker (k < 1) without changing the hue's strength: pale feathers stay pale."""
+    return tuple(max(0, min(255, round(x * k))) for x in c)
 
 
 def base_colour(img):
@@ -108,23 +115,26 @@ class Panel:
         light, mid, dark, rim = colours
         dx, dy = math.cos(angle), math.sin(angle)
         nx, ny = -dy, dx
+        def half_at(t):
+            return max(0.6, width / 2 * (1 - (t - 0.82) / 0.18 * 0.85 if t > 0.82 else 1))  # taper into a rounded tip
+
         cells = {}
         steps = int(length * 3)
         for i in range(steps + 1):
             t = i / steps
-            half = width / 2 * (1 - max(0, t - 0.82) / 0.18 * 0.85 if t > 0.82 else 1)  # taper into a rounded tip
-            half = max(0.6, half)
+            half = half_at(t)
             for j in range(-int(half * 3), int(half * 3) + 1):
                 s = j / 3
-                x = base[0] + dx * length * t + nx * s
-                y = base[1] + dy * length * t + ny * s
-                key = (int(math.floor(x)), int(math.floor(y)))
-                edge = abs(s) / half
-                cells[key] = min(cells.get(key, 9), edge) if key in cells else edge
+                cells[(int(math.floor(base[0] + dx * length * t + nx * s)),
+                       int(math.floor(base[1] + dy * length * t + ny * s)))] = 0
+        for (x, y) in cells:                                     # how far each pixel's centre sits from the shaft
+            rx, ry = x + 0.5 - base[0], y + 0.5 - base[1]
+            t = max(0.0, min(1.0, (rx * dx + ry * dy) / length))
+            cells[(x, y)] = abs(rx * nx + ry * ny) / half_at(t)
         for (x, y), edge in cells.items():
             if edge > 0.78:
                 c = rim
-            elif edge < 0.18:
+            elif edge < 0.13:
                 c = light                                        # the shaft
             else:
                 c = lerp(mid, dark, (edge - 0.18) / 0.6)
@@ -138,48 +148,48 @@ class Panel:
         return im
 
 
-def palette(base):
-    return (shade(base, 1.25), base, shade(base, 0.78), shade(base, 0.5))
+def palette(colours, k=1.0):
+    return tuple(shade(colours[n], k) for n in ('light', 'mid', 'dark', 'rim'))
 
 
-def draw_inner(base, rnd):
+def draw_inner(colours, k, rnd):
     """Inner panel: leading edge on top, tip side on the left, body on the right. Secondaries hang to the trailing edge."""
     p = Panel()
-    sec = palette(shade(base, 0.92))
+    sec = palette(colours, 0.92)
     for i, x in enumerate(range(1, 42, 5)):                       # secondaries, back to front from the body side
-        length = 38 - (2 if i % 2 else 0) - max(0, x - 34)       # shorter near the body, alternating tips
+        length = (38 - (2 if i % 2 else 0) - max(0, x - 34)) * k  # shorter near the body, alternating tips
         p.feather((x + 2.5, 2), math.pi / 2 + 0.05, length, 6.5, sec, rnd)
     for row, (y, w, ln) in enumerate(((14, 6, 9), (8, 5, 8), (2, 4, 7))):   # three rows of coverts over the shafts
         for x in range(-2 + row * 2, 44, w - 1):
             if x > 39 - (row == 2) * 3 and y < 6:
                 continue                                         # keep the rounded shoulder corner
-            p.feather((x + w / 2, y - 2), math.pi / 2, ln, w, palette(shade(base, 1.0 + row * 0.06)), rnd)
+            p.feather((x + w / 2, (y - 2) * k), math.pi / 2, ln * k, w, palette(colours, 1.0 + row * 0.06), rnd)
     for x in range(0, 42):                                       # leading edge: a light line of marginal feathers
         for y in range(0, 2):
             if (x, y) in p.px and not (x > 37 and y < 2):
-                p.put(x, y, shade(base, 1.3))
+                p.put(x, y, colours['light'])
     return p
 
 
-def draw_tip(base, rnd):
+def draw_tip(colours, k, rnd):
     """Outer panel: wrist at top right, primaries fanning out to the left (outward) and down (back)."""
     p = Panel()
-    pri = palette(shade(base, 0.85))
+    pri = palette(colours, 0.85)
     feathers = 7
+    scale = k
     for i in range(feathers):                                     # innermost first so the outer ones lie on top
-        k = i / (feathers - 1)
-        angle = math.pi / 2 + math.radians(6 + 72 * k)           # from straight back (down) to almost along the edge (left)
-        length = 32 + 9 * k
-        p.feather((40 - i * 0.8, 3 + i * 0.6), angle, length, 6, pri, rnd)
+        t = i / (feathers - 1)
+        angle = math.pi / 2 + math.radians(6 + 72 * t)           # from straight back (down) to almost along the edge (left)
+        p.feather((40 - i * 0.8, 3 + i * 0.6), angle, (32 + 9 * t) * scale, 6, pri, rnd)
     for row, (y, w, ln) in enumerate(((9, 6, 10), (3, 5, 8))):   # coverts over the primary bases near the wrist
         for x in range(22 + row * 4, 44, w - 1):
-            p.feather((x + w / 2, y - 3), math.pi / 2 + 0.25, ln, w, palette(shade(base, 1.0 + row * 0.06)), rnd)
+            p.feather((x + w / 2, (y - 3) * k), math.pi / 2 + 0.25, ln * k, w, palette(colours, 1.0 + row * 0.06), rnd)
     return p
 
 
-def redraw(img, base):
+def redraw(img, colours, k):
     rnd = random.Random(7)
-    for (x0, y0), panel in ((INNER, draw_inner(base, rnd)), (TIP, draw_tip(base, rnd))):
+    for (x0, y0), panel in ((INNER, draw_inner(colours, k, rnd)), (TIP, draw_tip(colours, k, rnd))):
         top, under = panel.image(), panel.image(0.82)
         for dx in range(84):                                     # clear both faces of the square first
             for dy in range(42):
@@ -196,10 +206,9 @@ def main():
     (OUT / 'geo' / 'magical_horse_model.geo.json').write_text(json.dumps(geo, indent=2) + '\n', encoding='utf-8')
     (OUT / 'textures' / 'entity').mkdir(parents=True, exist_ok=True)
     previews = []
-    for skin, override in SKINS.items():
+    for skin, (k, colours) in SKINS.items():
         img = Image.open(io.BytesIO(jar.read(TEX + skin))).convert('RGBA')
-        base = override or base_colour(img)
-        redraw(img, base).save(OUT / 'textures' / 'entity' / skin)
+        redraw(img, colours, k).save(OUT / 'textures' / 'entity' / skin)
         previews.append(img.crop((0, 120, 86, 208)))
     sheet = Image.new('RGBA', (len(previews) * 90 * 4, 88 * 4), (70, 70, 70, 255))
     for i, im in enumerate(previews):
