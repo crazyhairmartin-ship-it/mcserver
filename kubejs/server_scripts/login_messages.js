@@ -1,7 +1,7 @@
 // Login messages.
 // - Returning players: "Welcome back, <name>!" to them, and a nudge to everyone else to say hi.
 //   (First-time players get the Field Guide welcome from field_guide.js instead.)
-// - Unspent skill points: a reminder listing which trees have points left (K opens the skills screen).
+// - Unspent skill points: a short reminder that K opens the skills menu.
 // - One-time notices: shown once per player on their next login, tracked in server persistentData.
 //   Bump NOTICE_ID to show a new notice to everyone once.
 
@@ -10,21 +10,12 @@ let $NoticeCompoundTag = Java.loadClass('net.minecraft.nbt.CompoundTag')
 
 let NOTICE_ID = 'keybinds_shaders_2026_10'
 
-function capitalize(s) {
-  return s.charAt(0).toUpperCase() + s.slice(1)
-}
-
-function unspentSkillPoints(player) {
-  let trees = []
-  let total = 0
+function hasUnspentSkillPoints(player) {
+  let unspent = false
   $SkillsAPI.streamCategories().toList().forEach(category => {
-    let left = category.getPointsLeft(player)
-    if (left > 0) {
-      trees.push(`${capitalize(String(category.getId().getPath()))} ${left}`)
-      total += left
-    }
+    if (category.getPointsLeft(player) > 0) unspent = true
   })
-  return { total: total, trees: trees }
+  return unspent
 }
 
 function noticeSeen(server, player) {
@@ -84,12 +75,10 @@ PlayerEvents.loggedIn(event => {
         other.tell(Text.yellow(`${name} is back in the forest. Give them a welcome!`))
     })
 
-    let skills = unspentSkillPoints(online)
-    if (skills.total > 0) {
-      online.tell(Text.lightPurple(`★ You have ${skills.total} unspent skill point${skills.total == 1 ? '' : 's'} `)
-        .append(Text.gray(`(${skills.trees.join(', ')}). Press `))
+    if (hasUnspentSkillPoints(online)) {
+      online.tell(Text.lightPurple('★ You have unspent skill points! Press ')
         .append(Text.white('K').bold(true))
-        .append(Text.gray(' to spend them.')))
+        .append(Text.lightPurple(' to open the skills menu.')))
     }
 
     if (showNotice) showKeybindNotice(server, online)
