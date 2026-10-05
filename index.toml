@@ -1551,6 +1551,50 @@ file = "kubejs/assets/ultimate_unicorn_mod/models/block/template_short_fire_side
 hash = "11a68c5017e5f2de2ca77404e68def15c6bd5219a185c6706ce8211694e9a356"
 
 [[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/deer.png"
+hash = "d962e3a4d302e44af448340f84816c1fecb06ea5f311363deb8ce89456d859e9"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/destrier_brown.png"
+hash = "a2ce29c6a50f875d8f52ea4037b4225d9c444e85aa685f3ec4d7836bce0233d7"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/destrier_red_wing_blackbird.png"
+hash = "814cec697f6f61be44bb5b4ae21007968c3d7fed37fbef2ef0920c1b15ca1434"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/griffin.png"
+hash = "224c0718716471409e83736b063fc60171285ff56a773c02ac1c090d5c9cf0dd"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/hippocamp.png"
+hash = "58a2ed83bf8164ff4713afcc72e92683e419f2bd9e7c82c55fc9b6783368c8f5"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/hippocamp_celestial_sea_horse.png"
+hash = "95e06442738c49af636682425c8ce0fb401f7bd2c66af9d67d1a94a1a4fbd3cd"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/hippogriff.png"
+hash = "c4083b251abd70571eba1830b64ff371e55ce634354e804420aeccd1680fd008"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/kevin.png"
+hash = "1a2f90b3a7d82657044d8c02c4c6532054d4248c4e9a45da5ebf5c56986e0449"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/kirin.png"
+hash = "d7b61d39fb2851661d22f008e6bd71f3ad05e0753a390c3e3c379d06f2831986"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/kirin_golden.png"
+hash = "c587f8cc444d9178621f29e163580fcf4f49cdfc52cbbe44a36a9e39f901af9b"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/magical_horse.png"
+hash = "1b9e4a5fd47f17d603ecee79ae3040507389f05e9f6500c74f80ba2a776768ef"
+
+[[files]]
 file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/nightmare_big_red.png"
 hash = "8e3ea0867f8296db794549c417dba4b63577ab2e1a8bbcbb08bd114ff333c8a5"
 
@@ -1559,12 +1603,24 @@ file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/nightmare_black.png"
 hash = "fabcec498b9ebd48a9df7d3f95429231c362dea8bee8a7263e4360fd3edab0ba"
 
 [[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/oracle.png"
+hash = "9a4dd709792187055c5a9b26990b864154c2c9460e7621bb208eb896cd442a24"
+
+[[files]]
 file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/pegasus_big_blue.png"
 hash = "2c2630e6461de16898200eb467d653a7a88fbb0b08ad41d7be347c3daefcc540"
 
 [[files]]
 file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/pegasus_blue.png"
 hash = "9e61ab75cd52cf97a34914456e83ebe7c759b33b6ec208107dafc8edcf8f22d3"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/unicorn_rainbow_smash.png"
+hash = "884bf22f7a82fdefb5aefea655caf0cfe4ad602ee802410b18c0065610ecba98"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/unicorn_white.png"
+hash = "1b9e4a5fd47f17d603ecee79ae3040507389f05e9f6500c74f80ba2a776768ef"
 
 [[files]]
 file = "kubejs/assets/wildernature/lang/en_us.json"
