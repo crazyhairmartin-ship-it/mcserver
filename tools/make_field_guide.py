@@ -245,7 +245,7 @@ ENTRIES = [
         text('Other players can\'t hurt your tamed pets.$(br2)Whales won\'t attack your boats.$(br2)Butterflies, fireflies and critters live in almost every biome. Bring a net and a jar!', 'Friendly Server'),
     ]),
     ('grove', 'commands', 'Handy Commands', 'minecraft:command_block', [
-        text('$(li)$(l)/guide$(): a new Field Guide$(li)$(l)/guide <book>$(): other guide books (see $(l)More Guide Books$())$(li)$(l)/nick set <name>$(): change the name others see$(li)$(l)/nick clear$(): back to your real name'),
+        text('$(li)$(l)/guide$(): a new Field Guide$(li)$(l)/guide <book>$(): other guide books (see $(l)More Guide Books$())$(li)$(l)/nick set <name>$(): change the name others see$(li)$(l)/nick clear$(): back to your real name$(li)$(l)/pvp on$() or $(l)off$(): fight other players who also turned it on (off by default)'),
         text('Delete junk with the $(l)trash slot$() next to your inventory: drop an item in, and it\'s gone for good. Turn the slot on or off in your inventory.', 'Trash Slot'),
     ]),
     ('grove', 'rules', 'Grove Rules', 'minecraft:oak_sign', [
