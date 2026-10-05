@@ -18,6 +18,10 @@
       "required": false
     },
     {
+      "id": "alexsmobs:tendon_whip",
+      "required": false
+    },
+    {
       "id": "ars_nouveau:wand",
       "required": false
     },
@@ -27,6 +31,22 @@
     },
     {
       "id": "cataclysm:astrape",
+      "required": false
+    },
+    {
+      "id": "cataclysm:brontes",
+      "required": false
+    },
+    {
+      "id": "cataclysm:ceraunus",
+      "required": false
+    },
+    {
+      "id": "cataclysm:coral_bardiche",
+      "required": false
+    },
+    {
+      "id": "cataclysm:coral_spear",
       "required": false
     },
     {
@@ -47,6 +67,10 @@
     },
     {
       "id": "cataclysm:the_incinerator",
+      "required": false
+    },
+    {
+      "id": "cataclysm:tidal_claws",
       "required": false
     },
     {

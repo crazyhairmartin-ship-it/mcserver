@@ -17,7 +17,7 @@ alexscaves,alexscaves:sweetberry_ice_cream_scoop,thrown,ThrownProjectileItem,0.0
 alexscaves,alexscaves:vanilla_ice_cream_scoop,thrown,ThrownProjectileItem,0.0,0.00
 alexsmobs,alexsmobs:ghostly_pickaxe,tool,ItemGhostlyPickaxe,3.0,-2.80
 alexsmobs,alexsmobs:skelewag_sword,sword,ItemSkelewagSword,3.5,0.00
-alexsmobs,alexsmobs:tendon_whip,light thrown,ItemTendonWhip,4.0,-3.00
+alexsmobs,alexsmobs:tendon_whip,light magic,ItemTendonWhip,4.0,-3.00
 aquaculture,aquaculture:diamond_fillet_knife,light,ItemFilletKnife,1.5,-2.20
 aquaculture,aquaculture:gold_fillet_knife,light,ItemFilletKnife,0.0,-2.20
 aquaculture,aquaculture:iron_fillet_knife,light,ItemFilletKnife,1.0,-2.20
@@ -45,10 +45,10 @@ cataclysm,cataclysm:black_steel_axe,axe,AxeItem,8.0,-3.10
 cataclysm,cataclysm:black_steel_pickaxe,tool,PickaxeItem,3.0,-2.80
 cataclysm,cataclysm:black_steel_shovel,tool,ShovelItem,3.5,-3.00
 cataclysm,cataclysm:black_steel_sword,sword,SwordItem,5.0,-2.40
-cataclysm,cataclysm:brontes,two_handed blunt thrown,Brontes,12.0,-3.00
-cataclysm,cataclysm:ceraunus,two_handed thrown,Ceraunus,15.0,-3.30
-cataclysm,cataclysm:coral_bardiche,two_handed polearm axe thrown,Coral_Bardiche,9.0,-3.20
-cataclysm,cataclysm:coral_spear,polearm thrown,Coral_Spear,5.5,-2.90
+cataclysm,cataclysm:brontes,two_handed blunt thrown magic,Brontes,12.0,-3.00
+cataclysm,cataclysm:ceraunus,two_handed thrown magic,Ceraunus,15.0,-3.30
+cataclysm,cataclysm:coral_bardiche,two_handed polearm axe thrown magic,Coral_Bardiche,9.0,-3.20
+cataclysm,cataclysm:coral_spear,polearm thrown magic,Coral_Spear,5.5,-2.90
 cataclysm,cataclysm:cursed_bow,bow magic,Cursed_bow,0.0,0.00
 cataclysm,cataclysm:gauntlet_of_bulwark,light blunt,Gauntlet_of_Bulwark,10.0,-2.40
 cataclysm,cataclysm:gauntlet_of_guard,light blunt,Gauntlet_of_Guard,10.0,-2.40
@@ -61,7 +61,7 @@ cataclysm,cataclysm:soul_render,two_handed polearm axe,Soul_Render,14.0,-2.90
 cataclysm,cataclysm:the_annihilator,two_handed axe,The_Annihilator,7.5,-2.40
 cataclysm,cataclysm:the_immolator,two_handed blunt magic,The_Immolator,7.5,-2.40
 cataclysm,cataclysm:the_incinerator,sword two_handed magic,The_Incinerator,13.0,-2.60
-cataclysm,cataclysm:tidal_claws,light thrown,Tidal_Claws,7.0,-2.40
+cataclysm,cataclysm:tidal_claws,light thrown magic,Tidal_Claws,7.0,-2.40
 cataclysm,cataclysm:void_assault_shoulder_weapon,two_handed crossbow magic,Void_Assault_SHoulder_Weapon,0.0,0.00
 cataclysm,cataclysm:void_core,magic,Void_core,,
 cataclysm,cataclysm:void_forge,two_handed blunt,Void_forge,12.0,-3.00

@@ -104,6 +104,19 @@ def paint_coil(img, rope, seams, cx=5.5, cy=10.5):
         img.putpixel((x, y), ROPE['dark'])
 
 
+def icon_tones(path):
+    """Five colours from darkest to lightest, taken from the rope icon's opaque pixels (falls back to ROPE)."""
+    try:
+        im = Image.open(path).convert('RGBA')
+        colours = sorted({im.getpixel((x, y)) for x in range(im.width) for y in range(im.height) if im.getpixel((x, y))[3] > 0},
+                         key=lambda c: c[0] * 299 + c[1] * 587 + c[2] * 114)
+    except OSError:
+        colours = []
+    if len(colours) < 2:
+        colours = [ROPE['dark'], ROPE['mid'], ROPE['light']]
+    return [colours[round(i * (len(colours) - 1) / 4)] for i in range(5)]
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
     rope, seams = wound_coil(5.5, 10.5)
@@ -117,11 +130,12 @@ def main():
 
     # item and held are no longer saved: grapplinghook.png and rope.png are Dylan's hand-drawn versions
     braid = Image.new('RGBA', (2, 16))
-    twist = [('light', 'dark'), ('mid', 'mid'), ('dark', 'light'), ('mid', 'mid')]   # strands crossing, like the pack's rope
+    tones = icon_tones(os.path.join(OUT, 'rope.png'))             # the line uses the browns of Dylan's rope icon
+    twist = [(4, 0), (3, 1), (2, 2), (1, 3), (0, 4), (1, 3), (2, 2), (3, 1)]   # two strands winding past each other
     for y in range(16):
-        left, right = twist[y % 4]
-        braid.putpixel((0, y), ROPE[left])
-        braid.putpixel((1, y), ROPE[right])
+        left, right = twist[y % len(twist)]
+        braid.putpixel((0, y), tones[left])
+        braid.putpixel((1, y), tones[right])
     entity_dir = os.path.join(OUT, '..', 'entity')
     os.makedirs(entity_dir, exist_ok=True)
     braid.save(os.path.join(entity_dir, 'rope.png'))
