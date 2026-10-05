@@ -1,22 +1,47 @@
 {
-  "name": "Parkour",
+  "name": "Parkour (ParCool)",
   "icon": "parcool:parcool_guide",
   "category": "patchouli:travel",
   "sortnum": 0,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(l)ParCool$(): parkour moves. Free from the start: sprint ($(l)Ctrl$()), crawl and slide ($(l)C$(), while sprinting to slide), vault, hang on ledges and climb up, pole climb, slide down walls, ziplines, fast swim, dive, breakfall and dodge ($(l)Mouse 4$())."
+      "text": "$(l)ParCool$() turns you into a free runner. Moves use the $(l)stamina$() bar by your hunger bar; it refills when you rest. Your total skill level adds more stamina.$(br2)The basic moves are free from the start. The athletic ones unlock from the $(l)Agility$() skill tree (press $(l)K$())."
     },
     {
       "type": "patchouli:text",
-      "text": "The athletic moves come from the $(l)Agility$() tree:$(li)$(l)Freerunner$(): wall run (sprint-jump along a wall, then press dodge), horizontal wall run, cast away (look away from the wall while hanging, then jump)$(li)$(l)Spring Step$(): wall jump, long jump (sprint a while, then tap sneak), charge jump$(li)$(l)Featherfall$(): skydive (crawl key while falling)$(li)$(l)Double Jump$(): jump again in mid-air with a flip (hold back for a back flip), plus trick jumps (jump while holding back for a flip, or during a fast run)",
+      "text": "$(li)$(l)Fast run$(): hold $(l)Ctrl$() while running$(li)$(l)Crawl$(): press $(l)C$()$(li)$(l)Slide$(): press $(l)C$() while running$(li)$(l)Vault$(): run at a low wall or fence$(li)$(l)Fast swim$() and $(l)dive$(): sprint in water, or run off a ledge into deep water",
+      "title": "Running"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(l)Grab a ledge$(): jump at an edge and hold $(l)right-click$(); move left or right while hanging$(li)$(l)Climb up$(): press jump while hanging$(li)$(l)Hang$(): hold $(l)right-click$() under a bar or beam$(li)$(l)Pole climb$(): walk into a fence, bar or chain and hold forward$(li)$(l)Wall slide$(): hold $(l)right-click$() against a wall while falling",
+      "title": "Climbing"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(l)Dodge$(): press $(l)Mouse 4$() with a direction key; it goes quite far$(li)$(l)Breakfall$(): press $(l)Mouse 4$() just before you land to roll and take less fall damage$(li)$(l)Zipline$(): craft a zipline (look it up in JEI), jump onto it and hold $(l)right-click$() to ride$(li)$(l)Hide$(): press $(l)C$() in tall grass or hay",
+      "title": "Landing & Dodging"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Freerunner$():$(li)$(l)Wall run$(): sprint-jump along a wall, then press $(l)Mouse 4$()$(li)$(l)Horizontal wall run$(): the same, holding $(l)Mouse 4$()$(li)$(l)Cast away$(): while hanging on a ledge, look away from the wall and jump$(br2)$(l)Featherfall$():$(li)$(l)Skydive$(): press $(l)C$() while falling from high up",
       "title": "Agility Moves"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(l)Spring Step$():$(li)$(l)Wall jump$(): jump into a wall in mid-air and press jump again$(li)$(l)Long jump$(): sprint for a while, then quickly tap sneak and jump$(li)$(l)Charge jump$(): hold sneak standing still, then jump$(br2)$(l)Double Jump$() (capstone):$(li)Press jump again in mid-air for a second jump with a flip; hold back for a back flip$(li)Normal jumps can flip too: jump while holding back, or jump during a fast run",
+      "title": "More Agility"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)Chain moves: slide into a vault, wall run into a wall jump, then breakfall$(li)A roll or breakfall saves you from most falls$(li)Watch your stamina before a long climb$(li)Keys can be changed in $(l)Options > Controls > Key Binds$() under ParCool",
+      "title": "Tips"
     },
     {
       "type": "patchouli:crafting",
       "recipe": "parcool:parcool_guide",
-      "text": "The $(l)ParCool Guide$() explains every move."
+      "text": "The $(l)ParCool Guide$() item shows every move with animations."
     }
   ]
 }

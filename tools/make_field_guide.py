@@ -71,7 +71,7 @@ ENTRIES = [
         text('Days here are long and sunsets are slow, so take your time.$(br2)If you die, your items wait in a $(l)gravestone$(). Nothing is lost!', 'No Rush'),
     ]),
     ('getting_started', 'skills', 'Skills & Levels', 'minecraft:experience_bottle', [
-        text('You get better at things by doing them. There are 12 skills: Mining, Foraging, Farming, Fishing, Cooking, Crafting, Attack, Range, Defense, Agility, Magic and Taming. Each level up to 50 gives a point to spend in that skill\'s tree. Press $(l)K$() to open the skill menu.$(br2)Agility trains when you sprint or climb on your own feet, not while riding.'),
+        text('You get better at things by doing them. There are 12 skills: Mining, Foraging, Farming, Fishing, Cooking, Crafting, Attack, Range, Defense, Agility, Magic and Taming. Each level up to 50 gives a point to spend in that skill\'s tree. Press $(l)K$() to open the skill menu.'),
         text('Trees have five tiers. Spending points in a tree opens the next tier (5, 10, 15, then 25 points). Tiers marked $(l)OR$() let you pick one of two branches. Hover a node to see what it does now (white) and what the next rank adds (grey). A full tree costs exactly 50 points.', 'Skill Trees'),
         text('$(l)/fotfskills perks$() lists every perk you have. Click the $(l)star button$() beside your inventory for your character screen: health, stamina and mana, an $(l)Overview$() of every skill\'s level and your active buffs, and an icon tab per skill showing its XP and exactly what each of your nodes does (scroll for more).$(br2)Level-up messages are short: open chat and point at one to read the details.$(br2)$(l)/fotfskills levelups off$() hides them; $(l)on$() brings them back.', 'Perks'),
         text('Your $(l)total level$() (all 12 skills added up) gives extra hearts and ParCool stamina: the first at total level 8, all 15 by 256.$(br2)$(l)/fotfskills reset <tree>$() gives a tree\'s points back for 1 XP level per 2 points spent (at least 5).', 'Hearts & Resets'),
@@ -112,7 +112,7 @@ ENTRIES = [
     # ---------- Creatures & Companions ----------
     ('creatures', 'unicorns', 'Unicorns & Magical Horses', 'ultimate_unicorn_mod:unicorn_horn', [
         text('Unicorns, pegasi, hippocamps, reindeer and more live in forests, plains, hills and oceans.$(br2)Tame and ride them like horses. Pegasi fly: hold $(l)Space$() to go up and $(l)Left Ctrl$() to go down. Unicorns have magical powers!'),
-        text('Nightmares fly on speed, not wing power: gallop straight to full speed on open ground, then hold $(l)Space$(). Keep turns gentle. If they slow down, they glide back to the ground.$(br2)Their hoof fire and fireballs here never hurt friends, only monsters.$(br2)Pegasi and nightmares float in deep water instead of sinking.', 'Nightmares'),
+        text('Nightmares fly on speed, not wing power: gallop straight to full speed on open ground, then hold $(l)Space$(). Keep turns gentle. If they slow down, they glide back to the ground.$(br2)Their hoof fire and fireballs here never hurt friends, only monsters.', 'Nightmares'),
         spot(UNICORN_BOOK, 'The $(l)Unicorn Guidebook$() explains everything. Get one with $(l)/guide unicorn$().', 'Official Guide'),
         craft('fotf:saddle', 'Saddles can be crafted here: 5 leather, 1 iron ingot and 2 string.'),
     ]),
@@ -175,7 +175,6 @@ ENTRIES = [
     ('combat', 'weapons', 'Weapons & Shields', 'spartanweaponry:iron_longsword', [
         text('$(l)Spartan Weaponry$(): daggers, spears, halberds, longbows and more, in every material.$(br2)$(l)Spartan Shields$(): more shields.'),
         text('Every weapon counts as one or more categories: sword, light, two-handed, polearm, axe, blunt, scythe (hoes too), thrown, bow, crossbow or magic. Skill perks boost their categories.$(br2)Hover a weapon to see its damage with your skills; hold $(l)Shift$() for the breakdown and its categories.', 'Weapon Types'),
-        text('$(l)Two-handed$() perks only work with an empty off hand (or a second copy of the same weapon).$(br2)$(l)Magic$() weapons\' special attacks grow with your spell power; ones that are also $(l)thrown$() get your thrown-weapon perks too.$(br2)Cataclysm\'s $(l)Immolator$() and $(l)Annihilator$() are dual-wield: hold one in each hand, then hold right-click to charge their special.', 'Special Attacks'),
     ]),
     ('combat', 'bosses', 'Bosses', 'cataclysm:ignitium_ingot', [
         text('$(l)L_Ender\'s Cataclysm$() and $(l)Mowzie\'s Mobs$() add huge bosses in their own arenas.$(br2)They only fight you if you go to them, so the rest of the world stays normal. Bring your best gear!'),
@@ -188,7 +187,6 @@ ENTRIES = [
     ('exploring', 'structures', 'Villages & Dungeons', 'minecraft:filled_map', [
         text('Villages come in many styles (CTOV). Guards protect them, and bounty boards give jobs for rewards.$(br2)Ruins, towers, camps and dungeons are everywhere. Their chests have separate loot for each player.'),
         text('Big dungeons (When Dungeons Arise, Cataclysm) are dangerous.$(br2)Spawners keep making mobs until you break them or light them up with torches.', 'Be Careful'),
-        text('Old shrines around the world now hold $(l)statues$() of the Iron\'s Spells supporters, each in its own pose.$(br2)Small underground shrines hold a stone statue clutching a $(l)treasure$(): right-click it to take the prize.', 'Statues'),
     ]),
     ('exploring', 'compasses', 'Finding Places', 'naturescompass:naturescompass', [
         spot('naturescompass:naturescompass', 'The $(l)Nature\'s Compass$() points to any biome you pick.'),
@@ -203,10 +201,15 @@ ENTRIES = [
     ]),
 
     # ---------- Travel & Movement ----------
-    ('travel', 'parcool', 'Parkour', 'parcool:parcool_guide', [
-        text('$(l)ParCool$(): parkour moves. Free from the start: sprint ($(l)Ctrl$()), crawl and slide ($(l)C$(), while sprinting to slide), vault, hang on ledges and climb up, pole climb, slide down walls, ziplines, fast swim, dive, breakfall and dodge ($(l)Mouse 4$()).'),
-        text('The athletic moves come from the $(l)Agility$() tree:$(li)$(l)Freerunner$(): wall run (sprint-jump along a wall, then press dodge), horizontal wall run, cast away (look away from the wall while hanging, then jump)$(li)$(l)Spring Step$(): wall jump, long jump (sprint a while, then tap sneak), charge jump$(li)$(l)Featherfall$(): skydive (crawl key while falling)$(li)$(l)Double Jump$(): jump again in mid-air with a flip (hold back for a back flip), plus trick jumps (jump while holding back for a flip, or during a fast run)', 'Agility Moves'),
-        craft('parcool:parcool_guide', 'The $(l)ParCool Guide$() explains every move.'),
+    ('travel', 'parcool', 'Parkour (ParCool)', 'parcool:parcool_guide', [
+        text('$(l)ParCool$() turns you into a free runner. Moves use the $(l)stamina$() bar by your hunger bar; it refills when you rest. Your total skill level adds more stamina.$(br2)The basic moves are free from the start. The athletic ones unlock from the $(l)Agility$() skill tree (press $(l)K$()).'),
+        text('$(li)$(l)Fast run$(): hold $(l)Ctrl$() while running$(li)$(l)Crawl$(): press $(l)C$()$(li)$(l)Slide$(): press $(l)C$() while running$(li)$(l)Vault$(): run at a low wall or fence$(li)$(l)Fast swim$() and $(l)dive$(): sprint in water, or run off a ledge into deep water', 'Running'),
+        text('$(li)$(l)Grab a ledge$(): jump at an edge and hold $(l)right-click$(); move left or right while hanging$(li)$(l)Climb up$(): press jump while hanging$(li)$(l)Hang$(): hold $(l)right-click$() under a bar or beam$(li)$(l)Pole climb$(): walk into a fence, bar or chain and hold forward$(li)$(l)Wall slide$(): hold $(l)right-click$() against a wall while falling', 'Climbing'),
+        text('$(li)$(l)Dodge$(): press $(l)Mouse 4$() with a direction key; it goes quite far$(li)$(l)Breakfall$(): press $(l)Mouse 4$() just before you land to roll and take less fall damage$(li)$(l)Zipline$(): craft a zipline (look it up in JEI), jump onto it and hold $(l)right-click$() to ride$(li)$(l)Hide$(): press $(l)C$() in tall grass or hay', 'Landing & Dodging'),
+        text('$(l)Freerunner$():$(li)$(l)Wall run$(): sprint-jump along a wall, then press $(l)Mouse 4$()$(li)$(l)Horizontal wall run$(): the same, holding $(l)Mouse 4$()$(li)$(l)Cast away$(): while hanging on a ledge, look away from the wall and jump$(br2)$(l)Featherfall$():$(li)$(l)Skydive$(): press $(l)C$() while falling from high up', 'Agility Moves'),
+        text('$(l)Spring Step$():$(li)$(l)Wall jump$(): jump into a wall in mid-air and press jump again$(li)$(l)Long jump$(): sprint for a while, then quickly tap sneak and jump$(li)$(l)Charge jump$(): hold sneak standing still, then jump$(br2)$(l)Double Jump$() (capstone):$(li)Press jump again in mid-air for a second jump with a flip; hold back for a back flip$(li)Normal jumps can flip too: jump while holding back, or jump during a fast run', 'More Agility'),
+        text('$(li)Chain moves: slide into a vault, wall run into a wall jump, then breakfall$(li)A roll or breakfall saves you from most falls$(li)Watch your stamina before a long climb$(li)Keys can be changed in $(l)Options > Controls > Key Binds$() under ParCool', 'Tips'),
+        craft('parcool:parcool_guide', 'The $(l)ParCool Guide$() item shows every move with animations.'),
     ]),
     ('travel', 'gliding', 'Elytra', 'minecraft:elytra', [
         spot('minecraft:elytra', 'Elytra go in their own slot, so you can still wear a chestplate.'),

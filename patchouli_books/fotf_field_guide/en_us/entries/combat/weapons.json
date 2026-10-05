@@ -12,11 +12,6 @@
       "type": "patchouli:text",
       "text": "Every weapon counts as one or more categories: sword, light, two-handed, polearm, axe, blunt, scythe (hoes too), thrown, bow, crossbow or magic. Skill perks boost their categories.$(br2)Hover a weapon to see its damage with your skills; hold $(l)Shift$() for the breakdown and its categories.",
       "title": "Weapon Types"
-    },
-    {
-      "type": "patchouli:text",
-      "text": "$(l)Two-handed$() perks only work with an empty off hand (or a second copy of the same weapon).$(br2)$(l)Magic$() weapons' special attacks grow with your spell power; ones that are also $(l)thrown$() get your thrown-weapon perks too.$(br2)Cataclysm's $(l)Immolator$() and $(l)Annihilator$() are dual-wield: hold one in each hand, then hold right-click to charge their special.",
-      "title": "Special Attacks"
     }
   ]
 }
