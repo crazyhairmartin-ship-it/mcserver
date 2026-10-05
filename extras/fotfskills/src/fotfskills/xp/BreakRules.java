@@ -13,11 +13,19 @@ public final class BreakRules {
         boolean hasTag(String tag);
 
         boolean matureCrop();
+
+        /** Fully grown for any plant: no "age" property, or that age at its maximum (cocoa, berry bushes, wild crops). */
+        default boolean mature() {
+            return true;
+        }
     }
 
-    private record Rule(String block, boolean matureCrop, int experience) {
+    private record Rule(String block, boolean matureCrop, boolean mature, int experience) {
         boolean matches(Facts facts) {
             if (matureCrop && !facts.matureCrop()) {
+                return false;
+            }
+            if (mature && !facts.mature()) {
                 return false;
             }
             if (block == null) {
@@ -39,6 +47,7 @@ public final class BreakRules {
             JsonObject rule = element.getAsJsonObject();
             rules.add(new Rule(rule.has("block") ? rule.get("block").getAsString() : null,
                     rule.has("mature_crop") && rule.get("mature_crop").getAsBoolean(),
+                    rule.has("mature") && rule.get("mature").getAsBoolean(),
                     rule.get("experience").getAsInt()));
         }
         return new BreakRules(rules);

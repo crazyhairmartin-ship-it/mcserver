@@ -27,6 +27,16 @@ public record BlockFacts(BlockState state) implements BreakRules.Facts {
         return state.m_204336_(TAGS.computeIfAbsent(tag, t -> TagKey.m_203882_(ForgeRegistries.Keys.BLOCKS, new ResourceLocation(t))));
     }
 
+    @Override
+    public boolean mature() {
+        for (Property<?> property : state.m_61147_()) {
+            if (property instanceof IntegerProperty age && age.m_61708_().equals("age")) {
+                return state.m_61143_(age) == age.m_6908_().stream().max(Integer::compare).orElse(0);
+            }
+        }
+        return true;
+    }
+
     /** Fully grown: CropBlock.isMaxAge, or an "age" property at its maximum for other blocks in #minecraft:crops. */
     @Override
     public boolean matureCrop() {

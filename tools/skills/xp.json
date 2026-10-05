@@ -62,17 +62,28 @@
             },
             {
               "block": "#minecraft:flowers",
-              "experience": 1
+              "experience": 5
             },
             {
               "block": "minecraft:brown_mushroom",
-              "experience": 1
+              "experience": 5
             },
             {
               "block": "minecraft:red_mushroom",
-              "experience": 1
+              "experience": 5
+            },
+            {
+              "block": "#fotfskills:wild_plants",
+              "mature": true,
+              "experience": 5
             }
           ]
+        }
+      },
+      {
+        "type": "fotfskills:forage_pick",
+        "data": {
+          "experience": 5
         }
       }
     ],
@@ -115,7 +126,7 @@
           "experience": [
             {
               "condition": "bred",
-              "expression": "6"
+              "expression": "10"
             }
           ]
         }
@@ -328,7 +339,7 @@
           "experience": [
             {
               "condition": "bred",
-              "expression": "10"
+              "expression": "25"
             }
           ]
         }

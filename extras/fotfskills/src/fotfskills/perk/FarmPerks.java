@@ -98,7 +98,7 @@ public final class FarmPerks {
     public void onRightClick(PlayerInteractEvent.RightClickBlock event) {
         if (event.getEntity() instanceof ServerPlayer player && event.getLevel() instanceof ServerLevel level) {
             BlockState state = level.m_8055_(event.getPos());
-            if (age(state) != null || state.m_60734_() instanceof BeehiveBlock || state.m_60734_() instanceof ComposterBlock) {
+            if (age(state) != null || berries(state) != null || state.m_60734_() instanceof BeehiveBlock || state.m_60734_() instanceof ComposterBlock) {
                 clicks.add(new Click(player, level, event.getPos(), state));
             }
         }
@@ -116,7 +116,15 @@ public final class FarmPerks {
             }
             Block block = now.m_60734_();
             IntegerProperty harvestAge = age(now);
-            if (harvestAge != null && c.before.m_61143_(harvestAge) > now.m_61143_(harvestAge)) {
+            boolean picked = harvestAge != null && c.before.m_61143_(harvestAge) > now.m_61143_(harvestAge);
+            var berries = berries(now);
+            boolean pickedBerries = berries != null && c.before.m_61143_(berries) && !now.m_61143_(berries);
+            boolean wild = now.m_204336_(WILD_PLANTS);
+            if ((picked || pickedBerries) && wild) {
+                fotfskills.xp.AmountSource.award(c.player, "forage_pick", 1);   // wild berries, cocoa, wild grapes: Foraging
+                fotfskills.xp.AmountSource.award(c.player, "harvest", 1);       // and Farming too (extras come from Berry Picker)
+            }
+            if (picked && !wild) {
                 fotfskills.xp.AmountSource.award(c.player, "harvest", 1);    // picked without breaking (tomatoes, berries)
                 int copies = (Perks.roll(c.player, "crop_drops") ? 1 : 0) + (Perks.roll(c.player, "harvest_double") ? 1 : 0);
                 ItemStack crop = block.m_7397_(c.level, c.pos, c.before);           // Harvester / Harvest Moon extras
@@ -236,6 +244,20 @@ public final class FarmPerks {
             p = p.m_7495_();
         }
         return p;
+    }
+
+    private static final net.minecraft.tags.TagKey<Block> WILD_PLANTS = net.minecraft.tags.TagKey.m_203882_(
+            ForgeRegistries.Keys.BLOCKS, new ResourceLocation("fotfskills", "wild_plants"));
+
+    /** Glow berries ("berries") and torchberries ("has_torchberries"): picked when the flag goes from true to false. */
+    private static net.minecraft.world.level.block.state.properties.BooleanProperty berries(BlockState state) {
+        for (Property<?> property : state.m_61147_()) {
+            if (property instanceof net.minecraft.world.level.block.state.properties.BooleanProperty flag
+                    && (flag.m_61708_().equals("berries") || flag.m_61708_().equals("has_torchberries"))) {
+                return flag;
+            }
+        }
+        return null;
     }
 
     private static IntegerProperty age(BlockState state) {
