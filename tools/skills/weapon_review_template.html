@@ -175,7 +175,11 @@ render();
   try { db = window.claude ? await window.claude.use("db") : null; } catch (_) { db = null; }
   if (!db) { counts("not saving: open this page on claude.ai while signed in"); return; }
   db.collection("weapons").onSnapshot(snap => {
-    for (const d of snap.docs) { const v = d.data(); if (v && v.id) saved[v.id] = v; }
+    // copy each doc: the snapshot's objects are read-only, so editing them in place silently did nothing
+    for (const d of snap.docs) {
+      const v = d.data();
+      if (v && v.id) saved[v.id] = { id: v.id, types: Array.isArray(v.types) ? v.types.slice() : [], confirmed: !!v.confirmed };
+    }
     render();
     counts("choices save automatically");
   }, err => counts("couldn't load saved choices (" + (err && err.code || "error") + ")"));
