@@ -276,7 +276,7 @@ public final class WeaponPerks {
      * Cleave / Reaper's Due: damage to hostile mobs around center (never pets, villagers, players or armour stands);
      * frontOnly keeps only mobs in front of the player.
      */
-    private static final java.util.Set<String> WEAPON_MODS = java.util.Set.of("simplyswords", "cataclysm", "mowziesmobs",
+    private static final java.util.Set<String> WEAPON_MODS = java.util.Set.of("cataclysm", "mowziesmobs",
             "alexscaves", "twilightforest");
     private static final String[] MELEE = {"sword", "light", "two_handed", "polearm", "axe", "blunt", "scythe", "pickaxe"};
 

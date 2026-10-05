@@ -173,7 +173,7 @@ ENTRIES = [
 
     # ---------- Combat & Gear ----------
     ('combat', 'weapons', 'Weapons & Shields', 'spartanweaponry:iron_longsword', [
-        text('$(l)Spartan Weaponry$(): daggers, spears, halberds, longbows and more, in every material.$(br2)$(l)Spartan Shields$(): more shields.$(br2)$(l)Simply Swords$(): rare runic and legendary weapons, found in dungeons.'),
+        text('$(l)Spartan Weaponry$(): daggers, spears, halberds, longbows and more, in every material.$(br2)$(l)Spartan Shields$(): more shields.'),
     ]),
     ('combat', 'bosses', 'Bosses', 'cataclysm:ignitium_ingot', [
         text('$(l)L_Ender\'s Cataclysm$() and $(l)Mowzie\'s Mobs$() add huge bosses in their own arenas.$(br2)They only fight you if you go to them, so the rest of the world stays normal. Bring your best gear!'),

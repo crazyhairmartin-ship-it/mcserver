@@ -84,10 +84,6 @@ def abilities(mods, items):
                     if k in lang and ('tooltip' in k or 'rightclick' in k or k.endswith('.desc')):
                         keys.append(k)
                 keys += [k for k in lang if k.startswith(f'item.{ns}.{cls.lower()}.')]
-        if path in ('watcher_claymore', 'watching_warglaive'):
-            form = 'claymore' if 'claymore' in path else 'warglaive'
-            keys += [k for k in lang if k.startswith('item.simplyswords.watchersworditem.')
-                     and (form in k or not ('claymore' in k or 'warglaive' in k))]
         lines = []
         for k in sorted(dict.fromkeys(keys), key=_key_order):
             v = re.sub(r'§.', '', lang[k]).replace('%%', '%')
@@ -95,8 +91,6 @@ def abilities(mods, items):
             v = re.sub(r'[-꬀-꯿]', '', v).strip()    # icon glyphs from the mod's font
             if v and v not in lines and len(v) > 3:
                 lines.append(v)
-        if not lines and path.startswith('runic_') and ns == 'simplyswords':
-            lines = ['Rolls one random runic power (shown on the item in game); no fixed ability']
         if lines:
             out[it['id']] = lines
     return out
