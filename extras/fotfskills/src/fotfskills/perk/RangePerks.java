@@ -55,8 +55,7 @@ public final class RangePerks {
         long now = CombatState.now(player);
         boolean fullDraw = arrow.m_36792_();      // read before Seeker marks every arrow as a crit
         double seeker = Perks.get(player, "seeker");
-        boolean seeks = kind == Projectiles.Kind.ARROW || seeker > 0;   // thrown weapons home only with Seeker
-        if (seeks && Perks.random() < Perks.get(player, "homing") * (1 + 2 * seeker)) {
+        if (Perks.random() < Perks.get(player, "homing") * (1 + 2 * seeker)) {   // arrows and thrown weapons alike
             homers.add(new Homer(arrow, now + 60));
         }
         if (seeker > 0) {

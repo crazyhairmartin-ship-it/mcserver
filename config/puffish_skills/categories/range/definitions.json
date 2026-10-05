@@ -851,7 +851,7 @@
   },
   "homing_arrows_1": {
     "title": "Homing Arrows",
-    "description": "5%: arrows curve to the nearest hostile mob",
+    "description": "5%: arrows and thrown weapons curve to the nearest hostile mob",
     "icon": {
       "type": "item",
       "data": {
@@ -878,7 +878,7 @@
   },
   "homing_arrows_2": {
     "title": "Homing Arrows",
-    "description": "10%: arrows curve to the nearest hostile mob",
+    "description": "10%: arrows and thrown weapons curve to the nearest hostile mob",
     "icon": {
       "type": "item",
       "data": {
@@ -905,7 +905,7 @@
   },
   "homing_arrows_3": {
     "title": "Homing Arrows",
-    "description": "15%: arrows curve to the nearest hostile mob",
+    "description": "15%: arrows and thrown weapons curve to the nearest hostile mob",
     "icon": {
       "type": "item",
       "data": {
@@ -932,7 +932,7 @@
   },
   "homing_arrows_4": {
     "title": "Homing Arrows",
-    "description": "20%: arrows curve to the nearest hostile mob",
+    "description": "20%: arrows and thrown weapons curve to the nearest hostile mob",
     "icon": {
       "type": "item",
       "data": {
@@ -1283,7 +1283,7 @@
   },
   "retriever_1": {
     "title": "Retriever",
-    "description": "50% that a thrown weapon flies back to you when it hits (always at max)",
+    "description": "50% that a thrown weapon flies back to you when it hits",
     "icon": {
       "type": "item",
       "data": {
@@ -1310,7 +1310,7 @@
   },
   "retriever_2": {
     "title": "Retriever",
-    "description": "100% that a thrown weapon flies back to you when it hits (always at max)",
+    "description": "100% that a thrown weapon flies back to you when it hits",
     "icon": {
       "type": "item",
       "data": {

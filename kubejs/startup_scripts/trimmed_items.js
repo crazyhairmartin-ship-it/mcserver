@@ -1082,3 +1082,5 @@ global.TRIMMED_ITEMS = global.TRIMMED_ITEMS.concat([
   'ars_nouveau:glyph_wither'
 ])
 
+// Supplementaries quiver: taken out (no recipe, hidden, skeletons don't carry one). Existing quivers still work so their arrows can come out.
+global.TRIMMED_ITEMS = global.TRIMMED_ITEMS.concat(['supplementaries:quiver'])
