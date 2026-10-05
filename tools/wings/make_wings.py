@@ -81,10 +81,13 @@ def shrink(geo):
                 uv[1] += 1                      # the left wing read its squares one row too high
             cube['uv'] = box_faces(uv, cube['size'])
             if cube['size'][1] < 0.5:           # feather planes: GeckoLib puts the texture's top at the wing's back edge;
-                for face in ('up', 'down'):     # flip front-to-back so the coverts sit on the leading edge (left/right
-                    f = cube['uv'][face]        # is already mirrored correctly by "mirror")
+                for face in ('up', 'down'):     # flip front-to-back so the coverts sit on the leading edge
+                    f = cube['uv'][face]
                     f['uv'] = [f['uv'][0], f['uv'][1] + f['uv_size'][1]]
                     f['uv_size'] = [f['uv_size'][0], -f['uv_size'][1]]
+                    if name.startswith('left'):  # leftWing is the rider's left (GeckoLib mirrors x): its tips pointed in
+                        f['uv'] = [f['uv'][0] + f['uv_size'][0], f['uv'][1]]
+                        f['uv_size'] = [-f['uv_size'][0], f['uv_size'][1]]
             cube['origin'] = scaled(cube['origin'], root)
             cube['size'] = [round(s * SCALE, 4) if s > 0.5 else s for s in cube['size']]
     return geo
