@@ -336,7 +336,7 @@ hash = "4682b65decfa2458c9ee462d5d9619ba42e54e670bfcd412a03fd095dd190831"
 
 [[files]]
 file = "config/puffish_skills/categories/range/definitions.json"
-hash = "5240dd8fa9f707e72123e24d4237fc4bdac2de5cb19ae9600061ba9a546466a7"
+hash = "6f102097bc345c31d8f29c4709466d232504a1a74e3c0986382ed897a05b8067"
 
 [[files]]
 file = "config/puffish_skills/categories/range/experience.json"
@@ -373,6 +373,10 @@ hash = "48ee22c33683c5ec4dd6f48eb2d0cb0830d1fadf6c170dd0416f00e8601bcde7"
 [[files]]
 file = "config/sophisticatedcore-client.toml"
 hash = "a02244dde2f77ca6abc99a959c4377e90780c97de9b5dab9ed09191e80285426"
+
+[[files]]
+file = "config/supplementaries-common.toml"
+hash = "2a1146367ad3f1dba0ed6029e96f08f5acff5436e5b1cf690390f143e21f0ee3"
 
 [[files]]
 file = "config/tconstruct-common.toml"
@@ -1935,6 +1939,10 @@ file = "kubejs/server_scripts/trim_spartan.js"
 hash = "af05651a09e770707b62cf6059d8e861fa74cb21c36030a342b4e0ec96529e8c"
 
 [[files]]
+file = "kubejs/server_scripts/trim_supplementaries.js"
+hash = "a020fbcfad25cb9f85481ab086209bb80f221c80f5ad9f7e24c33ae1750d3cd2"
+
+[[files]]
 file = "kubejs/server_scripts/trim_tinkers.js"
 hash = "5e499a0bd92efadf01a7be29f1b1b4f3142da563a3903be3c8f00af4de16cc1a"
 
@@ -1964,7 +1972,7 @@ hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
-hash = "2650bc1b00c9490fd0a3b9da6a572e680489343b0297a9e9599a149f85392e05"
+hash = "451930f095554be55f95ee19905a6098d5c40604671dd4662e5ad09a9b09a9a1"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -2178,7 +2186,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "dc2ed6176e459b70421d052658e7e1d2e8df717603ffffdb60674adae40081d3"
+hash = "364cf336b26e3ca16a4b1e4e13d7ed38e73cd10de7dfc40e6259979e6182459f"
 metafile = true
 
 [[files]]
