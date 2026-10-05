@@ -46,7 +46,7 @@ cataclysm,cataclysm:black_steel_pickaxe,tool,PickaxeItem,3.0,-2.80
 cataclysm,cataclysm:black_steel_shovel,tool,ShovelItem,3.5,-3.00
 cataclysm,cataclysm:black_steel_sword,sword,SwordItem,5.0,-2.40
 cataclysm,cataclysm:brontes,two_handed blunt thrown,Brontes,12.0,-3.00
-cataclysm,cataclysm:ceraunus,two_handed,Ceraunus,15.0,-3.30
+cataclysm,cataclysm:ceraunus,two_handed thrown,Ceraunus,15.0,-3.30
 cataclysm,cataclysm:coral_bardiche,two_handed polearm axe thrown,Coral_Bardiche,9.0,-3.20
 cataclysm,cataclysm:coral_spear,polearm thrown,Coral_Spear,5.5,-2.90
 cataclysm,cataclysm:cursed_bow,bow magic,Cursed_bow,0.0,0.00
@@ -55,15 +55,18 @@ cataclysm,cataclysm:gauntlet_of_guard,light blunt,Gauntlet_of_Guard,10.0,-2.40
 cataclysm,cataclysm:gauntlet_of_maelstrom,light blunt magic,Gauntlet_of_Maelstrom,10.0,-2.40
 cataclysm,cataclysm:infernal_forge,two_handed blunt,Infernal_forge,12.0,-3.00
 cataclysm,cataclysm:khopesh,sword light,Khopesh,4.0,-2.60
+cataclysm,cataclysm:laser_gatling,crossbow magic,Laser_Gatling,,
 cataclysm,cataclysm:meat_shredder,two_handed polearm,Meat_Shredder,7.5,-2.60
 cataclysm,cataclysm:soul_render,two_handed polearm axe,Soul_Render,14.0,-2.90
 cataclysm,cataclysm:the_annihilator,two_handed axe,The_Annihilator,7.5,-2.40
-cataclysm,cataclysm:the_immolator,two_handed blunt,The_Immolator,7.5,-2.40
+cataclysm,cataclysm:the_immolator,two_handed blunt magic,The_Immolator,7.5,-2.40
 cataclysm,cataclysm:the_incinerator,sword two_handed magic,The_Incinerator,13.0,-2.60
 cataclysm,cataclysm:tidal_claws,light thrown,Tidal_Claws,7.0,-2.40
 cataclysm,cataclysm:void_assault_shoulder_weapon,two_handed crossbow magic,Void_Assault_SHoulder_Weapon,0.0,0.00
+cataclysm,cataclysm:void_core,magic,Void_core,,
 cataclysm,cataclysm:void_forge,two_handed blunt,Void_forge,12.0,-3.00
 cataclysm,cataclysm:wither_assault_shoulder_weapon,two_handed crossbow magic,Wither_Assault_SHoulder_Weapon,0.0,0.00
+cataclysm,cataclysm:wrath_of_the_desert,bow magic,Wrath_of_the_desert,,
 farm_and_charm,farm_and_charm:pitchfork,polearm scythe,HoeItem,1.0,-1.00
 farmersdelight,farmersdelight:diamond_knife,light,KnifeItem,3.5,-2.00
 farmersdelight,farmersdelight:flint_knife,light,KnifeItem,1.5,-2.00
@@ -81,9 +84,9 @@ irons_spellbooks,irons_spellbooks:autoloader_crossbow,crossbow,AutoloaderCrossbo
 irons_spellbooks,irons_spellbooks:blood_staff,light magic,StaffItem,7.0,-3.00
 irons_spellbooks,irons_spellbooks:boreal_blade,sword magic,MagicSwordItem,15.0,-3.10
 irons_spellbooks,irons_spellbooks:claymore,,ExtendedSwordItem,9.0,-2.70
-irons_spellbooks,irons_spellbooks:decrepit_scythe,sword light scythe,ExtendedSwordItem,10.0,-2.60
+irons_spellbooks,irons_spellbooks:decrepit_scythe,two_handed scythe,ExtendedSwordItem,10.0,-2.60
 irons_spellbooks,irons_spellbooks:graybeard_staff,magic,StaffItem,2.0,-3.00
-irons_spellbooks,irons_spellbooks:hellrazor,sword light scythe magic,MagicSwordItem,12.0,-2.60
+irons_spellbooks,irons_spellbooks:hellrazor,two_handed scythe magic,MagicSwordItem,12.0,-2.60
 irons_spellbooks,irons_spellbooks:hither_thither_wand,magic,HitherThitherWand,0.0,0.00
 irons_spellbooks,irons_spellbooks:ice_staff,magic,StaffItem,4.0,-3.00
 irons_spellbooks,irons_spellbooks:keeper_flamberge,sword light,ExtendedSwordItem,10.0,-2.70
@@ -94,7 +97,7 @@ irons_spellbooks,irons_spellbooks:misery,,MagicSwordItem,7.0,-2.10
 irons_spellbooks,irons_spellbooks:pyrium_staff,two_handed polearm magic,PyriumStaffItem,8.0,-2.50
 irons_spellbooks,irons_spellbooks:spellbreaker,sword magic,MagicSwordItem,9.0,-2.20
 irons_spellbooks,irons_spellbooks:staff_of_the_nines,,StaffOfTheNines,0.0,0.00
-irons_spellbooks,irons_spellbooks:twilight_gale,polearm magic,TwilightGaleItem,12.0,-2.60
+irons_spellbooks,irons_spellbooks:twilight_gale,polearm thrown magic,TwilightGaleItem,12.0,-2.60
 lilis_lucky_lures,lilis_lucky_lures:spear,polearm thrown,SpearItem,6.0,-2.70
 minecraft,minecraft:bow,bow,BowItem,0.0,0.00
 minecraft,minecraft:crossbow,crossbow,CrossbowItem,0.0,0.00

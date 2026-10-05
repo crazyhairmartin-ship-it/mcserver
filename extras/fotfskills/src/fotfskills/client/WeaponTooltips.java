@@ -25,6 +25,9 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
  */
 public final class WeaponTooltips {
     private static final String[] MELEE = {"sword", "light", "two_handed", "polearm", "axe", "blunt", "scythe", "pickaxe"};
+    private static final String[] CATEGORIES = {"sword", "light", "two_handed", "polearm", "axe", "blunt", "scythe", "thrown", "bow",
+            "crossbow", "magic", "pickaxe"};
+    private static final java.util.Map<String, String> LABELS = java.util.Map.of("two_handed", "Two-handed");
 
     @SubscribeEvent
     public void onTooltip(ItemTooltipEvent event) {
@@ -40,6 +43,17 @@ public final class WeaponTooltips {
             }
         }
         List<Component> tip = event.getToolTip();
+        if (Screen.m_96638_()) {
+            List<String> all = new java.util.ArrayList<>();
+            for (String type : CATEGORIES) {
+                if (Weapons.is(stack, type)) {
+                    all.add(LABELS.getOrDefault(type, Character.toUpperCase(type.charAt(0)) + type.substring(1)));
+                }
+            }
+            if (!all.isEmpty()) {
+                tip.add(Component.m_237113_("§8Counts as: §7" + String.join(", ", all)));
+            }
+        }
         boolean offHandBusy = types.contains("two_handed") && !Weapons.twoHanded(player, stack);
         if (offHandBusy) {
             types.remove("two_handed");

@@ -147,7 +147,7 @@ public final class FarmPerks {
 
     /**
      * Sweeping Harvest for crops picked by right-click: finds each nearby plant of the same crop by its base (2 blocks up or
-     * down, for tall plants on stepped rows) and picks it on the same half the player clicked, if that half is ripe.
+     * down, for tall plants on stepped rows) and picks every ripe block of it, top and bottom halves alike.
      */
     private static void sweepByHand(ServerPlayer player, ServerLevel level, BlockPos pos, BlockState mature, IntegerProperty age) {
         int radius = Math.min(2, (int) Math.round(Perks.get(player, "sweeping_harvest")));
@@ -156,8 +156,6 @@ public final class FarmPerks {
         }
         net.minecraft.world.level.block.Block crop = mature.m_60734_();
         int ripe = java.util.Collections.max(age.m_6908_());
-        BlockPos clickedBase = base(level, pos, crop);
-        int half = pos.m_123342_() - clickedBase.m_123342_();
         sweeping = true;
         try {
             java.util.Set<BlockPos> bases = new java.util.HashSet<>();
@@ -166,14 +164,18 @@ public final class FarmPerks {
                     bases.add(base(level, p.m_7949_(), crop));
                 }
             }
-            bases.remove(clickedBase);
             for (BlockPos plant : bases) {
-                BlockPos target = plant.m_6630_(half);
-                BlockState state = level.m_8055_(target);
-                if (state.m_60734_() == crop && (!state.m_61138_(age) || state.m_61143_(age) == ripe)) {
-                    state.m_60664_(level, player, net.minecraft.world.InteractionHand.MAIN_HAND,
-                            new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.m_82512_(target),
-                                    net.minecraft.core.Direction.UP, target, false));
+                for (int h = 0; h < 4; h++) {
+                    BlockPos target = plant.m_6630_(h);
+                    BlockState state = level.m_8055_(target);
+                    if (state.m_60734_() != crop) {
+                        break;
+                    }
+                    if (!target.equals(pos) && (!state.m_61138_(age) || state.m_61143_(age) == ripe)) {
+                        state.m_60664_(level, player, net.minecraft.world.InteractionHand.MAIN_HAND,
+                                new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.m_82512_(target),
+                                        net.minecraft.core.Direction.UP, target, false));
+                    }
                 }
             }
         } finally {

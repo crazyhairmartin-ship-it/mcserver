@@ -38,6 +38,14 @@
       "required": false
     },
     {
+      "id": "cataclysm:laser_gatling",
+      "required": false
+    },
+    {
+      "id": "cataclysm:the_immolator",
+      "required": false
+    },
+    {
       "id": "cataclysm:the_incinerator",
       "required": false
     },
@@ -46,7 +54,15 @@
       "required": false
     },
     {
+      "id": "cataclysm:void_core",
+      "required": false
+    },
+    {
       "id": "cataclysm:wither_assault_shoulder_weapon",
+      "required": false
+    },
+    {
+      "id": "cataclysm:wrath_of_the_desert",
       "required": false
     },
     {

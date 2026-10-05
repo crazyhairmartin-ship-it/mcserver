@@ -24,8 +24,9 @@ public final class Weapons {
         return stack.m_204117_(tag);
     }
 
-    /** Two-handed perks only count while the off hand is empty. */
+    /** Two-handed perks only count while the off hand is empty (or holds a second one of the same weapon, like the Immolator wants). */
     public static boolean twoHanded(net.minecraft.world.entity.LivingEntity holder, ItemStack stack) {
-        return is(stack, "two_handed") && holder.m_21206_().m_41619_();
+        ItemStack off = holder.m_21206_();
+        return is(stack, "two_handed") && (off.m_41619_() || off.m_41720_() == stack.m_41720_());
     }
 }
