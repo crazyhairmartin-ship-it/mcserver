@@ -117,6 +117,8 @@ public final class FarmPerks {
             Block block = now.m_60734_();
             IntegerProperty harvestAge = age(now);
             if (harvestAge != null && c.before.m_61143_(harvestAge) > now.m_61143_(harvestAge)) {
+                fotfskills.xp.AmountSource.award(c.player, "harvest", 1);    // picked without breaking (tomatoes, berries)
+                wholePlant(c.player, c.level, c.pos, c.before, harvestAge);
                 sweepByHand(c.player, c.level, c.pos, c.before, harvestAge);
             }
             if (block instanceof ComposterBlock) {
@@ -175,6 +177,41 @@ public final class FarmPerks {
                         state.m_60664_(level, player, net.minecraft.world.InteractionHand.MAIN_HAND,
                                 new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.m_82512_(target),
                                         net.minecraft.core.Direction.UP, target, false));
+                        BlockState after = level.m_8055_(target);
+                        if (after.m_60734_() == crop && after.m_61138_(age) && after.m_61143_(age) < ripe) {
+                            fotfskills.xp.AmountSource.award(player, "harvest", 1);
+                        }
+                    }
+                }
+            }
+        } finally {
+            sweeping = false;
+        }
+    }
+
+    /** Picking one block of a tall plant (two-block tomatoes and the like) picks its other ripe blocks too. */
+    private static void wholePlant(ServerPlayer player, ServerLevel level, BlockPos pos, BlockState mature, IntegerProperty age) {
+        if (sweeping) {
+            return;
+        }
+        net.minecraft.world.level.block.Block crop = mature.m_60734_();
+        int ripe = java.util.Collections.max(age.m_6908_());
+        BlockPos plant = base(level, pos, crop);
+        sweeping = true;
+        try {
+            for (int h = 0; h < 4; h++) {
+                BlockPos target = plant.m_6630_(h);
+                BlockState state = level.m_8055_(target);
+                if (state.m_60734_() != crop) {
+                    break;
+                }
+                if (!target.equals(pos) && state.m_61138_(age) && state.m_61143_(age) == ripe) {
+                    state.m_60664_(level, player, net.minecraft.world.InteractionHand.MAIN_HAND,
+                            new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.m_82512_(target),
+                                    net.minecraft.core.Direction.UP, target, false));
+                    BlockState after = level.m_8055_(target);
+                    if (after.m_60734_() == crop && after.m_61143_(age) < ripe) {
+                        fotfskills.xp.AmountSource.award(player, "harvest", 1);
                     }
                 }
             }

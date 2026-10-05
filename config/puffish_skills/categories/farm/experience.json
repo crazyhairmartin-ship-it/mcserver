@@ -19,6 +19,12 @@
       }
     },
     {
+      "type": "fotfskills:harvest",
+      "data": {
+        "experience": 3
+      }
+    },
+    {
       "type": "puffish_skills:increase_stat",
       "data": {
         "variables": {
