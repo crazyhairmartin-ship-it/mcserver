@@ -10,7 +10,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Press $(l)Y$() for minimap settings: size, what it shows and more.$(br2)Waypoints show on your minimap to point you in the right direction.",
+      "text": "Press $(l)U$() to see and edit your waypoints. They show on your minimap to point you in the right direction.$(br2)To change the minimap's size and what it shows, go to $(l)Mods$() on the title screen and open $(l)Xaero's Minimap$() config.",
       "title": "Settings"
     }
   ]

@@ -87,7 +87,7 @@ ENTRIES = [
     ]),
     ('getting_started', 'maps', 'Maps & Waypoints', 'minecraft:filled_map', [
         text('The minimap sits in the corner of your screen. It shows players and your tamed pets.$(br2)Press $(l)M$() for the big world map.$(br2)Right-click on the world map to create a $(l)waypoint$(), so you can find a place again.'),
-        text('Press $(l)Y$() for minimap settings: size, what it shows and more.$(br2)Waypoints show on your minimap to point you in the right direction.', 'Settings'),
+        text('Press $(l)U$() to see and edit your waypoints. They show on your minimap to point you in the right direction.$(br2)To change the minimap\'s size and what it shows, go to $(l)Mods$() on the title screen and open $(l)Xaero\'s Minimap$() config.', 'Settings'),
     ]),
     ('getting_started', 'claims', 'Your Base & Friends', 'minecraft:white_banner', [
         text('Claim your land so nobody else can break blocks or open chests there.$(br2)Open the world map ($(l)M$()), then right-click chunks to claim them. Or press the $(l)\'$() (apostrophe) key for the claims menu.'),
@@ -105,8 +105,10 @@ ENTRIES = [
         text('Right-click an animal or chest while crouching with empty hands to $(l)carry$() it (Carry On). Chests keep everything inside.', 'Carrying Things'),
     ]),
     ('getting_started', 'keys', 'Handy Keys', 'minecraft:tripwire_hook', [
-        text('$(li)$(l)Ctrl+O$(): show/hide JEI$(li)$(l)B$(): backpack$(li)$(l)V$(): cast spell$(li)$(l)R$(): spell wheel$(li)$(l)Caps Lock$(): talk$(li)$(l)Y$(): minimap settings$(li)$(l)F7$(): shaders on/off'),
-        text('Change any key in $(l)Options > Controls > Key Binds$(). The search bar there helps.$(br2)$(l)Reset All$() brings back the server\'s recommended keys.', 'Changing Keys'),
+        text('$(li)$(l)Ctrl+O$(): show/hide JEI$(li)$(l)M$(): world map$(li)$(l)U$(): waypoints$(li)$(l)B$(): backpack$(li)$(l)I$(): quiver$(li)$(l)V$(): cast spell$(li)$(l)R$(): spell wheel$(li)$(l)Caps Lock$(): talk$(li)$(l)G$(): voice chat groups'),
+        text('$(li)$(l)Z$(): Alex\'s Caves ability$(li)$(l)H$(): kirin breath (while riding one)$(li)$(l)X$(): Cataclysm ability$(li)$(l)J$(): instrument in your hand$(li)$(l)F7$(): shaders on/off', 'Riding & Abilities'),
+        text('Change any key in $(l)Options > Controls > Key Binds$(). The search bar there helps.$(br2)$(l)Reset All$() brings back the server\'s recommended keys. Do this after big pack updates.', 'Changing Keys'),
+        text('Shaders add real shadows, sky and water. Turn them on in $(l)Options > Video Settings > Shader Packs$().$(br2)$(l)Complementary$() looks the best; $(l)MakeUp$() and $(l)Super Duper Vanilla$() are lighter for slower computers. $(l)F7$() toggles them.', 'Shaders'),
     ]),
 
     # ---------- Creatures & Companions ----------

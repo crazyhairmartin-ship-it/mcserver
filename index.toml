@@ -1891,6 +1891,10 @@ file = "kubejs/server_scripts/keep_inventory.js"
 hash = "8032ba7d5b5cd998c8cb13a3876cf1731a60bca51b37c245d6eb114462b9e63b"
 
 [[files]]
+file = "kubejs/server_scripts/login_messages.js"
+hash = "3d429b488c97f25c96fc00491261cce35ce0f0c25e74afd128f482f063d2f3db"
+
+[[files]]
 file = "kubejs/server_scripts/long_climbing_rope.js"
 hash = "08d0cf09fccbf79e3391e7496b483041a0d222102eb5955cc01f2124f0ebee73"
 
@@ -2851,11 +2855,11 @@ hash = "307bf3f5cae42cb4bd05f3a5457ba2b86186fcda862910bdd79cdfe903a4be68"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/keys.json"
-hash = "ab1284df8303b4578978babc3f539b9e6a64a8803c519d8570e991bbc04e41a1"
+hash = "39cc6bb2662d00e7a451c6979f2404f7b46cd9b86a1abe81383c21a6ec56c83e"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/maps.json"
-hash = "f20753f968157ce2c6fc4ff63a3d469b518a939b5874a39e135d75d6e6a09717"
+hash = "095bc0ddb13716a7c2ee366ab5e8bf6652bf1182109c2be41b0a7c990ac042c1"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/getting_started/skills.json"
@@ -2936,6 +2940,11 @@ hash = "b624442887e1aa37f2d8c5017fd5b1366ef8eafcf0b89a78f53a8c6bbe4cd54c"
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/travel/ships.json"
 hash = "42b55919ec45ffed9dc84219b3ce460decfc6a29fd0db4d169777fb8f1ec9b74"
+
+[[files]]
+file = "shaderpacks/complementary-reimagined.pw.toml"
+hash = "75d1d2488a0c332a9a58af7e57f980a1b006c02b3a1c580fbd50443088e4eab0"
+metafile = true
 
 [[files]]
 file = "shaderpacks/makeup-ultra-fast-shaders.pw.toml"

@@ -6,12 +6,22 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(li)$(l)Ctrl+O$(): show/hide JEI$(li)$(l)B$(): backpack$(li)$(l)V$(): cast spell$(li)$(l)R$(): spell wheel$(li)$(l)Caps Lock$(): talk$(li)$(l)Y$(): minimap settings$(li)$(l)F7$(): shaders on/off"
+      "text": "$(li)$(l)Ctrl+O$(): show/hide JEI$(li)$(l)M$(): world map$(li)$(l)U$(): waypoints$(li)$(l)B$(): backpack$(li)$(l)I$(): quiver$(li)$(l)V$(): cast spell$(li)$(l)R$(): spell wheel$(li)$(l)Caps Lock$(): talk$(li)$(l)G$(): voice chat groups"
     },
     {
       "type": "patchouli:text",
-      "text": "Change any key in $(l)Options > Controls > Key Binds$(). The search bar there helps.$(br2)$(l)Reset All$() brings back the server's recommended keys.",
+      "text": "$(li)$(l)Z$(): Alex's Caves ability$(li)$(l)H$(): kirin breath (while riding one)$(li)$(l)X$(): Cataclysm ability$(li)$(l)J$(): instrument in your hand$(li)$(l)F7$(): shaders on/off",
+      "title": "Riding & Abilities"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Change any key in $(l)Options > Controls > Key Binds$(). The search bar there helps.$(br2)$(l)Reset All$() brings back the server's recommended keys. Do this after big pack updates.",
       "title": "Changing Keys"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Shaders add real shadows, sky and water. Turn them on in $(l)Options > Video Settings > Shader Packs$().$(br2)$(l)Complementary$() looks the best; $(l)MakeUp$() and $(l)Super Duper Vanilla$() are lighter for slower computers. $(l)F7$() toggles them.",
+      "title": "Shaders"
     }
   ]
 }
