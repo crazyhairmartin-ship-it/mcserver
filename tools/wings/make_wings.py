@@ -28,15 +28,15 @@ OUT = PACK / 'kubejs' / 'assets' / 'ultimate_unicorn_mod'
 JAR = PACK.parent / 'server-test' / 'data' / 'mods' / 'ultimate_unicorn_mod-1.20.1-2.0.0.jar'
 GEO = 'assets/ultimate_unicorn_mod/geo/magical_horse_model.geo.json'
 TEX = 'assets/ultimate_unicorn_mod/textures/entity/'
-SCALE = 0.72                                     # the wing bones' size: the nightmare's wings fill it
+SCALE = 0.8                                     # the wing bones' size: the nightmare's wings fill it
 WINGS = ('rightWing', 'rightWingTip', 'leftWing', 'leftWingTip')
 ROOTS = {'rightWing': 'rightWing', 'rightWingTip': 'rightWing', 'leftWing': 'leftWing', 'leftWingTip': 'leftWing'}
 INNER, TIP = (0, 122), (0, 164)                  # top-left of each panel's top-face square; the underside sits 42 px right
 # skin -> feather length (1 fills the wing bones; pegasi draw shorter feathers so their wings look smaller) and colours:
 # light (shaft), vane from mid to dark, rim (feather edge)
 SKINS = {
-    'pegasus_blue.png': (0.76, dict(light=(250, 252, 255), mid=(232, 236, 242), dark=(198, 206, 218), rim=(150, 160, 178))),
-    'pegasus_big_blue.png': (0.76, dict(light=(242, 248, 255), mid=(206, 220, 236), dark=(166, 186, 210), rim=(112, 134, 166))),
+    'pegasus_blue.png': (0.69, dict(light=(250, 252, 255), mid=(232, 236, 242), dark=(198, 206, 218), rim=(150, 160, 178))),
+    'pegasus_big_blue.png': (0.69, dict(light=(242, 248, 255), mid=(206, 220, 236), dark=(166, 186, 210), rim=(112, 134, 166))),
     'nightmare_black.png': (1.0, dict(light=(96, 16, 16), mid=(30, 26, 28), dark=(14, 12, 13), rim=(6, 4, 5))),
     'nightmare_big_red.png': (1.0, dict(light=(150, 24, 20), mid=(70, 12, 12), dark=(30, 8, 8), rim=(8, 4, 4))),
     'kirin_golden.png': (1.0, dict(light=(252, 226, 128), mid=(222, 180, 62), dark=(170, 126, 38), rim=(112, 78, 22))),
@@ -80,13 +80,11 @@ def shrink(geo):
             if name.startswith('left'):
                 uv[1] += 1                      # the left wing read its squares one row too high
             cube['uv'] = box_faces(uv, cube['size'])
-            if name.startswith('right'):        # "mirror" doesn't flip top and bottom faces, so one side reads its feathers
-                                                # backwards: flip that side's (in game, the left wing of the rider was right)
-                for face in ('up', 'down'):
-                    if face in cube['uv'] and cube['size'][1] < 0.5:
-                        f = cube['uv'][face]
-                        f['uv'] = [f['uv'][0] + f['uv_size'][0], f['uv'][1]]
-                        f['uv_size'] = [-f['uv_size'][0], f['uv_size'][1]]
+            if cube['size'][1] < 0.5:           # feather planes: GeckoLib puts the texture's top at the wing's back edge;
+                for face in ('up', 'down'):     # flip front-to-back so the coverts sit on the leading edge (left/right
+                    f = cube['uv'][face]        # is already mirrored correctly by "mirror")
+                    f['uv'] = [f['uv'][0], f['uv'][1] + f['uv_size'][1]]
+                    f['uv_size'] = [f['uv_size'][0], -f['uv_size'][1]]
             cube['origin'] = scaled(cube['origin'], root)
             cube['size'] = [round(s * SCALE, 4) if s > 0.5 else s for s in cube['size']]
     return geo
