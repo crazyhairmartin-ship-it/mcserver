@@ -546,13 +546,13 @@
       }
     ]
   },
-  "book_saver_1": {
-    "title": "Book Saver",
-    "description": "Enchanted gear about to break turns into an enchanted book keeping 100% of its enchantments",
+  "salvager_1": {
+    "title": "Salvager",
+    "description": "15% that disenchanting gear on a grindstone gives back one of its repair material",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:enchanted_book"
+        "item": "minecraft:grindstone"
       }
     },
     "frame": {
@@ -567,8 +567,62 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "book_saver",
-          "value": 1
+          "perk": "salvager",
+          "value": 0.15
+        }
+      }
+    ]
+  },
+  "salvager_2": {
+    "title": "Salvager",
+    "description": "30% that disenchanting gear on a grindstone gives back one of its repair material",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:grindstone"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "salvager",
+          "value": 0.15
+        }
+      }
+    ]
+  },
+  "salvager_3": {
+    "title": "Salvager",
+    "description": "45% that disenchanting gear on a grindstone gives back one of its repair material",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:grindstone"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "salvager",
+          "value": 0.15
         }
       }
     ]
@@ -1066,13 +1120,13 @@
       }
     ]
   },
-  "salvager_1": {
-    "title": "Salvager",
-    "description": "15% that disenchanting gear on a grindstone gives back one of its repair material",
+  "book_saver_1": {
+    "title": "Book Saver",
+    "description": "Enchanted gear about to break turns into an enchanted book keeping 100% of its enchantments",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:grindstone"
+        "item": "minecraft:enchanted_book"
       }
     },
     "frame": {
@@ -1087,62 +1141,8 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "salvager",
-          "value": 0.15
-        }
-      }
-    ]
-  },
-  "salvager_2": {
-    "title": "Salvager",
-    "description": "30% that disenchanting gear on a grindstone gives back one of its repair material",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:grindstone"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 15,
-    "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "salvager",
-          "value": 0.15
-        }
-      }
-    ]
-  },
-  "salvager_3": {
-    "title": "Salvager",
-    "description": "45% that disenchanting gear on a grindstone gives back one of its repair material",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:grindstone"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 15,
-    "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "salvager",
-          "value": 0.15
+          "perk": "book_saver",
+          "value": 1
         }
       }
     ]

@@ -108,11 +108,21 @@
     "y": 34,
     "definition": "enchanted_crafts_4"
   },
-  "book_saver_1": {
+  "salvager_1": {
     "x": 0,
     "y": 34,
-    "definition": "book_saver_1",
+    "definition": "salvager_1",
     "root": true
+  },
+  "salvager_2": {
+    "x": 0,
+    "y": 34,
+    "definition": "salvager_2"
+  },
+  "salvager_3": {
+    "x": 0,
+    "y": 34,
+    "definition": "salvager_3"
   },
   "repair_kit_1": {
     "x": 30,
@@ -213,21 +223,11 @@
     "y": 102,
     "definition": "enchanted_crafts_ii_3"
   },
-  "salvager_1": {
+  "book_saver_1": {
     "x": 30,
     "y": 102,
-    "definition": "salvager_1",
+    "definition": "book_saver_1",
     "root": true
-  },
-  "salvager_2": {
-    "x": 30,
-    "y": 102,
-    "definition": "salvager_2"
-  },
-  "salvager_3": {
-    "x": 30,
-    "y": 102,
-    "definition": "salvager_3"
   },
   "saddler_1": {
     "x": 60,
