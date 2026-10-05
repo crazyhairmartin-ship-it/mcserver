@@ -94,6 +94,14 @@ public final class FarmPerks {
         }
     }
 
+    /** Every crop breaks instantly, like wheat (Farm & Charm onions are given a small hardness). Runs on both sides. */
+    @SubscribeEvent
+    public void onBreakSpeed(net.minecraftforge.event.entity.player.PlayerEvent.BreakSpeed event) {
+        if (event.getState().m_60734_() instanceof CropBlock && event.getNewSpeed() < 1000) {
+            event.setNewSpeed(1000);
+        }
+    }
+
     @SubscribeEvent
     public void onRightClick(PlayerInteractEvent.RightClickBlock event) {
         if (event.getEntity() instanceof ServerPlayer player && event.getLevel() instanceof ServerLevel level) {
@@ -174,31 +182,17 @@ public final class FarmPerks {
             return;
         }
         net.minecraft.world.level.block.Block crop = mature.m_60734_();
-        int ripe = java.util.Collections.max(age.m_6908_());
         sweeping = true;
         try {
             java.util.Set<BlockPos> bases = new java.util.HashSet<>();
             for (BlockPos p : BlockPos.m_121940_(pos.m_7918_(-radius, -2, -radius), pos.m_7918_(radius, 2, radius))) {
-                if (level.m_8055_(p).m_60734_() == crop) {
+                if (samePlant(level.m_8055_(p).m_60734_(), crop)) {
                     bases.add(base(level, p.m_7949_(), crop));
                 }
             }
             for (BlockPos plant : bases) {
-                for (int h = 0; h < 4; h++) {
-                    BlockPos target = plant.m_6630_(h);
-                    BlockState state = level.m_8055_(target);
-                    if (state.m_60734_() != crop) {
-                        break;
-                    }
-                    if (!target.equals(pos) && (!state.m_61138_(age) || state.m_61143_(age) == ripe)) {
-                        state.m_60664_(level, player, net.minecraft.world.InteractionHand.MAIN_HAND,
-                                new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.m_82512_(target),
-                                        net.minecraft.core.Direction.UP, target, false));
-                        BlockState after = level.m_8055_(target);
-                        if (after.m_60734_() == crop && after.m_61138_(age) && after.m_61143_(age) < ripe) {
-                            fotfskills.xp.AmountSource.award(player, "harvest", 1);
-                        }
-                    }
+                if (pickPlant(player, level, plant, crop, pos)) {
+                    fotfskills.xp.AmountSource.award(player, "harvest", 1);    // once per plant, not per block
                 }
             }
         } finally {
@@ -211,36 +205,58 @@ public final class FarmPerks {
         if (sweeping) {
             return;
         }
-        net.minecraft.world.level.block.Block crop = mature.m_60734_();
-        int ripe = java.util.Collections.max(age.m_6908_());
-        BlockPos plant = base(level, pos, crop);
         sweeping = true;
         try {
-            for (int h = 0; h < 4; h++) {
-                BlockPos target = plant.m_6630_(h);
-                BlockState state = level.m_8055_(target);
-                if (state.m_60734_() != crop) {
-                    break;
-                }
-                if (!target.equals(pos) && state.m_61138_(age) && state.m_61143_(age) == ripe) {
-                    state.m_60664_(level, player, net.minecraft.world.InteractionHand.MAIN_HAND,
-                            new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.m_82512_(target),
-                                    net.minecraft.core.Direction.UP, target, false));
-                    BlockState after = level.m_8055_(target);
-                    if (after.m_60734_() == crop && after.m_61143_(age) < ripe) {
-                        fotfskills.xp.AmountSource.award(player, "harvest", 1);
-                    }
-                }
-            }
+            pickPlant(player, level, base(level, pos, mature.m_60734_()), mature.m_60734_(), pos);
         } finally {
             sweeping = false;
         }
     }
 
+    /** Right-click picks every ripe block of one plant (bottom up), skipping the block the player already picked; true if any was picked. */
+    private static boolean pickPlant(ServerPlayer player, ServerLevel level, BlockPos plant, net.minecraft.world.level.block.Block crop, BlockPos skip) {
+        boolean picked = false;
+        for (int h = 0; h < 4; h++) {
+            BlockPos target = plant.m_6630_(h);
+            BlockState state = level.m_8055_(target);
+            if (!samePlant(state.m_60734_(), crop)) {
+                break;
+            }
+            IntegerProperty a = age(state);
+            if (target.equals(skip) || a == null || state.m_61143_(a) != max(a)) {
+                continue;
+            }
+            state.m_60664_(level, player, net.minecraft.world.InteractionHand.MAIN_HAND,
+                    new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.m_82512_(target),
+                            net.minecraft.core.Direction.UP, target, false));
+            BlockState after = level.m_8055_(target);
+            IntegerProperty b = age(after);
+            picked |= samePlant(after.m_60734_(), crop) && b != null && after.m_61143_(b) < max(b);
+        }
+        return picked;
+    }
+
+    /**
+     * Two blocks are the same plant when they are the same block, or the same mod's parts of one plant: Farm & Charm's
+     * tomato_crop and tomato_crop_body (names equal once a part suffix like _body or _top is dropped).
+     */
+    private static boolean samePlant(net.minecraft.world.level.block.Block a, net.minecraft.world.level.block.Block b) {
+        if (a == b) {
+            return true;
+        }
+        ResourceLocation ka = ForgeRegistries.BLOCKS.getKey(a), kb = ForgeRegistries.BLOCKS.getKey(b);
+        return ka != null && kb != null && ka.m_135827_().equals(kb.m_135827_())
+                && plantName(ka.m_135815_()).equals(plantName(kb.m_135815_())) && age(a.m_49966_()) != null && age(b.m_49966_()) != null;
+    }
+
+    private static String plantName(String path) {
+        return path.replaceFirst("_(body|top|upper|lower|head|stem|bottom)$", "");
+    }
+
     /** The bottom block of a plant: walk down while the block below is the same crop. */
     private static BlockPos base(ServerLevel level, BlockPos pos, net.minecraft.world.level.block.Block crop) {
         BlockPos p = pos;
-        for (int i = 0; i < 4 && level.m_8055_(p.m_7495_()).m_60734_() == crop; i++) {
+        for (int i = 0; i < 4 && samePlant(level.m_8055_(p.m_7495_()).m_60734_(), crop); i++) {
             p = p.m_7495_();
         }
         return p;
