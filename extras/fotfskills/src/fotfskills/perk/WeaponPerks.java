@@ -296,6 +296,11 @@ public final class WeaponPerks {
     }
 
     private static double abilityMultiplier(ServerPlayer player, ItemStack weapon) {
+        if (Weapons.is(weapon, "magic")) {          // magic weapons' special attacks scale with spell power, not weapon perks
+            net.minecraft.world.entity.ai.attributes.Attribute spell = net.minecraftforge.registries.ForgeRegistries.ATTRIBUTES
+                    .getValue(new net.minecraft.resources.ResourceLocation("irons_spellbooks", "spell_power"));
+            return spell == null || player.m_21051_(spell) == null ? 1.0 : Math.max(0, player.m_21133_(spell));
+        }
         java.util.Set<String> types = new java.util.HashSet<>();
         for (String type : MELEE) {
             if (Weapons.is(weapon, type)) {
