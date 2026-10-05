@@ -78,7 +78,7 @@ public final class WeaponPerks {
                 amount += Perks.get(player, "dmg_polearm");
             }
             double pct = 0;
-            if (Weapons.is(weapon, "two_handed")) {
+            if (Weapons.twoHanded(player, weapon)) {
                 pct += Perks.get(player, "pct_two_handed");
             }
             double momentum = Perks.get(player, "momentum");
@@ -113,7 +113,7 @@ public final class WeaponPerks {
             state.markedTarget = target.m_20148_();
             state.markedUntil = now + 200;
             double cleave = Perks.get(player, "cleave");
-            if (cleave > 0 && Weapons.is(weapon, "two_handed")) {
+            if (cleave > 0 && Weapons.twoHanded(player, weapon)) {
                 splash(player, target, target, (float) (amount * cleave), 2.5);
             }
             if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe")) {
@@ -301,6 +301,9 @@ public final class WeaponPerks {
             if (Weapons.is(weapon, type)) {
                 types.add(type);
             }
+        }
+        if (!Weapons.twoHanded(player, weapon)) {
+            types.remove("two_handed");
         }
         if (types.isEmpty()) {
             return 1.0;

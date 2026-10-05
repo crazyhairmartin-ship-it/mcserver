@@ -732,7 +732,7 @@
   },
   "heavy_arms_1": {
     "title": "Heavy Arms",
-    "description": "Two-handed weapons +10% damage",
+    "description": "Two-handed weapons +10% damage, off hand empty",
     "icon": {
       "type": "item",
       "data": {
@@ -760,7 +760,7 @@
   },
   "heavy_arms_2": {
     "title": "Heavy Arms",
-    "description": "Two-handed weapons +20% damage",
+    "description": "Two-handed weapons +20% damage, off hand empty",
     "icon": {
       "type": "item",
       "data": {
@@ -788,7 +788,7 @@
   },
   "heavy_arms_3": {
     "title": "Heavy Arms",
-    "description": "Two-handed weapons +30% damage",
+    "description": "Two-handed weapons +30% damage, off hand empty",
     "icon": {
       "type": "item",
       "data": {
@@ -1474,7 +1474,7 @@
   },
   "cleave_1": {
     "title": "Cleave",
-    "description": "Two-handed hits splash 30% to nearby mobs",
+    "description": "Two-handed hits splash 30% to nearby mobs, off hand empty",
     "icon": {
       "type": "item",
       "data": {

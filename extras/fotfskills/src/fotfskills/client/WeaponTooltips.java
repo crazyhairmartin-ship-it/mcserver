@@ -40,7 +40,11 @@ public final class WeaponTooltips {
             }
         }
         List<Component> tip = event.getToolTip();
-        if (!types.isEmpty()) {
+        boolean offHandBusy = types.contains("two_handed") && !Weapons.twoHanded(player, stack);
+        if (offHandBusy) {
+            types.remove("two_handed");
+        }
+        if (!types.isEmpty() || offHandBusy) {
             double weapon = 1 + additions(stack.m_41638_(EquipmentSlot.MAINHAND).get(Attributes.f_22281_));
             double skill = fotfskills.perk.ClientPerks.raw("skill_attack");
             double enchant = EnchantmentHelper.m_44833_(stack, MobType.f_21640_);
@@ -50,6 +54,9 @@ public final class WeaponTooltips {
                 d.lines().forEach(line -> tip.add(Component.m_237113_("§7  " + line)));
             } else {
                 tip.add(Component.m_237113_("§8Hold Shift for the breakdown"));
+            }
+            if (offHandBusy) {
+                tip.add(Component.m_237113_("§8Two-handed perks need an empty off hand"));
             }
         }
         if (Weapons.is(stack, "thrown")) {

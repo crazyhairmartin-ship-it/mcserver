@@ -23,4 +23,9 @@ public final class Weapons {
                 t.equals("pickaxe") ? new ResourceLocation("minecraft", "pickaxes") : t.equals("hoe") ? new ResourceLocation("minecraft", "hoes") : new ResourceLocation("fotfskills", t)));
         return stack.m_204117_(tag);
     }
+
+    /** Two-handed perks only count while the off hand is empty. */
+    public static boolean twoHanded(net.minecraft.world.entity.LivingEntity holder, ItemStack stack) {
+        return is(stack, "two_handed") && holder.m_21206_().m_41619_();
+    }
 }
