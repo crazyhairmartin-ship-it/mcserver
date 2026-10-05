@@ -118,12 +118,21 @@ public final class FarmPerks {
             IntegerProperty harvestAge = age(now);
             if (harvestAge != null && c.before.m_61143_(harvestAge) > now.m_61143_(harvestAge)) {
                 fotfskills.xp.AmountSource.award(c.player, "harvest", 1);    // picked without breaking (tomatoes, berries)
+                int copies = (Perks.roll(c.player, "crop_drops") ? 1 : 0) + (Perks.roll(c.player, "harvest_double") ? 1 : 0);
+                ItemStack crop = block.m_7397_(c.level, c.pos, c.before);           // Harvester / Harvest Moon extras
+                if (copies > 0 && !crop.m_41619_()) {
+                    crop.m_41764_(copies);
+                    Block.m_49840_(c.level, c.pos, crop);
+                }
                 wholePlant(c.player, c.level, c.pos, c.before, harvestAge);
                 sweepByHand(c.player, c.level, c.pos, c.before, harvestAge);
             }
             if (block instanceof ComposterBlock) {
                 int before = c.before.m_61143_(ComposterBlock.f_51913_);
                 int after = now.m_61143_(ComposterBlock.f_51913_);
+                if (before == 8 && after == 0 && Perks.roll(c.player, "compost_king")) {
+                    Block.m_49840_(c.level, c.pos.m_7494_(), new ItemStack(net.minecraft.world.item.Items.f_42499_));  // double bone meal
+                }
                 if (after == before + 1 && after < 7 && Perks.roll(c.player, "compost_king")) {
                     c.level.m_7731_(c.pos, now.m_61124_(ComposterBlock.f_51913_, after + 1), 3);
                 }

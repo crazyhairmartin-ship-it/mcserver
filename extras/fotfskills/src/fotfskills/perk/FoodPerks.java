@@ -40,7 +40,7 @@ public final class FoodPerks {
             data.m_38717_((float) Math.min(data.m_38702_(), data.m_38722_() + saturation * hearty));
         }
         double feast = Perks.get(player, "harvest_feast");
-        if (feast > 0 && tagged(stack, CROP_TAGS)) {
+        if (feast > 0 && cropFoods(player).contains(stack.m_41720_())) {
             data.m_38707_((int) Math.round(food.m_38744_() * feast), 0);
         }
         double sushi = Perks.get(player, "sushi_chef");
@@ -68,6 +68,59 @@ public final class FoodPerks {
                     friend.m_5634_((float) picnic);
                 }
             }
+        }
+    }
+
+    private static Set<Item> cropFoods;
+
+    /**
+     * Harvest Feast's foods: crops, fruit and bread (by tag), plus every food a recipe makes from them, a few steps deep
+     * (tomato -> tomato sauce -> pasta). Built once from the server's recipes; /reload rebuilds it.
+     */
+    static Set<Item> cropFoods(ServerPlayer player) {
+        if (cropFoods != null) {
+            return cropFoods;
+        }
+        Set<Item> foods = new java.util.HashSet<>();
+        for (Item item : ForgeRegistries.ITEMS) {
+            if (tagged(new ItemStack(item), CROP_TAGS)) {
+                foods.add(item);
+            }
+        }
+        net.minecraft.server.MinecraftServer server = player.m_20194_();
+        if (server != null) {
+            var access = server.m_206579_();
+            for (int pass = 0; pass < 3; pass++) {
+                for (var recipe : server.m_129894_().m_44051_()) {
+                    ItemStack out;
+                    try {
+                        out = recipe.m_8043_(access);
+                    } catch (RuntimeException e) {
+                        continue;                       // a mod's odd recipe: skip it
+                    }
+                    if (out == null || out.m_41619_() || !out.m_41614_() || foods.contains(out.m_41720_())) {
+                        continue;
+                    }
+                    outer:
+                    for (var ingredient : recipe.m_7527_()) {
+                        for (ItemStack option : ingredient.m_43908_()) {
+                            if (foods.contains(option.m_41720_())) {
+                                foods.add(out.m_41720_());
+                                break outer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        cropFoods = foods;
+        return foods;
+    }
+
+    @SubscribeEvent
+    public void onReload(net.minecraftforge.event.OnDatapackSyncEvent event) {
+        if (event.getPlayer() == null) {
+            cropFoods = null;                           // /reload: recipes may have changed
         }
     }
 

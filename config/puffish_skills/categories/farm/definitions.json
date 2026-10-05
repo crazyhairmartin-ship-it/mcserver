@@ -602,7 +602,7 @@
   },
   "harvest_feast_1": {
     "title": "Harvest Feast",
-    "description": "Food made from crops you grew restores 10% more",
+    "description": "Food made from crops restores 10% more",
     "icon": {
       "type": "item",
       "data": {
@@ -629,7 +629,7 @@
   },
   "harvest_feast_2": {
     "title": "Harvest Feast",
-    "description": "Food made from crops you grew restores 20% more",
+    "description": "Food made from crops restores 20% more",
     "icon": {
       "type": "item",
       "data": {
@@ -656,7 +656,7 @@
   },
   "harvest_feast_3": {
     "title": "Harvest Feast",
-    "description": "Food made from crops you grew restores 30% more",
+    "description": "Food made from crops restores 30% more",
     "icon": {
       "type": "item",
       "data": {
@@ -1306,7 +1306,7 @@
   },
   "compost_king_1": {
     "title": "Compost King",
-    "description": "50% that each item you put in a composter fills an extra layer",
+    "description": "50% that each item you put in a composter fills an extra layer, and for double bone meal when you empty it",
     "icon": {
       "type": "item",
       "data": {
@@ -1333,7 +1333,7 @@
   },
   "compost_king_2": {
     "title": "Compost King",
-    "description": "100% that each item you put in a composter fills an extra layer",
+    "description": "100% that each item you put in a composter fills an extra layer, and for double bone meal when you empty it",
     "icon": {
       "type": "item",
       "data": {
@@ -1489,7 +1489,7 @@
   },
   "harvest_moon_1": {
     "title": "Harvest Moon",
-    "description": "5% chance a harvest drops double everything",
+    "description": "25% chance a harvest drops double everything",
     "icon": {
       "type": "item",
       "data": {
@@ -1510,7 +1510,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "harvest_double",
-          "value": 0.05
+          "value": 0.25
         }
       }
     ]
