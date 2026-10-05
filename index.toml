@@ -78,7 +78,7 @@ hash = "93ce54c6f1b110f983b56c84278fb3cb9df21077454f10a70c9dd2572a2ee383"
 
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
-hash = "05122fb753844c2eed68e946764e26c6bd64e055f79f8526fb1d2c82a6ce5444"
+hash = "10d15ab3f79ece120f8364ec0e547dcf05341849a6ad2f4bffd66af80195023c"
 
 [[files]]
 file = "config/everycomp-entries.toml"
@@ -369,14 +369,6 @@ hash = "3f940209ad602e3cbc53bd20e199a965c21dcc9aebca5bd91caa2c295395b68a"
 [[files]]
 file = "config/puffish_skills/config.json"
 hash = "48ee22c33683c5ec4dd6f48eb2d0cb0830d1fadf6c170dd0416f00e8601bcde7"
-
-[[files]]
-file = "config/simplyswords/general.toml"
-hash = "eb18922146826ff4f2ee2e762ad7ad62fb388f912342ac7abcef26e8507c15d4"
-
-[[files]]
-file = "config/simplyswords/loot.toml"
-hash = "efab36ae8fe81c9e52d589cc321c06b145c7aaffb3a9e43b0310ce365fbb1d51"
 
 [[files]]
 file = "config/sophisticatedcore-client.toml"
@@ -1855,10 +1847,6 @@ file = "kubejs/server_scripts/trim_grapplemod.js"
 hash = "fec451ea319fa836af52aa76fa7fc835fa40d0b271a59fdb5354de2f022b06cd"
 
 [[files]]
-file = "kubejs/server_scripts/trim_simplyswords.js"
-hash = "ad65c303393af3505cc1fc5a7d4809723311f0ebd86c6eb78f981994c67d31ab"
-
-[[files]]
 file = "kubejs/server_scripts/trim_sophisticated.js"
 hash = "82a6adc1392a5a6fa7a347502c33d83cbb0b1ff8f9655d6fc776bc2a264bdb4c"
 
@@ -1896,7 +1884,7 @@ hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
-hash = "d8eb2ff000aada489ae979bb830f54a769cca76d6ddce48c008bc5b8d7c9b5cb"
+hash = "2650bc1b00c9490fd0a3b9da6a572e680489343b0297a9e9599a149f85392e05"
 
 [[files]]
 file = "mods/alexs-caves.pw.toml"
@@ -2110,7 +2098,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "5523e5d49bd73195b64fff32ea89924a2fa4fc5a9d53146645b82276a21535b4"
+hash = "fead0b6fc90d0ffe096a4563a6e7104e8f24776f7a35e54893fd925a8a947c67"
 metafile = true
 
 [[files]]
@@ -2711,7 +2699,7 @@ hash = "426113a8a602525d8b23a41ded0f49cc5d3e03aa44c0553c55827f24ca9f0aa8"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/combat/weapons.json"
-hash = "fd69397200b254e38aa5a21604359e776e0043d4fddd92b3c4f5434c4af196ca"
+hash = "8448446515a19d463253b0979816454cb44b618b948172b014a777902794b2fc"
 
 [[files]]
 file = "patchouli_books/fotf_field_guide/en_us/entries/creatures/alexs_mobs.json"
