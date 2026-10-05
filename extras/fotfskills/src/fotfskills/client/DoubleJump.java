@@ -13,9 +13,12 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 /**
  * Double Jump (Agility capstone): press jump again in mid-air for one more jump per time in the air. Reacts to the key
  * press itself (a once-per-tick check missed quick taps). The client moves the player (movement is client-side) and
- * tells the server, which clears the fall distance so the landing is safe.
+ * tells the server, which clears the fall distance so the landing is safe. It also plays ParCool's flip (ParcoolTrickMixin).
  */
 public final class DoubleJump {
+    /** The flip a double jump asked ParCool to play ("FORWARD" or "BACK"), taken by ParcoolTrickMixin within a few ticks. */
+    private static volatile String pendingFlip;
+    private static volatile long pendingUntil;
     private boolean used;
     private boolean leftGround;
 
@@ -54,5 +57,13 @@ public final class DoubleJump {
                     (Math.random() - 0.5) * 0.2, -0.05, (Math.random() - 0.5) * 0.2);
         }
         PerkSync.sendDoubleJump();
+        pendingFlip = mc.f_91066_.f_92087_.m_90857_() ? "BACK" : "FORWARD";
+        pendingUntil = System.currentTimeMillis() + 300;
+    }
+
+    public static String takePendingFlip() {
+        String flip = pendingFlip;
+        pendingFlip = null;
+        return flip != null && System.currentTimeMillis() <= pendingUntil ? flip : null;
     }
 }

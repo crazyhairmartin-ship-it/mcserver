@@ -8,6 +8,7 @@
     "SkillsScreenMixin",
     "ArsManaHudMixin",
     "ParcoolDodgeMixin",
+    "ParcoolTrickMixin",
     "ContainerScreenAccessor"
   ],
   "injectors": {

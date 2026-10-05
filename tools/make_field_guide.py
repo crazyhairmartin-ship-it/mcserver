@@ -202,7 +202,7 @@ ENTRIES = [
     # ---------- Travel & Movement ----------
     ('travel', 'parcool', 'Parkour', 'parcool:parcool_guide', [
         text('$(l)ParCool$(): parkour moves. Free from the start: sprint ($(l)Ctrl$()), crawl and slide ($(l)C$(), while sprinting to slide), vault, hang on ledges and climb up, pole climb, slide down walls, ziplines, fast swim, dive, breakfall and dodge ($(l)Mouse 4$()).'),
-        text('The athletic moves come from the $(l)Agility$() tree:$(li)$(l)Freerunner$(): wall run (sprint-jump along a wall, then press dodge), horizontal wall run, cast away (look away from the wall while hanging, then jump)$(li)$(l)Spring Step$(): wall jump, long jump (sprint a while, then tap sneak), charge jump$(li)$(l)Featherfall$(): skydive (crawl key while falling)$(li)$(l)Double Jump$(): jump again in mid-air, plus trick jumps (jump while holding back for a flip, or during a fast run)', 'Agility Moves'),
+        text('The athletic moves come from the $(l)Agility$() tree:$(li)$(l)Freerunner$(): wall run (sprint-jump along a wall, then press dodge), horizontal wall run, cast away (look away from the wall while hanging, then jump)$(li)$(l)Spring Step$(): wall jump, long jump (sprint a while, then tap sneak), charge jump$(li)$(l)Featherfall$(): skydive (crawl key while falling)$(li)$(l)Double Jump$(): jump again in mid-air with a flip (hold back for a back flip), plus trick jumps (jump while holding back for a flip, or during a fast run)', 'Agility Moves'),
         craft('parcool:parcool_guide', 'The $(l)ParCool Guide$() explains every move.'),
     ]),
     ('travel', 'gliding', 'Elytra', 'minecraft:elytra', [
