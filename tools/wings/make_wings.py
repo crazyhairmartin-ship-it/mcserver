@@ -1,0 +1,213 @@
+"""Smaller, feathered wings for Wings Horns & Hooves (ultimate_unicorn_mod) pegasi and nightmares (KubeJS asset overrides).
+
+    python tools/wings/make_wings.py [mod jar]     (default: the test server's copy)
+
+Geometry: every horse shares magical_horse_model.geo.json. The four wing bones are scaled down around the shoulder pivot
+(SCALE) and their cubes switch from box UV to per-face UV that point at the same texture squares, so the smaller wing
+still shows the whole feather texture. Animations only rotate these bones, so flapping and folding are unchanged.
+Griffins, hippogriffs and destriers use the same wing bones, so their wings shrink too.
+
+Textures: the wing squares of the pegasus and nightmare skins are redrawn as feathers - small coverts along the leading
+edge, long secondaries on the inner panel, and fanned primaries with gaps between their tips on the outer panel - in
+each skin's own colours. Writes into kubejs/assets/ultimate_unicorn_mod/ plus a preview next to this script.
+"""
+import colorsys
+import io
+import json
+import math
+import os
+import random
+import sys
+import zipfile
+from pathlib import Path
+
+from PIL import Image
+
+HERE = Path(__file__).resolve().parent
+PACK = HERE.parents[1]
+OUT = PACK / 'kubejs' / 'assets' / 'ultimate_unicorn_mod'
+JAR = PACK.parent / 'server-test' / 'data' / 'mods' / 'ultimate_unicorn_mod-1.20.1-2.0.0.jar'
+GEO = 'assets/ultimate_unicorn_mod/geo/magical_horse_model.geo.json'
+TEX = 'assets/ultimate_unicorn_mod/textures/entity/'
+SCALE = 0.55
+WINGS = ('rightWing', 'rightWingTip', 'leftWing', 'leftWingTip')
+ROOTS = {'rightWing': 'rightWing', 'rightWingTip': 'rightWing', 'leftWing': 'leftWing', 'leftWingTip': 'leftWing'}
+INNER, TIP = (0, 122), (0, 164)                  # top-left of each panel's top-face square; the underside sits 42 px right
+SKINS = {                                        # skin -> (shade of the top face, base colour taken from the old wing)
+    'pegasus_blue.png': None,
+    'pegasus_big_blue.png': None,
+    'nightmare_black.png': (52, 46, 60),         # the old wing is pure black: give it dark slate feathers instead
+    'nightmare_big_red.png': None,
+}
+
+
+# ---------- geometry ----------
+
+def box_faces(uv, size):
+    """GeckoLib's box-UV layout (BakedModelFactory.buildQuad) as per-face UVs."""
+    u, v = uv
+    w, h, d = (math.floor(s) for s in size)
+    faces = {'west': ([u + d + w, v + d], [d, h]), 'east': ([u, v + d], [d, h]),
+             'north': ([u + d, v + d], [w, h]), 'south': ([u + d + w + d, v + d], [w, h]),
+             'up': ([u + d, v], [w, d]), 'down': ([u + d + w, v + d], [w, -d])}
+    return {k: {'uv': a, 'uv_size': b} for k, (a, b) in faces.items() if b[0] != 0 and b[1] != 0}
+
+
+def shrink(geo):
+    bones = {b['name']: b for b in geo['minecraft:geometry'][0]['bones']}
+    pivots = {name: bones[name]['pivot'] for name in ('rightWing', 'leftWing')}
+
+    def scaled(point, root):
+        p = pivots[root]
+        return [round(p[i] + (point[i] - p[i]) * SCALE, 4) for i in range(3)]
+
+    for name in WINGS:
+        bone, root = bones[name], ROOTS[name]
+        if name != root:
+            bone['pivot'] = scaled(bone['pivot'], root)
+        for cube in bone['cubes']:
+            uv = list(cube['uv'])
+            if name.startswith('left'):
+                uv[1] += 1                      # the left wing read its squares one row too high
+            cube['uv'] = box_faces(uv, cube['size'])
+            cube['origin'] = scaled(cube['origin'], root)
+            cube['size'] = [round(s * SCALE, 4) if s > 0.5 else s for s in cube['size']]
+    return geo
+
+
+# ---------- feathers ----------
+
+def lerp(a, b, t):
+    return tuple(round(a[i] + (b[i] - a[i]) * t) for i in range(3))
+
+
+def shade(c, k):
+    h, l, s = colorsys.rgb_to_hls(*(x / 255 for x in c))
+    return tuple(round(x * 255) for x in colorsys.hls_to_rgb(h, max(0, min(1, l * k)), s))
+
+
+def base_colour(img):
+    """Average colour of the old wing's top faces."""
+    px = [img.getpixel((x, y)) for (x0, y0) in (INNER, TIP) for x in range(x0, x0 + 42) for y in range(y0, y0 + 42)]
+    px = [p for p in px if p[3] > 0]
+    return tuple(sum(p[i] for p in px) // len(px) for i in range(3))
+
+
+class Panel:
+    """A 42x42 RGBA canvas; later feathers paint over earlier ones (so draw back to front)."""
+
+    def __init__(self):
+        self.px = {}
+
+    def put(self, x, y, c):
+        if 0 <= x < 42 and 0 <= y < 42:
+            self.px[(x, y)] = c
+
+    def feather(self, base, angle, length, width, colours, rnd):
+        """A feather from base along angle (radians, 0 = +x, pi/2 = +y): rounded tip, dark rim, light shaft."""
+        light, mid, dark, rim = colours
+        dx, dy = math.cos(angle), math.sin(angle)
+        nx, ny = -dy, dx
+        cells = {}
+        steps = int(length * 3)
+        for i in range(steps + 1):
+            t = i / steps
+            half = width / 2 * (1 - max(0, t - 0.82) / 0.18 * 0.85 if t > 0.82 else 1)  # taper into a rounded tip
+            half = max(0.6, half)
+            for j in range(-int(half * 3), int(half * 3) + 1):
+                s = j / 3
+                x = base[0] + dx * length * t + nx * s
+                y = base[1] + dy * length * t + ny * s
+                key = (int(math.floor(x)), int(math.floor(y)))
+                edge = abs(s) / half
+                cells[key] = min(cells.get(key, 9), edge) if key in cells else edge
+        for (x, y), edge in cells.items():
+            if edge > 0.78:
+                c = rim
+            elif edge < 0.18:
+                c = light                                        # the shaft
+            else:
+                c = lerp(mid, dark, (edge - 0.18) / 0.6)
+            noise = rnd.uniform(0.94, 1.06)
+            self.put(x, y, shade(c, noise) if c != rim else c)
+
+    def image(self, dim=1.0):
+        im = Image.new('RGBA', (42, 42))
+        for (x, y), c in self.px.items():
+            im.putpixel((x, y), shade(c, dim) + (255,))
+        return im
+
+
+def palette(base):
+    return (shade(base, 1.25), base, shade(base, 0.78), shade(base, 0.5))
+
+
+def draw_inner(base, rnd):
+    """Inner panel: leading edge on top, tip side on the left, body on the right. Secondaries hang to the trailing edge."""
+    p = Panel()
+    sec = palette(shade(base, 0.92))
+    for i, x in enumerate(range(1, 42, 5)):                       # secondaries, back to front from the body side
+        length = 38 - (2 if i % 2 else 0) - max(0, x - 34)       # shorter near the body, alternating tips
+        p.feather((x + 2.5, 2), math.pi / 2 + 0.05, length, 6.5, sec, rnd)
+    for row, (y, w, ln) in enumerate(((14, 6, 9), (8, 5, 8), (2, 4, 7))):   # three rows of coverts over the shafts
+        for x in range(-2 + row * 2, 44, w - 1):
+            if x > 39 - (row == 2) * 3 and y < 6:
+                continue                                         # keep the rounded shoulder corner
+            p.feather((x + w / 2, y - 2), math.pi / 2, ln, w, palette(shade(base, 1.0 + row * 0.06)), rnd)
+    for x in range(0, 42):                                       # leading edge: a light line of marginal feathers
+        for y in range(0, 2):
+            if (x, y) in p.px and not (x > 37 and y < 2):
+                p.put(x, y, shade(base, 1.3))
+    return p
+
+
+def draw_tip(base, rnd):
+    """Outer panel: wrist at top right, primaries fanning out to the left (outward) and down (back)."""
+    p = Panel()
+    pri = palette(shade(base, 0.85))
+    feathers = 7
+    for i in range(feathers):                                     # innermost first so the outer ones lie on top
+        k = i / (feathers - 1)
+        angle = math.pi / 2 + math.radians(6 + 72 * k)           # from straight back (down) to almost along the edge (left)
+        length = 32 + 9 * k
+        p.feather((40 - i * 0.8, 3 + i * 0.6), angle, length, 6, pri, rnd)
+    for row, (y, w, ln) in enumerate(((9, 6, 10), (3, 5, 8))):   # coverts over the primary bases near the wrist
+        for x in range(22 + row * 4, 44, w - 1):
+            p.feather((x + w / 2, y - 3), math.pi / 2 + 0.25, ln, w, palette(shade(base, 1.0 + row * 0.06)), rnd)
+    return p
+
+
+def redraw(img, base):
+    rnd = random.Random(7)
+    for (x0, y0), panel in ((INNER, draw_inner(base, rnd)), (TIP, draw_tip(base, rnd))):
+        top, under = panel.image(), panel.image(0.82)
+        for dx in range(84):                                     # clear both faces of the square first
+            for dy in range(42):
+                img.putpixel((x0 + dx, y0 + dy), (0, 0, 0, 0))
+        img.paste(top, (x0, y0))
+        img.paste(under, (x0 + 42, y0))                          # the underside: same feathers, a bit darker
+    return img
+
+
+def main():
+    jar = zipfile.ZipFile(sys.argv[1] if len(sys.argv) > 1 else JAR)
+    geo = shrink(json.loads(jar.read(GEO)))
+    (OUT / 'geo').mkdir(parents=True, exist_ok=True)
+    (OUT / 'geo' / 'magical_horse_model.geo.json').write_text(json.dumps(geo, indent=2) + '\n', encoding='utf-8')
+    (OUT / 'textures' / 'entity').mkdir(parents=True, exist_ok=True)
+    previews = []
+    for skin, override in SKINS.items():
+        img = Image.open(io.BytesIO(jar.read(TEX + skin))).convert('RGBA')
+        base = override or base_colour(img)
+        redraw(img, base).save(OUT / 'textures' / 'entity' / skin)
+        previews.append(img.crop((0, 120, 86, 208)))
+    sheet = Image.new('RGBA', (len(previews) * 90 * 4, 88 * 4), (70, 70, 70, 255))
+    for i, im in enumerate(previews):
+        big = im.resize((86 * 4, 88 * 4), Image.NEAREST)
+        sheet.paste(big, (i * 360, 0), big)
+    sheet.save(HERE / 'preview.png')
+    print(f'wings: geometry x{SCALE}, {len(SKINS)} skins redrawn')
+
+
+if __name__ == '__main__':
+    main()
