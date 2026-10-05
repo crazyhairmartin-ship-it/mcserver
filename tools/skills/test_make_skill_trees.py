@@ -330,7 +330,7 @@ def test_xp_rates_after_playtest_1():
 def test_phase4_nodes_are_wired():
     expect = {('agility', 'long_rope_1'): ('hook_range', 4), ('agility', 'long_rope_ii_1'): ('hook_range', 4),
               ('agility', 'hookmaster_1'): ('hook_speed', 0.15), ('agility', 'motor_reel_1'): ('hook_motor', 1),
-              ('agility', 'double_jump_1'): ('double_jump', 1), ('taming', 'ferality_1'): ('ferality', 0.15)}
+              ('agility', 'double_jump_1'): ('double_jump', 1), ('taming', 'ferality_1'): ('ferality', 0.1)}
     for (tree_id, sid), (perk, value) in expect.items():
         defs = g.build_category(tree(tree_id), TIERS, XP, PERKS)['definitions.json']
         assert {'type': 'fotfskills:perk', 'data': {'perk': perk, 'value': value}} in defs[sid]['rewards'], sid

@@ -788,7 +788,7 @@
   },
   "battlemage_plate_1": {
     "title": "Battlemage Plate",
-    "description": "Taking hits restores 2 mana",
+    "description": "Taking hits restores 10 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -809,14 +809,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "battlemage_mana",
-          "value": 2
+          "value": 10
         }
       }
     ]
   },
   "battlemage_plate_2": {
     "title": "Battlemage Plate",
-    "description": "Taking hits restores 4 mana",
+    "description": "Taking hits restores 20 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -837,14 +837,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "battlemage_mana",
-          "value": 2
+          "value": 10
         }
       }
     ]
   },
   "battlemage_plate_3": {
     "title": "Battlemage Plate",
-    "description": "Taking hits restores 6 mana",
+    "description": "Taking hits restores 30 mana",
     "icon": {
       "type": "item",
       "data": {
@@ -865,7 +865,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "battlemage_mana",
-          "value": 2
+          "value": 10
         }
       }
     ]

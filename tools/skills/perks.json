@@ -238,7 +238,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "battlemage_mana",
-          "value": 2
+          "value": 10
         }
       }
     ],
@@ -353,7 +353,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "free_spell",
-          "value": 0.12
+          "value": 0.15
         }
       },
       {
@@ -1775,13 +1775,11 @@
           "perk": "growth",
           "value": 0.1
         }
-      }
-    ],
-    "pack_tactics": [
+      },
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "pack_tactics",
+          "perk": "egg_hatch",
           "value": 0.1
         }
       }
@@ -1903,7 +1901,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "ferality",
-          "value": 0.15
+          "value": 0.1
         }
       }
     ]

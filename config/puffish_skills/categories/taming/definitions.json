@@ -627,6 +627,33 @@
       }
     ]
   },
+  "pet_scavenging_4": {
+    "title": "Pet Scavenging",
+    "description": "Every 2 minutes, 40% that a pet near you finds and drops a useful item",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:bone"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 5,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "scavenging",
+          "value": 0.1
+        }
+      }
+    ]
+  },
   "tier_3_label": {
     "title": "Tier 3 \u00b7 10 points",
     "description": "Opens once you have spent 10 points in this tree. Pick one branch: taking one locks the other.",
@@ -747,7 +774,7 @@
   },
   "breeder_1": {
     "title": "Breeder",
-    "description": "6% for twins; babies grow up faster",
+    "description": "6% for twins and 10% per rank for an extra chick from thrown eggs; babies grow up faster",
     "icon": {
       "type": "item",
       "data": {
@@ -775,6 +802,13 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "growth",
+          "value": 0.1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "egg_hatch",
           "value": 0.1
         }
       }
@@ -782,7 +816,7 @@
   },
   "breeder_2": {
     "title": "Breeder",
-    "description": "12% for twins; babies grow up faster",
+    "description": "12% for twins and 10% per rank for an extra chick from thrown eggs; babies grow up faster",
     "icon": {
       "type": "item",
       "data": {
@@ -812,12 +846,19 @@
           "perk": "growth",
           "value": 0.1
         }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "egg_hatch",
+          "value": 0.1
+        }
       }
     ]
   },
   "breeder_3": {
     "title": "Breeder",
-    "description": "18% for twins; babies grow up faster",
+    "description": "18% for twins and 10% per rank for an extra chick from thrown eggs; babies grow up faster",
     "icon": {
       "type": "item",
       "data": {
@@ -845,6 +886,13 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "growth",
+          "value": 0.1
+        }
+      },
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "egg_hatch",
           "value": 0.1
         }
       }
@@ -866,114 +914,6 @@
       }
     },
     "required_spent_points": 15
-  },
-  "pack_tactics_1": {
-    "title": "Pack Tactics",
-    "description": "Your pets deal 10% more damage to your target",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:fox_spawn_egg"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 15,
-    "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "pack_tactics",
-          "value": 0.1
-        }
-      }
-    ]
-  },
-  "pack_tactics_2": {
-    "title": "Pack Tactics",
-    "description": "Your pets deal 20% more damage to your target",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:fox_spawn_egg"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 15,
-    "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "pack_tactics",
-          "value": 0.1
-        }
-      }
-    ]
-  },
-  "pack_tactics_3": {
-    "title": "Pack Tactics",
-    "description": "Your pets deal 30% more damage to your target",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:fox_spawn_egg"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 15,
-    "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "pack_tactics",
-          "value": 0.1
-        }
-      }
-    ]
-  },
-  "pack_tactics_4": {
-    "title": "Pack Tactics",
-    "description": "Your pets deal 40% more damage to your target",
-    "icon": {
-      "type": "item",
-      "data": {
-        "item": "minecraft:fox_spawn_egg"
-      }
-    },
-    "frame": {
-      "type": "advancement",
-      "data": {
-        "frame": "task"
-      }
-    },
-    "cost": 1,
-    "required_spent_points": 15,
-    "rewards": [
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "pack_tactics",
-          "value": 0.1
-        }
-      }
-    ]
   },
   "loyal_guard_1": {
     "title": "Loyal Guard",
@@ -1193,7 +1133,7 @@
   },
   "ferality_1": {
     "title": "Ferality",
-    "description": "15% that a pet survives a killing blow, heals fully and gains 4 absorption hearts and Strength II for 15 seconds",
+    "description": "10% that a pet survives a killing blow, heals fully and gains 4 absorption hearts and Strength II for 15 seconds",
     "icon": {
       "type": "item",
       "data": {
@@ -1213,12 +1153,39 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "ferality",
-          "value": 0.15
+          "value": 0.1
         }
       }
     ]
   },
   "ferality_2": {
+    "title": "Ferality",
+    "description": "20% that a pet survives a killing blow, heals fully and gains 4 absorption hearts and Strength II for 15 seconds",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:bone"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 15,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "ferality",
+          "value": 0.1
+        }
+      }
+    ]
+  },
+  "ferality_3": {
     "title": "Ferality",
     "description": "30% that a pet survives a killing blow, heals fully and gains 4 absorption hearts and Strength II for 15 seconds",
     "icon": {
@@ -1240,14 +1207,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "ferality",
-          "value": 0.15
+          "value": 0.1
         }
       }
     ]
   },
-  "ferality_3": {
+  "ferality_4": {
     "title": "Ferality",
-    "description": "45% that a pet survives a killing blow, heals fully and gains 4 absorption hearts and Strength II for 15 seconds",
+    "description": "40% that a pet survives a killing blow, heals fully and gains 4 absorption hearts and Strength II for 15 seconds",
     "icon": {
       "type": "item",
       "data": {
@@ -1267,7 +1234,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "ferality",
-          "value": 0.15
+          "value": 0.1
         }
       }
     ]
@@ -1519,7 +1486,61 @@
   },
   "caretaker_1": {
     "title": "Caretaker",
-    "description": "Feeding your pet heals it 1 extra heart",
+    "description": "Extra hearts healed when feeding your pet: 1",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:hay_block"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "caretaker",
+          "value": 2
+        }
+      }
+    ]
+  },
+  "caretaker_2": {
+    "title": "Caretaker",
+    "description": "Extra hearts healed when feeding your pet: 2",
+    "icon": {
+      "type": "item",
+      "data": {
+        "item": "minecraft:hay_block"
+      }
+    },
+    "frame": {
+      "type": "advancement",
+      "data": {
+        "frame": "task"
+      }
+    },
+    "cost": 1,
+    "required_spent_points": 25,
+    "rewards": [
+      {
+        "type": "fotfskills:perk",
+        "data": {
+          "perk": "caretaker",
+          "value": 2
+        }
+      }
+    ]
+  },
+  "caretaker_3": {
+    "title": "Caretaker",
+    "description": "Extra hearts healed when feeding your pet: 3",
     "icon": {
       "type": "item",
       "data": {

@@ -662,7 +662,7 @@
   },
   "sourcecraft_1": {
     "title": "Sourcecraft",
-    "description": "Sourcelinks you place make +33% more source and the enchanting apparatus uses -17% less source (double source, half cost at max)",
+    "description": "Sourcelinks you place make +33% more source and the enchanting apparatus uses 17% less source",
     "icon": {
       "type": "item",
       "data": {
@@ -696,7 +696,7 @@
   },
   "sourcecraft_2": {
     "title": "Sourcecraft",
-    "description": "Sourcelinks you place make +66% more source and the enchanting apparatus uses -34% less source (double source, half cost at max)",
+    "description": "Sourcelinks you place make +66% more source and the enchanting apparatus uses 34% less source",
     "icon": {
       "type": "item",
       "data": {
@@ -730,7 +730,7 @@
   },
   "sourcecraft_3": {
     "title": "Sourcecraft",
-    "description": "Sourcelinks you place make +99% more source and the enchanting apparatus uses -51% less source (double source, half cost at max)",
+    "description": "Sourcelinks you place make +99% more source and the enchanting apparatus uses 51% less source",
     "icon": {
       "type": "item",
       "data": {
@@ -1532,7 +1532,7 @@
   },
   "archmage_1": {
     "title": "Archmage",
-    "description": "12% free spells, -15% cooldowns",
+    "description": "15% free spells, -15% cooldowns",
     "icon": {
       "type": "item",
       "data": {
@@ -1553,7 +1553,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "free_spell",
-          "value": 0.12
+          "value": 0.15
         }
       },
       {

@@ -1651,11 +1651,11 @@
   },
   "double_jump_1": {
     "title": "Double Jump",
-    "description": "Press jump again in mid-air for 1 extra jump with a flip (hold back for a back flip); also unlocks Trick Jump (flips on normal jumps)",
+    "description": "Press jump again in mid-air for 1 extra jump",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:feather"
+        "item": "minecraft:diamond_boots"
       }
     },
     "frame": {

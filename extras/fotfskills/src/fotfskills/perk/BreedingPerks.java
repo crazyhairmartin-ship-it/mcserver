@@ -13,6 +13,22 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 /** Breeder (twins, faster growth), Selective Breeding, Prized Stock (foal stats, shorter breeding cooldown) and Bloodlines (rare looks) on player-caused breeding. */
 public final class BreedingPerks {
+    /** Breeder: a thrown egg that lands has an extra chance to hatch one more chick. */
+    @SubscribeEvent
+    public void onEggLands(net.minecraftforge.event.entity.ProjectileImpactEvent event) {
+        if (!(event.getProjectile() instanceof net.minecraft.world.entity.projectile.ThrownEgg egg)
+                || !(egg.m_19749_() instanceof net.minecraft.server.level.ServerPlayer player)
+                || !(egg.m_9236_() instanceof ServerLevel level) || !Perks.roll(player, "egg_hatch")) {
+            return;
+        }
+        net.minecraft.world.entity.animal.Chicken chick = net.minecraft.world.entity.EntityType.f_20555_.m_20615_(level);
+        if (chick != null) {
+            chick.m_146762_(-24000);
+            chick.m_7678_(egg.m_20185_(), egg.m_20186_(), egg.m_20189_(), egg.m_146908_(), 0);
+            level.m_7967_(chick);
+        }
+    }
+
     private static final Attribute[] HORSE_STATS = {Attributes.f_22276_, Attributes.f_22279_, Attributes.f_22288_};
     private static final double[] VANILLA_MAX = {30, 0.3375, 1.0};
     private record Grow(AgeableMob child, int age) {

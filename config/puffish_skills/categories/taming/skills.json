@@ -125,6 +125,11 @@
     "y": 34,
     "definition": "pet_scavenging_3"
   },
+  "pet_scavenging_4": {
+    "x": 45,
+    "y": 34,
+    "definition": "pet_scavenging_4"
+  },
   "tier_3_label": {
     "x": -45,
     "y": 68,
@@ -168,117 +173,101 @@
     "definition": "breeder_3"
   },
   "tier_4_label": {
-    "x": -90,
+    "x": -75,
     "y": 102,
     "definition": "tier_4_label"
   },
-  "pack_tactics_1": {
-    "x": -60,
-    "y": 102,
-    "definition": "pack_tactics_1",
-    "root": true
-  },
-  "pack_tactics_2": {
-    "x": -60,
-    "y": 102,
-    "definition": "pack_tactics_2"
-  },
-  "pack_tactics_3": {
-    "x": -60,
-    "y": 102,
-    "definition": "pack_tactics_3"
-  },
-  "pack_tactics_4": {
-    "x": -60,
-    "y": 102,
-    "definition": "pack_tactics_4"
-  },
   "loyal_guard_1": {
-    "x": -30,
+    "x": -45,
     "y": 102,
     "definition": "loyal_guard_1",
     "root": true
   },
   "loyal_guard_2": {
-    "x": -30,
+    "x": -45,
     "y": 102,
     "definition": "loyal_guard_2"
   },
   "loyal_guard_3": {
-    "x": -30,
+    "x": -45,
     "y": 102,
     "definition": "loyal_guard_3"
   },
   "loyal_guard_4": {
-    "x": -30,
+    "x": -45,
     "y": 102,
     "definition": "loyal_guard_4"
   },
   "bloodlines_1": {
-    "x": 0,
+    "x": -15,
     "y": 102,
     "definition": "bloodlines_1",
     "root": true
   },
   "bloodlines_2": {
-    "x": 0,
+    "x": -15,
     "y": 102,
     "definition": "bloodlines_2"
   },
   "bloodlines_3": {
-    "x": 0,
+    "x": -15,
     "y": 102,
     "definition": "bloodlines_3"
   },
   "bloodlines_4": {
-    "x": 0,
+    "x": -15,
     "y": 102,
     "definition": "bloodlines_4"
   },
   "ferality_1": {
-    "x": 30,
+    "x": 15,
     "y": 102,
     "definition": "ferality_1",
     "root": true
   },
   "ferality_2": {
-    "x": 30,
+    "x": 15,
     "y": 102,
     "definition": "ferality_2"
   },
   "ferality_3": {
-    "x": 30,
+    "x": 15,
     "y": 102,
     "definition": "ferality_3"
   },
+  "ferality_4": {
+    "x": 15,
+    "y": 102,
+    "definition": "ferality_4"
+  },
   "mount_training_1": {
-    "x": 60,
+    "x": 45,
     "y": 102,
     "definition": "mount_training_1",
     "root": true
   },
   "mount_training_2": {
-    "x": 60,
+    "x": 45,
     "y": 102,
     "definition": "mount_training_2"
   },
   "mount_training_3": {
-    "x": 60,
+    "x": 45,
     "y": 102,
     "definition": "mount_training_3"
   },
   "bonded_ii_1": {
-    "x": 90,
+    "x": 75,
     "y": 102,
     "definition": "bonded_ii_1"
   },
   "bonded_ii_2": {
-    "x": 90,
+    "x": 75,
     "y": 102,
     "definition": "bonded_ii_2"
   },
   "bonded_ii_3": {
-    "x": 90,
+    "x": 75,
     "y": 102,
     "definition": "bonded_ii_3"
   },
@@ -292,6 +281,16 @@
     "y": 136,
     "definition": "caretaker_1",
     "root": true
+  },
+  "caretaker_2": {
+    "x": -30,
+    "y": 136,
+    "definition": "caretaker_2"
+  },
+  "caretaker_3": {
+    "x": -30,
+    "y": 136,
+    "definition": "caretaker_3"
   },
   "alpha_1": {
     "x": 0,
