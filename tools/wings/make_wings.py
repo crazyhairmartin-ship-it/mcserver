@@ -37,8 +37,8 @@ INNER, TIP = (0, 122), (0, 164)                  # top-left of each panel's top-
 SKINS = {
     'pegasus_blue.png': (0.76, dict(light=(250, 252, 255), mid=(232, 236, 242), dark=(198, 206, 218), rim=(150, 160, 178))),
     'pegasus_big_blue.png': (0.76, dict(light=(242, 248, 255), mid=(206, 220, 236), dark=(166, 186, 210), rim=(112, 134, 166))),
-    'nightmare_black.png': (1.0, dict(light=(140, 20, 20), mid=(34, 26, 28), dark=(16, 12, 14), rim=(58, 8, 8))),
-    'nightmare_big_red.png': (1.0, dict(light=(196, 42, 30), mid=(140, 18, 16), dark=(84, 8, 8), rim=(20, 6, 6))),
+    'nightmare_black.png': (1.0, dict(light=(96, 16, 16), mid=(30, 26, 28), dark=(14, 12, 13), rim=(6, 4, 5))),
+    'nightmare_big_red.png': (1.0, dict(light=(150, 24, 20), mid=(70, 12, 12), dark=(30, 8, 8), rim=(8, 4, 4))),
     'kirin_golden.png': (1.0, dict(light=(252, 226, 128), mid=(222, 180, 62), dark=(170, 126, 38), rim=(112, 78, 22))),
 }
 # every other skin a winged hybrid can wear: full-size feathers in colours taken from that skin's old wing art
@@ -80,7 +80,8 @@ def shrink(geo):
             if name.startswith('left'):
                 uv[1] += 1                      # the left wing read its squares one row too high
             cube['uv'] = box_faces(uv, cube['size'])
-            if name.startswith('left'):         # "mirror" doesn't flip top and bottom faces: flip them so the tips point out
+            if name.startswith('right'):        # "mirror" doesn't flip top and bottom faces, so one side reads its feathers
+                                                # backwards: flip that side's (in game, the left wing of the rider was right)
                 for face in ('up', 'down'):
                     if face in cube['uv'] and cube['size'][1] < 0.5:
                         f = cube['uv'][face]
@@ -215,7 +216,7 @@ def main():
     (OUT / 'geo' / 'magical_horse_model.geo.json').write_text(json.dumps(geo, indent=2) + '\n', encoding='utf-8')
     (OUT / 'textures' / 'entity').mkdir(parents=True, exist_ok=True)
     previews = []
-    for skin in list(SKINS) + list(OTHER_SKINS):
+    for skin in list(SKINS) + [s for s in OTHER_SKINS if s not in SKINS]:
         img = Image.open(io.BytesIO(jar.read(TEX + skin))).convert('RGBA')
         k, colours = SKINS.get(skin) or (1.0, auto_colours(base_colour(img)))
         redraw(img, colours, k).save(OUT / 'textures' / 'entity' / skin)
