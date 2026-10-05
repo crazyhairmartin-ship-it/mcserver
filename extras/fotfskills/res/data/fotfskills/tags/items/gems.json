@@ -1,0 +1,61 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "#forge:gems",
+      "required": false
+    },
+    {
+      "id": "minecraft:echo_shard",
+      "required": false
+    },
+    {
+      "id": "minecraft:prismarine_shard",
+      "required": false
+    },
+    {
+      "id": "alexscaves:occult_gem",
+      "required": false
+    },
+    {
+      "id": "alexscaves:amber_curiosity",
+      "required": false
+    },
+    {
+      "id": "alexscaves:pearl",
+      "required": false
+    },
+    {
+      "id": "alexscaves:gazing_pearl",
+      "required": false
+    },
+    {
+      "id": "alexscaves:sea_glass_shards",
+      "required": false
+    },
+    {
+      "id": "alexscaves:tectonic_shard",
+      "required": false
+    },
+    {
+      "id": "crittersandcompanions:pearl",
+      "required": false
+    },
+    {
+      "id": "biomesoplenty:rose_quartz_chunk",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:divine_pearl",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:ice_crystal",
+      "required": false
+    },
+    {
+      "id": "cataclysm:crystallized_coral",
+      "required": false
+    }
+  ]
+}
