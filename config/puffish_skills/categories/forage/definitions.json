@@ -774,7 +774,7 @@
   },
   "wildcrafter_1": {
     "title": "Wildcrafter",
-    "description": "Mushrooms, flowers and herbs drop 8% extra; teas and potions from them last longer",
+    "description": "Teas and potions you drink last 25% longer",
     "icon": {
       "type": "item",
       "data": {
@@ -794,15 +794,15 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "wild_drops",
-          "value": 0.08
+          "perk": "tea_duration",
+          "value": 0.25
         }
       }
     ]
   },
   "wildcrafter_2": {
     "title": "Wildcrafter",
-    "description": "Mushrooms, flowers and herbs drop 16% extra; teas and potions from them last longer",
+    "description": "Teas and potions you drink last 50% longer",
     "icon": {
       "type": "item",
       "data": {
@@ -822,15 +822,15 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "wild_drops",
-          "value": 0.08
+          "perk": "tea_duration",
+          "value": 0.25
         }
       }
     ]
   },
   "wildcrafter_3": {
     "title": "Wildcrafter",
-    "description": "Mushrooms, flowers and herbs drop 24% extra; teas and potions from them last longer",
+    "description": "Teas and potions you drink last 75% longer",
     "icon": {
       "type": "item",
       "data": {
@@ -850,8 +850,8 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "wild_drops",
-          "value": 0.08
+          "perk": "tea_duration",
+          "value": 0.25
         }
       }
     ]
@@ -1258,7 +1258,7 @@
   },
   "druids_grove_1": {
     "title": "Druid's Grove",
-    "description": "Iron's spells cost 5% less mana in forests",
+    "description": "Spells cost 5% less mana in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -1285,7 +1285,7 @@
   },
   "druids_grove_2": {
     "title": "Druid's Grove",
-    "description": "Iron's spells cost 10% less mana in forests",
+    "description": "Spells cost 10% less mana in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -1312,7 +1312,7 @@
   },
   "druids_grove_3": {
     "title": "Druid's Grove",
-    "description": "Iron's spells cost 15% less mana in forests",
+    "description": "Spells cost 15% less mana in forests",
     "icon": {
       "type": "item",
       "data": {
@@ -1464,7 +1464,7 @@
   },
   "natures_bounty_1": {
     "title": "Nature's Bounty",
-    "description": "5% chance any log, berry, mushroom or honey harvest drops triple",
+    "description": "10% chance any log, berry, mushroom or honey harvest drops triple",
     "icon": {
       "type": "item",
       "data": {
@@ -1485,7 +1485,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "bounty_triple",
-          "value": 0.05
+          "value": 0.1
         }
       }
     ]

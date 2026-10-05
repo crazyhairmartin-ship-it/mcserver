@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Player;
 public final class Perks {
     public static final Map<String, Double> CAPS = Map.ofEntries(
             Map.entry("ore_drops", 0.95), Map.entry("ore_triple", 0.95), Map.entry("log_drops", 0.95),
-            Map.entry("crop_drops", 0.95), Map.entry("harvest_double", 0.95), Map.entry("wild_drops", 0.95),
+            Map.entry("crop_drops", 0.95), Map.entry("tea_duration", 3.0), Map.entry("harvest_double", 0.95), Map.entry("wild_drops", 0.95),
             Map.entry("bounty_triple", 0.95), Map.entry("seed_back", 0.95),
             Map.entry("pickaxe_durability", 0.95), Map.entry("armour_durability", 0.95),
             Map.entry("craft_save", 0.95), Map.entry("craft_free", 0.95), Map.entry("craft_arrows", 0.95),

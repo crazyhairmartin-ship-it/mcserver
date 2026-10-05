@@ -15,7 +15,7 @@ public final class Biomes {
 
     public static boolean inForest(LivingEntity entity) {
         if (forest == null) {
-            forest = TagKey.m_203882_(ForgeRegistries.Keys.BIOMES, new ResourceLocation("minecraft", "is_forest"));
+            forest = TagKey.m_203882_(ForgeRegistries.Keys.BIOMES, new ResourceLocation("fotfskills", "forests"));
         }
         return entity.m_9236_().m_204166_(entity.m_20183_()).m_203656_(forest);
     }

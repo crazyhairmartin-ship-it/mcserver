@@ -27,7 +27,7 @@ import net.minecraftforge.registries.ForgeRegistries;
  * removing at logout.
  */
 public final class ConditionalStats {
-    private static final TagKey<Biome> FOREST = TagKey.m_203882_(ForgeRegistries.Keys.BIOMES, new ResourceLocation("minecraft", "is_forest"));
+    private static final TagKey<Biome> FOREST = TagKey.m_203882_(ForgeRegistries.Keys.BIOMES, new ResourceLocation("fotfskills", "forests"));
     private static final TagKey<Item> GEMS = TagKey.m_203882_(ForgeRegistries.Keys.ITEMS, new ResourceLocation("forge", "gems"));
 
     private static final java.util.Map<java.util.UUID, Double> SENT_ATTACK = new java.util.concurrent.ConcurrentHashMap<>();

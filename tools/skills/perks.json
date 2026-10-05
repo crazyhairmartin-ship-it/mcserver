@@ -831,8 +831,8 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "wild_drops",
-          "value": 0.08
+          "perk": "tea_duration",
+          "value": 0.25
         }
       }
     ],
@@ -850,7 +850,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "bounty_triple",
-          "value": 0.05
+          "value": 0.1
         }
       }
     ],
