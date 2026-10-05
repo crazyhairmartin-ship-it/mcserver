@@ -15,6 +15,10 @@
       "required": false
     },
     {
+      "id": "cataclysm:soul_render",
+      "required": false
+    },
+    {
       "id": "cataclysm:the_annihilator",
       "required": false
     },
@@ -264,6 +268,10 @@
     },
     {
       "id": "twilightforest:diamond_minotaur_axe",
+      "required": false
+    },
+    {
+      "id": "twilightforest:giant_pickaxe",
       "required": false
     },
     {

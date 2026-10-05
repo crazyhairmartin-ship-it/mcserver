@@ -1,7 +1,14 @@
 {
   "replace": false,
   "values": [
-    "#minecraft:swords",
+    {
+      "id": "alexscaves:limestone_spear",
+      "required": false
+    },
+    {
+      "id": "alexscaves:ortholance",
+      "required": false
+    },
     {
       "id": "alexsmobs:skelewag_sword",
       "required": false
@@ -15,23 +22,11 @@
       "required": false
     },
     {
-      "id": "bakery:rolling_pin",
-      "required": false
-    },
-    {
-      "id": "beachparty:pool_noodle",
-      "required": false
-    },
-    {
       "id": "cataclysm:black_steel_sword",
       "required": false
     },
     {
       "id": "cataclysm:khopesh",
-      "required": false
-    },
-    {
-      "id": "cataclysm:meat_shredder",
       "required": false
     },
     {
@@ -47,7 +42,11 @@
       "required": false
     },
     {
-      "id": "irons_spellbooks:claymore",
+      "id": "irons_spellbooks:decrepit_scythe",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:hellrazor",
       "required": false
     },
     {
@@ -63,15 +62,7 @@
       "required": false
     },
     {
-      "id": "irons_spellbooks:misery",
-      "required": false
-    },
-    {
       "id": "irons_spellbooks:spellbreaker",
-      "required": false
-    },
-    {
-      "id": "irons_spellbooks:twilight_gale",
       "required": false
     },
     {
@@ -136,10 +127,6 @@
     },
     {
       "id": "spartanweaponry:bronze_saber",
-      "required": false
-    },
-    {
-      "id": "spartanweaponry:cestus",
       "required": false
     },
     {
@@ -423,10 +410,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:studded_cestus",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:tin_greatsword",
       "required": false
     },
@@ -464,6 +447,22 @@
     },
     {
       "id": "spartanweaponry:wooden_saber",
+      "required": false
+    },
+    {
+      "id": "tconstruct:cleaver",
+      "required": false
+    },
+    {
+      "id": "tconstruct:dagger",
+      "required": false
+    },
+    {
+      "id": "tconstruct:swasher",
+      "required": false
+    },
+    {
+      "id": "tconstruct:sword",
       "required": false
     },
     {

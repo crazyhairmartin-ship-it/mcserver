@@ -27,10 +27,6 @@
       "required": false
     },
     {
-      "id": "cataclysm:ceraunus",
-      "required": false
-    },
-    {
       "id": "cataclysm:coral_bardiche",
       "required": false
     },
@@ -39,11 +35,27 @@
       "required": false
     },
     {
+      "id": "cataclysm:meat_shredder",
+      "required": false
+    },
+    {
       "id": "cataclysm:soul_render",
       "required": false
     },
     {
       "id": "farm_and_charm:pitchfork",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:lightning_rod",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:pyrium_staff",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:twilight_gale",
       "required": false
     },
     {

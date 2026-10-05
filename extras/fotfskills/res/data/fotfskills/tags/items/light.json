@@ -42,7 +42,31 @@
       "required": false
     },
     {
+      "id": "bakery:rolling_pin",
+      "required": false
+    },
+    {
+      "id": "beachparty:pool_noodle",
+      "required": false
+    },
+    {
       "id": "cataclysm:athame",
+      "required": false
+    },
+    {
+      "id": "cataclysm:gauntlet_of_bulwark",
+      "required": false
+    },
+    {
+      "id": "cataclysm:gauntlet_of_guard",
+      "required": false
+    },
+    {
+      "id": "cataclysm:gauntlet_of_maelstrom",
+      "required": false
+    },
+    {
+      "id": "cataclysm:khopesh",
       "required": false
     },
     {
@@ -70,7 +94,39 @@
       "required": false
     },
     {
+      "id": "farmersdelight:skillet",
+      "required": false
+    },
+    {
       "id": "irons_spellbooks:amethyst_rapier",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:blood_staff",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:decrepit_scythe",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:hellrazor",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:keeper_flamberge",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:legionnaire_flamberge",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:lightning_rod",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:magehunter",
       "required": false
     },
     {
@@ -110,6 +166,10 @@
       "required": false
     },
     {
+      "id": "spartanweaponry:cestus",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:constantan_dagger",
       "required": false
     },
@@ -134,11 +194,31 @@
       "required": false
     },
     {
+      "id": "spartanweaponry:copper_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_quarterstaff",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:copper_rapier",
       "required": false
     },
     {
+      "id": "spartanweaponry:copper_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_spear",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:copper_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_tomahawk",
       "required": false
     },
     {
@@ -150,11 +230,31 @@
       "required": false
     },
     {
+      "id": "spartanweaponry:diamond_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_quarterstaff",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:diamond_rapier",
       "required": false
     },
     {
+      "id": "spartanweaponry:diamond_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_spear",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:diamond_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_tomahawk",
       "required": false
     },
     {
@@ -182,11 +282,31 @@
       "required": false
     },
     {
+      "id": "spartanweaponry:golden_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_quarterstaff",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:golden_rapier",
       "required": false
     },
     {
+      "id": "spartanweaponry:golden_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_spear",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:golden_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_tomahawk",
       "required": false
     },
     {
@@ -214,11 +334,31 @@
       "required": false
     },
     {
+      "id": "spartanweaponry:iron_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_quarterstaff",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:iron_rapier",
       "required": false
     },
     {
+      "id": "spartanweaponry:iron_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_spear",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:iron_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_tomahawk",
       "required": false
     },
     {
@@ -246,11 +386,31 @@
       "required": false
     },
     {
+      "id": "spartanweaponry:netherite_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_quarterstaff",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:netherite_rapier",
       "required": false
     },
     {
+      "id": "spartanweaponry:netherite_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_spear",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:netherite_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_tomahawk",
       "required": false
     },
     {
@@ -326,11 +486,39 @@
       "required": false
     },
     {
+      "id": "spartanweaponry:stone_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_quarterstaff",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:stone_rapier",
       "required": false
     },
     {
+      "id": "spartanweaponry:stone_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_spear",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:stone_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:studded_cestus",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:studded_club",
       "required": false
     },
     {
@@ -350,6 +538,10 @@
       "required": false
     },
     {
+      "id": "spartanweaponry:wooden_club",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:wooden_dagger",
       "required": false
     },
@@ -358,11 +550,35 @@
       "required": false
     },
     {
+      "id": "spartanweaponry:wooden_pike",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_quarterstaff",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:wooden_rapier",
       "required": false
     },
     {
+      "id": "spartanweaponry:wooden_saber",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_spear",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:wooden_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_tomahawk",
+      "required": false
+    },
+    {
+      "id": "supplementaries:wrench",
       "required": false
     }
   ]

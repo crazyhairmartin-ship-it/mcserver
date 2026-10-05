@@ -3,6 +3,10 @@
   "values": [
     "#minecraft:hoes",
     {
+      "id": "aquaculture:neptunium_hoe",
+      "required": false
+    },
+    {
       "id": "farm_and_charm:pitchfork",
       "required": false
     },

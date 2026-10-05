@@ -20,7 +20,10 @@ def test_items_are_optional_and_unique_and_vanilla_tags_included():
     ids = [v['id'] for v in sword if isinstance(v, dict)]
     assert len(ids) == len(set(ids))
     assert all(v['required'] is False for v in sword if isinstance(v, dict))
-    assert '#minecraft:swords' in sword and '#minecraft:axes' in tags['axe']['values']
+    assert '#minecraft:axes' in tags['axe']['values'] and '#minecraft:hoes' in tags['scythe']['values']
+    # swords are listed one by one (no #minecraft:swords) so an item taken off the sword list really leaves it
+    assert '#minecraft:swords' not in sword and 'minecraft:iron_sword' in ids
+    assert 'irons_spellbooks:twilight_gale' not in ids
 
 
 def test_multi_type_rows_land_in_each_type_and_firearms_are_crossbows():

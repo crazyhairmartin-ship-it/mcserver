@@ -4,12 +4,12 @@ alexscaves,alexscaves:cinder_brick,thrown,ThrownProjectileItem,0.0,0.00
 alexscaves,alexscaves:depth_charge,thrown,ThrownProjectileItem,0.0,0.00
 alexscaves,alexscaves:desolate_dagger,light,DesolateDaggerItem,3.0,-2.00
 alexscaves,alexscaves:dreadbow,bow,DreadbowItem,0.0,0.00
-alexscaves,alexscaves:extinction_spear,polearm,ExtinctionSpearItem,8.0,-3.00
-alexscaves,alexscaves:frostmint_spear,polearm,FrostmintSpearItem,5.0,-3.00
+alexscaves,alexscaves:extinction_spear,polearm magic,ExtinctionSpearItem,8.0,-3.00
+alexscaves,alexscaves:frostmint_spear,polearm magic,FrostmintSpearItem,5.0,-3.00
 alexscaves,alexscaves:guano,thrown,ThrownProjectileItem,0.0,0.00
-alexscaves,alexscaves:limestone_spear,polearm,LimestoneSpearItem,3.0,-3.00
-alexscaves,alexscaves:ortholance,polearm two_handed,OrtholanceItem,5.0,-2.40
-alexscaves,alexscaves:primitive_club,blunt,PrimitiveClubItem,8.0,-3.75
+alexscaves,alexscaves:limestone_spear,sword polearm thrown,LimestoneSpearItem,3.0,-3.00
+alexscaves,alexscaves:ortholance,sword two_handed polearm,OrtholanceItem,5.0,-2.40
+alexscaves,alexscaves:primitive_club,two_handed blunt,PrimitiveClubItem,8.0,-3.75
 alexscaves,alexscaves:sea_staff,magic,SeaStaffItem,0.0,0.00
 alexscaves,alexscaves:sharpened_candy_cane,light,SharpenedCandyCaneItem,3.0,4.00
 alexscaves,alexscaves:sugar_staff,magic,SugarStaffItem,0.0,0.00
@@ -17,85 +17,85 @@ alexscaves,alexscaves:sweetberry_ice_cream_scoop,thrown,ThrownProjectileItem,0.0
 alexscaves,alexscaves:vanilla_ice_cream_scoop,thrown,ThrownProjectileItem,0.0,0.00
 alexsmobs,alexsmobs:ghostly_pickaxe,tool,ItemGhostlyPickaxe,3.0,-2.80
 alexsmobs,alexsmobs:skelewag_sword,sword,ItemSkelewagSword,3.5,0.00
-alexsmobs,alexsmobs:tendon_whip,light,ItemTendonWhip,4.0,-3.00
+alexsmobs,alexsmobs:tendon_whip,light thrown,ItemTendonWhip,4.0,-3.00
 aquaculture,aquaculture:diamond_fillet_knife,light,ItemFilletKnife,1.5,-2.20
 aquaculture,aquaculture:gold_fillet_knife,light,ItemFilletKnife,0.0,-2.20
 aquaculture,aquaculture:iron_fillet_knife,light,ItemFilletKnife,1.0,-2.20
 aquaculture,aquaculture:neptunium_axe,axe,AxeItem,8.5,-3.00
 aquaculture,aquaculture:neptunium_bow,bow,NeptuniumBow,0.0,0.00
 aquaculture,aquaculture:neptunium_fillet_knife,light,ItemFilletKnife,1.8,-2.20
-aquaculture,aquaculture:neptunium_hoe,tool,NeptuniumHoe,0.5,0.20
+aquaculture,aquaculture:neptunium_hoe,scythe tool,NeptuniumHoe,0.5,0.20
 aquaculture,aquaculture:neptunium_pickaxe,tool,NeptuniumPickaxe,4.5,-2.80
 aquaculture,aquaculture:neptunium_shovel,tool,NeptuniumShovel,5.0,-3.00
 aquaculture,aquaculture:neptunium_sword,sword,SwordItem,6.5,-2.40
 aquaculture,aquaculture:stone_fillet_knife,light,ItemFilletKnife,0.5,-2.20
 aquaculture,aquaculture:wooden_fillet_knife,light,ItemFilletKnife,0.0,-2.20
-ars_nouveau,ars_nouveau:dominion_wand,magic,DominionWand,0.0,0.00
+ars_nouveau,ars_nouveau:dominion_wand,,DominionWand,0.0,0.00
 ars_nouveau,ars_nouveau:enchanters_sword,sword,EnchantersSword,7.0,-2.40
 ars_nouveau,ars_nouveau:spell_bow,bow,SpellBow,0.0,0.00
 ars_nouveau,ars_nouveau:spell_crossbow,crossbow,SpellCrossbow,0.0,0.00
 ars_nouveau,ars_nouveau:wand,magic,Wand,0.0,0.00
 bakery,bakery:bread_knife,light,SwordItem,3.0,-2.00
-bakery,bakery:rolling_pin,sword,SwordItem,1.0,-2.00
-beachparty,beachparty:pool_noodle,sword,PoolNoodleItem,0.0,-1.40
-cataclysm,cataclysm:ancient_spear,polearm,Ancient_Spear,8.5,-2.60
-cataclysm,cataclysm:astrape,polearm,Astrape,9.5,-2.60
+bakery,bakery:rolling_pin,light blunt,SwordItem,1.0,-2.00
+beachparty,beachparty:pool_noodle,light blunt,PoolNoodleItem,0.0,-1.40
+cataclysm,cataclysm:ancient_spear,polearm magic,Ancient_Spear,8.5,-2.60
+cataclysm,cataclysm:astrape,polearm magic,Astrape,9.5,-2.60
 cataclysm,cataclysm:athame,light,Athame,4.0,-1.80
 cataclysm,cataclysm:black_steel_axe,axe,AxeItem,8.0,-3.10
 cataclysm,cataclysm:black_steel_pickaxe,tool,PickaxeItem,3.0,-2.80
 cataclysm,cataclysm:black_steel_shovel,tool,ShovelItem,3.5,-3.00
 cataclysm,cataclysm:black_steel_sword,sword,SwordItem,5.0,-2.40
-cataclysm,cataclysm:brontes,blunt two_handed,Brontes,12.0,-3.00
-cataclysm,cataclysm:ceraunus,polearm two_handed,Ceraunus,15.0,-3.30
-cataclysm,cataclysm:coral_bardiche,polearm axe two_handed,Coral_Bardiche,9.0,-3.20
-cataclysm,cataclysm:coral_spear,polearm,Coral_Spear,5.5,-2.90
-cataclysm,cataclysm:cursed_bow,bow,Cursed_bow,0.0,0.00
-cataclysm,cataclysm:gauntlet_of_bulwark,blunt,Gauntlet_of_Bulwark,10.0,-2.40
-cataclysm,cataclysm:gauntlet_of_guard,blunt,Gauntlet_of_Guard,10.0,-2.40
-cataclysm,cataclysm:gauntlet_of_maelstrom,blunt,Gauntlet_of_Maelstrom,10.0,-2.40
-cataclysm,cataclysm:infernal_forge,blunt two_handed,Infernal_forge,12.0,-3.00
-cataclysm,cataclysm:khopesh,sword,Khopesh,4.0,-2.60
-cataclysm,cataclysm:meat_shredder,sword,Meat_Shredder,7.5,-2.60
-cataclysm,cataclysm:soul_render,polearm two_handed,Soul_Render,14.0,-2.90
-cataclysm,cataclysm:the_annihilator,axe two_handed,The_Annihilator,7.5,-2.40
-cataclysm,cataclysm:the_immolator,blunt two_handed,The_Immolator,7.5,-2.40
-cataclysm,cataclysm:the_incinerator,sword two_handed,The_Incinerator,13.0,-2.60
-cataclysm,cataclysm:tidal_claws,light,Tidal_Claws,7.0,-2.40
-cataclysm,cataclysm:void_assault_shoulder_weapon,crossbow,Void_Assault_SHoulder_Weapon,0.0,0.00
-cataclysm,cataclysm:void_forge,blunt two_handed,Void_forge,12.0,-3.00
-cataclysm,cataclysm:wither_assault_shoulder_weapon,crossbow,Wither_Assault_SHoulder_Weapon,0.0,0.00
+cataclysm,cataclysm:brontes,two_handed blunt thrown,Brontes,12.0,-3.00
+cataclysm,cataclysm:ceraunus,two_handed,Ceraunus,15.0,-3.30
+cataclysm,cataclysm:coral_bardiche,two_handed polearm axe thrown,Coral_Bardiche,9.0,-3.20
+cataclysm,cataclysm:coral_spear,polearm thrown,Coral_Spear,5.5,-2.90
+cataclysm,cataclysm:cursed_bow,bow magic,Cursed_bow,0.0,0.00
+cataclysm,cataclysm:gauntlet_of_bulwark,light blunt,Gauntlet_of_Bulwark,10.0,-2.40
+cataclysm,cataclysm:gauntlet_of_guard,light blunt,Gauntlet_of_Guard,10.0,-2.40
+cataclysm,cataclysm:gauntlet_of_maelstrom,light blunt magic,Gauntlet_of_Maelstrom,10.0,-2.40
+cataclysm,cataclysm:infernal_forge,two_handed blunt,Infernal_forge,12.0,-3.00
+cataclysm,cataclysm:khopesh,sword light,Khopesh,4.0,-2.60
+cataclysm,cataclysm:meat_shredder,two_handed polearm,Meat_Shredder,7.5,-2.60
+cataclysm,cataclysm:soul_render,two_handed polearm axe,Soul_Render,14.0,-2.90
+cataclysm,cataclysm:the_annihilator,two_handed axe,The_Annihilator,7.5,-2.40
+cataclysm,cataclysm:the_immolator,two_handed blunt,The_Immolator,7.5,-2.40
+cataclysm,cataclysm:the_incinerator,sword two_handed magic,The_Incinerator,13.0,-2.60
+cataclysm,cataclysm:tidal_claws,light thrown,Tidal_Claws,7.0,-2.40
+cataclysm,cataclysm:void_assault_shoulder_weapon,two_handed crossbow magic,Void_Assault_SHoulder_Weapon,0.0,0.00
+cataclysm,cataclysm:void_forge,two_handed blunt,Void_forge,12.0,-3.00
+cataclysm,cataclysm:wither_assault_shoulder_weapon,two_handed crossbow magic,Wither_Assault_SHoulder_Weapon,0.0,0.00
 farm_and_charm,farm_and_charm:pitchfork,polearm scythe,HoeItem,1.0,-1.00
 farmersdelight,farmersdelight:diamond_knife,light,KnifeItem,3.5,-2.00
 farmersdelight,farmersdelight:flint_knife,light,KnifeItem,1.5,-2.00
 farmersdelight,farmersdelight:golden_knife,light,KnifeItem,0.5,-2.00
 farmersdelight,farmersdelight:iron_knife,light,KnifeItem,2.5,-2.00
 farmersdelight,farmersdelight:netherite_knife,light,KnifeItem,4.5,-2.00
-farmersdelight,farmersdelight:skillet,blunt,SkilletItem,7.0,-3.10
+farmersdelight,farmersdelight:skillet,light blunt,SkilletItem,7.0,-3.10
 grapplemod,grapplemod:launcheritem,magic,EnderStaffItem,0.0,0.00
 grapplemod,grapplemod:staffupgradeitem,magic,StaffUpgradeItem,0.0,0.00
 grapplemod,grapplemod:throwupgradeitem,thrown,ThrowUpgradeItem,0.0,0.00
-immersive_aircraft,immersive_aircraft:heavy_crossbow,crossbow,WeaponItem,0.0,0.00
-irons_spellbooks,irons_spellbooks:amethyst_rapier,light sword,MagicSwordItem,7.0,-1.70
+immersive_aircraft,immersive_aircraft:heavy_crossbow,two_handed crossbow,WeaponItem,0.0,0.00
+irons_spellbooks,irons_spellbooks:amethyst_rapier,sword light magic,MagicSwordItem,7.0,-1.70
 irons_spellbooks,irons_spellbooks:artificer_cane,magic,StaffItem,3.0,-3.00
 irons_spellbooks,irons_spellbooks:autoloader_crossbow,crossbow,AutoloaderCrossbow,0.0,0.00
-irons_spellbooks,irons_spellbooks:blood_staff,magic,StaffItem,7.0,-3.00
-irons_spellbooks,irons_spellbooks:boreal_blade,sword,MagicSwordItem,15.0,-3.10
-irons_spellbooks,irons_spellbooks:claymore,sword two_handed,ExtendedSwordItem,9.0,-2.70
-irons_spellbooks,irons_spellbooks:decrepit_scythe,scythe two_handed,ExtendedSwordItem,10.0,-2.60
+irons_spellbooks,irons_spellbooks:blood_staff,light magic,StaffItem,7.0,-3.00
+irons_spellbooks,irons_spellbooks:boreal_blade,sword magic,MagicSwordItem,15.0,-3.10
+irons_spellbooks,irons_spellbooks:claymore,,ExtendedSwordItem,9.0,-2.70
+irons_spellbooks,irons_spellbooks:decrepit_scythe,sword light scythe,ExtendedSwordItem,10.0,-2.60
 irons_spellbooks,irons_spellbooks:graybeard_staff,magic,StaffItem,2.0,-3.00
-irons_spellbooks,irons_spellbooks:hellrazor,scythe,MagicSwordItem,12.0,-2.60
+irons_spellbooks,irons_spellbooks:hellrazor,sword light scythe magic,MagicSwordItem,12.0,-2.60
 irons_spellbooks,irons_spellbooks:hither_thither_wand,magic,HitherThitherWand,0.0,0.00
 irons_spellbooks,irons_spellbooks:ice_staff,magic,StaffItem,4.0,-3.00
-irons_spellbooks,irons_spellbooks:keeper_flamberge,sword,ExtendedSwordItem,10.0,-2.70
-irons_spellbooks,irons_spellbooks:legionnaire_flamberge,sword,ExtendedSwordItem,10.0,-2.50
-irons_spellbooks,irons_spellbooks:lightning_rod,magic,StaffItem,4.0,-3.00
-irons_spellbooks,irons_spellbooks:magehunter,sword,ExtendedSwordItem,6.0,-2.40
-irons_spellbooks,irons_spellbooks:misery,sword,MagicSwordItem,7.0,-2.10
-irons_spellbooks,irons_spellbooks:pyrium_staff,magic,PyriumStaffItem,8.0,-2.50
-irons_spellbooks,irons_spellbooks:spellbreaker,sword,MagicSwordItem,9.0,-2.20
-irons_spellbooks,irons_spellbooks:staff_of_the_nines,magic,StaffOfTheNines,0.0,0.00
-irons_spellbooks,irons_spellbooks:twilight_gale,sword,TwilightGaleItem,12.0,-2.60
-lilis_lucky_lures,lilis_lucky_lures:spear,polearm,SpearItem,6.0,-2.70
+irons_spellbooks,irons_spellbooks:keeper_flamberge,sword light,ExtendedSwordItem,10.0,-2.70
+irons_spellbooks,irons_spellbooks:legionnaire_flamberge,sword light,ExtendedSwordItem,10.0,-2.50
+irons_spellbooks,irons_spellbooks:lightning_rod,light two_handed polearm magic,StaffItem,4.0,-3.00
+irons_spellbooks,irons_spellbooks:magehunter,sword light,ExtendedSwordItem,6.0,-2.40
+irons_spellbooks,irons_spellbooks:misery,,MagicSwordItem,7.0,-2.10
+irons_spellbooks,irons_spellbooks:pyrium_staff,two_handed polearm magic,PyriumStaffItem,8.0,-2.50
+irons_spellbooks,irons_spellbooks:spellbreaker,sword magic,MagicSwordItem,9.0,-2.20
+irons_spellbooks,irons_spellbooks:staff_of_the_nines,,StaffOfTheNines,0.0,0.00
+irons_spellbooks,irons_spellbooks:twilight_gale,polearm magic,TwilightGaleItem,12.0,-2.60
+lilis_lucky_lures,lilis_lucky_lures:spear,polearm thrown,SpearItem,6.0,-2.70
 minecraft,minecraft:bow,bow,BowItem,0.0,0.00
 minecraft,minecraft:crossbow,crossbow,CrossbowItem,0.0,0.00
 minecraft,minecraft:diamond_axe,axe,AxeItem,8.0,-3.00
@@ -120,17 +120,17 @@ minecraft,minecraft:stone_axe,axe,AxeItem,8.0,-3.20
 minecraft,minecraft:stone_pickaxe,tool,PickaxeItem,2.0,-2.80
 minecraft,minecraft:stone_shovel,tool,ShovelItem,2.5,-3.00
 minecraft,minecraft:stone_sword,sword,SwordItem,4.0,-2.40
-minecraft,minecraft:trident,thrown polearm,TridentItem,8.0,-2.90
+minecraft,minecraft:trident,polearm thrown,TridentItem,8.0,-2.90
 minecraft,minecraft:wooden_axe,axe,AxeItem,6.0,-3.20
 minecraft,minecraft:wooden_pickaxe,tool,PickaxeItem,1.0,-2.80
 minecraft,minecraft:wooden_shovel,tool,ShovelItem,1.5,-3.00
 minecraft,minecraft:wooden_sword,sword,SwordItem,3.0,-2.40
 mowziesmobs,mowziesmobs:blowgun,bow,ItemBlowgun,0.0,0.00
-mowziesmobs,mowziesmobs:earthrend_gauntlet,blunt,ItemEarthrendGauntlet,5.0,-2.80
+mowziesmobs,mowziesmobs:earthrend_gauntlet,blunt magic,ItemEarthrendGauntlet,5.0,-2.80
 mowziesmobs,mowziesmobs:naga_fang_dagger,light,ItemNagaFangDagger,2.0,-2.00
 mowziesmobs,mowziesmobs:sculptor_staff,magic,ItemSculptorStaff,2.0,-3.00
 mowziesmobs,mowziesmobs:spear,polearm,ItemSpear,4.0,-2.40
-mowziesmobs,mowziesmobs:wrought_axe,axe,ItemWroughtAxe,8.0,-3.10
+mowziesmobs,mowziesmobs:wrought_axe,two_handed axe,ItemWroughtAxe,8.0,-3.10
 spartanweaponry,spartanweaponry:aluminum_battle_hammer,blunt two_handed,SwordBaseItem,5.1,-2.40
 spartanweaponry,spartanweaponry:aluminum_battleaxe,axe two_handed,SwordBaseItem,5.1,-2.40
 spartanweaponry,spartanweaponry:aluminum_boomerang,thrown,BoomerangItem,0.0,0.00
@@ -152,7 +152,7 @@ spartanweaponry,spartanweaponry:aluminum_rapier,light sword,SwordBaseItem,5.1,-2
 spartanweaponry,spartanweaponry:aluminum_saber,sword,SwordBaseItem,5.1,-2.40
 spartanweaponry,spartanweaponry:aluminum_scythe,scythe two_handed,SwordBaseItem,5.1,-2.40
 spartanweaponry,spartanweaponry:aluminum_spear,polearm,SwordBaseItem,5.1,-2.40
-spartanweaponry,spartanweaponry:aluminum_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:aluminum_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:aluminum_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:aluminum_warhammer,blunt two_handed,SwordBaseItem,5.1,-2.40
 spartanweaponry,spartanweaponry:bronze_battle_hammer,blunt two_handed,SwordBaseItem,5.0,-2.40
@@ -176,10 +176,10 @@ spartanweaponry,spartanweaponry:bronze_rapier,light sword,SwordBaseItem,5.0,-2.4
 spartanweaponry,spartanweaponry:bronze_saber,sword,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:bronze_scythe,scythe two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:bronze_spear,polearm,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:bronze_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:bronze_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:bronze_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:bronze_warhammer,blunt two_handed,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:cestus,sword,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:cestus,light blunt,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:constantan_battle_hammer,blunt two_handed,SwordBaseItem,5.3,-2.40
 spartanweaponry,spartanweaponry:constantan_battleaxe,axe two_handed,SwordBaseItem,5.3,-2.40
 spartanweaponry,spartanweaponry:constantan_boomerang,thrown,BoomerangItem,0.0,0.00
@@ -201,57 +201,57 @@ spartanweaponry,spartanweaponry:constantan_rapier,light sword,SwordBaseItem,5.3,
 spartanweaponry,spartanweaponry:constantan_saber,sword,SwordBaseItem,5.3,-2.40
 spartanweaponry,spartanweaponry:constantan_scythe,scythe two_handed,SwordBaseItem,5.3,-2.40
 spartanweaponry,spartanweaponry:constantan_spear,polearm,SwordBaseItem,5.3,-2.40
-spartanweaponry,spartanweaponry:constantan_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:constantan_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:constantan_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:constantan_warhammer,blunt two_handed,SwordBaseItem,5.3,-2.40
-spartanweaponry,spartanweaponry:copper_battle_hammer,blunt two_handed,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_battleaxe,axe two_handed,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_boomerang,thrown,BoomerangItem,0.0,0.00
+spartanweaponry,spartanweaponry:copper_battle_hammer,blunt,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_battleaxe,two_handed axe,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_boomerang,blunt thrown,BoomerangItem,0.0,0.00
 spartanweaponry,spartanweaponry:copper_dagger,light thrown,SwordBaseItem,4.5,-2.40
 spartanweaponry,spartanweaponry:copper_flanged_mace,blunt,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_glaive,polearm two_handed,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_glaive,two_handed polearm,SwordBaseItem,4.5,-2.40
 spartanweaponry,spartanweaponry:copper_greatsword,sword two_handed,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_halberd,polearm axe two_handed,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_heavy_crossbow,crossbow,HeavyCrossbowItem,0.0,0.00
-spartanweaponry,spartanweaponry:copper_javelin,thrown polearm,JavelinItem,0.0,0.00
-spartanweaponry,spartanweaponry:copper_katana,sword,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_lance,polearm two_handed,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_halberd,two_handed polearm axe,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_heavy_crossbow,two_handed crossbow,HeavyCrossbowItem,0.0,0.00
+spartanweaponry,spartanweaponry:copper_javelin,polearm thrown,JavelinItem,0.0,0.00
+spartanweaponry,spartanweaponry:copper_katana,sword two_handed,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_lance,two_handed polearm,SwordBaseItem,4.5,-2.40
 spartanweaponry,spartanweaponry:copper_longbow,bow,LongbowItem,0.0,0.00
 spartanweaponry,spartanweaponry:copper_longsword,sword,SwordBaseItem,4.5,-2.40
 spartanweaponry,spartanweaponry:copper_parrying_dagger,light,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_pike,polearm two_handed,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_quarterstaff,blunt polearm two_handed,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_rapier,light sword,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_saber,sword,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_scythe,scythe two_handed,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_spear,polearm,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:copper_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
-spartanweaponry,spartanweaponry:copper_tomahawk,thrown axe,TomahawkItem,0.0,0.00
-spartanweaponry,spartanweaponry:copper_warhammer,blunt two_handed,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:diamond_battle_hammer,blunt two_handed,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_battleaxe,axe two_handed,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_boomerang,thrown,BoomerangItem,0.0,0.00
+spartanweaponry,spartanweaponry:copper_pike,light two_handed polearm,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_quarterstaff,light two_handed polearm blunt,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_rapier,sword light,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_saber,sword light,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_scythe,two_handed scythe,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_spear,light polearm,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:copper_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:copper_tomahawk,light axe thrown,TomahawkItem,0.0,0.00
+spartanweaponry,spartanweaponry:copper_warhammer,two_handed blunt,SwordBaseItem,4.5,-2.40
+spartanweaponry,spartanweaponry:diamond_battle_hammer,blunt,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_battleaxe,two_handed axe,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_boomerang,blunt thrown,BoomerangItem,0.0,0.00
 spartanweaponry,spartanweaponry:diamond_dagger,light thrown,SwordBaseItem,6.0,-2.40
 spartanweaponry,spartanweaponry:diamond_flanged_mace,blunt,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_glaive,polearm two_handed,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_glaive,two_handed polearm,SwordBaseItem,6.0,-2.40
 spartanweaponry,spartanweaponry:diamond_greatsword,sword two_handed,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_halberd,polearm axe two_handed,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_heavy_crossbow,crossbow,HeavyCrossbowItem,0.0,0.00
-spartanweaponry,spartanweaponry:diamond_javelin,thrown polearm,JavelinItem,0.0,0.00
-spartanweaponry,spartanweaponry:diamond_katana,sword,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_lance,polearm two_handed,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_halberd,two_handed polearm axe,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_heavy_crossbow,two_handed crossbow,HeavyCrossbowItem,0.0,0.00
+spartanweaponry,spartanweaponry:diamond_javelin,polearm thrown,JavelinItem,0.0,0.00
+spartanweaponry,spartanweaponry:diamond_katana,sword two_handed,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_lance,two_handed polearm,SwordBaseItem,6.0,-2.40
 spartanweaponry,spartanweaponry:diamond_longbow,bow,LongbowItem,0.0,0.00
 spartanweaponry,spartanweaponry:diamond_longsword,sword,SwordBaseItem,6.0,-2.40
 spartanweaponry,spartanweaponry:diamond_parrying_dagger,light,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_pike,polearm two_handed,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_quarterstaff,blunt polearm two_handed,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_rapier,light sword,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_saber,sword,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_scythe,scythe two_handed,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_spear,polearm,SwordBaseItem,6.0,-2.40
-spartanweaponry,spartanweaponry:diamond_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
-spartanweaponry,spartanweaponry:diamond_tomahawk,thrown axe,TomahawkItem,0.0,0.00
-spartanweaponry,spartanweaponry:diamond_warhammer,blunt two_handed,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_pike,light two_handed polearm,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_quarterstaff,light two_handed polearm blunt,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_rapier,sword light,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_saber,sword light,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_scythe,two_handed scythe,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_spear,light polearm,SwordBaseItem,6.0,-2.40
+spartanweaponry,spartanweaponry:diamond_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:diamond_tomahawk,light axe thrown,TomahawkItem,0.0,0.00
+spartanweaponry,spartanweaponry:diamond_warhammer,two_handed blunt,SwordBaseItem,6.0,-2.40
 spartanweaponry,spartanweaponry:electrum_battle_hammer,blunt two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:electrum_battleaxe,axe two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:electrum_boomerang,thrown,BoomerangItem,0.0,0.00
@@ -273,33 +273,33 @@ spartanweaponry,spartanweaponry:electrum_rapier,light sword,SwordBaseItem,5.0,-2
 spartanweaponry,spartanweaponry:electrum_saber,sword,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:electrum_scythe,scythe two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:electrum_spear,polearm,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:electrum_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:electrum_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:electrum_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:electrum_warhammer,blunt two_handed,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:golden_battle_hammer,blunt two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_battleaxe,axe two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_boomerang,thrown,BoomerangItem,0.0,0.00
+spartanweaponry,spartanweaponry:golden_battle_hammer,blunt,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_battleaxe,two_handed axe,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_boomerang,blunt thrown,BoomerangItem,0.0,0.00
 spartanweaponry,spartanweaponry:golden_dagger,light thrown,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:golden_flanged_mace,blunt,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_glaive,polearm two_handed,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_glaive,two_handed polearm,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:golden_greatsword,sword two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_halberd,polearm axe two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_heavy_crossbow,crossbow,HeavyCrossbowItem,0.0,0.00
-spartanweaponry,spartanweaponry:golden_javelin,thrown polearm,JavelinItem,0.0,0.00
-spartanweaponry,spartanweaponry:golden_katana,sword,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_lance,polearm two_handed,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_halberd,two_handed polearm axe,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_heavy_crossbow,two_handed crossbow,HeavyCrossbowItem,0.0,0.00
+spartanweaponry,spartanweaponry:golden_javelin,polearm thrown,JavelinItem,0.0,0.00
+spartanweaponry,spartanweaponry:golden_katana,sword two_handed,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_lance,two_handed polearm,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:golden_longbow,bow,LongbowItem,0.0,0.00
 spartanweaponry,spartanweaponry:golden_longsword,sword,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:golden_parrying_dagger,light,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_pike,polearm two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_quarterstaff,blunt polearm two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_rapier,light sword,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_saber,sword,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_scythe,scythe two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_spear,polearm,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:golden_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
-spartanweaponry,spartanweaponry:golden_tomahawk,thrown axe,TomahawkItem,0.0,0.00
-spartanweaponry,spartanweaponry:golden_warhammer,blunt two_handed,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_pike,light two_handed polearm,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_quarterstaff,light two_handed polearm blunt,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_rapier,sword light,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_saber,sword light,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_scythe,two_handed scythe,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_spear,light polearm,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:golden_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:golden_tomahawk,light axe thrown,TomahawkItem,0.0,0.00
+spartanweaponry,spartanweaponry:golden_warhammer,two_handed blunt,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:invar_battle_hammer,blunt two_handed,SwordBaseItem,5.3,-2.40
 spartanweaponry,spartanweaponry:invar_battleaxe,axe two_handed,SwordBaseItem,5.3,-2.40
 spartanweaponry,spartanweaponry:invar_boomerang,thrown,BoomerangItem,0.0,0.00
@@ -321,33 +321,33 @@ spartanweaponry,spartanweaponry:invar_rapier,light sword,SwordBaseItem,5.3,-2.40
 spartanweaponry,spartanweaponry:invar_saber,sword,SwordBaseItem,5.3,-2.40
 spartanweaponry,spartanweaponry:invar_scythe,scythe two_handed,SwordBaseItem,5.3,-2.40
 spartanweaponry,spartanweaponry:invar_spear,polearm,SwordBaseItem,5.3,-2.40
-spartanweaponry,spartanweaponry:invar_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:invar_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:invar_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:invar_warhammer,blunt two_handed,SwordBaseItem,5.3,-2.40
-spartanweaponry,spartanweaponry:iron_battle_hammer,blunt two_handed,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_battleaxe,axe two_handed,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_boomerang,thrown,BoomerangItem,0.0,0.00
+spartanweaponry,spartanweaponry:iron_battle_hammer,blunt,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_battleaxe,two_handed axe,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_boomerang,blunt thrown,BoomerangItem,0.0,0.00
 spartanweaponry,spartanweaponry:iron_dagger,light thrown,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:iron_flanged_mace,blunt,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_glaive,polearm two_handed,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_glaive,two_handed polearm,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:iron_greatsword,sword two_handed,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_halberd,polearm axe two_handed,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_heavy_crossbow,crossbow,HeavyCrossbowItem,0.0,0.00
-spartanweaponry,spartanweaponry:iron_javelin,thrown polearm,JavelinItem,0.0,0.00
-spartanweaponry,spartanweaponry:iron_katana,sword,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_lance,polearm two_handed,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_halberd,two_handed polearm axe,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_heavy_crossbow,two_handed crossbow,HeavyCrossbowItem,0.0,0.00
+spartanweaponry,spartanweaponry:iron_javelin,polearm thrown,JavelinItem,0.0,0.00
+spartanweaponry,spartanweaponry:iron_katana,sword two_handed,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_lance,two_handed polearm,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:iron_longbow,bow,LongbowItem,0.0,0.00
 spartanweaponry,spartanweaponry:iron_longsword,sword,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:iron_parrying_dagger,light,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_pike,polearm two_handed,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_quarterstaff,blunt polearm two_handed,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_rapier,light sword,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_saber,sword,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_scythe,scythe two_handed,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_spear,polearm,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:iron_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
-spartanweaponry,spartanweaponry:iron_tomahawk,thrown axe,TomahawkItem,0.0,0.00
-spartanweaponry,spartanweaponry:iron_warhammer,blunt two_handed,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_pike,light two_handed polearm,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_quarterstaff,light two_handed polearm blunt,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_rapier,sword light,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_saber,sword light,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_scythe,two_handed scythe,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_spear,light polearm,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:iron_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:iron_tomahawk,light axe thrown,TomahawkItem,0.0,0.00
+spartanweaponry,spartanweaponry:iron_warhammer,two_handed blunt,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:lead_battle_hammer,blunt two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:lead_battleaxe,axe two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:lead_boomerang,thrown,BoomerangItem,0.0,0.00
@@ -369,35 +369,35 @@ spartanweaponry,spartanweaponry:lead_rapier,light sword,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:lead_saber,sword,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:lead_scythe,scythe two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:lead_spear,polearm,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:lead_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:lead_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:lead_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:lead_warhammer,blunt two_handed,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:leather_heavy_crossbow,crossbow,HeavyCrossbowItem,0.0,0.00
+spartanweaponry,spartanweaponry:leather_heavy_crossbow,two_handed crossbow,HeavyCrossbowItem,0.0,0.00
 spartanweaponry,spartanweaponry:leather_longbow,bow,LongbowItem,0.0,0.00
-spartanweaponry,spartanweaponry:netherite_battle_hammer,blunt two_handed,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_battleaxe,axe two_handed,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_boomerang,thrown,BoomerangItem,0.0,0.00
+spartanweaponry,spartanweaponry:netherite_battle_hammer,blunt,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_battleaxe,two_handed axe,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_boomerang,blunt thrown,BoomerangItem,0.0,0.00
 spartanweaponry,spartanweaponry:netherite_dagger,light thrown,SwordBaseItem,7.0,-2.40
 spartanweaponry,spartanweaponry:netherite_flanged_mace,blunt,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_glaive,polearm two_handed,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_glaive,two_handed polearm,SwordBaseItem,7.0,-2.40
 spartanweaponry,spartanweaponry:netherite_greatsword,sword two_handed,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_halberd,polearm axe two_handed,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_heavy_crossbow,crossbow,HeavyCrossbowItem,0.0,0.00
-spartanweaponry,spartanweaponry:netherite_javelin,thrown polearm,JavelinItem,0.0,0.00
-spartanweaponry,spartanweaponry:netherite_katana,sword,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_lance,polearm two_handed,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_halberd,two_handed polearm axe,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_heavy_crossbow,two_handed crossbow,HeavyCrossbowItem,0.0,0.00
+spartanweaponry,spartanweaponry:netherite_javelin,polearm thrown,JavelinItem,0.0,0.00
+spartanweaponry,spartanweaponry:netherite_katana,sword two_handed,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_lance,two_handed polearm,SwordBaseItem,7.0,-2.40
 spartanweaponry,spartanweaponry:netherite_longbow,bow,LongbowItem,0.0,0.00
 spartanweaponry,spartanweaponry:netherite_longsword,sword,SwordBaseItem,7.0,-2.40
 spartanweaponry,spartanweaponry:netherite_parrying_dagger,light,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_pike,polearm two_handed,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_quarterstaff,blunt polearm two_handed,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_rapier,light sword,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_saber,sword,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_scythe,scythe two_handed,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_spear,polearm,SwordBaseItem,7.0,-2.40
-spartanweaponry,spartanweaponry:netherite_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
-spartanweaponry,spartanweaponry:netherite_tomahawk,thrown axe,TomahawkItem,0.0,0.00
-spartanweaponry,spartanweaponry:netherite_warhammer,blunt two_handed,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_pike,light two_handed polearm,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_quarterstaff,light two_handed polearm blunt,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_rapier,sword light,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_saber,sword light,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_scythe,two_handed scythe,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_spear,light polearm,SwordBaseItem,7.0,-2.40
+spartanweaponry,spartanweaponry:netherite_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:netherite_tomahawk,light axe thrown,TomahawkItem,0.0,0.00
+spartanweaponry,spartanweaponry:netherite_warhammer,two_handed blunt,SwordBaseItem,7.0,-2.40
 spartanweaponry,spartanweaponry:nickel_battle_hammer,blunt two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:nickel_battleaxe,axe two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:nickel_boomerang,thrown,BoomerangItem,0.0,0.00
@@ -419,7 +419,7 @@ spartanweaponry,spartanweaponry:nickel_rapier,light sword,SwordBaseItem,5.0,-2.4
 spartanweaponry,spartanweaponry:nickel_saber,sword,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:nickel_scythe,scythe two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:nickel_spear,polearm,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:nickel_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:nickel_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:nickel_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:nickel_warhammer,blunt two_handed,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:platinum_battle_hammer,blunt two_handed,SwordBaseItem,6.5,-2.40
@@ -443,7 +443,7 @@ spartanweaponry,spartanweaponry:platinum_rapier,light sword,SwordBaseItem,6.5,-2
 spartanweaponry,spartanweaponry:platinum_saber,sword,SwordBaseItem,6.5,-2.40
 spartanweaponry,spartanweaponry:platinum_scythe,scythe two_handed,SwordBaseItem,6.5,-2.40
 spartanweaponry,spartanweaponry:platinum_spear,polearm,SwordBaseItem,6.5,-2.40
-spartanweaponry,spartanweaponry:platinum_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:platinum_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:platinum_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:platinum_warhammer,blunt two_handed,SwordBaseItem,6.5,-2.40
 spartanweaponry,spartanweaponry:silver_battle_hammer,blunt two_handed,SwordBaseItem,4.5,-2.40
@@ -467,7 +467,7 @@ spartanweaponry,spartanweaponry:silver_rapier,light sword,SwordBaseItem,4.5,-2.4
 spartanweaponry,spartanweaponry:silver_saber,sword,SwordBaseItem,4.5,-2.40
 spartanweaponry,spartanweaponry:silver_scythe,scythe two_handed,SwordBaseItem,4.5,-2.40
 spartanweaponry,spartanweaponry:silver_spear,polearm,SwordBaseItem,4.5,-2.40
-spartanweaponry,spartanweaponry:silver_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:silver_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:silver_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:silver_warhammer,blunt two_handed,SwordBaseItem,4.5,-2.40
 spartanweaponry,spartanweaponry:steel_battle_hammer,blunt two_handed,SwordBaseItem,5.5,-2.40
@@ -491,33 +491,33 @@ spartanweaponry,spartanweaponry:steel_rapier,light sword,SwordBaseItem,5.5,-2.40
 spartanweaponry,spartanweaponry:steel_saber,sword,SwordBaseItem,5.5,-2.40
 spartanweaponry,spartanweaponry:steel_scythe,scythe two_handed,SwordBaseItem,5.5,-2.40
 spartanweaponry,spartanweaponry:steel_spear,polearm,SwordBaseItem,5.5,-2.40
-spartanweaponry,spartanweaponry:steel_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:steel_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:steel_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:steel_warhammer,blunt two_handed,SwordBaseItem,5.5,-2.40
-spartanweaponry,spartanweaponry:stone_battle_hammer,blunt two_handed,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_battleaxe,axe two_handed,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_boomerang,thrown,BoomerangItem,0.0,0.00
+spartanweaponry,spartanweaponry:stone_battle_hammer,blunt,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_battleaxe,two_handed axe,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_boomerang,blunt thrown,BoomerangItem,0.0,0.00
 spartanweaponry,spartanweaponry:stone_dagger,light thrown,SwordBaseItem,4.0,-2.40
 spartanweaponry,spartanweaponry:stone_flanged_mace,blunt,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_glaive,polearm two_handed,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_glaive,two_handed polearm,SwordBaseItem,4.0,-2.40
 spartanweaponry,spartanweaponry:stone_greatsword,sword two_handed,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_halberd,polearm axe two_handed,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_javelin,thrown polearm,JavelinItem,0.0,0.00
-spartanweaponry,spartanweaponry:stone_katana,sword,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_lance,polearm two_handed,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_halberd,two_handed polearm axe,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_javelin,polearm thrown,JavelinItem,0.0,0.00
+spartanweaponry,spartanweaponry:stone_katana,sword two_handed,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_lance,two_handed polearm,SwordBaseItem,4.0,-2.40
 spartanweaponry,spartanweaponry:stone_longsword,sword,SwordBaseItem,4.0,-2.40
 spartanweaponry,spartanweaponry:stone_parrying_dagger,light,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_pike,polearm two_handed,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_quarterstaff,blunt polearm two_handed,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_rapier,light sword,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_saber,sword,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_scythe,scythe two_handed,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_spear,polearm,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:stone_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
-spartanweaponry,spartanweaponry:stone_tomahawk,thrown axe,TomahawkItem,0.0,0.00
-spartanweaponry,spartanweaponry:stone_warhammer,blunt two_handed,SwordBaseItem,4.0,-2.40
-spartanweaponry,spartanweaponry:studded_cestus,sword,SwordBaseItem,5.0,-2.40
-spartanweaponry,spartanweaponry:studded_club,blunt,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:stone_pike,light two_handed polearm,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_quarterstaff,light two_handed polearm blunt,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_rapier,sword light,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_saber,sword light,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_scythe,two_handed scythe,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_spear,light polearm,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:stone_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:stone_tomahawk,light axe thrown,TomahawkItem,0.0,0.00
+spartanweaponry,spartanweaponry:stone_warhammer,two_handed blunt,SwordBaseItem,4.0,-2.40
+spartanweaponry,spartanweaponry:studded_cestus,light blunt,SwordBaseItem,5.0,-2.40
+spartanweaponry,spartanweaponry:studded_club,light blunt,SwordBaseItem,5.0,-2.40
 spartanweaponry,spartanweaponry:tin_battle_hammer,blunt two_handed,SwordBaseItem,4.8,-2.40
 spartanweaponry,spartanweaponry:tin_battleaxe,axe two_handed,SwordBaseItem,4.8,-2.40
 spartanweaponry,spartanweaponry:tin_boomerang,thrown,BoomerangItem,0.0,0.00
@@ -539,46 +539,50 @@ spartanweaponry,spartanweaponry:tin_rapier,light sword,SwordBaseItem,4.8,-2.40
 spartanweaponry,spartanweaponry:tin_saber,sword,SwordBaseItem,4.8,-2.40
 spartanweaponry,spartanweaponry:tin_scythe,scythe two_handed,SwordBaseItem,4.8,-2.40
 spartanweaponry,spartanweaponry:tin_spear,polearm,SwordBaseItem,4.8,-2.40
-spartanweaponry,spartanweaponry:tin_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:tin_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
 spartanweaponry,spartanweaponry:tin_tomahawk,thrown axe,TomahawkItem,0.0,0.00
 spartanweaponry,spartanweaponry:tin_warhammer,blunt two_handed,SwordBaseItem,4.8,-2.40
-spartanweaponry,spartanweaponry:wooden_battle_hammer,blunt two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_battleaxe,axe two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_boomerang,thrown,BoomerangItem,0.0,0.00
-spartanweaponry,spartanweaponry:wooden_club,blunt,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_battle_hammer,blunt,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_battleaxe,two_handed axe,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_boomerang,blunt thrown,BoomerangItem,0.0,0.00
+spartanweaponry,spartanweaponry:wooden_club,light blunt,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:wooden_dagger,light thrown,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:wooden_flanged_mace,blunt,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_glaive,polearm two_handed,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_glaive,two_handed polearm,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:wooden_greatsword,sword two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_halberd,polearm axe two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_heavy_crossbow,crossbow,HeavyCrossbowItem,0.0,0.00
-spartanweaponry,spartanweaponry:wooden_javelin,thrown polearm,JavelinItem,0.0,0.00
-spartanweaponry,spartanweaponry:wooden_katana,sword,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_lance,polearm two_handed,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_halberd,two_handed polearm axe,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_heavy_crossbow,two_handed crossbow,HeavyCrossbowItem,0.0,0.00
+spartanweaponry,spartanweaponry:wooden_javelin,polearm thrown,JavelinItem,0.0,0.00
+spartanweaponry,spartanweaponry:wooden_katana,sword two_handed,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_lance,two_handed polearm,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:wooden_longbow,bow,LongbowItem,0.0,0.00
 spartanweaponry,spartanweaponry:wooden_longsword,sword,SwordBaseItem,3.0,-2.40
 spartanweaponry,spartanweaponry:wooden_parrying_dagger,light,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_pike,polearm two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_quarterstaff,blunt polearm two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_rapier,light sword,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_saber,sword,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_scythe,scythe two_handed,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_spear,polearm,SwordBaseItem,3.0,-2.40
-spartanweaponry,spartanweaponry:wooden_throwing_knife,thrown light,ThrowingKnifeItem,0.0,0.00
-spartanweaponry,spartanweaponry:wooden_tomahawk,thrown axe,TomahawkItem,0.0,0.00
-spartanweaponry,spartanweaponry:wooden_warhammer,blunt two_handed,SwordBaseItem,3.0,-2.40
-supplementaries,supplementaries:slingshot,thrown,SlingshotItem,0.0,0.00
-supplementaries,supplementaries:wrench,blunt,WrenchItem,2.5,-2.00
+spartanweaponry,spartanweaponry:wooden_pike,light two_handed polearm,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_quarterstaff,light two_handed polearm blunt,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_rapier,sword light,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_saber,sword light,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_scythe,two_handed scythe,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_spear,light polearm,SwordBaseItem,3.0,-2.40
+spartanweaponry,spartanweaponry:wooden_throwing_knife,light thrown,ThrowingKnifeItem,0.0,0.00
+spartanweaponry,spartanweaponry:wooden_tomahawk,light axe thrown,TomahawkItem,0.0,0.00
+spartanweaponry,spartanweaponry:wooden_warhammer,two_handed blunt,SwordBaseItem,3.0,-2.40
+supplementaries,supplementaries:slingshot,bow,SlingshotItem,0.0,0.00
+supplementaries,supplementaries:wrench,light blunt,WrenchItem,2.5,-2.00
+tconstruct,tconstruct:cleaver,sword,,,
+tconstruct,tconstruct:dagger,sword,,,
+tconstruct,tconstruct:swasher,sword,,,
+tconstruct,tconstruct:sword,sword,,,
 twilightforest,twilightforest:diamond_minotaur_axe,axe,MinotaurAxeItem,9.0,-3.00
-twilightforest,twilightforest:ender_bow,bow,EnderBowItem,0.0,0.00
+twilightforest,twilightforest:ender_bow,bow magic,EnderBowItem,0.0,0.00
 twilightforest,twilightforest:fiery_pickaxe,tool,FieryPickItem,5.0,-2.80
-twilightforest,twilightforest:fiery_sword,sword,FierySwordItem,7.0,-2.40
+twilightforest,twilightforest:fiery_sword,sword magic,FierySwordItem,7.0,-2.40
 twilightforest,twilightforest:fortification_scepter,magic,FortificationWandItem,0.0,0.00
-twilightforest,twilightforest:giant_pickaxe,tool,GiantPickItem,9.0,-3.50
-twilightforest,twilightforest:giant_sword,sword,GiantSwordItem,11.0,-3.50
+twilightforest,twilightforest:giant_pickaxe,two_handed axe blunt tool,GiantPickItem,9.0,-3.50
+twilightforest,twilightforest:giant_sword,sword two_handed blunt,GiantSwordItem,11.0,-3.50
 twilightforest,twilightforest:glass_sword,sword,GlassSwordItem,39.0,-2.40
-twilightforest,twilightforest:gold_minotaur_axe,axe,MinotaurAxeItem,6.0,-2.80
-twilightforest,twilightforest:ice_bow,bow,IceBowItem,0.0,0.00
+twilightforest,twilightforest:gold_minotaur_axe,two_handed axe blunt,MinotaurAxeItem,6.0,-2.80
+twilightforest,twilightforest:ice_bow,bow magic,IceBowItem,0.0,0.00
 twilightforest,twilightforest:ice_sword,sword,IceSwordItem,6.5,-2.40
 twilightforest,twilightforest:ironwood_axe,axe,AxeItem,8.0,-3.10
 twilightforest,twilightforest:ironwood_pickaxe,tool,PickaxeItem,3.0,-2.80
@@ -588,12 +592,12 @@ twilightforest,twilightforest:knightmetal_axe,axe,KnightmetalAxeItem,9.0,-3.00
 twilightforest,twilightforest:knightmetal_pickaxe,tool,KnightmetalPickItem,4.0,-2.80
 twilightforest,twilightforest:knightmetal_sword,sword,KnightmetalSwordItem,6.0,-2.40
 twilightforest,twilightforest:mazebreaker_pickaxe,tool,MazebreakerPickItem,4.0,-2.80
-twilightforest,twilightforest:seeker_bow,bow,SeekerBowItem,0.0,0.00
+twilightforest,twilightforest:seeker_bow,bow magic,SeekerBowItem,0.0,0.00
 twilightforest,twilightforest:steeleaf_axe,axe,AxeItem,9.0,-3.00
 twilightforest,twilightforest:steeleaf_pickaxe,tool,PickaxeItem,4.0,-2.80
 twilightforest,twilightforest:steeleaf_shovel,tool,ShovelItem,4.5,-3.00
 twilightforest,twilightforest:steeleaf_sword,sword,SwordItem,6.0,-2.40
-twilightforest,twilightforest:triple_bow,bow,TripleBowItem,0.0,0.00
+twilightforest,twilightforest:triple_bow,bow magic,TripleBowItem,0.0,0.00
 twilightforest,twilightforest:twilight_scepter,magic,TwilightWandItem,0.0,0.00
 twilightforest,twilightforest:zombie_scepter,magic,ZombieWandItem,0.0,0.00
 wildernature,wildernature:blunderbuss,crossbow,BlunderBussItem,0.0,0.00

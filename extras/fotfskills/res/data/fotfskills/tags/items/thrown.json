@@ -19,6 +19,10 @@
       "required": false
     },
     {
+      "id": "alexscaves:limestone_spear",
+      "required": false
+    },
+    {
       "id": "alexscaves:sweetberry_ice_cream_scoop",
       "required": false
     },
@@ -27,7 +31,31 @@
       "required": false
     },
     {
+      "id": "alexsmobs:tendon_whip",
+      "required": false
+    },
+    {
+      "id": "cataclysm:brontes",
+      "required": false
+    },
+    {
+      "id": "cataclysm:coral_bardiche",
+      "required": false
+    },
+    {
+      "id": "cataclysm:coral_spear",
+      "required": false
+    },
+    {
+      "id": "cataclysm:tidal_claws",
+      "required": false
+    },
+    {
       "id": "grapplemod:throwupgradeitem",
+      "required": false
+    },
+    {
+      "id": "lilis_lucky_lures:spear",
       "required": false
     },
     {
@@ -396,10 +424,6 @@
     },
     {
       "id": "spartanweaponry:wooden_tomahawk",
-      "required": false
-    },
-    {
-      "id": "supplementaries:slingshot",
       "required": false
     }
   ]

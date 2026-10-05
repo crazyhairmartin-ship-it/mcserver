@@ -6,6 +6,10 @@
       "required": false
     },
     {
+      "id": "alexscaves:primitive_club",
+      "required": false
+    },
+    {
       "id": "cataclysm:brontes",
       "required": false
     },
@@ -19,6 +23,10 @@
     },
     {
       "id": "cataclysm:infernal_forge",
+      "required": false
+    },
+    {
+      "id": "cataclysm:meat_shredder",
       "required": false
     },
     {
@@ -38,15 +46,31 @@
       "required": false
     },
     {
+      "id": "cataclysm:void_assault_shoulder_weapon",
+      "required": false
+    },
+    {
       "id": "cataclysm:void_forge",
       "required": false
     },
     {
-      "id": "irons_spellbooks:claymore",
+      "id": "cataclysm:wither_assault_shoulder_weapon",
       "required": false
     },
     {
-      "id": "irons_spellbooks:decrepit_scythe",
+      "id": "immersive_aircraft:heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:lightning_rod",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:pyrium_staff",
+      "required": false
+    },
+    {
+      "id": "mowziesmobs:wrought_axe",
       "required": false
     },
     {
@@ -170,10 +194,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:copper_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:copper_battleaxe",
       "required": false
     },
@@ -187,6 +207,14 @@
     },
     {
       "id": "spartanweaponry:copper_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:copper_katana",
       "required": false
     },
     {
@@ -210,10 +238,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:diamond_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:diamond_battleaxe",
       "required": false
     },
@@ -227,6 +251,14 @@
     },
     {
       "id": "spartanweaponry:diamond_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:diamond_katana",
       "required": false
     },
     {
@@ -290,10 +322,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:golden_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:golden_battleaxe",
       "required": false
     },
@@ -307,6 +335,14 @@
     },
     {
       "id": "spartanweaponry:golden_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:golden_katana",
       "required": false
     },
     {
@@ -370,10 +406,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:iron_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:iron_battleaxe",
       "required": false
     },
@@ -387,6 +419,14 @@
     },
     {
       "id": "spartanweaponry:iron_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:iron_katana",
       "required": false
     },
     {
@@ -450,7 +490,7 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:netherite_battle_hammer",
+      "id": "spartanweaponry:leather_heavy_crossbow",
       "required": false
     },
     {
@@ -467,6 +507,14 @@
     },
     {
       "id": "spartanweaponry:netherite_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:netherite_katana",
       "required": false
     },
     {
@@ -650,10 +698,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:stone_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:stone_battleaxe",
       "required": false
     },
@@ -667,6 +711,10 @@
     },
     {
       "id": "spartanweaponry:stone_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:stone_katana",
       "required": false
     },
     {
@@ -730,10 +778,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:wooden_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:wooden_battleaxe",
       "required": false
     },
@@ -747,6 +791,14 @@
     },
     {
       "id": "spartanweaponry:wooden_halberd",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:wooden_katana",
       "required": false
     },
     {
@@ -767,6 +819,18 @@
     },
     {
       "id": "spartanweaponry:wooden_warhammer",
+      "required": false
+    },
+    {
+      "id": "twilightforest:giant_pickaxe",
+      "required": false
+    },
+    {
+      "id": "twilightforest:giant_sword",
+      "required": false
+    },
+    {
+      "id": "twilightforest:gold_minotaur_axe",
       "required": false
     }
   ]
