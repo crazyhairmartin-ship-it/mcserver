@@ -39,7 +39,16 @@ SKINS = {
     'pegasus_big_blue.png': (0.76, dict(light=(242, 248, 255), mid=(206, 220, 236), dark=(166, 186, 210), rim=(112, 134, 166))),
     'nightmare_black.png': (1.0, dict(light=(140, 20, 20), mid=(34, 26, 28), dark=(16, 12, 14), rim=(58, 8, 8))),
     'nightmare_big_red.png': (1.0, dict(light=(196, 42, 30), mid=(140, 18, 16), dark=(84, 8, 8), rim=(20, 6, 6))),
+    'kirin_golden.png': (1.0, dict(light=(252, 226, 128), mid=(222, 180, 62), dark=(170, 126, 38), rim=(112, 78, 22))),
 }
+# every other skin a winged hybrid can wear: full-size feathers in colours taken from that skin's old wing art
+OTHER_SKINS = ('deer.png', 'destrier_brown.png', 'destrier_red_wing_blackbird.png', 'griffin.png', 'hippocamp.png',
+               'hippocamp_celestial_sea_horse.png', 'hippogriff.png', 'kevin.png', 'kirin.png', 'kirin_golden.png',
+               'magical_horse.png', 'oracle.png', 'unicorn_rainbow_smash.png', 'unicorn_white.png')
+
+
+def auto_colours(base):
+    return dict(light=shade(base, 1.22), mid=base, dark=shade(base, 0.78), rim=shade(base, 0.52))
 
 
 # ---------- geometry ----------
@@ -206,16 +215,18 @@ def main():
     (OUT / 'geo' / 'magical_horse_model.geo.json').write_text(json.dumps(geo, indent=2) + '\n', encoding='utf-8')
     (OUT / 'textures' / 'entity').mkdir(parents=True, exist_ok=True)
     previews = []
-    for skin, (k, colours) in SKINS.items():
+    for skin in list(SKINS) + list(OTHER_SKINS):
         img = Image.open(io.BytesIO(jar.read(TEX + skin))).convert('RGBA')
+        k, colours = SKINS.get(skin) or (1.0, auto_colours(base_colour(img)))
         redraw(img, colours, k).save(OUT / 'textures' / 'entity' / skin)
         previews.append(img.crop((0, 120, 86, 208)))
-    sheet = Image.new('RGBA', (len(previews) * 90 * 4, 88 * 4), (70, 70, 70, 255))
+    cols = 6
+    sheet = Image.new('RGBA', (cols * 90 * 2, ((len(previews) + cols - 1) // cols) * 90 * 2), (70, 70, 70, 255))
     for i, im in enumerate(previews):
-        big = im.resize((86 * 4, 88 * 4), Image.NEAREST)
-        sheet.paste(big, (i * 360, 0), big)
+        big = im.resize((86 * 2, 88 * 2), Image.NEAREST)
+        sheet.paste(big, ((i % cols) * 180, (i // cols) * 180), big)
     sheet.save(HERE / 'preview.png')
-    print(f'wings: geometry x{SCALE}, {len(SKINS)} skins redrawn')
+    print(f'wings: geometry x{SCALE}, {len(previews)} skins redrawn')
 
 
 if __name__ == '__main__':
