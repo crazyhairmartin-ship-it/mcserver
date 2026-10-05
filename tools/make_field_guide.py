@@ -71,9 +71,9 @@ ENTRIES = [
         text('Days here are long and sunsets are slow, so take your time.$(br2)If you die, your items wait in a $(l)gravestone$(). Nothing is lost!', 'No Rush'),
     ]),
     ('getting_started', 'skills', 'Skills & Levels', 'minecraft:experience_bottle', [
-        text('You get better at things by doing them. There are 12 skills: Mining, Foraging, Farming, Fishing, Cooking, Crafting, Attack, Range, Defense, Agility, Magic and Taming. Each level up to 50 gives a point to spend in that skill\'s tree. Press $(l)K$() to open the skill menu.'),
+        text('You get better at things by doing them. There are 12 skills: Mining, Foraging, Farming, Fishing, Cooking, Crafting, Attack, Range, Defense, Agility, Magic and Taming. Each level up to 50 gives a point to spend in that skill\'s tree. Press $(l)K$() to open the skill menu.$(br2)Agility trains when you sprint or climb on your own feet, not while riding.'),
         text('Trees have five tiers. Spending points in a tree opens the next tier (5, 10, 15, then 25 points). Tiers marked $(l)OR$() let you pick one of two branches. Hover a node to see what it does now (white) and what the next rank adds (grey). A full tree costs exactly 50 points.', 'Skill Trees'),
-        text('$(l)/fotfskills perks$() lists every perk you have. Click the $(l)star button$() beside your inventory for your character screen: health, stamina, mana, active buffs, and a tab per skill with its level, XP and nodes.$(br2)Level-up messages are short: open chat and point at one to read the details.$(br2)$(l)/fotfskills levelups off$() hides them; $(l)on$() brings them back.', 'Perks'),
+        text('$(l)/fotfskills perks$() lists every perk you have. Click the $(l)star button$() beside your inventory for your character screen: health, stamina and mana, an $(l)Overview$() of every skill\'s level and your active buffs, and an icon tab per skill showing its XP and exactly what each of your nodes does (scroll for more).$(br2)Level-up messages are short: open chat and point at one to read the details.$(br2)$(l)/fotfskills levelups off$() hides them; $(l)on$() brings them back.', 'Perks'),
         text('Your $(l)total level$() (all 12 skills added up) gives extra hearts and ParCool stamina: the first at total level 8, all 15 by 256.$(br2)$(l)/fotfskills reset <tree>$() gives a tree\'s points back for 1 XP level per 2 points spent (at least 5).', 'Hearts & Resets'),
         text('Place a $(l)Pet Bed$() and let your pet walk onto it once: if it dies, it comes back at its bed the next morning (someone has to be nearby at sunrise).$(br2)Taming\'s $(l)Ferality$() gives a chance that a pet survives a killing blow and turns feral: full health, extra hearts and Strength II for 15 seconds.', 'Pets'),
     ]),
@@ -112,7 +112,7 @@ ENTRIES = [
     # ---------- Creatures & Companions ----------
     ('creatures', 'unicorns', 'Unicorns & Magical Horses', 'ultimate_unicorn_mod:unicorn_horn', [
         text('Unicorns, pegasi, hippocamps, reindeer and more live in forests, plains, hills and oceans.$(br2)Tame and ride them like horses. Pegasi fly: hold $(l)Space$() to go up and $(l)Left Ctrl$() to go down. Unicorns have magical powers!'),
-        text('Nightmares fly on speed, not wing power: gallop straight to full speed on open ground, then hold $(l)Space$(). Keep turns gentle. If they slow down, they glide back to the ground.$(br2)Their hoof fire and fireballs here never hurt friends, only monsters.', 'Nightmares'),
+        text('Nightmares fly on speed, not wing power: gallop straight to full speed on open ground, then hold $(l)Space$(). Keep turns gentle. If they slow down, they glide back to the ground.$(br2)Their hoof fire and fireballs here never hurt friends, only monsters.$(br2)Pegasi and nightmares float in deep water instead of sinking.', 'Nightmares'),
         spot(UNICORN_BOOK, 'The $(l)Unicorn Guidebook$() explains everything. Get one with $(l)/guide unicorn$().', 'Official Guide'),
         craft('fotf:saddle', 'Saddles can be crafted here: 5 leather, 1 iron ingot and 2 string.'),
     ]),
@@ -174,6 +174,8 @@ ENTRIES = [
     # ---------- Combat & Gear ----------
     ('combat', 'weapons', 'Weapons & Shields', 'spartanweaponry:iron_longsword', [
         text('$(l)Spartan Weaponry$(): daggers, spears, halberds, longbows and more, in every material.$(br2)$(l)Spartan Shields$(): more shields.'),
+        text('Every weapon counts as one or more categories: sword, light, two-handed, polearm, axe, blunt, scythe (hoes too), thrown, bow, crossbow or magic. Skill perks boost their categories.$(br2)Hover a weapon to see its damage with your skills; hold $(l)Shift$() for the breakdown and its categories.', 'Weapon Types'),
+        text('$(l)Two-handed$() perks only work with an empty off hand (or a second copy of the same weapon).$(br2)$(l)Magic$() weapons\' special attacks grow with your spell power; ones that are also $(l)thrown$() get your thrown-weapon perks too.$(br2)Cataclysm\'s $(l)Immolator$() and $(l)Annihilator$() are dual-wield: hold one in each hand, then hold right-click to charge their special.', 'Special Attacks'),
     ]),
     ('combat', 'bosses', 'Bosses', 'cataclysm:ignitium_ingot', [
         text('$(l)L_Ender\'s Cataclysm$() and $(l)Mowzie\'s Mobs$() add huge bosses in their own arenas.$(br2)They only fight you if you go to them, so the rest of the world stays normal. Bring your best gear!'),
@@ -186,6 +188,7 @@ ENTRIES = [
     ('exploring', 'structures', 'Villages & Dungeons', 'minecraft:filled_map', [
         text('Villages come in many styles (CTOV). Guards protect them, and bounty boards give jobs for rewards.$(br2)Ruins, towers, camps and dungeons are everywhere. Their chests have separate loot for each player.'),
         text('Big dungeons (When Dungeons Arise, Cataclysm) are dangerous.$(br2)Spawners keep making mobs until you break them or light them up with torches.', 'Be Careful'),
+        text('Old shrines around the world now hold $(l)statues$() of the Iron\'s Spells supporters, each in its own pose.$(br2)Small underground shrines hold a stone statue clutching a $(l)treasure$(): right-click it to take the prize.', 'Statues'),
     ]),
     ('exploring', 'compasses', 'Finding Places', 'naturescompass:naturescompass', [
         spot('naturescompass:naturescompass', 'The $(l)Nature\'s Compass$() points to any biome you pick.'),

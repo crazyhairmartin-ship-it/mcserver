@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "You get better at things by doing them. There are 12 skills: Mining, Foraging, Farming, Fishing, Cooking, Crafting, Attack, Range, Defense, Agility, Magic and Taming. Each level up to 50 gives a point to spend in that skill's tree. Press $(l)K$() to open the skill menu."
+      "text": "You get better at things by doing them. There are 12 skills: Mining, Foraging, Farming, Fishing, Cooking, Crafting, Attack, Range, Defense, Agility, Magic and Taming. Each level up to 50 gives a point to spend in that skill's tree. Press $(l)K$() to open the skill menu.$(br2)Agility trains when you sprint or climb on your own feet, not while riding."
     },
     {
       "type": "patchouli:text",
@@ -15,7 +15,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "$(l)/fotfskills perks$() lists every perk you have. Click the $(l)star button$() beside your inventory for your character screen: health, stamina, mana, active buffs, and a tab per skill with its level, XP and nodes.$(br2)Level-up messages are short: open chat and point at one to read the details.$(br2)$(l)/fotfskills levelups off$() hides them; $(l)on$() brings them back.",
+      "text": "$(l)/fotfskills perks$() lists every perk you have. Click the $(l)star button$() beside your inventory for your character screen: health, stamina and mana, an $(l)Overview$() of every skill's level and your active buffs, and an icon tab per skill showing its XP and exactly what each of your nodes does (scroll for more).$(br2)Level-up messages are short: open chat and point at one to read the details.$(br2)$(l)/fotfskills levelups off$() hides them; $(l)on$() brings them back.",
       "title": "Perks"
     },
     {

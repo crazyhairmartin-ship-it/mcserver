@@ -12,6 +12,11 @@
       "type": "patchouli:text",
       "text": "Big dungeons (When Dungeons Arise, Cataclysm) are dangerous.$(br2)Spawners keep making mobs until you break them or light them up with torches.",
       "title": "Be Careful"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Old shrines around the world now hold $(l)statues$() of the Iron's Spells supporters, each in its own pose.$(br2)Small underground shrines hold a stone statue clutching a $(l)treasure$(): right-click it to take the prize.",
+      "title": "Statues"
     }
   ]
 }
