@@ -14,6 +14,14 @@
           {
             "mature_crop": true,
             "experience": 3
+          },
+          {
+            "block": "minecraft:melon",
+            "experience": 3
+          },
+          {
+            "block": "minecraft:pumpkin",
+            "experience": 3
           }
         ]
       }

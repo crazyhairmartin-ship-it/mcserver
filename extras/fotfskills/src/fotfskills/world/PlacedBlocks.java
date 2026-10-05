@@ -10,7 +10,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.saveddata.SavedData;
 
 /**
- * Positions of player-placed gathering blocks (ores, logs, stone, flowers, mushrooms) in one dimension, so
+ * Positions of player-placed gathering blocks (ores, logs, stone, flowers, mushrooms, melons, pumpkins) in one dimension, so
  * re-mining them gives no skill XP or extra drops. Marks follow blocks pushed by pistons. Saved as
  * data/fotfskills_placed.dat in the dimension folder.
  */
@@ -25,7 +25,8 @@ public final class PlacedBlocks extends SavedData {
     public static boolean tracked(BlockFacts facts) {
         return facts.hasTag("forge:ores") || facts.hasTag("minecraft:logs")
                 || facts.hasTag("minecraft:base_stone_overworld") || facts.hasTag("minecraft:base_stone_nether")
-                || facts.hasTag("minecraft:flowers") || facts.id().endsWith("_mushroom");
+                || facts.hasTag("minecraft:flowers") || facts.id().endsWith("_mushroom")
+                || facts.id().equals("minecraft:melon") || facts.id().equals("minecraft:pumpkin");
     }
 
     private static PlacedBlocks load(CompoundTag tag) {

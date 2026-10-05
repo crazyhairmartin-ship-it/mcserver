@@ -256,7 +256,8 @@ def test_gathering_xp_uses_the_placed_block_aware_source():
         assert not {'puffish_skills:mine_block', 'puffish_skills:break_block'} & set(types), tree_id
     farm = g.build_category(tree('farm'), TIERS, xp=XP)['experience.json']['sources']
     rules = next(s for s in farm if s['type'] == 'fotfskills:break')['data']['rules']
-    assert rules == [{'mature_crop': True, 'experience': 3}]
+    assert rules == [{'mature_crop': True, 'experience': 3}, {'block': 'minecraft:melon', 'experience': 3},
+                     {'block': 'minecraft:pumpkin', 'experience': 3}]
 
 
 def test_weapon_and_conditional_nodes_are_wired():
