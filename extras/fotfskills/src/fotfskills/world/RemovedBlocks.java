@@ -57,6 +57,38 @@ public final class RemovedBlocks {
     private record Pending(ServerLevel level, BlockPos pos) {
     }
 
+    /** A converted statue that may have been placed facing backwards (the first live day, before the rotation fix). */
+    private record Fix(ServerLevel level, BlockPos pos, Direction facing) {
+    }
+
+    private final Queue<Fix> fixes = new ConcurrentLinkedQueue<>();
+    private static Map<Long, List<Fix>> goddessSpots;
+
+    /** Where every Paragliders goddess statue stood in the live world, and its facing (res/fotfskills/goddess_statues.txt). */
+    private static Map<Long, List<Fix>> goddessSpots() {
+        if (goddessSpots == null) {
+            Map<Long, List<Fix>> spots = new java.util.HashMap<>();
+            try (var in = RemovedBlocks.class.getResourceAsStream("/fotfskills/goddess_statues.txt")) {
+                if (in != null) {
+                    for (String line : new String(in.readAllBytes(), java.nio.charset.StandardCharsets.UTF_8).split("\n")) {
+                        String[] f = line.trim().split(" ");
+                        if (f.length != 5 || !f[0].equals("overworld")) {
+                            continue;
+                        }
+                        BlockPos pos = new BlockPos(Integer.parseInt(f[1]), Integer.parseInt(f[2]), Integer.parseInt(f[3]));
+                        Direction facing = Direction.m_122402_(f[4]);
+                        spots.computeIfAbsent(ChunkPos.m_45589_(pos.m_123341_() >> 4, pos.m_123343_() >> 4), k -> new java.util.ArrayList<>())
+                                .add(new Fix(null, pos, facing == null ? Direction.NORTH : facing));
+                    }
+                }
+            } catch (java.io.IOException | RuntimeException ignored) {
+                // no list: nothing to fix
+            }
+            goddessSpots = spots;
+        }
+        return goddessSpots;
+    }
+
     private final Queue<Pending> pending = new ConcurrentLinkedQueue<>();
     private int ticks;
 
@@ -150,6 +182,11 @@ public final class RemovedBlocks {
         Block goddess = GODDESS.get(), horned = HORNED.get();
         LevelChunkSection[] sections = chunk.m_7103_();
         ChunkPos cp = chunk.m_7697_();
+        if (level.m_46472_() == net.minecraft.world.level.Level.f_46428_) {
+            for (Fix f : goddessSpots().getOrDefault(cp.m_45588_(), List.of())) {
+                fixes.add(new Fix(level, f.pos, f.facing));
+            }
+        }
         for (int i = 0; i < sections.length; i++) {
             LevelChunkSection section = sections[i];
             if (section.m_188008_() || !section.m_63019_().m_63109_(s -> s.m_60734_() == goddess || s.m_60734_() == horned)) {
@@ -171,7 +208,13 @@ public final class RemovedBlocks {
 
     @SubscribeEvent
     public void onTick(TickEvent.ServerTickEvent event) {
-        if (event.phase != TickEvent.Phase.END || pending.isEmpty()) {
+        if (event.phase != TickEvent.Phase.END) {
+            return;
+        }
+        for (int n = 0; n < 32 && !fixes.isEmpty(); n++) {
+            turnAround(fixes.poll());
+        }
+        if (pending.isEmpty()) {
             return;
         }
         ticks++;
@@ -193,6 +236,23 @@ public final class RemovedBlocks {
                 }
             } else if (state.m_60734_() == HORNED.get()) {
                 treasureStatue(p.level, p.pos, facing, true);
+            }
+        }
+    }
+
+    /** A statue converted with the old (backwards) rotation: turn both halves around, keeping its skin and pose. */
+    private static void turnAround(Fix f) {
+        if (!f.level.m_46749_(f.pos)) {
+            return;
+        }
+        var rot = net.minecraft.world.level.block.state.properties.BlockStateProperties.f_61390_;
+        int wrong = net.minecraft.world.level.block.state.properties.RotationSegment.m_245225_(f.facing);
+        int right = net.minecraft.world.level.block.state.properties.RotationSegment.m_245225_(f.facing.m_122424_());
+        for (BlockPos p : new BlockPos[] {f.pos, f.pos.m_7494_()}) {
+            BlockState state = f.level.m_8055_(p);
+            ResourceLocation id = ForgeRegistries.BLOCKS.getKey(state.m_60734_());
+            if (id != null && id.toString().equals("irons_lib:player_statue") && state.m_61138_(rot) && state.m_61143_(rot) == wrong) {
+                f.level.m_7731_(p, state.m_61124_(rot, right), 2 | 16);   // same block: the statue keeps its data
             }
         }
     }

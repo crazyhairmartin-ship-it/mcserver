@@ -38,7 +38,7 @@ final class IronsStatue {
         if (statue == null || statue == Blocks.f_50016_ || !level.m_8055_(pos.m_7494_()).m_247087_()) {
             return false;
         }
-        BlockState state = statue.m_49966_().m_61124_(BlockStateProperties.f_61390_, RotationSegment.m_245225_(facing));
+        BlockState state = statue.m_49966_().m_61124_(BlockStateProperties.f_61390_, RotationSegment.m_245225_(facing.m_122424_()));   // Iron's rotation faces the other way
         level.m_7731_(pos, state, 3);
         statue.m_6402_(level, pos, state, null, ItemStack.f_41583_);          // builds the upper half
         if (level.m_7702_(pos) instanceof PlayerStatueBlockEntity be) {
