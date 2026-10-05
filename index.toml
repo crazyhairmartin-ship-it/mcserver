@@ -1495,6 +1495,10 @@ file = "kubejs/assets/ultimate_unicorn_mod/blockstates/nightmare_fire_block.json
 hash = "fbb1c04a60548f3285166a915f6db4822e4b4b5561c198d736a59947dcd57354"
 
 [[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/geo/magical_horse_model.geo.json"
+hash = "88a70c8d479a0ea2a561f85dbc610cdd5fbeaa7d3013face31233c972b382154"
+
+[[files]]
 file = "kubejs/assets/ultimate_unicorn_mod/models/block/short_fire_floor0.json"
 hash = "5787d58a06011064dcb215444580350dddbcb9a032e79e9f50b1d1acd75be82d"
 
@@ -1545,6 +1549,22 @@ hash = "22a1db7f37d5d9f8a048f183202bfb2dbbc3eba1cf8ff252bd438ae508974f73"
 [[files]]
 file = "kubejs/assets/ultimate_unicorn_mod/models/block/template_short_fire_side_alt.json"
 hash = "11a68c5017e5f2de2ca77404e68def15c6bd5219a185c6706ce8211694e9a356"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/nightmare_big_red.png"
+hash = "023d7a3b24d83d9d43172a88243fc44825de060c5ad367ee470d1b973f142ec8"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/nightmare_black.png"
+hash = "10ed4ba7c41e784ff8757ab38cfe8947c672884cd43fb462b7222d5844f9fa2d"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/pegasus_big_blue.png"
+hash = "13eadcbae21919b8ed73589bda978a8af51aacbfa107162a3af7c3afd4c6a98f"
+
+[[files]]
+file = "kubejs/assets/ultimate_unicorn_mod/textures/entity/pegasus_blue.png"
+hash = "3940161e24a395cd24da4de7a1a16c7cbd0c2967617d56fddf696089b34802b4"
 
 [[files]]
 file = "kubejs/assets/wildernature/lang/en_us.json"
