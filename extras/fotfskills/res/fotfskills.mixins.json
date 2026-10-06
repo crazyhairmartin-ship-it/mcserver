@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "fotfskills.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": ["ItemStackCraftedMixin", "ArsSpellResolverMixin", "ItemStackDurabilityMixin", "FishingHookMixin", "AbstractArrowAccessor", "ServerPlayerGameModeMixin", "AnimalTreatMixin", "ServerLevelTameMixin", "PlayerExhaustionMixin", "LivingEntityBlockMixin", "AbstractHorseTameMixin", "ItemCraftedByMixin", "PetBedRespawnMixin", "ArsManaCapMixin", "ArsManaRegenMixin", "UltimineExhaustionMixin", "FishingHookAccessor", "AquaBobberMixin", "ScribesTableMixin", "FarmBlockIrrigatorMixin", "ArsSourcelinkMixin", "ArsApparatusMixin", "ParcoolPermitMixin"],
+  "mixins": ["ItemStackCraftedMixin", "ArsSpellResolverMixin", "ItemStackDurabilityMixin", "FishingHookMixin", "AbstractArrowAccessor", "ServerPlayerGameModeMixin", "AnimalTreatMixin", "ServerLevelTameMixin", "PlayerExhaustionMixin", "LivingEntityBlockMixin", "AbstractHorseTameMixin", "ItemCraftedByMixin", "PetBedRespawnMixin", "ArsManaCapMixin", "ArsManaRegenMixin", "UltimineExhaustionMixin", "FishingHookAccessor", "AquaBobberMixin", "ScribesTableMixin", "FarmBlockIrrigatorMixin", "ArsSourcelinkMixin", "ArsApparatusMixin", "ParcoolPermitMixin", "HorseDescentMixin"],
   "client": [
     "SkillsScreenMixin",
     "ArsManaHudMixin",
