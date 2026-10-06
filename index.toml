@@ -2747,11 +2747,11 @@ hash = "b8da69cdf381c86eb4b670239da868aff6a6a218e7eb301d8b33f962f4622b2d"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/categories/baking.json"
-hash = "29ca63d8d87fb45385fe2c409f679d77b37561e0c0a556a8f418cdd40deb3e69"
+hash = "cfe656b5725c26832f429b2c338bb9a168df26d98c50fb08db23df510facdd37"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/categories/bowl.json"
-hash = "b4d9bd369cecdd0fea9db8d13e5381bdb7e848011e4ecbeb4634131b6c714408"
+hash = "8aed7aa9a7378dd7f8c09da1862309f06e762c5a6797e8842c68fdea21116835"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/categories/crafting.json"
@@ -2763,15 +2763,7 @@ hash = "7c89b55f57486247bfd15180fa2c158469c7cd82b2f88c8cbc4dfb3b77f2a03d"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/categories/drinks.json"
-hash = "fa5698cfd0bd6e02997f0386e926e36f6b89df46d681be816df232027badea3e"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/categories/fc_pot.json"
-hash = "bd898488fd10f77bf69138c5377eac1196519d70f30abd039c0ed7903389df33"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/categories/fd_pot.json"
-hash = "d88b8a733b6b574172eed0d37b32197b3b01795345f2ec72851530b35d146229"
+hash = "56d0dca6589d2fc83249c843103e8ecf250e61dded6d30f6838969b5b608680d"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/categories/fire.json"
@@ -2779,19 +2771,23 @@ hash = "c762cd483c3638b0659d457534c6ec26d65d45a79dd0ba7dc2a1c04a805971c9"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/categories/meadow.json"
-hash = "1f42224f5a94cf81d5c6e09711f0f6ead0e94f2d1a844090095a19fe8c4903ba"
+hash = "2a57818faed67f3ea25d95cf8f27ccd2bcb9eb1a8dbe8dca3d7638223f91fba2"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/categories/mincer.json"
-hash = "cc25e3cbb4c25789c4ca6a93f8f89242f7255117bfb0e98ea5d39bb2b7c0aeb9"
+hash = "b489e146ce322db3d18e53cd16f389a846c1ca6fa44e3cbf76ff35e426ef572a"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/categories/other.json"
-hash = "236dfb30b24f18e0dbe1d094557fa33f743d6fda91ae363b7694e5e3d77ea5fb"
+hash = "0b0260ce2e53dde3a6fe85dacc07ff776f8ca8296add8c6b3dd82bf2e677aeb5"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/categories/pot.json"
+hash = "fcca18e7e3898f49cefaba47d87a28a7fe3b49def9406a10dd224190cd75b0d9"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/categories/roaster.json"
-hash = "7a9604d07b03eb650f08de9de78f0dc75274d223066a728c53cdf9c4a64991a3"
+hash = "5ba9c0d32f69c94462418fc9102328017ba417c0af29a3f7a61abf3a506acb42"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/categories/stove.json"
@@ -3666,178 +3662,6 @@ file = "patchouli_books/fotf_cookbook/en_us/entries/drinks/vinery__villagers_fri
 hash = "632833c2115a594d2daf9d3101e7e52029911e2cb199b5430542f0b2db94c63c"
 
 [[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/bakery__chocolate_truffle.json"
-hash = "5b1b3386b0949ed42a9dfa22bdd17ba61cb8a412a777eb00abebef779224b058"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/brewery__dumplings.json"
-hash = "c52bea0e639dec32b1c26ce633580570e86738ec2d3acc028d0671c4e9eccd70"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/brewery__sausage.json"
-hash = "74092f21be32c7c7114f3fe593500ae1c0612331bc4a83ed40e68c7867565cd9"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/candlelight__chicken_teriyaki.json"
-hash = "d4dff87f6f7d2706a4d9d5a7419060fb70e11d42b29778d38775929ca038e1df"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/candlelight__chocolate_mousse.json"
-hash = "b0bde4d2e6bba08da148ecf27ca70fde02ea3166c1d9c8b243727fa8e1bf7b0a"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/candlelight__khinkali.json"
-hash = "36d7115f001736fe5fa1565922e9d6c52f20bc9c88e56d2e937fec3d6d0ab8ec"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/candlelight__mushroom_soup.json"
-hash = "675a667c182ff7b814005efc30c21eb4162d7a004e91bb359e310fa5f9ef4e90"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/candlelight__pasta_with_mozzarella.json"
-hash = "35a70cde7e0fcad5085bffa5fbd10800db1378bcd1120832f94bedd9c5aa0b00"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/candlelight__salmon_on_white_wine.json"
-hash = "88491ea484844a3df49e0738ea5f060b2a812808098055be5e982ec59eff851d"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/candlelight__tomato_soup.json"
-hash = "bd286a70f784082b5e4d19d76635a10c8ff83d6acc98be833d22d678546bf00d"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/farm_and_charm__barley_soup.json"
-hash = "8617ac448cfb5e1b91c63b0f2c88e0b5d28d9717e48d867e6e1163dec0ec60b9"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/farm_and_charm__corn_grits.json"
-hash = "b7f581d28df81deae55465ef9f42a2e788e91a3ba674285a50be486e8aab626e"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/farm_and_charm__goulash.json"
-hash = "0d49a9a4008c7bbb6e93852b9cb08ae7a622d41ea8fb16c20e2fbef9baa2aef8"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/farm_and_charm__nettle_tea.json"
-hash = "5d717412454e9d76de996368fd185e1f97765ada4a53023f69b88442e7865d42"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/farm_and_charm__onion_soup.json"
-hash = "17fad70923d0b93df6c94569722b9186a64f9910eef478dcc4b4e3da2104e73e"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/farm_and_charm__potato_soup.json"
-hash = "5ace463a5cd55bba57393dc0116e90360f4075622039579fdcce1aae7155a287"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/farm_and_charm__ribwort_tea.json"
-hash = "472bbae42f275c5d7486d9812fc2584c5ba3d2e7d33e20890f046de5cebb78fa"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/farm_and_charm__simple_tomato_soup.json"
-hash = "ded1c1c7f6302f68091f620f308bdc5dde22ab08d3956ed83ab1ce2adcbeacf4"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/farm_and_charm__strawberry_tea.json"
-hash = "561b801ee9cace57f4009f34ec16b13cfa2936dc965793b4dffc91b1349f8a96"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fc_pot/lilis_lucky_lures__cooked_cod_meal.json"
-hash = "02e78576e98334c3bb7aeba10d5523a080b771ce06b0b0b6197b76b1bca22ce6"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__apple_cider.json"
-hash = "225280e6f35cef6e5ef95fab0b5ba58db6b287dd497b0fa2ea2d335eb3d51816"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__baked_cod_stew.json"
-hash = "b89252aff1bcd375738f3e4b03debe1bc6408f3d3415efe023b31073f970aa9f"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__beef_stew.json"
-hash = "b84ab89ba763a54d8eb49324fb518ce9ccf75ea7470dd6aa3af9592087203844"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__bone_broth.json"
-hash = "a813a05a57d4bde9fb548d4bae1fd7ef78a97f34213245971ca6a7ec42802de7"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__cabbage_rolls.json"
-hash = "4681ad94ea5ee872accadaa61e31a977f12efbdef11d90a6b71bb2a6fd22fb71"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__chicken_soup.json"
-hash = "8ac742c50c5ed25d78fcac1b7597d41dafd28e5c9e087b103ccf8575c2b2688a"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__cooked_rice.json"
-hash = "1b77e01ee2a9f710d7c13fcddb24e2421d059e093e89e0eecaa07ff6ff4f1bed"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__fish_stew.json"
-hash = "aa959a0f8450cfbd7ae41f4572906027d27f2de4d07a37ba6380cd0a30d6228e"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__fried_rice.json"
-hash = "dd012cb5c6b8c49cb5a07efccb090e9a0b89c008006e8427fe48eee121867305"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__glow_berry_custard.json"
-hash = "1d8a633d7d5981be4502eae81f16d77fad6a0c4e247d2f0080309c1d89ca6261"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__mushroom_rice.json"
-hash = "37d9636b83ef27d85cb75d319f2c075ce11a32d154be4e055c3be25d0ac13403"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__noodle_soup.json"
-hash = "645a0d0552f4db4be711a96a315e2fdda0c460ca8876854e35c2c02a70516239"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__pasta_with_meatballs.json"
-hash = "78327d50fdb391581bd3dc47763aea43656855cdb33d4cac1885c96b2dd4166c"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__pasta_with_mutton_chop.json"
-hash = "e17a0cce68dda216668bce5b96972a4d275f225c438613843dfc97dc6239ccb3"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__pumpkin_soup.json"
-hash = "408b51dc5b0293482c01d8f71ba6f97c5ee3a2bbcb092f02e35799f154a0f998"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__ratatouille.json"
-hash = "6d9e452e2ba8c4d2bb18d48b90982a3177b98770d8a7ae572d83448bf07f66dc"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__squid_ink_pasta.json"
-hash = "1e62729d9ea65c1f7382918db69cdf296bf7759bd04672f985ce3d1bee39ae86"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__tomato_sauce.json"
-hash = "d3ffe5938389f6eb240787c02e170ce5f7b13aeba245de8684a4ba6a3f5d1062"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__vegetable_noodles.json"
-hash = "f2c298be4c7074de16485838ca101e15beabb482d7af5a7d450d013aa8a2a29b"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/farmersdelight__vegetable_soup.json"
-hash = "3d206e0af407da19f11f0f7a734c130ae147c39b77ce9e719e2bf7cddbaf30d2"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/minecraft__beetroot_soup.json"
-hash = "c772426c994ea8759525b95b8f418e5e4e27342d38187105eefb15df68850570"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/minecraft__mushroom_stew.json"
-hash = "5734872241819f4d9cefac29e825ae54178482c584a0dae15cff74cc84f139d6"
-
-[[files]]
-file = "patchouli_books/fotf_cookbook/en_us/entries/fd_pot/minecraft__rabbit_stew.json"
-hash = "6f2283745805e7c84534908584f30dd190eb9af167a91528b2c1ac496707f972"
-
-[[files]]
 file = "patchouli_books/fotf_cookbook/en_us/entries/fire/alexscaves__cooked_lanternfish.json"
 hash = "71a8fe902edf5645f5afe4431a8913125dc4b1eca96cb4906b693fca87cfe2f5"
 
@@ -4084,6 +3908,178 @@ hash = "94b5f72a3ba85a01197c9e06d5b110fecea9132dfd8db63fb38cd981b8485222"
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/entries/other/beachparty__sweetberries_cocktail.json"
 hash = "9b0a73831abeb4ccb886c1af173be742f41c7bb4a8a4b2789eec466442b1603b"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/bakery__chocolate_truffle.json"
+hash = "2fdc45531d4681ff7754d6bd2428559317ea0b8d2c00efb5b8cc092990820096"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/brewery__dumplings.json"
+hash = "faa32f0ea3473473470df4e259a1c70452f42b78cb2b923228c25ccc5d4abab2"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/brewery__sausage.json"
+hash = "285477d65b96bb5c6352689dd6c92324696c68159d6ea0a7312897895d715bb0"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/candlelight__chicken_teriyaki.json"
+hash = "837182ea25f77d536bafa25daabae55343e19f7e21452b05fbafb4138224b85c"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/candlelight__chocolate_mousse.json"
+hash = "9c9d8f9a37312c7cb2b4a7613a4b90db94c08ca6b4190749b1ab0c6d8916400b"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/candlelight__khinkali.json"
+hash = "07fa79e7e9d6c82abaf1b601a416e9fa3e0184bb7a6de5fac4a26188c42d45da"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/candlelight__mushroom_soup.json"
+hash = "5fa865cf9c271a9b8722a4012afbd7a167ebf1635dbf022e0ab8a9ad8c1b6bd0"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/candlelight__pasta_with_mozzarella.json"
+hash = "ddc0d601fe5afa9d10f74e2df5c5cb50be1914306a1ca6a8e34b1fa5fe4267ee"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/candlelight__salmon_on_white_wine.json"
+hash = "fe1da3debcb95212d02f970b3b20f68bc3ad8841433f13c7097a1f98ef8d5cab"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/candlelight__tomato_soup.json"
+hash = "53c83a2fad1a992c28468642c4a63188459b2532fddda38d6f66958cc3cec7f6"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farm_and_charm__barley_soup.json"
+hash = "fc122fef75f4e463dcbbf57b1389654697e4b449ae99b9b5144624bd6ced6ab0"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farm_and_charm__corn_grits.json"
+hash = "e49d9f735696f87a7d441e787ba45c984eb15dcc8909ca3b72d605af0435c9b3"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farm_and_charm__goulash.json"
+hash = "ac0f536bb45e7dbaa36b691cfba1489521b58e70c571109f46686eba7ccd759c"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farm_and_charm__nettle_tea.json"
+hash = "a0b6f71531ffd76ecc89d477a5fe95db8918008a08ee886c3a19b6c3a0079ccb"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farm_and_charm__onion_soup.json"
+hash = "04aad60e1e9941c6444249943a9f82f87be9cf08150e90845ad956ea11390614"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farm_and_charm__potato_soup.json"
+hash = "84759e57ff296facbfa8775619fc7a666ddd296c65f891a3753c34b0fec3c005"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farm_and_charm__ribwort_tea.json"
+hash = "4cd6ac00a6667fd79a92e23fe213e5eac45aa8b8644c07cb61952d4e9e5236b9"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farm_and_charm__simple_tomato_soup.json"
+hash = "baa644df42ebbb6764f2e0a73ea80f5db21ca8903641fcebc2bfe321f36a84f5"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farm_and_charm__strawberry_tea.json"
+hash = "3928f6f259191857126b05408d5fd1483521eeedaad090741e819137ef368f6a"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__apple_cider.json"
+hash = "2aad7a69476b9c101875ef1f6582f496c1af652b9b8b32655d1fac96ba4d2180"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__baked_cod_stew.json"
+hash = "6a8d831d78e03018914d532ff5349e82bf95de3ffc569c6ae120f0895e85119d"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__beef_stew.json"
+hash = "de3b60230c800e93ae2cd2d00fd8c0b592dbdb03ceaf4950776156a5a1f3c0e8"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__bone_broth.json"
+hash = "c2b915e9f8ceda840f31f66e10e8e0e58e740b501c9063b413eecd54ee4c240b"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__cabbage_rolls.json"
+hash = "9dd8a6ff2884955267d647b975d0c454ad635296d13673ad8b00f45bcf6ee0a8"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__chicken_soup.json"
+hash = "f18e1a73f338bc5521fabb25934ecac8b6882fb7f8a9b7501073bb51de71ca31"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__cooked_rice.json"
+hash = "cdc203747d29c8887af9ab3ff5d2c9eaa1dfd638160d718af9b3622c9a0e20fa"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__fish_stew.json"
+hash = "5624a729773b28ea8629b335031625ed15dc0dbc4e194a52c9cc9734ff7f7c16"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__fried_rice.json"
+hash = "b1a8c30b9b1369a6a87cd76dfc5562131e6e1ba817a0351866df303bd527cf10"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__glow_berry_custard.json"
+hash = "e98c2f40331ad21335ca8cef2e584aff02ed28b6f9b221f711d9e9509effe968"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__mushroom_rice.json"
+hash = "b2540554479682d1cf445489e3f9cc8faebae8eff4ea98c21573713e07d2ff6a"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__noodle_soup.json"
+hash = "c291bf5978f940ea287530091aff2021d7d36626043db9b9a9f9bb6fc4618bb9"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__pasta_with_meatballs.json"
+hash = "63ad0de1d6d32a40591ac4103bd85043e381e30e16c45649e6d5ffcb8c81c62f"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__pasta_with_mutton_chop.json"
+hash = "2219f8c4c1cff214169964a4cb359f6ceff3e5b76ed900caad75fbf495ad7225"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__pumpkin_soup.json"
+hash = "29eb129ff7ce18f5828c590231e65d6d861f6db4e4c7bf81f4c7aa562df0009f"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__ratatouille.json"
+hash = "0c01f0d8219f36d46d98ca4e8150c27d175d48467d3d81a216ad970493c7b553"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__squid_ink_pasta.json"
+hash = "641f725929d67d9ec8e30fdfdae68457c17bfe2734257fbabbc05306884c9633"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__tomato_sauce.json"
+hash = "a2e8ce67a50e20e86f448b0bd29997f1fb08e69d7ca43e42803933fe8e7bf78c"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__vegetable_noodles.json"
+hash = "0959b3901dd07ab17d2d5ecf155251a9149f0de7a2187b354f5919f6f40f0f93"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/farmersdelight__vegetable_soup.json"
+hash = "1af3ed51369530a55f20e6649f55b2409ab50bdaa816abf6d902cd60609762da"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/lilis_lucky_lures__cooked_cod_meal.json"
+hash = "1f67f1359ee4f8e2e64a90c2e1a8305158b76d704a71e65f1153d9f07950980a"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/minecraft__beetroot_soup.json"
+hash = "33362e02bfd8c218c136c4622801d96be64feed6af476198be8feb437a9d520e"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/minecraft__mushroom_stew.json"
+hash = "5bd0ae3fd98235bb4acb8dcb2fc6a5c77433b17e8d3483b2d96749a1fde00b5c"
+
+[[files]]
+file = "patchouli_books/fotf_cookbook/en_us/entries/pot/minecraft__rabbit_stew.json"
+hash = "ca09e892089220a539670c83cf140b4fa2185ac4035c405d9d64a4b11f5b8a74"
 
 [[files]]
 file = "patchouli_books/fotf_cookbook/en_us/entries/roaster/brewery__fried_chicken.json"
