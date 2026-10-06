@@ -1,9 +1,9 @@
-package fotfmail;
+package fotfars;
 
 import com.hollingsworth.arsnouveau.client.container.StorageTerminalMenu;
 import com.hollingsworth.arsnouveau.client.container.StoredItemStack;
 import com.hollingsworth.arsnouveau.common.block.tile.StorageLecternTile;
-import fotfmail.mixin.StorageTerminalMenuAccessor;
+import fotfars.mixin.StorageTerminalMenuAccessor;
 import java.util.Set;
 import java.util.function.Supplier;
 import net.minecraft.network.FriendlyByteBuf;
@@ -44,7 +44,7 @@ public final class LecternDeposit {
         context.get().enqueueWork(() -> {
             ServerPlayer player = context.get().getSender();
             if (player != null && player.f_36096_ instanceof StorageTerminalMenu menu) {
-                StorageLecternTile lectern = ((StorageTerminalMenuAccessor) menu).fotfmail$lectern();
+                StorageLecternTile lectern = ((StorageTerminalMenuAccessor) menu).fotfars$lectern();
                 if (lectern != null) {
                     if (message.restock) {
                         restock(player, menu, lectern);

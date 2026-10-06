@@ -1,4 +1,4 @@
-package fotfmail.mixin;
+package fotfars.mixin;
 
 import com.hollingsworth.arsnouveau.common.entity.goal.bookwyrm.RandomStorageVisitGoal;
 import org.spongepowered.asm.mixin.Mixin;
@@ -14,7 +14,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(RandomStorageVisitGoal.class)
 public abstract class RandomStorageVisitGoalMixin {
     @Inject(method = "m_8036_", at = @At("RETURN"), cancellable = true, remap = false)
-    private void fotfmail$visitChestsLessOften(CallbackInfoReturnable<Boolean> cir) {
+    private void fotfars$visitChestsLessOften(CallbackInfoReturnable<Boolean> cir) {
         if (cir.getReturnValueZ() && java.util.concurrent.ThreadLocalRandom.current().nextInt(5) != 0) {
             cir.setReturnValue(false);
         }

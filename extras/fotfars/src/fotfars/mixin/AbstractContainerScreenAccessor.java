@@ -1,4 +1,4 @@
-package fotfmail.mixin;
+package fotfars.mixin;
 
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import org.spongepowered.asm.mixin.Mixin;
@@ -8,8 +8,8 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(AbstractContainerScreen.class)
 public interface AbstractContainerScreenAccessor {
     @Accessor(value = "f_97735_", remap = false)
-    int fotfmail$leftPos();
+    int fotfars$leftPos();
 
     @Accessor(value = "f_97736_", remap = false)
-    int fotfmail$topPos();
+    int fotfars$topPos();
 }

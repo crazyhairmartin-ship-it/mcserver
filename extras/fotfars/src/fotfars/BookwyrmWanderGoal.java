@@ -1,4 +1,4 @@
-package fotfmail;
+package fotfars;
 
 import com.hollingsworth.arsnouveau.common.block.tile.StorageLecternTile;
 import com.hollingsworth.arsnouveau.common.entity.EntityBookwyrm;

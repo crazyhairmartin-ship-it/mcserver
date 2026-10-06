@@ -1,4 +1,4 @@
-package fotfmail.mixin;
+package fotfars.mixin;
 
 import com.hollingsworth.arsnouveau.client.container.StorageTerminalMenu;
 import com.hollingsworth.arsnouveau.common.block.tile.StorageLecternTile;
@@ -9,5 +9,5 @@ import org.spongepowered.asm.mixin.gen.Accessor;
 @Mixin(StorageTerminalMenu.class)
 public interface StorageTerminalMenuAccessor {
     @Accessor(value = "te", remap = false)
-    StorageLecternTile fotfmail$lectern();
+    StorageLecternTile fotfars$lectern();
 }

@@ -1,4 +1,4 @@
-package fotfmail;
+package fotfars;
 
 import com.hollingsworth.arsnouveau.client.container.StoredItemStack;
 import java.util.HashMap;

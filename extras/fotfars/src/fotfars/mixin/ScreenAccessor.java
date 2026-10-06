@@ -1,4 +1,4 @@
-package fotfmail.mixin;
+package fotfars.mixin;
 
 import net.minecraft.client.gui.components.events.GuiEventListener;
 import net.minecraft.client.gui.screens.Screen;
@@ -9,5 +9,5 @@ import org.spongepowered.asm.mixin.gen.Invoker;
 @Mixin(Screen.class)
 public interface ScreenAccessor {
     @Invoker(value = "m_142416_", remap = false)
-    GuiEventListener fotfmail$addRenderableWidget(GuiEventListener widget);
+    GuiEventListener fotfars$addRenderableWidget(GuiEventListener widget);
 }

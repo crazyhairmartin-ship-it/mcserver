@@ -58,8 +58,6 @@ public class FotfMail {
                 SendPackagePacket::handle, Optional.of(NetworkDirection.PLAY_TO_SERVER));
         NETWORK.registerMessage(1, PackageInfoPacket.class, PackageInfoPacket::encode, PackageInfoPacket::decode,
                 PackageInfoPacket::handle, Optional.of(NetworkDirection.PLAY_TO_CLIENT));
-        NETWORK.registerMessage(2, LecternDeposit.class, LecternDeposit::encode, LecternDeposit::decode,
-                LecternDeposit::handle, Optional.of(NetworkDirection.PLAY_TO_SERVER));
         MinecraftForge.EVENT_BUS.addListener(FotfMail::onRightClickBlock);
         MinecraftForge.EVENT_BUS.addListener(Mail::onServerTick);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGHEST, true, PlayerInteractEvent.EntityInteractSpecific.class,

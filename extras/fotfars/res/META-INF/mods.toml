@@ -1,0 +1,27 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+license = "MIT"
+
+[[mods]]
+modId = "fotfars"
+version = "1.0.0"
+displayName = "Friends of the Forest Ars"
+description = '''
+Tweaks for Ars Nouveau: a creative-tab sort and "move matching items" / "restock" buttons on the Storage Lectern,
+and Bookwyrms that wander around their lectern network.
+'''
+
+[[dependencies.fotfars]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.fotfars]]
+modId = "ars_nouveau"
+mandatory = true
+# The mixins target Ars Nouveau 4.12 internals (StorageTerminalMenu.te, AbstractStorageTerminalScreen, Bookwyrm goals).
+versionRange = "*"
+ordering = "AFTER"
+side = "BOTH"

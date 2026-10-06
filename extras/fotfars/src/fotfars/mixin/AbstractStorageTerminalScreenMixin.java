@@ -1,4 +1,4 @@
-package fotfmail.mixin;
+package fotfars.mixin;
 
 import com.hollingsworth.arsnouveau.client.container.AbstractStorageTerminalScreen;
 import com.hollingsworth.arsnouveau.client.container.SortSettings;
@@ -6,9 +6,9 @@ import com.hollingsworth.arsnouveau.client.container.StorageTerminalMenu;
 import com.hollingsworth.arsnouveau.client.container.StoredItemStack;
 import com.hollingsworth.arsnouveau.client.gui.buttons.StateButton;
 import com.hollingsworth.arsnouveau.client.gui.buttons.StorageSettingsButton;
-import fotfmail.CreativeTabSort;
-import fotfmail.FotfMail;
-import fotfmail.LecternDeposit;
+import fotfars.CreativeTabSort;
+import fotfars.FotfArs;
+import fotfars.LecternDeposit;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.components.Tooltip;
 import net.minecraft.network.chat.Component;
@@ -40,7 +40,7 @@ public abstract class AbstractStorageTerminalScreenMixin {
     protected abstract void sendUpdate();
 
     @Inject(method = "lambda$init$1", at = @At("HEAD"), cancellable = true, remap = false)
-    private void fotfmail$cycleSortModes(Button button, CallbackInfo ci) {
+    private void fotfars$cycleSortModes(Button button, CallbackInfo ci) {
         int next = (comparator.type() + 1) % (StoredItemStack.SortingTypes.VALUES.length + 1);
         boolean reversed = comparator.isReversed();
         if (next == CreativeTabSort.TYPE) {
@@ -56,7 +56,7 @@ public abstract class AbstractStorageTerminalScreenMixin {
     }
 
     @Inject(method = "onPacket", at = @At("TAIL"), remap = false)
-    private void fotfmail$restoreCreativeSort(CallbackInfo ci) {
+    private void fotfars$restoreCreativeSort(CallbackInfo ci) {
         Object menu = ((AbstractContainerScreen<?>) (Object) this).m_6262_();
         SortSettings settings = menu instanceof StorageTerminalMenu terminal ? terminal.terminalData : null;
         if (settings != null && settings.sortType == CreativeTabSort.TYPE) {
@@ -70,11 +70,11 @@ public abstract class AbstractStorageTerminalScreenMixin {
     }
 
     @Inject(method = "m_7856_", at = @At("TAIL"), remap = false)
-    private void fotfmail$threeSortIcons(CallbackInfo ci) {
+    private void fotfars$threeSortIcons(CallbackInfo ci) {
         // "Restock" and "move matching items" (LecternDeposit) as purple side tabs like the lectern's own, stacked
         // above them (Ars's sit at topPos + 14, 29, 44).
-        fotfmail$addTab(-16, "lectern_restock", "fotfmail.lectern.restock", true);
-        fotfmail$addTab(-1, "lectern_deposit", "fotfmail.lectern.deposit", false);
+        fotfars$addTab(-16, "lectern_restock", "fotfars.lectern.restock", true);
+        fotfars$addTab(-1, "lectern_deposit", "fotfars.lectern.deposit", false);
         if (buttonSortingType != null) {
             buttonSortingType.imageWidth = 66;
             if (comparator != null && comparator.type() == CreativeTabSort.TYPE) {
@@ -83,12 +83,12 @@ public abstract class AbstractStorageTerminalScreenMixin {
         }
     }
 
-    private void fotfmail$addTab(int y, String icon, String tooltip, boolean restock) {
+    private void fotfars$addTab(int y, String icon, String tooltip, boolean restock) {
         AbstractContainerScreenAccessor screen = (AbstractContainerScreenAccessor) (Object) this;
-        StorageSettingsButton tab = new StorageSettingsButton(screen.fotfmail$leftPos() - 17, screen.fotfmail$topPos() + y,
-                22, 12, 22, 13, 0, new ResourceLocation("fotfmail", "textures/gui/" + icon + ".png"),
-                button -> FotfMail.NETWORK.sendToServer(new LecternDeposit(restock)));
+        StorageSettingsButton tab = new StorageSettingsButton(screen.fotfars$leftPos() - 17, screen.fotfars$topPos() + y,
+                22, 12, 22, 13, 0, new ResourceLocation(FotfArs.MODID, "textures/gui/" + icon + ".png"),
+                button -> FotfArs.NETWORK.sendToServer(new LecternDeposit(restock)));
         tab.m_257544_(Tooltip.m_257550_(Component.m_237115_(tooltip)));
-        ((ScreenAccessor) (Object) this).fotfmail$addRenderableWidget(tab);
+        ((ScreenAccessor) (Object) this).fotfars$addRenderableWidget(tab);
     }
 }
