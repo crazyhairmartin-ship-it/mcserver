@@ -1923,6 +1923,10 @@ file = "kubejs/server_scripts/saddle_recipe.js"
 hash = "412bf83da2aa86b4baf7ae41144bcf05f8f4068bf7b32693f4dd5740f86299fb"
 
 [[files]]
+file = "kubejs/server_scripts/stove_heat.js"
+hash = "5984f7980aa8ed4295743a2162bb863c0c8657e7b2ba9c3c54aab35d406e32b7"
+
+[[files]]
 file = "kubejs/server_scripts/trim_aquaculture.js"
 hash = "6025b8605db77c3f6a6858af034680cfbc9126435774b31fa31d1b2b98e74f8b"
 
