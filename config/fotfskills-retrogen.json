@@ -1,0 +1,12 @@
+{
+  "_help": "Retrogen (fotfskills): adds placed features from newly installed mods to chunks generated before them, as the chunks load. Only list features from mods added since those chunks were made, or they get doubled. Patterns use * and ?, e.g. realmrpg_skeletons:*. Server only; /fotfskills retrogen status|reload (ops). Structures aren't supported yet.",
+  "enabled": false,
+  "features": [],
+  "excludeFeatures": [],
+  "dimensions": ["*"],
+  "maxInhabitedTicks": 1200,
+  "claimBufferChunks": 2,
+  "maxChunksPerTick": 2,
+  "maxMillisPerTick": 8,
+  "logChunks": false
+}

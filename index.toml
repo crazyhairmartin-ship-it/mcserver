@@ -93,6 +93,10 @@ file = "config/fml.toml"
 hash = "7628fc0bfac9c538350fd51e9a390f5bb03f65faeb61bc9ae3541e53c614cc22"
 
 [[files]]
+file = "config/fotfskills-retrogen.json"
+hash = "558d667243a4a4cc08742a189bc289d51e49a32dd82546dcdec7c8f52f0a61e7"
+
+[[files]]
 file = "config/gravestone-client.toml"
 hash = "b8e24932dc5f41db8ccdc0d40d6241a4f12fc4366bfb646b513b72b9432aad19"
 
