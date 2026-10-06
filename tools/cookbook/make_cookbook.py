@@ -37,10 +37,9 @@ STATIONS = [
     ('drinks', 'Brewing & Fermenting', 'vinery:fermentation_barrel',
      ['vinery:wine_fermentation', 'vinery:apple_fermenting', 'vinery:apple_mashing', 'brewery:brewing',
       'herbalbrews:kettle_brewing']),
-    ('other', 'Bars, Traps & Oddities', 'beachparty:palm_bar',
-     ['beachparty:palm_bar_mixing', 'lilis_lucky_lures:fish_trap', 'cataclysm:amethyst_bless']),
+    ('other', 'Palm Bar (Cocktails)', 'beachparty:palm_bar', ['beachparty:palm_bar_mixing']),
 ]
-SKIP_TYPES = {'tconstruct:casting_table'}
+SKIP_TYPES = {'tconstruct:casting_table', 'lilis_lucky_lures:fish_trap', 'cataclysm:amethyst_bless'}  # bait and rituals, not cooking
 # a food's chapter is its first station in this order (real cooking before the crafting table)
 PRIORITY = ['fd_pot', 'fc_pot', 'stove', 'roaster', 'meadow', 'baking', 'bowl', 'mincer', 'drinks', 'fire', 'cutting',
             'other', 'crafting']
@@ -107,7 +106,7 @@ def main():
     station_of = {t: s for s, _, _, types in STATIONS for t in types}
     by_food = {}
     for r in dump['recipes']:
-        if r['type'] in SKIP_TYPES or r['out'] not in foods or r['type'] not in station_of:
+        if r['type'] in SKIP_TYPES or r['out'] not in foods or r['type'] not in station_of or not r['ingredients']:
             continue
         if r['type'].startswith('minecraft:crafting') and len(r['ingredients']) == 1 and r['count'] > 1:
             continue                                    # unpacking a crate, bag or storage block isn't cooking
@@ -130,8 +129,9 @@ def main():
     for item in foods:
         recipes = by_food.get(item, [])
         stations = {station_of[r['type']] for r in recipes}
-        chapter = next((s for s in PRIORITY if s in stations), 'gathered')
-        chapters[chapter].append(item)
+        chapter = next((s for s in PRIORITY if s in stations), None)
+        if chapter:                                     # foods with no recipe (raw, found) aren't in the book
+            chapters[chapter].append(item)
 
     titles = {s: (t, icon) for s, t, icon, _ in STATIONS}
     titles['gathered'] = GATHERED[1:]
@@ -166,8 +166,6 @@ def main():
                 makes = f' (makes {r["count"]})' if r['count'] > 1 else ''
                 pages.append({"type": "patchouli:text", "title": station,
                               "text": (f'Makes {r["count"]}.$(br)' if r['count'] > 1 else '') + ''.join(lines)})
-            if not by_food.get(item):
-                pages[0]["text"] += '$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()'
             entry = {"name": name(item), "icon": item, "category": f"patchouli:{chapter}", "sortnum": n, "pages": pages}
             fname = re.sub(r'[^a-z0-9_]', '_', item.replace(':', '__'))
             (edir / f'{fname}.json').write_text(json.dumps(entry, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')

@@ -2,7 +2,7 @@
   "name": "Pumpkin Cocktail",
   "icon": "beachparty:pumpkin_cocktail",
   "category": "patchouli:other",
-  "sortnum": 7,
+  "sortnum": 4,
   "pages": [
     {
       "type": "patchouli:spotlight",
@@ -11,7 +11,7 @@
     },
     {
       "type": "patchouli:text",
-      "title": "Bars, Traps & Oddities",
+      "title": "Palm Bar (Cocktails)",
       "text": "$(li)Pumpkin$(li)Ice$(li)Sugar$(li)Milk Bucket"
     }
   ]

@@ -2,7 +2,7 @@
   "name": "Sweetberries Cocktail",
   "icon": "beachparty:sweetberries_cocktail",
   "category": "patchouli:other",
-  "sortnum": 9,
+  "sortnum": 5,
   "pages": [
     {
       "type": "patchouli:spotlight",
@@ -11,7 +11,7 @@
     },
     {
       "type": "patchouli:text",
-      "title": "Bars, Traps & Oddities",
+      "title": "Palm Bar (Cocktails)",
       "text": "$(li)Sweet Berries$(li)Ice$(li)Sugar"
     }
   ]

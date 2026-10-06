@@ -2,7 +2,7 @@
   "name": "Melon Cocktail",
   "icon": "beachparty:melon_cocktail",
   "category": "patchouli:other",
-  "sortnum": 5,
+  "sortnum": 3,
   "pages": [
     {
       "type": "patchouli:spotlight",
@@ -11,7 +11,7 @@
     },
     {
       "type": "patchouli:text",
-      "title": "Bars, Traps & Oddities",
+      "title": "Palm Bar (Cocktails)",
       "text": "$(li)Melon Slice$(li)Ice$(li)Sugar"
     }
   ]

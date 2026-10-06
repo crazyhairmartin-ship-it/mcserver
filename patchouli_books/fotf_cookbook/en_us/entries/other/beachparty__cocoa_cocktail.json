@@ -2,7 +2,7 @@
   "name": "Cocoa Cocktail",
   "icon": "beachparty:cocoa_cocktail",
   "category": "patchouli:other",
-  "sortnum": 1,
+  "sortnum": 0,
   "pages": [
     {
       "type": "patchouli:spotlight",
@@ -11,7 +11,7 @@
     },
     {
       "type": "patchouli:text",
-      "title": "Bars, Traps & Oddities",
+      "title": "Palm Bar (Cocktails)",
       "text": "$(li)Cocoa Beans$(li)Ice$(li)Sugar"
     }
   ]

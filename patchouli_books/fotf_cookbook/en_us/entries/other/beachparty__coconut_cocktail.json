@@ -2,7 +2,7 @@
   "name": "Coconut Cocktail",
   "icon": "beachparty:coconut_cocktail",
   "category": "patchouli:other",
-  "sortnum": 2,
+  "sortnum": 1,
   "pages": [
     {
       "type": "patchouli:spotlight",
@@ -11,7 +11,7 @@
     },
     {
       "type": "patchouli:text",
-      "title": "Bars, Traps & Oddities",
+      "title": "Palm Bar (Cocktails)",
       "text": "$(li)Open Coconut$(li)Ice$(li)Honey Bottle"
     }
   ]

@@ -2,7 +2,7 @@
   "name": "Honey Cocktail",
   "icon": "beachparty:honey_cocktail",
   "category": "patchouli:other",
-  "sortnum": 4,
+  "sortnum": 2,
   "pages": [
     {
       "type": "patchouli:spotlight",
@@ -11,7 +11,7 @@
     },
     {
       "type": "patchouli:text",
-      "title": "Bars, Traps & Oddities",
+      "title": "Palm Bar (Cocktails)",
       "text": "$(li)Honeycomb$(li)Ice$(li)Milk Bucket"
     }
   ]
