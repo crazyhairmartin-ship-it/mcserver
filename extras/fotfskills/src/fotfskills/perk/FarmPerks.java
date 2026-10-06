@@ -146,11 +146,21 @@ public final class FarmPerks {
             if (block instanceof ComposterBlock) {
                 int before = c.before.m_61143_(ComposterBlock.f_51913_);
                 int after = now.m_61143_(ComposterBlock.f_51913_);
-                if (before == 8 && after == 0 && Perks.roll(c.player, "compost_king")) {
-                    Block.m_49840_(c.level, c.pos.m_7494_(), new ItemStack(net.minecraft.world.item.Items.f_42499_));  // double bone meal
-                }
-                if (after == before + 1 && after < 7 && Perks.roll(c.player, "compost_king")) {
-                    c.level.m_7731_(c.pos, now.m_61124_(ComposterBlock.f_51913_, after + 1), 3);
+                ResourceLocation id = ForgeRegistries.BLOCKS.getKey(block);
+                if (id != null && id.toString().equals("aquaculture:worm_farm")) {
+                    // Aquaculture's worm farm gives one worm per click (a layer each): Compost King doubles the worms
+                    net.minecraft.world.item.Item worm = ForgeRegistries.ITEMS.getValue(new ResourceLocation("aquaculture", "worm"));
+                    if (after == before - 1 && worm != null && worm != net.minecraft.world.item.Items.f_41852_
+                            && Perks.roll(c.player, "compost_king")) {
+                        Block.m_49840_(c.level, c.pos.m_7494_(), new ItemStack(worm));
+                    }
+                } else {
+                    if (after == before + 1 && after < 7 && Perks.roll(c.player, "compost_king")) {
+                        c.level.m_7731_(c.pos, now.m_61124_(ComposterBlock.f_51913_, after + 1), 3);
+                    }
+                    if (before == 8 && after == 0 && Perks.roll(c.player, "compost_king")) {
+                        Block.m_49840_(c.level, c.pos.m_7494_(), new ItemStack(net.minecraft.world.item.Items.f_42499_, 9));  // 10x bone meal
+                    }
                 }
             } else if (block instanceof BeehiveBlock) {
                 if (c.before.m_61143_(BeehiveBlock.f_49564_) == 5 && now.m_61143_(BeehiveBlock.f_49564_) == 0

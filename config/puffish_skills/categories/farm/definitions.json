@@ -1306,7 +1306,7 @@
   },
   "compost_king_1": {
     "title": "Compost King",
-    "description": "50% that each item you put in a composter fills an extra layer, and for double bone meal when you empty it",
+    "description": "50% that each item you put in a composter fills an extra layer and for 10x bone meal when you empty it; worm farms give double worms",
     "icon": {
       "type": "item",
       "data": {
@@ -1333,7 +1333,7 @@
   },
   "compost_king_2": {
     "title": "Compost King",
-    "description": "100% that each item you put in a composter fills an extra layer, and for double bone meal when you empty it",
+    "description": "100% that each item you put in a composter fills an extra layer and for 10x bone meal when you empty it; worm farms give double worms",
     "icon": {
       "type": "item",
       "data": {
