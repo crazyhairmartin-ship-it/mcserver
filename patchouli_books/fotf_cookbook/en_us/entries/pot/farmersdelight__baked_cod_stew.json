@@ -1,0 +1,18 @@
+{
+  "name": "Baked Cod Stew",
+  "icon": "farmersdelight:baked_cod_stew",
+  "category": "patchouli:pot",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:baked_cod_stew",
+      "text": "$(l)Hunger:$() 14 (7 drumsticks)$(br)$(l)Saturation:$() 21$(br)$(l)Effects:$() Nourishment (5:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)Cod or Raw Cod Slice$(li)Potato$(li)Tortoise Egg or Alligator Egg or Duck Egg (or similar)$(li)Tomato"
+    }
+  ]
+}

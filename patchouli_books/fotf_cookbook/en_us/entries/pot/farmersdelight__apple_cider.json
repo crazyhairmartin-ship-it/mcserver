@@ -1,0 +1,18 @@
+{
+  "name": "Apple Cider",
+  "icon": "farmersdelight:apple_cider",
+  "category": "patchouli:pot",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:apple_cider",
+      "text": "$(l)Hunger:$() 0 (0 drumsticks)$(br)$(l)Saturation:$() 0$(br)$(l)Effects:$() Absorption (1:00)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)2x Apple$(li)Sugar"
+    }
+  ]
+}

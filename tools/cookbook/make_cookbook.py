@@ -26,9 +26,8 @@ STATIONS = [
     ('fire', 'Furnace, Smoker & Campfire', 'minecraft:smoker',
      ['minecraft:smelting', 'minecraft:smoking', 'minecraft:campfire_cooking']),
     ('cutting', 'Cutting Board', 'farmersdelight:cutting_board', ['farmersdelight:cutting']),
-    ('fd_pot', 'Cooking Pot (Farmer\'s Delight)', 'farmersdelight:cooking_pot', ['farmersdelight:cooking']),
+    ('pot', 'Cooking Pots (any pot)', 'farmersdelight:cooking_pot', ['farmersdelight:cooking', 'farm_and_charm:pot_cooking']),
     ('stove', 'Stove', 'farm_and_charm:stove', ['farm_and_charm:stove']),
-    ('fc_pot', 'Cooking Pot (Farm & Charm)', 'farm_and_charm:cooking_pot', ['farm_and_charm:pot_cooking']),
     ('roaster', 'Roaster', 'farm_and_charm:roaster', ['farm_and_charm:roaster']),
     ('bowl', 'Mixing Bowl', 'farm_and_charm:crafting_bowl', ['farm_and_charm:crafting_bowl']),
     ('mincer', 'Mincer', 'farm_and_charm:mincer', ['farm_and_charm:mincer']),
@@ -41,7 +40,7 @@ STATIONS = [
 ]
 SKIP_TYPES = {'tconstruct:casting_table', 'lilis_lucky_lures:fish_trap', 'cataclysm:amethyst_bless'}  # bait and rituals, not cooking
 # a food's chapter is its first station in this order (real cooking before the crafting table)
-PRIORITY = ['fd_pot', 'fc_pot', 'stove', 'roaster', 'meadow', 'baking', 'bowl', 'mincer', 'drinks', 'fire', 'cutting',
+PRIORITY = ['pot', 'stove', 'roaster', 'meadow', 'baking', 'bowl', 'mincer', 'drinks', 'fire', 'cutting',
             'other', 'crafting']
 GATHERED = ('gathered', 'Grown, Caught & Hunted', 'minecraft:apple')
 PARTIAL = re.compile(r'(slice|piece|wedge|portion|_bite|half_|_half|chunk_of)')

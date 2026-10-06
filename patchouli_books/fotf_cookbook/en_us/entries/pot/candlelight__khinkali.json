@@ -1,0 +1,18 @@
+{
+  "name": "Khinkali",
+  "icon": "candlelight:khinkali",
+  "category": "patchouli:pot",
+  "sortnum": 18,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:khinkali",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 14.4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "Makes 4.$(br)$(li)Minced Beef$(li)Dough or Wheat Dough"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Pasta with Mozzarella",
+  "icon": "candlelight:pasta_with_mozzarella",
+  "category": "patchouli:pot",
+  "sortnum": 27,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:pasta_with_mozzarella",
+      "text": "$(l)Hunger:$() 10 (5 drumsticks)$(br)$(l)Saturation:$() 14"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "Makes 4.$(br)$(li)Raw Pasta$(li)Egg$(li)Noir Wine or Red Wine or Strad Wine (or similar)$(li)Mozzarella"
+    }
+  ]
+}

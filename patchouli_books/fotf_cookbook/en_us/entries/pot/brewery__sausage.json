@@ -1,0 +1,18 @@
+{
+  "name": "Sausage",
+  "icon": "brewery:sausage",
+  "category": "patchouli:pot",
+  "sortnum": 35,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:sausage",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 6$(br)$(l)Effects:$() Sustenance (5:00)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)2x Minced Beef$(li)Lettuce or Cabbage or Cabbage Leaf"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Ratatouille",
+  "icon": "farmersdelight:ratatouille",
+  "category": "patchouli:pot",
+  "sortnum": 32,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:ratatouille",
+      "text": "$(l)Hunger:$() 10 (5 drumsticks)$(br)$(l)Saturation:$() 12$(br)$(l)Effects:$() Nourishment (1:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)Tomato$(li)Onion$(li)Beetroot$(li)Beetroot or Carrot or Onion (or similar)"
+    }
+  ]
+}

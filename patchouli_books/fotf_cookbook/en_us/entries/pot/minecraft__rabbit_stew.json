@@ -1,0 +1,43 @@
+{
+  "name": "Rabbit Stew",
+  "icon": "minecraft:rabbit_stew",
+  "category": "patchouli:pot",
+  "sortnum": 31,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:rabbit_stew",
+      "text": "$(l)Hunger:$() 10 (5 drumsticks)$(br)$(l)Saturation:$() 12"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Cauldron",
+      "text": "Makes 6.$(br)$(li)Baked Potato$(li)Cooked Rabbit$(li)Bowl$(li)Carrot$(li)Piece of Cheese or Piece of Sheep Cheese or Piece of Grain Cheese (or similar)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:rabbit_stew_from_brown_mushroom",
+      "text": "Makes 1."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)Potato$(li)Brown Mushroom$(li)Carrot$(li)Rabbit"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "biomesoplenty:rabbit_stew_from_toadstool",
+      "text": "Makes 1."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)Potato$(li)Rabbit$(li)Carrot$(li)Brown Mushroom or Red Mushroom"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:rabbit_stew_from_red_mushroom",
+      "text": "Makes 1."
+    }
+  ]
+}

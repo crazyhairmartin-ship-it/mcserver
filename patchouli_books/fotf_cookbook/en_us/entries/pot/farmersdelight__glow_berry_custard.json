@@ -1,0 +1,18 @@
+{
+  "name": "Glow Berry Custard",
+  "icon": "farmersdelight:glow_berry_custard",
+  "category": "patchouli:pot",
+  "sortnum": 16,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:glow_berry_custard",
+      "text": "$(l)Hunger:$() 7 (3.5 drumsticks)$(br)$(l)Saturation:$() 8.4$(br)$(l)Effects:$() Glowing (5s)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)Glow Berries$(li)Milk Bucket or Milk Bottle or Wooden Milk Bucket$(li)Tortoise Egg or Alligator Egg or Duck Egg (or similar)$(li)Sugar"
+    }
+  ]
+}

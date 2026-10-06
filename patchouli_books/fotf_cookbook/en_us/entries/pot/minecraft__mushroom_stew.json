@@ -1,0 +1,23 @@
+{
+  "name": "Mushroom Stew",
+  "icon": "minecraft:mushroom_stew",
+  "category": "patchouli:pot",
+  "sortnum": 22,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:mushroom_stew",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 7.2"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)Brown Mushroom$(li)Red Mushroom"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:mushroom_stew",
+      "text": "Makes 1."
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "name": "Cooked Cod Meal",
+  "icon": "lilis_lucky_lures:cooked_cod_meal",
+  "category": "patchouli:pot",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "lilis_lucky_lures:cooked_cod_meal",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 12.8$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Uncooked Cod Meal"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Uncooked Cod Meal"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Uncooked Cod Meal"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)Kelp$(li)Potato$(li)Cod"
+    }
+  ]
+}

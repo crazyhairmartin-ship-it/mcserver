@@ -1,0 +1,33 @@
+{
+  "name": "Beetroot Soup",
+  "icon": "minecraft:beetroot_soup",
+  "category": "patchouli:pot",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:beetroot_soup",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 7.2"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Cauldron",
+      "text": "Makes 2.$(br)$(li)Bowl$(li)5x Beetroot"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:beetroot_soup",
+      "text": "Makes 1."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)Beetroot"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)3x Beetroot"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Fried Rice",
+  "icon": "farmersdelight:fried_rice",
+  "category": "patchouli:pot",
+  "sortnum": 15,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:fried_rice",
+      "text": "$(l)Hunger:$() 12 (6 drumsticks)$(br)$(l)Saturation:$() 19.2$(br)$(l)Effects:$() Nourishment (3:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pots (any pot)",
+      "text": "$(li)Rice$(li)Tortoise Egg or Alligator Egg or Duck Egg (or similar)$(li)Carrot$(li)Onion"
+    }
+  ]
+}
