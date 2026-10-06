@@ -12,8 +12,8 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 /**
- * config/fotfskills-retrogen.json: which placed features Retrogen adds to chunks generated before their mod was
- * installed, and the limits it works within. Off and empty by default, so nothing happens until it's set up.
+ * config/fotfskills-retrogen.json: which placed features and structure sets Retrogen adds to chunks generated before
+ * their mod was installed, and the limits it works within. Off and empty by default, so nothing happens until it's set up.
  * Patterns are ids with * (any characters) and ? (one character), e.g. "realmrpg_fallen_adventurers:*".
  */
 public final class RetrogenConfig {
@@ -22,6 +22,15 @@ public final class RetrogenConfig {
     public List<String> features = new ArrayList<>();
     /** Placed features never to add, even if they match {@link #features}. */
     public List<String> excludeFeatures = new ArrayList<>();
+    /** Structure sets to add (id patterns, e.g. "mns:*"). */
+    public List<String> structures = new ArrayList<>();
+    /** Structure sets never to add, even if they match {@link #structures}. */
+    public List<String> excludeStructures = new ArrayList<>();
+    /**
+     * How many chunks around a chunk must be loaded before its structures are handled: structures can reach this
+     * far, and pieces of structures starting nearby are filled in from here. Vanilla uses 8.
+     */
+    public int structureRadius = 8;
     /** Dimensions to work in (id patterns). */
     public List<String> dimensions = new ArrayList<>(List.of("*"));
     /** Skip a chunk if it or a neighbour has had players near it for longer than this (ticks; -1 = no limit). */
@@ -63,6 +72,9 @@ public final class RetrogenConfig {
         }
         if (config.features == null) config.features = new ArrayList<>();
         if (config.excludeFeatures == null) config.excludeFeatures = new ArrayList<>();
+        if (config.structures == null) config.structures = new ArrayList<>();
+        if (config.excludeStructures == null) config.excludeStructures = new ArrayList<>();
+        config.structureRadius = Math.max(1, Math.min(16, config.structureRadius));
         if (config.dimensions == null) config.dimensions = new ArrayList<>(List.of("*"));
         config.maxChunksPerTick = Math.max(1, config.maxChunksPerTick);
         config.maxMillisPerTick = Math.max(1, config.maxMillisPerTick);
@@ -71,6 +83,10 @@ public final class RetrogenConfig {
 
     public boolean wantsFeature(String id) {
         return anyMatch(features, id) && !anyMatch(excludeFeatures, id);
+    }
+
+    public boolean wantsStructureSet(String id) {
+        return anyMatch(structures, id) && !anyMatch(excludeStructures, id);
     }
 
     public boolean wantsDimension(String id) {

@@ -1,8 +1,11 @@
 {
-  "_help": "Retrogen (fotfskills): adds placed features from newly installed mods to chunks generated before them, as the chunks load. Only list features from mods added since those chunks were made, or they get doubled. Patterns use * and ?, e.g. realmrpg_skeletons:*. Server only; /fotfskills retrogen status|reload (ops). Structures aren't supported yet.",
+  "_help": "Retrogen (fotfskills): adds placed features from newly installed mods to chunks generated before them, as the chunks load. Only list features from mods added since those chunks were made, or they get doubled. Patterns use * and ?, e.g. realmrpg_skeletons:*. Server only; /fotfskills retrogen status|reload (ops). Structure sets (e.g. mss:*) are added the same way: a structure is only started when every chunk it covers is loaded, uninhabited and unclaimed; structureRadius chunks around must be loaded first.",
   "enabled": false,
   "features": [],
   "excludeFeatures": [],
+  "structures": [],
+  "excludeStructures": [],
+  "structureRadius": 8,
   "dimensions": ["*"],
   "maxInhabitedTicks": 1200,
   "claimBufferChunks": 2,

@@ -27,11 +27,19 @@ public final class RetrogenLogicTest {
         check(!config.wantsDimension("minecraft:the_end"), "dimension filter");
         check(config.inhabitedOk(Long.MAX_VALUE), "-1 means no inhabited limit");
         check(config.maxChunksPerTick == 1, "per-tick limits are at least 1");
+        check(!defaults.wantsStructureSet("mss:sky_islands") && defaults.structureRadius == 8, "no structures by default");
+        RetrogenConfig structures = RetrogenConfig.parse(new StringReader(
+                "{\"structures\":[\"mss:*\"],\"excludeStructures\":[\"mss:big_*\"],\"structureRadius\":40}"));
+        check(structures.wantsStructureSet("mss:sky_islands") && !structures.wantsStructureSet("mss:big_ship"),
+                "structure exclude wins over include");
+        check(!structures.wantsFeature("mss:sky_islands"), "structure patterns don't add features");
+        check(structures.structureRadius == 16 && RetrogenConfig.parse(new StringReader("{\"structureRadius\":0}")).structureRadius == 1,
+                "structure radius is clamped to 1-16");
         check(!RetrogenConfig.parse(new StringReader("null")).enabled, "empty file reads as defaults");
         Path shipped = Path.of("../../config/fotfskills-retrogen.json");
         if (Files.exists(shipped)) {
             RetrogenConfig pack = RetrogenConfig.load(shipped);
-            check(pack.maxChunksPerTick == 2 && pack.claimBufferChunks == 2, "the pack's config file parses");
+            check(pack.maxChunksPerTick == 2 && pack.claimBufferChunks == 2 && pack.structureRadius == 8 && pack.structures.isEmpty(), "the pack's config file parses");
         }
 
         // worldgen history
