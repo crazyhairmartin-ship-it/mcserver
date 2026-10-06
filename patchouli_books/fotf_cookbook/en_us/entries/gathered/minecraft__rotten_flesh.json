@@ -1,0 +1,13 @@
+{
+  "name": "Rotten Flesh",
+  "icon": "minecraft:rotten_flesh",
+  "category": "patchouli:gathered",
+  "sortnum": 134,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:rotten_flesh",
+      "text": "$(l)Hunger:$() 4 (2 drumsticks)$(br)$(l)Saturation:$() 0.8$(br)$(l)Effects:$() Hunger (30s, 80% chance)$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()"
+    }
+  ]
+}

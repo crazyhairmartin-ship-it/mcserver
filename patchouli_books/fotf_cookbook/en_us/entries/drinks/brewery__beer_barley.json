@@ -1,0 +1,18 @@
+{
+  "name": "Beer Barley",
+  "icon": "brewery:beer_barley",
+  "category": "patchouli:drinks",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:beer_barley",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Hops$(li)Dried Barley$(li)Yeast"
+    }
+  ]
+}

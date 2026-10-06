@@ -1,0 +1,18 @@
+{
+  "name": "Glowing Wine",
+  "icon": "vinery:glowing_wine",
+  "category": "patchouli:drinks",
+  "sortnum": 23,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "vinery:glowing_wine",
+      "text": "$(l)Hunger:$() 0 (0 drumsticks)$(br)$(l)Saturation:$() 0$(br)$(l)Effects:$() Glowing (1:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Glow Berries"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Bread",
+  "icon": "bakery:bread",
+  "category": "patchouli:stove",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "bakery:bread",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 12$(br)$(l)Effects:$() Sustenance (3:30)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 4.$(br)$(li)Dough or Wheat Dough$(li)Sugar$(li)Wooden Water Bucket or Water Bucket"
+    }
+  ]
+}

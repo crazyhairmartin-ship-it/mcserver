@@ -1,0 +1,18 @@
+{
+  "name": "Pasta with Onion Sauce",
+  "icon": "farm_and_charm:pasta_with_onion_sauce",
+  "category": "patchouli:stove",
+  "sortnum": 18,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:pasta_with_onion_sauce",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 8.4$(br)$(l)Effects:$() Satiation (3:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 4.$(br)$(li)2x Onion$(li)Raw Pasta"
+    }
+  ]
+}

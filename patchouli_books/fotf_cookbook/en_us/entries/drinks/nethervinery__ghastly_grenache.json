@@ -1,0 +1,18 @@
+{
+  "name": "Ghastly Grenache",
+  "icon": "nethervinery:ghastly_grenache",
+  "category": "patchouli:drinks",
+  "sortnum": 22,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "nethervinery:ghastly_grenache",
+      "text": "$(l)Hunger:$() 0 (0 drumsticks)$(br)$(l)Saturation:$() 0$(br)$(l)Effects:$() Double Jump (1:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Ghast Tear"
+    }
+  ]
+}

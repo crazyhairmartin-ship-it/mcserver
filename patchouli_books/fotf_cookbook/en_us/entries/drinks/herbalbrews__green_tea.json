@@ -1,0 +1,18 @@
+{
+  "name": "Green Tea",
+  "icon": "herbalbrews:green_tea",
+  "category": "patchouli:drinks",
+  "sortnum": 24,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "herbalbrews:green_tea",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Dried Green Tea$(li)Glass Bottle"
+    }
+  ]
+}

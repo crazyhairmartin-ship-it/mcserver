@@ -1,0 +1,13 @@
+{
+  "name": "Brown Shrooma",
+  "icon": "aquaculture:brown_shrooma",
+  "category": "patchouli:gathered",
+  "sortnum": 22,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "aquaculture:brown_shrooma",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.2$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()"
+    }
+  ]
+}

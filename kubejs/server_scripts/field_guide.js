@@ -20,6 +20,7 @@ let GUIDE_BOOKS = {
   music: () => Item.of('mimi:guide'),
   animals: () => Item.of('alexsmobs:animal_dictionary'),
   caves: () => Item.of('alexscaves:cave_book'),
+  cookbook: patchouliBook('patchouli:fotf_cookbook'),
 }
 
 PlayerEvents.loggedIn(event => {

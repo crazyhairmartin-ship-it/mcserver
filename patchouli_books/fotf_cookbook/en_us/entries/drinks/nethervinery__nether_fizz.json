@@ -1,0 +1,18 @@
+{
+  "name": "Nether Fizz",
+  "icon": "nethervinery:nether_fizz",
+  "category": "patchouli:drinks",
+  "sortnum": 37,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "nethervinery:nether_fizz",
+      "text": "$(l)Hunger:$() 0 (0 drumsticks)$(br)$(l)Saturation:$() 0$(br)$(l)Effects:$() Hearthstone (2s)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Crimson Fungus$(li)Warped Fungus"
+    }
+  ]
+}

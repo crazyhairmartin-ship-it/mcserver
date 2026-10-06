@@ -1,0 +1,18 @@
+{
+  "name": "Steak and Potatoes",
+  "icon": "farmersdelight:steak_and_potatoes",
+  "category": "patchouli:crafting",
+  "sortnum": 110,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:steak_and_potatoes",
+      "text": "$(l)Hunger:$() 12 (6 drumsticks)$(br)$(l)Saturation:$() 19.2$(br)$(l)Effects:$() Nourishment (3:00)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:steak_and_potatoes",
+      "text": "Makes 1."
+    }
+  ]
+}

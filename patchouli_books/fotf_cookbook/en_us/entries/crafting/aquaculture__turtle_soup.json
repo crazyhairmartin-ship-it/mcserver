@@ -1,0 +1,18 @@
+{
+  "name": "Turtle Soup",
+  "icon": "aquaculture:turtle_soup",
+  "category": "patchouli:crafting",
+  "sortnum": 122,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "aquaculture:turtle_soup",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 7.2"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "aquaculture:turtle_soup",
+      "text": "Makes 1."
+    }
+  ]
+}

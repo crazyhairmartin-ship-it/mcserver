@@ -1,0 +1,18 @@
+{
+  "name": "Choco-Ray Muffin",
+  "icon": "rainbowreef:choco_ray_muffin",
+  "category": "patchouli:crafting",
+  "sortnum": 16,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:choco_ray_muffin",
+      "text": "$(l)Hunger:$() 7 (3.5 drumsticks)$(br)$(l)Saturation:$() 4.2$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/choco_ray_muffin",
+      "text": "Makes 1."
+    }
+  ]
+}

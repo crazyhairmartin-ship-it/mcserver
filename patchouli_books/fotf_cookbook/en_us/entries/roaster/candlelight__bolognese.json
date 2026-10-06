@@ -1,0 +1,18 @@
+{
+  "name": "Bolognese",
+  "icon": "candlelight:bolognese",
+  "category": "patchouli:roaster",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:bolognese",
+      "text": "$(l)Hunger:$() 10 (5 drumsticks)$(br)$(l)Saturation:$() 14"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "Makes 4.$(br)$(li)Simple Tomato Soup or Tomato Soup$(li)Minced Beef$(li)Bacon$(li)Onion$(li)Carrot$(li)Noir Wine or Red Wine or Strad Wine (or similar)"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Boulti",
+  "icon": "aquaculture:boulti",
+  "category": "patchouli:gathered",
+  "sortnum": 19,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "aquaculture:boulti",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.2$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()"
+    }
+  ]
+}

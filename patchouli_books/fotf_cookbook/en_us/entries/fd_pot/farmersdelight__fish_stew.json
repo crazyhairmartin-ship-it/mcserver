@@ -1,0 +1,18 @@
+{
+  "name": "Fish Stew",
+  "icon": "farmersdelight:fish_stew",
+  "category": "patchouli:fd_pot",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:fish_stew",
+      "text": "$(l)Hunger:$() 12 (6 drumsticks)$(br)$(l)Saturation:$() 19.2$(br)$(l)Effects:$() Nourishment (3:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pot (Farmer's Delight)",
+      "text": "$(li)Cod or Salmon or Tropical Fish (or similar)$(li)Tomato Sauce$(li)Onion"
+    }
+  ]
+}

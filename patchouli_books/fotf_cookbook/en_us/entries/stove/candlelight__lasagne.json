@@ -1,0 +1,18 @@
+{
+  "name": "Lasagne",
+  "icon": "candlelight:lasagne",
+  "category": "patchouli:stove",
+  "sortnum": 16,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:lasagne",
+      "text": "$(l)Hunger:$() 10 (5 drumsticks)$(br)$(l)Saturation:$() 14"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 2.$(br)$(li)Bolognese$(li)Raw Pasta$(li)Piece of Cheese or Piece of Sheep Cheese or Piece of Grain Cheese (or similar)"
+    }
+  ]
+}

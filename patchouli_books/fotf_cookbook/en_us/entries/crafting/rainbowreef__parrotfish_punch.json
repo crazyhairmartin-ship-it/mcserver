@@ -1,0 +1,18 @@
+{
+  "name": "Parrotfish Punch",
+  "icon": "rainbowreef:parrotfish_punch",
+  "category": "patchouli:crafting",
+  "sortnum": 71,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:parrotfish_punch",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 12$(br)$(l)Effects:$() Absorption II (15s), Regeneration (15s)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/parrotfish_punch",
+      "text": "Makes 1."
+    }
+  ]
+}

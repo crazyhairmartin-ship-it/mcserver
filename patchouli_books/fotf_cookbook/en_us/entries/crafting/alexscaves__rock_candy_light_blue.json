@@ -1,0 +1,23 @@
+{
+  "name": "Rock Candy Light Blue",
+  "icon": "alexscaves:rock_candy_light_blue",
+  "category": "patchouli:crafting",
+  "sortnum": 84,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:rock_candy_light_blue",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_light_blue",
+      "text": "Makes 4."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_light_blue_dye",
+      "text": "Makes 8."
+    }
+  ]
+}

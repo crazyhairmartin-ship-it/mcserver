@@ -1,0 +1,18 @@
+{
+  "name": "Solaris Wine",
+  "icon": "vinery:solaris_wine",
+  "category": "patchouli:drinks",
+  "sortnum": 43,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "vinery:solaris_wine",
+      "text": "$(l)Hunger:$() 0 (0 drumsticks)$(br)$(l)Saturation:$() 0$(br)$(l)Effects:$() Health Boost (1:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Honey Bottle$(li)Sweet Berries"
+    }
+  ]
+}

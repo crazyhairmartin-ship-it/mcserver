@@ -64,7 +64,7 @@ ENTRIES = [
         text('Lost this book? Type $(l)/guide$() in chat for a new copy.$(br2)Stuck on anything? Ask in chat. Someone has probably figured it out already.', 'Tip'),
     ]),
     ('getting_started', 'books', 'More Guide Books', 'minecraft:bookshelf', [
-        text('Big mods have their own guide books. Type a command in chat to get one:$(li)$(l)/guide unicorn$(): unicorns$(li)$(l)/guide spells$(): Iron\'s Spells$(li)$(l)/guide ars$(): Ars Nouveau$(li)$(l)/guide animals$(): Alex\'s Mobs$(li)$(l)/guide caves$(): Alex\'s Caves$(li)$(l)/guide music$(): MIMI'),
+        text('Big mods have their own guide books. Type a command in chat to get one:$(li)$(l)/guide unicorn$(): unicorns$(li)$(l)/guide spells$(): Iron\'s Spells$(li)$(l)/guide ars$(): Ars Nouveau$(li)$(l)/guide animals$(): Alex\'s Mobs$(li)$(l)/guide caves$(): Alex\'s Caves$(li)$(l)/guide music$(): MIMI$(li)$(l)/guide cookbook$(): every food and its recipes, by cooking station'),
     ]),
     ('getting_started', 'first_day', 'Your First Day', 'minecraft:oak_log', [
         text('A good first day:$(br)$(li)Punch trees, make tools$(li)Find a village for food and a $(l)Waystone$()$(li)Make a bed before night$(li)Claim your base (see $(l)Your Base$())'),

@@ -1,0 +1,18 @@
+{
+  "name": "Jellyfish Tart",
+  "icon": "rainbowreef:jelly_tart",
+  "category": "patchouli:crafting",
+  "sortnum": 59,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:jelly_tart",
+      "text": "$(l)Hunger:$() 4 (2 drumsticks)$(br)$(l)Saturation:$() 4$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/jelly_tart",
+      "text": "Makes 1."
+    }
+  ]
+}

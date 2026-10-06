@@ -1,0 +1,18 @@
+{
+  "name": "Pasta with Mutton Chop",
+  "icon": "farmersdelight:pasta_with_mutton_chop",
+  "category": "patchouli:fd_pot",
+  "sortnum": 15,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:pasta_with_mutton_chop",
+      "text": "$(l)Hunger:$() 12 (6 drumsticks)$(br)$(l)Saturation:$() 19.2$(br)$(l)Effects:$() Nourishment (3:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pot (Farmer's Delight)",
+      "text": "$(li)Mutton or Raw Mutton Chops or Lamb Ham$(li)Raw Pasta$(li)Tomato Sauce"
+    }
+  ]
+}

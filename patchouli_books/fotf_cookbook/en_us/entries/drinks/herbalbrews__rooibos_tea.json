@@ -1,0 +1,18 @@
+{
+  "name": "Rooibos Tea",
+  "icon": "herbalbrews:rooibos_tea",
+  "category": "patchouli:drinks",
+  "sortnum": 42,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "herbalbrews:rooibos_tea",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Rooibos Leaf$(li)Glass Bottle"
+    }
+  ]
+}

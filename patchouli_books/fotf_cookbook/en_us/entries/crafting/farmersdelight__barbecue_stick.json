@@ -1,0 +1,18 @@
+{
+  "name": "Barbecue on a Stick",
+  "icon": "farmersdelight:barbecue_stick",
+  "category": "patchouli:crafting",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:barbecue_stick",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 14.4"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:barbecue_stick",
+      "text": "Makes 1."
+    }
+  ]
+}

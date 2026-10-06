@@ -1,0 +1,13 @@
+{
+  "name": "Hydra Chop",
+  "icon": "twilightforest:hydra_chop",
+  "category": "patchouli:gathered",
+  "sortnum": 58,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "twilightforest:hydra_chop",
+      "text": "$(l)Hunger:$() 18 (9 drumsticks)$(br)$(l)Saturation:$() 72$(br)$(l)Effects:$() Regeneration (5s)$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()"
+    }
+  ]
+}

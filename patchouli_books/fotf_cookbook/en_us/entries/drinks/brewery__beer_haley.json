@@ -1,0 +1,18 @@
+{
+  "name": "Beer Haley",
+  "icon": "brewery:beer_haley",
+  "category": "patchouli:drinks",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:beer_haley",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Hops$(li)Popped Chorus Fruit$(li)Yeast"
+    }
+  ]
+}

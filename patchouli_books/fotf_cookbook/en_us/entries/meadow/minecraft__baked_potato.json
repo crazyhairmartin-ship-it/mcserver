@@ -1,0 +1,33 @@
+{
+  "name": "Baked Potato",
+  "icon": "minecraft:baked_potato",
+  "category": "patchouli:meadow",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:baked_potato",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 6"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Potato"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Cauldron",
+      "text": "Makes 4.$(br)$(li)Potato$(li)Alpine Salt"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Potato"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Potato"
+    }
+  ]
+}

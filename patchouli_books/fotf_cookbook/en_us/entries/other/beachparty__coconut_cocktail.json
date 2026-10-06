@@ -1,0 +1,18 @@
+{
+  "name": "Coconut Cocktail",
+  "icon": "beachparty:coconut_cocktail",
+  "category": "patchouli:other",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "beachparty:coconut_cocktail",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 2$(br)$(l)Effects:$() Strength (45s)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Bars, Traps & Oddities",
+      "text": "$(li)Open Coconut$(li)Ice$(li)Honey Bottle"
+    }
+  ]
+}

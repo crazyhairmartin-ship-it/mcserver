@@ -1,0 +1,18 @@
+{
+  "name": "Beef Wellington",
+  "icon": "candlelight:beef_wellington",
+  "category": "patchouli:stove",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:beef_wellington",
+      "text": "$(l)Hunger:$() 10 (5 drumsticks)$(br)$(l)Saturation:$() 14"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "$(li)Lamb Ham$(li)Dough or Wheat Dough$(li)Mushroom Soup"
+    }
+  ]
+}

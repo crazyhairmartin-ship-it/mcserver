@@ -1,0 +1,28 @@
+{
+  "name": "Cooked Bushmeat",
+  "icon": "naturalist:cooked_bushmeat",
+  "category": "patchouli:fire",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "naturalist:cooked_bushmeat",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 0"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Bushmeat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Bushmeat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Bushmeat"
+    }
+  ]
+}

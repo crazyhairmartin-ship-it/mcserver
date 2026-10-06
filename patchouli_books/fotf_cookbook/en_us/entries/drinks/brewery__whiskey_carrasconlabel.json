@@ -1,0 +1,18 @@
+{
+  "name": "Whiskey Carrasconlabel",
+  "icon": "brewery:whiskey_carrasconlabel",
+  "category": "patchouli:drinks",
+  "sortnum": 48,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:whiskey_carrasconlabel",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Dried Wheat$(li)Dried Corn$(li)Yeast"
+    }
+  ]
+}

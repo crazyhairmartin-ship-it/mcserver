@@ -1,0 +1,28 @@
+{
+  "name": "Cooked Mussel Meat",
+  "icon": "beachparty:cooked_mussel_meat",
+  "category": "patchouli:fire",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "beachparty:cooked_mussel_meat",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 6"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Raw Mussel Meat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Raw Mussel Meat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Raw Mussel Meat"
+    }
+  ]
+}

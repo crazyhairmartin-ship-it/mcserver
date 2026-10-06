@@ -1,0 +1,18 @@
+{
+  "name": "Nether Salad",
+  "icon": "farmersdelight:nether_salad",
+  "category": "patchouli:crafting",
+  "sortnum": 70,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:nether_salad",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 4$(br)$(l)Effects:$() Nausea (12s, 30% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:nether_salad",
+      "text": "Makes 1."
+    }
+  ]
+}

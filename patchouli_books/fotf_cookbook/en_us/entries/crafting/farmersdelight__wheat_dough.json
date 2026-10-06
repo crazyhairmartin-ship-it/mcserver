@@ -1,0 +1,18 @@
+{
+  "name": "Wheat Dough",
+  "icon": "farmersdelight:wheat_dough",
+  "category": "patchouli:crafting",
+  "sortnum": 131,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:wheat_dough",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 1.2$(br)$(l)Effects:$() Hunger (30s, 30% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:wheat_dough_from_egg",
+      "text": "Makes 3."
+    }
+  ]
+}

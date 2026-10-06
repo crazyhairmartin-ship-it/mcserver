@@ -1,0 +1,18 @@
+{
+  "name": "Strawberry Tea",
+  "icon": "farm_and_charm:strawberry_tea",
+  "category": "patchouli:fc_pot",
+  "sortnum": 18,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:strawberry_tea",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 2$(br)$(l)Effects:$() Haste (12s)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pot (Farm & Charm)",
+      "text": "$(li)Wooden Water Bucket or Water Bucket$(li)2x Strawberry"
+    }
+  ]
+}

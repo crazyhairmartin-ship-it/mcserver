@@ -1,0 +1,33 @@
+{
+  "name": "Cooked Chicken Cuts",
+  "icon": "farmersdelight:cooked_chicken_cuts",
+  "category": "patchouli:fire",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:cooked_chicken_cuts",
+      "text": "$(l)Hunger:$() 3 (1.5 drumsticks)$(br)$(l)Saturation:$() 3.6$(br)Quick to eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Raw Chicken Cuts"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Raw Chicken Cuts"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Raw Chicken Cuts"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cutting Board",
+      "text": "Makes 2.$(br)$(li)Cooked Chicken"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Rock Candy Pink",
+  "icon": "alexscaves:rock_candy_pink",
+  "category": "patchouli:crafting",
+  "sortnum": 89,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:rock_candy_pink",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_pink_dye",
+      "text": "Makes 8."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_pink",
+      "text": "Makes 4."
+    }
+  ]
+}

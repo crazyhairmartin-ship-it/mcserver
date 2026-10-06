@@ -1,0 +1,18 @@
+{
+  "name": "Cheese Roll",
+  "icon": "meadow:cheese_roll",
+  "category": "patchouli:crafting",
+  "sortnum": 12,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "meadow:cheese_roll",
+      "text": "$(l)Hunger:$() 7 (3.5 drumsticks)$(br)$(l)Saturation:$() 11.2"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "meadow:cheese_roll",
+      "text": "Makes 8."
+    }
+  ]
+}

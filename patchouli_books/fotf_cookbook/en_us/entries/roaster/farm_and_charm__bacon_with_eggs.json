@@ -1,0 +1,18 @@
+{
+  "name": "Bacon with Eggs",
+  "icon": "farm_and_charm:bacon_with_eggs",
+  "category": "patchouli:roaster",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:bacon_with_eggs",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 8.4$(br)$(l)Effects:$() Sustenance (3:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "Makes 3.$(br)$(li)2x Bacon$(li)2x Egg$(li)Butter"
+    }
+  ]
+}

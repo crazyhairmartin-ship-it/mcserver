@@ -1,0 +1,18 @@
+{
+  "name": "Sopa De Macaco",
+  "icon": "alexsmobs:sopa_de_macaco",
+  "category": "patchouli:crafting",
+  "sortnum": 106,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexsmobs:sopa_de_macaco",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 4"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexsmobs:sopa_de_macaco",
+      "text": "Makes 1."
+    }
+  ]
+}

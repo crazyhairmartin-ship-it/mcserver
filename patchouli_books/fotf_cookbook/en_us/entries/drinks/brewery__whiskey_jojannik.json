@@ -1,0 +1,18 @@
+{
+  "name": "Whiskey Jojannik",
+  "icon": "brewery:whiskey_jojannik",
+  "category": "patchouli:drinks",
+  "sortnum": 52,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:whiskey_jojannik",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)2x Dried Barley$(li)Yeast"
+    }
+  ]
+}

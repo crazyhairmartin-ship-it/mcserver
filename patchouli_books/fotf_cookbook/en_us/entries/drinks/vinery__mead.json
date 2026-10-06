@@ -1,0 +1,18 @@
+{
+  "name": "Mead",
+  "icon": "vinery:mead",
+  "category": "patchouli:drinks",
+  "sortnum": 34,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "vinery:mead",
+      "text": "$(l)Hunger:$() 0 (0 drumsticks)$(br)$(l)Saturation:$() 0$(br)$(l)Effects:$() Haste (1:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Honey Bottle$(li)Sugar"
+    }
+  ]
+}

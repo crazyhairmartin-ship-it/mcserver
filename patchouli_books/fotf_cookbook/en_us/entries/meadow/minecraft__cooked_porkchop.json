@@ -1,0 +1,38 @@
+{
+  "name": "Cooked Porkchop",
+  "icon": "minecraft:cooked_porkchop",
+  "category": "patchouli:meadow",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:cooked_porkchop",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 12.8"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Cauldron",
+      "text": "Makes 2.$(br)$(li)Porkchop$(li)Alpine Salt"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Porkchop"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cutting Board",
+      "text": "Makes 2.$(br)$(li)Smoked Ham"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Porkchop"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Porkchop"
+    }
+  ]
+}

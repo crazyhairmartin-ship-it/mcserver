@@ -1,0 +1,33 @@
+{
+  "name": "Cooked Cod",
+  "icon": "minecraft:cooked_cod",
+  "category": "patchouli:meadow",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:cooked_cod",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 6"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Cod"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Cod"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Cod"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Cauldron",
+      "text": "Makes 2.$(br)$(li)Cod$(li)Alpine Salt"
+    }
+  ]
+}

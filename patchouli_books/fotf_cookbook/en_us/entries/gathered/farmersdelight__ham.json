@@ -1,0 +1,13 @@
+{
+  "name": "Ham",
+  "icon": "farmersdelight:ham",
+  "category": "patchouli:gathered",
+  "sortnum": 54,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:ham",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 3$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()"
+    }
+  ]
+}

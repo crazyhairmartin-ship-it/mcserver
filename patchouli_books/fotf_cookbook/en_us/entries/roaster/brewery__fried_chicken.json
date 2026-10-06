@@ -1,0 +1,18 @@
+{
+  "name": "Fried Chicken",
+  "icon": "brewery:fried_chicken",
+  "category": "patchouli:roaster",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:fried_chicken",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 7.2$(br)$(l)Effects:$() Sustenance (3:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "Makes 2.$(br)$(li)Chicken Parts$(li)Chicken$(li)Tomato$(li)Flour$(li)Butter"
+    }
+  ]
+}

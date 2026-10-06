@@ -1,0 +1,18 @@
+{
+  "name": "Chicken with Vegetables",
+  "icon": "candlelight:chicken_with_vegetables",
+  "category": "patchouli:stove",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:chicken_with_vegetables",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 14.4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 2.$(br)$(li)Harvest Plate$(li)Chicken Parts$(li)Mellohi Wine or Glowing Wine or Solaris Wine (or similar)"
+    }
+  ]
+}

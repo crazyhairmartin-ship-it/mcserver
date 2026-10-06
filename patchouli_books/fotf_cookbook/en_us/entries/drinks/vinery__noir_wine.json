@@ -1,0 +1,18 @@
+{
+  "name": "Noir Wine",
+  "icon": "vinery:noir_wine",
+  "category": "patchouli:drinks",
+  "sortnum": 39,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "vinery:noir_wine",
+      "text": "$(l)Hunger:$() 0 (0 drumsticks)$(br)$(l)Saturation:$() 0$(br)$(l)Effects:$() Jump Boost (1:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Sweet Berries"
+    }
+  ]
+}

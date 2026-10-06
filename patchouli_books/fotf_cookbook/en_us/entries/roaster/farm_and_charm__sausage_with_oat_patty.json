@@ -1,0 +1,18 @@
+{
+  "name": "Sausage with Oat Patty",
+  "icon": "farm_and_charm:sausage_with_oat_patty",
+  "category": "patchouli:roaster",
+  "sortnum": 17,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:sausage_with_oat_patty",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 14.4$(br)$(l)Effects:$() Sweets (2:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "Makes 2.$(br)$(li)Oat$(li)Butter$(li)Potato$(li)Carrot$(li)2x Minced Beef"
+    }
+  ]
+}

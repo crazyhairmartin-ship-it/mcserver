@@ -1,0 +1,18 @@
+{
+  "name": "Gummy Ring Green",
+  "icon": "alexscaves:gummy_ring_green",
+  "category": "patchouli:crafting",
+  "sortnum": 45,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:gummy_ring_green",
+      "text": "$(l)Hunger:$() 3 (1.5 drumsticks)$(br)$(l)Saturation:$() 0.9$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:gummy_ring_green",
+      "text": "Makes 3."
+    }
+  ]
+}

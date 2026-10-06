@@ -1,0 +1,18 @@
+{
+  "name": "Roastbeef with Carrots",
+  "icon": "candlelight:roastbeef_with_glazed_carrots",
+  "category": "patchouli:stove",
+  "sortnum": 23,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:roastbeef_with_glazed_carrots",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 12.8"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 6.$(br)$(li)Beef$(li)Carrot$(li)Noir Wine or Red Wine or Strad Wine (or similar)"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Beef Tartare",
+  "icon": "candlelight:beef_tartare",
+  "category": "patchouli:bowl",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:beef_tartare",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 14.4$(br)$(l)Effects:$() Satiation (2:30)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mixing Bowl",
+      "text": "Makes 2.$(br)$(li)Minced Beef$(li)Bowl$(li)Onion"
+    }
+  ]
+}

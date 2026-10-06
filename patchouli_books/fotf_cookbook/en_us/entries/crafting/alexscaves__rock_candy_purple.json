@@ -1,0 +1,23 @@
+{
+  "name": "Rock Candy Purple",
+  "icon": "alexscaves:rock_candy_purple",
+  "category": "patchouli:crafting",
+  "sortnum": 90,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:rock_candy_purple",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_purple_dye",
+      "text": "Makes 8."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_purple",
+      "text": "Makes 4."
+    }
+  ]
+}

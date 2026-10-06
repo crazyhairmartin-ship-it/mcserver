@@ -1,0 +1,33 @@
+{
+  "name": "Cooked Mutton Chops",
+  "icon": "farmersdelight:cooked_mutton_chops",
+  "category": "patchouli:fire",
+  "sortnum": 21,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:cooked_mutton_chops",
+      "text": "$(l)Hunger:$() 3 (1.5 drumsticks)$(br)$(l)Saturation:$() 4.8$(br)Quick to eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Raw Mutton Chops"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Raw Mutton Chops"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cutting Board",
+      "text": "Makes 2.$(br)$(li)Cooked Mutton"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Raw Mutton Chops"
+    }
+  ]
+}

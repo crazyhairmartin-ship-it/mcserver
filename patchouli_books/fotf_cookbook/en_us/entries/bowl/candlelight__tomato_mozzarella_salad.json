@@ -1,0 +1,18 @@
+{
+  "name": "Tomato Mozzarella Salad",
+  "icon": "candlelight:tomato_mozzarella_salad",
+  "category": "patchouli:bowl",
+  "sortnum": 13,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:tomato_mozzarella_salad",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 7$(br)$(l)Effects:$() Feast (4:00)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mixing Bowl",
+      "text": "$(li)Piece of Cheese or Piece of Sheep Cheese or Piece of Grain Cheese (or similar)$(li)Tomato$(li)Bowl"
+    }
+  ]
+}

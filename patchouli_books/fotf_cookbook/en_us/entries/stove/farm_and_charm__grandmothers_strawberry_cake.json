@@ -1,0 +1,18 @@
+{
+  "name": "Grandmothers Strawberry Cake",
+  "icon": "farm_and_charm:grandmothers_strawberry_cake",
+  "category": "patchouli:stove",
+  "sortnum": 12,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:grandmothers_strawberry_cake",
+      "text": "$(l)Hunger:$() 4 (2 drumsticks)$(br)$(l)Saturation:$() 5.6$(br)$(l)Effects:$() Grandmas Blessing (2:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 2.$(br)$(li)Dough or Wheat Dough$(li)Strawberry$(li)Sugar"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Bread with Jam",
+  "icon": "bakery:bread_with_jam",
+  "category": "patchouli:crafting",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "bakery:bread_with_jam",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 5$(br)$(l)Effects:$() Rested (20s)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "bakery:bread_with_jam",
+      "text": "Makes 5."
+    }
+  ]
+}

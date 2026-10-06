@@ -1,0 +1,18 @@
+{
+  "name": "Goby Gummy",
+  "icon": "rainbowreef:goby_gummy",
+  "category": "patchouli:crafting",
+  "sortnum": 40,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:goby_gummy",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 2$(br)Quick to eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/goby_gummy",
+      "text": "Makes 4."
+    }
+  ]
+}

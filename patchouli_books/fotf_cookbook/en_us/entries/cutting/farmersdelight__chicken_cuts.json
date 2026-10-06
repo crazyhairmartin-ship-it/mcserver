@@ -1,0 +1,18 @@
+{
+  "name": "Raw Chicken Cuts",
+  "icon": "farmersdelight:chicken_cuts",
+  "category": "patchouli:cutting",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:chicken_cuts",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.6$(br)$(l)Effects:$() Hunger (30s, 30% chance)$(br)Quick to eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cutting Board",
+      "text": "Makes 2.$(br)$(li)Chicken"
+    }
+  ]
+}

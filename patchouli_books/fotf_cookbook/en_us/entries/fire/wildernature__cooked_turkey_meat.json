@@ -1,0 +1,28 @@
+{
+  "name": "Cooked Turkey Meat",
+  "icon": "wildernature:cooked_turkey_meat",
+  "category": "patchouli:fire",
+  "sortnum": 26,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "wildernature:cooked_turkey_meat",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 7.2"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Turkey Meat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Turkey Meat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Turkey Meat"
+    }
+  ]
+}

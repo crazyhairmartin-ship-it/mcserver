@@ -1,0 +1,18 @@
+{
+  "name": "Minced Beef",
+  "icon": "farm_and_charm:minced_beef",
+  "category": "patchouli:mincer",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:minced_beef",
+      "text": "$(l)Hunger:$() 3 (1.5 drumsticks)$(br)$(l)Saturation:$() 1.8"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mincer",
+      "text": "$(li)Beef"
+    }
+  ]
+}

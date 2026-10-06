@@ -1,0 +1,13 @@
+{
+  "name": "Plate of Honey Glazed Ham",
+  "icon": "farmersdelight:honey_glazed_ham",
+  "category": "patchouli:gathered",
+  "sortnum": 87,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:honey_glazed_ham",
+      "text": "$(l)Hunger:$() 14 (7 drumsticks)$(br)$(l)Saturation:$() 21$(br)$(l)Effects:$() Nourishment (5:00)$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Hamburger",
+  "icon": "farmersdelight:hamburger",
+  "category": "patchouli:crafting",
+  "sortnum": 49,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:hamburger",
+      "text": "$(l)Hunger:$() 11 (5.5 drumsticks)$(br)$(l)Saturation:$() 17.6"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:hamburger",
+      "text": "Makes 1."
+    }
+  ]
+}

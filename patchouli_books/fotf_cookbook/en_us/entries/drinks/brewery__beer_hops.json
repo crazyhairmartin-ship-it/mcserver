@@ -1,0 +1,18 @@
+{
+  "name": "Beer Hops",
+  "icon": "brewery:beer_hops",
+  "category": "patchouli:drinks",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:beer_hops",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)2x Hops$(li)Yeast"
+    }
+  ]
+}

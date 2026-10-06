@@ -1,0 +1,33 @@
+{
+  "name": "Pumpkin Pie",
+  "icon": "minecraft:pumpkin_pie",
+  "category": "patchouli:crafting",
+  "sortnum": 76,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:pumpkin_pie",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 4.8"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:pumpkin_pie_from_slices",
+      "text": "Makes 1."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:pumpkin_pie",
+      "text": "Makes 1."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:pumpkin_pie_from_pie_crust",
+      "text": "Makes 2."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "naturalist:pumpkin_pie",
+      "text": "Makes 1."
+    }
+  ]
+}

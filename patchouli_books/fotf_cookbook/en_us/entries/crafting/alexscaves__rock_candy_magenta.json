@@ -1,0 +1,23 @@
+{
+  "name": "Rock Candy Magenta",
+  "icon": "alexscaves:rock_candy_magenta",
+  "category": "patchouli:crafting",
+  "sortnum": 87,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:rock_candy_magenta",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_magenta_dye",
+      "text": "Makes 8."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_magenta",
+      "text": "Makes 4."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Beef Patty with Vegetables",
+  "icon": "farm_and_charm:beef_patty_with_vegetables",
+  "category": "patchouli:roaster",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:beef_patty_with_vegetables",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 9.6$(br)$(l)Effects:$() Sustenance (4:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "Makes 2.$(br)$(li)Beef$(li)Carrot$(li)Butter$(li)Potato$(li)Beetroot$(li)Lettuce or Cabbage or Cabbage Leaf"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Vegetable Noodles",
+  "icon": "farmersdelight:vegetable_noodles",
+  "category": "patchouli:fd_pot",
+  "sortnum": 21,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:vegetable_noodles",
+      "text": "$(l)Hunger:$() 14 (7 drumsticks)$(br)$(l)Saturation:$() 21$(br)$(l)Effects:$() Nourishment (5:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pot (Farmer's Delight)",
+      "text": "$(li)Carrot$(li)Brown Mushroom or Red Mushroom or Glowshroom (or similar)$(li)Raw Pasta$(li)Cabbage or Cabbage Leaf$(li)Beetroot or Carrot or Onion (or similar)"
+    }
+  ]
+}

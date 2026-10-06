@@ -1,0 +1,28 @@
+{
+  "name": "Cooked Lizard Tail",
+  "icon": "naturalist:cooked_lizard_tail",
+  "category": "patchouli:fire",
+  "sortnum": 16,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "naturalist:cooked_lizard_tail",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 6"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Lizard Tail"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Lizard Tail"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Lizard Tail"
+    }
+  ]
+}

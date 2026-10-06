@@ -1,0 +1,18 @@
+{
+  "name": "Rooibos Leaf",
+  "icon": "herbalbrews:rooibos_leaf",
+  "category": "patchouli:crafting",
+  "sortnum": 95,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "herbalbrews:rooibos_leaf",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.2$(br)Can always eat, Quick to eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "herbalbrews:rooibos_leaf_from_plant",
+      "text": "Makes 1."
+    }
+  ]
+}

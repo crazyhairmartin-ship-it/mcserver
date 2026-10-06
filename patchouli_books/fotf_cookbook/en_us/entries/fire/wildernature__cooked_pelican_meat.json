@@ -1,0 +1,28 @@
+{
+  "name": "Cooked Pelican Meat",
+  "icon": "wildernature:cooked_pelican_meat",
+  "category": "patchouli:fire",
+  "sortnum": 22,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "wildernature:cooked_pelican_meat",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 9.6"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Pelican Meat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Pelican Meat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Pelican Meat"
+    }
+  ]
+}

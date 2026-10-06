@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Big mods have their own guide books. Type a command in chat to get one:$(li)$(l)/guide unicorn$(): unicorns$(li)$(l)/guide spells$(): Iron's Spells$(li)$(l)/guide ars$(): Ars Nouveau$(li)$(l)/guide animals$(): Alex's Mobs$(li)$(l)/guide caves$(): Alex's Caves$(li)$(l)/guide music$(): MIMI"
+      "text": "Big mods have their own guide books. Type a command in chat to get one:$(li)$(l)/guide unicorn$(): unicorns$(li)$(l)/guide spells$(): Iron's Spells$(li)$(l)/guide ars$(): Ars Nouveau$(li)$(l)/guide animals$(): Alex's Mobs$(li)$(l)/guide caves$(): Alex's Caves$(li)$(l)/guide music$(): MIMI$(li)$(l)/guide cookbook$(): every food and its recipes, by cooking station"
     }
   ]
 }

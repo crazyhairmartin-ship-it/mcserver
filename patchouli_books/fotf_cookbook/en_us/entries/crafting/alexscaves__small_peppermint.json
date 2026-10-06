@@ -1,0 +1,18 @@
+{
+  "name": "Small Peppermint",
+  "icon": "alexscaves:small_peppermint",
+  "category": "patchouli:crafting",
+  "sortnum": 104,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:small_peppermint",
+      "text": "$(l)Hunger:$() 3 (1.5 drumsticks)$(br)$(l)Saturation:$() 0.9$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:small_peppermint",
+      "text": "Makes 1."
+    }
+  ]
+}

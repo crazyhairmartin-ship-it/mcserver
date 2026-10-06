@@ -1,0 +1,18 @@
+{
+  "name": "Cookie",
+  "icon": "minecraft:cookie",
+  "category": "patchouli:crafting",
+  "sortnum": 21,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:cookie",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:cookie",
+      "text": "Makes 8."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Potato Salad",
+  "icon": "brewery:potato_salad",
+  "category": "patchouli:bowl",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:potato_salad",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 8.4$(br)$(l)Effects:$() Satiation (5:00)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mixing Bowl",
+      "text": "Makes 2.$(br)$(li)Beetroot$(li)Baked Potato$(li)Lettuce or Cabbage or Cabbage Leaf$(li)Tomato"
+    }
+  ]
+}

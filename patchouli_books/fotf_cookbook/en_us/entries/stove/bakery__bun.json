@@ -1,0 +1,18 @@
+{
+  "name": "Bun",
+  "icon": "bakery:bun",
+  "category": "patchouli:stove",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "bakery:bun",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 12$(br)$(l)Effects:$() Sustenance (2:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 5.$(br)$(li)Dough or Wheat Dough$(li)Yeast$(li)Tortoise Egg or Alligator Egg or Duck Egg (or similar)"
+    }
+  ]
+}

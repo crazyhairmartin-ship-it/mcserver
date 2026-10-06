@@ -1,0 +1,18 @@
+{
+  "name": "Melon Cocktail",
+  "icon": "beachparty:melon_cocktail",
+  "category": "patchouli:other",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "beachparty:melon_cocktail",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 2$(br)$(l)Effects:$() Luck (45s)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Bars, Traps & Oddities",
+      "text": "$(li)Melon Slice$(li)Ice$(li)Sugar"
+    }
+  ]
+}

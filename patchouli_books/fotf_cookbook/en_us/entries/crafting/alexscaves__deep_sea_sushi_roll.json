@@ -1,0 +1,18 @@
+{
+  "name": "Deep Sea Sushi Roll",
+  "icon": "alexscaves:deep_sea_sushi_roll",
+  "category": "patchouli:crafting",
+  "sortnum": 24,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:deep_sea_sushi_roll",
+      "text": "$(l)Hunger:$() 7 (3.5 drumsticks)$(br)$(l)Saturation:$() 5.6"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:deep_sea_sushi_roll",
+      "text": "Makes 2."
+    }
+  ]
+}

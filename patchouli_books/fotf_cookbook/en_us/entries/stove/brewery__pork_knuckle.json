@@ -1,0 +1,18 @@
+{
+  "name": "Pork Knuckle",
+  "icon": "brewery:pork_knuckle",
+  "category": "patchouli:stove",
+  "sortnum": 19,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:pork_knuckle",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 7.2$(br)$(l)Effects:$() Sustenance (3:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 4.$(br)$(li)Beer Wheat or Beer Hops or Beer Barley (or similar)$(li)Porkchop"
+    }
+  ]
+}

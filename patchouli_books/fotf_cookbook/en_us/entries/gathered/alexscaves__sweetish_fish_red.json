@@ -1,0 +1,13 @@
+{
+  "name": "Red Sweetish Fish",
+  "icon": "alexscaves:sweetish_fish_red",
+  "category": "patchouli:gathered",
+  "sortnum": 129,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:sweetish_fish_red",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.8$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Candy",
+  "icon": "supplementaries:candy",
+  "category": "patchouli:crafting",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "supplementaries:candy",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)Can always eat, Quick to eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "supplementaries:candy",
+      "text": "Makes 8."
+    }
+  ]
+}

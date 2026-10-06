@@ -1,0 +1,18 @@
+{
+  "name": "Chorus Wine",
+  "icon": "vinery:chorus_wine",
+  "category": "patchouli:drinks",
+  "sortnum": 16,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "vinery:chorus_wine",
+      "text": "$(l)Hunger:$() 0 (0 drumsticks)$(br)$(l)Saturation:$() 0$(br)$(l)Effects:$() Teleport (1s)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Chorus Fruit"
+    }
+  ]
+}

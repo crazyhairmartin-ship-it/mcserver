@@ -1,0 +1,18 @@
+{
+  "name": "Pasta with Bolognese",
+  "icon": "candlelight:pasta_with_bolognese",
+  "category": "patchouli:roaster",
+  "sortnum": 14,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:pasta_with_bolognese",
+      "text": "$(l)Hunger:$() 7 (3.5 drumsticks)$(br)$(l)Saturation:$() 11.2"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "$(li)Bolognese$(li)Raw Pasta$(li)Piece of Cheese or Piece of Sheep Cheese or Piece of Grain Cheese (or similar)"
+    }
+  ]
+}

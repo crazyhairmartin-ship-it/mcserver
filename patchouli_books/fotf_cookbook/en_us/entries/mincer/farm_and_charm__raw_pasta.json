@@ -1,0 +1,18 @@
+{
+  "name": "Raw Pasta",
+  "icon": "farm_and_charm:raw_pasta",
+  "category": "patchouli:mincer",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:raw_pasta",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mincer",
+      "text": "Makes 2.$(br)$(li)Dough or Wheat Dough"
+    }
+  ]
+}

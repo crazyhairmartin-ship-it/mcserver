@@ -1,0 +1,18 @@
+{
+  "name": "Seething Stew",
+  "icon": "alexscaves:seething_stew",
+  "category": "patchouli:crafting",
+  "sortnum": 100,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:seething_stew",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 7.2$(br)$(l)Effects:$() Rage (1:50)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:seething_stew",
+      "text": "Makes 1."
+    }
+  ]
+}

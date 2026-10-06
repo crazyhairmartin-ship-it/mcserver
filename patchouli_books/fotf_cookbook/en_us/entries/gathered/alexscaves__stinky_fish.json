@@ -1,0 +1,13 @@
+{
+  "name": "Stinky Fish",
+  "icon": "alexscaves:stinky_fish",
+  "category": "patchouli:gathered",
+  "sortnum": 144,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:stinky_fish",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.2$(br)$(l)Effects:$() Stunned (5s)$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()"
+    }
+  ]
+}

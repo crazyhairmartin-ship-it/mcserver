@@ -1,0 +1,18 @@
+{
+  "name": "Source Berry Pie",
+  "icon": "ars_nouveau:source_berry_pie",
+  "category": "patchouli:crafting",
+  "sortnum": 107,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "ars_nouveau:source_berry_pie",
+      "text": "$(l)Hunger:$() 9 (4.5 drumsticks)$(br)$(l)Saturation:$() 16.2$(br)$(l)Effects:$() Mana Regen II (1:00)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "ars_nouveau:source_berry_pie",
+      "text": "Makes 1."
+    }
+  ]
+}

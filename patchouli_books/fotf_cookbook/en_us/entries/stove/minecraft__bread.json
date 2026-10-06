@@ -1,0 +1,43 @@
+{
+  "name": "Bread",
+  "icon": "minecraft:bread",
+  "category": "patchouli:stove",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:bread",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 6"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Barley"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 3.$(br)$(li)3x Wheat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Barley"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Wheat Dough"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:bread",
+      "text": "Makes 1."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Wheat Dough"
+    }
+  ]
+}

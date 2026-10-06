@@ -1,0 +1,18 @@
+{
+  "name": "Frosted Gingerbread Wall",
+  "icon": "alexscaves:frosted_gingerbread_wall",
+  "category": "patchouli:crafting",
+  "sortnum": 32,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:frosted_gingerbread_wall",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:frosted_gingerbread_wall",
+      "text": "Makes 6."
+    }
+  ]
+}

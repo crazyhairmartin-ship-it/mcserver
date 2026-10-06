@@ -1,0 +1,18 @@
+{
+  "name": "Gingerbread Door",
+  "icon": "alexscaves:gingerbread_door",
+  "category": "patchouli:crafting",
+  "sortnum": 38,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:gingerbread_door",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:gingerbread_door",
+      "text": "Makes 3."
+    }
+  ]
+}

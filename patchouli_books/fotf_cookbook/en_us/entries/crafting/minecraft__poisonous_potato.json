@@ -1,0 +1,18 @@
+{
+  "name": "Poisonous Potato",
+  "icon": "minecraft:poisonous_potato",
+  "category": "patchouli:crafting",
+  "sortnum": 74,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:poisonous_potato",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 1.2$(br)$(l)Effects:$() Poison (5s, 60% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "irons_spellbooks:poisonous_potato",
+      "text": "Makes 4."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Fresh Garden Salad",
+  "icon": "candlelight:fresh_garden_salad",
+  "category": "patchouli:bowl",
+  "sortnum": 6,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:fresh_garden_salad",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 10.8$(br)$(l)Effects:$() Farmers Blessing (3:00)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mixing Bowl",
+      "text": "Makes 2.$(br)$(li)Lettuce or Cabbage or Cabbage Leaf$(li)Tomato$(li)Bowl$(li)Carrot"
+    }
+  ]
+}

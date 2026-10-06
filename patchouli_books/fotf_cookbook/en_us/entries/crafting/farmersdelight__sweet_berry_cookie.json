@@ -1,0 +1,18 @@
+{
+  "name": "Sweet Berry Cookie",
+  "icon": "farmersdelight:sweet_berry_cookie",
+  "category": "patchouli:crafting",
+  "sortnum": 117,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:sweet_berry_cookie",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)Quick to eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:sweet_berry_cookie",
+      "text": "Makes 8."
+    }
+  ]
+}

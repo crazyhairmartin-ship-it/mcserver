@@ -1,0 +1,18 @@
+{
+  "name": "MissLilitu Biscuit",
+  "icon": "bakery:misslilitu_biscuit",
+  "category": "patchouli:stove",
+  "sortnum": 17,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "bakery:misslilitu_biscuit",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 7.2$(br)$(l)Effects:$() Sustenance (45s)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 4.$(br)$(li)Red Dye$(li)White Dye$(li)Sweet Dough"
+    }
+  ]
+}

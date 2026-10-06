@@ -1,0 +1,18 @@
+{
+  "name": "Grilled Salmon",
+  "icon": "farmersdelight:grilled_salmon",
+  "category": "patchouli:crafting",
+  "sortnum": 43,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:grilled_salmon",
+      "text": "$(l)Hunger:$() 14 (7 drumsticks)$(br)$(l)Saturation:$() 21$(br)$(l)Effects:$() Nourishment (3:00)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:grilled_salmon",
+      "text": "Makes 1."
+    }
+  ]
+}

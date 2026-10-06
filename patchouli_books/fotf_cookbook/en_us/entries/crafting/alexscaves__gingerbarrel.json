@@ -1,0 +1,18 @@
+{
+  "name": "Gingerbarrel",
+  "icon": "alexscaves:gingerbarrel",
+  "category": "patchouli:crafting",
+  "sortnum": 35,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:gingerbarrel",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:gingerbarrel",
+      "text": "Makes 1."
+    }
+  ]
+}

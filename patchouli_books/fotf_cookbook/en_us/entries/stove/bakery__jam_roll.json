@@ -1,0 +1,18 @@
+{
+  "name": "Jam Roll",
+  "icon": "bakery:jam_roll",
+  "category": "patchouli:stove",
+  "sortnum": 15,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "bakery:jam_roll",
+      "text": "$(l)Hunger:$() 3 (1.5 drumsticks)$(br)$(l)Saturation:$() 3$(br)$(l)Effects:$() Sweets (45s)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 5.$(br)$(li)Chocolate Jam or Strawberry Jam or Sweetberry Jam (or similar)$(li)Sweet Dough$(li)Sugar"
+    }
+  ]
+}

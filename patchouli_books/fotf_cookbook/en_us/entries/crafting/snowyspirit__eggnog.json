@@ -1,0 +1,18 @@
+{
+  "name": "Eggnog",
+  "icon": "snowyspirit:eggnog",
+  "category": "patchouli:crafting",
+  "sortnum": 26,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "snowyspirit:eggnog",
+      "text": "$(l)Hunger:$() 4 (2 drumsticks)$(br)$(l)Saturation:$() 16"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "snowyspirit:eggnog",
+      "text": "Makes 1."
+    }
+  ]
+}

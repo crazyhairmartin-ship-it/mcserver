@@ -1,0 +1,18 @@
+{
+  "name": "Wafer Cookie Wall",
+  "icon": "alexscaves:wafer_cookie_wall",
+  "category": "patchouli:crafting",
+  "sortnum": 130,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:wafer_cookie_wall",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.1$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:wafer_cookie_wall",
+      "text": "Makes 6."
+    }
+  ]
+}

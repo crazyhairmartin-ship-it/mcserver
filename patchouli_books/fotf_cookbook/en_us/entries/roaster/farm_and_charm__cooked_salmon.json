@@ -1,0 +1,18 @@
+{
+  "name": "Cooked Salmon",
+  "icon": "farm_and_charm:cooked_salmon",
+  "category": "patchouli:roaster",
+  "sortnum": 7,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:cooked_salmon",
+      "text": "$(l)Hunger:$() 7 (3.5 drumsticks)$(br)$(l)Saturation:$() 12.6$(br)$(l)Effects:$() Satiation (4:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "$(li)Corn$(li)Lettuce or Cabbage or Cabbage Leaf$(li)Salmon$(li)Butter"
+    }
+  ]
+}

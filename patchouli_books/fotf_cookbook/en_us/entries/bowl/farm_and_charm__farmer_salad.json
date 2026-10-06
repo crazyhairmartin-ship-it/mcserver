@@ -1,0 +1,18 @@
+{
+  "name": "Farmer Salad",
+  "icon": "farm_and_charm:farmer_salad",
+  "category": "patchouli:bowl",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:farmer_salad",
+      "text": "$(l)Hunger:$() 7 (3.5 drumsticks)$(br)$(l)Saturation:$() 8.4$(br)$(l)Effects:$() Satiation (4:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mixing Bowl",
+      "text": "Makes 2.$(br)$(li)Tomato$(li)Onion$(li)Lettuce or Cabbage or Cabbage Leaf$(li)Strawberry"
+    }
+  ]
+}

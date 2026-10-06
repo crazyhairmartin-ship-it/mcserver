@@ -1,0 +1,23 @@
+{
+  "name": "Rock Candy Yellow",
+  "icon": "alexscaves:rock_candy_yellow",
+  "category": "patchouli:crafting",
+  "sortnum": 93,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:rock_candy_yellow",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_yellow_dye",
+      "text": "Makes 8."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_yellow",
+      "text": "Makes 4."
+    }
+  ]
+}

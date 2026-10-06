@@ -1,0 +1,18 @@
+{
+  "name": "Farmers Bread",
+  "icon": "farm_and_charm:farmers_bread",
+  "category": "patchouli:stove",
+  "sortnum": 11,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:farmers_bread",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 9.6$(br)$(l)Effects:$() Farmers Blessing (3:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 3.$(br)$(li)Dough or Wheat Dough$(li)Wooden Water Bucket or Water Bucket"
+    }
+  ]
+}

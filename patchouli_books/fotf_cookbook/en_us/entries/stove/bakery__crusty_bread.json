@@ -1,0 +1,18 @@
+{
+  "name": "Crusty Bread",
+  "icon": "bakery:crusty_bread",
+  "category": "patchouli:stove",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "bakery:crusty_bread",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 12$(br)$(l)Effects:$() Sustenance (4:00)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 4.$(br)$(li)Dough or Wheat Dough$(li)Yeast$(li)Wooden Water Bucket or Water Bucket"
+    }
+  ]
+}

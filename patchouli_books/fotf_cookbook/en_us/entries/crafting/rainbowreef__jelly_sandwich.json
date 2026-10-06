@@ -1,0 +1,18 @@
+{
+  "name": "Jelly Sandwich",
+  "icon": "rainbowreef:jelly_sandwich",
+  "category": "patchouli:crafting",
+  "sortnum": 57,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:jelly_sandwich",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 8$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/jelly_sandwhich",
+      "text": "Makes 1."
+    }
+  ]
+}

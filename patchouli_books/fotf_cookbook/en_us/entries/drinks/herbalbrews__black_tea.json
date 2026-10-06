@@ -1,0 +1,18 @@
+{
+  "name": "Black Tea",
+  "icon": "herbalbrews:black_tea",
+  "category": "patchouli:drinks",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "herbalbrews:black_tea",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Dried Black Tea$(li)Sugar$(li)Glass Bottle"
+    }
+  ]
+}

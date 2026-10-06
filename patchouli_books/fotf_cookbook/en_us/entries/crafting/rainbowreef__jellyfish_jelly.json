@@ -1,0 +1,18 @@
+{
+  "name": "Jellyfish Jelly",
+  "icon": "rainbowreef:jellyfish_jelly",
+  "category": "patchouli:crafting",
+  "sortnum": 58,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:jellyfish_jelly",
+      "text": "$(l)Hunger:$() 4 (2 drumsticks)$(br)$(l)Saturation:$() 4$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/jellyfish_jelly",
+      "text": "Makes 1."
+    }
+  ]
+}

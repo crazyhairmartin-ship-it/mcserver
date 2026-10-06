@@ -1,0 +1,18 @@
+{
+  "name": "Sharkbite Salad",
+  "icon": "rainbowreef:sharkbite_salad",
+  "category": "patchouli:crafting",
+  "sortnum": 102,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:sharkbite_salad",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 8"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/sharkbite_salad",
+      "text": "Makes 1."
+    }
+  ]
+}

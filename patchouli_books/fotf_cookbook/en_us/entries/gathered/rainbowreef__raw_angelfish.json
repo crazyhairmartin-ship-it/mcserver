@@ -1,0 +1,13 @@
+{
+  "name": "Raw Angelfish",
+  "icon": "rainbowreef:raw_angelfish",
+  "category": "patchouli:gathered",
+  "sortnum": 96,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:raw_angelfish",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.8$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()"
+    }
+  ]
+}

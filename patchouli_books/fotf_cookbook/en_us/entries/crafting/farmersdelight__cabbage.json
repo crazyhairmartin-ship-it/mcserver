@@ -1,0 +1,18 @@
+{
+  "name": "Cabbage",
+  "icon": "farmersdelight:cabbage",
+  "category": "patchouli:crafting",
+  "sortnum": 9,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:cabbage",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 1.6"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:cabbage_from_leaves",
+      "text": "Makes 1."
+    }
+  ]
+}

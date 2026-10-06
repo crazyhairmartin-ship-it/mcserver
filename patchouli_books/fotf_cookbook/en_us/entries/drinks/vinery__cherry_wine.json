@@ -1,0 +1,18 @@
+{
+  "name": "Cherry Wine",
+  "icon": "vinery:cherry_wine",
+  "category": "patchouli:drinks",
+  "sortnum": 15,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "vinery:cherry_wine",
+      "text": "$(l)Hunger:$() 0 (0 drumsticks)$(br)$(l)Saturation:$() 0$(br)$(l)Effects:$() Invisibility (1:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Cherry"
+    }
+  ]
+}

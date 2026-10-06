@@ -1,0 +1,18 @@
+{
+  "name": "Cristel Wine",
+  "icon": "vinery:cristel_wine",
+  "category": "patchouli:drinks",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "vinery:cristel_wine",
+      "text": "$(l)Hunger:$() 0 (0 drumsticks)$(br)$(l)Saturation:$() 0$(br)$(l)Effects:$() Water Breathing (1:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Sugar$(li)Feather$(li)Blaze Rod"
+    }
+  ]
+}

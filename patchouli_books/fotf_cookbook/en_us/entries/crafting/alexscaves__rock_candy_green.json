@@ -1,0 +1,23 @@
+{
+  "name": "Rock Candy Green",
+  "icon": "alexscaves:rock_candy_green",
+  "category": "patchouli:crafting",
+  "sortnum": 83,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:rock_candy_green",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_green_dye",
+      "text": "Makes 8."
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:rock_candy_green",
+      "text": "Makes 4."
+    }
+  ]
+}

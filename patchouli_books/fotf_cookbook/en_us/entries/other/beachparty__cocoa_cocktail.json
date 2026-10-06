@@ -1,0 +1,18 @@
+{
+  "name": "Cocoa Cocktail",
+  "icon": "beachparty:cocoa_cocktail",
+  "category": "patchouli:other",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "beachparty:cocoa_cocktail",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 2$(br)$(l)Effects:$() Regeneration (45s)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Bars, Traps & Oddities",
+      "text": "$(li)Cocoa Beans$(li)Ice$(li)Sugar"
+    }
+  ]
+}

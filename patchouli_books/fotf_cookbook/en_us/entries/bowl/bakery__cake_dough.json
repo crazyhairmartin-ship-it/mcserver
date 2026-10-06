@@ -1,0 +1,18 @@
+{
+  "name": "Cake Dough",
+  "icon": "bakery:cake_dough",
+  "category": "patchouli:bowl",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "bakery:cake_dough",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mixing Bowl",
+      "text": "Makes 12.$(br)$(li)Wheat$(li)Sugar$(li)Tortoise Egg or Alligator Egg or Duck Egg (or similar)$(li)Milk Bucket or Wooden Milk Bucket or Milk Bottle"
+    }
+  ]
+}

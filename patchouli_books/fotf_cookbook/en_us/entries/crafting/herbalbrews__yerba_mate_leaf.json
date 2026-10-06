@@ -1,0 +1,18 @@
+{
+  "name": "Yerba Mate Leaf",
+  "icon": "herbalbrews:yerba_mate_leaf",
+  "category": "patchouli:crafting",
+  "sortnum": 132,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "herbalbrews:yerba_mate_leaf",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.2$(br)Can always eat, Quick to eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "herbalbrews:yerba_mate_leaf_from_plant",
+      "text": "Makes 1."
+    }
+  ]
+}

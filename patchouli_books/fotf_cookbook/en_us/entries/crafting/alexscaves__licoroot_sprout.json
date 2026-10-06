@@ -1,0 +1,18 @@
+{
+  "name": "Licoroot Sprout",
+  "icon": "alexscaves:licoroot_sprout",
+  "category": "patchouli:crafting",
+  "sortnum": 64,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:licoroot_sprout",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.2$(br)$(l)Effects:$() Nausea (10s, 10% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:licoroot_sprout",
+      "text": "Makes 1."
+    }
+  ]
+}

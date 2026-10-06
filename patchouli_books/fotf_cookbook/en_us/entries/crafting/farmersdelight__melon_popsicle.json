@@ -1,0 +1,18 @@
+{
+  "name": "Melon Popsicle",
+  "icon": "farmersdelight:melon_popsicle",
+  "category": "patchouli:crafting",
+  "sortnum": 66,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:melon_popsicle",
+      "text": "$(l)Hunger:$() 3 (1.5 drumsticks)$(br)$(l)Saturation:$() 1.2$(br)Can always eat, Quick to eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:melon_popsicle",
+      "text": "Makes 1."
+    }
+  ]
+}

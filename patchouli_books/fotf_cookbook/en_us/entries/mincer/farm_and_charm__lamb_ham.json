@@ -1,0 +1,18 @@
+{
+  "name": "Lamb Ham",
+  "icon": "farm_and_charm:lamb_ham",
+  "category": "patchouli:mincer",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:lamb_ham",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 1.2"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mincer",
+      "text": "$(li)Mutton"
+    }
+  ]
+}

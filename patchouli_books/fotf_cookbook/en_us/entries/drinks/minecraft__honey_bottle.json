@@ -1,0 +1,23 @@
+{
+  "name": "Honey Bottle",
+  "icon": "minecraft:honey_bottle",
+  "category": "patchouli:drinks",
+  "sortnum": 26,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:honey_bottle",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 1.2"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:honey_bottle",
+      "text": "Makes 4."
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Honeycomb"
+    }
+  ]
+}

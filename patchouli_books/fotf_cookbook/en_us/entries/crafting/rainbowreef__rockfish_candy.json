@@ -1,0 +1,18 @@
+{
+  "name": "Rockfish Candy",
+  "icon": "rainbowreef:rockfish_candy",
+  "category": "patchouli:crafting",
+  "sortnum": 94,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:rockfish_candy",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 8$(br)Quick to eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/rockfish_candy",
+      "text": "Makes 1."
+    }
+  ]
+}

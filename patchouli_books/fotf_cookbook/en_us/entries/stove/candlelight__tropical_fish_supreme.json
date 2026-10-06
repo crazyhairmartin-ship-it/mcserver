@@ -1,0 +1,18 @@
+{
+  "name": "Tropical Fish Supreme",
+  "icon": "candlelight:tropical_fish_supreme",
+  "category": "patchouli:stove",
+  "sortnum": 30,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:tropical_fish_supreme",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 14.4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 3.$(br)$(li)Tropical Fish$(li)Lettuce or Cabbage or Cabbage Leaf$(li)Mellohi Wine or Glowing Wine or Solaris Wine (or similar)"
+    }
+  ]
+}

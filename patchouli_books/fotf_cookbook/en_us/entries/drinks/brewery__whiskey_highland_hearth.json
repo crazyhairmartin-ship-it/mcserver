@@ -1,0 +1,18 @@
+{
+  "name": "Whiskey Highland Hearth",
+  "icon": "brewery:whiskey_highland_hearth",
+  "category": "patchouli:drinks",
+  "sortnum": 50,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:whiskey_highland_hearth",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Dried Wheat$(li)Dried Oat$(li)Yeast"
+    }
+  ]
+}

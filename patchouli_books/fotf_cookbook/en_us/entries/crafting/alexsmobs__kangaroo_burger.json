@@ -1,0 +1,18 @@
+{
+  "name": "Kangaroo Burger",
+  "icon": "alexsmobs:kangaroo_burger",
+  "category": "patchouli:crafting",
+  "sortnum": 60,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexsmobs:kangaroo_burger",
+      "text": "$(l)Hunger:$() 12 (6 drumsticks)$(br)$(l)Saturation:$() 24"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexsmobs:kangaroo_burger",
+      "text": "Makes 1."
+    }
+  ]
+}

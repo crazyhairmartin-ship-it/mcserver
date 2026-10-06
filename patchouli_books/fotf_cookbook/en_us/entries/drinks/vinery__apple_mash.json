@@ -1,0 +1,18 @@
+{
+  "name": "Apple Mash",
+  "icon": "vinery:apple_mash",
+  "category": "patchouli:drinks",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "vinery:apple_mash",
+      "text": "$(l)Hunger:$() 4 (2 drumsticks)$(br)$(l)Saturation:$() 2.4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Apple"
+    }
+  ]
+}

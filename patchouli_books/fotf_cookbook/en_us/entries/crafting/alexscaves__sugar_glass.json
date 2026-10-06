@@ -1,0 +1,18 @@
+{
+  "name": "Sugar Glass",
+  "icon": "alexscaves:sugar_glass",
+  "category": "patchouli:crafting",
+  "sortnum": 112,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:sugar_glass",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.2$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:sugar_glass",
+      "text": "Makes 1."
+    }
+  ]
+}

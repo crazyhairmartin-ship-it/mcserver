@@ -1,0 +1,18 @@
+{
+  "name": "Stuffed Potato",
+  "icon": "farmersdelight:stuffed_potato",
+  "category": "patchouli:crafting",
+  "sortnum": 111,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:stuffed_potato",
+      "text": "$(l)Hunger:$() 10 (5 drumsticks)$(br)$(l)Saturation:$() 14"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:stuffed_potato",
+      "text": "Makes 1."
+    }
+  ]
+}

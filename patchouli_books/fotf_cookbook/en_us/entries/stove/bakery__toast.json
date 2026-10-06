@@ -1,0 +1,18 @@
+{
+  "name": "Toast",
+  "icon": "bakery:toast",
+  "category": "patchouli:stove",
+  "sortnum": 29,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "bakery:toast",
+      "text": "$(l)Hunger:$() 3 (1.5 drumsticks)$(br)$(l)Saturation:$() 4.8$(br)$(l)Effects:$() Sustenance (4:30)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "Makes 3.$(br)$(li)Sugar$(li)Dough or Wheat Dough$(li)Milk Bucket or Wooden Milk Bucket or Milk Bottle"
+    }
+  ]
+}

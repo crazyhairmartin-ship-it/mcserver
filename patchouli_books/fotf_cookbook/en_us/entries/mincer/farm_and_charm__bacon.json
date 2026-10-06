@@ -1,0 +1,18 @@
+{
+  "name": "Bacon",
+  "icon": "farm_and_charm:bacon",
+  "category": "patchouli:mincer",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:bacon",
+      "text": "$(l)Hunger:$() 3 (1.5 drumsticks)$(br)$(l)Saturation:$() 1.8"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mincer",
+      "text": "Makes 2.$(br)$(li)Porkchop"
+    }
+  ]
+}

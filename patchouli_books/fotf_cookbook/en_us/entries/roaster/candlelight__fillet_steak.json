@@ -1,0 +1,18 @@
+{
+  "name": "Fillet Steak",
+  "icon": "candlelight:fillet_steak",
+  "category": "patchouli:roaster",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:fillet_steak",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 12.8"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "$(li)Beef$(li)Butter$(li)Noir Wine or Red Wine or Strad Wine (or similar)"
+    }
+  ]
+}

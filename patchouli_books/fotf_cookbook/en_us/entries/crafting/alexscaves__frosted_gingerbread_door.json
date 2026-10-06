@@ -1,0 +1,18 @@
+{
+  "name": "Frosted Gingerbread Door",
+  "icon": "alexscaves:frosted_gingerbread_door",
+  "category": "patchouli:crafting",
+  "sortnum": 31,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:frosted_gingerbread_door",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:frosted_gingerbread_door",
+      "text": "Makes 3."
+    }
+  ]
+}

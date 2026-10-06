@@ -1,0 +1,18 @@
+{
+  "name": "Spelunkie",
+  "icon": "alexscaves:spelunkie",
+  "category": "patchouli:crafting",
+  "sortnum": 109,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:spelunkie",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)Quick to eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:spelunkie",
+      "text": "Makes 2."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Whiskey Jamesons Malt",
+  "icon": "brewery:whiskey_jamesons_malt",
+  "category": "patchouli:drinks",
+  "sortnum": 51,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:whiskey_jamesons_malt",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Brewing & Fermenting",
+      "text": "$(li)Dried Barley$(li)Dried Oat$(li)Yeast"
+    }
+  ]
+}

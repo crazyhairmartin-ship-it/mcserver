@@ -1,0 +1,18 @@
+{
+  "name": "Alex Meal",
+  "icon": "alexscaves:alex_meal",
+  "category": "patchouli:crafting",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:alex_meal",
+      "text": "$(l)Hunger:$() 40 (20 drumsticks)$(br)$(l)Saturation:$() 400$(br)$(l)Effects:$() Nausea (10s), Bad Omen (40:00)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:alex_meal",
+      "text": "Makes 1."
+    }
+  ]
+}

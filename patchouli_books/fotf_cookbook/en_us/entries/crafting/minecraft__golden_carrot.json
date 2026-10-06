@@ -1,0 +1,18 @@
+{
+  "name": "Golden Carrot",
+  "icon": "minecraft:golden_carrot",
+  "category": "patchouli:crafting",
+  "sortnum": 42,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:golden_carrot",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 14.4"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "minecraft:golden_carrot",
+      "text": "Makes 1."
+    }
+  ]
+}

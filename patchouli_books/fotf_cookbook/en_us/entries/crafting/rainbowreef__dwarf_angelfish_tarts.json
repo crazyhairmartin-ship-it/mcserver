@@ -1,0 +1,18 @@
+{
+  "name": "Angel Tart",
+  "icon": "rainbowreef:dwarf_angelfish_tarts",
+  "category": "patchouli:crafting",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:dwarf_angelfish_tarts",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 1"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/tart",
+      "text": "Makes 1."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Surf N Turf",
+  "icon": "rainbowreef:surf_n_turf",
+  "category": "patchouli:crafting",
+  "sortnum": 115,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:surf_n_turf",
+      "text": "$(l)Hunger:$() 10 (5 drumsticks)$(br)$(l)Saturation:$() 14"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/surf_n_turf",
+      "text": "Makes 1."
+    }
+  ]
+}

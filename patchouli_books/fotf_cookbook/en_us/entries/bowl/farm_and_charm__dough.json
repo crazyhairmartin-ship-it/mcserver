@@ -1,0 +1,18 @@
+{
+  "name": "Dough",
+  "icon": "farm_and_charm:dough",
+  "category": "patchouli:bowl",
+  "sortnum": 4,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:dough",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mixing Bowl",
+      "text": "Makes 5.$(br)$(li)Flour$(li)Yeast$(li)Wooden Water Bucket or Water Bucket"
+    }
+  ]
+}

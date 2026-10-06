@@ -1,0 +1,18 @@
+{
+  "name": "Pasta with Lettuce",
+  "icon": "candlelight:pasta_with_lettuce",
+  "category": "patchouli:roaster",
+  "sortnum": 15,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:pasta_with_lettuce",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 14.4$(br)$(l)Effects:$() Satiation (3:00)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "$(li)Lettuce or Cabbage or Cabbage Leaf$(li)Raw Pasta$(li)Piece of Cheese or Piece of Sheep Cheese or Piece of Grain Cheese (or similar)"
+    }
+  ]
+}

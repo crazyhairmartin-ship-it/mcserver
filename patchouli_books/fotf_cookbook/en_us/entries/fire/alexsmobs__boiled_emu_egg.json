@@ -1,0 +1,28 @@
+{
+  "name": "Boiled Emu Egg",
+  "icon": "alexsmobs:boiled_emu_egg",
+  "category": "patchouli:fire",
+  "sortnum": 2,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexsmobs:boiled_emu_egg",
+      "text": "$(l)Hunger:$() 4 (2 drumsticks)$(br)$(l)Saturation:$() 8"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Emu Egg"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Emu Egg"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Emu Egg"
+    }
+  ]
+}

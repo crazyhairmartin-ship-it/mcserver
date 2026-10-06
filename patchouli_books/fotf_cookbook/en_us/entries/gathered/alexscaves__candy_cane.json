@@ -1,0 +1,13 @@
+{
+  "name": "Candy Cane",
+  "icon": "alexscaves:candy_cane",
+  "category": "patchouli:gathered",
+  "sortnum": 26,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:candy_cane",
+      "text": "$(l)Hunger:$() 2 (1 drumsticks)$(br)$(l)Saturation:$() 0.4$(br)$(l)Effects:$() Sugar Rush (10s, 1% chance)$(br2)$(o)No recipe: grow, gather, fish, hunt or find it.$()"
+    }
+  ]
+}

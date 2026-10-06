@@ -1,0 +1,18 @@
+{
+  "name": "Roasted Lamb with Lettuce",
+  "icon": "candlelight:roasted_lamb_with_lettuce",
+  "category": "patchouli:roaster",
+  "sortnum": 16,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:roasted_lamb_with_lettuce",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 12.8"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "Makes 2.$(br)$(li)Lettuce or Cabbage or Cabbage Leaf$(li)Lamb Ham$(li)Noir Wine or Red Wine or Strad Wine (or similar)"
+    }
+  ]
+}

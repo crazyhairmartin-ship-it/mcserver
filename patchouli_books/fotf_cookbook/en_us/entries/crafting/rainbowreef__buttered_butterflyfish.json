@@ -1,0 +1,18 @@
+{
+  "name": "Buttered Butterflyfish Toast",
+  "icon": "rainbowreef:buttered_butterflyfish",
+  "category": "patchouli:crafting",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:buttered_butterflyfish",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 0"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/buttered_butterflyfish",
+      "text": "Makes 1."
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "name": "Tropical Fish",
+  "icon": "minecraft:tropical_fish",
+  "category": "patchouli:other",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "minecraft:tropical_fish",
+      "text": "$(l)Hunger:$() 1 (0.5 drumsticks)$(br)$(l)Saturation:$() 0.2"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Bars, Traps & Oddities",
+      "text": "Makes 2.$(br)$(li)Melon Seeds"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/tropical_fish_from_rainbow_fishes",
+      "text": "Makes 1."
+    }
+  ]
+}

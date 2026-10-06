@@ -1,0 +1,18 @@
+{
+  "name": "Mashed Potatoes",
+  "icon": "brewery:mashed_potatoes",
+  "category": "patchouli:mincer",
+  "sortnum": 3,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "brewery:mashed_potatoes",
+      "text": "$(l)Hunger:$() 3 (1.5 drumsticks)$(br)$(l)Saturation:$() 3$(br)$(l)Effects:$() Satiation (3:20)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mincer",
+      "text": "Makes 2.$(br)$(li)Baked Potato"
+    }
+  ]
+}

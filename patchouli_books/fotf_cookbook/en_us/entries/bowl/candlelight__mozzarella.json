@@ -1,0 +1,18 @@
+{
+  "name": "Mozzarella",
+  "icon": "candlelight:mozzarella",
+  "category": "patchouli:bowl",
+  "sortnum": 8,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "candlelight:mozzarella",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 6"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Mixing Bowl",
+      "text": "Makes 6.$(br)$(li)Milk Bucket or Wooden Milk Bucket or Milk Bottle$(li)Wooden Water Bucket or Water Bucket"
+    }
+  ]
+}

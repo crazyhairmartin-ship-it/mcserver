@@ -1,0 +1,18 @@
+{
+  "name": "Seasugar Sorbet",
+  "icon": "rainbowreef:seasugar_sorbet",
+  "category": "patchouli:crafting",
+  "sortnum": 99,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "rainbowreef:seasugar_sorbet",
+      "text": "$(l)Hunger:$() 7 (3.5 drumsticks)$(br)$(l)Saturation:$() 4.2$(br)$(l)Effects:$() Regeneration II (30s)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "rainbowreef:item/seasugar_sorbet",
+      "text": "Makes 1."
+    }
+  ]
+}

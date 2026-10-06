@@ -1,0 +1,18 @@
+{
+  "name": "Serene Salad",
+  "icon": "alexscaves:serene_salad",
+  "category": "patchouli:crafting",
+  "sortnum": 101,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:serene_salad",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 3.5"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:serene_salad",
+      "text": "Makes 1."
+    }
+  ]
+}

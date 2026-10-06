@@ -1,0 +1,18 @@
+{
+  "name": "Egg Sandwich",
+  "icon": "farmersdelight:egg_sandwich",
+  "category": "patchouli:crafting",
+  "sortnum": 25,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:egg_sandwich",
+      "text": "$(l)Hunger:$() 8 (4 drumsticks)$(br)$(l)Saturation:$() 12.8"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:egg_sandwich",
+      "text": "Makes 1."
+    }
+  ]
+}

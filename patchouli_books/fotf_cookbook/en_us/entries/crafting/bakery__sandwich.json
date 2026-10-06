@@ -1,0 +1,18 @@
+{
+  "name": "Sandwich",
+  "icon": "bakery:sandwich",
+  "category": "patchouli:crafting",
+  "sortnum": 98,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "bakery:sandwich",
+      "text": "$(l)Hunger:$() 7 (3.5 drumsticks)$(br)$(l)Saturation:$() 9.8$(br)$(l)Effects:$() Satiation (1:15)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "bakery:sandwich",
+      "text": "Makes 2."
+    }
+  ]
+}

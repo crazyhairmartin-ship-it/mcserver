@@ -1,0 +1,18 @@
+{
+  "name": "Kelp Roll",
+  "icon": "farmersdelight:kelp_roll",
+  "category": "patchouli:crafting",
+  "sortnum": 61,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:kelp_roll",
+      "text": "$(l)Hunger:$() 12 (6 drumsticks)$(br)$(l)Saturation:$() 14.4"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:kelp_roll",
+      "text": "Makes 1."
+    }
+  ]
+}

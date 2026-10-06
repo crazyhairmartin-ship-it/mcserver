@@ -1,0 +1,18 @@
+{
+  "name": "Vesper Stew",
+  "icon": "alexscaves:vesper_stew",
+  "category": "patchouli:crafting",
+  "sortnum": 129,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "alexscaves:vesper_stew",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 3$(br)$(l)Effects:$() Night Vision (2:00)$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "alexscaves:vesper_stew",
+      "text": "Makes 1."
+    }
+  ]
+}

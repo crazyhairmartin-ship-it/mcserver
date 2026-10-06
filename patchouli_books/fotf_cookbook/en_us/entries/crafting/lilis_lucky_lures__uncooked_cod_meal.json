@@ -1,0 +1,18 @@
+{
+  "name": "Uncooked Cod Meal",
+  "icon": "lilis_lucky_lures:uncooked_cod_meal",
+  "category": "patchouli:crafting",
+  "sortnum": 124,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "lilis_lucky_lures:uncooked_cod_meal",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 8.4$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "lilis_lucky_lures:uncooked_cod_meal",
+      "text": "Makes 1."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Mutton Wrap",
+  "icon": "farmersdelight:mutton_wrap",
+  "category": "patchouli:crafting",
+  "sortnum": 69,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:mutton_wrap",
+      "text": "$(l)Hunger:$() 10 (5 drumsticks)$(br)$(l)Saturation:$() 16"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:mutton_wrap",
+      "text": "Makes 1."
+    }
+  ]
+}

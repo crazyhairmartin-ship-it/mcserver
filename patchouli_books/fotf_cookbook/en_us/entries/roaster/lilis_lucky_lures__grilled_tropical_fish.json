@@ -1,0 +1,33 @@
+{
+  "name": "Grilled Tropical Fish",
+  "icon": "lilis_lucky_lures:grilled_tropical_fish",
+  "category": "patchouli:roaster",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "lilis_lucky_lures:grilled_tropical_fish",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 8.4$(br)Can always eat"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Roaster",
+      "text": "$(li)Kelp$(li)Tropical Fish$(li)Potato"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Uncooked Tropical Fish"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Uncooked Tropical Fish"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Furnace, Smoker & Campfire",
+      "text": "$(li)Uncooked Tropical Fish"
+    }
+  ]
+}

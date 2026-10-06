@@ -1,0 +1,18 @@
+{
+  "name": "Fruit Salad",
+  "icon": "farmersdelight:fruit_salad",
+  "category": "patchouli:crafting",
+  "sortnum": 34,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:fruit_salad",
+      "text": "$(l)Hunger:$() 6 (3 drumsticks)$(br)$(l)Saturation:$() 7.2$(br)$(l)Effects:$() Regeneration (5s)"
+    },
+    {
+      "type": "patchouli:crafting",
+      "recipe": "farmersdelight:fruit_salad",
+      "text": "Makes 1."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Cabbage Rolls",
+  "icon": "farmersdelight:cabbage_rolls",
+  "category": "patchouli:fd_pot",
+  "sortnum": 5,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farmersdelight:cabbage_rolls",
+      "text": "$(l)Hunger:$() 5 (2.5 drumsticks)$(br)$(l)Saturation:$() 5"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Cooking Pot (Farmer's Delight)",
+      "text": "$(li)Cabbage or Cabbage Leaf or Lettuce$(li)Rabbit or Beef or Minced Beef (or similar)"
+    }
+  ]
+}

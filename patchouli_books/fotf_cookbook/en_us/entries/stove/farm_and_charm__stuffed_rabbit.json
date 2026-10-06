@@ -1,0 +1,18 @@
+{
+  "name": "Stuffed Rabbit",
+  "icon": "farm_and_charm:stuffed_rabbit",
+  "category": "patchouli:stove",
+  "sortnum": 28,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "farm_and_charm:stuffed_rabbit",
+      "text": "$(l)Hunger:$() 9 (4.5 drumsticks)$(br)$(l)Saturation:$() 16.2$(br)$(l)Effects:$() Feast (8:00)"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "Stove",
+      "text": "$(li)Onion$(li)Rabbit$(li)Carrot"
+    }
+  ]
+}
