@@ -11,4 +11,5 @@ tools/grapple/preview.png
 .pytest_cache/
 __pycache__/
 !extras/fotfskills/*.jar
+!extras/fotfretrogen/*.jar
 extras/fotfskills/numerals_preview.png

@@ -1,4 +1,4 @@
-package fotfskills.world;
+package fotfretrogen;
 
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.logging.LogUtils;

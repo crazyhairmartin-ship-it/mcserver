@@ -1,4 +1,4 @@
-package fotfskills.world;
+package fotfretrogen;
 
 import java.io.StringReader;
 import java.nio.file.Files;

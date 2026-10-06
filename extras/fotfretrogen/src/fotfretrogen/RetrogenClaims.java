@@ -1,4 +1,4 @@
-package fotfskills.world;
+package fotfretrogen;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;

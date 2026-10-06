@@ -1,4 +1,4 @@
-package fotfskills.world;
+package fotfretrogen;
 
 import java.util.HashSet;
 import java.util.List;
