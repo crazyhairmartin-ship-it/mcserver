@@ -1,0 +1,13 @@
+name = "Spartan Weaponry: Cataclysm"
+filename = "spartancataclysm-1.1.2+1.20.1+forge.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/wKopCLTN/versions/yuMfxdHs/spartancataclysm-1.1.2%2B1.20.1%2Bforge.jar"
+hash-format = "sha512"
+hash = "bce8d7d53a5ff25dc58c9e0a06773110429b089665ceccc7c30955f89f31d682b26400e6e5ddcfff127368d427fafeb2bfe3184440f9f85f9d6870454cf0af58"
+
+[update]
+[update.modrinth]
+mod-id = "wKopCLTN"
+version = "yuMfxdHs"

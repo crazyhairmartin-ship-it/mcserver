@@ -110,7 +110,12 @@ hash = "4d6199ff35d84cda391d070e67ff407e77eda90243d7475a848b903a7608dbd1"
 
 [[files]]
 file = "config/paxi/resourcepack_load_order.json"
-hash = "4b40c657f874318e6116a4e4b227a444bb1e818f895f25ea79ea9fb8758ada43"
+hash = "f21846f1447e1b0bc600bd027988f65e1d2c8aceabb2a1295f196d52230ff782"
+
+[[files]]
+file = "config/paxi/resourcepacks/attribute-icons.pw.toml"
+hash = "469666c31566b34351b044720e9ff920850e01f3c0350c74973fa9ff0b6a8aec"
+metafile = true
 
 [[files]]
 file = "config/paxi/resourcepacks/brays-zombie-overhaul.pw.toml"
@@ -2290,8 +2295,18 @@ hash = "2de33e7d757cfa1108b05247cb59f6db2f08000af824da328322d78cdb7c4c4d"
 metafile = true
 
 [[files]]
+file = "mods/azurelib.pw.toml"
+hash = "99b38d3573c0b76ebdb63d108b5a12e3172eceb2357d2ec2878fb70f968160af"
+metafile = true
+
+[[files]]
 file = "mods/balm.pw.toml"
 hash = "cc17fd6e85be435f0141ff78ce81233e0645414f6ec5bc1db112a26a79204822"
+metafile = true
+
+[[files]]
+file = "mods/better-combat-x-cataclysm-spellbooks-compatibility.pw.toml"
+hash = "9ad7eb1595c5b0c11a083423af79531610ef44edcf977791e0d41114f74679c1"
 metafile = true
 
 [[files]]
@@ -2325,6 +2340,11 @@ hash = "ba1bdad41e3c9ec131330f048fc6f9bcb753ca3e9bfa1e41d60d6ca11afbc2e6"
 metafile = true
 
 [[files]]
+file = "mods/cataclysm-spellbooks.pw.toml"
+hash = "46d7e45a470ab4280c68c2d435214ee63a1c016c426d889d9deee049c6f39a08"
+metafile = true
+
+[[files]]
 file = "mods/choicetheorems-overhauled-village.pw.toml"
 hash = "78bcb2e1589baaa14ecccb6fca39293a5b4ac8d7f6f5a6ee1a6a812e3a5a958c"
 metafile = true
@@ -2352,6 +2372,11 @@ metafile = true
 [[files]]
 file = "mods/comforts.pw.toml"
 hash = "58bf97ca61f74ea9a540f6e6090aef631155748c49b83a7a338b34d8dece9109"
+metafile = true
+
+[[files]]
+file = "mods/common-network.pw.toml"
+hash = "d20ac61510085aab4dbd69b2e2c7beb7ddd80671733e7cc18a00878e2bbba3b7"
 metafile = true
 
 [[files]]
@@ -2525,6 +2550,11 @@ hash = "33c13017e0a59e5743ac644cf37496622a096c925b708e3bd39de676b1c2fc00"
 metafile = true
 
 [[files]]
+file = "mods/icarus.pw.toml"
+hash = "e435fbbf3af8d112431718fb90641d164810422d46c1222a4b84874435e21291"
+metafile = true
+
+[[files]]
 file = "mods/immediatelyfast.pw.toml"
 hash = "e339ce21a2fcda8c6bdd7183edc37bb1c6e85a1c5a59eca26cbfb7a1b37dd548"
 metafile = true
@@ -2690,13 +2720,43 @@ hash = "1d623ba29fcb52d5db733af383a13273792ac3dc1ac7a8f9e3f58a17ae1bc2c7"
 metafile = true
 
 [[files]]
+file = "mods/loot-integrations-cataclysm.pw.toml"
+hash = "21cabbf48e29ec71de779410b6ef32edb89da0891cc6b0f3270e6af4517ab75f"
+metafile = true
+
+[[files]]
+file = "mods/loot-integrations-dungeons-and-taverns.pw.toml"
+hash = "78df2250535ee004601abf1de44d3f2f1b39fc77befff708a7d78e332eb8c4e5"
+metafile = true
+
+[[files]]
+file = "mods/loot-integrations-moogs-voyager-soaring-end-nether.pw.toml"
+hash = "1b90141f6de7f48231bbfa43223855c26c43f40a98d8285dd902162783b02b10"
+metafile = true
+
+[[files]]
+file = "mods/loot-integrations-towns-and-towers.pw.toml"
+hash = "612d62e3de655416c993eec64f9f976633c267dcd56ecef5f4aeec597e8fd7cd"
+metafile = true
+
+[[files]]
+file = "mods/loot-integrations.pw.toml"
+hash = "7d9b2aa5cac6ac41b286427835faff3c865f8353fe0f6646cfe92f0507ecd33f"
+metafile = true
+
+[[files]]
 file = "mods/lootr.pw.toml"
-hash = "e8b4876d403b4f4daab64bad9704a5b271a33031d1ff8d19d23ebd1e3b8dd39a"
+hash = "a415da31942b94d7bb508d13ee7c4464888fbe2fa32ff0f868fb3fc4fed025f2"
 metafile = true
 
 [[files]]
 file = "mods/macaws-bridges.pw.toml"
 hash = "0261f8fb3b0880b572044ff084edceecd2c91f39ee71c477198313ac2a253f4d"
+metafile = true
+
+[[files]]
+file = "mods/mes-moogs-end-structures.pw.toml"
+hash = "108750d474c87286996e8dbbce3a18ad277e7258c0d49094250fc33da34fb68b"
 metafile = true
 
 [[files]]
@@ -2707,6 +2767,11 @@ metafile = true
 [[files]]
 file = "mods/mmmmmmmmmmmm.pw.toml"
 hash = "9a6966a29c97847b774ea2c5e859a0f037d07dc62da6ba46e05de443cfbd7e79"
+metafile = true
+
+[[files]]
+file = "mods/mns-moogs-nether-structures.pw.toml"
+hash = "78c2742da9600fca2b6051310267415caf37b368329a66d908391e9c4daac514"
 metafile = true
 
 [[files]]
@@ -2730,6 +2795,11 @@ hash = "e8dcf2468e5b23c5ed71ce8c6e5d48ae70b9cb3281eab6c35401b0beecfc8a1c"
 metafile = true
 
 [[files]]
+file = "mods/mos-moogs-ocean-structures.pw.toml"
+hash = "3e3c1862f755040f791ed84a53d89c88408fd6490b0a98f77d59eac3e72f17f3"
+metafile = true
+
+[[files]]
 file = "mods/mouse-tweaks.pw.toml"
 hash = "c17b9de2050b52f12368cea16836e8c6ac43be9683b2fc4755a9b3d4a60fa67b"
 metafile = true
@@ -2742,6 +2812,11 @@ metafile = true
 [[files]]
 file = "mods/mowzies-mobs.pw.toml"
 hash = "69c100deb9011e828b3f11a0df754316829b751833ac30bc4726710c082f9808"
+metafile = true
+
+[[files]]
+file = "mods/mss-moogs-soaring-structures.pw.toml"
+hash = "c91f7406ff4b24f35f33c491cffe5a7f6f2170c7aeb9b0a13e8df69363dd8c8a"
 metafile = true
 
 [[files]]
@@ -2825,8 +2900,18 @@ hash = "cc71b1c8938a6bbb2f7cb1bd0f49d5ffe4b30a04a866ff32c2457b9ebc5919dc"
 metafile = true
 
 [[files]]
+file = "mods/realm-rpg-fallen-adventurers.pw.toml"
+hash = "d282a7b0297f8987976b6f2495c35c9d11c22ebf6bd6cf1cba748e4cbd218744"
+metafile = true
+
+[[files]]
 file = "mods/regions-unexplored.pw.toml"
 hash = "e162eaf2b01dcfc4f7f9f796284f1a577fcfc244057081e32f8f432891ba6a7a"
+metafile = true
+
+[[files]]
+file = "mods/resourceful-config.pw.toml"
+hash = "b85e8417e797be3fdae046c487eeda8f54cdc88f3f20e462e0e229f8dd734214"
 metafile = true
 
 [[files]]
@@ -2885,6 +2970,11 @@ hash = "b4caa569bd944a9e44607e8eda798cc4b1cd0cfb6420e89adcf20abd04c16545"
 metafile = true
 
 [[files]]
+file = "mods/sky-villages-forge.pw.toml"
+hash = "8a2bb37831521a06e723796797baa606c121a721f9e86f4aae4c7ce4ba8a8ea1"
+metafile = true
+
+[[files]]
 file = "mods/small-ships.pw.toml"
 hash = "a2641c9187ec8485df45b2fb25c901f835da50ffe4d9601e4ecc81fc9036eb55"
 metafile = true
@@ -2932,6 +3022,11 @@ metafile = true
 [[files]]
 file = "mods/spartan-weaponry.pw.toml"
 hash = "2245f3d120ab366a525dd63f07d83bcb879a410fe973db60c189d24395212279"
+metafile = true
+
+[[files]]
+file = "mods/spartancataclysm.pw.toml"
+hash = "5cb8c869bffcede6cefa6802e25210b51f704b5709f55d48d10cae5ad3fae847"
 metafile = true
 
 [[files]]
@@ -3017,6 +3112,11 @@ metafile = true
 [[files]]
 file = "mods/yacl.pw.toml"
 hash = "c08817fe8025a9d62c8f7abd5f56a54b90673e5ab60f39ae8fa1d70d5ace529b"
+metafile = true
+
+[[files]]
+file = "mods/yung-structures-addon-for-loot-integrations.pw.toml"
+hash = "717b561ad673415cbd548422b4ae813f06b8aaaba11de1593ced83cdd40c6b14"
 metafile = true
 
 [[files]]

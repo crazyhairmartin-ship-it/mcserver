@@ -1,0 +1,13 @@
+name = "MSS - Moog's Soaring Structures"
+filename = "MoogsSoaringStructures-universal-1.20-2.2.0.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/RJCLIx7k/versions/Fu2E23KF/MoogsSoaringStructures-universal-1.20-2.2.0.jar"
+hash-format = "sha512"
+hash = "c4dcae64aaa8ada9498608179db653c9bf72ec8bd58388ed4eb26aa56d1a9684dbc29fb4417da97866b3c298f181edfa6505b87145d8853ae2a49d087d91b145"
+
+[update]
+[update.modrinth]
+mod-id = "RJCLIx7k"
+version = "Fu2E23KF"

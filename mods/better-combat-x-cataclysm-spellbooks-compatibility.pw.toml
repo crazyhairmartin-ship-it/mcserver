@@ -1,0 +1,13 @@
+name = "Better Combat x Cataclysm Spellbooks Compatibility"
+filename = "better-combat-x-cataclysm-spellbooks-compatibility-1.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/1nSvHESm/versions/uYgPW5r9/better-combat-x-cataclysm-spellbooks-compatibility-1.1.jar"
+hash-format = "sha512"
+hash = "b29cd31bf1da4a8dff730180412f1afcd55c8181e8c5d550cbff7c67f2db5189d23a4ae495e6dc23b1559ea98562e1218feda29ef1e25fe01412d13919481d10"
+
+[update]
+[update.modrinth]
+mod-id = "1nSvHESm"
+version = "uYgPW5r9"
