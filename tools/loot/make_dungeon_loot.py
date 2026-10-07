@@ -1,11 +1,11 @@
-"""Artifacts and Spartan weapons in modded dungeon chests (YUNG's structures, When Dungeons Arise).
+"""Artifacts and Spartan weapons in modded structure chests (YUNG's, When Dungeons Arise, Moog's structures).
 
     python tools/loot/make_dungeon_loot.py [mods folder]
 
 Artifacts and Spartan Weaponry only add their loot to vanilla chests, and Loot Integrations doesn't pick that up. This
 writes global loot modifiers (Artifacts' own "artifacts:roll_loot_table" type, so no code is needed) that roll
 - artifacts:artifact (one artifact) in ARTIFACT_CHANCE of those chests, and
-- fotf:chests/dungeon_weapon (one Spartan weapon, iron > gold > diamond, worn, often enchanted) in WEAPON_CHANCE,
+- fotf:chests/dungeon_weapon (one Spartan weapon, iron > gold > diamond > netherite, worn, often enchanted) in WEAPON_CHANCE,
 for every chest loot table the structure mods ship. Writes kubejs/data/fotf/{loot_tables,loot_modifiers} and
 kubejs/data/forge/loot_modifiers/global_loot_modifiers.json.
 """
@@ -17,11 +17,11 @@ from pathlib import Path
 
 PACK = Path(__file__).resolve().parents[2]
 DATA = PACK / 'kubejs' / 'data'
-STRUCTURE_JARS = ['Yungs*.jar', 'DungeonsArise*.jar']
+STRUCTURE_JARS = ['Yungs*.jar', 'DungeonsArise*.jar', 'Moogs*.jar']
 ARTIFACT_CHANCE = 0.08
 WEAPON_CHANCE = 0.15
 ENCHANT_CHANCE = 0.5
-MATERIALS = {'iron': 10, 'golden': 4, 'diamond': 1}
+MATERIALS = {'iron': 20, 'golden': 8, 'diamond': 3, 'netherite': 1}
 CSV = PACK / 'docs' / 'superpowers' / 'specs' / '2026-10-03-weapons.csv'
 
 
@@ -31,7 +31,9 @@ def chest_tables(mods):
         for jar in sorted(mods.glob(pattern)):
             for n in zipfile.ZipFile(jar).namelist():
                 m = re.match(r'data/([^/]+)/loot_tables/(.+)\.json$', n)
-                if m and 'chests/' in m.group(2) + '/':
+                path = m.group(2) if m else ''
+                moog = jar.name.startswith('Moogs')            # Moog's tables aren't all under chests/
+                if m and ('chests/' in path or moog and not re.match(r'(archaeology|blocks|entities|gameplay)/', path)):
                     tables.append(f'{m.group(1)}:{m.group(2)}')
     return sorted(set(tables))
 
@@ -42,7 +44,7 @@ def spartan_weapons():
     items = []
     for line in CSV.read_text(encoding='utf-8').splitlines()[1:]:
         item = line.split(',')[1]
-        m = re.fullmatch(r'spartanweaponry:(iron|golden|diamond)_\w+', item)
+        m = re.fullmatch(r'spartanweaponry:(iron|golden|diamond|netherite)_\w+', item)
         if m and item not in trimmed and not re.search(r'(arrow|bolt)', item):
             items.append((item, MATERIALS[m.group(1)]))
     return items

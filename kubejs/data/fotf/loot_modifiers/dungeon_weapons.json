@@ -688,6 +688,574 @@
         {
           "condition": "forge:loot_table_id",
           "loot_table_id": "dungeons_arise:chests/undead_pirate_ship/undead_pirate_ship_treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mes:end_common"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mes:end_rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mes:end_uncommon"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mes:mega_ship_barrel"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mes:mega_ship_barrel_empty"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mes:mega_ship_barrel_empty_rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mes:mega_ship_crate"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mes:mega_ship_treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/dragon_arena/epic"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/dragon_arena/main_barrel"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/dragon_arena/mid"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/empty"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/houses"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/large_arena/common"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/large_arena/main_barrel"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/large_arena/treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/brewing_scraps"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/intact"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/intact_base"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/intact_gold_treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/intact_library"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/intact_treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/intact_uncommon"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/ravaged"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/ravaged_treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/ruined"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/mega_fortress/tnt_room"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/small_arena/gold_treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/small_arena/mid"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/small_arena/rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mns:chests/uncommon"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:church/church_alms"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:church/church_reliquary"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:church/church_sacristy"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:church/church_scriptorium"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:decor/clam_shell"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:decor/conduit_arch"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:decor/ruined_wall_gravel"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:domes/pufferfish_dome"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:houses/atlantis_common"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:houses/atlantis_rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:houses/atlantis_ultra_rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:houses/ruined_common"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:houses/ruined_furnace"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:houses/ruined_junk"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:houses/ruined_rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:portal_archway/portal_gold"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:portal_archway/portal_treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:portal_archway/tree_camp"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:portal_archway/wreck_hold"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:rafts/acacia"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:rafts/birch"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:rafts/cherry"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:rafts/dark_oak"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:rafts/jungle"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:rafts/mangrove"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:rafts/oak"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:rafts/snow"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:rafts/spruce"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:rafts/wanderer_valuables"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ruins/castle_common"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ruins/castle_treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/docked_cargo"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/hauling_provisions"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/shipwreck_dark_oak"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/shipwreck_oak"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/shipwreck_spruce"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/small_ship_stores"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/sunken_cabin"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/sunken_captain"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/sunken_hold"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/travel_ship_cannon"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/travel_ship_captain"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/travel_ship_cargo"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/travel_ship_hold"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/travel_ship_pot"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:ships/travel_ship_quarters"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:skeleton/dragon_gravel"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:skeleton/dragon_gut"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:skeleton/dragon_hoard"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:spawners/small_ocean_temple/trial_reward"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:temple/temple_inner"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:temple/temple_offering"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:temple/temple_stores"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:traps/dispenser_trap"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:treasure/buried_treasure_1"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mos:vaults/atlantis_tribune/main"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:abandoned"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:arena"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:arena_amethyst_cove"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:arena_dungeon_chest"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:arena_mossy_hallway_chest"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:castle_tower_top"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:crystal"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:empty"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:general"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:houses_common"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:houses_rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:houses_uncommon"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:junk"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:pots/desert"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:pots/jungle"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:pots/swamp"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:pots/taiga"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:pots/tower"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:pots/volcano"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:sparse"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mss:stash"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:abandoned"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:cart"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:cartographer_tower"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:cathedral_base"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:cathedral_common"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:cathedral_rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:crystal"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:empty"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:floating_islands"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:general"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:houses_books"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:houses_brewing"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:houses_common"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:houses_desert"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:houses_flower"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:houses_rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:houses_uncommon"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:jungle_tower"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:large_carts"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:large_carts_2"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:mushroom_pond"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:ocean_tower/common"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:ocean_tower/treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:ocean_tower/uncommon"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:pillager"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:pond"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:rare"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:red_tower/common"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:red_tower/treasure"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:red_tower/uncommon"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:stable"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "mvs:swamps"
         }
       ]
     },
