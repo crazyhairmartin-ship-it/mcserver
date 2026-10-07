@@ -233,7 +233,7 @@ hash = "865a10843b465ef57a677c2bab73ba889353dc88f519cff24a414d785981914e"
 
 [[files]]
 file = "config/puffish_skills/categories/farm/definitions.json"
-hash = "0f416c25933fd65d1464206e77d9dd7dcfe58c33f9ed0cc102a3a576e3f23e7a"
+hash = "5c48ac976f5843c14188870ef8f482a82f9ba543e49da7a8c7ec799b7f010a4f"
 
 [[files]]
 file = "config/puffish_skills/categories/farm/experience.json"
@@ -2292,6 +2292,10 @@ file = "kubejs/server_scripts/convert_duplicates.js"
 hash = "d43b8afe8c5e323e8259c967fdf48d8328ea6c9df7fab42ea5c2dd3960ffc1ee"
 
 [[files]]
+file = "kubejs/server_scripts/fairy_light.js"
+hash = "3f4c39c3fe6a3c5518957df272dcc7566973563a33a4c1c21e1c3710062130cf"
+
+[[files]]
 file = "kubejs/server_scripts/field_guide.js"
 hash = "98af1bcd4e3e985f9f4c6d43ca495435c3d9c5de55ce4db6189b25ac2651065f"
 
@@ -2634,7 +2638,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "65d01088ae1a2c9adb699d921e5c8fe41e2afa3c80407b1d60503daefa10c6d7"
+hash = "7c3662863b6457e134e5f4a5365c64904f3b41025cf013a01ec3b11c4214e0de"
 metafile = true
 
 [[files]]
