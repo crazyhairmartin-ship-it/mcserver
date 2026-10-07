@@ -604,7 +604,7 @@
   },
   "light_weapons_1": {
     "title": "Light Weapons",
-    "description": "Dual-wielding light weapons (one in each hand): +8% attack speed",
+    "description": "A light weapon in your off hand: +8% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -631,7 +631,7 @@
   },
   "light_weapons_2": {
     "title": "Light Weapons",
-    "description": "Dual-wielding light weapons (one in each hand): +16% attack speed",
+    "description": "A light weapon in your off hand: +16% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -658,7 +658,7 @@
   },
   "light_weapons_3": {
     "title": "Light Weapons",
-    "description": "Dual-wielding light weapons (one in each hand): +24% attack speed",
+    "description": "A light weapon in your off hand: +24% attack speed",
     "icon": {
       "type": "item",
       "data": {

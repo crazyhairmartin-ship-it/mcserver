@@ -64,6 +64,11 @@ public final class WeaponTooltips {
             double enchant = EnchantmentHelper.m_44833_(stack, MobType.f_21640_);
             DamageBreakdown d = DamageBreakdown.of(weapon, skill, enchant, types, p -> Perks.get(player, p));
             tip.add(Component.m_237113_("§6" + DamageBreakdown.fmt(d.total()) + " damage with your skills"));
+            double baseSpeed = 4 + additions(stack.m_41638_(EquipmentSlot.MAINHAND).get(Attributes.f_22283_));
+            double speedBonus = (Weapons.is(stack, "light") || Weapons.is(stack, "sword") ? Perks.get(player, "duelist_speed") : 0)
+                    + (Weapons.is(player.m_21206_(), "light") && player.m_21206_() != stack ? Perks.get(player, "light_speed") : 0);
+            tip.add(Component.m_237113_("§6" + DamageBreakdown.fmt(baseSpeed * (1 + speedBonus)) + " attack speed with your skills"
+                    + (speedBonus > 0 ? " §7(+" + Math.round(speedBonus * 100) + "%)" : "")));
             if (Screen.m_96638_()) {
                 d.lines().forEach(line -> tip.add(Component.m_237113_("§7  " + line)));
             } else {
