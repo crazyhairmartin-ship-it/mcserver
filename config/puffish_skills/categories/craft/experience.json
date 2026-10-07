@@ -44,6 +44,12 @@
           }
         ]
       }
+    },
+    {
+      "type": "fotfskills:craft_utility",
+      "data": {
+        "experience": 5
+      }
     }
   ]
 }

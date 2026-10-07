@@ -754,7 +754,7 @@
     {
       "id": "cook",
       "name": "Cooking",
-      "xp": "Finished meals: Farmer's Delight pots, Let's Do recipes, smoker and furnace food.",
+      "xp": "Finished meals: Farmer's Delight pots, Let's Do recipes, smoker and furnace food, and food crafted in a crafting grid.",
       "icon": "farmersdelight:cooking_pot",
       "background": "minecraft:textures/block/bricks.png",
       "nodes": [
@@ -928,7 +928,7 @@
     {
       "id": "craft",
       "name": "Crafting",
-      "xp": "Crafting tools, armour, weapons and gear; smithing upgrades; smelting ingots.",
+      "xp": "Crafting tools, armour, weapons and gear; crafting workstations and storage (5 each: crafting tables, furnaces, chests, cooking stations...); smithing upgrades; smelting ingots.",
       "icon": "minecraft:crafting_table",
       "background": "minecraft:textures/block/spruce_planks.png",
       "nodes": [

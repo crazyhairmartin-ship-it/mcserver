@@ -19,6 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 /** Crafting refunds (Frugal, Endless Workshop), Fletcher's extra arrows, and Double Catch. */
 public final class ItemPerks {
     private static final TagKey<Item> ARROWS = TagKey.m_203882_(ForgeRegistries.Keys.ITEMS, new ResourceLocation("minecraft", "arrows"));
+    private static final TagKey<Item> WORKSTATIONS = TagKey.m_203882_(ForgeRegistries.Keys.ITEMS, new ResourceLocation("fotfskills", "workstations"));
 
     /** Fires before the grid is consumed, so the ingredients are still there to copy. */
     @SubscribeEvent
@@ -45,6 +46,16 @@ public final class ItemPerks {
         }
         if (craftingGrid && Refund.eligible(ids)) {
             fotfskills.xp.AmountSource.award(player, "craft_any", 1);    // any real recipe (no compress/decompress loops)
+        }
+        ItemStack made = event.getCrafting();
+        if (craftingGrid && made.m_204117_(WORKSTATIONS)) {
+            fotfskills.xp.AmountSource.award(player, "craft_utility", 1);   // crafting tables, furnaces, chests, stations
+        }
+        if (craftingGrid && made.m_41614_() && ids.size() >= 2 && made.m_41613_() <= ids.size()) {
+            net.minecraft.world.food.FoodProperties food = made.m_41720_().m_41473_();   // food crafted in a grid: Cooking
+            if (food != null) {                                                     // (never unpacking a crate)
+                fotfskills.xp.AmountSource.award(player, "cook", (double) food.m_38744_() * made.m_41613_());
+            }
         }
         if (craftingGrid && Refund.eligible(ids) && !refundable.isEmpty()) {
             if (Perks.roll(player, "craft_free")) {
