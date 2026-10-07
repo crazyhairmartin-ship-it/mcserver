@@ -10,7 +10,8 @@ For the overworld, the Nether and the End:
   --claim-buffer chunks around it;
 - resets everything else: the chunk is removed from region/, entities/ and poi/ (region files that end up empty are
   deleted), and Minecraft generates it again with the current mods the next time it's loaded;
-- in kept chunks, turns the removed Ars Nouveau biome (ars_nouveau:archwood_forest) into minecraft:forest.
+- in kept chunks, turns the removed Ars Nouveau biome (ars_nouveau:archwood_forest) into minecraft:forest, and relabels
+  archwood chests as vanilla chests so their items survive.
 Without --apply nothing is changed. Either way it writes reset_map_<dimension>.png next to the world: kept chunks
 green, claimed blue, reset grey. ALWAYS run it on a stopped server and a backed-up world.
 """
@@ -29,6 +30,9 @@ DIMENSIONS = {'overworld': ('', 'minecraft:overworld'), 'nether': ('DIM-1', 'min
               'end': ('DIM1', 'minecraft:the_end')}
 INHABITED = b'\x04\x00\x0dInhabitedTime'
 BIOME_SWAPS = {'ars_nouveau:archwood_forest': 'minecraft:forest'}
+# block entities of removed mods whose contents a vanilla block can keep (the block itself is swapped by fotfskills'
+# RemovedBlocks aliases); without this the game drops the unknown block entity, and the items with it
+BLOCK_ENTITY_SWAPS = {'ars_nouveau:archwood_chest': 'minecraft:chest'}
 
 
 def region_files(folder):
@@ -80,10 +84,14 @@ def grow(cells, radius):
 
 
 def swap_biomes(chunk):
-    """The chunk with removed biomes renamed in every section's biome palette, or None if it has none."""
-    if not any(old.encode() in chunk for old in BIOME_SWAPS):
+    """The chunk with removed biomes renamed in every section's biome palette and removed mods' chests relabelled as
+    vanilla chests (items kept), or None if it has neither."""
+    if not any(old.encode() in chunk for old in list(BIOME_SWAPS) + list(BLOCK_ENTITY_SWAPS)):
         return None
     root = nbt.loads(chunk)
+    for be in root.get('block_entities', (nbt.LIST, (nbt.COMPOUND, [])))[1][1]:
+        if be.get('id', (nbt.STRING, ''))[1] in BLOCK_ENTITY_SWAPS:
+            be['id'] = (nbt.STRING, BLOCK_ENTITY_SWAPS[be['id'][1]])
     for section in root.get('sections', (nbt.LIST, (nbt.COMPOUND, [])))[1][1]:
         biomes = section.get('biomes')
         if biomes:
@@ -189,7 +197,7 @@ def main():
         for (rx, rz), gone in by_region.items():
             for folder in ('region', 'entities', 'poi'):
                 remove(base / folder, rx, rz, gone)
-        print(f'  applied: {len(reset)} chunks reset, archwood biome renamed in {renamed} kept chunks')
+        print(f'  applied: {len(reset)} chunks reset, {renamed} kept chunks fixed (archwood biome, archwood chests)')
 
 
 if __name__ == '__main__':
