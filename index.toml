@@ -1824,6 +1824,10 @@ file = "kubejs/data/fays_fairies/forge/biome_modifier/pink_fairy_biome_modifier.
 hash = "c476558fd9a8a384986b4e72437ff87dc302e0d3ba85c2dbbfcfafd8e4aa9f71"
 
 [[files]]
+file = "kubejs/data/forge/loot_modifiers/global_loot_modifiers.json"
+hash = "f2e6be923ce8a76e35a8ee658171fd10c886663be3e348bfc192c0935b278b11"
+
+[[files]]
 file = "kubejs/data/fotf/forge/biome_modifier/fairies_common.json"
 hash = "92e35a2abfe6cb7c643124c5636004b24c68e03dfb2cea951f484e66880b56f9"
 
@@ -1890,6 +1894,18 @@ hash = "16ac26d38db4e4a7f33d728e260a0d8a1e4441dd6759b1b0d1a6930a045cac86"
 [[files]]
 file = "kubejs/data/fotf/forge/biome_modifier/tf_wildlife_magical.json"
 hash = "a2d23ac9a8734d2e2113153e321a2f260363e3b952f956fb2ec3c8fb67ddca37"
+
+[[files]]
+file = "kubejs/data/fotf/loot_modifiers/dungeon_artifacts.json"
+hash = "3b2274e7458c44742ca4e735f57927db39949267870095dedaecfb70e7d4205f"
+
+[[files]]
+file = "kubejs/data/fotf/loot_modifiers/dungeon_weapons.json"
+hash = "1eb7f2ba39dc6cc7b7a3facff9d2ad61b170e479c3904d64dfaf03f33de4e121"
+
+[[files]]
+file = "kubejs/data/fotf/loot_tables/chests/dungeon_weapon.json"
+hash = "7a756851223441fa3e5f8b1468d0f432d686949bbf69a4fb4dd7219d8e7ccdc9"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/biome/fairy/common.json"
