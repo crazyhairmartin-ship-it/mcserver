@@ -8,9 +8,9 @@ Status: plan, nothing applied. Builds on the cloud session's spec (`2026-10-06-r
 - **Ars goes completely.** Iron's stays the only magic mod.
 - **Archwood is not kept or re-created.** Every archwood block, item and Every Compat variant in the world becomes the
   matching **Biomes O' Plenty empyreal wood** block.
-- **Empyreal's inner wood moves halfway to archwood.** Only planks and what's crafted from them (doors, trapdoors,
-  signs, boats, and so stairs, slabs and fences), the log ends' inner rings and stripped logs are recoloured, halfway
-  between empyreal's purple (`#72517b` planks) and the archwood planks (`#9887b6`). Empyreal's bark, leaves and the
+- **Empyreal's inner wood moves 70% of the way to archwood.** Only planks and what's crafted from them (doors, trapdoors,
+  signs, boats, and so stairs, slabs and fences), the log ends' inner rings and stripped logs are recoloured, 70% of the way
+  from empyreal's purple (`#72517b` planks) to the archwood planks (`#9887b6`). Empyreal's bark, leaves and the
   designs of its doors and trapdoors stay as they are. `tools/empyreal/recolor_empyreal.py` writes the textures to
   `kubejs/assets/biomesoplenty/`. Every Compat builds its furniture textures from the planks, so empyreal furniture
   follows the new colour.

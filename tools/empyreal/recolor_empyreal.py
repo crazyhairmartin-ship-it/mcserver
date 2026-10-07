@@ -23,7 +23,7 @@ PACK = Path(__file__).resolve().parents[2]
 OUT = PACK / 'kubejs' / 'assets' / 'biomesoplenty' / 'textures'
 OUR_ARCHWOOD = PACK / 'kubejs' / 'assets' / 'ars_nouveau' / 'textures'
 
-BLEND = 0.5         # how far empyreal moves towards archwood: 0 = unchanged, 1 = archwood's colour
+BLEND = 0.7         # how far empyreal moves towards archwood: 0 = unchanged, 1 = archwood's colour
 # material: (empyreal texture that defines it, archwood texture whose colours it moves towards)
 MATERIALS = {
     'planks': ('block/empyreal_planks.png', 'block/archwood_planks.png'),
