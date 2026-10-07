@@ -26,7 +26,7 @@ OUR_ARCHWOOD = PACK / 'kubejs' / 'assets' / 'ars_nouveau' / 'textures'
 # material: (mauve texture that defines it, archwood texture whose colours it takes)
 MATERIALS = {
     'planks': ('block/mauve_planks.png', 'block/archwood_planks.png'),
-    'bark': ('block/mauve_log.png', 'block/purple_archwood_log.png'),
+    'bark': ('block/mauve_log.png', 'block/archwood_log.png'),             # archwood's grey bark, not its swirl
     'stripped': ('block/stripped_mauve_log.png', 'block/stripped_archwood_log.png'),
     'leaves': ('block/mauve_leaves.png', 'block/purple_archwood_leaves.png'),
 }
