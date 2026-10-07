@@ -30,14 +30,20 @@ MATERIALS = {
     'stripped': ('block/stripped_mauve_log.png', 'block/stripped_archwood_log.png'),
     'leaves': ('block/mauve_leaves.png', 'block/purple_archwood_leaves.png'),
 }
-# every mauve texture to recolour; only pixels close to a material's palette change (metal, rope, chests stay)
-TEXTURES = ['block/mauve_planks.png', 'block/mauve_door_top.png', 'block/mauve_door_bottom.png',
-            'block/mauve_trapdoor.png', 'block/mauve_log.png', 'block/mauve_log_top.png', 'block/stripped_mauve_log.png',
-            'block/stripped_mauve_log_top.png', 'block/mauve_leaves.png', 'block/mauve_sapling.png',
-            'block/mauve_shrub_bottom.png', 'block/mauve_shrub_top.png', 'block/mauve_branch.png',
-            'item/mauve_door.png', 'item/mauve_sign.png', 'item/mauve_hanging_sign.png', 'item/mauve_boat.png',
-            'item/mauve_chest_boat.png', 'item/mauve_branch.png', 'entity/boat/mauve.png', 'entity/chest_boat/mauve.png',
-            'entity/signs/mauve.png', 'entity/signs/hanging/mauve.png', 'gui/hanging_signs/mauve.png']
+# every mauve texture to recolour, with the materials it may contain. Only pixels close to one of those materials'
+# palettes change, so the brown chest and paddles on boats (close to mauve's brown bark) are left alone.
+WOOD, TREE = ('planks',), ('planks', 'bark', 'stripped', 'leaves')
+TEXTURES = {
+    'block/mauve_planks.png': WOOD, 'block/mauve_door_top.png': WOOD, 'block/mauve_door_bottom.png': WOOD,
+    'block/mauve_trapdoor.png': WOOD, 'item/mauve_door.png': WOOD, 'item/mauve_sign.png': WOOD,
+    'item/mauve_hanging_sign.png': WOOD, 'item/mauve_boat.png': WOOD, 'item/mauve_chest_boat.png': WOOD,
+    'entity/boat/mauve.png': WOOD, 'entity/chest_boat/mauve.png': WOOD, 'entity/signs/mauve.png': WOOD,
+    'entity/signs/hanging/mauve.png': WOOD, 'gui/hanging_signs/mauve.png': WOOD,
+    'block/mauve_log.png': TREE, 'block/mauve_log_top.png': TREE, 'block/stripped_mauve_log.png': TREE,
+    'block/stripped_mauve_log_top.png': TREE, 'block/mauve_leaves.png': TREE, 'block/mauve_sapling.png': TREE,
+    'block/mauve_shrub_bottom.png': TREE, 'block/mauve_shrub_top.png': TREE, 'block/mauve_branch.png': TREE,
+    'item/mauve_branch.png': TREE,
+}
 MATCH = 12.0        # max CIELAB distance from a material's palette for a pixel to count as that material
 
 
@@ -112,11 +118,11 @@ def main():
     def mauve(path):
         return Image.open(io.BytesIO(ru.read('assets/regions_unexplored/textures/' + path)))
 
-    materials = [Material(mauve(src), archwood(arch)) for src, arch in MATERIALS.values()]
+    materials = {name: Material(mauve(src), archwood(arch)) for name, (src, arch) in MATERIALS.items()}
     rows = []
-    for path in TEXTURES:
+    for path, kinds in TEXTURES.items():
         src = mauve(path)
-        new = recolor(src, materials)
+        new = recolor(src, [materials[k] for k in kinds])
         (OUT / path).parent.mkdir(parents=True, exist_ok=True)
         new.save(OUT / path)
         rows.append((src, new))
