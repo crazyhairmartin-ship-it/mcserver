@@ -3081,6 +3081,11 @@ hash = "b54e2ac8f9ebf54af08e84db20b9d38cc7f955124f30b8dbcd84f0b7ae7ed9ed"
 metafile = true
 
 [[files]]
+file = "mods/overflowing-bars.pw.toml"
+hash = "4c1f6dcff3caee73a2f4059d4ccc3fda792cfffcde94329b2d4a390e2fc6ec45"
+metafile = true
+
+[[files]]
 file = "mods/parcool.pw.toml"
 hash = "361e6eac214cfbaa592b1e7c136e44e74ee282f686b53eb1f9d7781bb7eabc3e"
 metafile = true
@@ -3103,6 +3108,11 @@ metafile = true
 [[files]]
 file = "mods/polymorph.pw.toml"
 hash = "d9986c3798db028db0e1ab30851f7fab87ce12094448685ef7c4ba64374cbfa0"
+metafile = true
+
+[[files]]
+file = "mods/puzzles-lib.pw.toml"
+hash = "cd6a08805626518bbcf8915b73449c4fdc3fb8f799de82fc499d8f46a3f2efce"
 metafile = true
 
 [[files]]
