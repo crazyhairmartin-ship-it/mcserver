@@ -1,13 +1,14 @@
 name = "Shoulder Surfing Reloaded"
-filename = "ShoulderSurfing-Forge-1.20.1-5.2.0.jar"
+filename = "ShoulderSurfing-Forge-1.20.1-4.22.12.jar"
 side = "client"
+pin = true
 
 [download]
-url = "https://cdn.modrinth.com/data/kepjj2sy/versions/mswaiBSo/ShoulderSurfing-Forge-1.20.1-5.2.0.jar"
+url = "https://cdn.modrinth.com/data/kepjj2sy/versions/TQk9rDdf/ShoulderSurfing-Forge-1.20.1-4.22.12.jar"
 hash-format = "sha512"
-hash = "c8e4d88012f0c10b56547bed73525dae0a007225afe2093405b158819d16b8d402b2dce839b0800a14eff3b9a81b9ff249b5918061c45431addbf65f47cd615f"
+hash = "9be5f6d80fdfdf01d42bbdddbaa8d0fcec8eca258686bb86165d283abe7bbfc49b6cf2b01a56f1483a5f119ed324f20549a888ec159fad875ebf7aebbdba9ea5"
 
 [update]
 [update.modrinth]
 mod-id = "kepjj2sy"
-version = "mswaiBSo"
+version = "TQk9rDdf"
