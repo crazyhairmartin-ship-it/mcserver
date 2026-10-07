@@ -833,7 +833,7 @@
   },
   "duelist_1": {
     "title": "Duelist",
-    "description": "A dagger, rapier or sword in your main hand: +8% attack speed",
+    "description": "A dagger, rapier or sword in your main hand gets +8% attack speed (24% max)",
     "icon": {
       "type": "item",
       "data": {
@@ -861,7 +861,7 @@
   },
   "duelist_2": {
     "title": "Duelist",
-    "description": "A dagger, rapier or sword in your main hand: +16% attack speed",
+    "description": "A dagger, rapier or sword in your main hand gets +16% attack speed (24% max)",
     "icon": {
       "type": "item",
       "data": {
@@ -889,7 +889,7 @@
   },
   "duelist_3": {
     "title": "Duelist",
-    "description": "A dagger, rapier or sword in your main hand: +24% attack speed",
+    "description": "A dagger, rapier or sword in your main hand gets +24% attack speed (24% max)",
     "icon": {
       "type": "item",
       "data": {
