@@ -1,0 +1,26 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:signs",
+    "#minecraft:hanging_signs",
+    "#minecraft:beds",
+    "#minecraft:banners",
+    {
+      "id": "#forge:heads",
+      "required": false
+    },
+    "minecraft:skeleton_skull",
+    "minecraft:wither_skeleton_skull",
+    "minecraft:zombie_head",
+    "minecraft:player_head",
+    "minecraft:creeper_head",
+    "minecraft:dragon_head",
+    "minecraft:piglin_head",
+    "minecraft:decorated_pot",
+    "minecraft:flower_pot",
+    "minecraft:bell",
+    "minecraft:conduit",
+    "minecraft:beacon",
+    "minecraft:spawner"
+  ]
+}

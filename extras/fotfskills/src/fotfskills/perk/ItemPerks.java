@@ -19,9 +19,23 @@ import net.minecraftforge.registries.ForgeRegistries;
 /** Crafting refunds (Frugal, Endless Workshop), Fletcher's extra arrows, and Double Catch. */
 public final class ItemPerks {
     private static final TagKey<Item> ARROWS = TagKey.m_203882_(ForgeRegistries.Keys.ITEMS, new ResourceLocation("minecraft", "arrows"));
+    private static final TagKey<Item> NOT_WORKSTATIONS = TagKey.m_203882_(ForgeRegistries.Keys.ITEMS, new ResourceLocation("fotfskills", "not_workstations"));
     private static final TagKey<Item> WORKSTATIONS = TagKey.m_203882_(ForgeRegistries.Keys.ITEMS, new ResourceLocation("fotfskills", "workstations"));
 
     /** Fires before the grid is consumed, so the ingredients are still there to copy. */
+    /**
+     * Workstations and storage: any block with a block entity (chests, barrels, furnaces, cooking stations, modded
+     * storage), plus #fotfskills:workstations for the tables without one (crafting table, loom, stonecutter...), minus
+     * #fotfskills:not_workstations (signs, beds, banners, heads).
+     */
+    private static boolean isWorkstation(ItemStack stack) {
+        if (stack.m_204117_(NOT_WORKSTATIONS)) {
+            return false;
+        }
+        return stack.m_204117_(WORKSTATIONS) || stack.m_41720_() instanceof net.minecraft.world.item.BlockItem block
+                && block.m_40614_() instanceof net.minecraft.world.level.block.EntityBlock;
+    }
+
     @SubscribeEvent
     public void onCraft(PlayerEvent.ItemCraftedEvent event) {
         if (!(event.getEntity() instanceof ServerPlayer player)) {
@@ -48,8 +62,8 @@ public final class ItemPerks {
             fotfskills.xp.AmountSource.award(player, "craft_any", 1);    // any real recipe (no compress/decompress loops)
         }
         ItemStack made = event.getCrafting();
-        if (craftingGrid && made.m_204117_(WORKSTATIONS)) {
-            fotfskills.xp.AmountSource.award(player, "craft_utility", 1);   // crafting tables, furnaces, chests, stations
+        if (craftingGrid && isWorkstation(made)) {
+            fotfskills.xp.AmountSource.award(player, "craft_utility", ids.size());   // per ingredient used
         }
         if (craftingGrid && made.m_41614_() && ids.size() >= 2 && made.m_41613_() <= ids.size()) {
             net.minecraft.world.food.FoodProperties food = made.m_41720_().m_41473_();   // food crafted in a grid: Cooking
