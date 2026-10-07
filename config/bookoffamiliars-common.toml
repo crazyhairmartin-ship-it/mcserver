@@ -1,0 +1,7 @@
+#Maximum number of familiars a player can store.
+maxFamiliars = 10
+#Enable the resurrection system. If disabled, familiars will not return to the book after death
+#Off: pets revive at Domestication Innovation pet beds instead, so they never come back twice.
+enableResurrection = false
+#Enable tracking of released familiars in the book.
+enableTracking = true

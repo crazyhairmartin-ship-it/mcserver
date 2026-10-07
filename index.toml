@@ -57,6 +57,10 @@ file = "config/alexsmobs/tiger_spawns.json"
 hash = "193a619593e7506613a00c83d9fa423944d7888aa56c687c213560a722436e7c"
 
 [[files]]
+file = "config/bookoffamiliars-common.toml"
+hash = "31d668085d5d43eea4095d6d7d4fbfe866870adde57d94f75229d0bd39de0c7b"
+
+[[files]]
 file = "config/butterflies-common.toml"
 hash = "617fd72199b5c4667af801c92b4725bc81ce281e36f4de5e5e653318c4727955"
 
@@ -2479,6 +2483,11 @@ metafile = true
 [[files]]
 file = "mods/boks-butterflies.pw.toml"
 hash = "34d69129011eedd860b66f65bc9fc65f710c01cce9937f35c806c49b0e1ce614"
+metafile = true
+
+[[files]]
+file = "mods/book-of-familiars.pw.toml"
+hash = "c5fe87edf2343a9c1e5bffaf0e322dedda495dd316965835f0436ae13e8044fb"
 metafile = true
 
 [[files]]
