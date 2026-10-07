@@ -22,14 +22,18 @@
     "FarmBlockIrrigatorMixin",
     "ParcoolPermitMixin",
     "HorseDescentMixin",
-    "FairyCategoryMixin"
+    "FairyCategoryMixin",
+    "BookRevivalMixin"
   ],
   "client": [
     "SkillsScreenMixin",
     "ParcoolDodgeMixin",
     "ParcoolTrickMixin",
     "ContainerScreenAccessor",
-    "FairyGlowMixin"
+    "FairyGlowMixin",
+    "IronsCastPacketMixin",
+    "IronsQuickCastPacketMixin",
+    "IronsScrollMixin"
   ],
   "injectors": {
     "defaultRequire": 1

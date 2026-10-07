@@ -10,7 +10,7 @@ MSYS_NO_PATHCONV=1 docker run --rm \
     set -e
     CP=$(find /libs -name "*.jar" ! -name "minecraft-*-client.jar" ! -name "*-extra.jar" ! -name "*-slim.jar" \
            ! -path "*/forge/1.20.1-47.4.10/*" | tr "\n" ":")
-    CP="$CP$(ls /data/libraries/net/minecraftforge/forge/1.20.1-47.4.23/forge-1.20.1-47.4.23-universal.jar):$(ls /data/mods/*.jar | tr "\n" ":")"
+    CP="$CP$(ls /data/libraries/net/minecraftforge/forge/1.20.1-47.4.23/forge-1.20.1-47.4.23-universal.jar):$(ls /data/mods/*.jar compile-libs/*.jar | tr "\n" ":")"
     rm -rf /tmp/t && mkdir -p /tmp/t
     javac --release 17 -proc:none -nowarn -cp "$CP" -d /tmp/t $(find src test -name "*.java")
     for t in $(cd test && find . -name "*Test.java" | sed "s|^\./||; s|\.java$||; s|/|.|g"); do java -cp "/tmp/t:$CP" "$t"; done

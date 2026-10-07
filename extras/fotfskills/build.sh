@@ -4,6 +4,7 @@
 # mixins use remap=false. Needs Prism's libraries (client SRG jar, Forge, mixin) and Pufferfish.s Skills jar:
 #   PRISM_LIBS   default C:/Users/Dylan/AppData/Roaming/PrismLauncher/libraries
 #   SERVER_DATA  default C:/Users/Dylan/Documents/Minecraft server/server-test/data  (forge universal + mods incl. puffish_skills)
+# plus client-only mods the server doesn't have, in compile-libs/ (not in git): ShoulderSurfing-Forge-1.20.1-5.2.0.jar
 set -euo pipefail
 cd "$(dirname "$0")"
 PRISM_LIBS=${PRISM_LIBS:-C:/Users/Dylan/AppData/Roaming/PrismLauncher/libraries}
@@ -14,7 +15,7 @@ MSYS_NO_PATHCONV=1 docker run --rm \
     set -e
     CP=$(find /libs -name "*.jar" ! -name "minecraft-*-client.jar" ! -name "*-extra.jar" ! -name "*-slim.jar" \
            ! -path "*/forge/1.20.1-47.4.10/*" | tr "\n" ":")
-    CP="$CP$(ls /data/libraries/net/minecraftforge/forge/1.20.1-47.4.23/forge-1.20.1-47.4.23-universal.jar):$(ls /data/mods/*.jar | tr "\n" ":")"
+    CP="$CP$(ls /data/libraries/net/minecraftforge/forge/1.20.1-47.4.23/forge-1.20.1-47.4.23-universal.jar):$(ls /data/mods/*.jar compile-libs/*.jar | tr "\n" ":")"
     rm -rf build && mkdir -p build/classes
     javac --release 17 -proc:none -nowarn -cp "$CP" -d build/classes $(find src -name "*.java")
     cp -R res/. build/classes/
