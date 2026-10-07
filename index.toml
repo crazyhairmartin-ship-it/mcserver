@@ -89,6 +89,10 @@ file = "config/fml.toml"
 hash = "7628fc0bfac9c538350fd51e9a390f5bb03f65faeb61bc9ae3541e53c614cc22"
 
 [[files]]
+file = "config/fotfskills-retrogen.json"
+hash = "e0a4271b2b0d3f8d07b3b57ef68c189adf56714cfac7a2f352fddd41b7cfda46"
+
+[[files]]
 file = "config/gravestone-client.toml"
 hash = "b8e24932dc5f41db8ccdc0d40d6241a4f12fc4366bfb646b513b72b9432aad19"
 
@@ -2650,6 +2654,11 @@ metafile = true
 [[files]]
 file = "mods/fotfmail.pw.toml"
 hash = "89b6ec853b01ca8f928e9d9454a2bcc1a6003cb5dae4390e611479a290ff32cb"
+metafile = true
+
+[[files]]
+file = "mods/fotfretrogen.pw.toml"
+hash = "d9cfa32b0aac2431533fe72529bae3ad609733843986861d33a2dae8835fec1f"
 metafile = true
 
 [[files]]
