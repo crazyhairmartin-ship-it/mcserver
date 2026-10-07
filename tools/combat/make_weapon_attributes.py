@@ -5,9 +5,10 @@
 Reads the weapon categories (docs/superpowers/specs/2026-10-03-weapons.csv, the same ones the Attack tree uses) and
 writes kubejs/data/<mod>/weapon_attributes/<item>.json for each melee weapon whose mod (or Better Combat itself) ships
 no weapon_attributes file for it. The preset follows the categories, and two_handed is set from ours, so Better
-Combat's two-handed rule (no off-hand item) matches the skills' two-handed perks. Weapons whose own data disagrees
-with our two-handed category get an override that keeps their move set and only changes two_handed. Bows, crossbows,
-thrown-only weapons, tools and magic-only items keep their normal swing.
+Combat's two-handed rule (no off-hand item) matches the skills' two-handed perks. Where a weapon's own mod already
+has Better Combat data, the mod's two-handed setting wins: the weapon's row in the CSV is updated to match (run
+tools/skills/make_weapon_tags.py afterwards). Bows, crossbows, thrown-only weapons, tools and magic-only items keep
+their normal swing.
 """
 import csv
 import json
@@ -76,34 +77,41 @@ def main():
     for old in OUT.glob('*/weapon_attributes/*.json'):
         if MARK in json.loads(old.read_text(encoding='utf-8')):
             old.unlink()
-    written, overridden, by_preset = 0, 0, {}
-    with open(CSV, encoding='utf-8') as f:
-        for row in csv.DictReader(f):
-            item = row['item']
-            types = set(row['weapon types'].split())
-            name = preset(types)
-            if ':' not in item:
-                continue
-            ns, path = item.split(':', 1)
-            target = OUT / ns / 'weapon_attributes' / f'{path}.json'
-            if item in have:
-                ours = 'two_handed' in types
-                if two_handed(have, have[item]) != ours:
-                    data = json.loads(json.dumps(have[item]))
-                    data.setdefault('attributes', {})['two_handed'] = ours
-                    target.parent.mkdir(parents=True, exist_ok=True)
-                    target.write_text(json.dumps({MARK: True, **data}, indent=2) + '\n', encoding='utf-8')
-                    overridden += 1
-                continue
-            if not name:
-                continue
-            target.parent.mkdir(parents=True, exist_ok=True)
-            target.write_text(json.dumps({MARK: True, 'parent': f'bettercombat:{name}',
-                                          'attributes': {'two_handed': 'two_handed' in types}}, indent=2) + '\n',
-                              encoding='utf-8')
-            written += 1
-            by_preset[name] = by_preset.get(name, 0) + 1
-    print(f'{written} weapons given a Better Combat move set; {overridden} mod-made ones changed to our two_handed')
+    written, synced, by_preset = 0, [], {}
+    with open(CSV, encoding='utf-8', newline='') as f:
+        reader = csv.DictReader(f)
+        fields, rows = reader.fieldnames, list(reader)
+    for row in rows:
+        item = row['item']
+        types = row['weapon types'].split()
+        if ':' not in item:
+            continue
+        if item in have:                                # the mod's own move set and two-handed setting win
+            theirs = two_handed(have, have[item])
+            if theirs != ('two_handed' in types):
+                types = [t for t in types if t != 'two_handed'] + (['two_handed'] if theirs else [])
+                row['weapon types'] = ' '.join(types)
+                synced.append(f"{item}: {'two-handed' if theirs else 'one-handed'}")
+            continue
+        name = preset(set(types))
+        if not name:
+            continue
+        ns, path = item.split(':', 1)
+        target = OUT / ns / 'weapon_attributes' / f'{path}.json'
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_text(json.dumps({MARK: True, 'parent': f'bettercombat:{name}',
+                                      'attributes': {'two_handed': 'two_handed' in types}}, indent=2) + '\n',
+                          encoding='utf-8')
+        written += 1
+        by_preset[name] = by_preset.get(name, 0) + 1
+    if synced:
+        with open(CSV, 'w', encoding='utf-8', newline='') as f:
+            w = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
+            w.writeheader()
+            w.writerows(rows)
+    print(f'{written} weapons given a Better Combat move set; {len(synced)} categories changed to match their mod:')
+    for line in synced:
+        print('  ' + line)
     for name, n in sorted(by_preset.items(), key=lambda x: -x[1]):
         print(f'  {name}: {n}')
 

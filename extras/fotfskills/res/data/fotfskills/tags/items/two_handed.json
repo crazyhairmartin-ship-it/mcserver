@@ -10,6 +10,10 @@
       "required": false
     },
     {
+      "id": "cataclysm:astrape",
+      "required": false
+    },
+    {
       "id": "cataclysm:brontes",
       "required": false
     },
@@ -19,6 +23,10 @@
     },
     {
       "id": "cataclysm:coral_bardiche",
+      "required": false
+    },
+    {
+      "id": "cataclysm:coral_spear",
       "required": false
     },
     {
@@ -62,6 +70,14 @@
       "required": false
     },
     {
+      "id": "irons_spellbooks:boreal_blade",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:claymore",
+      "required": false
+    },
+    {
       "id": "irons_spellbooks:decrepit_scythe",
       "required": false
     },
@@ -70,19 +86,23 @@
       "required": false
     },
     {
-      "id": "irons_spellbooks:lightning_rod",
+      "id": "irons_spellbooks:keeper_flamberge",
       "required": false
     },
     {
-      "id": "irons_spellbooks:pyrium_staff",
+      "id": "irons_spellbooks:legionnaire_flamberge",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:spellbreaker",
+      "required": false
+    },
+    {
+      "id": "irons_spellbooks:twilight_gale",
       "required": false
     },
     {
       "id": "mowziesmobs:wrought_axe",
-      "required": false
-    },
-    {
-      "id": "spartanweaponry:aluminum_battle_hammer",
       "required": false
     },
     {
@@ -102,7 +122,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:aluminum_lance",
+      "id": "spartanweaponry:aluminum_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:aluminum_longsword",
       "required": false
     },
     {
@@ -122,10 +146,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:bronze_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:bronze_battleaxe",
       "required": false
     },
@@ -142,7 +162,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:bronze_lance",
+      "id": "spartanweaponry:bronze_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:bronze_longsword",
       "required": false
     },
     {
@@ -162,10 +186,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:constantan_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:constantan_battleaxe",
       "required": false
     },
@@ -182,7 +202,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:constantan_lance",
+      "id": "spartanweaponry:constantan_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:constantan_longsword",
       "required": false
     },
     {
@@ -226,7 +250,7 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:copper_lance",
+      "id": "spartanweaponry:copper_longsword",
       "required": false
     },
     {
@@ -270,7 +294,7 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:diamond_lance",
+      "id": "spartanweaponry:diamond_longsword",
       "required": false
     },
     {
@@ -290,10 +314,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:electrum_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:electrum_battleaxe",
       "required": false
     },
@@ -310,7 +330,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:electrum_lance",
+      "id": "spartanweaponry:electrum_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:electrum_longsword",
       "required": false
     },
     {
@@ -354,7 +378,7 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:golden_lance",
+      "id": "spartanweaponry:golden_longsword",
       "required": false
     },
     {
@@ -374,10 +398,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:invar_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:invar_battleaxe",
       "required": false
     },
@@ -394,7 +414,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:invar_lance",
+      "id": "spartanweaponry:invar_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:invar_longsword",
       "required": false
     },
     {
@@ -438,7 +462,7 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:iron_lance",
+      "id": "spartanweaponry:iron_longsword",
       "required": false
     },
     {
@@ -458,10 +482,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:lead_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:lead_battleaxe",
       "required": false
     },
@@ -478,7 +498,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:lead_lance",
+      "id": "spartanweaponry:lead_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:lead_longsword",
       "required": false
     },
     {
@@ -526,7 +550,7 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:netherite_lance",
+      "id": "spartanweaponry:netherite_longsword",
       "required": false
     },
     {
@@ -546,10 +570,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:nickel_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:nickel_battleaxe",
       "required": false
     },
@@ -566,7 +586,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:nickel_lance",
+      "id": "spartanweaponry:nickel_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:nickel_longsword",
       "required": false
     },
     {
@@ -586,10 +610,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:platinum_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:platinum_battleaxe",
       "required": false
     },
@@ -606,7 +626,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:platinum_lance",
+      "id": "spartanweaponry:platinum_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:platinum_longsword",
       "required": false
     },
     {
@@ -626,10 +650,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:silver_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:silver_battleaxe",
       "required": false
     },
@@ -646,7 +666,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:silver_lance",
+      "id": "spartanweaponry:silver_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:silver_longsword",
       "required": false
     },
     {
@@ -666,10 +690,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:steel_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:steel_battleaxe",
       "required": false
     },
@@ -686,7 +706,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:steel_lance",
+      "id": "spartanweaponry:steel_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:steel_longsword",
       "required": false
     },
     {
@@ -726,7 +750,7 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:stone_lance",
+      "id": "spartanweaponry:stone_longsword",
       "required": false
     },
     {
@@ -746,10 +770,6 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:tin_battle_hammer",
-      "required": false
-    },
-    {
       "id": "spartanweaponry:tin_battleaxe",
       "required": false
     },
@@ -766,7 +786,11 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:tin_lance",
+      "id": "spartanweaponry:tin_katana",
+      "required": false
+    },
+    {
+      "id": "spartanweaponry:tin_longsword",
       "required": false
     },
     {
@@ -810,7 +834,7 @@
       "required": false
     },
     {
-      "id": "spartanweaponry:wooden_lance",
+      "id": "spartanweaponry:wooden_longsword",
       "required": false
     },
     {
