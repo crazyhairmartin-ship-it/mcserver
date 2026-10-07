@@ -3,10 +3,6 @@
   "values": [
     "minecraft:crossbow",
     {
-      "id": "ars_nouveau:spell_crossbow",
-      "required": false
-    },
-    {
       "id": "cataclysm:laser_gatling",
       "required": false
     },

@@ -14,6 +14,11 @@ Status: plan, nothing applied. Builds on the cloud session's spec (`2026-10-06-r
   designs of its doors and trapdoors stay as they are. `tools/empyreal/recolor_empyreal.py` writes the textures to
   `kubejs/assets/biomesoplenty/`. Every Compat builds its furniture textures from the planks, so empyreal furniture
   follows the new colour.
+- **Same update as the unexplored-chunk reset (issue #1).** Unvisited chunks are deleted and regenerate without Ars,
+  so most archwood forests (about 1,000 chunks) simply become whatever the new worldgen puts there. Only visited chunks
+  keep their trees and convert through the aliases (archwood -> empyreal). The `ars_nouveau:archwood_forest` biome id
+  stays valid via `kubejs/data/ars_nouveau/worldgen/biome/archwood_forest.json` (a copy of vanilla forest) and is in
+  the fairies' magical-forest tier, so converted groves get fairies and fireflies.
 - **Archwood chests:** Dylan swaps his by hand before the update. No block-entity conversion.
 
 ## Block and item mapping (fotfskills RemovedBlocks, same as Tinkers)

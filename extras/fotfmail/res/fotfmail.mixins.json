@@ -7,17 +7,14 @@
     "LockerBlockMixin",
     "ServerGamePacketListenerImplMixin",
     "EnderMailmanEntityMixin",
-    "EntityBookwyrmMixin",
     "MobAccessor",
     "EnderMailmanGoalsMixin",
-    "RandomStorageVisitGoalMixin",
     "NightmareFireBlockMixin",
     "NightmareWalkFireMixin",
     "PackageMenuMixin",
     "PackageBlockEntityMixin",
     "PackageBlockMixin",
     "FireBlockMixin",
-    "StorageTerminalMenuAccessor",
     "FarmBlockMixin"
   ],
   "injectors": {
@@ -25,7 +22,6 @@
   },
   "client": [
     "LayerPetOverlaysMixin",
-    "AbstractStorageTerminalScreenMixin",
     "BookEditScreenMixin",
     "PackageScreenMixin",
     "ScreenWrapperMixin",

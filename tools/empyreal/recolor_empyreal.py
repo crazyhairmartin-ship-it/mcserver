@@ -6,7 +6,7 @@ Archwood is being replaced by empyreal wood (docs/superpowers/specs/2026-10-07-r
 wood changes: planks and everything made from them (doors, trapdoors, signs, boats), the log ends' inner rings and
 stripped logs. Bark and leaves keep empyreal's own colours. In CIELAB a pixel keeps its offset from empyreal's plank
 average (so grain, shading and door/trapdoor patterns stay), and the average moves BLEND of the way to the archwood
-planks' average (#9887b6, kubejs/assets/ars_nouveau). Only pixels close to empyreal's inner-wood palette change, so
+planks' average (#9887b6, kept in tools/empyreal/archwood). Only pixels close to empyreal's inner-wood palette change, so
 bark rings, metal, rope and chest parts keep their colours.
 
 Writes kubejs/assets/biomesoplenty/textures/... and tools/empyreal/preview.png (empyreal before and after).
@@ -21,7 +21,7 @@ from PIL import Image
 
 PACK = Path(__file__).resolve().parents[2]
 OUT = PACK / 'kubejs' / 'assets' / 'biomesoplenty' / 'textures'
-OUR_ARCHWOOD = PACK / 'kubejs' / 'assets' / 'ars_nouveau' / 'textures'
+OUR_ARCHWOOD = Path(__file__).parent / 'archwood'          # the pack's recoloured archwood textures
 
 BLEND = 0.7         # how far empyreal moves towards archwood: 0 = unchanged, 1 = archwood's colour
 # material: (empyreal texture that defines it, archwood texture whose colours it moves towards)
@@ -100,7 +100,8 @@ def recolor(src, materials):
 def main():
     mods = Path(sys.argv[1]) if len(sys.argv) > 1 else PACK.parent / 'server' / 'data' / 'mods'
     bop = zipfile.ZipFile(next(mods.glob('BiomesOPlenty*.jar')))
-    ars = zipfile.ZipFile(next(mods.glob('ars_nouveau*.jar')))
+    ars_jar = next(mods.glob('ars_nouveau*.jar'), None)                 # only needed for archwood we don't keep
+    ars = zipfile.ZipFile(ars_jar) if ars_jar else None
 
     def archwood(path):
         ours = OUR_ARCHWOOD / path

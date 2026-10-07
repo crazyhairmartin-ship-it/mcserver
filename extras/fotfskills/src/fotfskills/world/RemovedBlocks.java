@@ -36,6 +36,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 /**
  * Blocks and items from mods the pack dropped (Paragliders, Simply Swords, Tinkers' Construct) that are still in the live world.
+ * Ars Nouveau follows res/fotfskills/removed_ids_ars.txt (archwood becomes empyreal, the rest vanilla look-alikes).
  * Tinkers' natural blocks (slime islands, geodes, cobalt ore) follow the table in res/fotfskills/removed_ids.txt
  * (tools/removed/make_tinkers_remap.py) and become vanilla blocks; anything else from Tinkers is dropped.
  * On world load their ids are remapped: the Runic Forge becomes an anvil, and the statues become hidden placeholder
@@ -91,23 +92,34 @@ public final class RemovedBlocks {
         return goddessSpots;
     }
 
-    /** "block"/"item" -> old id -> replacement id, from res/fotfskills/removed_ids.txt. */
-    private static Map<String, Map<ResourceLocation, ResourceLocation>> table;
+    /** The mapping tables (tools/removed/make_*_remap.py): `block|item old new [mod that must be gone]`. */
+    private static final String[] TABLES = {"/fotfskills/removed_ids.txt", "/fotfskills/removed_ids_ars.txt"};
 
-    private static Map<ResourceLocation, ResourceLocation> table(String kind) {
+    private record Remap(ResourceLocation to, String goneMod) {
+    }
+
+    /** "block"/"item" -> old id -> replacement, from the TABLES files. */
+    private static Map<String, Map<ResourceLocation, Remap>> table;
+
+    private static Map<ResourceLocation, Remap> table(String kind) {
         if (table == null) {
-            Map<String, Map<ResourceLocation, ResourceLocation>> t = new java.util.HashMap<>();
-            try (var in = RemovedBlocks.class.getResourceAsStream("/fotfskills/removed_ids.txt")) {
-                if (in != null) {
+            Map<String, Map<ResourceLocation, Remap>> t = new java.util.HashMap<>();
+            for (String file : TABLES) {
+                try (var in = RemovedBlocks.class.getResourceAsStream(file)) {
+                    if (in == null) {
+                        continue;
+                    }
                     for (String line : new String(in.readAllBytes(), java.nio.charset.StandardCharsets.UTF_8).split("\n")) {
                         String[] f = line.trim().split(" ");
-                        if (f.length == 3 && !f[0].startsWith("#")) {
-                            t.computeIfAbsent(f[0], k -> new java.util.HashMap<>()).put(new ResourceLocation(f[1]), new ResourceLocation(f[2]));
+                        if ((f.length == 3 || f.length == 4) && !f[0].startsWith("#")) {
+                            ResourceLocation from = new ResourceLocation(f[1]);
+                            t.computeIfAbsent(f[0], k -> new java.util.HashMap<>())
+                                    .put(from, new Remap(new ResourceLocation(f[2]), f.length == 4 ? f[3] : from.m_135827_()));
                         }
                     }
+                } catch (java.io.IOException | RuntimeException ignored) {
+                    // a broken table: skip it
                 }
-            } catch (java.io.IOException | RuntimeException ignored) {
-                // no table: nothing to remap
             }
             table = t;
         }
@@ -116,9 +128,9 @@ public final class RemovedBlocks {
 
     /** Alias every table entry whose mod is gone to its replacement, when the replacement exists. */
     private static <T> void aliasTable(net.minecraftforge.registries.ForgeRegistry<T> reg, String kind) {
-        table(kind).forEach((from, to) -> {
-            if (!ModList.get().isLoaded(from.m_135827_()) && reg.containsKey(to)) {
-                reg.addAlias(from, to);
+        table(kind).forEach((from, remap) -> {
+            if (!ModList.get().isLoaded(remap.goneMod()) && reg.containsKey(remap.to())) {
+                reg.addAlias(from, remap.to());
             }
         });
     }
@@ -209,15 +221,15 @@ public final class RemovedBlocks {
             }
         }
         for (MissingMappingsEvent.Mapping<Block> m : event.getAllMappings(ForgeRegistries.Keys.BLOCKS)) {
-            ResourceLocation to = table("block").get(m.getKey());
-            if (to != null && ForgeRegistries.BLOCKS.containsKey(to)) {
-                m.remap(ForgeRegistries.BLOCKS.getValue(to));
+            Remap to = table("block").get(m.getKey());
+            if (to != null && ForgeRegistries.BLOCKS.containsKey(to.to())) {
+                m.remap(ForgeRegistries.BLOCKS.getValue(to.to()));
             }
         }
         for (MissingMappingsEvent.Mapping<Item> m : event.getAllMappings(ForgeRegistries.Keys.ITEMS)) {
-            ResourceLocation to = table("item").get(m.getKey());
-            if (to != null && ForgeRegistries.ITEMS.containsKey(to)) {
-                m.remap(ForgeRegistries.ITEMS.getValue(to));
+            Remap to = table("item").get(m.getKey());
+            if (to != null && ForgeRegistries.ITEMS.containsKey(to.to())) {
+                m.remap(ForgeRegistries.ITEMS.getValue(to.to()));
             }
         }
     }

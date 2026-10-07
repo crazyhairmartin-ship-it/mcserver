@@ -64,7 +64,7 @@ ENTRIES = [
         text('Lost this book? Type $(l)/guide$() in chat for a new copy.$(br2)Stuck on anything? Ask in chat. Someone has probably figured it out already.', 'Tip'),
     ]),
     ('getting_started', 'books', 'More Guide Books', 'minecraft:bookshelf', [
-        text('Big mods have their own guide books. Type a command in chat to get one:$(li)$(l)/guide unicorn$(): unicorns$(li)$(l)/guide spells$(): Iron\'s Spells$(li)$(l)/guide ars$(): Ars Nouveau$(li)$(l)/guide animals$(): Alex\'s Mobs$(li)$(l)/guide caves$(): Alex\'s Caves$(li)$(l)/guide cookbook$(): every food and its recipes, by cooking station'),
+        text('Big mods have their own guide books. Type a command in chat to get one:$(li)$(l)/guide unicorn$(): unicorns$(li)$(l)/guide spells$(): Iron\'s Spells$(li)$(l)/guide animals$(): Alex\'s Mobs$(li)$(l)/guide caves$(): Alex\'s Caves$(li)$(l)/guide cookbook$(): every food and its recipes, by cooking station'),
     ]),
     ('getting_started', 'first_day', 'Your First Day', 'minecraft:oak_log', [
         text('A good first day:$(br)$(li)Punch trees, make tools$(li)Find a village for food and a $(l)Waystone$()$(li)Make a bed before night$(li)Claim your base (see $(l)Your Base$())'),
@@ -165,12 +165,9 @@ ENTRIES = [
         text('The pack\'s spell system. Find spell $(l)scrolls$() in dungeons, put them in a $(l)spell book$(), then cast.$(br2)$(l)V$() casts your spell, $(l)R$() opens the spell wheel.'),
         spot('patchouli:guide_book{"patchouli:book":"irons_spellbooks:iss_guide_book"}', 'The official guidebook explains schools of magic, gear and bosses. Get one with $(l)/guide spells$().'),
     ]),
-    ('magic', 'ars_nouveau', 'Ars Nouveau', 'ars_nouveau:worn_notebook', [
-        text('Ars magic without the spells: gather $(l)source$(), build its machines, perform rituals and bind familiars and helpers that farm, carry items and craft for you. (Spellcasting is Iron\'s job here.)$(br2)Ars mage armour and mana enchantments still raise your mana.'),
-        craft('ars_nouveau:worn_notebook', 'Start with the $(l)Worn Notebook$(): craft one or type $(l)/guide ars$(). It teaches everything, step by step.'),
-    ]),
-    ('magic', 'which_magic', 'Which Magic?', 'minecraft:enchanted_book', [
-        text('$(l)Iron\'s Spells$() is where you cast spells.$(br2)$(l)Ars Nouveau$() is for source, rituals and helpers for your base, and its gear adds to your one mana bar.$(br2)Both feed the Magic skill tree.'),
+    ('magic', 'fairies', 'Fairies', 'fays_fairies:fairy_bottle', [
+        text('Little $(l)fairies$() drift through forests, most of all in the $(l)Twilight Forest$(), less often in magical forests like Dark Forests and old growth woods.$(br2)Give one an $(l)amethyst shard$() to tame her. Feed glowstone dust to heal or breed them.'),
+        text('A tamed fairy follows you and slowly $(l)heals$() you while you\'re hurt.$(br2)The $(l)Fae Bond$() perks in the Magic tree give a chance that a fairy saves you from a killing blow.', 'Fairy Friends'),
     ]),
 
     # ---------- Combat & Gear ----------
