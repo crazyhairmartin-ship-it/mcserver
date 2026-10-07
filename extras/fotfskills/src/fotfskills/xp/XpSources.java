@@ -21,6 +21,7 @@ public final class XpSources {
         source("move", "meters_per_xp");
         source("harvest", "experience");
         source("forage_pick", "experience");
+        source("net_fish", "experience");
         SkillsAPI.registerExperienceSource(new ResourceLocation("fotfskills", "break"), context -> context.getData()
                 .andThen(data -> {
                     try {
