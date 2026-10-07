@@ -18,7 +18,7 @@ public final class SpinAnimation {
         }
         Entity entity = mc.f_91073_.m_6815_(entityId);
         if (entity instanceof net.bettercombat.client.animation.PlayerAttackAnimatable animatable) {
-            animatable.playAttackAnimation("bettercombat:two_handed_spin", net.bettercombat.logic.AnimatedHand.TWO_HANDED, 14f, 0.5f);
+            animatable.playAttackAnimation("bettercombat:two_handed_spin", net.bettercombat.logic.AnimatedHand.TWO_HANDED, 24f, 0.35f);
         }
     }
 }

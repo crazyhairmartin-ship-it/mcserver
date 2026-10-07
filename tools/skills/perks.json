@@ -512,7 +512,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "light_speed",
-          "value": 0.04
+          "value": 0.08
         }
       }
     ],
@@ -1194,12 +1194,12 @@
         }
       }
     ],
-    "hook_shot": [
+    "trap_haul": [
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "hook_shot",
-          "value": 1
+          "perk": "trap_haul",
+          "value": 0.3334
         }
       }
     ],

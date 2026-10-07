@@ -995,13 +995,13 @@
       }
     ]
   },
-  "hook_shot_1": {
-    "title": "Hook Shot",
-    "description": "Your rod yanks mobs harder and deals 2 damage",
+  "trap_haul_1": {
+    "title": "Trap Haul",
+    "description": "+33% chance that each fish you take from a fishing trap is doubled (always at rank 3)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:tripwire_hook"
+        "item": "lilis_lucky_lures:fish_trap"
       }
     },
     "frame": {
@@ -1016,19 +1016,19 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "hook_shot",
-          "value": 1
+          "perk": "trap_haul",
+          "value": 0.3334
         }
       }
     ]
   },
-  "hook_shot_2": {
-    "title": "Hook Shot",
-    "description": "Your rod yanks mobs harder and deals 2 damage",
+  "trap_haul_2": {
+    "title": "Trap Haul",
+    "description": "+66% chance that each fish you take from a fishing trap is doubled (always at rank 3)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:tripwire_hook"
+        "item": "lilis_lucky_lures:fish_trap"
       }
     },
     "frame": {
@@ -1043,19 +1043,19 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "hook_shot",
-          "value": 1
+          "perk": "trap_haul",
+          "value": 0.3334
         }
       }
     ]
   },
-  "hook_shot_3": {
-    "title": "Hook Shot",
-    "description": "Your rod yanks mobs harder and deals 2 damage",
+  "trap_haul_3": {
+    "title": "Trap Haul",
+    "description": "+99% chance that each fish you take from a fishing trap is doubled (always at rank 3)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "minecraft:tripwire_hook"
+        "item": "lilis_lucky_lures:fish_trap"
       }
     },
     "frame": {
@@ -1070,8 +1070,8 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "hook_shot",
-          "value": 1
+          "perk": "trap_haul",
+          "value": 0.3334
         }
       }
     ]

@@ -74,6 +74,7 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SummonPerks());
         if (ModList.get().isLoaded("lilis_lucky_lures")) {
             MinecraftForge.EVENT_BUS.register(new fotfskills.perk.NetFishing());
+            MinecraftForge.EVENT_BUS.register(new fotfskills.perk.TrapHaul());
         }
         if (ModList.get().isLoaded("butterflies")) {
             MinecraftForge.EVENT_BUS.register(new fotfskills.perk.NetReach());

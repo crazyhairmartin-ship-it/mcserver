@@ -43,6 +43,8 @@ public final class FairyCompanion {
     private static final long SAVE_COOLDOWN = 12000;
     private static final int ORBIT_TICKS = 40;
     private static final String FAIRY_TAG = "FotfFairy";
+    private static final String MODE_TAG = "FotfFairyMode";
+    private static final int FOLLOW = 0, SHOULDER = 1, WAIT = 2;
     private final Map<LivingEntity, Long> lastHeal = new WeakHashMap<>();
     private final Map<LivingEntity, Long> lastSave = new WeakHashMap<>();
     private final List<Orbit> orbits = new ArrayList<>();
@@ -74,6 +76,10 @@ public final class FairyCompanion {
 
     @SubscribeEvent
     public void onFairyTick(LivingEvent.LivingTickEvent event) {
+        if (event.getEntity() instanceof TamableAnimal shoulder && !shoulder.m_9236_().f_46443_ && isFairy(shoulder)
+                && data(shoulder).m_128451_(MODE_TAG) == SHOULDER) {
+            hoverAtShoulder(shoulder);
+        }
         if (!(event.getEntity() instanceof TamableAnimal fairy) || !(fairy.m_9236_() instanceof ServerLevel level)
                 || fairy.f_19797_ % 20 != 0 || !isFairy(fairy) || fairy.m_21827_()
                 || !(fairy.m_269323_() instanceof ServerPlayer owner) || owner.m_9236_() != level
@@ -88,6 +94,29 @@ public final class FairyCompanion {
         owner.m_5634_(1.0f);
         level.m_8767_(ParticleTypes.f_175827_, owner.m_20185_(), owner.m_20186_() + 1.0, owner.m_20189_(), 6, 0.3, 0.4, 0.3, 0.02);
         level.m_6263_(null, fairy.m_20185_(), fairy.m_20186_(), fairy.m_20189_(), SoundEvents.f_144243_, SoundSource.NEUTRAL, 0.4f, 1.8f);
+    }
+
+    private static net.minecraft.nbt.CompoundTag data(Entity entity) {
+        return ((net.minecraftforge.common.extensions.IForgeEntity) (Object) entity).getPersistentData();
+    }
+
+    /** Close follow: just behind the owner's left shoulder, turning with them. Owner gone: back to normal following. */
+    private static void hoverAtShoulder(TamableAnimal fairy) {
+        if (!(fairy.m_269323_() instanceof ServerPlayer owner) || owner.m_9236_() != fairy.m_9236_() || !owner.m_6084_()) {
+            data(fairy).m_128405_(MODE_TAG, FOLLOW);
+            fairy.m_20242_(false);
+            return;
+        }
+        double yaw = Math.toRadians(owner.f_20883_);              // body yaw: shoulders, not where the head looks
+        double leftX = Math.cos(yaw), leftZ = Math.sin(yaw);       // left of the facing direction
+        double backX = Math.sin(yaw), backZ = -Math.cos(yaw);      // behind
+        double x = owner.m_20185_() + leftX * 0.55 + backX * 0.35;
+        double z = owner.m_20189_() + leftZ * 0.55 + backZ * 0.35;
+        double y = owner.m_20186_() + owner.m_20206_() * 0.85 + Math.sin(fairy.f_19797_ / 8.0) * 0.05;   // a gentle bob
+        fairy.m_6034_(x, y, z);
+        fairy.m_20256_(net.minecraft.world.phys.Vec3.f_82478_);
+        fairy.m_146922_(owner.f_20883_);
+        fairy.f_20883_ = owner.f_20883_;
     }
 
     @SubscribeEvent(priority = EventPriority.HIGHEST)
@@ -132,12 +161,16 @@ public final class FairyCompanion {
         net.minecraft.world.entity.player.Player player = event.getEntity();
         net.minecraft.world.item.ItemStack held = player.m_21120_(event.getHand());
         if (held.m_41619_()) {
-            if (!fairy.m_9236_().f_46443_) {
-                boolean sit = !fairy.m_21827_();
-                fairy.m_21839_(sit);
-                fairy.m_21837_(sit);
+            if (!fairy.m_9236_().f_46443_) {                // follow -> close follow (left shoulder) -> wait -> follow
+                int mode = fairy.m_21827_() ? WAIT : data(fairy).m_128451_(MODE_TAG);
+                int next = mode == FOLLOW ? SHOULDER : mode == SHOULDER ? WAIT : FOLLOW;
+                data(fairy).m_128405_(MODE_TAG, next);
+                fairy.m_21839_(next == WAIT);
+                fairy.m_21837_(next == WAIT);
+                fairy.m_20242_(next == SHOULDER);
                 fairy.m_21573_().m_26573_();
-                player.m_5661_(Component.m_237113_(sit ? "§dYour fairy will wait here." : "§dYour fairy follows you."), true);
+                player.m_5661_(Component.m_237113_(next == WAIT ? "§dYour fairy will wait here."
+                        : next == SHOULDER ? "§dYour fairy stays close, at your shoulder." : "§dYour fairy follows you."), true);
             }
             event.setCanceled(true);
             event.setCancellationResult(net.minecraft.world.InteractionResult.SUCCESS);

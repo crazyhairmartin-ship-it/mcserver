@@ -604,7 +604,7 @@
   },
   "light_weapons_1": {
     "title": "Light Weapons",
-    "description": "Daggers, rapiers and short blades +4% attack speed",
+    "description": "Dual-wielding light weapons (one in each hand): +8% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -624,14 +624,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "light_speed",
-          "value": 0.04
+          "value": 0.08
         }
       }
     ]
   },
   "light_weapons_2": {
     "title": "Light Weapons",
-    "description": "Daggers, rapiers and short blades +8% attack speed",
+    "description": "Dual-wielding light weapons (one in each hand): +16% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -651,14 +651,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "light_speed",
-          "value": 0.04
+          "value": 0.08
         }
       }
     ]
   },
   "light_weapons_3": {
     "title": "Light Weapons",
-    "description": "Daggers, rapiers and short blades +12% attack speed",
+    "description": "Dual-wielding light weapons (one in each hand): +24% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -678,7 +678,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "light_speed",
-          "value": 0.04
+          "value": 0.08
         }
       }
     ]

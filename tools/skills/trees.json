@@ -569,7 +569,7 @@
     {
       "id": "fish",
       "name": "Fishing",
-      "xp": "Any catch, Aquaculture included, plus 5 XP per fishing-net catch.",
+      "xp": "Any catch, Aquaculture included, plus 5 XP per fishing-net catch and per fish taken from a fishing trap.",
       "icon": "minecraft:fishing_rod",
       "background": "minecraft:textures/block/prismarine.png",
       "nodes": [
@@ -674,9 +674,9 @@
         },
         {
           "t": 4,
-          "name": "Hook Shot",
+          "name": "Trap Haul",
           "r": 3,
-          "d": "Your rod yanks mobs harder and deals 2 damage",
+          "d": "+33% chance per rank that each fish you take from a fishing trap is doubled (always at rank 3)",
           "c": 1,
           "b": null,
           "cap": false,
@@ -1275,7 +1275,7 @@
           "t": 5,
           "name": "Flurry",
           "r": 1,
-          "d": "Every 5th hit strikes twice",
+          "d": "The 5th attack of a combo strikes twice",
           "c": 3,
           "b": "B",
           "cap": true,
@@ -1720,7 +1720,7 @@
           "t": 2,
           "name": "Light Weapons",
           "r": 3,
-          "d": "Daggers, rapiers and short blades +4% attack speed per rank",
+          "d": "Dual-wielding light weapons (one in each hand): +8% attack speed per rank",
           "c": 1,
           "b": null,
           "cap": false,

@@ -59,7 +59,7 @@ public final class ConditionalStats {
         Modifiers.set(player, Attributes.f_22276_, "health", player.m_36324_().m_38722_() > 10 ? Perks.get(player, "iron_stomach") : 0,
                 AttributeModifier.Operation.ADDITION);
         double attackSpeed = (Weapons.is(held, "light") || Weapons.is(held, "sword") ? Perks.get(player, "duelist_speed") : 0)
-                + (Weapons.is(held, "light") ? Perks.get(player, "light_speed") : 0);
+                + (Weapons.is(held, "light") && Weapons.is(player.m_21206_(), "light") ? Perks.get(player, "light_speed") : 0);   // dual-wielding light weapons
         Modifiers.set(player, Attributes.f_22283_, "attack_speed", attackSpeed, AttributeModifier.Operation.MULTIPLY_TOTAL);
 
         boolean staff = Weapons.is(held, "magic");

@@ -97,9 +97,8 @@ public final class WeaponPerks {
                 state.lastCast = -100000;          // the next hit only
             }
             amount *= (float) (1 + pct);
-            if (swing && Perks.get(player, "flurry") > 0 && state.flurry.hit(now) == 5) {
-                amount *= 2;                        // Flurry: every 5th quick hit strikes twice
-                state.flurry.reset();
+            if (swing && Perks.get(player, "flurry") > 0 && nthOfCombo(player, state.flurry, 5, now)) {
+                amount *= 2;                        // Flurry: the combo's 5th attack strikes twice
             }
             if (Weapons.is(weapon, "blunt") && Perks.get(player, "crush_armor") > 0) {
                 crush(target, Perks.get(player, "crush_armor"), now);
@@ -115,7 +114,7 @@ public final class WeaponPerks {
             if (cleave > 0 && Weapons.twoHanded(player, weapon)) {
                 splash(player, target, target, (float) (amount * cleave), 2.5);
             }
-            if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe") && thirdOfCombo(player, state, now)) {
+            if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe") && nthOfCombo(player, state.reaper, 3, now)) {
                 splash(player, player, target, amount, 3);   // Reaper's Due: the combo's 3rd attack spins through every
                                                               // hostile mob within 3 blocks at full damage
                 reaperSpin(player);
@@ -329,25 +328,29 @@ public final class WeaponPerks {
     }
 
     /** The 3rd attack of a Better Combat combo (and the 6th, 9th...); without Better Combat, every 3rd swing in a row. */
-    private static boolean thirdOfCombo(ServerPlayer player, CombatState state, long now) {
+    /**
+     * The nth attack of a Better Combat combo (and every nth after it in the same combo); without Better Combat, every
+     * nth hit counted by the fallback streak.
+     */
+    private static boolean nthOfCombo(ServerPlayer player, Streak fallback, int n, long now) {
         if (net.minecraftforge.fml.ModList.get().isLoaded("bettercombat")) {
             int step = ComboStep.of(player);
             if (step >= 0) {
-                return step % 3 == 2;
+                return step % n == n - 1;
             }
         }
-        if (state.reaper.hit(now) == 3) {
-            state.reaper.reset();
+        if (fallback.hit(now) == n) {
+            fallback.reset();
             return true;
         }
         return false;
     }
 
-    /** The Reaper's Due finisher: a ring of sweeps, the sweep sound, and a spin everyone nearby sees. */
+    /** The Reaper's Due finisher: a few sweeps around you, the sweep sound, and a spin everyone nearby sees. */
     private static void reaperSpin(ServerPlayer player) {
         if (player.m_9236_() instanceof net.minecraft.server.level.ServerLevel level) {
-            for (int i = 0; i < 8; i++) {
-                double a = i * Math.PI / 4;
+            for (int i = 0; i < 4; i++) {
+                double a = i * Math.PI / 2 + Math.PI / 4;
                 level.m_8767_(net.minecraft.core.particles.ParticleTypes.f_123766_, player.m_20185_() + Math.cos(a) * 2,
                         player.m_20186_() + 1, player.m_20189_() + Math.sin(a) * 2, 1, 0, 0, 0, 0);
             }
