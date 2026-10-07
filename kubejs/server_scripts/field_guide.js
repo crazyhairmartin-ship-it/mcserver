@@ -17,7 +17,6 @@ let GUIDE_BOOKS = {
   unicorn: patchouliBook('ultimate_unicorn_mod:unicorn_guide'),
   spells: patchouliBook('irons_spellbooks:iss_guide_book'),
   ars: () => Item.of('ars_nouveau:worn_notebook'),
-  music: () => Item.of('mimi:guide'),
   animals: () => Item.of('alexsmobs:animal_dictionary'),
   caves: () => Item.of('alexscaves:cave_book'),
   cookbook: patchouliBook('patchouli:fotf_cookbook'),

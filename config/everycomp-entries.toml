@@ -55,12 +55,6 @@
 			hellbark = true
 			empyreal = true
 
-		[types.wood_type.tconstruct]
-			greenheart = true
-			skyroot = true
-			bloodshroom = true
-			enderbark = true
-
 		[types.wood_type.alexscaves]
 			pewen = true
 			thornwood = true
@@ -156,11 +150,6 @@
 			red_archwood = true
 			purple_archwood = true
 			green_archwood = true
-
-		[types.leaves_type.tconstruct]
-			earth_slime = true
-			sky_slime = true
-			ender_slime = true
 
 		[types.leaves_type.alexscaves]
 			ancient = true

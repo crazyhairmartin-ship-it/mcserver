@@ -80,7 +80,7 @@ def hidden_items():
     hidden = set(js_list(trimmed, 'TRIMMED_ITEMS')) | set(js_list(dupes, 'HIDDEN_ITEMS'))
     for items in re.findall(r'items: \[([^\]]*)\]', dupes):
         hidden |= set(re.findall(r"'([^']+)'", items)[1:])
-    return hidden, set(js_list(trimmed, 'TINKERS_KEEP'))
+    return hidden
 
 
 def read_jars(mods):
@@ -119,8 +119,7 @@ def hand_written(previous):
 def main():
     mods = sys.argv[1] if len(sys.argv) > 1 else os.path.join(PACK, '..', 'server', 'data', 'mods')
     names = read_jars(mods)
-    hidden, tinkers_keep = hidden_items()
-    hidden |= {i for i, _ in names.values() if i.startswith('tconstruct:') and i not in tinkers_keep}
+    hidden = hidden_items()
     hidden |= set(json.load(open(NAMES, encoding='utf-8')).get('skip', []))
     previous = json.load(open(MANAGED)) if os.path.exists(MANAGED) else []
     for key, value in hand_written(previous).items():  # the pack's own renames are the names players see

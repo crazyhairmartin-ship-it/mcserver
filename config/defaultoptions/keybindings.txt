@@ -44,13 +44,6 @@ key_key.climbdown.desc:key.keyboard.unknown:NONE
 key_key.enderlaunch.desc:key.mouse.left:NONE
 key_key.rocket.desc:key.mouse.left:NONE
 key_key.slide.desc:key.keyboard.left.shift:NONE
-key_key.mimi.midi.gui.filecaster:key.keyboard.unknown:NONE
-key_key.mimi.midi.gui.transmitter:key.keyboard.unknown:NONE
-key_key.mimi.midi.gui.settings:key.keyboard.unknown:NONE
-key_key.mimi.midi.alloff:key.keyboard.unknown:NONE
-key_key.mimi.midi.gui.main:key.keyboard.j:NONE
-key_key.mimi.midi.gui.off:key.keyboard.unknown:NONE
-key_key.mimi.midi.gui.seat:key.keyboard.unknown:NONE
 key_key.immersive_aircraft.fallback_control_left:key.keyboard.unknown:NONE
 key_key.immersive_aircraft.fallback_control_right:key.keyboard.unknown:NONE
 key_key.immersive_aircraft.fallback_control_forward:key.keyboard.unknown:NONE
@@ -150,8 +143,6 @@ key_key.ars_nouveau.qc9:key.keyboard.unknown:NONE
 key_key.ars_nouveau.qc10:key.keyboard.unknown:NONE
 key_key.ars_nouveau.familiar_toggle:key.keyboard.unknown:NONE
 key_rainbows.key.reload_rainbow_configs:key.keyboard.unknown:NONE
-key_key.tconstruct.helmet_interact:key.keyboard.unknown:NONE
-key_key.tconstruct.leggings_interact:key.keyboard.unknown:NONE
 key_key.special_ability:key.keyboard.z:NONE
 key_key.push_to_talk:key.keyboard.unknown:NONE
 key_key.whisper:key.keyboard.unknown:NONE
@@ -226,3 +217,4 @@ key_key.irons_spellbooks.spell_quick_cast_15:key.keyboard.unknown:NONE
 key_cos.key.opencosarmorinventory:key.keyboard.unknown:NONE
 key_gui.xaero_pac_key_open_menu:key.keyboard.apostrophe:NONE
 key_key.camping.open:key.keyboard.unknown:NONE
+key_key.weaponmaster_ydm.opengui:key.keyboard.unknown:NONE

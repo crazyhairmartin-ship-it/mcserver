@@ -64,7 +64,7 @@ ENTRIES = [
         text('Lost this book? Type $(l)/guide$() in chat for a new copy.$(br2)Stuck on anything? Ask in chat. Someone has probably figured it out already.', 'Tip'),
     ]),
     ('getting_started', 'books', 'More Guide Books', 'minecraft:bookshelf', [
-        text('Big mods have their own guide books. Type a command in chat to get one:$(li)$(l)/guide unicorn$(): unicorns$(li)$(l)/guide spells$(): Iron\'s Spells$(li)$(l)/guide ars$(): Ars Nouveau$(li)$(l)/guide animals$(): Alex\'s Mobs$(li)$(l)/guide caves$(): Alex\'s Caves$(li)$(l)/guide music$(): MIMI$(li)$(l)/guide cookbook$(): every food and its recipes, by cooking station'),
+        text('Big mods have their own guide books. Type a command in chat to get one:$(li)$(l)/guide unicorn$(): unicorns$(li)$(l)/guide spells$(): Iron\'s Spells$(li)$(l)/guide ars$(): Ars Nouveau$(li)$(l)/guide animals$(): Alex\'s Mobs$(li)$(l)/guide caves$(): Alex\'s Caves$(li)$(l)/guide cookbook$(): every food and its recipes, by cooking station'),
     ]),
     ('getting_started', 'first_day', 'Your First Day', 'minecraft:oak_log', [
         text('A good first day:$(br)$(li)Punch trees, make tools$(li)Find a village for food and a $(l)Waystone$()$(li)Make a bed before night$(li)Claim your base (see $(l)Your Base$())'),
@@ -225,9 +225,9 @@ ENTRIES = [
     ('travel', 'ships', 'Ships', 'smallships:oak_cog', [
         spot('smallships:oak_cog', '$(l)Small Ships$(): rowboats, cogs, galleys and more, with sails, storage and cannons.'),
     ]),
-    ('travel', 'music', 'Music Together', 'mimi:guide', [
-        text('$(l)MIMI$(): play instruments with friends. You can even plug in a real MIDI keyboard or play MIDI files.'),
-        craft('mimi:guide', 'The $(l)MIMI guide$() explains the instruments. Craft one or type $(l)/guide music$().'),
+    ('travel', 'music', 'Music Together', 'immersive_melodies:lute', [
+        text('$(l)Immersive Melodies$(): craft an instrument (lute, flute, piano, trumpet, bagpipe, drum and more), hold it and right-click to pick a song.$(br2)Play one of the built-in songs, or free-play notes with your keyboard. Everyone nearby hears it, so start a band!'),
+        craft('immersive_melodies:lute', 'Drop your own $(l).midi$() or $(l).abc$() song files onto the song list to add them.'),
     ]),
 
     # ---------- Grove Rules & Server Info ----------
