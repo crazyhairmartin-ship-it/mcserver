@@ -1,7 +1,5 @@
 package fotfskills;
 
-import fotfskills.perk.ArsMana;
-import fotfskills.perk.ArsPerks;
 import fotfskills.perk.BlockPerks;
 import fotfskills.perk.BreedingPerks;
 import fotfskills.perk.CombatPerks;
@@ -74,14 +72,8 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SalvagePerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.IrrigatorPerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SummonPerks());
-        if (ModList.get().isLoaded("ars_nouveau")) {
-            MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SourcePerks());
-        }
         if (ModList.get().isLoaded("butterflies")) {
             MinecraftForge.EVENT_BUS.register(new fotfskills.perk.NetReach());
-        }
-        if (ModList.get().isLoaded("ars_nouveau")) {
-            fotfskills.perk.SummonPerks.registerOwner(fotfskills.perk.ModSummons::ars);
         }
         if (ModList.get().isLoaded("irons_spellbooks")) {
             fotfskills.perk.SummonPerks.registerOwner(fotfskills.perk.ModSummons::irons);
@@ -90,18 +82,6 @@ public final class FotfSkills {
             Parties.register(OpacParties::same);
         }
         MinecraftForge.EVENT_BUS.register(new ForgeXpEvents());
-        boolean sharedMana = ModList.get().isLoaded("ars_nouveau") && ModList.get().isLoaded("irons_spellbooks");
-        if (sharedMana) {
-            fotfskills.mana.ManaMerge.activate();          // one pool: Iron's mana (Ars hooks in the mixins)
-            MinecraftForge.EVENT_BUS.register(new fotfskills.mana.ManaMergeTicker());
-        }
-        if (ModList.get().isLoaded("ars_nouveau")) {
-            MinecraftForge.EVENT_BUS.register(new ArsPerks());
-            if (!sharedMana) {                              // with shared mana, the Iron's bridge already reaches the pool
-                Mana.register(ArsMana::add);
-                Mana.registerSpender(ArsMana::spend);
-            }
-        }
         if (ModList.get().isLoaded("irons_spellbooks")) {
             MinecraftForge.EVENT_BUS.register(new IronsCastXp());
             MinecraftForge.EVENT_BUS.register(new IronsPerks());

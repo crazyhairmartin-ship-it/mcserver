@@ -22,8 +22,7 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
  * Domestication Innovation pet bed. Magic summons are not pets for this.
  */
 public final class Ferality {
-    private static final String[] SUMMON_INTERFACES = {"com.hollingsworth.arsnouveau.api.entity.ISummon",
-            "io.redspace.ironsspellbooks.entity.mobs.IMagicSummon"};
+    private static final String[] SUMMON_INTERFACES = {"io.redspace.ironsspellbooks.entity.mobs.IMagicSummon"};
 
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onDamage(LivingDamageEvent event) {

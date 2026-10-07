@@ -66,7 +66,7 @@ public final class ItemPerks {
         }
     }
 
-    /** Frugal for any craft, plus Thrifty Cook for food and Spellwright for Iron's / Ars items. */
+    /** Frugal for any craft, plus Thrifty Cook for food and Spellwright for Iron's items. */
     private static double saveChance(ServerPlayer player, ItemStack result) {
         ResourceLocation key = ForgeRegistries.ITEMS.getKey(result.m_41720_());
         String ns = key == null ? "" : key.m_135827_();
@@ -74,7 +74,7 @@ public final class ItemPerks {
         if (result.m_41614_()) {
             chance += Perks.get(player, "cook_save");
         }
-        if (ns.equals("irons_spellbooks") || ns.equals("ars_nouveau")) {
+        if (ns.equals("irons_spellbooks")) {
             chance += Perks.get(player, "spell_save");
         }
         return Math.min(chance, 0.95);

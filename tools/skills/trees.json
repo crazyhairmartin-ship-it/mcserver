@@ -1002,7 +1002,7 @@
           "t": 2,
           "name": "Spellwright",
           "r": 3,
-          "d": "8% per rank to save ingredients on Iron's scrolls and Ars items",
+          "d": "8% per rank to save ingredients on Iron's scrolls and magic items",
           "c": 1,
           "b": null,
           "cap": false,
@@ -1842,7 +1842,7 @@
     {
       "id": "magic",
       "name": "Magic",
-      "xp": "Casting spells in Ars Nouveau or Iron's Spells, by mana spent.",
+      "xp": "Casting Iron's Spells, by mana spent.",
       "icon": "minecraft:enchanted_book",
       "background": "minecraft:textures/block/purpur_block.png",
       "nodes": [
@@ -1938,7 +1938,7 @@
           "t": 3,
           "name": "Summoner",
           "r": 3,
-          "d": "Your summons (Iron's and Ars) get +15% health and damage per rank",
+          "d": "Your Iron's summons get +15% health and damage per rank",
           "c": 1,
           "b": "B",
           "cap": false,
