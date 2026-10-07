@@ -126,6 +126,330 @@
       "required": false
     },
     {
+      "id": "spartancataclysm:ancient_metal_dagger",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ancient_metal_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ancient_metal_pike",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ancient_metal_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ancient_metal_rapier",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ancient_metal_saber",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ancient_metal_spear",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ancient_metal_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ancient_metal_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:black_steel_dagger",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:black_steel_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:black_steel_pike",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:black_steel_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:black_steel_rapier",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:black_steel_saber",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:black_steel_spear",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:black_steel_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:black_steel_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:cursium_dagger",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:cursium_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:cursium_pike",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:cursium_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:cursium_rapier",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:cursium_saber",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:cursium_spear",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:cursium_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:cursium_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ignitium_dagger",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ignitium_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ignitium_pike",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ignitium_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ignitium_rapier",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ignitium_saber",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ignitium_spear",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ignitium_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ignitium_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:witherite_dagger",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:witherite_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:witherite_pike",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:witherite_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:witherite_rapier",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:witherite_saber",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:witherite_spear",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:witherite_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:witherite_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:fiery_dagger",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:fiery_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:fiery_pike",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:fiery_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:fiery_rapier",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:fiery_saber",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:fiery_spear",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:fiery_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:fiery_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:ironwood_dagger",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:ironwood_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:ironwood_pike",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:ironwood_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:ironwood_rapier",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:ironwood_saber",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:ironwood_spear",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:ironwood_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:ironwood_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:knightmetal_dagger",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:knightmetal_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:knightmetal_pike",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:knightmetal_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:knightmetal_rapier",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:knightmetal_saber",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:knightmetal_spear",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:knightmetal_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:knightmetal_tomahawk",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:steeleaf_dagger",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:steeleaf_parrying_dagger",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:steeleaf_pike",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:steeleaf_quarterstaff",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:steeleaf_rapier",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:steeleaf_saber",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:steeleaf_spear",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:steeleaf_throwing_knife",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:steeleaf_tomahawk",
+      "required": false
+    },
+    {
       "id": "spartanweaponry:aluminum_dagger",
       "required": false
     },
