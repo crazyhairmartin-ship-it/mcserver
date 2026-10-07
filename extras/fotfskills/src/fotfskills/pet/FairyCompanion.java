@@ -96,6 +96,38 @@ public final class FairyCompanion {
         level.m_6263_(null, fairy.m_20185_(), fairy.m_20186_(), fairy.m_20189_(), SoundEvents.f_144243_, SoundSource.NEUTRAL, 0.4f, 1.8f);
     }
 
+    private static boolean isPetBed(net.minecraft.world.level.Level level, net.minecraft.core.BlockPos pos) {
+        ResourceLocation id = ForgeRegistries.BLOCKS.getKey(level.m_8055_(pos).m_60734_());
+        return id != null && id.m_135827_().equals("domesticationinnovation") && id.m_135815_().contains("pet_bed");
+    }
+
+    /** A pet bed in the fairy's block or just below her (she hovers over it). */
+    private static boolean bindToBedBelow(LivingEntity fairy) {
+        net.minecraft.core.BlockPos here = fairy.m_20183_();
+        for (net.minecraft.core.BlockPos pos : new net.minecraft.core.BlockPos[] {here, here.m_7495_(), here.m_7495_().m_7495_()}) {
+            if (isPetBed(fairy.m_9236_(), pos)) {
+                return bindToBed(fairy, pos);
+            }
+        }
+        return false;
+    }
+
+    /**
+     * Domestication Innovation's own pet-bed binding (TameableUtils.setPetBedPos / setPetBedDimension), so a fairy that
+     * dies comes back at this bed like any pet. Fairies hover, so they rarely trigger the bed themselves.
+     */
+    private static boolean bindToBed(LivingEntity fairy, net.minecraft.core.BlockPos pos) {
+        try {
+            Class<?> utils = Class.forName("com.github.alexthe668.domesticationinnovation.server.entity.TameableUtils");
+            utils.getMethod("setPetBedPos", LivingEntity.class, net.minecraft.core.BlockPos.class).invoke(null, fairy, pos);
+            utils.getMethod("setPetBedDimension", LivingEntity.class, String.class)
+                    .invoke(null, fairy, fairy.m_9236_().m_46472_().toString());
+            return true;
+        } catch (ReflectiveOperationException | RuntimeException e) {
+            return false;
+        }
+    }
+
     private static net.minecraft.nbt.CompoundTag data(Entity entity) {
         return ((net.minecraftforge.common.extensions.IForgeEntity) (Object) entity).getPersistentData();
     }
@@ -169,6 +201,12 @@ public final class FairyCompanion {
                 fairy.m_21837_(next == WAIT);
                 fairy.m_20242_(next == SHOULDER);
                 fairy.m_21573_().m_26573_();
+                if (next == WAIT && bindToBedBelow(fairy)) {
+                    player.m_5661_(Component.m_237113_("§dYour fairy waits here, and will come back to this bed."), true);
+                    event.setCanceled(true);
+                    event.setCancellationResult(net.minecraft.world.InteractionResult.SUCCESS);
+                    return;
+                }
                 player.m_5661_(Component.m_237113_(next == WAIT ? "§dYour fairy will wait here."
                         : next == SHOULDER ? "§dYour fairy stays close, at your shoulder." : "§dYour fairy follows you."), true);
             }
@@ -203,7 +241,9 @@ public final class FairyCompanion {
         if (!held.m_41782_() || !held.m_41783_().m_128441_(FAIRY_TAG) || !(event.getLevel() instanceof ServerLevel level)) {
             return;
         }
-        net.minecraft.core.BlockPos at = event.getPos().m_121945_(event.getFace() == null ? net.minecraft.core.Direction.UP : event.getFace());
+        boolean bed = isPetBed(level, event.getPos());
+        net.minecraft.core.BlockPos at = bed ? event.getPos()
+                : event.getPos().m_121945_(event.getFace() == null ? net.minecraft.core.Direction.UP : event.getFace());
         net.minecraft.nbt.CompoundTag saved = held.m_41783_().m_128469_(FAIRY_TAG).m_6426_();
         Entity fairy = net.minecraft.world.entity.EntityType.m_20645_(saved, level, e -> {
             e.m_7678_(at.m_123341_() + 0.5, at.m_123342_() + 0.2, at.m_123343_() + 0.5, e.m_146908_(), e.m_146909_());
@@ -217,6 +257,9 @@ public final class FairyCompanion {
             held.m_41774_(1);
             net.minecraftforge.items.ItemHandlerHelper.giveItemToPlayer(event.getEntity(),
                     new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.f_42590_));
+            if (bed && fairy instanceof LivingEntity living && bindToBed(living, at)) {
+                event.getEntity().m_5661_(Component.m_237113_("§dYour fairy will come back to this bed."), true);
+            }
         }
         event.setCanceled(true);
         event.setCancellationResult(net.minecraft.world.InteractionResult.SUCCESS);
