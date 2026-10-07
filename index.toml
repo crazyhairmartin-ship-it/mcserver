@@ -1763,10 +1763,6 @@ file = "kubejs/data/cataclysm/weapon_attributes/ancient_spear.json"
 hash = "69f34e192fd1b393cd13e6f56adc6489ca2efddf58068873e847615c67af7ea4"
 
 [[files]]
-file = "kubejs/data/cataclysm/weapon_attributes/astrape.json"
-hash = "bf1a3ab674c99af405a313cd724c86985015c4287451f498bd71837e8da56c45"
-
-[[files]]
 file = "kubejs/data/cataclysm/weapon_attributes/black_steel_axe.json"
 hash = "bc18bf0aad37ccad2cbaef76bc419eb379832e49a6baa069b16fe706a90f62ed"
 
@@ -1777,10 +1773,6 @@ hash = "9556c28c717a55d5dccef66f96b43635f20c3590f5a9587a8fb32a7281de682a"
 [[files]]
 file = "kubejs/data/cataclysm/weapon_attributes/brontes.json"
 hash = "dd9be0bf36e3fdb1c50fd0437e0926d465e29463ff66076d132e097ee8c8b157"
-
-[[files]]
-file = "kubejs/data/cataclysm/weapon_attributes/coral_spear.json"
-hash = "898bc57325e91afb761140f60ca04c219a1df0b32ac7240dea06b5c98d9abe6f"
 
 [[files]]
 file = "kubejs/data/cataclysm/weapon_attributes/gauntlet_of_bulwark.json"
@@ -1893,38 +1885,6 @@ hash = "7c775ea2f87afc700bdb63e4267621b68bc1e5b0634e227091b666ee6e2c42ef"
 [[files]]
 file = "kubejs/data/friendsandfoes/tags/worldgen/biome/has_moobloom/buttercup.json"
 hash = "22928a6bdabe3824921031bc13adf4b79bc663647c6589bef0440e8b4f8099da"
-
-[[files]]
-file = "kubejs/data/irons_spellbooks/weapon_attributes/boreal_blade.json"
-hash = "c200ad79a7a5bc31b06223322ca297888a7ba46bfd070f21fa1304495517c740"
-
-[[files]]
-file = "kubejs/data/irons_spellbooks/weapon_attributes/claymore.json"
-hash = "c200ad79a7a5bc31b06223322ca297888a7ba46bfd070f21fa1304495517c740"
-
-[[files]]
-file = "kubejs/data/irons_spellbooks/weapon_attributes/keeper_flamberge.json"
-hash = "c200ad79a7a5bc31b06223322ca297888a7ba46bfd070f21fa1304495517c740"
-
-[[files]]
-file = "kubejs/data/irons_spellbooks/weapon_attributes/legionnaire_flamberge.json"
-hash = "c200ad79a7a5bc31b06223322ca297888a7ba46bfd070f21fa1304495517c740"
-
-[[files]]
-file = "kubejs/data/irons_spellbooks/weapon_attributes/lightning_rod.json"
-hash = "3b2fd2a07d97e48296d44e56fa6eb035fdfd8319d95fe6837c7a40fe77426e0a"
-
-[[files]]
-file = "kubejs/data/irons_spellbooks/weapon_attributes/pyrium_staff.json"
-hash = "0f270ccc5482008f7be58eebdb25f7f5b2ac9b9331579b24569a0759722c2eb5"
-
-[[files]]
-file = "kubejs/data/irons_spellbooks/weapon_attributes/spellbreaker.json"
-hash = "192391341bc7789d3abff0e6ca8ff2887fca1983b3d0c3f3bbfd961d964a7a6b"
-
-[[files]]
-file = "kubejs/data/irons_spellbooks/weapon_attributes/twilight_gale.json"
-hash = "898bc57325e91afb761140f60ca04c219a1df0b32ac7240dea06b5c98d9abe6f"
 
 [[files]]
 file = "kubejs/data/meadow/forge/biome_modifier/spawn_buffalo.json"
@@ -2063,268 +2023,36 @@ file = "kubejs/data/naturalist/tags/worldgen/biome/has_vulture.json"
 hash = "22de1fb4f119f67cbae6882d8ee8c0b66255812f60b1b2cc89dcddfe9cbdb094"
 
 [[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/aluminum_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/aluminum_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/aluminum_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/aluminum_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/bronze_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/bronze_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/bronze_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/bronze_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/constantan_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/constantan_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/constantan_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/constantan_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
 file = "kubejs/data/spartanweaponry/weapon_attributes/copper_boomerang.json"
 hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/copper_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/copper_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
 
 [[files]]
 file = "kubejs/data/spartanweaponry/weapon_attributes/diamond_boomerang.json"
 hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
 
 [[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/diamond_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/diamond_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/electrum_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
 file = "kubejs/data/spartanweaponry/weapon_attributes/electrum_halberd.json"
 hash = "60fa1099287e3aa3e8d091dcfc2beaa66a1cd56dfb9409d04c5b39be68b83401"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/electrum_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/electrum_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/electrum_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
 
 [[files]]
 file = "kubejs/data/spartanweaponry/weapon_attributes/golden_boomerang.json"
 hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
 
 [[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/golden_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/golden_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/invar_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/invar_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/invar_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/invar_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
 file = "kubejs/data/spartanweaponry/weapon_attributes/iron_boomerang.json"
 hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/iron_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/iron_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/lead_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/lead_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/lead_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/lead_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
 
 [[files]]
 file = "kubejs/data/spartanweaponry/weapon_attributes/netherite_boomerang.json"
 hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
 
 [[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/netherite_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/netherite_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/nickel_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/nickel_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/nickel_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/nickel_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/platinum_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/platinum_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/platinum_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/platinum_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/silver_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/silver_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/silver_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/silver_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/steel_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/steel_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/steel_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/steel_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
 file = "kubejs/data/spartanweaponry/weapon_attributes/stone_boomerang.json"
 hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
 
 [[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/stone_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/stone_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/tin_battle_hammer.json"
-hash = "2a3ac3a80e14cb46cbccf74f7b49a7a8967bccb15e1d61fd47ccb761e3c9130f"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/tin_katana.json"
-hash = "e46470f053eb605c1173870ae380dd7a39a507df8ef378b0e553d344d3effee7"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/tin_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/tin_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
-
-[[files]]
 file = "kubejs/data/spartanweaponry/weapon_attributes/wooden_boomerang.json"
 hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/wooden_lance.json"
-hash = "733a1e8c61502fc01d9c4fe46da8c74b93671677ce0eb83e33c9b172a84d5923"
-
-[[files]]
-file = "kubejs/data/spartanweaponry/weapon_attributes/wooden_longsword.json"
-hash = "6725e6b0c1677936af71c8ba8ce5f516ff88dcb4aa0b3b41af035e77a3c0daec"
 
 [[files]]
 file = "kubejs/data/twilightforest/weapon_attributes/diamond_minotaur_axe.json"
@@ -2743,7 +2471,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "b72d9162e27f69cd7959c7034c0b368be981c997e5f3ffee8e0202569189795d"
+hash = "603fa760bf4332d14ebbf2f945861d22a95c1979f68d7ddb9ae28f0ca9f2fd3c"
 metafile = true
 
 [[files]]
