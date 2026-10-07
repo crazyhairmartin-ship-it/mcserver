@@ -2,6 +2,7 @@
 done by script instead of MCA Selector).
 
     python tools/worldgen/reset_unexplored.py <world folder> [--apply] [--minutes 1] [--buffer 2] [--claim-buffer 2]
+                                             [--full nether]
 
 For the overworld, the Nether and the End:
 - keeps every chunk players have spent at least --minutes in (the chunk's InhabitedTime), plus --buffer chunks around
@@ -145,6 +146,8 @@ def main():
     ap.add_argument('--minutes', type=float, default=1)
     ap.add_argument('--buffer', type=int, default=2)
     ap.add_argument('--claim-buffer', type=int, default=2)
+    ap.add_argument('--full', nargs='*', default=[], choices=list(DIMENSIONS),
+                    help='dimensions reset completely, explored chunks too (claims are still kept)')
     a = ap.parse_args()
     world = Path(a.world)
     for name, (sub, key) in DIMENSIONS.items():
@@ -157,6 +160,8 @@ def main():
                 if inhabited(chunk) >= a.minutes * 1200:
                     explored.add(pos)
         claimed = claims(world, key)
+        if name in a.full:
+            explored = set()                            # full reset: only claims survive
         keep = grow(explored, a.buffer) | grow(claimed, a.claim_buffer)
         reset = [p for p in present if p not in keep]
         draw(world.parent / f'reset_map_{name}.png', present, keep, claimed)
