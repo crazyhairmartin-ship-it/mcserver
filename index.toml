@@ -1480,6 +1480,102 @@ file = "kubejs/assets/regions_unexplored/lang/en_us.json"
 hash = "af1b667f9aee7204032c0a280c54b35133930c26fa16dc6d1f4e5267d0aefa85"
 
 [[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_branch.png"
+hash = "3dab97c337313ebe0c05b820e8a7038a423e0b91a49c653be98b57c3e1447583"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_door_bottom.png"
+hash = "78b820abe096dec7d122765835a64dbeb5b44e57fa5134a6f93079d882e3b93a"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_door_top.png"
+hash = "d7e15fd1119f1f1dd5cbb019a42da153aa6fc3929ddd4c73869c6e3815ee16b0"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_leaves.png"
+hash = "85dd4f93fea8404df2c3092fed39b2b0f2e2d2f43debad16711919f4d79ebc87"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_log.png"
+hash = "b93cf4a8676dbae03c2ba10a9044bc10cd6bf5d3f55c5700f78ed607afe2c3fc"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_log_top.png"
+hash = "c2c48e51bddf1d9e1597544e825b9c260a8be9e48b19ba376c69ed81e3f554ce"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_planks.png"
+hash = "6b82ed25bfe433ef132a5940bbbb8606461d28e703c3686c69b2daa1bb912361"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_sapling.png"
+hash = "12f90e5d6d7cf819bae1ba542001b90d5e7e01afa0046eec70d69e4db371bb4b"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_shrub_bottom.png"
+hash = "82c65a40a7d1d77d58600227c4c3fdd9f7c83bb2c9292a959adbba7d2605fd62"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_shrub_top.png"
+hash = "1c80530c165fa9ca873a862b8c5a2c05dd2504dcc6a5b4961f17da7a6fa6b23b"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/mauve_trapdoor.png"
+hash = "0267c0b6e87c5f0728ff7696fb0ab969209d0df198911112cdb64407c08e8e83"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/stripped_mauve_log.png"
+hash = "fc0f31b866314504fcf26963dd2fd86c61385673dc49dbb8329fb01c18c75cc3"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/block/stripped_mauve_log_top.png"
+hash = "dfbb557d7cdd5a419cf8e254e4db441be0946b99009d3ac2e8612b8b5077d968"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/entity/boat/mauve.png"
+hash = "c7f7768903ee2467177af18cde3776370ffef8876d7d43bc5daf34d5598a8686"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/entity/chest_boat/mauve.png"
+hash = "0198512ad81622af8a055ff7069fb6bf118c649000459e1468da68764df66955"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/entity/signs/hanging/mauve.png"
+hash = "185286c75cd2aaaef34b984dcb2bfdf57a5728d9e5c69138cb9a893e3bbf682f"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/entity/signs/mauve.png"
+hash = "54d7be1cdac2c169060618ff6a2567aa03b163675e2a22d1949c2c42427bdd45"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/gui/hanging_signs/mauve.png"
+hash = "df3a6c04cac0f00a05baede1f30f2f3653baa4880c8e5a11632d612fce5420b4"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/item/mauve_boat.png"
+hash = "440b358a5ccce24cc04fbccc59531a7103b965e2c550153d5f82c0aecaf25bd7"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/item/mauve_branch.png"
+hash = "143f9e9832faaae6b7aa9feb615b8996d2297c5b38fd55f8829ee34721c1760d"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/item/mauve_chest_boat.png"
+hash = "a57c0ffbfe4086b62f7d3507bfc54e9c08b37b4277b8df2168519a09bc668aa0"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/item/mauve_door.png"
+hash = "6ad8ea4a87b2c167cfd349665b31e74d511c15287d8f7b63930dc8a398f4e8a5"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/item/mauve_hanging_sign.png"
+hash = "eae36ffa33279829f56303e8c8018f4280dea2171a1cacc52a0d7cddf7824660"
+
+[[files]]
+file = "kubejs/assets/regions_unexplored/textures/item/mauve_sign.png"
+hash = "fa1f4b89276955be4233a4612e607c4e96a04053748b735d9354e866a423adef"
+
+[[files]]
 file = "kubejs/assets/smallships/lang/en_us.json"
 hash = "96df043022faf4866033d117f88d082eb4b1244645ac20dcb3c8d9545690f3ba"
 
@@ -2945,18 +3041,8 @@ hash = "fee498cb6d037ca6130755d9e3d42d16f08e208d9a510525dbe55797ca98f30a"
 metafile = true
 
 [[files]]
-file = "mods/shoulder-surfing-iron-spells-integration.pw.toml"
-hash = "ad76e5a659df9bc1a09a2184c54591a8cdf10824e5e9b70483b27d01debd4bab"
-metafile = true
-
-[[files]]
 file = "mods/shoulder-surfing-reloaded.pw.toml"
-hash = "b3d97b44a2955fe980d19c459f6e55c7aeb0efa69cbfb549a546b4ecbe5bbee9"
-metafile = true
-
-[[files]]
-file = "mods/shoulder-surfing-ultimine.pw.toml"
-hash = "162ff0b2c84f41e9453456fdca258c0e5bc5610598ac60b492db03c92203c2a7"
+hash = "ac5f70c39afa37665732c5b7f92dfa73667efd66b9577b8e281a893924aaee21"
 metafile = true
 
 [[files]]
