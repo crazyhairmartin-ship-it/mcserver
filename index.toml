@@ -2391,18 +2391,8 @@ hash = "2de33e7d757cfa1108b05247cb59f6db2f08000af824da328322d78cdb7c4c4d"
 metafile = true
 
 [[files]]
-file = "mods/azurelib.pw.toml"
-hash = "99b38d3573c0b76ebdb63d108b5a12e3172eceb2357d2ec2878fb70f968160af"
-metafile = true
-
-[[files]]
 file = "mods/balm.pw.toml"
 hash = "cc17fd6e85be435f0141ff78ce81233e0645414f6ec5bc1db112a26a79204822"
-metafile = true
-
-[[files]]
-file = "mods/better-combat-x-cataclysm-spellbooks-compatibility.pw.toml"
-hash = "9ad7eb1595c5b0c11a083423af79531610ef44edcf977791e0d41114f74679c1"
 metafile = true
 
 [[files]]
@@ -2433,11 +2423,6 @@ metafile = true
 [[files]]
 file = "mods/carry-on.pw.toml"
 hash = "ba1bdad41e3c9ec131330f048fc6f9bcb753ca3e9bfa1e41d60d6ca11afbc2e6"
-metafile = true
-
-[[files]]
-file = "mods/cataclysm-spellbooks.pw.toml"
-hash = "46d7e45a470ab4280c68c2d435214ee63a1c016c426d889d9deee049c6f39a08"
 metafile = true
 
 [[files]]
