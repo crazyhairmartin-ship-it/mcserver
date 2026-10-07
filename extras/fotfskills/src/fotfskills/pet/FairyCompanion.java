@@ -42,6 +42,7 @@ public final class FairyCompanion {
     private static final double SAVE_RANGE = 16;
     private static final long SAVE_COOLDOWN = 12000;
     private static final int ORBIT_TICKS = 40;
+    private static final String FAIRY_TAG = "FotfFairy";
     private final Map<LivingEntity, Long> lastHeal = new WeakHashMap<>();
     private final Map<LivingEntity, Long> lastSave = new WeakHashMap<>();
     private final List<Orbit> orbits = new ArrayList<>();
@@ -62,6 +63,9 @@ public final class FairyCompanion {
                         .getPrivateValue(net.minecraft.world.entity.Mob.class, fairy, "f_21346_");
                 targets.m_25352_(1, new OwnerHurtByTargetGoal(fairy));
                 targets.m_25352_(2, new OwnerHurtTargetGoal(fairy));
+                net.minecraft.world.entity.ai.goal.GoalSelector goals = net.minecraftforge.fml.util.ObfuscationReflectionHelper
+                        .getPrivateValue(net.minecraft.world.entity.Mob.class, fairy, "f_21345_");
+                goals.m_25352_(1, new net.minecraft.world.entity.ai.goal.SitWhenOrderedToGoal(fairy));
             } catch (RuntimeException ignored) {
                 // no targets: collar enchantments that need one just stay idle
             }
@@ -113,6 +117,76 @@ public final class FairyCompanion {
             player.m_5661_(Component.m_237113_("§dYour fairy saved you!"), true);
             return;
         }
+    }
+
+    /**
+     * The owner's right-click: with an empty hand a tamed fairy stays put / follows again; with a glass bottle she goes
+     * into a Fairy Bottle that keeps everything about her (name, colour, owner, health).
+     */
+    @SubscribeEvent(priority = EventPriority.HIGHEST)
+    public void onInteract(net.minecraftforge.event.entity.player.PlayerInteractEvent.EntityInteract event) {
+        if (!(event.getTarget() instanceof TamableAnimal fairy) || !isFairy(fairy) || !fairy.m_21824_()
+                || !event.getEntity().m_20148_().equals(fairy.m_21805_()) || event.getHand() != net.minecraft.world.InteractionHand.MAIN_HAND) {
+            return;
+        }
+        net.minecraft.world.entity.player.Player player = event.getEntity();
+        net.minecraft.world.item.ItemStack held = player.m_21120_(event.getHand());
+        if (held.m_41619_()) {
+            if (!fairy.m_9236_().f_46443_) {
+                boolean sit = !fairy.m_21827_();
+                fairy.m_21839_(sit);
+                fairy.m_21837_(sit);
+                fairy.m_21573_().m_26573_();
+                player.m_5661_(Component.m_237113_(sit ? "§dYour fairy will wait here." : "§dYour fairy follows you."), true);
+            }
+            event.setCanceled(true);
+            event.setCancellationResult(net.minecraft.world.InteractionResult.SUCCESS);
+        } else if (held.m_150930_(net.minecraft.world.item.Items.f_42590_)) {
+            net.minecraft.world.item.Item bottle = ForgeRegistries.ITEMS.getValue(new ResourceLocation("fays_fairies", "fairy_bottle"));
+            if (bottle != null && !fairy.m_9236_().f_46443_) {
+                net.minecraft.nbt.CompoundTag saved = new net.minecraft.nbt.CompoundTag();
+                if (fairy.m_20223_(saved)) {
+                    net.minecraft.world.item.ItemStack filled = new net.minecraft.world.item.ItemStack(bottle);
+                    filled.m_41784_().m_128365_(FAIRY_TAG, saved);
+                    if (fairy.m_8077_()) {
+                        filled.m_41714_(fairy.m_7770_());
+                    }
+                    held.m_41774_(1);
+                    net.minecraftforge.items.ItemHandlerHelper.giveItemToPlayer(player, filled);
+                    fairy.m_146870_();
+                    fairy.m_9236_().m_6263_(null, fairy.m_20185_(), fairy.m_20186_(), fairy.m_20189_(), SoundEvents.f_11770_,
+                            SoundSource.PLAYERS, 1.0f, 1.4f);
+                }
+            }
+            event.setCanceled(true);
+            event.setCancellationResult(net.minecraft.world.InteractionResult.SUCCESS);
+        }
+    }
+
+    /** A filled Fairy Bottle used on a block lets her out there and gives the glass bottle back. */
+    @SubscribeEvent
+    public void onUseBottle(net.minecraftforge.event.entity.player.PlayerInteractEvent.RightClickBlock event) {
+        net.minecraft.world.item.ItemStack held = event.getItemStack();
+        if (!held.m_41782_() || !held.m_41783_().m_128441_(FAIRY_TAG) || !(event.getLevel() instanceof ServerLevel level)) {
+            return;
+        }
+        net.minecraft.core.BlockPos at = event.getPos().m_121945_(event.getFace() == null ? net.minecraft.core.Direction.UP : event.getFace());
+        net.minecraft.nbt.CompoundTag saved = held.m_41783_().m_128469_(FAIRY_TAG).m_6426_();
+        Entity fairy = net.minecraft.world.entity.EntityType.m_20645_(saved, level, e -> {
+            e.m_7678_(at.m_123341_() + 0.5, at.m_123342_() + 0.2, at.m_123343_() + 0.5, e.m_146908_(), e.m_146909_());
+            return e;
+        });
+        if (fairy != null && level.m_7967_(fairy)) {
+            if (fairy instanceof TamableAnimal tame) {
+                tame.m_21839_(false);
+                tame.m_21837_(false);
+            }
+            held.m_41774_(1);
+            net.minecraftforge.items.ItemHandlerHelper.giveItemToPlayer(event.getEntity(),
+                    new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.f_42590_));
+        }
+        event.setCanceled(true);
+        event.setCancellationResult(net.minecraft.world.InteractionResult.SUCCESS);
     }
 
     /** The saving fairy flies two circles around its owner, trailing sparkles. */

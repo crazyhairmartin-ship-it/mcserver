@@ -115,9 +115,9 @@ public final class WeaponPerks {
             if (cleave > 0 && Weapons.twoHanded(player, weapon)) {
                 splash(player, target, target, (float) (amount * cleave), 2.5);
             }
-            if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe") && state.reaper.hit(now) == 3) {
-                state.reaper.reset();                         // Reaper's Due: every 3rd swing spins through every
-                splash(player, player, target, amount, 3);   // hostile mob within 3 blocks at full damage
+            if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe") && thirdOfCombo(player, state, now)) {
+                splash(player, player, target, amount, 3);   // Reaper's Due: the combo's 3rd attack spins through every
+                                                              // hostile mob within 3 blocks at full damage
                 reaperSpin(player);
             }
         } else if (direct instanceof Projectile projectile) {
@@ -326,6 +326,21 @@ public final class WeaponPerks {
             }
         }
         return DamageBreakdown.abilityMultiplier(base, types, p -> Perks.get(player, p));
+    }
+
+    /** The 3rd attack of a Better Combat combo (and the 6th, 9th...); without Better Combat, every 3rd swing in a row. */
+    private static boolean thirdOfCombo(ServerPlayer player, CombatState state, long now) {
+        if (net.minecraftforge.fml.ModList.get().isLoaded("bettercombat")) {
+            int step = ComboStep.of(player);
+            if (step >= 0) {
+                return step % 3 == 2;
+            }
+        }
+        if (state.reaper.hit(now) == 3) {
+            state.reaper.reset();
+            return true;
+        }
+        return false;
     }
 
     /** The Reaper's Due finisher: a ring of sweeps, the sweep sound, and a spin everyone nearby sees. */
