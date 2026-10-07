@@ -3,13 +3,14 @@
   "minVersion": "0.8",
   "package": "fotfskills.mixin",
   "compatibilityLevel": "JAVA_17",
-  "mixins": ["ItemStackCraftedMixin", "ArsSpellResolverMixin", "ItemStackDurabilityMixin", "FishingHookMixin", "AbstractArrowAccessor", "ServerPlayerGameModeMixin", "AnimalTreatMixin", "ServerLevelTameMixin", "PlayerExhaustionMixin", "LivingEntityBlockMixin", "AbstractHorseTameMixin", "ItemCraftedByMixin", "PetBedRespawnMixin", "ArsManaCapMixin", "ArsManaRegenMixin", "UltimineExhaustionMixin", "FishingHookAccessor", "AquaBobberMixin", "ScribesTableMixin", "FarmBlockIrrigatorMixin", "ArsSourcelinkMixin", "ArsApparatusMixin", "ParcoolPermitMixin", "HorseDescentMixin"],
+  "mixins": ["ItemStackCraftedMixin", "ArsSpellResolverMixin", "ItemStackDurabilityMixin", "FishingHookMixin", "AbstractArrowAccessor", "ServerPlayerGameModeMixin", "AnimalTreatMixin", "ServerLevelTameMixin", "PlayerExhaustionMixin", "LivingEntityBlockMixin", "AbstractHorseTameMixin", "ItemCraftedByMixin", "PetBedRespawnMixin", "ArsManaCapMixin", "ArsManaRegenMixin", "UltimineExhaustionMixin", "FishingHookAccessor", "AquaBobberMixin", "ScribesTableMixin", "FarmBlockIrrigatorMixin", "ArsSourcelinkMixin", "ArsApparatusMixin", "ParcoolPermitMixin", "HorseDescentMixin", "FairyCategoryMixin"],
   "client": [
     "SkillsScreenMixin",
     "ArsManaHudMixin",
     "ParcoolDodgeMixin",
     "ParcoolTrickMixin",
-    "ContainerScreenAccessor"
+    "ContainerScreenAccessor",
+    "FairyGlowMixin"
   ],
   "injectors": {
     "defaultRequire": 1

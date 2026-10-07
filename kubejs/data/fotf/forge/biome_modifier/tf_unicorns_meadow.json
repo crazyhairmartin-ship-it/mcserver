@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#fotf:tf_unicorns/meadow",
+  "spawners": [
+    {
+      "type": "ultimate_unicorn_mod:unicorn",
+      "weight": 16,
+      "minCount": 1,
+      "maxCount": 3
+    },
+    {
+      "type": "ultimate_unicorn_mod:pegasus",
+      "weight": 16,
+      "minCount": 1,
+      "maxCount": 3
+    }
+  ]
+}

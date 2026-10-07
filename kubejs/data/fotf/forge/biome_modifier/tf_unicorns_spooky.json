@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#fotf:tf_unicorns/spooky",
+  "spawners": [
+    {
+      "type": "ultimate_unicorn_mod:nightmare",
+      "weight": 14,
+      "minCount": 1,
+      "maxCount": 2
+    }
+  ]
+}

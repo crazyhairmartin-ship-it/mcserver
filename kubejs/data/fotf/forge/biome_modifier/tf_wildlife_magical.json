@@ -1,0 +1,30 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#fotf:fairy/uncommon",
+  "spawners": [
+    {
+      "type": "twilightforest:tiny_bird",
+      "weight": 6,
+      "minCount": 2,
+      "maxCount": 4
+    },
+    {
+      "type": "twilightforest:squirrel",
+      "weight": 5,
+      "minCount": 1,
+      "maxCount": 3
+    },
+    {
+      "type": "twilightforest:dwarf_rabbit",
+      "weight": 5,
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "type": "twilightforest:deer",
+      "weight": 4,
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ]
+}

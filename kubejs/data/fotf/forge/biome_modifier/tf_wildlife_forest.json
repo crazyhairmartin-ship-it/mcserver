@@ -1,0 +1,45 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:and",
+    "values": [
+      "#fotf:wildlife/forest",
+      {
+        "type": "forge:not",
+        "value": "#fotf:fairy/uncommon"
+      }
+    ]
+  },
+  "spawners": [
+    {
+      "type": "twilightforest:tiny_bird",
+      "weight": 3,
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "type": "twilightforest:squirrel",
+      "weight": 3,
+      "minCount": 1,
+      "maxCount": 2
+    },
+    {
+      "type": "twilightforest:dwarf_rabbit",
+      "weight": 2,
+      "minCount": 1,
+      "maxCount": 3
+    },
+    {
+      "type": "twilightforest:deer",
+      "weight": 3,
+      "minCount": 2,
+      "maxCount": 3
+    },
+    {
+      "type": "twilightforest:boar",
+      "weight": 2,
+      "minCount": 2,
+      "maxCount": 3
+    }
+  ]
+}
