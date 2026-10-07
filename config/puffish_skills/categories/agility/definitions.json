@@ -604,7 +604,7 @@
   },
   "light_weapons_1": {
     "title": "Light Weapons",
-    "description": "A light weapon in your off hand gets +8% attack speed (24% max)",
+    "description": "A light weapon in your off hand gets +5% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -624,14 +624,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "light_speed",
-          "value": 0.08
+          "value": 0.05
         }
       }
     ]
   },
   "light_weapons_2": {
     "title": "Light Weapons",
-    "description": "A light weapon in your off hand gets +16% attack speed (24% max)",
+    "description": "A light weapon in your off hand gets +10% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -651,14 +651,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "light_speed",
-          "value": 0.08
+          "value": 0.05
         }
       }
     ]
   },
   "light_weapons_3": {
     "title": "Light Weapons",
-    "description": "A light weapon in your off hand gets +24% attack speed (24% max)",
+    "description": "A light weapon in your off hand gets +15% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -678,7 +678,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "light_speed",
-          "value": 0.08
+          "value": 0.05
         }
       }
     ]

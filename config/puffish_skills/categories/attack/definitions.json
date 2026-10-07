@@ -833,7 +833,7 @@
   },
   "duelist_1": {
     "title": "Duelist",
-    "description": "A dagger, rapier or sword in your main hand gets +8% attack speed (24% max)",
+    "description": "A dagger, rapier or sword in your main hand gets +5% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -854,14 +854,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "duelist_speed",
-          "value": 0.08
+          "value": 0.05
         }
       }
     ]
   },
   "duelist_2": {
     "title": "Duelist",
-    "description": "A dagger, rapier or sword in your main hand gets +16% attack speed (24% max)",
+    "description": "A dagger, rapier or sword in your main hand gets +10% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -882,14 +882,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "duelist_speed",
-          "value": 0.08
+          "value": 0.05
         }
       }
     ]
   },
   "duelist_3": {
     "title": "Duelist",
-    "description": "A dagger, rapier or sword in your main hand gets +24% attack speed (24% max)",
+    "description": "A dagger, rapier or sword in your main hand gets +15% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -910,7 +910,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "duelist_speed",
-          "value": 0.08
+          "value": 0.05
         }
       }
     ]
