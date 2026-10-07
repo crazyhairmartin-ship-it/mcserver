@@ -36,8 +36,8 @@ import net.minecraftforge.registries.RegistryObject;
 
 /**
  * Blocks and items from mods the pack dropped (Paragliders, Simply Swords, Tinkers' Construct) that are still in the live world.
- * Tinkers' blocks and items follow the table in res/fotfskills/removed_ids.txt (tools/removed/make_tinkers_remap.py):
- * slime islands and slime wood become vanilla blocks, Tinkers tools the matching iron tool.
+ * Tinkers' natural blocks (slime islands, geodes, cobalt ore) follow the table in res/fotfskills/removed_ids.txt
+ * (tools/removed/make_tinkers_remap.py) and become vanilla blocks; anything else from Tinkers is dropped.
  * On world load their ids are remapped: the Runic Forge becomes an anvil, and the statues become hidden placeholder
  * blocks that keep their facing. The first time a chunk with a placeholder loads, the placeholder is swapped:
  * goddess statues become Iron's player statues (random supporter skin and pose, like Iron's own structures), horned
@@ -114,15 +114,10 @@ public final class RemovedBlocks {
         return table.getOrDefault(kind, Map.of());
     }
 
-    /**
-     * Alias every table entry whose mod is gone to its replacement, when the replacement exists. Every Compat's blocks in a
-     * removed mod's wood (everycomp:hc/tconstruct/...) go with that mod, not with Every Compat.
-     */
+    /** Alias every table entry whose mod is gone to its replacement, when the replacement exists. */
     private static <T> void aliasTable(net.minecraftforge.registries.ForgeRegistry<T> reg, String kind) {
         table(kind).forEach((from, to) -> {
-            String[] parts = from.m_135815_().split("/");
-            String mod = parts.length == 3 ? parts[1] : from.m_135827_();
-            if (!ModList.get().isLoaded(mod) && reg.containsKey(to)) {
+            if (!ModList.get().isLoaded(from.m_135827_()) && reg.containsKey(to)) {
                 reg.addAlias(from, to);
             }
         });
