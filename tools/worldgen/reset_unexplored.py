@@ -1,7 +1,7 @@
 """Reset chunks nobody has explored, so they regenerate with the new worldgen (issue #1's "unexplored-chunk reset",
 done by script instead of MCA Selector).
 
-    python tools/worldgen/reset_unexplored.py <world folder> [--apply] [--minutes 1] [--buffer 2] [--claim-buffer 2]
+    python tools/worldgen/reset_unexplored.py <world folder> [--apply] [--minutes 1] [--buffer 5] [--claim-buffer 2]
                                              [--full nether]
 
 For the overworld, the Nether and the End:
@@ -152,7 +152,7 @@ def main():
     ap.add_argument('world')
     ap.add_argument('--apply', action='store_true')
     ap.add_argument('--minutes', type=float, default=1)
-    ap.add_argument('--buffer', type=int, default=2)
+    ap.add_argument('--buffer', type=int, default=5)
     ap.add_argument('--claim-buffer', type=int, default=2)
     ap.add_argument('--full', nargs='*', default=[], choices=list(DIMENSIONS),
                     help='dimensions reset completely, explored chunks too (claims are still kept)')
