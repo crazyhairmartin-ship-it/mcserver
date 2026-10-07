@@ -53,6 +53,7 @@ public final class FotfSkills {
         }
         MinecraftForge.EVENT_BUS.register(new PetPerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.pet.FairyCompanion());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.world.FlyerHeight());
         MinecraftForge.EVENT_BUS.register(new BreedingPerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.pet.Ferality());
         MinecraftForge.EVENT_BUS.register(new fotfskills.world.RemovedBlocks());
