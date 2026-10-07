@@ -928,7 +928,7 @@
     {
       "id": "craft",
       "name": "Crafting",
-      "xp": "Crafting tools, armour, weapons and gear; crafting workstations and storage (1 per ingredient: crafting tables, furnaces, chests, barrels, cooking stations...); smithing upgrades; smelting ingots.",
+      "xp": "Crafting tools, armour, weapons and gear; crafting workstations and storage (1 XP per 4 ingredients: crafting tables, furnaces, chests, barrels, cooking stations...); smithing upgrades; smelting ingots.",
       "icon": "minecraft:crafting_table",
       "background": "minecraft:textures/block/spruce_planks.png",
       "nodes": [
