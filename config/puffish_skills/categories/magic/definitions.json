@@ -660,13 +660,13 @@
       }
     ]
   },
-  "sourcecraft_1": {
-    "title": "Sourcecraft",
-    "description": "Sourcelinks you place make +33% more source and the enchanting apparatus uses 17% less source",
+  "fae_bond_1": {
+    "title": "Fae Bond",
+    "description": "+10% chance that a tamed fairy nearby saves you from a killing blow (each fairy once every 10 minutes)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "ars_nouveau:source_gem"
+        "item": "fays_fairies:fairy_bottle"
       }
     },
     "frame": {
@@ -681,26 +681,19 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "source_gain",
-          "value": 0.33
-        }
-      },
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "apparatus_save",
-          "value": 0.17
+          "perk": "fae_bond",
+          "value": 0.1
         }
       }
     ]
   },
-  "sourcecraft_2": {
-    "title": "Sourcecraft",
-    "description": "Sourcelinks you place make +66% more source and the enchanting apparatus uses 34% less source",
+  "fae_bond_2": {
+    "title": "Fae Bond",
+    "description": "+20% chance that a tamed fairy nearby saves you from a killing blow (each fairy once every 10 minutes)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "ars_nouveau:source_gem"
+        "item": "fays_fairies:fairy_bottle"
       }
     },
     "frame": {
@@ -715,26 +708,19 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "source_gain",
-          "value": 0.33
-        }
-      },
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "apparatus_save",
-          "value": 0.17
+          "perk": "fae_bond",
+          "value": 0.1
         }
       }
     ]
   },
-  "sourcecraft_3": {
-    "title": "Sourcecraft",
-    "description": "Sourcelinks you place make +99% more source and the enchanting apparatus uses 51% less source",
+  "fae_bond_3": {
+    "title": "Fae Bond",
+    "description": "+30% chance that a tamed fairy nearby saves you from a killing blow (each fairy once every 10 minutes)",
     "icon": {
       "type": "item",
       "data": {
-        "item": "ars_nouveau:source_gem"
+        "item": "fays_fairies:fairy_bottle"
       }
     },
     "frame": {
@@ -749,15 +735,8 @@
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "source_gain",
-          "value": 0.33
-        }
-      },
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "apparatus_save",
-          "value": 0.17
+          "perk": "fae_bond",
+          "value": 0.1
         }
       }
     ]

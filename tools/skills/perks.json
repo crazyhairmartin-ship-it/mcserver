@@ -436,19 +436,12 @@
         }
       }
     ],
-    "sourcecraft": [
+    "fae_bond": [
       {
         "type": "fotfskills:perk",
         "data": {
-          "perk": "source_gain",
-          "value": 0.33
-        }
-      },
-      {
-        "type": "fotfskills:perk",
-        "data": {
-          "perk": "apparatus_save",
-          "value": 0.17
+          "perk": "fae_bond",
+          "value": 0.1
         }
       }
     ],
