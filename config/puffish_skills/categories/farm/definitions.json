@@ -1534,7 +1534,7 @@
   },
   "reapers_due_1": {
     "title": "Reaper's Due",
-    "description": "Scythe swings hit every hostile mob within 3 blocks around you at full damage",
+    "description": "Every third scythe swing in a row is a spinning finisher that hits every hostile mob within 3 blocks around you at full damage",
     "icon": {
       "type": "item",
       "data": {

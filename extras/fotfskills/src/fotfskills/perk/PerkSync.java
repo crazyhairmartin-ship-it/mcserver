@@ -79,6 +79,13 @@ public final class PerkSync {
                     context.get().setPacketHandled(true);
                 })
                 .add();
+        CHANNEL.messageBuilder(Spin.class, 5, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder((msg, buf) -> buf.m_130130_(msg.entityId())).decoder(buf -> new Spin(buf.m_130242_()))
+                .consumerMainThread((msg, context) -> {
+                    fotfskills.client.SpinAnimation.play(msg.entityId());
+                    context.get().setPacketHandled(true);
+                })
+                .add();
         CHANNEL.messageBuilder(Buffs.class, 1, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Buffs::encode).decoder(Buffs::decode)
                 .consumerMainThread((msg, context) -> {
@@ -86,6 +93,14 @@ public final class PerkSync {
                     context.get().setPacketHandled(true);
                 })
                 .add();
+    }
+
+    /** Server to clients: play the Reaper's Due spin on this player (the player and everyone who can see them). */
+    public record Spin(int entityId) {
+    }
+
+    public static void sendSpin(ServerPlayer player) {
+        CHANNEL.send(PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> player), new Spin(player.m_19879_()));
     }
 
     /** Client to server: the player used Double Jump (the server clears their fall distance). */

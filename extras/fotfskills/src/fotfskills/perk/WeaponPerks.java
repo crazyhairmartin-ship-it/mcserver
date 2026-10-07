@@ -115,8 +115,10 @@ public final class WeaponPerks {
             if (cleave > 0 && Weapons.twoHanded(player, weapon)) {
                 splash(player, target, target, (float) (amount * cleave), 2.5);
             }
-            if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe")) {
-                splash(player, player, target, amount, 3);   // Reaper's Due: every hostile mob around you, full damage
+            if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe") && state.reaper.hit(now) == 3) {
+                state.reaper.reset();                         // Reaper's Due: every 3rd swing spins through every
+                splash(player, player, target, amount, 3);   // hostile mob within 3 blocks at full damage
+                reaperSpin(player);
             }
         } else if (direct instanceof Projectile projectile) {
             Projectiles.Kind kind = Projectiles.kind(projectile);
@@ -324,6 +326,20 @@ public final class WeaponPerks {
             }
         }
         return DamageBreakdown.abilityMultiplier(base, types, p -> Perks.get(player, p));
+    }
+
+    /** The Reaper's Due finisher: a ring of sweeps, the sweep sound, and a spin everyone nearby sees. */
+    private static void reaperSpin(ServerPlayer player) {
+        if (player.m_9236_() instanceof net.minecraft.server.level.ServerLevel level) {
+            for (int i = 0; i < 8; i++) {
+                double a = i * Math.PI / 4;
+                level.m_8767_(net.minecraft.core.particles.ParticleTypes.f_123766_, player.m_20185_() + Math.cos(a) * 2,
+                        player.m_20186_() + 1, player.m_20189_() + Math.sin(a) * 2, 1, 0, 0, 0, 0);
+            }
+            level.m_6263_(null, player.m_20185_(), player.m_20186_(), player.m_20189_(),
+                    net.minecraft.sounds.SoundEvents.f_12317_, net.minecraft.sounds.SoundSource.PLAYERS, 1.0f, 0.8f);
+        }
+        PerkSync.sendSpin(player);
     }
 
     /** Hits every hostile mob within radius of center, except center itself and the mob the swing already hit. */
