@@ -153,7 +153,7 @@ hash = "ae70b01b4bd0628f4b7eb7f379e8514702a8899891cd95baf8081b9ac33ea15c"
 
 [[files]]
 file = "config/puffish_skills/categories/attack/definitions.json"
-hash = "df5aad6b0e09a4f385b2bc71fc3f489459a454fd9498bdb4833aa430e5ebd797"
+hash = "cb88decadf561e2bc08cca8f1ff983582e39b3a3439c3583e36de31509284a7a"
 
 [[files]]
 file = "config/puffish_skills/categories/attack/experience.json"
@@ -165,7 +165,7 @@ hash = "d7b5449ce8d9c24b8514b85b1e47b062c98c4304e17e72e6117f398be7b2d8b3"
 
 [[files]]
 file = "config/puffish_skills/categories/cook/category.json"
-hash = "af1f1bb9c7e02dba2c849076cde703a52803c4647323fe4345b4bc67872f702e"
+hash = "54e55a64e58e447f7bfa2af1d4d0721c75106f6ac309d95d0541c10e7bae5a48"
 
 [[files]]
 file = "config/puffish_skills/categories/cook/connections.json"
@@ -185,7 +185,7 @@ hash = "713f29271f143baaba4dd314edd4dcf0ee228e0b41ae956d793fa47e3594525c"
 
 [[files]]
 file = "config/puffish_skills/categories/craft/category.json"
-hash = "5f213ca7f23389f013103ba1eb968609c018d94b2fa9f5092e36ceb4f4824914"
+hash = "d749298c4ce799b8eebdb3a84db18548c60def5cd42bcb430207dcbb2df761d6"
 
 [[files]]
 file = "config/puffish_skills/categories/craft/connections.json"
@@ -193,11 +193,11 @@ hash = "4e5fdd07a557d7ae7da06a012f7ec3d4cc7cc22cbcbd1b081b3e0dfd00da5761"
 
 [[files]]
 file = "config/puffish_skills/categories/craft/definitions.json"
-hash = "8ec5e50b4941bc7d416b2fe27d700341977a8bf616d7436b073f22979b3c6bf0"
+hash = "1abf8163bb2b7d37f6961768195c9493d3ab20f5f8e668c1cf7ce501cc56c121"
 
 [[files]]
 file = "config/puffish_skills/categories/craft/experience.json"
-hash = "e715b7154040396b8df77dbbb8391744e0783bf9fedeecd0dab1afcd0e64944d"
+hash = "05ddc7c13ae5fb6d02957e8a0fad6173004ada1e902d014e23e4d68dcdd15008"
 
 [[files]]
 file = "config/puffish_skills/categories/craft/skills.json"
@@ -233,7 +233,7 @@ hash = "865a10843b465ef57a677c2bab73ba889353dc88f519cff24a414d785981914e"
 
 [[files]]
 file = "config/puffish_skills/categories/farm/definitions.json"
-hash = "a01f4519541a4e91f0f1f4c0de60d39f103db058b6d6f00e225cc4f093645c0f"
+hash = "0f416c25933fd65d1464206e77d9dd7dcfe58c33f9ed0cc102a3a576e3f23e7a"
 
 [[files]]
 file = "config/puffish_skills/categories/farm/experience.json"
@@ -245,7 +245,7 @@ hash = "08c0df17ef6cfd1e649362381bec0077528da3cb81a1fe1761e6c2e5480074a3"
 
 [[files]]
 file = "config/puffish_skills/categories/fish/category.json"
-hash = "32bbc28898b186091601920dc4f14883d339cac9f7b7d2032256c26099b97dab"
+hash = "44cef0ac258a9cf0610eeb56626a20f92bc565131daadcadb67d8fc5c4abb99a"
 
 [[files]]
 file = "config/puffish_skills/categories/fish/connections.json"
@@ -253,11 +253,11 @@ hash = "23efc03b939b62cee78047a1a5ba1f84c28588503baa722618ac51b21bd55121"
 
 [[files]]
 file = "config/puffish_skills/categories/fish/definitions.json"
-hash = "52a64abaf112443c7e665f79c2e242a599cbe661263ada93126d05d480b75d69"
+hash = "39f0d1779b9426b413459cc6ef7b667d74226d61ee39b45fb929ce89c998733c"
 
 [[files]]
 file = "config/puffish_skills/categories/fish/experience.json"
-hash = "854a4a41b9f3f25ab93324a0633ca1cc1bac19d5397009a26af75667fa8b9565"
+hash = "e8b87ad01fd06bfe4f030a7906cc5e2db4e9bd06b05d232c1a721b4d4ea18302"
 
 [[files]]
 file = "config/puffish_skills/categories/fish/skills.json"
@@ -285,7 +285,7 @@ hash = "040e7df984e54168cb1310960c3cb294a00b510291337403455e0c36beffe32a"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/category.json"
-hash = "6dabb56e0a4023b83a234d750892e78a92aae9a37f6a94673cfd1c3d7ebe9402"
+hash = "92f666de8f4562e827033f31d34f4909ff809d870659b72b6e63b4abc4af0aaa"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/connections.json"
@@ -293,7 +293,7 @@ hash = "9ed97ec53618e63f432fab0c3d2d5996170764c12dad246d3f5899bebb982d5e"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/definitions.json"
-hash = "73d4e79b3ac25edf3a1840e27dc7d25abb56603bdf301917174bc3cd78396cd4"
+hash = "6ea9551d7a0b64ff341b457a6eddd81519ac24c96e4725bef5f8dc85e00dd890"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/experience.json"
@@ -1696,10 +1696,6 @@ file = "kubejs/data/aquaculture/weapon_attributes/wooden_fillet_knife.json"
 hash = "82cb2f71abd211506cc45a58fa8f46b80e33b1f3461ff2db922fe3ffe2ae0419"
 
 [[files]]
-file = "kubejs/data/ars_nouveau/worldgen/biome/archwood_forest.json"
-hash = "cb6ed694c55f142ba0e3edb9cdf47e0ebed70b4414d7e407e7e8f81242fc6da4"
-
-[[files]]
 file = "kubejs/data/bakery/weapon_attributes/bread_knife.json"
 hash = "82cb2f71abd211506cc45a58fa8f46b80e33b1f3461ff2db922fe3ffe2ae0419"
 
@@ -1901,7 +1897,7 @@ hash = "18a36247ae1178b8388deb29261fb910953d36c1270434ed523d3994719ca015"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/biome/fairy/uncommon.json"
-hash = "755e66d3ba913e21b2ea17759d8f07b5ca76f2d5b95cd7d1899d031e25c61423"
+hash = "f8799727c42a1e07a46b3f79d3142d92064089b68df42cdb87cae7e9781ad380"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/biome/meadow_water_buffalo.json"
@@ -2110,6 +2106,78 @@ hash = "d0bb0bcd252ea1fb468b0e4bc6ae6813e2b87e70241e7bc9d862694072dffc55"
 [[files]]
 file = "kubejs/data/naturalist/tags/worldgen/biome/has_vulture.json"
 hash = "22de1fb4f119f67cbae6882d8ee8c0b66255812f60b1b2cc89dcddfe9cbdb094"
+
+[[files]]
+file = "kubejs/data/spartancataclysm/weapon_attributes/ancient_metal_boomerang.json"
+hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
+
+[[files]]
+file = "kubejs/data/spartancataclysm/weapon_attributes/black_steel_boomerang.json"
+hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
+
+[[files]]
+file = "kubejs/data/spartancataclysm/weapon_attributes/cursium_boomerang.json"
+hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
+
+[[files]]
+file = "kubejs/data/spartancataclysm/weapon_attributes/ignitium_boomerang.json"
+hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
+
+[[files]]
+file = "kubejs/data/spartancataclysm/weapon_attributes/witherite_boomerang.json"
+hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
+
+[[files]]
+file = "kubejs/data/spartantwilight/weapon_attributes/fiery_boomerang.json"
+hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
+
+[[files]]
+file = "kubejs/data/spartantwilight/weapon_attributes/ironwood_boomerang.json"
+hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
+
+[[files]]
+file = "kubejs/data/spartantwilight/weapon_attributes/knightmetal_boomerang.json"
+hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
+
+[[files]]
+file = "kubejs/data/spartantwilight/weapon_attributes/steeleaf_boomerang.json"
+hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
+
+[[files]]
+file = "kubejs/data/spartanweaponry/tags/spartanweaponry/weapon_traits/battleaxe.json"
+hash = "061b27ba2cb1f650245acf15342dce31e2c5796a4d973387b6436b8317bc8505"
+
+[[files]]
+file = "kubejs/data/spartanweaponry/tags/spartanweaponry/weapon_traits/glaive.json"
+hash = "141e48a55da52fba59dae21fc2e8b8714967f33f5d91e8f9c19d40125f60a0da"
+
+[[files]]
+file = "kubejs/data/spartanweaponry/tags/spartanweaponry/weapon_traits/greatsword.json"
+hash = "e5975eef3e7c18ee59e3836de261e545b7254f4244177460d72c39f8ac7dcd03"
+
+[[files]]
+file = "kubejs/data/spartanweaponry/tags/spartanweaponry/weapon_traits/halberd.json"
+hash = "eed8c51ceeac6b5f5e2c07ee213a3b1553ddb3250f92a5b5ea93bfdb8c6e37f6"
+
+[[files]]
+file = "kubejs/data/spartanweaponry/tags/spartanweaponry/weapon_traits/katana.json"
+hash = "7a0e45963ad858d4ca227d56093a0105780f4953ba0fb01584cf34065cbb81d0"
+
+[[files]]
+file = "kubejs/data/spartanweaponry/tags/spartanweaponry/weapon_traits/longsword.json"
+hash = "26ca7fe5c9cb8488255280d33d647d4ba4f044aafe840a0817efad69ee38c583"
+
+[[files]]
+file = "kubejs/data/spartanweaponry/tags/spartanweaponry/weapon_traits/pike.json"
+hash = "3c82a19d52aec809f7eccd90372b256bda5b3d4265a36b8f53f802b5d91cd566"
+
+[[files]]
+file = "kubejs/data/spartanweaponry/tags/spartanweaponry/weapon_traits/quarterstaff.json"
+hash = "f1d323871add5eb73bd38f6371be09c2894f9767647eb88360330695baef9386"
+
+[[files]]
+file = "kubejs/data/spartanweaponry/tags/spartanweaponry/weapon_traits/warhammer.json"
+hash = "42a12dd7de6f981286c63d4398dce77dea0c344ca96cd51cbf57b71cbc64bb3d"
 
 [[files]]
 file = "kubejs/data/spartanweaponry/weapon_attributes/copper_boomerang.json"
@@ -2561,12 +2629,12 @@ metafile = true
 
 [[files]]
 file = "mods/fotfmail.pw.toml"
-hash = "753006f8647e980412b22f028f9ce454976d744fd93e25554405a7a6d81cf186"
+hash = "89b6ec853b01ca8f928e9d9454a2bcc1a6003cb5dae4390e611479a290ff32cb"
 metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "b1aa198a1e7b18837e0bdb29c93eaeae07659850e2c6d5b73918f1a05ae81ed3"
+hash = "fdb894fc71aed26fb494371b4dbef9a414798ead2f73016207f890bf7b93a849"
 metafile = true
 
 [[files]]
