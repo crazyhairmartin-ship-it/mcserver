@@ -1,4 +1,4 @@
-# Remove Ars Nouveau: archwood becomes recoloured mauve wood
+# Remove Ars Nouveau: archwood becomes recoloured empyreal wood
 
 Status: plan, nothing applied. Builds on the cloud session's spec (`2026-10-06-remove-ars-nouveau.md` on branch
 `claude/cloud-session-setup-epiuzy`) with Dylan's decisions from 2026-10-07. Where the two disagree, this one wins.
@@ -7,12 +7,13 @@ Status: plan, nothing applied. Builds on the cloud session's spec (`2026-10-06-r
 
 - **Ars goes completely.** Iron's stays the only magic mod.
 - **Archwood is not kept or re-created.** Every archwood block, item and Every Compat variant in the world becomes the
-  matching **Regions Unexplored mauve wood** block.
-- **Mauve gets the archwood palette.** Recolour Regions Unexplored's mauve textures (planks, logs, stripped, leaves,
-  door, trapdoor, signs, boats...) to the current archwood colour (`#9887b6`, the purple already used for archwood in
-  `kubejs/assets/ars_nouveau/`), keeping mauve's own designs (trapdoor and door patterns stay mauve's). Ship the
-  recoloured textures in `kubejs/assets/regions_unexplored/`. Every Compat builds its furniture textures from the
-  planks, so mauve furniture follows the new colour.
+  matching **Biomes O' Plenty empyreal wood** block.
+- **Empyreal's inner wood moves halfway to archwood.** Only planks and what's crafted from them (doors, trapdoors,
+  signs, boats, and so stairs, slabs and fences), the log ends' inner rings and stripped logs are recoloured, halfway
+  between empyreal's purple (`#72517b` planks) and the archwood planks (`#9887b6`). Empyreal's bark, leaves and the
+  designs of its doors and trapdoors stay as they are. `tools/empyreal/recolor_empyreal.py` writes the textures to
+  `kubejs/assets/biomesoplenty/`. Every Compat builds its furniture textures from the planks, so empyreal furniture
+  follows the new colour.
 - **Archwood chests:** Dylan swaps his by hand before the update. No block-entity conversion.
 
 ## Block and item mapping (fotfskills RemovedBlocks, same as Tinkers)
@@ -22,15 +23,15 @@ world's registry list so nothing is missed:
 
 | Ars / variant | Becomes |
 |---|---|
-| `archwood_planks`, `_stairs`, `_slab`, `_fence`, `_fence_gate`, `_door`, `_trapdoor`, `_button`, `_pressure_plate` | `regions_unexplored:mauve_*` |
-| `{red,blue,green,purple}_archwood_log` / `_wood`, stripped versions | `mauve_log` / `mauve_wood` / `stripped_mauve_*` |
-| `*_archwood_leaves`, `*_archwood_sapling`, potted saplings | `mauve_leaves`, `mauve_sapling`, `potted_mauve_sapling` |
+| `archwood_planks`, `_stairs`, `_slab`, `_fence`, `_fence_gate`, `_door`, `_trapdoor`, `_button`, `_pressure_plate` | `biomesoplenty:empyreal_*` |
+| `{red,blue,green,purple}_archwood_log` / `_wood`, stripped versions | `empyreal_log` / `empyreal_wood` / `stripped_empyreal_*` |
+| `*_archwood_leaves`, `*_archwood_sapling`, potted saplings | `empyreal_leaves`, `empyreal_sapling`, `potted_empyreal_sapling` |
 | `archwood_sconce` | `minecraft:lantern` |
-| `everycomp:<mod>/ars_nouveau/archwood_*` | `everycomp:<mod>/regions_unexplored/mauve_*` |
-| `everycomp:ru/ars_nouveau/*archwood_shrub`, `archwood_branch` | `regions_unexplored:mauve_shrub`, `mauve_branch` |
-| `everycomp:tf/ars_nouveau/hollow_archwood_log*` | `everycomp:tf/regions_unexplored/hollow_mauve_log*` |
-| `supplementaries:ars_nouveau/sign_post_archwood`, `snowyspirit:ars_nouveau/sled_archwood` | their `regions_unexplored/..._mauve` versions |
-| Archwood mailbox (Ender Mail locker, wood `ars_nouveau_archwood`) | mauve mailbox (add mauve to `tools/mailbox/woods.json` if missing) |
+| `everycomp:<mod>/ars_nouveau/archwood_*` | `everycomp:<mod>/biomesoplenty/empyreal_*` |
+| `everycomp:ru/ars_nouveau/*archwood_shrub`, `archwood_branch` | `everycomp:ru/biomesoplenty/empyreal_shrub`, `empyreal_branch` (if Every Compat makes them; else air) |
+| `everycomp:tf/ars_nouveau/hollow_archwood_log*` | `everycomp:tf/biomesoplenty/hollow_empyreal_log*` |
+| `supplementaries:ars_nouveau/sign_post_archwood`, `snowyspirit:ars_nouveau/sled_archwood` | their `biomesoplenty/..._empyreal` versions |
+| Archwood mailbox (Ender Mail locker, wood `ars_nouveau_archwood`) | empyreal mailbox (add empyreal to `tools/mailbox/woods.json` if missing) |
 | Sourcestone, machines, other Ars blocks | the cloud spec's vanilla table |
 | Source gem / block | amethyst shard / block; everything else Ars is dropped |
 
@@ -38,7 +39,7 @@ Archwood Forest biome: keep its id alive with a datapack copy of vanilla forest 
 
 ## Side effect to accept
 
-Natural mauve trees from Regions Unexplored will also show the archwood colour, since it's one texture set.
+Natural empyreal trees from Biomes O' Plenty get the new inner-wood colour too (their bark and leaves don't change), since it's one texture set.
 
 ## Everything else
 
