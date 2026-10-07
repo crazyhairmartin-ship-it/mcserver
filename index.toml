@@ -58,7 +58,7 @@ hash = "193a619593e7506613a00c83d9fa423944d7888aa56c687c213560a722436e7c"
 
 [[files]]
 file = "config/bookoffamiliars-common.toml"
-hash = "31d668085d5d43eea4095d6d7d4fbfe866870adde57d94f75229d0bd39de0c7b"
+hash = "e47c4aab90e7edd54ecde67547cc0f9841351efc77e04b66c22800b24633c66b"
 
 [[files]]
 file = "config/butterflies-common.toml"
@@ -79,6 +79,10 @@ hash = "93ce54c6f1b110f983b56c84278fb3cb9df21077454f10a70c9dd2572a2ee383"
 [[files]]
 file = "config/defaultoptions/keybindings.txt"
 hash = "01fd7fd6e7486fbb3ece679a037f0ba15ba103dd8f919c84f6639f2aefc13942"
+
+[[files]]
+file = "config/domestication-innovation.toml"
+hash = "04746e88b10acafd5ce14ff6801025093de04abde3d0fdfd8c56eef9cea19220"
 
 [[files]]
 file = "config/everycomp-entries.toml"
@@ -2026,6 +2030,42 @@ hash = "bc18bf0aad37ccad2cbaef76bc419eb379832e49a6baa069b16fe706a90f62ed"
 [[files]]
 file = "kubejs/data/minecraft/weapon_attributes/wooden_axe.json"
 hash = "bc18bf0aad37ccad2cbaef76bc419eb379832e49a6baa069b16fe706a90f62ed"
+
+[[files]]
+file = "kubejs/data/moremobvariants/tags/worldgen/biome/wolf_ashen_spawns.json"
+hash = "487548c6f4111b89cbc914dadc5066d6b2dbcbde56096aee0b1b4acf3a8514a4"
+
+[[files]]
+file = "kubejs/data/moremobvariants/tags/worldgen/biome/wolf_black_spawns.json"
+hash = "8c1ac878290676940f7b515d5447db99f7a8ea4545007002fd4fc516570e03cc"
+
+[[files]]
+file = "kubejs/data/moremobvariants/tags/worldgen/biome/wolf_chestnut_spawns.json"
+hash = "55a3a28cc8af53086b0293beef20dec6c6bc81175e2f07cf58900afb8cfa5466"
+
+[[files]]
+file = "kubejs/data/moremobvariants/tags/worldgen/biome/wolf_pale_spawns.json"
+hash = "092525071f186357304d3e9e9d9849f527f8085d5efcb724f0c1fb279f7299be"
+
+[[files]]
+file = "kubejs/data/moremobvariants/tags/worldgen/biome/wolf_rusty_spawns.json"
+hash = "b868c5958750278f372b6965e10f64969290d773dcbdc3d57c473a6bd6cd1f9c"
+
+[[files]]
+file = "kubejs/data/moremobvariants/tags/worldgen/biome/wolf_snowy_spawns.json"
+hash = "9b8223e4d81a4928750d8d74303bdb1c989cf4bf1e0dafdb4f8725d5d2a89b71"
+
+[[files]]
+file = "kubejs/data/moremobvariants/tags/worldgen/biome/wolf_spotted_spawns.json"
+hash = "94b8b68a08708170b2e39893eef3e4b2ea8cfe82df8164f08de634157a585e25"
+
+[[files]]
+file = "kubejs/data/moremobvariants/tags/worldgen/biome/wolf_striped_spawns.json"
+hash = "358c255f0419c37122b96a889d4ef93818ef6a705f0770ed3d6024fd3c65d3e8"
+
+[[files]]
+file = "kubejs/data/moremobvariants/tags/worldgen/biome/wolf_woods_spawns.json"
+hash = "ff18dc5fa9f6eaddae598382acb7239fb7e93c14695b6ef5cb09c3c974a523c6"
 
 [[files]]
 file = "kubejs/data/mowziesmobs/weapon_attributes/earthrend_gauntlet.json"
