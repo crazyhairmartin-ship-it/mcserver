@@ -36,7 +36,8 @@
     "IronsCastPacketMixin",
     "IronsQuickCastPacketMixin",
     "IronsScrollMixin",
-    "WolfEarsMixin"
+    "WolfEarsMixin",
+    "ModelPartAccessor"
   ],
   "injectors": {
     "defaultRequire": 1
