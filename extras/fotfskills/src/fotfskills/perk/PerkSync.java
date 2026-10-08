@@ -62,6 +62,16 @@ public final class PerkSync {
                     context.get().setPacketHandled(true);
                 })
                 .add();
+        CHANNEL.messageBuilder(DepositMatching.class, 6, NetworkDirection.PLAY_TO_SERVER)
+                .encoder((msg, buf) -> { }).decoder(buf -> new DepositMatching())
+                .consumerMainThread((msg, context) -> {
+                    ServerPlayer player = context.get().getSender();
+                    if (player != null && net.minecraftforge.fml.ModList.get().isLoaded("obscuras_storage")) {
+                        fotfskills.compat.TerminalDeposit.depositMatching(player);
+                    }
+                    context.get().setPacketHandled(true);
+                })
+                .add();
         CHANNEL.messageBuilder(ProfileRequest.class, 3, NetworkDirection.PLAY_TO_SERVER)
                 .encoder((msg, buf) -> { }).decoder(buf -> new ProfileRequest())
                 .consumerMainThread((msg, context) -> {
@@ -105,6 +115,14 @@ public final class PerkSync {
 
     /** Client to server: the player used Double Jump (the server clears their fall distance). */
     public record DoubleJumped() {
+    }
+
+    /** Client to server: "move matching items" pressed on an Obscura's storage terminal. */
+    public record DepositMatching() {
+    }
+
+    public static void sendDepositMatching() {
+        CHANNEL.sendToServer(new DepositMatching());
     }
 
     /** Client to server: the character screen opened and wants this player's skills. */
