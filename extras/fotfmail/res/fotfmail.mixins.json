@@ -16,7 +16,8 @@
     "PackageBlockMixin",
     "FireBlockMixin",
     "FarmBlockMixin",
-    "LecternBlockEntityMixin"
+    "LecternBlockEntityMixin",
+    "LecternLetterMenuMixin"
   ],
   "injectors": {
     "defaultRequire": 1
