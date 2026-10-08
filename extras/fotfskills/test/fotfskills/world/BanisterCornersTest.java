@@ -16,10 +16,15 @@ public final class BanisterCornersTest {
                 "banister behind facing west: L with the west edge");
         check(shape(Direction.NORTH, Map.of(Direction.SOUTH, Direction.EAST)) == StairsShape.INNER_RIGHT,
                 "banister behind facing east: L with the east edge");
-        check(shape(Direction.NORTH, Map.of(Direction.NORTH, Direction.WEST)) == StairsShape.OUTER_LEFT,
-                "banister in front facing west: corner post on the west side");
-        check(shape(Direction.NORTH, Map.of(Direction.NORTH, Direction.EAST)) == StairsShape.OUTER_RIGHT,
-                "banister in front facing east: corner post on the east side");
+        check(shape(Direction.NORTH, Map.of(Direction.NORTH, Direction.WEST)) == StairsShape.STRAIGHT,
+                "banister in front facing sideways: rails already meet at the corner, stay straight (no corner post)");
+        check(shape(Direction.NORTH, Map.of(Direction.NORTH, Direction.EAST)) == StairsShape.STRAIGHT,
+                "same on the other side");
+        // I_I: three side by side, the outer two running along the path and facing the middle one
+        check(shape(Direction.EAST, Map.of(Direction.EAST, Direction.NORTH)) == StairsShape.STRAIGHT,
+                "I_I: the left banister keeps its whole rail");
+        check(shape(Direction.NORTH, Map.of(Direction.WEST, Direction.EAST, Direction.EAST, Direction.WEST))
+                == StairsShape.STRAIGHT, "I_I: the middle one stays straight");
         check(shape(Direction.NORTH, Map.of(Direction.NORTH, Direction.WEST, Direction.EAST, Direction.NORTH))
                 == StairsShape.STRAIGHT, "a parallel banister beside it keeps the run straight (like stairs)");
         check(shape(Direction.EAST, Map.of(Direction.WEST, Direction.NORTH)) == StairsShape.INNER_LEFT,
