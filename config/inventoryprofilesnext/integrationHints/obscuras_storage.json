@@ -1,0 +1,11 @@
+{
+    "com.obscura.storage.gui.StorageTerminalScreen": {
+        "playerSideOnly": true
+    },
+    "com.obscura.storage.gui.CraftingTerminalScreen": {
+        "playerSideOnly": true
+    },
+    "com.obscura.storage.gui.AbstractStorageTerminalScreen": {
+        "playerSideOnly": true
+    }
+}
