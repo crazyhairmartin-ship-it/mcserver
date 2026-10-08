@@ -20,7 +20,8 @@ import top.theillusivec4.curios.api.client.CuriosRendererRegistry;
 import top.theillusivec4.curios.api.client.ICurioRenderer;
 
 /**
- * Draws the lantern from the Curios Lantern slot hanging off the left side of the wearer's backpack, as the hanging
+ * Draws the lantern from the Curios Lantern slot hanging off the left side of the wearer's backpack (only while the
+ * backpack itself is drawn), as the hanging
  * block model, swinging a little as they walk. Positions are in body-model pixels: the body box is x -4..4,
  * y 0..12 (down), z -2..2, and backpacks sit behind it.
  */
@@ -47,12 +48,42 @@ public final class BackpackLanternRenderer implements ICurioRenderer {
         }
     }
 
+    private static final boolean COSMETIC_ARMOR = net.minecraftforge.fml.ModList.get().isLoaded("cosmeticarmorreworked");
+
+    /**
+     * The backpack as players see it, or empty when it's hidden: wearer invisible, the Curios slot's eye toggle off, or
+     * (chest slot) Cosmetic Armor hiding it or drawing a cosmetic chestplate over it.
+     */
+    private static ItemStack visibleBackpack(LivingEntity wearer) {
+        if (wearer == null || wearer.m_20145_()) {
+            return ItemStack.f_41583_;
+        }
+        ItemStack chest = wearer.m_6844_(net.minecraft.world.entity.EquipmentSlot.CHEST);
+        if (chest.m_204117_(BackpackLantern.BACKPACKS)
+                && !(COSMETIC_ARMOR && CosmeticChest.hides(wearer, net.minecraft.world.entity.EquipmentSlot.CHEST.m_20749_()))) {
+            return chest;
+        }
+        return top.theillusivec4.curios.api.CuriosApi.getCuriosInventory(wearer).resolve()
+                .flatMap(inv -> inv.findCurios(s -> s.m_204117_(BackpackLantern.BACKPACKS)).stream()
+                        .filter(r -> r.slotContext().visible()).findFirst())
+                .map(r -> r.stack())
+                .orElse(ItemStack.f_41583_);
+    }
+
+    /** Cosmetic Armor Reworked, kept in its own class so it only loads when that mod is there. */
+    private static final class CosmeticChest {
+        static boolean hides(LivingEntity wearer, int slot) {
+            var stacks = lain.mods.cos.api.CosArmorAPI.getCAStacksClient(wearer.m_20148_());
+            return stacks != null && (stacks.isSkinArmor(slot) || !stacks.getStackInSlot(slot).m_41619_());
+        }
+    }
+
     @Override
     public <T extends LivingEntity, M extends EntityModel<T>> void render(ItemStack stack, SlotContext slot, PoseStack pose,
             RenderLayerParent<T, M> parent, MultiBufferSource buffers, int light, float limbSwing, float limbSwingAmount,
             float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         LivingEntity wearer = slot.entity();
-        ItemStack pack = BackpackLantern.backpack(wearer);
+        ItemStack pack = visibleBackpack(wearer);
         if (!(stack.m_41720_() instanceof BlockItem item) || pack.m_41619_()
                 || !(parent.m_7200_() instanceof HumanoidModel<?> model)) {
             return;
