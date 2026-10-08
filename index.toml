@@ -1424,6 +1424,14 @@ file = "kubejs/assets/farmersdelight/lang/en_us.json"
 hash = "6d370cb5667feb8296d6a9dd3589030dbd50e53e8093c1e0fee107f1ebf5fa23"
 
 [[files]]
+file = "kubejs/assets/fotf/lang/en_us.json"
+hash = "936789b8afc2f755a85d29ff9958dc14f331bd9ddc7d133d5369bfdbe39e00f8"
+
+[[files]]
+file = "kubejs/assets/fotf/textures/slot/lantern_slot.png"
+hash = "f57b1bc11ee8e9de7ef8736af4470d5c91c36ea286ad6e66d8314f4323f9b28b"
+
+[[files]]
 file = "kubejs/assets/fotfskills/textures/entity/dale_ears.png"
 hash = "8350e2d59c94cd530ebb29fc63e14b2db473cc293e20a029facdbd5aa30f44c6"
 
@@ -1840,6 +1848,10 @@ file = "kubejs/data/cataclysm/weapon_attributes/the_immolator.json"
 hash = "dd9be0bf36e3fdb1c50fd0437e0926d465e29463ff66076d132e097ee8c8b157"
 
 [[files]]
+file = "kubejs/data/curios/tags/items/lantern.json"
+hash = "fe7f16da32e922333e0fc7ccffcb1a9dc8d4c22424608da7c50c251c8e28f430"
+
+[[files]]
 file = "kubejs/data/endermail/loot_tables/blocks/locker.json"
 hash = "12cca183dde8ce69ee5de63d2afcc52e910a3b2c713e4d651ba0e733d65f6340"
 
@@ -1878,6 +1890,14 @@ hash = "c476558fd9a8a384986b4e72437ff87dc302e0d3ba85c2dbbfcfafd8e4aa9f71"
 [[files]]
 file = "kubejs/data/forge/loot_modifiers/global_loot_modifiers.json"
 hash = "f2e6be923ce8a76e35a8ee658171fd10c886663be3e348bfc192c0935b278b11"
+
+[[files]]
+file = "kubejs/data/fotf/curios/entities/lantern.json"
+hash = "4ee7839e8a7fb33e971568f821cfb0956c27de05e4f372017cd34d6be6cc7f8d"
+
+[[files]]
+file = "kubejs/data/fotf/curios/slots/lantern.json"
+hash = "93f9e9f4ebe16bdbeba9755ede5ee26a07c1383bccf67e1028e5cb2f5ecf169c"
 
 [[files]]
 file = "kubejs/data/fotf/forge/biome_modifier/fairies_common.json"
@@ -2438,6 +2458,10 @@ hash = "a05769e9f0698330be7b73f4870bbf494a25b8b1a7e8b86f1d3bce3164a18ec0"
 [[files]]
 file = "kubejs/server_scripts/keep_inventory.js"
 hash = "8032ba7d5b5cd998c8cb13a3876cf1731a60bca51b37c245d6eb114462b9e63b"
+
+[[files]]
+file = "kubejs/server_scripts/lantern_light.js"
+hash = "fd0436626c9ada0d469dcd1cfa8662ba4fbd4c2cb52aa24e849e7bc97793792f"
 
 [[files]]
 file = "kubejs/server_scripts/login_messages.js"
