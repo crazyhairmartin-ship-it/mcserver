@@ -30,7 +30,9 @@ public final class TerminalDepositButton {
         for (var listener : event.getListenersList()) {
             if (listener instanceof AbstractWidget w && w.m_252754_() == x) {
                 bottom = Math.max(bottom, w.m_252907_() + w.m_93694_());
-                width = w.m_5711_();
+                if (w.m_5711_() >= 12 && w.m_5711_() <= 24) {       // vanilla buttons under ~4px tall crash when drawn
+                    width = w.m_5711_();
+                }
             }
         }
         event.addListener(new Button.Builder(Component.m_237113_("⇩"), b -> PerkSync.sendDepositMatching())
