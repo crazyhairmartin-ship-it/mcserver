@@ -218,11 +218,26 @@ def from_hand(mood):
     return img
 
 
+EAR_BOX = (16, 14, 22, 17)                                  # the vanilla wolf ear texture (2x2x1 box at 16,14)
+EARS_OUT = HERE.parents[1] / 'kubejs' / 'assets' / 'fotfskills' / 'textures' / 'entity' / 'dale_ears.png'
+
+
 def main():
+    """Coats with see-through upright ears, plus dale_ears.png for fotfskills' DaleEarsLayer (his floppy ears)."""
     OUT.mkdir(parents=True, exist_ok=True)
     for mood in ('wild', 'tame', 'angry'):
         # the hand-edited texture wins when it's there; paint() is how it started
-        (from_hand(mood) if HAND.exists() else paint(mood)).save(OUT / f'dale_{mood}.png')
+        coat = from_hand(mood) if HAND.exists() else paint(mood)
+        if mood == 'tame':
+            ears = Image.new('RGBA', coat.size, (0, 0, 0, 0))
+            ears.paste(coat.crop(EAR_BOX), EAR_BOX[:2])
+            EARS_OUT.parent.mkdir(parents=True, exist_ok=True)
+            ears.save(EARS_OUT)
+        x0, y0, x1, y1 = EAR_BOX
+        for y in range(y0, y1):
+            for x in range(x0, x1):
+                coat.putpixel((x, y), (0, 0, 0, 0))
+        coat.save(OUT / f'dale_{mood}.png')
     print('wrote', ', '.join(f'dale_{m}.png' for m in ('wild', 'tame', 'angry')), '->', OUT)
 
 

@@ -16,6 +16,7 @@ public final class ClientInit {
             net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus()
                     .addListener(BanisterCornerModels::onModifyBakingResult);
         }
+        net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus().addListener(DaleEarsLayer::onAddLayers);
         if (net.minecraftforge.fml.ModList.get().isLoaded("obscuras_storage")) {
             MinecraftForge.EVENT_BUS.register(new TerminalDepositButton());
         }

@@ -36,8 +36,8 @@
     "IronsCastPacketMixin",
     "IronsQuickCastPacketMixin",
     "IronsScrollMixin",
-    "WolfEarsMixin",
-    "ModelPartAccessor"
+    "WolfModelAccessor",
+    "LivingEntityRendererInvoker"
   ],
   "injectors": {
     "defaultRequire": 1
