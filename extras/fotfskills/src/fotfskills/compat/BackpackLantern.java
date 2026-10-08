@@ -48,6 +48,22 @@ public final class BackpackLantern {
                 .orElse(ItemStack.f_41583_);
     }
 
+    /** The lantern hanging off the entity's backpack (light-giving), or an empty stack. */
+    public static ItemStack lantern(LivingEntity entity) {
+        if (!wearsBackpack(entity)) {
+            return ItemStack.f_41583_;
+        }
+        return CuriosApi.getCuriosInventory(entity).resolve().flatMap(inv -> inv.getStacksHandler(SLOT)).map(handler -> {
+            var stacks = handler.getStacks();
+            for (int i = 0; i < stacks.getSlots(); i++) {
+                if (!stacks.getStackInSlot(i).m_41619_()) {
+                    return stacks.getStackInSlot(i);
+                }
+            }
+            return ItemStack.f_41583_;
+        }).orElse(ItemStack.f_41583_);
+    }
+
     @SubscribeEvent
     public void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;

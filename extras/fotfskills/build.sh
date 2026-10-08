@@ -4,7 +4,7 @@
 # mixins use remap=false. Needs Prism's libraries (client SRG jar, Forge, mixin) and Pufferfish.s Skills jar:
 #   PRISM_LIBS   default C:/Users/Dylan/AppData/Roaming/PrismLauncher/libraries
 #   SERVER_DATA  default C:/Users/Dylan/Documents/Minecraft server/server-test/data  (forge universal + mods incl. puffish_skills)
-# plus client-only mods the server doesn't have, in compile-libs/ (not in git): ShoulderSurfing-Forge-1.20.1-5.2.0.jar
+# plus client-only mods the server doesn't have, in compile-libs/ (not in git): ShoulderSurfing-Forge-1.20.1-5.2.0.jar, oculus-mc1.20.1-1.8.0.jar
 set -euo pipefail
 cd "$(dirname "$0")"
 PRISM_LIBS=${PRISM_LIBS:-C:/Users/Dylan/AppData/Roaming/PrismLauncher/libraries}
