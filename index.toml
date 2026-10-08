@@ -1449,15 +1449,15 @@ hash = "4d3973b9da6f15bb398c65b014f81183ebd6a39e3df47218216c722140362a8f"
 
 [[files]]
 file = "kubejs/assets/moremobvariants/textures/entity/wolf/dale_angry.png"
-hash = "76418659a1295ae57d15c7986da4b80b8f81f95954e31282059830aba3b355ff"
+hash = "18975b1f87fbccc55674683101116f2f6ef24cc9da1cc77d2eaa1d55aad2844d"
 
 [[files]]
 file = "kubejs/assets/moremobvariants/textures/entity/wolf/dale_tame.png"
-hash = "e4ebd650b50bad30776c7354e4ed98cb579d2cd8392e590b2feced7fbde63db5"
+hash = "d99f84ab2c252524a62f6b2360dd91a9b24ec853ac4a36f2ff9c8f3b055632ed"
 
 [[files]]
 file = "kubejs/assets/moremobvariants/textures/entity/wolf/dale_wild.png"
-hash = "e4ebd650b50bad30776c7354e4ed98cb579d2cd8392e590b2feced7fbde63db5"
+hash = "d99f84ab2c252524a62f6b2360dd91a9b24ec853ac4a36f2ff9c8f3b055632ed"
 
 [[files]]
 file = "kubejs/assets/naturalist/lang/en_us.json"
@@ -1944,6 +1944,10 @@ file = "kubejs/data/fotf/tags/worldgen/biome/meadow_water_buffalo.json"
 hash = "a5aeda8f0fe7757e25b5a6885b14583ade0b713a9c07624897a6a640e7e0595a"
 
 [[files]]
+file = "kubejs/data/fotf/tags/worldgen/biome/nowhere.json"
+hash = "f74498097708215ee46031db7467ce3abed880ed8188eff156e81993d9787e31"
+
+[[files]]
 file = "kubejs/data/fotf/tags/worldgen/biome/tf_unicorns/heights.json"
 hash = "ff754dc223df8bedf5944461c0894c689577c8bc7d5d4a0a1b369f45e1b318e7"
 
@@ -2081,7 +2085,7 @@ hash = "ff18dc5fa9f6eaddae598382acb7239fb7e93c14695b6ef5cb09c3c974a523c6"
 
 [[files]]
 file = "kubejs/data/moremobvariants/variants/wolf/dale.json"
-hash = "b629a45697c54f04e031ddb2be140a01c6dcffedac2a6d022cb060b87c037fa8"
+hash = "3d815ed924adbbc19eff1ae2a7ee037f6fa883e86c1c8deacf2ab9b448769fac"
 
 [[files]]
 file = "kubejs/data/mowziesmobs/weapon_attributes/earthrend_gauntlet.json"

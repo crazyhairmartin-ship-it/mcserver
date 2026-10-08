@@ -3,8 +3,8 @@
     python tools/skins/make_dale.py
 
 Writes kubejs/assets/moremobvariants/textures/entity/wolf/dale_{wild,tame,angry}.png (64x32, vanilla wolf layout; the
-pixel mask comes from vanilla_wolf_tame.png). The coat is name-tag only (kubejs/data/moremobvariants/variants/wolf/
-dale.json): any wolf named "Dale" wears it. Dale: white with grey freckles on muzzle and legs, a tan face with a white
+pixel mask comes from vanilla_wolf_tame.png). The coat (kubejs/data/moremobvariants/variants/wolf/dale.json) spawns
+nowhere (its biome tag fotf:nowhere is empty): it's given to a wolf by setting VariantID moremobvariants:dale. Dale: white with grey freckles on muzzle and legs, a tan face with a white
 blaze, dark brown ears, a big black heart-shaped saddle over the back and sides, black at the tail base.
 
 Wolf layout notes (body and mane boxes are rotated so their texture rows run head -> tail):
@@ -19,17 +19,48 @@ from PIL import Image
 HERE = Path(__file__).resolve().parent
 OUT = HERE.parents[1] / 'kubejs' / 'assets' / 'moremobvariants' / 'textures' / 'entity' / 'wolf'
 
-WHITE = (236, 232, 224)
-SHADE = (214, 208, 198)
-FRECKLE = (104, 96, 92)
-BLACK = (30, 28, 30)
-BLACK2 = (46, 42, 44)
-TAN = (156, 92, 44)
-TAN2 = (118, 66, 32)
-EAR = (82, 48, 26)
-EAR2 = (98, 60, 32)
-NOSE = (22, 20, 22)
-EYE = (34, 22, 14)
+# each colour is a ramp of tones (dark -> light); the coat picks a tone per pixel from soft mottled noise plus a little
+# speckle, the way More Mob Variants' own coats are painted, instead of flat fills
+RAMPS = {
+    'white': [(196, 190, 180), (214, 208, 198), (228, 223, 214), (238, 234, 226), (246, 243, 237)],
+    'freckle': [(84, 78, 76), (104, 96, 92), (122, 114, 108)],
+    'black': [(20, 19, 21), (30, 28, 30), (40, 37, 39), (52, 48, 50)],
+    'tan': [(108, 60, 28), (128, 72, 34), (148, 86, 42), (166, 100, 50), (182, 116, 62)],
+    'tan2': [(84, 46, 22), (100, 56, 27), (116, 66, 32)],
+    'ear': [(66, 38, 20), (78, 46, 25), (92, 56, 30), (104, 64, 34)],
+    'nose': [(18, 16, 18), (26, 24, 26)],
+    'eye': [(34, 22, 14)],
+}
+WHITE, SHADE, FRECKLE, BLACK, BLACK2 = 'white', 'white', 'freckle', 'black', 'black'
+TAN, TAN2, EAR, EAR2, NOSE, EYE = 'tan', 'tan2', 'ear', 'ear', 'nose', 'eye'
+# faces whose lower rows are the underside / lower flank get shaded down: (x0, y0, x1, y1, shade per row from the top)
+SHADING = [(18, 20, 24, 29, 0.0), (30, 20, 36, 29, 0.0), (24, 20, 30, 29, -0.35), (0, 20, 8, 28, -0.04),
+           (10, 0, 16, 4, -0.3), (36, 0, 44, 7, -0.25)]
+
+
+def mottle(x, y, seed):
+    """Smooth-ish value noise in 0..1: blobs a few pixels across, so tones form patches rather than salt and pepper."""
+    def h(i, j):
+        return random.Random((i * 7349 + j * 1931 + seed * 104729) & 0xFFFFFFFF).random()
+    total = 0.0
+    for scale, weight in ((3.0, 0.6), (1.5, 0.4)):
+        fx, fy = x / scale, y / scale
+        i, j = int(fx), int(fy)
+        tx, ty = fx - i, fy - j
+        tx, ty = tx * tx * (3 - 2 * tx), ty * ty * (3 - 2 * ty)
+        top = h(i, j) * (1 - tx) + h(i + 1, j) * tx
+        bottom = h(i, j + 1) * (1 - tx) + h(i + 1, j + 1) * tx
+        total += weight * (top * (1 - ty) + bottom * ty)
+    return total
+
+
+def tone(cls, x, y, rnd):
+    ramp = RAMPS[cls]
+    v = mottle(x, y, 11) * 0.8 + rnd.random() * 0.35 - 0.05
+    for x0, y0, x1, y1, per_row in SHADING:
+        if x0 <= x < x1 and y0 <= y < y1:
+            v += -0.06 * (y - y0) if per_row == 0.0 else per_row
+    return ramp[max(0, min(len(ramp) - 1, int(v * len(ramp))))]
 
 
 def paint(mood):
@@ -47,12 +78,12 @@ def paint(mood):
         for y in range(y0, y1):
             for x in range(x0, x1):
                 r = rnd.random()
-                px[(x, y)] = FRECKLE if r < freckles else SHADE if r < freckles + 0.18 else WHITE
+                px[(x, y)] = FRECKLE if r < freckles else WHITE
 
     def black(x0, y0, x1, y1):
         for y in range(y0, y1):
             for x in range(x0, x1):
-                px[(x, y)] = BLACK2 if rnd.random() < 0.25 else BLACK
+                px[(x, y)] = BLACK
 
     # everything starts white, lightly ticked
     white(0, 0, 64, 32, 0.03)
@@ -79,10 +110,11 @@ def paint(mood):
     for dy, row in enumerate(face):
         for dx, c in enumerate(row):
             px[(4 + dx, 4 + dy)] = c
+    fixed = {}
     if mood == 'angry':
         for x in (4, 5, 8, 9):
             px[(x, 5)] = BLACK
-        px[(4, 6)], px[(5, 6)], px[(8, 6)], px[(9, 6)] = (182, 15, 15), (228, 46, 46), (228, 46, 46), (182, 15, 15)
+        fixed = {(4, 6): (182, 15, 15), (5, 6): (228, 46, 46), (8, 6): (228, 46, 46), (9, 6): (182, 15, 15)}
 
     # muzzle: white with freckles, black nose at the front
     white(0, 10, 14, 17, 0.22)
@@ -119,11 +151,11 @@ def paint(mood):
     # ears last (their texture overlaps the body's unused corner): dark brown
     for y in range(14, 17):
         for x in range(16, 22):
-            px[(x, y)] = EAR2 if (x + y) % 3 == 0 else EAR
+            px[(x, y)] = EAR
 
     for (x, y), c in px.items():
         if 0 <= x < 64 and 0 <= y < 32 and mask.getpixel((x, y))[3]:
-            img.putpixel((x, y), c + (255,))
+            img.putpixel((x, y), fixed.get((x, y), tone(c, x, y, rnd)) + (255,))
     return img
 
 
