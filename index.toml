@@ -1452,6 +1452,14 @@ file = "kubejs/assets/meadow/lang/en_us.json"
 hash = "4d3973b9da6f15bb398c65b014f81183ebd6a39e3df47218216c722140362a8f"
 
 [[files]]
+file = "kubejs/assets/moremobvariants/textures/entity/cat/beast.png"
+hash = "c8418f12c2162c0a0a6212f73324ddd61e13eccf71f6e08a166f4450bd989d63"
+
+[[files]]
+file = "kubejs/assets/moremobvariants/textures/entity/cat/mister.png"
+hash = "896f225c50756523364cf43eb6128692f64ff44bf3cfc6a572e8c5d5d60a1fe5"
+
+[[files]]
 file = "kubejs/assets/moremobvariants/textures/entity/wolf/dale_angry.png"
 hash = "18975b1f87fbccc55674683101116f2f6ef24cc9da1cc77d2eaa1d55aad2844d"
 
@@ -2086,6 +2094,14 @@ hash = "358c255f0419c37122b96a889d4ef93818ef6a705f0770ed3d6024fd3c65d3e8"
 [[files]]
 file = "kubejs/data/moremobvariants/tags/worldgen/biome/wolf_woods_spawns.json"
 hash = "ff18dc5fa9f6eaddae598382acb7239fb7e93c14695b6ef5cb09c3c974a523c6"
+
+[[files]]
+file = "kubejs/data/moremobvariants/variants/cat/beast.json"
+hash = "3d815ed924adbbc19eff1ae2a7ee037f6fa883e86c1c8deacf2ab9b448769fac"
+
+[[files]]
+file = "kubejs/data/moremobvariants/variants/cat/mister.json"
+hash = "3d815ed924adbbc19eff1ae2a7ee037f6fa883e86c1c8deacf2ab9b448769fac"
 
 [[files]]
 file = "kubejs/data/moremobvariants/variants/wolf/dale.json"
@@ -2736,7 +2752,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "ef43b39cd65c33477b3d77c401a8335486c1d543d46666b7d21ad51286555387"
+hash = "640db4ded51c201987a3d3c097c09099abada0907bb45f0b0c38dcbd389fd68f"
 metafile = true
 
 [[files]]
