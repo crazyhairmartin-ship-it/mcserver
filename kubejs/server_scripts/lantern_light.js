@@ -4,8 +4,8 @@
 
 const CuriosApi = Java.loadClass('top.theillusivec4.curios.api.CuriosApi')
 const BackpackLantern = Java.loadClass('fotfskills.compat.BackpackLantern')
-const LANTERN_LEVELS = { 'minecraft:lantern': 15, 'minecraft:soul_lantern': 10, 'meadow:oil_lantern': 14 }
-const LANTERN_DEFAULT_LEVEL = 13
+const LANTERN_LEVELS = { 'minecraft:lantern': 5, 'minecraft:soul_lantern': 4, 'meadow:oil_lantern': 5 }   // dim: shaders draw the real glow (fotfskills OculusHeldLightMixin); this keeps mobs off
+const LANTERN_DEFAULT_LEVEL = 4
 const LANTERN_EVERY = 1   // ticks between updates
 if (!global.lanternLights) global.lanternLights = {}
 
