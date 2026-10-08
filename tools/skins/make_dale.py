@@ -28,6 +28,7 @@ RAMPS = {
     'tan': [(108, 60, 28), (128, 72, 34), (148, 86, 42), (166, 100, 50), (182, 116, 62)],
     'tan2': [(84, 46, 22), (100, 56, 27), (116, 66, 32)],
     'ear': [(66, 38, 20), (78, 46, 25), (92, 56, 30), (104, 64, 34)],
+    'earfade': [(34, 24, 20), (44, 30, 22), (54, 36, 24)],
     'nose': [(18, 16, 18), (26, 24, 26)],
     'eye': [(34, 22, 14)],
 }
@@ -110,7 +111,7 @@ def paint(mood):
     for dy, row in enumerate(face):
         for dx, c in enumerate(row):
             px[(4 + dx, 4 + dy)] = c
-    fixed = {}
+    fixed = {(4, 6): (255, 255, 255), (5, 6): (18, 20, 22), (8, 6): (18, 20, 22), (9, 6): (255, 255, 255)}
     if mood == 'angry':
         for x in (4, 5, 8, 9):
             px[(x, 5)] = BLACK
@@ -121,22 +122,60 @@ def paint(mood):
     fill(4, 14, 7, 15, NOSE)
     px[(5, 15)] = NOSE
 
-    # mane (neck and shoulders): white; the saddle starts at its back edge
-    white(21, 0, 51, 13, 0.04)
-    black(45, 12, 50, 13)
+    # Dale's spots, from the photos: an oblong "Mickey" on his right side (two lobes toward the shoulder), a big
+    # splotch on his left side that spills over the top of his back, and black over the top of his butt with a little
+    # tan below it. Side faces run head -> tail down the rows; on the right side column 18 is the spine edge, on the left
+    # side column 35 is. The shoulders (mane box) sit in front of the body, so the spots start on the mane's back rows
+    # and carry on onto the body without a seam.
+    def spot(cells):
+        for x, y in cells:
+            px[(x, y)] = BLACK
 
-    # body: white chest and belly, black heart-shaped saddle over the back and down both sides
-    white(18, 14, 42, 29, 0.04)
-    black(36, 21, 42, 27)                                   # back
-    for x, y in ((36, 21), (41, 21), (38, 26), (39, 26)):   # heart: two lobes at the shoulders, point at the rump
-        px[(x, y)] = WHITE
-    black(36, 26, 38, 27)
-    black(40, 26, 42, 27)
-    black(38, 28, 40, 29)                                   # black over the tail base
-    black(18, 21, 21, 27)                                   # right side, from the back edge
-    black(21, 22, 22, 26)
-    black(33, 21, 36, 27)                                   # left side, from the back edge
-    black(32, 22, 33, 26)
+    def grid(x0, y0, rows, flip=False):
+        """Cells from a picture: rows of '#'/'.' read top -> bottom = head -> tail, left -> right = spine -> belly
+        (flip: right -> left, for the left side where the spine is on the right)."""
+        out = []
+        for dy, row in enumerate(rows):
+            for dx, ch in enumerate(row):
+                if ch == '#':
+                    out.append((x0 - dx if flip else x0 + dx, y0 + dy))
+        return out
+
+    # shoulders (mane): white with ticking
+    white(21, 0, 51, 13, 0.05)
+    # right side of the mane (spine at x21): the Mickey's two lobes
+    spot(grid(21, 10, ['.#.#..',
+                       '.####.',
+                       '.####.']))
+    # left side of the mane (spine at x42): front of the splotch
+    spot(grid(42, 10, ['##....',
+                       '###...',
+                       '####..'], flip=True))
+    spot([(43, 11), (43, 12), (44, 12)])                    # splotch over the top, on the mane's back
+
+    # body: white with ticking along the back
+    white(18, 14, 42, 29, 0.05)
+    white(36, 20, 42, 29, 0.10)
+    # right side (spine at x18): the oblong Mickey, wide at the front, narrowing toward the hip
+    spot(grid(18, 20, ['.####.',
+                       '.#####',
+                       '.#####',
+                       '..####',
+                       '..###.',
+                       '...#..']))
+    # left side (spine at x35): the big splotch, up over the spine
+    spot(grid(35, 20, ['####..',
+                       '#####.',
+                       '#####.',
+                       '####..',
+                       '###...'], flip=True))
+    spot([(36, 20), (37, 20), (36, 21), (37, 21), (36, 22), (36, 23)])   # spilling over the top of his back
+    # top of the butt: black across the back's last rows and down onto both hips, a little tan under it
+    black(36, 27, 42, 29)
+    spot(grid(18, 27, ['###...', '###...']))
+    spot(grid(35, 27, ['###...', '###...'], flip=True))
+    for x, y in ((21, 27), (21, 28), (32, 27), (32, 28)):
+        px[(x, y)] = TAN
     black(32, 17, 35, 20)                                   # rump, under the tail
 
     # legs: white, freckled toward the paws
@@ -149,9 +188,9 @@ def paint(mood):
     black(11, 18, 15, 20)
 
     # ears last (their texture overlaps the body's unused corner): dark brown
-    for y in range(14, 17):
+    for y in range(14, 17):                                 # row 14 = top of the ear, 16 = where it meets the head
         for x in range(16, 22):
-            px[(x, y)] = EAR
+            px[(x, y)] = 'black' if y == 14 else 'earfade' if y == 15 else EAR
 
     for (x, y), c in px.items():
         if 0 <= x < 64 and 0 <= y < 32 and mask.getpixel((x, y))[3]:
