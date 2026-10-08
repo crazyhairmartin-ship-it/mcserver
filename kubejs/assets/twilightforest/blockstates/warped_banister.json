@@ -1,0 +1,454 @@
+{
+  "variants": {
+    "extended=false,facing=east,shape=connected,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=connected,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_inner_left",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=connected,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_inner_right",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=connected,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_outer_left",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=connected,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_outer_right",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=short,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=short,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_inner_left",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=short,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_inner_right",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=short,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_outer_left",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=short,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_outer_right",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=tall,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=tall,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_inner_left",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=tall,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_inner_right",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=tall,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_outer_left",
+      "y": 270
+    },
+    "extended=false,facing=east,shape=tall,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_outer_right",
+      "y": 270
+    },
+    "extended=false,facing=north,shape=connected,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=connected,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_inner_left",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=connected,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_inner_right",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=connected,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_outer_left",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=connected,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_outer_right",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=short,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=short,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_inner_left",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=short,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_inner_right",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=short,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_outer_left",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=short,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_outer_right",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=tall,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=tall,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_inner_left",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=tall,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_inner_right",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=tall,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_outer_left",
+      "y": 180
+    },
+    "extended=false,facing=north,shape=tall,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_outer_right",
+      "y": 180
+    },
+    "extended=false,facing=south,shape=connected,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected"
+    },
+    "extended=false,facing=south,shape=connected,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_inner_left"
+    },
+    "extended=false,facing=south,shape=connected,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_inner_right"
+    },
+    "extended=false,facing=south,shape=connected,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_outer_left"
+    },
+    "extended=false,facing=south,shape=connected,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_outer_right"
+    },
+    "extended=false,facing=south,shape=short,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short"
+    },
+    "extended=false,facing=south,shape=short,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_inner_left"
+    },
+    "extended=false,facing=south,shape=short,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_inner_right"
+    },
+    "extended=false,facing=south,shape=short,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_outer_left"
+    },
+    "extended=false,facing=south,shape=short,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_outer_right"
+    },
+    "extended=false,facing=south,shape=tall,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall"
+    },
+    "extended=false,facing=south,shape=tall,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_inner_left"
+    },
+    "extended=false,facing=south,shape=tall,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_inner_right"
+    },
+    "extended=false,facing=south,shape=tall,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_outer_left"
+    },
+    "extended=false,facing=south,shape=tall,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_outer_right"
+    },
+    "extended=false,facing=west,shape=connected,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=connected,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_inner_left",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=connected,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_inner_right",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=connected,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_outer_left",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=connected,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_outer_right",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=short,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=short,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_inner_left",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=short,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_inner_right",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=short,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_outer_left",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=short,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_outer_right",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=tall,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=tall,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_inner_left",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=tall,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_inner_right",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=tall,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_outer_left",
+      "y": 90
+    },
+    "extended=false,facing=west,shape=tall,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_outer_right",
+      "y": 90
+    },
+    "extended=true,facing=east,shape=connected,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=connected,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_inner_left",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=connected,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_inner_right",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=connected,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_outer_left",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=connected,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_outer_right",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=short,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=short,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_inner_left",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=short,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_inner_right",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=short,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_outer_left",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=short,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_outer_right",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=tall,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=tall,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_inner_left",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=tall,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_inner_right",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=tall,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_outer_left",
+      "y": 270
+    },
+    "extended=true,facing=east,shape=tall,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_outer_right",
+      "y": 270
+    },
+    "extended=true,facing=north,shape=connected,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=connected,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_inner_left",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=connected,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_inner_right",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=connected,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_outer_left",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=connected,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_outer_right",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=short,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=short,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_inner_left",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=short,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_inner_right",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=short,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_outer_left",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=short,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_outer_right",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=tall,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=tall,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_inner_left",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=tall,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_inner_right",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=tall,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_outer_left",
+      "y": 180
+    },
+    "extended=true,facing=north,shape=tall,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_outer_right",
+      "y": 180
+    },
+    "extended=true,facing=south,shape=connected,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended"
+    },
+    "extended=true,facing=south,shape=connected,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_inner_left"
+    },
+    "extended=true,facing=south,shape=connected,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_inner_right"
+    },
+    "extended=true,facing=south,shape=connected,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_outer_left"
+    },
+    "extended=true,facing=south,shape=connected,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_outer_right"
+    },
+    "extended=true,facing=south,shape=short,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended"
+    },
+    "extended=true,facing=south,shape=short,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_inner_left"
+    },
+    "extended=true,facing=south,shape=short,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_inner_right"
+    },
+    "extended=true,facing=south,shape=short,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_outer_left"
+    },
+    "extended=true,facing=south,shape=short,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_outer_right"
+    },
+    "extended=true,facing=south,shape=tall,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended"
+    },
+    "extended=true,facing=south,shape=tall,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_inner_left"
+    },
+    "extended=true,facing=south,shape=tall,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_inner_right"
+    },
+    "extended=true,facing=south,shape=tall,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_outer_left"
+    },
+    "extended=true,facing=south,shape=tall,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_outer_right"
+    },
+    "extended=true,facing=west,shape=connected,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=connected,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_inner_left",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=connected,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_inner_right",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=connected,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_outer_left",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=connected,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_connected_extended_outer_right",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=short,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=short,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_inner_left",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=short,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_inner_right",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=short,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_outer_left",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=short,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_short_extended_outer_right",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=tall,corner=straight": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=tall,corner=inner_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_inner_left",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=tall,corner=inner_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_inner_right",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=tall,corner=outer_left": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_outer_left",
+      "y": 90
+    },
+    "extended=true,facing=west,shape=tall,corner=outer_right": {
+      "model": "twilightforest:block/wood/banister/warped/warped_banister_tall_extended_outer_right",
+      "y": 90
+    }
+  }
+}

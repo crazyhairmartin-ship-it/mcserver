@@ -24,7 +24,8 @@
     "HorseDescentMixin",
     "FairyCategoryMixin",
     "BookRevivalMixin",
-    "EntityNameMixin"
+    "EntityNameMixin",
+    "BanisterBlockMixin"
   ],
   "client": [
     "SkillsScreenMixin",
