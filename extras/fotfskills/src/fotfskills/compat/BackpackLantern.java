@@ -48,15 +48,21 @@ public final class BackpackLantern {
                 .orElse(ItemStack.f_41583_);
     }
 
-    /** The lantern hanging off the entity's backpack (light-giving), or an empty stack. */
+    /**
+     * The lit lantern hanging off the entity's backpack, or an empty stack. The Lantern slot's eye toggle is its on/off
+     * switch: hidden = unlit (hiding the backpack itself leaves it lit). Drives both the server light (lantern_light.js)
+     * and the shader glow (mixin/OculusHeldLightMixin).
+     */
     public static ItemStack lantern(LivingEntity entity) {
         if (!wearsBackpack(entity)) {
             return ItemStack.f_41583_;
         }
         return CuriosApi.getCuriosInventory(entity).resolve().flatMap(inv -> inv.getStacksHandler(SLOT)).map(handler -> {
             var stacks = handler.getStacks();
+            var renders = handler.getRenders();
             for (int i = 0; i < stacks.getSlots(); i++) {
-                if (!stacks.getStackInSlot(i).m_41619_()) {
+                boolean lit = i >= renders.size() || renders.get(i);
+                if (lit && !stacks.getStackInSlot(i).m_41619_()) {
                     return stacks.getStackInSlot(i);
                 }
             }

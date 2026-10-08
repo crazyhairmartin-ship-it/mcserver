@@ -2,7 +2,6 @@
 // light block follows the player's head, the one behind is removed. Same approach as fairy_light.js: only air is ever
 // replaced and only our own light blocks are cleared, so builds are never touched.
 
-const CuriosApi = Java.loadClass('top.theillusivec4.curios.api.CuriosApi')
 const BackpackLantern = Java.loadClass('fotfskills.compat.BackpackLantern')
 const LANTERN_LEVELS = { 'minecraft:lantern': 5, 'minecraft:soul_lantern': 4, 'meadow:oil_lantern': 5 }   // dim: shaders draw the real glow (fotfskills OculusHeldLightMixin); this keeps mobs off
 const LANTERN_DEFAULT_LEVEL = 4
@@ -10,19 +9,11 @@ const LANTERN_EVERY = 1   // ticks between updates
 if (!global.lanternLights) global.lanternLights = {}
 
 function lanternLevelOf(player) {
-  if (!BackpackLantern.wearsBackpack(player)) return 0   // the lantern hangs off a backpack (fotfskills)
-  let inv = CuriosApi.getCuriosInventory(player).resolve()
-  if (!inv.isPresent()) return 0
-  let slots = inv.get().getStacksHandler('lantern')
-  if (!slots.isPresent()) return 0
-  let stacks = slots.get().getStacks()
-  for (let i = 0; i < stacks.getSlots(); i++) {
-    let stack = stacks.getStackInSlot(i)
-    if (stack.isEmpty()) continue
-    let lvl = LANTERN_LEVELS[String(stack.id)]
-    return lvl ? lvl : LANTERN_DEFAULT_LEVEL
-  }
-  return 0
+  // the lit lantern on the player's backpack (needs a backpack; the slot's eye toggle switches it off)
+  let stack = BackpackLantern.lantern(player)
+  if (stack.isEmpty()) return 0
+  let lvl = LANTERN_LEVELS[String(stack.id)]
+  return lvl ? lvl : LANTERN_DEFAULT_LEVEL
 }
 
 function lanternLightClear(level, spot) {
