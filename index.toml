@@ -1897,7 +1897,7 @@ hash = "4ee7839e8a7fb33e971568f821cfb0956c27de05e4f372017cd34d6be6cc7f8d"
 
 [[files]]
 file = "kubejs/data/fotf/curios/slots/lantern.json"
-hash = "93f9e9f4ebe16bdbeba9755ede5ee26a07c1383bccf67e1028e5cb2f5ecf169c"
+hash = "ae28f65013d1b08d6f313f82accd8e4afa809c9d8019621c2cdc087a43fe5771"
 
 [[files]]
 file = "kubejs/data/fotf/forge/biome_modifier/fairies_common.json"
@@ -1978,6 +1978,10 @@ hash = "ea598a2a481dcd5246392a46e8b7c7888875e20db2380f4defbb574e7f5b2b81"
 [[files]]
 file = "kubejs/data/fotf/loot_tables/chests/dungeon_weapon.json"
 hash = "7ba24e1a11f678a1dc981e68a3fbbe08386d07eace56cc0c735de873334e2a30"
+
+[[files]]
+file = "kubejs/data/fotf/tags/items/lantern_backpacks.json"
+hash = "bd307dd0ea6794c57d700ab0ebfd2df6db343153843d5d74efb202d85bad2726"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/biome/fairy/common.json"
@@ -2461,7 +2465,7 @@ hash = "8032ba7d5b5cd998c8cb13a3876cf1731a60bca51b37c245d6eb114462b9e63b"
 
 [[files]]
 file = "kubejs/server_scripts/lantern_light.js"
-hash = "fd0436626c9ada0d469dcd1cfa8662ba4fbd4c2cb52aa24e849e7bc97793792f"
+hash = "f00309279090c969074d460323c9b8e10c44ede93181e4de8257f27a4309eaf4"
 
 [[files]]
 file = "kubejs/server_scripts/login_messages.js"
@@ -2800,7 +2804,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "2ef6f918d06d19b4d53ef1f58122d5a639fcd804ad2131e7876df7de8bd21723"
+hash = "f6b5cdb80b4d5867bdbaa2d67571df32ff68e4fe3dedb7b543604d221b00b4d2"
 metafile = true
 
 [[files]]
