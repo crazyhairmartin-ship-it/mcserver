@@ -1800,6 +1800,10 @@ file = "kubejs/data/butterflies/forge/biome_modifier/wetlands_butterflies.json"
 hash = "8c307ef8ef240e4f2aa097c715f7e30499299db75d77cbe232927751bd18b6ce"
 
 [[files]]
+file = "kubejs/data/cataclysm/curios/entities/slots.json"
+hash = "5b83e637c8c6f5f860d1a38d938450a3645aceae320b9856a14e6a18abafd959"
+
+[[files]]
 file = "kubejs/data/cataclysm/weapon_attributes/ancient_spear.json"
 hash = "69f34e192fd1b393cd13e6f56adc6489ca2efddf58068873e847615c67af7ea4"
 
@@ -1848,8 +1852,20 @@ file = "kubejs/data/cataclysm/weapon_attributes/the_immolator.json"
 hash = "dd9be0bf36e3fdb1c50fd0437e0926d465e29463ff66076d132e097ee8c8b157"
 
 [[files]]
+file = "kubejs/data/curios/tags/items/belt.json"
+hash = "7e06297fa4be5b8e2c0bfd493de8c3f8edf04f7e09bb284aaa850b5fa0254ea8"
+
+[[files]]
+file = "kubejs/data/curios/tags/items/charm.json"
+hash = "50c830d9603a58358fd104d7a0d968d535f66f3b34dce9b22dbf578693270eea"
+
+[[files]]
 file = "kubejs/data/curios/tags/items/lantern.json"
 hash = "fe7f16da32e922333e0fc7ccffcb1a9dc8d4c22424608da7c50c251c8e28f430"
+
+[[files]]
+file = "kubejs/data/curios/tags/items/ring.json"
+hash = "9b035fb5cc0d3437866d7d0281f9f4493be0c20ae0517f0910c1052d06b187fa"
 
 [[files]]
 file = "kubejs/data/endermail/loot_tables/blocks/locker.json"
@@ -2465,7 +2481,7 @@ hash = "8032ba7d5b5cd998c8cb13a3876cf1731a60bca51b37c245d6eb114462b9e63b"
 
 [[files]]
 file = "kubejs/server_scripts/lantern_light.js"
-hash = "0185e8b0e5b6f34f00bfec639c731be9777eb6d79c9ff9c7c6ae9aeb3786071e"
+hash = "267e09bcb69cd1fc661c6b3f96768f92d008140e870afe5627975855ebb28826"
 
 [[files]]
 file = "kubejs/server_scripts/login_messages.js"
@@ -2804,7 +2820,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "31d243aa3268e8b2d464182c0f0db2ae16abce8bbfe0b39e09fd0b519fde1227"
+hash = "b46e76ff6fe1cc4a962dfb7a1582e115cc94fbae7b863a039b39e63e866bac63"
 metafile = true
 
 [[files]]
