@@ -1,11 +1,26 @@
 {
     "com.obscura.storage.gui.StorageTerminalScreen": {
-        "playerSideOnly": true
+        "playerSideOnly": true,
+        "buttonHints": {
+            "MOVE_TO_CONTAINER": {
+                "hide": true
+            }
+        }
     },
     "com.obscura.storage.gui.CraftingTerminalScreen": {
-        "playerSideOnly": true
+        "playerSideOnly": true,
+        "buttonHints": {
+            "MOVE_TO_CONTAINER": {
+                "hide": true
+            }
+        }
     },
     "com.obscura.storage.gui.AbstractStorageTerminalScreen": {
-        "playerSideOnly": true
+        "playerSideOnly": true,
+        "buttonHints": {
+            "MOVE_TO_CONTAINER": {
+                "hide": true
+            }
+        }
     }
 }
