@@ -2728,6 +2728,11 @@ hash = "a6af059766ea70358690d048898d19e493108e2e06a97542fac696fd5e03589a"
 metafile = true
 
 [[files]]
+file = "mods/dynamiclights-reforged.pw.toml"
+hash = "00a06884a4f8854fad85f2456c1d6c53ee09cc5e545a35e41cad24e82907a1ab"
+metafile = true
+
+[[files]]
 file = "mods/elytra-slot.pw.toml"
 hash = "c94b9427a8d7f0e6aa0a1779c68bde63b98b4adc1968b48adad521f51bde84f3"
 metafile = true
@@ -3218,6 +3223,11 @@ hash = "cd6a08805626518bbcf8915b73449c4fdc3fb8f799de82fc499d8f46a3f2efce"
 metafile = true
 
 [[files]]
+file = "mods/radiant-gear.pw.toml"
+hash = "81aa10e3701585e80331f9936e98f5c13d44a2f8cfbd9ae6ec67c04f7ea53080"
+metafile = true
+
+[[files]]
 file = "mods/rainboows.pw.toml"
 hash = "768ceab9247faa36690099e0b9e825f2dfa4bdf535513a4227f41bf879631bbd"
 metafile = true
@@ -3305,6 +3315,11 @@ metafile = true
 [[files]]
 file = "mods/snowy-spirit.pw.toml"
 hash = "fe8c20f384ce7bf9cd50a8ab5642ff3fe6753edd2f84c5dc1e988b155d4e41ad"
+metafile = true
+
+[[files]]
+file = "mods/sodium-options-api.pw.toml"
+hash = "bec4fd7f9b90e9040786e31d14bf4af7fb42fce842b9f5acfdd0821c973ecb82"
 metafile = true
 
 [[files]]
