@@ -55,9 +55,16 @@ public class LetterItem extends WritableBookItem {
         return InteractionResultHolder.m_19092_(stack, level.m_5776_());
     }
 
-    /** No placing letters on lecterns. */
+    /** A signed letter goes on an empty lectern for anyone to read (it's in #minecraft:lectern_books); blank ones don't. */
     @Override
     public InteractionResult m_6225_(UseOnContext context) {
+        Level level = context.m_43725_();
+        net.minecraft.core.BlockPos pos = context.m_8083_();
+        net.minecraft.world.level.block.state.BlockState state = level.m_8055_(pos);
+        if (isSigned(context.m_43722_()) && state.m_60713_(net.minecraft.world.level.block.Blocks.f_50624_)
+                && net.minecraft.world.level.block.LecternBlock.m_269125_(context.m_43723_(), level, pos, state, context.m_43722_())) {
+            return InteractionResult.m_19078_(level.m_5776_());
+        }
         return InteractionResult.PASS;
     }
 
