@@ -37,10 +37,34 @@ public final class TerminalDepositButton {
         if (x == Integer.MAX_VALUE) {
             x = left - SIZE - 4;                                         // no column found: sit beside the panel
         }
-        event.addListener(new Button.Builder(Component.m_237113_("⇩"), b -> PerkSync.sendDepositMatching())
+        event.addListener(new Button.Builder(Component.m_237113_("⇩"), b -> PerkSync.sendDepositMatching(lockedSlots()))
                 .m_252987_(x, bottom + 2, SIZE, SIZE)
-                .m_257505_(Tooltip.m_257550_(Component.m_237113_("Move matching items into storage\n(your hotbar stays put)")))
+                .m_257505_(Tooltip.m_257550_(Component.m_237113_("Move matching items into storage\n(your hotbar and locked slots stay put)")))
                 .m_253136_());
+    }
+
+    /**
+     * Player inventory slots locked in Inventory Profiles Next, as bits (slot i = bit i). Read by reflection so a
+     * missing or changed IPN just means nothing is locked.
+     */
+    private static long lockedSlots() {
+        long bits = 0;
+        try {
+            Class<?> handler = Class.forName("org.anti_ad.mc.ipnext.event.LockSlotsHandler");
+            Object ipn = handler.getField("INSTANCE").get(null);
+            if (!(Boolean) handler.getMethod("getEnabled").invoke(ipn)) {
+                return 0;
+            }
+            var isLocked = handler.getMethod("isSlotLocked", int.class);
+            for (int i = 0; i < 36; i++) {
+                if ((Boolean) isLocked.invoke(ipn, i)) {
+                    bits |= 1L << i;
+                }
+            }
+        } catch (ReflectiveOperationException | RuntimeException | LinkageError e) {
+            return bits;
+        }
+        return bits;
     }
 
     /** A button-sized widget in the strip just left of the panel, below its top edge. */

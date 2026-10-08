@@ -63,11 +63,11 @@ public final class PerkSync {
                 })
                 .add();
         CHANNEL.messageBuilder(DepositMatching.class, 6, NetworkDirection.PLAY_TO_SERVER)
-                .encoder((msg, buf) -> { }).decoder(buf -> new DepositMatching())
+                .encoder((msg, buf) -> buf.writeLong(msg.locked())).decoder(buf -> new DepositMatching(buf.readLong()))
                 .consumerMainThread((msg, context) -> {
                     ServerPlayer player = context.get().getSender();
                     if (player != null && net.minecraftforge.fml.ModList.get().isLoaded("obscuras_storage")) {
-                        fotfskills.compat.TerminalDeposit.depositMatching(player);
+                        fotfskills.compat.TerminalDeposit.depositMatching(player, msg.locked());
                     }
                     context.get().setPacketHandled(true);
                 })
@@ -117,12 +117,15 @@ public final class PerkSync {
     public record DoubleJumped() {
     }
 
-    /** Client to server: "move matching items" pressed on an Obscura's storage terminal. */
-    public record DepositMatching() {
+    /**
+     * Client to server: "move matching items" pressed on an Obscura's storage terminal. locked: bit i set = player
+     * inventory slot i is locked in Inventory Profiles Next (client-side only, so the client says which).
+     */
+    public record DepositMatching(long locked) {
     }
 
-    public static void sendDepositMatching() {
-        CHANNEL.sendToServer(new DepositMatching());
+    public static void sendDepositMatching(long locked) {
+        CHANNEL.sendToServer(new DepositMatching(locked));
     }
 
     /** Client to server: the character screen opened and wants this player's skills. */
