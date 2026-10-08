@@ -3111,6 +3111,11 @@ hash = "e5e76b305f6e8fd611fb70695f42014c62e5f46b926d626eaf5ca0c78e394c5c"
 metafile = true
 
 [[files]]
+file = "mods/obscuras-simple-storage.pw.toml"
+hash = "6dcd1edf27f26184919f207023c04fc5ea829af95c949224bc5761a5185b899b"
+metafile = true
+
+[[files]]
 file = "mods/oculus.pw.toml"
 hash = "200f79b635a087841698c85ac7028f0a1fac2cc4ffae1d59ff3f07a94abfe70e"
 metafile = true

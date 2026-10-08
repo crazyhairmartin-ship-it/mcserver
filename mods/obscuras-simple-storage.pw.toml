@@ -1,0 +1,13 @@
+name = "Obscura's Simple Storage (Tom's Simple Storage Fork)"
+filename = "obscuras_simple_storage-forge-mc1.20.1-v5.0.0.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "f963ccef437bb03c63345afa0047ab76b38f4d69"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 9025722
+project-id = 1475987
