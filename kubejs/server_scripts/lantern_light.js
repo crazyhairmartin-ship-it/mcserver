@@ -6,7 +6,7 @@ const CuriosApi = Java.loadClass('top.theillusivec4.curios.api.CuriosApi')
 const BackpackLantern = Java.loadClass('fotfskills.compat.BackpackLantern')
 const LANTERN_LEVELS = { 'minecraft:lantern': 15, 'minecraft:soul_lantern': 10, 'meadow:oil_lantern': 14 }
 const LANTERN_DEFAULT_LEVEL = 13
-const LANTERN_EVERY = 2   // ticks between updates
+const LANTERN_EVERY = 1   // ticks between updates
 if (!global.lanternLights) global.lanternLights = {}
 
 function lanternLevelOf(player) {
@@ -45,15 +45,18 @@ ServerEvents.tick(event => {
     let x = Math.floor(player.x), y = Math.floor(player.y + 1), z = Math.floor(player.z)
     let old = global.lanternLights[id]
     if (old && old.dim == dim && old.x == x && old.y == y && old.z == z && old.lvl == lvl) return
-    if (old && old.dim == dim) lanternLightClear(level, old)
-    if (old && old.dim != dim) server.allLevels.forEach(l => { if (String(l.dimension) == old.dim) lanternLightClear(l, old) })
+    // light the new spot first, then clear the old one, so there's never a dark tick in between
     let here = level.getBlock(x, y, z)
-    if (here.id == 'minecraft:air' || here.id == 'minecraft:cave_air') {
+    let placed = false
+    if (here.id == 'minecraft:air' || here.id == 'minecraft:cave_air' || here.id == 'minecraft:light') {
       here.set('minecraft:light', { level: String(lvl) })
-      global.lanternLights[id] = { dim: dim, x: x, y: y, z: z, lvl: lvl }
-    } else {
-      delete global.lanternLights[id]
+      placed = true
     }
+    if (old && !(old.dim == dim && old.x == x && old.y == y && old.z == z)) {
+      server.allLevels.forEach(l => { if (String(l.dimension) == old.dim) lanternLightClear(l, old) })
+    }
+    if (placed) global.lanternLights[id] = { dim: dim, x: x, y: y, z: z, lvl: lvl }
+    else delete global.lanternLights[id]
   })
   // lantern taken off, player left or changed dimension: take the light away
   Object.keys(global.lanternLights).forEach(id => {
