@@ -2036,6 +2036,10 @@ file = "kubejs/data/meadow/tags/worldgen/biome/spawns_meadow_wooly_cows.json"
 hash = "0064cf210428ea825773063937544aa0a6402856a8d7a6bfc8042b1fb679072e"
 
 [[files]]
+file = "kubejs/data/minecraft/tags/items/lectern_books.json"
+hash = "f7099bfbe26ba199aa1cbac37f240f749d3b2e4828f2c787245b08b083675f3e"
+
+[[files]]
 file = "kubejs/data/minecraft/weapon_attributes/diamond_axe.json"
 hash = "bc18bf0aad37ccad2cbaef76bc419eb379832e49a6baa069b16fe706a90f62ed"
 
@@ -2742,7 +2746,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfmail.pw.toml"
-hash = "89b6ec853b01ca8f928e9d9454a2bcc1a6003cb5dae4390e611479a290ff32cb"
+hash = "90dd30d3a72a0fbaee2c12b0fa78152c4f51a3ca1b82977e705396cd563af157"
 metafile = true
 
 [[files]]
