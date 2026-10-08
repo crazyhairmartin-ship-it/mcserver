@@ -90,6 +90,11 @@ public final class FotfSkills {
         if (ModList.get().isLoaded("openpartiesandclaims")) {
             Parties.register(OpacParties::same);
         }
+        if (ModList.get().isLoaded("curios")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.compat.BackpackLantern());
+            net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus().addListener(
+                    (net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent e) -> fotfskills.compat.BackpackLantern.registerPredicate());
+        }
         MinecraftForge.EVENT_BUS.register(new ForgeXpEvents());
         if (ModList.get().isLoaded("irons_spellbooks")) {
             MinecraftForge.EVENT_BUS.register(new IronsCastXp());

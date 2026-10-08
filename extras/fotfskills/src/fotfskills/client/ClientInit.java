@@ -20,6 +20,10 @@ public final class ClientInit {
         if (net.minecraftforge.fml.ModList.get().isLoaded("obscuras_storage")) {
             MinecraftForge.EVENT_BUS.register(new TerminalDepositButton());
         }
+        if (net.minecraftforge.fml.ModList.get().isLoaded("curios")) {
+            net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus().addListener(
+                    (net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent e) -> BackpackLanternRenderer.registerAll());
+        }
         if (net.minecraftforge.fml.ModList.get().isLoaded("moremobvariants")) {
             MinecraftForge.EVENT_BUS.register(new CustomCoats());
         }

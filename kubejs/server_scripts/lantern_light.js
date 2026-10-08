@@ -1,14 +1,16 @@
-// A lantern in the Curios "Lantern" slot (kubejs/data/fotf/curios) lights the area around its wearer: an invisible
+// A lantern in the Curios "Lantern" slot (kubejs/data/fotf/curios; needs a backpack worn, see fotfskills BackpackLantern) lights the area around its wearer: an invisible
 // light block follows the player's head, the one behind is removed. Same approach as fairy_light.js: only air is ever
 // replaced and only our own light blocks are cleared, so builds are never touched.
 
 const CuriosApi = Java.loadClass('top.theillusivec4.curios.api.CuriosApi')
+const BackpackLantern = Java.loadClass('fotfskills.compat.BackpackLantern')
 const LANTERN_LEVELS = { 'minecraft:lantern': 15, 'minecraft:soul_lantern': 10, 'meadow:oil_lantern': 14 }
 const LANTERN_DEFAULT_LEVEL = 13
 const LANTERN_EVERY = 2   // ticks between updates
 if (!global.lanternLights) global.lanternLights = {}
 
 function lanternLevelOf(player) {
+  if (!BackpackLantern.wearsBackpack(player)) return 0   // the lantern hangs off a backpack (fotfskills)
   let inv = CuriosApi.getCuriosInventory(player).resolve()
   if (!inv.isPresent()) return 0
   let slots = inv.get().getStacksHandler('lantern')

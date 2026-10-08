@@ -2,5 +2,5 @@
   "size": 1,
   "order": 185,
   "icon": "fotf:slot/lantern_slot",
-  "validators": ["curios:tag"]
+  "validators": ["fotfskills:backpack_lantern"]
 }

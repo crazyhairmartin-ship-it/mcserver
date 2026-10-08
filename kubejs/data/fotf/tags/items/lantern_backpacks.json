@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "sophisticatedbackpacks:backpack", "required": false },
+    { "id": "sophisticatedbackpacks:copper_backpack", "required": false },
+    { "id": "sophisticatedbackpacks:iron_backpack", "required": false },
+    { "id": "sophisticatedbackpacks:gold_backpack", "required": false },
+    { "id": "sophisticatedbackpacks:diamond_backpack", "required": false },
+    { "id": "sophisticatedbackpacks:netherite_backpack", "required": false },
+    { "id": "camping:small_backpack", "required": false },
+    { "id": "camping:large_backpack", "required": false },
+    { "id": "camping:wanderer_backpack", "required": false },
+    { "id": "camping:enderpack", "required": false }
+  ]
+}
