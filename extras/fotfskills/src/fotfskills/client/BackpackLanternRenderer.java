@@ -84,7 +84,7 @@ public final class BackpackLanternRenderer implements ICurioRenderer {
             float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         LivingEntity wearer = slot.entity();
         ItemStack pack = visibleBackpack(wearer);
-        if (!(stack.m_41720_() instanceof BlockItem item) || pack.m_41619_()
+        if (!slot.visible() || !(stack.m_41720_() instanceof BlockItem item) || pack.m_41619_()
                 || !(parent.m_7200_() instanceof HumanoidModel<?> model)) {
             return;
         }
