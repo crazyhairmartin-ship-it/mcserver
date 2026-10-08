@@ -37,7 +37,7 @@ public final class TerminalDepositButton {
         if (x == Integer.MAX_VALUE) {
             x = left - SIZE - 4;                                         // no column found: sit beside the panel
         }
-        event.addListener(new Button.Builder(Component.m_237113_("⇩"), b -> PerkSync.sendDepositMatching(lockedSlots()))
+        event.addListener(new Button.Builder(Component.m_237113_("⇧"), b -> PerkSync.sendDepositMatching(lockedSlots()))
                 .m_252987_(x, bottom + 2, SIZE, SIZE)
                 .m_257505_(Tooltip.m_257550_(Component.m_237113_("Move matching items into storage\n(your hotbar and locked slots stay put)")))
                 .m_253136_());
