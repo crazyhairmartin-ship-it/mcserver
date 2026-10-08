@@ -31,6 +31,7 @@ public final class DaleEarsLayer extends RenderLayer<Wolf, WolfModel<Wolf>> {
     private static final ResourceLocation EARS = new ResourceLocation("fotfskills", "textures/entity/dale_ears.png");
     private static final float DROOP = 2.6f;               // about 150 degrees: tipped over, hanging outward
     private static final float LENGTH = 2.2f;
+    private static final float TURN = (float) (Math.PI / 2);   // quarter turn: the flat side faces outward, against the head
     private final ModelPart right = ear();
     private final ModelPart left = ear();
 
@@ -59,8 +60,8 @@ public final class DaleEarsLayer extends RenderLayer<Wolf, WolfModel<Wolf>> {
         model.fotfskills$realHead().m_104299_(pose);
         VertexConsumer buffer = buffers.m_6299_(RenderType.m_110458_(EARS));
         int overlay = LivingEntityRenderer.m_115338_(wolf, 0);
-        place(right, -1, -DROOP);
-        place(left, 3, DROOP);
+        place(right, -1, -DROOP, TURN);
+        place(left, 3, DROOP, -TURN);
         right.m_104301_(pose, buffer, light, overlay);
         left.m_104301_(pose, buffer, light, overlay);
         pose.m_85849_();
@@ -73,12 +74,12 @@ public final class DaleEarsLayer extends RenderLayer<Wolf, WolfModel<Wolf>> {
     }
 
     /** Pivot where the vanilla ear meets the head (ear boxes sit at x -2..0 / 2..4, y -5..-3, z 0..1), then droop. */
-    private static void place(ModelPart ear, float x, float droop) {
+    private static void place(ModelPart ear, float x, float droop, float turn) {
         ear.f_104200_ = x;
         ear.f_104201_ = -3;
         ear.f_104202_ = 0;
         ear.f_104203_ = 0;
-        ear.f_104204_ = 0;
+        ear.f_104204_ = turn;
         ear.f_104205_ = droop;
         ear.f_233553_ = 1;
         ear.f_233554_ = LENGTH;
