@@ -23,7 +23,8 @@
     "ParcoolPermitMixin",
     "HorseDescentMixin",
     "FairyCategoryMixin",
-    "BookRevivalMixin"
+    "BookRevivalMixin",
+    "EntityNameMixin"
   ],
   "client": [
     "SkillsScreenMixin",

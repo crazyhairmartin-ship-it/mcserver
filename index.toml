@@ -97,6 +97,10 @@ file = "config/fml.toml"
 hash = "7628fc0bfac9c538350fd51e9a390f5bb03f65faeb61bc9ae3541e53c614cc22"
 
 [[files]]
+file = "config/fotfskills-named-pets.json"
+hash = "23282ab4e16a166c094d86c8a941af4d37be84289d89b1e271a606c9ea60fbc1"
+
+[[files]]
 file = "config/fotfskills-retrogen.json"
 hash = "85ec448a33811d736079d5c429cf405f8cb6b3062fac2bcd1650f42627ffcf14"
 
@@ -3118,6 +3122,11 @@ metafile = true
 [[files]]
 file = "mods/paxi.pw.toml"
 hash = "de839923acbdec57f0287c4e2a558bf5934d116c91bfe74b2a0beee4611b537f"
+metafile = true
+
+[[files]]
+file = "mods/pehkui.pw.toml"
+hash = "ff455d3439b8e4ffbf78dc1e8998c1b59200bd10c74c77f9fe90e98f606e0f0d"
 metafile = true
 
 [[files]]
