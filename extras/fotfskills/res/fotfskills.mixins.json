@@ -35,7 +35,8 @@
     "FairyGlowMixin",
     "IronsCastPacketMixin",
     "IronsQuickCastPacketMixin",
-    "IronsScrollMixin"
+    "IronsScrollMixin",
+    "WolfEarsMixin"
   ],
   "injectors": {
     "defaultRequire": 1
