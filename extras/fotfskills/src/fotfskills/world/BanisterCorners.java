@@ -8,7 +8,7 @@ import net.minecraft.world.level.block.state.properties.StairsShape;
  * Twilight Forest banisters turn corners the way stairs do. A banister's rail is on the edge it faces, like a stair's
  * tall back, so vanilla's stair rule (StairBlock.getStairsShape) carries over: a banister behind facing sideways makes
  * an L (INNER: rails on two edges), one in front facing sideways makes a corner post (OUTER), left = counter-clockwise.
- * Wired up in mixin/BanisterBlockMixin; models from tools/banisters/make_banister_corners.py.
+ * Wired up in mixin/BanisterBlockMixin; models built in game by client/BanisterCornerModels.
  */
 public final class BanisterCorners {
     private BanisterCorners() {

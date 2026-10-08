@@ -29,7 +29,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * Twilight Forest banisters (and Every Compat's, which use the same block class) turn corners like stairs: a "corner"
  * property set on placement and whenever a neighbour changes (see world/BanisterCorners). INNER = rails on the facing
  * edge and one side (an L), OUTER = just the corner post. Hitboxes follow: the union / overlap of the two straight
- * banisters. Pseudo: skipped without Twilight Forest.
+ * banisters. The corner models are built in game from the straight ones (client/BanisterCornerModels). Pseudo:
+ * skipped without Twilight Forest.
  */
 @Pseudo
 @Mixin(targets = "twilightforest.block.BanisterBlock", remap = false)
