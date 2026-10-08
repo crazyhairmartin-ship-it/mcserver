@@ -29,15 +29,20 @@ public abstract class WolfEarsMixin {
 
     @Inject(method = "<init>", at = @At("RETURN"), remap = false)
     private void fotfskills$findEars(ModelPart root, CallbackInfo ci) {
-        ModelPart head = root.m_171324_("head").m_171324_("real_head");
-        fotfskills$rightEar = head.m_171324_("right_ear");
-        fotfskills$leftEar = head.m_171324_("left_ear");
+        try {
+            ModelPart head = root.m_171324_("head").m_171324_("real_head");
+            fotfskills$rightEar = head.m_171324_("right_ear");
+            fotfskills$leftEar = head.m_171324_("left_ear");
+        } catch (java.util.NoSuchElementException e) {
+            fotfskills$rightEar = null;                     // 1.20.1: the ears are boxes inside real_head, not parts
+            fotfskills$leftEar = null;
+        }
     }
 
     @Inject(method = "m_6973_(Lnet/minecraft/world/entity/animal/Wolf;FFFFF)V", at = @At("TAIL"), remap = false)
     private void fotfskills$floppyEars(Wolf wolf, float limbSwing, float limbAmount, float age, float yaw, float pitch,
                                        CallbackInfo ci) {
-        if (fotfskills$rightEar == null) {
+        if (fotfskills$rightEar == null || fotfskills$leftEar == null) {
             return;
         }
         boolean dale = wolf.m_8077_() && wolf.m_7770_() != null && wolf.m_7770_().getString().trim().equalsIgnoreCase("dale");
