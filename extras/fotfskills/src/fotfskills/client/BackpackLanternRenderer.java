@@ -26,7 +26,7 @@ import top.theillusivec4.curios.api.client.ICurioRenderer;
  */
 public final class BackpackLanternRenderer implements ICurioRenderer {
     private static final float HANG_X = 5.5f / 16;
-    private static final float HANG_Y = 5f / 16;
+    private static final float HANG_Y = 10f / 16;
     private static final float HANG_Z = 4.5f / 16;
     private static final float SCALE = 0.42f;
 
