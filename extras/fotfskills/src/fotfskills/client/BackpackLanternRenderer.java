@@ -25,9 +25,14 @@ import top.theillusivec4.curios.api.client.ICurioRenderer;
  * y 0..12 (down), z -2..2, and backpacks sit behind it.
  */
 public final class BackpackLanternRenderer implements ICurioRenderer {
+    // small packs and bags (Camping): at the hip
     private static final float HANG_X = 5.5f / 16;
-    private static final float HANG_Y = 10f / 16;
+    private static final float HANG_Y = 5f / 16;
     private static final float HANG_Z = 4.5f / 16;
+    // Sophisticated Backpacks are wide and deep: hang it clear of the pack's side and lower
+    private static final float BIG_X = 7.5f / 16;
+    private static final float BIG_Y = 9f / 16;
+    private static final float BIG_Z = 5f / 16;
     private static final float SCALE = 0.42f;
 
     /** The items in the curios:lantern tag (kubejs/data/curios/tags/items/lantern.json); tags aren't loaded yet here. */
@@ -47,7 +52,8 @@ public final class BackpackLanternRenderer implements ICurioRenderer {
             RenderLayerParent<T, M> parent, MultiBufferSource buffers, int light, float limbSwing, float limbSwingAmount,
             float partialTicks, float ageInTicks, float netHeadYaw, float headPitch) {
         LivingEntity wearer = slot.entity();
-        if (!(stack.m_41720_() instanceof BlockItem item) || !BackpackLantern.wearsBackpack(wearer)
+        ItemStack pack = BackpackLantern.backpack(wearer);
+        if (!(stack.m_41720_() instanceof BlockItem item) || pack.m_41619_()
                 || !(parent.m_7200_() instanceof HumanoidModel<?> model)) {
             return;
         }
@@ -57,7 +63,8 @@ public final class BackpackLanternRenderer implements ICurioRenderer {
         }
         pose.m_85836_();
         model.f_102810_.m_104299_(pose);                                    // follow the body (turning, sneaking)
-        pose.m_252880_(HANG_X, HANG_Y, HANG_Z);
+        boolean big = "sophisticatedbackpacks".equals(ForgeRegistries.ITEMS.getKey(pack.m_41720_()).m_135827_());
+        pose.m_252880_(big ? BIG_X : HANG_X, big ? BIG_Y : HANG_Y, big ? BIG_Z : HANG_Z);
         float swing = (float) Math.sin(limbSwing * 0.6662f) * 0.35f * limbSwingAmount;
         pose.m_252781_(new Quaternionf().rotationXYZ(swing, 0, swing * 0.4f));
         pose.m_85841_(SCALE, -SCALE, -SCALE);                               // model space is upside down

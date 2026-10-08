@@ -30,15 +30,22 @@ public final class BackpackLantern {
     }
 
     public static boolean wearsBackpack(LivingEntity entity) {
+        return !backpack(entity).m_41619_();
+    }
+
+    /** The backpack the entity wears (chest slot or any curio slot), or an empty stack. */
+    public static ItemStack backpack(LivingEntity entity) {
         if (entity == null) {
-            return false;
+            return ItemStack.f_41583_;
         }
-        if (entity.m_6844_(EquipmentSlot.CHEST).m_204117_(BACKPACKS)) {
-            return true;
+        ItemStack chest = entity.m_6844_(EquipmentSlot.CHEST);
+        if (chest.m_204117_(BACKPACKS)) {
+            return chest;
         }
         return CuriosApi.getCuriosInventory(entity).resolve()
-                .map(inv -> inv.findFirstCurio(s -> s.m_204117_(BACKPACKS)).isPresent())
-                .orElse(false);
+                .flatMap(inv -> inv.findFirstCurio(s -> s.m_204117_(BACKPACKS)))
+                .map(r -> r.stack())
+                .orElse(ItemStack.f_41583_);
     }
 
     @SubscribeEvent
