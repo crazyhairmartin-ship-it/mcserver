@@ -14,7 +14,7 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   A signed letter stays the same item and opens as a readable book. Letters are written and read on letter
   paper instead of the book page (`BookEditScreenMixin`, `BookViewScreenMixin`, texture from `draw_icons.py`).
   A signed letter can go on a lectern for anyone to read, on the same letter paper (`LetterItem.useOn`,
-  `LecternScreenMixin`, `kubejs/data/minecraft/tags/items/lectern_books.json`).
+  `LecternScreenMixin`, `LecternBlockEntityMixin`, `kubejs/data/minecraft/tags/items/lectern_books.json`).
 - **Collar effects on GeckoLib pets.** Domestication Innovation only draws its collar enchantment effects
   (shadow hands, magnet, auras, blazing bars...) on vanilla-style renderers, so Critters & Companions,
   Naturalist and unicorn-mod pets showed nothing. `PetOverlaysGeoLayer` runs DI's own `LayerPetOverlays` from a
