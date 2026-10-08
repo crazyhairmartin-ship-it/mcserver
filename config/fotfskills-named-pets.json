@@ -1,8 +1,8 @@
 {
-  "_about": "Naming a pet one of these names gives it Dylan's real pet's look: a More Mob Variants coat and a Pehkui size (1 = normal). Names ignore capitals. Read by fotfskills (world/NamedPets).",
+  "_about": "Naming a pet one of these names gives it Dylan's real pet's look: a More Mob Variants coat, and for Beast a Pehkui size (1 = normal; only Beast changes size). Names ignore capitals. Read by fotfskills (world/NamedPets).",
   "pets": [
-    {"names": ["Dale"], "entity": "minecraft:wolf", "coat": "moremobvariants:dale", "scale": 1.25},
-    {"names": ["Mister"], "entity": "minecraft:cat", "coat": "moremobvariants:mister", "scale": 1.0},
+    {"names": ["Dale"], "entity": "minecraft:wolf", "coat": "moremobvariants:dale"},
+    {"names": ["Mister"], "entity": "minecraft:cat", "coat": "moremobvariants:mister"},
     {"names": ["Beast", "Beastmode"], "entity": "minecraft:cat", "coat": "moremobvariants:beast", "scale": 0.75}
   ]
 }
