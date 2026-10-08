@@ -12,5 +12,8 @@ public final class ClientInit {
         MinecraftForge.EVENT_BUS.register(new DoubleJump());
         MinecraftForge.EVENT_BUS.register(new WeaponMasterCombo());
         MinecraftForge.EVENT_BUS.register(new WeaponTooltips());
+        if (net.minecraftforge.fml.ModList.get().isLoaded("moremobvariants")) {
+            MinecraftForge.EVENT_BUS.register(new CustomCoats());
+        }
     }
 }

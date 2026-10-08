@@ -52,13 +52,15 @@ def mister():
     src = Image.open(HERE / 'vanilla_cat_black.png').convert('RGBA')
     white = {(7, 7), (7, 8), (3, 24), (3, 25)}                                 # stripe down the nose
     white |= {(x, y) for x in (12, 13) for y in range(17, 21)}                 # left back paw white further up
+    # the vanilla tuxedo cat's own eyes
+    eyes = {(5, 6): (234, 234, 234), (6, 6): (90, 157, 18), (8, 6): (90, 157, 18), (9, 6): (234, 234, 234)}
 
     def classify(x, y, c):
         h, s, v = colorsys.rgb_to_hsv(*(k / 255 for k in c))
+        if (x, y) in eyes:
+            return eyes[(x, y)]
         if (x, y) in white:
             return 'white', 0.8
-        if s > 0.35 and 0.15 < h < 0.45:                                       # eyes: yellow-green
-            return (196, 204, 72) if lum(c) > 60 else (24, 22, 26)
         if s > 0.25 and (h < 0.05 or h > 0.9):                                 # pink nose
             return 'pink', v
         if lum(c) > 150:

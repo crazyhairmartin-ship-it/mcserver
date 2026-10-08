@@ -89,6 +89,17 @@ public final class NamedPets {
         server.m_129892_().m_230957_(server.m_129893_().m_81324_(), command);
     }
 
+    /** entity type id -> the coats named pets of that type wear (the client registers them, see client/CustomCoats). */
+    public static Map<String, java.util.Set<String>> coats() {
+        Map<String, java.util.Set<String>> out = new HashMap<>();
+        looks().forEach((type, byName) -> byName.values().forEach(look -> {
+            if (look.coat() != null) {
+                out.computeIfAbsent(type, k -> new java.util.HashSet<>()).add(look.coat());
+            }
+        }));
+        return out;
+    }
+
     /** entity type -> lower-case name -> look, read once from config/fotfskills-named-pets.json. */
     private static Map<String, Map<String, Look>> looks() {
         if (looks == null) {
