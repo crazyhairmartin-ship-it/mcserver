@@ -4,6 +4,18 @@
         "buttonHints": {
             "MOVE_TO_CONTAINER": {
                 "hide": true
+            },
+            "SORT": {
+                "horizontalOffset": 20
+            },
+            "SORT_COLUMNS": {
+                "horizontalOffset": 20
+            },
+            "SORT_ROWS": {
+                "horizontalOffset": 20
+            },
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20
             }
         }
     },
@@ -12,6 +24,18 @@
         "buttonHints": {
             "MOVE_TO_CONTAINER": {
                 "hide": true
+            },
+            "SORT": {
+                "horizontalOffset": 20
+            },
+            "SORT_COLUMNS": {
+                "horizontalOffset": 20
+            },
+            "SORT_ROWS": {
+                "horizontalOffset": 20
+            },
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20
             }
         }
     },
@@ -20,6 +44,18 @@
         "buttonHints": {
             "MOVE_TO_CONTAINER": {
                 "hide": true
+            },
+            "SORT": {
+                "horizontalOffset": 20
+            },
+            "SORT_COLUMNS": {
+                "horizontalOffset": 20
+            },
+            "SORT_ROWS": {
+                "horizontalOffset": 20
+            },
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20
             }
         }
     }
