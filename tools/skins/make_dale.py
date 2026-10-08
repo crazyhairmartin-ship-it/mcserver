@@ -2,6 +2,9 @@
 
     python tools/skins/make_dale.py
 
+Dylan hand-edited the result into dale_hand_edited.png; when that file exists it's the source (see from_hand), so
+rerunning this keeps his edits. Delete it to go back to the painted version.
+
 Writes kubejs/assets/moremobvariants/textures/entity/wolf/dale_{wild,tame,angry}.png (64x32, vanilla wolf layout; the
 pixel mask comes from vanilla_wolf_tame.png). The coat (kubejs/data/moremobvariants/variants/wolf/dale.json) spawns
 nowhere (its biome tag fotf:nowhere is empty): it's given to a wolf by setting VariantID moremobvariants:dale. Dale: white with grey freckles on muzzle and legs, a tan face with a white
@@ -200,10 +203,26 @@ def paint(mood):
     return img
 
 
+HAND = HERE / 'dale_hand_edited.png'
+
+
+def from_hand(mood):
+    """Dylan's hand-edited Dale (dale_hand_edited.png, started from paint('tame')): used as-is for tame and wild; the
+    angry one gets vanilla's angry eyes (dark brows, red eyes)."""
+    img = Image.open(HAND).convert('RGBA')
+    if mood == 'angry':
+        for x in (4, 5, 8, 9):
+            img.putpixel((x, 5), (30, 28, 30, 255))
+        for p, c in {(4, 6): (182, 15, 15), (5, 6): (228, 46, 46), (8, 6): (228, 46, 46), (9, 6): (182, 15, 15)}.items():
+            img.putpixel(p, c + (255,))
+    return img
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     for mood in ('wild', 'tame', 'angry'):
-        paint(mood).save(OUT / f'dale_{mood}.png')
+        # the hand-edited texture wins when it's there; paint() is how it started
+        (from_hand(mood) if HAND.exists() else paint(mood)).save(OUT / f'dale_{mood}.png')
     print('wrote', ', '.join(f'dale_{m}.png' for m in ('wild', 'tame', 'angry')), '->', OUT)
 
 
