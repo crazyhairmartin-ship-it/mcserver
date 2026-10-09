@@ -317,7 +317,7 @@ hash = "6ea9551d7a0b64ff341b457a6eddd81519ac24c96e4725bef5f8dc85e00dd890"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/experience.json"
-hash = "d3e6108415e12d7ab4fa4fd4c780d833ecfb85ca06dd7737f0b1d50ad35fe761"
+hash = "b475e955d21e11fac45153a92672c9a875f582538b48e931d8918ea6f46aad44"
 
 [[files]]
 file = "config/puffish_skills/categories/magic/skills.json"
@@ -594,6 +594,10 @@ hash = "c3ca0d363e59b69c38be90030b01aa30c551c82b02702e7233f0492e0adcc7d4"
 [[files]]
 file = "kubejs/assets/bloomingnature/lang/en_us.json"
 hash = "386ac6c21f54018cf1a5c2526ce0eb593ab64ce8c0e79d8f2d1f4abd342d0edc"
+
+[[files]]
+file = "kubejs/assets/bookoffamiliars/lang/en_us.json"
+hash = "fe8e5e25d4e2375fd2a2d4b1270369124a6df78cb1fd0f6b84d70f99c3e99150"
 
 [[files]]
 file = "kubejs/assets/brewery/lang/en_us.json"
@@ -2853,7 +2857,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "1b76008a7c7ff6cc86d8397cd60066cfa5790bf4b17e5ad6dffef0f96bff7db2"
+hash = "5d05b3c1a6e9e335331b50c49d3bc4f0c4b318ea782d2f958c4c580c229f9466"
 metafile = true
 
 [[files]]
