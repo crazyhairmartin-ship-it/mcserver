@@ -23,10 +23,17 @@ public final class BackpackLantern {
     public static final TagKey<Item> LANTERNS = TagKey.m_203882_(Registries.f_256913_, new ResourceLocation("curios", "lantern"));
     public static final TagKey<Item> BACKPACKS = TagKey.m_203882_(Registries.f_256913_, new ResourceLocation("fotf", "lantern_backpacks"));
     private static final int CHECK_EVERY = 10;
+    /** Ticks after joining when the backpack rule isn't enforced: on login Curios re-validates each slot as it loads,
+     * and the Lantern slot can load before the back slot holding the backpack, which threw the lantern out. */
+    private static final int LOGIN_GRACE = 100;
 
     public static void registerPredicate() {
         CuriosApi.registerCurioPredicate(new ResourceLocation("fotfskills", "backpack_lantern"),
-                r -> r.stack().m_204117_(LANTERNS) && wearsBackpack(r.slotContext().entity()));
+                r -> r.stack().m_204117_(LANTERNS) && (loading(r.slotContext().entity()) || wearsBackpack(r.slotContext().entity())));
+    }
+
+    private static boolean loading(LivingEntity entity) {
+        return entity != null && entity.f_19797_ < LOGIN_GRACE;
     }
 
     public static boolean wearsBackpack(LivingEntity entity) {
@@ -73,7 +80,8 @@ public final class BackpackLantern {
     @SubscribeEvent
     public void onPlayerTick(TickEvent.PlayerTickEvent event) {
         Player player = event.player;
-        if (event.phase != TickEvent.Phase.END || player.m_9236_().f_46443_ || player.f_19797_ % CHECK_EVERY != 0) {
+        if (event.phase != TickEvent.Phase.END || player.m_9236_().f_46443_ || player.f_19797_ % CHECK_EVERY != 0
+                || loading(player)) {
             return;
         }
         CuriosApi.getCuriosInventory(player).resolve().flatMap(inv -> inv.getStacksHandler(SLOT)).ifPresent(handler -> {

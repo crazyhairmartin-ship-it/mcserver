@@ -65,6 +65,9 @@ public final class FotfSkills {
         if (ModList.get().isLoaded("ultimate_unicorn_mod")) {
             MinecraftForge.EVENT_BUS.register(new fotfskills.world.HorseSwim());
         }
+        if (ModList.get().isLoaded("alexsmobs")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.world.ElephantSwim());
+        }
         MinecraftForge.EVENT_BUS.register(new FarmPerks());
         MinecraftForge.EVENT_BUS.register(new FoodPerks());
         MinecraftForge.EVENT_BUS.register(new FishingPerks());
