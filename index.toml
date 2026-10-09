@@ -2272,6 +2272,22 @@ file = "kubejs/data/naturalist/tags/worldgen/biome/has_vulture.json"
 hash = "22de1fb4f119f67cbae6882d8ee8c0b66255812f60b1b2cc89dcddfe9cbdb094"
 
 [[files]]
+file = "kubejs/data/skyvillages/structures/waystones/waystone_0_fabric.nbt"
+hash = "e4d473c52dc7f21e798c17afb2ca0878403db4e607af689a3f022bb9883f25b8"
+
+[[files]]
+file = "kubejs/data/skyvillages/structures/waystones/waystone_0_forge.nbt"
+hash = "d2dac1b0972fc9210d8355bf35d3a0a04f2bdbd1df1d074ca8cb862517419449"
+
+[[files]]
+file = "kubejs/data/skyvillages/worldgen/template_pool/skyvillage_bridges.json"
+hash = "ac53b8a220f17b811334d2e125454b88a8d4324d438f4ca00f8c6883f609494c"
+
+[[files]]
+file = "kubejs/data/skyvillages/worldgen/template_pool/skyvillage_houses.json"
+hash = "03f3df1692068e101423aad20bb5cd852702ee937fde47df5a1c43fe1b99ec90"
+
+[[files]]
 file = "kubejs/data/spartancataclysm/weapon_attributes/ancient_metal_boomerang.json"
 hash = "3d9f370f4db634322569f9048b46608adc252596cfb8c8f8e3fcac7afb100563"
 
