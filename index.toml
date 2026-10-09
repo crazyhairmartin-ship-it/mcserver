@@ -62,7 +62,7 @@ hash = "e47c4aab90e7edd54ecde67547cc0f9841351efc77e04b66c22800b24633c66b"
 
 [[files]]
 file = "config/butterflies-common.toml"
-hash = "617fd72199b5c4667af801c92b4725bc81ce281e36f4de5e5e653318c4727955"
+hash = "8bf7bb99c6689bbf6cf9c3a140d000475f64090263b1b10a4bf56c7d59e28fda"
 
 [[files]]
 file = "config/cataclysm-common.toml"
@@ -2453,7 +2453,7 @@ hash = "a3c4b3f21824be8a277f02433bfddb79944c1f2ff1a9914ed144a70baf0ef537"
 
 [[files]]
 file = "kubejs/server_scripts/butterfly_sightings.js"
-hash = "ab6c957144e6fa572b983394a4d5f1fe9a0456ec5933a19e467834e63e96fa03"
+hash = "609540b7f3b4dbf43834eb700f17dae92a0fb6757f56f51e19f2b2bbe86f850e"
 
 [[files]]
 file = "kubejs/server_scripts/convert_duplicates.js"
@@ -2576,6 +2576,11 @@ metafile = true
 [[files]]
 file = "mods/alexs-mobs.pw.toml"
 hash = "5e1239fd67c97c042d09cf38664698c9d1a3cfbc50d779fc550c461cf6aeb565"
+metafile = true
+
+[[files]]
+file = "mods/alltheleaks.pw.toml"
+hash = "7b112d9281dc3bf615e7f2eac0fac8f42688b3239c2ddd5e448c9588638b0a09"
 metafile = true
 
 [[files]]
