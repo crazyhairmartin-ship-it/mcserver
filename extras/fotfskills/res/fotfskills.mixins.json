@@ -38,7 +38,8 @@
     "IronsScrollMixin",
     "WolfModelAccessor",
     "LivingEntityRendererInvoker",
-    "OculusHeldLightMixin"
+    "OculusHeldLightMixin",
+    "FamiliarPreviewMixin"
   ],
   "injectors": {
     "defaultRequire": 1
