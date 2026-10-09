@@ -5,7 +5,7 @@ import json, sys, zipfile, os
 jar = zipfile.ZipFile(sys.argv[1])
 shipped = {n[len("data/skyvillages/structures/"):-4] for n in jar.namelist() if n.startswith("data/skyvillages/structures/")}
 shipped |= {"waystones/" + f[:-4] for f in os.listdir("kubejs/data/skyvillages/structures/waystones")}
-WAYSTONE_WEIGHT = 200          # vs 50 per normal house: roughly 1 in 4 house slots, so nearly every village has one
+WAYSTONE_WEIGHT = 100          # vs 50 per normal house: about 1 in 8 house slots; a village has 10+, so usually 1-2
 for pool in ("skyvillage_houses", "skyvillage_bridges"):
     d = json.loads(jar.read(f"data/skyvillages/worldgen/template_pool/{pool}.json"))
     kept = []
