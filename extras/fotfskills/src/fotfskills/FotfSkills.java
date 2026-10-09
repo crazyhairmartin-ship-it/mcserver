@@ -100,6 +100,7 @@ public final class FotfSkills {
         }
         MinecraftForge.EVENT_BUS.register(new ForgeXpEvents());
         if (ModList.get().isLoaded("irons_spellbooks")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.compat.BloodCauldronMobs());
             MinecraftForge.EVENT_BUS.register(new IronsCastXp());
             MinecraftForge.EVENT_BUS.register(new IronsPerks());
             Mana.register(IronsMana::add);

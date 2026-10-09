@@ -25,7 +25,11 @@
     "FairyCategoryMixin",
     "BookRevivalMixin",
     "EntityNameMixin",
-    "BanisterBlockMixin"
+    "BanisterBlockMixin",
+    "FamiliarUnbindMixin",
+    "FamiliarUnbindTrackedMixin",
+    "BloodCauldronReachMixin",
+    "ScrollForgeXpMixin"
   ],
   "client": [
     "SkillsScreenMixin",
@@ -39,7 +43,8 @@
     "WolfModelAccessor",
     "LivingEntityRendererInvoker",
     "OculusHeldLightMixin",
-    "FamiliarPreviewMixin"
+    "FamiliarPreviewMixin",
+    "ScrollForgeTooltipMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -6,7 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.event.entity.living.LivingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -14,14 +14,14 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 /**
  * Alex's Mobs elephants float but can't swim, so one that wades in ends up stranded at sea. In water they now:
  *   swim where their rider steers (runs on the rider's client too, which moves a ridden mount),
- *   head for the nearest shore when nobody rides them (server; the target is re-picked every 2 seconds),
+ *   head for the nearest shore within 96 blocks when nobody rides them (server; re-picked every 2 seconds),
  *   and get lifted over the bank when they swim into it (vanilla's hop out of water is too short for them).
  */
 public final class ElephantSwim {
     private static final String ELEPHANT = "com.github.alexthe666.alexsmobs.entity.EntityElephant";
     private static final double RIDDEN_SPEED = 0.12;
     private static final double WILD_SPEED = 0.07;
-    private static final int SEARCH_RADIUS = 24;
+    private static final int SEARCH_RADIUS = 96;
     private static final int SEARCH_EVERY = 40;
     private final Map<LivingEntity, BlockPos> shores = new WeakHashMap<>();
 
@@ -75,26 +75,29 @@ public final class ElephantSwim {
         elephant.m_20334_(vx, vy, vz);
     }
 
-    /** The closest dry spot at about water level: air with solid, unflooded ground under it (loaded chunks only). */
+    /**
+     * The closest dry shore within SEARCH_RADIUS: a column whose top block is land, not water (the ocean-floor and
+     * motion-blocking heightmaps agree; grass and flowers count for neither), a few blocks above or below the elephant.
+     * Height maps only, so even a wide lake is cheap to search; loaded chunks only.
+     */
     private static BlockPos nearestShore(LivingEntity elephant) {
         Level level = elephant.m_9236_();
-        BlockPos at = elephant.m_20183_();
+        int ex = (int) Math.floor(elephant.m_20185_()), ez = (int) Math.floor(elephant.m_20189_());
+        int ey = (int) Math.floor(elephant.m_20186_());
         for (int r = 2; r <= SEARCH_RADIUS; r += 2) {
-            for (int dx = -r; dx <= r; dx++) {
-                for (int dz = -r; dz <= r; dz++) {
+            for (int dx = -r; dx <= r; dx += 2) {
+                for (int dz = -r; dz <= r; dz += 2) {
                     if (Math.abs(dx) != r && Math.abs(dz) != r) {
                         continue;                                            // only the ring at this distance
                     }
-                    for (int dy = -1; dy <= 2; dy++) {
-                        BlockPos spot = at.m_7918_(dx, dy, dz);
-                        if (!level.m_46749_(spot)) {
-                            continue;
-                        }
-                        BlockState here = level.m_8055_(spot);
-                        BlockState ground = level.m_8055_(spot.m_7495_());
-                        if (here.m_60795_() && ground.m_280296_() && ground.m_60819_().m_76178_()) {
-                            return spot;
-                        }
+                    int x = ex + dx, z = ez + dz;
+                    if (!level.m_7232_(x >> 4, z >> 4)) {
+                        continue;
+                    }
+                    int floor = level.m_6924_(Heightmap.Types.OCEAN_FLOOR, x, z);
+                    int surface = level.m_6924_(Heightmap.Types.MOTION_BLOCKING, x, z);
+                    if (floor == surface && surface >= ey - 2 && surface <= ey + 4) {
+                        return new BlockPos(x, surface, z);
                     }
                 }
             }

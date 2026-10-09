@@ -60,23 +60,27 @@ public final class WeaponPerks {
             event.setAmount((float) (amount * abilityMultiplier(player, player.m_21205_())));
             return;
         }
+        ItemStack thrownWeapon = fotfskills.compat.IronsThrow.weapon(direct);
+        if (!thrownWeapon.m_41619_()) {          // Iron's Throw: a hit with the thrown weapon (no swing combos)
+            amount = weaponTypeBonus(player, target, thrownWeapon, amount);
+            double pct = Perks.get(player, "pct_thrown");
+            if (Weapons.is(thrownWeapon, "axe")) {
+                pct += Perks.get(player, "pct_thrown_axe");
+            }
+            if (Weapons.twoHanded(player, thrownWeapon)) {
+                pct += Perks.get(player, "pct_two_handed");
+            }
+            amount *= (float) (1 + pct);
+            if (Weapons.is(thrownWeapon, "blunt") && Perks.get(player, "crush_armor") > 0) {
+                crush(target, Perks.get(player, "crush_armor"), now);
+            }
+            event.setAmount(amount);
+            return;
+        }
         if (direct == player && "player".equals(event.getSource().m_19385_())) {   // a real swing, not thorns or spells
             boolean swing = state.swing.first(now);          // the main target; sweep targets share the tick
             ItemStack weapon = player.m_21205_();
-            if (Weapons.is(weapon, "pickaxe") || Weapons.is(weapon, "blunt")) {
-                amount += Perks.get(player, "dmg_pickaxe_blunt");
-            }
-            if (Weapons.is(weapon, "axe")) {
-                amount += Perks.get(player, "dmg_axe");
-                amount *= (float) ArmorPierce.multiplier(target.m_21230_(), target.m_21133_(Attributes.f_22285_), amount,
-                        Perks.get(player, "armor_pierce_axe"));
-            }
-            if (Weapons.is(weapon, "scythe")) {
-                amount += Perks.get(player, "dmg_scythe");
-            }
-            if (Weapons.is(weapon, "polearm")) {
-                amount += Perks.get(player, "dmg_polearm");
-            }
+            amount = weaponTypeBonus(player, target, weapon, amount);
             double pct = 0;
             if (Weapons.twoHanded(player, weapon)) {
                 pct += Perks.get(player, "pct_two_handed");
@@ -135,6 +139,25 @@ public final class WeaponPerks {
         }
     }
 
+    /** The per-weapon-type flat bonuses (and the axe's armor pierce), for swings and Iron's Throw alike. */
+    private static float weaponTypeBonus(ServerPlayer player, LivingEntity target, ItemStack weapon, float amount) {
+        if (Weapons.is(weapon, "pickaxe") || Weapons.is(weapon, "blunt")) {
+            amount += Perks.get(player, "dmg_pickaxe_blunt");
+        }
+        if (Weapons.is(weapon, "axe")) {
+            amount += Perks.get(player, "dmg_axe");
+            amount *= (float) ArmorPierce.multiplier(target.m_21230_(), target.m_21133_(Attributes.f_22285_), amount,
+                    Perks.get(player, "armor_pierce_axe"));
+        }
+        if (Weapons.is(weapon, "scythe")) {
+            amount += Perks.get(player, "dmg_scythe");
+        }
+        if (Weapons.is(weapon, "polearm")) {
+            amount += Perks.get(player, "dmg_polearm");
+        }
+        return amount;
+    }
+
     /** Second Wind: a hit that would kill leaves you on 1 health, once per 5 minutes (totems are left alone). */
     @SubscribeEvent(priority = EventPriority.LOWEST)
     public void onDamage(LivingDamageEvent event) {
@@ -152,10 +175,14 @@ public final class WeaponPerks {
 
     @SubscribeEvent
     public void onDeath(LivingDeathEvent event) {
-        if (!(event.getSource().m_7639_() instanceof ServerPlayer player) || event.getSource().m_7640_() != player) {
+        if (!(event.getSource().m_7639_() instanceof ServerPlayer player)) {
             return;
         }
-        ItemStack weapon = player.m_21205_();
+        ItemStack weapon = event.getSource().m_7640_() == player ? player.m_21205_()
+                : fotfskills.compat.IronsThrow.weapon(event.getSource().m_7640_());   // a kill by Iron's Throw
+        if (weapon.m_41619_()) {
+            return;
+        }
         if (Weapons.is(weapon, "scythe")) {
             player.m_5634_((float) Perks.get(player, "grim_harvest"));
         }

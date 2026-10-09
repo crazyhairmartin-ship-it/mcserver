@@ -24,6 +24,10 @@ public final class ClientInit {
             net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus().addListener(
                     (net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent e) -> BackpackLanternRenderer.registerAll());
         }
+        if (net.minecraftforge.fml.ModList.get().isLoaded("weaponmaster_ydm")
+                && net.minecraftforge.fml.ModList.get().isLoaded("bettercombat")) {
+            MinecraftForge.EVENT_BUS.register(new SheathedPose());
+        }
         if (net.minecraftforge.fml.ModList.get().isLoaded("moremobvariants")) {
             MinecraftForge.EVENT_BUS.register(new CustomCoats());
         }

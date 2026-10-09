@@ -315,6 +315,12 @@
         "data": {
           "per_mana": 0.25
         }
+      },
+      {
+        "type": "fotfskills:inscribe_scroll",
+        "data": {
+          "per_rarity": 8.0
+        }
       }
     ],
     "taming": [
