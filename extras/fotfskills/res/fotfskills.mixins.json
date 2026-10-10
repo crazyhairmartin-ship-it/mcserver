@@ -44,7 +44,8 @@
     "LivingEntityRendererInvoker",
     "OculusHeldLightMixin",
     "FamiliarPreviewMixin",
-    "ScrollForgeTooltipMixin"
+    "ScrollForgeTooltipMixin",
+    "SheathedPoseMixin"
   ],
   "injectors": {
     "defaultRequire": 1

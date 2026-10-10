@@ -2,24 +2,26 @@ package fotfskills.client;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.util.Map;
+import java.util.WeakHashMap;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.world.entity.player.Player;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 /**
- * When Weapon Master puts a held weapon away (on the back or hip after a while without attacking), Better Combat still
- * held that weapon's stance (two-handed grips and so on). Right before each player is drawn, the stance of every hand
- * whose weapon is put away is cleared. Weapon Master's own test: no hit with that hand for hideTick ticks and its
- * auto-hide toggle on (toggleSlots 11 main hand, 12 off hand). Both mods are read by reflection; if either changes,
- * this does nothing.
+ * When Weapon Master puts a held weapon away (on the back or hip after a while without attacking), Better Combat kept
+ * that weapon's stance. mixin/SheathedPoseMixin makes Better Combat's pose layers set no stance for a hand whose weapon
+ * is put away; this class tells it which player owns each pose layer (learned as players are drawn) and runs Weapon
+ * Master's own test: no hit with that hand for hideTick ticks and its auto-hide toggle on (toggleSlots 11 main hand,
+ * 12 off hand). Both mods are read by reflection; if either changes, stances are left alone.
  */
 public final class SheathedPose {
-    private boolean broken;
-    private Method playerData;
-    private Field hideTick, lastMain, lastOff, toggles;
-    private Field mainBody, mainItem, offBody, offItem;
-    private Method setPose;
+    private static final Map<Object, Player> OWNERS = new WeakHashMap<>();
+    private static boolean broken;
+    private static Method playerData;
+    private static Field hideTick, lastMain, lastOff, toggles;
+    private static Field[] stacks;
 
     @SubscribeEvent
     public void onRender(RenderPlayerEvent.Pre event) {
@@ -28,46 +30,55 @@ public final class SheathedPose {
             return;
         }
         try {
-            if (setPose == null) {
-                look(player);
+            if (stacks == null) {
+                look();
             }
-            Object data = playerData.invoke(player);
-            if (data == null) {
-                return;
-            }
-            int hide = hideTick.getInt(data);
-            int[] toggle = (int[]) toggles.get(data);
-            if (toggle.length > 11 && toggle[11] == 1 && lastMain.getInt(data) >= hide && !player.m_21205_().m_41619_()) {
-                setPose.invoke(mainBody.get(player), null, false);
-                setPose.invoke(mainItem.get(player), null, false);
-            }
-            if (toggle.length > 12 && toggle[12] == 1 && lastOff.getInt(data) >= hide && !player.m_21206_().m_41619_()) {
-                setPose.invoke(offBody.get(player), null, false);
-                setPose.invoke(offItem.get(player), null, false);
+            for (Field f : stacks) {
+                Object stack = f.get(player);
+                if (stack != null && OWNERS.get(stack) != player) {
+                    OWNERS.put(stack, player);
+                }
             }
         } catch (ReflectiveOperationException | RuntimeException | LinkageError e) {
             broken = true;
         }
     }
 
-    private void look(Player player) throws ReflectiveOperationException {
+    /** True if this Better Combat pose layer's hand holds a weapon that Weapon Master has put away. */
+    public static boolean sheathed(Object poseStack, boolean mainHand) {
+        Player player = OWNERS.get(poseStack);
+        if (player == null || broken) {
+            return false;
+        }
+        try {
+            Object data = playerData.invoke(player);
+            if (data == null) {
+                return false;
+            }
+            int[] toggle = (int[]) toggles.get(data);
+            int slot = mainHand ? 11 : 12;
+            int sinceHit = (mainHand ? lastMain : lastOff).getInt(data);
+            boolean holding = !(mainHand ? player.m_21205_() : player.m_21206_()).m_41619_();
+            return holding && toggle.length > slot && toggle[slot] == 1 && sinceHit >= hideTick.getInt(data);
+        } catch (ReflectiveOperationException | RuntimeException | LinkageError e) {
+            broken = true;
+            return false;
+        }
+    }
+
+    private static void look() throws ReflectiveOperationException {
         Class<?> data = Class.forName("com.minecraftserverzone.weaponmaster.setup.playerdata.PlayerData");
         playerData = Class.forName("com.minecraftserverzone.weaponmaster.setup.playerdata.IPlayerData").getMethod("getPlayerData");
         hideTick = data.getField("hideTick");
         lastMain = data.getField("lastMainhandHit");
         lastOff = data.getField("lastOffhandHit");
         toggles = data.getField("toggleSlots");
-        mainBody = field("mainHandBodyPose");
-        mainItem = field("mainHandItemPose");
-        offBody = field("offHandBodyPose");
-        offItem = field("offHandItemPose");
-        Class<?> anim = Class.forName("dev.kosmx.playerAnim.core.data.KeyframeAnimation");
-        setPose = Class.forName("net.bettercombat.client.animation.PoseSubStack").getMethod("setPose", anim, boolean.class);
-    }
-
-    private static Field field(String name) throws NoSuchFieldException {
-        Field f = AbstractClientPlayer.class.getDeclaredField(name);    // added to the class by Better Combat's mixin
-        f.setAccessible(true);
-        return f;
+        String[] names = {"mainHandBodyPose", "mainHandItemPose", "offHandBodyPose", "offHandItemPose"};
+        Field[] found = new Field[names.length];
+        for (int i = 0; i < names.length; i++) {
+            found[i] = AbstractClientPlayer.class.getDeclaredField(names[i]);   // added by Better Combat's mixin
+            found[i].setAccessible(true);
+        }
+        stacks = found;
     }
 }
