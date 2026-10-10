@@ -115,7 +115,11 @@ public final class BanisterCornerModels {
             return out;
         }
 
-        /** Inner corner: the side banister's rail stops at the straight banister's rail. */
+        /**
+         * Inner corner: the side banister's rail stops at the straight banister's rail, and anything of it reaching into
+         * that rail goes (its end cap, and the post nearest the corner, which would poke through the straight
+         * banister's rail and post).
+         */
         private BakedQuad trimmed(BakedQuad q) {
             int axis = axis(facing);
             float[][] f = read(q);
@@ -123,10 +127,8 @@ public final class BanisterCornerModels {
             if (ext > 0.5f) {
                 return write(q, positive(facing) ? QuadGeometry.clip(f, axis, 0, 1 - BAND) : QuadGeometry.clip(f, axis, BAND, 1));
             }
-            if (ext < EPS && onEdge(QuadGeometry.centre(f, axis)) && inBand(QuadGeometry.centre(f, axis), facing)) {
-                return null;                                 // its end cap, inside the other rail
-            }
-            return q;
+            boolean intoRail = positive(facing) ? QuadGeometry.reaches(f, axis, 1 - BAND, 1) : QuadGeometry.reaches(f, axis, 0, BAND);
+            return intoRail ? null : q;
         }
 
         /** Outer corner: only the side's corner of the straight banister, with its nearer post moved into the corner. */

@@ -23,6 +23,15 @@ public final class QuadGeometry {
         return (max(quad, axis) + min(quad, axis)) / 2;
     }
 
+    /** Whether the face reaches into lo..hi along the axis (a flat face counts when it lies within it). */
+    public static boolean reaches(float[][] quad, int axis, float lo, float hi) {
+        float a = min(quad, axis), b = max(quad, axis);
+        if (b - a < EPS) {
+            return a >= lo - EPS && a <= hi + EPS;
+        }
+        return b > lo + EPS && a < hi - EPS;
+    }
+
     /** The part of the face with lo <= axis <= hi, or null if none of it is there. */
     public static float[][] clip(float[][] quad, int axis, float lo, float hi) {
         float a = min(quad, axis);
