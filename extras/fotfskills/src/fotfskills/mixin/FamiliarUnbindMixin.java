@@ -44,6 +44,7 @@ public abstract class FamiliarUnbindMixin {
             return;
         }
         entity.m_7678_(player.m_20185_(), player.m_20186_(), player.m_20189_(), player.m_146908_(), 0);
+        if (!entity.m_8077_()) entity.m_20340_(false);     // the book's floating label goes with the bond
         if (!player.m_284548_().m_7967_(entity)) {
             player.m_213846_(Component.m_237113_("Couldn't let " + familiar.displayName() + " out here; they stay in your book."));
             return;                                         // keep the page rather than lose the familiar
