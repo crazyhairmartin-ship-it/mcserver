@@ -1924,6 +1924,10 @@ file = "kubejs/data/fotf/curios/slots/lantern.json"
 hash = "ae28f65013d1b08d6f313f82accd8e4afa809c9d8019621c2cdc087a43fe5771"
 
 [[files]]
+file = "kubejs/data/fotf/curios/slots/ring.json"
+hash = "637160e6436c9d1f0d8a6ddaee750598703f1916b91bddcfbf45e40cc3f73fdc"
+
+[[files]]
 file = "kubejs/data/fotf/forge/biome_modifier/fairies_common.json"
 hash = "92e35a2abfe6cb7c643124c5636004b24c68e03dfb2cea951f484e66880b56f9"
 
@@ -2857,7 +2861,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "5d05b3c1a6e9e335331b50c49d3bc4f0c4b318ea782d2f958c4c580c229f9466"
+hash = "9ab323360ff63da4966cf7425a51a2d029dc9201f00fe570405e992a2a3c3eb4"
 metafile = true
 
 [[files]]
