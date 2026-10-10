@@ -1,6 +1,6 @@
 name = "Puzzles Lib"
 filename = "PuzzlesLib-v8.1.33-1.20.1-Forge.jar"
-side = "client"
+side = "both"
 
 [download]
 hash-format = "sha1"
