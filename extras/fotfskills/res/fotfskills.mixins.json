@@ -33,6 +33,8 @@
     "ScrollForgeXpMixin"
   ],
   "client": [
+    "WeaponLayoutMixin",
+    "WeaponLayoutOthersMixin",
     "SkillsScreenMixin",
     "ParcoolDodgeMixin",
     "ParcoolTrickMixin",
