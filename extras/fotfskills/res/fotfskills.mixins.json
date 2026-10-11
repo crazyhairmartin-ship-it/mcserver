@@ -6,6 +6,7 @@
   "mixins": [
     "ItemStackCraftedMixin",
     "OreScentOutlineMixin",
+    "OreScentColourMixin",
     "ItemStackDurabilityMixin",
     "FishingHookMixin",
     "AbstractArrowAccessor",
