@@ -22,7 +22,7 @@ public abstract class WeaponLayoutOthersMixin {
                                            net.minecraft.client.renderer.MultiBufferSource buffers, int light,
                                            net.minecraft.client.model.HumanoidModel<?> model, CallbackInfo ci) {
         PlayerData data = ((IPlayerData) player).getPlayerData();
-        WeaponLayoutHooks.current = data == null ? null : WeaponLayoutHooks.arrange(player, data.inventory);
+        WeaponLayoutHooks.current = data == null ? null : WeaponLayoutHooks.arrange(WeaponLayoutHooks.attachments(player), data.inventory);
         fotfskills$shown = data == null ? null : WeaponLayoutHooks.shown(data.inventory, WeaponLayoutHooks.current);
     }
 

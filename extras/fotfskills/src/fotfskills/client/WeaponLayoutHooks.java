@@ -34,17 +34,31 @@ public final class WeaponLayoutHooks {
         return WeaponLayout.OTHER;
     }
 
-    /** Arrangement for a hotbar (first nine stacks) under this player's Weapon Master slot attachments, or null. */
-    public static int[] arrange(Player player, ItemStack[] hotbar) {
+    /** Weapon Master's own default slot attachments, for when a player's settings haven't arrived. */
+    private static final String DEFAULT_ATTACHMENTS = "1-body,2-body,3-rleg,4-lleg,5-rleg,6-lleg,7-body,8-body,9-rleg";
+
+    /** The local player's slot attachments: Weapon Master keeps those client-side, not in the synced PlayerData. */
+    public static String localAttachments() {
+        String own = com.minecraftserverzone.weaponmaster.setup.events_on_client.ClientOnlyForgeSetup.slotAttachment;
+        return own == null || own.isEmpty() ? DEFAULT_ATTACHMENTS : own;
+    }
+
+    /** Another player's slot attachments, from the PlayerData Weapon Master syncs for them. */
+    public static String attachments(Player player) {
         PlayerData data = ((IPlayerData) player).getPlayerData();
-        if (data == null || data.slotAttachments == null || hotbar == null || hotbar.length < 9) {
+        return data == null || data.slotAttachments == null || data.slotAttachments.isEmpty() ? DEFAULT_ATTACHMENTS : data.slotAttachments;
+    }
+
+    /** Arrangement for a hotbar (first nine stacks) under these Weapon Master slot attachments, or null. */
+    public static int[] arrange(String attachments, ItemStack[] hotbar) {
+        if (hotbar == null || hotbar.length < 9) {
             return null;
         }
         int[] kinds = new int[9];
         for (int i = 0; i < 9; i++) {
             kinds[i] = kind(hotbar[i]);
         }
-        return WeaponLayout.arrange(kinds, WeaponLayout.places(data.slotAttachments));
+        return WeaponLayout.arrange(kinds, WeaponLayout.places(attachments));
     }
 
     /** The stacks rearranged into display order (anything past the hotbar, e.g. the off hand, unchanged). */

@@ -27,7 +27,7 @@ public abstract class WeaponLayoutMixin {
             for (int i = 0; i < 9; i++) {
                 hotbar[i] = player.m_150109_().m_8020_(i);
             }
-            WeaponLayoutHooks.current = WeaponLayoutHooks.arrange(player, hotbar);
+            WeaponLayoutHooks.current = WeaponLayoutHooks.arrange(WeaponLayoutHooks.localAttachments(), hotbar);
         }
     }
 
