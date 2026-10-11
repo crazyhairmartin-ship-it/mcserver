@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "ItemStackCraftedMixin",
+    "OreScentOutlineMixin",
     "ItemStackDurabilityMixin",
     "FishingHookMixin",
     "AbstractArrowAccessor",
