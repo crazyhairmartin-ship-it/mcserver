@@ -57,7 +57,8 @@ public final class PerkSync {
                 .consumerMainThread((msg, context) -> {
                     ServerPlayer player = context.get().getSender();
                     if (player != null && Perks.get(player, "double_jump") > 0) {
-                        player.f_19789_ = 0;                 // the landing after a double jump is safe
+                        player.f_19789_ = 0;
+                        CombatPerks.LANDING.jumped(player.m_20148_());   // only the drop below take-off counts
                     }
                     context.get().setPacketHandled(true);
                 })
