@@ -9067,7 +9067,7 @@
   ],
   "generates": true,
   "mod": "Structory",
-  "name": "outcast villager's boat",
+  "name": "outcast fisherman's boat (a small boat with a fishing villager, in all oceans)",
   "overridden_by_pack": false,
   "rarity": "rare",
   "set": "structory:outcast_villager",
@@ -10409,12 +10409,11 @@
   "dimensions": [
    "Overworld"
   ],
-  "generates": true,
+  "generates": false,
   "mod": "Towns and Towers",
-  "name": "villager ship fleet (mothership, escorts, small ships)",
+  "name": "villager ship fleet (switched off in config/towns_and_towers)",
   "overridden_by_pack": false,
   "rarity": "rare",
-  "seen_in_world": "Villager ship fleets: config/towns_and_towers switches Towns and Towers villages off, but players see these all over the ocean.",
   "set": "towns_and_towers:towns",
   "spacing": "48",
   "type": "minecraft:jigsaw",

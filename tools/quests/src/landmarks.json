@@ -1,7 +1,7 @@
 {
  "_about": "Landmarks for quests and coverage. \"names\": plain names for structures whose ids are unclear. \"seen_in_world\": structures the config switches off but that are in the server world (older chunks), so they count as present. \"features\": landmarks placed as world features, not structures (a quest finds them with a biome, place or checkmark task, not a structure task). \"scenery\": id patterns of decorations that are not places to send players; coverage.py leaves them out. \"replaced_by\": vanilla structures a mod switches off in code (YUNG's), so they don't generate.",
  "names": {
-  "towns_and_towers:village_ocean": "villager ship fleet (mothership, escorts, small ships)",
+  "towns_and_towers:village_ocean": "villager ship fleet (switched off in config/towns_and_towers)",
   "towns_and_towers:pillager_outpost_ocean": "pillager ship",
   "towns_and_towers:wreckage_ocean": "sunken wreckage",
   "towns_and_towers:mimic_desert": "desert mimic ruin",
@@ -11,7 +11,7 @@
   "mos:ship_small": "small ship",
   "mos:wanderer_raft": "wanderer's raft",
   "mvs:small_ship": "small ship",
-  "structory:boat": "outcast villager's boat",
+  "structory:boat": "outcast fisherman's boat (a small boat with a fishing villager, in all oceans)",
   "dungeons_arise:heavenly_challenger": "airship",
   "dungeons_arise:heavenly_conqueror": "airship",
   "dungeons_arise:heavenly_rider": "airship",
@@ -21,9 +21,7 @@
   "mes:mega_ship": "End mega ship",
   "skyvillages:skyvillage": "sky village"
  },
- "seen_in_world": {
-  "towns_and_towers:village_ocean": "Villager ship fleets: config/towns_and_towers switches Towns and Towers villages off, but players see these all over the ocean."
- },
+ "seen_in_world": {},
  "features": {
   "yungsbridges:bridges": {
    "name": "Bridges over rivers (YUNG's Bridges)",
