@@ -1,5 +1,9 @@
 # Quests
 
+> **Spoilers:** everything under `src/` (and the generated `config/ftbquests/`) is the quest content itself. The
+> pack owner plays the quests unspoiled; when summarising quest work for them, describe approach, difficulty,
+> style and plot outline only (see the spoiler policy in `docs/superpowers/specs/2026-10-13-boss-progression.md`).
+
 The pack's quest book is [FTB Quests](https://www.curseforge.com/minecraft/mc-mods/ftb-quests) (with FTB Teams, which
 it needs, and FTB XMod Compat for KubeJS). The quests aren't made in the in-game editor: they're written as short
 JSON files here and turned into FTB Quests' files by a script, the same way the field guide, cookbook and skill
@@ -73,6 +77,7 @@ Quest fields:
 | `hidden` | `"until_deps"`: invisible until the quests before it are visible |
 | `optional` | Doesn't block chapter completion |
 | `giver` | The quest is handed out by a villager, mob or item instead of being in the book from the start (below) |
+| `discover` | The quest is found out in the world: a task (usually `structure`, `biome`, `item`, `dimension` or `stat`) that's hidden; when it's done the quest appears. E.g. `"discover": {"biome": "minecraft:cherry_grove"}` |
 
 ## Tasks
 
@@ -86,11 +91,24 @@ Quest fields:
 | `{"advancement": "minecraft:adventure/sleep_in_bed"}` | The advancement is earned |
 | `{"observe": "minecraft:beehive", "ticks": 40}` | Looking at a block or mob (for this long) |
 | `{"levels": 10}` | Has XP levels |
+| `{"stat": "minecraft:fish_caught", "count": 50}` | A vanilla statistic reaches the count (`minecraft:walk_one_cm`, `minecraft:aviate_one_cm`, `minecraft:fish_caught`, ...) |
 | `{"checkmark": "I've read this"}` | The player ticks it |
 | `{"talk": "villager", "profession": "minecraft:cleric", "lines": [...]}` | Sneak + right-click that villager while on the quest; they say the lines. `"talk": "entity"` with `"entity"` (and optional `"named"`) for a mob |
 | `{"stage": "my_stage"}` | The player has that stage (a player tag; for scripted quests) |
 
 Any task can have a `"title"`. Add `"unchecked": true` for ids that only exist at runtime (Every Compat's blocks, tags).
+
+### What counts, and when
+
+A quest's tasks only make progress once the quest is open (everything in `after` done). Some task types look back
+and some don't, which matters for bosses players can fight without the quest:
+
+- **Only counts while the quest is open:** `kill`, `talk`, `stage`, `checkmark`.
+- **Completes straight away if it's already true:** `item` (carrying it), `advancement` (earned before), `stat`
+  (it reads the lifetime total), `biome`/`structure`/`dimension` (standing in it).
+
+So a boss quest should ask for the **kill** (plus steps like crafting the eye or talking to someone), not for the
+boss's drop or its advancement, so beating the boss early doesn't tick the quest.
 
 ## Rewards
 
@@ -139,6 +157,9 @@ clickable `[accept]` button; accepting adds the quest to the book.
 name in chat. For `drop` and `item`, `"item"` is either an existing item id or a new quest item:
 `{"name": "Water-Stained Letter", "tooltip": "Right-click to read", "texture": "minecraft:item/paper"}` (its id is
 `kubejs:quest_<quest id>`, or set `"id"`). The item is used up on accepting unless `"consume": false`.
+
+`talk` steps only answer while their quest is open (checked with FTB Quests): earlier quests done, the quest not
+finished, and for a quest with a `giver` or `discover`, its first task done.
 
 How it works: accepting adds the player tag `fq.<chapter>.<quest>`, and the quest's hidden first task waits for it
 (FTB Quests reads player tags as stages). `talk` tasks add `fq.<chapter>.<quest>.talk<n>`. A quest that a giver

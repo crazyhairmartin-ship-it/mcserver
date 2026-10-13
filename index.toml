@@ -113,16 +113,20 @@ file = "config/ftbquests/quests/chapters/getting_started.snbt"
 hash = "18aceadb1b6f606c819125e154f503d3e0aca69410035b8882d7417a68f5d7ab"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/out_in_the_world.snbt"
+hash = "16b00c07d201f9a41e91283939b003572ea7f9794be89ad69819e46a624aa401"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/skill_fishing.snbt"
-hash = "01ab432abf21fe312c5745122bb9619720fded426655510b092f8d1505836a3b"
+hash = "ddb9d29df9cd3240f2d4c41efb8c00f7bde78b12a0f171a103fa06ab5bd35f61"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/story_prologue.snbt"
-hash = "be8561b29dde2f5f7b1757ad3b1b515782989ef7da989069f51f214a63683c78"
+hash = "562c46d712aa30f557ce951f775d408d01f142421342de87269033085629121c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/village_errands.snbt"
-hash = "89d24b941d023498c1567d491f435dd93f33df54e095a110a3ee0d58fa3269cc"
+hash = "3d5436ee4f546de791f9a9c81e251cd92122c5cece063246300caae6be7ac75c"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -2581,11 +2585,11 @@ hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "4f046bd653d51f6d399443a3349a2becc40ce13be62e341584adb9eb7669836c"
+hash = "ce0d90342be4d649ce5d53183b607bdd829f87c4802d1a0938eebf424ec9a035"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
-hash = "3a05421fb83885bc1b811c7bfc3f99fdf7c741216c6471c805f3fdb24923a21b"
+hash = "7c1ca41645b7dbd372b5ac59f64941a2be99abaa765a0c8439d656cc71a2a6c2"
 
 [[files]]
 file = "kubejs/server_scripts/saddle_recipe.js"

@@ -1,8 +1,18 @@
 # Boss and objective progression (for the story line)
 
-Status: proposal for discussion, 2026-10-13 (revised: Cataclysm's main bosses moved after the Ender Dragon and ordered by the owner's testing; Mowzie's bosses in the main story; Ignis the final boss and Echo of Tyros the magic questline's; compass real lock decided, not built). Built from the pack's current mod list on `main` (merged into
+Status: proposal for discussion, 2026-10-13 (revised: Cataclysm's main bosses moved after the Ender Dragon and ordered by the owner's testing; Mowzie's bosses in the main story; Ignis the final boss and Echo of Tyros the magic questline's; compass real lock decided, not built; quests are a pathway with bonuses, not a gate; realm questlines; discovery quests; artifacts as quest rewards). Built from the pack's current mod list on `main` (merged into
 `claude/cloud-session-setup-epiuzy`), reading each mod's jar: boss tags, structures and where they generate, locator
 recipes, and boss loot tables. Difficulty is relative (from the mods' designs and drops), not measured in game.
+
+## Spoiler policy
+
+The owner wants to play the quests unspoiled, but approve the **approach, difficulty, style and plot**. So when
+quest work is shown to the owner (chat, issue comments, summaries): describe structure, mechanics, difficulty
+curve, tone and the plot at outline level, and keep specifics vague: no quest names or text, dialogue, exact
+rewards, hidden triggers, discovery quest locations or twists, unless the owner asks for one. Plot details that
+need approval are offered as a short outline with an explicit "spoiler" warning, so the owner can choose to read
+them. Quest sources (`tools/quests/src/`) and the generated book are full spoilers. This design doc covers the
+framework and the boss order (public knowledge); story text belongs in the sources, not here.
 
 ## What's in the pack
 
@@ -162,30 +172,85 @@ end of the plot. Side branches from the main quest (not required for the finale)
 Caves volcano, Ominous Catalyst; 600 health, 20 armour), the Void Worm, the Warden. **Echo of Tyros** is the final
 boss of the magic questline instead (below).
 
-## Quest structure: a main quest with branches
+## Quest structure
 
-Quests are the pack's progression, not an optional extra: the main story and its branches carry real rewards
-(boss-tier gear, unique items, artifacts, skill XP), and the compass lock ties discovery to them.
+### Principles (from the owner)
 
-- **Main quest** (group "The Story"): one chapter per act. Each act has a short spine of story quests that must be
-  done in order, ending in the act's finale. The spine only asks for what the plot needs.
-- **Branches**: optional content hangs off the spine. A spine quest unlocks a branch questline in its own chapter
-  (side content, a mod showcase or a big optional boss like the Luxtructosaurus). The spine chapter shows the
-  branch with a **quest link** (`"links"` in the chapter source): it appears in the main chapter, and clicking it
-  opens the branch. Branches can loop back with a reward that helps the spine (e.g. the Luxtructosaurus branch
-  gives gear that makes Act V easier).
-- **Planned branches** (first pass):
+- **Nothing is locked behind quests.** Players can find bosses with eyes, compasses or by exploring, and kill them
+  without being on the quest. Quests are a **pathway** to the content, with **helpful bonuses** along the way
+  (gear, unique items, artifacts, skill XP), not a gate.
+- **Quest progress is required for later quests.** Each questline is a chain; you can't skip ahead in it.
+- **Doing something outside its quest doesn't complete the quest.** Beating Echo of Tyros without the magic
+  questline is fine, but the questline's Tyros quest still isn't done. FTB Quests already works this way for
+  kills: a kill task only counts while its quest is open (checked in its code). So boss quests ask for the
+  **kill** (and story steps around it), never "have the boss's drop" or "have the boss's advancement", which
+  would tick at once (see "What counts, and when" in `tools/quests/README.md`).
+- **Variety, not just "go kill this boss".** Each boss beat is a few steps of different kinds (below).
+- **Realms branch off.** Each dimension (and the Alex's Caves underworld) has its own questline, linked from the
+  point in the main story where it fits.
+- **The world hands out quests too.** Finding an item, a dungeon or a biome can start a standalone quest about it.
+- **Artifacts become quest rewards** (note below).
 
-| Branches off | Branch | Content |
+### Main story and realm questlines
+
+- **Main story** (group "The Story"): the Overworld spine, one chapter per act, Prologue to the Act V finale (Ignis).
+  Its quests must be done in order.
+- **Realm questlines** (group "Realms"), each its own chapter (or a few), starting from a main-story quest and
+  linked back into it with a **quest link** so the main chapter shows where each realm falls:
+
+| Realm | Opens from | Covers | Feeds back into |
+|---|---|---|---|
+| **Twilight Forest** | Act I finale (the portal) | Three parts: Naga/Lich/Minoshroom (Act II), Hydra/Knight Phantoms/Ur-Ghast (Act III), Yeti/Snow Queen (Act IV) | Twilight gear (Ironwood, Steeleaf, Knightmetal, Fiery) |
+| **The Underworld** (Alex's Caves) | Act II | Cave Maps, each cave biome and its challenge, Forsaken, Hullbreaker, Tremorzilla, and the **Luxtructosaurus** finale | Cave tech and gear |
+| **The Nether** | Act II finale (first trip) | Fortresses, bastions, Wildfire, netherite, the Wither; later the Nether Cataclysm bosses (Netherite Monstrosity, Ignis) as Act V links | Blaze powder (eyes), netherite, a beacon |
+| **The End** | Act IV (the stronghold) | The Dragon, End cities, elytra, Moog's End structures, Nullscape, Void Worm; later the Ender Guardian | Shulker shells, elytra |
+
+  The main story's acts then read as: Overworld beats, plus "the Twilight Forest is calling: go when ready (Part
+  1)". Each realm chapter's quests can require main-story quests so realm progress can't run ahead of the story
+  where it matters.
+- **Side questlines** (other groups): the magic questline (Iron's Spells to Echo of Tyros), skill paths, villages
+  and drops, mod showcases.
+
+### Quest goal variety
+
+A boss beat is a short chain, not one kill. The framework already supports all of these:
+
+| Goal | Task type | Example |
 |---|---|---|
-| Act I spine | The magic questline | Iron's Spells from the first Priest to Echo of Tyros (below) |
-| Act II spine | Alex's Caves | Cave Maps, each cave biome, Forsaken, Hullbreaker, Tremorzilla, **Luxtructosaurus** |
-| Act II spine | Twilight Forest | Three parts, continued in Acts III and IV |
-| Act II spine | Cataclysm scouting | Mini-bosses, eyes, the eight sealed strongholds |
-| Act IV spine | The End | End cities, elytra, Moog's End structures, Void Worm |
-| Act V spine | The eight | One branch quest per Cataclysm boss, in the order above |
-| Any time | Skill paths | One questline per skill tree (below) |
-| Any time | Villages, drops, exploration | Villager and mob givers, drop quests, structures and biomes to find |
+| Learn about it from someone | `talk`, `giver` | A cleric tells you about the Frostmaw; a cartographer reads your cave tablet |
+| Find it | `structure`, `biome`, `dimension`, `discover` | Reach the Umvuthana Grove; enter the Twilight Forest |
+| Prepare | `item` (crafted or gathered) | Craft the Frostmaw Eye; gather the Abyssal Sacrifice's blocks; brew fire resistance |
+| Scout | `observe` | Look at the Wroughtnaut's chamber door before going in |
+| Clear the way | `kill` mini-bosses or mobs | Kobolediators and Wadjets before the Ancient Remnant |
+| The fight | `kill` | Defeat the boss (counts only while the quest is open) |
+| Aftermath | `item` (consume), `talk` | Bring the Ice Crystal back to the cleric; deliver a trophy |
+| Travel and skill | `stat`, `levels` | Walk 10 km; fly 5 km with elytra; catch 100 fish |
+| Build or decide | `checkmark` | Build a shrine; choose a path |
+
+Rule of thumb: every boss beat has at least three steps of different kinds, and story text in each.
+
+### Quests found in the world (discovery quests)
+
+Standalone quests with `"discover"`: they're hidden until the player happens to do the trigger, then appear with a
+toast. No NPC or script needed, and they work with or without the main story.
+
+- **Finding an item:** a Cave Tablet → "take it to a cartographer"; a music disc → "find a jukebox and play it";
+  an echo shard → "the ancient city's secret".
+- **Entering a dungeon or structure:** a YUNG's skeleton dungeon → "clear it out"; a When Dungeons Arise
+  stronghold → its own short quest; a Cataclysm stronghold → "you're not ready yet... (come back after Act IV)".
+- **Entering a biome:** cherry grove, mushroom fields, each Alex's Caves biome, the Twilight biomes.
+- **Milestones:** walking 1 km starts "The Long Walk" (10 km).
+
+The sample chapter `tools/quests/src/chapters/out_in_the_world.json` has one of each.
+
+### Artifacts as quest rewards
+
+**Note: make artifacts rare in loot and give pretty much all of them as quest rewards.** The Artifacts mod's
+config has the knobs: `artifactRarity` (above 1 makes artifacts rarer in chests; 10000 removes them from chest
+loot entirely), `archaeologyChance` (suspicious sand/gravel) and the campsite settings (campsites hold artifacts in
+chests and mimics; main already retrogens campsites into old chunks). Also check whether the Loot Integrations
+add-ons add artifacts to structure loot. Then spread nearly all 40+ artifacts over the skill paths, realm
+questlines and discovery quests (the skill-path table below already places most of them).
 
 ## The magic questline (Iron's Spells), ending with Echo of Tyros
 
@@ -234,6 +299,10 @@ Explorer's Compass and Nature's Compass would otherwise find any structure or bi
 story's discovery. **Decision: the real lock only**: players craft the compass normally, but what it can find
 grows with their quest progress. No recipe lock, and no extra check against modified clients (not a concern on this
 server). Not to be built until asked.
+
+This fits "nothing is locked behind quests": the lock only limits what the **compass** shows. Eyes (Cataclysm,
+Mowzie's Cataclysm), maps, and plain exploring still find everything, so a player can always reach a boss early;
+the compass just becomes the quest pathway's guide.
 
 - **How:** both compasses build the list of searchable structures/biomes **on the server, per player, when the
   compass is used** (`ExplorersCompassItem.use` calls `StructureUtils.getAllowedStructureKeys` and sends a

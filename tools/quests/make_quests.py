@@ -185,13 +185,18 @@ def build_task(t, ids, reg, where, problems):
                     timer=L(t.get('ticks', 0)))
     elif 'levels' in t:
         task.update(type='xp', value=L(t['levels']), points=False)
+    elif 'stat' in t:
+        stat = t['stat']
+        if not isinstance(stat, str) or ':' not in stat:
+            problems.error(where, f'stat {stat!r} needs a namespace, like minecraft:fish_caught')
+        task.update(type='stat', stat=stat, value=int(t.get('count', 1)))
     elif 'checkmark' in t:
         task.update(type='checkmark')
         if isinstance(t['checkmark'], str):
             task['title'] = t['checkmark']
     else:
         problems.error(where, f'unknown task {json.dumps(t)}; use item, kill, biome, structure, dimension, '
-                              'advancement, stage, observe, levels or checkmark')
+                              'advancement, stage, observe, levels, stat, talk or checkmark')
         return None
     return task
 
@@ -537,6 +542,16 @@ def main():
                 quest['can_repeat'] = True
             tasks = []
             giver = q.get('giver')
+            discover = q.get('discover')
+            if discover is not None:
+                if giver:
+                    problems.error(where, 'a quest can have a "giver" or "discover", not both')
+                trigger = build_task(discover, ('task', name, qid, 'discover'), reg, where + ' > discover', problems)
+                if trigger:
+                    trigger.setdefault('title', 'Discovered')
+                    tasks.append(trigger)
+                    quest['invisible'] = True
+                    quest['invisible_until_tasks'] = 1
             if giver:
                 g = build_giver(giver, name, qid, ctx, where + ' > giver', problems)
                 if g:
@@ -545,17 +560,16 @@ def main():
                                   'title': giver.get('task', 'Accepted')})
                     quest['invisible'] = True
                     quest['invisible_until_tasks'] = 1
-            if giver:
-                talk_requires = [giver_stage(name, qid)]
-            else:
-                talk_requires = [giver_stage(*ref) + '.done' for ref in deps.get(qid, [])]
+            # talk steps only answer while the quest is open: checked live against FTB Quests (quest_id/open_task)
+            talk_requires = [giver_stage(name, qid)] if giver else []
+            open_task = tasks[0]['id'] if tasks else ''
             for n, t in enumerate(q.get('tasks', [])):
                 twhere = f'{where} > task {n + 1}'
                 if isinstance(t, dict) and 'talk' in t:
                     task, entry = build_talk(t, name, qid, n, talk_requires, ctx, twhere, problems)
                     if entry:
-                        if not giver:
-                            ctx['done_stages'].update(deps.get(qid, []))
+                        entry['quest_id'] = quest['id']
+                        entry['open_task'] = open_task
                         givers.append(entry)
                         talk_requires = talk_requires + [entry['stage']]
                 else:

@@ -1,0 +1,193 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "out_in_the_world"
+	group: "76581968F62E459A"
+	icon: "minecraft:compass"
+	id: "2810622C8E6B7808"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"You've stumbled into an old skeleton dungeon. Its spawners still rattle."
+				""
+				"Clear it out: break the spawners and loot what's left."
+			]
+			icon: "minecraft:bone"
+			id: "225FC1D592B99A12"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 80"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "2F4432CF3A4F7956"
+					silent: true
+					title: "+80 Attack XP"
+					type: "command"
+				}
+				{
+					count: 4
+					id: "407CED286A1F0592"
+					item: "minecraft:bone_block"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7A528D7CD0BE3312"
+					structure: "betterdungeons:skeleton_dungeon"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:skeleton"
+					id: "5F1FD580AF3A939A"
+					type: "kill"
+					value: 10L
+				}
+				{
+					id: "61E8CA70F63D385C"
+					title: "Spawners broken"
+					type: "checkmark"
+				}
+			]
+			title: "A Rattle Below"
+			x: 0.0d
+			y: -2.25d
+		}
+		{
+			description: ["A cherry grove! Bees love it here. Collect a few saplings and some petals to plant at home."]
+			icon: "minecraft:cherry_sapling"
+			id: "40BA17C5228F750E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 60"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "44A675740626DE16"
+					silent: true
+					title: "+60 Foraging XP"
+					type: "command"
+				}
+				{
+					count: 2
+					id: "5427DE71FCDABAC4"
+					item: "minecraft:honey_bottle"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:cherry_grove"
+					id: "64061E2DCD32EBA7"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 3L
+					id: "5BABE72EEC6377FB"
+					item: "minecraft:cherry_sapling"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "4AEB0AEB0D1CD9CF"
+					item: "minecraft:pink_petals"
+					type: "item"
+				}
+			]
+			title: "Petals on the Wind"
+			x: 0.0d
+			y: -0.75d
+		}
+		{
+			description: ["The tablet shows a strange cave, deep underground. A cartographer villager could turn it into a map."]
+			icon: "alexscaves:cave_tablet"
+			id: "7D95EC31B3835C4B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 100"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "6D9951327BF7A5BD"
+					silent: true
+					title: "+100 Mining XP"
+					type: "command"
+				}
+				{
+					count: 3
+					id: "06F778F3B5D9A677"
+					item: "minecraft:map"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "0354E4397647787A"
+					item: "alexscaves:cave_tablet"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					id: "63EB2DAFD6FEC7F0"
+					stage: "fq.out_in_the_world.cave_tablet.talk0"
+					title: "Talk to a cartographer"
+					type: "gamestage"
+				}
+			]
+			title: "The Cave Tablet"
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			description: ["You've walked a whole kilometre. Keep going: real explorers walk ten."]
+			icon: "minecraft:leather_boots"
+			id: "64516EE712BE2BE7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "60FF1CFB86D03DE4"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+				{
+					id: "47CE37A5EC2ABB48"
+					item: "artifacts:running_shoes"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "55F3EE9EC183379C"
+					stat: "minecraft:walk_one_cm"
+					title: "Discovered"
+					type: "stat"
+					value: 100000
+				}
+				{
+					id: "4EC132C3195DCBE5"
+					stat: "minecraft:walk_one_cm"
+					type: "stat"
+					value: 1000000
+				}
+			]
+			title: "The Long Walk"
+			x: 0.0d
+			y: 2.25d
+		}
+	]
+	subtitle: ["Quests that find you while you explore"]
+	title: "Out in the World"
+}

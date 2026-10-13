@@ -12,8 +12,11 @@
 
 let $QuestCompoundTag = Java.loadClass('net.minecraft.nbt.CompoundTag')
 let $QuestStageTask = null
+let $QuestFile = null
+let $QuestLong = Java.loadClass('java.lang.Long')
 try {
   $QuestStageTask = Java.loadClass('dev.ftb.mods.ftbquests.quest.task.StageTask')
+  $QuestFile = Java.loadClass('dev.ftb.mods.ftbquests.quest.ServerQuestFile')
 } catch (e) {
   console.warn('quest_givers: FTB Quests not found; stages are added but no quest will notice')
 }
@@ -27,6 +30,26 @@ function questGivers() {
 
 function questHasAll(player, stages) {
   return stages.every(stage => player.tags.contains(stage))
+}
+
+// A talk step only answers while its quest is open: earlier quests done, the quest itself not finished, and (for a
+// quest that's discovered or handed out) its first task done. Asked of FTB Quests directly.
+function questOpen(player, giver) {
+  if (!giver.quest_id || !$QuestFile || !$QuestFile.INSTANCE) return true
+  try {
+    let file = $QuestFile.INSTANCE
+    let data = file.getOrCreateTeamData(player)
+    let quest = file.getQuest($QuestLong.parseLong(giver.quest_id, 16))
+    if (!quest || !data.canStartTasks(quest) || data.isCompleted(quest)) return false
+    if (giver.open_task) {
+      let first = file.getTask($QuestLong.parseLong(giver.open_task, 16))
+      if (first && !data.isCompleted(first)) return false
+    }
+    return true
+  } catch (e) {
+    console.warn('quest_givers: could not read quest ' + giver.quest + ': ' + e)
+    return false
+  }
 }
 
 function questAddStage(player, stage) {
@@ -83,7 +106,7 @@ ItemEvents.entityInteracted(event => {
   let speaker = String(target.displayName.string)
   // Quests in progress first: a talk task for this villager or mob.
   let talk = givers.find(g => g.type == 'talk' && questMatches(g, target) && questHasAll(player, g.requires)
-    && !player.tags.contains(g.stage))
+    && !player.tags.contains(g.stage) && questOpen(player, g))
   if (talk) {
     questSay(player, talk.name || speaker, talk.lines)
     questAddStage(player, talk.stage)

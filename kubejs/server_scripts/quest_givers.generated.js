@@ -3,6 +3,21 @@
 // Who gives which quest. Read by quest_givers.js.
 global.QUEST_GIVERS = [
   {
+    "quest": "out_in_the_world:cave_tablet",
+    "stage": "fq.out_in_the_world.cave_tablet.talk0",
+    "type": "talk",
+    "lines": [
+      "A cave tablet? I've only read about these.",
+      "Bring it to my table and I'll draw you a map of what it shows."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "villager",
+    "profession": "minecraft:cartographer",
+    "quest_id": "7D95EC31B3835C4B",
+    "open_task": "0354E4397647787A"
+  },
+  {
     "quest": "story_prologue:old_cleric",
     "stage": "fq.story_prologue.old_cleric",
     "type": "villager",
@@ -67,6 +82,8 @@ global.QUEST_GIVERS = [
     ],
     "name": "",
     "match": "villager",
-    "profession": "minecraft:cleric"
+    "profession": "minecraft:cleric",
+    "quest_id": "08266E090D41CFAC",
+    "open_task": "4DBCB681ED10A4CD"
   }
 ]
