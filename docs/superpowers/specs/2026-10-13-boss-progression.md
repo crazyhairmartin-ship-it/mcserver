@@ -333,6 +333,31 @@ chests and mimics; main already retrogens campsites into old chunks). Also check
 add-ons add artifacts to structure loot. Then spread nearly all 40+ artifacts over the skill paths, realm
 questlines and discovery quests (the skill-path table below already places most of them).
 
+### Artifact quests: designed backwards from the artifact
+
+Each artifact gets **one quest built around it**, instead of being dropped onto a quest that needed a reward.
+The method, per artifact:
+
+1. **Start from what it does.** Its effect is the quest's theme (an item that lets you breathe underwater gets a
+   quest that's about running out of air).
+2. **Who would own it, or need it?** That gives the giver and the story: a person, an organisation, a creature, a
+   place where it was lost.
+3. **Make the player feel the problem it solves.** The steps put the player in the situation the artifact fixes,
+   with the other quest types (talk, find, fetch, unique drop, encounter, timed challenge) doing the work.
+4. **The artifact is the payoff.** It arrives at the moment it makes sense, so using it feels earned.
+5. **Place it by usefulness.** Strong artifacts come later (deeper in a skill path, a realm questline or the main
+   story); fun or minor ones can be discovery quests or side quests.
+6. **One artifact, one quest.** The quest names its artifact as its `"signature"`.
+
+**Enforced by the generator:** a quest built around an artifact declares `"signature": "artifacts:..."`. The
+checker allows each artifact to be the signature of only one quest, warns when an artifact is given as a reward by
+a quest not built around it (or sits in a random reward table), and reports coverage ("N/44 artifacts with a quest
+built around them"; `--artifacts` lists the ones still missing). The per-artifact concepts live with the quest
+sources (spoilers) in `tools/quests/src/plans/artifact_quests.md`.
+
+The sample Fishing path and discovery chapter give three artifacts as plain rewards; they'll be rewritten so those
+artifacts come from quests built around them.
+
 ## The magic questline (Iron's Spells), ending with Echo of Tyros
 
 The Magic skill path and Iron's Spells' content are one questline, running alongside the main story and branching

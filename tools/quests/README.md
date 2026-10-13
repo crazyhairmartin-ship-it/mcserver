@@ -77,6 +77,7 @@ Quest fields:
 | `shape`, `size` | `circle` `square` `rsquare` `diamond` `pentagon` `hexagon` `octagon` `heart` `gear`; size 1 is normal |
 | `hidden` | `"until_deps"`: invisible until the quests before it are visible |
 | `optional` | Doesn't block chapter completion |
+| `signature` | The artifact this quest is built around, e.g. `"artifacts:snorkel"`. Each artifact may be the signature of one quest only; giving an artifact from a quest that isn't built around it is a warning. `--artifacts` lists artifacts without one |
 | `giver` | The quest is handed out by a villager, mob or item instead of being in the book from the start (below) |
 | `discover` | The quest is found out in the world: a task (usually `structure`, `biome`, `item`, `dimension` or `stat`) that's hidden; when it's done the quest appears. E.g. `"discover": {"biome": "minecraft:cherry_grove"}` |
 

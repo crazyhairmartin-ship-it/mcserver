@@ -2,6 +2,7 @@
 
     python tools/quests/make_quests.py          check everything and write the files
     python tools/quests/make_quests.py --check  check only, write nothing
+    add --artifacts to list the artifacts that don't have a quest built around them yet
 
 Writes (and owns: anything else in these places is deleted):
   config/ftbquests/quests/                      data.snbt, chapter_groups.snbt, chapters/*.snbt, reward_tables/*.snbt
@@ -27,6 +28,8 @@ OUT = os.path.join(ROOT, 'config', 'ftbquests', 'quests')
 ITEMS_JS = os.path.join(ROOT, 'kubejs', 'startup_scripts', 'quest_items.generated.js')
 GIVERS_JS = os.path.join(ROOT, 'kubejs', 'server_scripts', 'quest_givers.generated.js')
 NAME = re.compile(r'^[a-z0-9_]+$')
+SIGNATURE_MODS = {'artifacts'}                          # items that each get one quest designed around them
+SIGNATURE_EXEMPT = {'artifacts:mimic_spawn_egg'}
 SINGULAR = {'items': 'item', 'entities': 'mob', 'enchantments': 'enchantment', 'biomes': 'biome', 'structures': 'structure',
             'advancements': 'advancement', 'dimensions': 'dimension'}
 SHAPES = {'circle', 'square', 'rsquare', 'diamond', 'pentagon', 'hexagon', 'octagon', 'heart', 'gear'}
@@ -616,7 +619,8 @@ def main():
         c.setdefault('entity', 'minecraft:villager')
         reg.check('entities', c['entity'], f'pack.json > character {cid}')
         characters[cid] = c
-    ctx = {'registry': reg, 'skills': skills, 'orgs': orgs, 'characters': characters, 'tables': {}, 'quest_items': {}, 'done_stages': set()}
+    ctx = {'registry': reg, 'skills': skills, 'orgs': orgs, 'characters': characters, 'signatures': {},
+           'artifact_rewards': [], 'tables': {}, 'quest_items': {}, 'done_stages': set()}
 
     # reward tables
     tables_out = {}
@@ -636,6 +640,10 @@ def main():
             if 'item' not in e:
                 problems.error(where, f'reward {n + 1} needs an "item"')
                 continue
+            if isinstance(e.get('item'), str) and e['item'].split(':')[0] in SIGNATURE_MODS \
+                    and e['item'] not in SIGNATURE_EXEMPT:
+                problems.warn(where, f'{e["item"]} in a random table: artifacts should come from the quest built '
+                                     'around them')
             entry = {'id': fid('table', name, str(n)), 'type': 'item', 'item': item_value(e, reg, where, problems)}
             if e.get('count', 1) != 1:
                 entry['count'] = e['count']
@@ -789,6 +797,21 @@ def main():
                     rewards.append(reward)
             if rewards:
                 quest['rewards'] = rewards
+            # artifact quests are built backwards from their artifact: the quest names it as its "signature"
+            sig = q.get('signature')
+            if sig is not None:
+                reg.check('items', sig, where + ' > signature')
+                if sig in ctx['signatures']:
+                    problems.error(where, f'{sig} is already the signature of {ctx["signatures"][sig]}; '
+                                          'each artifact gets one quest built around it')
+                ctx['signatures'][sig] = f'{name}:{qid}'
+            for r in q.get('rewards', []):
+                item = r.get('item') if isinstance(r, dict) else None
+                if isinstance(item, str) and item.split(':')[0] in SIGNATURE_MODS and item not in SIGNATURE_EXEMPT:
+                    ctx['artifact_rewards'].append((f'{name}:{qid}', item))
+                    if item != sig:
+                        problems.warn(where, f'gives {item} without being built around it (add "signature": '
+                                             f'"{item}" to the quest that is designed for it)')
             out_quests.append((qid, quest))
         links = []
         for n, link in enumerate(c.get('links', [])):
@@ -832,6 +855,13 @@ def main():
         sys.exit(f'{len(problems.errors)} problem(s); nothing written')
     count = sum(len(c['quests']) for c in chapters_out.values())
     summary = f'{len(chapters_out)} chapters, {count} quests, {len(tables_out)} reward tables, {len(givers)} quest givers'
+    all_artifacts = sorted(i for i in reg.sets.get('items', set())
+                           if i.split(':')[0] in SIGNATURE_MODS and i not in SIGNATURE_EXEMPT
+                           and not i.startswith('artifacts:umbrella_'))   # umbrella_* are model variants
+    summary += f', {len(ctx["signatures"])}/{len(all_artifacts)} artifacts with a quest built around them'
+    if '--artifacts' in sys.argv:
+        missing = [a for a in all_artifacts if a not in ctx['signatures']]
+        print('artifacts without a signature quest: ' + (', '.join(missing) or 'none'))
     if check_only:
         print('ok: ' + summary)
         return
