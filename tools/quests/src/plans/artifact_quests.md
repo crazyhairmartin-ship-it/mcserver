@@ -2,7 +2,8 @@
 
 > Quest content. The pack owner plays unspoiled: don't show this file's contents in summaries.
 
-One quest per artifact, designed backwards from what the artifact does (method: the "Artifact quests" section of
+One quest per artifact, designed backwards from what the artifact does. Not every one is standalone: many are a
+step inside the main story, a realm questline or a skill path, with that step shaped around the artifact (method: the "Artifact quests" section of
 `docs/superpowers/specs/2026-10-13-boss-progression.md`). Each line: artifact, what it does, the quest concept, and
 where it sits. When a quest is written, set `"signature"` to the artifact and tick it here.
 

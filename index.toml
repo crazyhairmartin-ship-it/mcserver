@@ -2116,6 +2116,86 @@ file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/wetlands.json"
 hash = "7c775ea2f87afc700bdb63e4267621b68bc1e5b0634e227091b666ee6e2c42ef"
 
 [[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/arenas.json"
+hash = "bcaf99ce85e7bb881a946c7878f18f9f4d705b627042d248f91c50f1584e4bf4"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/camps.json"
+hash = "d32a3079e3aa55f693bc5a0a09c46b449b4c7f45b4fb7bb72352fb4d8b81535d"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/farmsteads.json"
+hash = "e560a9be0609c709765912120260a7d529ab795786e42b8c3ac88ef7eeb9b481"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/firewatch_towers.json"
+hash = "c33c3061a297d468b2f7bcee11032a403628b5a5525b3bd19d11a152c663f718"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/fishing_huts.json"
+hash = "6ec9a4258678d60229916ef6d29b1754b72bde13017a1605560bf2a29205d42e"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/forager_outposts.json"
+hash = "589390f1f4e7e6b4c804823ea2fe86503f11095b8fa93df064cf46b81e520e60"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/graveyards.json"
+hash = "08c3d3ef1af5a591c626b9cb174dee3e68ad5800ed36996017eb4b4160700879"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/illager_hideouts.json"
+hash = "73da402f14e127fd2df50058aef5ee9b9cb02ed9be92e7201726c3a66672f1b2"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/lighthouses.json"
+hash = "41e2dabdfbe58f485633d62e4b10c0d7df0153ee596d5f21eb34c4f647fe577d"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/mines.json"
+hash = "8a60645d8ce82a46b37f5090607ee8d41938d0b0cb2987fdea68e06d87ec87d6"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/nether_outposts.json"
+hash = "1c8442088cf603724f6283a79fa3edb6a5df4dce0dac96dca0d284653027cc67"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/ruined_portals.json"
+hash = "b92fdee34ecbca16baf918cbaad69439cc3ae1245faa686c0aa7984321ea484d"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/ruins.json"
+hash = "fe17145a6f0371e2580183cf973b5258fe94f73184f2015bc1d57330b9c50d5b"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/shipwrecks.json"
+hash = "9c6a4d8eb64cb48eb9c1cb7626e6260ed2fc35aa07cecc0e9bfeecc16e92d748"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/sunken_ruins.json"
+hash = "b0033d2a7d57eb3fe79542439f3f8bee3a8b59003e3d3c5fbb5e2ddd68554aca"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/taverns.json"
+hash = "f94e311f9df8d4a530749cb845ecf1fa233e97efee1d64fca752e87fdb4499b9"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/villages.json"
+hash = "ec953c6b137094753423b6a72a9252be88c840e97381de952e5365c241de158f"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/wells.json"
+hash = "fa9aa419b7cc0a4857d9bd1d13d3edb92bd4420826afdc276620c929ba871c32"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/witch_huts.json"
+hash = "c26eee4b386ae5f6a72121e38f2cd3fce7937026e1d815b17b53e6e9c50f718f"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/wizard_towers.json"
+hash = "52337809041566cd69334faa6daa4a97b1f8f9be040576df6deac6fd058db62e"
+
+[[files]]
 file = "kubejs/data/fotf/worldgen/configured_feature/forest_fireflies.json"
 hash = "e3e6ea027a26da9a332a115948c04c9eac916bb678de6459535756ccc5927c64"
 

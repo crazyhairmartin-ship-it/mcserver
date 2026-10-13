@@ -15,20 +15,26 @@ tools/quests/
   src/chapters/*.json       one file per chapter; the file name is the chapter's id
   src/reward_tables/*.json  random reward tables
   src/places.json           named places in the server world (the spawn village, nearby villages) for travel tasks
+  src/structure_groups.json families of structures (taverns, lighthouses, mines...) that count as one place
+  structures.json           every structure in the pack, whether it generates, where and how often (make_structures.py;
+                            readable list in docs/world-structures.md)
   registry.json             every item, mob, biome, structure, advancement and dimension id in the pack
   make_quests.py            checks the sources, then writes the book
   make_registry.py          rebuilds registry.json from the pack's jars
+  make_structures.py        rebuilds structures.json and docs/world-structures.md from the pack's jars and config
 ```
 
 `python tools/quests/make_quests.py` checks everything and writes:
 - `config/ftbquests/quests/` (the book; the script owns this folder, so in-game edits there are overwritten)
 - `kubejs/startup_scripts/quest_items.generated.js` (quest items like letters)
 - `kubejs/server_scripts/quest_givers.generated.js` (who gives which quest)
+- `kubejs/data/fotf/tags/worldgen/structure/groups/` (the structure groups, as tags)
 
 `--check` only checks. Nothing is written if anything's wrong: unknown or trimmed item ids (with "did you mean"
 suggestions), mobs, biomes, structures, broken `after` links, duplicate ids, unknown skills or reward tables.
 After changing mods, rebuild the registry: `python tools/quests/make_registry.py <mods folder> <vanilla client
-extra jar> .` (the docstring says where the vanilla jar is).
+extra jar> .` (the docstring says where the vanilla jar is), then the structures list the same way with
+`make_structures.py` (it also reads the pack's config and `kubejs/data` overrides, so rerun it after changing those).
 
 **Ids are permanent.** FTB Quests' internal ids are made from the chapter file name, quest `id` and task position,
 so regenerating keeps everyone's progress. Renaming a chapter or quest, or reordering a quest's tasks, resets that
@@ -77,7 +83,7 @@ Quest fields:
 | `shape`, `size` | `circle` `square` `rsquare` `diamond` `pentagon` `hexagon` `octagon` `heart` `gear`; size 1 is normal |
 | `hidden` | `"until_deps"`: invisible until the quests before it are visible |
 | `optional` | Doesn't block chapter completion |
-| `signature` | The artifact this quest is built around, e.g. `"artifacts:snorkel"`. Each artifact may be the signature of one quest only; giving an artifact from a quest that isn't built around it is a warning. `--artifacts` lists artifacts without one |
+| `signature` | The artifact this quest is built around, e.g. `"artifacts:snorkel"`. Each artifact may be the signature of one quest only (a standalone quest, or one step of a main, realm or skill chain); giving an artifact from a quest that isn't built around it is a warning. `--artifacts` lists artifacts without one |
 | `giver` | The quest is handed out by a villager, mob or item instead of being in the book from the start (below) |
 | `discover` | The quest is found out in the world: a task (usually `structure`, `biome`, `item`, `dimension` or `stat`) that's hidden; when it's done the quest appears. E.g. `"discover": {"biome": "minecraft:cherry_grove"}` |
 
@@ -88,7 +94,7 @@ Quest fields:
 | `{"item": "minecraft:wheat", "count": 64}` | The player has the items. `"consume": true` takes them; `"crafted": true` only counts crafted ones |
 | `{"kill": "minecraft:zombie", "count": 5}` | Kills |
 | `{"biome": "minecraft:cherry_grove"}` | Standing in the biome |
-| `{"structure": "minecraft:village_plains"}` | Inside the structure (`#tag` ids work with `"unchecked": true`) |
+| `{"structure": "minecraft:village_plains"}` | Inside the structure. `{"structure": "#taverns"}` (no namespace) is a group from `src/structure_groups.json`, so any of its structures counts; another structure tag works as `#namespace:tag` |
 | `{"dimension": "minecraft:the_nether"}` | In the dimension |
 | `{"place": "reece"}` | Within the place's radius (default 48 blocks). Places are named once in `src/places.json`: `"reece": {"name": "Reece", "pos": [x, y, z], "radius": 64}` |
 | `{"advancement": "minecraft:adventure/sleep_in_bed"}` | The advancement is earned |
