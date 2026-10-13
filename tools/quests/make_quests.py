@@ -365,6 +365,41 @@ def build_talk(t, chapter, qid, n, requires, ctx, where, problems):
     return task, entry
 
 
+def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
+    """A "unique drop" task: while the quest is open, the listed mobs can drop a quest item; the task is to bring it."""
+    spec = t['drop']
+    if not isinstance(spec, dict):
+        problems.error(where, '"drop" must be an object with "from", "chance" and "item"')
+        return None, None
+    sources = spec.get('from', [])
+    if not sources:
+        problems.error(where, 'a drop task needs "from": [mob ids]')
+    for src in sources:
+        ctx['registry'].check('entities', src, where, spec.get('unchecked', False))
+    chance = float(spec.get('chance', 0.25))
+    if not 0 < chance <= 1:
+        problems.error(where, '"chance" must be between 0 and 1')
+    item_spec = spec.get('item')
+    if isinstance(item_spec, dict):
+        item_spec = dict(item_spec)
+        item_spec.setdefault('tooltip', 'Quest item')
+    item = quest_item_id(dict(spec, item=item_spec), chapter, f'{qid}_{n}', ctx, where, problems)
+    if not item:
+        return None, None
+    count = int(t.get('count', 1))
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'item', 'item': item}
+    if count != 1:
+        task['count'] = L(count)
+    if t.get('consume', True):
+        task['consume_items'] = True
+    if 'title' in t:
+        task['title'] = t['title']
+    entry = {'quest': f'{chapter}:{qid}', 'stage': '', 'type': 'task_drop', 'from': sources, 'chance': chance,
+             'item': item, 'requires': list(requires), 'quest_id': quest_id, 'open_task': open_task, 'lines': [],
+             'name': ''}
+    return task, entry
+
+
 def quest_item_id(g, chapter, qid, ctx, where, problems):
     """Quest items given by drops or used to start quests. Either an existing item or a new kubejs:quest_* one."""
     if 'item' in g and isinstance(g['item'], str):
@@ -565,7 +600,12 @@ def main():
             open_task = tasks[0]['id'] if tasks else ''
             for n, t in enumerate(q.get('tasks', [])):
                 twhere = f'{where} > task {n + 1}'
-                if isinstance(t, dict) and 'talk' in t:
+                if isinstance(t, dict) and 'drop' in t:
+                    task, entry = build_task_drop(t, name, qid, n, quest['id'], open_task, talk_requires, ctx, twhere,
+                                                  problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and 'talk' in t:
                     task, entry = build_talk(t, name, qid, n, talk_requires, ctx, twhere, problems)
                     if entry:
                         entry['quest_id'] = quest['id']

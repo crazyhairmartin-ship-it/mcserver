@@ -229,6 +229,47 @@ A boss beat is a short chain, not one kill. The framework already supports all o
 
 Rule of thumb: every boss beat has at least three steps of different kinds, and story text in each.
 
+### Quest types
+
+Every questline mixes these. Most are built; two need new mechanics (marked).
+
+| Type | What the player does | How it's built |
+|---|---|---|
+| **Fetch** | Gather and hand over items | `item` with `"consume": true` |
+| **Delivery** | Bring something to a particular person | `item` + `talk` |
+| **Kill** | Defeat a number of a mob | `kill` (counts only while the quest is open) |
+| **Boss** | A short chain: learn of it, find it, prepare, clear the way, fight, aftermath | Several steps, the fight is a `kill` |
+| **Unique drop** | Hunt particular mobs until one drops a unique quest item | `drop` task: the item only drops while the quest is open (built) |
+| **Discovery** | Stumble on something in the world, which starts a quest | `discover` (built) |
+| **Exploration** | Reach a structure, biome or dimension | `structure`, `biome`, `dimension` |
+| **Crafting** | Make a particular item | `item` with `"crafted": true` |
+| **Story / talk** | Speak to characters, make choices | `giver`, `talk`, `checkmark` |
+| **Milestone** | Travel, catch, mine a lot | `stat` (lifetime totals) |
+| **Encounter** *(new mechanic)* | A quest step brings a character or creature into the world near the player: a trapped miner to rescue, a legendary beast to hunt, a rival to beat | KubeJS: when a step opens (talk/accept/discover), summon a named mob or NPC nearby (or in a matching biome/depth); its kill or rescue completes the step |
+| **Timed challenge** *(new mechanic)* | Do something within a time limit: a fishing round, a courier run, holding a position | KubeJS: a step starts a timer and counts the action; succeeding within the limit adds the step's stage, failing lets the player retry |
+
+### Skill paths: each with its own story and feel
+
+Each skill path is its own short story with a mentor or rival and a setting, not a checklist. The owner's ideas are
+the first three; the rest are proposals to approve or replace.
+
+| Skill | Story and feel | Leans on |
+|---|---|---|
+| **Range** | **The hunt**: a hunting lodge; tracking game across biomes, then legendary trophy beasts | Unique drops, encounters |
+| **Fishing** | **Fishing competitions**: a rival angler and a season of contests across waters, ending in a championship | Timed challenges, milestones |
+| **Mining** | **Mining rescues**: a collapsed mine and trapped miners, each rescue deeper than the last | Encounters, exploration |
+| Foraging | A herbalist's almanac: cataloguing wild plants and restoring a dying grove | Fetch, discovery |
+| Farming | The harvest festival: prize crops and feeding a village through a hard season | Fetch, crafting |
+| Cooking | A tavern kitchen: cooking for travellers, a food critic, feasts for village events (Dungeons & Taverns' taverns) | Delivery, crafting |
+| Crafting | A guild apprenticeship: commissions from a master, rebuilding the village workshop and a bridge | Crafting, delivery |
+| Attack | The monster hunter: the bounty board (Bountiful) and an arena ladder | Kill, unique drops, boss |
+| Defense | The village guard: a guard captain (Guard Villagers), raids, fortifying a village | Kill, timed challenges |
+| Agility | The courier: deliveries against the clock, rooftop routes (ParCool), wings | Timed challenges, milestones |
+| Magic | The magic questline (Iron's Spells) to Echo of Tyros | Story, boss |
+| Taming | The sanctuary: rescuing and raising animals, Domestication Innovation, unicorns | Encounters, delivery |
+
+The sample Fishing path written earlier is a plain checklist; it gets rewritten as the competition story.
+
 ### Quests found in the world (discovery quests)
 
 Standalone quests with `"discover"`: they're hidden until the player happens to do the trigger, then appear with a

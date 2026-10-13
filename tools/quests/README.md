@@ -95,6 +95,7 @@ Quest fields:
 | `{"checkmark": "I've read this"}` | The player ticks it |
 | `{"talk": "villager", "profession": "minecraft:cleric", "lines": [...]}` | Sneak + right-click that villager while on the quest; they say the lines. `"talk": "entity"` with `"entity"` (and optional `"named"`) for a mob |
 | `{"stage": "my_stage"}` | The player has that stage (a player tag; for scripted quests) |
+| `{"drop": {"from": ["minecraft:wolf"], "chance": 0.2, "item": {"name": "Alpha's Fang"}}, "count": 1}` | A unique quest drop: while the quest is open, those mobs can drop the quest item (new `kubejs:quest_*` item, or an existing id); the task is to bring it (`"consume": false` to keep it). Drops never happen outside the quest |
 
 Any task can have a `"title"`. Add `"unchecked": true` for ids that only exist at runtime (Every Compat's blocks, tags).
 

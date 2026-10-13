@@ -7,6 +7,8 @@
 // - "talk" tasks: sneak + right-click the right villager or mob while on that quest to finish the task.
 // - Drop givers: the listed mobs sometimes drop a quest item when you kill them; right-clicking it shows the lines
 //   and [Accept]. Item givers work the same for an item you find any other way.
+// - "drop" tasks: while a quest is open, the listed mobs can drop its unique quest item (a trophy, a stolen
+//   heirloom...), which the quest then asks for.
 // Stages are plain player tags (FTB Library's stage provider), so `/tag @s list` shows them and `/tag @s remove`
 // resets one.
 
@@ -139,13 +141,18 @@ ItemEvents.rightClicked(event => {
   event.cancel()
 })
 
-// Mobs drop quest items for players who don't have that quest yet.
+// Mobs drop quest items: quest starters for players who don't have that quest yet, and unique quest drops
+// ("drop" tasks) only while their quest is open.
 EntityEvents.death(event => {
   let { entity, source } = event
   let player = source.player
   if (!player || entity.level.clientSide) return
   let type = String(entity.type)
   questGivers().forEach(giver => {
+    if (giver.type == 'task_drop' && giver.from.indexOf(type) >= 0 && questHasAll(player, giver.requires)
+      && Math.random() < giver.chance && questOpen(player, giver)) {
+      entity.block.popItem(Item.of(giver.item))
+    }
     if (giver.type != 'drop' || giver.from.indexOf(type) < 0) return
     if (player.tags.contains(giver.stage) || !questHasAll(player, giver.requires)) return
     if (Math.random() >= giver.chance) return
