@@ -1,0 +1,557 @@
+{
+ "line": "Farming path",
+ "chapter": "skill_farming",
+ "group": "skills",
+ "giver": "Growers' co-operative: farmer representatives in every village; the co-op's leader in Reece for key moments",
+ "feel": "The Harvest Festival building up over the seasons: spring planting, a hard winter, prize crops and festival night",
+ "quests": [
+  {
+   "id": "coop_share",
+   "title": "A Share in the Co-op",
+   "tier": "prologue",
+   "types": [
+    "talk",
+    "farm"
+   ],
+   "after": [],
+   "summary": "A village farmer offers you a share in the Growers' Co-operative: till a plot, plant wheat and bring in your first 64 wheat. This year, he says, the co-op means to hold a proper Harvest Festival again.",
+   "mods": [],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Farming XP, a stone hoe and seed bags"
+  },
+  {
+   "id": "scarecrow",
+   "title": "Scarecrow and Compost",
+   "tier": "prologue",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "coop_share"
+   ],
+   "summary": "Protect the plot: build a scarecrow (Farm & Charm), fill a composter, and craft fertilizer for the next planting.",
+   "mods": [
+    "farm_and_charm"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a pitchfork"
+  },
+  {
+   "id": "wild_seeds",
+   "title": "Seeds from the Wild",
+   "tier": "prologue",
+   "types": [
+    "collect",
+    "explore"
+   ],
+   "after": [
+    "coop_share"
+   ],
+   "summary": "The co-op wants new crops for the festival: find wild tomatoes, wild lettuce, wild onions and wild oats (Farm & Charm) and wild cabbages (Farmer's Delight), and bring back their seeds.",
+   "mods": [
+    "farm_and_charm",
+    "farmersdelight"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a crafting bowl and a bag of mixed seeds"
+  },
+  {
+   "id": "smarter_farmers",
+   "title": "A Farmer Who Thinks",
+   "tier": "prologue",
+   "types": [
+    "talk",
+    "build"
+   ],
+   "after": [
+    "wild_seeds"
+   ],
+   "summary": "The village farmer replants with whatever seeds he's given (Smarter Farmers). Fence and water a new village field, hand him carrots, potatoes and beetroot, and watch him keep it planted for the co-op.",
+   "mods": [
+    "smarterfarmers"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Farming XP, an iron hoe"
+  },
+  {
+   "id": "spring_planting",
+   "title": "Spring Planting",
+   "tier": "prologue",
+   "types": [
+    "farm"
+   ],
+   "after": [
+    "scarecrow",
+    "wild_seeds"
+   ],
+   "summary": "The festival is announced for the autumn and the co-op's spring planting begins: grow and harvest tomatoes, lettuce, strawberries and onions (Farm & Charm).",
+   "mods": [
+    "farm_and_charm"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a festival bunting banner"
+  },
+  {
+   "id": "barn_raising",
+   "title": "Barn Raising",
+   "tier": "act1",
+   "types": [
+    "explore",
+    "build"
+   ],
+   "after": [
+    "spring_planting"
+   ],
+   "summary": "Visit an old barn or wheat farm out in the country to see how it's done, then raise a barn of your own with a feeding trough, a chicken coop and a hay loft of straw bales.",
+   "mods": [
+    "mvs",
+    "farm_and_charm",
+    "farmersdelight"
+   ],
+   "landmarks": [
+    "#farmsteads"
+   ],
+   "reward": "Farming XP, a supply cart (Farm & Charm)"
+  },
+  {
+   "id": "rich_soil",
+   "title": "Rich Soil",
+   "tier": "act1",
+   "types": [
+    "craft",
+    "farm"
+   ],
+   "after": [
+    "barn_raising"
+   ],
+   "summary": "Make organic compost (Farmer's Delight) from straw, rotten flesh and bone meal and let it turn to rich soil; grow brown and red mushroom colonies on it for the co-op's kitchen garden.",
+   "mods": [
+    "farmersdelight"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a water sprinkler (Farm & Charm)"
+  },
+  {
+   "id": "rice_paddies",
+   "title": "Rice Paddies",
+   "tier": "act1",
+   "types": [
+    "farm"
+   ],
+   "after": [
+    "rich_soil"
+   ],
+   "summary": "The festival needs rice: find wild rice in a river and grow a paddy of it (Farmer's Delight) in shallow water; bring in a rice bale.",
+   "mods": [
+    "farmersdelight"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a canvas rug"
+  },
+  {
+   "id": "cheese_wheel",
+   "title": "The Cheese Wheel",
+   "tier": "act1",
+   "types": [
+    "farm",
+    "craft"
+   ],
+   "after": [
+    "barn_raising"
+   ],
+   "summary": "The co-op's cheesemaker wants your milk: milk a wooly cow or a water buffalo with a wooden bucket (Meadow), and turn it into a cheese block in a cheese form.",
+   "mods": [
+    "meadow"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a cheese rack"
+  },
+  {
+   "id": "corn_rows",
+   "title": "Corn Rows",
+   "tier": "act1",
+   "types": [
+    "farm",
+    "craft"
+   ],
+   "after": [
+    "spring_planting"
+   ],
+   "summary": "Plant long rows of corn (Farm & Charm), harvest them and dry kernels into popcorn (Corn Expansion) to sell at the festival stall.",
+   "mods": [
+    "farm_and_charm",
+    "cornexpansion"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, popcorn tins"
+  },
+  {
+   "id": "vineyard",
+   "title": "The Vineyard",
+   "tier": "act1",
+   "types": [
+    "farm",
+    "explore"
+   ],
+   "after": [
+    "spring_planting"
+   ],
+   "summary": "Start the co-op's vineyard: collect red and white grape seeds plus one savanna, taiga or jungle variety (Vinery) and grow them on lattices.",
+   "mods": [
+    "vinery"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a winemaker's apron"
+  },
+  {
+   "id": "wine_press",
+   "title": "The Festival Toast",
+   "tier": "act1",
+   "types": [
+    "brew",
+    "craft"
+   ],
+   "after": [
+    "vineyard"
+   ],
+   "summary": "Press grapes in an apple press and ferment them in a fermentation barrel (Vinery) to have red wine and apple cider ready for the festival toast.",
+   "mods": [
+    "vinery"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, wine racks"
+  },
+  {
+   "id": "shearing",
+   "title": "Shearing Day",
+   "tier": "act1",
+   "types": [
+    "farm",
+    "timed"
+   ],
+   "after": [
+    "cheese_wheel"
+   ],
+   "summary": "Shearing day at the co-op: shear wooly sheep and horned sheep (Meadow) and bring in 32 wool before noon for the festival's flecked and highland wool bunting.",
+   "mods": [
+    "meadow"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, highland wool and a pair of shears"
+  },
+  {
+   "id": "orchard",
+   "title": "The Orchard",
+   "tier": "act2",
+   "types": [
+    "farm",
+    "explore"
+   ],
+   "after": [
+    "wandering_winemaker"
+   ],
+   "summary": "Plant the co-op an orchard: apple saplings (Vinery) and cherries, plus a flowering oak from a Biomes O' Plenty orchard; harvest a bag of apples and press apple juice.",
+   "mods": [
+    "vinery",
+    "biomesoplenty"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, an apple bag and applesauce"
+  },
+  {
+   "id": "wandering_winemaker",
+   "title": "The Wandering Winemaker",
+   "tier": "act2",
+   "types": [
+    "encounter",
+    "trade"
+   ],
+   "after": [
+    "wine_press",
+    "main_story:act2_start"
+   ],
+   "summary": "A wandering winemaker (Vinery) passes through the co-op's fields and tastes your wine; trade him for cherry saplings and his advice on ageing.",
+   "mods": [
+    "vinery"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, cherry and apple saplings"
+  },
+  {
+   "id": "field_wont_grow",
+   "title": "The Field That Won't Grow",
+   "tier": "act2",
+   "types": [
+    "farm",
+    "build"
+   ],
+   "after": [
+    "rich_soil",
+    "main_story:act2_start"
+   ],
+   "summary": "Old Farmer Hobb's field has stood bare for years. Find out why, then restore it: drain the waterlogged corner, lay rich soil, set water sprinklers, bone meal the rows and replant until it bears again. He gives you his old boots.",
+   "mods": [
+    "farmersdelight",
+    "farm_and_charm"
+   ],
+   "landmarks": [],
+   "signature": "artifacts:rooted_boots",
+   "reward": "Farming XP, Rooted Boots"
+  },
+  {
+   "id": "silo",
+   "title": "The Silo",
+   "tier": "act2",
+   "types": [
+    "build",
+    "farm"
+   ],
+   "after": [
+    "corn_rows"
+   ],
+   "summary": "Build the co-op a silo (Farm & Charm) and fill it with barley and oats to dry for the winter and for the brewers.",
+   "mods": [
+    "farm_and_charm"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, flour and yeast"
+  },
+  {
+   "id": "outpost_crows",
+   "title": "Crows at the Outpost",
+   "tier": "act2",
+   "types": [
+    "defend",
+    "deliver"
+   ],
+   "after": [
+    "silo"
+   ],
+   "summary": "A farmer outpost far from the village is losing its crop: deliver seed corn and a scarecrow, and defend the field through the night from the mobs trampling it.",
+   "mods": [
+    "structory_towers",
+    "farm_and_charm"
+   ],
+   "landmarks": [
+    "structory_towers:farmer_outpost"
+   ],
+   "reward": "Farming XP, a chicken nest and a coop of hens"
+  },
+  {
+   "id": "livestock_fair",
+   "title": "The Livestock Fair",
+   "tier": "act2",
+   "types": [
+    "farm",
+    "contest"
+   ],
+   "after": [
+    "cheese_wheel"
+   ],
+   "summary": "The festival's livestock fair: breed cows, sheep, pigs, chickens and a water buffalo (Meadow) and show your best pair of each.",
+   "mods": [
+    "meadow"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a feeding trough and a rosette"
+  },
+  {
+   "id": "giant_pumpkin",
+   "title": "The Giant Pumpkin",
+   "tier": "act2",
+   "types": [
+    "farm",
+    "contest"
+   ],
+   "after": [
+    "livestock_fair"
+   ],
+   "summary": "The pumpkin contest: grow pumpkins in a pumpkin patch (Biomes O' Plenty) or your own field and bring the co-op a full stack in one harvest.",
+   "mods": [
+    "biomesoplenty"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a stuffed pumpkin recipe"
+  },
+  {
+   "id": "mead",
+   "title": "Bees and Mead",
+   "tier": "act2",
+   "types": [
+    "collect",
+    "brew"
+   ],
+   "after": [
+    "wine_press"
+   ],
+   "summary": "Keep a hive near the flower fields, harvest honey bottles and honeycomb with a campfire beneath, and ferment mead (Vinery) for the festival.",
+   "mods": [
+    "vinery"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a beehive and a mead barrel"
+  },
+  {
+   "id": "hard_winter",
+   "title": "The Hard Winter",
+   "tier": "act2",
+   "types": [
+    "deliver",
+    "timed"
+   ],
+   "after": [
+    "silo"
+   ],
+   "summary": "A snowy village's harvest failed and they won't see spring without help. Before the winter's end (in-game days), deliver 64 bread, 16 potato soup and 16 barley soup (Farm & Charm) and seed for next year.",
+   "mods": [
+    "farm_and_charm"
+   ],
+   "landmarks": [
+    "minecraft:village_snowy"
+   ],
+   "reward": "Farming XP, the snowy village's festival pledge"
+  },
+  {
+   "id": "nether_grapes",
+   "title": "Grapes in the Nether",
+   "tier": "act3",
+   "types": [
+    "farm",
+    "explore"
+   ],
+   "after": [
+    "main_story:act3_start",
+    "wandering_winemaker"
+   ],
+   "summary": "The winemaker swears grapes grow in the Nether: find crimson and warped grape seeds (Nether Vinery) and grow them; then visit the old nether wart plantation for its wart.",
+   "mods": [
+    "nethervinery"
+   ],
+   "landmarks": [
+    "mns:nether_wart_farm"
+   ],
+   "reward": "Farming XP, a crimson fermentation barrel"
+  },
+  {
+   "id": "eiswein",
+   "title": "Ice Wine",
+   "tier": "act3",
+   "types": [
+    "brew",
+    "farm"
+   ],
+   "after": [
+    "nether_grapes"
+   ],
+   "summary": "Make the rarest wine for the festival's top table: grow taiga grapes in the cold, and age eiswein and a cherry wine (Vinery) in the cellar.",
+   "mods": [
+    "vinery"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a big bottle of eiswein"
+  },
+  {
+   "id": "prize_crops",
+   "title": "Prize Crops",
+   "tier": "act4",
+   "types": [
+    "collect",
+    "milestone"
+   ],
+   "after": [
+    "main_story:act4_start",
+    "giant_pumpkin",
+    "eiswein"
+   ],
+   "summary": "The festival's prize table: a crate of every crop the co-op grows, from Farmer's Delight cabbages and rice to Farm & Charm barley and strawberries, corn, grapes and Nether grapes.",
+   "mods": [
+    "farmersdelight",
+    "farm_and_charm",
+    "vinery",
+    "nethervinery"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a silo of your own"
+  },
+  {
+   "id": "market_stall",
+   "title": "The Market Stall",
+   "tier": "act4",
+   "types": [
+    "contest",
+    "trade"
+   ],
+   "after": [
+    "prize_crops"
+   ],
+   "summary": "Festival market day: run the co-op's stall against the other villages' farmers, selling your best produce to villagers for emeralds; outsell them all and win the market master's hat.",
+   "mods": [
+    "mvs"
+   ],
+   "landmarks": [
+    "#moog_stalls_and_carts"
+   ],
+   "signature": "artifacts:villager_hat",
+   "reward": "Farming XP, Villager Hat"
+  },
+  {
+   "id": "festival_grounds",
+   "title": "The Festival Grounds",
+   "tier": "act5",
+   "types": [
+    "build"
+   ],
+   "after": [
+    "main_story:act5_start",
+    "market_stall"
+   ],
+   "summary": "Build the Harvest Festival grounds in Reece: a long table, bunting, hay bales, a stage for the band and the prize table under a barn roof.",
+   "mods": [
+    "farmersdelight",
+    "farm_and_charm"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, the festival's banner"
+  },
+  {
+   "id": "harvest_festival",
+   "title": "The Harvest Festival",
+   "tier": "act5",
+   "types": [
+    "deliver",
+    "talk",
+    "milestone"
+   ],
+   "after": [
+    "festival_grounds"
+   ],
+   "summary": "Festival night: bring the feast's produce, the wine and the cheese, and the co-op's leader opens the Harvest Festival in Reece with every village you fed in the hard winter.",
+   "mods": [
+    "vinery",
+    "meadow"
+   ],
+   "landmarks": [],
+   "reward": "Farming XP, a festival crown (straw hat)"
+  },
+  {
+   "id": "harvest_moon",
+   "title": "Harvest Moon",
+   "tier": "act5",
+   "types": [
+    "talk",
+    "milestone"
+   ],
+   "after": [
+    "harvest_festival"
+   ],
+   "summary": "The co-op's leader names you Master Grower and gives you the hoe that cut the first sheaf.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Farming XP, Harvest Moon (named netherite hoe: Fortune III, Efficiency V, Unbreaking III, Mending)"
+  }
+ ]
+}

@@ -140,8 +140,7 @@
    "title": "The Bloom Catalogue",
    "tier": "act1",
    "types": [
-    "collect",
-    "photo"
+    "collect"
    ],
    "after": [
     "outpost_notes"
@@ -302,7 +301,7 @@
    "after": [
     "wanderers_map"
    ],
-   "summary": "Find the tallest redwood in a redwood forest, climb it to measure it with a dropped rope, and bring down a redwood sapling and a cone of its leaves.",
+   "summary": "Find the tallest redwood in a redwood forest, climb it to measure it with a dropped rope, and bring down a redwood sapling and a branch of its leaves.",
    "mods": [
     "biomesoplenty",
     "regions_unexplored"
