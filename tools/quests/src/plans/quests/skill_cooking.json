@@ -1,0 +1,565 @@
+{
+ "line": "Cooking path",
+ "chapter": "skill_cooking",
+ "group": "skills",
+ "giver": "Tavern keepers: butcher representatives in every village; the Reece tavern keeper for key moments",
+ "feel": "A network of taverns between villages: regulars' requests, cook-offs, festival nights and feasts",
+ "quests": [
+  {
+   "id": "first_order",
+   "title": "First Order",
+   "tier": "prologue",
+   "types": [
+    "talk",
+    "cook"
+   ],
+   "after": [],
+   "summary": "The tavern keeper in Reece is a cook short: grill 8 steaks and bake 8 bread for tonight's regulars, and you're on the kitchen roster.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Cooking XP, an apron's worth of coin and a flint knife"
+  },
+  {
+   "id": "cutting_board",
+   "title": "Knife and Board",
+   "tier": "prologue",
+   "types": [
+    "craft",
+    "cook"
+   ],
+   "after": [
+    "first_order"
+   ],
+   "summary": "Set up a proper kitchen: craft a cutting board and an iron knife (Farmer's Delight), and cut cabbage leaves, minced beef and salmon slices for the prep shelf.",
+   "mods": [
+    "farmersdelight"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a skillet"
+  },
+  {
+   "id": "stew_pot",
+   "title": "The Stew Pot",
+   "tier": "prologue",
+   "types": [
+    "cook"
+   ],
+   "after": [
+    "cutting_board"
+   ],
+   "summary": "Every tavern lives on its stew pot: cook beef stew, vegetable soup and chicken soup in a cooking pot (Farmer's Delight) and keep it full for a day.",
+   "mods": [
+    "farmersdelight"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a cooking pot of your own"
+  },
+  {
+   "id": "regulars",
+   "title": "The Regulars",
+   "tier": "prologue",
+   "types": [
+    "deliver"
+   ],
+   "after": [
+    "stew_pot"
+   ],
+   "summary": "Three regulars can't make it to the tavern: carry an egg sandwich to the old miner, hot cocoa to the cleric's apprentice and mushroom rice to the farmer, each in a different part of the village.",
+   "mods": [
+    "farmersdelight"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Cooking XP, a regular's tip and a mug"
+  },
+  {
+   "id": "campfire_supper",
+   "title": "Campfire Supper",
+   "tier": "prologue",
+   "types": [
+    "cook",
+    "build"
+   ],
+   "after": [
+    "first_order"
+   ],
+   "summary": "Travellers on the road between villages need feeding: pitch a tent, set up a grill (Camping) and cook barbecue sticks and grilled salmon for a party camped for the night.",
+   "mods": [
+    "camping",
+    "farmersdelight"
+   ],
+   "landmarks": [
+    "#camps"
+   ],
+   "reward": "Cooking XP, a small backpack and a sleeping bag"
+  },
+  {
+   "id": "tavern_road",
+   "title": "The Tavern Road",
+   "tier": "act1",
+   "types": [
+    "discover",
+    "talk"
+   ],
+   "after": [
+    "regulars"
+   ],
+   "summary": "The Reece keeper wants to link the taverns between villages into a network. Find a tavern out on the roads, meet its keeper and bring back their house recipe.",
+   "mods": [
+    "mr_dungeons_andtaverns"
+   ],
+   "landmarks": [
+    "#taverns"
+   ],
+   "reward": "Cooking XP, a tavern network sign and a map hint to the next tavern"
+  },
+  {
+   "id": "bakers_dozen",
+   "title": "A Baker's Dozen",
+   "tier": "act1",
+   "types": [
+    "craft",
+    "cook"
+   ],
+   "after": [
+    "tavern_road"
+   ],
+   "summary": "Build a baker station (Bakery) and bake a baker's dozen for the tavern's breakfast: baguettes, croissants, braided bread, crusty bread, toast and a strawberry cake among them.",
+   "mods": [
+    "bakery"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a bread knife and a rolling pin"
+  },
+  {
+   "id": "wandering_baker",
+   "title": "The Wandering Baker",
+   "tier": "act1",
+   "types": [
+    "encounter",
+    "trade"
+   ],
+   "after": [
+    "bakers_dozen"
+   ],
+   "summary": "A wandering baker (Bakery) rolls up with a cart that smells of cinnamon; trade him jams for his chocolate gateau recipe, and he points you to a bakery out in the world.",
+   "mods": [
+    "bakery"
+   ],
+   "landmarks": [
+    "bakery:bakery"
+   ],
+   "reward": "Cooking XP, chocolate jam and a cake stand"
+  },
+  {
+   "id": "tea_time",
+   "title": "Morning Tea",
+   "tier": "act1",
+   "types": [
+    "brew",
+    "deliver"
+   ],
+   "after": [
+    "tavern_road"
+   ],
+   "summary": "The morning regulars want tea and coffee: brew green tea, black tea and milk coffee (Herbal Brews) and serve them before the first bell.",
+   "mods": [
+    "herbalbrews"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a jug and tea leaf crates"
+  },
+  {
+   "id": "first_brew",
+   "title": "The First Brew",
+   "tier": "act1",
+   "types": [
+    "brew",
+    "craft"
+   ],
+   "after": [
+    "tavern_road"
+   ],
+   "summary": "No tavern without beer: build a wooden brewing station (Brewery) and brew wheat beer and hops beer, then pour them in beer mugs for the bar.",
+   "mods": [
+    "brewery"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a bar counter and hops seeds"
+  },
+  {
+   "id": "food_critic",
+   "title": "The Food Critic",
+   "tier": "act1",
+   "types": [
+    "encounter",
+    "cook",
+    "contest"
+   ],
+   "after": [
+    "bakers_dozen",
+    "stew_pot"
+   ],
+   "summary": "A famous food critic arrives unannounced. Serve her three courses on plates under a cloche (Candlelight): a fresh garden salad, roast beef with glazed carrots and a chocolate mousse, and earn a review good enough to pull in travellers.",
+   "mods": [
+    "candlelight"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a chef's jacket and cooking hat"
+  },
+  {
+   "id": "brewfest_night",
+   "title": "Brewfest Night",
+   "tier": "act2",
+   "types": [
+    "brew",
+    "deliver",
+    "contest"
+   ],
+   "after": [
+    "first_brew",
+    "main_story:act2_start"
+   ],
+   "summary": "The brewers hold their festival night in a brewfest tent out in the world: bring barley, oat and nettle beers (Brewery) and pretzels, keep the mugs full all night, and win the drinking-song contest. The brewmaster crowns you with a ridiculous hat.",
+   "mods": [
+    "brewery"
+   ],
+   "landmarks": [
+    "brewery:brewfest_tent"
+   ],
+   "signature": "artifacts:novelty_drinking_hat",
+   "reward": "Cooking XP, Novelty Drinking Hat"
+  },
+  {
+   "id": "candlelit_dinner",
+   "title": "A Candlelit Dinner",
+   "tier": "act2",
+   "types": [
+    "build",
+    "cook"
+   ],
+   "after": [
+    "food_critic"
+   ],
+   "summary": "The village elder wants a proper dinner for a wedding party: furnish a dining room with Candlelight tables, chairs, napkins, wine glasses and a dinner bell, and serve lasagne and fillet steak to eight guests.",
+   "mods": [
+    "candlelight"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a gold ring and a love letter from the couple"
+  },
+  {
+   "id": "wine_pairing",
+   "title": "Wine Pairing",
+   "tier": "act2",
+   "types": [
+    "cook",
+    "brew"
+   ],
+   "after": [
+    "candlelit_dinner"
+   ],
+   "summary": "Pair each dish with its wine (Vinery): salmon on white wine, beef with mushroom in wine and potatoes, and a glass of red wine with the cheese.",
+   "mods": [
+    "vinery",
+    "candlelight"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a wine rack"
+  },
+  {
+   "id": "cheese_board",
+   "title": "The Cheese Board",
+   "tier": "act2",
+   "types": [
+    "cook",
+    "collect"
+   ],
+   "after": [
+    "wine_pairing"
+   ],
+   "summary": "Make a cheese board for the tavern from Meadow's cheeses: goat, sheep, buffalo and grain cheese, with cheese tart and fondue on the side.",
+   "mods": [
+    "meadow"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a cheese form"
+  },
+  {
+   "id": "popcorn_night",
+   "title": "Popcorn Night",
+   "tier": "act2",
+   "types": [
+    "cook"
+   ],
+   "after": [
+    "tea_time"
+   ],
+   "summary": "Music night at the tavern needs snacks: buttery, cheesy and candied popcorn in tins (Corn Expansion), with grandma's cornbread for the band.",
+   "mods": [
+    "cornexpansion",
+    "immersive_melodies"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, an instrument for the tavern stage (Immersive Melodies)"
+  },
+  {
+   "id": "hot_delivery",
+   "title": "Still Hot",
+   "tier": "act2",
+   "types": [
+    "timed",
+    "deliver"
+   ],
+   "after": [
+    "tavern_road"
+   ],
+   "summary": "A tavern two villages away has run out of stew mid-feast: carry a shepherd's pie block and 8 bowls of beef stew there before the in-game hour is up.",
+   "mods": [
+    "farmersdelight",
+    "mr_dungeons_andtaverns"
+   ],
+   "landmarks": [
+    "#taverns"
+   ],
+   "reward": "Cooking XP, a wanderer bag (Camping)"
+  },
+  {
+   "id": "greenwood_pub",
+   "title": "The Greenwood Pub",
+   "tier": "act2",
+   "types": [
+    "deliver",
+    "explore"
+   ],
+   "after": [
+    "hot_delivery"
+   ],
+   "summary": "The greenwood pub in the deep forest is the last tavern on the network map. Bring its keeper a barrel of your best beer and find out why no one has heard from them.",
+   "mods": [
+    "dungeons_arise",
+    "brewery"
+   ],
+   "landmarks": [
+    "dungeons_arise:greenwood_pub"
+   ],
+   "reward": "Cooking XP, the pub's secret ale recipe"
+  },
+  {
+   "id": "campfire_feast",
+   "title": "Feast Under the Stars",
+   "tier": "act2",
+   "types": [
+    "cook",
+    "travel"
+   ],
+   "after": [
+    "campfire_supper",
+    "greenwood_pub"
+   ],
+   "summary": "Lead a caravan of travellers between taverns and feed them every night on the road: three camps, three meals (roasted mutton chops, fish stew, honey-glazed ham) cooked on your camp grill.",
+   "mods": [
+    "camping",
+    "farmersdelight"
+   ],
+   "landmarks": [
+    "#camps"
+   ],
+   "reward": "Cooking XP, a large backpack"
+  },
+  {
+   "id": "whiskey",
+   "title": "The Long Wait",
+   "tier": "act3",
+   "types": [
+    "brew",
+    "craft"
+   ],
+   "after": [
+    "main_story:act3_start",
+    "brewfest_night"
+   ],
+   "summary": "Upgrade to a copper brewing station (Brewery) and age a whiskey long enough to be worth the name, Highland Hearth or Smokey Reverie.",
+   "mods": [
+    "brewery"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a whiskey barrel for the bar"
+  },
+  {
+   "id": "nether_kitchen",
+   "title": "The Nether Kitchen",
+   "tier": "act3",
+   "types": [
+    "cook",
+    "deliver"
+   ],
+   "after": [
+    "main_story:act3_start",
+    "hot_delivery"
+   ],
+   "summary": "An expedition camped near a Nether fortress is living on mushrooms: cook nether salad, glowing wine (Vinery) and a stack of steak and potatoes, and get it to them through the fire.",
+   "mods": [
+    "farmersdelight",
+    "vinery"
+   ],
+   "landmarks": [
+    "#nether_outposts"
+   ],
+   "reward": "Cooking XP, a netherite upgrade template for your knife"
+  },
+  {
+   "id": "cook_off",
+   "title": "The Cook-Off",
+   "tier": "act3",
+   "types": [
+    "contest",
+    "cook"
+   ],
+   "after": [
+    "wine_pairing",
+    "greenwood_pub"
+   ],
+   "summary": "The rival tavern down the road claims its steak never runs out. Challenge them to a cook-off between taverns: three judges, three rounds, fillet steak, beef wellington and pork ribs (Candlelight). Win, and their legendary steak is yours.",
+   "mods": [
+    "candlelight",
+    "mr_dungeons_andtaverns"
+   ],
+   "landmarks": [
+    "#taverns"
+   ],
+   "signature": "artifacts:eternal_steak",
+   "reward": "Cooking XP, Eternal Steak"
+  },
+  {
+   "id": "herbal_cure",
+   "title": "A Cup for the Sick",
+   "tier": "act3",
+   "types": [
+    "brew",
+    "deliver"
+   ],
+   "after": [
+    "tea_time",
+    "cook_off"
+   ],
+   "summary": "A traveller staggers into the tavern feverish: brew a herbal infusion and hibiscus tea (Herbal Brews), and nurse him through the night with chicken soup.",
+   "mods": [
+    "herbalbrews",
+    "farmersdelight"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, a flask and a top hat he leaves behind"
+  },
+  {
+   "id": "feast_blocks",
+   "title": "The Wedding Feast",
+   "tier": "act4",
+   "types": [
+    "cook",
+    "deliver"
+   ],
+   "after": [
+    "main_story:act4_start",
+    "candlelit_dinner"
+   ],
+   "summary": "The couple from the candlelit dinner are marrying: cook the feast centrepieces (Farmer's Delight), a roast chicken, honey-glazed ham, shepherd's pie and stuffed pumpkin, and carry them whole to the wedding.",
+   "mods": [
+    "farmersdelight"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Cooking XP, a harvest plate and a wedding invitation"
+  },
+  {
+   "id": "everlasting_recipe",
+   "title": "The Everlasting Recipe",
+   "tier": "act4",
+   "types": [
+    "puzzle",
+    "cook",
+    "fetch"
+   ],
+   "after": [
+    "cook_off",
+    "whiskey"
+   ],
+   "summary": "The Reece tavern's own legend: a beef dish that never empties. Piece the recipe together from three taverns' keepers, then cook its chain, from minced beef to beef patty to roast beef with glazed carrots and beef wellington, to earn it.",
+   "mods": [
+    "farmersdelight",
+    "candlelight",
+    "mr_dungeons_andtaverns"
+   ],
+   "landmarks": [
+    "#taverns"
+   ],
+   "signature": "artifacts:everlasting_beef",
+   "reward": "Cooking XP, Everlasting Beef"
+  },
+  {
+   "id": "netherite_brewery",
+   "title": "The Master Brewer",
+   "tier": "act4",
+   "types": [
+    "brew",
+    "craft"
+   ],
+   "after": [
+    "everlasting_recipe"
+   ],
+   "summary": "Build a netherite brewing station (Brewery) and brew the whiskeys and dark brew for the banquet's toast.",
+   "mods": [
+    "brewery"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, brewfest regalia"
+  },
+  {
+   "id": "banquet",
+   "title": "The Grand Banquet",
+   "tier": "act5",
+   "types": [
+    "cook",
+    "contest",
+    "milestone"
+   ],
+   "after": [
+    "main_story:act5_start",
+    "feast_blocks",
+    "netherite_brewery"
+   ],
+   "summary": "Every keeper on the tavern network comes to Reece for a grand banquet: cook a dish from every kitchen you've worked (Farmer's Delight, Bakery, Candlelight, Corn Expansion, Meadow) with Vinery wine and Brewery beer to match.",
+   "mods": [
+    "farmersdelight",
+    "bakery",
+    "candlelight",
+    "cornexpansion",
+    "meadow",
+    "vinery",
+    "brewery"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, the banquet hall's chef's table"
+  },
+  {
+   "id": "last_course",
+   "title": "The Last Course",
+   "tier": "act5",
+   "types": [
+    "talk",
+    "milestone"
+   ],
+   "after": [
+    "banquet"
+   ],
+   "summary": "The tavern keepers name you Head of the Table and give you the knife every keeper's mentor passed down.",
+   "mods": [
+    "farmersdelight"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, The Last Course (named netherite knife: Sharpness V, Looting III, Unbreaking III, Mending)"
+  }
+ ]
+}
