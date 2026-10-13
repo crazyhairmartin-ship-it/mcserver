@@ -1,0 +1,13 @@
+{
+  "title": "Friends of the Forest",
+  "icon": "minecraft:oak_sapling",
+  "default_shape": "circle",
+  "groups": [
+    {"id": "start", "title": "Getting Started"},
+    {"id": "story", "title": "The Story"},
+    {"id": "side", "title": "Side Quests"},
+    {"id": "milestones", "title": "Milestones"},
+    {"id": "showcase", "title": "Mod Showcases"},
+    {"id": "explore", "title": "Exploration & Collecting"}
+  ]
+}

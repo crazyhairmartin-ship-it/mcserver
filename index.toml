@@ -105,6 +105,34 @@ file = "config/fotfskills-retrogen.json"
 hash = "85ec448a33811d736079d5c429cf405f8cb6b3062fac2bcd1650f42627ffcf14"
 
 [[files]]
+file = "config/ftbquests/quests/chapter_groups.snbt"
+hash = "215ea5b32347e72cc9a84bc3601d5d99a0035cb8f8b4dde9993316af5a271b74"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/getting_started.snbt"
+hash = "18aceadb1b6f606c819125e154f503d3e0aca69410035b8882d7417a68f5d7ab"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/story_prologue.snbt"
+hash = "c6570803d489006c9e3211f9449ff0589f26f5dae3f428180e2ca3c24c705111"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/village_errands.snbt"
+hash = "53bf19abbe64bed09ae36c7e1b3cafbe6561de291301c6a524b18f421fb4bf78"
+
+[[files]]
+file = "config/ftbquests/quests/data.snbt"
+hash = "9007ba9daa54c0abe24972d6983850d51b5a5720ea851010a173a71e2beaaa28"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/starter_supplies.snbt"
+hash = "1b05e3edfa72bd9784a2cce483b00abc1156652394606808d92727883c9e85c8"
+
+[[files]]
+file = "config/ftbquests/quests/reward_tables/village_favours.snbt"
+hash = "f2a3d9158941d2a262eb6627772162968f4485786fae39c8ea7a3e02fbfd8c4d"
+
+[[files]]
 file = "config/gravestone-client.toml"
 hash = "b8e24932dc5f41db8ccdc0d40d6241a4f12fc4366bfb646b513b72b9432aad19"
 
@@ -2548,6 +2576,14 @@ file = "kubejs/server_scripts/protect_pets.js"
 hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
 [[files]]
+file = "kubejs/server_scripts/quest_givers.generated.js"
+hash = "4f046bd653d51f6d399443a3349a2becc40ce13be62e341584adb9eb7669836c"
+
+[[files]]
+file = "kubejs/server_scripts/quest_givers.js"
+hash = "9777ab696cd8ce66d2f7fd4dc5641b71ff9f57936821a4a1430fee59522b1434"
+
+[[files]]
 file = "kubejs/server_scripts/saddle_recipe.js"
 hash = "412bf83da2aa86b4baf7ae41144bcf05f8f4068bf7b32693f4dd5740f86299fb"
 
@@ -2598,6 +2634,10 @@ hash = "8401f71d28bcb037ad3787668b01e855e49f61d2983bc9f78455b2eac57cfbe7"
 [[files]]
 file = "kubejs/startup_scripts/protect_boats.js"
 hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
+
+[[files]]
+file = "kubejs/startup_scripts/quest_items.generated.js"
+hash = "422734b4797dfa9787a7ee47d39ed48a052b602ac71a8f717b3eee7bf946a1dc"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
@@ -2884,8 +2924,23 @@ hash = "efa75ee4aae90dea11316b6e61aecaf9433eeb3d0821f78b4eca41acbbd73e8f"
 metafile = true
 
 [[files]]
+file = "mods/ftb-quests-forge.pw.toml"
+hash = "7b2cc450f553b82439ae9422b8c2b4406dae1af3c48f7ce791a3576acff1d122"
+metafile = true
+
+[[files]]
+file = "mods/ftb-teams-forge.pw.toml"
+hash = "efda76423b21f9bfab4ad8d0411f0b06a199ab7e3e12ca16dc0586c1828b8f07"
+metafile = true
+
+[[files]]
 file = "mods/ftb-ultimine-forge.pw.toml"
 hash = "95b3a27eadc2854462de996ddce5ff2468771e13ac97c46ed96d41a6edaa056e"
+metafile = true
+
+[[files]]
+file = "mods/ftb-xmod-compat.pw.toml"
+hash = "39e65bf3c47517cdb2f9b4b49c6632dd56db797744faaf8b1a3726b1b95aacb4"
 metafile = true
 
 [[files]]

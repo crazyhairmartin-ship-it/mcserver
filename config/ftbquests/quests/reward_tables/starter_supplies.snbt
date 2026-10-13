@@ -1,0 +1,41 @@
+{
+	icon: "minecraft:bundle"
+	id: "0F8FD9C982408466"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{
+			count: 8
+			id: "7000C64997D5366B"
+			item: "minecraft:bread"
+			type: "item"
+			weight: 4.0
+		}
+		{
+			count: 16
+			id: "583325613459E4FE"
+			item: "minecraft:torch"
+			type: "item"
+			weight: 4.0
+		}
+		{
+			count: 4
+			id: "08FE2AC750C32D4A"
+			item: "minecraft:iron_ingot"
+			type: "item"
+			weight: 2.0
+		}
+		{
+			id: "53913C4EFB761A6F"
+			item: "minecraft:saddle"
+			type: "item"
+		}
+		{
+			id: "3B59EDBDE4E32A00"
+			item: "minecraft:name_tag"
+			type: "item"
+		}
+	]
+	title: "Starter Supplies"
+	use_title: true
+}

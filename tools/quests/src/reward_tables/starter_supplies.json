@@ -1,0 +1,12 @@
+{
+  "title": "Starter Supplies",
+  "icon": "minecraft:bundle",
+  "rolls": 1,
+  "rewards": [
+    {"item": "minecraft:bread", "count": 8, "weight": 4},
+    {"item": "minecraft:torch", "count": 16, "weight": 4},
+    {"item": "minecraft:iron_ingot", "count": 4, "weight": 2},
+    {"item": "minecraft:saddle", "weight": 1},
+    {"item": "minecraft:name_tag", "weight": 1}
+  ]
+}

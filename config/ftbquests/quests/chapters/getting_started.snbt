@@ -1,0 +1,248 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "getting_started"
+	group: "520042A0F9159BC8"
+	icon: "minecraft:oak_sapling"
+	id: "5556FECB89D4939B"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Welcome to Friends of the Forest! These quests walk you through the pack one step at a time."
+				""
+				"Tick this off to start. Rewards are claimed from the quest window."
+			]
+			icon: "minecraft:oak_sapling"
+			id: "5EBCC26E8097F15D"
+			rewards: [
+				{
+					id: "27F42C4927D143CA"
+					type: "xp"
+					xp: 20
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					id: "47E8BCB65DF49D6A"
+					title: "Read me"
+					type: "checkmark"
+				}
+			]
+			title: "Welcome, Friend"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5EBCC26E8097F15D"]
+			description: [
+				"You started with the Field Guide. It explains everything the pack adds. Lost it? Type /guide for a new one."
+				""
+				"Have a look at the Getting Started pages, then tick this off."
+			]
+			icon: "minecraft:book"
+			id: "68BE826150A0E304"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 25"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "4BC8C5959E48B0DA"
+					silent: true
+					title: "+25 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5D076CF131119532"
+					title: "I've had a look"
+					type: "checkmark"
+				}
+			]
+			title: "Read the Field Guide"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["5EBCC26E8097F15D"]
+			description: ["Every journey starts with a tree. Chop some logs; any wood counts once you have four of one kind."]
+			icon: "minecraft:oak_log"
+			id: "1A79B176B7913C99"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 30"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "33ED7F3A8EFFDA84"
+					silent: true
+					title: "+30 Foraging XP"
+					type: "command"
+				}
+				{
+					count: 3
+					id: "1C73F86FA1A554D8"
+					item: "minecraft:apple"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "267AE9B347713C19"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+			]
+			title: "Timber!"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["68BE826150A0E304"]
+			description: [
+				"Almost everything you do earns skill XP: mining, farming, cooking, fighting, taming and more."
+				""
+				"Press K to open your skill trees and spend points on perks."
+			]
+			icon: "minecraft:experience_bottle"
+			id: "024426A24C910415"
+			rewards: [
+				{
+					id: "59B40FD19222A93C"
+					type: "xp"
+					xp: 50
+				}
+			]
+			tasks: [
+				{
+					id: "26FE6DC598BF0B97"
+					title: "Opened my skills"
+					type: "checkmark"
+				}
+			]
+			title: "Skills"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1A79B176B7913C99"]
+			description: ["A backpack gives you a lot more room. Wear it and press B to open it."]
+			icon: "sophisticatedbackpacks:backpack"
+			id: "078EAC6DAD7F337D"
+			rewards: [
+				{
+					id: "2D735FF4D953A560"
+					table_id: 1121354291735463014L
+					type: "random"
+				}
+			]
+			tasks: [
+				{
+					id: "57A3890D15B0C801"
+					item: "sophisticatedbackpacks:backpack"
+					type: "item"
+				}
+			]
+			title: "Pack Your Bags"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A79B176B7913C99"]
+			description: ["Craft a mailbox and give it an ID. Friends send letters and packages to that ID, and a mail carrier brings them."]
+			icon: "endermail:locker"
+			id: "7869C7FBEE7C1F45"
+			rewards: [
+				{
+					count: 3
+					id: "2798D3EF90389184"
+					item: "fotfmail:letter"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "505B512DEB9830C5"
+					item: "endermail:locker"
+					type: "item"
+				}
+			]
+			title: "You've Got Mail"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"078EAC6DAD7F337D"
+				"7869C7FBEE7C1F45"
+			]
+			dependency_requirement: "one_completed"
+			description: ["Make a bed and sleep through your first night."]
+			icon: "minecraft:red_bed"
+			id: "3B7374B6E6B17041"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 50"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "6163483CEAA4B855"
+					silent: true
+					title: "+50 Crafting XP"
+					type: "command"
+				}
+				{
+					id: "51AA3E8049DF2742"
+					type: "xp_levels"
+					xp_levels: 2
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/sleep_in_bed"
+					criterion: ""
+					id: "79AE2DE7A1C506A2"
+					type: "advancement"
+				}
+			]
+			title: "A Place to Sleep"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3B7374B6E6B17041"]
+			description: ["Villages are full of people with problems. Find one, then sneak and right-click villagers to talk to them: some have quests for you."]
+			icon: "minecraft:emerald"
+			id: "7E151D1E3A2B6A30"
+			rewards: [
+				{
+					count: 5
+					id: "7F3BB95357F08F7B"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					auto: "invisible"
+					id: "49E6A7489CD56C31"
+					stage: "fq.getting_started.village.done"
+					type: "gamestage"
+				}
+			]
+			tasks: [
+				{
+					id: "4776F79CE719E06A"
+					structure: "#minecraft:village"
+					type: "structure"
+				}
+			]
+			title: "Neighbours"
+			x: 6.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Your first day in the forest"]
+	title: "Getting Started"
+}

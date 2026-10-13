@@ -1,0 +1,147 @@
+# Quests
+
+The pack's quest book is [FTB Quests](https://www.curseforge.com/minecraft/mc-mods/ftb-quests) (with FTB Teams, which
+it needs, and FTB XMod Compat for KubeJS). The quests aren't made in the in-game editor: they're written as short
+JSON files here and turned into FTB Quests' files by a script, the same way the field guide, cookbook and skill
+trees are built.
+
+```
+tools/quests/
+  src/pack.json             book title, icon, chapter groups (in order)
+  src/chapters/*.json       one file per chapter; the file name is the chapter's id
+  src/reward_tables/*.json  random reward tables
+  registry.json             every item, mob, biome, structure, advancement and dimension id in the pack
+  make_quests.py            checks the sources, then writes the book
+  make_registry.py          rebuilds registry.json from the pack's jars
+```
+
+`python tools/quests/make_quests.py` checks everything and writes:
+- `config/ftbquests/quests/` (the book; the script owns this folder, so in-game edits there are overwritten)
+- `kubejs/startup_scripts/quest_items.generated.js` (quest items like letters)
+- `kubejs/server_scripts/quest_givers.generated.js` (who gives which quest)
+
+`--check` only checks. Nothing is written if anything's wrong: unknown or trimmed item ids (with "did you mean"
+suggestions), mobs, biomes, structures, broken `after` links, duplicate ids, unknown skills or reward tables.
+After changing mods, rebuild the registry: `python tools/quests/make_registry.py <mods folder> <vanilla client
+extra jar> .` (the docstring says where the vanilla jar is).
+
+**Ids are permanent.** FTB Quests' internal ids are made from the chapter file name, quest `id` and task position,
+so regenerating keeps everyone's progress. Renaming a chapter or quest, or reordering a quest's tasks, resets that
+progress, so only do it before release. Adding quests or tasks at the end is always safe.
+
+Run `/ftbquests reload` on the server (op) after deploying new quests; players get them straight away.
+
+## A chapter
+
+```json
+{
+  "title": "Getting Started",
+  "subtitle": "Your first day in the forest",
+  "icon": "minecraft:oak_sapling",
+  "group": "start",
+  "order": 0,
+  "quests": [
+    {
+      "id": "first_wood",
+      "title": "Timber!",
+      "icon": "minecraft:oak_log",
+      "after": ["welcome"],
+      "text": ["Every journey starts with a tree.", "A second paragraph."],
+      "tasks": [{"item": "minecraft:oak_log", "count": 4}],
+      "rewards": [{"skill": "forage", "xp": 30}, {"item": "minecraft:apple", "count": 3}]
+    }
+  ]
+}
+```
+
+Quest fields:
+
+| Field | What it does |
+|---|---|
+| `id` | Required, `a-z 0-9 _`, unique in the chapter. Never change it after release |
+| `title`, `subtitle` | Shown in the book. `&` colour codes work (`&a` green, `&l` bold) |
+| `text` | Description: a string, or a list of paragraphs |
+| `icon` | Item id (defaults to the first task's item) |
+| `after` | Quests that must be done first: `"welcome"` in this chapter, `"getting_started:home"` in another |
+| `after_any` | `true`: any one of `after` is enough instead of all |
+| `pos` | `[x, y]` in the chapter. Without it quests are laid out in columns by how many steps they are from the start |
+| `shape`, `size` | `circle` `square` `rsquare` `diamond` `pentagon` `hexagon` `octagon` `heart` `gear`; size 1 is normal |
+| `hidden` | `"until_deps"`: invisible until the quests before it are visible |
+| `optional` | Doesn't block chapter completion |
+| `giver` | The quest is handed out by a villager, mob or item instead of being in the book from the start (below) |
+
+## Tasks
+
+| Task | Done when |
+|---|---|
+| `{"item": "minecraft:wheat", "count": 64}` | The player has the items. `"consume": true` takes them; `"crafted": true` only counts crafted ones |
+| `{"kill": "minecraft:zombie", "count": 5}` | Kills |
+| `{"biome": "minecraft:cherry_grove"}` | Standing in the biome |
+| `{"structure": "minecraft:village_plains"}` | Inside the structure (`#tag` ids work with `"unchecked": true`) |
+| `{"dimension": "minecraft:the_nether"}` | In the dimension |
+| `{"advancement": "minecraft:adventure/sleep_in_bed"}` | The advancement is earned |
+| `{"observe": "minecraft:beehive", "ticks": 40}` | Looking at a block or mob (for this long) |
+| `{"levels": 10}` | Has XP levels |
+| `{"checkmark": "I've read this"}` | The player ticks it |
+| `{"talk": "villager", "profession": "minecraft:cleric", "lines": [...]}` | Sneak + right-click that villager while on the quest; they say the lines. `"talk": "entity"` with `"entity"` (and optional `"named"`) for a mob |
+| `{"stage": "my_stage"}` | The player has that stage (a player tag; for scripted quests) |
+
+Any task can have a `"title"`. Add `"unchecked": true` for ids that only exist at runtime (Every Compat's blocks, tags).
+
+## Rewards
+
+| Reward | Gives |
+|---|---|
+| `{"item": "minecraft:emerald", "count": 5}` | Items (cosmetics are just items too) |
+| `{"skill": "farm", "xp": 150}` | Pufferfish skill XP in that tree: `mining forage farm fish cook craft attack range defense agility magic taming` |
+| `{"xp": 100}` / `{"levels": 3}` | Vanilla XP points / levels |
+| `{"table": "village_favours"}` | One random roll from `src/reward_tables/village_favours.json` |
+| `{"command": "/say hi {p}", "title": "A surprise"}` | Runs a command as the server (`{p}` is the player) |
+| `{"stage": "my_stage"}` | Adds a stage |
+
+Any reward can have a `"title"`; `"auto": true` claims it by itself.
+
+A reward table:
+
+```json
+{"title": "Village Favours", "icon": "minecraft:emerald", "rolls": 1,
+ "rewards": [{"item": "minecraft:emerald", "count": 6, "weight": 5}, {"item": "minecraft:golden_carrot", "weight": 3}]}
+```
+
+## Quest givers
+
+A quest with a `giver` is invisible until the player accepts it. The giver says its `lines` in chat with a
+clickable `[accept]` button; accepting adds the quest to the book.
+
+```json
+"giver": {
+  "type": "villager",
+  "profession": "minecraft:farmer",
+  "requires": ["getting_started:village"],
+  "lines": ["Oh, a traveller! The crows got half my wheat this year.", "Could you bring me a stack of wheat?"],
+  "accept": "I'll help"
+}
+```
+
+| `type` | How the player gets the quest |
+|---|---|
+| `villager` | Sneak + right-click a villager with that `profession` (`"any"` for all) |
+| `entity` | Sneak + right-click a mob of type `entity`, optionally only one `named` something (name-tagged NPCs) |
+| `drop` | The mobs in `from` drop a quest item (`chance`, default 0.05) for players who don't have the quest; right-click the item to read it |
+| `item` | Right-click an item (found in a chest, given by a command...) |
+
+`requires` lists quests that must be finished before the giver offers anything. `name` overrides the speaker's
+name in chat. For `drop` and `item`, `"item"` is either an existing item id or a new quest item:
+`{"name": "Water-Stained Letter", "tooltip": "Right-click to read", "texture": "minecraft:item/paper"}` (its id is
+`kubejs:quest_<quest id>`, or set `"id"`). The item is used up on accepting unless `"consume": false`.
+
+How it works: accepting adds the player tag `fq.<chapter>.<quest>`, and the quest's hidden first task waits for it
+(FTB Quests reads player tags as stages). `talk` tasks add `fq.<chapter>.<quest>.talk<n>`. A quest that a giver
+`requires` gets an invisible reward adding `fq.<chapter>.<quest>.done`. To reset someone's quest giver state:
+`/tag <player> remove fq.<chapter>.<quest>` (and change their progress with `/ftbquests change_progress`). The
+behaviour lives in `kubejs/server_scripts/quest_givers.js`.
+
+## Progress
+
+Quest progress is solo: everyone has their own. FTB Teams is only installed because FTB Quests needs it; claims and
+parties stay with Open Parties and Claims.
