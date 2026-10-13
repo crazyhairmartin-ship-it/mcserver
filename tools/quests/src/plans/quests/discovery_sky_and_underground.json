@@ -1,0 +1,572 @@
+{
+  "line": "Out in the world: above and below",
+  "chapter": "discovery_sky_and_underground",
+  "group": "world",
+  "giver": "The world itself: quests that appear when the player reaches a floating island, an airship or a sky village, or finds a hidden place underground.",
+  "feel": "Vertigo and darkness: climbing, grappling and flying up to islands in the sky; quiet, careful exploring of what's buried. Airships and the ancient city wait for later acts.",
+  "quests": [
+    {
+      "id": "islands_in_the_sky",
+      "title": "Islands in the Sky",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Spotting a floating island overhead starts it. Get up there by any means (pillar, grapple, wings) and stand on it.",
+      "mods": [
+        "mss",
+        "grapplemod"
+      ],
+      "landmarks": [
+        "#moog_sky_islands"
+      ],
+      "reward": "Agility XP, a Grappling Hook, ender pearls"
+    },
+    {
+      "id": "sky_hopper",
+      "title": "Sky Hopper",
+      "tier": "any",
+      "types": [
+        "explore",
+        "milestone"
+      ],
+      "after": [
+        "islands_in_the_sky"
+      ],
+      "summary": "Set foot on five different floating islands, from the small huts to the rivers in the sky.",
+      "mods": [
+        "mss"
+      ],
+      "landmarks": [
+        "#moog_sky_islands"
+      ],
+      "reward": "Agility XP, feather falling boots"
+    },
+    {
+      "id": "volcano_in_the_sky",
+      "title": "Fire Overhead",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "fetch"
+      ],
+      "after": [],
+      "summary": "A volcano floats in the sky, dripping lava over the edge. Reach its crater and mine the magma and ores at its core without falling through.",
+      "mods": [
+        "mss"
+      ],
+      "landmarks": [
+        "mss:volcano"
+      ],
+      "reward": "Mining XP, obsidian, a fire resistance potion"
+    },
+    {
+      "id": "castle_in_the_clouds",
+      "title": "Castle in the Clouds",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "kill",
+        "explore"
+      ],
+      "after": [],
+      "summary": "A ruined castle and towers float above the land, held by skeletons. Storm the castle and take the banner from its highest tower.",
+      "mods": [
+        "mss"
+      ],
+      "landmarks": [
+        "mss:castle_ruin",
+        "mss:castle_tower",
+        "mss:large_tower",
+        "mss:small_tower"
+      ],
+      "reward": "Attack XP, an enchanted bow, a banner"
+    },
+    {
+      "id": "pyramid_aloft",
+      "title": "The Pyramid Aloft",
+      "tier": "any",
+      "types": [
+        "discover",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "A desert pyramid floats over the dunes, its sand somehow holding. Find the way in from below and solve its tomb lock.",
+      "mods": [
+        "mss"
+      ],
+      "landmarks": [
+        "mss:desert_pyramid",
+        "mss:desert_well"
+      ],
+      "reward": "Mining XP, gold, sandstone"
+    },
+    {
+      "id": "palm_island",
+      "title": "Castaway Above",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "A palm island floats over the sea with a castaway's hammock and no way down. Collect its coconuts and leave a ladder for the next one.",
+      "mods": [
+        "mss",
+        "beachparty"
+      ],
+      "landmarks": [
+        "mss:palm_island"
+      ],
+      "reward": "Foraging XP, coconuts, a palm sapling"
+    },
+    {
+      "id": "sky_ice_fishing",
+      "title": "Ice Fishing in the Sky",
+      "tier": "any",
+      "types": [
+        "discover",
+        "fish"
+      ],
+      "after": [],
+      "summary": "A frozen pond floats in the sky. Cut a hole in the ice and catch a fish up there.",
+      "mods": [
+        "mss",
+        "aquaculture"
+      ],
+      "landmarks": [
+        "mss:frozen_pond",
+        "mss:small_pond",
+        "mss:muddy_water_hole"
+      ],
+      "reward": "Fishing XP, bait, a fishing hook"
+    },
+    {
+      "id": "portal_in_the_sky",
+      "title": "A Portal in the Sky",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "A nether portal sits alone on a floating rock. Report it to the Arcane order, who want to know who built it so high.",
+      "mods": [
+        "mss"
+      ],
+      "landmarks": [
+        "mss:nether_portal"
+      ],
+      "reward": "Magic XP, obsidian"
+    },
+    {
+      "id": "sky_garden",
+      "title": "The Sky Garden",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect",
+        "farm"
+      ],
+      "after": [],
+      "summary": "Forests float in the sky: jungle, mangrove, mushroom, taiga, cherry and birch rivers. Bring back saplings from three different sky forests and plant them at home.",
+      "mods": [
+        "mss"
+      ],
+      "landmarks": [
+        "mss:jungle",
+        "mss:mangrove",
+        "mss:mushroom",
+        "mss:taiga",
+        "mss:cherry_river",
+        "mss:birch_river",
+        "mss:leaf_hollow",
+        "mss:red_sand"
+      ],
+      "reward": "Foraging XP, bone meal"
+    },
+    {
+      "id": "sky_hermit",
+      "title": "The Sky Hermit",
+      "tier": "any",
+      "types": [
+        "discover",
+        "talk",
+        "deliver"
+      ],
+      "after": [],
+      "summary": "Small houses float in the sky, and one of them still has a hermit who never comes down. Bring him supplies from the ground and hear why he left.",
+      "mods": [
+        "mss"
+      ],
+      "landmarks": [
+        "mss:spruce_huts",
+        "mss:small_oak_house",
+        "mss:white_house",
+        "mss:calcite_house",
+        "mss:diorite_house",
+        "mss:small_deepslate_house"
+      ],
+      "reward": "Agility XP, a slow falling potion"
+    },
+    {
+      "id": "floating_islands",
+      "title": "Drifting Rocks",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Moog's floating islands hang low over the land with chests on top. Reach the large floating island's chest with a grappling hook alone.",
+      "mods": [
+        "mvs",
+        "grapplemod"
+      ],
+      "landmarks": [
+        "mvs:floating_islands",
+        "mvs:large_floating_island"
+      ],
+      "reward": "Agility XP, a grappling hook rope upgrade"
+    },
+    {
+      "id": "village_above_the_clouds",
+      "title": "The Village above the Clouds",
+      "tier": "any",
+      "types": [
+        "discover",
+        "talk",
+        "trade"
+      ],
+      "after": [],
+      "summary": "A sky village floats on its own island. Get up to it, meet its villagers and make your first trade there.",
+      "mods": [
+        "skyvillages"
+      ],
+      "landmarks": [
+        "skyvillages:skyvillage"
+      ],
+      "reward": "Agility XP, emeralds, a slow falling potion"
+    },
+    {
+      "id": "airship_boarding",
+      "title": "Boarding Party",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "kill",
+        "explore"
+      ],
+      "after": [],
+      "summary": "An airship drifts overhead, crewed by illagers. Get aboard, clear the decks and take the captain's chest before it sails away.",
+      "mods": [
+        "dungeons_arise",
+        "grapplemod"
+      ],
+      "landmarks": [
+        "#airships"
+      ],
+      "reward": "Range XP, an enchanted crossbow, rockets"
+    },
+    {
+      "id": "the_drifting_blimp",
+      "title": "The Drifting Blimp",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "craft"
+      ],
+      "after": [],
+      "summary": "A small blimp floats unmanned above the hills. Climb aboard, read the pilot's engine notes and use them to build your own Immersive Aircraft.",
+      "mods": [
+        "dungeons_arise",
+        "immersive_aircraft"
+      ],
+      "landmarks": [
+        "dungeons_arise:small_blimp"
+      ],
+      "reward": "Crafting XP, Immersive Aircraft engine parts"
+    },
+    {
+      "id": "highest_point",
+      "title": "The Highest Point",
+      "tier": "act2",
+      "types": [
+        "milestone",
+        "travel"
+      ],
+      "after": [
+        "islands_in_the_sky"
+      ],
+      "summary": "Fly or climb to the build limit and look down. Icarus wings, an aircraft or a pillar of dirt all count.",
+      "mods": [
+        "icarus",
+        "immersive_aircraft"
+      ],
+      "landmarks": [],
+      "reward": "Agility XP, firework rockets"
+    },
+    {
+      "id": "the_ancient_city",
+      "title": "The Silent City",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "stealth",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Finding an ancient city in the deep dark. Cross it to the great portal frame without waking the Warden, sneaking past every shrieker.",
+      "mods": [],
+      "landmarks": [
+        "minecraft:ancient_city"
+      ],
+      "reward": "Magic XP, swift sneak, echo shards"
+    },
+    {
+      "id": "echo_shards",
+      "title": "Echoes",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "craft"
+      ],
+      "after": [],
+      "summary": "Picking up an echo shard starts it. Find eight and craft a recovery compass, then die on purpose (carefully) and follow it back.",
+      "mods": [
+        "gravestone"
+      ],
+      "landmarks": [
+        "minecraft:ancient_city"
+      ],
+      "reward": "Magic XP, a recovery compass"
+    },
+    {
+      "id": "disc_fragments",
+      "title": "Fragments of a Song",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "collect",
+        "craft"
+      ],
+      "after": [
+        "the_ancient_city"
+      ],
+      "summary": "Finding a disc fragment starts it. Collect nine and assemble the strange disc, then play it somewhere quiet.",
+      "mods": [],
+      "landmarks": [
+        "minecraft:ancient_city"
+      ],
+      "reward": "Magic XP, a jukebox, sculk"
+    },
+    {
+      "id": "the_bunker",
+      "title": "The Bunker",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "A sealed bunker lies under the hills, its doors on a redstone lock. Restore power by finding its levers in the right order and open the vault.",
+      "mods": [
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [
+        "nova_structures:bunker"
+      ],
+      "reward": "Crafting XP, redstone, iron"
+    },
+    {
+      "id": "underground_house",
+      "title": "A House Underground",
+      "tier": "any",
+      "types": [
+        "discover",
+        "talk",
+        "fetch"
+      ],
+      "after": [],
+      "summary": "A house buried under the ground, lit and furnished, with nobody in it. Find out from the diary who dug it, and bring the owner's lost pickaxe back from the cave beyond.",
+      "mods": [
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [
+        "nova_structures:underground_house"
+      ],
+      "reward": "Mining XP, torches, an iron pickaxe"
+    },
+    {
+      "id": "taiga_cellar",
+      "title": "The Cellar under the Ruin",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "A taiga ruin has a cellar underneath. Find the entrance, light it up and recover what the ruin's people hid below.",
+      "mods": [
+        "structory",
+        "torchmaster"
+      ],
+      "landmarks": [
+        "structory:taiga_ruin_surface",
+        "structory:taiga_ruin_underground"
+      ],
+      "reward": "Mining XP, a Torchmaster megatorch part, coal"
+    },
+    {
+      "id": "mossy_cave",
+      "title": "The Mossy Cave",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore",
+        "collect"
+      ],
+      "after": [],
+      "summary": "A small cave in the taiga lined with forest moss. Collect its moss and the flowers growing in the light from the opening.",
+      "mods": [
+        "bloomingnature"
+      ],
+      "landmarks": [
+        "bloomingnature:cave"
+      ],
+      "reward": "Foraging XP, forest moss"
+    },
+    {
+      "id": "the_cave_tablet",
+      "title": "A Carved Tablet",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "talk"
+      ],
+      "after": [],
+      "summary": "Finding a cave tablet starts it. Its carvings show a place far below; take it to a cartographer, who knows what it's worth.",
+      "mods": [
+        "alexscaves"
+      ],
+      "landmarks": [],
+      "reward": "Mining XP, a map"
+    },
+    {
+      "id": "glittering_nest",
+      "title": "The Glittering Nest",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "kill",
+        "drop"
+      ],
+      "after": [],
+      "summary": "An amethyst nest grows in a lush cave, guarded by amethyst crabs. Hunt the crabs until one drops a perfect geode heart (quest item).",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:amethyst_nest"
+      ],
+      "reward": "Mining XP, amethyst blocks, a spyglass"
+    },
+    {
+      "id": "biome_deep_dark",
+      "title": "Into the Deep Dark",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "stealth"
+      ],
+      "after": [],
+      "summary": "Entering the deep dark for the first time. Collect a sculk sensor without setting off a shrieker.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Mining XP, sculk"
+    },
+    {
+      "id": "biome_lush_caves",
+      "title": "Lush Caves",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect",
+        "tame"
+      ],
+      "after": [],
+      "summary": "Entering lush caves. Collect glow berries and catch an axolotl in a bucket.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Foraging XP, a bucket of axolotl"
+    },
+    {
+      "id": "biome_dripstone",
+      "title": "Teeth of Stone",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering dripstone caves. Collect pointed dripstone and fill a cauldron by dripping water.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Mining XP, a cauldron"
+    },
+    {
+      "id": "biome_redstone_caves",
+      "title": "Red Veins",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering Regions Unexplored's redstone caves. Mine the raw redstone that grows on the walls.",
+      "mods": [
+        "regions_unexplored"
+      ],
+      "landmarks": [],
+      "reward": "Mining XP, redstone"
+    },
+    {
+      "id": "biome_prismachasm",
+      "title": "The Prismachasm",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering the prismachasm, full of prismatic glass. Bring back its shining crystals.",
+      "mods": [
+        "regions_unexplored"
+      ],
+      "landmarks": [],
+      "reward": "Mining XP, prismoss"
+    },
+    {
+      "id": "biome_spider_nest",
+      "title": "Webs Everywhere",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "kill",
+        "timed"
+      ],
+      "after": [],
+      "summary": "Stumbling into a Biomes O' Plenty spider nest. Get out the other side within three minutes, killing the spiders that block the way.",
+      "mods": [
+        "biomesoplenty"
+      ],
+      "landmarks": [],
+      "reward": "Attack XP, string, a Bane of Arthropods book"
+    }
+  ]
+}

@@ -9,74 +9,131 @@
       "id": "through_the_flames",
       "title": "Through the Flames",
       "tier": "act3",
-      "types": ["talk", "explore"],
-      "after": ["main_story:act2_finale"],
+      "types": [
+        "talk",
+        "explore"
+      ],
+      "after": [
+        "main_story:act2_finale"
+      ],
       "summary": "Vesna hears you lit a portal and hands over her old field journal with one rule: never sleep down there. Step through and survive your first ten minutes in the Nether.",
       "mods": [],
-      "landmarks": ["minecraft:ruined_portal_nether"],
+      "landmarks": [
+        "minecraft:ruined_portal_nether"
+      ],
       "reward": "Fire resistance potions, Vesna's field journal"
     },
     {
       "id": "forward_camp",
       "title": "Forward Camp",
       "tier": "act3",
-      "types": ["build"],
-      "after": ["through_the_flames"],
+      "types": [
+        "build"
+      ],
+      "after": [
+        "through_the_flames"
+      ],
       "summary": "Wall in your portal with blast-proof stone, add a chest, a crafting table and a lit waystone so you always have a way home.",
-      "mods": ["waystones"],
-      "landmarks": ["feature:waystones:waystones"],
+      "mods": [
+        "waystones"
+      ],
+      "landmarks": [
+        "feature:waystones:waystones"
+      ],
       "reward": "Warp stone, a stack of cobbled deepslate"
     },
     {
       "id": "the_long_halls",
       "title": "The Long Halls",
       "tier": "act3",
-      "types": ["explore", "discover"],
-      "after": ["forward_camp"],
+      "types": [
+        "explore",
+        "discover"
+      ],
+      "after": [
+        "forward_camp"
+      ],
       "summary": "Vesna's journal sketches a fortress that is nothing like the old maps: find one of the rebuilt Better Nether Fortresses and walk its great halls to the central keep.",
-      "mods": ["betterfortresses", "lootintegrations_yungs"],
-      "landmarks": ["betterfortresses:fortress"],
+      "mods": [
+        "betterfortresses",
+        "lootintegrations_yungs"
+      ],
+      "landmarks": [
+        "betterfortresses:fortress"
+      ],
       "reward": "A Nether fortress map note, gold ingots"
     },
     {
       "id": "rods_for_the_eyes",
       "title": "Rods for the Eyes",
       "tier": "act3",
-      "types": ["kill", "collect"],
-      "after": ["the_long_halls"],
+      "types": [
+        "kill",
+        "collect"
+      ],
+      "after": [
+        "the_long_halls"
+      ],
       "summary": "Every locator eye in the pack starts with blaze powder. Bring back 16 blaze rods from the fortress spawners, without dying to the fireballs.",
-      "mods": ["betterfortresses"],
-      "landmarks": ["betterfortresses:fortress"],
+      "mods": [
+        "betterfortresses"
+      ],
+      "landmarks": [
+        "betterfortresses:fortress"
+      ],
       "reward": "Ender pearls, a blaze-hide shield"
     },
     {
       "id": "skulls_on_the_wall",
       "title": "Skulls on the Wall",
       "tier": "act3",
-      "types": ["drop", "hunt"],
-      "after": ["the_long_halls"],
+      "types": [
+        "drop",
+        "hunt"
+      ],
+      "after": [
+        "the_long_halls"
+      ],
       "summary": "Wither skeletons patrol the fortress bridges; Vesna wants three of their skulls for something she won't name yet. Hunt them with a Looting blade.",
-      "mods": ["betterfortresses", "spartanweaponry"],
-      "landmarks": ["betterfortresses:fortress"],
+      "mods": [
+        "betterfortresses",
+        "spartanweaponry"
+      ],
+      "landmarks": [
+        "betterfortresses:fortress"
+      ],
       "reward": "A Looting II book, soul lanterns"
     },
     {
       "id": "wart_harvest",
       "title": "The Wart Garden",
       "tier": "act3",
-      "types": ["farm", "brew"],
-      "after": ["the_long_halls"],
+      "types": [
+        "farm",
+        "brew"
+      ],
+      "after": [
+        "the_long_halls"
+      ],
       "summary": "Someone tends a nether wart farm out in the wastes, and nobody knows who. Harvest from it, start your own soul-sand patch at camp, and brew three potions of fire resistance.",
-      "mods": ["mns"],
-      "landmarks": ["mns:nether_wart_farm"],
+      "mods": [
+        "mns"
+      ],
+      "landmarks": [
+        "mns:nether_wart_farm"
+      ],
       "reward": "A brewing stand, blaze powder"
     },
     {
       "id": "golden_manners",
       "title": "Golden Manners",
       "tier": "act3",
-      "types": ["trade"],
-      "after": ["forward_camp"],
+      "types": [
+        "trade"
+      ],
+      "after": [
+        "forward_camp"
+      ],
       "summary": "Wear gold and barter with piglins until they've given you an ender pearl, obsidian and string. Vesna bets you'll be robbed at least once.",
       "mods": [],
       "landmarks": [],
@@ -86,241 +143,454 @@
       "id": "lost_trader",
       "title": "The Lost Trader",
       "tier": "act3",
-      "types": ["encounter", "escort", "rescue"],
-      "after": ["golden_manners"],
+      "types": [
+        "encounter",
+        "escort",
+        "rescue"
+      ],
+      "after": [
+        "golden_manners"
+      ],
       "summary": "A piglin with a merchant's pack has strayed from his camp and the hoglins are closing in. Keep him alive back to the piglin camp, where his chief owes you a favour.",
-      "mods": ["mr_dungeons_andtaverns"],
-      "landmarks": ["nova_structures:piglin_camp"],
+      "mods": [
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [
+        "nova_structures:piglin_camp"
+      ],
       "reward": "A bartering bundle (pearls, fire charges, crying obsidian)"
     },
     {
       "id": "outstation_ledger",
       "title": "The Outstation Ledger",
       "tier": "act3",
-      "types": ["deliver", "explore"],
-      "after": ["lost_trader"],
+      "types": [
+        "deliver",
+        "explore"
+      ],
+      "after": [
+        "lost_trader"
+      ],
       "summary": "The chief sends you with a sack of gold to the piglin outstation near the bastions. Deliver it, then bring back the ledger proving the brutes there are skimming.",
-      "mods": ["mr_dungeons_andtaverns", "lootintegrations_dnt"],
-      "landmarks": ["nova_structures:piglin_outstation"],
+      "mods": [
+        "mr_dungeons_andtaverns",
+        "lootintegrations_dnt"
+      ],
+      "landmarks": [
+        "nova_structures:piglin_outstation"
+      ],
       "reward": "Gold blocks, a netherite scrap"
     },
     {
       "id": "bastion_quiet",
       "title": "Quiet Feet in the Bastion",
       "tier": "act3",
-      "types": ["stealth", "fetch"],
-      "after": ["outstation_ledger"],
+      "types": [
+        "stealth",
+        "fetch"
+      ],
+      "after": [
+        "outstation_ledger"
+      ],
       "summary": "The ledger names a bastion's treasure room. Get in, lift the gilded blackstone and a snout banner from the vault, and get out without the brutes ever turning on you.",
       "mods": [],
-      "landmarks": ["minecraft:bastion_remnant"],
+      "landmarks": [
+        "minecraft:bastion_remnant"
+      ],
       "reward": "A netherite upgrade template, gilded blackstone"
     },
     {
       "id": "lava_dock",
       "title": "The Lava Dock",
       "tier": "act3",
-      "types": ["discover", "explore"],
-      "after": ["the_long_halls"],
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [
+        "the_long_halls"
+      ],
       "summary": "A harbour on a lava sea, with moorings and cranes and no sailors. Find the Nether port and read the harbourmaster's last log.",
-      "mods": ["mr_dungeons_andtaverns"],
-      "landmarks": ["nova_structures:nether_port"],
+      "mods": [
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [
+        "nova_structures:nether_port"
+      ],
       "reward": "A strider saddle, warped fungus on a stick"
     },
     {
       "id": "strider_crossing",
       "title": "Strider Crossing",
       "tier": "act3",
-      "types": ["ride", "timed"],
-      "after": ["lava_dock"],
+      "types": [
+        "ride",
+        "timed"
+      ],
+      "after": [
+        "lava_dock"
+      ],
       "summary": "The harbourmaster's log mentions a route across the lava ocean. Saddle a strider and cross 300 blocks of lava inside four minutes.",
       "mods": [],
-      "landmarks": ["nova_structures:nether_port"],
+      "landmarks": [
+        "nova_structures:nether_port"
+      ],
       "reward": "Fire resistance, netherite scrap"
     },
     {
       "id": "the_keep",
       "title": "The Keep at the Edge",
       "tier": "act3",
-      "types": ["explore", "kill"],
-      "after": ["the_long_halls"],
+      "types": [
+        "explore",
+        "kill"
+      ],
+      "after": [
+        "the_long_halls"
+      ],
       "summary": "Dungeons and Taverns' Nether keep sits near the fortress roads, held by blaze-guarded skeletons. Clear its walls and claim the keep's chest.",
-      "mods": ["mr_dungeons_andtaverns", "lootintegrations_dnt"],
-      "landmarks": ["nova_structures:nether_keep"],
+      "mods": [
+        "mr_dungeons_andtaverns",
+        "lootintegrations_dnt"
+      ],
+      "landmarks": [
+        "nova_structures:nether_keep"
+      ],
       "reward": "Diamond gear trims, a gold apple"
     },
     {
       "id": "four_watchtowers",
       "title": "Four Watchtowers",
       "tier": "act3",
-      "types": ["explore", "milestone"],
-      "after": ["the_keep"],
+      "types": [
+        "explore",
+        "milestone"
+      ],
+      "after": [
+        "the_keep"
+      ],
       "summary": "Skeleton towers and camps watch over every biome. Reach a tower or camp in the crimson forest, the warped forest, the soul valleys and the wastes.",
-      "mods": ["mr_dungeons_andtaverns"],
-      "landmarks": ["#nether_outposts"],
+      "mods": [
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [
+        "#nether_outposts"
+      ],
       "reward": "Bone blocks, a spyglass, Range XP"
     },
     {
       "id": "fortress_tower_lookout",
       "title": "From the Fortress Tower",
       "tier": "act3",
-      "types": ["explore", "photo"],
-      "after": ["four_watchtowers"],
+      "types": [
+        "explore",
+        "photo"
+      ],
+      "after": [
+        "four_watchtowers"
+      ],
       "summary": "Climb a Structory fortress tower and look out from its top: mark down any fortress, bastion or skull on the horizon in Vesna's journal.",
-      "mods": ["structory_towers"],
-      "landmarks": ["structory_towers:nether/fortress_tower"],
+      "mods": [
+        "structory_towers"
+      ],
+      "landmarks": [
+        "structory_towers:nether/fortress_tower"
+      ],
       "reward": "Explorer's Compass, map paper"
     },
     {
       "id": "mega_fortress",
       "title": "The Mega Fortress",
       "tier": "act3",
-      "types": ["explore", "kill"],
-      "after": ["fortress_tower_lookout"],
+      "types": [
+        "explore",
+        "kill"
+      ],
+      "after": [
+        "fortress_tower_lookout"
+      ],
       "summary": "One of Moog's mega fortresses dwarfs even YUNG's halls. Fight through its towers to the treasure at the top.",
-      "mods": ["mns", "lootintegrations_moog"],
-      "landmarks": ["mns:mega_fortress", "mns:nether_tower"],
+      "mods": [
+        "mns",
+        "lootintegrations_moog"
+      ],
+      "landmarks": [
+        "mns:mega_fortress",
+        "mns:nether_tower"
+      ],
       "reward": "Netherite scrap, a Spartan halberd"
     },
     {
       "id": "bridges_of_ash",
       "title": "Bridges of Ash",
       "tier": "act3",
-      "types": ["travel", "explore"],
-      "after": ["fortress_tower_lookout"],
+      "types": [
+        "travel",
+        "explore"
+      ],
+      "after": [
+        "fortress_tower_lookout"
+      ],
       "summary": "Ancient bridges span the lava lakes. Cross three of Moog's Nether bridges and note who built them: the stonework doesn't match any fortress.",
-      "mods": ["mns"],
-      "landmarks": ["#nether_bridges"],
+      "mods": [
+        "mns"
+      ],
+      "landmarks": [
+        "#nether_bridges"
+      ],
       "reward": "Agility XP, magma cream"
     },
     {
       "id": "giant_skull",
       "title": "The Giant's Skull",
       "tier": "act3",
-      "types": ["discover", "puzzle"],
-      "after": ["bridges_of_ash"],
+      "types": [
+        "discover",
+        "puzzle"
+      ],
+      "after": [
+        "bridges_of_ash"
+      ],
       "summary": "A skull the size of a house lies half-buried in the wastes, with a second one in the sand. Find both, then work out from the carvings inside which way the giant was facing when it fell.",
-      "mods": ["mns"],
-      "landmarks": ["mns:giant_skull", "mns:sandy_skull"],
+      "mods": [
+        "mns"
+      ],
+      "landmarks": [
+        "mns:giant_skull",
+        "mns:sandy_skull"
+      ],
       "reward": "Bone meal, a giant's tooth (named bone)"
     },
     {
       "id": "giants_sword",
       "title": "The Giant's Sword",
       "tier": "act3",
-      "types": ["explore", "fetch"],
-      "after": ["giant_skull"],
+      "types": [
+        "explore",
+        "fetch"
+      ],
+      "after": [
+        "giant_skull"
+      ],
       "summary": "The carvings point to a crimson forest where a colossal sword stands buried to the hilt. Climb it and recover what's lodged at the guard.",
-      "mods": ["mns", "spartanweaponry"],
-      "landmarks": ["mns:sword"],
+      "mods": [
+        "mns",
+        "spartanweaponry"
+      ],
+      "landmarks": [
+        "mns:sword"
+      ],
       "reward": "An enchanted Spartan greatsword"
     },
     {
       "id": "ghost_train",
       "title": "The Ghost Train",
       "tier": "act3",
-      "types": ["discover", "talk", "fetch"],
-      "after": ["bridges_of_ash"],
+      "types": [
+        "discover",
+        "talk",
+        "fetch"
+      ],
+      "after": [
+        "bridges_of_ash"
+      ],
       "summary": "A train sits on rails to nowhere in the Nether. Its spectral conductor wants the scattered cargo back in the wagons before it can 'depart'.",
-      "mods": ["mns"],
-      "landmarks": ["mns:train"],
+      "mods": [
+        "mns"
+      ],
+      "landmarks": [
+        "mns:train"
+      ],
       "reward": "Minecarts of gold nuggets, a conductor's lantern"
     },
     {
       "id": "nether_houses",
       "title": "Who Lives Here?",
       "tier": "act3",
-      "types": ["explore", "puzzle"],
-      "after": ["ghost_train"],
+      "types": [
+        "explore",
+        "puzzle"
+      ],
+      "after": [
+        "ghost_train"
+      ],
       "summary": "Small houses stand in the Nether, furnished and empty. Search two of them and piece together, from the notes left inside, what happened to the family.",
-      "mods": ["mns"],
-      "landmarks": ["mns:medium_house", "mns:medium_house_2"],
+      "mods": [
+        "mns"
+      ],
+      "landmarks": [
+        "mns:medium_house",
+        "mns:medium_house_2"
+      ],
       "reward": "Furniture blocks, a family keepsake"
     },
     {
       "id": "warped_dome",
       "title": "Under the Warped Dome",
       "tier": "act3",
-      "types": ["explore", "collect"],
-      "after": ["bridges_of_ash"],
+      "types": [
+        "explore",
+        "collect"
+      ],
+      "after": [
+        "bridges_of_ash"
+      ],
       "summary": "A glass dome shelters a warped garden and a pool full of warped toads. Bring back shroomlights, twisting vines and a warped toad caught in a bucket... or alive on a lead.",
-      "mods": ["mns", "alexsmobs"],
-      "landmarks": ["mns:warped_dome", "mns:warped_pool"],
+      "mods": [
+        "mns",
+        "alexsmobs"
+      ],
+      "landmarks": [
+        "mns:warped_dome",
+        "mns:warped_pool"
+      ],
       "reward": "Warped grape seeds, a Taming XP bonus"
     },
     {
       "id": "copper_tower",
       "title": "The Copper Tower",
       "tier": "act3",
-      "types": ["puzzle", "explore"],
-      "after": ["warped_dome"],
+      "types": [
+        "puzzle",
+        "explore"
+      ],
+      "after": [
+        "warped_dome"
+      ],
       "summary": "A copper tower in a realm without rain. Restore the oxidised lightning rods at the top and the vault door at the base opens.",
-      "mods": ["mns", "friendsandfoes"],
-      "landmarks": ["mns:copper_tower"],
+      "mods": [
+        "mns",
+        "friendsandfoes"
+      ],
+      "landmarks": [
+        "mns:copper_tower"
+      ],
       "reward": "Copper blocks, a copper golem head"
     },
     {
       "id": "arena_of_ash",
       "title": "Arena of Ash",
       "tier": "act3",
-      "types": ["contest", "defend", "timed"],
-      "after": ["mega_fortress"],
+      "types": [
+        "contest",
+        "defend",
+        "timed"
+      ],
+      "after": [
+        "mega_fortress"
+      ],
       "summary": "In one of the Nether arenas, survive three waves of blazes, wither skeletons and magma cubes for five minutes. Win in the dragon arena and Vesna buys the drinks.",
-      "mods": ["mns"],
-      "landmarks": ["mns:small_arena", "mns:large_arena", "mns:dragon_arena"],
+      "mods": [
+        "mns"
+      ],
+      "landmarks": [
+        "mns:small_arena",
+        "mns:large_arena",
+        "mns:dragon_arena"
+      ],
       "reward": "Attack XP, a golden apple, an arena trophy"
     },
     {
       "id": "shrine_offerings",
       "title": "Offerings at the Shrines",
       "tier": "act3",
-      "types": ["deliver", "explore"],
-      "after": ["through_the_flames"],
+      "types": [
+        "deliver",
+        "explore"
+      ],
+      "after": [
+        "through_the_flames"
+      ],
       "summary": "Small shrines dot the wastes, some still smoking. Leave a gold ingot at a shrine and at a smoking shrine and see what the realm gives back.",
-      "mods": ["mns"],
-      "landmarks": ["mns:shrine", "mns:smoking_shrine"],
+      "mods": [
+        "mns"
+      ],
+      "landmarks": [
+        "mns:shrine",
+        "mns:smoking_shrine"
+      ],
       "reward": "A random Nether boon (fire charges, quartz, ghast tear)"
     },
     {
       "id": "wishing_in_fire",
       "title": "Wishing in Fire",
       "tier": "any",
-      "types": ["discover", "fetch"],
-      "after": ["through_the_flames"],
+      "types": [
+        "discover",
+        "fetch"
+      ],
+      "after": [
+        "through_the_flames"
+      ],
       "summary": "A well in the Nether, full of lava instead of water. Find one in the crimson forest, one in the warped forest, or Moog's Voyager Nether well, and fish out the coins at its bottom with a fire-resistant hand.",
-      "mods": ["mns", "mvs"],
-      "landmarks": ["mns:medium_crimson_well", "mns:medium_warped_well", "mvs:nether_well"],
+      "mods": [
+        "mns",
+        "mvs"
+      ],
+      "landmarks": [
+        "mns:medium_crimson_well",
+        "mns:medium_warped_well",
+        "mvs:nether_well"
+      ],
       "reward": "Gold nuggets, a lucky coin"
     },
     {
       "id": "soul_valley_graves",
       "title": "The Soul Valley Graves",
       "tier": "act3",
-      "types": ["explore", "drop"],
-      "after": ["four_watchtowers"],
+      "types": [
+        "explore",
+        "drop"
+      ],
+      "after": [
+        "four_watchtowers"
+      ],
       "summary": "A graveyard in the soul sand valley is circled by soul vultures. Find it, and bring back a soul heart from one of the vultures.",
-      "mods": ["mns", "alexsmobs"],
-      "landmarks": ["mns:grave_yard"],
+      "mods": [
+        "mns",
+        "alexsmobs"
+      ],
+      "landmarks": [
+        "mns:grave_yard"
+      ],
       "reward": "Soul torches, a soul-speed book"
     },
     {
       "id": "mosquito_season",
       "title": "Mosquito Season",
       "tier": "act3",
-      "types": ["hunt", "drop"],
-      "after": ["soul_valley_graves"],
+      "types": [
+        "hunt",
+        "drop"
+      ],
+      "after": [
+        "soul_valley_graves"
+      ],
       "summary": "Crimson mosquitoes are draining the piglins' hoglins. Swat ten and bring a mosquito proboscis to the camp chief.",
-      "mods": ["alexsmobs", "mr_dungeons_andtaverns"],
-      "landmarks": ["nova_structures:piglin_camp"],
+      "mods": [
+        "alexsmobs",
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [
+        "nova_structures:piglin_camp"
+      ],
       "reward": "Mosquito repellent stew, Range XP"
     },
     {
       "id": "realm_survey",
       "title": "A Survey of Hell",
       "tier": "act3",
-      "types": ["explore", "milestone"],
-      "after": ["four_watchtowers"],
+      "types": [
+        "explore",
+        "milestone"
+      ],
+      "after": [
+        "four_watchtowers"
+      ],
       "summary": "Vesna's journal has blank pages for every biome she never saw. Stand in the crimson and warped forests, the basalt deltas, the soul sand valley and Biomes O' Plenty's visceral heap, withered abyss, crystalline chasm, undergrowth and erupting inferno.",
-      "mods": ["biomesoplenty"],
+      "mods": [
+        "biomesoplenty"
+      ],
       "landmarks": [],
       "reward": "Nature's Compass, Foraging XP"
     },
@@ -328,10 +598,17 @@
       "id": "uncharted_regions",
       "title": "Uncharted Regions",
       "tier": "act3",
-      "types": ["explore", "collect"],
-      "after": ["realm_survey"],
+      "types": [
+        "explore",
+        "collect"
+      ],
+      "after": [
+        "realm_survey"
+      ],
       "summary": "Rumours of glowing meadows and redstone pits: visit Regions Unexplored's infernal holt, glistering meadow, mycotoxic undergrowth, blackstone basin and redstone abyss, and bring back a sample from each.",
-      "mods": ["regions_unexplored"],
+      "mods": [
+        "regions_unexplored"
+      ],
       "landmarks": [],
       "reward": "Foraging XP, a sample satchel (backpack)"
     },
@@ -339,10 +616,19 @@
       "id": "stranded_vintner",
       "title": "The Stranded Vintner",
       "tier": "act3",
-      "types": ["encounter", "talk", "collect"],
-      "after": ["realm_survey"],
+      "types": [
+        "encounter",
+        "talk",
+        "collect"
+      ],
+      "after": [
+        "realm_survey"
+      ],
       "summary": "A Vinery winemaker who followed a rumour through a ruined portal is stranded in the crimson forest. He'll teach you Nether winemaking if you gather crimson and warped grape seeds for him.",
-      "mods": ["nethervinery", "vinery"],
+      "mods": [
+        "nethervinery",
+        "vinery"
+      ],
       "landmarks": [],
       "reward": "Crimson and warped grapevine pots"
     },
@@ -350,10 +636,17 @@
       "id": "nether_vineyard",
       "title": "A Vineyard in Hell",
       "tier": "act3",
-      "types": ["farm", "build"],
-      "after": ["stranded_vintner"],
+      "types": [
+        "farm",
+        "build"
+      ],
+      "after": [
+        "stranded_vintner"
+      ],
       "summary": "Plant crimson and warped grapes at your forward camp and harvest a crate of each, then build an apple press and fermentation barrel from Nether wood.",
-      "mods": ["nethervinery"],
+      "mods": [
+        "nethervinery"
+      ],
       "landmarks": [],
       "reward": "Farming XP, a crimson wine rack"
     },
@@ -361,10 +654,17 @@
       "id": "netherite_nectar",
       "title": "Netherite Nectar",
       "tier": "act3",
-      "types": ["brew", "deliver"],
-      "after": ["nether_vineyard"],
+      "types": [
+        "brew",
+        "deliver"
+      ],
+      "after": [
+        "nether_vineyard"
+      ],
       "summary": "Ferment Ghastly Grenache, Blazewine Pinot and the vintner's prize Netherite Nectar, and deliver a bottle of each to Vesna in Reece, who has waited thirty years for a decent drink.",
-      "mods": ["nethervinery"],
+      "mods": [
+        "nethervinery"
+      ],
       "landmarks": [],
       "reward": "Cooking XP, Lava Fizz, a netherite scrap"
     },
@@ -372,8 +672,13 @@
       "id": "debris_dive",
       "title": "Deep Debris",
       "tier": "act3",
-      "types": ["collect", "milestone"],
-      "after": ["skulls_on_the_wall"],
+      "types": [
+        "collect",
+        "milestone"
+      ],
+      "after": [
+        "skulls_on_the_wall"
+      ],
       "summary": "Down at the bottom of the Nether, mine eight ancient debris. Vesna explains the trick with beds and tells you never to tell her how it went.",
       "mods": [],
       "landmarks": [],
@@ -383,99 +688,164 @@
       "id": "the_burning_citadel",
       "title": "The Burning Citadel",
       "tier": "act3",
-      "types": ["discover", "explore"],
-      "after": ["arena_of_ash"],
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [
+        "arena_of_ash"
+      ],
       "summary": "Fire that walks, and shields that circle it: a citadel in the wastes is held by something Vesna only calls 'the crowned flame'. Find it and look at it from a safe distance.",
-      "mods": ["friendsandfoes"],
-      "landmarks": ["friendsandfoes:citadel"],
+      "mods": [
+        "friendsandfoes"
+      ],
+      "landmarks": [
+        "friendsandfoes:citadel"
+      ],
       "reward": "Fire resistance, snowballs (Vesna's joke)"
-    },
-    {
-      "id": "crowned_flame",
-      "title": "The Crowned Flame",
-      "tier": "act3",
-      "types": ["boss"],
-      "after": ["the_burning_citadel"],
-      "summary": "Break the Wildfire's shields and put out the crowned flame (120 health), with blazes spawning around it. A side fight: the realm doesn't wait for it.",
-      "mods": ["friendsandfoes"],
-      "landmarks": ["friendsandfoes:citadel"],
-      "reward": "Attack XP, a netherite scrap, Vesna's respect"
     },
     {
       "id": "nether_dungeons",
       "title": "Small Places, Sharp Teeth",
       "tier": "any",
-      "types": ["discover", "kill"],
-      "after": ["through_the_flames"],
+      "types": [
+        "discover",
+        "kill"
+      ],
+      "after": [
+        "through_the_flames"
+      ],
       "summary": "Stumble on one of YUNG's small Nether dungeons and clear its spawner.",
-      "mods": ["betterdungeons"],
-      "landmarks": ["betterdungeons:small_nether_dungeon"],
+      "mods": [
+        "betterdungeons"
+      ],
+      "landmarks": [
+        "betterdungeons:small_nether_dungeon"
+      ],
       "reward": "Nether loot, quartz"
     },
     {
       "id": "devils_rest",
       "title": "The Devil's Rest",
       "tier": "act3",
-      "types": ["discover", "puzzle"],
-      "after": ["through_the_flames"],
+      "types": [
+        "discover",
+        "puzzle"
+      ],
+      "after": [
+        "through_the_flames"
+      ],
       "summary": "A horned statue squats over the lava, and people say it grants a wish to anyone who answers its riddle. Find Moog's Nether devil and solve it.",
-      "mods": ["mvs"],
-      "landmarks": ["mvs:nether_devil"],
+      "mods": [
+        "mvs"
+      ],
+      "landmarks": [
+        "mvs:nether_devil"
+      ],
       "reward": "A ghast tear, a riddle book"
     },
     {
       "id": "crimson_donjon",
       "title": "The Crimson Donjon",
       "tier": "act4",
-      "types": ["explore", "kill"],
-      "after": ["the_keep"],
+      "types": [
+        "explore",
+        "kill"
+      ],
+      "after": [
+        "the_keep"
+      ],
       "summary": "Deep in a crimson forest stands a donjon, and near the bastions a piglin hamlet. Raid the donjon's tower, then trade at the hamlet with what you took.",
-      "mods": ["mr_dungeons_andtaverns", "lootintegrations_dnt"],
-      "landmarks": ["nova_structures:donjon", "nova_structures:hamlet"],
+      "mods": [
+        "mr_dungeons_andtaverns",
+        "lootintegrations_dnt"
+      ],
+      "landmarks": [
+        "nova_structures:donjon",
+        "nova_structures:hamlet"
+      ],
       "reward": "Netherite scrap, a Spartan Shields tower shield"
     },
     {
       "id": "the_soul_forge",
       "title": "The Soul Forge",
       "tier": "act3",
-      "types": ["discover", "explore"],
-      "after": ["debris_dive"],
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [
+        "debris_dive"
+      ],
       "summary": "An anvil the size of a hall, ringing in the soul sand valley. Find Cataclysm's Soul Black Smith, look but don't knock: whatever works the forge is not for now. Vesna will remember the way.",
-      "mods": ["cataclysm"],
-      "landmarks": ["cataclysm:soul_black_smith"],
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:soul_black_smith"
+      ],
       "reward": "A note in the journal, soul lanterns"
     },
     {
       "id": "arena_of_embers",
       "title": "The Arena of Embers",
       "tier": "act3",
-      "types": ["discover", "explore"],
-      "after": ["the_soul_forge"],
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [
+        "the_soul_forge"
+      ],
       "summary": "In the deepest wastes, a sealed arena burns with blue fire. Find Cataclysm's Burning Arena and listen at its doors; even Vesna won't go nearer.",
-      "mods": ["cataclysm"],
-      "landmarks": ["cataclysm:burning_arena"],
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:burning_arena"
+      ],
       "reward": "A note in the journal, blaze rods"
     },
     {
       "id": "monstrous_eye",
       "title": "The Monstrous Eye",
       "tier": "act5",
-      "types": ["craft", "talk"],
-      "after": ["the_soul_forge", "main_story:act5_start"],
+      "types": [
+        "craft",
+        "talk"
+      ],
+      "after": [
+        "the_soul_forge",
+        "main_story:act5_start"
+      ],
       "summary": "The strongholds have woken. Craft the Monstrous Eye from netherite scrap and an eye of ender, and bring it to Vesna so she can confirm it points at the forge you found.",
-      "mods": ["cataclysm"],
-      "landmarks": ["cataclysm:soul_black_smith"],
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:soul_black_smith"
+      ],
       "reward": "Fire resistance potions, golden apples"
     },
     {
       "id": "flame_eye",
       "title": "The Flame Eye",
       "tier": "act5",
-      "types": ["craft", "deliver"],
-      "after": ["arena_of_embers", "monstrous_eye"],
+      "types": [
+        "craft",
+        "deliver"
+      ],
+      "after": [
+        "arena_of_embers",
+        "monstrous_eye"
+      ],
       "summary": "Craft the Flame Eye and hand Vesna her journal back, filled in. She writes the last page herself: the arena is waiting, when the story is.",
-      "mods": ["cataclysm"],
-      "landmarks": ["cataclysm:burning_arena"],
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:burning_arena"
+      ],
       "reward": "Vesna's Ashwalker cloak (named, enchanted leather chestplate)"
     }
   ]

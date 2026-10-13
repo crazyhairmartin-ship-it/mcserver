@@ -1,0 +1,562 @@
+{
+  "line": "Out in the world: the sea and the shore",
+  "chapter": "discovery_sea",
+  "group": "world",
+  "giver": "The world itself: each quest appears when the player finds its place, item or biome on the coast or at sea. A few point to the Anglers' society or the Arcane order.",
+  "feel": "Salt, wrecks and drowned things: short stories that reward sailing out (Small Ships help) and diving down. Sunken fortresses wait for later acts.",
+  "quests": [
+    {
+      "id": "bones_of_the_deep",
+      "title": "Bones of the Deep",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore",
+        "collect"
+      ],
+      "after": [],
+      "summary": "A dragon's skeleton lies on the sea floor, ribs rising like a reef. Dive to its skull and take one of its bones; the Anglers' society swear it was a sea serpent.",
+      "mods": [
+        "mos"
+      ],
+      "landmarks": [
+        "#sea_dragon_bones"
+      ],
+      "reward": "Fishing XP, bone blocks, a potion of water breathing"
+    },
+    {
+      "id": "the_tribune_of_atlantis",
+      "title": "The Tribune of Atlantis",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "A tribune of white stone stands on the deep sea floor beside drowned Atlantean ruins. Light the tribune's four sea lanterns (bring them down) and the ruins' sealed vault opens.",
+      "mods": [
+        "mos"
+      ],
+      "landmarks": [
+        "mos:atlantis_tribune",
+        "mos:ruins_atlantis"
+      ],
+      "reward": "Fishing XP, prismarine, a trident"
+    },
+    {
+      "id": "the_conduit_arch",
+      "title": "The Conduit Arch",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "craft",
+        "build"
+      ],
+      "after": [],
+      "summary": "An arch of prismarine stands on the sea floor with an empty socket. Craft a conduit (heart of the sea and nautilus shells) and set it in the arch to light the waters around.",
+      "mods": [
+        "mos"
+      ],
+      "landmarks": [
+        "mos:conduit_arch"
+      ],
+      "reward": "Fishing XP, a nautilus shell, prismarine"
+    },
+    {
+      "id": "x_marks_the_spot",
+      "title": "X Marks the Spot",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore",
+        "fetch"
+      ],
+      "after": [],
+      "summary": "A buried treasure map from a wreck starts it. Follow the map to the X, dig out the chest (vanilla or Moog's) and bring home the heart of the sea.",
+      "mods": [
+        "mos"
+      ],
+      "landmarks": [
+        "minecraft:buried_treasure",
+        "mos:buried_treasure"
+      ],
+      "reward": "Fishing XP, a heart of the sea, gold"
+    },
+    {
+      "id": "wreck_diver",
+      "title": "Wreck Diver",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore",
+        "milestone"
+      ],
+      "after": [],
+      "summary": "Finding a shipwreck starts it. Loot the captain's chest from three different wrecks and piece together their last voyage from the logbooks.",
+      "mods": [
+        "mos"
+      ],
+      "landmarks": [
+        "#shipwrecks"
+      ],
+      "reward": "Fishing XP, a treasure map, emeralds"
+    },
+    {
+      "id": "drowned_temple",
+      "title": "Drowned Halls",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "kill",
+        "drop"
+      ],
+      "after": [],
+      "summary": "Sunken ruins are thick with drowned. Kill drowned around the ruins until one drops the Drowned Priest's Medallion (quest item), and bring it to a cleric.",
+      "mods": [
+        "mos"
+      ],
+      "landmarks": [
+        "#sunken_ruins"
+      ],
+      "reward": "Attack XP, a trident, a book of Impaling"
+    },
+    {
+      "id": "typhon",
+      "title": "The Typhon",
+      "tier": "act3",
+      "types": [
+        "discover",
+        "explore",
+        "kill",
+        "defend"
+      ],
+      "after": [
+        "main_story:act2_finale"
+      ],
+      "summary": "The sea fortress Typhon rises from the ocean, its guns still manned. Board it from a boat, fight up its decks and hold its bridge until the crew breaks.",
+      "mods": [
+        "dungeons_arise",
+        "smallships"
+      ],
+      "landmarks": [
+        "dungeons_arise:typhon"
+      ],
+      "reward": "Defense XP, an enchanted crossbow, a Small Ships cog"
+    },
+    {
+      "id": "golden_hind",
+      "title": "The Golden Hind",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "explore",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "The sunken ship Ceryneian Hind was carrying a golden figurehead of a deer. Search its flooded holds for the three pieces of the figurehead and rebuild it on deck.",
+      "mods": [
+        "dungeons_arise"
+      ],
+      "landmarks": [
+        "dungeons_arise:ceryneian_hind"
+      ],
+      "reward": "Fishing XP, gold blocks, a book of Depth Strider"
+    },
+    {
+      "id": "salvage_rights",
+      "title": "Salvage Rights",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect",
+        "craft"
+      ],
+      "after": [],
+      "summary": "Sunken wreckage lies in the shallows. Salvage planks, rope and a sail from it and build your own Small Ships cog.",
+      "mods": [
+        "t_and_t",
+        "smallships",
+        "supplementaries"
+      ],
+      "landmarks": [
+        "towns_and_towers:wreckage_ocean"
+      ],
+      "reward": "Crafting XP, a Small Ships cog, Supplementaries rope"
+    },
+    {
+      "id": "the_ocean_pillar",
+      "title": "The Ocean Pillar",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "A stone pillar rises from the open ocean with a ladder that ends halfway. Climb the rest of the way and claim the lookout's chest.",
+      "mods": [
+        "structory_towers",
+        "parcool"
+      ],
+      "landmarks": [
+        "structory_towers:ocean_pillar"
+      ],
+      "reward": "Agility XP, a spyglass, a compass"
+    },
+    {
+      "id": "drowned_keeper",
+      "title": "The Drowned Keeper",
+      "tier": "any",
+      "types": [
+        "discover",
+        "kill",
+        "build"
+      ],
+      "after": [],
+      "summary": "An ocean tower's light has gone out and its keeper walks the shallows as a drowned. Put him to rest and relight the lamp at the top.",
+      "mods": [
+        "mvs"
+      ],
+      "landmarks": [
+        "mvs:ocean_tower"
+      ],
+      "reward": "Fishing XP, a lantern, glowstone"
+    },
+    {
+      "id": "prismarine_cottages",
+      "title": "Houses of the Sea Folk",
+      "tier": "any",
+      "types": [
+        "discover",
+        "talk",
+        "trade"
+      ],
+      "after": [],
+      "summary": "Prismarine houses stand on the beach, built from monument stone. Find out where the builders got it, and trade them sea fish for a prismarine lantern.",
+      "mods": [
+        "mvs",
+        "aquaculture"
+      ],
+      "landmarks": [
+        "mvs:prismarine_house_1",
+        "mvs:prismarine_house_2"
+      ],
+      "reward": "Fishing XP, prismarine, sea lanterns"
+    },
+    {
+      "id": "last_orders",
+      "title": "Last Orders at the Beach Bar",
+      "tier": "any",
+      "types": [
+        "discover",
+        "cook",
+        "timed",
+        "deliver"
+      ],
+      "after": [],
+      "summary": "The beach bar's bartender is swamped and his customers are thirsty and impatient. Mix four Beachparty cocktails and serve them before each customer gives up (a timed rush); he tips you the plastic hat that lets him drink on the job twice as fast.",
+      "mods": [
+        "mvs",
+        "beachparty",
+        "artifacts"
+      ],
+      "landmarks": [
+        "mvs:beach_bar"
+      ],
+      "signature": "artifacts:plastic_drinking_hat",
+      "reward": "Cooking XP, the Plastic Drinking Hat, coconut cocktails"
+    },
+    {
+      "id": "the_ritual_circle",
+      "title": "The Ritual Circle",
+      "tier": "any",
+      "types": [
+        "discover",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "A circle of torches and shells on the beach. Place a seashell on each stone at sunset and play a beach disc on a radio, and the sea gives something back.",
+      "mods": [
+        "beachparty"
+      ],
+      "landmarks": [
+        "beachparty:ritual_circle"
+      ],
+      "reward": "Magic XP, a Beachparty music disc, sunglasses"
+    },
+    {
+      "id": "excavated_treasure",
+      "title": "Dig on the Beach",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Someone has been digging on the beach and left a half-dug hole. Finish the dig with a brush and a shovel and find out what they were after.",
+      "mods": [
+        "beachparty"
+      ],
+      "landmarks": [
+        "beachparty:excavated_treasure"
+      ],
+      "reward": "Fishing XP, a sand bucket, a message in a bottle"
+    },
+    {
+      "id": "gate_by_the_sea",
+      "title": "A Gate by the Sea",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "talk"
+      ],
+      "after": [],
+      "summary": "A nether portal archway stands on the shore, ringed by sea glass. Note how the sea has worn it and take a piece of its obsidian to the Arcane order, who know what lies on the other side.",
+      "mods": [
+        "mos"
+      ],
+      "landmarks": [
+        "mos:nether_portal_archway"
+      ],
+      "reward": "Magic XP, obsidian, a flint and steel"
+    },
+    {
+      "id": "the_faithful_hound",
+      "title": "The Faithful Hound",
+      "tier": "any",
+      "types": [
+        "discover",
+        "tame",
+        "deliver"
+      ],
+      "after": [],
+      "summary": "A prismarine statue of a dog still waits for its master on the sea floor. Tame a wolf, bring it to the statue and give it the statue's collar.",
+      "mods": [
+        "mos",
+        "domesticationinnovation"
+      ],
+      "landmarks": [
+        "mos:prismarine_dog_statue"
+      ],
+      "reward": "Taming XP, a Domestication Innovation collar tag"
+    },
+    {
+      "id": "underwater_garden",
+      "title": "The Underwater Garden",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect",
+        "farm"
+      ],
+      "after": [],
+      "summary": "A garden of coral and kelp grows inside sunken walls. Collect five kinds of Rainbow Reef coral and sea plants, then plant a reef of your own.",
+      "mods": [
+        "mos",
+        "rainbowreef"
+      ],
+      "landmarks": [
+        "mos:underwater_garden"
+      ],
+      "reward": "Foraging XP, coral, sea pickles"
+    },
+    {
+      "id": "underwater_shrine",
+      "title": "The Underwater Shrine",
+      "tier": "any",
+      "types": [
+        "discover",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "A small shrine on the sea floor holds an offering bowl. Leave the offering carved on it (a pufferfish and a pearl) and the shrine grants a blessing.",
+      "mods": [
+        "mos",
+        "aquaculture"
+      ],
+      "landmarks": [
+        "mos:underwater_shrine"
+      ],
+      "reward": "Magic XP, potions of water breathing and night vision"
+    },
+    {
+      "id": "small_ocean_temple",
+      "title": "The Little Temple",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "kill",
+        "explore"
+      ],
+      "after": [],
+      "summary": "A small ocean temple guarded by guardians. Clear it without breaking its sponges and claim its chest.",
+      "mods": [
+        "mos"
+      ],
+      "landmarks": [
+        "mos:small_ocean_temple"
+      ],
+      "reward": "Attack XP, wet sponges, prismarine"
+    },
+    {
+      "id": "drowned_village",
+      "title": "The Drowned Village",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "A castle, a church and houses lie under the waves where a village once stood. Find the church bell and the castle's crest, and learn the village's name.",
+      "mods": [
+        "mos"
+      ],
+      "landmarks": [
+        "mos:ruined_castle",
+        "mos:ruined_church",
+        "mos:ruined_house",
+        "mos:ruined_archway"
+      ],
+      "reward": "Fishing XP, a bell, gold"
+    },
+    {
+      "id": "conduit_ruin",
+      "title": "The Conduit Ruin",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "puzzle",
+        "explore"
+      ],
+      "after": [],
+      "summary": "A rare ruin on the ocean floor where a conduit once stood. Find its broken frame and repair it block by block until it lights again.",
+      "mods": [
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [
+        "nova_structures:conduit_ruin"
+      ],
+      "reward": "Magic XP, prismarine, a conduit"
+    },
+    {
+      "id": "beach_discs",
+      "title": "Songs of the Beach",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Finding the overgrown disc on the beach starts it. Collect all the Beachparty music discs and play them on a radio.",
+      "mods": [
+        "beachparty"
+      ],
+      "landmarks": [
+        "beachparty:excavated_treasure"
+      ],
+      "reward": "Fishing XP, a radio, a palm bar"
+    },
+    {
+      "id": "coral_reef",
+      "title": "The Coral Reef",
+      "tier": "any",
+      "types": [
+        "discover",
+        "fish"
+      ],
+      "after": [],
+      "summary": "Entering a warm ocean for the first time. Catch three reef fish (tropical fish or Rainbow Reef fish) in a bucket.",
+      "mods": [
+        "rainbowreef",
+        "aquaculture"
+      ],
+      "landmarks": [],
+      "reward": "Fishing XP, a fish bucket"
+    },
+    {
+      "id": "frozen_ocean",
+      "title": "The Frozen Sea",
+      "tier": "any",
+      "types": [
+        "discover",
+        "travel"
+      ],
+      "after": [],
+      "summary": "Entering a deep frozen ocean. Cross it among the icebergs and polar bears, and fish through a hole in the ice.",
+      "mods": [
+        "aquaculture"
+      ],
+      "landmarks": [],
+      "reward": "Fishing XP, blue ice"
+    },
+    {
+      "id": "tropic_islands",
+      "title": "Island Life",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Landing on a tropical island (Biomes O' Plenty tropics or Regions Unexplored). Crack open a coconut and rest in a hammock between palms.",
+      "mods": [
+        "biomesoplenty",
+        "regions_unexplored",
+        "beachparty",
+        "comforts"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, coconuts, a Comforts hammock"
+    },
+    {
+      "id": "rocky_reef",
+      "title": "The Rocky Reef",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Entering Regions Unexplored's rocky reef or hyacinth deeps. Dive among its stones and bring back its glowing plants.",
+      "mods": [
+        "regions_unexplored"
+      ],
+      "landmarks": [],
+      "reward": "Fishing XP, hyacinth flowers"
+    },
+    {
+      "id": "dune_beach",
+      "title": "The Dunes",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Walking a dune beach for the first time. Collect seashells and sea stars along the tide line.",
+      "mods": [
+        "biomesoplenty",
+        "beachparty"
+      ],
+      "landmarks": [],
+      "reward": "Fishing XP, Beachparty seashells"
+    },
+    {
+      "id": "mangrove_maze",
+      "title": "The Mangrove Maze",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Entering a mangrove swamp. Find your way through the roots by boat to the far side without leaving the water.",
+      "mods": [
+        "smallships"
+      ],
+      "landmarks": [],
+      "reward": "Agility XP, a mangrove boat, propagules"
+    }
+  ]
+}

@@ -504,6 +504,11 @@ Scylla. Insane: Ignis. The Leviathan: not found. Some pages (Scylla, Maledictus,
 - [ ] **Artifacts rarity**: set `artifactRarity` / `archaeologyChance` / campsite settings so artifacts mostly come
   from quests; check Loot Integrations.
 - [ ] **Plot approval**: outline at spoiler-safe level before writing the story chapters.
+- [ ] **Write the chapters from the quest list** (`tools/quests/src/plans/quests/`, 879 quests; coverage in
+  `docs/quest-coverage.md`), questline by questline, after approval.
+- [ ] **Towns and Towers villager ship fleets** are switched off with the other Towns and Towers villages
+  (`config/towns_and_towers`); the boats with a villager seen at sea are Structory's outcast fisherman's boats.
+  Turn `village_ocean` on if the fleets are wanted too.
 - [ ] **In-game test pass** of the quest framework (book, rewards, givers, talk steps, drops, encounters, timed
   challenges).
 - [ ] **Deploy**: FTB Quests / Teams / XMod Compat, `config/ftbquests`, the quest KubeJS scripts; `/ftbquests reload`.

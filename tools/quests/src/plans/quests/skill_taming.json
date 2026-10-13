@@ -5,101 +5,621 @@
   "giver": "The Sanctuary keepers: shepherds and leatherworkers in every village bring word of animals in need; Keeper Maren Thistlewood runs the sanctuary at the edge of Reece and gives the key tasks",
   "feel": "A sanctuary for rescued and rare animals that grows from a single pen into gardens, a butterfly house and paddocks for unicorns. Gentle, warm, sometimes urgent: animals to find, save, raise and protect.",
   "quests": [
-    {"id": "stray_wolf", "title": "The Stray", "tier": "prologue", "types": ["tame", "talk"], "after": [],
-     "summary": "A shepherd says a half-starved wolf follows the flock at a distance. Tame it, give it a collar tag and bring it to Maren's pen at the edge of Reece.",
-     "mods": ["domesticationinnovation"], "landmarks": ["#villages"], "reward": "Taming XP, a collar tag and bones"},
-    {"id": "first_pens", "title": "Pens and Pet Beds", "tier": "prologue", "types": ["build", "craft"], "after": ["stray_wolf"],
-     "summary": "The sanctuary is a single fence. Build proper pens, a shelter and pet beds so rescued animals have a place to rest and respawn.",
-     "mods": ["domesticationinnovation"], "landmarks": [], "reward": "Taming XP, a pet bed in your choice of colour"},
-    {"id": "lame_horse", "title": "The Lame Horse", "tier": "prologue", "types": ["explore", "tame", "ride"], "after": ["stray_wolf"],
-     "summary": "Travellers abandoned a lame horse at their horse campsite. Find the camp, feed the horse back to health with apples and hay, tame it and ride it home slowly.",
-     "mods": [], "landmarks": ["mvs:horse_campsite"], "reward": "Taming XP, a saddle"},
-    {"id": "fox_kits", "title": "Kits at the Hut", "tier": "prologue", "types": ["explore", "tame"], "after": ["first_pens"],
-     "summary": "A hunter's fox hut has orphaned kits nearby. Win the wary foxes' trust by breeding a pair with sweet berries so the kits are raised trusting you.",
-     "mods": [], "landmarks": ["mvs:fox_hut"], "reward": "Taming XP, a stack of glow berries"},
-    {"id": "critter_census", "title": "Who Lives Here", "tier": "prologue", "types": ["discover", "collect"], "after": ["stray_wolf"],
-     "summary": "Maren keeps a census of the small animals around Reece. Find an otter, a red panda, a ferret and a shima enaga, and tame a ferret to help with the count.",
-     "mods": ["crittersandcompanions"], "landmarks": [], "reward": "Taming XP, a silk lead"},
-    {"id": "butterfly_net", "title": "Wings in a Bottle", "tier": "prologue", "types": ["collect"], "after": ["critter_census"],
-     "summary": "Start the sanctuary's butterfly collection: bottle five different butterflies from Bok's Banging Butterflies across meadows and forests, without harming a single one.",
-     "mods": ["butterflies"], "landmarks": [], "reward": "Taming XP, a butterfly banner pattern"},
-    {"id": "cat_colony", "title": "The Cats of the Ruin", "tier": "act1", "types": ["rescue", "encounter", "tame"], "after": ["fox_kits"],
-     "summary": "A colony of stray cats lives in a crumbling ruin that creepers have overrun (encounter). Clear the creepers, coax every cat out with fish and bring them home; the old cat-lady of the ruin leaves you her slippers.",
-     "mods": ["artifacts"], "landmarks": ["#ruins"], "signature": "artifacts:kitty_slippers", "reward": "Taming XP, Kitty Slippers"},
-    {"id": "sled_dogs", "title": "Lost in the Blizzard", "tier": "act1", "types": ["rescue", "travel", "tame"], "after": ["stray_wolf"],
-     "summary": "The snowy dog hut's sled team ran off in a blizzard. Track the wolves across the snow, tame each one back and return them to their kennel.",
-     "mods": ["domesticationinnovation"], "landmarks": ["mvs:snowy_dog_hut"], "reward": "Taming XP, a feather on a stick"},
-    {"id": "butterfly_house", "title": "The Butterfly House", "tier": "act1", "types": ["build", "farm"], "after": ["butterfly_net"],
-     "summary": "Build a glass butterfly house, raise caterpillars in jars through chrysalis to butterfly, and release them inside among the flowers.",
-     "mods": ["butterflies"], "landmarks": [], "reward": "Taming XP, rare butterfly eggs"},
-    {"id": "koi_pond", "title": "The Koi Pond", "tier": "act1", "types": ["build", "fish"], "after": ["first_pens"],
-     "summary": "A merchant's koi are dying in a stagnant pool. Bucket them, dig a proper pond at the sanctuary with lily pads and clams, and add a dumbo octopus for the visitors.",
-     "mods": ["crittersandcompanions"], "landmarks": [], "reward": "Taming XP, a pearl necklace"},
-    {"id": "pet_enchanting", "title": "A Collar Worth Wearing", "tier": "act1", "types": ["craft"], "after": ["sled_dogs"],
-     "summary": "Maren shows you how to enchant a collar tag: give your wolf Health Boost and a creeper-sniffing Defusal so it can guard the sanctuary.",
-     "mods": ["domesticationinnovation"], "landmarks": [], "reward": "Taming XP, enchanted books for pets"},
-    {"id": "eggs_to_hatch", "title": "Eggs to Hatch", "tier": "act1", "types": ["fetch", "farm"], "after": ["koi_pond"],
-     "summary": "A storm flooded the riverbank nests. Collect duck, tortoise and snail eggs before they're lost, hatch them at the sanctuary and keep the young safe until they're grown.",
-     "mods": ["naturalist"], "landmarks": [], "reward": "Taming XP, a bug net"},
-    {"id": "dragonfly_rider", "title": "Shimmering Wings", "tier": "act1", "types": ["tame", "craft"], "after": ["critter_census"],
-     "summary": "Tame a dragonfly by the marsh and make it iron armour so it can patrol the sanctuary's pond for pests.",
-     "mods": ["crittersandcompanions"], "landmarks": [], "reward": "Taming XP, dragonfly wings"},
-    {"id": "fairy_meadow", "title": "Lights in the Meadow", "tier": "act2", "types": ["collect", "rescue"], "after": ["butterfly_house"],
-     "summary": "Fairies caught by a greedy collector are wilting in jars in his shed. Recover the fairy bottles, and catch a blue, a pink and a gold fairy of your own to release into the sanctuary garden.",
-     "mods": ["fays_fairies"], "landmarks": [], "reward": "Taming XP, a fairy bottle"},
-    {"id": "monkey_business", "title": "Monkey Business", "tier": "act2", "types": ["tame", "encounter"], "after": ["pet_enchanting"],
-     "summary": "A capuchin monkey, a raccoon and a crow have been stealing from the market (encounter). Catch them, tame them and turn the thieves into the sanctuary's most popular residents.",
-     "mods": ["alexsmobs"], "landmarks": ["#villages"], "reward": "Taming XP, a stack of bananas and the stolen goods"},
-    {"id": "falconry", "title": "The Falconer's Glove", "tier": "act2", "types": ["tame", "hunt"], "after": ["monkey_business"],
-     "summary": "Tame a bald eagle, hood it and fly it from a falconry glove; send it out to bring back a rabbit.",
-     "mods": ["alexsmobs"], "landmarks": [], "reward": "Taming XP, a falconry hood"},
-    {"id": "elephant_caravan", "title": "The Elephant Caravan", "tier": "act2", "types": ["escort", "ride"], "after": ["monkey_business"],
-     "summary": "An old trader's elephant is too old to work. Escort the trader and his elephant from the savanna to the sanctuary, where it can retire, riding at its slow pace.",
-     "mods": ["alexsmobs"], "landmarks": ["ctov:large/village_savanna"], "reward": "Taming XP, the trader's goods"},
-    {"id": "horse_roundup", "title": "Round Them Up", "tier": "act2", "types": ["encounter", "ride", "timed"], "after": ["lame_horse"],
-     "summary": "Lightning spooked the sanctuary's horses and they scattered across the plain (encounters). Ride out and lead every one back to the horse pen before nightfall; the old wrangler gives you his hat.",
-     "mods": ["artifacts"], "landmarks": ["mvs:horse_pen"], "signature": "artifacts:cowboy_hat", "reward": "Taming XP, Cowboy Hat"},
-    {"id": "horse_gear", "title": "Barding", "tier": "act2", "types": ["craft"], "after": ["horse_roundup"],
-     "summary": "Make proper armour for the sanctuary's horses: horse helms and armour from Wings, Horns and Hooves, and test a foal's bloodline with the DNA tester.",
-     "mods": ["ultimate_unicorn_mod"], "landmarks": [], "reward": "Taming XP, a slotted horse helm"},
-    {"id": "unicorn_tracks", "title": "Silver Hoofprints", "tier": "act2", "types": ["explore", "tame"], "after": ["horse_gear"],
-     "summary": "A shepherd swears she saw a white horse with a horn at dawn. Follow the tracks, gain the unicorn's trust and bring it to the sanctuary.",
-     "mods": ["ultimate_unicorn_mod"], "landmarks": [], "reward": "Taming XP, a talisman"},
-    {"id": "familiar_bond", "title": "A Bond of Spirit", "tier": "act3", "types": ["spell", "tame"], "after": ["fairy_meadow", "main_story:act3_start"],
-     "summary": "A visiting hedge witch gives Maren a Book of Familiars. Read it and bond a familiar of your own, a companion bound by more than food.",
-     "mods": ["bookoffamiliars"], "landmarks": [], "reward": "Taming XP, a familiar"},
-    {"id": "pegasus", "title": "Wings Over the Paddock", "tier": "act3", "types": ["tame", "ride"], "after": ["unicorn_tracks"],
-     "summary": "Pegasus feathers keep drifting down onto the sanctuary. Find the winged horse in the mountains, tame it and fly it home.",
-     "mods": ["ultimate_unicorn_mod"], "landmarks": [], "reward": "Taming XP, pegasus feathers"},
-    {"id": "hippocamp", "title": "Horse of the Sea", "tier": "act3", "types": ["tame", "ride", "travel"], "after": ["pegasus"],
-     "summary": "Fishermen speak of a horse with a fish's tail playing in their wake. Sail out past the boats at sea, find the hippocamp and ride it back to the sanctuary's sea pen.",
-     "mods": ["ultimate_unicorn_mod", "smallships"], "landmarks": ["#ships_at_sea"], "reward": "Taming XP, a hippocamp saddle blanket (dyed leather horse armour)"},
-    {"id": "nightmare", "title": "The Nightmare", "tier": "act3", "types": ["rescue", "encounter"], "after": ["pegasus", "main_story:act3_start"],
-     "summary": "In the Nether, piglins have chained a burning nightmare horse in their camp (encounter). Free it, calm it and bring it back through the portal.",
-     "mods": ["ultimate_unicorn_mod", "mr_dungeons_andtaverns"], "landmarks": ["nova_structures:piglin_camp"], "reward": "Taming XP, a nightmare hoof"},
-    {"id": "stolen_pet", "title": "Wherever You Are", "tier": "act3", "types": ["craft", "travel", "rescue"], "after": ["pet_enchanting"],
-     "summary": "A child's dog was stolen by a passing illager band. Make a wayward lantern from the dog's deed of ownership and follow its glow across the land to bring the dog home.",
-     "mods": ["domesticationinnovation"], "landmarks": ["#illager_hideouts"], "reward": "Taming XP, a deed of ownership"},
-    {"id": "poachers", "title": "Poachers at the Gate", "tier": "act3", "types": ["defend", "encounter"], "after": ["stolen_pet", "unicorn_tracks"],
-     "summary": "Word of a unicorn has reached the poachers' camp. They come for it at night (encounter): defend the sanctuary with your enchanted pets, then follow them back to their campsite and free the caged animals.",
-     "mods": ["domesticationinnovation", "dungeons_arise", "ultimate_unicorn_mod"], "landmarks": ["dungeons_arise:illager_campsite"], "reward": "Taming XP, the freed animals and an enchanted book of Herding"},
-    {"id": "the_full_herd", "title": "The Full Herd", "tier": "act4", "types": ["tame", "collect"], "after": ["hippocamp", "nightmare", "main_story:act4_start"],
-     "summary": "Complete the sanctuary's magical herd: add a kirin, a destrier and a reindeer to the unicorn, pegasus, hippocamp and nightmare.",
-     "mods": ["ultimate_unicorn_mod"], "landmarks": [], "reward": "Taming XP, diamond horse armour"},
-    {"id": "end_ready_pets", "title": "Pets for the Void", "tier": "act4", "types": ["craft"], "after": ["poachers", "main_story:act4_start"],
-     "summary": "Your companions want to follow you to the End. Enchant their collars with Void Cloud, Tethered Teleport and Fireproof so they come back safe.",
-     "mods": ["domesticationinnovation"], "landmarks": [], "reward": "Taming XP, a magnet and a stack of chorus fruit"},
-    {"id": "pet_show", "title": "Best in Show", "tier": "act4", "types": ["contest", "milestone"], "after": ["end_ready_pets", "falconry"],
-     "summary": "The sanctuary hosts a pet show for every village. Enter a companion judged on its enchantments, health, collar and bed, and beat the shepherds' champion sheepdog.",
-     "mods": ["domesticationinnovation", "crittersandcompanions"], "landmarks": ["#villages"], "reward": "Taming XP, a rosette and an acorn hat"},
-    {"id": "butterfly_atlas", "title": "The Complete Atlas", "tier": "act4", "types": ["collect"], "after": ["butterfly_house"],
-     "summary": "Finish the butterfly collection with the rarest wings: the ice butterfly from frozen peaks, the lava from the Nether and the obsidian from the darkest places.",
-     "mods": ["butterflies"], "landmarks": [], "reward": "Taming XP, a butterfly golem's favour"},
-    {"id": "after_the_storm", "title": "After the Storm", "tier": "act5", "types": ["rescue", "travel", "encounter"], "after": ["the_full_herd", "main_story:act5_start"],
-     "summary": "The great battles have driven animals out of their homes. Find the frightened ones wandering far from home (encounters) and lead them to the sanctuary by land, sea and air with your herd.",
-     "mods": ["ultimate_unicorn_mod", "alexsmobs", "naturalist"], "landmarks": [], "reward": "Taming XP, a herd of new residents"},
-    {"id": "taming_capstone", "title": "Keeper of the Sanctuary", "tier": "act5", "types": ["talk", "milestone"], "after": ["after_the_storm", "pet_show", "butterfly_atlas", "familiar_bond"],
-     "summary": "Maren names you Keeper and gives you the sanctuary's oldest gift, stitched for you.",
-     "mods": [], "landmarks": [], "reward": "Taming XP, the Thistlewood Saddle (named enchanted saddle, Unbreaking III and Mending)"}
+    {
+      "id": "stray_wolf",
+      "title": "The Stray",
+      "tier": "prologue",
+      "types": [
+        "tame",
+        "talk"
+      ],
+      "after": [],
+      "summary": "A shepherd says a half-starved wolf follows the flock at a distance. Tame it, give it a collar tag and bring it to Maren's pen at the edge of Reece.",
+      "mods": [
+        "domesticationinnovation"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Taming XP, a collar tag and bones"
+    },
+    {
+      "id": "first_pens",
+      "title": "Pens and Pet Beds",
+      "tier": "prologue",
+      "types": [
+        "build",
+        "craft"
+      ],
+      "after": [
+        "stray_wolf"
+      ],
+      "summary": "The sanctuary is a single fence. Build proper pens, a shelter and pet beds so rescued animals have a place to rest and respawn.",
+      "mods": [
+        "domesticationinnovation"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a pet bed in your choice of colour"
+    },
+    {
+      "id": "lame_horse",
+      "title": "The Lame Horse",
+      "tier": "prologue",
+      "types": [
+        "explore",
+        "tame",
+        "ride"
+      ],
+      "after": [
+        "stray_wolf"
+      ],
+      "summary": "Travellers abandoned a lame horse at their horse campsite. Find the camp, feed the horse back to health with apples and hay, tame it and ride it home slowly.",
+      "mods": [],
+      "landmarks": [
+        "mvs:horse_campsite"
+      ],
+      "reward": "Taming XP, a saddle"
+    },
+    {
+      "id": "fox_kits",
+      "title": "Kits at the Hut",
+      "tier": "prologue",
+      "types": [
+        "explore",
+        "tame"
+      ],
+      "after": [
+        "first_pens"
+      ],
+      "summary": "A hunter's fox hut has orphaned kits nearby. Win the wary foxes' trust by breeding a pair with sweet berries so the kits are raised trusting you.",
+      "mods": [],
+      "landmarks": [
+        "mvs:fox_hut"
+      ],
+      "reward": "Taming XP, a stack of glow berries"
+    },
+    {
+      "id": "critter_census",
+      "title": "The Critter Census",
+      "tier": "prologue",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [
+        "stray_wolf"
+      ],
+      "summary": "Maren keeps a census of the small animals around Reece. Find an otter, a red panda, a ferret and a shima enaga, and tame a ferret to help with the count.",
+      "mods": [
+        "crittersandcompanions"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a silk lead"
+    },
+    {
+      "id": "butterfly_net",
+      "title": "Wings in a Bottle",
+      "tier": "prologue",
+      "types": [
+        "collect"
+      ],
+      "after": [
+        "critter_census"
+      ],
+      "summary": "Start the sanctuary's butterfly collection: bottle five different butterflies from Bok's Banging Butterflies across meadows and forests, without harming a single one.",
+      "mods": [
+        "butterflies"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a butterfly banner pattern"
+    },
+    {
+      "id": "cat_colony",
+      "title": "The Cats of the Ruin",
+      "tier": "act1",
+      "types": [
+        "rescue",
+        "encounter",
+        "tame"
+      ],
+      "after": [
+        "fox_kits"
+      ],
+      "summary": "A colony of stray cats lives in a crumbling ruin that creepers have overrun (encounter). Clear the creepers, coax every cat out with fish and bring them home; the old cat-lady of the ruin leaves you her slippers.",
+      "mods": [
+        "artifacts"
+      ],
+      "landmarks": [
+        "#ruins"
+      ],
+      "signature": "artifacts:kitty_slippers",
+      "reward": "Taming XP, Kitty Slippers"
+    },
+    {
+      "id": "sled_dogs",
+      "title": "Lost in the Blizzard",
+      "tier": "act1",
+      "types": [
+        "rescue",
+        "travel",
+        "tame"
+      ],
+      "after": [
+        "stray_wolf"
+      ],
+      "summary": "The snowy dog hut's sled team ran off in a blizzard. Track the wolves across the snow, tame each one back and return them to their kennel.",
+      "mods": [
+        "domesticationinnovation"
+      ],
+      "landmarks": [
+        "mvs:snowy_dog_hut"
+      ],
+      "reward": "Taming XP, a feather on a stick"
+    },
+    {
+      "id": "butterfly_house",
+      "title": "The Butterfly House",
+      "tier": "act1",
+      "types": [
+        "build",
+        "farm"
+      ],
+      "after": [
+        "butterfly_net"
+      ],
+      "summary": "Build a glass butterfly house, raise caterpillars in jars through chrysalis to butterfly, and release them inside among the flowers.",
+      "mods": [
+        "butterflies"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, rare butterfly eggs"
+    },
+    {
+      "id": "koi_pond",
+      "title": "The Koi Pond",
+      "tier": "act1",
+      "types": [
+        "build",
+        "fish"
+      ],
+      "after": [
+        "first_pens"
+      ],
+      "summary": "A merchant's koi are dying in a stagnant pool. Bucket them, dig a proper pond at the sanctuary with lily pads and clams, and add a dumbo octopus for the visitors.",
+      "mods": [
+        "crittersandcompanions"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a pearl necklace"
+    },
+    {
+      "id": "pet_enchanting",
+      "title": "A Collar Worth Wearing",
+      "tier": "act1",
+      "types": [
+        "craft"
+      ],
+      "after": [
+        "sled_dogs"
+      ],
+      "summary": "Maren shows you how to enchant a collar tag: give your wolf Health Boost and a creeper-sniffing Defusal so it can guard the sanctuary.",
+      "mods": [
+        "domesticationinnovation"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, enchanted books for pets"
+    },
+    {
+      "id": "eggs_to_hatch",
+      "title": "Eggs to Hatch",
+      "tier": "act1",
+      "types": [
+        "fetch",
+        "farm"
+      ],
+      "after": [
+        "koi_pond"
+      ],
+      "summary": "A storm flooded the riverbank nests. Collect duck, tortoise and snail eggs before they're lost, hatch them at the sanctuary and keep the young safe until they're grown.",
+      "mods": [
+        "naturalist"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a bug net"
+    },
+    {
+      "id": "dragonfly_rider",
+      "title": "Shimmering Wings",
+      "tier": "act1",
+      "types": [
+        "tame",
+        "craft"
+      ],
+      "after": [
+        "critter_census"
+      ],
+      "summary": "Tame a dragonfly by the marsh and make it iron armour so it can patrol the sanctuary's pond for pests.",
+      "mods": [
+        "crittersandcompanions"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, dragonfly wings"
+    },
+    {
+      "id": "fairy_meadow",
+      "title": "Lights in the Meadow",
+      "tier": "act2",
+      "types": [
+        "collect",
+        "rescue"
+      ],
+      "after": [
+        "butterfly_house"
+      ],
+      "summary": "Fairies caught by a greedy collector are wilting in jars in his shed. Recover the fairy bottles, and catch a blue, a pink and a gold fairy of your own to release into the sanctuary garden.",
+      "mods": [
+        "fays_fairies"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a fairy bottle"
+    },
+    {
+      "id": "monkey_business",
+      "title": "Monkey Business",
+      "tier": "act2",
+      "types": [
+        "tame",
+        "encounter"
+      ],
+      "after": [
+        "pet_enchanting"
+      ],
+      "summary": "A capuchin monkey, a raccoon and a crow have been stealing from the market (encounter). Catch them, tame them and turn the thieves into the sanctuary's most popular residents.",
+      "mods": [
+        "alexsmobs"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Taming XP, a stack of bananas and the stolen goods"
+    },
+    {
+      "id": "falconry",
+      "title": "The Falconer's Glove",
+      "tier": "act2",
+      "types": [
+        "tame",
+        "hunt"
+      ],
+      "after": [
+        "monkey_business"
+      ],
+      "summary": "Tame a bald eagle, hood it and fly it from a falconry glove; send it out to bring back a rabbit.",
+      "mods": [
+        "alexsmobs"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a falconry hood"
+    },
+    {
+      "id": "elephant_caravan",
+      "title": "The Elephant Caravan",
+      "tier": "act2",
+      "types": [
+        "escort",
+        "ride"
+      ],
+      "after": [
+        "monkey_business"
+      ],
+      "summary": "An old trader's elephant is too old to work. Escort the trader and his elephant from the savanna to the sanctuary, where it can retire, riding at its slow pace.",
+      "mods": [
+        "alexsmobs"
+      ],
+      "landmarks": [
+        "ctov:large/village_savanna"
+      ],
+      "reward": "Taming XP, the trader's goods"
+    },
+    {
+      "id": "horse_roundup",
+      "title": "Round Them Up",
+      "tier": "act2",
+      "types": [
+        "encounter",
+        "ride",
+        "timed"
+      ],
+      "after": [
+        "lame_horse"
+      ],
+      "summary": "Lightning spooked the sanctuary's horses and they scattered across the plain (encounters). Ride out and lead every one back to the horse pen before nightfall; the old wrangler gives you his hat.",
+      "mods": [
+        "artifacts"
+      ],
+      "landmarks": [
+        "mvs:horse_pen"
+      ],
+      "signature": "artifacts:cowboy_hat",
+      "reward": "Taming XP, Cowboy Hat"
+    },
+    {
+      "id": "horse_gear",
+      "title": "Barding",
+      "tier": "act2",
+      "types": [
+        "craft"
+      ],
+      "after": [
+        "horse_roundup"
+      ],
+      "summary": "Make proper armour for the sanctuary's horses: horse helms and armour from Wings, Horns and Hooves, and test a foal's bloodline with the DNA tester.",
+      "mods": [
+        "ultimate_unicorn_mod"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a slotted horse helm"
+    },
+    {
+      "id": "unicorn_tracks",
+      "title": "Silver Hoofprints",
+      "tier": "act2",
+      "types": [
+        "explore",
+        "tame"
+      ],
+      "after": [
+        "horse_gear"
+      ],
+      "summary": "A shepherd swears she saw a white horse with a horn at dawn. Follow the tracks, gain the unicorn's trust and bring it to the sanctuary.",
+      "mods": [
+        "ultimate_unicorn_mod"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a talisman"
+    },
+    {
+      "id": "familiar_bond",
+      "title": "A Bond of Spirit",
+      "tier": "act3",
+      "types": [
+        "spell",
+        "tame"
+      ],
+      "after": [
+        "fairy_meadow",
+        "main_story:act3_start"
+      ],
+      "summary": "A visiting hedge witch gives Maren a Book of Familiars. Read it and bond a familiar of your own, a companion bound by more than food.",
+      "mods": [
+        "bookoffamiliars"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a familiar"
+    },
+    {
+      "id": "pegasus",
+      "title": "Wings Over the Paddock",
+      "tier": "act3",
+      "types": [
+        "tame",
+        "ride"
+      ],
+      "after": [
+        "unicorn_tracks"
+      ],
+      "summary": "Pegasus feathers keep drifting down onto the sanctuary. Find the winged horse in the mountains, tame it and fly it home.",
+      "mods": [
+        "ultimate_unicorn_mod"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, pegasus feathers"
+    },
+    {
+      "id": "hippocamp",
+      "title": "Horse of the Sea",
+      "tier": "act3",
+      "types": [
+        "tame",
+        "ride",
+        "travel"
+      ],
+      "after": [
+        "pegasus"
+      ],
+      "summary": "Fishermen speak of a horse with a fish's tail playing in their wake. Sail out past the boats at sea, find the hippocamp and ride it back to the sanctuary's sea pen.",
+      "mods": [
+        "ultimate_unicorn_mod",
+        "smallships"
+      ],
+      "landmarks": [
+        "#ships_at_sea"
+      ],
+      "reward": "Taming XP, a hippocamp saddle blanket (dyed leather horse armour)"
+    },
+    {
+      "id": "nightmare",
+      "title": "The Nightmare",
+      "tier": "act3",
+      "types": [
+        "rescue",
+        "encounter"
+      ],
+      "after": [
+        "pegasus",
+        "main_story:act3_start"
+      ],
+      "summary": "In the Nether, piglins have chained a burning nightmare horse in their camp (encounter). Free it, calm it and bring it back through the portal.",
+      "mods": [
+        "ultimate_unicorn_mod",
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [
+        "nova_structures:piglin_camp"
+      ],
+      "reward": "Taming XP, a nightmare hoof"
+    },
+    {
+      "id": "stolen_pet",
+      "title": "Wherever You Are",
+      "tier": "act3",
+      "types": [
+        "craft",
+        "travel",
+        "rescue"
+      ],
+      "after": [
+        "pet_enchanting"
+      ],
+      "summary": "A child's dog was stolen by a passing illager band. Make a wayward lantern from the dog's deed of ownership and follow its glow across the land to bring the dog home.",
+      "mods": [
+        "domesticationinnovation"
+      ],
+      "landmarks": [
+        "#illager_hideouts"
+      ],
+      "reward": "Taming XP, a deed of ownership"
+    },
+    {
+      "id": "poachers",
+      "title": "Poachers at the Gate",
+      "tier": "act3",
+      "types": [
+        "defend",
+        "encounter"
+      ],
+      "after": [
+        "stolen_pet",
+        "unicorn_tracks"
+      ],
+      "summary": "Word of a unicorn has reached the poachers' camp. They come for it at night (encounter): defend the sanctuary with your enchanted pets, then follow them back to their campsite and free the caged animals.",
+      "mods": [
+        "domesticationinnovation",
+        "dungeons_arise",
+        "ultimate_unicorn_mod"
+      ],
+      "landmarks": [
+        "dungeons_arise:illager_campsite"
+      ],
+      "reward": "Taming XP, the freed animals and an enchanted book of Herding"
+    },
+    {
+      "id": "the_full_herd",
+      "title": "The Full Herd",
+      "tier": "act4",
+      "types": [
+        "tame",
+        "collect"
+      ],
+      "after": [
+        "hippocamp",
+        "nightmare",
+        "main_story:act4_start"
+      ],
+      "summary": "Complete the sanctuary's magical herd: add a kirin, a destrier and a reindeer to the unicorn, pegasus, hippocamp and nightmare.",
+      "mods": [
+        "ultimate_unicorn_mod"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, diamond horse armour"
+    },
+    {
+      "id": "end_ready_pets",
+      "title": "Pets for the Void",
+      "tier": "act4",
+      "types": [
+        "craft"
+      ],
+      "after": [
+        "poachers",
+        "main_story:act4_start"
+      ],
+      "summary": "Your companions want to follow you to the End. Enchant their collars with Void Cloud, Tethered Teleport and Fireproof so they come back safe.",
+      "mods": [
+        "domesticationinnovation"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a magnet and a stack of chorus fruit"
+    },
+    {
+      "id": "pet_show",
+      "title": "Best in Show",
+      "tier": "act4",
+      "types": [
+        "contest",
+        "milestone"
+      ],
+      "after": [
+        "end_ready_pets",
+        "falconry"
+      ],
+      "summary": "The sanctuary hosts a pet show for every village. Enter a companion judged on its enchantments, health, collar and bed, and beat the shepherds' champion sheepdog.",
+      "mods": [
+        "domesticationinnovation",
+        "crittersandcompanions"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Taming XP, a rosette and an acorn hat"
+    },
+    {
+      "id": "butterfly_atlas",
+      "title": "The Complete Atlas",
+      "tier": "act4",
+      "types": [
+        "collect"
+      ],
+      "after": [
+        "butterfly_house"
+      ],
+      "summary": "Finish the butterfly collection with the rarest wings: the ice butterfly from frozen peaks, the lava from the Nether and the obsidian from the darkest places.",
+      "mods": [
+        "butterflies"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a butterfly golem's favour"
+    },
+    {
+      "id": "after_the_storm",
+      "title": "After the Storm",
+      "tier": "act5",
+      "types": [
+        "rescue",
+        "travel",
+        "encounter"
+      ],
+      "after": [
+        "the_full_herd",
+        "main_story:act5_start"
+      ],
+      "summary": "The great battles have driven animals out of their homes. Find the frightened ones wandering far from home (encounters) and lead them to the sanctuary by land, sea and air with your herd.",
+      "mods": [
+        "ultimate_unicorn_mod",
+        "alexsmobs",
+        "naturalist"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP, a herd of new residents"
+    },
+    {
+      "id": "taming_capstone",
+      "title": "Keeper of the Sanctuary",
+      "tier": "act5",
+      "types": [
+        "talk",
+        "milestone"
+      ],
+      "after": [
+        "after_the_storm",
+        "pet_show",
+        "butterfly_atlas",
+        "familiar_bond"
+      ],
+      "summary": "Maren names you Keeper and gives you the sanctuary's oldest gift, stitched for you.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Taming XP, the Thistlewood Saddle (named enchanted saddle, Unbreaking III and Mending)"
+    }
   ]
 }
