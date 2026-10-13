@@ -13,6 +13,7 @@ public final class CombatState {
     public boolean counterReady;
     public final Streak momentum = new Streak(60, 3);
     public final Streak flurry = new Streak(Long.MAX_VALUE / 4, 5);   // every 5th melee hit, no time limit
+    public final Streak reaper = new Streak(60, 3);                     // Reaper's Due: every 3rd scythe swing in a row
     public final SwingGate swing = new SwingGate();
     /** Gathering XP for vein-mined blocks (same tick as another break) is cut to a quarter. */
     public final BreakTick breaks = new BreakTick(0.25);

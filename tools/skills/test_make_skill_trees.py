@@ -363,4 +363,4 @@ def test_agility_nodes_unlock_parcool_moves():
 def test_magic_rework_tier3_is_spell_power_or_summons():
     names = {n['name']: n for n in tree('magic')['nodes']}
     assert names['Battlemage']['b'] == 'A' and names['Summoner']['b'] == 'B' and names['Summoner']['t'] == 3
-    assert names['Sourcecraft']['t'] == 2 and 'Artificer' not in names
+    assert names['Fae Bond']['t'] == 2 and 'Artificer' not in names

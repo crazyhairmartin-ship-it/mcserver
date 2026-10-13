@@ -1,0 +1,17 @@
+{
+  "name": "Fairies",
+  "icon": "fays_fairies:fairy_bottle",
+  "category": "patchouli:magic",
+  "sortnum": 1,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Little $(l)fairies$() drift through forests, most of all in the $(l)Twilight Forest$(), less often in magical forests like Dark Forests and old growth woods.$(br2)Give one an $(l)amethyst shard$() to tame her. Feed glowstone dust to heal or breed them."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "A tamed fairy follows you and slowly $(l)heals$() you while you're hurt.$(br2)The $(l)Fae Bond$() perks in the Magic tree give a chance that a fairy saves you from a killing blow.",
+      "title": "Fairy Friends"
+    }
+  ]
+}

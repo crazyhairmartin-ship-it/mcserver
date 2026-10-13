@@ -1,0 +1,18 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#fotf:tf_unicorns/heights",
+  "spawners": [
+    {
+      "type": "ultimate_unicorn_mod:kirin",
+      "weight": 14,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "ultimate_unicorn_mod:destrier",
+      "weight": 12,
+      "minCount": 1,
+      "maxCount": 3
+    }
+  ]
+}

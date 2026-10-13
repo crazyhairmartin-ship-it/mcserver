@@ -732,7 +732,7 @@
   },
   "heavy_arms_1": {
     "title": "Heavy Arms",
-    "description": "Two-handed weapons +10% damage when your off hand is empty",
+    "description": "Two-handed weapons +10% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -760,7 +760,7 @@
   },
   "heavy_arms_2": {
     "title": "Heavy Arms",
-    "description": "Two-handed weapons +20% damage when your off hand is empty",
+    "description": "Two-handed weapons +20% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -788,7 +788,7 @@
   },
   "heavy_arms_3": {
     "title": "Heavy Arms",
-    "description": "Two-handed weapons +30% damage when your off hand is empty",
+    "description": "Two-handed weapons +30% damage",
     "icon": {
       "type": "item",
       "data": {
@@ -833,7 +833,7 @@
   },
   "duelist_1": {
     "title": "Duelist",
-    "description": "Daggers, rapiers and swords +8% attack speed",
+    "description": "A dagger, rapier or sword in your main hand gets +5% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -854,14 +854,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "duelist_speed",
-          "value": 0.08
+          "value": 0.05
         }
       }
     ]
   },
   "duelist_2": {
     "title": "Duelist",
-    "description": "Daggers, rapiers and swords +16% attack speed",
+    "description": "A dagger, rapier or sword in your main hand gets +10% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -882,14 +882,14 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "duelist_speed",
-          "value": 0.08
+          "value": 0.05
         }
       }
     ]
   },
   "duelist_3": {
     "title": "Duelist",
-    "description": "Daggers, rapiers and swords +24% attack speed",
+    "description": "A dagger, rapier or sword in your main hand gets +15% attack speed",
     "icon": {
       "type": "item",
       "data": {
@@ -910,7 +910,7 @@
         "type": "fotfskills:perk",
         "data": {
           "perk": "duelist_speed",
-          "value": 0.08
+          "value": 0.05
         }
       }
     ]
@@ -1474,7 +1474,7 @@
   },
   "cleave_1": {
     "title": "Cleave",
-    "description": "Two-handed hits splash 30% to nearby mobs when your off hand is empty",
+    "description": "Two-handed hits splash 30% to nearby mobs",
     "icon": {
       "type": "item",
       "data": {
@@ -1519,7 +1519,7 @@
   },
   "flurry_1": {
     "title": "Flurry",
-    "description": "Every 5th hit strikes twice",
+    "description": "The 5th attack of a combo strikes twice",
     "icon": {
       "type": "item",
       "data": {

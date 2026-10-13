@@ -3,10 +3,6 @@
   "values": [
     "minecraft:crossbow",
     {
-      "id": "ars_nouveau:spell_crossbow",
-      "required": false
-    },
-    {
       "id": "cataclysm:laser_gatling",
       "required": false
     },
@@ -24,6 +20,42 @@
     },
     {
       "id": "irons_spellbooks:autoloader_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ancient_metal_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:black_steel_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:cursium_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:ignitium_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartancataclysm:witherite_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:fiery_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:ironwood_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:knightmetal_heavy_crossbow",
+      "required": false
+    },
+    {
+      "id": "spartantwilight:steeleaf_heavy_crossbow",
       "required": false
     },
     {

@@ -112,7 +112,7 @@ def rows(tool_tags, lang):
     for tag, members in tool_tags.items():
         tool, implied = TOOL_TAGS[tag]
         for item in members:
-            if item in gone or item.startswith('tconstruct:'):
+            if item in gone:
                 continue
             row = items.setdefault(item, {'id': item, 'mod': item.split(':')[0], 'types': [], 'tool': '', 'damage': ''})
             row['tool'] = tool

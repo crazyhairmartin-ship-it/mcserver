@@ -13,6 +13,8 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   If nobody is near the friend's mailbox it's delivered straight in. Other dimensions get it instantly.
   A signed letter stays the same item and opens as a readable book. Letters are written and read on letter
   paper instead of the book page (`BookEditScreenMixin`, `BookViewScreenMixin`, texture from `draw_icons.py`).
+  A signed letter can go on a lectern for anyone to read, on the same letter paper (`LetterItem.useOn`,
+  `LecternScreenMixin`, `LecternBlockEntityMixin`, `LecternLetterMenuMixin` (before Amendments' book-and-quill editor), `kubejs/data/minecraft/tags/items/lectern_books.json`).
 - **Collar effects on GeckoLib pets.** Domestication Innovation only draws its collar enchantment effects
   (shadow hands, magnet, auras, blazing bars...) on vanilla-style renderers, so Critters & Companions,
   Naturalist and unicorn-mod pets showed nothing. `PetOverlaysGeoLayer` runs DI's own `LayerPetOverlays` from a
@@ -33,6 +35,11 @@ Small Forge add-on for Ender Mail and Domestication Innovation (both sides).
   a crooked stamp (`tools/mailbox/make_package.py`, `PackageBlockMixin` for shape/occlusion).
 - **Spider snacks.** Tamed jumping spiders heal from spider eyes and rotten flesh (`SpiderSnacks`). Handled at
   HIGHEST priority on both entity-click events: the spider's own click handling kept a KubeJS version from firing.
+- **Move matching items into / restock from the Storage Lectern.** Two purple side tabs above the lectern's own
+  (`AbstractStorageTerminalScreenMixin`, icons `textures/gui/lectern_*.png`) send `LecternDeposit`: up arrow puts
+  main-inventory stacks whose item is already stored in via `pushStack`; down arrow tops up every partial stack
+  (hotbar included) via `pullStack`. IPN's buttons are hidden on the lectern (config/inventoryprofilesnext/
+  integrationHints/endermail.json), since they can't reach its virtual slots.
 - **Water one block below farmland hydrates it** (`FarmBlockMixin` lowers `isNearWater`'s scan box by one).
 
 The wood list comes from `tools/mailbox/woods.json`; `tools/mailbox/make_mailbox.py` regenerates

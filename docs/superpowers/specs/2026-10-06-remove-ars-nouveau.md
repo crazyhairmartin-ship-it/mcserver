@@ -1,7 +1,6 @@
 # Remove Ars Nouveau cleanly, add Obscura's Simple Storage
 
-Status: spec only, nothing applied. Written 2026-10-06 from the repo on branch `claude/cloud-session-setup-epiuzy`, with
-Ars Nouveau `ars_nouveau-1.20.1-4.12.7-all.jar` and Obscura's Simple Storage v5.0.0 checked inside their jars.
+Status: **superseded.** Ars Nouveau was removed on `main` in commit `39f6258` with its own mapping (archwood → Empyreal wood, the rest to vanilla, `removed_ids_ars.txt`; lectern and Bookwyrm extras dropped; Archwood Forest biome kept as a forest). This spec is kept as history. It was written 2026-10-06 on branch `claude/cloud-session-setup-epiuzy`.
 
 ## Goal
 

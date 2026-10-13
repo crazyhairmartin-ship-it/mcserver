@@ -60,23 +60,27 @@ public final class WeaponPerks {
             event.setAmount((float) (amount * abilityMultiplier(player, player.m_21205_())));
             return;
         }
+        ItemStack thrownWeapon = fotfskills.compat.IronsThrow.weapon(direct);
+        if (!thrownWeapon.m_41619_()) {          // Iron's Throw: a hit with the thrown weapon (no swing combos)
+            amount = weaponTypeBonus(player, target, thrownWeapon, amount);
+            double pct = Perks.get(player, "pct_thrown");
+            if (Weapons.is(thrownWeapon, "axe")) {
+                pct += Perks.get(player, "pct_thrown_axe");
+            }
+            if (Weapons.twoHanded(player, thrownWeapon)) {
+                pct += Perks.get(player, "pct_two_handed");
+            }
+            amount *= (float) (1 + pct);
+            if (Weapons.is(thrownWeapon, "blunt") && Perks.get(player, "crush_armor") > 0) {
+                crush(target, Perks.get(player, "crush_armor"), now);
+            }
+            event.setAmount(amount);
+            return;
+        }
         if (direct == player && "player".equals(event.getSource().m_19385_())) {   // a real swing, not thorns or spells
             boolean swing = state.swing.first(now);          // the main target; sweep targets share the tick
             ItemStack weapon = player.m_21205_();
-            if (Weapons.is(weapon, "pickaxe") || Weapons.is(weapon, "blunt")) {
-                amount += Perks.get(player, "dmg_pickaxe_blunt");
-            }
-            if (Weapons.is(weapon, "axe")) {
-                amount += Perks.get(player, "dmg_axe");
-                amount *= (float) ArmorPierce.multiplier(target.m_21230_(), target.m_21133_(Attributes.f_22285_), amount,
-                        Perks.get(player, "armor_pierce_axe"));
-            }
-            if (Weapons.is(weapon, "scythe")) {
-                amount += Perks.get(player, "dmg_scythe");
-            }
-            if (Weapons.is(weapon, "polearm")) {
-                amount += Perks.get(player, "dmg_polearm");
-            }
+            amount = weaponTypeBonus(player, target, weapon, amount);
             double pct = 0;
             if (Weapons.twoHanded(player, weapon)) {
                 pct += Perks.get(player, "pct_two_handed");
@@ -97,9 +101,8 @@ public final class WeaponPerks {
                 state.lastCast = -100000;          // the next hit only
             }
             amount *= (float) (1 + pct);
-            if (swing && Perks.get(player, "flurry") > 0 && state.flurry.hit(now) == 5) {
-                amount *= 2;                        // Flurry: every 5th quick hit strikes twice
-                state.flurry.reset();
+            if (swing && Perks.get(player, "flurry") > 0 && nthOfCombo(player, state.flurry, 5, now)) {
+                amount *= 2;                        // Flurry: the combo's 5th attack strikes twice
             }
             if (Weapons.is(weapon, "blunt") && Perks.get(player, "crush_armor") > 0) {
                 crush(target, Perks.get(player, "crush_armor"), now);
@@ -115,8 +118,10 @@ public final class WeaponPerks {
             if (cleave > 0 && Weapons.twoHanded(player, weapon)) {
                 splash(player, target, target, (float) (amount * cleave), 2.5);
             }
-            if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe")) {
-                splash(player, player, target, amount, 3);   // Reaper's Due: every hostile mob around you, full damage
+            if (Perks.get(player, "reapers_due") > 0 && Weapons.is(weapon, "scythe") && nthOfCombo(player, state.reaper, 3, now)) {
+                splash(player, player, target, amount, 3);   // Reaper's Due: the combo's 3rd attack spins through every
+                                                              // hostile mob within 3 blocks at full damage
+                reaperSpin(player);
             }
         } else if (direct instanceof Projectile projectile) {
             Projectiles.Kind kind = Projectiles.kind(projectile);
@@ -132,6 +137,25 @@ public final class WeaponPerks {
             }
             event.setAmount((float) (amount * (1 + pct)));
         }
+    }
+
+    /** The per-weapon-type flat bonuses (and the axe's armor pierce), for swings and Iron's Throw alike. */
+    private static float weaponTypeBonus(ServerPlayer player, LivingEntity target, ItemStack weapon, float amount) {
+        if (Weapons.is(weapon, "pickaxe") || Weapons.is(weapon, "blunt")) {
+            amount += Perks.get(player, "dmg_pickaxe_blunt");
+        }
+        if (Weapons.is(weapon, "axe")) {
+            amount += Perks.get(player, "dmg_axe");
+            amount *= (float) ArmorPierce.multiplier(target.m_21230_(), target.m_21133_(Attributes.f_22285_), amount,
+                    Perks.get(player, "armor_pierce_axe"));
+        }
+        if (Weapons.is(weapon, "scythe")) {
+            amount += Perks.get(player, "dmg_scythe");
+        }
+        if (Weapons.is(weapon, "polearm")) {
+            amount += Perks.get(player, "dmg_polearm");
+        }
+        return amount;
     }
 
     /** Second Wind: a hit that would kill leaves you on 1 health, once per 5 minutes (totems are left alone). */
@@ -151,10 +175,14 @@ public final class WeaponPerks {
 
     @SubscribeEvent
     public void onDeath(LivingDeathEvent event) {
-        if (!(event.getSource().m_7639_() instanceof ServerPlayer player) || event.getSource().m_7640_() != player) {
+        if (!(event.getSource().m_7639_() instanceof ServerPlayer player)) {
             return;
         }
-        ItemStack weapon = player.m_21205_();
+        ItemStack weapon = event.getSource().m_7640_() == player ? player.m_21205_()
+                : fotfskills.compat.IronsThrow.weapon(event.getSource().m_7640_());   // a kill by Iron's Throw
+        if (weapon.m_41619_()) {
+            return;
+        }
         if (Weapons.is(weapon, "scythe")) {
             player.m_5634_((float) Perks.get(player, "grim_harvest"));
         }
@@ -324,6 +352,39 @@ public final class WeaponPerks {
             }
         }
         return DamageBreakdown.abilityMultiplier(base, types, p -> Perks.get(player, p));
+    }
+
+    /** The 3rd attack of a Better Combat combo (and the 6th, 9th...); without Better Combat, every 3rd swing in a row. */
+    /**
+     * The nth attack of a Better Combat combo (and every nth after it in the same combo); without Better Combat, every
+     * nth hit counted by the fallback streak.
+     */
+    private static boolean nthOfCombo(ServerPlayer player, Streak fallback, int n, long now) {
+        if (net.minecraftforge.fml.ModList.get().isLoaded("bettercombat")) {
+            int step = ComboStep.of(player);
+            if (step >= 0) {
+                return step % n == n - 1;
+            }
+        }
+        if (fallback.hit(now) == n) {
+            fallback.reset();
+            return true;
+        }
+        return false;
+    }
+
+    /** The Reaper's Due finisher: a few sweeps around you, the sweep sound, and a spin everyone nearby sees. */
+    private static void reaperSpin(ServerPlayer player) {
+        if (player.m_9236_() instanceof net.minecraft.server.level.ServerLevel level) {
+            for (int i = 0; i < 4; i++) {
+                double a = i * Math.PI / 2 + Math.PI / 4;
+                level.m_8767_(net.minecraft.core.particles.ParticleTypes.f_123766_, player.m_20185_() + Math.cos(a) * 2,
+                        player.m_20186_() + 1, player.m_20189_() + Math.sin(a) * 2, 1, 0, 0, 0, 0);
+            }
+            level.m_6263_(null, player.m_20185_(), player.m_20186_(), player.m_20189_(),
+                    net.minecraft.sounds.SoundEvents.f_12317_, net.minecraft.sounds.SoundSource.PLAYERS, 1.0f, 0.8f);
+        }
+        PerkSync.sendSpin(player);
     }
 
     /** Hits every hostile mob within radius of center, except center itself and the mob the swing already hit. */

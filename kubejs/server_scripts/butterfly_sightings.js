@@ -1,7 +1,7 @@
 // Butterfly sightings: Bok's Butterflies rarely win a spawn slot against all the other animal mods,
 // so during the day this adds one now and then near players outdoors, as long as fewer than
 // SIGHTING_MAX are already around. Species match the biome, using the same lists as the mod's own spawns.
-// (Butterflies also don't die of old age now: enable_lifespan = false in config/butterflies-common.toml.)
+// (Butterflies die of old age again since 2026-10-09: enable_lifespan = true, max_density 8, in config/butterflies-common.toml.)
 
 let SIGHTING_INTERVAL_TICKS = 400 // every 20 seconds per player
 let SIGHTING_MAX = 4 // butterflies within SIGHTING_RADIUS before we stop adding more

@@ -1,0 +1,39 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": {
+    "type": "forge:and",
+    "values": [
+      "#fotf:wildlife/forest",
+      {
+        "type": "forge:not",
+        "value": {
+          "type": "forge:or",
+          "values": [
+            "#fotf:fairy/common",
+            "#fotf:fairy/uncommon"
+          ]
+        }
+      }
+    ]
+  },
+  "spawners": [
+    {
+      "type": "fays_fairies:blue_fairy",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "fays_fairies:gold_fairy",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    },
+    {
+      "type": "fays_fairies:pink_fairy",
+      "weight": 1,
+      "minCount": 1,
+      "maxCount": 1
+    }
+  ]
+}

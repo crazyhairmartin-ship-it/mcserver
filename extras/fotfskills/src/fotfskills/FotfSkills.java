@@ -1,7 +1,5 @@
 package fotfskills;
 
-import fotfskills.perk.ArsMana;
-import fotfskills.perk.ArsPerks;
 import fotfskills.perk.BlockPerks;
 import fotfskills.perk.BreedingPerks;
 import fotfskills.perk.CombatPerks;
@@ -54,12 +52,21 @@ public final class FotfSkills {
             MinecraftForge.EVENT_BUS.register(new fotfskills.perk.GrapplePerks());
         }
         MinecraftForge.EVENT_BUS.register(new PetPerks());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.pet.FairyCompanion());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.world.FlyerHeight());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.world.NamedPets());
+        if (ModList.get().isLoaded("moremobvariants")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.world.WolfCoats());
+        }
         MinecraftForge.EVENT_BUS.register(new BreedingPerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.pet.Ferality());
         MinecraftForge.EVENT_BUS.register(new fotfskills.world.RemovedBlocks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.world.PlayerRules());
         if (ModList.get().isLoaded("ultimate_unicorn_mod")) {
             MinecraftForge.EVENT_BUS.register(new fotfskills.world.HorseSwim());
+        }
+        if (ModList.get().isLoaded("alexsmobs")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.world.ElephantSwim());
         }
         MinecraftForge.EVENT_BUS.register(new FarmPerks());
         MinecraftForge.EVENT_BUS.register(new FoodPerks());
@@ -73,14 +80,12 @@ public final class FotfSkills {
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SalvagePerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.IrrigatorPerks());
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SummonPerks());
-        if (ModList.get().isLoaded("ars_nouveau")) {
-            MinecraftForge.EVENT_BUS.register(new fotfskills.perk.SourcePerks());
+        if (ModList.get().isLoaded("lilis_lucky_lures")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.perk.NetFishing());
+            MinecraftForge.EVENT_BUS.register(new fotfskills.perk.TrapHaul());
         }
         if (ModList.get().isLoaded("butterflies")) {
             MinecraftForge.EVENT_BUS.register(new fotfskills.perk.NetReach());
-        }
-        if (ModList.get().isLoaded("ars_nouveau")) {
-            fotfskills.perk.SummonPerks.registerOwner(fotfskills.perk.ModSummons::ars);
         }
         if (ModList.get().isLoaded("irons_spellbooks")) {
             fotfskills.perk.SummonPerks.registerOwner(fotfskills.perk.ModSummons::irons);
@@ -88,20 +93,14 @@ public final class FotfSkills {
         if (ModList.get().isLoaded("openpartiesandclaims")) {
             Parties.register(OpacParties::same);
         }
+        if (ModList.get().isLoaded("curios")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.compat.BackpackLantern());
+            net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus().addListener(
+                    (net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent e) -> fotfskills.compat.BackpackLantern.registerPredicate());
+        }
         MinecraftForge.EVENT_BUS.register(new ForgeXpEvents());
-        boolean sharedMana = ModList.get().isLoaded("ars_nouveau") && ModList.get().isLoaded("irons_spellbooks");
-        if (sharedMana) {
-            fotfskills.mana.ManaMerge.activate();          // one pool: Iron's mana (Ars hooks in the mixins)
-            MinecraftForge.EVENT_BUS.register(new fotfskills.mana.ManaMergeTicker());
-        }
-        if (ModList.get().isLoaded("ars_nouveau")) {
-            MinecraftForge.EVENT_BUS.register(new ArsPerks());
-            if (!sharedMana) {                              // with shared mana, the Iron's bridge already reaches the pool
-                Mana.register(ArsMana::add);
-                Mana.registerSpender(ArsMana::spend);
-            }
-        }
         if (ModList.get().isLoaded("irons_spellbooks")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.compat.BloodCauldronMobs());
             MinecraftForge.EVENT_BUS.register(new IronsCastXp());
             MinecraftForge.EVENT_BUS.register(new IronsPerks());
             Mana.register(IronsMana::add);

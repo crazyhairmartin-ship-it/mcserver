@@ -1,0 +1,15 @@
+{
+  "type": "forge:add_features",
+  "biomes": {
+    "type": "forge:and",
+    "values": [
+      "#fotf:wildlife/forest",
+      {
+        "type": "forge:not",
+        "value": "#fotf:fairy/uncommon"
+      }
+    ]
+  },
+  "features": "fotf:forest_fireflies_sparse",
+  "step": "vegetal_decoration"
+}

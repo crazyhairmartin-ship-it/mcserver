@@ -15,7 +15,9 @@
     "PackageBlockEntityMixin",
     "PackageBlockMixin",
     "FireBlockMixin",
-    "FarmBlockMixin"
+    "FarmBlockMixin",
+    "LecternBlockEntityMixin",
+    "LecternLetterMenuMixin"
   ],
   "injectors": {
     "defaultRequire": 1
@@ -26,6 +28,9 @@
     "PackageScreenMixin",
     "ScreenWrapperMixin",
     "BookViewScreenMixin",
-    "UnicornKeyBindingsMixin"
+    "ScreenAccessor",
+    "AbstractContainerScreenAccessor",
+    "UnicornKeyBindingsMixin",
+    "LecternScreenMixin"
   ]
 }

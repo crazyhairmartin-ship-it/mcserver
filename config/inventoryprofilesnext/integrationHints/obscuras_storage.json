@@ -1,0 +1,62 @@
+{
+    "com.obscura.storage.gui.StorageTerminalScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "MOVE_TO_CONTAINER": {
+                "hide": true
+            },
+            "SORT": {
+                "horizontalOffset": 20
+            },
+            "SORT_COLUMNS": {
+                "horizontalOffset": 20
+            },
+            "SORT_ROWS": {
+                "horizontalOffset": 20
+            },
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20
+            }
+        }
+    },
+    "com.obscura.storage.gui.CraftingTerminalScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "MOVE_TO_CONTAINER": {
+                "hide": true
+            },
+            "SORT": {
+                "horizontalOffset": 20
+            },
+            "SORT_COLUMNS": {
+                "horizontalOffset": 20
+            },
+            "SORT_ROWS": {
+                "horizontalOffset": 20
+            },
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20
+            }
+        }
+    },
+    "com.obscura.storage.gui.AbstractStorageTerminalScreen": {
+        "playerSideOnly": true,
+        "buttonHints": {
+            "MOVE_TO_CONTAINER": {
+                "hide": true
+            },
+            "SORT": {
+                "horizontalOffset": 20
+            },
+            "SORT_COLUMNS": {
+                "horizontalOffset": 20
+            },
+            "SORT_ROWS": {
+                "horizontalOffset": 20
+            },
+            "SHOW_EDITOR": {
+                "horizontalOffset": 20
+            }
+        }
+    }
+}

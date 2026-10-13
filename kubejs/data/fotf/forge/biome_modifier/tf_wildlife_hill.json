@@ -1,0 +1,12 @@
+{
+  "type": "forge:add_spawns",
+  "biomes": "#fotf:wildlife/hill",
+  "spawners": [
+    {
+      "type": "twilightforest:bighorn_sheep",
+      "weight": 4,
+      "minCount": 2,
+      "maxCount": 4
+    }
+  ]
+}

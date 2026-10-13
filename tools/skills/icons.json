@@ -23,7 +23,7 @@
   "fish": {
     "Patient Angler": "minecraft:fishing_rod", "Lucky Line": "minecraft:string", "Trident Master": "minecraft:trident",
     "Double Catch": "minecraft:cod", "Bait Saver": "minecraft:spider_eye", "Tidecaller": "minecraft:heart_of_the_sea",
-    "Treasure Hunter": "minecraft:name_tag", "Riptide Runner": "minecraft:oak_boat", "Hook Shot": "minecraft:tripwire_hook",
+    "Treasure Hunter": "minecraft:name_tag", "Riptide Runner": "minecraft:oak_boat", "Trap Haul": "lilis_lucky_lures:fish_trap",
     "Sushi Chef": "minecraft:cooked_salmon", "Lure Master": "minecraft:glow_ink_sac", "Storm Fisher": "minecraft:lightning_rod",
     "Sea Legs": "minecraft:birch_boat", "Leviathan Bait": "minecraft:tropical_fish", "Sea's Blessing": "minecraft:nautilus_shell"
   },
@@ -72,7 +72,7 @@
   "magic": {
     "Mana Pool": "minecraft:lapis_block", "Focus": "minecraft:amethyst_cluster", "Flow": "minecraft:experience_bottle",
     "Mana Saver": "minecraft:lapis_lazuli", "Mana Shield": "minecraft:light_blue_stained_glass", "Scroll Saver": "minecraft:paper",
-    "Staff Adept": "minecraft:blaze_rod", "Battlemage": "minecraft:fire_charge", "Summoner": "minecraft:skeleton_skull", "Sourcecraft": "ars_nouveau:source_gem",
+    "Staff Adept": "minecraft:blaze_rod", "Battlemage": "minecraft:fire_charge", "Summoner": "minecraft:skeleton_skull", "Fae Bond": "fays_fairies:fairy_bottle",
     "Spellbound Steel": "minecraft:enchanted_book", "Nature's Mend": "minecraft:glistering_melon_slice", "Cooldown Flow": "minecraft:clock",
     "Arcane Aegis": "minecraft:end_crystal", "Archmage": "minecraft:dragon_breath", "Wellspring": "minecraft:conduit"
   },

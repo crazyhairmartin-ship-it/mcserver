@@ -1,0 +1,8 @@
+name = "FOTF Retrogen"
+filename = "fotfretrogen-1.0.0.jar"
+side = "server"
+
+[download]
+url = "https://raw.githubusercontent.com/crazyhairmartin-ship-it/mcserver/7402857702e95c931e2fdca4549e470cc19caa57/extras/fotfretrogen/fotfretrogen-1.0.0.jar"
+hash-format = "sha512"
+hash = "cf6e76c3f56f10a75ec3d8b4e23fc152a24184e54f73d44886452a42c1007a013fd190342971d521725a5339459ba8758649fe19f58c01740a51413adba2b09e"

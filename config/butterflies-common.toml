@@ -9,9 +9,9 @@
 	egg_limit = 1
 	#Butterfly max density in a 32x32x32 area before breeding is disabled (0 ignores).
 	#Range: 0 ~ 1024
-	max_density = 16
+	max_density = 8
 	#If true, butterflies will die naturally.
-	enable_lifespan = false
+	enable_lifespan = true
 	#If true, butterflies will pollinate flowers.
 	enable_pollination = true
 	#If true, hostile butterflies will spawn.

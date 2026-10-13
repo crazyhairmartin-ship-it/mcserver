@@ -57,7 +57,18 @@ public final class PerkSync {
                 .consumerMainThread((msg, context) -> {
                     ServerPlayer player = context.get().getSender();
                     if (player != null && Perks.get(player, "double_jump") > 0) {
-                        player.f_19789_ = 0;                 // the landing after a double jump is safe
+                        player.f_19789_ = 0;
+                        CombatPerks.LANDING.jumped(player.m_20148_());   // only the drop below take-off counts
+                    }
+                    context.get().setPacketHandled(true);
+                })
+                .add();
+        CHANNEL.messageBuilder(DepositMatching.class, 6, NetworkDirection.PLAY_TO_SERVER)
+                .encoder((msg, buf) -> buf.writeLong(msg.locked())).decoder(buf -> new DepositMatching(buf.readLong()))
+                .consumerMainThread((msg, context) -> {
+                    ServerPlayer player = context.get().getSender();
+                    if (player != null && net.minecraftforge.fml.ModList.get().isLoaded("obscuras_storage")) {
+                        fotfskills.compat.TerminalDeposit.depositMatching(player, msg.locked());
                     }
                     context.get().setPacketHandled(true);
                 })
@@ -79,6 +90,13 @@ public final class PerkSync {
                     context.get().setPacketHandled(true);
                 })
                 .add();
+        CHANNEL.messageBuilder(Spin.class, 5, NetworkDirection.PLAY_TO_CLIENT)
+                .encoder((msg, buf) -> buf.m_130130_(msg.entityId())).decoder(buf -> new Spin(buf.m_130242_()))
+                .consumerMainThread((msg, context) -> {
+                    fotfskills.client.SpinAnimation.play(msg.entityId());
+                    context.get().setPacketHandled(true);
+                })
+                .add();
         CHANNEL.messageBuilder(Buffs.class, 1, NetworkDirection.PLAY_TO_CLIENT)
                 .encoder(Buffs::encode).decoder(Buffs::decode)
                 .consumerMainThread((msg, context) -> {
@@ -88,8 +106,27 @@ public final class PerkSync {
                 .add();
     }
 
+    /** Server to clients: play the Reaper's Due spin on this player (the player and everyone who can see them). */
+    public record Spin(int entityId) {
+    }
+
+    public static void sendSpin(ServerPlayer player) {
+        CHANNEL.send(PacketDistributor.TRACKING_ENTITY_AND_SELF.with(() -> player), new Spin(player.m_19879_()));
+    }
+
     /** Client to server: the player used Double Jump (the server clears their fall distance). */
     public record DoubleJumped() {
+    }
+
+    /**
+     * Client to server: "move matching items" pressed on an Obscura's storage terminal. locked: bit i set = player
+     * inventory slot i is locked in Inventory Profiles Next (client-side only, so the client says which).
+     */
+    public record DepositMatching(long locked) {
+    }
+
+    public static void sendDepositMatching(long locked) {
+        CHANNEL.sendToServer(new DepositMatching(locked));
     }
 
     /** Client to server: the character screen opened and wants this player's skills. */

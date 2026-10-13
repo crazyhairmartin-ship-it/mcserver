@@ -35,7 +35,7 @@ public final class Perks {
             Map.entry("iron_stomach", 20.0), Map.entry("earthbound", 5.0), Map.entry("tide_spell", 1.0),
             Map.entry("warded_spell", 1.0), Map.entry("gem_spell", 1.0), Map.entry("staff_spell", 1.0),
             Map.entry("staff_cooldown", 1.0), Map.entry("feast_spell", 1.0), Map.entry("brain_regen", 2.0),
-            Map.entry("duelist_speed", 1.0), Map.entry("light_speed", 1.0), Map.entry("seas_blessing", 1.0),
+            Map.entry("duelist_speed", 0.15), Map.entry("light_speed", 0.15), Map.entry("seas_blessing", 1.0),
             Map.entry("pet_health", 1.0), Map.entry("pet_damage", 1.0), Map.entry("pet_armor", 20.0),
             Map.entry("pet_regen", 5.0), Map.entry("pet_speed", 1.0), Map.entry("pet_stun", 0.95),
             Map.entry("mount_speed", 1.0), Map.entry("mount_jump", 1.0), Map.entry("mount_health", 1.0),
@@ -68,7 +68,8 @@ public final class Perks {
             Map.entry("artificer_summon", 2.0), Map.entry("bloodlines", 0.95), Map.entry("breed_cooldown", 0.9),
             Map.entry("source_gain", 1.0), Map.entry("apparatus_save", 0.9),
             Map.entry("pc_freerunner", 1.0), Map.entry("pc_spring", 1.0), Map.entry("pc_skydive", 1.0),
-            Map.entry("pc_trick", 1.0), Map.entry("dodge_distance", 1.0), Map.entry("double_jump", 1.0));
+            Map.entry("pc_trick", 1.0), Map.entry("dodge_distance", 1.0), Map.entry("double_jump", 1.0), Map.entry("fae_bond", 0.3),
+            Map.entry("trap_haul", 1.0));
 
     public static final PerkTotals TOTALS = new PerkTotals(perk -> CAPS.getOrDefault(perk, 0.0));
 

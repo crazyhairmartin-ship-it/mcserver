@@ -38,7 +38,7 @@ STATIONS = [
       'herbalbrews:kettle_brewing']),
     ('other', 'Palm Bar (Cocktails)', 'beachparty:palm_bar', ['beachparty:palm_bar_mixing']),
 ]
-SKIP_TYPES = {'tconstruct:casting_table', 'lilis_lucky_lures:fish_trap', 'cataclysm:amethyst_bless'}  # bait and rituals, not cooking
+SKIP_TYPES = {'lilis_lucky_lures:fish_trap', 'cataclysm:amethyst_bless'}  # bait and rituals, not cooking
 # a food's chapter is its first station in this order (real cooking before the crafting table)
 PRIORITY = ['pot', 'stove', 'roaster', 'meadow', 'baking', 'bowl', 'mincer', 'drinks', 'fire', 'cutting',
             'other', 'crafting']

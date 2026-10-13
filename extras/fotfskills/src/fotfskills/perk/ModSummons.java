@@ -7,10 +7,6 @@ public final class ModSummons {
     private ModSummons() {
     }
 
-    public static Entity ars(Entity entity) {
-        return entity instanceof com.hollingsworth.arsnouveau.api.entity.ISummon summon ? summon.getOwnerAlt() : null;
-    }
-
     public static Entity irons(Entity entity) {
         return entity instanceof io.redspace.ironsspellbooks.entity.mobs.IMagicSummon summon ? summon.getSummoner() : null;
     }

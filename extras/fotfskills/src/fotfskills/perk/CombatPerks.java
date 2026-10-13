@@ -33,6 +33,21 @@ public final class CombatPerks {
     private static final TagKey<Item> ARROWS = TagKey.m_203882_(ForgeRegistries.Keys.ITEMS, new ResourceLocation("minecraft", "arrows"));
     private static final Set<String> FIRE = Set.of("inFire", "onFire", "lava", "hotFloor", "fireball", "unattributedFireball");
     private static final Set<String> HIDES = Set.of("minecraft:leather", "minecraft:rabbit_hide", "minecraft:feather");
+    /** Double Jump landings: fed the take-off height here and the jump by PerkSync's DoubleJumped message. */
+    public static final DoubleJumpLanding LANDING = new DoubleJumpLanding();
+
+    @SubscribeEvent
+    public void onPlayerTick(net.minecraftforge.event.TickEvent.PlayerTickEvent event) {
+        if (event.phase == net.minecraftforge.event.TickEvent.Phase.END && event.player instanceof ServerPlayer player
+                && player.m_20096_()) {
+            LANDING.ground(player.m_20148_(), (float) player.m_20186_());
+        }
+    }
+
+    @SubscribeEvent
+    public void onLogout(net.minecraftforge.event.entity.player.PlayerEvent.PlayerLoggedOutEvent event) {
+        LANDING.forget(event.getEntity().m_20148_());
+    }
 
     /** Quiver Care: refund the arrow and make the fired one un-pickable, so nothing is duplicated. */
     @SubscribeEvent
@@ -72,6 +87,7 @@ public final class CombatPerks {
         if (!(event.getEntity() instanceof ServerPlayer player)) {
             return;
         }
+        event.setDistance(LANDING.fall(player.m_20148_(), event.getDistance(), (float) player.m_20186_()));
         if (event.getDistance() < Perks.get(player, "fall_immunity")) {
             event.setCanceled(true);
             return;
@@ -98,7 +114,9 @@ public final class CombatPerks {
             if (direct instanceof Projectile) {
                 bonus += Perks.get(player, "projectile_damage");
             }
-            if (direct == player && "player".equals(event.getSource().m_19385_()) && target.m_21223_() < 0.3f * target.m_21233_()) {
+            boolean weaponHit = (direct == player && "player".equals(event.getSource().m_19385_()))
+                    || !fotfskills.compat.IronsThrow.weapon(direct).m_41619_();     // a swing, or Iron's Throw
+            if (weaponHit && target.m_21223_() < 0.3f * target.m_21233_()) {
                 bonus += Perks.get(player, "executioner");
             }
             if (player.m_20186_() < 40) {
