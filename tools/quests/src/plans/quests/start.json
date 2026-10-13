@@ -1,0 +1,355 @@
+{
+ "line": "Getting started",
+ "chapter": "start",
+ "group": "story",
+ "giver": "Elder Maren and the people of Reece",
+ "feel": "A warm, unhurried first hour: meet Reece, learn the pack's tools, hear the first worry.",
+ "quests": [
+  {
+   "id": "welcome",
+   "title": "Welcome to Reece",
+   "tier": "start",
+   "types": [
+    "talk"
+   ],
+   "after": [],
+   "summary": "Elder Maren meets you at Reece's well, gives you the Field Guide (a Patchouli book) and asks you to look around before night falls.",
+   "mods": [
+    "patchouli",
+    "ctov"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Field Guide, bread, 16 torches"
+  },
+  {
+   "id": "field_guide",
+   "title": "Read the Field Guide",
+   "tier": "start",
+   "types": [
+    "talk",
+    "puzzle"
+   ],
+   "after": [
+    "welcome"
+   ],
+   "summary": "Open the Field Guide and find the page on the quiet forest; a pressed leaf between the pages hints that the guide was written by someone who left Reece in a hurry.",
+   "mods": [
+    "patchouli"
+   ],
+   "landmarks": [],
+   "reward": "Wooden tools, a lantern"
+  },
+  {
+   "id": "reece_tour",
+   "title": "Old Streets, New Roofs",
+   "tier": "start",
+   "types": [
+    "explore",
+    "talk"
+   ],
+   "after": [
+    "welcome"
+   ],
+   "summary": "Reece is a ChoiceTheorem overhauled village: find its smithy, its farms, its chapel and its market square, and greet one villager in each.",
+   "mods": [
+    "ctov"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Emeralds, a map of Reece"
+  },
+  {
+   "id": "skill_trees",
+   "title": "Every Hand Learns",
+   "tier": "start",
+   "types": [
+    "talk",
+    "milestone"
+   ],
+   "after": [
+    "field_guide"
+   ],
+   "summary": "Elder Maren explains that Reece trains its people in skills: open the Pufferfish skill screen, earn your first point in any tree and spend it.",
+   "mods": [
+    "puffish_skills"
+   ],
+   "landmarks": [],
+   "reward": "Skill XP in every tree (small)"
+  },
+  {
+   "id": "skill_tonic",
+   "title": "A Bitter Tonic",
+   "tier": "start",
+   "types": [
+    "craft",
+    "talk"
+   ],
+   "after": [
+    "skill_trees"
+   ],
+   "summary": "The cleric brews skill tonics for those who want to unlearn a choice: learn how Friends of the Forest Skills resets work, and keep one tonic in reserve.",
+   "mods": [
+    "fotfskills",
+    "puffish_skills"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "A skill tonic"
+  },
+  {
+   "id": "first_timber",
+   "title": "Timber!",
+   "tier": "start",
+   "types": [
+    "collect"
+   ],
+   "after": [
+    "welcome"
+   ],
+   "summary": "Hold the Ultimine key and fell a whole tree in one swing, then gather 64 logs for the village woodpile.",
+   "mods": [
+    "ftbultimine"
+   ],
+   "landmarks": [],
+   "reward": "Stone axe, apples"
+  },
+  {
+   "id": "waystone_reece",
+   "title": "The Stone That Remembers",
+   "tier": "start",
+   "types": [
+    "explore",
+    "travel"
+   ],
+   "after": [
+    "reece_tour"
+   ],
+   "summary": "Attune to the waystone in Reece's square, then find a second waystone out in the wild and warp home with it.",
+   "mods": [
+    "waystones"
+   ],
+   "landmarks": [
+    "feature:waystones:waystones",
+    "#villages"
+   ],
+   "reward": "A return scroll, 2 warp stones' worth of shards"
+  },
+  {
+   "id": "backpack",
+   "title": "Room to Carry",
+   "tier": "start",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "first_timber"
+   ],
+   "summary": "Reece's leatherworker shows you how to stitch a Sophisticated Backpack; craft one and fit it with a pickup upgrade.",
+   "mods": [
+    "sophisticatedbackpacks"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Leather, a pickup upgrade"
+  },
+  {
+   "id": "first_night",
+   "title": "The Hourglass Night",
+   "tier": "start",
+   "types": [
+    "craft",
+    "milestone"
+   ],
+   "after": [
+    "reece_tour"
+   ],
+   "summary": "Craft a bed and sleep through your first night; with Hourglass the stars wheel by faster the more of the server is asleep.",
+   "mods": [
+    "hourglass"
+   ],
+   "landmarks": [],
+   "reward": "Cooked mutton, a candle"
+  },
+  {
+   "id": "camp_out",
+   "title": "Under the Open Sky",
+   "tier": "start",
+   "types": [
+    "craft",
+    "travel"
+   ],
+   "after": [
+    "first_night"
+   ],
+   "summary": "Make a Comforts sleeping bag for nights on the road and a hammock for afternoon naps, then sleep in the bag at least 200 blocks from Reece.",
+   "mods": [
+    "comforts"
+   ],
+   "landmarks": [],
+   "reward": "Rope and nail, a campfire"
+  },
+  {
+   "id": "gravestone",
+   "title": "The Sexton's Promise",
+   "tier": "start",
+   "types": [
+    "talk"
+   ],
+   "after": [
+    "reece_tour"
+   ],
+   "summary": "Old Edda keeps the graveyard: if you fall, a gravestone holds your things where you died, and only you can open it. She gives you an obituary book from the last adventurer who didn't come back.",
+   "mods": [
+    "gravestone"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "An obituary, a golden carrot"
+  },
+  {
+   "id": "cosmetic_armor",
+   "title": "Dressed for Reece",
+   "tier": "start",
+   "types": [
+    "talk",
+    "fetch"
+   ],
+   "after": [
+    "reece_tour"
+   ],
+   "summary": "The tailor fusses that armour is ugly at the harvest dance: learn the cosmetic armour slots, then bring her 8 wool to make you a festival look.",
+   "mods": [
+    "cosmeticarmorreworked"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Dyed leather outfit"
+  },
+  {
+   "id": "natures_compass",
+   "title": "Which Way the Wind Blows",
+   "tier": "start",
+   "types": [
+    "craft",
+    "discover"
+   ],
+   "after": [
+    "waystone_reece"
+   ],
+   "summary": "Craft a Nature's Compass and use it to find a biome you have never seen.",
+   "mods": [
+    "naturescompass"
+   ],
+   "landmarks": [],
+   "reward": "Saplings from that biome, emeralds"
+  },
+  {
+   "id": "explorers_compass",
+   "title": "Which Way the Stones Lie",
+   "tier": "start",
+   "types": [
+    "craft",
+    "explore"
+   ],
+   "after": [
+    "natures_compass"
+   ],
+   "summary": "Craft an Explorer's Compass and follow it to the nearest well; the compass learns more places as your story goes on.",
+   "mods": [
+    "explorerscompass"
+   ],
+   "landmarks": [
+    "#wells"
+   ],
+   "reward": "Iron ingots, a bucket"
+  },
+  {
+   "id": "guilds_of_the_field",
+   "title": "Hands of the Field",
+   "tier": "start",
+   "types": [
+    "talk"
+   ],
+   "after": [
+    "reece_tour"
+   ],
+   "summary": "Meet four organisations: the Growers' co-operative (farmer), the Anglers' society (fisherman), the Herbalists (cleric) and the Tavern keepers (butcher). Each has work when you're ready.",
+   "mods": [
+    "ctov",
+    "farmersdelight"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Seeds, a fishing rod, a herb pouch, a meal"
+  },
+  {
+   "id": "guilds_of_the_forge",
+   "title": "Hands of the Forge",
+   "tier": "start",
+   "types": [
+    "talk"
+   ],
+   "after": [
+    "reece_tour"
+   ],
+   "summary": "Meet the Miners' guild (toolsmith), the Crafters' guild (mason), the Bounty office (weaponsmith, at the Bountiful board) and the Hunters' lodge (fletcher).",
+   "mods": [
+    "ctov",
+    "bountiful"
+   ],
+   "landmarks": [
+    "#villages",
+    "feature:bountiful:bounty_boards"
+   ],
+   "reward": "Torches, a stonecutter, a bounty contract, arrows"
+  },
+  {
+   "id": "guilds_of_the_road",
+   "title": "Hands of the Road",
+   "tier": "start",
+   "types": [
+    "talk"
+   ],
+   "after": [
+    "reece_tour"
+   ],
+   "summary": "Meet the Couriers (cartographer), the Village watch (a Guard Villagers guard), the Arcane order (librarian) and the Sanctuary keepers (shepherd).",
+   "mods": [
+    "ctov",
+    "guardvillagers"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "A blank map, a shield, a book, a lead"
+  },
+  {
+   "id": "clerics_worry",
+   "title": "The Cleric's Worry",
+   "tier": "prologue",
+   "types": [
+    "talk"
+   ],
+   "after": [
+    "field_guide",
+    "guilds_of_the_field"
+   ],
+   "summary": "Sister Wren, Reece's cleric, confides that the forest has gone silent: no fireflies, no birdsong at dusk, and the old spirits no longer answer her prayers. She asks for your help.",
+   "mods": [
+    "ctov"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "A healing potion, the main story opens"
+  }
+ ]
+}

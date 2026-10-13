@@ -1,0 +1,568 @@
+{
+ "line": "Mining path",
+ "chapter": "skill_mining",
+ "group": "skills",
+ "giver": "Miners' guild: toolsmith and armourer representatives in every village; the Guildmaster in Reece for key moments",
+ "feel": "Mining rescues: cave-ins, lost miners and deep expeditions, each deeper than the last",
+ "quests": [
+  {
+   "id": "guild_card",
+   "title": "The Guild Card",
+   "tier": "prologue",
+   "types": [
+    "talk",
+    "collect"
+   ],
+   "after": [],
+   "summary": "A village toolsmith signs you into the Miners' Guild if you can prove you'll swing a pick: bring 32 cobblestone, 16 coal and a stone pickaxe you made yourself.",
+   "mods": [],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Mining XP, a guild lantern and a stamped guild card"
+  },
+  {
+   "id": "first_shift",
+   "title": "First Shift",
+   "tier": "prologue",
+   "types": [
+    "collect"
+   ],
+   "after": [
+    "guild_card"
+   ],
+   "summary": "Your first paid shift: 24 raw copper and 16 coal from the shallow seams the guild leases near the village, mined before nightfall.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, a stack of torches"
+  },
+  {
+   "id": "canary_call",
+   "title": "The Canary Stopped Singing",
+   "tier": "prologue",
+   "types": [
+    "rescue",
+    "encounter"
+   ],
+   "after": [
+    "first_shift"
+   ],
+   "summary": "A small collapse traps an apprentice in a hillside tunnel near the village; dig through the gravel fall without bringing the rest down and lead him out alive.",
+   "mods": [],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Mining XP, the apprentice's spare iron pickaxe"
+  },
+  {
+   "id": "shoring_up",
+   "title": "Shoring Up",
+   "tier": "prologue",
+   "types": [
+    "craft",
+    "build"
+   ],
+   "after": [
+    "canary_call"
+   ],
+   "summary": "After the scare the guild drills its crews in safety: craft ladders, scaffolding and 64 torches, and shore up the practice shaft with log props every few blocks.",
+   "mods": [
+    "supplementaries"
+   ],
+   "landmarks": [],
+   "reward": "Mining XP, a rope coil and a safety net"
+  },
+  {
+   "id": "old_workings",
+   "title": "The Old Workings",
+   "tier": "prologue",
+   "types": [
+    "discover",
+    "explore"
+   ],
+   "after": [
+    "shoring_up"
+   ],
+   "summary": "Find any old mineshaft (YUNG's Better Mineshafts) and bring back a lantern and a rail from its deepest gallery: the guild is mapping every abandoned working before someone falls into one.",
+   "mods": [
+    "bettermineshafts"
+   ],
+   "landmarks": [
+    "#mines"
+   ],
+   "reward": "Mining XP, a guild map case"
+  },
+  {
+   "id": "iron_seam",
+   "title": "The Iron Seam",
+   "tier": "act1",
+   "types": [
+    "collect",
+    "craft"
+   ],
+   "after": [
+    "old_workings"
+   ],
+   "summary": "The guild's smiths need metal: mine 48 raw iron, smelt it, and forge a full set of iron tools for the next rescue crew.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, a blast furnace"
+  },
+  {
+   "id": "lights_out",
+   "title": "Lights Out",
+   "tier": "act1",
+   "types": [
+    "rescue",
+    "puzzle"
+   ],
+   "after": [
+    "iron_seam"
+   ],
+   "summary": "Every torch in a YUNG's mineshaft has gone out and a surveyor is somewhere inside; follow his tapping and the glow lichen he scraped onto the walls to find him in the pitch dark. He presses his spare goggles on you.",
+   "mods": [
+    "bettermineshafts"
+   ],
+   "landmarks": [
+    "#mines"
+   ],
+   "signature": "artifacts:night_vision_goggles",
+   "reward": "Mining XP, Night Vision Goggles"
+  },
+  {
+   "id": "vein_breaker",
+   "title": "Vein Breaker",
+   "tier": "act1",
+   "types": [
+    "milestone",
+    "collect"
+   ],
+   "after": [
+    "iron_seam"
+   ],
+   "summary": "The guild foreman shows you the vein-miner's knack (FTB Ultimine): break a whole coal or iron vein in one go, then clear a 64-block side tunnel the same way.",
+   "mods": [
+    "ftbultimine"
+   ],
+   "landmarks": [],
+   "reward": "Mining XP, a crate of food for long swings"
+  },
+  {
+   "id": "alpine_prospect",
+   "title": "Alpine Prospect",
+   "tier": "act1",
+   "types": [
+    "explore",
+    "collect"
+   ],
+   "after": [
+    "vein_breaker"
+   ],
+   "summary": "A prospector's letter speaks of ore in the high peaks: climb the tallest mountains (Tectonic) and bring back alpine iron ore, alpine copper ore and a lump of alpine salt.",
+   "mods": [
+    "tectonic",
+    "meadow"
+   ],
+   "landmarks": [],
+   "reward": "Mining XP, climbing rope from the prospector"
+  },
+  {
+   "id": "supply_run",
+   "title": "Supplies for the Camp",
+   "tier": "act1",
+   "types": [
+    "deliver",
+    "travel"
+   ],
+   "after": [
+    "vein_breaker"
+   ],
+   "summary": "A mining camp out in the wilds is short of everything: deliver 32 bread, 64 torches and 8 iron pickaxes to the miners at a mine with campsite or a badlands miner outpost.",
+   "mods": [
+    "mvs",
+    "mr_dungeons_andtaverns"
+   ],
+   "landmarks": [
+    "mvs:mine_with_campsite",
+    "nova_structures:badlands_miner_outpost"
+   ],
+   "reward": "Mining XP, the camp boss's mining helmet lamp (a lantern) and a tip about a lost crew"
+  },
+  {
+   "id": "depth_chart",
+   "title": "The Depth Chart",
+   "tier": "act1",
+   "types": [
+    "collect",
+    "puzzle"
+   ],
+   "after": [
+    "alpine_prospect"
+   ],
+   "summary": "Fill the guild's depth chart: redstone and lapis from below Y 0, gold from the badlands surface, copper from the dripstone caves, each tagged with the depth you mined it at.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, a guild compass engraved with the depths"
+  },
+  {
+   "id": "underminer",
+   "title": "The Underminer",
+   "tier": "act1",
+   "types": [
+    "encounter",
+    "talk"
+   ],
+   "after": [
+    "depth_chart"
+   ],
+   "summary": "Miners talk of a ghostly figure that digs beside you in the deep and vanishes. Find the Underminer (Alex's Mobs) in a cave and follow it: it leads you to a sealed side passage full of ore.",
+   "mods": [
+    "alexsmobs"
+   ],
+   "landmarks": [],
+   "reward": "Mining XP, a cache of raw gold"
+  },
+  {
+   "id": "lost_crew",
+   "title": "The Lost Crew",
+   "tier": "act2",
+   "types": [
+    "rescue",
+    "explore"
+   ],
+   "after": [
+    "supply_run",
+    "main_story:act2_start"
+   ],
+   "summary": "The camp's survey crew went down a Dungeons Arise mining system three days ago and never came up. Fight through the infested galleries, find the three miners and get them to the lifts.",
+   "mods": [
+    "dungeons_arise"
+   ],
+   "landmarks": [
+    "dungeons_arise:mining_system"
+   ],
+   "reward": "Mining XP, a diamond pickaxe from the crew's foreman"
+  },
+  {
+   "id": "deepslate_descent",
+   "title": "Into the Deepslate",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "collect"
+   ],
+   "after": [
+    "lost_crew"
+   ],
+   "summary": "The guild's next shaft goes below Y -32: mine down into the deepslate, bring back 8 deepslate diamond ore (with Silk Touch or as diamonds) and 64 cobbled deepslate for the shaft walls.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, a deepslate guild badge"
+  },
+  {
+   "id": "shift_meal",
+   "title": "The Shift Meal",
+   "tier": "act2",
+   "types": [
+    "cook",
+    "collect"
+   ],
+   "after": [
+    "deepslate_descent"
+   ],
+   "summary": "The guild cook feeds the rescue crews before the big descent: grow or forage onions, then cook onion soup and pasta with onion sauce for a crew of six and serve it at the shaft head.",
+   "mods": [
+    "farmersdelight",
+    "farm_and_charm"
+   ],
+   "landmarks": [],
+   "signature": "artifacts:onion_ring",
+   "reward": "Mining XP, the cook's Onion Ring"
+  },
+  {
+   "id": "cave_in",
+   "title": "Cave-In",
+   "tier": "act2",
+   "types": [
+    "timed",
+    "rescue"
+   ],
+   "after": [
+    "shift_meal"
+   ],
+   "summary": "The new deep shaft collapses with you and two miners behind the fall, and your pick is under the rubble: dig the tunnel open with a shovel and bare hands before the air runs out (a timed challenge). The old miner who survived gives you his claws.",
+   "mods": [],
+   "landmarks": [],
+   "signature": "artifacts:digging_claws",
+   "reward": "Mining XP, Digging Claws"
+  },
+  {
+   "id": "three_seams",
+   "title": "Three Famous Seams",
+   "tier": "act2",
+   "types": [
+    "collect",
+    "contest"
+   ],
+   "after": [
+    "deepslate_descent"
+   ],
+   "summary": "An old prospector swears his scarf brings luck. Bet him you can bring emerald from the high peaks, gold from a mesa mineshaft and diamond from the deepslate before he finishes his pipe; win, and the scarf is yours.",
+   "mods": [
+    "tectonic",
+    "bettermineshafts"
+   ],
+   "landmarks": [
+    "bettermineshafts:mineshaft_mesa"
+   ],
+   "signature": "artifacts:lucky_scarf",
+   "reward": "Mining XP, Lucky Scarf"
+  },
+  {
+   "id": "spore_shaft",
+   "title": "The Spore Shaft",
+   "tier": "act2",
+   "types": [
+    "escort",
+    "explore"
+   ],
+   "after": [
+    "lost_crew"
+   ],
+   "summary": "Miners working the Dungeons Arise mushroom mines have gone strange from the spores; escort four of them back to the surface through the overgrown tunnels, keeping them away from the glowing caps.",
+   "mods": [
+    "dungeons_arise"
+   ],
+   "landmarks": [
+    "dungeons_arise:mushroom_mines"
+   ],
+   "reward": "Mining XP, mushroom stew and a stack of glowshrooms"
+  },
+  {
+   "id": "scorched_mines",
+   "title": "Fire Below",
+   "tier": "act2",
+   "types": [
+    "rescue",
+    "defend"
+   ],
+   "after": [
+    "spore_shaft"
+   ],
+   "summary": "A fire has broken out in the scorched mines and the trapped miners are holding a gallery against what crawled out of the burning seams; reach them with fire resistance potions and water buckets and hold until they're out.",
+   "mods": [
+    "dungeons_arise"
+   ],
+   "landmarks": [
+    "dungeons_arise:scorched_mines"
+   ],
+   "reward": "Mining XP, fire resistance potions"
+  },
+  {
+   "id": "surveyors_glass",
+   "title": "The Surveyor's Glass",
+   "tier": "act2",
+   "types": [
+    "collect",
+    "craft"
+   ],
+   "after": [
+    "deepslate_descent"
+   ],
+   "summary": "The guild surveyor wants to read the deep rock: crack open an amethyst geode, bring 16 amethyst shards and 8 copper ingots, and craft her a spyglass and a tinted glass lamp.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, a spyglass of your own"
+  },
+  {
+   "id": "strange_minerals",
+   "title": "Strange Minerals",
+   "tier": "act2",
+   "types": [
+    "fetch",
+    "deliver"
+   ],
+   "after": [
+    "surveyors_glass"
+   ],
+   "summary": "Rumours of magnetic rock deep under the world: bring the guild's metallurgist a sample of galena and raw scarlet neodymium from the Magnetic Caves, and a lump of amber from the Primordial Caves (Alex's Caves; the caves' own questline goes deeper).",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:ferrocave"
+   ],
+   "reward": "Mining XP, a guild note pointing to the caves' own questline"
+  },
+  {
+   "id": "lost_journal",
+   "title": "The Lost Expedition's Journal",
+   "tier": "act2",
+   "types": [
+    "stealth",
+    "fetch"
+   ],
+   "after": [
+    "cave_in"
+   ],
+   "summary": "A guild expedition went too deep and found an ancient city; one survivor made it out without the expedition journal. Creep through the sculk without waking the Warden and bring the journal back from beside the portal frame.",
+   "mods": [],
+   "landmarks": [
+    "minecraft:ancient_city"
+   ],
+   "reward": "Mining XP, swift sneak book and the journal's ore map"
+  },
+  {
+   "id": "forge_cold",
+   "title": "The Cold Forge",
+   "tier": "act3",
+   "types": [
+    "deliver",
+    "craft"
+   ],
+   "after": [
+    "main_story:act3_start",
+    "cave_in"
+   ],
+   "summary": "The guild's deep forge below Y -50 has gone cold and no one can smelt down there. Carry a stack of coal blocks, 16 blaze powder and magma blocks down to relight it; the smith fits your pick with a heater in thanks.",
+   "mods": [],
+   "landmarks": [],
+   "signature": "artifacts:pickaxe_heater",
+   "reward": "Mining XP, Pickaxe Heater"
+  },
+  {
+   "id": "ancient_debris",
+   "title": "Ancient Debris",
+   "tier": "act3",
+   "types": [
+    "collect",
+    "explore"
+   ],
+   "after": [
+    "main_story:act3_start",
+    "deepslate_descent"
+   ],
+   "summary": "The guild has never brought netherite home. Find and mine 8 ancient debris near Nether lava level, blasting or digging, and carry it back to Reece.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, a netherite upgrade template"
+  },
+  {
+   "id": "quartz_contract",
+   "title": "The Quartz Contract",
+   "tier": "act3",
+   "types": [
+    "collect",
+    "trade"
+   ],
+   "after": [
+    "ancient_debris"
+   ],
+   "summary": "A guild contract for the Nether: 64 nether quartz, 32 gold nuggets from nether gold ore and 16 gilded blackstone, mined in one trip and sold through the guild.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, emeralds and a guild contract seal"
+  },
+  {
+   "id": "netherite_pick",
+   "title": "Netherite Pick",
+   "tier": "act3",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "ancient_debris"
+   ],
+   "summary": "Smelt your debris to netherite scrap, alloy an ingot, and upgrade your diamond pickaxe at a smithing table: the first netherite pick the guild has seen.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, the guild's respect (rank: Deep Delver)"
+  },
+  {
+   "id": "obsidian_cut",
+   "title": "Cutting Obsidian",
+   "tier": "act4",
+   "types": [
+    "collect"
+   ],
+   "after": [
+    "main_story:act4_start",
+    "netherite_pick"
+   ],
+   "summary": "For the memorial and the guild's new deep doors: 64 obsidian and 16 crying obsidian, cut cleanly (vein-mine the slab if you can).",
+   "mods": [
+    "ftbultimine"
+   ],
+   "landmarks": [],
+   "reward": "Mining XP, a stack of deepslate tiles"
+  },
+  {
+   "id": "great_collapse",
+   "title": "The Great Collapse",
+   "tier": "act4",
+   "types": [
+    "rescue",
+    "encounter",
+    "timed"
+   ],
+   "after": [
+    "main_story:act4_start",
+    "forge_cold",
+    "lost_journal"
+   ],
+   "summary": "The deepest rescue: the old mine under Reece gives way at Y -58 with seven miners below. Reach each pocket of survivors through deepslate, lava and falling gravel, and bring them all up before the last torch burns down.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, every miner's thanks and a diamond block"
+  },
+  {
+   "id": "memorial",
+   "title": "The Miners' Memorial",
+   "tier": "act4",
+   "types": [
+    "build"
+   ],
+   "after": [
+    "great_collapse",
+    "obsidian_cut"
+   ],
+   "summary": "Build the guild a memorial at the guildhall in Reece: polished deepslate, obsidian, lanterns and a sign for every miner lost or saved on your rescues.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, the memorial plaque named for you"
+  },
+  {
+   "id": "mother_lode",
+   "title": "The Mother Lode",
+   "tier": "act5",
+   "types": [
+    "milestone",
+    "collect"
+   ],
+   "after": [
+    "main_story:act5_start",
+    "memorial"
+   ],
+   "summary": "A guildmaster's test: bring a block of every metal and gem the guild works (coal, copper, iron, gold, redstone, lapis, emerald, diamond and netherite).",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, a deep miner's beacon"
+  },
+  {
+   "id": "guildmaster",
+   "title": "Lifeline",
+   "tier": "act5",
+   "types": [
+    "talk",
+    "milestone"
+   ],
+   "after": [
+    "mother_lode"
+   ],
+   "summary": "The Guildmaster in Reece names you Master of Rescues and hands over the guild's oldest pick, reforged.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mining XP, Lifeline (named netherite pickaxe: Efficiency V, Fortune III, Unbreaking III, Mending)"
+  }
+ ]
+}

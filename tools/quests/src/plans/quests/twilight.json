@@ -1,0 +1,1020 @@
+{
+ "line": "Twilight Forest",
+ "chapter": "realm_twilight",
+ "group": "realms",
+ "giver": "The spirits of the Twilight Forest, through signs and the trophies of fallen guardians",
+ "feel": "Fairy-tale exploration in three parts: each guardian lifts a curse and opens the next land",
+ "quests": [
+  {
+   "id": "through_the_pool",
+   "title": "Through the Pool",
+   "tier": "act2",
+   "types": [
+    "travel",
+    "discover"
+   ],
+   "after": [
+    "main_story:act1_finale"
+   ],
+   "summary": "The pool you ringed with flowers is shimmering; step in and wake in the Twilight Forest, the spirits' own realm, under its endless dusk.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Exploration kit: torches, bread, a Twilight oak sapling"
+  },
+  {
+   "id": "fireflies_and_cicadas",
+   "title": "Lanterns of the Dusk",
+   "tier": "act2",
+   "types": [
+    "collect",
+    "discover"
+   ],
+   "after": [
+    "through_the_pool"
+   ],
+   "summary": "Walk into a Firefly Forest and catch fireflies and cicadas in jars (glass bottles) to light your first camp on the other side.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, firefly jars"
+  },
+  {
+   "id": "raven_feather",
+   "title": "The Wary Raven",
+   "tier": "act2",
+   "types": [
+    "stealth",
+    "hunt"
+   ],
+   "after": [
+    "through_the_pool"
+   ],
+   "summary": "Forest ravens take flight at the slightest noise; sneak up and take a raven feather, the key ingredient of the realm's maps.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Range XP, arrows"
+  },
+  {
+   "id": "magic_map",
+   "title": "A Map That Draws Itself",
+   "tier": "act2",
+   "types": [
+    "craft",
+    "explore"
+   ],
+   "after": [
+    "raven_feather",
+    "fireflies_and_cicadas"
+   ],
+   "summary": "Bind a raven feather, torchberries and glowstone into a Magic Map Focus, then a Magic Map that charts biomes and marks every landmark around the portal.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, a spare magic map"
+  },
+  {
+   "id": "twilight_biomes",
+   "title": "Atlas of the Twilight",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "discover"
+   ],
+   "after": [
+    "magic_map"
+   ],
+   "summary": "Set foot in the Enchanted Forest, the Mushroom Forest, the Spooky Forest and the Oak Savannah, noting which lands are still veiled by curses.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Agility XP, a Charm of Life"
+  },
+  {
+   "id": "hollow_hill",
+   "title": "Inside the Hollow Hill",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "fetch"
+   ],
+   "after": [
+    "magic_map"
+   ],
+   "summary": "A grassy mound hides a cavern full of ores, spider spawners and redcaps; break in, raid its chests and come out with steeleaf.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "#hollow_hills"
+   ],
+   "reward": "Mining XP, steeleaf ingots"
+  },
+  {
+   "id": "steeleaf_kit",
+   "title": "Leaf-Steel",
+   "tier": "act2",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "hollow_hill"
+   ],
+   "summary": "Forge steeleaf ingots into a steeleaf pickaxe or chestplate, the realm's first native gear that grows enchantments of its own.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, steeleaf ingots"
+  },
+  {
+   "id": "naga_courtyard",
+   "title": "The Serpent's Court",
+   "tier": "act2",
+   "types": [
+    "explore"
+   ],
+   "after": [
+    "magic_map"
+   ],
+   "summary": "The magic map shows a walled courtyard of nagastone; find the Naga Courtyard and scout its broken pillars before the guardian wakes.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:naga_courtyard"
+   ],
+   "reward": "Exploration XP, a stack of food"
+  },
+  {
+   "id": "naga",
+   "title": "Coils of the Naga",
+   "tier": "act2",
+   "types": [
+    "boss"
+   ],
+   "after": [
+    "naga_courtyard"
+   ],
+   "summary": "The Naga charges in loops through the courtyard; dodge its rushes and strike its segments until it falls, lifting the first curse.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:naga_courtyard"
+   ],
+   "reward": "Attack XP, a healing potion bundle, golden apples"
+  },
+  {
+   "id": "naga_armor",
+   "title": "Scales of the Serpent",
+   "tier": "act2",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "naga"
+   ],
+   "summary": "Turn the Naga's scales into a Naga Scale chestplate and leggings, armour that shrugs off knockback.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Defense XP, a Naga banner pattern"
+  },
+  {
+   "id": "quest_grove",
+   "title": "The Questing Ram",
+   "tier": "act2",
+   "types": [
+    "puzzle",
+    "fetch"
+   ],
+   "after": [
+    "magic_map"
+   ],
+   "summary": "In a ring of stone in the Quest Grove grazes the Questing Ram, who wants wool of all sixteen colours; feed it one of each and see what it leaves behind.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:quest_grove"
+   ],
+   "reward": "Farming XP, the Questing Ram's treasure"
+  },
+  {
+   "id": "ironwood",
+   "title": "Living Iron",
+   "tier": "act2",
+   "types": [
+    "craft",
+    "fetch"
+   ],
+   "after": [
+    "hollow_hill"
+   ],
+   "summary": "Dig liveroot from the forest floor, craft it with iron and gold into raw ironwood, and smelt ironwood ingots.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Mining XP, ironwood ingots"
+  },
+  {
+   "id": "spartan_ironwood",
+   "title": "Ironwood Arsenal",
+   "tier": "act2",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "ironwood"
+   ],
+   "summary": "A Spartan smith's pattern takes ironwood well: craft an ironwood weapon from the Spartan Twilight line, a glaive, katana or halberd.",
+   "mods": [
+    "twilightforest",
+    "spartantwilight"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, ironwood throwing knives"
+  },
+  {
+   "id": "mushroom_tower",
+   "title": "The Glowing Spire",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "puzzle"
+   ],
+   "after": [
+    "twilight_biomes"
+   ],
+   "summary": "A giant mushroom tower rises in the Mushroom Forest; find the way up through its caps and stems to the loot at the top.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:mushroom_tower"
+   ],
+   "reward": "Agility XP, mushgloom and torchberries"
+  },
+  {
+   "id": "hedge_maze",
+   "title": "Thorns in the Hedge",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "timed"
+   ],
+   "after": [
+    "naga"
+   ],
+   "summary": "Hedge spiders lurk in the Hedge Maze's walls; reach the chests at its centre and get back out within ten minutes, before the spiders swarm.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:hedge_maze"
+   ],
+   "reward": "Agility XP, a Crumble Horn or Peacock Fan from the chests"
+  },
+  {
+   "id": "lich_tower",
+   "title": "The Lich's Spire",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "puzzle"
+   ],
+   "after": [
+    "naga"
+   ],
+   "summary": "With the Naga gone the Lich Tower opens; climb its winding stairs and painting rooms, past skeleton druids and the tower's spawners.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:lich_tower"
+   ],
+   "reward": "Exploration XP, ender pearls"
+  },
+  {
+   "id": "lich",
+   "title": "Shields of the Lich",
+   "tier": "act2",
+   "types": [
+    "boss"
+   ],
+   "after": [
+    "lich_tower"
+   ],
+   "summary": "The Lich hides behind spinning shields and clones; break the shields with ranged blows, ignore the copies, and end it at the tower's crown.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:lich_tower"
+   ],
+   "reward": "Magic XP, a Charm of Keeping, golden carrots"
+  },
+  {
+   "id": "scepters",
+   "title": "The Lich's Sceptres",
+   "tier": "act2",
+   "types": [
+    "drop",
+    "spell"
+   ],
+   "after": [
+    "lich"
+   ],
+   "summary": "Among the Lich's treasures lie the Twilight, Lifedrain, Zombie and Fortification sceptres; claim one and use it in battle.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Magic XP, a sceptre refill (ender pearls or rotten flesh)"
+  },
+  {
+   "id": "cursed_swamp",
+   "title": "The Choking Swamp",
+   "tier": "act2",
+   "types": [
+    "travel",
+    "encounter"
+   ],
+   "after": [
+    "lich"
+   ],
+   "summary": "The Lich's fall clears the fog over the Swamp, but mosquito swarms and hunger still haunt it; cross it in search of the labyrinth.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Agility XP, a stack of cooked food"
+  },
+  {
+   "id": "maze_map",
+   "title": "Map of the Maze",
+   "tier": "act2",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "cursed_swamp",
+    "magic_map"
+   ],
+   "summary": "Upgrade your Magic Map Focus into a Maze Map Focus and craft a Maze Map that traces corridors underground.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, a spare maze map"
+  },
+  {
+   "id": "labyrinth",
+   "title": "Halls of the Labyrinth",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "puzzle"
+   ],
+   "after": [
+    "maze_map"
+   ],
+   "summary": "Below the swamp sprawls the Labyrinth, with maze slimes and trapped vaults; map it, find the Mazebreaker Pickaxe or Ore Magnet in its vaults.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:labyrinth"
+   ],
+   "reward": "Mining XP, maze map, a Mazebreaker Pickaxe hint"
+  },
+  {
+   "id": "minotaurs",
+   "title": "Horns in the Dark",
+   "tier": "act2",
+   "types": [
+    "hunt"
+   ],
+   "after": [
+    "labyrinth"
+   ],
+   "summary": "Minotaurs pace the labyrinth halls; bring down five and take a Minotaur Axe from them.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:labyrinth"
+   ],
+   "reward": "Attack XP, a shield"
+  },
+  {
+   "id": "minoshroom",
+   "title": "The Minoshroom",
+   "tier": "act2",
+   "types": [
+    "boss"
+   ],
+   "after": [
+    "labyrinth"
+   ],
+   "summary": "At the labyrinth's heart waits the Minoshroom, charging with its diamond axe; bait its charge into walls and finish it.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:labyrinth"
+   ],
+   "reward": "Attack XP, a Diamond Minotaur Axe, healing potions"
+  },
+  {
+   "id": "meef",
+   "title": "Meef Stroganoff",
+   "tier": "act2",
+   "types": [
+    "cook",
+    "hunt"
+   ],
+   "after": [
+    "minoshroom"
+   ],
+   "summary": "Taste the Minoshroom's meef stroganoff, then hunt raw meef from minotaurs and cook enough for your next trip.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, cooked meef"
+  },
+  {
+   "id": "uncrafting",
+   "title": "Unmaking Things",
+   "tier": "act2",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "lich"
+   ],
+   "summary": "Build an Uncrafting Table and break down an old enchanted item into its parts.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, experience bottles"
+  },
+  {
+   "id": "trophies_one",
+   "title": "Three Trophies",
+   "tier": "act2",
+   "types": [
+    "collect",
+    "milestone"
+   ],
+   "after": [
+    "naga",
+    "lich",
+    "minoshroom"
+   ],
+   "summary": "Gather the Naga, Lich and Minoshroom trophies; the first part of the spirits' realm is free.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Exploration XP, an ironwood chest of supplies"
+  },
+  {
+   "id": "return_to_dusk",
+   "title": "Back to the Dusk",
+   "tier": "act3",
+   "types": [
+    "travel"
+   ],
+   "after": [
+    "main_story:act2_finale",
+    "trophies_one"
+   ],
+   "summary": "The forest calls again: the Minoshroom's death has cleared the Fire Swamp's smoke, and the Dark Forest has begun to stir.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Fire resistance potions"
+  },
+  {
+   "id": "fire_swamp",
+   "title": "Through the Fire Swamp",
+   "tier": "act3",
+   "types": [
+    "travel",
+    "brew"
+   ],
+   "after": [
+    "return_to_dusk"
+   ],
+   "summary": "Fire jets and lava pools fill the Fire Swamp; brew fire resistance and push through to the Hydra's lair.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Magic XP, fire resistance potions"
+  },
+  {
+   "id": "hydra_lair",
+   "title": "The Hydra's Lair",
+   "tier": "act3",
+   "types": [
+    "explore"
+   ],
+   "after": [
+    "fire_swamp"
+   ],
+   "summary": "Find the lair cut into the swamp's hill and the Hydra waiting inside.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:hydra_lair"
+   ],
+   "reward": "Exploration XP, golden apples"
+  },
+  {
+   "id": "hydra",
+   "title": "Three Heads Burning",
+   "tier": "act3",
+   "types": [
+    "boss"
+   ],
+   "after": [
+    "hydra_lair"
+   ],
+   "summary": "The Hydra spits fire and mortars; strike its heads when they open, before they regrow, until the body falls.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:hydra_lair"
+   ],
+   "reward": "Range XP, hydra chops, fiery blood"
+  },
+  {
+   "id": "fiery_ingot",
+   "title": "Fire in the Metal",
+   "tier": "act3",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "hydra"
+   ],
+   "summary": "Combine fiery blood with iron to forge fiery ingots, the hottest metal of the realm.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, fiery ingots"
+  },
+  {
+   "id": "dark_forest",
+   "title": "Under the Black Canopy",
+   "tier": "act3",
+   "types": [
+    "travel",
+    "encounter"
+   ],
+   "after": [
+    "hydra"
+   ],
+   "summary": "The Dark Forest is lit by nothing; brave its blindness and the goblins, redcaps and hostile wolves that roam it.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Defense XP, night vision potions"
+  },
+  {
+   "id": "magic_trees",
+   "title": "Seeds of Wonder",
+   "tier": "act3",
+   "types": [
+    "collect",
+    "build"
+   ],
+   "after": [
+    "dark_forest"
+   ],
+   "summary": "Rare saplings of the Tree of Time, Tree of Transformation, Miner's Tree and Sorting Tree hide in the Dark Forest; grow one and set its heart working.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, transformation powder"
+  },
+  {
+   "id": "knight_stronghold",
+   "title": "The Phantom Stronghold",
+   "tier": "act3",
+   "types": [
+    "explore"
+   ],
+   "after": [
+    "dark_forest"
+   ],
+   "summary": "Beneath the Dark Forest lies the Knight Stronghold; find the trapdoor in, past goblin knights and helmet crabs.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:knight_stronghold"
+   ],
+   "reward": "Exploration XP, a lantern"
+  },
+  {
+   "id": "knightmetal",
+   "title": "Shards of Armour",
+   "tier": "act3",
+   "types": [
+    "collect",
+    "craft"
+   ],
+   "after": [
+    "knight_stronghold"
+   ],
+   "summary": "Collect armour shards from goblin knights and the stronghold's chests and press them into knightmetal ingots.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:knight_stronghold"
+   ],
+   "reward": "Crafting XP, knightmetal ingots"
+  },
+  {
+   "id": "knight_phantoms",
+   "title": "Six Phantom Knights",
+   "tier": "act3",
+   "types": [
+    "boss"
+   ],
+   "after": [
+    "knight_stronghold"
+   ],
+   "summary": "In the stronghold's throne room six Knight Phantoms rise one after another; outlast them all.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:knight_stronghold"
+   ],
+   "reward": "Defense XP, Phantom armour piece, golden apples"
+  },
+  {
+   "id": "block_and_chain",
+   "title": "Block and Chain",
+   "tier": "act3",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "knightmetal"
+   ],
+   "summary": "Craft a Block and Chain or a Knightmetal Shield, the weapons the phantoms' metal was made for.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Attack XP, knightmetal blocks"
+  },
+  {
+   "id": "spartan_knightmetal",
+   "title": "Knightly Arms",
+   "tier": "act3",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "knightmetal"
+   ],
+   "summary": "Use knightmetal for a Spartan Twilight weapon: a knightmetal longsword, lance or warhammer.",
+   "mods": [
+    "twilightforest",
+    "spartantwilight"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, knightmetal javelins"
+  },
+  {
+   "id": "dark_tower",
+   "title": "The Dark Tower",
+   "tier": "act3",
+   "types": [
+    "explore",
+    "puzzle"
+   ],
+   "after": [
+    "knight_phantoms"
+   ],
+   "summary": "At the Dark Forest's centre stands a towerwood spire; climb past towerwood borers, ghastguards and carminite golems, triggering the builder blocks to climb.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:dark_tower"
+   ],
+   "reward": "Agility XP, carminite"
+  },
+  {
+   "id": "carminite",
+   "title": "Carminite Hearts",
+   "tier": "act3",
+   "types": [
+    "drop",
+    "puzzle"
+   ],
+   "after": [
+    "dark_tower"
+   ],
+   "summary": "Harvest carminite from ghastlings and golems and destroy the carminite reactors that keep the tower's defences alive.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:dark_tower"
+   ],
+   "reward": "Mining XP, a carminite builder"
+  },
+  {
+   "id": "ur_ghast",
+   "title": "Tears of the Ur-Ghast",
+   "tier": "act3",
+   "types": [
+    "boss"
+   ],
+   "after": [
+    "carminite"
+   ],
+   "summary": "Atop the tower the Ur-Ghast cries fire; break the reactors when it retreats, then strike it down.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:dark_tower"
+   ],
+   "reward": "Range XP, fiery tears, a stack of arrows"
+  },
+  {
+   "id": "fiery_gear",
+   "title": "The Fiery Set",
+   "tier": "act3",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "ur_ghast",
+    "fiery_ingot"
+   ],
+   "summary": "With fiery tears and blood, finish a full suit of fiery armour or a fiery sword and pickaxe.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, fire resistance potions"
+  },
+  {
+   "id": "spartan_fiery",
+   "title": "Weapons of Flame",
+   "tier": "act3",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "fiery_gear"
+   ],
+   "summary": "Forge a fiery Spartan Twilight weapon, a greatsword, scythe or heavy crossbow that sets enemies alight.",
+   "mods": [
+    "twilightforest",
+    "spartantwilight"
+   ],
+   "landmarks": [],
+   "reward": "Attack XP, fiery throwing knives"
+  },
+  {
+   "id": "trophies_two",
+   "title": "Six Trophies",
+   "tier": "act3",
+   "types": [
+    "collect",
+    "milestone"
+   ],
+   "after": [
+    "hydra",
+    "knight_phantoms",
+    "ur_ghast"
+   ],
+   "summary": "Add the Hydra, Knight Phantom and Ur-Ghast trophies to your hall; the forest's middle lands are free.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Exploration XP, a Charm of Life II"
+  },
+  {
+   "id": "call_of_snow",
+   "title": "The Cold Reaches",
+   "tier": "act4",
+   "types": [
+    "travel",
+    "encounter"
+   ],
+   "after": [
+    "main_story:act3_finale",
+    "trophies_two"
+   ],
+   "summary": "The forest's snowy forest has opened; cross it through blizzards, winter wolves and falling ice.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Defense XP, warm food"
+  },
+  {
+   "id": "yeti_cave",
+   "title": "Caves of the Yeti",
+   "tier": "act4",
+   "types": [
+    "explore",
+    "hunt"
+   ],
+   "after": [
+    "call_of_snow"
+   ],
+   "summary": "Find the yeti cave in the snowy forest and hunt yetis for arctic fur.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:yeti_cave"
+   ],
+   "reward": "Range XP, arctic fur"
+  },
+  {
+   "id": "alpha_yeti",
+   "title": "The Alpha Yeti",
+   "tier": "act4",
+   "types": [
+    "boss"
+   ],
+   "after": [
+    "yeti_cave"
+   ],
+   "summary": "The Alpha Yeti hurls ice and roars the ceiling down; wait for it to tire, then strike.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:yeti_cave"
+   ],
+   "reward": "Attack XP, alpha yeti fur, ice bombs"
+  },
+  {
+   "id": "arctic_armor",
+   "title": "Armour of Fur",
+   "tier": "act4",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "yeti_cave"
+   ],
+   "summary": "Sew arctic fur into arctic armour that can be dyed and keeps the cold out.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, a dye bundle"
+  },
+  {
+   "id": "aurora_palace",
+   "title": "The Aurora Palace",
+   "tier": "act4",
+   "types": [
+    "explore",
+    "puzzle"
+   ],
+   "after": [
+    "alpha_yeti"
+   ],
+   "summary": "On the Glacier stands the Aurora Palace of ice; climb its halls past snow guardians and ice cores to the queen's chamber.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:aurora_palace"
+   ],
+   "reward": "Agility XP, auroralized glass"
+  },
+  {
+   "id": "snow_queen",
+   "title": "The Snow Queen",
+   "tier": "act4",
+   "types": [
+    "boss"
+   ],
+   "after": [
+    "aurora_palace"
+   ],
+   "summary": "The Snow Queen summons ice shields and hammers you from above; break her guard and bring her down.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:aurora_palace"
+   ],
+   "reward": "Magic XP, a Charm of Keeping III"
+  },
+  {
+   "id": "troll_caves",
+   "title": "Caves of the Trolls",
+   "tier": "act4",
+   "types": [
+    "explore",
+    "fetch"
+   ],
+   "after": [
+    "snow_queen"
+   ],
+   "summary": "The Highlands open at last; search the troll caves under them for trollsteinn and the vault holding the Lamp of Cinders.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:troll_cave"
+   ],
+   "reward": "Mining XP, uberous soil"
+  },
+  {
+   "id": "thornlands",
+   "title": "Burn the Thorns",
+   "tier": "act4",
+   "types": [
+    "travel",
+    "puzzle"
+   ],
+   "after": [
+    "troll_caves"
+   ],
+   "summary": "The Lamp of Cinders burns away the thorns of the Thornlands; carve a path to the Final Plateau.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Agility XP, food"
+  },
+  {
+   "id": "final_castle",
+   "title": "The Unfinished Castle",
+   "tier": "act4",
+   "types": [
+    "explore"
+   ],
+   "after": [
+    "thornlands"
+   ],
+   "summary": "On the plateau stands the final castle, sealed behind force fields and still unfinished; reach its gate and see what waits for the realm next.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [
+    "twilightforest:final_castle"
+   ],
+   "reward": "Exploration XP, a Twilight Forest trophy pedestal"
+  },
+  {
+   "id": "trophy_hall",
+   "title": "A Hall of Trophies",
+   "tier": "act4",
+   "types": [
+    "build",
+    "milestone"
+   ],
+   "after": [
+    "snow_queen",
+    "trophies_two",
+    "alpha_yeti"
+   ],
+   "summary": "Build a hall in your base and mount all eight trophies on pedestals: Naga, Lich, Minoshroom, Hydra, Knight Phantom, Ur-Ghast, Alpha Yeti, Snow Queen.",
+   "mods": [
+    "twilightforest"
+   ],
+   "landmarks": [],
+   "reward": "Exploration XP, a Questing Ram trophy"
+  }
+ ]
+}

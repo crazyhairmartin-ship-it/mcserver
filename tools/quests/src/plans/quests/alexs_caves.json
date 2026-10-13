@@ -1,0 +1,957 @@
+{
+ "line": "The Underworld (Alex's Caves)",
+ "chapter": "realm_alexs_caves",
+ "group": "realms",
+ "giver": "A village cartographer with Cave Maps, and the cave tablets left in abandoned cabins",
+ "feel": "Six strange worlds under the stone, each with its own tech, creatures and climax",
+ "quests": [
+  {
+   "id": "rumours_below",
+   "title": "Rumours from Below",
+   "tier": "act2",
+   "types": [
+    "talk",
+    "trade"
+   ],
+   "after": [
+    "main_story:act2_start"
+   ],
+   "summary": "A village cartographer speaks of whole worlds under the stone and sells Cave Maps; buy one and let it search out the nearest cave biome.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Exploration XP, emeralds toward a second map"
+  },
+  {
+   "id": "miners_cabin",
+   "title": "The Abandoned Cabin",
+   "tier": "any",
+   "types": [
+    "discover",
+    "fetch"
+   ],
+   "after": [],
+   "summary": "Stumbling on an underground cabin deep in the rock, you find a cave tablet among its chests; it points toward a hidden biome.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:underground_cabin"
+   ],
+   "reward": "Mining XP, a cave tablet, torches"
+  },
+  {
+   "id": "cave_book",
+   "title": "The Spelunker's Notes",
+   "tier": "act2",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "rumours_below"
+   ],
+   "summary": "Craft a Cave Book to keep notes on every cave biome, and a Cave Codex as your journal of the underworld.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, a Cave Codex"
+  },
+  {
+   "id": "magnetic_caves",
+   "title": "Pull of the Deep",
+   "tier": "act2",
+   "types": [
+    "discover",
+    "travel"
+   ],
+   "after": [
+    "rumours_below"
+   ],
+   "summary": "Follow the Cave Map down into the Magnetic Caves, where galena spires float and metal tugs at your belt.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Exploration XP, iron ingots"
+  },
+  {
+   "id": "ferrocave",
+   "title": "Ferrocave",
+   "tier": "act2",
+   "types": [
+    "explore"
+   ],
+   "after": [
+    "magnetic_caves"
+   ],
+   "summary": "Find a ferrocave, its walls studded with scarlet and azure neodymium nodes.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:ferrocave"
+   ],
+   "reward": "Mining XP, a pickaxe repair kit"
+  },
+  {
+   "id": "neodymium",
+   "title": "Scarlet and Azure",
+   "tier": "act2",
+   "types": [
+    "collect"
+   ],
+   "after": [
+    "ferrocave"
+   ],
+   "summary": "Mine raw scarlet and azure neodymium and smelt ingots of both colours.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:ferrocave"
+   ],
+   "reward": "Mining XP, neodymium ingots"
+  },
+  {
+   "id": "magnets",
+   "title": "Opposites Attract",
+   "tier": "act2",
+   "types": [
+    "craft",
+    "puzzle"
+   ],
+   "after": [
+    "neodymium"
+   ],
+   "summary": "Craft scarlet and azure magnets and use them to pull metal blocks across a gap.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, a stack of iron blocks"
+  },
+  {
+   "id": "magnetron",
+   "title": "The Magnetron",
+   "tier": "act2",
+   "types": [
+    "hunt"
+   ],
+   "after": [
+    "ferrocave"
+   ],
+   "summary": "A Magnetron stalks the cave, pulling metal blocks into a body; bring it down and survive the teletors and notors around it.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:ferrocave"
+   ],
+   "reward": "Attack XP, a resistor shield"
+  },
+  {
+   "id": "galena_gauntlet",
+   "title": "The Galena Gauntlet",
+   "tier": "act2",
+   "types": [
+    "craft",
+    "contest"
+   ],
+   "after": [
+    "magnets",
+    "magnetron"
+   ],
+   "summary": "Forge a Galena Gauntlet and use it to fling and catch metal; master the gauntlet challenge.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, a holocoder"
+  },
+  {
+   "id": "tesla",
+   "title": "Lightning in a Bulb",
+   "tier": "act2",
+   "types": [
+    "build"
+   ],
+   "after": [
+    "magnets"
+   ],
+   "summary": "Build a working magnetic machine: tesla bulbs, a quarry smasher, or a finished quarry.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, redstone blocks"
+  },
+  {
+   "id": "primordial_caves",
+   "title": "Lost World",
+   "tier": "act2",
+   "types": [
+    "discover",
+    "travel"
+   ],
+   "after": [
+    "rumours_below"
+   ],
+   "summary": "Under the forest roof lies a land of ferns and cycads: the Primordial Caves, home of the dinosaurs.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Exploration XP, a spyglass"
+  },
+  {
+   "id": "dino_bowl",
+   "title": "The Dinosaur Bowl",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "photo"
+   ],
+   "after": [
+    "primordial_caves"
+   ],
+   "summary": "Look down into a dino bowl and watch grottoceratops herds, subterranodons and relicheirus graze among the tar.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:dino_bowl"
+   ],
+   "reward": "Taming XP, food"
+  },
+  {
+   "id": "dino_chop",
+   "title": "Primordial Supper",
+   "tier": "act2",
+   "types": [
+    "hunt",
+    "cook"
+   ],
+   "after": [
+    "dino_bowl"
+   ],
+   "summary": "Hunt a grottoceratops for dinosaur chops and cook them into hearty meals.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:dino_bowl"
+   ],
+   "reward": "Cooking XP, dinosaur nuggets"
+  },
+  {
+   "id": "subterranodon",
+   "title": "Wings Over the Cave",
+   "tier": "act2",
+   "types": [
+    "tame",
+    "ride"
+   ],
+   "after": [
+    "dino_bowl"
+   ],
+   "summary": "Tame a subterranodon and ride it across the cavern.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Taming XP, a saddle"
+  },
+  {
+   "id": "stolen_egg",
+   "title": "The Stolen Egg",
+   "tier": "act2",
+   "types": [
+    "rescue",
+    "escort"
+   ],
+   "after": [
+    "dino_bowl"
+   ],
+   "summary": "Vallumraptors have taken an atlatitan egg; take it back from their pack and carry it safely to hatch.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Taming XP, a primitive club"
+  },
+  {
+   "id": "amber",
+   "title": "Trapped in Amber",
+   "tier": "act2",
+   "types": [
+    "fetch"
+   ],
+   "after": [
+    "primordial_caves"
+   ],
+   "summary": "Search the cave walls for amber and an amber curiosity, old relics sealed inside.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Mining XP, amber"
+  },
+  {
+   "id": "volcano",
+   "title": "The Volcano",
+   "tier": "act2",
+   "types": [
+    "explore"
+   ],
+   "after": [
+    "primordial_caves"
+   ],
+   "summary": "Find the primordial volcano, a mountain of magma and tephra that the Tremorsaurus guards.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:volcano"
+   ],
+   "reward": "Exploration XP, fire resistance"
+  },
+  {
+   "id": "tremorsaurus",
+   "title": "The Tremorsaurus",
+   "tier": "act2",
+   "types": [
+    "hunt"
+   ],
+   "after": [
+    "volcano"
+   ],
+   "summary": "Take down a tremorsaurus and claim a heavy bone from the giant.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:volcano"
+   ],
+   "reward": "Attack XP, heavy bones"
+  },
+  {
+   "id": "ominous_catalyst",
+   "title": "Ominous Catalyst",
+   "tier": "act3",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "tremorsaurus",
+    "amber"
+   ],
+   "summary": "Combine heavy bones with an amber curiosity to craft the Ominous Catalyst that can wake something at the volcano.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, a spare heavy bone"
+  },
+  {
+   "id": "luxtructosaurus",
+   "title": "The Luxtructosaurus",
+   "tier": "act4",
+   "types": [
+    "boss"
+   ],
+   "after": [
+    "ominous_catalyst"
+   ],
+   "summary": "Use the Ominous Catalyst at the volcano to summon the Luxtructosaurus (600 health, 20 armour); outlast its meteors and stomps.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:volcano"
+   ],
+   "reward": "Attack XP, a tectonic shard"
+  },
+  {
+   "id": "extinction_spear",
+   "title": "Extinction",
+   "tier": "act4",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "luxtructosaurus"
+   ],
+   "summary": "Craft the Extinction Spear from the tectonic shard, the underworld's final weapon.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, golden apples"
+  },
+  {
+   "id": "hazmat",
+   "title": "Gear Up",
+   "tier": "act2",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "rumours_below"
+   ],
+   "summary": "Before entering the Toxic Caves, craft a hazmat suit and mask; radiation kills unprotected explorers.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, a hazmat mask"
+  },
+  {
+   "id": "toxic_caves",
+   "title": "Glow of Uranium",
+   "tier": "act2",
+   "types": [
+    "discover",
+    "travel"
+   ],
+   "after": [
+    "hazmat"
+   ],
+   "summary": "Descend into the Toxic Caves, a land of green acid and glowing uranium.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Exploration XP, milk buckets"
+  },
+  {
+   "id": "acid_pit",
+   "title": "The Acid Pit",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "timed"
+   ],
+   "after": [
+    "toxic_caves"
+   ],
+   "summary": "Find an acid pit and pull a cache from its edge before radiation takes hold.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:acid_pit"
+   ],
+   "reward": "Agility XP, radon bottles"
+  },
+  {
+   "id": "raycat",
+   "title": "Raycat",
+   "tier": "act2",
+   "types": [
+    "tame"
+   ],
+   "after": [
+    "toxic_caves"
+   ],
+   "summary": "Tame a raycat with raw fish; it purifies radiation around you. Feed gammaroaches too.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Taming XP, cooked radgill"
+  },
+  {
+   "id": "raygun",
+   "title": "Raygun",
+   "tier": "act2",
+   "types": [
+    "craft",
+    "drop"
+   ],
+   "after": [
+    "toxic_caves"
+   ],
+   "summary": "Gather uranium rods and scrap metal and craft a raygun, then test its beam on the gammaroaches.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Range XP, uranium"
+  },
+  {
+   "id": "nucleeper",
+   "title": "Defuse It",
+   "tier": "act3",
+   "types": [
+    "puzzle",
+    "timed"
+   ],
+   "after": [
+    "toxic_caves"
+   ],
+   "summary": "A nucleeper has primed; defuse the nuclear bomb before it blows.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Defense XP, a nuclear furnace component"
+  },
+  {
+   "id": "tremorzilla",
+   "title": "Raising Tremorzilla",
+   "tier": "act3",
+   "types": [
+    "tame",
+    "boss"
+   ],
+   "after": [
+    "nucleeper",
+    "tremorsaurus"
+   ],
+   "summary": "Irradiate a tremorsaurus egg into Tremorzilla's egg, hatch it, and raise the monster as your own.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Taming XP, a stack of food"
+  },
+  {
+   "id": "diving_gear",
+   "title": "Down to the Depths",
+   "tier": "act2",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "rumours_below"
+   ],
+   "summary": "Craft a diving helmet, suit and boots for the drowned chasm.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, depth charges"
+  },
+  {
+   "id": "abyssal_chasm",
+   "title": "Into the Abyss",
+   "tier": "act2",
+   "types": [
+    "discover",
+    "travel"
+   ],
+   "after": [
+    "diving_gear"
+   ],
+   "summary": "Under the ocean floor, find the Abyssal Chasm, where lanternfish and tripodfish swim in the dark.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:ocean_trench"
+   ],
+   "reward": "Exploration XP, bioluminescent torches"
+  },
+  {
+   "id": "submarine",
+   "title": "The Submarine",
+   "tier": "act3",
+   "types": [
+    "craft",
+    "ride"
+   ],
+   "after": [
+    "abyssal_chasm"
+   ],
+   "summary": "Build a submarine and pilot it to the trench's floor.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, a stack of copper"
+  },
+  {
+   "id": "abyssal_ruins",
+   "title": "Ruins of the Deep Ones",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "stealth"
+   ],
+   "after": [
+    "abyssal_chasm"
+   ],
+   "summary": "Sneak into abyssal ruins, the city of the deep ones, without stirring the mine guardians.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:abyssal_ruins"
+   ],
+   "reward": "Exploration XP, pearls"
+  },
+  {
+   "id": "deep_ones",
+   "title": "Trade with the Deep",
+   "tier": "act3",
+   "types": [
+    "trade",
+    "talk"
+   ],
+   "after": [
+    "abyssal_ruins"
+   ],
+   "summary": "Earn the deep ones' trust with offerings at an abyssal altar and trade for their gear: a sea staff or an ortholance.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:abyssal_ruins"
+   ],
+   "reward": "Fishing XP, a sea staff"
+  },
+  {
+   "id": "sushi",
+   "title": "Deep Sea Sushi",
+   "tier": "act2",
+   "types": [
+    "fish",
+    "cook"
+   ],
+   "after": [
+    "abyssal_chasm"
+   ],
+   "summary": "Catch lanternfish, tripodfish and mussels and roll them into deep sea sushi.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Fishing XP, sushi"
+  },
+  {
+   "id": "hullbreaker",
+   "title": "The Hullbreaker",
+   "tier": "act3",
+   "types": [
+    "boss"
+   ],
+   "after": [
+    "submarine",
+    "deep_ones"
+   ],
+   "summary": "The Hullbreaker, a giant bony angler that rams submarines, hunts the trench's floor; bring it down from your sub or on foot.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:ocean_trench"
+   ],
+   "reward": "Fishing XP, golden apples"
+  },
+  {
+   "id": "forlorn_hollows",
+   "title": "Where Light Dies",
+   "tier": "act2",
+   "types": [
+    "discover",
+    "travel"
+   ],
+   "after": [
+    "rumours_below"
+   ],
+   "summary": "Descend into the Forlorn Hollows, a moonless world of watchers, gloomoths and corrodents.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Exploration XP, torches"
+  },
+  {
+   "id": "forlorn_canyon",
+   "title": "The Forlorn Canyon",
+   "tier": "act2",
+   "types": [
+    "explore"
+   ],
+   "after": [
+    "forlorn_hollows"
+   ],
+   "summary": "Find the forlorn canyon and its guano-stained cliffs.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:forlorn_canyon"
+   ],
+   "reward": "Exploration XP, night vision"
+  },
+  {
+   "id": "forlorn_bridge",
+   "title": "Cross the Bridge",
+   "tier": "act2",
+   "types": [
+    "stealth",
+    "timed"
+   ],
+   "after": [
+    "forlorn_canyon"
+   ],
+   "summary": "Cross a forlorn bridge over the void while underzealots hunt in the dark.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:forlorn_bridge"
+   ],
+   "reward": "Agility XP, dark tatters"
+  },
+  {
+   "id": "watcher",
+   "title": "The Watcher",
+   "tier": "act2",
+   "types": [
+    "hunt"
+   ],
+   "after": [
+    "forlorn_hollows"
+   ],
+   "summary": "Watchers take your eyes; kill one before it can switch your view.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Attack XP, a spyglass"
+  },
+  {
+   "id": "forsaken",
+   "title": "The Forsaken",
+   "tier": "act2",
+   "types": [
+    "boss",
+    "encounter"
+   ],
+   "after": [
+    "forlorn_bridge"
+   ],
+   "summary": "Underzealots perform a ritual to summon the Forsaken, a towering blind beast; fight it as it emerges.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:forlorn_canyon"
+   ],
+   "reward": "Attack XP, golden apples, night vision potions"
+  },
+  {
+   "id": "dreadbow",
+   "title": "The Dreadbow",
+   "tier": "act2",
+   "types": [
+    "craft"
+   ],
+   "after": [
+    "forsaken"
+   ],
+   "summary": "Craft a dreadbow and a desolate dagger from pure darkness and dark tatters.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Range XP, arrows"
+  },
+  {
+   "id": "beholder",
+   "title": "The Beholder",
+   "tier": "act3",
+   "types": [
+    "craft",
+    "puzzle"
+   ],
+   "after": [
+    "forsaken"
+   ],
+   "summary": "Build a beholder and use it to watch far places.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Magic XP, occult gems"
+  },
+  {
+   "id": "candy_cavity",
+   "title": "Sugar Rush",
+   "tier": "act2",
+   "types": [
+    "discover",
+    "travel"
+   ],
+   "after": [
+    "rumours_below"
+   ],
+   "summary": "A cave full of sweets: the Candy Cavity, with its frosting hills and soda lakes.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Exploration XP, candy canes"
+  },
+  {
+   "id": "gingerbread_town",
+   "title": "Gingerbread Town",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "trade"
+   ],
+   "after": [
+    "candy_cavity"
+   ],
+   "summary": "Visit a gingerbread town and its gingerbread men.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:gingerbread_town"
+   ],
+   "reward": "Cooking XP, gingerbread armour"
+  },
+  {
+   "id": "licowitch",
+   "title": "The Licowitch Tower",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "kill"
+   ],
+   "after": [
+    "candy_cavity"
+   ],
+   "summary": "Climb a licowitch tower and defeat the licowitch at its top.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:licowitch_tower"
+   ],
+   "reward": "Magic XP, a sugar staff"
+  },
+  {
+   "id": "sweet_landmarks",
+   "title": "A Tour of Sweets",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "collect"
+   ],
+   "after": [
+    "candy_cavity"
+   ],
+   "summary": "Visit a cake cave, a soda bottle and a donut arch, collecting a treat from each.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [
+    "alexscaves:cake_cave",
+    "alexscaves:soda_bottle",
+    "alexscaves:donut_arch"
+   ],
+   "reward": "Cooking XP, caramel apples"
+  },
+  {
+   "id": "confection_oven",
+   "title": "The Confection Oven",
+   "tier": "act2",
+   "types": [
+    "craft",
+    "cook"
+   ],
+   "after": [
+    "sweet_landmarks"
+   ],
+   "summary": "Craft a confection oven and bake sweets in it.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Cooking XP, biome treats"
+  },
+  {
+   "id": "gummy_bear",
+   "title": "Gummy Friends",
+   "tier": "act2",
+   "types": [
+    "tame",
+    "ride"
+   ],
+   "after": [
+    "candy_cavity"
+   ],
+   "summary": "Feed a gummy bear and ride a candicorn.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Taming XP, gelatin"
+  },
+  {
+   "id": "gum_worm",
+   "title": "The Gum Worm",
+   "tier": "act3",
+   "types": [
+    "hunt",
+    "ride"
+   ],
+   "after": [
+    "candy_cavity"
+   ],
+   "summary": "Hook a gum worm with a candy cane hook and ride it.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Agility XP, a candy cane hook"
+  },
+  {
+   "id": "six_worlds",
+   "title": "Six Worlds Below",
+   "tier": "act3",
+   "types": [
+    "milestone",
+    "discover"
+   ],
+   "after": [
+    "magnetic_caves",
+    "primordial_caves",
+    "toxic_caves",
+    "abyssal_chasm",
+    "forlorn_hollows",
+    "candy_cavity"
+   ],
+   "summary": "Visit all six cave biomes and record them in your Cave Codex.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Exploration XP, a conversion crucible"
+  },
+  {
+   "id": "crucible",
+   "title": "The Conversion Crucible",
+   "tier": "act3",
+   "types": [
+    "build"
+   ],
+   "after": [
+    "six_worlds"
+   ],
+   "summary": "Use a conversion crucible to turn an area into a cave biome.",
+   "mods": [
+    "alexscaves"
+   ],
+   "landmarks": [],
+   "reward": "Crafting XP, biome treats"
+  }
+ ]
+}
