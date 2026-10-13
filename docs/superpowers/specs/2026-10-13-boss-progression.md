@@ -1,6 +1,6 @@
 # Boss and objective progression (for the story line)
 
-Status: proposal for discussion, 2026-10-13 (revised: Cataclysm's main bosses moved after the Ender Dragon and ordered by the owner's testing, close to the Cataclysm wiki's ratings; base health from each mod's code; main quest with branches, skill paths and compass locks added). Built from the pack's current mod list on `main` (merged into
+Status: proposal for discussion, 2026-10-13 (revised: Cataclysm's main bosses moved after the Ender Dragon and ordered by the owner's testing; Mowzie's bosses in the main story; Ignis the final boss and Echo of Tyros the magic questline's; compass real lock decided, not built). Built from the pack's current mod list on `main` (merged into
 `claude/cloud-session-setup-epiuzy`), reading each mod's jar: boss tags, structures and where they generate, locator
 recipes, and boss loot tables. Difficulty is relative (from the mods' designs and drops), not measured in game.
 
@@ -96,31 +96,39 @@ Getting Started, the first village, the Field Guide, skills, mailbox, first home
 has gone quiet.
 
 ### Act I: the first wardens (iron)
-1. **Ferrous Wroughtnaut** (Wrought Chamber): 40 health but hits for 30; teaches dodge-and-punish.
-2. **YUNG's dungeons, mineshafts, desert and jungle temples**; the first Explorer's Compass.
-3. **Iron's Spells start**: a Priest in a village, the Pyromancer Tower, first spellbook and scrolls.
-4. **Umvuthi** (Umvuthana Grove, savanna).
-5. **The Sculptor** (Monastery climb; fits the Agility tree and ParCool).
-6. **Pillager outposts and the first raid**, the Illusioner and Iceologer (Friends & Foes).
-- _Act finale:_ craft a diamond and light the **Twilight Forest portal**.
+Mowzie's bosses are part of the main story (Acts I and II), not a side branch: each is a story beat, unlocked in the
+compass when the story reaches it, and each drops gear that carries the player to the next act.
+1. **YUNG's dungeons, mineshafts, desert and jungle temples**; the first structures in the compass.
+2. **Ferrous Wroughtnaut** (Wrought Chamber): 40 health but hits for 30, only hurt from behind; teaches
+   dodge-and-punish. Drops the **Wrought Axe** and **Wrought Helm**.
+3. **Iron's Spells start** (also the start of the magic questline, below): a Priest, the Pyromancer Tower.
+4. **Pillager outposts and the first raid**, the Illusioner and Iceologer (Friends & Foes).
+5. **Umvuthi** (Umvuthana Grove, savanna; 150 health, spells and followers): drops the **Sol Visage**.
+- _Act finale:_ Umvuthi falls; craft a diamond and light the **Twilight Forest portal**.
 
 ### Act II: below and beyond (diamond)
 1. **Twilight Forest, part 1**: Naga, Lich, Minoshroom.
-2. **Alex's Caves**: Cave Maps; Magnetic and Primordial Caves, the Abyssal Chasm, Forlorn Hollows (**Forsaken**),
+2. **Frostmaw** (snowy biomes; 250 health): drops the **Ice Crystal**.
+3. **Alex's Caves**: Cave Maps; Magnetic and Primordial Caves, the Abyssal Chasm, Forlorn Hollows (**Forsaken**),
    the Candy Cavity.
-3. **Frostmaw** (snowy biomes).
 4. **Elder Guardian** (Better Ocean Monument): prismarine, water breathing.
 5. **Cataclysm's outposts**: scout the Cursed Pyramid (Kobolediator, Wadjet: Ancient Metal) and the Frosted Prison
    (Aptrgangr: Black Steel); their main bosses wait for the post-game.
-6. **Evoker Fort** (Archevoker) and When Dungeons Arise's illager strongholds.
-- _Act finale:_ the **first trip to the Nether**.
+6. **The Sculptor** (Monastery: a climbing trial up a tall peak, then the fight; fits the Agility tree and
+   ParCool): drops the **Geomancer** armour set and the **Sculptor Staff**.
+- _Act finale:_ the Sculptor's peak is the last Overworld trial; from the top you see the way into the Nether.
+  **First trip to the Nether.**
+
+Mowzie's Cataclysm's eyes (Wrought, Sun, Frostmaw, Tongbi) are crafted from Eyes of Ender, so they only work after
+the first Nether trip. Before that, the story points the player at each Mowzie structure through the compass lock
+(below); afterwards the eyes are a second way to find more of them.
 
 ### Act III: the burning realm (Nether, diamond to netherite)
 1. **Better Nether Fortress**: blaze rods, wither skeleton skulls.
-2. **Iron's Nether Citadel** (Ancient Knight) and Friends & Foes' **Wildfire**.
+2. Friends & Foes' **Wildfire** (Nether citadel). Iron's Nether Citadel belongs to the magic questline.
 3. **Netherite gear**.
 4. **Twilight Forest, part 2**: Hydra, Knight Phantoms, Ur-Ghast.
-5. **The Dead King** (Iron's Catacombs): the big magic milestone.
+5. Branch: **the Dead King** (Iron's Catacombs), the magic questline's big milestone.
 6. **The Wither**, then a beacon.
 7. Optional: **Hullbreaker** (Abyssal Chasm), **Tremorzilla** (Toxic Caves).
 - _Act finale:_ finish the Twilight Forest (part 3 below) or find the stronghold.
@@ -149,11 +157,15 @@ hearts, made worse by server lag).
    its damage in `config/cataclysm-common.toml` if it stays a one-shot on the server.
 8. **Ignis** (Burning Arena, Flame Eye): Ignitium. Hardest, no question.
 
-Side branches from the main quest (not required for the finale): **Luxtructosaurus** (Alex's Caves volcano,
-Ominous Catalyst; 600 health, 20 armour), the Void Worm, the Warden.
-- _Finale:_ **Echo of Tyros, First Flamebearer** (Iron's, 1000 health, 15 armour), or end on Ignis (open question).
+**Ignis is the final boss of the main story**: the hardest fight in Cataclysm, last in the order above, and the
+end of the plot. Side branches from the main quest (not required for the finale): **Luxtructosaurus** (Alex's
+Caves volcano, Ominous Catalyst; 600 health, 20 armour), the Void Worm, the Warden. **Echo of Tyros** is the final
+boss of the magic questline instead (below).
 
 ## Quest structure: a main quest with branches
+
+Quests are the pack's progression, not an optional extra: the main story and its branches carry real rewards
+(boss-tier gear, unique items, artifacts, skill XP), and the compass lock ties discovery to them.
 
 - **Main quest** (group "The Story"): one chapter per act. Each act has a short spine of story quests that must be
   done in order, ending in the act's finale. The spine only asks for what the plot needs.
@@ -166,16 +178,31 @@ Ominous Catalyst; 600 health, 20 armour), the Void Worm, the Warden.
 
 | Branches off | Branch | Content |
 |---|---|---|
-| Act I spine | Iron's Spells: first steps | Priest, Pyromancer Tower, first spellbook, inks, scrolls |
-| Act I spine | Mowzie's trials | Wroughtnaut, Umvuthi, Sculptor's climb |
+| Act I spine | The magic questline | Iron's Spells from the first Priest to Echo of Tyros (below) |
 | Act II spine | Alex's Caves | Cave Maps, each cave biome, Forsaken, Hullbreaker, Tremorzilla, **Luxtructosaurus** |
 | Act II spine | Twilight Forest | Three parts, continued in Acts III and IV |
 | Act II spine | Cataclysm scouting | Mini-bosses, eyes, the eight sealed strongholds |
-| Act III spine | The Dead King | Catacombs, Necromancers, the Dead King |
 | Act IV spine | The End | End cities, elytra, Moog's End structures, Void Worm |
 | Act V spine | The eight | One branch quest per Cataclysm boss, in the order above |
 | Any time | Skill paths | One questline per skill tree (below) |
 | Any time | Villages, drops, exploration | Villager and mob givers, drop quests, structures and biomes to find |
+
+## The magic questline (Iron's Spells), ending with Echo of Tyros
+
+The Magic skill path and Iron's Spells' content are one questline, running alongside the main story and branching
+off it at each act. Its final boss is **Echo of Tyros, First Flamebearer** (1000 health, 15 armour), the strongest
+fight in the pack, so it sits at the very end for the players who follow magic all the way.
+
+| Main story | Magic questline |
+|---|---|
+| Act I | A village Priest; the Pyromancer Tower; first spellbook, scrolls and inks; the Apothecarist's mangrove hut |
+| Act II | The Cryomancer's mountain tower; the Ice Spider den; the Evoker Fort's Archevoker; the arcane anvil and higher inks |
+| Act III | The Catacombs and their Necromancers; **the Dead King** (500 health) |
+| Act III-IV | The Nether Citadel and Ancient Battleground (**Ancient Knight**: cinder essence); pyrium |
+| After Act V | Craft the **Tyros Statue** (pyrium ingot) and face **Echo of Tyros** |
+
+Rewards along it: Magic skill XP, Iron's gear and scrolls, the Antidote Vessel, Scarf of Invisibility and Shock
+Pendant (Artifacts), and a unique named staff or spellbook at the end.
 
 ## Skill paths: questlines tied to the skill trees
 
@@ -196,30 +223,30 @@ and the capstone gives a **unique named, enchanted item**. The Fishing path is w
 | Range | Bow and crossbow kills, long shots, thrown weapons | Superstitious Hat, Golden Hook | Named bow (Power, Infinity) |
 | Defense | Shields blocked, armour sets, surviving bosses | Crystal Heart, Cross Necklace, Steadfast Spikes, Thorn/Flame/Shock Pendant, Chorus Totem | Named shield or chestplate (Protection, Unbreaking) |
 | Agility | Distance travelled, ParCool moves, climbing, wings | Running Shoes, Bunny Hoppers, Cloud in a Bottle, Helium Flamingo, Panic Necklace, Snowshoes, Aqua-Dashers | Named boots (Feather Falling, Depth Strider) |
-| Magic | Iron's spells cast, inks, scrolls, schools | Antidote Vessel, Scarf of Invisibility, Shock Pendant | Named spellbook or staff |
+| Magic | The magic questline above (Iron's Spells), ending with Echo of Tyros | Antidote Vessel, Scarf of Invisibility, Shock Pendant | Named spellbook or staff |
 | Taming | Pets, mounts, unicorns, Domestication Innovation | Cowboy Hat, Kitty Slippers | Named saddle or lead (cosmetic) |
 
 Artifacts also spawn in loot, so quest artifacts should be the ones that suit the path rather than the rarest.
 
-## Locking the compasses behind quests
+## Locking the compasses behind quests (decided, not built yet)
 
 Explorer's Compass and Nature's Compass would otherwise find any structure or biome from day one, skipping the
-story's discovery. Two levels:
+story's discovery. **Decision: the real lock only**: players craft the compass normally, but what it can find
+grows with their quest progress. No recipe lock, and no extra check against modified clients (not a concern on this
+server). Not to be built until asked.
 
-1. **The compass itself**: remove its recipe (KubeJS) and give it as a quest reward, e.g. Explorer's Compass from an
-   Act I exploration quest and Nature's Compass from a Foraging path quest.
-2. **What it can find, per player**: both compasses build the list of searchable structures/biomes **on the
-   server, per player, when the compass is used** (`ExplorersCompassItem.use` calls
-   `StructureUtils.getAllowedStructureKeys` and sends a `SyncPacket` to that player; Nature's Compass does the same
-   with biomes). A small mixin can filter that list by the player's quest stages, and a second one refuses a search
-   for a locked id (in case a modded client asks anyway). Locked entries then don't appear in the compass at all.
-   - Locks would be written next to the quests, e.g. a quest with `"unlocks": {"structures": ["cataclysm:*"]}`. The
-     generator gives that quest an invisible stage reward and writes the lock list for the mod to read.
-   - Suggested locks: Cataclysm strongholds until the Act IV finale (or per boss as Act V progresses), Mowzie's
-     boss structures until their branch starts, Alex's Caves biomes until the caves branch, Iron's Catacombs until
-     Act III, End structures until the Dragon.
-   - This is new Java (a mixin into each compass), best in its own small mod (like FOTF Retrogen), e.g. "FOTF
-     Quests", which could later hold other quest hooks too.
+- **How:** both compasses build the list of searchable structures/biomes **on the server, per player, when the
+  compass is used** (`ExplorersCompassItem.use` calls `StructureUtils.getAllowedStructureKeys` and sends a
+  `SyncPacket` to that player; Nature's Compass does the same with biomes). One mixin per compass filters that list
+  by the player's quest stages, so locked entries don't appear in the compass at all.
+- **Where the locks live:** next to the quests, e.g. a quest with `"unlocks": {"structures": ["mowziesmobs:wrought_chamber"]}`.
+  The generator gives that quest an invisible stage reward and writes the lock list for the mod to read; anything
+  not mentioned stays unlocked.
+- **Suggested locks:** Mowzie's structures as their story beat starts (Wrought Chamber, Umvuthana Grove, Frostmaw,
+  Monastery); Alex's Caves biomes with the caves branch; Iron's Catacombs and Citadel with the magic questline;
+  End structures after the Dragon; the Cataclysm strongholds one by one through Act V.
+- **Code:** a mixin into each compass, in its own small mod (e.g. "FOTF Quests", like FOTF Retrogen), which can
+  later hold other quest hooks too.
 
 ## Story hooks (placeholder, to shape together)
 
@@ -230,7 +257,8 @@ story's discovery. Two levels:
 - **Act II:** the corruption is below: the caves, and the sealed Cataclysm strongholds you can't yet enter.
 - **Act III:** the Nether, the Dead King and the Wither: the world's wardens are being turned.
 - **Act IV:** the Dragon falls, and with the Void's guard gone, the eight sealed strongholds wake.
-- **Act V:** the reckoning: break the eight, then face the First Flamebearer, the source of it all.
+- **Act V:** the reckoning: break the eight; the last of them, Ignis, is the source of it all.
+- **Magic questline:** the First Flamebearer, Tyros, is the magic path's own ending.
 - Recurring NPCs (villager givers and name-tagged NPCs) carry the story between acts; side quests come from
   villagers, mob drops and found items, as the quest framework already supports.
 
@@ -240,8 +268,8 @@ Scylla. Insane: Ignis. The Leviathan: not found. Some pages (Scylla, Maledictus,
 
 ## Open questions
 
-- Should acts lock the next act (quests only, since bosses can't be locked) or just suggest an order?
+- Should acts lock the next act's quests, or just suggest an order? (Bosses themselves can't be locked; their
+  structures can be hidden from the compass.)
 - Where do the optional fights go: Warden, Void Worm, Hullbreaker, Tremorzilla?
-- Is Echo of Tyros the final boss, or should the story end on Ignis?
 - Should Maledictus's damage be lowered for the server (lag made its slam a one-shot in testing)?
 - Confirm in game: how Echo of Tyros is summoned, and the Alex's Caves bosses' summon steps in this version.
