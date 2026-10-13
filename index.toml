@@ -2116,12 +2116,24 @@ file = "kubejs/data/fotf/tags/worldgen/biome/wildlife/wetlands.json"
 hash = "7c775ea2f87afc700bdb63e4267621b68bc1e5b0634e227091b666ee6e2c42ef"
 
 [[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/airships.json"
+hash = "9db942c81b498d72053cff9619e13fa4d93817da06ac306608cd469d76ce53ff"
+
+[[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/arenas.json"
 hash = "bcaf99ce85e7bb881a946c7878f18f9f4d705b627042d248f91c50f1584e4bf4"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/camps.json"
 hash = "d32a3079e3aa55f693bc5a0a09c46b449b4c7f45b4fb7bb72352fb4d8b81535d"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/cataclysm_ruins.json"
+hash = "cfe1bad2506f329b86d8c13a2ced9549a51bc63e9e496b832f1cf51f164b612a"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/end_mega_ships.json"
+hash = "d48ff93d72771663e578f120ab2083fc515a1eb49857ae7dc960fb7c65edc8de"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/farmsteads.json"
@@ -2144,6 +2156,10 @@ file = "kubejs/data/fotf/tags/worldgen/structure/groups/graveyards.json"
 hash = "08c3d3ef1af5a591c626b9cb174dee3e68ad5800ed36996017eb4b4160700879"
 
 [[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/hollow_hills.json"
+hash = "0c3c80c0284bbfd914b903ee148072d4363ded6c7fc40f92f169185db92d9ca5"
+
+[[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/illager_hideouts.json"
 hash = "73da402f14e127fd2df50058aef5ee9b9cb02ed9be92e7201726c3a66672f1b2"
 
@@ -2153,11 +2169,23 @@ hash = "41e2dabdfbe58f485633d62e4b10c0d7df0153ee596d5f21eb34c4f647fe577d"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/mines.json"
-hash = "8a60645d8ce82a46b37f5090607ee8d41938d0b0cb2987fdea68e06d87ec87d6"
+hash = "45f41c17bf6bccf00d156e20ff6ca9c6ae6db5210444fbdf974cfb81339ebc72"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/moog_sky_islands.json"
+hash = "bfd45f536b80d3be6000d142da819a0e610bf3c5f3dad8c5a6a7edc75a049954"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/moog_stalls_and_carts.json"
+hash = "0b7df077cfc52d827fe7b60b1112a7b5e28a37a059e4a9dca23cbb99adbff8f6"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/nether_bridges.json"
+hash = "7638f6c1a69d8e8b6c5739f3fa3739fb19facff58409fb8167ed9d43042e0a44"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/nether_outposts.json"
-hash = "1c8442088cf603724f6283a79fa3edb6a5df4dce0dac96dca0d284653027cc67"
+hash = "2c7cede0ab7f83a4a881015c8b786ecfd517e8e9f6ea5fd740435ea4bb449ea8"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/ruined_portals.json"
@@ -2166,6 +2194,14 @@ hash = "b92fdee34ecbca16baf918cbaad69439cc3ae1245faa686c0aa7984321ea484d"
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/ruins.json"
 hash = "fe17145a6f0371e2580183cf973b5258fe94f73184f2015bc1d57330b9c50d5b"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/sea_dragon_bones.json"
+hash = "d904751dfb8413daaf1904f7a040dc7cdc8a4e421078bfba2a54c17698ba80df"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/ships_at_sea.json"
+hash = "f3824e1f40b54d7afd237533475d4f5f3fda113a9c74614b4df30f236f1697af"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/shipwrecks.json"
@@ -2189,11 +2225,15 @@ hash = "fa9aa419b7cc0a4857d9bd1d13d3edb92bd4420826afdc276620c929ba871c32"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/witch_huts.json"
-hash = "c26eee4b386ae5f6a72121e38f2cd3fce7937026e1d815b17b53e6e9c50f718f"
+hash = "320e68959a02080f7993bcc1281a97e711ddf0beae3ebfc3f914e86803978b32"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/wizard_towers.json"
 hash = "52337809041566cd69334faa6daa4a97b1f8f9be040576df6deac6fd058db62e"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/yungs_dungeons.json"
+hash = "ff887aa3da8e8a1e440568361e3aef507e7f87f8374bb79799573d865def6db0"
 
 [[files]]
 file = "kubejs/data/fotf/worldgen/configured_feature/forest_fireflies.json"

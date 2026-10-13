@@ -108,8 +108,6 @@
     "bettermineshafts:mineshaft_spruce_snowy",
     "dungeons_arise:mining_system",
     "dungeons_arise:mushroom_mines",
-    "minecraft:mineshaft",
-    "minecraft:mineshaft_mesa",
     "mvs:mine_with_campsite",
     "nova_structures:badlands_miner_outpost"
   ],
@@ -155,7 +153,6 @@
     "betterwitchhuts:witch_hut",
     "bloomingnature:swamp_hut",
     "irons_spellbooks:mangrove_hut",
-    "minecraft:swamp_hut",
     "nova_structures:mangrove_witch_hut"
   ],
   "wizard_towers": [
@@ -308,7 +305,6 @@
   ],
   "nether_outposts": [
     "betterfortresses:fortress",
-    "minecraft:fortress",
     "mns:mega_fortress",
     "mns:nether_tower",
     "nova_structures:nether_keep",
@@ -322,5 +318,109 @@
     "nova_structures:skeleton_camp_warped",
     "nova_structures:skeleton_camp_waste",
     "structory_towers:nether/fortress_tower"
+  ],
+  "ships_at_sea": [
+    "mos:hauling_ship_1",
+    "mos:long_ship",
+    "mos:rare_travel_ship",
+    "mos:ship_small",
+    "mos:wanderer_raft",
+    "mvs:small_ship",
+    "structory:boat",
+    "towns_and_towers:pillager_outpost_ocean",
+    "towns_and_towers:village_ocean"
+  ],
+  "end_mega_ships": [
+    "mes:mega_ship",
+    "mes:mega_ship_basic",
+    "mes:mega_ship_crashed",
+    "mes:mega_ship_crashed_2",
+    "mes:mega_ship_crashed_deepslate",
+    "mes:mega_ship_deepslate",
+    "mes:mega_ship_deepslate_2",
+    "mes:mega_ship_deepslate_3"
+  ],
+  "nether_bridges": [
+    "mns:bridge_1",
+    "mns:bridge_2",
+    "mns:bridge_3",
+    "mns:bridge_4",
+    "mns:bridge_5",
+    "mns:bridge_6"
+  ],
+  "hollow_hills": [
+    "twilightforest:large_hollow_hill",
+    "twilightforest:medium_hollow_hill",
+    "twilightforest:small_hollow_hill"
+  ],
+  "airships": [
+    "dungeons_arise:heavenly_challenger",
+    "dungeons_arise:heavenly_conqueror",
+    "dungeons_arise:heavenly_rider",
+    "dungeons_arise:small_blimp"
+  ],
+  "sea_dragon_bones": [
+    "mos:dragon_skeleton",
+    "mos:sea_dragon_skeleton"
+  ],
+  "moog_sky_islands": [
+    "mss:arena",
+    "mss:birch_river",
+    "mss:calcite_house",
+    "mss:castle_ruin",
+    "mss:castle_tower",
+    "mss:cherry_river",
+    "mss:desert_pyramid",
+    "mss:desert_well",
+    "mss:diorite_house",
+    "mss:frozen_pond",
+    "mss:jungle",
+    "mss:large_tower",
+    "mss:leaf_hollow",
+    "mss:mangrove",
+    "mss:muddy_water_hole",
+    "mss:mushroom",
+    "mss:nether_portal",
+    "mss:palm_island",
+    "mss:red_sand",
+    "mss:small_deepslate_house",
+    "mss:small_oak_house",
+    "mss:small_pond",
+    "mss:small_tower",
+    "mss:spruce_huts",
+    "mss:taiga",
+    "mss:tree_1",
+    "mss:tree_2",
+    "mss:tree_3",
+    "mss:tree_4",
+    "mss:tree_5",
+    "mss:tree_6",
+    "mss:tree_7",
+    "mss:tree_8",
+    "mss:volcano",
+    "mss:white_house"
+  ],
+  "moog_stalls_and_carts": [
+    "mvs:blue_stall",
+    "mvs:cart",
+    "mvs:large_cart_1",
+    "mvs:large_cart_2",
+    "mvs:medium_bamboo_cart",
+    "mvs:orange_stall",
+    "mvs:pink_stall",
+    "mvs:red_stall"
+  ],
+  "yungs_dungeons": [
+    "betterdungeons:skeleton_dungeon",
+    "betterdungeons:small_dungeon",
+    "betterdungeons:small_nether_dungeon",
+    "betterdungeons:spider_dungeon",
+    "betterdungeons:zombie_dungeon"
+  ],
+  "cataclysm_ruins": [
+    "cataclysm:abandoned_spire",
+    "cataclysm:abandoned_village",
+    "cataclysm:desert_occupied_village",
+    "cataclysm:desert_site"
   ]
 }

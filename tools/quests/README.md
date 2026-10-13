@@ -22,6 +22,11 @@ tools/quests/
   make_quests.py            checks the sources, then writes the book
   make_registry.py          rebuilds registry.json from the pack's jars
   make_structures.py        rebuilds structures.json and docs/world-structures.md from the pack's jars and config
+  make_mods.py              rebuilds mods.json (every mod, its ids and what it adds)
+  coverage.py               checks the quest list (src/plans/quests/) and writes docs/quest-coverage.md:
+                            which mods, landmarks and artifacts have quests (spoiler-free)
+  src/mod_roles.json        which mods should appear in quests (libraries, client and admin mods don't)
+  src/landmarks.json        plain names, landmarks seen in the world, feature landmarks, scenery, YUNG's replacements
 ```
 
 `python tools/quests/make_quests.py` checks everything and writes:

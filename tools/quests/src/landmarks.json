@@ -1,0 +1,122 @@
+{
+ "_about": "Landmarks for quests and coverage. \"names\": plain names for structures whose ids are unclear. \"seen_in_world\": structures the config switches off but that are in the server world (older chunks), so they count as present. \"features\": landmarks placed as world features, not structures (a quest finds them with a biome, place or checkmark task, not a structure task). \"scenery\": id patterns of decorations that are not places to send players; coverage.py leaves them out. \"replaced_by\": vanilla structures a mod switches off in code (YUNG's), so they don't generate.",
+ "names": {
+  "towns_and_towers:village_ocean": "villager ship fleet (mothership, escorts, small ships)",
+  "towns_and_towers:pillager_outpost_ocean": "pillager ship",
+  "towns_and_towers:wreckage_ocean": "sunken wreckage",
+  "towns_and_towers:mimic_desert": "desert mimic ruin",
+  "mos:hauling_ship_1": "hauling ship",
+  "mos:long_ship": "longship",
+  "mos:rare_travel_ship": "travel ship",
+  "mos:ship_small": "small ship",
+  "mos:wanderer_raft": "wanderer's raft",
+  "mvs:small_ship": "small ship",
+  "structory:boat": "outcast villager's boat",
+  "dungeons_arise:heavenly_challenger": "airship",
+  "dungeons_arise:heavenly_conqueror": "airship",
+  "dungeons_arise:heavenly_rider": "airship",
+  "dungeons_arise:small_blimp": "blimp",
+  "dungeons_arise:typhon": "Typhon (sea fortress)",
+  "dungeons_arise:ceryneian_hind": "Ceryneian Hind (sunken ship)",
+  "mes:mega_ship": "End mega ship",
+  "skyvillages:skyvillage": "sky village"
+ },
+ "seen_in_world": {
+  "towns_and_towers:village_ocean": "Villager ship fleets: config/towns_and_towers switches Towns and Towers villages off, but players see these all over the ocean."
+ },
+ "features": {
+  "yungsbridges:bridges": {
+   "name": "Bridges over rivers (YUNG's Bridges)",
+   "mod": "yungsbridges"
+  },
+  "yungsextras:desert_obelisks": {
+   "name": "Desert obelisks (YUNG's Extras)",
+   "mod": "yungsextras"
+  },
+  "yungsextras:desert_wells": {
+   "name": "Desert wells and wishing wells (YUNG's Extras)",
+   "mod": "yungsextras"
+  },
+  "yungsextras:swamp_arches": {
+   "name": "Swamp arches and cubbies (YUNG's Extras)",
+   "mod": "yungsextras"
+  },
+  "betterendisland:end_island": {
+   "name": "The rebuilt End island and its tower (YUNG's Better End Island)",
+   "mod": "betterendisland"
+  },
+  "waystones:waystones": {
+   "name": "Waystones in the wild and in villages",
+   "mod": "waystones"
+  },
+  "bountiful:bounty_boards": {
+   "name": "Bounty boards in villages",
+   "mod": "bountiful"
+  },
+  "realmrpg_skeletons:fallen_adventurers": {
+   "name": "Fallen adventurers (skeletons with gear)",
+   "mod": "realmrpg_skeletons"
+  },
+  "artifacts:campsites": {
+   "name": "Artifact campsites (with mimics)",
+   "mod": "artifacts"
+  }
+ },
+ "scenery": [
+  "mvs:*_tree",
+  "mvs:*_log_pile",
+  "mvs:dead_tree_*",
+  "mvs:*_lantern",
+  "mvs:bench",
+  "mvs:boulder",
+  "mvs:stone_rock",
+  "mvs:stone_pillars",
+  "mvs:pile",
+  "mvs:paths",
+  "mvs:haystack",
+  "mvs:duck",
+  "mvs:flower_hole",
+  "mvs:shed",
+  "mvs:out_house",
+  "mvs:lamp_chest",
+  "mvs:large_mushroom",
+  "mvs:mushroom_pond",
+  "mvs:small_oak_pond",
+  "mvs:crystal",
+  "mvs:wheat_grain_bin",
+  "mvs:snowy_fossil",
+  "mvs:railway",
+  "mvs:jungle_palm_tree",
+  "mss:tree_*",
+  "mns:very_small_*",
+  "mns:small_nether_brick",
+  "mns:medium_blackstone",
+  "mns:large_blackstone_*",
+  "mns:large_nether_brick",
+  "mns:circle_*",
+  "mns:leafy_rubble",
+  "mns:medium_crimson_fungus*",
+  "mns:medium_warped_fungus*",
+  "mns:lava_pool",
+  "mns:soul_fire",
+  "mes:ruined_pillar",
+  "mes:enderpin_spikes",
+  "mes:endscraps",
+  "mos:ocean_decor",
+  "mos:magma_block_ravine",
+  "meadow:bench",
+  "bloomingnature:tree_stump",
+  "bloomingnature:swamp_ruin_*",
+  "minecraft:nether_fossil"
+ ],
+ "replaced_by": {
+  "minecraft:desert_pyramid": "betterdeserttemples:desert_temple",
+  "minecraft:jungle_pyramid": "betterjungletemples:jungle_temple",
+  "minecraft:mineshaft": "YUNG's Better Mineshafts",
+  "minecraft:mineshaft_mesa": "YUNG's Better Mineshafts",
+  "minecraft:stronghold": "betterstrongholds:stronghold",
+  "minecraft:monument": "betteroceanmonuments:ocean_monument",
+  "minecraft:fortress": "betterfortresses:fortress",
+  "minecraft:swamp_hut": "betterwitchhuts:witch_hut"
+ }
+}

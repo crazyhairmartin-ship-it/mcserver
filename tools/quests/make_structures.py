@@ -237,6 +237,17 @@ def main():
                     'set': set_id, 'spacing': spacing, 'rarity': rar, 'generates': status == 'yes', 'why_not': why,
                     'type': data.get('type', ''), 'overridden_by_pack': source.startswith('pack')}
 
+    lm_path = os.path.join(pack_dir, 'tools', 'quests', 'src', 'landmarks.json')
+    landmarks = json.load(open(lm_path)) if os.path.exists(lm_path) else {}
+    for sid, v in out.items():
+        v['name'] = landmarks.get('names', {}).get(sid, '')
+    for sid, by in landmarks.get('replaced_by', {}).items():
+        if sid in out:
+            out[sid].update(generates=False, why_not=f'replaced by {by} (switched off in its code)')
+    for sid, note in landmarks.get('seen_in_world', {}).items():
+        if sid in out and not out[sid]['generates']:
+            out[sid].update(generates=True, seen_in_world=note)
+
     with open(os.path.join(ROOT, 'tools', 'quests', 'structures.json'), 'w') as fh:
         json.dump(out, fh, indent=1, sort_keys=True)
         fh.write('\n')
@@ -262,8 +273,15 @@ def main():
             lines += [f'### {mod}', '', '| Structure | Rarity (spacing) | Where | Set |', '|---|---|---|---|']
             for k, v in sorted(by_mod[mod]):
                 where = v['biomes'] + (f' ({v["biome_count"]} biomes)' if v['biome_count'] > 1 else '')
-                lines.append(f'| `{k}` | {v["rarity"]} ({v["spacing"]}) | {where} | `{v["set"]}` |')
+                label = f'`{k}`' + (f' ({v["name"]})' if v['name'] else '')
+                rar = f'{v["rarity"]} ({v["spacing"]})' + (' **seen in the world, config says off**' if v.get('seen_in_world') else '')
+                lines.append(f'| {label} | {rar} | {where} | `{v["set"]}` |')
             lines.append('')
+    feats = landmarks.get('features', {})
+    if feats:
+        lines += [f'## Placed as world features, not structures ({len(feats)})', '',
+                  'Landmarks a structure search won\'t find; quests reach them with a biome, place or checkmark task.', '']
+        lines += [f'- {f["name"]}' for f in feats.values()] + ['']
     off = {k: v for k, v in out.items() if not v['generates'] and v['why_not'] != 'not in any structure set (a piece, or made another way)'}
     lines += [f'## Present but switched off ({len(off)})', '', '| Structure | Why |', '|---|---|']
     lines += [f'| `{k}` | {v["why_not"]} |' for k, v in sorted(off.items())]
