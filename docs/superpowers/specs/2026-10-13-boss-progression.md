@@ -1,6 +1,6 @@
 # Boss and objective progression (for the story line)
 
-Status: proposal for discussion, 2026-10-13. Built from the pack's current mod list on `main` (merged into
+Status: proposal for discussion, 2026-10-13 (revised: Cataclysm's main bosses moved after the Ender Dragon, with base health from each mod's code). Built from the pack's current mod list on `main` (merged into
 `claude/cloud-session-setup-epiuzy`), reading each mod's jar: boss tags, structures and where they generate, locator
 recipes, and boss loot tables. Difficulty is relative (from the mods' designs and drops), not measured in game.
 
@@ -47,63 +47,106 @@ Steeleaf, Knightmetal (Knight Phantoms' stronghold), Fiery (Hydra blood, Ur-Ghas
 Twilight add-on turns into weapons. Iron's: the Dead King drops the Necronomicon and Blood Staff, Tyros the
 Betrayer Signet and Divine Soulshard.
 
+## Boss strength (base values from each mod's code)
+
+Health and base attack damage as the mods set them (the pack's configs leave Cataclysm's and Iron's multipliers at
+1.0; damage scales up on Hard). For comparison: Elder Guardian 80, Ender Dragon 200, Wither 300, Warden 500.
+
+| Boss | Health | Damage | Notes |
+|---|---|---|---|
+| Ferrous Wroughtnaut | 40 | 30 | Only hurt from behind; a timing fight |
+| Lich (TF) | 100 | | |
+| Naga, Minoshroom (TF) | 120 | | |
+| Wildfire (F&F) | 120 | 8 | |
+| Sculptor | 140 | 10 | A climbing challenge more than a fight |
+| Umvuthi | 150 | | Spells and followers |
+| Knight Phantoms (TF) | 35 each, 6 of them | | |
+| Cataclysm mini-bosses | 110-225 | 10-18 | Coral Golem 110, Wadjet / Ender Golem 150, Aptrgangr 160, Kobolediator 180, Clawdian 225 |
+| Alpha Yeti, Snow Queen (TF) | 200 | | |
+| Frostmaw, Forsaken (AC), Ur-Ghast (TF) | 250 | 10 | |
+| Hydra (TF) | 360 | | |
+| Hullbreaker (AC) | 400 | 16 | Underwater |
+| The Dead King (Iron's) | 500 | 10 | 15 armour |
+| Tremorzilla (AC) | 500 | 30 | Raised from an egg, can be tamed |
+| **Ender Guardian** | 333 | 16 | Cataclysm |
+| **Scylla**, **The Harbinger** | 390 | 18 / 9 | Cataclysm |
+| **The Leviathan** | 400 | | Cataclysm |
+| **Maledictus** | 420 | 13 | Cataclysm |
+| **Ignis**, **Ancient Remnant** | 450 | 14 / 25 | Cataclysm |
+| **Netherite Monstrosity** | 600 | 25 | Cataclysm |
+| **Luxtructosaurus** (AC) | 600 | 12 | 20 armour |
+| **Echo of Tyros** (Iron's) | 1000 | 10 | 15 armour |
+| Void Worm (Alex's Mobs) | 160 (pack config) | 5 | Segmented, End only |
+
+**Cataclysm's main bosses are post-Ender-Dragon content.** Besides having more health than the Dragon or the Wither,
+they have damage caps in `config/cataclysm-common.toml` (e.g. the Ender Guardian takes at most 22 per hit and 13
+per second, the Netherite Monstrosity 25 and 20), so they can't be burst down with gear alone. Several attacks also
+take a percentage of the player's max health, which armour doesn't reduce. They're built for full netherite and
+learning their patterns. Their mini-bosses (110-225 health) fit the mid-game and guard the same structures, so
+players can meet a Cataclysm structure early, clear its outer parts, and come back for the boss.
+
 ## Proposed order
 
-Five acts, each matching a gear tier and a new place, so the story is also the progression guide. Inside an act
-the order is a suggestion; the quest book can let players pick (`after_any`) and then require all of them for the
-act's finale.
+Six acts: four before the Dragon by gear tier and place, then the Dragon, then a post-game act for Cataclysm and the
+other giants. Inside an act the order is a suggestion; the quest book can let players pick (`after_any`) and require
+all of them for the act's finale.
 
 ### Prologue: the quiet forest (wood, stone)
 Getting Started, the first village, the Field Guide, skills, mailbox, first home. The cleric explains the forest
 has gone quiet.
 
 ### Act I: the first wardens (iron)
-1. **Ferrous Wroughtnaut** (Wrought Chamber): small health, armoured from the front; teaches dodge-and-punish.
-2. **YUNG's dungeons, mineshafts, desert and jungle temples**: loot and the first Explorer's Compass.
+1. **Ferrous Wroughtnaut** (Wrought Chamber): 40 health but hits for 30; teaches dodge-and-punish.
+2. **YUNG's dungeons, mineshafts, desert and jungle temples**; the first Explorer's Compass.
 3. **Iron's Spells start**: a Priest in a village, the Pyromancer Tower, first spellbook and scrolls.
 4. **Umvuthi** (Umvuthana Grove, savanna).
-5. **Pillager outpost / first raid**, Illusioner and Iceologer (Friends & Foes).
-- _Act finale:_ craft a diamond tool and light the **Twilight Forest portal**.
+5. **The Sculptor** (Monastery climb; fits the Agility tree and ParCool).
+6. **Pillager outposts and the first raid**, the Illusioner and Iceologer (Friends & Foes).
+- _Act finale:_ craft a diamond and light the **Twilight Forest portal**.
 
 ### Act II: below and beyond (diamond)
 1. **Twilight Forest, part 1**: Naga, Lich, Minoshroom.
-2. **Alex's Caves**: get Cave Maps; Magnetic Caves, Primordial Caves (summon **Luxtructosaurus** with the Ominous
-   Catalyst), Abyssal Chasm (**Hullbreaker**), Forlorn Hollows (**Forsaken**), Candy Cavity. Toxic Caves and
-   Tremorzilla can wait for Act III.
-3. **Frostmaw** (snowy biomes) and the **Sculptor** (Monastery climb; a good fit for the Agility tree and ParCool).
-4. **Elder Guardian** (Better Ocean Monument): prismarine for later, water breathing.
-5. **Ancient Remnant** (Cursed Pyramid), after its mini-bosses Kobolediator and Wadjet: Ancient Metal.
-6. **The Dead King** (Iron's Catacombs, after its Necromancers): the big magic milestone.
-7. **Evoker Fort** (Archevoker) and When Dungeons Arise's illager strongholds.
-- _Act finale:_ the **first trip to the Nether** (blaze powder makes the eyes possible).
+2. **Alex's Caves**: Cave Maps; Magnetic and Primordial Caves, the Abyssal Chasm, Forlorn Hollows (**Forsaken**),
+   the Candy Cavity.
+3. **Frostmaw** (snowy biomes).
+4. **Elder Guardian** (Better Ocean Monument): prismarine, water breathing.
+5. **Cataclysm's outposts**: scout the Cursed Pyramid (Kobolediator, Wadjet: Ancient Metal) and the Frosted Prison
+   (Aptrgangr: Black Steel); their main bosses wait for the post-game.
+6. **Evoker Fort** (Archevoker) and When Dungeons Arise's illager strongholds.
+- _Act finale:_ the **first trip to the Nether**.
 
 ### Act III: the burning realm (Nether, diamond to netherite)
 1. **Better Nether Fortress**: blaze rods, wither skeleton skulls.
-2. **Iron's Nether Citadel**: the **Ancient Knight**; Friends & Foes' **Wildfire** in its own Nether citadel.
-3. **Netherite Monstrosity** (Soul Black Smith, Monstrous Eye).
-4. **Netherite gear**, then **Echo of Tyros** (Iron's, pyrium).
-5. **Ignis** (Burning Arena, Flame Eye): Ignitium.
-6. **Twilight Forest, part 2**: Hydra, Knight Phantoms, Ur-Ghast (fire themes fit this act).
-7. **The Wither** (vanilla), then **The Harbinger** (Ancient Factory, Mech Eye): the machine that copies the Wither;
-   Witherite.
-8. **Maledictus** (Frosted Prison, Cursed Eye) after Aptrgangr: Cursium. Toxic Caves and **Tremorzilla** fit here.
-- _Act finale:_ a beacon; the corruption's trail leads to the sea.
+2. **Iron's Nether Citadel** (Ancient Knight) and Friends & Foes' **Wildfire**.
+3. **Netherite gear**.
+4. **Twilight Forest, part 2**: Hydra, Knight Phantoms, Ur-Ghast.
+5. **The Dead King** (Iron's Catacombs): the big magic milestone.
+6. **The Wither**, then a beacon.
+7. Optional: **Hullbreaker** (Abyssal Chasm), **Tremorzilla** (Toxic Caves).
+- _Act finale:_ finish the Twilight Forest (part 3 below) or find the stronghold.
 
-### Act IV: the deep and the storm (netherite)
-1. **Conduit and deep-sea gear**; Moog's ocean structures.
-2. **The Leviathan** (Sunken City, Abyss Eye, Abyssal Sacrifice), after the Coral Golem.
-3. **Scylla** (Acropolis, Storm Eye): the hardest Overworld fight.
-4. **Twilight Forest, part 3**: Alpha Yeti, Snow Queen (the Twilight Forest finished).
-5. Optional: **the Warden** (ancient city).
-- _Act finale:_ find the stronghold (YUNG's Better Strongholds) and open the End portal.
+### Act IV: the end (full netherite)
+1. **Twilight Forest, part 3**: Alpha Yeti, Snow Queen.
+2. **Stronghold** (YUNG's Better Strongholds) and the **Ender Dragon** (Better End Island).
+3. **End cities**: elytra and shulker shells; Moog's End structures, Nullscape.
+4. Optional: the **Void Worm** (End only), the **Warden**.
+- _Act finale:_ the Dragon is down, and the eyes are all craftable now. The real threat shows itself.
 
-### Act V: the end of all things (the End)
-1. **The Ender Dragon** (Better End Island).
-2. **End cities**: shulker shells (Void Eye), elytra; Moog's End structures, Nullscape.
-3. **Ender Guardian** (Ruined Citadel, after the Ender Golem).
-4. Optional super-boss: **the Void Worm** (Alex's Mobs).
-- _Finale:_ a capstone quest that needs the act finales (and, for completionists, every boss trophy or music disc).
-  The forest wakes up.
+### Act V: the reckoning (post-game: Cataclysm and the giants)
+Roughly easiest to hardest; each one's drops help with the next.
+1. **Ender Guardian** (Ruined Citadel in the End, Void Eye; you're already there): Gauntlet of Guard.
+2. **Maledictus** (Frosted Prison, Cursed Eye): Cursium.
+3. **The Harbinger** (Ancient Factory, Mech Eye): Witherite. It mirrors the Wither from Act III.
+4. **Ancient Remnant** (Cursed Pyramid, Desert Eye): Ancient Metal, Sandstorm in a Bottle (with the Gauntlet of
+   Guard: Gauntlet of Maelstrom).
+5. **The Leviathan** (Sunken City, Abyss Eye, Abyssal Sacrifice).
+6. **Ignis** (Burning Arena, Flame Eye): Ignitium.
+7. **Scylla** (Acropolis, Storm Eye).
+8. **Netherite Monstrosity** (Soul Black Smith, Monstrous Eye): 600 health.
+9. **Luxtructosaurus** (Alex's Caves volcano, Ominous Catalyst): 600 health, 20 armour.
+- _Finale:_ **Echo of Tyros, First Flamebearer** (Iron's, 1000 health, 15 armour): the strongest thing in the pack
+  and a natural final boss. A capstone quest needs it plus the act finales; completionists collect every trophy
+  or music disc.
 
 ## Story hooks (placeholder, to shape together)
 
@@ -111,17 +154,16 @@ has gone quiet.
   bosses are "wardens" turned or woken by it, and the Twilight Forest is the spirits' own realm, visited in three
   parts as the story deepens.
 - **Prologue / Act I:** the village cleric and the first signs. The Wroughtnaut and Umvuthi guard old places.
-- **Act II:** the corruption is below: the caves, the catacombs, the Dead King.
-- **Act III:** it came from the Nether's forges (Monstrosity, Ignis, Tyros). The Harbinger is a machine built
-  to copy the Wither.
-- **Act IV:** it fled into the sea (Leviathan, Scylla).
-- **Act V:** its source is the Void (Ender Guardian, the Void Worm).
+- **Act II:** the corruption is below: the caves, and the sealed Cataclysm strongholds you can't yet enter.
+- **Act III:** the Nether, the Dead King and the Wither: the world's wardens are being turned.
+- **Act IV:** the Dragon falls, and with the Void's guard gone, the eight sealed strongholds wake.
+- **Act V:** the reckoning: break the eight, then face the First Flamebearer, the source of it all.
 - Recurring NPCs (villager givers and name-tagged NPCs) carry the story between acts; side quests come from
   villagers, mob drops and found items, as the quest framework already supports.
 
 ## Open questions
 
 - Should acts lock the next act (quests only, since bosses can't be locked) or just suggest an order?
-- Where do the optional/very hard fights go: Warden, Void Worm, Scylla?
-- Is Mowzie's Sculptor better as an Act II climb or an Act III challenge?
+- Where do the optional fights go: Warden, Void Worm, Hullbreaker, Tremorzilla?
+- Is Echo of Tyros the final boss, or should the story end on a Cataclysm boss (e.g. the Netherite Monstrosity)?
 - Confirm in game: how Echo of Tyros is summoned, and the Alex's Caves bosses' summon steps in this version.
