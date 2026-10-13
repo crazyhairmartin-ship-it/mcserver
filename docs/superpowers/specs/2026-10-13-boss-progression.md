@@ -280,6 +280,11 @@ The sample Fishing path written earlier is a plain checklist; it gets rewritten 
 
 Progress is still per player and in order whichever kind of giver offers it.
 
+**The server world:** the spawn village is **Reece**, where the named characters live. Several villages close to
+it serve as quest destinations (deliveries, errands, organisation work, early story travel). They're listed once in
+`tools/quests/src/places.json` (name, centre coordinates, radius) and quests send players there with
+`{"place": "<id>"}`. Coordinates still to be filled in.
+
 **Organisations (proposal)**: one per skill path, represented by the profession that fits it.
 
 | Organisation (working names) | Skill path | Representatives |

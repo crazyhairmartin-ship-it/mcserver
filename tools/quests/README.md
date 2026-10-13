@@ -14,6 +14,7 @@ tools/quests/
   src/pack.json             book title, icon, chapter groups (in order)
   src/chapters/*.json       one file per chapter; the file name is the chapter's id
   src/reward_tables/*.json  random reward tables
+  src/places.json           named places in the server world (the spawn village, nearby villages) for travel tasks
   registry.json             every item, mob, biome, structure, advancement and dimension id in the pack
   make_quests.py            checks the sources, then writes the book
   make_registry.py          rebuilds registry.json from the pack's jars
@@ -88,6 +89,7 @@ Quest fields:
 | `{"biome": "minecraft:cherry_grove"}` | Standing in the biome |
 | `{"structure": "minecraft:village_plains"}` | Inside the structure (`#tag` ids work with `"unchecked": true`) |
 | `{"dimension": "minecraft:the_nether"}` | In the dimension |
+| `{"place": "reece"}` | Within the place's radius (default 48 blocks). Places are named once in `src/places.json`: `"reece": {"name": "Reece", "pos": [x, y, z], "radius": 64}` |
 | `{"advancement": "minecraft:adventure/sleep_in_bed"}` | The advancement is earned |
 | `{"observe": "minecraft:beehive", "ticks": 40}` | Looking at a block or mob (for this long) |
 | `{"levels": 10}` | Has XP levels |

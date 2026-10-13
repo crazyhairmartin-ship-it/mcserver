@@ -42,6 +42,10 @@ class L(int):
     """A long (written 4L)."""
 
 
+class IA(list):
+    """An int array (written [I; 1, 2, 3])."""
+
+
 class B(int):
     """A byte (written 1b)."""
 
@@ -66,6 +70,8 @@ def snbt(value, indent=0):
         return repr(value)
     if isinstance(value, str):
         return '"' + value.replace('\\', '\\\\').replace('"', '\\"') + '"'
+    if isinstance(value, IA):
+        return '[I; ' + ', '.join(str(int(v)) for v in value) + ']'
     if isinstance(value, list):
         if not value:
             return '[ ]'
@@ -141,6 +147,9 @@ class Registry:
 
 # ---- tasks and rewards ----
 
+PLACES = {}
+
+
 def build_task(t, ids, reg, where, problems):
     """One task from its short form. Returns the FTB task, or None."""
     if not isinstance(t, dict):
@@ -185,6 +194,16 @@ def build_task(t, ids, reg, where, problems):
                     timer=L(t.get('ticks', 0)))
     elif 'levels' in t:
         task.update(type='xp', value=L(t['levels']), points=False)
+    elif 'place' in t:
+        place = PLACES.get(t['place'])
+        if not place:
+            problems.error(where, f'unknown place {t["place"]!r}; places are listed in tools/quests/src/places.json')
+            return None
+        x, y, z = place['pos']
+        r = int(place.get('radius', 48))
+        task.update(type='location', dimension=place.get('dimension', 'minecraft:overworld'), ignore_dimension=False,
+                    position=IA([x - r, y - 32, z - r]), size=IA([2 * r, 96, 2 * r]))
+        task.setdefault('title', 'Travel to ' + place.get('name', t['place']))
     elif 'stat' in t:
         stat = t['stat']
         if not isinstance(stat, str) or ':' not in stat:
@@ -196,7 +215,7 @@ def build_task(t, ids, reg, where, problems):
             task['title'] = t['checkmark']
     else:
         problems.error(where, f'unknown task {json.dumps(t)}; use item, kill, biome, structure, dimension, '
-                              'advancement, stage, observe, levels, stat, talk or checkmark')
+                              'place, advancement, stage, observe, levels, stat, drop, talk or checkmark')
         return None
     return task
 
@@ -463,6 +482,18 @@ def main():
     for cat in sk_cfg.get('categories', []):
         c = load_json(os.path.join(ROOT, 'config', 'puffish_skills', 'categories', cat, 'category.json'), problems) or {}
         skills[cat] = (c.get('title', cat), c.get('icon', {}).get('data', {}).get('item', 'minecraft:book'))
+    places_path = os.path.join(SRC, 'places.json')
+    places = (load_json(places_path, problems) or {}) if os.path.exists(places_path) else {}
+    for key, place in places.items():
+        if key.startswith('_'):
+            continue
+        pos = place.get('pos') if isinstance(place, dict) else None
+        if not NAME.match(key) or not (isinstance(pos, list) and len(pos) == 3 and all(isinstance(v, int) for v in pos)):
+            problems.error('places.json', f'place {key!r} needs an a-z_ id and "pos": [x, y, z] (whole numbers)')
+            continue
+        if place.get('dimension') and place['dimension'] not in reg.sets.get('dimensions', set()):
+            problems.error('places.json', f'place {key!r}: unknown dimension {place["dimension"]}')
+        PLACES[key] = place
     ctx = {'registry': reg, 'skills': skills, 'tables': {}, 'quest_items': {}, 'done_stages': set()}
 
     # reward tables
