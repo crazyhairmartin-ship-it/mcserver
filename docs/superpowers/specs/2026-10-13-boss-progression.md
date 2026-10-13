@@ -270,6 +270,41 @@ the first three; the rest are proposals to approve or replace.
 
 The sample Fishing path written earlier is a plain checklist; it gets rewritten as the competition story.
 
+### Who gives quests (decided: all three kinds)
+
+| Kind | Who | Used for | How it works |
+|---|---|---|---|
+| **Organisation representatives** | Villagers of a profession, standing in for an organisation in every village | Side quests and the skill paths' everyday quests | Each organisation has a **pool** of quests. A villager offers one picked from the pool by that villager's own identity, so different villages hand out different work. A player's progress in an organisation's storyline carries over: any representative, in any village, offers the next step |
+| **Named characters at spawn** | Specific named NPCs placed in the spawn town, one shared copy each | Main-story beats and each organisation's leader (its storyline's key moments) | Matched by type and name. An op places them with a command; they don't despawn, wander off or take damage |
+| **Characters who come to you** | A character appears near the player when a quest step opens, and stays for a while | Moments that happen out in the world: a messenger, someone lost or in trouble, a rival | The encounter mechanic: the step summons the named character nearby; talking to them (or helping them) completes the step |
+
+Progress is still per player and in order whichever kind of giver offers it.
+
+**Organisations (proposal)**: one per skill path, represented by the profession that fits it.
+
+| Organisation (working names) | Skill path | Representatives |
+|---|---|---|
+| Hunters' lodge | Range | Fletchers |
+| Anglers' society | Fishing | Fishermen |
+| Miners' guild | Mining | Armourers / toolsmiths |
+| Herbalists | Foraging | Clerics |
+| Growers' co-operative | Farming | Farmers |
+| Tavern keepers | Cooking | Butchers |
+| Crafters' guild | Crafting | Masons |
+| Bounty office | Attack | Weaponsmiths |
+| Village watch | Defense | Guards (Guard Villagers) |
+| Couriers | Agility | Cartographers |
+| The arcane order | Magic | Librarians and Iron's Priests |
+| Sanctuary keepers | Taming | Shepherds / leatherworkers |
+
+Wandering traders can carry rare, one-off offers.
+
+**To build** (framework, no content):
+1. **Quest pools**: a giver can be a pool; the script picks one quest per villager (stable for that villager) from those the player can take now.
+2. **Named NPCs**: a `/questnpc` command for ops to place a named character (villager or other mob, with profession and name) that stays put and can't be hurt; givers and talk steps match it by name.
+3. **Encounters**: a quest step that summons its character near the player when it opens, and removes it when done or after a while.
+4. **Timed challenges** (from the quest types above).
+
 ### Quests found in the world (discovery quests)
 
 Standalone quests with `"discover"`: they're hidden until the player happens to do the trigger, then appear with a
