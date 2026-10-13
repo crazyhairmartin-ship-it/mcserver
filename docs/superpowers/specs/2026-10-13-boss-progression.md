@@ -1,6 +1,6 @@
 # Boss and objective progression (for the story line)
 
-Status: proposal for discussion, 2026-10-13 (revised: Cataclysm's main bosses moved after the Ender Dragon, with base health from each mod's code). Built from the pack's current mod list on `main` (merged into
+Status: proposal for discussion, 2026-10-13 (revised: Cataclysm's main bosses moved after the Ender Dragon and ordered by the Cataclysm wiki's difficulty ratings; base health from each mod's code). Built from the pack's current mod list on `main` (merged into
 `claude/cloud-session-setup-epiuzy`), reading each mod's jar: boss tags, structures and where they generate, locator
 recipes, and boss loot tables. Difficulty is relative (from the mods' designs and drops), not measured in game.
 
@@ -72,8 +72,8 @@ Health and base attack damage as the mods set them (the pack's configs leave Cat
 | **Scylla**, **The Harbinger** | 390 | 18 / 9 | Cataclysm |
 | **The Leviathan** | 400 | | Cataclysm |
 | **Maledictus** | 420 | 13 | Cataclysm |
-| **Ignis**, **Ancient Remnant** | 450 | 14 / 25 | Cataclysm |
-| **Netherite Monstrosity** | 600 | 25 | Cataclysm |
+| **Ignis**, **Ancient Remnant** | 450 | 14 / 25 | Cataclysm; the wiki rates Ignis the hardest |
+| **Netherite Monstrosity** | 600 | 25 | Cataclysm; the wiki rates it the weakest |
 | **Luxtructosaurus** (AC) | 600 | 12 | 20 armour |
 | **Echo of Tyros** (Iron's) | 1000 | 10 | 15 armour |
 | Void Worm (Alex's Mobs) | 160 (pack config) | 5 | Segmented, End only |
@@ -133,20 +133,33 @@ has gone quiet.
 - _Act finale:_ the Dragon is down, and the eyes are all craftable now. The real threat shows itself.
 
 ### Act V: the reckoning (post-game: Cataclysm and the giants)
-Roughly easiest to hardest; each one's drops help with the next.
-1. **Ender Guardian** (Ruined Citadel in the End, Void Eye; you're already there): Gauntlet of Guard.
-2. **Maledictus** (Frosted Prison, Cursed Eye): Cursium.
-3. **The Harbinger** (Ancient Factory, Mech Eye): Witherite. It mirrors the Wither from Act III.
-4. **Ancient Remnant** (Cursed Pyramid, Desert Eye): Ancient Metal, Sandstorm in a Bottle (with the Gauntlet of
+Ordered by the Cataclysm wiki's own difficulty ratings (Hard, Very Hard, Insane), not by health: the wiki calls the
+600-health Netherite Monstrosity the weakest boss and Ignis the hardest. Each tier's drops help with the next.
+
+_Hard_
+1. **Netherite Monstrosity** (Soul Black Smith, Monstrous Eye): the wiki's weakest boss, a good first Cataclysm fight.
+2. **Ender Guardian** (Ruined Citadel in the End, Void Eye): Gauntlet of Guard.
+3. **Ancient Remnant** (Cursed Pyramid, Desert Eye): Ancient Metal, Sandstorm in a Bottle (with the Gauntlet of
    Guard: Gauntlet of Maelstrom).
-5. **The Leviathan** (Sunken City, Abyss Eye, Abyssal Sacrifice).
-6. **Ignis** (Burning Arena, Flame Eye): Ignitium.
+4. **The Harbinger** (Ancient Factory, Mech Eye): Witherite. It mirrors the Wither from Act III.
+
+_Very Hard_
+5. **The Leviathan** (Sunken City, Abyss Eye, Abyssal Sacrifice). No wiki rating was found; placed here because
+   it needs the Abyssal Sacrifice and an underwater fight.
+6. **Maledictus** (Frosted Prison, Cursed Eye): Cursium.
 7. **Scylla** (Acropolis, Storm Eye).
-8. **Netherite Monstrosity** (Soul Black Smith, Monstrous Eye): 600 health.
+
+_Insane_
+8. **Ignis** (Burning Arena, Flame Eye): Ignitium. The wiki's hardest Cataclysm boss.
+
+Then the other giants:
 9. **Luxtructosaurus** (Alex's Caves volcano, Ominous Catalyst): 600 health, 20 armour.
 - _Finale:_ **Echo of Tyros, First Flamebearer** (Iron's, 1000 health, 15 armour): the strongest thing in the pack
   and a natural final boss. A capstone quest needs it plus the act finales; completionists collect every trophy
   or music disc.
+
+The Hard tier could also come just before the Dragon (the Netherite Monstrosity and the Harbinger fit Act III's
+Nether and Wither themes) for groups that want an earlier challenge. The Ender Guardian can't: it lives in the End.
 
 ## Story hooks (placeholder, to shape together)
 
@@ -160,6 +173,10 @@ Roughly easiest to hardest; each one's drops help with the next.
 - **Act V:** the reckoning: break the eight, then face the First Flamebearer, the source of it all.
 - Recurring NPCs (villager givers and name-tagged NPCs) carry the story between acts; side quests come from
   villagers, mob drops and found items, as the quest framework already supports.
+
+**Wiki ratings** (L_Ender's Cataclysm wiki, per-boss pages; the Bosses index page couldn't be read from the cloud
+session): Hard: Netherite Monstrosity, Ender Guardian, Ancient Remnant, The Harbinger. Very Hard: Maledictus,
+Scylla. Insane: Ignis. The Leviathan: not found. Some pages (Scylla, Maledictus, Harbinger) may be out of date.
 
 ## Open questions
 
