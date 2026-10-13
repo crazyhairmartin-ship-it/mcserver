@@ -5,10 +5,11 @@
 <mods dir> holds the pack's mod jars (only the files named in <pack dir>/mods/*.pw.toml are read, so stray jars
 don't count). <vanilla jar> is Minecraft 1.20.1's client "extra" jar (it has the assets and data), e.g.
 PrismLauncher/libraries/net/minecraft/client/1.20.1-20230612.114412/client-1.20.1-20230612.114412-extra.jar.
-Writes tools/quests/registry.json: items, entities, biomes, structures, advancements and dimensions, plus the items
+Writes tools/quests/registry.json: items, entities, enchantments, biomes, structures, advancements and dimensions, plus the items
 KubeJS trims out of the pack (kubejs/startup_scripts/trimmed_items.js).
 
-Item ids come from item models (every item has one), entities from their lang keys, the rest from data files.
+Item ids come from item models (every item has one), entities and enchantments from their lang keys, the rest from
+data files.
 Rerun it after adding or removing mods.
 """
 import json
@@ -59,6 +60,8 @@ def scan(jar, out):
                     parts = key.split('.')
                     if len(parts) == 3 and parts[0] == 'entity':
                         out['entities'].add(f'{parts[1]}:{parts[2]}')
+                    elif len(parts) == 3 and parts[0] == 'enchantment':
+                        out['enchantments'].add(f'{parts[1]}:{parts[2]}')
                 continue
             for kind, pattern in DATA.items():
                 m = pattern.match(name)
@@ -72,7 +75,7 @@ def main():
         sys.exit(__doc__)
     mods_dir, vanilla = sys.argv[1], sys.argv[2]
     pack_dir = sys.argv[3] if len(sys.argv) > 3 else None
-    out = {k: set() for k in ('items', 'entities', 'biomes', 'structures', 'advancements', 'dimensions')}
+    out = {k: set() for k in ('items', 'entities', 'enchantments', 'biomes', 'structures', 'advancements', 'dimensions')}
     out['dimensions'].update({'minecraft:overworld', 'minecraft:the_nether', 'minecraft:the_end'})
     scan(vanilla, out)
     jars = pack_jars(mods_dir, pack_dir)

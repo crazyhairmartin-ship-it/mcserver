@@ -1,0 +1,207 @@
+{
+  "title": "The Angler's Path",
+  "subtitle": "Fishing skill questline",
+  "icon": "minecraft:fishing_rod",
+  "group": "skills",
+  "order": 0,
+  "quests": [
+    {
+      "id": "cast_off",
+      "title": "Cast Off",
+      "icon": "minecraft:fishing_rod",
+      "text": [
+        "Every angler starts with a stick and some string. Craft a fishing rod."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:fishing_rod"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "fish",
+          "xp": 25
+        },
+        {
+          "item": "aquaculture:worm",
+          "count": 16
+        }
+      ]
+    },
+    {
+      "id": "first_catch",
+      "title": "First Catch",
+      "icon": "minecraft:cod",
+      "after": [
+        "cast_off"
+      ],
+      "text": [
+        "Catch some cod. Fishing earns Fishing skill XP every time."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:cod",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "fish",
+          "xp": 50
+        }
+      ]
+    },
+    {
+      "id": "river_and_reef",
+      "title": "River and Reef",
+      "icon": "minecraft:tropical_fish",
+      "after": [
+        "first_catch"
+      ],
+      "text": [
+        "Salmon run in rivers and cold water; tropical fish live in warm oceans."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:salmon",
+          "count": 4
+        },
+        {
+          "item": "minecraft:tropical_fish",
+          "count": 2
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "fish",
+          "xp": 75
+        },
+        {
+          "item": "minecraft:fishing_rod",
+          "name": "Riverrunner",
+          "lore": [
+            "A rod that remembers every river it has seen."
+          ],
+          "enchant": {
+            "minecraft:lure": 2,
+            "minecraft:unbreaking": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "puffer_wrangler",
+      "title": "Puffer Wrangler",
+      "icon": "minecraft:pufferfish",
+      "after": [
+        "river_and_reef"
+      ],
+      "text": [
+        "Pufferfish are best handled carefully. Catch three, and take this for your ocean trips."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:pufferfish",
+          "count": 3
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "fish",
+          "xp": 100
+        },
+        {
+          "item": "artifacts:snorkel"
+        }
+      ]
+    },
+    {
+      "id": "sunken_treasure",
+      "title": "Sunken Treasure",
+      "icon": "aquaculture:treasure_chest",
+      "after": [
+        "river_and_reef"
+      ],
+      "text": [
+        "Sometimes the line comes back heavy. Fish up a treasure chest."
+      ],
+      "tasks": [
+        {
+          "item": "aquaculture:treasure_chest"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "fish",
+          "xp": 150
+        },
+        {
+          "item": "artifacts:anglers_hat"
+        }
+      ]
+    },
+    {
+      "id": "deep_water",
+      "title": "Deep Water",
+      "icon": "minecraft:nautilus_shell",
+      "after": [
+        "puffer_wrangler",
+        "sunken_treasure"
+      ],
+      "text": [
+        "Nautilus shells come up from deep water. Bring three."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:nautilus_shell",
+          "count": 3
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "fish",
+          "xp": 200
+        },
+        {
+          "item": "artifacts:flippers"
+        }
+      ]
+    },
+    {
+      "id": "master_angler",
+      "title": "Master Angler",
+      "icon": "aquaculture:neptunium_fishing_rod",
+      "after": [
+        "deep_water"
+      ],
+      "shape": "gear",
+      "size": 1.5,
+      "text": [
+        "Neptunium comes from the sea's deepest treasures. Bring an ingot and earn the rod of a master."
+      ],
+      "tasks": [
+        {
+          "item": "aquaculture:neptunium_ingot"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "fish",
+          "xp": 400
+        },
+        {
+          "item": "aquaculture:neptunium_fishing_rod",
+          "name": "Tidecaller",
+          "unbreakable": true,
+          "lore": [
+            "The tide answers to whoever holds it."
+          ],
+          "enchant": {
+            "minecraft:luck_of_the_sea": 3,
+            "minecraft:lure": 3
+          }
+        }
+      ]
+    }
+  ]
+}

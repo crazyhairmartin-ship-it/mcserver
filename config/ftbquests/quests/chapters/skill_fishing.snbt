@@ -1,0 +1,287 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_fishing"
+	group: "1CAE106B8DA521D5"
+	icon: "minecraft:fishing_rod"
+	id: "3DE246ABED4E77D2"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Every angler starts with a stick and some string. Craft a fishing rod."]
+			icon: "minecraft:fishing_rod"
+			id: "5461C61A9F3C6B14"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 25"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "52C8752F1B2B8A7B"
+					silent: true
+					title: "+25 Fishing XP"
+					type: "command"
+				}
+				{
+					count: 16
+					id: "221E41E6F59A8EF6"
+					item: "aquaculture:worm"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "4858B810C83333CE"
+					item: "minecraft:fishing_rod"
+					type: "item"
+				}
+			]
+			title: "Cast Off"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5461C61A9F3C6B14"]
+			description: ["Catch some cod. Fishing earns Fishing skill XP every time."]
+			icon: "minecraft:cod"
+			id: "5A998716C91625EA"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 50"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "29AA87920BB2FFCD"
+					silent: true
+					title: "+50 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "3A70E96FF9BECB87"
+					item: "minecraft:cod"
+					type: "item"
+				}
+			]
+			title: "First Catch"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A998716C91625EA"]
+			description: ["Salmon run in rivers and cold water; tropical fish live in warm oceans."]
+			icon: "minecraft:tropical_fish"
+			id: "31A126138E0F18D3"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 75"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "45936D6D273EF56B"
+					silent: true
+					title: "+75 Fishing XP"
+					type: "command"
+				}
+				{
+					id: "39E02C34DFE2F167"
+					item: {
+						Count: 1b
+						id: "minecraft:fishing_rod"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:lure"
+									lvl: 2s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 2s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"A rod that remembers every river it has seen.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Riverrunner\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "0976A7402EACD036"
+					item: "minecraft:salmon"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "0F0D9A4043698AC1"
+					item: "minecraft:tropical_fish"
+					type: "item"
+				}
+			]
+			title: "River and Reef"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["31A126138E0F18D3"]
+			description: ["Pufferfish are best handled carefully. Catch three, and take this for your ocean trips."]
+			icon: "minecraft:pufferfish"
+			id: "75F77B717B524A3F"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 100"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "16A01B39F5A9AB12"
+					silent: true
+					title: "+100 Fishing XP"
+					type: "command"
+				}
+				{
+					id: "4911B41B0AA514F5"
+					item: "artifacts:snorkel"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "356DD19806729E25"
+					item: "minecraft:pufferfish"
+					type: "item"
+				}
+			]
+			title: "Puffer Wrangler"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["31A126138E0F18D3"]
+			description: ["Sometimes the line comes back heavy. Fish up a treasure chest."]
+			icon: "aquaculture:treasure_chest"
+			id: "1ACF82E59E813670"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "789F9A9A297597B9"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
+				}
+				{
+					id: "09B3CA02917054B0"
+					item: "artifacts:anglers_hat"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7225E5F84234F973"
+					item: "aquaculture:treasure_chest"
+					type: "item"
+				}
+			]
+			title: "Sunken Treasure"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"75F77B717B524A3F"
+				"1ACF82E59E813670"
+			]
+			description: ["Nautilus shells come up from deep water. Bring three."]
+			icon: "minecraft:nautilus_shell"
+			id: "3EBF74E38E732A65"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 200"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "3E8F9BA86FE24FFC"
+					silent: true
+					title: "+200 Fishing XP"
+					type: "command"
+				}
+				{
+					id: "622E6A278D525477"
+					item: "artifacts:flippers"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "4E9B41B6955D3525"
+					item: "minecraft:nautilus_shell"
+					type: "item"
+				}
+			]
+			title: "Deep Water"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3EBF74E38E732A65"]
+			description: ["Neptunium comes from the sea's deepest treasures. Bring an ingot and earn the rod of a master."]
+			icon: "aquaculture:neptunium_fishing_rod"
+			id: "08A72F290ED3F273"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 400"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "25F66EBB725E9114"
+					silent: true
+					title: "+400 Fishing XP"
+					type: "command"
+				}
+				{
+					id: "0B7B07F97D234D2E"
+					item: {
+						Count: 1b
+						id: "aquaculture:neptunium_fishing_rod"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:luck_of_the_sea"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:lure"
+									lvl: 3s
+								}
+							]
+							Unbreakable: 1b
+							display: {
+								Lore: ["{\"text\": \"The tide answers to whoever holds it.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Tidecaller\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+			]
+			shape: "gear"
+			size: 1.5d
+			tasks: [
+				{
+					id: "3FA1E813ECE4C874"
+					item: "aquaculture:neptunium_ingot"
+					type: "item"
+				}
+			]
+			title: "Master Angler"
+			x: 7.5d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Fishing skill questline"]
+	title: "The Angler's Path"
+}

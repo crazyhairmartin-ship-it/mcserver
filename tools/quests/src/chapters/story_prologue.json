@@ -11,32 +11,71 @@
       "icon": "minecraft:writable_book",
       "shape": "hexagon",
       "size": 1.5,
-      "after": ["getting_started:home"],
+      "after": [
+        "getting_started:home"
+      ],
       "text": [
         "[Draft] The birds stopped singing the night you arrived. The villagers say the old forest spirits have gone quiet.",
         "Ask around: someone must know what happened."
       ],
-      "tasks": [{"checkmark": "Start the story"}],
-      "rewards": [{"xp": 50}]
+      "tasks": [
+        {
+          "checkmark": "Start the story"
+        }
+      ],
+      "rewards": [
+        {
+          "xp": 50
+        }
+      ]
     },
     {
       "id": "old_cleric",
       "title": "The Old Cleric",
       "icon": "minecraft:amethyst_shard",
-      "after": ["strange_silence"],
+      "after": [
+        "strange_silence"
+      ],
       "giver": {
         "type": "villager",
         "profession": "minecraft:cleric",
-        "requires": ["story_prologue:strange_silence"],
+        "requires": [
+          "story_prologue:strange_silence"
+        ],
         "lines": [
           "You hear it too, don't you? The quiet.",
           "The spirits sleep in the old groves. Bring me something that still remembers them: a sprig of glow berries from the caves below."
         ],
         "accept": "I'll find them"
       },
-      "text": ["[Draft] The cleric wants glow berries from the lush caves."],
-      "tasks": [{"item": "minecraft:glow_berries", "count": 8}],
-      "rewards": [{"skill": "magic", "xp": 100}, {"item": "minecraft:amethyst_shard", "count": 8}]
+      "text": [
+        "[Draft] The cleric wants glow berries from the lush caves."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:glow_berries",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "magic",
+          "xp": 100
+        },
+        {
+          "item": "minecraft:amethyst_shard",
+          "count": 8
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "to": "village_errands:lost_letter",
+      "pos": [
+        3.0,
+        1.5
+      ]
     }
   ]
 }

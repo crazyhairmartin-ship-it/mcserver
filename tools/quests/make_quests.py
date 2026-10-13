@@ -27,7 +27,7 @@ OUT = os.path.join(ROOT, 'config', 'ftbquests', 'quests')
 ITEMS_JS = os.path.join(ROOT, 'kubejs', 'startup_scripts', 'quest_items.generated.js')
 GIVERS_JS = os.path.join(ROOT, 'kubejs', 'server_scripts', 'quest_givers.generated.js')
 NAME = re.compile(r'^[a-z0-9_]+$')
-SINGULAR = {'items': 'item', 'entities': 'mob', 'biomes': 'biome', 'structures': 'structure',
+SINGULAR = {'items': 'item', 'entities': 'mob', 'enchantments': 'enchantment', 'biomes': 'biome', 'structures': 'structure',
             'advancements': 'advancement', 'dimensions': 'dimension'}
 SHAPES = {'circle', 'square', 'rsquare', 'diamond', 'pentagon', 'hexagon', 'octagon', 'heart', 'gear'}
 
@@ -42,6 +42,14 @@ class L(int):
     """A long (written 4L)."""
 
 
+class B(int):
+    """A byte (written 1b)."""
+
+
+class S(int):
+    """A short (written 5s)."""
+
+
 def snbt(value, indent=0):
     tab = '\t'
     if isinstance(value, bool):
@@ -50,6 +58,10 @@ def snbt(value, indent=0):
         return f'{float(value)!r}d'
     if isinstance(value, L):
         return f'{int(value)}L'
+    if isinstance(value, B):
+        return f'{int(value)}b'
+    if isinstance(value, S):
+        return f'{int(value)}s'
     if isinstance(value, (int, float)):
         return repr(value)
     if isinstance(value, str):
@@ -184,6 +196,45 @@ def build_task(t, ids, reg, where, problems):
     return task
 
 
+ITEM_EXTRAS = ('enchant', 'name', 'lore', 'unbreakable')
+
+
+def text_json(text, color, italic):
+    return json.dumps({'text': text, 'color': color, 'italic': italic}, ensure_ascii=False)
+
+
+def item_value(r, reg, where, problems):
+    """An item for a reward: a plain id, or with "enchant" {id: level}, "name", "lore" [lines], "unbreakable".
+    Named items show their name in gold; enchanted books store their enchantments the way books do."""
+    item = r['item']
+    reg.check('items', item, where, r.get('unchecked', False))
+    if not any(k in r for k in ITEM_EXTRAS):
+        return item
+    tag = {}
+    enchants = r.get('enchant', {})
+    if not isinstance(enchants, dict):
+        problems.error(where, '"enchant" must be an object like {"minecraft:sharpness": 5}')
+        enchants = {}
+    if enchants:
+        for ench, lvl in enchants.items():
+            reg.check('enchantments', ench, where, r.get('unchecked', False))
+            if not isinstance(lvl, int) or not 1 <= lvl <= 255:
+                problems.error(where, f'enchantment level for {ench} must be a whole number 1-255')
+        key = 'StoredEnchantments' if item == 'minecraft:enchanted_book' else 'Enchantments'
+        tag[key] = [{'id': ench, 'lvl': S(lvl)} for ench, lvl in enchants.items()]
+    display = {}
+    if 'name' in r:
+        display['Name'] = text_json(r['name'], 'gold', False)
+    if 'lore' in r:
+        lore = [r['lore']] if isinstance(r['lore'], str) else r['lore']
+        display['Lore'] = [text_json(line, 'gray', True) for line in lore]
+    if display:
+        tag['display'] = display
+    if r.get('unbreakable'):
+        tag['Unbreakable'] = B(1)
+    return {'id': item, 'Count': B(1), 'tag': tag}
+
+
 def build_reward(r, ids, ctx, where, problems):
     if not isinstance(r, dict):
         problems.error(where, f'a reward must be an object, got {r!r}')
@@ -193,8 +244,7 @@ def build_reward(r, ids, ctx, where, problems):
     if 'title' in r:
         reward['title'] = r['title']
     if 'item' in r:
-        reg.check('items', r['item'], where, r.get('unchecked', False))
-        reward.update(type='item', item=r['item'])
+        reward.update(type='item', item=item_value(r, reg, where, problems))
         if r.get('count', 1) != 1:
             reward['count'] = r['count']
     elif 'skill' in r:
@@ -390,8 +440,10 @@ def main():
         ctx['tables'][name] = tid
         entries = []
         for n, e in enumerate(t.get('rewards', [])):
-            reg.check('items', e.get('item'), where, e.get('unchecked', False))
-            entry = {'id': fid('table', name, str(n)), 'type': 'item', 'item': e.get('item')}
+            if 'item' not in e:
+                problems.error(where, f'reward {n + 1} needs an "item"')
+                continue
+            entry = {'id': fid('table', name, str(n)), 'type': 'item', 'item': item_value(e, reg, where, problems)}
             if e.get('count', 1) != 1:
                 entry['count'] = e['count']
             if e.get('weight', 1) != 1:
@@ -521,10 +573,24 @@ def main():
             if rewards:
                 quest['rewards'] = rewards
             out_quests.append((qid, quest))
+        links = []
+        for n, link in enumerate(c.get('links', [])):
+            lwhere = f'{cwhere} > link {n + 1}'
+            ref = resolve_ref(link.get('to', ''), name)
+            if ref not in known:
+                problems.error(lwhere, f'"to" points at unknown quest {":".join(ref)}')
+                continue
+            lx, ly = link.get('pos', (0, 0))
+            entry = {'id': fid('link', name, str(n)), 'linked_quest': known[ref], 'x': D(lx), 'y': D(ly)}
+            if 'shape' in link:
+                entry['shape'] = link['shape']
+            if 'size' in link:
+                entry['size'] = D(link['size'])
+            links.append(entry)
         chapters_out[name] = {
             'id': fid('chapter', name), 'filename': name, 'title': c.get('title', name),
             'icon': c.get('icon', 'minecraft:book'), 'group': group_ids.get(c.get('group'), ''), 'order_index': order,
-            'default_hide_dependency_lines': False, 'default_quest_shape': '', 'quest_links': [],
+            'default_hide_dependency_lines': False, 'default_quest_shape': '', 'quest_links': links,
             'quests': out_quests,
         }
         if c.get('subtitle'):

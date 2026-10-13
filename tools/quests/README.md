@@ -54,6 +54,10 @@ Run `/ftbquests reload` on the server (op) after deploying new quests; players g
 }
 ```
 
+Chapter fields: `title`, `subtitle`, `icon`, `group` (from pack.json), `order`, `quests`, and `links`:
+`[{"to": "other_chapter:quest", "pos": [x, y]}]` shows a quest from another chapter in this one. Clicking it jumps
+there; this is how the main story shows its branches.
+
 Quest fields:
 
 | Field | What it does |
@@ -93,6 +97,7 @@ Any task can have a `"title"`. Add `"unchecked": true` for ids that only exist a
 | Reward | Gives |
 |---|---|
 | `{"item": "minecraft:emerald", "count": 5}` | Items (cosmetics are just items too) |
+| `{"item": "minecraft:fishing_rod", "name": "Riverrunner", "lore": ["..."], "enchant": {"minecraft:lure": 2}, "unbreakable": true}` | A unique item: gold name, grey lore, enchantments (checked against the pack). On `minecraft:enchanted_book` the enchantments are stored like a normal enchanted book. Works in reward tables too |
 | `{"skill": "farm", "xp": 150}` | Pufferfish skill XP in that tree: `mining forage farm fish cook craft attack range defense agility magic taming` |
 | `{"xp": 100}` / `{"levels": 3}` | Vanilla XP points / levels |
 | `{"table": "village_favours"}` | One random roll from `src/reward_tables/village_favours.json` |

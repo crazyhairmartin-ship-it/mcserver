@@ -5,8 +5,15 @@
 	group: "484C028E38528A76"
 	icon: "minecraft:writable_book"
 	id: "04F0E24FD649063B"
-	order_index: 1
-	quest_links: [ ]
+	order_index: 2
+	quest_links: [
+		{
+			id: "3030AD868DDEA2B7"
+			linked_quest: "08266E090D41CFAC"
+			x: 3.0d
+			y: 1.5d
+		}
+	]
 	quests: [
 		{
 			dependencies: ["3B7374B6E6B17041"]

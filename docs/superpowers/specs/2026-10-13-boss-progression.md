@@ -1,6 +1,6 @@
 # Boss and objective progression (for the story line)
 
-Status: proposal for discussion, 2026-10-13 (revised: Cataclysm's main bosses moved after the Ender Dragon and ordered by the Cataclysm wiki's difficulty ratings; base health from each mod's code). Built from the pack's current mod list on `main` (merged into
+Status: proposal for discussion, 2026-10-13 (revised: Cataclysm's main bosses moved after the Ender Dragon and ordered by the owner's testing, close to the Cataclysm wiki's ratings; base health from each mod's code; main quest with branches, skill paths and compass locks added). Built from the pack's current mod list on `main` (merged into
 `claude/cloud-session-setup-epiuzy`), reading each mod's jar: boss tags, structures and where they generate, locator
 recipes, and boss loot tables. Difficulty is relative (from the mods' designs and drops), not measured in game.
 
@@ -133,33 +133,93 @@ has gone quiet.
 - _Act finale:_ the Dragon is down, and the eyes are all craftable now. The real threat shows itself.
 
 ### Act V: the reckoning (post-game: Cataclysm and the giants)
-Ordered by the Cataclysm wiki's own difficulty ratings (Hard, Very Hard, Insane), not by health: the wiki calls the
-600-health Netherite Monstrosity the weakest boss and Ignis the hardest. Each tier's drops help with the next.
+Ordered by the owner's own testing (easiest first). This replaces the wiki-based order: the wiki's ratings agree on
+Ignis being hardest and the Netherite Monstrosity weakest, but testing put Maledictus and the Leviathan above the
+Ancient Remnant (Maledictus's lift-and-slam one-shot a player in full Protection IV netherite with golden-apple
+hearts, made worse by server lag).
 
-_Hard_
-1. **Netherite Monstrosity** (Soul Black Smith, Monstrous Eye): the wiki's weakest boss, a good first Cataclysm fight.
+1. **Netherite Monstrosity** (Soul Black Smith, Monstrous Eye). Easiest: two Ignited Revenants beat it in testing.
 2. **Ender Guardian** (Ruined Citadel in the End, Void Eye): Gauntlet of Guard.
-3. **Ancient Remnant** (Cursed Pyramid, Desert Eye): Ancient Metal, Sandstorm in a Bottle (with the Gauntlet of
-   Guard: Gauntlet of Maelstrom).
-4. **The Harbinger** (Ancient Factory, Mech Eye): Witherite. It mirrors the Wither from Act III.
+3. **The Harbinger** (Ancient Factory, Mech Eye): Witherite. It mirrors the Wither from Act III.
+4. **Scylla** (Acropolis, Storm Eye).
+5. **Ancient Remnant** (Cursed Pyramid, Desert Eye): annoying but doable. Ancient Metal, Sandstorm in a Bottle
+   (with the Gauntlet of Guard: Gauntlet of Maelstrom).
+6. **The Leviathan** (Sunken City, Abyss Eye, Abyssal Sacrifice).
+7. **Maledictus** (Frosted Prison, Cursed Eye): Cursium. Warn players about the lift-and-slam; consider lowering
+   its damage in `config/cataclysm-common.toml` if it stays a one-shot on the server.
+8. **Ignis** (Burning Arena, Flame Eye): Ignitium. Hardest, no question.
 
-_Very Hard_
-5. **The Leviathan** (Sunken City, Abyss Eye, Abyssal Sacrifice). No wiki rating was found; placed here because
-   it needs the Abyssal Sacrifice and an underwater fight.
-6. **Maledictus** (Frosted Prison, Cursed Eye): Cursium.
-7. **Scylla** (Acropolis, Storm Eye).
+Side branches from the main quest (not required for the finale): **Luxtructosaurus** (Alex's Caves volcano,
+Ominous Catalyst; 600 health, 20 armour), the Void Worm, the Warden.
+- _Finale:_ **Echo of Tyros, First Flamebearer** (Iron's, 1000 health, 15 armour), or end on Ignis (open question).
 
-_Insane_
-8. **Ignis** (Burning Arena, Flame Eye): Ignitium. The wiki's hardest Cataclysm boss.
+## Quest structure: a main quest with branches
 
-Then the other giants:
-9. **Luxtructosaurus** (Alex's Caves volcano, Ominous Catalyst): 600 health, 20 armour.
-- _Finale:_ **Echo of Tyros, First Flamebearer** (Iron's, 1000 health, 15 armour): the strongest thing in the pack
-  and a natural final boss. A capstone quest needs it plus the act finales; completionists collect every trophy
-  or music disc.
+- **Main quest** (group "The Story"): one chapter per act. Each act has a short spine of story quests that must be
+  done in order, ending in the act's finale. The spine only asks for what the plot needs.
+- **Branches**: optional content hangs off the spine. A spine quest unlocks a branch questline in its own chapter
+  (side content, a mod showcase or a big optional boss like the Luxtructosaurus). The spine chapter shows the
+  branch with a **quest link** (`"links"` in the chapter source): it appears in the main chapter, and clicking it
+  opens the branch. Branches can loop back with a reward that helps the spine (e.g. the Luxtructosaurus branch
+  gives gear that makes Act V easier).
+- **Planned branches** (first pass):
 
-The Hard tier could also come just before the Dragon (the Netherite Monstrosity and the Harbinger fit Act III's
-Nether and Wither themes) for groups that want an earlier challenge. The Ender Guardian can't: it lives in the End.
+| Branches off | Branch | Content |
+|---|---|---|
+| Act I spine | Iron's Spells: first steps | Priest, Pyromancer Tower, first spellbook, inks, scrolls |
+| Act I spine | Mowzie's trials | Wroughtnaut, Umvuthi, Sculptor's climb |
+| Act II spine | Alex's Caves | Cave Maps, each cave biome, Forsaken, Hullbreaker, Tremorzilla, **Luxtructosaurus** |
+| Act II spine | Twilight Forest | Three parts, continued in Acts III and IV |
+| Act II spine | Cataclysm scouting | Mini-bosses, eyes, the eight sealed strongholds |
+| Act III spine | The Dead King | Catacombs, Necromancers, the Dead King |
+| Act IV spine | The End | End cities, elytra, Moog's End structures, Void Worm |
+| Act V spine | The eight | One branch quest per Cataclysm boss, in the order above |
+| Any time | Skill paths | One questline per skill tree (below) |
+| Any time | Villages, drops, exploration | Villager and mob givers, drop quests, structures and biomes to find |
+
+## Skill paths: questlines tied to the skill trees
+
+One chapter per Pufferfish skill tree in a "Skill Paths" group. Each path has 6-8 quests built around that skill's
+activities; every quest gives skill XP in its tree, mid-path quests give an **Artifacts** item that suits the skill,
+and the capstone gives a **unique named, enchanted item**. The Fishing path is written as the sample
+(`tools/quests/src/chapters/skill_fishing.json`).
+
+| Skill | Path activities | Artifacts rewards | Capstone unique item (example) |
+|---|---|---|---|
+| Mining | Ores by depth, deepslate, mineshafts, ancient debris | Digging Claws, Night Vision Goggles, Lucky Scarf, Pickaxe Heater | Fortune/Efficiency pickaxe |
+| Foraging | Logs of many kinds, wild plants, saplings, cave plants | Universal Attractor, Rooted Boots | Unbreakable axe |
+| Farming | Crops, Farmer's Delight / Farm & Charm crops, animals bred | Rooted Boots, Villager Hat | Named hoe |
+| Fishing (sample) | Cod, salmon, tropical fish, pufferfish, treasure, nautilus, neptunium | Snorkel, Angler's Hat, Flippers | Tidecaller (Neptunium rod, Luck of the Sea III, Lure III, unbreakable) |
+| Cooking | Meals from each cooking mod, feasts, drinks | Eternal Steak, Everlasting Beef, Novelty Drinking Hat, Onion Ring | Named cleaver or knife |
+| Crafting | Workstations, tools, storage, Obscura's storage network | Villager Hat, Universal Attractor, Pocket Piston | Named tool set |
+| Attack | Hostile mobs, mini-bosses, Spartan weapons | Power Glove, Feral Claws, Fire Gauntlet, Vampiric Glove | Named Spartan weapon (Sharpness, Looting) |
+| Range | Bow and crossbow kills, long shots, thrown weapons | Superstitious Hat, Golden Hook | Named bow (Power, Infinity) |
+| Defense | Shields blocked, armour sets, surviving bosses | Crystal Heart, Cross Necklace, Steadfast Spikes, Thorn/Flame/Shock Pendant, Chorus Totem | Named shield or chestplate (Protection, Unbreaking) |
+| Agility | Distance travelled, ParCool moves, climbing, wings | Running Shoes, Bunny Hoppers, Cloud in a Bottle, Helium Flamingo, Panic Necklace, Snowshoes, Aqua-Dashers | Named boots (Feather Falling, Depth Strider) |
+| Magic | Iron's spells cast, inks, scrolls, schools | Antidote Vessel, Scarf of Invisibility, Shock Pendant | Named spellbook or staff |
+| Taming | Pets, mounts, unicorns, Domestication Innovation | Cowboy Hat, Kitty Slippers | Named saddle or lead (cosmetic) |
+
+Artifacts also spawn in loot, so quest artifacts should be the ones that suit the path rather than the rarest.
+
+## Locking the compasses behind quests
+
+Explorer's Compass and Nature's Compass would otherwise find any structure or biome from day one, skipping the
+story's discovery. Two levels:
+
+1. **The compass itself**: remove its recipe (KubeJS) and give it as a quest reward, e.g. Explorer's Compass from an
+   Act I exploration quest and Nature's Compass from a Foraging path quest.
+2. **What it can find, per player**: both compasses build the list of searchable structures/biomes **on the
+   server, per player, when the compass is used** (`ExplorersCompassItem.use` calls
+   `StructureUtils.getAllowedStructureKeys` and sends a `SyncPacket` to that player; Nature's Compass does the same
+   with biomes). A small mixin can filter that list by the player's quest stages, and a second one refuses a search
+   for a locked id (in case a modded client asks anyway). Locked entries then don't appear in the compass at all.
+   - Locks would be written next to the quests, e.g. a quest with `"unlocks": {"structures": ["cataclysm:*"]}`. The
+     generator gives that quest an invisible stage reward and writes the lock list for the mod to read.
+   - Suggested locks: Cataclysm strongholds until the Act IV finale (or per boss as Act V progresses), Mowzie's
+     boss structures until their branch starts, Alex's Caves biomes until the caves branch, Iron's Catacombs until
+     Act III, End structures until the Dragon.
+   - This is new Java (a mixin into each compass), best in its own small mod (like FOTF Retrogen), e.g. "FOTF
+     Quests", which could later hold other quest hooks too.
 
 ## Story hooks (placeholder, to shape together)
 
@@ -182,5 +242,6 @@ Scylla. Insane: Ignis. The Leviathan: not found. Some pages (Scylla, Maledictus,
 
 - Should acts lock the next act (quests only, since bosses can't be locked) or just suggest an order?
 - Where do the optional fights go: Warden, Void Worm, Hullbreaker, Tremorzilla?
-- Is Echo of Tyros the final boss, or should the story end on a Cataclysm boss (e.g. the Netherite Monstrosity)?
+- Is Echo of Tyros the final boss, or should the story end on Ignis?
+- Should Maledictus's damage be lowered for the server (lag made its slam a one-shot in testing)?
 - Confirm in game: how Echo of Tyros is summoned, and the Alex's Caves bosses' summon steps in this version.
