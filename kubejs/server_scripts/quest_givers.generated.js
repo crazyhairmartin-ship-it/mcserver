@@ -87,3 +87,81 @@ global.QUEST_GIVERS = [
     "open_task": "4DBCB681ED10A4CD"
   }
 ]
+global.QUEST_CHARACTERS = {}
+global.QUEST_ORGS = {
+  "hunters": {
+    "name": "Hunters' Lodge",
+    "professions": [
+      "minecraft:fletcher"
+    ]
+  },
+  "anglers": {
+    "name": "Anglers' Society",
+    "professions": [
+      "minecraft:fisherman"
+    ]
+  },
+  "miners": {
+    "name": "Miners' Guild",
+    "professions": [
+      "minecraft:armorer",
+      "minecraft:toolsmith"
+    ]
+  },
+  "herbalists": {
+    "name": "Herbalists",
+    "professions": [
+      "minecraft:cleric"
+    ]
+  },
+  "growers": {
+    "name": "Growers' Co-op",
+    "professions": [
+      "minecraft:farmer"
+    ]
+  },
+  "tavern": {
+    "name": "Tavern Keepers",
+    "professions": [
+      "minecraft:butcher"
+    ]
+  },
+  "crafters": {
+    "name": "Crafters' Guild",
+    "professions": [
+      "minecraft:mason"
+    ]
+  },
+  "bounty": {
+    "name": "Bounty Office",
+    "professions": [
+      "minecraft:weaponsmith"
+    ]
+  },
+  "watch": {
+    "name": "Village Watch",
+    "professions": [
+      "guardvillagers:guard"
+    ]
+  },
+  "couriers": {
+    "name": "Couriers",
+    "professions": [
+      "minecraft:cartographer"
+    ]
+  },
+  "arcane": {
+    "name": "Arcane Order",
+    "professions": [
+      "minecraft:librarian",
+      "irons_spellbooks:priest"
+    ]
+  },
+  "sanctuary": {
+    "name": "Sanctuary Keepers",
+    "professions": [
+      "minecraft:shepherd",
+      "minecraft:leatherworker"
+    ]
+  }
+}

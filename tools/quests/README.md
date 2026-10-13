@@ -95,7 +95,9 @@ Quest fields:
 | `{"levels": 10}` | Has XP levels |
 | `{"stat": "minecraft:fish_caught", "count": 50}` | A vanilla statistic reaches the count (`minecraft:walk_one_cm`, `minecraft:aviate_one_cm`, `minecraft:fish_caught`, ...) |
 | `{"checkmark": "I've read this"}` | The player ticks it |
-| `{"talk": "villager", "profession": "minecraft:cleric", "lines": [...]}` | Sneak + right-click that villager while on the quest; they say the lines. `"talk": "entity"` with `"entity"` (and optional `"named"`) for a mob |
+| `{"talk": "villager", "profession": "minecraft:cleric", "lines": [...]}` | Sneak + right-click that villager while on the quest; they say the lines. `"talk": "entity"` with `"entity"` (and optional `"named"`) for a mob, `"talk": "org"` with `"org"` for any representative of an organisation, `"talk": "character"` with `"character"` for a named character (plain right-click) |
+| `{"encounter": {"character": "id" or "entity": "minecraft:wolf", "name": "Old Grey", "then": "talk" or "kill", "lines": [...], "arrive": "...", "health": 60, "glow": true, "distance": [8, 16], "minutes": 20, "where": {"biomes": [...], "dimension": "...", "below_y": 0, "above_y": 60}}}` | When the quest reaches this step (earlier tasks done) and `where` fits, the character or mob appears 8-16 blocks from the player. `talk`: right-click it (it can't be hurt); `kill`: defeat it. It leaves after `minutes` if ignored and comes back 2 minutes later; it's removed when the step is done. Only its player can complete it |
+| `{"timed": {"seconds": 300, "goal": {"kill": "minecraft:zombie", "count": 10} or {"stat": "minecraft:fish_caught", "count": 5} or {"place": "reece"}, "lines": [...], "start": "Start"}}` | When the quest reaches this step, the player gets a clickable [Start] in chat (repeated every 5 minutes until started). Timer and progress show on the action bar; reach the goal in time to complete the step, or click [Try again] |
 | `{"stage": "my_stage"}` | The player has that stage (a player tag; for scripted quests) |
 | `{"drop": {"from": ["minecraft:wolf"], "chance": 0.2, "item": {"name": "Alpha's Fang"}}, "count": 1}` | A unique quest drop: while the quest is open, those mobs can drop the quest item (new `kubejs:quest_*` item, or an existing id); the task is to bring it (`"consume": false` to keep it). Drops never happen outside the quest |
 
@@ -151,6 +153,8 @@ clickable `[accept]` button; accepting adds the quest to the book.
 
 | `type` | How the player gets the quest |
 |---|---|
+| `org` | Sneak + right-click any representative of the organisation (`"org": "anglers"`, from pack.json) in any village. Add `"pool": "anglers_side"` to make it part of a pool (below) |
+| `character` | Right-click the named character (`"character": "id"`, from pack.json), placed in Reece with `/questnpc` |
 | `villager` | Sneak + right-click a villager with that `profession` (`"any"` for all) |
 | `entity` | Sneak + right-click a mob of type `entity`, optionally only one `named` something (name-tagged NPCs) |
 | `drop` | The mobs in `from` drop a quest item (`chance`, default 0.05) for players who don't have the quest; right-click the item to read it |
@@ -169,6 +173,28 @@ How it works: accepting adds the player tag `fq.<chapter>.<quest>`, and the ques
 `requires` gets an invisible reward adding `fq.<chapter>.<quest>.done`. To reset someone's quest giver state:
 `/tag <player> remove fq.<chapter>.<quest>` (and change their progress with `/ftbquests change_progress`). The
 behaviour lives in `kubejs/server_scripts/quest_givers.js`.
+
+### Organisations, pools and characters (pack.json)
+
+```json
+"organisations": [{"id": "anglers", "name": "Anglers' Society", "professions": ["minecraft:fisherman"]}],
+"characters": {"elder": {"name": "...", "entity": "minecraft:villager", "profession": "minecraft:cleric",
+                         "idle": ["Lines they say when they have nothing for you."]}}
+```
+
+- **Organisations:** representatives are villagers with one of the `professions`, or mobs of a listed type (e.g.
+  `guardvillagers:guard`). The speaker shows as "Name (Organisation)". Without a `pool`, an organisation quest is
+  storyline: any representative anywhere offers the player's next one.
+- **Pools:** quests sharing a `pool` are side quests. When a representative has no storyline quest for the
+  player, it offers one pool quest the player can take now, chosen by that villager's own identity, so different
+  villagers (and villages) offer different ones.
+- **Characters:** `/questnpc place <id>` (op) puts the character where you stand, facing your way: it never
+  despawns, doesn't move and can't be hurt. `/questnpc remove <id>` removes it (in loaded chunks), `/questnpc list`
+  lists them. A plain right-click talks to a character; it never opens a trading screen, and says an `idle` line
+  when it has nothing for you. Encounters can bring a character to the player instead.
+
+All of this lives in `kubejs/server_scripts/quest_givers.js` (givers, talk, pools, drops) and `quest_npcs.js`
+(characters, encounters, timed challenges).
 
 ## Progress
 

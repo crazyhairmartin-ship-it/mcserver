@@ -2585,11 +2585,15 @@ hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "ce0d90342be4d649ce5d53183b607bdd829f87c4802d1a0938eebf424ec9a035"
+hash = "b59883a38f9bbea9f533a2e52bb544f80b5e2909c59470050001ebe7abc0b8dd"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
-hash = "c13f3b238dfd755b31565c99b307553f4fbbd06efc8a106fa0a9b64159252d98"
+hash = "c2d6fc749f65d13fcaf9d9f69ff26e11fed8a3d10b0c71a69e97b846a83e1bca"
+
+[[files]]
+file = "kubejs/server_scripts/quest_npcs.js"
+hash = "f24c5617d29c157a8b2e240b256a518bbd10cd3d492f20f3fb47093774edac41"
 
 [[files]]
 file = "kubejs/server_scripts/saddle_recipe.js"

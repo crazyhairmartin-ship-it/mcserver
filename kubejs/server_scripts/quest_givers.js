@@ -1,9 +1,13 @@
 // Quest givers: villagers, mobs, dropped letters and other items hand out FTB Quests quests.
 // The list of givers is generated (quest_givers.generated.js, from tools/quests/src); this file is the behaviour.
 //
-// - Sneak + right-click a villager or mob: if it has a quest for you (right profession / mob type / name, and you've
-//   finished what it requires), it says its lines in chat with a clickable [Accept]. Accepting adds the quest's stage,
-//   which completes the quest's hidden first task, so the quest appears in your book.
+// - Sneak + right-click a villager or mob: if it has a quest for you (right profession / mob type / name, an
+//   organisation's representative, and you've finished what it requires), it says its lines in chat with a
+//   clickable [Accept]. Accepting adds the quest's stage, which completes the quest's hidden first task, so the
+//   quest appears in your book. Named characters (placed with /questnpc, see quest_npcs.js) answer a plain
+//   right-click.
+// - Pools: an organisation's side quests can be a pool. Each representative offers one quest from it, picked by
+//   that villager's own identity, so different villages hand out different work.
 // - "talk" tasks: sneak + right-click the right villager or mob while on that quest to finish the task.
 // - Drop givers: the listed mobs sometimes drop a quest item when you kill them; right-clicking it shows the lines
 //   and [Accept]. Item givers work the same for an item you find any other way.
@@ -47,6 +51,12 @@ function questOpen(player, giver) {
       let first = file.getTask($QuestLong.parseLong(giver.open_task, 16))
       if (first && !data.isCompleted(first)) return false
     }
+    if (giver.prev_tasks) {
+      for (let i = 0; i < giver.prev_tasks.length; i++) {
+        let prev = file.getTask($QuestLong.parseLong(giver.prev_tasks[i], 16))
+        if (prev && !data.isCompleted(prev)) return false
+      }
+    }
     return true
   } catch (e) {
     console.warn('quest_givers: could not read quest ' + giver.quest + ': ' + e)
@@ -86,7 +96,20 @@ function questOffer(player, giver, speaker) {
   ]))
 }
 
+function questProfession(target) {
+  if (String(target.type) != 'minecraft:villager') return ''
+  return String(target.nbt.getCompound('VillagerData').getString('profession'))
+}
+
 function questMatches(giver, target) {
+  if (giver.match == 'org') {
+    // a representative: a villager with one of the organisation's professions, or a mob of a listed type (guards)
+    let type = String(target.type)
+    return giver.professions.indexOf(type) >= 0 || giver.professions.indexOf(questProfession(target)) >= 0
+  }
+  if (giver.match == 'character') {
+    return target.tags.contains('fq_npc.' + giver.character)
+  }
   if (giver.match == 'villager') {
     if (String(target.type) != 'minecraft:villager') return false
     if (giver.profession == 'any') return true
@@ -100,29 +123,72 @@ function questMatches(giver, target) {
   return false
 }
 
+// A stable number for a villager + quest, so each representative prefers its own quests from a pool.
+function questHash(text) {
+  let h = 0
+  for (let i = 0; i < text.length; i++) h = (h * 31 + text.charCodeAt(i)) | 0
+  return h
+}
+
+function questSpeaker(giver, target) {
+  if (giver.name) return giver.name
+  let name = String(target.displayName.string)
+  return giver.org_name ? name + ' (' + giver.org_name + ')' : name
+}
+
+// What this villager or mob offers this player now: storyline quests first, then one quest from each pool.
+function questOfferFor(player, target) {
+  let candidates = questGivers().filter(g => (g.type == 'villager' || g.type == 'entity' || g.type == 'org'
+    || g.type == 'character') && questMatches(g, target) && questHasAll(player, g.requires)
+    && !player.tags.contains(g.stage))
+  let story = candidates.find(g => !g.pool)
+  if (story) return story
+  let uuid = String(target.uuid)
+  candidates.sort((a, b) => questHash(uuid + a.stage) - questHash(uuid + b.stage))
+  return candidates[0]
+}
+
 // Talk to villagers and mobs.
 ItemEvents.entityInteracted(event => {
   let { player, target } = event
-  if (String(event.hand) != 'MAIN_HAND' || !player.crouching || player.level.clientSide) return
+  if (String(event.hand) != 'MAIN_HAND' || player.level.clientSide) return
+  if (target.tags.contains('fq_enc')) return            // encounters are handled in quest_npcs.js
+  let character = target.tags.contains('fq_npc')
+  if (!player.crouching && !character) return
   let givers = questGivers()
-  let speaker = String(target.displayName.string)
   // Quests in progress first: a talk task for this villager or mob.
   let talk = givers.find(g => g.type == 'talk' && questMatches(g, target) && questHasAll(player, g.requires)
     && !player.tags.contains(g.stage) && questOpen(player, g))
   if (talk) {
-    questSay(player, talk.name || speaker, talk.lines)
+    questSay(player, questSpeaker(talk, target), talk.lines)
     questAddStage(player, talk.stage)
     player.tell(Text.yellow('Quest updated.'))
     event.cancel()
     return
   }
-  let offer = givers.find(g => (g.type == 'villager' || g.type == 'entity') && questMatches(g, target)
-    && questHasAll(player, g.requires) && !player.tags.contains(g.stage))
+  let offer = questOfferFor(player, target)
   if (offer) {
-    questOffer(player, offer, offer.name || speaker)
+    questOffer(player, offer, questSpeaker(offer, target))
+    event.cancel()
+    return
+  }
+  if (character) {
+    // named characters never open a trading screen; with nothing for you they say an idle line
+    let info = (global.QUEST_CHARACTERS || {})[questCharacterId(target)] || {}
+    let idle = info.idle || ['...']
+    questSay(player, String(target.displayName.string), [idle[Math.floor(Math.random() * idle.length)]])
     event.cancel()
   }
 })
+
+function questCharacterId(target) {
+  let found = ''
+  target.tags.forEach(tag => {
+    let t = String(tag)
+    if (t.indexOf('fq_npc.') == 0) found = t.substring(7)
+  })
+  return found
+}
 
 // Quest items from drops (or found anywhere) start quests when read.
 ItemEvents.rightClicked(event => {
@@ -174,7 +240,8 @@ ServerEvents.commandRegistry(event => {
           let player = ctx.source.player
           if (!player) return 0
           let stage = Arguments.STRING.getResult(ctx, 'stage')
-          let giver = questGivers().find(g => g.stage == stage && g.type != 'talk')
+          let giver = questGivers().find(g => g.stage == stage && g.type != 'talk' && g.type != 'encounter'
+            && g.type != 'timed' && g.type != 'task_drop')
           let offers = questOffers(player)
           if (!giver || !offers.contains(stage) || Date.now() - offers.getLong(stage) > QUEST_OFFER_MS) {
             player.tell(Text.gray('That offer has expired. Talk to them again.'))

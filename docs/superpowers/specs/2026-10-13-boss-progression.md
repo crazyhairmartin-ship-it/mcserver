@@ -416,6 +416,19 @@ the compass just becomes the quest pathway's guide.
 session): Hard: Netherite Monstrosity, Ender Guardian, Ancient Remnant, The Harbinger. Very Hard: Maledictus,
 Scylla. Insane: Ignis. The Leviathan: not found. Some pages (Scylla, Maledictus, Harbinger) may be out of date.
 
+## Do later
+
+- [ ] **Place coordinates**: Reece (spawn village) and the nearby villages used as quest destinations: names,
+  centres, radius, in `tools/quests/src/places.json`. The owner will provide them.
+- [ ] **Place the named characters in Reece** with `/questnpc` once they're written.
+- [ ] **Compass lock** (decided: per-player real lock only; not to be built until asked).
+- [ ] **Artifacts rarity**: set `artifactRarity` / `archaeologyChance` / campsite settings so artifacts mostly come
+  from quests; check Loot Integrations.
+- [ ] **Plot approval**: outline at spoiler-safe level before writing the story chapters.
+- [ ] **In-game test pass** of the quest framework (book, rewards, givers, talk steps, drops, encounters, timed
+  challenges).
+- [ ] **Deploy**: FTB Quests / Teams / XMod Compat, `config/ftbquests`, the quest KubeJS scripts; `/ftbquests reload`.
+
 ## Open questions
 
 - Should acts lock the next act's quests, or just suggest an order? (Bosses themselves can't be locked; their

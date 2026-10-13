@@ -309,7 +309,8 @@ def build_reward(r, ids, ctx, where, problems):
 
 # ---- quest givers ----
 
-GIVER_KINDS = {'villager', 'entity', 'drop', 'item'}
+GIVER_KINDS = {'villager', 'entity', 'org', 'character', 'drop', 'item'}
+TARGET_KINDS = ('villager', 'entity', 'org', 'character')
 
 
 def giver_stage(chapter, quest):
@@ -328,8 +329,12 @@ def build_giver(g, chapter, qid, ctx, where, problems):
     out = {'quest': f'{chapter}:{qid}', 'stage': giver_stage(chapter, qid), 'type': kind, 'lines': lines,
            'accept': g.get('accept', 'Accept'), 'requires': [], 'name': g.get('name', '')}
     reg = ctx['registry']
-    if kind in ('villager', 'entity'):
-        out.update(match_target(kind, g, reg, where, problems))
+    if kind in TARGET_KINDS:
+        out.update(match_target(kind, g, ctx, where, problems))
+        if g.get('pool'):
+            if not NAME.match(str(g['pool'])):
+                problems.error(where, '"pool" must be an a-z_ name')
+            out['pool'] = g['pool']
     elif kind in ('drop', 'item'):
         item = quest_item_id(g, chapter, qid, ctx, where, problems)
         if not item:
@@ -352,8 +357,20 @@ def build_giver(g, chapter, qid, ctx, where, problems):
     return out
 
 
-def match_target(kind, g, reg, where, problems):
-    """Which villager or mob this is: a villager by profession ("any" for all), or a mob type, optionally by name."""
+def match_target(kind, g, ctx, where, problems):
+    """Who this is: a villager by profession ("any" for all), a mob type (optionally by name), any representative of
+    an organisation (pack.json "organisations"), or a named character (pack.json "characters")."""
+    reg = ctx['registry']
+    if kind == 'org':
+        org = ctx['orgs'].get(g.get('org'))
+        if not org:
+            problems.error(where, f'unknown organisation {g.get("org")!r} (pack.json "organisations")')
+            return {'match': 'org', 'org': g.get('org'), 'professions': [], 'org_name': ''}
+        return {'match': 'org', 'org': g['org'], 'professions': org['professions'], 'org_name': org['name']}
+    if kind == 'character':
+        if g.get('character') not in ctx['characters']:
+            problems.error(where, f'unknown character {g.get("character")!r} (pack.json "characters")')
+        return {'match': 'character', 'character': g.get('character')}
     if kind == 'villager':
         prof = g.get('profession', 'any')
         if prof != 'any' and ':' not in prof:
@@ -366,8 +383,8 @@ def match_target(kind, g, reg, where, problems):
 def build_talk(t, chapter, qid, n, requires, ctx, where, problems):
     """A "talk to" task: done when the player sneak-right-clicks the right villager or mob while on the quest."""
     target = t.get('talk')
-    if target not in ('villager', 'entity'):
-        problems.error(where, '"talk" must be "villager" or "entity"')
+    if target not in TARGET_KINDS:
+        problems.error(where, '"talk" must be "villager", "entity", "org" or "character"')
         return None, None
     lines = t.get('lines', [])
     if not isinstance(lines, list) or not all(isinstance(x, str) for x in lines):
@@ -376,11 +393,99 @@ def build_talk(t, chapter, qid, n, requires, ctx, where, problems):
     stage = f'{giver_stage(chapter, qid)}.talk{n}'
     entry = {'quest': f'{chapter}:{qid}', 'stage': stage, 'type': 'talk', 'lines': lines, 'requires': list(requires),
              'name': t.get('name', '')}
-    entry.update(match_target(target, t, ctx['registry'], where, problems))
+    entry.update(match_target(target, t, ctx, where, problems))
     default = 'Talk to a villager' if target == 'villager' else 'Talk to them'
     if target == 'villager' and entry['profession'] != 'any':
         default = 'Talk to a ' + entry['profession'].split(':', 1)[1].replace('_', ' ')
+    elif target == 'org':
+        default = 'Talk to a representative of the ' + entry.get('org_name', '')
+    elif target == 'character' and entry['character'] in ctx['characters']:
+        default = 'Talk to ' + ctx['characters'][entry['character']]['name']
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': stage, 'title': t.get('title', default)}
+    return task, entry
+
+
+def place_box(place):
+    x, y, z = place['pos']
+    r = int(place.get('radius', 48))
+    return {'dimension': place.get('dimension', 'minecraft:overworld'), 'min': [x - r, y - 32, z - r],
+            'max': [x + r, y + 64, z + r]}
+
+
+def build_encounter(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """An "encounter" task: when the step opens, a character or mob appears near the player; talking to it (or
+    defeating it) completes the step. Optional "where" conditions say where it can happen."""
+    spec = t['encounter']
+    if not isinstance(spec, dict):
+        problems.error(where, '"encounter" must be an object')
+        return None, None
+    reg = ctx['registry']
+    then = spec.get('then', 'talk')
+    if then not in ('talk', 'kill'):
+        problems.error(where, 'encounter "then" must be "talk" or "kill"')
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.enc{n}', 'type': 'encounter',
+             'then': then, 'lines': spec.get('lines', []), 'arrive': spec.get('arrive', ''), 'requires': [],
+             'quest_id': quest_id, 'prev_tasks': list(prev_tasks), 'name': spec.get('name', ''),
+             'distance': spec.get('distance', [8, 16]), 'minutes': float(spec.get('minutes', 20)),
+             'health': spec.get('health'), 'glow': bool(spec.get('glow', False)), 'where': {}}
+    if 'character' in spec:
+        char = ctx['characters'].get(spec['character'])
+        if not char:
+            problems.error(where, f'unknown character {spec["character"]!r} (pack.json "characters")')
+            return None, None
+        entry.update(entity=char['entity'], name=entry['name'] or char['name'], profession=char.get('profession', ''))
+    elif 'entity' in spec:
+        reg.check('entities', spec['entity'], where, spec.get('unchecked', False))
+        entry.update(entity=spec['entity'], profession=spec.get('profession', ''))
+    else:
+        problems.error(where, 'an encounter needs "character" or "entity"')
+        return None, None
+    if not entry['name']:
+        problems.error(where, 'an encounter needs a "name" (or a character, which has one)')
+    cond = spec.get('where', {})
+    for b in cond.get('biomes', []):
+        reg.check('biomes', b, where, spec.get('unchecked', False))
+    if cond.get('dimension'):
+        reg.check('dimensions', cond['dimension'], where)
+    entry['where'] = {k: cond[k] for k in ('biomes', 'dimension', 'below_y', 'above_y') if k in cond}
+    title = t.get('title', ('Meet ' if then == 'talk' else 'Defeat ') + entry['name'])
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'], 'title': title}
+    return task, entry
+
+
+def build_timed(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "timed" challenge: when the step opens the player gets a [Start] button; they then have "seconds" to reach
+    the goal: kill a number of a mob, raise a statistic by a number, or reach a place."""
+    spec = t['timed']
+    if not isinstance(spec, dict) or not isinstance(spec.get('goal'), dict):
+        problems.error(where, '"timed" needs "seconds" and a "goal"')
+        return None, None
+    seconds = int(spec.get('seconds', 0))
+    if seconds <= 0:
+        problems.error(where, 'a timed challenge needs "seconds" above 0')
+    goal = spec['goal']
+    out_goal = {}
+    if 'kill' in goal:
+        ctx['registry'].check('entities', goal['kill'], where, goal.get('unchecked', False))
+        out_goal = {'kind': 'kill', 'entity': goal['kill'], 'count': int(goal.get('count', 1))}
+    elif 'stat' in goal:
+        if ':' not in str(goal['stat']):
+            problems.error(where, 'goal stat needs a namespace, like minecraft:fish_caught')
+        out_goal = {'kind': 'stat', 'stat': goal['stat'], 'count': int(goal.get('count', 1))}
+    elif 'place' in goal:
+        if goal['place'] not in PLACES:
+            problems.error(where, f'unknown place {goal["place"]!r} (tools/quests/src/places.json)')
+            return None, None
+        out_goal = {'kind': 'place', 'box': place_box(PLACES[goal['place']]),
+                    'label': PLACES[goal['place']].get('name', goal['place'])}
+    else:
+        problems.error(where, 'timed goal must be "kill", "stat" or "place"')
+        return None, None
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.timed{n}', 'type': 'timed',
+             'seconds': seconds, 'goal': out_goal, 'lines': spec.get('lines', []), 'start': spec.get('start', 'Start'),
+             'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks), 'name': spec.get('name', '')}
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', f'Challenge ({seconds // 60}:{seconds % 60:02d})')}
     return task, entry
 
 
@@ -494,7 +599,24 @@ def main():
         if place.get('dimension') and place['dimension'] not in reg.sets.get('dimensions', set()):
             problems.error('places.json', f'place {key!r}: unknown dimension {place["dimension"]}')
         PLACES[key] = place
-    ctx = {'registry': reg, 'skills': skills, 'tables': {}, 'quest_items': {}, 'done_stages': set()}
+    orgs, characters = {}, {}
+    for o in pack.get('organisations', []):
+        profs = o.get('professions', [])
+        if not NAME.match(str(o.get('id', ''))) or not profs or not all(':' in p for p in profs):
+            problems.error('pack.json', f'organisation {o.get("id")!r} needs an a-z_ id and namespaced "professions"')
+            continue
+        orgs[o['id']] = {'name': o.get('name', o['id']), 'professions': profs}
+    for cid, c in pack.get('characters', {}).items():
+        if cid.startswith('_'):
+            continue
+        if not NAME.match(cid) or not isinstance(c, dict) or 'name' not in c:
+            problems.error('pack.json', f'character {cid!r} needs an a-z_ id and a "name"')
+            continue
+        c = dict(c)
+        c.setdefault('entity', 'minecraft:villager')
+        reg.check('entities', c['entity'], f'pack.json > character {cid}')
+        characters[cid] = c
+    ctx = {'registry': reg, 'skills': skills, 'orgs': orgs, 'characters': characters, 'tables': {}, 'quest_items': {}, 'done_stages': set()}
 
     # reward tables
     tables_out = {}
@@ -631,7 +753,17 @@ def main():
             open_task = tasks[0]['id'] if tasks else ''
             for n, t in enumerate(q.get('tasks', [])):
                 twhere = f'{where} > task {n + 1}'
-                if isinstance(t, dict) and 'drop' in t:
+                if isinstance(t, dict) and 'encounter' in t:
+                    task, entry = build_encounter(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx,
+                                                  twhere, problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and 'timed' in t:
+                    task, entry = build_timed(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
+                                              problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and 'drop' in t:
                     task, entry = build_task_drop(t, name, qid, n, quest['id'], open_task, talk_requires, ctx, twhere,
                                                   problems)
                     if entry:
@@ -735,7 +867,9 @@ def main():
               for i in items) + '})\n')
     write(GIVERS_JS, '// priority: 100\n' + note +
           '// Who gives which quest. Read by quest_givers.js.\n'
-          'global.QUEST_GIVERS = ' + json.dumps(givers, indent=2) + '\n')
+          'global.QUEST_GIVERS = ' + json.dumps(givers, indent=2) + '\n'
+          'global.QUEST_CHARACTERS = ' + json.dumps(characters, indent=2) + '\n'
+          'global.QUEST_ORGS = ' + json.dumps(orgs, indent=2) + '\n')
     print('wrote ' + summary)
 
 
