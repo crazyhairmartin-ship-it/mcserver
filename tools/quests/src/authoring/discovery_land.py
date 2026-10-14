@@ -1,7 +1,7 @@
-"""Chapter: discovery_land, stumbling on strange places across the land (every tier except any).
+"""Chapter: discovery_land, stumbling on strange places across the land (every tier, including any).
 Plan: src/plans/quests/discovery_land.json. Quests with a "discover" stay hidden until the player reaches the place; a
-toast announces them. The tier-"any" quests are appended later (T08)."""
-from common import chapter, quest, talk_org, item, reward_item, skill, encounter
+toast announces them. """
+from common import chapter, quest, talk_org, talk_villager, item, reward_item, skill, encounter
 
 
 def enc(lines, title=None, **spec):
@@ -423,4 +423,465 @@ Q = [
           rewards=[reward_item("minecraft:obsidian", 8), reward_item("minecraft:magma_cream", 4), skill("mining", 220)]),
 ]
 
-chapter("discovery_land", "Out in the Land", "Strange places on the road", "minecraft:compass", "explore", 0, Q)
+def search(at, count, name, found, texture="minecraft:item/paper", title=None):
+    """Opening containers at the place turns up the quest item."""
+    return {"search": {"at": {"structure": at}, "count": count,
+                       "item": {"name": name, "texture": texture}, "found": found},
+            "title": title or ("Search for " + name)}
+
+
+def use(block, at, title, count=1, **extra):
+    t = {"use": block, "count": count, "title": title}
+    if at:
+        t["at"] = {"structure": at}
+    t.update(extra)
+    return t
+
+
+def biome_step(biome, title):
+    return {"biome": biome, "title": title}
+
+
+ANY = [
+    quest("the_lonely_cap", "The Lonely Cap", icon="minecraft:red_mushroom",
+          discover={"structure": "dungeons_arise:mushroom_house"},
+          text=["A single mushroom house stands far from anywhere with its door ajar and its owner missing. A trail of "
+                "spores leads from the doorstep into the cave behind, where spiders have him cornered."],
+          tasks=[fight("minecraft:cave_spider", 6, "dungeons_arise:mushroom_house", "Cave Spiders",
+                       "Drive the spiders off the trapped hermit"),
+                 enc(["Oh, thank the caps! They had me pinned for two days.",
+                      "Take me home, please. The stew's gone cold."], then="escort", entity="minecraft:villager",
+                     name="Mushroom Hermit", to={"structure": "dungeons_arise:mushroom_house", "label": "his house"},
+                     title="Lead the hermit home")],
+          rewards=[reward_item("minecraft:suspicious_stew", 3), reward_item("farmersdelight:brown_mushroom_colony", 2),
+                   skill("forage", 150)]),
+
+    quest("chapel_in_the_pines", "The Chapel in the Pines", icon="minecraft:bell",
+          discover={"structure": "structory:abandoned_chapel"},
+          text=["An abandoned chapel still has its bell, but the rope has rotted and the candles have burnt out. "
+                "Someone in the forest has been listening for it for years."],
+          tasks=[item("supplementaries:rope", 2, consume=True, title="Bring a new rope for the bell"),
+                 item("minecraft:candle", 3, consume=True, title="Bring candles for the altar"),
+                 use("minecraft:bell", "structory:abandoned_chapel", "Ring the chapel bell"),
+                 enc(["I heard the bell! After all these years!",
+                      "I used to keep this chapel. The forest took the road, and I took the forest.",
+                      "Thank you for ringing it. It sounds just as I remembered."], entity="minecraft:villager",
+                     name="Chapel Keeper", title="See who comes out of the forest")],
+          rewards=[reward_item("minecraft:bell"), reward_item("minecraft:candle", 4), skill("defense", 150)]),
+
+    quest("outcasts", "The Outcasts", icon="minecraft:emerald",
+          discover={"structure": "structory:outcast_villager_grassy"},
+          text=["Villagers cast out of their village live in a shack on their own. They'd like to go home, if "
+                "anyone would carry their apology."],
+          tasks=[enc(["Cast out for a harvest dispute, can you believe? Over a cabbage.",
+                      "We'd go home tomorrow if they'd have us. Would you take our apology?"],
+                     entity="minecraft:villager", name="Outcast Villager", title="Hear the outcasts' side"),
+                 item("minecraft:emerald", 3, consume=True, title="Take their gift of emeralds"),
+                 {"structure": "#villages", "title": "Carry their apology to the nearest village"},
+                 talk_villager("minecraft:librarian", ["They apologised? Over the cabbage?",
+                                                       "Well. It was a very good cabbage. Tell them they're welcome home."],
+                               title="Deliver the apology to the village")],
+          rewards=[reward_item("minecraft:emerald", 6), skill("defense", 150)]),
+
+    quest("northern_runes", "Northern Runes", icon="explorerscompass:explorerscompass",
+          discover={"structure": "structory:northern_ruin"},
+          text=["Northern ruins carry runes on their standing stones. Three of them read together point to a "
+                "buried chest."],
+          tasks=[search("structory:northern_ruin", 3, "Rune Rubbing", "A rubbing of the runes, tucked in the stonework.",
+                        title="Read the runes at three northern ruins"),
+                 {"checkmark": "I followed the runes to the buried chest"}],
+          rewards=[reward_item("minecraft:chest"), reward_item("explorerscompass:explorerscompass"), skill("magic", 200)]),
+
+    quest("engineers_plans", "The Engineer's Plans", icon="minecraft:sticky_piston",
+          discover={"structure": "structory_towers:engineer_tower"},
+          text=["The engineer left plans for a machine half-built: a working piston door. His notes list the parts."],
+          tasks=[search("structory_towers:engineer_tower", 1, "Engineer's Notes", "Notes in a cramped hand, with a "
+                        "parts list."),
+                 item("minecraft:sticky_piston", 2, crafted=True, title="Make the sticky pistons the notes call for"),
+                 {"build": {"blocks": {"minecraft:sticky_piston": 2, "minecraft:iron_door": 1}, "radius": 8},
+                  "title": "Finish the piston door"}],
+          rewards=[reward_item("minecraft:piston", 8), reward_item("minecraft:redstone", 16), skill("craft", 200)]),
+
+    quest("mirage_outpost", "The Mirage", icon="minecraft:sand",
+          discover={"structure": "structory_towers:mirage_outpost"},
+          text=["The desert outpost keeps a water barrel and a logbook of travellers who never arrived. The next "
+                "oasis is a hard walk across the dunes, and the barrel only holds so much."],
+          tasks=[{"timed": {"seconds": 480, "goal": {"structure": "#villages", "label": "the next oasis", "away": 150},
+                            "lines": ["The barrel's nearly dry. Cross the dunes before your water runs out."],
+                            "start": "Cross the dunes", "no": ["teleport", "mounts"]},
+                  "title": "Cross the dunes before the water runs out"},
+                 {"checkmark": "I added my name to the logbook"}],
+          rewards=[reward_item("minecraft:dried_kelp", 16), reward_item("minecraft:golden_carrot", 6),
+                   skill("agility", 200)]),
+
+    quest("gallows_hill", "Gallows Hill", icon="minecraft:oak_sign",
+          discover={"structure": "mvs:gallows"},
+          text=["A notice on the gallows names a thief who swore he was innocent. The real culprit dropped a coin "
+                "purse nearby, and the Village Watch could clear the dead man's name."],
+          tasks=[search("mvs:gallows", 1, "Dropped Coin Purse", "A coin purse, stitched with the wrong man's initials.",
+                        texture="minecraft:item/gold_nugget", title="Search the gallows for the culprit's purse"),
+                 talk_org("watch", ["A purse stitched with the wrong initials? That changes things.",
+                                    "The man they hanged was framed. We'll have his name cleared.",
+                                    "Thank you for coming forward."], title="Clear the dead man's name with the Watch")],
+          rewards=[reward_item("minecraft:emerald", 6), skill("defense", 150)]),
+
+    quest("the_tree_monument", "Grove of Remembrance", icon="minecraft:oak_sapling",
+          discover={"structure": "mvs:tree_monument"},
+          text=["A monument to a felled forest stands on bare ground. Plant a sapling of every vanilla tree around it "
+                "and bone-meal them up, and the grove will return."],
+          tasks=[{"build": {"blocks": {"minecraft:oak_sapling": 1, "minecraft:spruce_sapling": 1,
+                                       "minecraft:birch_sapling": 1, "minecraft:jungle_sapling": 1,
+                                       "minecraft:acacia_sapling": 1, "minecraft:dark_oak_sapling": 1},
+                            "radius": 12}, "title": "Plant a sapling of every tree around the monument"},
+                 item("minecraft:bone_meal", 12, consume=True, title="Bone-meal the saplings up")],
+          rewards=[reward_item("minecraft:bone_meal", 16), reward_item("minecraft:oak_sapling", 8), skill("forage", 150)]),
+
+    quest("nobodys_home", "Nobody's Home", icon="minecraft:book",
+          discover={"structure": "#lonely_houses"},
+          text=["Lonely houses stand empty along the roads, tables still set. A diary, torn into pages, is scattered "
+                "through them. Gather its pages to learn where the families went."],
+          tasks=[search("#lonely_houses", 3, "Diary Page", "A page from a diary, with a date and a worried hand.",
+                        title="Search three empty houses for diary pages")],
+          rewards=[reward_item("handcrafted:oak_chair", 2), reward_item("minecraft:red_bed"), skill("craft", 150)]),
+
+    quest("circle_of_stones", "The Circle of Stones", icon="minecraft:cauldron",
+          discover={"structure": "betterwitchhuts:witch_circle"},
+          text=["A witch's circle of stones stands in the swamp. A potion is carved into its stones, and the old "
+                "tales say a witch's familiar answers when it is poured at the centre."],
+          tasks=[item("minecraft:potion", title="Brew the potion carved into the stones"),
+                 use("minecraft:water_cauldron", "betterwitchhuts:witch_circle", "Pour the potion into the cauldron",
+                     holding="minecraft:potion", unchecked=True),
+                 enc(["Meow. The witch's tongue is in my mouth, and she says you may pass."],
+                     entity="minecraft:cat", name="Witch's Familiar", title="Meet the witch's familiar")],
+          rewards=[reward_item("bookoffamiliars:familiar_book"), reward_item("minecraft:redstone", 16),
+                   skill("magic", 200)]),
+
+    quest("reading_the_obelisks", "Reading the Obelisks", icon="minecraft:chiseled_sandstone",
+          discover={"biome": "minecraft:desert"},
+          text=["Obelisks in the desert carry the same carvings in different orders. One symbol appears on every "
+                "one, and the old tales say it points to a cache."],
+          tasks=[{"checkmark": "I noted the carvings on the first obelisk"},
+                 {"checkmark": "I noted the carvings on the second obelisk"},
+                 {"checkmark": "I noted the carvings on the third obelisk, and the symbol they share"}],
+          rewards=[reward_item("minecraft:sandstone", 32), reward_item("minecraft:gold_ingot", 6), skill("magic", 200)]),
+
+    quest("shards_of_the_trail", "Shards of the Trail", icon="minecraft:decorated_pot",
+          discover={"structure": "minecraft:trail_ruins"},
+          text=["Trail ruins hide their past under suspicious gravel. Brush out four different pottery sherds and "
+                "fit them on a decorated pot to read the story they tell."],
+          tasks=[item("minecraft:brush", title="Bring a brush for the suspicious gravel"),
+                 item("minecraft:angler_pottery_sherd", title="Brush out an angler sherd"),
+                 item("minecraft:archer_pottery_sherd", title="Brush out an archer sherd"),
+                 item("minecraft:arms_up_pottery_sherd", title="Brush out an arms-up sherd"),
+                 item("minecraft:blade_pottery_sherd", title="Brush out a blade sherd"),
+                 item("minecraft:decorated_pot", crafted=True, title="Fit the sherds onto a decorated pot")],
+          rewards=[reward_item("minecraft:brush"), reward_item("minecraft:sniffer_egg"), skill("craft", 200)]),
+
+    quest("the_bakery", "Fresh from the Oven", icon="bakery:strawberry_cake",
+          discover={"structure": "bakery:bakery"},
+          text=["The village bakery's baker is behind on orders for the festival. Bake a strawberry cake, a baguette "
+                "and a tray of cupcakes and deliver them."],
+          tasks=[item("bakery:strawberry_cake", consume=True, title="Bake a strawberry cake"),
+                 item("bakery:baguette", consume=True, title="Bake a baguette"),
+                 item("bakery:strawberry_cupcake", 3, consume=True, title="Bake a tray of cupcakes"),
+                 enc(["You baked all of it? And on time? I could kiss you. I won't. Flour.",
+                      "Take a rolling pin. I have three."], entity="minecraft:villager", name="Harried Baker",
+                     title="Deliver the baking before the festival")],
+          rewards=[reward_item("bakery:rolling_pin"), reward_item("bakery:bread", 8), skill("cook", 200)]),
+
+    quest("brewfest", "Brewfest", icon="brewery:beer_mug",
+          discover={"structure": "brewery:brewfest_tent"},
+          text=["A brewfest tent stands in the plains with a contest board. Brew three beers, enter them, and beat "
+                "the brewfest regulars and the Beer Elemental they keep in the cellar."],
+          tasks=[item("brewery:beer_wheat", consume=True, title="Brew a wheat beer"),
+                 item("brewery:beer_barley", consume=True, title="Brew a barley beer"),
+                 item("brewery:beer_oat", consume=True, title="Brew an oat beer"),
+                 fight("brewery:beer_elemental", 1, "brewery:brewfest_tent", "Cellar Beer Elemental",
+                       "Beat the Beer Elemental in the cellar", wave=1)],
+          rewards=[reward_item("brewery:brewfest_hat"), reward_item("brewery:wooden_brewingstation"),
+                   skill("cook", 220)]),
+
+    quest("the_chalet", "Fondue at the Chalet", icon="meadow:fondue",
+          discover={"structure": "meadow:chalet"},
+          text=["The alpine chalet's cook makes fondue for climbers, but the cheese cellar is empty. Bring cheese of "
+                "three kinds from Meadow's animals and cook the fondue together."],
+          tasks=[item("meadow:piece_of_cheese", consume=True, title="Bring plain cheese"),
+                 item("meadow:piece_of_goat_cheese", consume=True, title="Bring goat cheese"),
+                 item("meadow:piece_of_sheep_cheese", consume=True, title="Bring sheep cheese"),
+                 item("meadow:fondue", title="Cook the fondue")],
+          rewards=[reward_item("meadow:cheese_sandwich", 4), reward_item("meadow:fur_boots"), skill("cook", 200)]),
+
+    quest("the_observation_post", "The Observation Post", icon="camerapture:camera",
+          discover={"structure": "meadow:observation_post"},
+          text=["An alpine observation post has a list of animals to sight pinned to its sill. Photograph three "
+                "of them for the survey."],
+          tasks=[{"photo": {"entity": "meadow:water_buffalo"}, "title": "Photograph a water buffalo"},
+                 {"photo": {"entity": "meadow:horned_sheep"}, "title": "Photograph a horned sheep"},
+                 {"photo": {"entity": "meadow:highland_cattle"}, "title": "Photograph a highland cow"}],
+          rewards=[reward_item("camerapture:camera"), reward_item("minecraft:spyglass"), skill("range", 200)]),
+
+    quest("the_gardeners_cottage", "The Gardener's Cottage", icon="bloomingnature:bluebell",
+          discover={"structure": "bloomingnature:cottage"},
+          text=["A cottage in the woods with a garden gone wild. The wandering gardener who lives there wants her "
+                "beds replanted, and will give a cutting of each."],
+          tasks=[enc(["Oh, a visitor! My garden's got away from me, I'm afraid.",
+                      "Could you replant the beds? Anemones, bluebells, amaryllis. I'll give you cuttings."],
+                     entity="minecraft:villager", name="Wandering Gardener", title="Talk to the gardener"),
+                 item("bloomingnature:anemone", 2, consume=True, title="Replant the anemones"),
+                 item("bloomingnature:bluebell", 2, consume=True, title="Replant the bluebells"),
+                 item("bloomingnature:amaryllis", 2, consume=True, title="Replant the amaryllis")],
+          rewards=[reward_item("bloomingnature:begonie", 4), reward_item("bloomingnature:bird_of_paradise", 2),
+                   skill("forage", 200)]),
+
+    quest("gingerbread_house", "The Gingerbread House", icon="snowyspirit:gingerbread_cookie",
+          discover={"structure": "snowyspirit:gingerbread_house"},
+          text=["A gingerbread house in the snow, and a gingerbread golem that won't let anyone eat the walls. "
+                "Bake it some gingerbread cookies and eggnog to win it over."],
+          tasks=[item("snowyspirit:gingerbread_cookie", 4, consume=True, title="Bake gingerbread cookies for the golem"),
+                 item("snowyspirit:eggnog", 2, consume=True, title="Bring eggnog for the golem"),
+                 {"talk": "entity", "entity": "snowyspirit:gingerbread_golem",
+                  "lines": ["Crumble crumble. You brought cookies? And a drink?",
+                            "My house, my walls. But you may have one gumdrop.",
+                            "Merry Midwinter."], "title": "Win over the gingerbread golem"}],
+          rewards=[reward_item("snowyspirit:sled_oak"), reward_item("snowyspirit:candy_cane", 8), skill("cook", 200)]),
+
+    quest("butterfly_lovers", "The Butterfly Lovers", icon="butterflies:butterfly_net",
+          discover={"structure": "butterflies:liangshanbo_grave"},
+          text=["A lonely grave where two butterflies always circle. The legend carved on it asks for two matching "
+                "butterflies to be set free at the grave."],
+          tasks=[use("minecraft:spruce_wall_sign", "butterflies:liangshanbo_grave", "Read the legend on the grave", unchecked=True),
+                 item("butterflies:bottled_butterfly_common", 2, consume=True, title="Catch a matching pair of butterflies"),
+                 {"checkmark": "I released the pair at the grave"}],
+          rewards=[reward_item("butterflies:butterfly_net"), reward_item("minecraft:poppy", 6), skill("taming", 150)]),
+
+    quest("fallen_adventurer", "Bring Them Home", icon="minecraft:name_tag",
+          discover={"observe": "realmrpg_skeletons:hunted_skeleton", "ticks": 20},
+          text=["A skeleton in armour lies where an adventurer fell. Take the name tag and gear found on it to the "
+                "nearest village and tell the family, who will want to know."],
+          tasks=[item("minecraft:name_tag", title="Take the adventurer's name tag"),
+                 {"structure": "#villages", "title": "Carry the news to the nearest village"},
+                 talk_org("watch", ["A name tag? Let me see. Oh, no. Not young Brin.",
+                                    "The family will want to know. We'll tell them gently.",
+                                    "They'll want you to have his sword, I think."],
+                          title="Tell the family through the Village Watch")],
+          rewards=[reward_item("minecraft:iron_sword", name="The Fallen Adventurer's Blade",
+                               lore=["Returned by the one who brought them home."]), skill("defense", 150)]),
+
+    quest("biome_cherry_grove", "Petals on the Wind", icon="minecraft:pink_petals",
+          discover={"biome": "minecraft:cherry_grove"},
+          text=["A cherry grove in bloom, pink petals drifting through the air. The Herbalists would love a sample "
+                "of its petals, its saplings and its bees' honey."],
+          tasks=[item("minecraft:pink_petals", 4, title="Gather pink petals"),
+                 item("minecraft:cherry_sapling", title="Take a cherry sapling"),
+                 item("minecraft:honey_bottle", title="Take honey from the grove's bees")],
+          rewards=[reward_item("minecraft:cherry_sapling", 4), skill("forage", 100)]),
+
+    quest("biome_mushroom_fields", "Mooshroom Shores", icon="minecraft:mushroom_stew",
+          discover={"biome": "minecraft:mushroom_fields"},
+          text=["You've landed on a mushroom island. A mushroom idol stands on some of them, and the mooshrooms give "
+                "stew instead of milk."],
+          tasks=[{"structure": "mvs:mushroom_statue", "title": "Find the mushroom idol"},
+                 item("minecraft:mushroom_stew", title="Milk a mooshroom for a bowl of stew")],
+          rewards=[reward_item("minecraft:mycelium", 8), reward_item("minecraft:mushroom_stew", 2), skill("farm", 100)]),
+
+    quest("biome_lavender_field", "Lavender Haze", icon="biomesoplenty:lavender",
+          discover={"biome": "biomesoplenty:lavender_field"},
+          text=["A field of lavender hums with bees. The Herbalists say a calming tea from it settles the "
+                "nerves of the whole village."],
+          tasks=[item("biomesoplenty:lavender", 8, title="Gather lavender"),
+                 item("herbalbrews:lavender_tea", consume=True, title="Brew a calming tea")],
+          rewards=[reward_item("herbalbrews:lavender_tea", 2), skill("forage", 100)]),
+
+    quest("biome_origin_valley", "Where It All Began", icon="biomesoplenty:origin_grass_block",
+          discover={"biome": "biomesoplenty:origin_valley"},
+          text=["You've stumbled into the rare Origin Valley, where the world looks as it did long ago. The Field "
+                "Guide would love a block of its old grass and a rose."],
+          tasks=[item("biomesoplenty:origin_grass_block", title="Take a block of the old grass"),
+                 item("biomesoplenty:rose", title="Pick a rose")],
+          rewards=[reward_item("minecraft:painting", 2), skill("forage", 100)]),
+
+    quest("biome_alpha_grove", "Alpha Grove", icon="regions_unexplored:alpha_sapling",
+          discover={"biome": "regions_unexplored:alpha_grove"},
+          text=["The alpha grove is all old-style leaves and grass, like a memory of the world before. Bring back its "
+                "saplings and leaves before you forget what it looked like."],
+          tasks=[item("regions_unexplored:alpha_sapling", 2, title="Take alpha saplings"),
+                 item("regions_unexplored:alpha_leaves", 4, title="Take alpha leaves")],
+          rewards=[reward_item("regions_unexplored:alpha_sapling", 4), skill("forage", 100)]),
+
+    quest("biome_mystic_grove", "The Mystic Grove", icon="fays_fairies:fairy_bottle",
+          discover={"biome": "biomesoplenty:mystic_grove"},
+          text=["A mystic grove glows with strange flowers. A fairy shows itself among them if you wait quietly, and "
+                "will lead you to its ring."],
+          tasks=[enc(["Ssh. You waited. Nobody waits.", "Follow me, if you like. There's a ring of mushrooms. It is "
+                      "very nice."], entity="fays_fairies:pink_fairy", name="Grove Fairy",
+                     title="Wait quietly for the fairy to appear")],
+          rewards=[reward_item("fays_fairies:fairy_bottle"), skill("magic", 150)]),
+
+    quest("biome_redwoods", "Giants of the Forest", icon="biomesoplenty:redwood_log",
+          discover={"biome": "biomesoplenty:redwood_forest"},
+          text=["A redwood forest, with trees taller than any tower. The Crafters' guild wants wood from one of the "
+                "giants, and a climb to the top is the only way to reach the good branches."],
+          tasks=[item("biomesoplenty:redwood_log", 16, title="Bring down redwood logs from the giants")],
+          rewards=[reward_item("biomesoplenty:redwood_log", 16), reward_item("minecraft:iron_axe"), skill("forage", 150)]),
+
+    quest("biome_hot_springs", "Hot Springs", icon="comforts:hammock_red",
+          discover={"biome": "biomesoplenty:hot_springs"},
+          text=["Hot springs steam in the cold air. Soak in the thermal water until you're fully healed, and take a "
+                "bottle home for a sore friend."],
+          tasks=[item("minecraft:potion", title="Bottle the spring water for a sore friend")],
+          rewards=[reward_item("comforts:hammock_blue"), skill("agility", 100)]),
+
+    quest("biome_snowblossom", "Snowblossom", icon="biomesoplenty:snowblossom_leaves",
+          discover={"biome": "biomesoplenty:snowblossom_grove"},
+          text=["A snowblossom grove, white petals in the snow. The Herbalists want leaves and a sapling to see "
+                "if it will grow in the village."],
+          tasks=[item("biomesoplenty:snowblossom_leaves", 4, title="Gather snowblossom leaves"),
+                 item("biomesoplenty:snowblossom_sapling", title="Take a snowblossom sapling")],
+          rewards=[reward_item("biomesoplenty:snowblossom_sapling", 3), skill("forage", 100)]),
+
+    quest("biome_wasteland", "The Wasteland", icon="biomesoplenty:dead_log",
+          discover={"biome": "biomesoplenty:wasteland"},
+          text=["A dried-out wasteland, nothing living in it. A single dead tree stands at its heart, and the "
+                "Couriers want to know if the way across is safe."],
+          tasks=[item("biomesoplenty:dead_log", 4, title="Bring wood from the dead tree at its heart")],
+          rewards=[reward_item("minecraft:water_bucket"), reward_item("biomesoplenty:dead_log", 8), skill("agility", 100)]),
+
+    quest("biome_pumpkin_patch", "The Pumpkin Patch", icon="minecraft:jack_o_lantern",
+          discover={"biome": "biomesoplenty:pumpkin_patch"},
+          text=["A pumpkin patch stretches to the horizon. The Growers' co-op would love your biggest pumpkins, and "
+                "the children want a jack o'lantern."],
+          tasks=[item("minecraft:pumpkin", 4, title="Pick the biggest pumpkins"),
+                 item("minecraft:jack_o_lantern", crafted=True, title="Carve a jack o'lantern")],
+          rewards=[reward_item("minecraft:pumpkin_pie", 4), skill("farm", 100)]),
+
+    quest("biome_baobab_savanna", "Under the Baobabs", icon="regions_unexplored:baobab_log",
+          discover={"biome": "regions_unexplored:baobab_savanna"},
+          text=["Baobabs rise from the savanna like upside-down trees. The Crafters' guild would love some of their "
+                "wood, and the herds that pass beneath are worth a look."],
+          tasks=[item("regions_unexplored:baobab_log", 8, title="Gather baobab wood")],
+          rewards=[reward_item("regions_unexplored:baobab_log", 16), skill("forage", 100)]),
+
+    quest("biome_chalk_cliffs", "White Cliffs", icon="regions_unexplored:chalk",
+          discover={"biome": "regions_unexplored:chalk_cliffs"},
+          text=["White chalk cliffs rise above the sea. Climb from the beach to the top without a fall, and bring "
+                "chalk for the Crafters' guild."],
+          tasks=[item("regions_unexplored:chalk", 8, title="Climb the cliffs and bring back chalk")],
+          rewards=[reward_item("regions_unexplored:chalk", 16), skill("agility", 100)]),
+
+    quest("biome_spires", "Among the Spires", icon="minecraft:stone",
+          discover={"biome": "regions_unexplored:spires"},
+          text=["Stone spires jut from the land like needles. Stand on top of the tallest you can find and look "
+                "across the world."],
+          tasks=[{"checkmark": "I stood on the tallest spire"}],
+          rewards=[reward_item("minecraft:string", 16), reward_item("supplementaries:rope", 16), skill("agility", 100)]),
+
+    quest("biome_magnolia", "Magnolia in Bloom", icon="minecraft:flowering_azalea",
+          discover={"biome": "regions_unexplored:magnolia_woodland"},
+          text=["A magnolia woodland in bloom, with a shining meadow beyond it. The Herbalists want its flowers and "
+                "the meadow's glistening grass."],
+          tasks=[{"biome": "regions_unexplored:glistering_meadow", "title": "Find the glistering meadow"},
+                 item("minecraft:flowering_azalea", 2, title="Gather flowering blossoms")],
+          rewards=[reward_item("minecraft:flowering_azalea", 4), skill("forage", 100)]),
+
+    quest("biome_ashen_woodland", "Ashen Woods", icon="regions_unexplored:ashen_sapling",
+          discover={"biome": "regions_unexplored:ashen_woodland"},
+          text=["An ashen woodland, burnt long ago. Bring back some ash and a surviving sapling to see if the soil "
+                "can heal."],
+          tasks=[item("regions_unexplored:ashen_dirt", 4, title="Collect ashen soil"),
+                 item("regions_unexplored:ashen_sapling", title="Find a surviving sapling")],
+          rewards=[reward_item("minecraft:bone_meal", 16), skill("forage", 100)]),
+
+    quest("biome_saguaro", "Land of Cacti", icon="minecraft:cactus",
+          discover={"biome": "regions_unexplored:saguaro_desert"},
+          text=["A desert of towering saguaro cacti. The Growers' co-op would like a cutting of each cactus and a "
+                "joshua tree sapling, if you don't hug the cactus."],
+          tasks=[item("minecraft:cactus", 4, title="Cut pieces of saguaro cactus"),
+                 item("regions_unexplored:joshua_beard", title="Take a joshua beard")],
+          rewards=[reward_item("minecraft:green_dye", 8), skill("forage", 100)]),
+
+    quest("tectonic_peaks", "Above the Clouds", icon="minecraft:spyglass",
+          discover={"biome": "minecraft:jagged_peaks"},
+          text=["The mountains here climb far higher than they should. Stand above the clouds on foot and look "
+                "down at the world."],
+          tasks=[{"checkmark": "I stood above the clouds"}],
+          rewards=[reward_item("minecraft:spyglass"), reward_item("minecraft:golden_carrot", 8), skill("agility", 150)]),
+
+    quest("tectonic_canyon", "The Deep Valley", icon="aquaculture:worm",
+          discover={"biome": "minecraft:river"},
+          text=["Rivers here cut deep valleys. Follow one down to where it meets the sea and fish at its mouth, "
+                "where the Anglers say the biggest fish gather."],
+          tasks=[{"biome": "minecraft:beach", "title": "Follow the river to the sea"},
+                 item("minecraft:salmon", 2, title="Fish at the river's mouth")],
+          rewards=[reward_item("aquaculture:worm", 16), skill("fish", 100)]),
+
+    quest("biome_ice_spikes", "Ice Spikes", icon="minecraft:packed_ice",
+          discover={"biome": "minecraft:ice_spikes"},
+          text=["Spikes of ice rise from a frozen plain. The Miners' Guild want packed ice from the top of a spike, "
+                "which only a pick with silk touch will take."],
+          tasks=[item("minecraft:packed_ice", 4, title="Mine packed ice from the top of a spike")],
+          rewards=[reward_item("minecraft:blue_ice", 4), skill("mining", 100)]),
+
+    quest("biome_badlands", "The Painted Badlands", icon="minecraft:terracotta",
+          discover={"biome": "minecraft:badlands"},
+          text=["The badlands are banded in every colour of clay. The Crafters' guild want a sample of each "
+                "colour from the canyon walls."],
+          tasks=[item("minecraft:terracotta", 4, title="Collect plain terracotta"),
+                 item("minecraft:orange_terracotta", 4, title="Collect orange terracotta"),
+                 item("minecraft:red_terracotta", 4, title="Collect red terracotta"),
+                 item("minecraft:yellow_terracotta", 4, title="Collect yellow terracotta"),
+                 item("minecraft:white_terracotta", 4, title="Collect white terracotta")],
+          rewards=[reward_item("minecraft:gold_ingot", 8), skill("mining", 100)]),
+
+    quest("biome_grand_tour", "The Grand Tour", icon="naturescompass:naturescompass", after=["biome_cherry_grove"],
+          text=["The Couriers keep a list of the biomes of the Overworld, and offer a prize for anyone who has "
+                "visited twenty. Nature's Compass helps you find the ones you're missing."],
+          tasks=[biome_step(b, "Visit " + t) for b, t in [
+              ("minecraft:plains", "the plains"), ("minecraft:forest", "a forest"), ("minecraft:birch_forest", "a birch forest"),
+              ("minecraft:dark_forest", "a dark forest"), ("minecraft:flower_forest", "a flower forest"),
+              ("minecraft:taiga", "a taiga"), ("minecraft:snowy_plains", "snowy plains"), ("minecraft:savanna", "a savanna"),
+              ("minecraft:desert", "a desert"), ("minecraft:jungle", "a jungle"), ("minecraft:swamp", "a swamp"),
+              ("minecraft:mangrove_swamp", "a mangrove swamp"), ("minecraft:meadow", "a meadow"),
+              ("minecraft:badlands", "the badlands"), ("minecraft:beach", "a beach"), ("minecraft:river", "a river"),
+              ("minecraft:ice_spikes", "ice spikes"), ("minecraft:cherry_grove", "a cherry grove"),
+              ("minecraft:windswept_hills", "windswept hills"), ("minecraft:stony_shore", "a stony shore")]],
+          rewards=[reward_item("naturescompass:naturescompass"), reward_item("sophisticatedbackpacks:stack_upgrade_tier_1"),
+                   skill("agility", 300)]),
+
+    quest("found_music_disc", "A Song from Somewhere", icon="minecraft:jukebox",
+          discover={"item": "minecraft:music_disc_13"},
+          text=["You've found an old music disc, and a tune is waiting in it. Build a jukebox to hear it, then learn "
+                "it on an instrument."],
+          tasks=[{"build": {"blocks": {"minecraft:jukebox": 1}, "radius": 8}, "title": "Set up a jukebox"},
+                 {"checkmark": "I played the disc"},
+                 item("immersive_melodies:lute", crafted=True, title="Make an instrument to learn the tune on")],
+          rewards=[reward_item("immersive_melodies:lute"), skill("craft", 100)]),
+
+    quest("antique_ink", "Antique Ink", icon="supplementaries:antique_ink",
+          discover={"item": "supplementaries:antique_ink"},
+          text=["A bottle of antique ink from a chest. Ink a map with it and the map should show an old landmark that "
+                "isn't on newer maps."],
+          tasks=[item("minecraft:map", crafted=True, title="Make a map to ink"),
+                 {"checkmark": "I inked the map and followed it to the old landmark"}],
+          rewards=[reward_item("supplementaries:globe"), reward_item("explorerscompass:explorerscompass"),
+                   skill("craft", 150)]),
+
+    quest("the_strange_key", "The Strange Key", icon="supplementaries:key",
+          discover={"item": "supplementaries:key"},
+          text=["A lone key from a dungeon chest, with a tag that names a safe. Find the safe in a ruin nearby, and "
+                "open it."],
+          tasks=[{"structure": "#ruins", "title": "Find a ruin that might hold the safe"},
+                 use("supplementaries:safe", None, "Open the safe with the strange key", holding="supplementaries:key")],
+          rewards=[reward_item("minecraft:gold_ingot", 10), reward_item("minecraft:diamond"), skill("mining", 150)]),
+
+    quest("sniffer_egg", "An Ancient Egg", icon="minecraft:sniffer_egg",
+          discover={"item": "minecraft:sniffer_egg"},
+          text=["A sniffer egg, warm to the touch. Hatch it on moss, raise the sniffer, and plant the first ancient "
+                "seed it digs up."],
+          tasks=[{"observe": "minecraft:sniffer", "ticks": 40, "title": "Watch the sniffer hatch and grow"},
+                 item("minecraft:torchflower_seeds", title="Take the first ancient seed it digs up")],
+          rewards=[reward_item("minecraft:pitcher_pod", 2), reward_item("minecraft:torchflower_seeds", 2),
+                   skill("taming", 150)]),
+]
+
+chapter("discovery_land", "Out in the Land", "Strange places on the road", "minecraft:compass", "explore", 0, Q + ANY)
+

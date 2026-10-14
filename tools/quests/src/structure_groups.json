@@ -429,5 +429,16 @@
   "mining_camps": [
     "mvs:mine_with_campsite",
     "nova_structures:badlands_miner_outpost"
+  ],
+  "lonely_houses": [
+    "mvs:house",
+    "mvs:lil_house",
+    "mvs:tall_house",
+    "mvs:deepslate_house",
+    "mvs:diorite_and_deepslate_house",
+    "mvs:azelea_house",
+    "mvs:mud_brick_house_1",
+    "mvs:small_swamp_house",
+    "mvs:desert_house"
   ]
 }

@@ -110,7 +110,7 @@ hash = "62ba0917b9a55387719b7a2e3d82ac58ae0546149ec510281c9d66a2add08318"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/discovery_land.snbt"
-hash = "3ea2f1e182f0dcd3063758a7f6716e7c068b9c0a8ee8e608d6133cfa6892778a"
+hash = "f8cc23af34b5dc320718c7c7f9c07b29aa616d3e3a8a8301606646f4d4bbb648"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/magic.snbt"
@@ -2224,6 +2224,10 @@ file = "kubejs/data/fotf/tags/worldgen/structure/groups/lighthouses.json"
 hash = "41e2dabdfbe58f485633d62e4b10c0d7df0153ee596d5f21eb34c4f647fe577d"
 
 [[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/lonely_houses.json"
+hash = "194ffba6928efc082b97922f7e398b2f4dc747994b548c805c7ee26fad880525"
+
+[[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/mines.json"
 hash = "45f41c17bf6bccf00d156e20ff6ca9c6ae6db5210444fbdf974cfb81339ebc72"
 
@@ -2777,7 +2781,7 @@ hash = "81238517f42d04aa513d472ee44c4eb212593671c2e57aa3273f67d942e11863"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "7ba5add15f5f8d1e0a15c374213d9448650bd0c51abd70dbbbb3902ac7b51369"
+hash = "c387b12ee2fe258b2517ef9feed28a38040a216b509fda13bd1edced4a89617f"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2861,7 +2865,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "53958d7f911dd65ac9e50df5c3d1045b6d75c47c222216fbd80e011b17d655dd"
+hash = "084ec14db11c6eca3c86d5460c8ae7bb7100f1136391e576c29d94b2d2ed05d9"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"

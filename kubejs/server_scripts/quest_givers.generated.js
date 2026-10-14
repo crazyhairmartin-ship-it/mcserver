@@ -1231,6 +1231,735 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "discovery_land:the_lonely_cap",
+    "stage": "fq.discovery_land.the_lonely_cap.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:cave_spider",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:mushroom_house"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Cave Spiders",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5E4DADC5B114A0E6",
+    "requires": [],
+    "quest_id": "6860505CAE3BB0E1",
+    "prev_tasks": [
+      "42A2F17CB5D7202F"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_lonely_cap",
+    "stage": "fq.discovery_land.the_lonely_cap.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Oh, thank the caps! They had me pinned for two days.",
+      "Take me home, please. The stew's gone cold."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "6860505CAE3BB0E1",
+    "prev_tasks": [
+      "42A2F17CB5D7202F",
+      "5E4DADC5B114A0E6"
+    ],
+    "name": "Mushroom Hermit",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:mushroom_house"
+      ],
+      "label": "his house"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "discovery_land:chapel_in_the_pines",
+    "stage": "fq.discovery_land.chapel_in_the_pines.use2",
+    "type": "use",
+    "keys": [
+      "minecraft:bell"
+    ],
+    "count": 1,
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "structory:abandoned_chapel"
+      ],
+      "label": "the destination"
+    },
+    "within": 0,
+    "holding": "",
+    "consume": false,
+    "requires": [],
+    "quest_id": "7C4105269EA76EB3",
+    "prev_tasks": [
+      "08C18B2B61B4D48E",
+      "7C8C4FCBE22E222D",
+      "21BFF9114D38B279"
+    ]
+  },
+  {
+    "quest": "discovery_land:chapel_in_the_pines",
+    "stage": "fq.discovery_land.chapel_in_the_pines.enc3",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "I heard the bell! After all these years!",
+      "I used to keep this chapel. The forest took the road, and I took the forest.",
+      "Thank you for ringing it. It sounds just as I remembered."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7C4105269EA76EB3",
+    "prev_tasks": [
+      "08C18B2B61B4D48E",
+      "7C8C4FCBE22E222D",
+      "21BFF9114D38B279",
+      "4A8F41D38883C1D8"
+    ],
+    "name": "Chapel Keeper",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "discovery_land:outcasts",
+    "stage": "fq.discovery_land.outcasts.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Cast out for a harvest dispute, can you believe? Over a cabbage.",
+      "We'd go home tomorrow if they'd have us. Would you take our apology?"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "5B1FDDEB9C61FDA3",
+    "prev_tasks": [
+      "62AD23D04822F0CD"
+    ],
+    "name": "Outcast Villager",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "discovery_land:outcasts",
+    "stage": "fq.discovery_land.outcasts.talk3",
+    "type": "talk",
+    "lines": [
+      "They apologised? Over the cabbage?",
+      "Well. It was a very good cabbage. Tell them they're welcome home."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "villager",
+    "profession": "minecraft:librarian",
+    "quest_id": "5B1FDDEB9C61FDA3",
+    "open_task": "62AD23D04822F0CD"
+  },
+  {
+    "quest": "discovery_land:northern_runes",
+    "stage": "fq.discovery_land.northern_runes.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "structory:northern_ruin"
+      ],
+      "label": "the destination"
+    },
+    "count": 3,
+    "item": "kubejs:quest_northern_runes_0",
+    "found": "A rubbing of the runes, tucked in the stonework.",
+    "requires": [],
+    "quest_id": "440BA88470FD43D8",
+    "prev_tasks": [
+      "23F0AB714CB4A5E7"
+    ]
+  },
+  {
+    "quest": "discovery_land:engineers_plans",
+    "stage": "fq.discovery_land.engineers_plans.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "structory_towers:engineer_tower"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_engineers_plans_0",
+    "found": "Notes in a cramped hand, with a parts list.",
+    "requires": [],
+    "quest_id": "121FB7B5328C562D",
+    "prev_tasks": [
+      "4807411FBB231AB0"
+    ]
+  },
+  {
+    "quest": "discovery_land:engineers_plans",
+    "stage": "fq.discovery_land.engineers_plans.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:sticky_piston",
+      "minecraft:iron_door"
+    ],
+    "counts": [
+      2,
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "121FB7B5328C562D",
+    "prev_tasks": [
+      "4807411FBB231AB0",
+      "7371F78EC29DEBC6",
+      "05969E2BF346174C"
+    ]
+  },
+  {
+    "quest": "discovery_land:mirage_outpost",
+    "stage": "fq.discovery_land.mirage_outpost.timed0",
+    "type": "timed",
+    "seconds": 480,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "the next oasis",
+      "away": 150
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "The barrel's nearly dry. Cross the dunes before your water runs out."
+    ],
+    "start": "Cross the dunes",
+    "requires": [],
+    "quest_id": "199E643424780F10",
+    "prev_tasks": [
+      "43533F10A58FA0B6"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "discovery_land:gallows_hill",
+    "stage": "fq.discovery_land.gallows_hill.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mvs:gallows"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_gallows_hill_0",
+    "found": "A coin purse, stitched with the wrong man's initials.",
+    "requires": [],
+    "quest_id": "31AE981B8F63BFDE",
+    "prev_tasks": [
+      "42C6F195C836317B"
+    ]
+  },
+  {
+    "quest": "discovery_land:gallows_hill",
+    "stage": "fq.discovery_land.gallows_hill.talk1",
+    "type": "talk",
+    "lines": [
+      "A purse stitched with the wrong initials? That changes things.",
+      "The man they hanged was framed. We'll have his name cleared.",
+      "Thank you for coming forward."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "watch",
+    "professions": [
+      "guardvillagers:guard"
+    ],
+    "org_name": "Village Watch",
+    "quest_id": "31AE981B8F63BFDE",
+    "open_task": "42C6F195C836317B"
+  },
+  {
+    "quest": "discovery_land:the_tree_monument",
+    "stage": "fq.discovery_land.the_tree_monument.build0",
+    "type": "build",
+    "keys": [
+      "minecraft:oak_sapling",
+      "minecraft:spruce_sapling",
+      "minecraft:birch_sapling",
+      "minecraft:jungle_sapling",
+      "minecraft:acacia_sapling",
+      "minecraft:dark_oak_sapling"
+    ],
+    "counts": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "38A61683DB53C643",
+    "prev_tasks": [
+      "4F9669640BB92376"
+    ]
+  },
+  {
+    "quest": "discovery_land:nobodys_home",
+    "stage": "fq.discovery_land.nobodys_home.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mvs:azelea_house",
+        "mvs:deepslate_house",
+        "mvs:desert_house",
+        "mvs:diorite_and_deepslate_house",
+        "mvs:house",
+        "mvs:lil_house",
+        "mvs:mud_brick_house_1",
+        "mvs:small_swamp_house",
+        "mvs:tall_house"
+      ],
+      "label": "the destination"
+    },
+    "count": 3,
+    "item": "kubejs:quest_nobodys_home_0",
+    "found": "A page from a diary, with a date and a worried hand.",
+    "requires": [],
+    "quest_id": "5BC27162BFFBD875",
+    "prev_tasks": [
+      "2650A5773D81224E"
+    ]
+  },
+  {
+    "quest": "discovery_land:circle_of_stones",
+    "stage": "fq.discovery_land.circle_of_stones.use1",
+    "type": "use",
+    "keys": [
+      "minecraft:water_cauldron"
+    ],
+    "count": 1,
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterwitchhuts:witch_circle"
+      ],
+      "label": "the destination"
+    },
+    "within": 0,
+    "holding": "minecraft:potion",
+    "consume": false,
+    "requires": [],
+    "quest_id": "6DC7C47D85F095BD",
+    "prev_tasks": [
+      "531C3E183D0EE0F3",
+      "4C9549F0110E97DF"
+    ]
+  },
+  {
+    "quest": "discovery_land:circle_of_stones",
+    "stage": "fq.discovery_land.circle_of_stones.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Meow. The witch's tongue is in my mouth, and she says you may pass."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "6DC7C47D85F095BD",
+    "prev_tasks": [
+      "531C3E183D0EE0F3",
+      "4C9549F0110E97DF",
+      "6900B1B7F1028084"
+    ],
+    "name": "Witch's Familiar",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:cat",
+    "profession": ""
+  },
+  {
+    "quest": "discovery_land:the_bakery",
+    "stage": "fq.discovery_land.the_bakery.enc3",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "You baked all of it? And on time? I could kiss you. I won't. Flour.",
+      "Take a rolling pin. I have three."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "562B4D0C85E36767",
+    "prev_tasks": [
+      "013C91BD2E7721C4",
+      "577B1802024D89D3",
+      "64AE51F804FCBF55",
+      "1E34C9E59FDFE9D4"
+    ],
+    "name": "Harried Baker",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "discovery_land:brewfest",
+    "stage": "fq.discovery_land.brewfest.spawn3",
+    "type": "spawn",
+    "entity": "brewery:beer_elemental",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "brewery:brewfest_tent"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Cellar Beer Elemental",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "24BB6CC1AA9F7B45",
+    "requires": [],
+    "quest_id": "5E9E2865DB1C6745",
+    "prev_tasks": [
+      "02F1AF3134359494",
+      "76E60AB69A847108",
+      "209646E044F88E22",
+      "16546C42E682EBE3"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_observation_post",
+    "stage": "fq.discovery_land.the_observation_post.photo0",
+    "type": "photo",
+    "target": {
+      "kind": "entity",
+      "entity": "meadow:water_buffalo",
+      "distance": 24.0
+    },
+    "requires": [],
+    "quest_id": "1B2BC7729FDBFA9A",
+    "prev_tasks": [
+      "5318FD1070ED0551"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_observation_post",
+    "stage": "fq.discovery_land.the_observation_post.photo1",
+    "type": "photo",
+    "target": {
+      "kind": "entity",
+      "entity": "meadow:horned_sheep",
+      "distance": 24.0
+    },
+    "requires": [],
+    "quest_id": "1B2BC7729FDBFA9A",
+    "prev_tasks": [
+      "5318FD1070ED0551",
+      "0716B74E5172EF6B"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_observation_post",
+    "stage": "fq.discovery_land.the_observation_post.photo2",
+    "type": "photo",
+    "target": {
+      "kind": "entity",
+      "entity": "meadow:highland_cattle",
+      "distance": 24.0
+    },
+    "requires": [],
+    "quest_id": "1B2BC7729FDBFA9A",
+    "prev_tasks": [
+      "5318FD1070ED0551",
+      "0716B74E5172EF6B",
+      "026A4D26531C9E3E"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_gardeners_cottage",
+    "stage": "fq.discovery_land.the_gardeners_cottage.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Oh, a visitor! My garden's got away from me, I'm afraid.",
+      "Could you replant the beds? Anemones, bluebells, amaryllis. I'll give you cuttings."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1CF9C29CE7B757A6",
+    "prev_tasks": [
+      "5A6570EE0D402311"
+    ],
+    "name": "Wandering Gardener",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "discovery_land:gingerbread_house",
+    "stage": "fq.discovery_land.gingerbread_house.talk2",
+    "type": "talk",
+    "lines": [
+      "Crumble crumble. You brought cookies? And a drink?",
+      "My house, my walls. But you may have one gumdrop.",
+      "Merry Midwinter."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "entity",
+    "entity": "snowyspirit:gingerbread_golem",
+    "named": "",
+    "quest_id": "163D6E2914F4E7D0",
+    "open_task": "5C1E0A352C21A730"
+  },
+  {
+    "quest": "discovery_land:butterfly_lovers",
+    "stage": "fq.discovery_land.butterfly_lovers.use0",
+    "type": "use",
+    "keys": [
+      "minecraft:spruce_wall_sign"
+    ],
+    "count": 1,
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "butterflies:liangshanbo_grave"
+      ],
+      "label": "the destination"
+    },
+    "within": 0,
+    "holding": "",
+    "consume": false,
+    "requires": [],
+    "quest_id": "1B773525B410136D",
+    "prev_tasks": [
+      "414BD653624598C3"
+    ]
+  },
+  {
+    "quest": "discovery_land:fallen_adventurer",
+    "stage": "fq.discovery_land.fallen_adventurer.talk2",
+    "type": "talk",
+    "lines": [
+      "A name tag? Let me see. Oh, no. Not young Brin.",
+      "The family will want to know. We'll tell them gently.",
+      "They'll want you to have his sword, I think."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "watch",
+    "professions": [
+      "guardvillagers:guard"
+    ],
+    "org_name": "Village Watch",
+    "quest_id": "4D62B88C14C1F612",
+    "open_task": "6823C60976C56C91"
+  },
+  {
+    "quest": "discovery_land:biome_mystic_grove",
+    "stage": "fq.discovery_land.biome_mystic_grove.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Ssh. You waited. Nobody waits.",
+      "Follow me, if you like. There's a ring of mushrooms. It is very nice."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2D771DCC3D68B041",
+    "prev_tasks": [
+      "6AE6A34C3224D32C"
+    ],
+    "name": "Grove Fairy",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "fays_fairies:pink_fairy",
+    "profession": ""
+  },
+  {
+    "quest": "discovery_land:found_music_disc",
+    "stage": "fq.discovery_land.found_music_disc.build0",
+    "type": "build",
+    "keys": [
+      "minecraft:jukebox"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "2C628D9E7FCE8E41",
+    "prev_tasks": [
+      "17EA5A830CFF3825"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_strange_key",
+    "stage": "fq.discovery_land.the_strange_key.use1",
+    "type": "use",
+    "keys": [
+      "supplementaries:safe"
+    ],
+    "count": 1,
+    "at": null,
+    "within": 0,
+    "holding": "supplementaries:key",
+    "consume": false,
+    "requires": [],
+    "quest_id": "3A1074F16EA914BC",
+    "prev_tasks": [
+      "400FF16B29E9C4DA",
+      "65B98262D3BDE464"
+    ]
+  },
+  {
     "quest": "main_story:prologue_dungeon",
     "stage": "",
     "type": "task_drop",

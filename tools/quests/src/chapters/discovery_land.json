@@ -1673,6 +1673,1904 @@
       "discover": {
         "biome": "biomesoplenty:volcano"
       }
+    },
+    {
+      "id": "the_lonely_cap",
+      "title": "The Lonely Cap",
+      "text": [
+        "A single mushroom house stands far from anywhere with its door ajar and its owner missing. A trail of spores leads from the doorstep into the cave behind, where spiders have him cornered."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:cave_spider",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:mushroom_house"
+            },
+            "wave": 4,
+            "name": "Cave Spiders"
+          },
+          "title": "Drive the spiders off the trapped hermit"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Mushroom Hermit",
+            "to": {
+              "structure": "dungeons_arise:mushroom_house",
+              "label": "his house"
+            },
+            "then": "escort",
+            "lines": [
+              "Oh, thank the caps! They had me pinned for two days.",
+              "Take me home, please. The stew's gone cold."
+            ]
+          },
+          "title": "Lead the hermit home"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:suspicious_stew",
+          "count": 3
+        },
+        {
+          "item": "farmersdelight:brown_mushroom_colony",
+          "count": 2
+        },
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:red_mushroom",
+      "discover": {
+        "structure": "dungeons_arise:mushroom_house"
+      }
+    },
+    {
+      "id": "chapel_in_the_pines",
+      "title": "The Chapel in the Pines",
+      "text": [
+        "An abandoned chapel still has its bell, but the rope has rotted and the candles have burnt out. Someone in the forest has been listening for it for years."
+      ],
+      "tasks": [
+        {
+          "item": "supplementaries:rope",
+          "count": 2,
+          "consume": true,
+          "title": "Bring a new rope for the bell"
+        },
+        {
+          "item": "minecraft:candle",
+          "count": 3,
+          "consume": true,
+          "title": "Bring candles for the altar"
+        },
+        {
+          "use": "minecraft:bell",
+          "count": 1,
+          "title": "Ring the chapel bell",
+          "at": {
+            "structure": "structory:abandoned_chapel"
+          }
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Chapel Keeper",
+            "then": "talk",
+            "lines": [
+              "I heard the bell! After all these years!",
+              "I used to keep this chapel. The forest took the road, and I took the forest.",
+              "Thank you for ringing it. It sounds just as I remembered."
+            ]
+          },
+          "title": "See who comes out of the forest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bell"
+        },
+        {
+          "item": "minecraft:candle",
+          "count": 4
+        },
+        {
+          "skill": "defense",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:bell",
+      "discover": {
+        "structure": "structory:abandoned_chapel"
+      }
+    },
+    {
+      "id": "outcasts",
+      "title": "The Outcasts",
+      "text": [
+        "Villagers cast out of their village live in a shack on their own. They'd like to go home, if anyone would carry their apology."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Outcast Villager",
+            "then": "talk",
+            "lines": [
+              "Cast out for a harvest dispute, can you believe? Over a cabbage.",
+              "We'd go home tomorrow if they'd have us. Would you take our apology?"
+            ]
+          },
+          "title": "Hear the outcasts' side"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 3,
+          "consume": true,
+          "title": "Take their gift of emeralds"
+        },
+        {
+          "structure": "#villages",
+          "title": "Carry their apology to the nearest village"
+        },
+        {
+          "talk": "villager",
+          "profession": "minecraft:librarian",
+          "lines": [
+            "They apologised? Over the cabbage?",
+            "Well. It was a very good cabbage. Tell them they're welcome home."
+          ],
+          "title": "Deliver the apology to the village"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 6
+        },
+        {
+          "skill": "defense",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:emerald",
+      "discover": {
+        "structure": "structory:outcast_villager_grassy"
+      }
+    },
+    {
+      "id": "northern_runes",
+      "title": "Northern Runes",
+      "text": [
+        "Northern ruins carry runes on their standing stones. Three of them read together point to a buried chest."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "structory:northern_ruin"
+            },
+            "count": 3,
+            "item": {
+              "name": "Rune Rubbing",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A rubbing of the runes, tucked in the stonework."
+          },
+          "title": "Read the runes at three northern ruins"
+        },
+        {
+          "checkmark": "I followed the runes to the buried chest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:chest"
+        },
+        {
+          "item": "explorerscompass:explorerscompass"
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "explorerscompass:explorerscompass",
+      "discover": {
+        "structure": "structory:northern_ruin"
+      }
+    },
+    {
+      "id": "engineers_plans",
+      "title": "The Engineer's Plans",
+      "text": [
+        "The engineer left plans for a machine half-built: a working piston door. His notes list the parts."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "structory_towers:engineer_tower"
+            },
+            "count": 1,
+            "item": {
+              "name": "Engineer's Notes",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "Notes in a cramped hand, with a parts list."
+          },
+          "title": "Search for Engineer's Notes"
+        },
+        {
+          "item": "minecraft:sticky_piston",
+          "count": 2,
+          "crafted": true,
+          "title": "Make the sticky pistons the notes call for"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:sticky_piston": 2,
+              "minecraft:iron_door": 1
+            },
+            "radius": 8
+          },
+          "title": "Finish the piston door"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:piston",
+          "count": 8
+        },
+        {
+          "item": "minecraft:redstone",
+          "count": 16
+        },
+        {
+          "skill": "craft",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:sticky_piston",
+      "discover": {
+        "structure": "structory_towers:engineer_tower"
+      }
+    },
+    {
+      "id": "mirage_outpost",
+      "title": "The Mirage",
+      "text": [
+        "The desert outpost keeps a water barrel and a logbook of travellers who never arrived. The next oasis is a hard walk across the dunes, and the barrel only holds so much."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 480,
+            "goal": {
+              "structure": "#villages",
+              "label": "the next oasis",
+              "away": 150
+            },
+            "lines": [
+              "The barrel's nearly dry. Cross the dunes before your water runs out."
+            ],
+            "start": "Cross the dunes",
+            "no": [
+              "teleport",
+              "mounts"
+            ]
+          },
+          "title": "Cross the dunes before the water runs out"
+        },
+        {
+          "checkmark": "I added my name to the logbook"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:dried_kelp",
+          "count": 16
+        },
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 6
+        },
+        {
+          "skill": "agility",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:sand",
+      "discover": {
+        "structure": "structory_towers:mirage_outpost"
+      }
+    },
+    {
+      "id": "gallows_hill",
+      "title": "Gallows Hill",
+      "text": [
+        "A notice on the gallows names a thief who swore he was innocent. The real culprit dropped a coin purse nearby, and the Village Watch could clear the dead man's name."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "mvs:gallows"
+            },
+            "count": 1,
+            "item": {
+              "name": "Dropped Coin Purse",
+              "texture": "minecraft:item/gold_nugget"
+            },
+            "found": "A coin purse, stitched with the wrong man's initials."
+          },
+          "title": "Search the gallows for the culprit's purse"
+        },
+        {
+          "talk": "org",
+          "org": "watch",
+          "lines": [
+            "A purse stitched with the wrong initials? That changes things.",
+            "The man they hanged was framed. We'll have his name cleared.",
+            "Thank you for coming forward."
+          ],
+          "title": "Clear the dead man's name with the Watch"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 6
+        },
+        {
+          "skill": "defense",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:oak_sign",
+      "discover": {
+        "structure": "mvs:gallows"
+      }
+    },
+    {
+      "id": "the_tree_monument",
+      "title": "Grove of Remembrance",
+      "text": [
+        "A monument to a felled forest stands on bare ground. Plant a sapling of every vanilla tree around it and bone-meal them up, and the grove will return."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "minecraft:oak_sapling": 1,
+              "minecraft:spruce_sapling": 1,
+              "minecraft:birch_sapling": 1,
+              "minecraft:jungle_sapling": 1,
+              "minecraft:acacia_sapling": 1,
+              "minecraft:dark_oak_sapling": 1
+            },
+            "radius": 12
+          },
+          "title": "Plant a sapling of every tree around the monument"
+        },
+        {
+          "item": "minecraft:bone_meal",
+          "count": 12,
+          "consume": true,
+          "title": "Bone-meal the saplings up"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone_meal",
+          "count": 16
+        },
+        {
+          "item": "minecraft:oak_sapling",
+          "count": 8
+        },
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:oak_sapling",
+      "discover": {
+        "structure": "mvs:tree_monument"
+      }
+    },
+    {
+      "id": "nobodys_home",
+      "title": "Nobody's Home",
+      "text": [
+        "Lonely houses stand empty along the roads, tables still set. A diary, torn into pages, is scattered through them. Gather its pages to learn where the families went."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "#lonely_houses"
+            },
+            "count": 3,
+            "item": {
+              "name": "Diary Page",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A page from a diary, with a date and a worried hand."
+          },
+          "title": "Search three empty houses for diary pages"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "handcrafted:oak_chair",
+          "count": 2
+        },
+        {
+          "item": "minecraft:red_bed"
+        },
+        {
+          "skill": "craft",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:book",
+      "discover": {
+        "structure": "#lonely_houses"
+      }
+    },
+    {
+      "id": "circle_of_stones",
+      "title": "The Circle of Stones",
+      "text": [
+        "A witch's circle of stones stands in the swamp. A potion is carved into its stones, and the old tales say a witch's familiar answers when it is poured at the centre."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:potion",
+          "title": "Brew the potion carved into the stones"
+        },
+        {
+          "use": "minecraft:water_cauldron",
+          "count": 1,
+          "title": "Pour the potion into the cauldron",
+          "at": {
+            "structure": "betterwitchhuts:witch_circle"
+          },
+          "holding": "minecraft:potion",
+          "unchecked": true
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:cat",
+            "name": "Witch's Familiar",
+            "then": "talk",
+            "lines": [
+              "Meow. The witch's tongue is in my mouth, and she says you may pass."
+            ]
+          },
+          "title": "Meet the witch's familiar"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bookoffamiliars:familiar_book"
+        },
+        {
+          "item": "minecraft:redstone",
+          "count": 16
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:cauldron",
+      "discover": {
+        "structure": "betterwitchhuts:witch_circle"
+      }
+    },
+    {
+      "id": "reading_the_obelisks",
+      "title": "Reading the Obelisks",
+      "text": [
+        "Obelisks in the desert carry the same carvings in different orders. One symbol appears on every one, and the old tales say it points to a cache."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I noted the carvings on the first obelisk"
+        },
+        {
+          "checkmark": "I noted the carvings on the second obelisk"
+        },
+        {
+          "checkmark": "I noted the carvings on the third obelisk, and the symbol they share"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:sandstone",
+          "count": 32
+        },
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 6
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:chiseled_sandstone",
+      "discover": {
+        "biome": "minecraft:desert"
+      }
+    },
+    {
+      "id": "shards_of_the_trail",
+      "title": "Shards of the Trail",
+      "text": [
+        "Trail ruins hide their past under suspicious gravel. Brush out four different pottery sherds and fit them on a decorated pot to read the story they tell."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:brush",
+          "title": "Bring a brush for the suspicious gravel"
+        },
+        {
+          "item": "minecraft:angler_pottery_sherd",
+          "title": "Brush out an angler sherd"
+        },
+        {
+          "item": "minecraft:archer_pottery_sherd",
+          "title": "Brush out an archer sherd"
+        },
+        {
+          "item": "minecraft:arms_up_pottery_sherd",
+          "title": "Brush out an arms-up sherd"
+        },
+        {
+          "item": "minecraft:blade_pottery_sherd",
+          "title": "Brush out a blade sherd"
+        },
+        {
+          "item": "minecraft:decorated_pot",
+          "crafted": true,
+          "title": "Fit the sherds onto a decorated pot"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:brush"
+        },
+        {
+          "item": "minecraft:sniffer_egg"
+        },
+        {
+          "skill": "craft",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:decorated_pot",
+      "discover": {
+        "structure": "minecraft:trail_ruins"
+      }
+    },
+    {
+      "id": "the_bakery",
+      "title": "Fresh from the Oven",
+      "text": [
+        "The village bakery's baker is behind on orders for the festival. Bake a strawberry cake, a baguette and a tray of cupcakes and deliver them."
+      ],
+      "tasks": [
+        {
+          "item": "bakery:strawberry_cake",
+          "consume": true,
+          "title": "Bake a strawberry cake"
+        },
+        {
+          "item": "bakery:baguette",
+          "consume": true,
+          "title": "Bake a baguette"
+        },
+        {
+          "item": "bakery:strawberry_cupcake",
+          "count": 3,
+          "consume": true,
+          "title": "Bake a tray of cupcakes"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Harried Baker",
+            "then": "talk",
+            "lines": [
+              "You baked all of it? And on time? I could kiss you. I won't. Flour.",
+              "Take a rolling pin. I have three."
+            ]
+          },
+          "title": "Deliver the baking before the festival"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bakery:rolling_pin"
+        },
+        {
+          "item": "bakery:bread",
+          "count": 8
+        },
+        {
+          "skill": "cook",
+          "xp": 200
+        }
+      ],
+      "icon": "bakery:strawberry_cake",
+      "discover": {
+        "structure": "bakery:bakery"
+      }
+    },
+    {
+      "id": "brewfest",
+      "title": "Brewfest",
+      "text": [
+        "A brewfest tent stands in the plains with a contest board. Brew three beers, enter them, and beat the brewfest regulars and the Beer Elemental they keep in the cellar."
+      ],
+      "tasks": [
+        {
+          "item": "brewery:beer_wheat",
+          "consume": true,
+          "title": "Brew a wheat beer"
+        },
+        {
+          "item": "brewery:beer_barley",
+          "consume": true,
+          "title": "Brew a barley beer"
+        },
+        {
+          "item": "brewery:beer_oat",
+          "consume": true,
+          "title": "Brew an oat beer"
+        },
+        {
+          "kill": "brewery:beer_elemental",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "brewery:brewfest_tent"
+            },
+            "wave": 1,
+            "name": "Cellar Beer Elemental"
+          },
+          "title": "Beat the Beer Elemental in the cellar"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "brewery:brewfest_hat"
+        },
+        {
+          "item": "brewery:wooden_brewingstation"
+        },
+        {
+          "skill": "cook",
+          "xp": 220
+        }
+      ],
+      "icon": "brewery:beer_mug",
+      "discover": {
+        "structure": "brewery:brewfest_tent"
+      }
+    },
+    {
+      "id": "the_chalet",
+      "title": "Fondue at the Chalet",
+      "text": [
+        "The alpine chalet's cook makes fondue for climbers, but the cheese cellar is empty. Bring cheese of three kinds from Meadow's animals and cook the fondue together."
+      ],
+      "tasks": [
+        {
+          "item": "meadow:piece_of_cheese",
+          "consume": true,
+          "title": "Bring plain cheese"
+        },
+        {
+          "item": "meadow:piece_of_goat_cheese",
+          "consume": true,
+          "title": "Bring goat cheese"
+        },
+        {
+          "item": "meadow:piece_of_sheep_cheese",
+          "consume": true,
+          "title": "Bring sheep cheese"
+        },
+        {
+          "item": "meadow:fondue",
+          "title": "Cook the fondue"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "meadow:cheese_sandwich",
+          "count": 4
+        },
+        {
+          "item": "meadow:fur_boots"
+        },
+        {
+          "skill": "cook",
+          "xp": 200
+        }
+      ],
+      "icon": "meadow:fondue",
+      "discover": {
+        "structure": "meadow:chalet"
+      }
+    },
+    {
+      "id": "the_observation_post",
+      "title": "The Observation Post",
+      "text": [
+        "An alpine observation post has a list of animals to sight pinned to its sill. Photograph three of them for the survey."
+      ],
+      "tasks": [
+        {
+          "photo": {
+            "entity": "meadow:water_buffalo"
+          },
+          "title": "Photograph a water buffalo"
+        },
+        {
+          "photo": {
+            "entity": "meadow:horned_sheep"
+          },
+          "title": "Photograph a horned sheep"
+        },
+        {
+          "photo": {
+            "entity": "meadow:highland_cattle"
+          },
+          "title": "Photograph a highland cow"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "camerapture:camera"
+        },
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "skill": "range",
+          "xp": 200
+        }
+      ],
+      "icon": "camerapture:camera",
+      "discover": {
+        "structure": "meadow:observation_post"
+      }
+    },
+    {
+      "id": "the_gardeners_cottage",
+      "title": "The Gardener's Cottage",
+      "text": [
+        "A cottage in the woods with a garden gone wild. The wandering gardener who lives there wants her beds replanted, and will give a cutting of each."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Wandering Gardener",
+            "then": "talk",
+            "lines": [
+              "Oh, a visitor! My garden's got away from me, I'm afraid.",
+              "Could you replant the beds? Anemones, bluebells, amaryllis. I'll give you cuttings."
+            ]
+          },
+          "title": "Talk to the gardener"
+        },
+        {
+          "item": "bloomingnature:anemone",
+          "count": 2,
+          "consume": true,
+          "title": "Replant the anemones"
+        },
+        {
+          "item": "bloomingnature:bluebell",
+          "count": 2,
+          "consume": true,
+          "title": "Replant the bluebells"
+        },
+        {
+          "item": "bloomingnature:amaryllis",
+          "count": 2,
+          "consume": true,
+          "title": "Replant the amaryllis"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bloomingnature:begonie",
+          "count": 4
+        },
+        {
+          "item": "bloomingnature:bird_of_paradise",
+          "count": 2
+        },
+        {
+          "skill": "forage",
+          "xp": 200
+        }
+      ],
+      "icon": "bloomingnature:bluebell",
+      "discover": {
+        "structure": "bloomingnature:cottage"
+      }
+    },
+    {
+      "id": "gingerbread_house",
+      "title": "The Gingerbread House",
+      "text": [
+        "A gingerbread house in the snow, and a gingerbread golem that won't let anyone eat the walls. Bake it some gingerbread cookies and eggnog to win it over."
+      ],
+      "tasks": [
+        {
+          "item": "snowyspirit:gingerbread_cookie",
+          "count": 4,
+          "consume": true,
+          "title": "Bake gingerbread cookies for the golem"
+        },
+        {
+          "item": "snowyspirit:eggnog",
+          "count": 2,
+          "consume": true,
+          "title": "Bring eggnog for the golem"
+        },
+        {
+          "talk": "entity",
+          "entity": "snowyspirit:gingerbread_golem",
+          "lines": [
+            "Crumble crumble. You brought cookies? And a drink?",
+            "My house, my walls. But you may have one gumdrop.",
+            "Merry Midwinter."
+          ],
+          "title": "Win over the gingerbread golem"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "snowyspirit:sled_oak"
+        },
+        {
+          "item": "snowyspirit:candy_cane",
+          "count": 8
+        },
+        {
+          "skill": "cook",
+          "xp": 200
+        }
+      ],
+      "icon": "snowyspirit:gingerbread_cookie",
+      "discover": {
+        "structure": "snowyspirit:gingerbread_house"
+      }
+    },
+    {
+      "id": "butterfly_lovers",
+      "title": "The Butterfly Lovers",
+      "text": [
+        "A lonely grave where two butterflies always circle. The legend carved on it asks for two matching butterflies to be set free at the grave."
+      ],
+      "tasks": [
+        {
+          "use": "minecraft:spruce_wall_sign",
+          "count": 1,
+          "title": "Read the legend on the grave",
+          "at": {
+            "structure": "butterflies:liangshanbo_grave"
+          },
+          "unchecked": true
+        },
+        {
+          "item": "butterflies:bottled_butterfly_common",
+          "count": 2,
+          "consume": true,
+          "title": "Catch a matching pair of butterflies"
+        },
+        {
+          "checkmark": "I released the pair at the grave"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "butterflies:butterfly_net"
+        },
+        {
+          "item": "minecraft:poppy",
+          "count": 6
+        },
+        {
+          "skill": "taming",
+          "xp": 150
+        }
+      ],
+      "icon": "butterflies:butterfly_net",
+      "discover": {
+        "structure": "butterflies:liangshanbo_grave"
+      }
+    },
+    {
+      "id": "fallen_adventurer",
+      "title": "Bring Them Home",
+      "text": [
+        "A skeleton in armour lies where an adventurer fell. Take the name tag and gear found on it to the nearest village and tell the family, who will want to know."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:name_tag",
+          "title": "Take the adventurer's name tag"
+        },
+        {
+          "structure": "#villages",
+          "title": "Carry the news to the nearest village"
+        },
+        {
+          "talk": "org",
+          "org": "watch",
+          "lines": [
+            "A name tag? Let me see. Oh, no. Not young Brin.",
+            "The family will want to know. We'll tell them gently.",
+            "They'll want you to have his sword, I think."
+          ],
+          "title": "Tell the family through the Village Watch"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_sword",
+          "name": "The Fallen Adventurer's Blade",
+          "lore": [
+            "Returned by the one who brought them home."
+          ]
+        },
+        {
+          "skill": "defense",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:name_tag",
+      "discover": {
+        "observe": "realmrpg_skeletons:hunted_skeleton",
+        "ticks": 20
+      }
+    },
+    {
+      "id": "biome_cherry_grove",
+      "title": "Petals on the Wind",
+      "text": [
+        "A cherry grove in bloom, pink petals drifting through the air. The Herbalists would love a sample of its petals, its saplings and its bees' honey."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:pink_petals",
+          "count": 4,
+          "title": "Gather pink petals"
+        },
+        {
+          "item": "minecraft:cherry_sapling",
+          "title": "Take a cherry sapling"
+        },
+        {
+          "item": "minecraft:honey_bottle",
+          "title": "Take honey from the grove's bees"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cherry_sapling",
+          "count": 4
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:pink_petals",
+      "discover": {
+        "biome": "minecraft:cherry_grove"
+      }
+    },
+    {
+      "id": "biome_mushroom_fields",
+      "title": "Mooshroom Shores",
+      "text": [
+        "You've landed on a mushroom island. A mushroom idol stands on some of them, and the mooshrooms give stew instead of milk."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:mushroom_statue",
+          "title": "Find the mushroom idol"
+        },
+        {
+          "item": "minecraft:mushroom_stew",
+          "title": "Milk a mooshroom for a bowl of stew"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:mycelium",
+          "count": 8
+        },
+        {
+          "item": "minecraft:mushroom_stew",
+          "count": 2
+        },
+        {
+          "skill": "farm",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:mushroom_stew",
+      "discover": {
+        "biome": "minecraft:mushroom_fields"
+      }
+    },
+    {
+      "id": "biome_lavender_field",
+      "title": "Lavender Haze",
+      "text": [
+        "A field of lavender hums with bees. The Herbalists say a calming tea from it settles the nerves of the whole village."
+      ],
+      "tasks": [
+        {
+          "item": "biomesoplenty:lavender",
+          "count": 8,
+          "title": "Gather lavender"
+        },
+        {
+          "item": "herbalbrews:lavender_tea",
+          "consume": true,
+          "title": "Brew a calming tea"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "herbalbrews:lavender_tea",
+          "count": 2
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "biomesoplenty:lavender",
+      "discover": {
+        "biome": "biomesoplenty:lavender_field"
+      }
+    },
+    {
+      "id": "biome_origin_valley",
+      "title": "Where It All Began",
+      "text": [
+        "You've stumbled into the rare Origin Valley, where the world looks as it did long ago. The Field Guide would love a block of its old grass and a rose."
+      ],
+      "tasks": [
+        {
+          "item": "biomesoplenty:origin_grass_block",
+          "title": "Take a block of the old grass"
+        },
+        {
+          "item": "biomesoplenty:rose",
+          "title": "Pick a rose"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:painting",
+          "count": 2
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "biomesoplenty:origin_grass_block",
+      "discover": {
+        "biome": "biomesoplenty:origin_valley"
+      }
+    },
+    {
+      "id": "biome_alpha_grove",
+      "title": "Alpha Grove",
+      "text": [
+        "The alpha grove is all old-style leaves and grass, like a memory of the world before. Bring back its saplings and leaves before you forget what it looked like."
+      ],
+      "tasks": [
+        {
+          "item": "regions_unexplored:alpha_sapling",
+          "count": 2,
+          "title": "Take alpha saplings"
+        },
+        {
+          "item": "regions_unexplored:alpha_leaves",
+          "count": 4,
+          "title": "Take alpha leaves"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "regions_unexplored:alpha_sapling",
+          "count": 4
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "regions_unexplored:alpha_sapling",
+      "discover": {
+        "biome": "regions_unexplored:alpha_grove"
+      }
+    },
+    {
+      "id": "biome_mystic_grove",
+      "title": "The Mystic Grove",
+      "text": [
+        "A mystic grove glows with strange flowers. A fairy shows itself among them if you wait quietly, and will lead you to its ring."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "fays_fairies:pink_fairy",
+            "name": "Grove Fairy",
+            "then": "talk",
+            "lines": [
+              "Ssh. You waited. Nobody waits.",
+              "Follow me, if you like. There's a ring of mushrooms. It is very nice."
+            ]
+          },
+          "title": "Wait quietly for the fairy to appear"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "fays_fairies:fairy_bottle"
+        },
+        {
+          "skill": "magic",
+          "xp": 150
+        }
+      ],
+      "icon": "fays_fairies:fairy_bottle",
+      "discover": {
+        "biome": "biomesoplenty:mystic_grove"
+      }
+    },
+    {
+      "id": "biome_redwoods",
+      "title": "Giants of the Forest",
+      "text": [
+        "A redwood forest, with trees taller than any tower. The Crafters' guild wants wood from one of the giants, and a climb to the top is the only way to reach the good branches."
+      ],
+      "tasks": [
+        {
+          "item": "biomesoplenty:redwood_log",
+          "count": 16,
+          "title": "Bring down redwood logs from the giants"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "biomesoplenty:redwood_log",
+          "count": 16
+        },
+        {
+          "item": "minecraft:iron_axe"
+        },
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "biomesoplenty:redwood_log",
+      "discover": {
+        "biome": "biomesoplenty:redwood_forest"
+      }
+    },
+    {
+      "id": "biome_hot_springs",
+      "title": "Hot Springs",
+      "text": [
+        "Hot springs steam in the cold air. Soak in the thermal water until you're fully healed, and take a bottle home for a sore friend."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:potion",
+          "title": "Bottle the spring water for a sore friend"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "comforts:hammock_blue"
+        },
+        {
+          "skill": "agility",
+          "xp": 100
+        }
+      ],
+      "icon": "comforts:hammock_red",
+      "discover": {
+        "biome": "biomesoplenty:hot_springs"
+      }
+    },
+    {
+      "id": "biome_snowblossom",
+      "title": "Snowblossom",
+      "text": [
+        "A snowblossom grove, white petals in the snow. The Herbalists want leaves and a sapling to see if it will grow in the village."
+      ],
+      "tasks": [
+        {
+          "item": "biomesoplenty:snowblossom_leaves",
+          "count": 4,
+          "title": "Gather snowblossom leaves"
+        },
+        {
+          "item": "biomesoplenty:snowblossom_sapling",
+          "title": "Take a snowblossom sapling"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "biomesoplenty:snowblossom_sapling",
+          "count": 3
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "biomesoplenty:snowblossom_leaves",
+      "discover": {
+        "biome": "biomesoplenty:snowblossom_grove"
+      }
+    },
+    {
+      "id": "biome_wasteland",
+      "title": "The Wasteland",
+      "text": [
+        "A dried-out wasteland, nothing living in it. A single dead tree stands at its heart, and the Couriers want to know if the way across is safe."
+      ],
+      "tasks": [
+        {
+          "item": "biomesoplenty:dead_log",
+          "count": 4,
+          "title": "Bring wood from the dead tree at its heart"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:water_bucket"
+        },
+        {
+          "item": "biomesoplenty:dead_log",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 100
+        }
+      ],
+      "icon": "biomesoplenty:dead_log",
+      "discover": {
+        "biome": "biomesoplenty:wasteland"
+      }
+    },
+    {
+      "id": "biome_pumpkin_patch",
+      "title": "The Pumpkin Patch",
+      "text": [
+        "A pumpkin patch stretches to the horizon. The Growers' co-op would love your biggest pumpkins, and the children want a jack o'lantern."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:pumpkin",
+          "count": 4,
+          "title": "Pick the biggest pumpkins"
+        },
+        {
+          "item": "minecraft:jack_o_lantern",
+          "crafted": true,
+          "title": "Carve a jack o'lantern"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:pumpkin_pie",
+          "count": 4
+        },
+        {
+          "skill": "farm",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:jack_o_lantern",
+      "discover": {
+        "biome": "biomesoplenty:pumpkin_patch"
+      }
+    },
+    {
+      "id": "biome_baobab_savanna",
+      "title": "Under the Baobabs",
+      "text": [
+        "Baobabs rise from the savanna like upside-down trees. The Crafters' guild would love some of their wood, and the herds that pass beneath are worth a look."
+      ],
+      "tasks": [
+        {
+          "item": "regions_unexplored:baobab_log",
+          "count": 8,
+          "title": "Gather baobab wood"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "regions_unexplored:baobab_log",
+          "count": 16
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "regions_unexplored:baobab_log",
+      "discover": {
+        "biome": "regions_unexplored:baobab_savanna"
+      }
+    },
+    {
+      "id": "biome_chalk_cliffs",
+      "title": "White Cliffs",
+      "text": [
+        "White chalk cliffs rise above the sea. Climb from the beach to the top without a fall, and bring chalk for the Crafters' guild."
+      ],
+      "tasks": [
+        {
+          "item": "regions_unexplored:chalk",
+          "count": 8,
+          "title": "Climb the cliffs and bring back chalk"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "regions_unexplored:chalk",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 100
+        }
+      ],
+      "icon": "regions_unexplored:chalk",
+      "discover": {
+        "biome": "regions_unexplored:chalk_cliffs"
+      }
+    },
+    {
+      "id": "biome_spires",
+      "title": "Among the Spires",
+      "text": [
+        "Stone spires jut from the land like needles. Stand on top of the tallest you can find and look across the world."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I stood on the tallest spire"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:string",
+          "count": 16
+        },
+        {
+          "item": "supplementaries:rope",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:stone",
+      "discover": {
+        "biome": "regions_unexplored:spires"
+      }
+    },
+    {
+      "id": "biome_magnolia",
+      "title": "Magnolia in Bloom",
+      "text": [
+        "A magnolia woodland in bloom, with a shining meadow beyond it. The Herbalists want its flowers and the meadow's glistening grass."
+      ],
+      "tasks": [
+        {
+          "biome": "regions_unexplored:glistering_meadow",
+          "title": "Find the glistering meadow"
+        },
+        {
+          "item": "minecraft:flowering_azalea",
+          "count": 2,
+          "title": "Gather flowering blossoms"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:flowering_azalea",
+          "count": 4
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:flowering_azalea",
+      "discover": {
+        "biome": "regions_unexplored:magnolia_woodland"
+      }
+    },
+    {
+      "id": "biome_ashen_woodland",
+      "title": "Ashen Woods",
+      "text": [
+        "An ashen woodland, burnt long ago. Bring back some ash and a surviving sapling to see if the soil can heal."
+      ],
+      "tasks": [
+        {
+          "item": "regions_unexplored:ashen_dirt",
+          "count": 4,
+          "title": "Collect ashen soil"
+        },
+        {
+          "item": "regions_unexplored:ashen_sapling",
+          "title": "Find a surviving sapling"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone_meal",
+          "count": 16
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "regions_unexplored:ashen_sapling",
+      "discover": {
+        "biome": "regions_unexplored:ashen_woodland"
+      }
+    },
+    {
+      "id": "biome_saguaro",
+      "title": "Land of Cacti",
+      "text": [
+        "A desert of towering saguaro cacti. The Growers' co-op would like a cutting of each cactus and a joshua tree sapling, if you don't hug the cactus."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:cactus",
+          "count": 4,
+          "title": "Cut pieces of saguaro cactus"
+        },
+        {
+          "item": "regions_unexplored:joshua_beard",
+          "title": "Take a joshua beard"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:green_dye",
+          "count": 8
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:cactus",
+      "discover": {
+        "biome": "regions_unexplored:saguaro_desert"
+      }
+    },
+    {
+      "id": "tectonic_peaks",
+      "title": "Above the Clouds",
+      "text": [
+        "The mountains here climb far higher than they should. Stand above the clouds on foot and look down at the world."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I stood above the clouds"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:spyglass",
+      "discover": {
+        "biome": "minecraft:jagged_peaks"
+      }
+    },
+    {
+      "id": "tectonic_canyon",
+      "title": "The Deep Valley",
+      "text": [
+        "Rivers here cut deep valleys. Follow one down to where it meets the sea and fish at its mouth, where the Anglers say the biggest fish gather."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:beach",
+          "title": "Follow the river to the sea"
+        },
+        {
+          "item": "minecraft:salmon",
+          "count": 2,
+          "title": "Fish at the river's mouth"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:worm",
+          "count": 16
+        },
+        {
+          "skill": "fish",
+          "xp": 100
+        }
+      ],
+      "icon": "aquaculture:worm",
+      "discover": {
+        "biome": "minecraft:river"
+      }
+    },
+    {
+      "id": "biome_ice_spikes",
+      "title": "Ice Spikes",
+      "text": [
+        "Spikes of ice rise from a frozen plain. The Miners' Guild want packed ice from the top of a spike, which only a pick with silk touch will take."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:packed_ice",
+          "count": 4,
+          "title": "Mine packed ice from the top of a spike"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:blue_ice",
+          "count": 4
+        },
+        {
+          "skill": "mining",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:packed_ice",
+      "discover": {
+        "biome": "minecraft:ice_spikes"
+      }
+    },
+    {
+      "id": "biome_badlands",
+      "title": "The Painted Badlands",
+      "text": [
+        "The badlands are banded in every colour of clay. The Crafters' guild want a sample of each colour from the canyon walls."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:terracotta",
+          "count": 4,
+          "title": "Collect plain terracotta"
+        },
+        {
+          "item": "minecraft:orange_terracotta",
+          "count": 4,
+          "title": "Collect orange terracotta"
+        },
+        {
+          "item": "minecraft:red_terracotta",
+          "count": 4,
+          "title": "Collect red terracotta"
+        },
+        {
+          "item": "minecraft:yellow_terracotta",
+          "count": 4,
+          "title": "Collect yellow terracotta"
+        },
+        {
+          "item": "minecraft:white_terracotta",
+          "count": 4,
+          "title": "Collect white terracotta"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 8
+        },
+        {
+          "skill": "mining",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:terracotta",
+      "discover": {
+        "biome": "minecraft:badlands"
+      }
+    },
+    {
+      "id": "biome_grand_tour",
+      "title": "The Grand Tour",
+      "after": [
+        "biome_cherry_grove"
+      ],
+      "text": [
+        "The Couriers keep a list of the biomes of the Overworld, and offer a prize for anyone who has visited twenty. Nature's Compass helps you find the ones you're missing."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:plains",
+          "title": "Visit the plains"
+        },
+        {
+          "biome": "minecraft:forest",
+          "title": "Visit a forest"
+        },
+        {
+          "biome": "minecraft:birch_forest",
+          "title": "Visit a birch forest"
+        },
+        {
+          "biome": "minecraft:dark_forest",
+          "title": "Visit a dark forest"
+        },
+        {
+          "biome": "minecraft:flower_forest",
+          "title": "Visit a flower forest"
+        },
+        {
+          "biome": "minecraft:taiga",
+          "title": "Visit a taiga"
+        },
+        {
+          "biome": "minecraft:snowy_plains",
+          "title": "Visit snowy plains"
+        },
+        {
+          "biome": "minecraft:savanna",
+          "title": "Visit a savanna"
+        },
+        {
+          "biome": "minecraft:desert",
+          "title": "Visit a desert"
+        },
+        {
+          "biome": "minecraft:jungle",
+          "title": "Visit a jungle"
+        },
+        {
+          "biome": "minecraft:swamp",
+          "title": "Visit a swamp"
+        },
+        {
+          "biome": "minecraft:mangrove_swamp",
+          "title": "Visit a mangrove swamp"
+        },
+        {
+          "biome": "minecraft:meadow",
+          "title": "Visit a meadow"
+        },
+        {
+          "biome": "minecraft:badlands",
+          "title": "Visit the badlands"
+        },
+        {
+          "biome": "minecraft:beach",
+          "title": "Visit a beach"
+        },
+        {
+          "biome": "minecraft:river",
+          "title": "Visit a river"
+        },
+        {
+          "biome": "minecraft:ice_spikes",
+          "title": "Visit ice spikes"
+        },
+        {
+          "biome": "minecraft:cherry_grove",
+          "title": "Visit a cherry grove"
+        },
+        {
+          "biome": "minecraft:windswept_hills",
+          "title": "Visit windswept hills"
+        },
+        {
+          "biome": "minecraft:stony_shore",
+          "title": "Visit a stony shore"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "naturescompass:naturescompass"
+        },
+        {
+          "item": "sophisticatedbackpacks:stack_upgrade_tier_1"
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "naturescompass:naturescompass"
+    },
+    {
+      "id": "found_music_disc",
+      "title": "A Song from Somewhere",
+      "text": [
+        "You've found an old music disc, and a tune is waiting in it. Build a jukebox to hear it, then learn it on an instrument."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "minecraft:jukebox": 1
+            },
+            "radius": 8
+          },
+          "title": "Set up a jukebox"
+        },
+        {
+          "checkmark": "I played the disc"
+        },
+        {
+          "item": "immersive_melodies:lute",
+          "crafted": true,
+          "title": "Make an instrument to learn the tune on"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "immersive_melodies:lute"
+        },
+        {
+          "skill": "craft",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:jukebox",
+      "discover": {
+        "item": "minecraft:music_disc_13"
+      }
+    },
+    {
+      "id": "antique_ink",
+      "title": "Antique Ink",
+      "text": [
+        "A bottle of antique ink from a chest. Ink a map with it and the map should show an old landmark that isn't on newer maps."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:map",
+          "crafted": true,
+          "title": "Make a map to ink"
+        },
+        {
+          "checkmark": "I inked the map and followed it to the old landmark"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:globe"
+        },
+        {
+          "item": "explorerscompass:explorerscompass"
+        },
+        {
+          "skill": "craft",
+          "xp": 150
+        }
+      ],
+      "icon": "supplementaries:antique_ink",
+      "discover": {
+        "item": "supplementaries:antique_ink"
+      }
+    },
+    {
+      "id": "the_strange_key",
+      "title": "The Strange Key",
+      "text": [
+        "A lone key from a dungeon chest, with a tag that names a safe. Find the safe in a ruin nearby, and open it."
+      ],
+      "tasks": [
+        {
+          "structure": "#ruins",
+          "title": "Find a ruin that might hold the safe"
+        },
+        {
+          "use": "supplementaries:safe",
+          "count": 1,
+          "title": "Open the safe with the strange key",
+          "holding": "supplementaries:key"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 10
+        },
+        {
+          "item": "minecraft:diamond"
+        },
+        {
+          "skill": "mining",
+          "xp": 150
+        }
+      ],
+      "icon": "supplementaries:key",
+      "discover": {
+        "item": "supplementaries:key"
+      }
+    },
+    {
+      "id": "sniffer_egg",
+      "title": "An Ancient Egg",
+      "text": [
+        "A sniffer egg, warm to the touch. Hatch it on moss, raise the sniffer, and plant the first ancient seed it digs up."
+      ],
+      "tasks": [
+        {
+          "observe": "minecraft:sniffer",
+          "ticks": 40,
+          "title": "Watch the sniffer hatch and grow"
+        },
+        {
+          "item": "minecraft:torchflower_seeds",
+          "title": "Take the first ancient seed it digs up"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:pitcher_pod",
+          "count": 2
+        },
+        {
+          "item": "minecraft:torchflower_seeds",
+          "count": 2
+        },
+        {
+          "skill": "taming",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:sniffer_egg",
+      "discover": {
+        "item": "minecraft:sniffer_egg"
+      }
     }
   ]
 }

@@ -66,7 +66,7 @@
 			]
 			title: "The Toll Road"
 			x: 0.0d
-			y: -24.75d
+			y: -58.5d
 		}
 		{
 			description: ["The bandits who hold these towers keep a ledger of every caravan they've robbed, torn into pages and hidden among their stores so no one man can sell them out. Fight off the archers and find the pages: the villages they robbed will want to know."]
@@ -121,7 +121,7 @@
 			]
 			title: "The Bandits' Ledger"
 			x: 0.0d
-			y: -23.25d
+			y: -57.0d
 		}
 		{
 			description: ["A giant aviary stands open on the mountainside with its keepers long gone. Birds are still caged inside, and they will starve."]
@@ -174,7 +174,7 @@
 			]
 			title: "The Great Cage"
 			x: 0.0d
-			y: -21.75d
+			y: -55.5d
 		}
 		{
 			description: ["The bathhouse's pools still steam, and something lurks under the water. Someone drowned here, and the bath master's ledger says who and why."]
@@ -228,7 +228,7 @@
 			]
 			title: "Steam and Shadows"
 			x: 0.0d
-			y: -20.25d
+			y: -54.0d
 		}
 		{
 			description: ["The foundry's furnaces have gone cold but its guardians still walk the floor, keeping the master smith's plans. Take the plans, and forge what they describe."]
@@ -288,7 +288,7 @@
 			]
 			title: "The Foundry's Last Blueprint"
 			x: 0.0d
-			y: -18.75d
+			y: -52.5d
 		}
 		{
 			description: ["Keep Kayra's garrison went mad and still holds its walls. Fight up through the gatehouse to the lord of the keep, then hold his throne room against the last of his men."]
@@ -370,7 +370,7 @@
 			]
 			title: "The Siege of Keep Kayra"
 			x: 0.0d
-			y: -17.25d
+			y: -51.0d
 		}
 		{
 			description: ["The mechanical nest hums with things that aren't quite alive. Its guardians carry a mainspring: the heart of the hive. A Crafters' guild mason would very much like to study it."]
@@ -430,7 +430,7 @@
 			]
 			title: "The Clockwork Hive"
 			x: 0.0d
-			y: -15.75d
+			y: -49.5d
 		}
 		{
 			description: ["The plague asylum's wards still hold the sick and what feeds on them. The Herbalists want samples from its apothecary, and a cure brewed from the notes."]
@@ -483,7 +483,7 @@
 			]
 			title: "Samples from the Asylum"
 			x: 0.0d
-			y: -14.25d
+			y: -48.0d
 		}
 		{
 			description: ["Shiraz Palace kept a fire burning in every court, and the old scholars wrote that the treasury answers only to a palace whose fires are lit. Relight the dead court fires and search for the treasury's seal among the palace stores."]
@@ -535,7 +535,7 @@
 			]
 			title: "The Palace Treasury"
 			x: 0.0d
-			y: -12.75d
+			y: -46.5d
 		}
 		{
 			description: ["Thorns have swallowed the Thornborn Towers from the roots up, and the vines fight back. Climb to the top and bring down a cutting of the first thorn."]
@@ -604,7 +604,7 @@
 			]
 			title: "The Thornborn Ascent"
 			x: 0.0d
-			y: -11.25d
+			y: -45.0d
 		}
 		{
 			description: ["Every wall of the infested temple hides silverfish. Reach the inner sanctum and smash its brood stones before the swarm closes the way out."]
@@ -664,7 +664,7 @@
 			]
 			title: "Swarming Stones"
 			x: 0.0d
-			y: -9.75d
+			y: -43.5d
 		}
 		{
 			description: ["An abandoned temple of the old order still keeps its sacred fire pit. The inscriptions name four offerings to be burned there before the reliquary will open."]
@@ -753,7 +753,7 @@
 			]
 			title: "The Old Order's Temple"
 			x: 0.0d
-			y: -8.25d
+			y: -42.0d
 		}
 		{
 			description: ["A village built inside giant mushrooms trades in caps and spores. Their people will teach you to grow the mushrooms, if you bring back a full set of blocks."]
@@ -824,7 +824,7 @@
 			]
 			title: "The Spore Folk"
 			x: 0.0d
-			y: -6.75d
+			y: -40.5d
 		}
 		{
 			description: ["The scorched mines burn, and the last shift never came up. Find the trapped miners through the heat and get them out before the next collapse."]
@@ -871,7 +871,7 @@
 			]
 			title: "Fire in the Hole"
 			x: 0.0d
-			y: -5.25d
+			y: -39.0d
 		}
 		{
 			description: ["The coliseum's stands are empty, but its gates still open for a challenger. A note pinned to the gate sends you to the Bounty Office, who know who runs the fights now."]
@@ -911,7 +911,7 @@
 			]
 			title: "Empty Stands"
 			x: 0.0d
-			y: -3.75d
+			y: -37.5d
 		}
 		{
 			description: ["The witches of the swamp villa are holding a tea party, and their recipe book lies open on the table. Copy it unseen, and brew their strangest potion yourself."]
@@ -962,7 +962,7 @@
 			]
 			title: "Tea at the Witch Villa"
 			x: 0.0d
-			y: -2.25d
+			y: -36.0d
 		}
 		{
 			description: ["The old manor's doors lock behind you. The family who lived here hid four keys among the house's stores before they fled, and the last of them opens the study where their final letter waits."]
@@ -1014,7 +1014,7 @@
 			]
 			title: "The Old Manor"
 			x: 0.0d
-			y: -0.75d
+			y: -34.5d
 		}
 		{
 			description: ["An ancient temple sits on a mountain peak above the clouds. The shepherds below say that once, four fires burned at its corners and the whole valley could see it. Bring fire back to the peak."]
@@ -1060,7 +1060,7 @@
 			]
 			title: "The Temple on the Peak"
 			x: 0.0d
-			y: 0.75d
+			y: -33.0d
 		}
 		{
 			description: ["The relic temple's altar is empty. Jungle thieves took the relic, and their trail leads to a nearby ruin."]
@@ -1125,7 +1125,7 @@
 			]
 			title: "The Sacred Relic"
 			x: 0.0d
-			y: 2.25d
+			y: -31.5d
 		}
 		{
 			description: ["A giant warped sword is driven into the shattered hills, as if dropped from the Nether. The forger's mark on its hilt names who made it."]
@@ -1171,7 +1171,7 @@
 			]
 			title: "The Sword in the Hill"
 			x: 0.0d
-			y: 3.75d
+			y: -30.0d
 		}
 		{
 			description: ["A cathedral stands alone in the wilds, its bell tower cracked. Climb the tower and ring the bell; a cleric will arrive to say why the town around it never got built."]
@@ -1223,7 +1223,7 @@
 			]
 			title: "The Cathedral"
 			x: 0.0d
-			y: 5.25d
+			y: -28.5d
 		}
 		{
 			description: ["Warped wood houses and towers stand in the Overworld where nothing warped should grow. The Arcane Order suspect a leak from the Nether, and want a sample."]
@@ -1277,7 +1277,7 @@
 			]
 			title: "Wrong Side of the Portal"
 			x: 0.0d
-			y: 6.75d
+			y: -27.0d
 		}
 		{
 			description: ["A ruined beacon still has its pyramid, half-robbed by looters. Replace the missing blocks and light it again, so the beam can be seen from miles away."]
@@ -1326,7 +1326,7 @@
 			]
 			title: "A Beacon Gone Dark"
 			x: 0.0d
-			y: 8.25d
+			y: -25.5d
 		}
 		{
 			description: ["A desert ruin has a chest sitting out in the open, unguarded. The chest bites. Beat the mimic, and the real loot is under the sand where it sat."]
@@ -1373,7 +1373,7 @@
 			]
 			title: "Too Good to Be True"
 			x: 0.0d
-			y: 9.75d
+			y: -24.0d
 		}
 		{
 			description: ["The desert temple's tomb is sealed, and its corridors are trapped. The builders left hidden switches for their own way in. Press them, mind the plates, and find what the pharaoh was buried with."]
@@ -1439,7 +1439,7 @@
 			]
 			title: "The Pharaoh's Vault"
 			x: 0.0d
-			y: 11.25d
+			y: -22.5d
 		}
 		{
 			description: ["A jungle temple's halls are full of dart traps and crushing floors. A carving at the entrance gives a warning and a deadline: be at the treasure room before the floors close."]
@@ -1505,7 +1505,7 @@
 			]
 			title: "Traps of the Jungle Temple"
 			x: 0.0d
-			y: 12.75d
+			y: -21.0d
 		}
 		{
 			description: ["On one of the old river bridges you find the builder's plaque: it asks that someone build one more. Cross another river with a bridge of your own."]
@@ -1553,7 +1553,7 @@
 			]
 			title: "The Bridge Builder"
 			x: 0.0d
-			y: 14.25d
+			y: -19.5d
 		}
 		{
 			description: ["A ruined portal stands half-collapsed with crying obsidian in its frame. Rebuild the frame, but don't light it yet: the Arcane Order want a word first."]
@@ -1612,7 +1612,7 @@
 			]
 			title: "The Broken Gate"
 			x: 0.0d
-			y: 15.75d
+			y: -18.0d
 		}
 		{
 			description: ["Under an igloo's carpet, a ladder leads to a cell holding a zombie villager. Cure him with weakness and a golden apple, and he will tell you whose igloo it was."]
@@ -1658,7 +1658,7 @@
 			]
 			title: "The Igloo's Basement"
 			x: 0.0d
-			y: 17.25d
+			y: -16.5d
 		}
 		{
 			description: ["Activating a wild waystone starts something. The Couriers say there's a whole network of them, each one remembers the others."]
@@ -1717,7 +1717,7 @@
 			]
 			title: "Stones That Remember"
 			x: 0.0d
-			y: 18.75d
+			y: -15.0d
 		}
 		{
 			description: ["Frozen spires and an abandoned village in the snow, built by no people anyone knows. Something very large sleeps far below. Note it, copy the writing, and leave it alone for now."]
@@ -1765,7 +1765,7 @@
 			]
 			title: "Frostbitten Ruins"
 			x: 0.0d
-			y: 20.25d
+			y: -13.5d
 		}
 		{
 			description: ["A desert village has been occupied by scouts of something that digs, and a dig site nearby goes deeper than it should. Drive the scouts off, read the foreman's notes, and leave the pit alone."]
@@ -1813,7 +1813,7 @@
 			]
 			title: "Occupied Dunes"
 			x: 0.0d
-			y: 21.75d
+			y: -12.0d
 		}
 		{
 			dependencies: [
@@ -1869,7 +1869,7 @@
 			]
 			title: "Back to the Ruins"
 			x: 1.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			description: ["Entering the ominous woods at night, you hear something hunting through the trees. Survive until dawn without leaving the woods."]
@@ -1915,7 +1915,7 @@
 			]
 			title: "The Ominous Woods"
 			x: 0.0d
-			y: 23.25d
+			y: -10.5d
 		}
 		{
 			description: ["You've found a volcano, smoking and black. The Miners' Guild would pay for lava, black sand and magma from its crater."]
@@ -1976,7 +1976,2571 @@
 			]
 			title: "The Mountain That Smokes"
 			x: 0.0d
-			y: 24.75d
+			y: -9.0d
+		}
+		{
+			description: ["A single mushroom house stands far from anywhere with its door ajar and its owner missing. A trail of spores leads from the doorstep into the cave behind, where spiders have him cornered."]
+			icon: "minecraft:red_mushroom"
+			id: "6860505CAE3BB0E1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 3
+					id: "72E44E7E00470616"
+					item: "minecraft:suspicious_stew"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "26A5931775E82D10"
+					item: "farmersdelight:brown_mushroom_colony"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "1E006E879C2A2E6F"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "42A2F17CB5D7202F"
+					structure: "dungeons_arise:mushroom_house"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:cave_spider"
+					id: "5E4DADC5B114A0E6"
+					title: "Drive the spiders off the trapped hermit"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "41C16A79AB6A79A3"
+					stage: "fq.discovery_land.the_lonely_cap.enc1"
+					title: "Lead the hermit home"
+					type: "gamestage"
+				}
+			]
+			title: "The Lonely Cap"
+			x: 0.0d
+			y: -7.5d
+		}
+		{
+			description: ["An abandoned chapel still has its bell, but the rope has rotted and the candles have burnt out. Someone in the forest has been listening for it for years."]
+			icon: "minecraft:bell"
+			id: "7C4105269EA76EB3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0A4F0FF3C9B4A9C6"
+					item: "minecraft:bell"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "3D6BDC694B8E2D22"
+					item: "minecraft:candle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 150"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "3B5C4F1247AB3271"
+					silent: true
+					title: "+150 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "08C18B2B61B4D48E"
+					structure: "structory:abandoned_chapel"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "7C8C4FCBE22E222D"
+					item: "supplementaries:rope"
+					title: "Bring a new rope for the bell"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 3L
+					id: "21BFF9114D38B279"
+					item: "minecraft:candle"
+					title: "Bring candles for the altar"
+					type: "item"
+				}
+				{
+					id: "4A8F41D38883C1D8"
+					stage: "fq.discovery_land.chapel_in_the_pines.use2"
+					title: "Ring the chapel bell"
+					type: "gamestage"
+				}
+				{
+					id: "3B4BBF6A33F1FC95"
+					stage: "fq.discovery_land.chapel_in_the_pines.enc3"
+					title: "See who comes out of the forest"
+					type: "gamestage"
+				}
+			]
+			title: "The Chapel in the Pines"
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			description: ["Villagers cast out of their village live in a shack on their own. They'd like to go home, if anyone would carry their apology."]
+			icon: "minecraft:emerald"
+			id: "5B1FDDEB9C61FDA3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 6
+					id: "7B62D359EC2C195E"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 150"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "48A31A65CD4F7642"
+					silent: true
+					title: "+150 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "62AD23D04822F0CD"
+					structure: "structory:outcast_villager_grassy"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "0E452E9980CE6EA8"
+					stage: "fq.discovery_land.outcasts.enc0"
+					title: "Hear the outcasts' side"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 3L
+					id: "32A782CB4A1D683B"
+					item: "minecraft:emerald"
+					title: "Take their gift of emeralds"
+					type: "item"
+				}
+				{
+					id: "5561670EA298B5D9"
+					structure: "#fotf:groups/villages"
+					title: "Carry their apology to the nearest village"
+					type: "structure"
+				}
+				{
+					id: "6D4C3EDD1FDD3015"
+					stage: "fq.discovery_land.outcasts.talk3"
+					title: "Deliver the apology to the village"
+					type: "gamestage"
+				}
+			]
+			title: "The Outcasts"
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			description: ["Northern ruins carry runes on their standing stones. Three of them read together point to a buried chest."]
+			icon: "explorerscompass:explorerscompass"
+			id: "440BA88470FD43D8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "7B0818AB7716FF80"
+					item: "minecraft:chest"
+					type: "item"
+				}
+				{
+					id: "4796037379DF30E7"
+					item: "explorerscompass:explorerscompass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "4188BC7DB71CFAA0"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "23F0AB714CB4A5E7"
+					structure: "structory:northern_ruin"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 3L
+					id: "58101AA346082CD8"
+					item: "kubejs:quest_northern_runes_0"
+					title: "Read the runes at three northern ruins"
+					type: "item"
+				}
+				{
+					id: "0B80644BC286F199"
+					title: "I followed the runes to the buried chest"
+					type: "checkmark"
+				}
+			]
+			title: "Northern Runes"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			description: ["The engineer left plans for a machine half-built: a working piston door. His notes list the parts."]
+			icon: "minecraft:sticky_piston"
+			id: "121FB7B5328C562D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "35B3F84FB73EC0F9"
+					item: "minecraft:piston"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "7F509626ADAED9F2"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 200"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "5D889C2A5F44EB94"
+					silent: true
+					title: "+200 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4807411FBB231AB0"
+					structure: "structory_towers:engineer_tower"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "7371F78EC29DEBC6"
+					item: "kubejs:quest_engineers_plans_0"
+					title: "Search for Engineer's Notes"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "05969E2BF346174C"
+					item: "minecraft:sticky_piston"
+					only_from_crafting: true
+					title: "Make the sticky pistons the notes call for"
+					type: "item"
+				}
+				{
+					id: "0DB7A3F610ADE5F9"
+					stage: "fq.discovery_land.engineers_plans.build2"
+					title: "Finish the piston door"
+					type: "gamestage"
+				}
+			]
+			title: "The Engineer's Plans"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			description: ["The desert outpost keeps a water barrel and a logbook of travellers who never arrived. The next oasis is a hard walk across the dunes, and the barrel only holds so much."]
+			icon: "minecraft:sand"
+			id: "199E643424780F10"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "50DC1EB51984A31D"
+					item: "minecraft:dried_kelp"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "33DBA837E3C0189B"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 200"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "30CDE39D56C51A3A"
+					silent: true
+					title: "+200 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "43533F10A58FA0B6"
+					structure: "structory_towers:mirage_outpost"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "7ACE000F4252AC8E"
+					stage: "fq.discovery_land.mirage_outpost.timed0"
+					title: "Cross the dunes before the water runs out"
+					type: "gamestage"
+				}
+				{
+					id: "40840DD3AA909180"
+					title: "I added my name to the logbook"
+					type: "checkmark"
+				}
+			]
+			title: "The Mirage"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			description: ["A notice on the gallows names a thief who swore he was innocent. The real culprit dropped a coin purse nearby, and the Village Watch could clear the dead man's name."]
+			icon: "minecraft:oak_sign"
+			id: "31AE981B8F63BFDE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 6
+					id: "4AD691BEE2E034B9"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 150"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "17BE2980EC10088C"
+					silent: true
+					title: "+150 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "42C6F195C836317B"
+					structure: "mvs:gallows"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "4EC51D3D758F4D5A"
+					item: "kubejs:quest_gallows_hill_0"
+					title: "Search the gallows for the culprit's purse"
+					type: "item"
+				}
+				{
+					id: "19DB1C051306B9CD"
+					stage: "fq.discovery_land.gallows_hill.talk1"
+					title: "Clear the dead man's name with the Watch"
+					type: "gamestage"
+				}
+			]
+			title: "Gallows Hill"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			description: ["A monument to a felled forest stands on bare ground. Plant a sapling of every vanilla tree around it and bone-meal them up, and the grove will return."]
+			icon: "minecraft:oak_sapling"
+			id: "38A61683DB53C643"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "3B4E9CEF92BC53F2"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "4A952BE31E698BA2"
+					item: "minecraft:oak_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "1987DEA944F4E4DC"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4F9669640BB92376"
+					structure: "mvs:tree_monument"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "0208E755585C56BB"
+					stage: "fq.discovery_land.the_tree_monument.build0"
+					title: "Plant a sapling of every tree around the monument"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 12L
+					id: "45D5AB72B4E2A501"
+					item: "minecraft:bone_meal"
+					title: "Bone-meal the saplings up"
+					type: "item"
+				}
+			]
+			title: "Grove of Remembrance"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			description: ["Lonely houses stand empty along the roads, tables still set. A diary, torn into pages, is scattered through them. Gather its pages to learn where the families went."]
+			icon: "minecraft:book"
+			id: "5BC27162BFFBD875"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "69BDC54D3F8B3F24"
+					item: "handcrafted:oak_chair"
+					type: "item"
+				}
+				{
+					id: "35A1DFC156A78A0B"
+					item: "minecraft:red_bed"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 150"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "63A038C388CFBCE5"
+					silent: true
+					title: "+150 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2650A5773D81224E"
+					structure: "#fotf:groups/lonely_houses"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 3L
+					id: "713F899365693778"
+					item: "kubejs:quest_nobodys_home_0"
+					title: "Search three empty houses for diary pages"
+					type: "item"
+				}
+			]
+			title: "Nobody's Home"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			description: ["A witch's circle of stones stands in the swamp. A potion is carved into its stones, and the old tales say a witch's familiar answers when it is poured at the centre."]
+			icon: "minecraft:cauldron"
+			id: "6DC7C47D85F095BD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "5ABCDCAB78C4BC89"
+					item: "bookoffamiliars:familiar_book"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "189B23E89D1B2EA9"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "63C9CD8BBA5E52F8"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "531C3E183D0EE0F3"
+					structure: "betterwitchhuts:witch_circle"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "4C9549F0110E97DF"
+					item: "minecraft:potion"
+					title: "Brew the potion carved into the stones"
+					type: "item"
+				}
+				{
+					id: "6900B1B7F1028084"
+					stage: "fq.discovery_land.circle_of_stones.use1"
+					title: "Pour the potion into the cauldron"
+					type: "gamestage"
+				}
+				{
+					id: "709E7C3C099B3100"
+					stage: "fq.discovery_land.circle_of_stones.enc2"
+					title: "Meet the witch's familiar"
+					type: "gamestage"
+				}
+			]
+			title: "The Circle of Stones"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			description: ["Obelisks in the desert carry the same carvings in different orders. One symbol appears on every one, and the old tales say it points to a cache."]
+			icon: "minecraft:chiseled_sandstone"
+			id: "1302096D2BFE0A2F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 32
+					id: "50D19EE441A136F2"
+					item: "minecraft:sandstone"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "07EA6DDB25375473"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "6BD28766C10D5F88"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:desert"
+					id: "099E3F9BA5AEED5F"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "43C0F791FA49D21E"
+					title: "I noted the carvings on the first obelisk"
+					type: "checkmark"
+				}
+				{
+					id: "587CA570446D8685"
+					title: "I noted the carvings on the second obelisk"
+					type: "checkmark"
+				}
+				{
+					id: "1A8AF3557A88EC40"
+					title: "I noted the carvings on the third obelisk, and the symbol they share"
+					type: "checkmark"
+				}
+			]
+			title: "Reading the Obelisks"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			description: ["Trail ruins hide their past under suspicious gravel. Brush out four different pottery sherds and fit them on a decorated pot to read the story they tell."]
+			icon: "minecraft:decorated_pot"
+			id: "5C696C4F1B7B085F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "74860DBC6FF9EA5E"
+					item: "minecraft:brush"
+					type: "item"
+				}
+				{
+					id: "4918DF088BBB83C5"
+					item: "minecraft:sniffer_egg"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 200"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "3A9B89DE2154B1B5"
+					silent: true
+					title: "+200 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "248DC8E057D8A2A9"
+					structure: "minecraft:trail_ruins"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "6C11494F861DBAF2"
+					item: "minecraft:brush"
+					title: "Bring a brush for the suspicious gravel"
+					type: "item"
+				}
+				{
+					id: "4A2C236F1FB10555"
+					item: "minecraft:angler_pottery_sherd"
+					title: "Brush out an angler sherd"
+					type: "item"
+				}
+				{
+					id: "26E2D6E720CD151E"
+					item: "minecraft:archer_pottery_sherd"
+					title: "Brush out an archer sherd"
+					type: "item"
+				}
+				{
+					id: "755AA448F8F76EE0"
+					item: "minecraft:arms_up_pottery_sherd"
+					title: "Brush out an arms-up sherd"
+					type: "item"
+				}
+				{
+					id: "5EE34FCA7730A55C"
+					item: "minecraft:blade_pottery_sherd"
+					title: "Brush out a blade sherd"
+					type: "item"
+				}
+				{
+					id: "0D3C42FF05743110"
+					item: "minecraft:decorated_pot"
+					only_from_crafting: true
+					title: "Fit the sherds onto a decorated pot"
+					type: "item"
+				}
+			]
+			title: "Shards of the Trail"
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			description: ["The village bakery's baker is behind on orders for the festival. Bake a strawberry cake, a baguette and a tray of cupcakes and deliver them."]
+			icon: "bakery:strawberry_cake"
+			id: "562B4D0C85E36767"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0D8779038367D170"
+					item: "bakery:rolling_pin"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "4D8F6D31769DC797"
+					item: "bakery:bread"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 200"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "1185D1F585DAB278"
+					silent: true
+					title: "+200 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "013C91BD2E7721C4"
+					structure: "bakery:bakery"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "577B1802024D89D3"
+					item: "bakery:strawberry_cake"
+					title: "Bake a strawberry cake"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "64AE51F804FCBF55"
+					item: "bakery:baguette"
+					title: "Bake a baguette"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 3L
+					id: "1E34C9E59FDFE9D4"
+					item: "bakery:strawberry_cupcake"
+					title: "Bake a tray of cupcakes"
+					type: "item"
+				}
+				{
+					id: "36C335461DC28EBB"
+					stage: "fq.discovery_land.the_bakery.enc3"
+					title: "Deliver the baking before the festival"
+					type: "gamestage"
+				}
+			]
+			title: "Fresh from the Oven"
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			description: ["A brewfest tent stands in the plains with a contest board. Brew three beers, enter them, and beat the brewfest regulars and the Beer Elemental they keep in the cellar."]
+			icon: "brewery:beer_mug"
+			id: "5E9E2865DB1C6745"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "5A5E8D2CD50A4DC5"
+					item: "brewery:brewfest_hat"
+					type: "item"
+				}
+				{
+					id: "4D3E1D1EFB5B5E51"
+					item: "brewery:wooden_brewingstation"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 220"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "0A815AD0962F7D9A"
+					silent: true
+					title: "+220 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "02F1AF3134359494"
+					structure: "brewery:brewfest_tent"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "76E60AB69A847108"
+					item: "brewery:beer_wheat"
+					title: "Brew a wheat beer"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "209646E044F88E22"
+					item: "brewery:beer_barley"
+					title: "Brew a barley beer"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "16546C42E682EBE3"
+					item: "brewery:beer_oat"
+					title: "Brew an oat beer"
+					type: "item"
+				}
+				{
+					entity: "brewery:beer_elemental"
+					id: "24BB6CC1AA9F7B45"
+					title: "Beat the Beer Elemental in the cellar"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Brewfest"
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			description: ["The alpine chalet's cook makes fondue for climbers, but the cheese cellar is empty. Bring cheese of three kinds from Meadow's animals and cook the fondue together."]
+			icon: "meadow:fondue"
+			id: "4C948CEBB26EAFBE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "1952FE5423234B30"
+					item: "meadow:cheese_sandwich"
+					type: "item"
+				}
+				{
+					id: "07893D05CF0F2311"
+					item: "meadow:fur_boots"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 200"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "33AF2A318D7BC58D"
+					silent: true
+					title: "+200 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "705DB479F0BB5537"
+					structure: "meadow:chalet"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "37E371C358E440AB"
+					item: "meadow:piece_of_cheese"
+					title: "Bring plain cheese"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "40E9D63BEDDCE292"
+					item: "meadow:piece_of_goat_cheese"
+					title: "Bring goat cheese"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "6D2A7781F2454EE2"
+					item: "meadow:piece_of_sheep_cheese"
+					title: "Bring sheep cheese"
+					type: "item"
+				}
+				{
+					id: "7DE3D4F10FFC7C71"
+					item: "meadow:fondue"
+					title: "Cook the fondue"
+					type: "item"
+				}
+			]
+			title: "Fondue at the Chalet"
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			description: ["An alpine observation post has a list of animals to sight pinned to its sill. Photograph three of them for the survey."]
+			icon: "camerapture:camera"
+			id: "1B2BC7729FDBFA9A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "24C1889444D64AED"
+					item: "camerapture:camera"
+					type: "item"
+				}
+				{
+					id: "0C299B6DD496FD82"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 200"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "417B22F0AB2B6D43"
+					silent: true
+					title: "+200 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5318FD1070ED0551"
+					structure: "meadow:observation_post"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "0716B74E5172EF6B"
+					stage: "fq.discovery_land.the_observation_post.photo0"
+					title: "Photograph a water buffalo"
+					type: "gamestage"
+				}
+				{
+					id: "026A4D26531C9E3E"
+					stage: "fq.discovery_land.the_observation_post.photo1"
+					title: "Photograph a horned sheep"
+					type: "gamestage"
+				}
+				{
+					id: "5D785E1FD6E5A51B"
+					stage: "fq.discovery_land.the_observation_post.photo2"
+					title: "Photograph a highland cow"
+					type: "gamestage"
+				}
+			]
+			title: "The Observation Post"
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			description: ["A cottage in the woods with a garden gone wild. The wandering gardener who lives there wants her beds replanted, and will give a cutting of each."]
+			icon: "bloomingnature:bluebell"
+			id: "1CF9C29CE7B757A6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "1B733A2883B9DB2B"
+					item: "bloomingnature:begonie"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "1D185DF9632EA471"
+					item: "bloomingnature:bird_of_paradise"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 200"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "5A3CC8F1770BF01E"
+					silent: true
+					title: "+200 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5A6570EE0D402311"
+					structure: "bloomingnature:cottage"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "0FFF570FB6EC10B0"
+					stage: "fq.discovery_land.the_gardeners_cottage.enc0"
+					title: "Talk to the gardener"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "789737DC6AFFF398"
+					item: "bloomingnature:anemone"
+					title: "Replant the anemones"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "24B2BE561D0BACA6"
+					item: "bloomingnature:bluebell"
+					title: "Replant the bluebells"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "0D3C847C0A86A6D0"
+					item: "bloomingnature:amaryllis"
+					title: "Replant the amaryllis"
+					type: "item"
+				}
+			]
+			title: "The Gardener's Cottage"
+			x: 0.0d
+			y: 16.5d
+		}
+		{
+			description: ["A gingerbread house in the snow, and a gingerbread golem that won't let anyone eat the walls. Bake it some gingerbread cookies and eggnog to win it over."]
+			icon: "snowyspirit:gingerbread_cookie"
+			id: "163D6E2914F4E7D0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "2335AB16D92522B6"
+					item: "snowyspirit:sled_oak"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "0294A4C068C9E391"
+					item: "snowyspirit:candy_cane"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 200"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "5EBCFF353414D034"
+					silent: true
+					title: "+200 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5C1E0A352C21A730"
+					structure: "snowyspirit:gingerbread_house"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "7BF3A5E232B7404F"
+					item: "snowyspirit:gingerbread_cookie"
+					title: "Bake gingerbread cookies for the golem"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "3651F351BDC28670"
+					item: "snowyspirit:eggnog"
+					title: "Bring eggnog for the golem"
+					type: "item"
+				}
+				{
+					id: "10A5AAB5CF97254B"
+					stage: "fq.discovery_land.gingerbread_house.talk2"
+					title: "Win over the gingerbread golem"
+					type: "gamestage"
+				}
+			]
+			title: "The Gingerbread House"
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			description: ["A lonely grave where two butterflies always circle. The legend carved on it asks for two matching butterflies to be set free at the grave."]
+			icon: "butterflies:butterfly_net"
+			id: "1B773525B410136D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "25EC3146CDAA33C5"
+					item: "butterflies:butterfly_net"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "32ACAFEF75A916A8"
+					item: "minecraft:poppy"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 150"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "180DD653A700DC2F"
+					silent: true
+					title: "+150 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "414BD653624598C3"
+					structure: "butterflies:liangshanbo_grave"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "26BFCD3591C38D6B"
+					stage: "fq.discovery_land.butterfly_lovers.use0"
+					title: "Read the legend on the grave"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "587C55568646A0BC"
+					item: "butterflies:bottled_butterfly_common"
+					title: "Catch a matching pair of butterflies"
+					type: "item"
+				}
+				{
+					id: "148923752080E2D6"
+					title: "I released the pair at the grave"
+					type: "checkmark"
+				}
+			]
+			title: "The Butterfly Lovers"
+			x: 0.0d
+			y: 19.5d
+		}
+		{
+			description: ["A skeleton in armour lies where an adventurer fell. Take the name tag and gear found on it to the nearest village and tell the family, who will want to know."]
+			icon: "minecraft:name_tag"
+			id: "4D62B88C14C1F612"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "508975D88AB2F517"
+					item: {
+						Count: 1b
+						id: "minecraft:iron_sword"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Returned by the one who brought them home.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Fallen Adventurer's Blade\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 150"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "28A2BC283144D280"
+					silent: true
+					title: "+150 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6823C60976C56C91"
+					observe_type: "block"
+					timer: 20L
+					title: "Discovered"
+					to_observe: "realmrpg_skeletons:hunted_skeleton"
+					type: "observation"
+				}
+				{
+					id: "73A4A78C6D06D38E"
+					item: "minecraft:name_tag"
+					title: "Take the adventurer's name tag"
+					type: "item"
+				}
+				{
+					id: "0AC386E9ED216A4F"
+					structure: "#fotf:groups/villages"
+					title: "Carry the news to the nearest village"
+					type: "structure"
+				}
+				{
+					id: "6A977AC44C50AAE1"
+					stage: "fq.discovery_land.fallen_adventurer.talk2"
+					title: "Tell the family through the Village Watch"
+					type: "gamestage"
+				}
+			]
+			title: "Bring Them Home"
+			x: 0.0d
+			y: 21.0d
+		}
+		{
+			description: ["A cherry grove in bloom, pink petals drifting through the air. The Herbalists would love a sample of its petals, its saplings and its bees' honey."]
+			icon: "minecraft:pink_petals"
+			id: "7A4288F150FC0A4E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "2D196B8267F26E4D"
+					item: "minecraft:cherry_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "1140BFFEFE5BDC6F"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:cherry_grove"
+					id: "161E41C3F64D0E9A"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "2F2DE3583A0A64D3"
+					item: "minecraft:pink_petals"
+					title: "Gather pink petals"
+					type: "item"
+				}
+				{
+					id: "5D4ADE36BC62302C"
+					item: "minecraft:cherry_sapling"
+					title: "Take a cherry sapling"
+					type: "item"
+				}
+				{
+					id: "7BCF319A903EE503"
+					item: "minecraft:honey_bottle"
+					title: "Take honey from the grove's bees"
+					type: "item"
+				}
+			]
+			title: "Petals on the Wind"
+			x: 0.0d
+			y: 22.5d
+		}
+		{
+			description: ["You've landed on a mushroom island. A mushroom idol stands on some of them, and the mooshrooms give stew instead of milk."]
+			icon: "minecraft:mushroom_stew"
+			id: "2E250250F24D4256"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "36E6F4E162CD5A8A"
+					item: "minecraft:mycelium"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "15AAEE0A2CACB24D"
+					item: "minecraft:mushroom_stew"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 100"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "4CBA380C7583BC08"
+					silent: true
+					title: "+100 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:mushroom_fields"
+					id: "5FC5E429DA4350F7"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "5BC27E85ED1DC3BC"
+					structure: "mvs:mushroom_statue"
+					title: "Find the mushroom idol"
+					type: "structure"
+				}
+				{
+					id: "0110E579AC4B52CA"
+					item: "minecraft:mushroom_stew"
+					title: "Milk a mooshroom for a bowl of stew"
+					type: "item"
+				}
+			]
+			title: "Mooshroom Shores"
+			x: 0.0d
+			y: 24.0d
+		}
+		{
+			description: ["A field of lavender hums with bees. The Herbalists say a calming tea from it settles the nerves of the whole village."]
+			icon: "biomesoplenty:lavender"
+			id: "3E2C6842851D725A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "36857376003601CF"
+					item: "herbalbrews:lavender_tea"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "33C231F4B1B9141C"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:lavender_field"
+					id: "71D67025C0B789B3"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 8L
+					id: "51C502E05DCD9293"
+					item: "biomesoplenty:lavender"
+					title: "Gather lavender"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "31EE37A2722A76D6"
+					item: "herbalbrews:lavender_tea"
+					title: "Brew a calming tea"
+					type: "item"
+				}
+			]
+			title: "Lavender Haze"
+			x: 0.0d
+			y: 25.5d
+		}
+		{
+			description: ["You've stumbled into the rare Origin Valley, where the world looks as it did long ago. The Field Guide would love a block of its old grass and a rose."]
+			icon: "biomesoplenty:origin_grass_block"
+			id: "224296DCE14F7806"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "24D2F642A43AC5CC"
+					item: "minecraft:painting"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "1B911596E0E136DB"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:origin_valley"
+					id: "64333DA52A5D49B9"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "6A0A070D3E9F2AFC"
+					item: "biomesoplenty:origin_grass_block"
+					title: "Take a block of the old grass"
+					type: "item"
+				}
+				{
+					id: "780CEF2D31F8D51B"
+					item: "biomesoplenty:rose"
+					title: "Pick a rose"
+					type: "item"
+				}
+			]
+			title: "Where It All Began"
+			x: 0.0d
+			y: 27.0d
+		}
+		{
+			description: ["The alpha grove is all old-style leaves and grass, like a memory of the world before. Bring back its saplings and leaves before you forget what it looked like."]
+			icon: "regions_unexplored:alpha_sapling"
+			id: "5D727D9627F80096"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "35A1B81111FA9BE8"
+					item: "regions_unexplored:alpha_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "51BF61B7D8607E26"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:alpha_grove"
+					id: "094F52A8AF05ABBD"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 2L
+					id: "2188C4A6AC91B1BE"
+					item: "regions_unexplored:alpha_sapling"
+					title: "Take alpha saplings"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "0F88772A21D3771C"
+					item: "regions_unexplored:alpha_leaves"
+					title: "Take alpha leaves"
+					type: "item"
+				}
+			]
+			title: "Alpha Grove"
+			x: 0.0d
+			y: 28.5d
+		}
+		{
+			description: ["A mystic grove glows with strange flowers. A fairy shows itself among them if you wait quietly, and will lead you to its ring."]
+			icon: "fays_fairies:fairy_bottle"
+			id: "2D771DCC3D68B041"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "3CC5432B4F787AB3"
+					item: "fays_fairies:fairy_bottle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 150"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "04D5ACE7330F860B"
+					silent: true
+					title: "+150 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:mystic_grove"
+					id: "6AE6A34C3224D32C"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "1A7A29A724ABBF0C"
+					stage: "fq.discovery_land.biome_mystic_grove.enc0"
+					title: "Wait quietly for the fairy to appear"
+					type: "gamestage"
+				}
+			]
+			title: "The Mystic Grove"
+			x: 0.0d
+			y: 30.0d
+		}
+		{
+			description: ["A redwood forest, with trees taller than any tower. The Crafters' guild wants wood from one of the giants, and a climb to the top is the only way to reach the good branches."]
+			icon: "biomesoplenty:redwood_log"
+			id: "56F492617A5403F4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "46A4B49F66A93F6D"
+					item: "biomesoplenty:redwood_log"
+					type: "item"
+				}
+				{
+					id: "108EC403E74313C3"
+					item: "minecraft:iron_axe"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "6FEF2E737AE6DD93"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:redwood_forest"
+					id: "4462932E92EBEE14"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 16L
+					id: "79201DAE5EDCA256"
+					item: "biomesoplenty:redwood_log"
+					title: "Bring down redwood logs from the giants"
+					type: "item"
+				}
+			]
+			title: "Giants of the Forest"
+			x: 0.0d
+			y: 31.5d
+		}
+		{
+			description: ["Hot springs steam in the cold air. Soak in the thermal water until you're fully healed, and take a bottle home for a sore friend."]
+			icon: "comforts:hammock_red"
+			id: "6159F06D3EB8C3A9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "4D3168CA41C881D2"
+					item: "comforts:hammock_blue"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 100"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "138A308A31C810BA"
+					silent: true
+					title: "+100 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:hot_springs"
+					id: "74EDE4E8FD18B33B"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "74EE2C28E6E57EF5"
+					item: "minecraft:potion"
+					title: "Bottle the spring water for a sore friend"
+					type: "item"
+				}
+			]
+			title: "Hot Springs"
+			x: 0.0d
+			y: 33.0d
+		}
+		{
+			description: ["A snowblossom grove, white petals in the snow. The Herbalists want leaves and a sapling to see if it will grow in the village."]
+			icon: "biomesoplenty:snowblossom_leaves"
+			id: "773DB59C90672DBF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 3
+					id: "15026394E53587B0"
+					item: "biomesoplenty:snowblossom_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "7E8715283DC3DEF0"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:snowblossom_grove"
+					id: "513AD65C140F04C5"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "70E7220970D1F759"
+					item: "biomesoplenty:snowblossom_leaves"
+					title: "Gather snowblossom leaves"
+					type: "item"
+				}
+				{
+					id: "1B512345A08B3132"
+					item: "biomesoplenty:snowblossom_sapling"
+					title: "Take a snowblossom sapling"
+					type: "item"
+				}
+			]
+			title: "Snowblossom"
+			x: 0.0d
+			y: 34.5d
+		}
+		{
+			description: ["A dried-out wasteland, nothing living in it. A single dead tree stands at its heart, and the Couriers want to know if the way across is safe."]
+			icon: "biomesoplenty:dead_log"
+			id: "627B7F9DB20A3685"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "16871BE1F98475FF"
+					item: "minecraft:water_bucket"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "37D6F6CA1D41A73F"
+					item: "biomesoplenty:dead_log"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 100"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "7C0624B853D53B13"
+					silent: true
+					title: "+100 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:wasteland"
+					id: "03C94A7949857FAE"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "75AE33C6EFF85EB5"
+					item: "biomesoplenty:dead_log"
+					title: "Bring wood from the dead tree at its heart"
+					type: "item"
+				}
+			]
+			title: "The Wasteland"
+			x: 0.0d
+			y: 36.0d
+		}
+		{
+			description: ["A pumpkin patch stretches to the horizon. The Growers' co-op would love your biggest pumpkins, and the children want a jack o'lantern."]
+			icon: "minecraft:jack_o_lantern"
+			id: "78D0017779901318"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "674EC54D6A975C73"
+					item: "minecraft:pumpkin_pie"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 100"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "1937E4A017F9C363"
+					silent: true
+					title: "+100 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:pumpkin_patch"
+					id: "219FBAA7E59145D6"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "4F1AC6BC4A23D529"
+					item: "minecraft:pumpkin"
+					title: "Pick the biggest pumpkins"
+					type: "item"
+				}
+				{
+					id: "26EBA8D4C215BC77"
+					item: "minecraft:jack_o_lantern"
+					only_from_crafting: true
+					title: "Carve a jack o'lantern"
+					type: "item"
+				}
+			]
+			title: "The Pumpkin Patch"
+			x: 0.0d
+			y: 37.5d
+		}
+		{
+			description: ["Baobabs rise from the savanna like upside-down trees. The Crafters' guild would love some of their wood, and the herds that pass beneath are worth a look."]
+			icon: "regions_unexplored:baobab_log"
+			id: "3221008717864D4D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "20E55DEA6D1872B4"
+					item: "regions_unexplored:baobab_log"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "477EC23466F2D5C7"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:baobab_savanna"
+					id: "4B63C65462CE8104"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 8L
+					id: "0A9AEA470E4E52F0"
+					item: "regions_unexplored:baobab_log"
+					title: "Gather baobab wood"
+					type: "item"
+				}
+			]
+			title: "Under the Baobabs"
+			x: 0.0d
+			y: 39.0d
+		}
+		{
+			description: ["White chalk cliffs rise above the sea. Climb from the beach to the top without a fall, and bring chalk for the Crafters' guild."]
+			icon: "regions_unexplored:chalk"
+			id: "5A8C1F3488BCD35D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "18E3929029EBC805"
+					item: "regions_unexplored:chalk"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 100"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "5FA8C8EB9E428DB9"
+					silent: true
+					title: "+100 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:chalk_cliffs"
+					id: "1C3DA9A83106FA10"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 8L
+					id: "0E0E7985183D8FA9"
+					item: "regions_unexplored:chalk"
+					title: "Climb the cliffs and bring back chalk"
+					type: "item"
+				}
+			]
+			title: "White Cliffs"
+			x: 0.0d
+			y: 40.5d
+		}
+		{
+			description: ["Stone spires jut from the land like needles. Stand on top of the tallest you can find and look across the world."]
+			icon: "minecraft:stone"
+			id: "0FFF05E087910E17"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "0E34793584DBCF8C"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "2D7EA3565DCB66A3"
+					item: "supplementaries:rope"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 100"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "415BEEA08F1EE9DF"
+					silent: true
+					title: "+100 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:spires"
+					id: "0E6B8F311D49EDB3"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "6BD0B5BA1819D17F"
+					title: "I stood on the tallest spire"
+					type: "checkmark"
+				}
+			]
+			title: "Among the Spires"
+			x: 0.0d
+			y: 42.0d
+		}
+		{
+			description: ["A magnolia woodland in bloom, with a shining meadow beyond it. The Herbalists want its flowers and the meadow's glistening grass."]
+			icon: "minecraft:flowering_azalea"
+			id: "631806BF0E74113C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "6F0D8D45EB3C7B55"
+					item: "minecraft:flowering_azalea"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "2C77EFE73560F963"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:magnolia_woodland"
+					id: "0C3273FB9BC29949"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					biome: "regions_unexplored:glistering_meadow"
+					id: "787D0647BA3334E1"
+					title: "Find the glistering meadow"
+					type: "biome"
+				}
+				{
+					count: 2L
+					id: "2B4CAD07C8D31728"
+					item: "minecraft:flowering_azalea"
+					title: "Gather flowering blossoms"
+					type: "item"
+				}
+			]
+			title: "Magnolia in Bloom"
+			x: 0.0d
+			y: 43.5d
+		}
+		{
+			description: ["An ashen woodland, burnt long ago. Bring back some ash and a surviving sapling to see if the soil can heal."]
+			icon: "regions_unexplored:ashen_sapling"
+			id: "16D69E655FBD20B3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "638815891DB9D8D4"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "6734C8F6645586F4"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:ashen_woodland"
+					id: "1E0E6E8CB46F4209"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "49C98CD6AE2E8839"
+					item: "regions_unexplored:ashen_dirt"
+					title: "Collect ashen soil"
+					type: "item"
+				}
+				{
+					id: "6E037CD1D1C4F80A"
+					item: "regions_unexplored:ashen_sapling"
+					title: "Find a surviving sapling"
+					type: "item"
+				}
+			]
+			title: "Ashen Woods"
+			x: 0.0d
+			y: 45.0d
+		}
+		{
+			description: ["A desert of towering saguaro cacti. The Growers' co-op would like a cutting of each cactus and a joshua tree sapling, if you don't hug the cactus."]
+			icon: "minecraft:cactus"
+			id: "28ED4FC6D2693183"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "460ED94EE03E148D"
+					item: "minecraft:green_dye"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "69DF440C3F9A5DEC"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:saguaro_desert"
+					id: "47EB40E9FC84F4FB"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "3829E4ED51B51788"
+					item: "minecraft:cactus"
+					title: "Cut pieces of saguaro cactus"
+					type: "item"
+				}
+				{
+					id: "5357DF000379E4F8"
+					item: "regions_unexplored:joshua_beard"
+					title: "Take a joshua beard"
+					type: "item"
+				}
+			]
+			title: "Land of Cacti"
+			x: 0.0d
+			y: 46.5d
+		}
+		{
+			description: ["The mountains here climb far higher than they should. Stand above the clouds on foot and look down at the world."]
+			icon: "minecraft:spyglass"
+			id: "1E0354E4B1E513EA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "11E9816E909FBFF9"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "17769961D5F16282"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "211C36DE911C9947"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:jagged_peaks"
+					id: "2089BCA12E34C080"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "262BC6BAB860FD2C"
+					title: "I stood above the clouds"
+					type: "checkmark"
+				}
+			]
+			title: "Above the Clouds"
+			x: 0.0d
+			y: 48.0d
+		}
+		{
+			description: ["Rivers here cut deep valleys. Follow one down to where it meets the sea and fish at its mouth, where the Anglers say the biggest fish gather."]
+			icon: "aquaculture:worm"
+			id: "1177C43179616032"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "4EB860ED1784ED39"
+					item: "aquaculture:worm"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 100"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "3D11FF5A4282F703"
+					silent: true
+					title: "+100 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:river"
+					id: "4473273E8600EF91"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:beach"
+					id: "5044B008C4776901"
+					title: "Follow the river to the sea"
+					type: "biome"
+				}
+				{
+					count: 2L
+					id: "6069F667FA6C3E61"
+					item: "minecraft:salmon"
+					title: "Fish at the river's mouth"
+					type: "item"
+				}
+			]
+			title: "The Deep Valley"
+			x: 0.0d
+			y: 49.5d
+		}
+		{
+			description: ["Spikes of ice rise from a frozen plain. The Miners' Guild want packed ice from the top of a spike, which only a pick with silk touch will take."]
+			icon: "minecraft:packed_ice"
+			id: "7CA8B4E098F6467C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "540BEE3B0238939F"
+					item: "minecraft:blue_ice"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 100"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "64D139FC030F9E5C"
+					silent: true
+					title: "+100 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:ice_spikes"
+					id: "6C4D9B7124C05CA7"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "691BB79C9DA0D728"
+					item: "minecraft:packed_ice"
+					title: "Mine packed ice from the top of a spike"
+					type: "item"
+				}
+			]
+			title: "Ice Spikes"
+			x: 0.0d
+			y: 51.0d
+		}
+		{
+			description: ["The badlands are banded in every colour of clay. The Crafters' guild want a sample of each colour from the canyon walls."]
+			icon: "minecraft:terracotta"
+			id: "72B74C13E1DCEC17"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "04398EF002A8ADFF"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 100"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "013865EE5CBFAE9C"
+					silent: true
+					title: "+100 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:badlands"
+					id: "3B79391A95F8B857"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "65A0C7115BB8DC6A"
+					item: "minecraft:terracotta"
+					title: "Collect plain terracotta"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "0E6417B97D33B8AB"
+					item: "minecraft:orange_terracotta"
+					title: "Collect orange terracotta"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "57D1DEA224986F5D"
+					item: "minecraft:red_terracotta"
+					title: "Collect red terracotta"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6E3481B2E6A46434"
+					item: "minecraft:yellow_terracotta"
+					title: "Collect yellow terracotta"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "4CFC042B7F0A726F"
+					item: "minecraft:white_terracotta"
+					title: "Collect white terracotta"
+					type: "item"
+				}
+			]
+			title: "The Painted Badlands"
+			x: 0.0d
+			y: 52.5d
+		}
+		{
+			dependencies: ["7A4288F150FC0A4E"]
+			description: ["The Couriers keep a list of the biomes of the Overworld, and offer a prize for anyone who has visited twenty. Nature's Compass helps you find the ones you're missing."]
+			icon: "naturescompass:naturescompass"
+			id: "70CFBEA8F8549226"
+			rewards: [
+				{
+					id: "1F63133CC80A8D41"
+					item: "naturescompass:naturescompass"
+					type: "item"
+				}
+				{
+					id: "237E128A2BA4607E"
+					item: "sophisticatedbackpacks:stack_upgrade_tier_1"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "124E7DA19AD86F3F"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:plains"
+					id: "765E83BA380F9E2C"
+					title: "Visit the plains"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:forest"
+					id: "15B1ED634388131A"
+					title: "Visit a forest"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:birch_forest"
+					id: "015B3ACC73615A8C"
+					title: "Visit a birch forest"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:dark_forest"
+					id: "3E214AE7E7FCC55D"
+					title: "Visit a dark forest"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:flower_forest"
+					id: "5D3F4888AB309ADA"
+					title: "Visit a flower forest"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:taiga"
+					id: "5D2ECB532AE8674E"
+					title: "Visit a taiga"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:snowy_plains"
+					id: "14FAA46D816FF964"
+					title: "Visit snowy plains"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:savanna"
+					id: "0F27155B6110D307"
+					title: "Visit a savanna"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:desert"
+					id: "25A318091FCE59A9"
+					title: "Visit a desert"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:jungle"
+					id: "2D8435A837D8BD81"
+					title: "Visit a jungle"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:swamp"
+					id: "0DD7927C63B4C3F4"
+					title: "Visit a swamp"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:mangrove_swamp"
+					id: "68A461B801320DFE"
+					title: "Visit a mangrove swamp"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:meadow"
+					id: "3C883C2A5C092A5D"
+					title: "Visit a meadow"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:badlands"
+					id: "1CECF65626553C65"
+					title: "Visit the badlands"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:beach"
+					id: "1F59FD21B34DD8CB"
+					title: "Visit a beach"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:river"
+					id: "68637A11E97664B6"
+					title: "Visit a river"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:ice_spikes"
+					id: "6B167C847F92294A"
+					title: "Visit ice spikes"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:cherry_grove"
+					id: "1EC1B1729F21FED6"
+					title: "Visit a cherry grove"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:windswept_hills"
+					id: "442F21FC2AE1AFB6"
+					title: "Visit windswept hills"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:stony_shore"
+					id: "562369A57E1A8A88"
+					title: "Visit a stony shore"
+					type: "biome"
+				}
+			]
+			title: "The Grand Tour"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			description: ["You've found an old music disc, and a tune is waiting in it. Build a jukebox to hear it, then learn it on an instrument."]
+			icon: "minecraft:jukebox"
+			id: "2C628D9E7FCE8E41"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "5B02B7A5E155C2BE"
+					item: "immersive_melodies:lute"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 100"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "53111BE636BEA63F"
+					silent: true
+					title: "+100 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "17EA5A830CFF3825"
+					item: "minecraft:music_disc_13"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					id: "7DC3600E834B3516"
+					stage: "fq.discovery_land.found_music_disc.build0"
+					title: "Set up a jukebox"
+					type: "gamestage"
+				}
+				{
+					id: "1470D280F549D9EC"
+					title: "I played the disc"
+					type: "checkmark"
+				}
+				{
+					id: "4E0FE86546584D20"
+					item: "immersive_melodies:lute"
+					only_from_crafting: true
+					title: "Make an instrument to learn the tune on"
+					type: "item"
+				}
+			]
+			title: "A Song from Somewhere"
+			x: 0.0d
+			y: 54.0d
+		}
+		{
+			description: ["A bottle of antique ink from a chest. Ink a map with it and the map should show an old landmark that isn't on newer maps."]
+			icon: "supplementaries:antique_ink"
+			id: "7C7257EC09BD7077"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "259EF5E1E75C38BE"
+					item: "supplementaries:globe"
+					type: "item"
+				}
+				{
+					id: "4563D5C1332EBB41"
+					item: "explorerscompass:explorerscompass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 150"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "2058F4C5A709A9EB"
+					silent: true
+					title: "+150 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "30E270ABD87DCFB3"
+					item: "supplementaries:antique_ink"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					id: "1583A5D881D07FC4"
+					item: "minecraft:map"
+					only_from_crafting: true
+					title: "Make a map to ink"
+					type: "item"
+				}
+				{
+					id: "135B718E0E84B3E9"
+					title: "I inked the map and followed it to the old landmark"
+					type: "checkmark"
+				}
+			]
+			title: "Antique Ink"
+			x: 0.0d
+			y: 55.5d
+		}
+		{
+			description: ["A lone key from a dungeon chest, with a tag that names a safe. Find the safe in a ruin nearby, and open it."]
+			icon: "supplementaries:key"
+			id: "3A1074F16EA914BC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 10
+					id: "43B3E44F0C18B50F"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "1827E34CEFE1F9CF"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 150"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "5655E682229D3FA9"
+					silent: true
+					title: "+150 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "400FF16B29E9C4DA"
+					item: "supplementaries:key"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					id: "65B98262D3BDE464"
+					structure: "#fotf:groups/ruins"
+					title: "Find a ruin that might hold the safe"
+					type: "structure"
+				}
+				{
+					id: "0B66A710F5CD1F0E"
+					stage: "fq.discovery_land.the_strange_key.use1"
+					title: "Open the safe with the strange key"
+					type: "gamestage"
+				}
+			]
+			title: "The Strange Key"
+			x: 0.0d
+			y: 57.0d
+		}
+		{
+			description: ["A sniffer egg, warm to the touch. Hatch it on moss, raise the sniffer, and plant the first ancient seed it digs up."]
+			icon: "minecraft:sniffer_egg"
+			id: "3B83CD84BB969C2F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "36E12DB046BAE7E9"
+					item: "minecraft:pitcher_pod"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "2FB6004A3407F0E6"
+					item: "minecraft:torchflower_seeds"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 150"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "674D296A28F54FBC"
+					silent: true
+					title: "+150 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7648F92E55333D24"
+					item: "minecraft:sniffer_egg"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					id: "4C1D7049B6D56769"
+					observe_type: "entity_type"
+					timer: 40L
+					title: "Watch the sniffer hatch and grow"
+					to_observe: "minecraft:sniffer"
+					type: "observation"
+				}
+				{
+					id: "35BB22B4013DC53C"
+					item: "minecraft:torchflower_seeds"
+					title: "Take the first ancient seed it digs up"
+					type: "item"
+				}
+			]
+			title: "An Ancient Egg"
+			x: 0.0d
+			y: 58.5d
 		}
 	]
 	subtitle: ["Strange places on the road"]
