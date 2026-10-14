@@ -66,15 +66,12 @@ ServerEvents.commandRegistry(event => {
       let entity = player.level.createEntity(info.entity || 'minecraft:villager')
       entity.setPos(player.x, player.y, player.z)
       npcDress(entity, info.name, info.profession, { Invulnerable: true, NoAI: true, Silent: true })
-      // runtime (SRG) names: KubeJS doesn't remap setYRot/setYHeadRot. m_146908_ getYRot, m_146922_ setYRot,
-      // m_5616_ setYHeadRot, m_5618_ setYBodyRot
-      let yaw = player.m_146908_()
-      entity.m_146922_(yaw)
-      entity.m_5616_(yaw)
-      entity.m_5618_(yaw)
       entity.addTag('fq_npc')
       entity.addTag('fq_npc.' + id)
       entity.spawn()
+      // face the way the player faces: /tp sets the body and head rotation (KubeJS can't reach setYRot here)
+      ctx.source.server.runCommandSilent('tp ' + entity.uuid + ' ' + player.x + ' ' + player.y + ' ' + player.z
+        + ' ' + player.yaw + ' 0')
       player.tell(Text.green('Placed ' + info.name + '.'))
       return 1
     })))
