@@ -89,7 +89,7 @@ Q = [
           text=["A snowy village is freezing under ice-chunk storms. Track the iceologer back to its cabin and end "
                 "it."],
           tasks=[{"structure": "friendsandfoes:iceologer_cabin", "title": "Find the iceologer's cabin"},
-                 {"kill": "friendsandfoes:iceologer", "title": "Defeat the iceologer"}],
+                 {"kill": "friendsandfoes:iceologer", "title": "Defeat the iceologer", "spawn": {"at": {"structure": "friendsandfoes:iceologer_cabin"}, "wave": 1, "ensure": True}}],
           rewards=[reward_item("friendsandfoes:totem_of_freezing"), skill("defense", 280)]),
 ]
 

@@ -148,7 +148,12 @@
         {
           "kill": "naturalist:boar",
           "count": 4,
-          "title": "Drive the sounder off the fields"
+          "title": "Drive the sounder off the fields",
+          "spawn": {
+            "at": {
+              "structure": "#villages"
+            }
+          }
         },
         {
           "item": "naturalist:bushmeat",

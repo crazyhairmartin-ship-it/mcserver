@@ -419,7 +419,14 @@
       "tasks": [
         {
           "kill": "mowziesmobs:ferrous_wroughtnaut",
-          "title": "Put the iron giant back to sleep"
+          "title": "Put the iron giant back to sleep",
+          "spawn": {
+            "at": {
+              "structure": "mowziesmobs:wrought_chamber"
+            },
+            "wave": 1,
+            "ensure": true
+          }
         }
       ],
       "rewards": [
@@ -516,7 +523,13 @@
         {
           "kill": "minecraft:pillager",
           "count": 6,
-          "title": "Clear the outpost off the trade road"
+          "title": "Clear the outpost off the trade road",
+          "spawn": {
+            "at": {
+              "structure": "#illager_hideouts"
+            },
+            "wave": 3
+          }
         }
       ],
       "rewards": [
@@ -694,7 +707,14 @@
       "tasks": [
         {
           "kill": "mowziesmobs:umvuthi",
-          "title": "Break the circle of masks"
+          "title": "Break the circle of masks",
+          "spawn": {
+            "at": {
+              "structure": "mowziesmobs:umvuthana_grove"
+            },
+            "wave": 1,
+            "ensure": true
+          }
         }
       ],
       "rewards": [

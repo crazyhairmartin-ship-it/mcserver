@@ -283,12 +283,22 @@
         {
           "kill": "minecraft:zombie",
           "count": 8,
-          "title": "Clear the dead out of the cellar"
+          "title": "Clear the dead out of the cellar",
+          "spawn": {
+            "at": {
+              "structure": "#yungs_dungeons"
+            }
+          }
         },
         {
           "kill": "minecraft:skeleton",
           "count": 8,
-          "title": "Clear the bones out of the cellar"
+          "title": "Clear the bones out of the cellar",
+          "spawn": {
+            "at": {
+              "structure": "#yungs_dungeons"
+            }
+          }
         }
       ],
       "rewards": [
@@ -328,7 +338,12 @@
         {
           "kill": "minecraft:cave_spider",
           "count": 12,
-          "title": "Clear out the brood"
+          "title": "Clear out the brood",
+          "spawn": {
+            "at": {
+              "structure": "betterdungeons:spider_dungeon"
+            }
+          }
         },
         {
           "drop": {
@@ -378,12 +393,22 @@
         {
           "kill": "minecraft:zombie",
           "count": 8,
-          "title": "Put the risen back in the ground"
+          "title": "Put the risen back in the ground",
+          "spawn": {
+            "at": {
+              "structure": "#graveyards"
+            }
+          }
         },
         {
           "kill": "minecraft:skeleton",
           "count": 7,
-          "title": "Put the walking bones back in the ground"
+          "title": "Put the walking bones back in the ground",
+          "spawn": {
+            "at": {
+              "structure": "#graveyards"
+            }
+          }
         }
       ],
       "rewards": [

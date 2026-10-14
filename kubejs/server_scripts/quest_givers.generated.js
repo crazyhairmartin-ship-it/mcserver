@@ -71,6 +71,28 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "main_story:act1_wroughtnaut",
+    "stage": "fq.main_story.act1_wroughtnaut.spawn0",
+    "type": "spawn",
+    "entity": "mowziesmobs:ferrous_wroughtnaut",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mowziesmobs:wrought_chamber"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "task_id": "3B013FE38A04943B",
+    "requires": [],
+    "quest_id": "2B39666FF280C4A5",
+    "prev_tasks": []
+  },
+  {
     "quest": "main_story:act1_wrought_report",
     "stage": "fq.main_story.act1_wrought_report.talk0",
     "type": "talk",
@@ -113,6 +135,89 @@ global.QUEST_GIVERS = [
     "where": {},
     "entity": "minecraft:villager",
     "profession": ""
+  },
+  {
+    "quest": "main_story:act1_outpost",
+    "stage": "fq.main_story.act1_outpost.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "ctov:pillager_outpost_badlands",
+        "ctov:pillager_outpost_beach",
+        "ctov:pillager_outpost_dark_forest",
+        "ctov:pillager_outpost_desert",
+        "ctov:pillager_outpost_jungle",
+        "ctov:pillager_outpost_mountain",
+        "ctov:pillager_outpost_plains",
+        "ctov:pillager_outpost_savanna",
+        "ctov:pillager_outpost_snowy",
+        "ctov:pillager_outpost_swamp",
+        "ctov:pillager_outpost_taiga",
+        "dungeons_arise:illager_campsite",
+        "dungeons_arise:illager_corsair",
+        "dungeons_arise:illager_fort",
+        "dungeons_arise:illager_galley",
+        "dungeons_arise:illager_windmill",
+        "friendsandfoes:iceologer_cabin",
+        "friendsandfoes:illusioner_shack",
+        "friendsandfoes:illusioner_training_grounds",
+        "irons_spellbooks:evoker_fort",
+        "minecraft:mansion",
+        "minecraft:pillager_outpost",
+        "mvs:small_pillager_tower",
+        "mvs:villager_statue",
+        "nova_structures:illager_camp",
+        "nova_structures:illager_hideout",
+        "nova_structures:illager_manor",
+        "structory:outcast_villager_desert",
+        "structory:outcast_villager_grassy",
+        "structory_towers:pillager_lookout",
+        "towns_and_towers:exclusives/pillager_outpost_classic",
+        "towns_and_towers:exclusives/pillager_outpost_iberian",
+        "towns_and_towers:exclusives/pillager_outpost_mediterranean",
+        "towns_and_towers:exclusives/pillager_outpost_oriental",
+        "towns_and_towers:exclusives/pillager_outpost_rustic",
+        "towns_and_towers:exclusives/pillager_outpost_swedish",
+        "towns_and_towers:exclusives/pillager_outpost_tudor",
+        "towns_and_towers:pillager_outpost_badlands",
+        "towns_and_towers:pillager_outpost_beach",
+        "towns_and_towers:pillager_outpost_birch_forest",
+        "towns_and_towers:pillager_outpost_desert",
+        "towns_and_towers:pillager_outpost_flower_forest",
+        "towns_and_towers:pillager_outpost_forest",
+        "towns_and_towers:pillager_outpost_grove",
+        "towns_and_towers:pillager_outpost_jungle",
+        "towns_and_towers:pillager_outpost_meadow",
+        "towns_and_towers:pillager_outpost_mushroom_fields",
+        "towns_and_towers:pillager_outpost_ocean",
+        "towns_and_towers:pillager_outpost_old_growth_taiga",
+        "towns_and_towers:pillager_outpost_savanna",
+        "towns_and_towers:pillager_outpost_savanna_plateau",
+        "towns_and_towers:pillager_outpost_snowy_beach",
+        "towns_and_towers:pillager_outpost_snowy_plains",
+        "towns_and_towers:pillager_outpost_snowy_slopes",
+        "towns_and_towers:pillager_outpost_snowy_taiga",
+        "towns_and_towers:pillager_outpost_sparse_jungle",
+        "towns_and_towers:pillager_outpost_sunflower_plains",
+        "towns_and_towers:pillager_outpost_swamp",
+        "towns_and_towers:pillager_outpost_taiga",
+        "towns_and_towers:pillager_outpost_wooded_badlands"
+      ],
+      "label": "the destination"
+    },
+    "wave": 3,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "task_id": "03AADC37055738AC",
+    "requires": [],
+    "quest_id": "1BC2581969526C71",
+    "prev_tasks": [
+      "0EED4909D897A485"
+    ]
   },
   {
     "quest": "main_story:act1_iceologer",
@@ -214,6 +319,28 @@ global.QUEST_GIVERS = [
     "character": "hale",
     "quest_id": "4AE9CEDBE440DDE0",
     "open_task": ""
+  },
+  {
+    "quest": "main_story:act1_umvuthi",
+    "stage": "fq.main_story.act1_umvuthi.spawn0",
+    "type": "spawn",
+    "entity": "mowziesmobs:umvuthi",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mowziesmobs:umvuthana_grove"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "task_id": "06BC17686935B003",
+    "requires": [],
+    "quest_id": "59C4414FBC2456AA",
+    "prev_tasks": []
   },
   {
     "quest": "skill_mining:guild_card",
@@ -2982,6 +3109,87 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "skill_attack:dungeon_sweep",
+    "stage": "fq.skill_attack.dungeon_sweep.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:zombie",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterdungeons:skeleton_dungeon",
+        "betterdungeons:small_dungeon",
+        "betterdungeons:small_nether_dungeon",
+        "betterdungeons:spider_dungeon",
+        "betterdungeons:zombie_dungeon"
+      ],
+      "label": "the destination"
+    },
+    "wave": 6,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "task_id": "6B2EEF1E81639088",
+    "requires": [],
+    "quest_id": "2188906CAFC0AE48",
+    "prev_tasks": [
+      "2DFE2C54C6B0C607"
+    ]
+  },
+  {
+    "quest": "skill_attack:dungeon_sweep",
+    "stage": "fq.skill_attack.dungeon_sweep.spawn2",
+    "type": "spawn",
+    "entity": "minecraft:skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterdungeons:skeleton_dungeon",
+        "betterdungeons:small_dungeon",
+        "betterdungeons:small_nether_dungeon",
+        "betterdungeons:spider_dungeon",
+        "betterdungeons:zombie_dungeon"
+      ],
+      "label": "the destination"
+    },
+    "wave": 6,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "task_id": "33215AC9C3142999",
+    "requires": [],
+    "quest_id": "2188906CAFC0AE48",
+    "prev_tasks": [
+      "2DFE2C54C6B0C607",
+      "6B2EEF1E81639088"
+    ]
+  },
+  {
+    "quest": "skill_attack:spider_queen",
+    "stage": "fq.skill_attack.spider_queen.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:cave_spider",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterdungeons:spider_dungeon"
+      ],
+      "label": "the destination"
+    },
+    "wave": 6,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "task_id": "5D91792892C6923A",
+    "requires": [],
+    "quest_id": "0F9649EDAAD9CD0F",
+    "prev_tasks": [
+      "557621A6B96D87E9"
+    ]
+  },
+  {
     "quest": "skill_attack:spider_queen",
     "stage": "",
     "type": "task_drop",
@@ -2995,6 +3203,61 @@ global.QUEST_GIVERS = [
     "open_task": "",
     "lines": [],
     "name": ""
+  },
+  {
+    "quest": "skill_attack:graveyard_shift",
+    "stage": "fq.skill_attack.graveyard_shift.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:zombie",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "butterflies:liangshanbo_grave",
+        "nova_structures:creeping_crypt",
+        "nova_structures:undead_crypt",
+        "structory:graveyard"
+      ],
+      "label": "the destination"
+    },
+    "wave": 6,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "task_id": "74DC2B16E97C330D",
+    "requires": [],
+    "quest_id": "133EBE77FE89381D",
+    "prev_tasks": [
+      "7FD8F95FF341B27F"
+    ]
+  },
+  {
+    "quest": "skill_attack:graveyard_shift",
+    "stage": "fq.skill_attack.graveyard_shift.spawn2",
+    "type": "spawn",
+    "entity": "minecraft:skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "butterflies:liangshanbo_grave",
+        "nova_structures:creeping_crypt",
+        "nova_structures:undead_crypt",
+        "structory:graveyard"
+      ],
+      "label": "the destination"
+    },
+    "wave": 6,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "task_id": "563C3C142B3DED9C",
+    "requires": [],
+    "quest_id": "133EBE77FE89381D",
+    "prev_tasks": [
+      "7FD8F95FF341B27F",
+      "74DC2B16E97C330D"
+    ]
   },
   {
     "quest": "skill_attack:feral_bounty",
@@ -3079,6 +3342,97 @@ global.QUEST_GIVERS = [
     "open_task": "",
     "lines": [],
     "name": ""
+  },
+  {
+    "quest": "skill_range:boar_trouble",
+    "stage": "fq.skill_range.boar_trouble.spawn1",
+    "type": "spawn",
+    "entity": "naturalist:boar",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "task_id": "375E7CC694CECD13",
+    "requires": [],
+    "quest_id": "28D94C2FF4C50692",
+    "prev_tasks": [
+      "4A50582BDE0BC097"
+    ]
   },
   {
     "quest": "skill_range:firewatch",
@@ -3483,6 +3837,30 @@ global.QUEST_GIVERS = [
     "character": "brannock",
     "quest_id": "5AF168685597D93F",
     "open_task": ""
+  },
+  {
+    "quest": "skill_defense:iceologer",
+    "stage": "fq.skill_defense.iceologer.spawn1",
+    "type": "spawn",
+    "entity": "friendsandfoes:iceologer",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "friendsandfoes:iceologer_cabin"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "task_id": "1B0BD0A5A8F500CE",
+    "requires": [],
+    "quest_id": "17D6AACC39DA1FF4",
+    "prev_tasks": [
+      "566A90ECBCDD1AE6"
+    ]
   },
   {
     "quest": "skill_agility:sign_the_roster",
@@ -4564,6 +4942,51 @@ global.QUEST_GIVERS = [
       "73110DC9144BBD95",
       "6FF4E30F1CC33703",
       "05A9D893B5E09C93"
+    ]
+  },
+  {
+    "quest": "skill_taming:cat_colony",
+    "stage": "fq.skill_taming.cat_colony.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:creeper",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:trail_ruins",
+        "mos:ruined_archway",
+        "mos:ruined_castle",
+        "mos:ruined_church",
+        "mos:ruined_house",
+        "mss:castle_ruin",
+        "mvs:castle_ruins",
+        "mvs:log_ruin",
+        "mvs:ruined_beacon",
+        "mvs:small_ruin",
+        "mvs:statue_ruins",
+        "nova_structures:desert_ruins",
+        "nova_structures:jungle_ruins",
+        "nova_structures:ruin_town",
+        "nova_structures:wild_ruin",
+        "structory:dense_forest_ruin",
+        "structory:jungle_ruin",
+        "structory:northern_ruin",
+        "structory:ruin_grassy",
+        "structory:swamp_ruin",
+        "structory:taiga_ruin_surface",
+        "structory:taiga_ruin_underground"
+      ],
+      "label": "the destination"
+    },
+    "wave": 5,
+    "name": "",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "task_id": "138D27AE967571D0",
+    "requires": [],
+    "quest_id": "70A91DD5D9F62E0F",
+    "prev_tasks": [
+      "3438BD9B78032E8C"
     ]
   },
   {

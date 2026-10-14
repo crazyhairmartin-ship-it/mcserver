@@ -737,6 +737,28 @@ def build_spellkill(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, proble
     return task, entry
 
 
+def build_spawn(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A kill task's "spawn": when the player reaches "at" while the step is open, the enemies spawn around them in
+    waves of "wave" (default up to 6) until the kill count is done; leftovers vanish when they leave. "ensure": true
+    (bosses) only spawns when none of that mob is within 64 blocks, so the structure's own boss is fought if it's there.
+    {"kill": "minecraft:zombie", "count": 8, "spawn": {"at": {"structure": "#graveyards"}, "wave": 4,
+     "name": "Restless Dead", "health": 30, "glow": false}}"""
+    spec = t['spawn']
+    if not isinstance(spec, dict) or 'at' not in spec:
+        problems.error(where, '"spawn" needs "at": {"place": id} or {"structure": id}')
+        return None
+    at = build_destination(spec['at'], ctx['registry'], where, problems)
+    if not at:
+        return None
+    count = int(t.get('count', 1))
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.spawn{n}', 'type': 'spawn',
+             'entity': t['kill'], 'at': at, 'wave': int(spec.get('wave', min(count, 6))), 'name': spec.get('name', ''),
+             'health': spec.get('health'), 'glow': bool(spec.get('glow', False)), 'ensure': bool(spec.get('ensure', False)),
+             'task_id': fid('task', chapter, qid, str(n)), 'requires': [], 'quest_id': quest_id,
+             'prev_tasks': list(prev_tasks)}
+    return entry
+
+
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
     """A "unique drop" task: while the quest is open, the listed mobs can drop a quest item (or, with "fishing" in "from",
     it can be fished up); the task is to bring it."""
@@ -1072,6 +1094,12 @@ def main():
                         givers.append(entry)
                         talk_requires = talk_requires + [entry['stage']]
                 else:
+                    if isinstance(t, dict) and 'kill' in t and 'spawn' in t:
+                        entry = build_spawn(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
+                                            problems)
+                        if entry:
+                            givers.append(entry)
+                        t = {k: v for k, v in t.items() if k != 'spawn'}
                     task = build_task(t, ('task', name, qid, str(n)), reg, twhere, problems)
                 if task:
                     tasks.append(task)

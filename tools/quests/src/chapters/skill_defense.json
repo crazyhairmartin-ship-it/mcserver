@@ -353,7 +353,14 @@
         },
         {
           "kill": "friendsandfoes:iceologer",
-          "title": "Defeat the iceologer"
+          "title": "Defeat the iceologer",
+          "spawn": {
+            "at": {
+              "structure": "friendsandfoes:iceologer_cabin"
+            },
+            "wave": 1,
+            "ensure": true
+          }
         }
       ],
       "rewards": [

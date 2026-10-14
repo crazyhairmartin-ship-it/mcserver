@@ -65,7 +65,7 @@ ServerEvents.commandRegistry(event => {
       target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
       tags.forEach(t => target.removeTag(t))
       let data = target.persistentData
-      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill'].forEach(k => data.remove(k))
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill', 'fqSpawn'].forEach(k => data.remove(k))
       server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
       ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
       return 1
@@ -582,6 +582,83 @@ global.fqOnBred = (player, child) => {
   })
 }
 
+// ---- spawned enemies (kill tasks with "spawn") ----
+// Reach the quest's place while its kill step is open and the enemies come: a wave around you, and another about 15
+// seconds after the last one falls, until FTB Quests counts the kills done. The fight is anchored where it started;
+// wander more than 48 blocks from there (or finish) and any leftovers vanish. Kills count as normal FTB kills, so
+// friends nearby share them (SharedKillHooks).
+
+const NPC_SPAWN_GAP_MS = 15 * 1000
+const NPC_SPAWN_LEASH = 48
+
+function npcTaskDone(player, taskHex) {
+  if (!$QuestFile || !$QuestFile.INSTANCE) return false
+  try {
+    let file = $QuestFile.INSTANCE
+    let data = file['getOrCreateTeamData(net.minecraft.world.entity.Entity)'](player)
+    let task = file.getTask($QuestLong.parseLong(taskHex, 16))
+    return task != null && data.isCompleted(task)
+  } catch (e) {
+    return false
+  }
+}
+
+function npcSpawnTag(player, sp) {
+  return 'fq_spawn.' + String(player.uuid).substring(0, 8) + '.' + sp.task_id
+}
+
+function npcTickSpawns(player) {
+  let state = npcData(player, 'fqSpawn')
+  let server = player.server
+  let now = Date.now()
+  npcEntries('spawn').forEach(sp => {
+    let tag = npcSpawnTag(player, sp)
+    let active = !player.tags.contains(sp.stage) && questOpen(player, sp) && !npcTaskDone(player, sp.task_id)
+    let rec = state.contains(sp.stage) ? state.getCompound(sp.stage) : null
+    if (rec) {
+      let dx = player.x - rec.getDouble('x'), dz = player.z - rec.getDouble('z')
+      let away = rec.getString('dim') != String(player.level.dimension) || dx * dx + dz * dz > NPC_SPAWN_LEASH * NPC_SPAWN_LEASH
+      if (!active || away) {
+        server.runCommandSilent('kill @e[tag=' + tag + ']')
+        state.remove(sp.stage)
+        return
+      }
+    } else if (!active || !npcAtDestination(player, sp.at)) {
+      return
+    }
+    if (!rec) {
+      rec = new $NpcCompoundTag()
+      rec.putString('dim', String(player.level.dimension))
+      rec.putDouble('x', player.x)
+      rec.putDouble('z', player.z)
+      rec.putLong('next', 0)
+      state.put(sp.stage, rec)
+      if (sp.name) player.tell(Text.italic((sp.name) + '... here they come.').gray())
+    }
+    if (now < rec.getLong('next') || server.runCommandSilent('execute if entity @e[tag=' + tag + ']') > 0) return
+    // "ensure" (bosses): the structure's own is fought if it's still there; one is only brought in if it's gone
+    if (sp.ensure && server.runCommandSilent('execute as ' + player.uuid + ' at @s if entity @e[type=' + sp.entity
+      + ',distance=..64]') > 0) {
+      rec.putLong('next', now + NPC_SPAWN_GAP_MS)
+      return
+    }
+    let nbt = { Tags: [tag] }
+    if (sp.name) nbt.CustomName = JSON.stringify({ text: sp.name })
+    if (sp.glow) nbt.Glowing = true
+    if (sp.health) {
+      nbt.Attributes = [{ Name: 'minecraft:generic.max_health', Base: sp.health }]
+      nbt.Health = sp.health
+    }
+    for (let i = 0; i < sp.wave; i++) {
+      let spot = npcFindSpot(player, 6, 12)
+      if (!spot) continue
+      server.runCommandSilent('execute in ' + player.level.dimension + ' run summon ' + sp.entity + ' ' + spot.x + ' '
+        + spot.y + ' ' + spot.z + ' ' + JSON.stringify(nbt))
+    }
+    rec.putLong('next', now + NPC_SPAWN_GAP_MS)
+  })
+}
+
 // ---- spellkill tasks ----
 // A kill counts when one of Iron's Spells' schools landed the killing blow (its damage types' message ids).
 
@@ -778,6 +855,7 @@ PlayerEvents.tick(event => {
   npcTickChallenges(player)
   npcTickEscorts(player)
   if (player.tickCount % 40 == 0) npcTickEncounters(player)
+  if (player.tickCount % 40 == 10) npcTickSpawns(player)
   if (player.tickCount % 100 == 0) npcTickBuilds(player)
   if (player.tickCount % 100 == 50) npcTickTames(player)
   if (player.tickCount % 100 == 75) npcTickWaystones(player)

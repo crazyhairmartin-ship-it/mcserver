@@ -34,7 +34,7 @@ Q = [
           text=["Wild boars are tearing up a village's fields. Hunt down the sounder before it ruins the harvest, "
                 "and keep the bushmeat."],
           tasks=[{"structure": "#villages", "title": "Reach the troubled village"},
-                 {"kill": "naturalist:boar", "count": 4, "title": "Drive the sounder off the fields"}, item("naturalist:bushmeat", 3)],
+                 {"kill": "naturalist:boar", "count": 4, "title": "Drive the sounder off the fields", "spawn": {"at": {"structure": "#villages"}}}, item("naturalist:bushmeat", 3)],
           rewards=[reward_item("naturalist:cooked_bushmeat", 8), skill("range", 120)]),
 
     quest("throwing_steel", "Thrown Steel", icon="spartanweaponry:iron_throwing_knife", after=["target_practice"],

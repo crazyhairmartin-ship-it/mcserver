@@ -67,7 +67,7 @@ Q = [
           text=["A colony of stray cats lives in a crumbling ruin that creepers have overrun. Clear the creepers, "
                 "coax every cat out with fish, and the old cat-lady of the ruin will leave you her slippers."],
           tasks=[{"structure": "#ruins", "title": "Find the overrun ruin"},
-                 {"kill": "minecraft:creeper", "count": 5, "title": "Clear the creepers away from the cats"},
+                 {"kill": "minecraft:creeper", "count": 5, "title": "Clear the creepers away from the cats", "spawn": {"at": {"structure": "#ruins"}}},
                  item("minecraft:cod", 4, consume=True, title="Coax the cats out with fish"),
                  encounter(["Oh, my darlings! All of them, safe!",
                             "I've lived among these ruins forty winters, and never once had the creepers "

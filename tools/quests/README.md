@@ -99,6 +99,7 @@ Quest fields:
 |---|---|
 | `{"item": "minecraft:wheat", "count": 64}` | The player has the items. `"consume": true` takes them; `"crafted": true` only counts crafted ones |
 | `{"kill": "minecraft:zombie", "count": 5}` | Kills |
+| `{"kill": "minecraft:zombie", "count": 8, "spawn": {"at": {"structure": "#graveyards"}, "wave": 4, "name": "Restless Dead", "health": 30, "glow": false, "ensure": false}}` | The same kills, but the enemies come to the fight: reaching `at` (a `place` or `structure`) while the step is open spawns a wave around the player, and another about 15 seconds after each wave falls, until the count is done. Leftovers vanish if the player goes more than 48 blocks from where it started. For bosses add `"ensure": true, "wave": 1`: one is only brought in when none is within 64 blocks, so a structure's own boss is fought if it's still there. Never spawn hostile mobs in a village people live in (they kill villagers) |
 | `{"biome": "minecraft:cherry_grove"}` | Standing in the biome |
 | `{"structure": "minecraft:village_plains"}` | Inside the structure. `{"structure": "#taverns"}` (no namespace) is a group from `src/structure_groups.json`, so any of its structures counts; another structure tag works as `#namespace:tag` |
 | `{"dimension": "minecraft:the_nether"}` | In the dimension |
