@@ -78,3 +78,19 @@ def chapter(name, title, subtitle, icon, group, order, quests, **extra):
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write("\n")
     print(f"wrote chapters/{name}.json: {len(quests)} quests")
+
+
+def giver_org(org, lines, accept="I'll do it", requires=()):
+    """The quest is offered by any representative of an organisation (sneak + right-click one in any village)."""
+    g = {"type": "org", "org": org, "lines": list(lines), "accept": accept}
+    if requires:
+        g["requires"] = list(requires)
+    return g
+
+
+def encounter(lines=None, then="talk", **spec):
+    """A character or mob turns up near the player for this step (see README: encounter)."""
+    e = dict(spec, then=then)
+    if lines:
+        e["lines"] = list(lines)
+    return {"encounter": e}

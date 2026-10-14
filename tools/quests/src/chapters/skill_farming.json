@@ -1,0 +1,446 @@
+{
+  "title": "The Growers' Co-op",
+  "subtitle": "Farming path",
+  "icon": "minecraft:wheat",
+  "group": "skills",
+  "order": 1,
+  "quests": [
+    {
+      "id": "coop_share",
+      "title": "A Share in the Co-op",
+      "text": [
+        "The Growers' Co-op means to hold a proper Harvest Festival again. It starts with wheat."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:wheat",
+          "count": 64
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:stone_hoe"
+        },
+        {
+          "item": "minecraft:wheat_seeds",
+          "count": 16
+        },
+        {
+          "skill": "farm",
+          "xp": 60
+        }
+      ],
+      "icon": "minecraft:wheat",
+      "giver": {
+        "type": "org",
+        "org": "growers",
+        "lines": [
+          "Fancy a share in the Growers' Co-op? Everyone pulls their weight.",
+          "Till a plot, plant wheat, bring in your first harvest. This year we mean to hold a proper Harvest Festival again."
+        ],
+        "accept": "Count me in"
+      }
+    },
+    {
+      "id": "scarecrow",
+      "title": "Scarecrow and Compost",
+      "after": [
+        "coop_share"
+      ],
+      "text": [
+        "Protect the plot: build a scarecrow, fill a composter, and make fertilizer for the next planting."
+      ],
+      "tasks": [
+        {
+          "item": "farm_and_charm:scarecrow"
+        },
+        {
+          "item": "minecraft:composter"
+        },
+        {
+          "item": "farm_and_charm:fertilizer",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farm_and_charm:pitchfork"
+        },
+        {
+          "skill": "farm",
+          "xp": 80
+        }
+      ],
+      "icon": "farm_and_charm:scarecrow"
+    },
+    {
+      "id": "wild_seeds",
+      "title": "Seeds from the Wild",
+      "after": [
+        "coop_share"
+      ],
+      "text": [
+        "The co-op wants new crops for the festival. Find wild tomatoes, lettuce, onions and oats, and wild cabbages, and gather their seeds."
+      ],
+      "tasks": [
+        {
+          "item": "farm_and_charm:tomato_seeds"
+        },
+        {
+          "item": "farm_and_charm:lettuce_seeds"
+        },
+        {
+          "item": "farm_and_charm:onion"
+        },
+        {
+          "item": "farm_and_charm:oat_seeds"
+        },
+        {
+          "item": "farmersdelight:cabbage_seeds"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farm_and_charm:crafting_bowl"
+        },
+        {
+          "skill": "farm",
+          "xp": 100
+        }
+      ],
+      "icon": "farm_and_charm:wild_tomatoes"
+    },
+    {
+      "id": "smarter_farmers",
+      "title": "A Farmer Who Thinks",
+      "after": [
+        "wild_seeds"
+      ],
+      "text": [
+        "Village farmers replant with whatever seeds they're given. Fence and water a new field in a village, hand a farmer carrots, potatoes and beetroot, and watch him keep it planted."
+      ],
+      "tasks": [
+        {
+          "talk": "villager",
+          "profession": "minecraft:farmer",
+          "lines": [
+            "A new field? I'll keep it planted for the co-op.",
+            "Just give me something to sow."
+          ]
+        },
+        {
+          "item": "minecraft:carrot",
+          "count": 16,
+          "consume": true
+        },
+        {
+          "item": "minecraft:potato",
+          "count": 16,
+          "consume": true
+        },
+        {
+          "item": "minecraft:beetroot_seeds",
+          "count": 16,
+          "consume": true
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_hoe"
+        },
+        {
+          "skill": "farm",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:carrot"
+    },
+    {
+      "id": "spring_planting",
+      "title": "Spring Planting",
+      "after": [
+        "scarecrow",
+        "wild_seeds"
+      ],
+      "text": [
+        "The festival is announced for the autumn, and the co-op's spring planting begins."
+      ],
+      "tasks": [
+        {
+          "item": "farm_and_charm:tomato",
+          "count": 8
+        },
+        {
+          "item": "farm_and_charm:lettuce",
+          "count": 8
+        },
+        {
+          "item": "farm_and_charm:strawberry",
+          "count": 8
+        },
+        {
+          "item": "farm_and_charm:onion",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:yellow_banner"
+        },
+        {
+          "skill": "farm",
+          "xp": 150
+        }
+      ],
+      "icon": "farm_and_charm:strawberry"
+    },
+    {
+      "id": "barn_raising",
+      "title": "Barn Raising",
+      "after": [
+        "spring_planting"
+      ],
+      "text": [
+        "See how a farmstead is laid out, then raise a barn of your own with a feeding trough, a chicken coop and a loft of straw bales."
+      ],
+      "tasks": [
+        {
+          "structure": "#farmsteads",
+          "title": "Visit a farmstead"
+        },
+        {
+          "item": "farm_and_charm:feeding_trough"
+        },
+        {
+          "item": "farm_and_charm:chicken_coop"
+        },
+        {
+          "item": "farmersdelight:straw_bale",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farm_and_charm:supply_cart"
+        },
+        {
+          "skill": "farm",
+          "xp": 150
+        }
+      ],
+      "icon": "farm_and_charm:feeding_trough"
+    },
+    {
+      "id": "rich_soil",
+      "title": "Rich Soil",
+      "after": [
+        "barn_raising"
+      ],
+      "text": [
+        "Make organic compost and let it turn to rich soil, then grow mushroom colonies on it for the co-op's kitchen garden."
+      ],
+      "tasks": [
+        {
+          "item": "farmersdelight:organic_compost",
+          "count": 4
+        },
+        {
+          "item": "farmersdelight:brown_mushroom_colony"
+        },
+        {
+          "item": "farmersdelight:red_mushroom_colony"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farm_and_charm:water_sprinkler"
+        },
+        {
+          "skill": "farm",
+          "xp": 150
+        }
+      ],
+      "icon": "farmersdelight:rich_soil"
+    },
+    {
+      "id": "rice_paddies",
+      "title": "Rice Paddies",
+      "after": [
+        "rich_soil"
+      ],
+      "text": [
+        "The festival needs rice. Find wild rice by a river and grow a paddy of it in shallow water."
+      ],
+      "tasks": [
+        {
+          "item": "farmersdelight:rice_bale"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farmersdelight:canvas_rug",
+          "count": 2
+        },
+        {
+          "skill": "farm",
+          "xp": 150
+        }
+      ],
+      "icon": "farmersdelight:rice_bale"
+    },
+    {
+      "id": "cheese_wheel",
+      "title": "The Cheese Wheel",
+      "after": [
+        "barn_raising"
+      ],
+      "text": [
+        "The co-op's cheesemaker wants milk from the meadow's animals, turned into a cheese block in a cheese form."
+      ],
+      "tasks": [
+        {
+          "item": "meadow:cheese_form"
+        },
+        {
+          "item": "meadow:cheese_block"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "meadow:cheese_rack"
+        },
+        {
+          "skill": "farm",
+          "xp": 150
+        }
+      ],
+      "icon": "meadow:cheese_block"
+    },
+    {
+      "id": "corn_rows",
+      "title": "Corn Rows",
+      "after": [
+        "spring_planting"
+      ],
+      "text": [
+        "Plant long rows of corn, harvest them, and turn the kernels into popcorn for the festival stall."
+      ],
+      "tasks": [
+        {
+          "item": "farm_and_charm:corn",
+          "count": 32
+        },
+        {
+          "item": "cornexpansion:popcorn",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cornexpansion:popcorn_tin",
+          "count": 2
+        },
+        {
+          "skill": "farm",
+          "xp": 150
+        }
+      ],
+      "icon": "farm_and_charm:corn"
+    },
+    {
+      "id": "vineyard",
+      "title": "The Vineyard",
+      "after": [
+        "spring_planting"
+      ],
+      "text": [
+        "Start the co-op's vineyard: red and white grapes, and one of the wilder varieties from the savanna, the taiga or the jungle, grown on lattices."
+      ],
+      "tasks": [
+        {
+          "item": "vinery:red_grape",
+          "count": 8
+        },
+        {
+          "item": "vinery:white_grape",
+          "count": 8
+        },
+        {
+          "item": "vinery:oak_lattice",
+          "count": 8
+        },
+        {
+          "item": "vinery:savanna_grapes_red"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "farm",
+          "xp": 150
+        }
+      ],
+      "icon": "vinery:red_grape"
+    },
+    {
+      "id": "wine_press",
+      "title": "The Festival Toast",
+      "after": [
+        "vineyard"
+      ],
+      "text": [
+        "Press grapes and apples and ferment them, so there's red wine and cider for the festival toast."
+      ],
+      "tasks": [
+        {
+          "item": "vinery:apple_press"
+        },
+        {
+          "item": "vinery:fermentation_barrel"
+        },
+        {
+          "item": "vinery:red_wine"
+        },
+        {
+          "item": "vinery:apple_cider"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "farm",
+          "xp": 200
+        }
+      ],
+      "icon": "vinery:red_wine"
+    },
+    {
+      "id": "shearing",
+      "title": "Shearing Day",
+      "after": [
+        "cheese_wheel"
+      ],
+      "text": [
+        "Shearing day at the co-op: shear the meadow's wooly and horned sheep for the festival's bunting."
+      ],
+      "tasks": [
+        {
+          "item": "meadow:highland_wool",
+          "count": 16
+        },
+        {
+          "item": "meadow:flecked_wool",
+          "count": 16
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:shears"
+        },
+        {
+          "skill": "farm",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:shears"
+    }
+  ]
+}

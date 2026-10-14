@@ -425,5 +425,9 @@
   "temples": [
     "betterdeserttemples:desert_temple",
     "betterjungletemples:jungle_temple"
+  ],
+  "mining_camps": [
+    "mvs:mine_with_campsite",
+    "nova_structures:badlands_miner_outpost"
   ]
 }
