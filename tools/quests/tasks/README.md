@@ -44,6 +44,7 @@ characters only (see "Report" below).
   "did you mean" suggestions. Never invent an id.
 - **Text**: a short `text` (1 to 3 sentences) setting the scene, plainly written, British spelling (armour, colour).
   Every task and quest title readable at a glance.
+- **Where characters are**: a character with a `home` in pack.json lives there, not in Reece; send players there and describe it that way.
 - **Dialogue**: 3 to 6 lines per talk step or giver, in the character's voice; organisation representatives
   (`talk_org`, `giver_org`) are ordinary villagers of that organisation, so give them plain, friendly lines.
 - **Rewards**: every skill-path quest gives that skill's XP (trees: `mining forage farm fish cook craft attack range

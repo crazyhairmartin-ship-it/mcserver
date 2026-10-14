@@ -1395,6 +1395,7 @@ global.QUEST_CHARACTERS = {
   "orla": {
     "name": "Huntmistress Orla Vance",
     "profession": "minecraft:fletcher",
+    "home": "the hunters' lodge on the hill west of Reece, about 200 blocks out",
     "personality": "Master of the Hunters' lodge. Cool, focused and sparing with words; values patience, clean shots and respect for the quarry. Dry wit if you earn it.",
     "idle": [
       "Breathe out, then loose.",
@@ -1409,6 +1410,7 @@ global.QUEST_CHARACTERS = {
   "tobiah": {
     "name": "Old Tobiah",
     "profession": "minecraft:fletcher",
+    "home": "the hunters' lodge on the hill west of Reece, about 200 blocks out",
     "personality": "Superstitious retired tracker and the lodge's mentor. Full of omens, charms and rituals (never whistle in a forest, salt in your boots); his tracking is genuinely brilliant, his reasons are nonsense.",
     "idle": [
       "Never whistle in the woods. That's how they know your name.",
@@ -1492,6 +1494,7 @@ global.QUEST_CHARACTERS = {
   "pip": {
     "name": "Pip",
     "profession": "minecraft:librarian",
+    "home": "a hidden underground house just outside Reece, to the north-west",
     "personality": "Orrin's runaway apprentice with a habit of borrowing things. Cheeky, quick and irrepressible, always has an excuse and something in their pocket that isn't theirs; a real talent underneath.",
     "idle": [
       "Borrowed. Not stolen. There's a difference. Mostly.",

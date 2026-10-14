@@ -1,5 +1,5 @@
 {
-  "_about": "Where each quest character stands on the live server (placed by Dylan in Reece, 2026-10-14). To put one back: stand there and /questnpc place <id>, or tp an op there first.",
+  "_about": "Where each quest character stands on the live server (placed by Dylan, 2026-10-14; most in Reece, some in their own homes nearby). To put one back: stand there and /questnpc place <id>, or tp an op there first.",
   "maren": {
     "pos": [
       3350.12,
@@ -103,5 +103,29 @@
       -4163.41
     ],
     "yaw": -51.1
+  },
+  "orla": {
+    "pos": [
+      3158.7,
+      117.0,
+      -4074.33
+    ],
+    "yaw": -82.4
+  },
+  "tobiah": {
+    "pos": [
+      3161.34,
+      117.0,
+      -4072.3
+    ],
+    "yaw": -171.3
+  },
+  "pip": {
+    "pos": [
+      3293.7,
+      52.0,
+      -4058.76
+    ],
+    "yaw": 126.0
   }
 }
