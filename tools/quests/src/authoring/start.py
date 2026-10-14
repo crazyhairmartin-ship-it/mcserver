@@ -19,8 +19,8 @@ Q = [
                    reward_item("minecraft:lantern")]),
 
     quest("reece_tour", "Old Streets, New Roofs", icon="minecraft:bell", after=["welcome"],
-          text=["Reece is bigger than it looks. Walk its streets: the smithy, the farms, the chapel and the market "
-                "square."],
+          text=["Reece is bigger than it looks. Walk its streets: the smithy, the farms and the market square, and "
+                "meet the people who keep them going."],
           tasks=[{"place": "reece", "title": "Walk around Reece"},
                  talk_org("crafters", ["The smithy's this way. Mind the anvil."], title="Say hello at the smithy"),
                  talk_org("growers", ["Fields don't plant themselves. Nice to meet you."], title="Say hello at the farms")],
