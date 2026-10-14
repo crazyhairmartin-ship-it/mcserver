@@ -109,24 +109,40 @@ file = "config/ftbquests/quests/chapter_groups.snbt"
 hash = "b070c4247b646582ee3d703b0164e3be69c70b04b36e2536863aac3591a7ba0a"
 
 [[files]]
-file = "config/ftbquests/quests/chapters/getting_started.snbt"
-hash = "18aceadb1b6f606c819125e154f503d3e0aca69410035b8882d7417a68f5d7ab"
+file = "config/ftbquests/quests/chapters/main_story.snbt"
+hash = "8b0f3ad76ba00e100fc3475bf0e85515b7dd6f8adda3521e16cdd5ef58f289c7"
 
 [[files]]
-file = "config/ftbquests/quests/chapters/out_in_the_world.snbt"
-hash = "16b00c07d201f9a41e91283939b003572ea7f9794be89ad69819e46a624aa401"
+file = "config/ftbquests/quests/chapters/odd_jobs.snbt"
+hash = "b6de6780106c5e9c1d4234376e3fe5648e27e34cde87e60f3012144d80c8318b"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/skill_cooking.snbt"
+hash = "3a78e2e9b47b0199b5a823e0dec5cd82d5b6816d7b8f70c92230eff797a3f743"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/skill_farming.snbt"
+hash = "441f5356aeae635ae5b44ed25567f1e7015be4963ace9bf02f1d0873c175c0e0"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_fishing.snbt"
-hash = "ddb9d29df9cd3240f2d4c41efb8c00f7bde78b12a0f171a103fa06ab5bd35f61"
+hash = "b0400cc98b660f96817385bca53398de06f5130e24d0b5f5690ae1468398e7b4"
 
 [[files]]
-file = "config/ftbquests/quests/chapters/story_prologue.snbt"
-hash = "562c46d712aa30f557ce951f775d408d01f142421342de87269033085629121c"
+file = "config/ftbquests/quests/chapters/skill_foraging.snbt"
+hash = "8378dc367b891e71686fdc6c4a6efd482d42d4dc88c406c50cdcdbe0e49e919f"
 
 [[files]]
-file = "config/ftbquests/quests/chapters/village_errands.snbt"
-hash = "3d5436ee4f546de791f9a9c81e251cd92122c5cece063246300caae6be7ac75c"
+file = "config/ftbquests/quests/chapters/skill_mining.snbt"
+hash = "0b7d46442f99b90304785c212c2e1b914b63557d7c809481be79260c284dff8f"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/small_favours.snbt"
+hash = "9e9f71d831a172428ab06a01fba66394c9292a79b06cfeb15b260d11575a0f88"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/start.snbt"
+hash = "acb2312384340dbf71e8fb91e6ba7ac23f325a621f8990dc5fba4a03d6041ac4"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -2172,6 +2188,10 @@ file = "kubejs/data/fotf/tags/worldgen/structure/groups/mines.json"
 hash = "45f41c17bf6bccf00d156e20ff6ca9c6ae6db5210444fbdf974cfb81339ebc72"
 
 [[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/mining_camps.json"
+hash = "624a3b92b4e2d1db9abca59309c541adfad881be45c893aea1f8d6f66f561fce"
+
+[[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/moog_sky_islands.json"
 hash = "bfd45f536b80d3be6000d142da819a0e610bf3c5f3dad8c5a6a7edc75a049954"
 
@@ -2214,6 +2234,10 @@ hash = "b0033d2a7d57eb3fe79542439f3f8bee3a8b59003e3d3c5fbb5e2ddd68554aca"
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/taverns.json"
 hash = "f94e311f9df8d4a530749cb845ecf1fa233e97efee1d64fca752e87fdb4499b9"
+
+[[files]]
+file = "kubejs/data/fotf/tags/worldgen/structure/groups/temples.json"
+hash = "47b28737c0f41d3f45d7937fae898b97d92f94e156f4da6418ced91ff048127e"
 
 [[files]]
 file = "kubejs/data/fotf/tags/worldgen/structure/groups/villages.json"
@@ -2705,11 +2729,11 @@ hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "b59883a38f9bbea9f533a2e52bb544f80b5e2909c59470050001ebe7abc0b8dd"
+hash = "9ab8f53804920f2568fe94b5b0891e447a15444c4eedaed2c70b2e18603894c2"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
-hash = "c2d6fc749f65d13fcaf9d9f69ff26e11fed8a3d10b0c71a69e97b846a83e1bca"
+hash = "a1437f3f1fb56145e30df1c949fd873586d23620d66fb8e07f63fa01e5125a93"
 
 [[files]]
 file = "kubejs/server_scripts/quest_npcs.js"
@@ -2769,7 +2793,7 @@ hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "422734b4797dfa9787a7ee47d39ed48a052b602ac71a8f717b3eee7bf946a1dc"
+hash = "d1d10f8f4fe7beae7422894174ffe8c8ffd4e59047d0e1b6782ec110da02bb07"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
@@ -3042,7 +3066,7 @@ metafile = true
 
 [[files]]
 file = "mods/fotfskills.pw.toml"
-hash = "61a241fae6128fe15b6c172ad00309571bdd4130e65787de47690cd197f9f94d"
+hash = "008ff797c6df356b6bd357e8c8075340188d05311a975367a74aa68eaca5a0a3"
 metafile = true
 
 [[files]]

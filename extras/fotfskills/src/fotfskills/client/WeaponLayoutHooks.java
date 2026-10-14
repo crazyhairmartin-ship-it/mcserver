@@ -8,8 +8,11 @@ import net.minecraft.world.item.ItemStack;
 
 /** Game side of WeaponLayout: weapon kinds from our weapon tags, and the arrangement for the player being drawn. */
 public final class WeaponLayoutHooks {
-    private static final String[] BACK = {"two_handed", "polearm", "scythe", "bow", "crossbow", "magic"};
+    // checked in this order: two-handed and long weapons go on the back even if also tagged sword or thrown; spell
+    // weapons that are also swords or rapiers stay on the hip; only pure magic items (staffs) go on the back
+    private static final String[] BACK = {"two_handed", "polearm", "scythe", "bow", "crossbow"};
     private static final String[] HIP = {"sword", "light", "axe", "blunt", "thrown"};
+    private static final String MAGIC_BACK = "magic";
 
     /** The arrangement for the player Weapon Master is drawing right now (render thread only), or null. */
     public static int[] current;
@@ -31,7 +34,7 @@ public final class WeaponLayoutHooks {
                 return WeaponLayout.HIP;
             }
         }
-        return WeaponLayout.OTHER;
+        return Weapons.is(stack, MAGIC_BACK) ? WeaponLayout.BACK : WeaponLayout.OTHER;
     }
 
     /** Weapon Master's own default slot attachments, for when a player's settings haven't arrived. */

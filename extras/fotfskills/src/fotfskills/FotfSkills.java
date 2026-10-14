@@ -68,6 +68,9 @@ public final class FotfSkills {
         if (ModList.get().isLoaded("alexsmobs")) {
             MinecraftForge.EVENT_BUS.register(new fotfskills.world.ElephantSwim());
         }
+        if (ModList.get().isLoaded("waystones")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.compat.VillageWaystones());
+        }
         MinecraftForge.EVENT_BUS.register(new FarmPerks());
         MinecraftForge.EVENT_BUS.register(new FoodPerks());
         MinecraftForge.EVENT_BUS.register(new FishingPerks());
