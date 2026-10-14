@@ -78,10 +78,11 @@
         },
         {
           "timed": {
-            "seconds": 150,
+            "seconds": 240,
             "goal": {
-              "stat": "minecraft:sprint_one_cm",
-              "count": 40000
+              "structure": "#villages",
+              "label": "the next village",
+              "away": 150
             },
             "lines": [
               "The noon bell rings in a few minutes. Run!",
@@ -93,11 +94,7 @@
               "mounts"
             ]
           },
-          "title": "Run for the next village"
-        },
-        {
-          "structure": "#villages",
-          "title": "Reach the village"
+          "title": "Reach the next village by noon"
         }
       ],
       "rewards": [
@@ -293,11 +290,9 @@
       ],
       "tasks": [
         {
-          "item": "waystones:attuned_shard",
-          "title": "Find a waystone and take a shard"
-        },
-        {
-          "checkmark": "I attuned three wild waystones"
+          "waystones": 3,
+          "wild": true,
+          "title": "Attune three wild waystones"
         }
       ],
       "rewards": [
@@ -327,10 +322,11 @@
         },
         {
           "timed": {
-            "seconds": 90,
+            "seconds": 180,
             "goal": {
-              "stat": "minecraft:sprint_one_cm",
-              "count": 30000
+              "structure": "#villages",
+              "label": "the village across the bridge",
+              "away": 100
             },
             "lines": [
               "The light is going. Run for the far side!"
@@ -341,7 +337,7 @@
               "mounts"
             ]
           },
-          "title": "Cross before dusk"
+          "title": "Reach the far village before dusk"
         }
       ],
       "rewards": [
@@ -423,10 +419,11 @@
         },
         {
           "timed": {
-            "seconds": 180,
+            "seconds": 300,
             "goal": {
-              "stat": "minecraft:sprint_one_cm",
-              "count": 40000
+              "structure": "#villages",
+              "label": "the next village",
+              "away": 200
             },
             "waves": [
               {
@@ -579,19 +576,21 @@
             "where": {
               "above_y": 70
             },
-            "then": "talk",
+            "to": {
+              "structure": "#villages",
+              "label": "the nearest village"
+            },
+            "thanks": [
+              "We made it. You're better at this than me.",
+              "Take the satchel. The letters inside are yours to finish now."
+            ],
+            "then": "escort",
             "lines": [
               "Down here! I can't move my leg. I took a shortcut...",
               "Please don't tell Juniper. She'll make me do the stairs forever.",
               "My satchel's got sealed letters in it. Can you finish them for me?"
             ]
           }
-        },
-        {
-          "checkmark": "I carried the courier to safety"
-        },
-        {
-          "structure": "#villages"
         }
       ],
       "rewards": [

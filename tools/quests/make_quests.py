@@ -514,6 +514,11 @@ def build_timed(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     else:
         problems.error(where, 'timed goal must be "kill", "stat", "place", "structure" or "hold"')
         return None, None
+    if 'away' in goal:
+        if out_goal.get('kind') not in ('place', 'structure'):
+            problems.error(where, '"away" only works with a "place" or "structure" goal')
+        else:
+            out_goal['away'] = int(goal['away'])
     waves = []
     for w in spec.get('waves', []):
         if not isinstance(w, dict) or 'entity' not in w:
@@ -668,6 +673,21 @@ def build_animal(t, kind, chapter, qid, n, quest_id, prev_tasks, ctx, where, pro
     verb = 'Tame' if kind == 'tame' else 'Breed'
     title = t.get('title', f'{verb} {count} {name}s' if count > 1 else f'{verb} a {name}')
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'], 'title': title}
+    return task, entry
+
+
+def build_waystones(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "waystones" task: the player attunes this many waystones they didn't have when the step opened.
+    {"waystones": 3, "wild": true} counts only waystones found in the wild (not villages or player-made)."""
+    count = int(t['waystones'])
+    if count < 1:
+        problems.error(where, '"waystones" needs a count of 1 or more')
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.waystones{n}', 'type': 'waystones',
+             'count': count, 'wild': bool(t.get('wild', False)), 'requires': [], 'quest_id': quest_id,
+             'prev_tasks': list(prev_tasks)}
+    default = f'Attune {count} {"wild " if entry["wild"] else ""}waystone{"s" if count > 1 else ""}'
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', default)}
     return task, entry
 
 
@@ -961,6 +981,11 @@ def main():
                 elif isinstance(t, dict) and 'timed' in t:
                     task, entry = build_timed(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
                                               problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and 'waystones' in t:
+                    task, entry = build_waystones(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
+                                                  problems)
                     if entry:
                         givers.append(entry)
                 elif isinstance(t, dict) and ('tame' in t or 'breed' in t):

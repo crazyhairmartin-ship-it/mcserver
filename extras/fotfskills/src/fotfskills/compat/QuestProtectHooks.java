@@ -32,6 +32,8 @@ import net.minecraftforge.server.ServerLifecycleHooks;
  */
 public final class QuestProtectHooks {
     static final PlacedBlocks PLACED = new PlacedBlocks();
+    /** Blocks players placed in protected areas for a quest build: theirs to pick up again until the server restarts. */
+    static final PlacedBlocks AREA_PLACED = new PlacedBlocks();
     private int ticks;
 
     @SubscribeEvent(priority = EventPriority.HIGH)
@@ -41,7 +43,9 @@ public final class QuestProtectHooks {
             return;
         }
         String dim = level.m_46472_().m_135782_().toString();
-        if (areaBlocks(player, level, event.getPos(), event.getState())) {
+        if (AREA_PLACED.contains(dim, event.getPos().m_121878_())) {
+            AREA_PLACED.remove(dim, event.getPos().m_121878_());   // placed for a quest build: theirs to take back
+        } else if (areaBlocks(player, level, event.getPos(), event.getState())) {
             event.setCanceled(true);
             player.m_5661_(Component.m_237113_("§7This place is protected."), true);
             return;
@@ -63,6 +67,10 @@ public final class QuestProtectHooks {
             return;
         }
         if (areaBlocks(player, level, event.getPos(), event.getPlacedBlock())) {
+            if (matchesAny(event.getPlacedBlock(), QuestAreas.allowed(player.m_20148_().toString()))) {
+                AREA_PLACED.add(level.m_46472_().m_135782_().toString(), event.getPos().m_121878_(), Long.MAX_VALUE);
+                return;   // a block an open quest build step needs
+            }
             event.setCanceled(true);
             player.m_5661_(Component.m_237113_("§7This place is protected."), true);
             return;
@@ -146,6 +154,24 @@ public final class QuestProtectHooks {
         }
         ResourceLocation crops = ResourceLocation.m_135820_("minecraft:crops");
         return !state.m_204336_(TagKey.m_203882_(Registries.f_256747_, crops));
+    }
+
+    private static boolean matchesAny(BlockState state, List<String> keys) {
+        if (keys.isEmpty()) {
+            return false;
+        }
+        String id = BuiltInRegistries.f_256975_.m_7981_(state.m_60734_()).toString();
+        for (String k : keys) {
+            if (k.startsWith("#")) {
+                ResourceLocation rl = ResourceLocation.m_135820_(k.substring(1));
+                if (rl != null && state.m_204336_(TagKey.m_203882_(Registries.f_256747_, rl))) {
+                    return true;
+                }
+            } else if (k.equals(id)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     /** The rule protecting this block here, or null. */

@@ -65,7 +65,7 @@ ServerEvents.commandRegistry(event => {
       target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
       tags.forEach(t => target.removeTag(t))
       let data = target.persistentData
-      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed'].forEach(k => data.remove(k))
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones'].forEach(k => data.remove(k))
       server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
       ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
       return 1
@@ -321,7 +321,9 @@ function npcChallengeProgress(player, ch, rec) {
   if (goal.kind == 'kill') return [rec.getInt('count'), goal.count]
   if (goal.kind == 'stat') return [npcStatValue(player, goal.stat) - rec.getInt('base'), goal.count]
   if (goal.kind == 'hold') return [0, 1]   // done when the time runs out (npcTickChallenges)
-  return [npcAtDestination(player, goal) ? 1 : 0, 1]
+  // "away": the destination only counts this far from where the timer started (the next village, not this one)
+  let far = !goal.away || npcHoldDistance(player, rec) >= goal.away
+  return [far && npcAtDestination(player, goal) ? 1 : 0, 1]
 }
 
 function npcHoldDistance(player, rec) {
@@ -466,8 +468,23 @@ BlockEvents.placed(event => {
   })
 })
 
+let $NpcQuestAreas = null
+try {
+  $NpcQuestAreas = Java.loadClass('fotfskills.compat.QuestAreas')
+} catch (e) {
+  $NpcQuestAreas = null
+}
+
 function npcTickBuilds(player) {
   let all = npcData(player, 'fqBuild')
+  // the blocks open build steps need may be placed even in protected areas (fotfskills QuestAreas)
+  if ($NpcQuestAreas) {
+    let keys = []
+    npcEntries('build').forEach(b => {
+      if (!player.tags.contains(b.stage) && questOpen(player, b)) b.keys.forEach(k => { if (keys.indexOf(k) < 0) keys.push(k) })
+    })
+    $NpcQuestAreas.setAllowed(String(player.uuid), keys)
+  }
   npcEntries('build').forEach(b => {
     if (player.tags.contains(b.stage)) {
       if (all.contains(b.stage)) all.remove(b.stage)
@@ -561,6 +578,47 @@ global.fqOnBred = (player, child) => {
       player.tell(Text.yellow('Bred. Quest updated.'))
     } else {
       counts.putInt(b.stage, n)
+    }
+  })
+}
+
+// ---- waystones tasks ----
+// Every 5 seconds: how many waystones the player has attuned (Waystones' own list), optionally only wild ones. The
+// count when the step opened is the baseline; the step is done when that many more have been attuned.
+
+let $NpcPlayerWaystones = null
+try {
+  $NpcPlayerWaystones = Java.loadClass('net.blay09.mods.waystones.core.PlayerWaystoneManager')
+} catch (e) {
+  console.warn("quest_npcs: Waystones not found; waystones tasks won't work")
+}
+
+function npcWaystoneCount(player, wild) {
+  let n = 0
+  $NpcPlayerWaystones.getWaystones(player).forEach(w => {
+    if (!wild || String(w.getOrigin()) == 'WILDERNESS') n++
+  })
+  return n
+}
+
+function npcTickWaystones(player) {
+  if (!$NpcPlayerWaystones) return
+  let bases = npcData(player, 'fqWaystones')
+  npcEntries('waystones').forEach(t => {
+    if (player.tags.contains(t.stage)) {
+      if (bases.contains(t.stage)) bases.remove(t.stage)
+      return
+    }
+    if (!questOpen(player, t)) return
+    let now = npcWaystoneCount(player, t.wild)
+    if (!bases.contains(t.stage)) {
+      bases.putInt(t.stage, now)
+      return
+    }
+    if (now - bases.getInt(t.stage) >= t.count) {
+      bases.remove(t.stage)
+      questAddStage(player, t.stage)
+      player.tell(Text.yellow('Route marked. Quest updated.'))
     }
   })
 }
@@ -671,6 +729,7 @@ PlayerEvents.tick(event => {
   if (player.tickCount % 40 == 0) npcTickEncounters(player)
   if (player.tickCount % 100 == 0) npcTickBuilds(player)
   if (player.tickCount % 100 == 50) npcTickTames(player)
+  if (player.tickCount % 100 == 75) npcTickWaystones(player)
 })
 
 EntityEvents.death(event => {

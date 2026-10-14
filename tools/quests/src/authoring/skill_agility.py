@@ -31,10 +31,9 @@ Q = [
           text=["Juniper's runner has twisted an ankle, and the morning post must reach the next village before the "
                 "noon bell. Make the run on the clock, and the runner will give you their shoes for good."],
           tasks=[item("fotfmail:letter_signed", title="Take the morning post"),
-                 {"timed": {"seconds": 150, "goal": {"stat": "minecraft:sprint_one_cm", "count": 40000},
+                 {"timed": {"seconds": 240, "goal": {"structure": "#villages", "label": "the next village", "away": 150},
                             "lines": ["The noon bell rings in a few minutes. Run!", "No short cuts, no mounts."],
-                            "start": "Start the run", "no": NO_SHORTCUTS}, "title": "Run for the next village"},
-                 {"structure": "#villages", "title": "Reach the village"}],
+                            "start": "Start the run", "no": NO_SHORTCUTS}, "title": "Reach the next village by noon"}],
           rewards=[reward_item("artifacts:running_shoes"), skill("agility", 100)]),
 
     quest("rooftop_basics", "Over, Not Around", icon="parcool:traceur_gloves", after=["sign_the_roster"],
@@ -79,17 +78,17 @@ Q = [
     quest("waystone_route", "Marking the Route", icon="waystones:waystone", after=["post_office"],
           text=["Old couriers left waystones along the roads. Find and attune three wild waystones between Reece "
                 "and the neighbouring villages, so later runs can start halfway."],
-          tasks=[item("waystones:attuned_shard", title="Find a waystone and take a shard"),
-                 {"checkmark": "I attuned three wild waystones"}],
+          tasks=[{"waystones": 3, "wild": True, "title": "Attune three wild waystones"}],
           rewards=[reward_item("waystones:warp_scroll", 4), skill("agility", 140)]),
 
     quest("great_bridge_run", "Before the Light Goes", icon="minecraft:stone_bricks", after=["waystone_route"],
           text=["A parcel of medicine must cross a great ravine bridge to a village on the far side before dusk. "
                 "Find the old stone bridge and make the crossing on the clock."],
           tasks=[{"checkmark": "I found the old stone bridge"},
-                 {"timed": {"seconds": 90, "goal": {"stat": "minecraft:sprint_one_cm", "count": 30000},
+                 {"timed": {"seconds": 180, "goal": {"structure": "#villages", "label": "the village across the bridge",
+                                                     "away": 100},
                             "lines": ["The light is going. Run for the far side!"],
-                            "start": "Cross the bridge", "no": NO_SHORTCUTS}, "title": "Cross before dusk"}],
+                            "start": "Cross the bridge", "no": NO_SHORTCUTS}, "title": "Reach the far village before dusk"}],
           rewards=[reward_item("minecraft:sugar", 16), reward_item("minecraft:golden_carrot", 8),
                    skill("agility", 180)]),
 
@@ -109,7 +108,7 @@ Q = [
           text=["An urgent letter must go out after dark across open country. Monsters ambush the road, so take "
                 "the hits and keep running. Stopping to fight loses the deadline."],
           tasks=[item("fotfmail:letter_signed", title="Take the urgent letter"),
-                 {"timed": {"seconds": 180, "goal": {"stat": "minecraft:sprint_one_cm", "count": 40000},
+                 {"timed": {"seconds": 300, "goal": {"structure": "#villages", "label": "the next village", "away": 200},
                             "waves": [{"entity": "minecraft:zombie", "count": 2, "every": 25},
                                       {"entity": "minecraft:skeleton", "count": 1, "every": 40}],
                             "lines": ["Night run. They'll come at you. Don't stop!"],
@@ -146,8 +145,10 @@ Q = [
           tasks=[encounter(["Down here! I can't move my leg. I took a shortcut...",
                             "Please don't tell Juniper. She'll make me do the stairs forever.",
                             "My satchel's got sealed letters in it. Can you finish them for me?"],
-                           entity="minecraft:villager", name="Injured Courier", where={"above_y": 70}),
-                 {"checkmark": "I carried the courier to safety"}, {"structure": "#villages"}],
+                           entity="minecraft:villager", name="Injured Courier", where={"above_y": 70},
+                           then="escort", to={"structure": "#villages", "label": "the nearest village"},
+                           thanks=["We made it. You're better at this than me.",
+                                   "Take the satchel. The letters inside are yours to finish now."])],
           rewards=[reward_item("fotfmail:letter", 4), reward_item("minecraft:golden_apple"), skill("agility", 220)]),
 
     quest("first_ferry", "Across the Bay", icon="smallships:oak_cog", after=["post_office"],

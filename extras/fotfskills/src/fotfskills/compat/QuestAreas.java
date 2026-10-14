@@ -17,6 +17,8 @@ public final class QuestAreas {
     public record Area(String dimension, int[] min, int[] max) {}
 
     private static volatile List<Area> areas = List.of();
+    /** Per player (UUID): blocks ("id" or "#tag") their open quest build steps let them place in protected areas. */
+    private static final java.util.Map<String, List<String>> ALLOWED = new java.util.concurrent.ConcurrentHashMap<>();
 
     private QuestAreas() {}
 
@@ -27,6 +29,19 @@ public final class QuestAreas {
 
     public static List<Area> areas() {
         return areas;
+    }
+
+    /** Called from KubeJS (quest_npcs.js) every few seconds with the blocks a player's open build steps need. */
+    public static void setAllowed(String player, List<String> keys) {
+        if (keys == null || keys.isEmpty()) {
+            ALLOWED.remove(player);
+        } else {
+            ALLOWED.put(player, List.copyOf(keys));
+        }
+    }
+
+    public static List<String> allowed(String player) {
+        return ALLOWED.getOrDefault(player, List.of());
     }
 
     public static boolean inside(List<Area> list, String dimension, int x, int y, int z) {

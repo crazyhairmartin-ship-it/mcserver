@@ -106,14 +106,8 @@
 				{
 					id: "34F759B8F65321A1"
 					stage: "fq.skill_agility.first_timed_run.timed1"
-					title: "Run for the next village"
+					title: "Reach the next village by noon"
 					type: "gamestage"
-				}
-				{
-					id: "1AE2D2A1916EEC30"
-					structure: "#fotf:groups/villages"
-					title: "Reach the village"
-					type: "structure"
 				}
 			]
 			title: "Beat the Bell"
@@ -339,14 +333,9 @@
 			tasks: [
 				{
 					id: "309FE2DFDE1F43F7"
-					item: "waystones:attuned_shard"
-					title: "Find a waystone and take a shard"
-					type: "item"
-				}
-				{
-					id: "67EAE4F260567F56"
-					title: "I attuned three wild waystones"
-					type: "checkmark"
+					stage: "fq.skill_agility.waystone_route.waystones0"
+					title: "Attune three wild waystones"
+					type: "gamestage"
 				}
 			]
 			title: "Marking the Route"
@@ -390,7 +379,7 @@
 				{
 					id: "766DDDCC2C7D18C9"
 					stage: "fq.skill_agility.great_bridge_run.timed1"
-					title: "Cross before dusk"
+					title: "Reach the far village before dusk"
 					type: "gamestage"
 				}
 			]
@@ -605,18 +594,8 @@
 				{
 					id: "066A93C850156032"
 					stage: "fq.skill_agility.ledge_rescue.enc0"
-					title: "Meet Injured Courier"
+					title: "Escort Injured Courier to the nearest village"
 					type: "gamestage"
-				}
-				{
-					id: "6C4B6B6084573D35"
-					title: "I carried the courier to safety"
-					type: "checkmark"
-				}
-				{
-					id: "6A8EF9408EC93EB9"
-					structure: "#fotf:groups/villages"
-					type: "structure"
 				}
 			]
 			title: "Stuck on the Ledge"
