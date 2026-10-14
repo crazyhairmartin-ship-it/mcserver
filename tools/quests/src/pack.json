@@ -334,6 +334,175 @@
         "Stand back and watch a master. ...Don't watch that one. That was a practice cast.",
         "I'm not nervous. My hands always shake like this. It's the cold."
       ]
+    },
+    "corvin": {
+      "name": "Bounty Master Corvin Ash",
+      "profession": "minecraft:weaponsmith",
+      "personality": "Scarred old monster hunter who runs the Bounty office. Grim, dry, speaks in short sentences and tallies everything in coin and scars; respects results, not talk.",
+      "idle": [
+        "Board's by the door. Pick a name, bring me proof.",
+        "Every scar's a lesson. I'm very well educated.",
+        "Don't name the monsters. Makes it harder.",
+        "Paid on proof. Not stories. Proof.",
+        "Sharpen it before you need it, not after.",
+        "I've buried better hunters than you. Don't make me bury you."
+      ]
+    },
+    "brannock": {
+      "name": "Sergeant Brannock",
+      "entity": "guardvillagers:guard",
+      "personality": "The watch's oldest guard, under Captain Hale. Creaky, unhurried and full of war stories from campaigns nobody else remembers; treats Hale like a son he's proud of and teases him about Marta.",
+      "idle": [
+        "Forty years on this gate. The gate's held up better than my knees.",
+        "In my day we fought pillagers with a stick. A short stick.",
+        "Captain's a good lad. Blushes like a beetroot when Marta walks by, mind.",
+        "Slow and steady holds a wall. Fast and clever falls off it.",
+        "I've seen three raids, two sieges and one very angry goat.",
+        "Sit a while. The wall's not going anywhere."
+      ]
+    },
+    "orla": {
+      "name": "Huntmistress Orla Vance",
+      "profession": "minecraft:fletcher",
+      "personality": "Master of the Hunters' lodge. Cool, focused and sparing with words; values patience, clean shots and respect for the quarry. Dry wit if you earn it.",
+      "idle": [
+        "Breathe out, then loose.",
+        "The hunt is mostly waiting. Learn to like waiting.",
+        "Wind's from the east. Everything downwind already knows you're here.",
+        "A clean shot is a kindness.",
+        "Tobiah says the woods are cursed again. Tobiah says that every Tuesday.",
+        "Fletch your own arrows. You'll miss less when it's your own work."
+      ]
+    },
+    "tobiah": {
+      "name": "Old Tobiah",
+      "profession": "minecraft:fletcher",
+      "personality": "Superstitious retired tracker and the lodge's mentor. Full of omens, charms and rituals (never whistle in a forest, salt in your boots); his tracking is genuinely brilliant, his reasons are nonsense.",
+      "idle": [
+        "Never whistle in the woods. That's how they know your name.",
+        "Three crows on a fence means rain. Or a cousin visiting. Bad either way.",
+        "Salt in your boots, laddie. Keeps the wisps off.",
+        "I can read a track three days old. I just won't follow one on a full moon.",
+        "Left foot first out the door. Always the left.",
+        "The deer know things. Don't ask me what. They know."
+      ]
+    },
+    "odile": {
+      "name": "Master Joiner Odile Brask",
+      "profession": "minecraft:mason",
+      "personality": "Master Joiner of the Crafters' guild. Exacting and demanding but fair, inspects every joint, quotes old guild rules; cracks a rare proud smile at fine work. Respects Olsen's old ways, argues with him about everything else.",
+      "idle": [
+        "A commission's a promise. Keep it.",
+        "Show me your joints. Your wood joints. Honestly.",
+        "Guild rule nine: if it wobbles, it isn't finished.",
+        "Olsen thinks pegs are better than nails. He's right. Don't tell him.",
+        "Good tools, good light, no excuses.",
+        "Fine work. Hm. Very fine. Don't let it go to your head."
+      ]
+    },
+    "juniper": {
+      "name": "Postmistress Juniper Quill",
+      "profession": "minecraft:cartographer",
+      "personality": "Runs the Couriers' post office. Brisk, fast-talking and always in a hurry, obsessed with schedules, stamps and the record time for every route; speaks in clipped bursts.",
+      "idle": [
+        "Running late? You're running late. Everyone's running late.",
+        "Signed, sealed, sprinted.",
+        "The record to Gazelle Harbour is still open. Just saying.",
+        "Rain, snow, creepers: the post goes through.",
+        "Stamp. Stamp. Stamp. Lovely.",
+        "Don't stop to chat on a run. You're chatting now. Off you go."
+      ]
+    },
+    "fern": {
+      "name": "Keeper Fern Thistlewood",
+      "profession": "minecraft:shepherd",
+      "personality": "Runs the animal sanctuary at the edge of Reece. Soft-spoken, endlessly patient with animals and short-tempered with careless people; names every creature and talks to them more than to humans.",
+      "idle": [
+        "Shh. Bartholomew is sleeping. He's the goat.",
+        "Every animal here has a name. Most of them have two.",
+        "Be gentle. They remember.",
+        "People ask me if I get lonely. I have forty-three friends. Some of them are ducks.",
+        "If you find something hurt out there, bring it here. Don't argue, just bring it.",
+        "Mind the llama. She has opinions."
+      ]
+    },
+    "orrin": {
+      "name": "Archmage Orrin Vael",
+      "profession": "minecraft:librarian",
+      "personality": "Leader of the Arcane Order in Reece's library tower. Brilliant, absent-minded and theatrical; loses his books and spectacles constantly (Pip borrows them), lectures at length, gets genuinely grave when real danger comes.",
+      "idle": [
+        "Mana is like tea: best brewed slowly, worst spilled on the books.",
+        "Have you seen my spectacles? Or my apprentice? Usually they're together.",
+        "Magic isn't power. It's paying very close attention.",
+        "Ah, a student! No? Pity. You'd be a terrible student. Wonderful.",
+        "I had three copies of that book. I now have none, and one apprentice.",
+        "Mind the runes on the floor. Some of them are still awake."
+      ]
+    },
+    "agathe": {
+      "name": "Sister Agathe",
+      "entity": "irons_spellbooks:priest",
+      "personality": "A wandering priest of the Arcane Order who hunts the undead. Stern, fearless and deadpan; shares Wren's faith in Notch but in a fiercer, holy-warrior way, and considers the undead a personal insult to His work.",
+      "idle": [
+        "The dead should stay down. I help them remember.",
+        "Notch made the living. Something else made the rest.",
+        "Carry silver. Carry light. Carry on.",
+        "Wren prays for the forest. I pray for a steady hand.",
+        "If it groans, it goes.",
+        "Rest easy. I'll be up."
+      ]
+    },
+    "pip": {
+      "name": "Pip",
+      "profession": "minecraft:librarian",
+      "personality": "Orrin's runaway apprentice with a habit of borrowing things. Cheeky, quick and irrepressible, always has an excuse and something in their pocket that isn't theirs; a real talent underneath.",
+      "idle": [
+        "Borrowed. Not stolen. There's a difference. Mostly.",
+        "Don't tell Orrin you saw me.",
+        "Is that yours? It's very nice. Just looking.",
+        "I can do a fireball. A small one. A small, wobbly one.",
+        "Books want to be read. I'm just helping them get out more.",
+        "I'll give it back! At some point. In the future."
+      ]
+    },
+    "vesna": {
+      "name": "Vesna Ashwalker",
+      "profession": "minecraft:armorer",
+      "personality": "Scarred old Nether guide retired to Reece. Gravelly, unflappable and dark-humoured; treats the Nether like a dangerous old friend, warns bluntly and never exaggerates.",
+      "idle": [
+        "Gold on your feet, or the piglins will have your hide. And your feet.",
+        "The Nether doesn't hate you. It doesn't notice you. That's worse.",
+        "Fire resistance first. Questions later.",
+        "Lost an eyebrow to a ghast in '09. Never grew back. Never forgave it.",
+        "Retired? I'm resting between bad decisions.",
+        "If the ground glows, don't stand on it. Simple."
+      ]
+    },
+    "ilse": {
+      "name": "Ilse Varr",
+      "profession": "minecraft:cartographer",
+      "personality": "Stargazer and cartographer who has mapped every sky but the End's. Dreamy, poetic and wistful, loses track of time looking up; fiercely precise about her charts.",
+      "idle": [
+        "Every star has a map. I've drawn most of them.",
+        "There's one sky I've never charted. It keeps me up at night. Everything keeps me up at night.",
+        "Look up. No, further up. There.",
+        "A map is a promise that somewhere is real.",
+        "The night is long and the ink is cheap.",
+        "Careful with that chart. It's older than the village."
+      ]
+    },
+    "gil": {
+      "name": "Gil the Ferryman",
+      "profession": "minecraft:fisherman",
+      "personality": "Ferryman at a river crossing near Reece. Laid-back, chatty and philosophical about rivers; never hurries, charges in favours instead of coin.",
+      "idle": [
+        "River's in no hurry. Neither am I.",
+        "Fare's a favour. Always has been.",
+        "Seen a lot of people cross this river. Most of them came back.",
+        "Every river reaches the sea eventually. No sense rushing it.",
+        "Hop in. Mind the wet bit. It's all the wet bit.",
+        "Bram sends his love. And his worries. Mostly his worries."
+      ]
     }
   }
 }

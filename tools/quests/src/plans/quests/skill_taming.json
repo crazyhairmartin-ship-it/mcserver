@@ -2,7 +2,7 @@
   "line": "Taming path",
   "chapter": "skill_taming",
   "group": "skills",
-  "giver": "The Sanctuary keepers: shepherds and leatherworkers in every village bring word of animals in need; Keeper Maren Thistlewood runs the sanctuary at the edge of Reece and gives the key tasks",
+  "giver": "The Sanctuary keepers: shepherds and leatherworkers in every village bring word of animals in need; Keeper Fern Thistlewood runs the sanctuary at the edge of Reece and gives the key tasks",
   "feel": "A sanctuary for rescued and rare animals that grows from a single pen into gardens, a butterfly house and paddocks for unicorns. Gentle, warm, sometimes urgent: animals to find, save, raise and protect.",
   "quests": [
     {
@@ -14,7 +14,7 @@
         "talk"
       ],
       "after": [],
-      "summary": "A shepherd says a half-starved wolf follows the flock at a distance. Tame it, give it a collar tag and bring it to Maren's pen at the edge of Reece.",
+      "summary": "A shepherd says a half-starved wolf follows the flock at a distance. Tame it, give it a collar tag and bring it to Fern's pen at the edge of Reece.",
       "mods": [
         "domesticationinnovation"
       ],
@@ -89,7 +89,7 @@
       "after": [
         "stray_wolf"
       ],
-      "summary": "Maren keeps a census of the small animals around Reece. Find an otter, a red panda, a ferret and a shima enaga, and tame a ferret to help with the count.",
+      "summary": "Fern keeps a census of the small animals around Reece. Find an otter, a red panda, a ferret and a shima enaga, and tame a ferret to help with the count.",
       "mods": [
         "crittersandcompanions"
       ],
@@ -202,7 +202,7 @@
       "after": [
         "sled_dogs"
       ],
-      "summary": "Maren shows you how to enchant a collar tag: give your wolf Health Boost and a creeper-sniffing Defusal so it can guard the sanctuary.",
+      "summary": "Fern shows you how to enchant a collar tag: give your wolf Health Boost and a creeper-sniffing Defusal so it can guard the sanctuary.",
       "mods": [
         "domesticationinnovation"
       ],
@@ -390,7 +390,7 @@
         "fairy_meadow",
         "main_story:act3_start"
       ],
-      "summary": "A visiting hedge witch gives Maren a Book of Familiars. Read it and bond a familiar of your own, a companion bound by more than food.",
+      "summary": "A visiting hedge witch gives Fern a Book of Familiars. Read it and bond a familiar of your own, a companion bound by more than food.",
       "mods": [
         "bookoffamiliars"
       ],
@@ -616,7 +616,7 @@
         "butterfly_atlas",
         "familiar_bond"
       ],
-      "summary": "Maren names you Keeper and gives you the sanctuary's oldest gift, stitched for you.",
+      "summary": "Fern names you Keeper and gives you the sanctuary's oldest gift, stitched for you.",
       "mods": [],
       "landmarks": [],
       "reward": "Taming XP, the Thistlewood Saddle (named enchanted saddle, Unbreaking III and Mending)"

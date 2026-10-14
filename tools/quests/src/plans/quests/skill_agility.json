@@ -2,7 +2,7 @@
  "line": "Agility path",
  "chapter": "skill_agility",
  "group": "skills",
- "giver": "The Couriers: cartographers in every village hand out runs; Postmistress Wren Halloway runs the Couriers' post office in Reece and gives the key runs",
+ "giver": "The Couriers: cartographers in every village hand out runs; Postmistress Juniper Quill runs the Couriers' post office in Reece and gives the key runs",
  "feel": "Deliveries against the clock: first on foot between villages and over rooftops, then by hook and zipline, then by sea in ever bigger ships, and finally by air. Every run has a parcel, a recipient and a deadline.",
  "quests": [
   {
@@ -34,7 +34,7 @@
    "after": [
     "sign_the_roster"
    ],
-   "summary": "Wren's runner has twisted an ankle and the morning post must reach the next village before the noon bell. Make the run on the clock; arrive in time and the runner gives you their shoes for good.",
+   "summary": "Juniper's runner has twisted an ankle and the morning post must reach the next village before the noon bell. Make the run on the clock; arrive in time and the runner gives you their shoes for good.",
    "mods": [
     "fotfmail",
     "artifacts"
@@ -118,7 +118,7 @@
    "after": [
     "first_timed_run"
    ],
-   "summary": "Wren wants a real post office: craft Ender Mail packing tape, stamps and a package controller, set up a locker at the Reece post office and send your first stamped package to another village's locker.",
+   "summary": "Juniper wants a real post office: craft Ender Mail packing tape, stamps and a package controller, set up a locker at the Reece post office and send your first stamped package to another village's locker.",
    "mods": [
     "endermail"
    ],
@@ -202,7 +202,7 @@
    "after": [
     "great_bridge_run"
    ],
-   "summary": "An urgent letter must go out after dark across open country. Monsters ambush the road (encounter): take the hits and keep running, because stopping to fight loses the deadline. Wren gives you the necklace she wore on her own night runs.",
+   "summary": "An urgent letter must go out after dark across open country. Monsters ambush the road (encounter): take the hits and keep running, because stopping to fight loses the deadline. Juniper gives you the necklace she wore on her own night runs.",
    "mods": [
     "fotfmail",
     "artifacts"
@@ -565,7 +565,7 @@
    "after": [
     "sky_post_office"
    ],
-   "summary": "Wren's grandfather flew the post on homemade wings. Craft a pair of Icarus feathered wings and glide from the sky village back down to Reece without touching the ground.",
+   "summary": "Juniper's grandfather flew the post on homemade wings. Craft a pair of Icarus feathered wings and glide from the sky village back down to Reece without touching the ground.",
    "mods": [
     "icarus",
     "skyvillages"
@@ -700,10 +700,10 @@
     "grand_relay",
     "sharestone_network"
    ],
-   "summary": "Wren hands you the post office keys and the Couriers' oldest treasure, reforged for you.",
+   "summary": "Juniper hands you the post office keys and the Couriers' oldest treasure, reforged for you.",
    "mods": [],
    "landmarks": [],
-   "reward": "Agility XP, Wren's Seven-League Boots (named netherite boots: Feather Falling IV, Depth Strider III, Soul Speed III, Unbreaking III, Mending)"
+   "reward": "Agility XP, Juniper's Seven-League Boots (named netherite boots: Feather Falling IV, Depth Strider III, Soul Speed III, Unbreaking III, Mending)"
   }
  ]
 }

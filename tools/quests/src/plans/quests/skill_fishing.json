@@ -2,7 +2,7 @@
   "line": "Fishing path",
   "chapter": "skill_fishing",
   "group": "skills",
-  "giver": "Anglers' society: fishermen in every village (pooled representatives); in Reece, Commodore Wren Halloway, the society's president. Rival: Silas Pike, a boastful champion angler who turns up wherever you fish.",
+  "giver": "Anglers' society: fishermen in every village (pooled representatives); in Reece, Commodore Marlow Halloway, the society's president. Rival: Silas Pike, a boastful champion angler who turns up wherever you fish.",
   "feel": "A season of fishing competitions: heats in rivers, jungles, reefs and the open sea against a rival who cheats a little, legendary catches, and a grand championship at the end.",
   "quests": [
     {"id": "sign_up", "title": "Entry Form", "tier": "prologue", "types": ["talk", "fish"], "after": [], "summary": "Commodore Halloway in Reece signs you up for the society's season, if you can land five fish of any kind with a plain rod before sundown and show her the catch.", "mods": ["aquaculture"], "landmarks": [], "reward": "Fishing XP, a stack of worms, the season's fixture card"},

@@ -2,7 +2,7 @@
   "line": "Magic path",
   "chapter": "skill_magic",
   "group": "skills",
-  "giver": "The Arcane Order: librarians and Iron's Priests in every village (the pool), led by Archmage Orrin Vael in Reece's library tower; with Sister Maren, a priest who hunts the undead, and Wren, a runaway apprentice with a habit of borrowing things",
+  "giver": "The Arcane Order: librarians and Iron's Priests in every village (the pool), led by Archmage Orrin Vael in Reece's library tower; with Sister Agathe, a priest who hunts the undead, and Pip, a runaway apprentice with a habit of borrowing things",
   "feel": "A scholar's apprenticeship that grows into a hunt for a lost flame: libraries and ink first, then towers, frozen dens and catacombs, ending with a fire older than any book",
   "quests": [
     {
@@ -44,7 +44,7 @@
       "tier": "act1",
       "types": ["talk", "trade"],
       "after": ["the_order_calls"],
-      "summary": "Sister Maren, an Iron's priest, wanders between villages. Find a priest, trade with him for a healing potion, and hear about the undead stirring beneath old graves.",
+      "summary": "Sister Agathe, an Iron's priest, wanders between villages. Find a priest, trade with him for a healing potion, and hear about the undead stirring beneath old graves.",
       "mods": ["irons_spellbooks"],
       "landmarks": ["#villages"],
       "reward": "Magic XP, holy water (healing splash)"
@@ -166,7 +166,7 @@
       "tier": "act1",
       "types": ["explore", "puzzle", "encounter"],
       "after": ["first_spellbook"],
-      "summary": "Wren, Orrin's apprentice, ran off with three of his books. Track her to a wizard tower in the old forests, solve the warded door, and talk her into coming home.",
+      "summary": "Pip, Orrin's apprentice, ran off with three of his books. Track her to a wizard tower in the old forests, solve the warded door, and talk her into coming home.",
       "mods": ["structory_towers", "irons_spellbooks"],
       "landmarks": ["structory_towers:wizard_tower"],
       "reward": "Magic XP, Orrin's books, a wizard hat"
@@ -265,10 +265,10 @@
       "tier": "act2",
       "types": ["cook", "deliver"],
       "after": ["spider_den"],
-      "summary": "Wren dares you to prepare and cook an ice spider egg, and then to serve it to Orrin without telling him what it is.",
+      "summary": "Pip dares you to prepare and cook an ice spider egg, and then to serve it to Orrin without telling him what it is.",
       "mods": ["irons_spellbooks"],
       "landmarks": [],
-      "reward": "Magic XP, Cooking XP, Wren's grin"
+      "reward": "Magic XP, Cooking XP, Pip's grin"
     },
     {
       "id": "impaled_icebreaker",
@@ -309,7 +309,7 @@
       "tier": "act2",
       "types": ["stealth", "fetch"],
       "after": ["evoker_fort"],
-      "summary": "Get into the fort and take the logbook without any illager seeing you; caught once, you start again. Wren lends her trick for the first try (an invisibility elixir) and the scarf she 'borrowed' from Orrin years ago once you're out, because you've earned it.",
+      "summary": "Get into the fort and take the logbook without any illager seeing you; caught once, you start again. Pip lends her trick for the first try (an invisibility elixir) and the scarf she 'borrowed' from Orrin years ago once you're out, because you've earned it.",
       "mods": ["irons_spellbooks", "artifacts"],
       "landmarks": ["irons_spellbooks:evoker_fort"],
       "signature": "artifacts:scarf_of_invisibility",
@@ -365,7 +365,7 @@
       "tier": "act3",
       "types": ["talk", "explore"],
       "after": ["translate_logbook", "main_story:act3_start"],
-      "summary": "Sister Maren reads the logbook and goes pale. She leads you to an old graveyard where the stair down to the catacombs was found.",
+      "summary": "Sister Agathe reads the logbook and goes pale. She leads you to an old graveyard where the stair down to the catacombs was found.",
       "mods": ["irons_spellbooks", "structory"],
       "landmarks": ["#graveyards"],
       "reward": "Magic XP, holy water"
@@ -398,7 +398,7 @@
       "tier": "act3",
       "types": ["fetch", "puzzle"],
       "after": ["necromancers"],
-      "summary": "The bone key opens the catacombs' vaults, where pieces of a phylactery are hidden. Gather the shards for Maren before anyone else does.",
+      "summary": "The bone key opens the catacombs' vaults, where pieces of a phylactery are hidden. Gather the shards for Agathe before anyone else does.",
       "mods": ["irons_spellbooks"],
       "landmarks": ["irons_spellbooks:catacombs"],
       "reward": "Magic XP, a blood vial"
@@ -409,7 +409,7 @@
       "tier": "act3",
       "types": ["boss"],
       "after": ["necromancers"],
-      "summary": "In the heart of the catacombs the Dead King (500 health) sits on his throne. Wake him and end his reign; Maren waits at the stair.",
+      "summary": "In the heart of the catacombs the Dead King (500 health) sits on his throne. Wake him and end his reign; Agathe waits at the stair.",
       "mods": ["irons_spellbooks"],
       "landmarks": ["irons_spellbooks:catacombs"],
       "reward": "Magic XP, a dead king's lullaby disc"
@@ -420,7 +420,7 @@
       "tier": "act3",
       "types": ["craft", "spell"],
       "after": ["phylactery_shards"],
-      "summary": "Orrin forbids blood magic; Wren insists you should understand it to fight it. Craft a blood rune and cast a blood spell in secret.",
+      "summary": "Orrin forbids blood magic; Pip insists you should understand it to fight it. Craft a blood rune and cast a blood spell in secret.",
       "mods": ["irons_spellbooks"],
       "landmarks": [],
       "reward": "Magic XP, bloody vellum"
@@ -530,7 +530,7 @@
       "tier": "act5",
       "types": ["talk", "deliver"],
       "after": ["legendary_ink", "netherite_mage"],
-      "summary": "Bring Orrin, Maren and Wren together in the library tower with the citadel inscriptions and the phylactery shards; together they work out who the Flamebearer was, and why his echo still burns.",
+      "summary": "Bring Orrin, Agathe and Pip together in the library tower with the citadel inscriptions and the phylactery shards; together they work out who the Flamebearer was, and why his echo still burns.",
       "mods": ["irons_spellbooks"],
       "landmarks": [],
       "reward": "Magic XP, the statue's design"
@@ -552,7 +552,7 @@
       "tier": "post",
       "types": ["boss", "spell"],
       "after": ["tyros_statue"],
-      "summary": "Wake the Echo of Tyros, First Flamebearer (1000 health, 15 armour), and lay the flame to rest, with Orrin, Maren and Wren watching from a safe distance.",
+      "summary": "Wake the Echo of Tyros, First Flamebearer (1000 health, 15 armour), and lay the flame to rest, with Orrin, Agathe and Pip watching from a safe distance.",
       "mods": ["irons_spellbooks"],
       "landmarks": [],
       "reward": "Magic XP, the Flame Still Burns disc"
