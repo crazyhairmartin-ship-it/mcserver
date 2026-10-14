@@ -409,7 +409,7 @@
     "juniper": {
       "name": "Postmistress Juniper Quill",
       "profession": "minecraft:cartographer",
-      "personality": "Runs the Couriers' post office. Brisk, fast-talking and always in a hurry, obsessed with schedules, stamps and the record time for every route; speaks in clipped bursts. Works alongside the Ender Mail carriers and takes every job they can't: too big, alive, fragile, no mailbox, or needs a signature. Respects the endermen's speed, resents their tea breaks.",
+      "personality": "Runs the Couriers' post office. Brisk, fast-talking and always in a hurry, obsessed with schedules, stamps and the record time for every route; speaks in clipped bursts. Works alongside the Ender Mail carriers and takes every job they can't: too big, alive, fragile, no mailbox, or needs a signature. Respects the endermen's speed, resents their tea breaks. Her assistant Vworp, a small Ender Mail carrier, sorts the post beside her.",
       "idle": [
         "Running late? You're running late. Everyone's running late.",
         "Signed, sealed, sprinted.",
@@ -419,7 +419,24 @@
         "Don't stop to chat on a run. You're chatting now. Off you go.",
         "The endermen do letters. We do everything else. Everything.",
         "No mailbox out there? Then it's a Couriers job.",
-        "A carrier won't take a live chicken. I've asked."
+        "A carrier won't take a live chicken. I've asked.",
+        "Vworp, stop staring at the gravel. We have a schedule."
+      ]
+    },
+    "vworp": {
+      "name": "Vworp",
+      "entity": "endermail:ender_mailman",
+      "scale": 0.6,
+      "home": "Juniper's post office in Reece, at her side",
+      "personality": "Juniper's assistant: a small, polite Ender Mail carrier in a mail cap who stays at the post office instead of delivering. Speaks in soft enderman noises and the odd careful word, sorts letters with great seriousness, is devoted to Juniper and quietly embarrassed by the jobs the other carriers turn down. Won't go near water.",
+      "idle": [
+        "*vwoop.* Letters. Sorted.",
+        "*tilts head at your parcel* ...Too big. Juniper.",
+        "*straightens its mail cap*",
+        "Rain? *shudders* No.",
+        "*holds out a stamp, very proudly*",
+        "Juniper says: no stopping. *vwoop*",
+        "*stares at a cobblestone block for a long time, then looks away guiltily*"
       ]
     },
     "fern": {
