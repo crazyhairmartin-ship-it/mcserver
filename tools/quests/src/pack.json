@@ -122,6 +122,117 @@
     }
   ],
   "characters": {
-    "_about": "Named characters placed in Reece with /questnpc place <id>, or brought by encounters. Each: name, entity (default minecraft:villager), profession (villagers), idle (lines when they have nothing for you)."
+    "_about": "Named characters placed in Reece with /questnpc place <id>, or brought by encounters. Each: name, entity (default minecraft:villager), profession (villagers), idle (lines when they have nothing for you).",
+    "maren": {
+      "name": "Elder Maren",
+      "profession": "minecraft:librarian",
+      "idle": [
+        "Reece is small, but it's never quiet for long.",
+        "Read the Field Guide when you're unsure. I wrote half of it."
+      ]
+    },
+    "wren": {
+      "name": "Sister Wren",
+      "profession": "minecraft:cleric",
+      "idle": [
+        "The forest still hasn't answered me.",
+        "Light a candle at the shrine if you pass it."
+      ]
+    },
+    "edda": {
+      "name": "Old Edda",
+      "profession": "minecraft:nitwit",
+      "idle": [
+        "Everyone comes back to the graveyard eventually. Some come back sooner.",
+        "Mind how you go."
+      ]
+    },
+    "hale": {
+      "name": "Captain Hale",
+      "entity": "guardvillagers:guard",
+      "idle": [
+        "Watch the tree line at dusk.",
+        "Keep your shield up and your back to a wall."
+      ]
+    },
+    "dagna": {
+      "name": "Guildmaster Dagna Holt",
+      "profession": "minecraft:toolsmith",
+      "idle": [
+        "A good pick and a better lantern. That's all a miner needs.",
+        "Mind the gravel."
+      ]
+    },
+    "marta": {
+      "name": "Marta Furrow",
+      "profession": "minecraft:farmer",
+      "idle": [
+        "Rain's coming. The barley knows it before I do.",
+        "There's always work in the fields."
+      ]
+    },
+    "halloway": {
+      "name": "Commodore Marlow Halloway",
+      "profession": "minecraft:fisherman",
+      "idle": [
+        "The society meets on the jetty. Bring a rod.",
+        "Tide's turning. Good time to fish."
+      ]
+    },
+    "bess": {
+      "name": "Bess Copperpot",
+      "profession": "minecraft:butcher",
+      "idle": [
+        "Stew's on. Pull up a stool.",
+        "Nobody leaves my tavern hungry."
+      ]
+    },
+    "rue": {
+      "name": "Mother Rue",
+      "profession": "minecraft:cleric",
+      "idle": [
+        "Every weed is a medicine to someone.",
+        "Pick only what you need."
+      ]
+    },
+    "bram": {
+      "name": "Bram the Baker",
+      "profession": "minecraft:farmer",
+      "idle": [
+        "Smell that? No, nor do I. No flour, no bread.",
+        "Mind the oven, it bites."
+      ]
+    },
+    "hesk": {
+      "name": "Miller Hesk",
+      "profession": "minecraft:farmer",
+      "idle": [
+        "The mill turns when the wind does.",
+        "Grain in, flour out. Usually."
+      ]
+    },
+    "nell": {
+      "name": "Nell the Weaver",
+      "profession": "minecraft:shepherd",
+      "idle": [
+        "Straw, canvas, wool. Everything starts as something plainer.",
+        "Don't touch the loom."
+      ]
+    },
+    "olsen": {
+      "name": "Olsen the Carpenter",
+      "profession": "minecraft:mason",
+      "idle": [
+        "Measure twice. Then measure again, because you got it wrong.",
+        "Only the old birch will do."
+      ]
+    },
+    "silas": {
+      "name": "Silas Pike",
+      "profession": "minecraft:fisherman",
+      "idle": [
+        "Back again? I'll still out-fish you."
+      ]
+    }
   }
 }

@@ -1,0 +1,676 @@
+{
+  "title": "Welcome to Reece",
+  "subtitle": "Your first day in the forest",
+  "icon": "minecraft:oak_sapling",
+  "group": "start",
+  "order": 0,
+  "quests": [
+    {
+      "id": "welcome",
+      "title": "Welcome to Reece",
+      "text": [
+        "Elder Maren is waiting by Reece's well. She meets every newcomer herself.",
+        "Find her in Reece and say hello."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "maren",
+          "lines": [
+            "Ah, a new face. Welcome to Reece.",
+            "Take this. It's the Field Guide; I wrote half of it, so be kind.",
+            "Have a look around before night falls. Reece is small, but it's friendly."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "command": "/give {p} patchouli:guide_book{\"patchouli:book\":\"patchouli:fotf_field_guide\"}",
+          "title": "The Field Guide"
+        },
+        {
+          "item": "minecraft:bread",
+          "count": 4
+        },
+        {
+          "item": "minecraft:torch",
+          "count": 16
+        }
+      ],
+      "icon": "minecraft:oak_sapling",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "field_guide",
+      "title": "Read the Field Guide",
+      "after": [
+        "welcome"
+      ],
+      "text": [
+        "The Field Guide explains everything the forest has to offer. Lost it? Type /guide for a new one.",
+        "Somewhere in it there's a page on the quiet forest. Someone pressed a leaf between its pages and left Reece in a hurry."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I found the pressed leaf"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:wooden_pickaxe"
+        },
+        {
+          "item": "minecraft:wooden_axe"
+        },
+        {
+          "item": "minecraft:lantern"
+        }
+      ],
+      "icon": "patchouli:guide_book"
+    },
+    {
+      "id": "reece_tour",
+      "title": "Old Streets, New Roofs",
+      "after": [
+        "welcome"
+      ],
+      "text": [
+        "Reece is bigger than it looks. Walk its streets: the smithy, the farms, the chapel and the market square."
+      ],
+      "tasks": [
+        {
+          "place": "reece",
+          "title": "Walk around Reece"
+        },
+        {
+          "talk": "org",
+          "org": "crafters",
+          "lines": [
+            "The smithy's this way. Mind the anvil."
+          ],
+          "title": "Say hello at the smithy"
+        },
+        {
+          "talk": "org",
+          "org": "growers",
+          "lines": [
+            "Fields don't plant themselves. Nice to meet you."
+          ],
+          "title": "Say hello at the farms"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 3
+        },
+        {
+          "item": "minecraft:map"
+        }
+      ],
+      "icon": "minecraft:bell"
+    },
+    {
+      "id": "skill_trees",
+      "title": "Every Hand Learns",
+      "after": [
+        "field_guide"
+      ],
+      "text": [
+        "Reece trains its people in skills: mining, farming, fishing, fighting and more. Almost everything you do earns skill XP.",
+        "Press K to open your skill trees, earn your first point in any tree and spend it."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I spent my first skill point"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "mining",
+          "xp": 15
+        },
+        {
+          "skill": "forage",
+          "xp": 15
+        },
+        {
+          "skill": "farm",
+          "xp": 15
+        },
+        {
+          "skill": "fish",
+          "xp": 15
+        },
+        {
+          "skill": "cook",
+          "xp": 15
+        },
+        {
+          "skill": "craft",
+          "xp": 15
+        },
+        {
+          "skill": "attack",
+          "xp": 15
+        },
+        {
+          "skill": "range",
+          "xp": 15
+        },
+        {
+          "skill": "defense",
+          "xp": 15
+        },
+        {
+          "skill": "agility",
+          "xp": 15
+        },
+        {
+          "skill": "magic",
+          "xp": 15
+        },
+        {
+          "skill": "taming",
+          "xp": 15
+        }
+      ],
+      "icon": "minecraft:experience_bottle"
+    },
+    {
+      "id": "skill_tonic",
+      "title": "A Bitter Tonic",
+      "after": [
+        "skill_trees"
+      ],
+      "text": [
+        "Changed your mind about a skill? Sister Wren, Reece's cleric, brews skill tonics that let you unlearn a tree's choices.",
+        "Ask her how they work, and keep one in reserve."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "wren",
+          "lines": [
+            "A skill tonic undoes what you've learned in one tree, and gives the points back.",
+            "It tastes awful. That's how you know it works.",
+            "Keep this one. You'll be glad of it one day."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "fotfskills:skill_tonic"
+        }
+      ],
+      "icon": "fotfskills:skill_tonic"
+    },
+    {
+      "id": "first_timber",
+      "title": "Timber!",
+      "after": [
+        "welcome"
+      ],
+      "text": [
+        "Every journey starts with a tree. Hold the Ultimine key while you chop and the whole trunk comes down in one go.",
+        "Reece's woodpile needs filling: gather 64 oak logs."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:oak_log",
+          "count": 64
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:stone_axe"
+        },
+        {
+          "item": "minecraft:apple",
+          "count": 4
+        },
+        {
+          "skill": "forage",
+          "xp": 40
+        }
+      ],
+      "icon": "minecraft:oak_log"
+    },
+    {
+      "id": "waystone_reece",
+      "title": "The Stone That Remembers",
+      "after": [
+        "reece_tour"
+      ],
+      "text": [
+        "The waystone in Reece remembers everyone who touches it. Attune to it, then find a second waystone out in the wild.",
+        "Waystones let you warp between any you've found."
+      ],
+      "tasks": [
+        {
+          "place": "reece",
+          "title": "Attune to Reece's waystone"
+        },
+        {
+          "checkmark": "I found a second waystone"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "waystones:return_scroll"
+        },
+        {
+          "item": "waystones:warp_dust",
+          "count": 4
+        }
+      ],
+      "icon": "waystones:waystone"
+    },
+    {
+      "id": "backpack",
+      "title": "Room to Carry",
+      "after": [
+        "first_timber"
+      ],
+      "text": [
+        "Your pockets won't hold a forest. Stitch a backpack, and fit it with a pickup upgrade so it fills itself as you walk."
+      ],
+      "tasks": [
+        {
+          "item": "sophisticatedbackpacks:backpack"
+        },
+        {
+          "item": "sophisticatedbackpacks:pickup_upgrade"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather",
+          "count": 6
+        },
+        {
+          "skill": "craft",
+          "xp": 40
+        }
+      ],
+      "icon": "sophisticatedbackpacks:backpack"
+    },
+    {
+      "id": "first_night",
+      "title": "The Hourglass Night",
+      "after": [
+        "reece_tour"
+      ],
+      "text": [
+        "Craft a bed and sleep through your first night. The more of the server is asleep, the faster the stars wheel by."
+      ],
+      "tasks": [
+        {
+          "advancement": "minecraft:adventure/sleep_in_bed"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cooked_mutton",
+          "count": 4
+        },
+        {
+          "item": "minecraft:candle",
+          "count": 2
+        }
+      ],
+      "icon": "minecraft:red_bed"
+    },
+    {
+      "id": "camp_out",
+      "title": "Under the Open Sky",
+      "after": [
+        "first_night"
+      ],
+      "text": [
+        "Nights on the road are kinder with a sleeping bag, and afternoons are kinder with a hammock.",
+        "Make both."
+      ],
+      "tasks": [
+        {
+          "item": "comforts:sleeping_bag_white"
+        },
+        {
+          "item": "comforts:hammock_white"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "comforts:rope_and_nail",
+          "count": 2
+        },
+        {
+          "item": "minecraft:campfire"
+        }
+      ],
+      "icon": "comforts:sleeping_bag_white"
+    },
+    {
+      "id": "gravestone",
+      "title": "The Sexton's Promise",
+      "after": [
+        "reece_tour"
+      ],
+      "text": [
+        "Old Edda keeps Reece's graveyard. She has something to tell every newcomer."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "edda",
+          "lines": [
+            "Everyone comes to the graveyard eventually. Some sooner than others.",
+            "If you fall out there, a gravestone holds your things where you died. Only you can open it.",
+            "This belonged to the last adventurer who didn't come back. Read it. Then don't be them."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "gravestone:obituary"
+        },
+        {
+          "item": "minecraft:golden_carrot"
+        }
+      ],
+      "icon": "gravestone:gravestone"
+    },
+    {
+      "id": "cosmetic_armor",
+      "title": "Dressed for Reece",
+      "after": [
+        "reece_tour"
+      ],
+      "text": [
+        "Reece's tailor thinks armour is ugly at the harvest dance. You can wear anything over your armour in the cosmetic armour slots of your inventory and keep the protection underneath.",
+        "Bring the tailor 8 white wool for a festival outfit."
+      ],
+      "tasks": [
+        {
+          "talk": "villager",
+          "profession": "minecraft:leatherworker",
+          "lines": [
+            "Armour at a dance? Absolutely not.",
+            "Bring me wool and I'll make you something proper."
+          ]
+        },
+        {
+          "item": "minecraft:white_wool",
+          "count": 8,
+          "consume": true
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather_helmet"
+        },
+        {
+          "item": "minecraft:leather_chestplate"
+        },
+        {
+          "item": "minecraft:leather_leggings"
+        },
+        {
+          "item": "minecraft:leather_boots"
+        }
+      ],
+      "icon": "minecraft:leather_chestplate"
+    },
+    {
+      "id": "natures_compass",
+      "title": "Which Way the Wind Blows",
+      "after": [
+        "waystone_reece"
+      ],
+      "text": [
+        "A Nature's Compass points to any biome you name. Craft one and use it to find somewhere you've never been."
+      ],
+      "tasks": [
+        {
+          "item": "naturescompass:naturescompass"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 40
+        }
+      ],
+      "icon": "minecraft:compass"
+    },
+    {
+      "id": "explorers_compass",
+      "title": "Which Way the Stones Lie",
+      "after": [
+        "natures_compass"
+      ],
+      "text": [
+        "An Explorer's Compass points to places people built. Craft one and follow it to the nearest well."
+      ],
+      "tasks": [
+        {
+          "item": "explorerscompass:explorerscompass"
+        },
+        {
+          "structure": "#wells",
+          "title": "Find a well"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 4
+        },
+        {
+          "item": "minecraft:bucket"
+        }
+      ],
+      "icon": "explorerscompass:explorerscompass"
+    },
+    {
+      "id": "guilds_of_the_field",
+      "title": "Hands of the Field",
+      "after": [
+        "reece_tour"
+      ],
+      "text": [
+        "Four organisations work the land and water around Reece. Meet a member of each: the Growers' co-op (farmers), the Anglers' society (fishermen), the Herbalists (clerics) and the Tavern keepers (butchers).",
+        "Sneak and right-click a villager to talk."
+      ],
+      "tasks": [
+        {
+          "talk": "org",
+          "org": "growers",
+          "lines": [
+            "The co-op's always short of hands. Come and see us."
+          ]
+        },
+        {
+          "talk": "org",
+          "org": "anglers",
+          "lines": [
+            "Fish bite at dawn and dusk. We'll teach you the rest."
+          ]
+        },
+        {
+          "talk": "org",
+          "org": "herbalists",
+          "lines": [
+            "Every weed is a medicine to someone."
+          ]
+        },
+        {
+          "talk": "org",
+          "org": "tavern",
+          "lines": [
+            "Nobody leaves a tavern hungry. That's the rule."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:wheat_seeds",
+          "count": 16
+        },
+        {
+          "item": "minecraft:fishing_rod"
+        },
+        {
+          "item": "minecraft:bread",
+          "count": 4
+        }
+      ],
+      "icon": "minecraft:wheat"
+    },
+    {
+      "id": "guilds_of_the_forge",
+      "title": "Hands of the Forge",
+      "after": [
+        "reece_tour"
+      ],
+      "text": [
+        "Four more work stone, metal and the hunt: the Miners' guild (toolsmiths), the Crafters' guild (masons), the Bounty office (weaponsmiths, by the bounty board) and the Hunters' lodge (fletchers)."
+      ],
+      "tasks": [
+        {
+          "talk": "org",
+          "org": "miners",
+          "lines": [
+            "Mind the gravel and carry torches. That's half of mining."
+          ]
+        },
+        {
+          "talk": "org",
+          "org": "crafters",
+          "lines": [
+            "Anything worth making is worth making twice."
+          ]
+        },
+        {
+          "talk": "org",
+          "org": "bounty",
+          "lines": [
+            "The board pays for monsters. Read it every morning."
+          ]
+        },
+        {
+          "talk": "org",
+          "org": "hunters",
+          "lines": [
+            "Walk soft and shoot straight."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:torch",
+          "count": 16
+        },
+        {
+          "item": "minecraft:stonecutter"
+        },
+        {
+          "item": "minecraft:arrow",
+          "count": 16
+        }
+      ],
+      "icon": "minecraft:iron_pickaxe"
+    },
+    {
+      "id": "guilds_of_the_road",
+      "title": "Hands of the Road",
+      "after": [
+        "reece_tour"
+      ],
+      "text": [
+        "And four keep the roads open: the Couriers (cartographers), the Village watch (guards), the Arcane order (librarians) and the Sanctuary keepers (shepherds)."
+      ],
+      "tasks": [
+        {
+          "talk": "org",
+          "org": "couriers",
+          "lines": [
+            "If it needs to be somewhere else, we'll take it."
+          ]
+        },
+        {
+          "talk": "org",
+          "org": "watch",
+          "lines": [
+            "Keep your eyes open at dusk."
+          ]
+        },
+        {
+          "talk": "org",
+          "org": "arcane",
+          "lines": [
+            "Magic is just knowledge nobody's written down yet."
+          ]
+        },
+        {
+          "talk": "org",
+          "org": "sanctuary",
+          "lines": [
+            "Every animal deserves somewhere safe."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:map"
+        },
+        {
+          "item": "minecraft:shield"
+        },
+        {
+          "item": "minecraft:book"
+        },
+        {
+          "item": "minecraft:lead"
+        }
+      ],
+      "icon": "minecraft:filled_map"
+    },
+    {
+      "id": "clerics_worry",
+      "title": "The Cleric's Worry",
+      "after": [
+        "field_guide",
+        "guilds_of_the_field"
+      ],
+      "text": [
+        "Sister Wren has been watching the forest. She'd like a word."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "wren",
+          "lines": [
+            "The forest has gone quiet. No fireflies at dusk, no birdsong.",
+            "And the old spirits don't answer my prayers any more.",
+            "I don't know what's wrong. Will you help me find out?"
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "command": "/give {p} minecraft:potion{Potion:\"minecraft:healing\"}",
+          "title": "A healing potion"
+        }
+      ],
+      "icon": "minecraft:candle",
+      "shape": "diamond",
+      "size": 1.25
+    }
+  ]
+}
