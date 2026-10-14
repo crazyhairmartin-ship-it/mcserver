@@ -27,6 +27,13 @@ try {
   console.warn('quest_givers: FTB Quests not found; stages are added but no quest will notice')
 }
 
+// puzzle blocks (quest "protect"): the fotfskills add-on enforces them; hand it this load's rules
+try {
+  Java.loadClass('fotfskills.compat.QuestProtect').configure(JSON.stringify(global.QUEST_PROTECT || []))
+} catch (e) {
+  console.warn('quest_givers: fotfskills QuestProtect not found; puzzle blocks are not protected: ' + e)
+}
+
 const QUEST_OFFER_MS = 5 * 60 * 1000       // [Accept] works for 5 minutes after the offer
 const QUEST_DROP_RETRY_MS = 20 * 60 * 1000  // a lost quest item can drop again after 20 minutes
 

@@ -467,6 +467,10 @@ def build_encounter(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, proble
     return task, entry
 
 
+# shortcuts a timed challenge can switch off (kubejs/server_scripts/quest_npcs.js)
+TIMED_BANS = ('teleport', 'mounts', 'elytra', 'pearls')  # never grappling hooks: Dylan wants them allowed
+
+
 def build_timed(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     """A "timed" challenge: when the step opens the player gets a [Start] button; they then have "seconds" to reach
     the goal: kill a number of a mob, raise a statistic by a number, or reach a place."""
@@ -495,12 +499,56 @@ def build_timed(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     else:
         problems.error(where, 'timed goal must be "kill", "stat" or "place"')
         return None, None
+    banned = spec.get('no', [])
+    banned = banned if isinstance(banned, list) else [banned]
+    for b in banned:
+        if b not in TIMED_BANS:
+            problems.error(where, f'timed "no": unknown shortcut {b!r} (one of {", ".join(TIMED_BANS)})')
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.timed{n}', 'type': 'timed',
-             'seconds': seconds, 'goal': out_goal, 'lines': spec.get('lines', []), 'start': spec.get('start', 'Start'),
+             'seconds': seconds, 'goal': out_goal, 'no': [b for b in banned if b in TIMED_BANS], 'lines': spec.get('lines', []), 'start': spec.get('start', 'Start'),
              'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks), 'name': spec.get('name', '')}
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
             'title': t.get('title', f'Challenge ({seconds // 60}:{seconds % 60:02d})')}
     return task, entry
+
+
+def protect_specs(value):
+    """A quest's "protect": one {"structure"/"structures", "blocks"} or a list of them."""
+    if value is None:
+        return []
+    return value if isinstance(value, list) else [value]
+
+
+def build_protect(spec, reg, where, problems):
+    """Puzzle blocks: inside the structures, the blocks can't be broken by survival players, blown up or pushed by
+    pistons. Structures are ids, "#group" (src/structure_groups.json, expanded here) or "#namespace:tag"; blocks are
+    ids (checked as items unless "unchecked": true) or "#namespace:tag"."""
+    if not isinstance(spec, dict):
+        problems.error(where, '"protect" needs {"structure": ..., "blocks": [...]}')
+        return None
+    structures = spec.get('structures', spec.get('structure'))
+    structures = structures if isinstance(structures, list) else [structures] if structures else []
+    blocks = spec.get('blocks', [])
+    blocks = blocks if isinstance(blocks, list) else [blocks]
+    if not structures or not blocks:
+        problems.error(where, '"protect" needs at least one structure and one block')
+        return None
+    out_structures = []
+    for sid in structures:
+        if isinstance(sid, str) and sid.startswith('#') and ':' not in sid:
+            if sid[1:] not in STRUCTURE_GROUPS:
+                problems.error(where, f'unknown structure group {sid} (tools/quests/src/structure_groups.json)')
+                continue
+            out_structures += STRUCTURE_GROUPS[sid[1:]]
+        elif isinstance(sid, str) and sid.startswith('#'):
+            out_structures.append(sid)
+        else:
+            reg.check('structures', sid, where)
+            out_structures.append(sid)
+    for b in blocks:
+        if not (isinstance(b, str) and b.startswith('#')):
+            reg.check('items', b, where, spec.get('unchecked', False))
+    return {'structures': sorted(set(out_structures)), 'blocks': list(blocks)}
 
 
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
@@ -644,7 +692,7 @@ def main():
         reg.check('entities', c['entity'], f'pack.json > character {cid}')
         characters[cid] = c
     ctx = {'registry': reg, 'skills': skills, 'orgs': orgs, 'characters': characters, 'signatures': {},
-           'artifact_rewards': [], 'tables': {}, 'quest_items': {}, 'done_stages': set()}
+           'artifact_rewards': [], 'protect': [], 'tables': {}, 'quest_items': {}, 'done_stages': set()}
 
     # reward tables
     tables_out = {}
@@ -829,6 +877,10 @@ def main():
                     problems.error(where, f'{sig} is already the signature of {ctx["signatures"][sig]}; '
                                           'each artifact gets one quest built around it')
                 ctx['signatures'][sig] = f'{name}:{qid}'
+            for n, spec in enumerate(protect_specs(q.get('protect'))):
+                rule = build_protect(spec, reg, f'{where} > protect {n + 1}', problems)
+                if rule:
+                    ctx['protect'].append(rule)
             for r in q.get('rewards', []):
                 item = r.get('item') if isinstance(r, dict) else None
                 if isinstance(item, str) and item.split(':')[0] in SIGNATURE_MODS and item not in SIGNATURE_EXEMPT:
@@ -928,7 +980,9 @@ def main():
           '// Who gives which quest. Read by quest_givers.js.\n'
           'global.QUEST_GIVERS = ' + json.dumps(givers, indent=2) + '\n'
           'global.QUEST_CHARACTERS = ' + json.dumps(characters, indent=2) + '\n'
-          'global.QUEST_ORGS = ' + json.dumps(orgs, indent=2) + '\n')
+          'global.QUEST_ORGS = ' + json.dumps(orgs, indent=2) + '\n'
+          '// Puzzle blocks that can\'t be broken, blown up or pushed inside these structures (fotfskills QuestProtect).\n'
+          'global.QUEST_PROTECT = ' + json.dumps(ctx['protect'], indent=2) + '\n')
     print('wrote ' + summary)
 
 

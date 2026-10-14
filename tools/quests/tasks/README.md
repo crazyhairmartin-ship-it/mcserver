@@ -77,11 +77,16 @@ characters only (see "Report" below).
 
 ### When the engine can't do it yet
 
-Some plan entries need mechanics the generator doesn't have yet: puzzle blocks that can't be broken, timed challenges
-that switch off waystones or mounts, escorts, stealth, defending a spot, checking a build, photos. **Write the quest
-anyway** with the nearest supported tasks (a `checkmark` for "solve the puzzle", a `timed` goal without the
-restrictions, a `kill` count for a defence, an `observe` or `structure` for "find it"), so the chain stays whole and
-playable. Then add one line per quest to `tools/quests/src/plans/followups.md` under "Engine needed":
+Puzzle blocks and timed-challenge restrictions **are** supported: give a puzzle quest a `protect` for exactly the
+blocks the puzzle depends on (never whole buildings), and a timed challenge the `no` list its plan entry implies
+(a race: `teleport` and usually `mounts`; a climb: `elytra` or `pearls` as the summary says). Grappling hooks are
+always allowed: never ban them, even where a plan summary says to. Use them
+rather than logging them.
+
+Some plan entries need mechanics the generator doesn't have yet: escorts, stealth, defending a spot, checking a
+build, photos, per-player resets of a changed puzzle. **Write the quest anyway** with the nearest supported tasks (a
+`checkmark` for "solve the puzzle", a `kill` count for a defence, an `observe` or `structure` for "find it"), so the
+chain stays whole and playable. Then add one line per quest to `tools/quests/src/plans/followups.md` under "Engine needed":
 `- <chapter>:<id>: needs <mechanic>; written as <what you used>`.
 
 If an `after` link points to a quest that isn't written yet (another chapter's later task), leave the link out and add

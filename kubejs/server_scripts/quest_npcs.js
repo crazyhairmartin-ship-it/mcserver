@@ -255,10 +255,12 @@ function npcStartChallenge(player, stage) {
   let rec = new $NpcCompoundTag()
   rec.putLong('until', Date.now() + ch.seconds * 1000)
   rec.putInt('count', 0)
+  npcRememberSpot(player, rec)
   if (ch.goal.kind == 'stat') rec.putInt('base', npcStatValue(player, ch.goal.stat))
   npcData(player, 'fqTimed').put(stage, rec)
   if (ch.lines.length) questSay(player, ch.name, ch.lines)
   player.tell(Text.yellow('Go! You have ' + ch.seconds + ' seconds.'))
+  if ((ch.no || []).length) player.tell(Text.gray('No ' + ch.no.map(b => NPC_BAN_WORDS[b]).join(', ') + ' until it's over.'))
   return true
 }
 
@@ -283,6 +285,11 @@ function npcTickChallenges(player) {
     }
     if (running.contains(ch.stage)) {
       let rec = running.getCompound(ch.stage)
+      let broken = npcBrokenBan(player, ch, rec)
+      if (broken) {
+        npcFailChallenge(player, ch, broken)
+        return
+      }
       let progress = npcChallengeProgress(player, ch, rec)
       let left = Math.ceil((rec.getLong('until') - now) / 1000)
       if (progress[0] >= progress[1]) {
@@ -307,6 +314,89 @@ function npcTickChallenges(player) {
       Text.green('[' + ch.start + ']').clickRunCommand('/quest challenge ' + ch.stage).hover('Start the timer')]))
   })
 }
+
+// ---- shortcuts a challenge switches off (timed "no") ----
+// teleport: waystones, warp and return scrolls, warp stones, chorus fruit, and (caught afterwards) any jump of over
+// 64 blocks in a second or a change of dimension. mounts: you're taken off whatever you ride. elytra: gliding ends the
+// challenge. pearls: ender pearls can't be thrown. Grappling hooks are always allowed.
+
+const NPC_BAN_WORDS = { teleport: 'teleporting', mounts: 'riding', elytra: 'gliding', pearls: 'ender pearls' }
+const NPC_TELEPORT_ITEMS = ['waystones:warp_scroll', 'waystones:bound_scroll', 'waystones:return_scroll',
+  'waystones:warp_stone', 'minecraft:chorus_fruit']
+const NPC_TELEPORT_DISTANCE = 64
+
+// the bans of every challenge this player has running: { teleport: challenge, ... }
+function npcBans(player) {
+  let running = npcData(player, 'fqTimed')
+  let bans = {}
+  npcEntries('timed').forEach(ch => {
+    if (running.contains(ch.stage)) (ch.no || []).forEach(b => { bans[b] = ch })
+  })
+  return bans
+}
+
+function npcItemBan(id) {
+  if (NPC_TELEPORT_ITEMS.indexOf(id) >= 0) return 'teleport'
+  if (id == 'minecraft:ender_pearl') return 'pearls'
+  return null
+}
+
+function npcRememberSpot(player, rec) {
+  rec.putString('dim', String(player.level.dimension))
+  rec.putDouble('x', player.x)
+  rec.putDouble('y', player.y)
+  rec.putDouble('z', player.z)
+}
+
+// checked once a second while the challenge runs; returns why it failed, or null
+function npcBrokenBan(player, ch, rec) {
+  let no = ch.no || []
+  if (!no.length) return null
+  let server = player.server
+  if (no.indexOf('mounts') >= 0
+    && server.runCommandSilent('execute as ' + player.uuid + ' on vehicle run ride ' + player.uuid + ' dismount') > 0) {
+    player.setStatusMessage(Text.red('No riding during this challenge'))
+  }
+  if (no.indexOf('elytra') >= 0
+    && server.runCommandSilent('execute as ' + player.uuid + ' if entity @s[nbt={FallFlying:1b}]') > 0) {
+    return 'No gliding in this challenge.'
+  }
+  if (no.indexOf('teleport') >= 0) {
+    let dx = player.x - rec.getDouble('x'), dy = player.y - rec.getDouble('y'), dz = player.z - rec.getDouble('z')
+    if (rec.getString('dim') != String(player.level.dimension)
+      || dx * dx + dy * dy + dz * dz > NPC_TELEPORT_DISTANCE * NPC_TELEPORT_DISTANCE) {
+      return 'No teleporting in this challenge.'
+    }
+  }
+  npcRememberSpot(player, rec)
+  return null
+}
+
+function npcFailChallenge(player, ch, why) {
+  npcData(player, 'fqTimed').remove(ch.stage)
+  player.setStatusMessage(Text.red('Challenge failed'))
+  player.tell(Text.of([Text.red(why + ' '),
+    Text.green('[Try again]').clickRunCommand('/quest challenge ' + ch.stage).hover('Restart the challenge')]))
+}
+
+ItemEvents.rightClicked(event => {
+  let player = event.player
+  if (!player || player.level.clientSide) return
+  let ban = npcItemBan(String(event.item.id))
+  if (ban && npcBans(player)[ban]) {
+    player.setStatusMessage(Text.red('No ' + NPC_BAN_WORDS[ban] + ' during this challenge'))
+    event.cancel()
+  }
+})
+
+BlockEvents.rightClicked(event => {
+  let player = event.player
+  if (!player || player.level.clientSide || String(event.block.id).indexOf('waystones:') != 0) return
+  if (npcBans(player).teleport) {
+    player.setStatusMessage(Text.red('No teleporting during this challenge'))
+    event.cancel()
+  }
+})
 
 // ---- ticking and kills ----
 

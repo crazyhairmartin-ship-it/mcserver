@@ -1633,3 +1633,5 @@ global.QUEST_ORGS = {
     ]
   }
 }
+// Puzzle blocks that can't be broken, blown up or pushed inside these structures (fotfskills QuestProtect).
+global.QUEST_PROTECT = []

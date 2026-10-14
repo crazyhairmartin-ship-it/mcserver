@@ -47,8 +47,8 @@ titles, plots or steps. Format: see the docstring of `tools/quests/coverage.py`.
 - **Fishing competitions aren't timed**: you fish until you land the competition's quest item (a prize fish that
   can only be caught while the quest is open). Needs a fishing version of the `drop` task.
 - **Timed challenges** can switch off shortcuts for their duration where they'd trivialise the challenge:
-  waystone and warp-scroll teleports, riding mounts, and per challenge other movement (elytra/wings, grappling
-  hooks, ender pearls). Each timed quest says which.
+  waystone and warp-scroll teleports, riding mounts, and per challenge other movement (elytra/wings, ender
+  pearls). Each timed quest says which. Grappling hooks are always allowed (Dylan, 2026-10-14).
 - **Protecting objectives: specific blocks, not areas.** The blocks a puzzle or quest depends on (braziers,
   levers, altars, a monument's pieces) can't be broken, blown up or pushed by pistons; everything around them stays
   normal survival. Clever solutions are welcome (any route, tool or trick that works), just not breaking the
