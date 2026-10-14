@@ -16,6 +16,22 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_taming:pet_enchanting: needs a check for enchanted collar tags; written as a checkmark
 - skill_taming:butterfly_house: needs releasing butterflies in a build; written as a build, a caterpillar jar and a checkmark
 - skill_taming:eggs_to_hatch: needs hatching and raising young; written as collecting eggs and a checkmark
+- skill_agility:first_timed_run: needs a timed delivery to a specific other village; written as a timed sprint (minecraft:sprint_one_cm) then a village structure
+- skill_agility:rooftop_basics: needs ParCool moves and a marked rooftop line; written as a timed minecraft:jump count in Reece
+- skill_agility:carry_the_chest: needs Carry On pickups; written as checkmarks
+- skill_agility:storm_cliff_parcel: needs a delivery down the cliff path to the cove; written as an encounter and a checkmark
+- skill_agility:post_office: needs sending a package between lockers; written as crafted items, a locker build and a checkmark (packing tape is trimmed from the pack)
+- skill_agility:waystone_route: needs attuning three wild waystones; written as an attuned shard and a checkmark
+- skill_agility:great_bridge_run: needs a timed crossing of a Yung's bridge (no structure id); written as a checkmark and a timed sprint
+- skill_agility:rooftop_route: needs a timed rooftop route in a village; written as a timed minecraft:jump count
+- skill_agility:night_post: needs a timed run to a specific destination; written as a timed sprint with waves
+- skill_agility:tower_zipline: needs a rigged ParCool zipline; written as a build of two iron zipline hooks
+- skill_agility:first_grapple: needs a timed canyon course; written as a timed sprint
+- skill_agility:ledge_rescue: needs Carry On rescue and return; written as an encounter and a checkmark
+- skill_crafting:sacks_and_jars: needs sorting stock into containers; written as crafting them
+- skill_crafting:road_comforts: needs handing out bedding; written as crafting and a checkmark
+- skill_crafting:megatorch: needs a night with no spawns in the ring; written as a build and a timed hold
+- skill_crafting:painted_signs: needs repainting signs and hanging wares; written as dye bottles, signs and a checkmark
 
 ## Links to restore
 

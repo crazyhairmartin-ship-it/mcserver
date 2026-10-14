@@ -117,16 +117,24 @@ file = "config/ftbquests/quests/chapters/odd_jobs.snbt"
 hash = "b6de6780106c5e9c1d4234376e3fe5648e27e34cde87e60f3012144d80c8318b"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/skill_agility.snbt"
+hash = "bc22d46ab0dcee22aa853300aea4fc5ddb06fdad327a304a3a4324b506483c81"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/skill_attack.snbt"
-hash = "ed21409f0ca2ff9d6789df443690eb1adfdff342963fb3ec6888af81a938bf73"
+hash = "96fe1e55bbd0614b451baea41994d601b53f9ae8ebef5fa3dd928fa413e97415"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_cooking.snbt"
 hash = "3a78e2e9b47b0199b5a823e0dec5cd82d5b6816d7b8f70c92230eff797a3f743"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/skill_crafting.snbt"
+hash = "0a774c3f198506095f6df5288e44544cdf0198b576f26cbfc7a140d17a3f73b0"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/skill_defense.snbt"
-hash = "2a19cdf6b364217ea54360f0f831b7e6cf638cca6473a553521f45b1d463cb1a"
+hash = "7592438806417d86e805c65de8e3ca7a04d4c11f09e3ddc996e15ce9549e40ee"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_farming.snbt"
@@ -146,11 +154,11 @@ hash = "0b7d46442f99b90304785c212c2e1b914b63557d7c809481be79260c284dff8f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_range.snbt"
-hash = "10a1fa7b95bd946b66790fecf2f543fe72de5c7a497c35743ba700c6c2696213"
+hash = "f2c4e27267752cec5877728bc7282be5de2cc8e2e1e3ab404e79b173a3247d36"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_taming.snbt"
-hash = "110a4d2a7f3fed16c2ea00da65492aa09a6623390218ed7170efa60cec7574e8"
+hash = "7201e9ad1aa1b070abb8b7ddb2562b0e135c6af2125c8a05ea023f7083dae888"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/small_favours.snbt"
@@ -2749,7 +2757,7 @@ hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "8f717cb9647a1639dd84ba8d00ed14a94462b7d9b837e0972f1424cc8f8167d9"
+hash = "0171d85a19aea59faa2ad8b991bb8c0165f187c4d091e5c6500947e2a78ecb9c"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"

@@ -1,0 +1,689 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_agility"
+	group: "1CAE106B8DA521D5"
+	icon: "minecraft:leather_boots"
+	id: "482363635747E2D4"
+	order_index: 13
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["A cartographer has pinned a Couriers' notice: runners wanted. Sign on at the Reece post office and carry your first signed letter to a cartographer in another village."]
+			icon: "fotfmail:letter_signed"
+			id: "67CC933617723768"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "1E8A45461BEAA315"
+					item: {
+						Count: 1b
+						id: "minecraft:bundle"
+						tag: {
+							display: {
+								Name: "{\"text\": \"Courier's Satchel\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 8
+					id: "735BC5FA08865790"
+					item: "fotfmail:letter"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 60"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "639901D7821C16F2"
+					silent: true
+					title: "+60 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "790020F51F638D3B"
+					stage: "fq.skill_agility.sign_the_roster"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "1DE87E1523B0780F"
+					stage: "fq.skill_agility.sign_the_roster.talk0"
+					title: "Talk to Postmistress Juniper Quill"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					id: "3CA6094A6E6C0ADD"
+					item: "fotfmail:letter_signed"
+					title: "Sign a letter for delivery"
+					type: "item"
+				}
+				{
+					id: "5B5AB85E8BD43E7E"
+					stage: "fq.skill_agility.sign_the_roster.talk2"
+					title: "Hand it to a cartographer in another village"
+					type: "gamestage"
+				}
+			]
+			title: "Sign the Roster"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["67CC933617723768"]
+			description: ["Juniper's runner has twisted an ankle, and the morning post must reach the next village before the noon bell. Make the run on the clock, and the runner will give you their shoes for good."]
+			icon: "artifacts:running_shoes"
+			id: "5E49D53931AD044E"
+			rewards: [
+				{
+					id: "6241A907A9D10B9F"
+					item: "artifacts:running_shoes"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 100"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "0382444719419A17"
+					silent: true
+					title: "+100 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6DE91D8377724E99"
+					item: "fotfmail:letter_signed"
+					title: "Take the morning post"
+					type: "item"
+				}
+				{
+					id: "34F759B8F65321A1"
+					stage: "fq.skill_agility.first_timed_run.timed1"
+					title: "Run for the next village"
+					type: "gamestage"
+				}
+				{
+					id: "1AE2D2A1916EEC30"
+					structure: "#fotf:groups/villages"
+					title: "Reach the village"
+					type: "structure"
+				}
+			]
+			title: "Beat the Bell"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["67CC933617723768"]
+			description: ["Couriers don't take the street. Learn ParCool's vault, roll and wall-run on a rooftop line across Reece, and finish it under the time on the chalk board."]
+			icon: "parcool:traceur_gloves"
+			id: "14CDB73AE5122F0E"
+			rewards: [
+				{
+					id: "6392B1125B027C65"
+					item: "parcool:parcool_guide"
+					type: "item"
+				}
+				{
+					id: "23EF51B34CD19641"
+					item: "parcool:traceur_gloves"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 90"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "29A7C99DF2E8CEE6"
+					silent: true
+					title: "+90 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "0E2D625FC0D52A19"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "78B33FD6B843C539"
+					stage: "fq.skill_agility.rooftop_basics.timed1"
+					title: "Run the rooftop line"
+					type: "gamestage"
+				}
+			]
+			title: "Over, Not Around"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["67CC933617723768"]
+			description: ["A family is moving house, and their strongbox can't be emptied on the way. Pick up the whole chest with Carry On and walk it to the new cottage, then carry their sleeping cat across too."]
+			icon: "minecraft:chest"
+			id: "5ECC6729201D9649"
+			rewards: [
+				{
+					id: "701F3B10BD076EA0"
+					item: "supplementaries:lunch_basket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 80"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "3CAA6A99EB5EBD62"
+					silent: true
+					title: "+80 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7AA047FCEDCD8BB7"
+					structure: "#fotf:groups/villages"
+					title: "Find the family's village"
+					type: "structure"
+				}
+				{
+					id: "58F1F8C95132D51B"
+					title: "I carried the chest to the new cottage"
+					type: "checkmark"
+				}
+				{
+					id: "69A1B798002C2572"
+					title: "I carried the sleeping cat across"
+					type: "checkmark"
+				}
+			]
+			title: "Don't Unpack It"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5E49D53931AD044E"]
+			description: ["A courier stranded on a cliff path by a thunderstorm begs you to finish their run. Take the parcel down the wet cliff route to the cove below without falling. Their umbrella is the thanks."]
+			icon: "artifacts:umbrella"
+			id: "5C5D0B78A4B91CE1"
+			rewards: [
+				{
+					id: "39A995C46A178F7B"
+					item: "artifacts:umbrella"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 140"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "35D3990821A5C819"
+					silent: true
+					title: "+140 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "42DF6B57FDA26E17"
+					stage: "fq.skill_agility.storm_cliff_parcel.enc0"
+					title: "Meet Stranded Courier"
+					type: "gamestage"
+				}
+				{
+					id: "7436E42A3C3F0B92"
+					title: "I delivered the parcel to the cove"
+					type: "checkmark"
+				}
+			]
+			title: "Under a Grey Sky"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5E49D53931AD044E"]
+			description: ["Juniper wants a real post office. Craft an Ender Mail package, stamps and a package controller, set up a locker at the Reece post office and send your first stamped package."]
+			icon: "endermail:stamp"
+			id: "0302FE0BC6665E28"
+			rewards: [
+				{
+					count: 8
+					id: "4BC94671BDACB173"
+					item: "endermail:stamp"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "6FD28D73783B9E5B"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0A0DD39BF6006772"
+					item: "endermail:package"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "4293CB74EBA2F4AC"
+					item: "endermail:stamp"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "1812C7BFA3DA7BBE"
+					item: "endermail:package_controller"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "209B0486FF174873"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "6F5241EBE52D3DCB"
+					stage: "fq.skill_agility.post_office.build4"
+					title: "Set up a locker"
+					type: "gamestage"
+				}
+				{
+					id: "5FB95DF70D34BFDD"
+					title: "I sent a stamped package"
+					type: "checkmark"
+				}
+			]
+			title: "Stamps and Tape"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0302FE0BC6665E28"]
+			description: ["Old couriers left waystones along the roads. Find and attune three wild waystones between Reece and the neighbouring villages, so later runs can start halfway."]
+			icon: "waystones:waystone"
+			id: "1A3C75E1E67C28EC"
+			rewards: [
+				{
+					count: 4
+					id: "5A8ACFB4A5E7F3DE"
+					item: "waystones:warp_scroll"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 140"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "761CD549A87BA085"
+					silent: true
+					title: "+140 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "309FE2DFDE1F43F7"
+					item: "waystones:attuned_shard"
+					title: "Find a waystone and take a shard"
+					type: "item"
+				}
+				{
+					id: "67EAE4F260567F56"
+					title: "I attuned three wild waystones"
+					type: "checkmark"
+				}
+			]
+			title: "Marking the Route"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["1A3C75E1E67C28EC"]
+			description: ["A parcel of medicine must cross a great ravine bridge to a village on the far side before dusk. Find the old stone bridge and make the crossing on the clock."]
+			icon: "minecraft:stone_bricks"
+			id: "63C735790EF433DD"
+			rewards: [
+				{
+					count: 16
+					id: "014F14037EB497D7"
+					item: "minecraft:sugar"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "6C7A0AF592B8D203"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 180"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "3F3BA1880088D9A5"
+					silent: true
+					title: "+180 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0A384D226FC496B2"
+					title: "I found the old stone bridge"
+					type: "checkmark"
+				}
+				{
+					id: "766DDDCC2C7D18C9"
+					stage: "fq.skill_agility.great_bridge_run.timed1"
+					title: "Cross before dusk"
+					type: "gamestage"
+				}
+			]
+			title: "Before the Light Goes"
+			x: 6.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["14CDB73AE5122F0E"]
+			description: ["A large village's couriers race a rooftop route with drops that would break legs. Run the whole line under the record, and the record holder hands over their bouncy boots."]
+			icon: "artifacts:bunny_hoppers"
+			id: "3D12E50E987A76A3"
+			rewards: [
+				{
+					id: "3A48A56C965B7645"
+					item: "artifacts:bunny_hoppers"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 220"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "062F708C72251B3B"
+					silent: true
+					title: "+220 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "65E587353FF6FB76"
+					structure: "#fotf:groups/villages"
+					title: "Find the village's rooftop route"
+					type: "structure"
+				}
+				{
+					id: "1126467ABEBBB9D8"
+					stage: "fq.skill_agility.rooftop_route.timed1"
+					title: "Run the line under the record"
+					type: "gamestage"
+				}
+			]
+			title: "The Long Drop Line"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["63C735790EF433DD"]
+			description: ["An urgent letter must go out after dark across open country. Monsters ambush the road, so take the hits and keep running. Stopping to fight loses the deadline."]
+			icon: "artifacts:panic_necklace"
+			id: "198B82ABB2125C01"
+			rewards: [
+				{
+					id: "4BD2748C568AD531"
+					item: "artifacts:panic_necklace"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 260"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "0511D9184DEC7B25"
+					silent: true
+					title: "+260 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "19D7E5E10DCDF361"
+					item: "fotfmail:letter_signed"
+					title: "Take the urgent letter"
+					type: "item"
+				}
+				{
+					id: "0538D8FFD9576D9D"
+					stage: "fq.skill_agility.night_post.timed1"
+					title: "Run the night post"
+					type: "gamestage"
+				}
+				{
+					id: "3470E5EECD1B1DCE"
+					stage: "fq.skill_agility.night_post.talk2"
+					title: "Talk to Postmistress Juniper Quill"
+					type: "gamestage"
+				}
+			]
+			title: "The Night Post"
+			x: 7.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["1A3C75E1E67C28EC"]
+			description: ["The Couriers' lookout is an old cartographer tower. Climb it, and rig a zipline from its top to the road below so runners can drop letters down in seconds."]
+			icon: "parcool:iron_zipline_hook"
+			id: "11E0EAF37FC40DD0"
+			rewards: [
+				{
+					count: 2
+					id: "2D017EEAC61A0907"
+					item: "parcool:iron_zipline_hook"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 160"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "4532293577206B20"
+					silent: true
+					title: "+160 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "18830ED5B37873C0"
+					structure: "mvs:cartographer_tower"
+					title: "Climb the cartographer tower"
+					type: "structure"
+				}
+				{
+					count: 2L
+					id: "53345D1657D33AFE"
+					item: "parcool:iron_zipline_hook"
+					type: "item"
+				}
+				{
+					id: "375EE912C35ED050"
+					stage: "fq.skill_agility.tower_zipline.build2"
+					title: "Rig a zipline"
+					type: "gamestage"
+				}
+			]
+			title: "Line from the Tower"
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["11E0EAF37FC40DD0"]
+			description: ["Craft a grappling hook and swing across a canyon course the Couriers marked with flags, faster than the long way round on foot."]
+			icon: "grapplemod:grapplinghook"
+			id: "5F3C835BAD1D8EEA"
+			rewards: [
+				{
+					count: 16
+					id: "4DECA385FF380F7D"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "2C972EEE5AAE5FF7"
+					item: "supplementaries:rope"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 200"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "004C5AB68C154779"
+					silent: true
+					title: "+200 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "46725D76F122A222"
+					item: "grapplemod:grapplinghook"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "2C0383273B097850"
+					stage: "fq.skill_agility.first_grapple.timed1"
+					title: "Swing the canyon course"
+					type: "gamestage"
+				}
+			]
+			title: "Hook and Swing"
+			x: 7.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["5F3C835BAD1D8EEA"]
+			description: ["A young courier who took a shortcut is stuck on a cliff ledge with a broken leg. Grapple down, pick them up with Carry On and bring them and their satchel safely back."]
+			icon: "minecraft:ladder"
+			id: "22D48084AF1569B5"
+			rewards: [
+				{
+					count: 4
+					id: "3754F567C992607E"
+					item: "fotfmail:letter"
+					type: "item"
+				}
+				{
+					id: "4DF0F3428E3AF2EE"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 220"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "204480DB775F8629"
+					silent: true
+					title: "+220 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "066A93C850156032"
+					stage: "fq.skill_agility.ledge_rescue.enc0"
+					title: "Meet Injured Courier"
+					type: "gamestage"
+				}
+				{
+					id: "6C4B6B6084573D35"
+					title: "I carried the courier to safety"
+					type: "checkmark"
+				}
+				{
+					id: "6A8EF9408EC93EB9"
+					structure: "#fotf:groups/villages"
+					type: "structure"
+				}
+			]
+			title: "Stuck on the Ledge"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0302FE0BC6665E28"]
+			description: ["A beach village's post piles up across the water. Build a rowboat, then a cog, and ferry three crates of mail over the bay."]
+			icon: "smallships:oak_cog"
+			id: "0A62ED1B9A79ED78"
+			rewards: [
+				{
+					count: 4
+					id: "0BCDAB834F4D9436"
+					item: "minecraft:white_wool"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "65F0EAFCD66021D7"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 240"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "769AAC6812F32B67"
+					silent: true
+					title: "+240 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7FB65E345C449393"
+					item: "smallships:oak_rowboat"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "20BDDA30420E2595"
+					item: "smallships:oak_cog"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 3L
+					id: "57E17FAE796C4D17"
+					item: "endermail:package"
+					title: "Load three crates of mail"
+					type: "item"
+				}
+				{
+					id: "6BD2966EE8AB9D73"
+					structure: "ctov:medium/village_beach"
+					title: "Reach the beach village"
+					type: "structure"
+				}
+			]
+			title: "Across the Bay"
+			x: 4.5d
+			y: 0.75d
+		}
+	]
+	subtitle: ["Agility path"]
+	title: "The Couriers"
+}

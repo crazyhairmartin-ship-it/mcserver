@@ -1,0 +1,521 @@
+{
+  "title": "The Crafters' Guild",
+  "subtitle": "Crafting path",
+  "icon": "minecraft:crafting_table",
+  "group": "skills",
+  "order": 5,
+  "quests": [
+    {
+      "id": "apprentice_papers",
+      "title": "Apprentice Papers",
+      "text": [
+        "The guild's workshop in Reece is an empty barn. Show you can join wood by making a table and two chairs for the bare hall."
+      ],
+      "tasks": [
+        {
+          "item": "handcrafted:oak_table",
+          "crafted": true
+        },
+        {
+          "item": "handcrafted:oak_chair",
+          "count": 2,
+          "crafted": true
+        },
+        {
+          "talk": "character",
+          "character": "odile",
+          "lines": [
+            "A table and two chairs. Hmm. Turn them over.",
+            "Rule Nine of the guild: a joint you can't see still has to be true.",
+            "...They'll do. More than do. Welcome to the guild, apprentice.",
+            "Olsen would have used more nails. Don't tell him I said that."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "handcrafted:hammer"
+        },
+        {
+          "item": "minecraft:oak_planks",
+          "count": 64
+        },
+        {
+          "skill": "craft",
+          "xp": 60
+        }
+      ],
+      "icon": "handcrafted:oak_table",
+      "giver": {
+        "type": "org",
+        "org": "crafters",
+        "lines": [
+          "The guild workshop in Reece is an empty barn, and Master Joiner Brask needs hands.",
+          "Make a table and two chairs to show you can join wood, and she'll sign you on."
+        ],
+        "accept": "I'll sign on"
+      }
+    },
+    {
+      "id": "workshop_walls",
+      "title": "Benches and Boards",
+      "after": [
+        "apprentice_papers"
+      ],
+      "text": [
+        "Fit out the workshop: workbenches, item shelves for tools and a notice board where commissions will be pinned."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:crafting_table": 2,
+              "supplementaries:item_shelf": 2,
+              "supplementaries:notice_board": 1
+            },
+            "radius": 12
+          },
+          "title": "Fit out the workshop"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:notice_board"
+        },
+        {
+          "skill": "craft",
+          "xp": 90
+        }
+      ],
+      "icon": "supplementaries:notice_board"
+    },
+    {
+      "id": "widows_cottage",
+      "title": "A Home Again",
+      "after": [
+        "workshop_walls"
+      ],
+      "text": [
+        "A widow's cottage was stripped bare by thieves. Make her a fancy bed, a cupboard, a nightstand and cushions, and set them in place."
+      ],
+      "tasks": [
+        {
+          "structure": "#villages",
+          "title": "Find the widow's cottage"
+        },
+        {
+          "build": {
+            "blocks": {
+              "handcrafted:oak_fancy_bed": 1,
+              "handcrafted:oak_cupboard": 1,
+              "handcrafted:oak_nightstand": 1,
+              "handcrafted:blue_cushion": 2
+            },
+            "radius": 10
+          },
+          "title": "Furnish the cottage"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "The Widow",
+            "then": "talk",
+            "lines": [
+              "Oh... it feels like home again.",
+              "Thank you, dear. Take my husband's tools. He'd have wanted a joiner to have them."
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "handcrafted:berry_jam_jar"
+        },
+        {
+          "item": "minecraft:iron_axe"
+        },
+        {
+          "item": "minecraft:iron_pickaxe"
+        },
+        {
+          "skill": "craft",
+          "xp": 130
+        }
+      ],
+      "icon": "handcrafted:oak_fancy_bed"
+    },
+    {
+      "id": "sacks_and_jars",
+      "title": "A Place for Everything",
+      "after": [
+        "workshop_walls"
+      ],
+      "text": [
+        "The workshop floor is a mess of loose materials. Make sacks, jars and a safe and sort the guild's stock into them."
+      ],
+      "tasks": [
+        {
+          "item": "supplementaries:sack",
+          "count": 2,
+          "crafted": true
+        },
+        {
+          "item": "supplementaries:jar",
+          "count": 3,
+          "crafted": true
+        },
+        {
+          "item": "supplementaries:safe",
+          "crafted": true
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:key"
+        },
+        {
+          "item": "supplementaries:safe"
+        },
+        {
+          "skill": "craft",
+          "xp": 100
+        }
+      ],
+      "icon": "supplementaries:sack"
+    },
+    {
+      "id": "road_comforts",
+      "title": "Sleeping Rough, Sleeping Well",
+      "after": [
+        "apprentice_papers"
+      ],
+      "text": [
+        "Guild members travelling to far commissions sleep on the ground. Sew sleeping bags and hammocks and hand them out at the guild camp."
+      ],
+      "tasks": [
+        {
+          "item": "comforts:rope_and_nail",
+          "count": 2,
+          "crafted": true
+        },
+        {
+          "item": "comforts:sleeping_bag_blue",
+          "crafted": true
+        },
+        {
+          "item": "comforts:hammock_red",
+          "crafted": true
+        },
+        {
+          "structure": "#camps",
+          "title": "Find a camp"
+        },
+        {
+          "checkmark": "I handed out the bedding"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "comforts:hammock_green"
+        },
+        {
+          "skill": "craft",
+          "xp": 100
+        }
+      ],
+      "icon": "comforts:hammock_red"
+    },
+    {
+      "id": "megatorch",
+      "title": "Light the Square",
+      "after": [
+        "widows_cottage"
+      ],
+      "text": [
+        "Zombies keep wandering into the village square at night. Build a megatorch at its centre and hold the square through the night."
+      ],
+      "tasks": [
+        {
+          "structure": "#villages",
+          "title": "Reach the village square"
+        },
+        {
+          "item": "torchmaster:megatorch",
+          "crafted": true
+        },
+        {
+          "build": {
+            "blocks": {
+              "torchmaster:megatorch": 1
+            },
+            "radius": 8
+          },
+          "title": "Set the megatorch"
+        },
+        {
+          "timed": {
+            "seconds": 240,
+            "goal": {
+              "hold": {
+                "radius": 24
+              }
+            },
+            "lines": [
+              "Night's coming. Let's see if the megatorch holds."
+            ],
+            "start": "Hold the square"
+          },
+          "title": "Hold the square for the night"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:lantern",
+          "count": 8
+        },
+        {
+          "skill": "craft",
+          "xp": 160
+        }
+      ],
+      "icon": "torchmaster:megatorch"
+    },
+    {
+      "id": "tavern_refit",
+      "title": "Last Orders",
+      "after": [
+        "widows_cottage"
+      ],
+      "text": [
+        "A tavern keeper wants her old tavern refitted before the travelling season: a grandfather clock, a cash register, benches, curtains and a fish tank."
+      ],
+      "tasks": [
+        {
+          "structure": "#taverns",
+          "title": "Find the tavern"
+        },
+        {
+          "build": {
+            "blocks": {
+              "furniture:oak_grandfather_clock": 1,
+              "furniture:cash_register": 1,
+              "furniture:oak_bench": 2,
+              "furniture:curtain_red": 2,
+              "furniture:copper_fish_tank": 1
+            },
+            "radius": 12
+          },
+          "title": "Refit the tavern"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "furniture:boat_in_a_jar"
+        },
+        {
+          "item": "minecraft:cooked_beef",
+          "count": 8
+        },
+        {
+          "item": "minecraft:bread",
+          "count": 8
+        },
+        {
+          "skill": "craft",
+          "xp": 170
+        }
+      ],
+      "icon": "furniture:oak_grandfather_clock"
+    },
+    {
+      "id": "village_square",
+      "title": "Somewhere to Sit",
+      "after": [
+        "megatorch"
+      ],
+      "text": [
+        "With the square lit, the elders want somewhere to sit and talk. Furnish it with benches, flower boxes, awnings and lamps."
+      ],
+      "tasks": [
+        {
+          "structure": "#villages",
+          "title": "Reach the square"
+        },
+        {
+          "build": {
+            "blocks": {
+              "another_furniture:oak_bench": 2,
+              "another_furniture:oak_flower_box": 2,
+              "another_furniture:red_awning": 2,
+              "another_furniture:red_lamp": 2
+            },
+            "radius": 12
+          },
+          "title": "Furnish the square"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:poppy",
+          "count": 6
+        },
+        {
+          "item": "minecraft:dandelion",
+          "count": 6
+        },
+        {
+          "skill": "craft",
+          "xp": 190
+        }
+      ],
+      "icon": "another_furniture:oak_bench"
+    },
+    {
+      "id": "washed_out_bridge",
+      "title": "The Washed-Out Bridge",
+      "after": [
+        "village_square"
+      ],
+      "text": [
+        "Spring floods took the bridge over the stream that feeds Reece's lake, and farmers are wading across. Rebuild it with piers, rails and bridge lanterns."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "mcwbridges:oak_bridge_pier": 2,
+              "mcwbridges:oak_log_bridge_middle": 4,
+              "mcwbridges:bridge_lantern": 2
+            },
+            "radius": 12
+          },
+          "title": "Rebuild the bridge"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:stone_bricks",
+          "count": 64
+        },
+        {
+          "item": "minecraft:wheat",
+          "count": 32
+        },
+        {
+          "skill": "craft",
+          "xp": 210
+        }
+      ],
+      "icon": "mcwbridges:oak_log_bridge_middle"
+    },
+    {
+      "id": "joiners_pack",
+      "title": "The Travelling Joiner",
+      "after": [
+        "road_comforts"
+      ],
+      "text": [
+        "Odile gives you her old backpack pattern. Make a Sophisticated Backpack and fit it with a crafting upgrade so you can build on site."
+      ],
+      "tasks": [
+        {
+          "item": "sophisticatedbackpacks:backpack",
+          "crafted": true
+        },
+        {
+          "item": "sophisticatedbackpacks:crafting_upgrade",
+          "crafted": true
+        }
+      ],
+      "rewards": [
+        {
+          "item": "sophisticatedbackpacks:stack_upgrade_tier_1"
+        },
+        {
+          "skill": "craft",
+          "xp": 180
+        }
+      ],
+      "icon": "sophisticatedbackpacks:backpack"
+    },
+    {
+      "id": "painted_signs",
+      "title": "Fresh Paint",
+      "after": [
+        "village_square"
+      ],
+      "text": [
+        "The shop signs have faded to nothing, and nobody can find the baker. Mix dye bottles, repaint the signs and hang the right wares on each shopfront."
+      ],
+      "tasks": [
+        {
+          "structure": "#villages",
+          "title": "Reach the faded shopfronts"
+        },
+        {
+          "item": "amendments:dye_bottle",
+          "count": 4,
+          "crafted": true
+        },
+        {
+          "item": "minecraft:oak_sign",
+          "count": 4
+        },
+        {
+          "checkmark": "I repainted the signs and hung the right wares"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "amendments:dye_bottle",
+          "count": 8
+        },
+        {
+          "skill": "craft",
+          "xp": 210
+        }
+      ],
+      "icon": "amendments:dye_bottle"
+    },
+    {
+      "id": "engineers_blueprints",
+      "title": "The Engineer's Blueprints",
+      "after": [
+        "washed_out_bridge"
+      ],
+      "text": [
+        "The guild's founder lived in an engineer's tower out in the wilds and left plans for a better workshop. Climb the tower and find his blueprints."
+      ],
+      "tasks": [
+        {
+          "structure": "structory_towers:engineer_tower",
+          "title": "Find the engineer's tower"
+        },
+        {
+          "item": "furniture:blueprints",
+          "title": "Find the blueprints"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "The Founder's Journal",
+          "lore": [
+            "Notes from the guild's founder, in a careful hand."
+          ]
+        },
+        {
+          "skill": "craft",
+          "xp": 280
+        }
+      ],
+      "icon": "furniture:blueprints"
+    }
+  ]
+}

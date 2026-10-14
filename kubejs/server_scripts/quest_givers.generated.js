@@ -1139,6 +1139,226 @@ global.QUEST_GIVERS = [
     "profession": ""
   },
   {
+    "quest": "skill_crafting:apprentice_papers",
+    "stage": "fq.skill_crafting.apprentice_papers",
+    "type": "org",
+    "lines": [
+      "The guild workshop in Reece is an empty barn, and Master Joiner Brask needs hands.",
+      "Make a table and two chairs to show you can join wood, and she'll sign you on."
+    ],
+    "accept": "I'll sign on",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "crafters",
+    "professions": [
+      "minecraft:mason"
+    ],
+    "org_name": "Crafters' Guild"
+  },
+  {
+    "quest": "skill_crafting:apprentice_papers",
+    "stage": "fq.skill_crafting.apprentice_papers.talk2",
+    "type": "talk",
+    "lines": [
+      "A table and two chairs. Hmm. Turn them over.",
+      "Rule Nine of the guild: a joint you can't see still has to be true.",
+      "...They'll do. More than do. Welcome to the guild, apprentice.",
+      "Olsen would have used more nails. Don't tell him I said that."
+    ],
+    "requires": [
+      "fq.skill_crafting.apprentice_papers"
+    ],
+    "name": "",
+    "match": "character",
+    "character": "odile",
+    "quest_id": "4E3617CBDEAEAA63",
+    "open_task": "73EC3E3E198F41C0"
+  },
+  {
+    "quest": "skill_crafting:workshop_walls",
+    "stage": "fq.skill_crafting.workshop_walls.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:crafting_table",
+      "supplementaries:item_shelf",
+      "supplementaries:notice_board"
+    ],
+    "counts": [
+      2,
+      2,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "2D74389AE5F69096",
+    "prev_tasks": [
+      "4A073077A95A5622"
+    ]
+  },
+  {
+    "quest": "skill_crafting:widows_cottage",
+    "stage": "fq.skill_crafting.widows_cottage.build1",
+    "type": "build",
+    "keys": [
+      "handcrafted:oak_fancy_bed",
+      "handcrafted:oak_cupboard",
+      "handcrafted:oak_nightstand",
+      "handcrafted:blue_cushion"
+    ],
+    "counts": [
+      1,
+      1,
+      1,
+      2
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "538A2DAE487CFF18",
+    "prev_tasks": [
+      "6C84FEDE7458C1B8"
+    ]
+  },
+  {
+    "quest": "skill_crafting:widows_cottage",
+    "stage": "fq.skill_crafting.widows_cottage.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Oh... it feels like home again.",
+      "Thank you, dear. Take my husband's tools. He'd have wanted a joiner to have them."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "538A2DAE487CFF18",
+    "prev_tasks": [
+      "6C84FEDE7458C1B8",
+      "4EF38896042A84F2"
+    ],
+    "name": "The Widow",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_crafting:megatorch",
+    "stage": "fq.skill_crafting.megatorch.build2",
+    "type": "build",
+    "keys": [
+      "torchmaster:megatorch"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "3D982BEAFBC96859",
+    "prev_tasks": [
+      "4373917555881459",
+      "721E5CF57987183A"
+    ]
+  },
+  {
+    "quest": "skill_crafting:megatorch",
+    "stage": "fq.skill_crafting.megatorch.timed3",
+    "type": "timed",
+    "seconds": 240,
+    "goal": {
+      "kind": "hold",
+      "radius": 24.0
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "Night's coming. Let's see if the megatorch holds."
+    ],
+    "start": "Hold the square",
+    "requires": [],
+    "quest_id": "3D982BEAFBC96859",
+    "prev_tasks": [
+      "4373917555881459",
+      "721E5CF57987183A",
+      "580E9AD6348B31BC"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_crafting:tavern_refit",
+    "stage": "fq.skill_crafting.tavern_refit.build1",
+    "type": "build",
+    "keys": [
+      "furniture:oak_grandfather_clock",
+      "furniture:cash_register",
+      "furniture:oak_bench",
+      "furniture:curtain_red",
+      "furniture:copper_fish_tank"
+    ],
+    "counts": [
+      1,
+      1,
+      2,
+      2,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "24AC67E0D4BEBB19",
+    "prev_tasks": [
+      "2CB75780764A285C"
+    ]
+  },
+  {
+    "quest": "skill_crafting:village_square",
+    "stage": "fq.skill_crafting.village_square.build1",
+    "type": "build",
+    "keys": [
+      "another_furniture:oak_bench",
+      "another_furniture:oak_flower_box",
+      "another_furniture:red_awning",
+      "another_furniture:red_lamp"
+    ],
+    "counts": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "54AF1AAD5BD9EF61",
+    "prev_tasks": [
+      "2D515F76B6A2FFD2"
+    ]
+  },
+  {
+    "quest": "skill_crafting:washed_out_bridge",
+    "stage": "fq.skill_crafting.washed_out_bridge.build1",
+    "type": "build",
+    "keys": [
+      "mcwbridges:oak_bridge_pier",
+      "mcwbridges:oak_log_bridge_middle",
+      "mcwbridges:bridge_lantern"
+    ],
+    "counts": [
+      2,
+      4,
+      2
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "1476629AEB8CE6D4",
+    "prev_tasks": [
+      "7DAB9B3C709788E9"
+    ]
+  },
+  {
     "quest": "skill_attack:the_board",
     "stage": "fq.skill_attack.the_board.talk0",
     "type": "talk",
@@ -1787,6 +2007,342 @@ global.QUEST_GIVERS = [
     "character": "brannock",
     "quest_id": "5AF168685597D93F",
     "open_task": ""
+  },
+  {
+    "quest": "skill_agility:sign_the_roster",
+    "stage": "fq.skill_agility.sign_the_roster",
+    "type": "org",
+    "lines": [
+      "Runners wanted! The Ender Mail lot take the parcels, but somebody has to carry the awkward jobs.",
+      "Sign on at the post office in Reece. Ask for Postmistress Quill, and be quick about it."
+    ],
+    "accept": "I'll sign on",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "couriers",
+    "professions": [
+      "minecraft:cartographer"
+    ],
+    "org_name": "Couriers"
+  },
+  {
+    "quest": "skill_agility:sign_the_roster",
+    "stage": "fq.skill_agility.sign_the_roster.talk0",
+    "type": "talk",
+    "lines": [
+      "New runner? Good. Name, signature, go.",
+      "The carriers handle the parcels. We handle what they won't: anything alive, hot, fragile or too big for a mailbox.",
+      "Sign this letter and take it to the cartographer in the next village. Don't dawdle. Don't read it. Go."
+    ],
+    "requires": [
+      "fq.skill_agility.sign_the_roster"
+    ],
+    "name": "",
+    "match": "character",
+    "character": "juniper",
+    "quest_id": "67CC933617723768",
+    "open_task": "790020F51F638D3B"
+  },
+  {
+    "quest": "skill_agility:sign_the_roster",
+    "stage": "fq.skill_agility.sign_the_roster.talk2",
+    "type": "talk",
+    "lines": [
+      "A letter from Quill? About time.",
+      "Signed and sealed. You'll do, runner.",
+      "Come back when you want a longer run."
+    ],
+    "requires": [
+      "fq.skill_agility.sign_the_roster",
+      "fq.skill_agility.sign_the_roster.talk0"
+    ],
+    "name": "",
+    "match": "villager",
+    "profession": "minecraft:cartographer",
+    "quest_id": "67CC933617723768",
+    "open_task": "790020F51F638D3B"
+  },
+  {
+    "quest": "skill_agility:first_timed_run",
+    "stage": "fq.skill_agility.first_timed_run.timed1",
+    "type": "timed",
+    "seconds": 150,
+    "goal": {
+      "kind": "stat",
+      "stat": "minecraft:sprint_one_cm",
+      "count": 40000
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "The noon bell rings in a few minutes. Run!",
+      "No short cuts, no mounts."
+    ],
+    "start": "Start the run",
+    "requires": [],
+    "quest_id": "5E49D53931AD044E",
+    "prev_tasks": [
+      "6DE91D8377724E99"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:rooftop_basics",
+    "stage": "fq.skill_agility.rooftop_basics.timed1",
+    "type": "timed",
+    "seconds": 45,
+    "goal": {
+      "kind": "stat",
+      "stat": "minecraft:jump",
+      "count": 25
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "Up and over. Roofs, not roads.",
+      "Keep moving."
+    ],
+    "start": "Start the rooftop line",
+    "requires": [],
+    "quest_id": "14CDB73AE5122F0E",
+    "prev_tasks": [
+      "0E2D625FC0D52A19"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:storm_cliff_parcel",
+    "stage": "fq.skill_agility.storm_cliff_parcel.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Oh, thank goodness! I can't go on. The path's like glass.",
+      "Take the parcel down to the cove. Slowly! One slip and it's a long way down.",
+      "Here, take my umbrella too. I won't need it where I'm going: back to bed."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "5C5D0B78A4B91CE1",
+    "prev_tasks": [],
+    "name": "Stranded Courier",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {
+      "above_y": 62
+    },
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_agility:post_office",
+    "stage": "fq.skill_agility.post_office.build4",
+    "type": "build",
+    "keys": [
+      "endermail:locker"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "0302FE0BC6665E28",
+    "prev_tasks": [
+      "0A0DD39BF6006772",
+      "4293CB74EBA2F4AC",
+      "1812C7BFA3DA7BBE",
+      "209B0486FF174873"
+    ]
+  },
+  {
+    "quest": "skill_agility:great_bridge_run",
+    "stage": "fq.skill_agility.great_bridge_run.timed1",
+    "type": "timed",
+    "seconds": 90,
+    "goal": {
+      "kind": "stat",
+      "stat": "minecraft:sprint_one_cm",
+      "count": 30000
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "The light is going. Run for the far side!"
+    ],
+    "start": "Cross the bridge",
+    "requires": [],
+    "quest_id": "63C735790EF433DD",
+    "prev_tasks": [
+      "0A384D226FC496B2"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:rooftop_route",
+    "stage": "fq.skill_agility.rooftop_route.timed1",
+    "type": "timed",
+    "seconds": 90,
+    "goal": {
+      "kind": "stat",
+      "stat": "minecraft:jump",
+      "count": 50
+    },
+    "no": [
+      "teleport",
+      "mounts",
+      "pearls"
+    ],
+    "waves": [],
+    "lines": [
+      "The line runs the whole village. Gaps, drops, all of it.",
+      "Beat the record."
+    ],
+    "start": "Run the line",
+    "requires": [],
+    "quest_id": "3D12E50E987A76A3",
+    "prev_tasks": [
+      "65E587353FF6FB76"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:night_post",
+    "stage": "fq.skill_agility.night_post.timed1",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "stat",
+      "stat": "minecraft:sprint_one_cm",
+      "count": 40000
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [
+      {
+        "entity": "minecraft:zombie",
+        "count": 2,
+        "every": 25
+      },
+      {
+        "entity": "minecraft:skeleton",
+        "count": 1,
+        "every": 40
+      }
+    ],
+    "lines": [
+      "Night run. They'll come at you. Don't stop!"
+    ],
+    "start": "Start the night run",
+    "requires": [],
+    "quest_id": "198B82ABB2125C01",
+    "prev_tasks": [
+      "19D7E5E10DCDF361"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:night_post",
+    "stage": "fq.skill_agility.night_post.talk2",
+    "type": "talk",
+    "lines": [
+      "You made it? In one piece? ...Good. Timing was fine.",
+      "Night runs are the worst. Everything bites.",
+      "Here. I wore this on my own night runs. It works. Mostly because it makes you run faster."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "juniper",
+    "quest_id": "198B82ABB2125C01",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_agility:tower_zipline",
+    "stage": "fq.skill_agility.tower_zipline.build2",
+    "type": "build",
+    "keys": [
+      "parcool:iron_zipline_hook"
+    ],
+    "counts": [
+      2
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "11E0EAF37FC40DD0",
+    "prev_tasks": [
+      "18830ED5B37873C0",
+      "53345D1657D33AFE"
+    ]
+  },
+  {
+    "quest": "skill_agility:first_grapple",
+    "stage": "fq.skill_agility.first_grapple.timed1",
+    "type": "timed",
+    "seconds": 60,
+    "goal": {
+      "kind": "stat",
+      "stat": "minecraft:sprint_one_cm",
+      "count": 20000
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "Flags along the canyon. Swing, don't walk."
+    ],
+    "start": "Start the course",
+    "requires": [],
+    "quest_id": "5F3C835BAD1D8EEA",
+    "prev_tasks": [
+      "46725D76F122A222"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:ledge_rescue",
+    "stage": "fq.skill_agility.ledge_rescue.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Down here! I can't move my leg. I took a shortcut...",
+      "Please don't tell Juniper. She'll make me do the stairs forever.",
+      "My satchel's got sealed letters in it. Can you finish them for me?"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "22D48084AF1569B5",
+    "prev_tasks": [],
+    "name": "Injured Courier",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {
+      "above_y": 70
+    },
+    "entity": "minecraft:villager",
+    "profession": ""
   },
   {
     "quest": "skill_taming:stray_wolf",

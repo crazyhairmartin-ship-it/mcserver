@@ -1,0 +1,616 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_crafting"
+	group: "1CAE106B8DA521D5"
+	icon: "minecraft:crafting_table"
+	id: "7FB6734D78A28798"
+	order_index: 9
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["The guild's workshop in Reece is an empty barn. Show you can join wood by making a table and two chairs for the bare hall."]
+			icon: "handcrafted:oak_table"
+			id: "4E3617CBDEAEAA63"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "52407840D90596D4"
+					item: "handcrafted:hammer"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "66A581BFC26CBB84"
+					item: "minecraft:oak_planks"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 60"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "420BD62AAF4A6B7D"
+					silent: true
+					title: "+60 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "73EC3E3E198F41C0"
+					stage: "fq.skill_crafting.apprentice_papers"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "48F788CEA8431F0D"
+					item: "handcrafted:oak_table"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "25FDCD5BAA4B92B7"
+					item: "handcrafted:oak_chair"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "5C0673663AA3A412"
+					stage: "fq.skill_crafting.apprentice_papers.talk2"
+					title: "Talk to Master Joiner Odile Brask"
+					type: "gamestage"
+				}
+			]
+			title: "Apprentice Papers"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4E3617CBDEAEAA63"]
+			description: ["Fit out the workshop: workbenches, item shelves for tools and a notice board where commissions will be pinned."]
+			icon: "supplementaries:notice_board"
+			id: "2D74389AE5F69096"
+			rewards: [
+				{
+					id: "56402D05F9E9777A"
+					item: "supplementaries:notice_board"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 90"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "44E7854F25430C0B"
+					silent: true
+					title: "+90 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "4A073077A95A5622"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "773A78BE2C50B6D8"
+					stage: "fq.skill_crafting.workshop_walls.build1"
+					title: "Fit out the workshop"
+					type: "gamestage"
+				}
+			]
+			title: "Benches and Boards"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["2D74389AE5F69096"]
+			description: ["A widow's cottage was stripped bare by thieves. Make her a fancy bed, a cupboard, a nightstand and cushions, and set them in place."]
+			icon: "handcrafted:oak_fancy_bed"
+			id: "538A2DAE487CFF18"
+			rewards: [
+				{
+					id: "22A213E71135B1E8"
+					item: "handcrafted:berry_jam_jar"
+					type: "item"
+				}
+				{
+					id: "77F9499B9174F64A"
+					item: "minecraft:iron_axe"
+					type: "item"
+				}
+				{
+					id: "0B8EF71CD02B30DE"
+					item: "minecraft:iron_pickaxe"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 130"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "03F5B1904DE59B1A"
+					silent: true
+					title: "+130 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6C84FEDE7458C1B8"
+					structure: "#fotf:groups/villages"
+					title: "Find the widow's cottage"
+					type: "structure"
+				}
+				{
+					id: "4EF38896042A84F2"
+					stage: "fq.skill_crafting.widows_cottage.build1"
+					title: "Furnish the cottage"
+					type: "gamestage"
+				}
+				{
+					id: "422E4F36D5344AD0"
+					stage: "fq.skill_crafting.widows_cottage.enc2"
+					title: "Meet The Widow"
+					type: "gamestage"
+				}
+			]
+			title: "A Home Again"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2D74389AE5F69096"]
+			description: ["The workshop floor is a mess of loose materials. Make sacks, jars and a safe and sort the guild's stock into them."]
+			icon: "supplementaries:sack"
+			id: "023405AECC5593A5"
+			rewards: [
+				{
+					id: "6C33949F21CABC0E"
+					item: "supplementaries:key"
+					type: "item"
+				}
+				{
+					id: "3268F576F42FE00A"
+					item: "supplementaries:safe"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 100"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "2C2F8383F3FEB1F6"
+					silent: true
+					title: "+100 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "73DF79FE3F9E0B77"
+					item: "supplementaries:sack"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "043C1449349FDF23"
+					item: "supplementaries:jar"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "2C55F04F001E4181"
+					item: "supplementaries:safe"
+					only_from_crafting: true
+					type: "item"
+				}
+			]
+			title: "A Place for Everything"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4E3617CBDEAEAA63"]
+			description: ["Guild members travelling to far commissions sleep on the ground. Sew sleeping bags and hammocks and hand them out at the guild camp."]
+			icon: "comforts:hammock_red"
+			id: "7B85D1AA88F82F19"
+			rewards: [
+				{
+					id: "291AB7D872BBA287"
+					item: "comforts:hammock_green"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 100"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "7E4C0CFF537FF940"
+					silent: true
+					title: "+100 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "49F95830E3962BC3"
+					item: "comforts:rope_and_nail"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "7FBE2B4FFF772728"
+					item: "comforts:sleeping_bag_blue"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "4F97C1771CA41ADB"
+					item: "comforts:hammock_red"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "25D63F48052AAECC"
+					structure: "#fotf:groups/camps"
+					title: "Find a camp"
+					type: "structure"
+				}
+				{
+					id: "18D132B644414AA6"
+					title: "I handed out the bedding"
+					type: "checkmark"
+				}
+			]
+			title: "Sleeping Rough, Sleeping Well"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["538A2DAE487CFF18"]
+			description: ["Zombies keep wandering into the village square at night. Build a megatorch at its centre and hold the square through the night."]
+			icon: "torchmaster:megatorch"
+			id: "3D982BEAFBC96859"
+			rewards: [
+				{
+					count: 8
+					id: "153C925F0CBF6094"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 160"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "282500630428154F"
+					silent: true
+					title: "+160 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4373917555881459"
+					structure: "#fotf:groups/villages"
+					title: "Reach the village square"
+					type: "structure"
+				}
+				{
+					id: "721E5CF57987183A"
+					item: "torchmaster:megatorch"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "580E9AD6348B31BC"
+					stage: "fq.skill_crafting.megatorch.build2"
+					title: "Set the megatorch"
+					type: "gamestage"
+				}
+				{
+					id: "45446601CCBFB15E"
+					stage: "fq.skill_crafting.megatorch.timed3"
+					title: "Hold the square for the night"
+					type: "gamestage"
+				}
+			]
+			title: "Light the Square"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["538A2DAE487CFF18"]
+			description: ["A tavern keeper wants her old tavern refitted before the travelling season: a grandfather clock, a cash register, benches, curtains and a fish tank."]
+			icon: "furniture:oak_grandfather_clock"
+			id: "24AC67E0D4BEBB19"
+			rewards: [
+				{
+					id: "3EAF21C9C1E4F5A8"
+					item: "furniture:boat_in_a_jar"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "4657241080FB3306"
+					item: "minecraft:cooked_beef"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "275DA7A76C2C3FF6"
+					item: "minecraft:bread"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 170"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "70E9567FBC02A3C0"
+					silent: true
+					title: "+170 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2CB75780764A285C"
+					structure: "#fotf:groups/taverns"
+					title: "Find the tavern"
+					type: "structure"
+				}
+				{
+					id: "2529E99411BEA236"
+					stage: "fq.skill_crafting.tavern_refit.build1"
+					title: "Refit the tavern"
+					type: "gamestage"
+				}
+			]
+			title: "Last Orders"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3D982BEAFBC96859"]
+			description: ["With the square lit, the elders want somewhere to sit and talk. Furnish it with benches, flower boxes, awnings and lamps."]
+			icon: "another_furniture:oak_bench"
+			id: "54AF1AAD5BD9EF61"
+			rewards: [
+				{
+					count: 6
+					id: "017E817AA2A3EEBA"
+					item: "minecraft:poppy"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "6868B95511128A18"
+					item: "minecraft:dandelion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 190"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "5D28839A241E46E1"
+					silent: true
+					title: "+190 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2D515F76B6A2FFD2"
+					structure: "#fotf:groups/villages"
+					title: "Reach the square"
+					type: "structure"
+				}
+				{
+					id: "1F4802FED600498C"
+					stage: "fq.skill_crafting.village_square.build1"
+					title: "Furnish the square"
+					type: "gamestage"
+				}
+			]
+			title: "Somewhere to Sit"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["54AF1AAD5BD9EF61"]
+			description: ["Spring floods took the bridge over the stream that feeds Reece's lake, and farmers are wading across. Rebuild it with piers, rails and bridge lanterns."]
+			icon: "mcwbridges:oak_log_bridge_middle"
+			id: "1476629AEB8CE6D4"
+			rewards: [
+				{
+					count: 64
+					id: "666B41EC0232FC60"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "0C9CD2D8C1D489E9"
+					item: "minecraft:wheat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 210"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "7AEFB8AC9FE8A4E1"
+					silent: true
+					title: "+210 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "7DAB9B3C709788E9"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "57C9523145A16F97"
+					stage: "fq.skill_crafting.washed_out_bridge.build1"
+					title: "Rebuild the bridge"
+					type: "gamestage"
+				}
+			]
+			title: "The Washed-Out Bridge"
+			x: 7.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["7B85D1AA88F82F19"]
+			description: ["Odile gives you her old backpack pattern. Make a Sophisticated Backpack and fit it with a crafting upgrade so you can build on site."]
+			icon: "sophisticatedbackpacks:backpack"
+			id: "5C4B9AE89F3BFA27"
+			rewards: [
+				{
+					id: "09E7E1A90C2F9A8B"
+					item: "sophisticatedbackpacks:stack_upgrade_tier_1"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 180"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "189B1B7A51862860"
+					silent: true
+					title: "+180 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5415E7DDBA41D76A"
+					item: "sophisticatedbackpacks:backpack"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "6A6C06D3E951A32B"
+					item: "sophisticatedbackpacks:crafting_upgrade"
+					only_from_crafting: true
+					type: "item"
+				}
+			]
+			title: "The Travelling Joiner"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["54AF1AAD5BD9EF61"]
+			description: ["The shop signs have faded to nothing, and nobody can find the baker. Mix dye bottles, repaint the signs and hang the right wares on each shopfront."]
+			icon: "amendments:dye_bottle"
+			id: "6A49DF986BF2B870"
+			rewards: [
+				{
+					count: 8
+					id: "098C6AD07278BA9F"
+					item: "amendments:dye_bottle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 210"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "437C5E938F8179FD"
+					silent: true
+					title: "+210 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3DDAB2B87086B4AE"
+					structure: "#fotf:groups/villages"
+					title: "Reach the faded shopfronts"
+					type: "structure"
+				}
+				{
+					count: 4L
+					id: "17CA3373F4F24E4A"
+					item: "amendments:dye_bottle"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "581C01DE1A00D655"
+					item: "minecraft:oak_sign"
+					type: "item"
+				}
+				{
+					id: "18EEDA75F7A4AC0A"
+					title: "I repainted the signs and hung the right wares"
+					type: "checkmark"
+				}
+			]
+			title: "Fresh Paint"
+			x: 7.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["1476629AEB8CE6D4"]
+			description: ["The guild's founder lived in an engineer's tower out in the wilds and left plans for a better workshop. Climb the tower and find his blueprints."]
+			icon: "furniture:blueprints"
+			id: "08A0E2C9723F44FE"
+			rewards: [
+				{
+					id: "0584DF9B3D80A814"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Notes from the guild's founder, in a careful hand.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Founder's Journal\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 280"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "4F2D3F601BF323CA"
+					silent: true
+					title: "+280 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1DAFC492083CCAE4"
+					structure: "structory_towers:engineer_tower"
+					title: "Find the engineer's tower"
+					type: "structure"
+				}
+				{
+					id: "1DC5E2B60464F49E"
+					item: "furniture:blueprints"
+					title: "Find the blueprints"
+					type: "item"
+				}
+			]
+			title: "The Engineer's Blueprints"
+			x: 9.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Crafting path"]
+	title: "The Crafters' Guild"
+}
