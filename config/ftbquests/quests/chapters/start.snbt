@@ -1,0 +1,838 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "start"
+	group: "520042A0F9159BC8"
+	icon: "minecraft:oak_sapling"
+	id: "22E1A37F318050E4"
+	order_index: 3
+	quest_links: [ ]
+	quests: [
+		{
+			description: [
+				"Elder Maren is waiting by Reece's well. She meets every newcomer herself."
+				""
+				"Find her in Reece and say hello."
+			]
+			icon: "minecraft:oak_sapling"
+			id: "2145643E4E5C72B6"
+			rewards: [
+				{
+					command: "/give {p} patchouli:guide_book{\"patchouli:book\":\"patchouli:fotf_field_guide\"}"
+					elevate_perms: true
+					id: "4CC885D7E68B6B36"
+					silent: true
+					title: "The Field Guide"
+					type: "command"
+				}
+				{
+					count: 4
+					id: "4291AD8EBEA02E4C"
+					item: "minecraft:bread"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "78F7052B81C783DE"
+					item: "minecraft:torch"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					id: "0557448DF17A638C"
+					stage: "fq.start.welcome.talk0"
+					title: "Talk to Elder Maren"
+					type: "gamestage"
+				}
+			]
+			title: "Welcome to Reece"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2145643E4E5C72B6"]
+			description: [
+				"The Field Guide explains everything the forest has to offer. Lost it? Type /guide for a new one."
+				""
+				"Somewhere in it there's a page on the quiet forest. Someone pressed a leaf between its pages and left Reece in a hurry."
+			]
+			icon: "patchouli:guide_book"
+			id: "28E2BBA8904B0982"
+			rewards: [
+				{
+					id: "5DAD94A820C4B919"
+					item: "minecraft:wooden_pickaxe"
+					type: "item"
+				}
+				{
+					id: "3A5B51A224171518"
+					item: "minecraft:wooden_axe"
+					type: "item"
+				}
+				{
+					id: "71F3032A32D1B750"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1B133B2B4D460192"
+					title: "I found the pressed leaf"
+					type: "checkmark"
+				}
+			]
+			title: "Read the Field Guide"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2145643E4E5C72B6"]
+			description: ["Reece is bigger than it looks. Walk its streets: the smithy, the farms, the chapel and the market square."]
+			icon: "minecraft:bell"
+			id: "26DF669B755491EA"
+			rewards: [
+				{
+					count: 3
+					id: "1B58DDEE4C73AA2D"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "2BD250E2793AB6A0"
+					item: "minecraft:map"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "3527CB5DEB46D899"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Walk around Reece"
+					type: "location"
+				}
+				{
+					id: "330D2304BD895785"
+					stage: "fq.start.reece_tour.talk1"
+					title: "Say hello at the smithy"
+					type: "gamestage"
+				}
+				{
+					id: "1D328F6214233E30"
+					stage: "fq.start.reece_tour.talk2"
+					title: "Say hello at the farms"
+					type: "gamestage"
+				}
+			]
+			title: "Old Streets, New Roofs"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["28E2BBA8904B0982"]
+			description: [
+				"Reece trains its people in skills: mining, farming, fishing, fighting and more. Almost everything you do earns skill XP."
+				""
+				"Press K to open your skill trees, earn your first point in any tree and spend it."
+			]
+			icon: "minecraft:experience_bottle"
+			id: "5DC7AF18441E83F8"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 15"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "7D7CB1FF32895045"
+					silent: true
+					title: "+15 Mining XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 15"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "2DCF598FEB0460DA"
+					silent: true
+					title: "+15 Foraging XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 15"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "47B6F8CB82165204"
+					silent: true
+					title: "+15 Farming XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 15"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "1962DCE6391FD3C8"
+					silent: true
+					title: "+15 Fishing XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 15"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "146937E92E75734C"
+					silent: true
+					title: "+15 Cooking XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 15"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "619A7A9C4885AE6D"
+					silent: true
+					title: "+15 Crafting XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 15"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "4DA343BBE0E5D758"
+					silent: true
+					title: "+15 Attack XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 15"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "492C953D384210F5"
+					silent: true
+					title: "+15 Range XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 15"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "21C9AD2A79543E53"
+					silent: true
+					title: "+15 Defense XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 15"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "26134CC5E3AEFC66"
+					silent: true
+					title: "+15 Agility XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 15"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "2FAF06650A02BEFD"
+					silent: true
+					title: "+15 Magic XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 15"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "6EDF2BB03EFF29A5"
+					silent: true
+					title: "+15 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4B61B66D27680A67"
+					title: "I spent my first skill point"
+					type: "checkmark"
+				}
+			]
+			title: "Every Hand Learns"
+			x: 3.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["5DC7AF18441E83F8"]
+			description: [
+				"Changed your mind about a skill? Sister Wren, Reece's cleric, brews skill tonics that let you unlearn a tree's choices."
+				""
+				"Ask her how they work, and keep one in reserve."
+			]
+			icon: "fotfskills:skill_tonic"
+			id: "5A699077A3F4DE05"
+			rewards: [
+				{
+					id: "06939A3EA0B2BC72"
+					item: "fotfskills:skill_tonic"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "11D2933E0EB26427"
+					stage: "fq.start.skill_tonic.talk0"
+					title: "Talk to Sister Wren"
+					type: "gamestage"
+				}
+			]
+			title: "A Bitter Tonic"
+			x: 4.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["2145643E4E5C72B6"]
+			description: [
+				"Every journey starts with a tree. Hold the Ultimine key while you chop and the whole trunk comes down in one go."
+				""
+				"Reece's woodpile needs filling: gather 64 oak logs."
+			]
+			icon: "minecraft:oak_log"
+			id: "2CF64F47E9A312AB"
+			rewards: [
+				{
+					id: "3E780E91A73D165B"
+					item: "minecraft:stone_axe"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "2ECE66AD846AC530"
+					item: "minecraft:apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 40"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "593EB0840DB8D720"
+					silent: true
+					title: "+40 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "01F3CF1A31F1F6A1"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+			]
+			title: "Timber!"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["26DF669B755491EA"]
+			description: [
+				"The waystone in Reece remembers everyone who touches it. Attune to it, then find a second waystone out in the wild."
+				""
+				"Waystones let you warp between any you've found."
+			]
+			icon: "waystones:waystone"
+			id: "67959C699393E730"
+			rewards: [
+				{
+					id: "2979D9A1322AB4DF"
+					item: "waystones:return_scroll"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "61E7D83EF78F9597"
+					item: "waystones:warp_dust"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "2B18EC3E28A2999F"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Attune to Reece's waystone"
+					type: "location"
+				}
+				{
+					id: "73FEAFCAB8229CB8"
+					title: "I found a second waystone"
+					type: "checkmark"
+				}
+			]
+			title: "The Stone That Remembers"
+			x: 3.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["2CF64F47E9A312AB"]
+			description: ["Your pockets won't hold a forest. Stitch a backpack, and fit it with a pickup upgrade so it fills itself as you walk."]
+			icon: "sophisticatedbackpacks:backpack"
+			id: "78A4F31AD155C96E"
+			rewards: [
+				{
+					count: 6
+					id: "46DA9DC82910E536"
+					item: "minecraft:leather"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 40"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "34A5198BDBBF4F58"
+					silent: true
+					title: "+40 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1226089E67BEAE25"
+					item: "sophisticatedbackpacks:backpack"
+					type: "item"
+				}
+				{
+					id: "5FFD572D81E3CF77"
+					item: "sophisticatedbackpacks:pickup_upgrade"
+					type: "item"
+				}
+			]
+			title: "Room to Carry"
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["26DF669B755491EA"]
+			description: ["Craft a bed and sleep through your first night. The more of the server is asleep, the faster the stars wheel by."]
+			icon: "minecraft:red_bed"
+			id: "156F2CADC2B6B94A"
+			rewards: [
+				{
+					count: 4
+					id: "581E789F78001517"
+					item: "minecraft:cooked_mutton"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "1E67C0DC52164C37"
+					item: "minecraft:candle"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/sleep_in_bed"
+					criterion: ""
+					id: "68870C769A4B3CDE"
+					type: "advancement"
+				}
+			]
+			title: "The Hourglass Night"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["156F2CADC2B6B94A"]
+			description: [
+				"Nights on the road are kinder with a sleeping bag, and afternoons are kinder with a hammock."
+				""
+				"Make both."
+			]
+			icon: "comforts:sleeping_bag_white"
+			id: "623589C6188A435A"
+			rewards: [
+				{
+					count: 2
+					id: "7C1BA175EB9280EB"
+					item: "comforts:rope_and_nail"
+					type: "item"
+				}
+				{
+					id: "09D4610F2DBD7A5A"
+					item: "minecraft:campfire"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "0114E419890D8ADF"
+					item: "comforts:sleeping_bag_white"
+					type: "item"
+				}
+				{
+					id: "175917C8617977DA"
+					item: "comforts:hammock_white"
+					type: "item"
+				}
+			]
+			title: "Under the Open Sky"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["26DF669B755491EA"]
+			description: ["Old Edda keeps Reece's graveyard. She has something to tell every newcomer."]
+			icon: "gravestone:gravestone"
+			id: "3661C4BA0AE508E0"
+			rewards: [
+				{
+					id: "5111B79B42C90251"
+					item: "gravestone:obituary"
+					type: "item"
+				}
+				{
+					id: "45392022CC368A04"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "4ECFB94EB2F91C31"
+					stage: "fq.start.gravestone.talk0"
+					title: "Talk to Old Edda"
+					type: "gamestage"
+				}
+			]
+			title: "The Sexton's Promise"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["26DF669B755491EA"]
+			description: [
+				"Reece's tailor thinks armour is ugly at the harvest dance. You can wear anything over your armour in the cosmetic armour slots of your inventory and keep the protection underneath."
+				""
+				"Bring the tailor 8 white wool for a festival outfit."
+			]
+			icon: "minecraft:leather_chestplate"
+			id: "6541B4C62AE389D4"
+			rewards: [
+				{
+					id: "067D276184857B2C"
+					item: "minecraft:leather_helmet"
+					type: "item"
+				}
+				{
+					id: "4DC0B7444E8BC51F"
+					item: "minecraft:leather_chestplate"
+					type: "item"
+				}
+				{
+					id: "3CDCA84C7238C7D2"
+					item: "minecraft:leather_leggings"
+					type: "item"
+				}
+				{
+					id: "74DD7638F109728C"
+					item: "minecraft:leather_boots"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "6D2AAF9DC453C5AC"
+					stage: "fq.start.cosmetic_armor.talk0"
+					title: "Talk to a leatherworker"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "6C791A810B16C73F"
+					item: "minecraft:white_wool"
+					type: "item"
+				}
+			]
+			title: "Dressed for Reece"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["67959C699393E730"]
+			description: ["A Nature's Compass points to any biome you name. Craft one and use it to find somewhere you've never been."]
+			icon: "minecraft:compass"
+			id: "550DAF7EDA039B49"
+			rewards: [
+				{
+					count: 4
+					id: "771C54039DA112AD"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 40"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "5D75347B7ED0ABD7"
+					silent: true
+					title: "+40 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3B41E84C068CFD3E"
+					item: "naturescompass:naturescompass"
+					type: "item"
+				}
+			]
+			title: "Which Way the Wind Blows"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["550DAF7EDA039B49"]
+			description: ["An Explorer's Compass points to places people built. Craft one and follow it to the nearest well."]
+			icon: "explorerscompass:explorerscompass"
+			id: "648034CC1DFD4C36"
+			rewards: [
+				{
+					count: 4
+					id: "2DB3A88AB28F58A7"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					id: "3C5A9DF09C1C31B5"
+					item: "minecraft:bucket"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "4E1BB5581D38097C"
+					item: "explorerscompass:explorerscompass"
+					type: "item"
+				}
+				{
+					id: "5066E23F6637848C"
+					structure: "#fotf:groups/wells"
+					title: "Find a well"
+					type: "structure"
+				}
+			]
+			title: "Which Way the Stones Lie"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["26DF669B755491EA"]
+			description: [
+				"Four organisations work the land and water around Reece. Meet a member of each: the Growers' co-op (farmers), the Anglers' society (fishermen), the Herbalists (clerics) and the Tavern keepers (butchers)."
+				""
+				"Sneak and right-click a villager to talk."
+			]
+			icon: "minecraft:wheat"
+			id: "74C694B039B4C80B"
+			rewards: [
+				{
+					count: 16
+					id: "11B160F4BF62B411"
+					item: "minecraft:wheat_seeds"
+					type: "item"
+				}
+				{
+					id: "16DF9C0B8E0B8303"
+					item: "minecraft:fishing_rod"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "39AB4367A0FDDC90"
+					item: "minecraft:bread"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "428C58579965EB4E"
+					stage: "fq.start.guilds_of_the_field.talk0"
+					title: "Talk to a representative of the Growers' Co-op"
+					type: "gamestage"
+				}
+				{
+					id: "4FA4CC42A4588F58"
+					stage: "fq.start.guilds_of_the_field.talk1"
+					title: "Talk to a representative of the Anglers' Society"
+					type: "gamestage"
+				}
+				{
+					id: "73B3250F443EB4ED"
+					stage: "fq.start.guilds_of_the_field.talk2"
+					title: "Talk to a representative of the Herbalists"
+					type: "gamestage"
+				}
+				{
+					id: "0F06BE97CCB62BE1"
+					stage: "fq.start.guilds_of_the_field.talk3"
+					title: "Talk to a representative of the Tavern Keepers"
+					type: "gamestage"
+				}
+			]
+			title: "Hands of the Field"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["26DF669B755491EA"]
+			description: ["Four more work stone, metal and the hunt: the Miners' guild (toolsmiths), the Crafters' guild (masons), the Bounty office (weaponsmiths, by the bounty board) and the Hunters' lodge (fletchers)."]
+			icon: "minecraft:iron_pickaxe"
+			id: "2980BC51D0B672C8"
+			rewards: [
+				{
+					count: 16
+					id: "27B381A7402914DB"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					id: "70F66BB5EC40BC38"
+					item: "minecraft:stonecutter"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "7537C473C06329F8"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "282B89E5AF098AB6"
+					stage: "fq.start.guilds_of_the_forge.talk0"
+					title: "Talk to a representative of the Miners' Guild"
+					type: "gamestage"
+				}
+				{
+					id: "2D5EB03EB9F7C015"
+					stage: "fq.start.guilds_of_the_forge.talk1"
+					title: "Talk to a representative of the Crafters' Guild"
+					type: "gamestage"
+				}
+				{
+					id: "398A0A80613C14FD"
+					stage: "fq.start.guilds_of_the_forge.talk2"
+					title: "Talk to a representative of the Bounty Office"
+					type: "gamestage"
+				}
+				{
+					id: "6C98915E7F79D4AC"
+					stage: "fq.start.guilds_of_the_forge.talk3"
+					title: "Talk to a representative of the Hunters' Lodge"
+					type: "gamestage"
+				}
+			]
+			title: "Hands of the Forge"
+			x: 3.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["26DF669B755491EA"]
+			description: ["And four keep the roads open: the Couriers (cartographers), the Village watch (guards), the Arcane order (librarians) and the Sanctuary keepers (shepherds)."]
+			icon: "minecraft:filled_map"
+			id: "078678AE30CD74E9"
+			rewards: [
+				{
+					id: "7BF3C62D48224579"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					id: "4A845D8206AC33ED"
+					item: "minecraft:shield"
+					type: "item"
+				}
+				{
+					id: "4DD5E9A9B44CAFE5"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					id: "46A67D39C959E110"
+					item: "minecraft:lead"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "27DF5197FC80C0D8"
+					stage: "fq.start.guilds_of_the_road.talk0"
+					title: "Talk to a representative of the Couriers"
+					type: "gamestage"
+				}
+				{
+					id: "7EA7D2DB26C510F4"
+					stage: "fq.start.guilds_of_the_road.talk1"
+					title: "Talk to a representative of the Village Watch"
+					type: "gamestage"
+				}
+				{
+					id: "0272AAA56DB8752C"
+					stage: "fq.start.guilds_of_the_road.talk2"
+					title: "Talk to a representative of the Arcane Order"
+					type: "gamestage"
+				}
+				{
+					id: "27CB4A2299108AA1"
+					stage: "fq.start.guilds_of_the_road.talk3"
+					title: "Talk to a representative of the Sanctuary Keepers"
+					type: "gamestage"
+				}
+			]
+			title: "Hands of the Road"
+			x: 3.0d
+			y: 6.0d
+		}
+		{
+			dependencies: [
+				"28E2BBA8904B0982"
+				"74C694B039B4C80B"
+			]
+			description: ["Sister Wren has been watching the forest. She'd like a word."]
+			icon: "minecraft:candle"
+			id: "2EA3306BE3105559"
+			rewards: [
+				{
+					command: "/give {p} minecraft:potion{Potion:\"minecraft:healing\"}"
+					elevate_perms: true
+					id: "1DA355F709D2FBB4"
+					silent: true
+					title: "A healing potion"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.25d
+			tasks: [
+				{
+					id: "3C76A7242F7556F4"
+					stage: "fq.start.clerics_worry.talk0"
+					title: "Talk to Sister Wren"
+					type: "gamestage"
+				}
+			]
+			title: "The Cleric's Worry"
+			x: 4.5d
+			y: 2.25d
+		}
+	]
+	subtitle: ["Your first day in the forest"]
+	title: "Welcome to Reece"
+}

@@ -5,283 +5,439 @@
 	group: "1CAE106B8DA521D5"
 	icon: "minecraft:fishing_rod"
 	id: "3DE246ABED4E77D2"
-	order_index: 2
+	order_index: 6
 	quest_links: [ ]
 	quests: [
 		{
-			description: ["Every angler starts with a stick and some string. Craft a fishing rod."]
+			description: ["Commodore Halloway runs the Anglers' Society from Reece. She'll sign you up for the season if you can land five fish with a plain rod."]
 			icon: "minecraft:fishing_rod"
-			id: "5461C61A9F3C6B14"
+			id: "3D40B5D6E6756BA4"
 			rewards: [
 				{
-					command: "/puffish_skills experience add {p} puffish_skills:fish 25"
-					elevate_perms: true
-					icon: "minecraft:fishing_rod"
-					id: "52C8752F1B2B8A7B"
-					silent: true
-					title: "+25 Fishing XP"
-					type: "command"
-				}
-				{
 					count: 16
-					id: "221E41E6F59A8EF6"
+					id: "466C08A6C5C871A2"
 					item: "aquaculture:worm"
 					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 60"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "615858E4A4C25A84"
+					silent: true
+					title: "+60 Fishing XP"
+					type: "command"
 				}
 			]
 			tasks: [
 				{
-					id: "4858B810C83333CE"
-					item: "minecraft:fishing_rod"
-					type: "item"
+					id: "5B028C055AE8B646"
+					stage: "fq.skill_fishing.sign_up.talk0"
+					title: "Talk to Commodore Marlow Halloway"
+					type: "gamestage"
+				}
+				{
+					id: "106DBA1E32961A80"
+					stat: "minecraft:fish_caught"
+					title: "Catch five fish"
+					type: "stat"
+					value: 5
 				}
 			]
-			title: "Cast Off"
+			title: "Entry Form"
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["5461C61A9F3C6B14"]
-			description: ["Catch some cod. Fishing earns Fishing skill XP every time."]
-			icon: "minecraft:cod"
-			id: "5A998716C91625EA"
+			dependencies: ["3D40B5D6E6756BA4"]
+			description: ["Every member keeps a worm farm for bait and a tackle box for hooks and bobbers."]
+			icon: "aquaculture:tackle_box"
+			id: "1FEE4C40792F8A42"
 			rewards: [
 				{
-					command: "/puffish_skills experience add {p} puffish_skills:fish 50"
+					id: "147B53C7921E568A"
+					item: "aquaculture:bobber"
+					type: "item"
+				}
+				{
+					id: "2E72E54ED7F457CE"
+					item: "aquaculture:fishing_line"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 80"
 					elevate_perms: true
 					icon: "minecraft:fishing_rod"
-					id: "29AA87920BB2FFCD"
+					id: "734C0124A7E01F78"
 					silent: true
-					title: "+50 Fishing XP"
+					title: "+80 Fishing XP"
 					type: "command"
 				}
 			]
 			tasks: [
 				{
-					count: 8L
-					id: "3A70E96FF9BECB87"
-					item: "minecraft:cod"
+					id: "0CCC0F7E028BA5E2"
+					item: "aquaculture:worm_farm"
+					type: "item"
+				}
+				{
+					id: "79AE9997E10F89B9"
+					item: "aquaculture:tackle_box"
 					type: "item"
 				}
 			]
-			title: "First Catch"
+			title: "Bait and Tackle"
 			x: 1.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["5A998716C91625EA"]
-			description: ["Salmon run in rivers and cold water; tropical fish live in warm oceans."]
-			icon: "minecraft:tropical_fish"
-			id: "31A126138E0F18D3"
-			rewards: [
-				{
-					command: "/puffish_skills experience add {p} puffish_skills:fish 75"
-					elevate_perms: true
-					icon: "minecraft:fishing_rod"
-					id: "45936D6D273EF56B"
-					silent: true
-					title: "+75 Fishing XP"
-					type: "command"
-				}
-				{
-					id: "39E02C34DFE2F167"
-					item: {
-						Count: 1b
-						id: "minecraft:fishing_rod"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:lure"
-									lvl: 2s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 2s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"A rod that remembers every river it has seen.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Riverrunner\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
-				}
-			]
-			tasks: [
-				{
-					count: 4L
-					id: "0976A7402EACD036"
-					item: "minecraft:salmon"
-					type: "item"
-				}
-				{
-					count: 2L
-					id: "0F0D9A4043698AC1"
-					item: "minecraft:tropical_fish"
-					type: "item"
-				}
-			]
-			title: "River and Reef"
-			x: 3.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["31A126138E0F18D3"]
-			description: ["Pufferfish are best handled carefully. Catch three, and take this for your ocean trips."]
-			icon: "minecraft:pufferfish"
-			id: "75F77B717B524A3F"
+			dependencies: ["1FEE4C40792F8A42"]
+			description: ["Someone is coming along the bank, and he looks very pleased with himself."]
+			icon: "minecraft:cod"
+			id: "2555A69A7ADDD8E2"
 			rewards: [
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:fish 100"
 					elevate_perms: true
 					icon: "minecraft:fishing_rod"
-					id: "16A01B39F5A9AB12"
+					id: "00E0580E91AF1F3A"
 					silent: true
 					title: "+100 Fishing XP"
 					type: "command"
 				}
+			]
+			tasks: [
 				{
-					id: "4911B41B0AA514F5"
-					item: "artifacts:snorkel"
+					id: "50A151EF3CD6DFDF"
+					stage: "fq.skill_fishing.a_rival_appears.enc0"
+					title: "Meet Silas Pike"
+					type: "gamestage"
+				}
+				{
+					id: "48AD323AF6D17ADA"
+					item: "kubejs:quest_a_rival_appears_1"
 					type: "item"
+				}
+			]
+			title: "A Rival on the Bank"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2555A69A7ADDD8E2"]
+			description: ["The first competition of the season, at the nearest fishing hut. The cup goes to whoever lands the society's ribboned trout. The winner wears the lucky angler's hat until next year, or for good, says the Commodore."]
+			icon: "artifacts:anglers_hat"
+			id: "5A974534A17C3437"
+			rewards: [
+				{
+					id: "6478CD97AAC58A23"
+					item: "artifacts:anglers_hat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "70237C8CBE82C584"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
 				}
 			]
 			tasks: [
 				{
-					count: 3L
-					id: "356DD19806729E25"
-					item: "minecraft:pufferfish"
+					id: "129BE36B41D573D9"
+					structure: "#fotf:groups/fishing_huts"
+					title: "Go to a fishing hut"
+					type: "structure"
+				}
+				{
+					id: "76A7C40FC1B7382A"
+					item: "kubejs:quest_opening_cup_1"
 					type: "item"
 				}
 			]
-			title: "Puffer Wrangler"
+			title: "The Opening Cup"
 			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5A974534A17C3437"]
+			description: ["The society keeps a lifetime tally for every member. A hundred fish ranks you for the summer heats."]
+			icon: "minecraft:writable_book"
+			id: "60955F52DA61EE39"
+			rewards: [
+				{
+					id: "7EBEC87FB5CB84BF"
+					item: "aquaculture:iron_hook"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "0CEF11394F485A3A"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4DD28C90BDE213C0"
+					stat: "minecraft:fish_caught"
+					title: "Catch a hundred fish"
+					type: "stat"
+					value: 100
+				}
+			]
+			title: "Tally Book"
+			x: 6.0d
 			y: -0.75d
 		}
 		{
-			dependencies: ["31A126138E0F18D3"]
-			description: ["Sometimes the line comes back heavy. Fish up a treasure chest."]
-			icon: "aquaculture:treasure_chest"
-			id: "1ACF82E59E813670"
+			dependencies: ["5A974534A17C3437"]
+			description: ["Heat one runs along a river: a brown trout, a smallmouth bass, a bluegill and a perch, and then the heat's marked fish."]
+			icon: "aquaculture:brown_trout"
+			id: "2FEEE407C29A7838"
+			rewards: [
+				{
+					id: "3020643DFAE1E542"
+					item: "aquaculture:iron_fishing_rod"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "3E7444276BBCB7F5"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0EA8AE81496E35B7"
+					item: "aquaculture:brown_trout"
+					type: "item"
+				}
+				{
+					id: "7153A12AD038B92D"
+					item: "aquaculture:smallmouth_bass"
+					type: "item"
+				}
+				{
+					id: "505B6A56E4CB50BB"
+					item: "aquaculture:bluegill"
+					type: "item"
+				}
+				{
+					id: "0A7EEAE6052A3898"
+					item: "aquaculture:perch"
+					type: "item"
+				}
+				{
+					id: "7D78BFC41BF13C0C"
+					item: "kubejs:quest_river_heat_4"
+					type: "item"
+				}
+			]
+			title: "The River Heat"
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["2FEEE407C29A7838"]
+			description: ["Silas won the heat on a technicality and won't stop bragging about his hooks. Make your own, so the next heat is fair."]
+			icon: "aquaculture:double_hook"
+			id: "3BD9D2C03AA097B3"
+			rewards: [
+				{
+					id: "780FA246879FC69B"
+					item: "aquaculture:gold_hook"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 120"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "629A1FF820A04BE9"
+					silent: true
+					title: "+120 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "33D6851658785224"
+					item: "aquaculture:light_hook"
+					type: "item"
+				}
+				{
+					id: "2B40E08DEE29A3AB"
+					item: "aquaculture:heavy_hook"
+					type: "item"
+				}
+				{
+					id: "72A28F7290EDAD28"
+					item: "aquaculture:double_hook"
+					type: "item"
+				}
+			]
+			title: "Hooked"
+			x: 7.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["2FEEE407C29A7838"]
+			description: ["Not every angler sits with a rod. Build a fish trap and a fishing net and set them overnight."]
+			icon: "lilis_lucky_lures:fish_trap"
+			id: "21454488ED922D0E"
+			rewards: [
+				{
+					id: "0658E7ABE7FE6EF8"
+					item: "lilis_lucky_lures:fish_bag"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 120"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "59888D39C0556B86"
+					silent: true
+					title: "+120 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2C927860ED12C33D"
+					item: "lilis_lucky_lures:fish_trap"
+					type: "item"
+				}
+				{
+					id: "51BBB0F6F027329F"
+					item: "lilis_lucky_lures:fishing_net"
+					type: "item"
+				}
+			]
+			title: "Traps and Nets"
+			x: 7.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3BD9D2C03AA097B3"]
+			description: ["The season's record book is kept at a lighthouse on the coast. Take the keeper a fresh cod meal and read the records, including one of Silas's that looks forged."]
+			icon: "minecraft:lantern"
+			id: "67AF7FA20EFCA433"
 			rewards: [
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
 					elevate_perms: true
 					icon: "minecraft:fishing_rod"
-					id: "789F9A9A297597B9"
+					id: "1FAEF7E627D84671"
 					silent: true
 					title: "+150 Fishing XP"
 					type: "command"
 				}
+			]
+			tasks: [
 				{
-					id: "09B3CA02917054B0"
-					item: "artifacts:anglers_hat"
+					id: "4DD0C956D8A86FA8"
+					structure: "#fotf:groups/lighthouses"
+					title: "Find a lighthouse"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "517B3E86B92D0CF8"
+					item: "lilis_lucky_lures:cooked_cod_meal"
 					type: "item"
+				}
+				{
+					id: "0EA153F23B8F9928"
+					title: "I read the records"
+					type: "checkmark"
+				}
+			]
+			title: "The Keeper's Ledger"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["67AF7FA20EFCA433"]
+			description: ["The coastal heat ends with a party at a beach hut: catch three tropical fish, grill them, and serve the judges."]
+			icon: "lilis_lucky_lures:grilled_tropical_fish"
+			id: "60C5A20FD1099321"
+			rewards: [
+				{
+					id: "00849687B1C00D7E"
+					item: "lilis_lucky_lures:fish_trophy_frame"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "0AB1C615703B54F0"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
 				}
 			]
 			tasks: [
 				{
-					id: "7225E5F84234F973"
-					item: "aquaculture:treasure_chest"
+					id: "613A27553D5E671E"
+					structure: "beachparty:beach_hut"
+					title: "Find the beach hut"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 3L
+					id: "0C8B6C8C86F0EED6"
+					item: "lilis_lucky_lures:grilled_tropical_fish"
 					type: "item"
 				}
 			]
-			title: "Sunken Treasure"
-			x: 4.5d
-			y: 0.75d
+			title: "Beach Weigh-in"
+			x: 10.5d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"75F77B717B524A3F"
-				"1ACF82E59E813670"
-			]
-			description: ["Nautilus shells come up from deep water. Bring three."]
-			icon: "minecraft:nautilus_shell"
-			id: "3EBF74E38E732A65"
+			dependencies: ["60C5A20FD1099321"]
+			description: ["The society's heirloom rod went over the side of a boat in the deepest lake around. Silas swears it wasn't him. Dive down and get it back; the old diver's snorkel is yours afterwards."]
+			icon: "artifacts:snorkel"
+			id: "049497D318092D53"
 			rewards: [
+				{
+					id: "2A6F952D98D0453A"
+					item: "artifacts:snorkel"
+					type: "item"
+				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:fish 200"
 					elevate_perms: true
 					icon: "minecraft:fishing_rod"
-					id: "3E8F9BA86FE24FFC"
+					id: "3F629E702BAD8466"
 					silent: true
 					title: "+200 Fishing XP"
 					type: "command"
 				}
-				{
-					id: "622E6A278D525477"
-					item: "artifacts:flippers"
-					type: "item"
-				}
 			]
 			tasks: [
 				{
-					count: 3L
-					id: "4E9B41B6955D3525"
-					item: "minecraft:nautilus_shell"
-					type: "item"
+					id: "4A7DBD2AC8E4AB81"
+					title: "I brought the heirloom rod up"
+					type: "checkmark"
 				}
 			]
-			title: "Deep Water"
-			x: 6.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["3EBF74E38E732A65"]
-			description: ["Neptunium comes from the sea's deepest treasures. Bring an ingot and earn the rod of a master."]
-			icon: "aquaculture:neptunium_fishing_rod"
-			id: "08A72F290ED3F273"
-			rewards: [
-				{
-					command: "/puffish_skills experience add {p} puffish_skills:fish 400"
-					elevate_perms: true
-					icon: "minecraft:fishing_rod"
-					id: "25F66EBB725E9114"
-					silent: true
-					title: "+400 Fishing XP"
-					type: "command"
-				}
-				{
-					id: "0B7B07F97D234D2E"
-					item: {
-						Count: 1b
-						id: "aquaculture:neptunium_fishing_rod"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:luck_of_the_sea"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:lure"
-									lvl: 3s
-								}
-							]
-							Unbreakable: 1b
-							display: {
-								Lore: ["{\"text\": \"The tide answers to whoever holds it.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Tidecaller\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
-				}
-			]
-			shape: "gear"
-			size: 1.5d
-			tasks: [
-				{
-					id: "3FA1E813ECE4C874"
-					item: "aquaculture:neptunium_ingot"
-					type: "item"
-				}
-			]
-			title: "Master Angler"
-			x: 7.5d
+			title: "The Rod at the Bottom"
+			x: 12.0d
 			y: 0.0d
 		}
 	]
-	subtitle: ["Fishing skill questline"]
-	title: "The Angler's Path"
+	subtitle: ["Fishing path"]
+	title: "The Anglers' Society"
 }

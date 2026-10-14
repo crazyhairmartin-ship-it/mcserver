@@ -1,0 +1,609 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_foraging"
+	group: "1CAE106B8DA521D5"
+	icon: "minecraft:oak_sapling"
+	id: "2A4119B431A10F3F"
+	order_index: 8
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Every herbalist keeps a field journal. Start yours properly: a book and quill, and five different flowers pressed into it."]
+			icon: "minecraft:writable_book"
+			id: "7F5889E3E2A8A625"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "773A4D5B661A57E0"
+					item: "minecraft:bundle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 60"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "3C27727D06F7B354"
+					silent: true
+					title: "+60 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7094AE711022E021"
+					stage: "fq.skill_foraging.field_journal"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "724926E07AD006F8"
+					item: "minecraft:writable_book"
+					type: "item"
+				}
+				{
+					id: "736FB754483812DE"
+					item: "minecraft:dandelion"
+					type: "item"
+				}
+				{
+					id: "562E36CE02013E62"
+					item: "minecraft:poppy"
+					type: "item"
+				}
+				{
+					id: "2E536EC009FEAC02"
+					item: "minecraft:oxeye_daisy"
+					type: "item"
+				}
+				{
+					id: "737A5A8391AD3D90"
+					item: "minecraft:azure_bluet"
+					type: "item"
+				}
+				{
+					id: "29B2511F9F0E55B3"
+					item: "minecraft:cornflower"
+					type: "item"
+				}
+			]
+			title: "A Blank Field Journal"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7F5889E3E2A8A625"]
+			description: ["Walk the hedgerows around the village and fill a basket."]
+			icon: "minecraft:sweet_berries"
+			id: "4BADB04A37C51504"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 80"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "4F7E8708C1E8DE53"
+					silent: true
+					title: "+80 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "46BC8CF919BAFCD1"
+					item: "minecraft:sweet_berries"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "00DE95C26098FA9F"
+					item: "minecraft:brown_mushroom"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2864834EAC7C1A54"
+					item: "minecraft:red_mushroom"
+					type: "item"
+				}
+				{
+					id: "6754B9DB4C0EC462"
+					item: "biomesoplenty:wildflower"
+					type: "item"
+				}
+				{
+					id: "65D1030884EE0295"
+					item: "regions_unexplored:daisy"
+					type: "item"
+				}
+			]
+			title: "Hedgerow Pickings"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["7F5889E3E2A8A625"]
+			description: ["Every forager learns the trees first. Collect six kinds of sapling."]
+			icon: "minecraft:oak_sapling"
+			id: "7BEAE58B17FB2F81"
+			rewards: [
+				{
+					count: 16
+					id: "1921E29D8E86A458"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "55B74A0844EE67CE"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6C6F7D5D19307BF2"
+					item: "minecraft:oak_sapling"
+					type: "item"
+				}
+				{
+					id: "71F12A32316985D3"
+					item: "minecraft:birch_sapling"
+					type: "item"
+				}
+				{
+					id: "70647EB7B0587E93"
+					item: "minecraft:spruce_sapling"
+					type: "item"
+				}
+				{
+					id: "014B5BC8ACC29336"
+					item: "minecraft:jungle_sapling"
+					type: "item"
+				}
+				{
+					id: "590D526720D924E8"
+					item: "minecraft:acacia_sapling"
+					type: "item"
+				}
+				{
+					id: "0C38E306FCBF6E31"
+					item: "minecraft:dark_oak_sapling"
+					type: "item"
+				}
+			]
+			title: "Six Saplings"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["7BEAE58B17FB2F81"]
+			description: ["The loggers at a meadow logging camp are behind on their order. Chop pine for them."]
+			icon: "meadow:pine_log"
+			id: "61608E752B0680EE"
+			rewards: [
+				{
+					id: "5755B0E4649D5738"
+					item: "meadow:woodcutter"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 120"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "7FD7BC8E336D722B"
+					silent: true
+					title: "+120 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6C6834BF05B520FE"
+					structure: "meadow:logging_camp"
+					title: "Find the logging camp"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "579E71043CB42D28"
+					item: "meadow:pine_log"
+					type: "item"
+				}
+			]
+			title: "The Loggers' Camp"
+			x: 3.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["4BADB04A37C51504"]
+			description: ["Find wild rooibos, coffee or yerba mate, dry the leaves, and brew your first pot."]
+			icon: "herbalbrews:tea_kettle"
+			id: "41BA98A4CCC7B0A7"
+			rewards: [
+				{
+					id: "0A8EF8BF10C1378A"
+					item: "herbalbrews:copper_tea_kettle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "0B503BEB7A424D81"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4E55AA61C2B7FDA3"
+					item: "herbalbrews:rooibos_tea"
+					type: "item"
+				}
+			]
+			title: "The First Tea"
+			x: 3.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["61608E752B0680EE"]
+			description: ["Find a forager's outpost in the wilds and copy the notes its last keeper left on the herbs of that region."]
+			icon: "minecraft:paper"
+			id: "3DCB80E25404D919"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "73A92D79DCE7AB46"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5564CF71A3EC5903"
+					structure: "#fotf:groups/forager_outposts"
+					title: "Find a forager's outpost"
+					type: "structure"
+				}
+				{
+					id: "7D82A15A6079E731"
+					title: "I copied the notes"
+					type: "checkmark"
+				}
+			]
+			title: "The Forager's Outpost"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["41BA98A4CCC7B0A7"]
+			description: ["A villager hasn't slept in a week. Gather lavender, brew lavender tea, and take it to them warm."]
+			icon: "herbalbrews:lavender_tea"
+			id: "62D5E7813EFF573B"
+			rewards: [
+				{
+					id: "5D1CE85CF853C60F"
+					item: "minecraft:white_bed"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "4798C7C2FEF5E22B"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "0FC702AF245B7AEA"
+					item: "herbalbrews:lavender_blossom"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "20B11EEFE37AA617"
+					item: "herbalbrews:lavender_tea"
+					type: "item"
+				}
+				{
+					id: "5898322218C964C2"
+					stage: "fq.skill_foraging.lavender_sleep.talk2"
+					title: "Give it to the sleepless farmer"
+					type: "gamestage"
+				}
+			]
+			title: "Lavender for the Sleepless"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3DCB80E25404D919"]
+			description: ["Catalogue the wildflowers of the temperate lands, one of each pressed in your journal."]
+			icon: "bloomingnature:bluebell"
+			id: "343769D7F54E5D91"
+			rewards: [
+				{
+					id: "5DA8CF93177C78C7"
+					item: "meadow:big_flower_pot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "36826BEFE67DE15F"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "31589864F88B8000"
+					item: "bloomingnature:bluebell"
+					type: "item"
+				}
+				{
+					id: "647456692763644E"
+					item: "regions_unexplored:blue_lupine"
+					type: "item"
+				}
+				{
+					id: "21BCCD5306CE9FC2"
+					item: "bloomingnature:gladiolus"
+					type: "item"
+				}
+				{
+					id: "25D40A10F6292132"
+					item: "bloomingnature:white_orchid"
+					type: "item"
+				}
+			]
+			title: "The Bloom Catalogue"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["343769D7F54E5D91"]
+			description: ["A gardener is coming down the road with a cart full of seeds you've never seen."]
+			icon: "bloomingnature:chestnut_sapling"
+			id: "626ED2D3C88ACB44"
+			rewards: [
+				{
+					id: "1C3A68C3D07C12EA"
+					item: "bloomingnature:chestnut_sapling"
+					type: "item"
+				}
+				{
+					id: "1C6BAE96680DE6E7"
+					item: "bloomingnature:larch_sapling"
+					type: "item"
+				}
+				{
+					id: "1E31B547F5C0FA0B"
+					item: "bloomingnature:ebony_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "6487D456081554AA"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "356F727E0B512851"
+					stage: "fq.skill_foraging.wandering_gardener.enc0"
+					title: "Meet The Wandering Gardener"
+					type: "gamestage"
+				}
+			]
+			title: "The Wandering Gardener"
+			x: 7.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["62D5E7813EFF573B"]
+			description: ["An old hermit herbalist lives in a swamp hut. Bring her cattails, reeds and a hibiscus, and she'll teach you her tea."]
+			icon: "herbalbrews:hibiscus_tea"
+			id: "26F59242EDC4A79D"
+			rewards: [
+				{
+					id: "1E2DF7C8D039B858"
+					item: "herbalbrews:witch_hat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 200"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "6F5B1F013582C644"
+					silent: true
+					title: "+200 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3C305431B746A556"
+					structure: "#fotf:groups/witch_huts"
+					title: "Find the swamp hut"
+					type: "structure"
+				}
+				{
+					count: 4L
+					id: "7ACF6B5164E5A3DD"
+					item: "bloomingnature:cattail"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "29EB7DE6EFBF1948"
+					item: "bloomingnature:reed"
+					type: "item"
+				}
+				{
+					id: "50C52B04D26A0027"
+					item: "herbalbrews:hibiscus"
+					type: "item"
+				}
+				{
+					id: "594E7136052EB556"
+					item: "herbalbrews:hibiscus_tea"
+					type: "item"
+				}
+			]
+			title: "The Swamp Hermit"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["41BA98A4CCC7B0A7"]
+			description: ["The Herbalists' oldest remedies come from weeds. Find wild nettle and ribwort and brew their teas."]
+			icon: "farm_and_charm:wild_nettle"
+			id: "09FBFF62BE544BE2"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "3DCEAFA1C6C3543E"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1060A19E9C87D795"
+					item: "farm_and_charm:wild_nettle"
+					type: "item"
+				}
+				{
+					id: "0A8DE70C305DC106"
+					item: "farm_and_charm:wild_ribwort"
+					type: "item"
+				}
+				{
+					id: "01D80896074B00C5"
+					item: "farm_and_charm:nettle_tea"
+					type: "item"
+				}
+				{
+					id: "12DDD845BCCDB5FA"
+					item: "farm_and_charm:ribwort_tea"
+					type: "item"
+				}
+			]
+			title: "Wild Herbs"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["343769D7F54E5D91"]
+			description: ["Climb to the high meadows of the tallest peaks and press the alpine flowers that grow nowhere else."]
+			icon: "meadow:enzian"
+			id: "1F1DA5AB3EAF341E"
+			rewards: [
+				{
+					id: "1D4F8C2E9307FBFF"
+					item: "meadow:fur_boots"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 200"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "610A58DA70CF3F95"
+					silent: true
+					title: "+200 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "293B6BBBC42F00D9"
+					item: "meadow:enzian"
+					type: "item"
+				}
+				{
+					id: "77CAF26672B6587F"
+					item: "meadow:saxifrage"
+					type: "item"
+				}
+				{
+					id: "046C61BE617B40F0"
+					item: "meadow:delphinium"
+					type: "item"
+				}
+				{
+					id: "175AE40F9BF600B3"
+					item: "meadow:alpine_poppy"
+					type: "item"
+				}
+			]
+			title: "Alpine Flora"
+			x: 7.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["09FBFF62BE544BE2"]
+			description: ["Herbalists prize truffles and hazelnuts. Follow the boars and squirrels through the woods."]
+			icon: "wildernature:truffle"
+			id: "1BB26D1FD0409A15"
+			rewards: [
+				{
+					id: "193A8B5489EA82F6"
+					item: "wildernature:fur_cloak"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 200"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "393CAE1809A7E879"
+					silent: true
+					title: "+200 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "272A6312BC70796A"
+					item: "wildernature:truffle"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "322E5FEE0A4936F1"
+					item: "wildernature:hazelnut"
+					type: "item"
+				}
+			]
+			title: "Truffle Season"
+			x: 6.0d
+			y: 1.5d
+		}
+	]
+	subtitle: ["Foraging path"]
+	title: "The Herbalists"
+}
