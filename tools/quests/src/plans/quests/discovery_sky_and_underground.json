@@ -105,64 +105,6 @@
       "reward": "Mining XP, gold, sandstone"
     },
     {
-      "id": "palm_island",
-      "title": "Castaway Above",
-      "tier": "any",
-      "types": [
-        "discover",
-        "collect"
-      ],
-      "after": [],
-      "summary": "A palm island floats over the sea with a castaway's hammock and no way down. Collect its coconuts and leave a ladder for the next one.",
-      "mods": [
-        "mss",
-        "beachparty"
-      ],
-      "landmarks": [
-        "mss:palm_island"
-      ],
-      "reward": "Foraging XP, coconuts, a palm sapling"
-    },
-    {
-      "id": "sky_ice_fishing",
-      "title": "Ice Fishing in the Sky",
-      "tier": "any",
-      "types": [
-        "discover",
-        "fish"
-      ],
-      "after": [],
-      "summary": "A frozen pond floats in the sky. Cut a hole in the ice and catch a fish up there.",
-      "mods": [
-        "mss",
-        "aquaculture"
-      ],
-      "landmarks": [
-        "mss:frozen_pond",
-        "mss:small_pond",
-        "mss:muddy_water_hole"
-      ],
-      "reward": "Fishing XP, bait, a fishing hook"
-    },
-    {
-      "id": "portal_in_the_sky",
-      "title": "A Portal in the Sky",
-      "tier": "act1",
-      "types": [
-        "discover",
-        "explore"
-      ],
-      "after": [],
-      "summary": "A nether portal sits alone on a floating rock. Report it to the Arcane order, who want to know who built it so high.",
-      "mods": [
-        "mss"
-      ],
-      "landmarks": [
-        "mss:nether_portal"
-      ],
-      "reward": "Magic XP, obsidian"
-    },
-    {
       "id": "sky_garden",
       "title": "The Sky Garden",
       "tier": "any",
@@ -211,45 +153,6 @@
         "mss:small_deepslate_house"
       ],
       "reward": "Agility XP, a slow falling potion"
-    },
-    {
-      "id": "floating_islands",
-      "title": "Drifting Rocks",
-      "tier": "any",
-      "types": [
-        "discover",
-        "explore"
-      ],
-      "after": [],
-      "summary": "Moog's floating islands hang low over the land with chests on top. Reach the large floating island's chest with a grappling hook alone.",
-      "mods": [
-        "mvs",
-        "grapplemod"
-      ],
-      "landmarks": [
-        "mvs:floating_islands",
-        "mvs:large_floating_island"
-      ],
-      "reward": "Agility XP, a grappling hook rope upgrade"
-    },
-    {
-      "id": "village_above_the_clouds",
-      "title": "The Village above the Clouds",
-      "tier": "any",
-      "types": [
-        "discover",
-        "talk",
-        "trade"
-      ],
-      "after": [],
-      "summary": "A sky village floats on its own island. Get up to it, meet its villagers and make your first trade there.",
-      "mods": [
-        "skyvillages"
-      ],
-      "landmarks": [
-        "skyvillages:skyvillage"
-      ],
-      "reward": "Agility XP, emeralds, a slow falling potion"
     },
     {
       "id": "airship_boarding",
@@ -401,45 +304,6 @@
         "nova_structures:underground_house"
       ],
       "reward": "Mining XP, torches, an iron pickaxe"
-    },
-    {
-      "id": "taiga_cellar",
-      "title": "The Cellar under the Ruin",
-      "tier": "any",
-      "types": [
-        "discover",
-        "explore"
-      ],
-      "after": [],
-      "summary": "A taiga ruin has a cellar underneath. Find the entrance, light it up and recover what the ruin's people hid below.",
-      "mods": [
-        "structory",
-        "torchmaster"
-      ],
-      "landmarks": [
-        "structory:taiga_ruin_surface",
-        "structory:taiga_ruin_underground"
-      ],
-      "reward": "Mining XP, a Torchmaster megatorch part, coal"
-    },
-    {
-      "id": "mossy_cave",
-      "title": "The Mossy Cave",
-      "tier": "any",
-      "types": [
-        "discover",
-        "explore",
-        "collect"
-      ],
-      "after": [],
-      "summary": "A small cave in the taiga lined with forest moss. Collect its moss and the flowers growing in the light from the opening.",
-      "mods": [
-        "bloomingnature"
-      ],
-      "landmarks": [
-        "bloomingnature:cave"
-      ],
-      "reward": "Foraging XP, forest moss"
     },
     {
       "id": "the_cave_tablet",

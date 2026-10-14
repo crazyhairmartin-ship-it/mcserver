@@ -185,25 +185,6 @@
       "reward": "Crafting XP, a Small Ships cog, Supplementaries rope"
     },
     {
-      "id": "the_ocean_pillar",
-      "title": "The Ocean Pillar",
-      "tier": "any",
-      "types": [
-        "discover",
-        "explore"
-      ],
-      "after": [],
-      "summary": "A stone pillar rises from the open ocean with a ladder that ends halfway. Climb the rest of the way and claim the lookout's chest.",
-      "mods": [
-        "structory_towers",
-        "parcool"
-      ],
-      "landmarks": [
-        "structory_towers:ocean_pillar"
-      ],
-      "reward": "Agility XP, a spyglass, a compass"
-    },
-    {
       "id": "drowned_keeper",
       "title": "The Drowned Keeper",
       "tier": "any",
@@ -221,27 +202,6 @@
         "mvs:ocean_tower"
       ],
       "reward": "Fishing XP, a lantern, glowstone"
-    },
-    {
-      "id": "prismarine_cottages",
-      "title": "Houses of the Sea Folk",
-      "tier": "any",
-      "types": [
-        "discover",
-        "talk",
-        "trade"
-      ],
-      "after": [],
-      "summary": "Prismarine houses stand on the beach, built from monument stone. Find out where the builders got it, and trade them sea fish for a prismarine lantern.",
-      "mods": [
-        "mvs",
-        "aquaculture"
-      ],
-      "landmarks": [
-        "mvs:prismarine_house_1",
-        "mvs:prismarine_house_2"
-      ],
-      "reward": "Fishing XP, prismarine, sea lanterns"
     },
     {
       "id": "last_orders",
@@ -285,43 +245,6 @@
       "reward": "Magic XP, a Beachparty music disc, sunglasses"
     },
     {
-      "id": "excavated_treasure",
-      "title": "Dig on the Beach",
-      "tier": "any",
-      "types": [
-        "discover",
-        "collect"
-      ],
-      "after": [],
-      "summary": "Someone has been digging on the beach and left a half-dug hole. Finish the dig with a brush and a shovel and find out what they were after.",
-      "mods": [
-        "beachparty"
-      ],
-      "landmarks": [
-        "beachparty:excavated_treasure"
-      ],
-      "reward": "Fishing XP, a sand bucket, a message in a bottle"
-    },
-    {
-      "id": "gate_by_the_sea",
-      "title": "A Gate by the Sea",
-      "tier": "act1",
-      "types": [
-        "discover",
-        "explore",
-        "talk"
-      ],
-      "after": [],
-      "summary": "A nether portal archway stands on the shore, ringed by sea glass. Note how the sea has worn it and take a piece of its obsidian to the Arcane order, who know what lies on the other side.",
-      "mods": [
-        "mos"
-      ],
-      "landmarks": [
-        "mos:nether_portal_archway"
-      ],
-      "reward": "Magic XP, obsidian, a flint and steel"
-    },
-    {
       "id": "the_faithful_hound",
       "title": "The Faithful Hound",
       "tier": "any",
@@ -362,44 +285,6 @@
       "reward": "Foraging XP, coral, sea pickles"
     },
     {
-      "id": "underwater_shrine",
-      "title": "The Underwater Shrine",
-      "tier": "any",
-      "types": [
-        "discover",
-        "puzzle"
-      ],
-      "after": [],
-      "summary": "A small shrine on the sea floor holds an offering bowl. Leave the offering carved on it (a pufferfish and a pearl) and the shrine grants a blessing.",
-      "mods": [
-        "mos",
-        "aquaculture"
-      ],
-      "landmarks": [
-        "mos:underwater_shrine"
-      ],
-      "reward": "Magic XP, potions of water breathing and night vision"
-    },
-    {
-      "id": "small_ocean_temple",
-      "title": "The Little Temple",
-      "tier": "act1",
-      "types": [
-        "discover",
-        "kill",
-        "explore"
-      ],
-      "after": [],
-      "summary": "A small ocean temple guarded by guardians. Clear it without breaking its sponges and claim its chest.",
-      "mods": [
-        "mos"
-      ],
-      "landmarks": [
-        "mos:small_ocean_temple"
-      ],
-      "reward": "Attack XP, wet sponges, prismarine"
-    },
-    {
       "id": "drowned_village",
       "title": "The Drowned Village",
       "tier": "any",
@@ -419,25 +304,6 @@
         "mos:ruined_archway"
       ],
       "reward": "Fishing XP, a bell, gold"
-    },
-    {
-      "id": "conduit_ruin",
-      "title": "The Conduit Ruin",
-      "tier": "act2",
-      "types": [
-        "discover",
-        "puzzle",
-        "explore"
-      ],
-      "after": [],
-      "summary": "A rare ruin on the ocean floor where a conduit once stood. Find its broken frame and repair it block by block until it lights again.",
-      "mods": [
-        "mr_dungeons_andtaverns"
-      ],
-      "landmarks": [
-        "nova_structures:conduit_ruin"
-      ],
-      "reward": "Magic XP, prismarine, a conduit"
     },
     {
       "id": "beach_discs",

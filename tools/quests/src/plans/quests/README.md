@@ -30,7 +30,17 @@ titles, plots or steps. Format: see the docstring of `tools/quests/coverage.py`.
 - **Variety**: not just "kill this boss". Fetch, collect, craft, build, hunt, unique drops, talk, deliver, escort,
   encounter, timed challenges, contests, rescues, puzzles, exploration.
 - **Mods**: quests should bring in virtually every content mod (`tools/quests/mods.json`; roles in
-  `src/mod_roles.json`). **Landmarks**: not every landmark needs a quest; the coverage report lists those without.
+  `src/mod_roles.json`).
+- **Landmarks**: many are involved in quests, but they don't each need a dedicated quest. A quest of its own is for
+  a place with a real story, puzzle or fight; small places (lookouts, lone chests, shrines, cellars) are settings
+  inside bigger quests or simply places to find. Coverage is not a target.
+- **Pacing: finish where you are.** Most quests complete at the objective: follow the map, get the loot, done;
+  no walk back to an NPC. A giver hands out the first quest of a chain and the rest open in the book as each step
+  finishes. Returning to a giver is good **at the end of a chain** (the payoff, the next chain) and **occasionally
+  mid-chain as a change of plans** (new information, a twist), never as routine: at most about one mid-chain return
+  per five quests, and never two out-and-back steps in a row. Mid-chain news can also reach the player in the field:
+  a letter by mail, or the character turning up. "Bring it back" stays where delivering is the point (couriers,
+  village errands).
 
 ## Tiers (when in the game)
 

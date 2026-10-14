@@ -228,27 +228,6 @@
       "reward": "Mining XP, an efficiency book, torches"
     },
     {
-      "id": "quiet_monastery",
-      "title": "The Vow of Silence",
-      "tier": "act1",
-      "types": [
-        "discover",
-        "talk",
-        "deliver"
-      ],
-      "after": [],
-      "summary": "The monastery's last monk keeps a vow of silence and talks only in written notes. Carry his sealed letter to a librarian of the Arcane order, and bring back the reply he's waited years for.",
-      "mods": [
-        "dungeons_arise",
-        "fotfmail"
-      ],
-      "landmarks": [
-        "dungeons_arise:monastery",
-        "#villages"
-      ],
-      "reward": "Magic XP, a book of a random spell school, candles"
-    },
-    {
       "id": "temple_of_the_old_order",
       "title": "The Old Order's Temple",
       "tier": "act1",
@@ -304,25 +283,6 @@
         "dungeons_arise:mushroom_house"
       ],
       "reward": "Foraging XP, suspicious stew, mushroom seeds"
-    },
-    {
-      "id": "house_in_the_canopy",
-      "title": "The House in the Canopy",
-      "tier": "prologue",
-      "types": [
-        "discover",
-        "explore"
-      ],
-      "after": [],
-      "summary": "A tree house sits high in the jungle canopy with no ladder left. Climb up by vines and branches (ParCool helps) and claim the lookout's chest at the top.",
-      "mods": [
-        "dungeons_arise",
-        "parcool"
-      ],
-      "landmarks": [
-        "dungeons_arise:jungle_tree_house"
-      ],
-      "reward": "Agility XP, cocoa beans, a spyglass"
     },
     {
       "id": "the_scorched_mines",
@@ -382,45 +342,6 @@
         "nova_structures:witch_villa"
       ],
       "reward": "Magic XP, splash potions, a cauldron"
-    },
-    {
-      "id": "ruin_town_survey",
-      "title": "Survey of a Fallen Town",
-      "tier": "any",
-      "types": [
-        "discover",
-        "explore",
-        "collect"
-      ],
-      "after": [],
-      "summary": "A whole town lies in ruins. Survey it: find the town hall, the smithy and the well, and bring back the town's stone to the Crafters' guild, who mean to rebuild it one day.",
-      "mods": [
-        "mr_dungeons_andtaverns"
-      ],
-      "landmarks": [
-        "nova_structures:ruin_town"
-      ],
-      "reward": "Crafting XP, stone bricks, a map"
-    },
-    {
-      "id": "stilts_over_the_swamp",
-      "title": "Stilts over the Swamp",
-      "tier": "any",
-      "types": [
-        "discover",
-        "trade",
-        "fish"
-      ],
-      "after": [],
-      "summary": "Villagers live on stilts over the swamp water and fish from their porches. Trade with them and catch the swamp's three fish they ask for in return for a boat.",
-      "mods": [
-        "mr_dungeons_andtaverns",
-        "aquaculture"
-      ],
-      "landmarks": [
-        "nova_structures:village_swamp"
-      ],
-      "reward": "Fishing XP, an Aquaculture iron rod, a mangrove boat"
     },
     {
       "id": "old_manor_ghost",
@@ -545,24 +466,6 @@
       "reward": "Crafting XP, pistons, redstone"
     },
     {
-      "id": "the_great_toadstool",
-      "title": "The Great Toadstool",
-      "tier": "any",
-      "types": [
-        "discover",
-        "explore"
-      ],
-      "after": [],
-      "summary": "A toadstool the size of a tower grows on a mushroom island. Climb inside, find the hermit's room under the cap and take one of his spore jars home to plant.",
-      "mods": [
-        "structory_towers"
-      ],
-      "landmarks": [
-        "structory_towers:great_toadstool"
-      ],
-      "reward": "Foraging XP, mycelium, mushroom stew"
-    },
-    {
       "id": "mirage_outpost",
       "title": "The Mirage",
       "tier": "any",
@@ -580,44 +483,6 @@
         "structory_towers:mirage_outpost"
       ],
       "reward": "Agility XP, a water flask (potions of water breathing) and dried food"
-    },
-    {
-      "id": "overgrown_mangrove",
-      "title": "Overgrown",
-      "tier": "any",
-      "types": [
-        "discover",
-        "explore",
-        "collect"
-      ],
-      "after": [],
-      "summary": "A mangrove tower has been swallowed by roots. Search the roots for the gardener's seed tin and collect the three mangrove plants listed on its lid.",
-      "mods": [
-        "structory_towers",
-        "bloomingnature"
-      ],
-      "landmarks": [
-        "structory_towers:overgrown_mangrove"
-      ],
-      "reward": "Foraging XP, BloomingNature saplings"
-    },
-    {
-      "id": "quarter_outpost",
-      "title": "Jungle Quarters",
-      "tier": "any",
-      "types": [
-        "discover",
-        "kill"
-      ],
-      "after": [],
-      "summary": "A jungle outpost has been taken over by ocelots and worse. Clear the camp of hostile mobs without harming the ocelots, then reclaim the quartermaster's chest.",
-      "mods": [
-        "structory_towers"
-      ],
-      "landmarks": [
-        "structory_towers:quarter_outpost"
-      ],
-      "reward": "Range XP, arrows, cocoa"
     },
     {
       "id": "sacred_relic",
@@ -698,25 +563,6 @@
       "reward": "Defense XP, emeralds"
     },
     {
-      "id": "the_strategists_gate",
-      "title": "The Strategist's Gate",
-      "tier": "any",
-      "types": [
-        "discover",
-        "explore",
-        "puzzle"
-      ],
-      "after": [],
-      "summary": "An old gate carries lines from a book of war. Read them all, then win a fight against a pack of mobs using only the terrain the gate describes: high ground, water, fire.",
-      "mods": [
-        "mvs"
-      ],
-      "landmarks": [
-        "mvs:sunzi_gate"
-      ],
-      "reward": "Attack XP, a book of Sharpness, a banner"
-    },
-    {
       "id": "the_tree_monument",
       "title": "Grove of Remembrance",
       "tier": "any",
@@ -734,28 +580,6 @@
         "mvs:tree_monument"
       ],
       "reward": "Foraging XP, bone meal, a stack of saplings"
-    },
-    {
-      "id": "towers_of_the_wild",
-      "title": "Towers of the Wild",
-      "tier": "any",
-      "types": [
-        "discover",
-        "explore",
-        "milestone"
-      ],
-      "after": [],
-      "summary": "Lone towers dot the wilds, each with a view. Climb three different kinds (diorite, red, jungle) and mark each summit on a map.",
-      "mods": [
-        "mvs",
-        "parcool"
-      ],
-      "landmarks": [
-        "mvs:diorite_tower",
-        "mvs:red_tower",
-        "mvs:jungle_tower"
-      ],
-      "reward": "Agility XP, a spyglass, a filled map"
     },
     {
       "id": "nobodys_home",
@@ -804,25 +628,6 @@
         "mvs:large_warped_tower"
       ],
       "reward": "Magic XP, warped planks, an ender pearl"
-    },
-    {
-      "id": "reading_garden",
-      "title": "The Reading Garden",
-      "tier": "any",
-      "types": [
-        "discover",
-        "puzzle"
-      ],
-      "after": [],
-      "summary": "A lectern stands in a taiga garden with a book open on it. Read the riddle on its last page and find its answer among the garden's flowers.",
-      "mods": [
-        "mvs",
-        "easymagic"
-      ],
-      "landmarks": [
-        "mvs:lecturn_garden"
-      ],
-      "reward": "Magic XP, an enchanted book, bookshelves"
     },
     {
       "id": "beacon_gone_dark",
@@ -938,42 +743,6 @@
         "feature:yungsextras:desert_obelisks"
       ],
       "reward": "Magic XP, sandstone and gold"
-    },
-    {
-      "id": "a_coin_in_the_sand",
-      "title": "A Coin in the Sand",
-      "tier": "any",
-      "types": [
-        "discover",
-        "fetch"
-      ],
-      "after": [],
-      "summary": "A desert wishing well is full of old coins. Drop one gold nugget in for luck, then fish out what an earlier traveller wished away.",
-      "mods": [
-        "yungsextras"
-      ],
-      "landmarks": [
-        "feature:yungsextras:desert_wells"
-      ],
-      "reward": "Fishing XP, a gold nugget pouch, a lucky charm (luck potion)"
-    },
-    {
-      "id": "under_the_swamp_arches",
-      "title": "Under the Arches",
-      "tier": "any",
-      "types": [
-        "discover",
-        "explore"
-      ],
-      "after": [],
-      "summary": "Mossy stone arches stand in the swamp water with cubbies hidden under them. Search three of them for the smuggler's stash.",
-      "mods": [
-        "yungsextras"
-      ],
-      "landmarks": [
-        "feature:yungsextras:swamp_arches"
-      ],
-      "reward": "Foraging XP, slime balls, emeralds"
     },
     {
       "id": "the_bridge_builder",
@@ -1111,44 +880,6 @@
       "reward": "Cooking XP, Meadow cheese, fur boots"
     },
     {
-      "id": "alpine_chapel",
-      "title": "The Alpine Chapel",
-      "tier": "any",
-      "types": [
-        "discover",
-        "talk",
-        "deliver"
-      ],
-      "after": [],
-      "summary": "A tiny chapel high in the meadow keeps a bell for lost climbers. Bring its keeper alpine flowers and a lantern, and ring it during a snowstorm to guide a lost shepherd in.",
-      "mods": [
-        "meadow"
-      ],
-      "landmarks": [
-        "meadow:chapel"
-      ],
-      "reward": "Agility XP, an oil lantern, Meadow wool"
-    },
-    {
-      "id": "stones_of_the_meadow",
-      "title": "Stones of the Meadow",
-      "tier": "any",
-      "types": [
-        "discover",
-        "travel",
-        "milestone"
-      ],
-      "after": [],
-      "summary": "Stone monuments stand across the alpine meadows. Visit three and leave an offering of flowers at each.",
-      "mods": [
-        "meadow"
-      ],
-      "landmarks": [
-        "meadow:monument"
-      ],
-      "reward": "Foraging XP, Meadow flowers, limestone"
-    },
-    {
       "id": "the_observation_post",
       "title": "The Observation Post",
       "tier": "any",
@@ -1188,25 +919,6 @@
       "reward": "Foraging XP, BloomingNature flowers, a flower box"
     },
     {
-      "id": "the_little_house",
-      "title": "The Little House in the Woods",
-      "tier": "any",
-      "types": [
-        "discover",
-        "fetch"
-      ],
-      "after": [],
-      "summary": "A tiny house in the forest has a shopping list nailed to its door. Fetch what's on it from the woods around and leave it by the door; something leaves a gift in return overnight.",
-      "mods": [
-        "bloomingnature",
-        "fays_fairies"
-      ],
-      "landmarks": [
-        "bloomingnature:little_house"
-      ],
-      "reward": "Foraging XP, honey, a fairy sighting"
-    },
-    {
       "id": "gingerbread_house",
       "title": "The Gingerbread House",
       "tier": "any",
@@ -1243,25 +955,6 @@
         "butterflies:liangshanbo_grave"
       ],
       "reward": "Taming XP, a butterfly net, flowers"
-    },
-    {
-      "id": "artifact_campsite",
-      "title": "Somebody's Camp",
-      "tier": "any",
-      "types": [
-        "discover",
-        "encounter",
-        "kill"
-      ],
-      "after": [],
-      "summary": "An abandoned campsite has chests left unguarded. One of them is a mimic; beat it and see what it swallowed.",
-      "mods": [
-        "artifacts"
-      ],
-      "landmarks": [
-        "feature:artifacts:campsites"
-      ],
-      "reward": "Attack XP, a lantern, campfire food"
     },
     {
       "id": "fallen_adventurer",

@@ -163,7 +163,7 @@ def main():
     out += ['', f'Not expected in quests ({len(exempt)}: libraries, performance, client-side, admin and loot mods): '
             + ', '.join(mods[k]['name'] for k in exempt), '']
     out += [f'## Landmarks without a quest ({len(lm_missing)} of {len(units)})', '',
-            'Not every landmark needs one; this is the list to pick from. A family counts once (any member covers it). '
+            'Not a to-do list: most landmarks are just places to find, and a quest uses one only when it has a real story there. A family counts once (any member covers it). '
             'Scenery (trees, log piles, lanterns, rubble) is left out.', '', '| Landmark | Where | Mod |', '|---|---|---|']
     out += [f'| {units[u][0]} | {units[u][1]} | {units[u][2]} |'
             for u in sorted(lm_missing, key=lambda u: (units[u][1], units[u][2], units[u][0]))]
