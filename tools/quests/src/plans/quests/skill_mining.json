@@ -83,7 +83,7 @@
    "after": [
     "shoring_up"
    ],
-   "summary": "Find any old mineshaft (YUNG's Better Mineshafts) and bring back a lantern and a rail from its deepest gallery: the guild is mapping every abandoned working before someone falls into one.",
+   "summary": "Find any old mineshaft (YUNG's Better Mineshafts) and recover a lantern and a rail from its deepest gallery: the guild is mapping every abandoned working before someone falls into one.",
    "mods": [
     "bettermineshafts"
    ],
@@ -158,7 +158,7 @@
    "after": [
     "vein_breaker"
    ],
-   "summary": "A prospector's letter speaks of ore in the high peaks: climb the tallest mountains (Tectonic) and bring back alpine iron ore, alpine copper ore and a lump of alpine salt.",
+   "summary": "A prospector's letter speaks of ore in the high peaks: climb the tallest mountains (Tectonic) and mine alpine iron ore, alpine copper ore and a lump of alpine salt.",
    "mods": [
     "tectonic",
     "meadow"
@@ -254,7 +254,7 @@
    "after": [
     "lost_crew"
    ],
-   "summary": "The guild's next shaft goes below Y -32: mine down into the deepslate, bring back 8 deepslate diamond ore (with Silk Touch or as diamonds) and 64 cobbled deepslate for the shaft walls.",
+   "summary": "The guild's next shaft goes below Y -32: mine down into the deepslate for 8 deepslate diamond ore (with Silk Touch or as diamonds) and 64 cobbled deepslate for the shaft walls.",
    "mods": [],
    "landmarks": [],
    "reward": "Mining XP, a deepslate guild badge"
@@ -443,7 +443,7 @@
     "main_story:act3_start",
     "deepslate_descent"
    ],
-   "summary": "The guild has never brought netherite home. Find and mine 8 ancient debris near Nether lava level, blasting or digging, and carry it back to Reece.",
+   "summary": "The guild has never had netherite. Find and mine 8 ancient debris near Nether lava level, blasting or digging.",
    "mods": [],
    "landmarks": [],
    "reward": "Mining XP, a netherite upgrade template"

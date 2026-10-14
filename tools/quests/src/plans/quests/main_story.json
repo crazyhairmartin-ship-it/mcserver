@@ -114,7 +114,7 @@
       "after": [
         "prologue_dungeon"
       ],
-      "summary": "Sister Wren writes to the cleric of the next village with Friends of the Forest Mail; carry the reply back yourself when the mail is too slow.",
+      "summary": "Sister Wren sends you to the cleric of the next village with the first letter of Friends of the Forest Mail; deliver it in person, and his reply follows you home by post.",
       "mods": [
         "fotfmail",
         "endermail"
@@ -550,13 +550,12 @@
       "title": "The Cold Heart",
       "tier": "act2",
       "types": [
-        "deliver",
-        "talk"
+        "collect"
       ],
       "after": [
         "act2_frostmaw"
       ],
-      "summary": "Carry the Ice Crystal Frostmaw left behind to Sister Wren; it's flecked with dark veins, proof the drain comes from deep underground.",
+      "summary": "Frostmaw leaves an Ice Crystal behind, flecked with dark veins. As you pick it up, a letter from Sister Wren arrives: the veins are proof the drain comes from deep underground.",
       "mods": [
         "mowziesmobs"
       ],
@@ -1634,13 +1633,13 @@
       "title": "A Warning in Ice",
       "tier": "act5",
       "types": [
-        "talk",
+        "encounter",
         "craft"
       ],
       "after": [
         "act5_leviathan"
       ],
-      "summary": "An old Village watch veteran warns of Maledictus's lifting slam, the move that ends most who face it. Craft a Cursed Eye and stock up on totems.",
+      "summary": "On the road north, an old Village watch veteran finds you and warns of Maledictus's lifting slam, the move that ends most who face it. Craft a Cursed Eye and stock up on totems.",
       "mods": [
         "cataclysm",
         "guardvillagers"
