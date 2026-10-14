@@ -110,7 +110,7 @@ hash = "62ba0917b9a55387719b7a2e3d82ac58ae0546149ec510281c9d66a2add08318"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/discovery_land.snbt"
-hash = "f8cc23af34b5dc320718c7c7f9c07b29aa616d3e3a8a8301606646f4d4bbb648"
+hash = "fbf559181d47d8d83c81cbd1245a278a75b3281dc01acea9b39b05ecea0ac075"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/magic.snbt"
@@ -2781,7 +2781,7 @@ hash = "81238517f42d04aa513d472ee44c4eb212593671c2e57aa3273f67d942e11863"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "c387b12ee2fe258b2517ef9feed28a38040a216b509fda13bd1edced4a89617f"
+hash = "239c1cdebe0c56959f7d9309c3bc96f48f2a930dd6fe226b919257ce023502a7"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2789,7 +2789,7 @@ hash = "26bffec8ccf318f1f517c90a964dc702443d7786da300888ec48b01e44ab5d0e"
 
 [[files]]
 file = "kubejs/server_scripts/quest_npcs.js"
-hash = "76be99b3753506bb2b57b525c3c39c533644a12f032fc111d7b980fef83eaa2e"
+hash = "8f6599df1038baaa6857222321c9c4cfc9d27e41ed54f54da6218e580e903db8"
 
 [[files]]
 file = "kubejs/server_scripts/quest_photos.js"
@@ -2865,7 +2865,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "084ec14db11c6eca3c86d5460c8ae7bb7100f1136391e576c29d94b2d2ed05d9"
+hash = "4a90849f97d70e57e012a23249ac3627d580a14502dcc2e5bce9bcd9abe9c4d9"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"

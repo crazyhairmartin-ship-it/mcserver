@@ -65,7 +65,7 @@ ServerEvents.commandRegistry(event => {
       target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
       tags.forEach(t => target.removeTag(t))
       let data = target.persistentData
-      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill', 'fqSpawn', 'fqMine', 'fqUse', 'fqSearch'].forEach(k => data.remove(k))
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill', 'fqSpawn', 'fqMine', 'fqUse', 'fqSearch', 'fqBiomes'].forEach(k => data.remove(k))
       server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
       ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
       return 1
@@ -782,7 +782,43 @@ function npcSkillLevel(player, tree) {
   return best
 }
 
+// be: standing somewhere that matches; biomes: different biomes visited while the step is open
+function npcBeFits(player, w) {
+  if (!npcConditionsMet(player, w)) return false
+  if (w.in_water && !player.inWater) return false
+  if (w.sky && !player.block.canSeeSky) return false
+  return true
+}
+
+function npcTickPlaces(player) {
+  npcEntries('be').forEach(b => {
+    if (player.tags.contains(b.stage) || !npcBeFits(player, b.where) || !questOpen(player, b)) return
+    questAddStage(player, b.stage)
+    player.tell(Text.yellow('Quest updated.'))
+  })
+  let seen = null
+  npcEntries('biomes').forEach(b => {
+    if (player.tags.contains(b.stage) || (b.dimension && String(player.level.dimension) != b.dimension)
+      || !questOpen(player, b)) return
+    if (!seen) seen = npcData(player, 'fqBiomes')
+    let visited = seen.contains(b.stage) ? seen.getCompound(b.stage) : new $NpcCompoundTag()
+    let here = String(player.block.biomeId)
+    if (visited.contains(here)) return
+    visited.putBoolean(here, true)
+    seen.put(b.stage, visited)
+    let n = visited.allKeys.size()
+    if (n >= b.count) {
+      seen.remove(b.stage)
+      questAddStage(player, b.stage)
+      player.tell(Text.yellow('Quest updated.'))
+    } else {
+      player.setStatusMessage(Text.gray('New biome: ' + here.split(':')[1].replace(/_/g, ' ') + ' (' + n + ' / ' + b.count + ')'))
+    }
+  })
+}
+
 function npcTickMilestones(player) {
+  npcTickPlaces(player)
   npcEntries('skill_level').forEach(k => {
     if (player.tags.contains(k.stage) || !questOpen(player, k) || npcSkillLevel(player, k.tree) < k.level) return
     questAddStage(player, k.stage)

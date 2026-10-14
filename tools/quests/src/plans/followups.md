@@ -54,22 +54,14 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - discovery_land:frostbitten_ruins: needs noting what sleeps below; written as a checkmark
 - discovery_land:occupied_dunes: needs Kobolediator scouts; written as koboletons
 - discovery_land:outcasts: needs a cheaper trade at the village and either outcast hut; written as the grassy hut and an apology delivery
-- discovery_land:northern_runes: needs reading three different ruins' runes (northern ruins have no known contents); written as a search for rubbings and a checkmark
 - discovery_land:mirage_outpost: needs a timed oasis crossing; written as a timed run to the next village
 - discovery_land:circle_of_stones: needs a potion carved into the stones; written as any potion poured into the cauldron
 - discovery_land:reading_the_obelisks: needs desert obelisks (a feature, no structure id); written as a discover on entering a desert and checkmarks
 - discovery_land:brewfest: needs a beer contest with regulars; written as three beers and a Beer Elemental fight
-- discovery_land:butterfly_lovers: needs releasing butterflies at the grave; written as a checkmark
-- discovery_land:biome_hot_springs: needs soaking in the springs; written as bottling spring water
-- discovery_land:biome_spires: needs standing on a spire; written as a checkmark
-- discovery_land:tectonic_peaks: needs standing above Y 300; written as a checkmark in jagged peaks
 - discovery_land:tectonic_canyon: needs following a river to its mouth; written as river, beach and salmon
-- discovery_land:biome_grand_tour: needs a counter of distinct biomes visited; written as twenty biome tasks
-- discovery_land:found_music_disc: needs discovering any music disc; written as discovering music disc 13 only
 - discovery_land:antique_ink: needs inking a map and following it; written as a map and a checkmark
 - discovery_land:the_strange_key: needs the safe found in a ruin; written as a safe opened with the key anywhere
 - discovery_land:sniffer_egg: needs hatching and raising a sniffer; written as observing a sniffer and an ancient seed
-- discovery_land:tectonic_peaks: (plan names Tectonic's peaks; written in vanilla jagged peaks)
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

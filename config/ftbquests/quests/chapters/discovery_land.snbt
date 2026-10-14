@@ -2033,7 +2033,7 @@
 			y: -7.5d
 		}
 		{
-			description: ["An abandoned chapel still has its bell, but the rope has rotted and the candles have burnt out. Someone in the forest has been listening for it for years."]
+			description: ["An abandoned chapel stands silent: its bell was carried off years ago and the candles have burnt out. Someone in the forest has been listening for it ever since."]
 			icon: "minecraft:bell"
 			id: "7C4105269EA76EB3"
 			invisible: true
@@ -2085,13 +2085,19 @@
 				}
 				{
 					id: "4A8F41D38883C1D8"
-					stage: "fq.discovery_land.chapel_in_the_pines.use2"
-					title: "Ring the chapel bell"
+					stage: "fq.discovery_land.chapel_in_the_pines.build2"
+					title: "Hang a new bell in the chapel"
 					type: "gamestage"
 				}
 				{
 					id: "3B4BBF6A33F1FC95"
-					stage: "fq.discovery_land.chapel_in_the_pines.enc3"
+					stage: "fq.discovery_land.chapel_in_the_pines.use3"
+					title: "Ring the chapel bell"
+					type: "gamestage"
+				}
+				{
+					id: "020E371E5643D5F0"
+					stage: "fq.discovery_land.chapel_in_the_pines.enc4"
 					title: "See who comes out of the forest"
 					type: "gamestage"
 				}
@@ -2162,7 +2168,7 @@
 			y: -4.5d
 		}
 		{
-			description: ["Northern ruins carry runes on their standing stones. Three of them read together point to a buried chest."]
+			description: ["Northern ruins carry runes on their standing stones, and the old scholars of the Arcane Order pay well for a good rubbing. Bring paper and charcoal, and take one."]
 			icon: "explorerscompass:explorerscompass"
 			id: "440BA88470FD43D8"
 			invisible: true
@@ -2196,16 +2202,25 @@
 					type: "structure"
 				}
 				{
-					count: 3L
 					id: "58101AA346082CD8"
-					item: "kubejs:quest_northern_runes_0"
-					title: "Read the runes at three northern ruins"
+					structure: "structory:northern_ruin"
+					title: "Find a northern ruin"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "0B80644BC286F199"
+					item: "minecraft:paper"
+					title: "Lay paper over the runes"
 					type: "item"
 				}
 				{
-					id: "0B80644BC286F199"
-					title: "I followed the runes to the buried chest"
-					type: "checkmark"
+					consume_items: true
+					id: "11BF76936F805170"
+					item: "minecraft:charcoal"
+					title: "Rub the runes onto it with charcoal"
+					type: "item"
 				}
 			]
 			title: "Northern Runes"
@@ -3093,22 +3108,17 @@
 				}
 				{
 					id: "26BFCD3591C38D6B"
-					stage: "fq.discovery_land.butterfly_lovers.use0"
-					title: "Read the legend on the grave"
-					type: "gamestage"
+					structure: "butterflies:liangshanbo_grave"
+					title: "Stand at the grave"
+					type: "structure"
 				}
 				{
 					consume_items: true
 					count: 2L
 					id: "587C55568646A0BC"
 					item: "butterflies:bottled_butterfly_common"
-					title: "Catch a matching pair of butterflies"
+					title: "Set a matching pair of butterflies free at the grave"
 					type: "item"
-				}
-				{
-					id: "148923752080E2D6"
-					title: "I released the pair at the grave"
-					type: "checkmark"
 				}
 			]
 			title: "The Butterfly Lovers"
@@ -3548,6 +3558,12 @@
 				}
 				{
 					id: "74EE2C28E6E57EF5"
+					stage: "fq.discovery_land.biome_hot_springs.be0"
+					title: "Soak in the thermal water"
+					type: "gamestage"
+				}
+				{
+					id: "42A07AF942DDD009"
 					item: "minecraft:potion"
 					title: "Bottle the spring water for a sore friend"
 					type: "item"
@@ -3823,8 +3839,9 @@
 				}
 				{
 					id: "6BD0B5BA1819D17F"
-					title: "I stood on the tallest spire"
-					type: "checkmark"
+					stage: "fq.discovery_land.biome_spires.be0"
+					title: "Stand on top of a spire"
+					type: "gamestage"
 				}
 			]
 			title: "Among the Spires"
@@ -4012,8 +4029,9 @@
 				}
 				{
 					id: "262BC6BAB860FD2C"
-					title: "I stood above the clouds"
-					type: "checkmark"
+					stage: "fq.discovery_land.tectonic_peaks.be0"
+					title: "Stand above the clouds on foot"
+					type: "gamestage"
 				}
 			]
 			title: "Above the Clouds"
@@ -4208,124 +4226,10 @@
 			]
 			tasks: [
 				{
-					biome: "minecraft:plains"
 					id: "765E83BA380F9E2C"
-					title: "Visit the plains"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:forest"
-					id: "15B1ED634388131A"
-					title: "Visit a forest"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:birch_forest"
-					id: "015B3ACC73615A8C"
-					title: "Visit a birch forest"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:dark_forest"
-					id: "3E214AE7E7FCC55D"
-					title: "Visit a dark forest"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:flower_forest"
-					id: "5D3F4888AB309ADA"
-					title: "Visit a flower forest"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:taiga"
-					id: "5D2ECB532AE8674E"
-					title: "Visit a taiga"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:snowy_plains"
-					id: "14FAA46D816FF964"
-					title: "Visit snowy plains"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:savanna"
-					id: "0F27155B6110D307"
-					title: "Visit a savanna"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:desert"
-					id: "25A318091FCE59A9"
-					title: "Visit a desert"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:jungle"
-					id: "2D8435A837D8BD81"
-					title: "Visit a jungle"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:swamp"
-					id: "0DD7927C63B4C3F4"
-					title: "Visit a swamp"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:mangrove_swamp"
-					id: "68A461B801320DFE"
-					title: "Visit a mangrove swamp"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:meadow"
-					id: "3C883C2A5C092A5D"
-					title: "Visit a meadow"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:badlands"
-					id: "1CECF65626553C65"
-					title: "Visit the badlands"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:beach"
-					id: "1F59FD21B34DD8CB"
-					title: "Visit a beach"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:river"
-					id: "68637A11E97664B6"
-					title: "Visit a river"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:ice_spikes"
-					id: "6B167C847F92294A"
-					title: "Visit ice spikes"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:cherry_grove"
-					id: "1EC1B1729F21FED6"
-					title: "Visit a cherry grove"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:windswept_hills"
-					id: "442F21FC2AE1AFB6"
-					title: "Visit windswept hills"
-					type: "biome"
-				}
-				{
-					biome: "minecraft:stony_shore"
-					id: "562369A57E1A8A88"
-					title: "Visit a stony shore"
-					type: "biome"
+					stage: "fq.discovery_land.biome_grand_tour.biomes0"
+					title: "Visit twenty different biomes"
+					type: "gamestage"
 				}
 			]
 			title: "The Grand Tour"
@@ -4369,8 +4273,9 @@
 				}
 				{
 					id: "1470D280F549D9EC"
-					title: "I played the disc"
-					type: "checkmark"
+					stage: "fq.discovery_land.found_music_disc.use1"
+					title: "Play the disc on a jukebox"
+					type: "gamestage"
 				}
 				{
 					id: "4E0FE86546584D20"

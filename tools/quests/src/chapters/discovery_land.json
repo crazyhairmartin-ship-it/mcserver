@@ -1733,7 +1733,7 @@
       "id": "chapel_in_the_pines",
       "title": "The Chapel in the Pines",
       "text": [
-        "An abandoned chapel still has its bell, but the rope has rotted and the candles have burnt out. Someone in the forest has been listening for it for years."
+        "An abandoned chapel stands silent: its bell was carried off years ago and the candles have burnt out. Someone in the forest has been listening for it ever since."
       ],
       "tasks": [
         {
@@ -1747,6 +1747,15 @@
           "count": 3,
           "consume": true,
           "title": "Bring candles for the altar"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:bell": 1
+            },
+            "radius": 10
+          },
+          "title": "Hang a new bell in the chapel"
         },
         {
           "use": "minecraft:bell",
@@ -1846,25 +1855,23 @@
       "id": "northern_runes",
       "title": "Northern Runes",
       "text": [
-        "Northern ruins carry runes on their standing stones. Three of them read together point to a buried chest."
+        "Northern ruins carry runes on their standing stones, and the old scholars of the Arcane Order pay well for a good rubbing. Bring paper and charcoal, and take one."
       ],
       "tasks": [
         {
-          "search": {
-            "at": {
-              "structure": "structory:northern_ruin"
-            },
-            "count": 3,
-            "item": {
-              "name": "Rune Rubbing",
-              "texture": "minecraft:item/paper"
-            },
-            "found": "A rubbing of the runes, tucked in the stonework."
-          },
-          "title": "Read the runes at three northern ruins"
+          "structure": "structory:northern_ruin",
+          "title": "Find a northern ruin"
         },
         {
-          "checkmark": "I followed the runes to the buried chest"
+          "item": "minecraft:paper",
+          "count": 2,
+          "consume": true,
+          "title": "Lay paper over the runes"
+        },
+        {
+          "item": "minecraft:charcoal",
+          "consume": true,
+          "title": "Rub the runes onto it with charcoal"
         }
       ],
       "rewards": [
@@ -2568,22 +2575,14 @@
       ],
       "tasks": [
         {
-          "use": "minecraft:spruce_wall_sign",
-          "count": 1,
-          "title": "Read the legend on the grave",
-          "at": {
-            "structure": "butterflies:liangshanbo_grave"
-          },
-          "unchecked": true
+          "structure": "butterflies:liangshanbo_grave",
+          "title": "Stand at the grave"
         },
         {
           "item": "butterflies:bottled_butterfly_common",
           "count": 2,
           "consume": true,
-          "title": "Catch a matching pair of butterflies"
-        },
-        {
-          "checkmark": "I released the pair at the grave"
+          "title": "Set a matching pair of butterflies free at the grave"
         }
       ],
       "rewards": [
@@ -2890,6 +2889,15 @@
       ],
       "tasks": [
         {
+          "be": {
+            "biomes": [
+              "biomesoplenty:hot_springs"
+            ],
+            "in_water": true
+          },
+          "title": "Soak in the thermal water"
+        },
+        {
           "item": "minecraft:potion",
           "title": "Bottle the spring water for a sore friend"
         }
@@ -3068,7 +3076,14 @@
       ],
       "tasks": [
         {
-          "checkmark": "I stood on the tallest spire"
+          "be": {
+            "biomes": [
+              "regions_unexplored:spires"
+            ],
+            "above_y": 110,
+            "sky": true
+          },
+          "title": "Stand on top of a spire"
         }
       ],
       "rewards": [
@@ -3194,7 +3209,11 @@
       ],
       "tasks": [
         {
-          "checkmark": "I stood above the clouds"
+          "be": {
+            "above_y": 192,
+            "sky": true
+          },
+          "title": "Stand above the clouds on foot"
         }
       ],
       "rewards": [
@@ -3334,84 +3353,9 @@
       ],
       "tasks": [
         {
-          "biome": "minecraft:plains",
-          "title": "Visit the plains"
-        },
-        {
-          "biome": "minecraft:forest",
-          "title": "Visit a forest"
-        },
-        {
-          "biome": "minecraft:birch_forest",
-          "title": "Visit a birch forest"
-        },
-        {
-          "biome": "minecraft:dark_forest",
-          "title": "Visit a dark forest"
-        },
-        {
-          "biome": "minecraft:flower_forest",
-          "title": "Visit a flower forest"
-        },
-        {
-          "biome": "minecraft:taiga",
-          "title": "Visit a taiga"
-        },
-        {
-          "biome": "minecraft:snowy_plains",
-          "title": "Visit snowy plains"
-        },
-        {
-          "biome": "minecraft:savanna",
-          "title": "Visit a savanna"
-        },
-        {
-          "biome": "minecraft:desert",
-          "title": "Visit a desert"
-        },
-        {
-          "biome": "minecraft:jungle",
-          "title": "Visit a jungle"
-        },
-        {
-          "biome": "minecraft:swamp",
-          "title": "Visit a swamp"
-        },
-        {
-          "biome": "minecraft:mangrove_swamp",
-          "title": "Visit a mangrove swamp"
-        },
-        {
-          "biome": "minecraft:meadow",
-          "title": "Visit a meadow"
-        },
-        {
-          "biome": "minecraft:badlands",
-          "title": "Visit the badlands"
-        },
-        {
-          "biome": "minecraft:beach",
-          "title": "Visit a beach"
-        },
-        {
-          "biome": "minecraft:river",
-          "title": "Visit a river"
-        },
-        {
-          "biome": "minecraft:ice_spikes",
-          "title": "Visit ice spikes"
-        },
-        {
-          "biome": "minecraft:cherry_grove",
-          "title": "Visit a cherry grove"
-        },
-        {
-          "biome": "minecraft:windswept_hills",
-          "title": "Visit windswept hills"
-        },
-        {
-          "biome": "minecraft:stony_shore",
-          "title": "Visit a stony shore"
+          "biomes": 20,
+          "dimension": "minecraft:overworld",
+          "title": "Visit twenty different biomes"
         }
       ],
       "rewards": [
@@ -3445,7 +3389,9 @@
           "title": "Set up a jukebox"
         },
         {
-          "checkmark": "I played the disc"
+          "use": "minecraft:jukebox",
+          "holding": "minecraft:music_disc_13",
+          "title": "Play the disc on a jukebox"
         },
         {
           "item": "immersive_melodies:lute",

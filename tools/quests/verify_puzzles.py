@@ -56,11 +56,16 @@ def main():
     copies = int(sys.argv[1]) if len(sys.argv) > 1 else 3
     container = sys.argv[2] if len(sys.argv) > 2 else 'fotf-test'
     checks = []   # (quest, step kind, structure ids, key, needed)
-    for g in givers():
+    all_givers = givers()
+    # blocks a quest has the player place first (a "build" step) don't need to be in the structure already
+    built = {(g['quest'], k) for g in all_givers if g['type'] == 'build' for k in g['keys']}
+    for g in all_givers:
         at = g.get('at') or {}
         if at.get('kind') != 'structure':
             continue
         sids = [s for s in at['structures'] if not s.startswith('#')][:3]
+        if g['type'] == 'use' and all((g['quest'], k) in built for k in g['keys']):
+            continue
         if g['type'] == 'use':
             checks.append((g['quest'], 'use', sids, ','.join(g['keys']), g['count']))
         elif g['type'] == 'search':

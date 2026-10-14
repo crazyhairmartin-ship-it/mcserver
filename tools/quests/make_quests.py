@@ -880,6 +880,40 @@ def build_search(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems)
     return task, entry
 
 
+def build_be(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "be" task: the player stands somewhere that matches every condition given (checked every 5 seconds):
+    {"be": {"biomes": [...], "dimension": id, "above_y": 192, "below_y": 0, "in_water": true, "sky": true}}
+    ("sky": open sky above them)."""
+    spec = t['be']
+    if not isinstance(spec, dict) or not spec:
+        problems.error(where, '"be" needs conditions: biomes, dimension, above_y, below_y, in_water, sky')
+        return None, None
+    for b in spec.get('biomes', []):
+        ctx['registry'].check('biomes', b, where, t.get('unchecked', False))
+    if spec.get('dimension'):
+        ctx['registry'].check('dimensions', spec['dimension'], where)
+    cond = {k: spec[k] for k in ('biomes', 'dimension', 'above_y', 'below_y', 'in_water', 'sky') if k in spec}
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.be{n}', 'type': 'be', 'where': cond,
+             'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', 'Get there')}
+    return task, entry
+
+
+def build_biomes(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "biomes" task: visit that many different biomes (any dimension) while the step is open.
+    {"biomes": 20} or {"biomes": 10, "dimension": "minecraft:overworld"}."""
+    count = int(t['biomes'])
+    if t.get('dimension'):
+        ctx['registry'].check('dimensions', t['dimension'], where)
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.biomes{n}', 'type': 'biomes',
+             'count': count, 'dimension': t.get('dimension', ''), 'requires': [], 'quest_id': quest_id,
+             'prev_tasks': list(prev_tasks)}
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', f'Visit {count} different biomes')}
+    return task, entry
+
+
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
     """A "unique drop" task: while the quest is open, the listed mobs can drop a quest item (or, with "fishing" in "from",
     it can be fished up); the task is to bring it."""
@@ -1180,6 +1214,11 @@ def main():
                 elif isinstance(t, dict) and 'cast' in t:
                     task, entry = build_cast(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
                                              problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and ('be' in t or (isinstance(t.get('biomes'), int))):
+                    builder = build_be if 'be' in t else build_biomes
+                    task, entry = builder(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere, problems)
                     if entry:
                         givers.append(entry)
                 elif isinstance(t, dict) and ('use' in t or 'search' in t):

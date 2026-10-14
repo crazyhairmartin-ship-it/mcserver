@@ -1294,7 +1294,26 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "discovery_land:chapel_in_the_pines",
-    "stage": "fq.discovery_land.chapel_in_the_pines.use2",
+    "stage": "fq.discovery_land.chapel_in_the_pines.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:bell"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "7C4105269EA76EB3",
+    "prev_tasks": [
+      "08C18B2B61B4D48E",
+      "7C8C4FCBE22E222D",
+      "21BFF9114D38B279"
+    ]
+  },
+  {
+    "quest": "discovery_land:chapel_in_the_pines",
+    "stage": "fq.discovery_land.chapel_in_the_pines.use3",
     "type": "use",
     "keys": [
       "minecraft:bell"
@@ -1315,12 +1334,13 @@ global.QUEST_GIVERS = [
     "prev_tasks": [
       "08C18B2B61B4D48E",
       "7C8C4FCBE22E222D",
-      "21BFF9114D38B279"
+      "21BFF9114D38B279",
+      "4A8F41D38883C1D8"
     ]
   },
   {
     "quest": "discovery_land:chapel_in_the_pines",
-    "stage": "fq.discovery_land.chapel_in_the_pines.enc3",
+    "stage": "fq.discovery_land.chapel_in_the_pines.enc4",
     "type": "encounter",
     "then": "talk",
     "lines": [
@@ -1335,7 +1355,8 @@ global.QUEST_GIVERS = [
       "08C18B2B61B4D48E",
       "7C8C4FCBE22E222D",
       "21BFF9114D38B279",
-      "4A8F41D38883C1D8"
+      "4A8F41D38883C1D8",
+      "3B4BBF6A33F1FC95"
     ],
     "name": "Chapel Keeper",
     "distance": [
@@ -1392,26 +1413,6 @@ global.QUEST_GIVERS = [
     "profession": "minecraft:librarian",
     "quest_id": "5B1FDDEB9C61FDA3",
     "open_task": "62AD23D04822F0CD"
-  },
-  {
-    "quest": "discovery_land:northern_runes",
-    "stage": "fq.discovery_land.northern_runes.search0",
-    "type": "search",
-    "at": {
-      "kind": "structure",
-      "structures": [
-        "structory:northern_ruin"
-      ],
-      "label": "the destination"
-    },
-    "count": 3,
-    "item": "kubejs:quest_northern_runes_0",
-    "found": "A rubbing of the runes, tucked in the stonework.",
-    "requires": [],
-    "quest_id": "440BA88470FD43D8",
-    "prev_tasks": [
-      "23F0AB714CB4A5E7"
-    ]
   },
   {
     "quest": "discovery_land:engineers_plans",
@@ -1852,30 +1853,6 @@ global.QUEST_GIVERS = [
     "open_task": "5C1E0A352C21A730"
   },
   {
-    "quest": "discovery_land:butterfly_lovers",
-    "stage": "fq.discovery_land.butterfly_lovers.use0",
-    "type": "use",
-    "keys": [
-      "minecraft:spruce_wall_sign"
-    ],
-    "count": 1,
-    "at": {
-      "kind": "structure",
-      "structures": [
-        "butterflies:liangshanbo_grave"
-      ],
-      "label": "the destination"
-    },
-    "within": 0,
-    "holding": "",
-    "consume": false,
-    "requires": [],
-    "quest_id": "1B773525B410136D",
-    "prev_tasks": [
-      "414BD653624598C3"
-    ]
-  },
-  {
     "quest": "discovery_land:fallen_adventurer",
     "stage": "fq.discovery_land.fallen_adventurer.talk2",
     "type": "talk",
@@ -1924,6 +1901,63 @@ global.QUEST_GIVERS = [
     "profession": ""
   },
   {
+    "quest": "discovery_land:biome_hot_springs",
+    "stage": "fq.discovery_land.biome_hot_springs.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "biomesoplenty:hot_springs"
+      ],
+      "in_water": true
+    },
+    "requires": [],
+    "quest_id": "6159F06D3EB8C3A9",
+    "prev_tasks": [
+      "74EDE4E8FD18B33B"
+    ]
+  },
+  {
+    "quest": "discovery_land:biome_spires",
+    "stage": "fq.discovery_land.biome_spires.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "regions_unexplored:spires"
+      ],
+      "above_y": 110,
+      "sky": true
+    },
+    "requires": [],
+    "quest_id": "0FFF05E087910E17",
+    "prev_tasks": [
+      "0E6B8F311D49EDB3"
+    ]
+  },
+  {
+    "quest": "discovery_land:tectonic_peaks",
+    "stage": "fq.discovery_land.tectonic_peaks.be0",
+    "type": "be",
+    "where": {
+      "above_y": 192,
+      "sky": true
+    },
+    "requires": [],
+    "quest_id": "1E0354E4B1E513EA",
+    "prev_tasks": [
+      "2089BCA12E34C080"
+    ]
+  },
+  {
+    "quest": "discovery_land:biome_grand_tour",
+    "stage": "fq.discovery_land.biome_grand_tour.biomes0",
+    "type": "biomes",
+    "count": 20,
+    "dimension": "minecraft:overworld",
+    "requires": [],
+    "quest_id": "70CFBEA8F8549226",
+    "prev_tasks": []
+  },
+  {
     "quest": "discovery_land:found_music_disc",
     "stage": "fq.discovery_land.found_music_disc.build0",
     "type": "build",
@@ -1938,6 +1972,25 @@ global.QUEST_GIVERS = [
     "quest_id": "2C628D9E7FCE8E41",
     "prev_tasks": [
       "17EA5A830CFF3825"
+    ]
+  },
+  {
+    "quest": "discovery_land:found_music_disc",
+    "stage": "fq.discovery_land.found_music_disc.use1",
+    "type": "use",
+    "keys": [
+      "minecraft:jukebox"
+    ],
+    "count": 1,
+    "at": null,
+    "within": 0,
+    "holding": "minecraft:music_disc_13",
+    "consume": false,
+    "requires": [],
+    "quest_id": "2C628D9E7FCE8E41",
+    "prev_tasks": [
+      "17EA5A830CFF3825",
+      "7DC3600E834B3516"
     ]
   },
   {

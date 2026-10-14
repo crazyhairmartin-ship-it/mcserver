@@ -458,10 +458,11 @@ ANY = [
 
     quest("chapel_in_the_pines", "The Chapel in the Pines", icon="minecraft:bell",
           discover={"structure": "structory:abandoned_chapel"},
-          text=["An abandoned chapel still has its bell, but the rope has rotted and the candles have burnt out. "
-                "Someone in the forest has been listening for it for years."],
+          text=["An abandoned chapel stands silent: its bell was carried off years ago and the candles have burnt "
+                "out. Someone in the forest has been listening for it ever since."],
           tasks=[item("supplementaries:rope", 2, consume=True, title="Bring a new rope for the bell"),
                  item("minecraft:candle", 3, consume=True, title="Bring candles for the altar"),
+                 {"build": {"blocks": {"minecraft:bell": 1}, "radius": 10}, "title": "Hang a new bell in the chapel"},
                  use("minecraft:bell", "structory:abandoned_chapel", "Ring the chapel bell"),
                  enc(["I heard the bell! After all these years!",
                       "I used to keep this chapel. The forest took the road, and I took the forest.",
@@ -485,11 +486,11 @@ ANY = [
 
     quest("northern_runes", "Northern Runes", icon="explorerscompass:explorerscompass",
           discover={"structure": "structory:northern_ruin"},
-          text=["Northern ruins carry runes on their standing stones. Three of them read together point to a "
-                "buried chest."],
-          tasks=[search("structory:northern_ruin", 3, "Rune Rubbing", "A rubbing of the runes, tucked in the stonework.",
-                        title="Read the runes at three northern ruins"),
-                 {"checkmark": "I followed the runes to the buried chest"}],
+          text=["Northern ruins carry runes on their standing stones, and the old scholars of the Arcane Order pay "
+                "well for a good rubbing. Bring paper and charcoal, and take one."],
+          tasks=[{"structure": "structory:northern_ruin", "title": "Find a northern ruin"},
+                 item("minecraft:paper", 2, consume=True, title="Lay paper over the runes"),
+                 item("minecraft:charcoal", consume=True, title="Rub the runes onto it with charcoal")],
           rewards=[reward_item("minecraft:chest"), reward_item("explorerscompass:explorerscompass"), skill("magic", 200)]),
 
     quest("engineers_plans", "The Engineer's Plans", icon="minecraft:sticky_piston",
@@ -649,9 +650,9 @@ ANY = [
           discover={"structure": "butterflies:liangshanbo_grave"},
           text=["A lonely grave where two butterflies always circle. The legend carved on it asks for two matching "
                 "butterflies to be set free at the grave."],
-          tasks=[use("minecraft:spruce_wall_sign", "butterflies:liangshanbo_grave", "Read the legend on the grave", unchecked=True),
-                 item("butterflies:bottled_butterfly_common", 2, consume=True, title="Catch a matching pair of butterflies"),
-                 {"checkmark": "I released the pair at the grave"}],
+          tasks=[{"structure": "butterflies:liangshanbo_grave", "title": "Stand at the grave"},
+                 item("butterflies:bottled_butterfly_common", 2, consume=True,
+                      title="Set a matching pair of butterflies free at the grave")],
           rewards=[reward_item("butterflies:butterfly_net"), reward_item("minecraft:poppy", 6), skill("taming", 150)]),
 
     quest("fallen_adventurer", "Bring Them Home", icon="minecraft:name_tag",
@@ -728,7 +729,8 @@ ANY = [
           discover={"biome": "biomesoplenty:hot_springs"},
           text=["Hot springs steam in the cold air. Soak in the thermal water until you're fully healed, and take a "
                 "bottle home for a sore friend."],
-          tasks=[item("minecraft:potion", title="Bottle the spring water for a sore friend")],
+          tasks=[{"be": {"biomes": ["biomesoplenty:hot_springs"], "in_water": True}, "title": "Soak in the thermal water"},
+                 item("minecraft:potion", title="Bottle the spring water for a sore friend")],
           rewards=[reward_item("comforts:hammock_blue"), skill("agility", 100)]),
 
     quest("biome_snowblossom", "Snowblossom", icon="biomesoplenty:snowblossom_leaves",
@@ -772,7 +774,8 @@ ANY = [
           discover={"biome": "regions_unexplored:spires"},
           text=["Stone spires jut from the land like needles. Stand on top of the tallest you can find and look "
                 "across the world."],
-          tasks=[{"checkmark": "I stood on the tallest spire"}],
+          tasks=[{"be": {"biomes": ["regions_unexplored:spires"], "above_y": 110, "sky": True},
+                  "title": "Stand on top of a spire"}],
           rewards=[reward_item("minecraft:string", 16), reward_item("supplementaries:rope", 16), skill("agility", 100)]),
 
     quest("biome_magnolia", "Magnolia in Bloom", icon="minecraft:flowering_azalea",
@@ -803,7 +806,7 @@ ANY = [
           discover={"biome": "minecraft:jagged_peaks"},
           text=["The mountains here climb far higher than they should. Stand above the clouds on foot and look "
                 "down at the world."],
-          tasks=[{"checkmark": "I stood above the clouds"}],
+          tasks=[{"be": {"above_y": 192, "sky": True}, "title": "Stand above the clouds on foot"}],
           rewards=[reward_item("minecraft:spyglass"), reward_item("minecraft:golden_carrot", 8), skill("agility", 150)]),
 
     quest("tectonic_canyon", "The Deep Valley", icon="aquaculture:worm",
@@ -835,15 +838,7 @@ ANY = [
     quest("biome_grand_tour", "The Grand Tour", icon="naturescompass:naturescompass", after=["biome_cherry_grove"],
           text=["The Couriers keep a list of the biomes of the Overworld, and offer a prize for anyone who has "
                 "visited twenty. Nature's Compass helps you find the ones you're missing."],
-          tasks=[biome_step(b, "Visit " + t) for b, t in [
-              ("minecraft:plains", "the plains"), ("minecraft:forest", "a forest"), ("minecraft:birch_forest", "a birch forest"),
-              ("minecraft:dark_forest", "a dark forest"), ("minecraft:flower_forest", "a flower forest"),
-              ("minecraft:taiga", "a taiga"), ("minecraft:snowy_plains", "snowy plains"), ("minecraft:savanna", "a savanna"),
-              ("minecraft:desert", "a desert"), ("minecraft:jungle", "a jungle"), ("minecraft:swamp", "a swamp"),
-              ("minecraft:mangrove_swamp", "a mangrove swamp"), ("minecraft:meadow", "a meadow"),
-              ("minecraft:badlands", "the badlands"), ("minecraft:beach", "a beach"), ("minecraft:river", "a river"),
-              ("minecraft:ice_spikes", "ice spikes"), ("minecraft:cherry_grove", "a cherry grove"),
-              ("minecraft:windswept_hills", "windswept hills"), ("minecraft:stony_shore", "a stony shore")]],
+          tasks=[{"biomes": 20, "dimension": "minecraft:overworld", "title": "Visit twenty different biomes"}],
           rewards=[reward_item("naturescompass:naturescompass"), reward_item("sophisticatedbackpacks:stack_upgrade_tier_1"),
                    skill("agility", 300)]),
 
@@ -852,7 +847,7 @@ ANY = [
           text=["You've found an old music disc, and a tune is waiting in it. Build a jukebox to hear it, then learn "
                 "it on an instrument."],
           tasks=[{"build": {"blocks": {"minecraft:jukebox": 1}, "radius": 8}, "title": "Set up a jukebox"},
-                 {"checkmark": "I played the disc"},
+                 {"use": "minecraft:jukebox", "holding": "minecraft:music_disc_13", "title": "Play the disc on a jukebox"},
                  item("immersive_melodies:lute", crafted=True, title="Make an instrument to learn the tune on")],
           rewards=[reward_item("immersive_melodies:lute"), skill("craft", 100)]),
 
