@@ -213,3 +213,9 @@ All of this lives in `kubejs/server_scripts/quest_givers.js` (givers, talk, pool
 
 Quest progress is solo: everyone has their own. FTB Teams is only installed because FTB Quests needs it; claims and
 parties stay with Open Parties and Claims.
+
+## To do
+
+- **Shared kill credit:** when a quest mob or boss dies, credit the kill to everyone nearby who helped, or to the
+  killer's OPAC party members within range, so friends can quest together with solo progress (FTB only credits the
+  last hit). Requested by Dylan 2026-10-14.
