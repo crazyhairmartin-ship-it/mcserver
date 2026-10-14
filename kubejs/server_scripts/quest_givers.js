@@ -230,6 +230,20 @@ EntityEvents.death(event => {
   })
 })
 
+// Fished quest items: a "drop" task with "fishing" in "from" (a prize fish in a competition) can bite only while its
+// quest is open; it goes straight into the angler's inventory.
+ForgeEvents.onEvent('net.minecraftforge.event.entity.player.ItemFishedEvent', event => {
+  let player = event.getEntity()
+  if (!player || player.level.clientSide) return
+  questGivers().forEach(giver => {
+    if (giver.type == 'task_drop' && giver.from.indexOf('fishing') >= 0 && questHasAll(player, giver.requires)
+      && Math.random() < giver.chance && questOpen(player, giver)) {
+      player.give(Item.of(giver.item))
+      player.tell(Text.gold('Something heavy is on the line... ').append(Text.yellow(Item.of(giver.item).hoverName)))
+    }
+  })
+})
+
 // /quest accept <stage>: what the [Accept] button runs. Only works for an offer made to you in the last 5 minutes.
 ServerEvents.commandRegistry(event => {
   let { commands: Commands, arguments: Arguments } = event

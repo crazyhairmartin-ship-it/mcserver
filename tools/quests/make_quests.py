@@ -504,7 +504,8 @@ def build_timed(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
 
 
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
-    """A "unique drop" task: while the quest is open, the listed mobs can drop a quest item; the task is to bring it."""
+    """A "unique drop" task: while the quest is open, the listed mobs can drop a quest item (or, with "fishing" in "from",
+    it can be fished up); the task is to bring it."""
     spec = t['drop']
     if not isinstance(spec, dict):
         problems.error(where, '"drop" must be an object with "from", "chance" and "item"')
@@ -513,7 +514,8 @@ def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, wher
     if not sources:
         problems.error(where, 'a drop task needs "from": [mob ids]')
     for src in sources:
-        ctx['registry'].check('entities', src, where, spec.get('unchecked', False))
+        if src != 'fishing':        # "fishing": the item can be fished up instead of dropped by a mob
+            ctx['registry'].check('entities', src, where, spec.get('unchecked', False))
     chance = float(spec.get('chance', 0.25))
     if not 0 < chance <= 1:
         problems.error(where, '"chance" must be between 0 and 1')
