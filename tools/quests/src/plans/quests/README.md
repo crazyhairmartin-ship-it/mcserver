@@ -44,6 +44,11 @@ titles, plots or steps. Format: see the docstring of `tools/quests/coverage.py`.
   village errands).
 - **Small favours** (`small_favours.json`): One Small Favour-style chains where each favour needs another first;
   every step goes somewhere new, and the chain unwinds back to whoever started it.
+- **Fishing competitions aren't timed**: you fish until you land the competition's quest item (a prize fish that
+  can only be caught while the quest is open). Needs a fishing version of the `drop` task.
+- **Timed challenges** can switch off shortcuts for their duration where they'd trivialise the challenge:
+  waystone and warp-scroll teleports, riding mounts, and per challenge other movement (elytra/wings, grappling
+  hooks, ender pearls). Each timed quest says which.
 - **Odd jobs and nonsense** (`odd_jobs.json`): deliberately pointless standalone quests with token rewards.
 
 ## Tiers (when in the game)
