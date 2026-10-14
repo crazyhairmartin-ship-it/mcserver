@@ -95,7 +95,8 @@ Q = [
           text=["A beast-tamer's bounty: a mauler, small, fast and all teeth, has been savaging travellers in the "
                 "badlands. Find it, survive its rush, and the tamer's feral claws are your pay."],
           tasks=[encounter(["Grrrrk!"], then="kill", entity="friendsandfoes:mauler", name="The Mauler", health=40,
-                           glow=True, where={"biomes": ["minecraft:badlands"]})],
+                           glow=True, where={"biomes": ["minecraft:badlands", "minecraft:eroded_badlands",
+                                                    "minecraft:wooded_badlands"]})],
           rewards=[reward_item("artifacts:feral_claws"), skill("attack", 300)]),
 ]
 

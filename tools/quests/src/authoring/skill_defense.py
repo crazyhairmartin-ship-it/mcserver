@@ -50,9 +50,11 @@ Q = [
 
     quest("tower_shield", "Behind the Wall of Iron", icon="spartanshields:iron_tower_shield",
           after=["arm_a_guard"],
-          text=["Brannock fights behind a tower shield. Craft an iron one and take a hundred hits on it."],
+          text=["Brannock fights behind a tower shield. Craft an iron one, then soak up a beating behind it."],
           tasks=[item("spartanshields:iron_tower_shield", crafted=True),
-                 {"stat": "minecraft:damage_blocked_by_shield", "count": 1000, "title": "Block a hundred hits"}],
+                 {"timed": {"seconds": 900, "goal": {"stat": "minecraft:damage_blocked_by_shield", "count": 500},
+                            "lines": ["Shield up. Let them hit it, not you.", "Fifteen minutes. Hold it."],
+                            "start": "Raise the shield"}, "title": "Block 50 hearts of damage"}],
           rewards=[reward_item("minecraft:white_banner", name="Iron Wall Banner",
                                lore=["The mark of those who held the line."]),
                    skill("defense", 200)]),

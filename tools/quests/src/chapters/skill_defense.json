@@ -193,7 +193,7 @@
         "arm_a_guard"
       ],
       "text": [
-        "Brannock fights behind a tower shield. Craft an iron one and take a hundred hits on it."
+        "Brannock fights behind a tower shield. Craft an iron one, then soak up a beating behind it."
       ],
       "tasks": [
         {
@@ -201,9 +201,19 @@
           "crafted": true
         },
         {
-          "stat": "minecraft:damage_blocked_by_shield",
-          "count": 1000,
-          "title": "Block a hundred hits"
+          "timed": {
+            "seconds": 900,
+            "goal": {
+              "stat": "minecraft:damage_blocked_by_shield",
+              "count": 500
+            },
+            "lines": [
+              "Shield up. Let them hit it, not you.",
+              "Fifteen minutes. Hold it."
+            ],
+            "start": "Raise the shield"
+          },
+          "title": "Block 50 hearts of damage"
         }
       ],
       "rewards": [

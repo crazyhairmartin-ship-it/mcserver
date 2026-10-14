@@ -73,6 +73,9 @@ characters only (see "Report" below).
 - **Fishing competitions aren't timed**: a `drop` task with `"from": ["fishing"]` (a prize fish).
 - **Reece** sits on a lake (no river). Its people and where they stand: `src/npc_positions.json`.
 - **Disabled content:** Alex's Caves' Magnetic Caves and Toxic Caves are off; never use them.
+- **Stats look back.** A plain `stat` task reads the lifetime total, so it's done at once for anyone who has done
+  that thing before. Use a stat only as a `timed` goal (it counts from the start) or for a true milestone.
+- **Build tasks count only blocks placed during the step**, so don't worry about what's already standing nearby.
 - Variety matters: the plan's `types` say what kind of quest it is; keep that kind.
 
 ### When the engine can't do it yet

@@ -65,7 +65,7 @@ ServerEvents.commandRegistry(event => {
       target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
       tags.forEach(t => target.removeTag(t))
       let data = target.persistentData
-      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt'].forEach(k => data.remove(k))
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos'].forEach(k => data.remove(k))
       server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
       ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
       return 1
@@ -440,16 +440,60 @@ function npcTickEscorts(player) {
 }
 
 // ---- build tasks ----
-// Done when the listed blocks are within "radius" of the player while the step is open; checked every 5 seconds.
+// Only blocks the player places while the step is open count (so blocks already standing there never do): each
+// placement is remembered, and every 5 seconds the remembered blocks still standing within "radius" of the player
+// are counted against the list. Breaking one takes it off the count.
+
+const NPC_BUILD_MAX = 512   // remembered placements per build step
+
+function npcBlockMatches(block, key) {
+  if (key.charAt(0) == '#') return block.hasTag(key.substring(1))
+  return String(block.id) == key
+}
+
+BlockEvents.placed(event => {
+  let player = event.player
+  if (!player || player.level.clientSide) return
+  let open = npcEntries('build').filter(b => !player.tags.contains(b.stage) && questOpen(player, b)
+    && b.keys.some(k => npcBlockMatches(event.block, k)))
+  if (!open.length) return
+  let all = npcData(player, 'fqBuild')
+  let spot = String(player.level.dimension) + '|' + event.block.x + '|' + event.block.y + '|' + event.block.z
+  open.forEach(b => {
+    let placed = all.contains(b.stage) ? all.getCompound(b.stage) : new $NpcCompoundTag()
+    if (placed.allKeys.size() < NPC_BUILD_MAX) placed.putBoolean(spot, true)
+    all.put(b.stage, placed)
+  })
+})
 
 function npcTickBuilds(player) {
-  if (!$NpcQuestWorld) return
+  let all = npcData(player, 'fqBuild')
   npcEntries('build').forEach(b => {
-    if (player.tags.contains(b.stage) || !questOpen(player, b)) return
-    let counts = $NpcQuestWorld.countBlocks(player.level, player.x, player.y, player.z, b.radius, b.keys)
+    if (player.tags.contains(b.stage)) {
+      if (all.contains(b.stage)) all.remove(b.stage)
+      return
+    }
+    if (!all.contains(b.stage) || !questOpen(player, b)) return
+    let placed = all.getCompound(b.stage)
+    let counts = b.keys.map(() => 0)
+    let dim = String(player.level.dimension)
+    let gone = []
+    placed.allKeys.forEach(spot => {
+      let p = String(spot).split('|')
+      if (p[0] != dim) return
+      let x = Number(p[1]), y = Number(p[2]), z = Number(p[3])
+      let dx = x + 0.5 - player.x, dy = y + 0.5 - player.y, dz = z + 0.5 - player.z
+      if (dx * dx + dy * dy + dz * dz > b.radius * b.radius) return
+      let block = player.level.getBlock(x, y, z)
+      let hit = false
+      b.keys.forEach((k, i) => { if (npcBlockMatches(block, k)) { counts[i]++; hit = true } })
+      if (!hit) gone.push(String(spot))
+    })
+    gone.forEach(spot => placed.remove(spot))
     for (let i = 0; i < b.counts.length; i++) {
       if (counts[i] < b.counts[i]) return
     }
+    all.remove(b.stage)
     questAddStage(player, b.stage)
     player.tell(Text.yellow('That looks right. Quest updated.'))
   })

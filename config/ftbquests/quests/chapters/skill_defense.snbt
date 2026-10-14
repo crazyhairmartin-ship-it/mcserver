@@ -206,7 +206,7 @@
 		}
 		{
 			dependencies: ["4C9DAB22C45F610C"]
-			description: ["Brannock fights behind a tower shield. Craft an iron one and take a hundred hits on it."]
+			description: ["Brannock fights behind a tower shield. Craft an iron one, then soak up a beating behind it."]
 			icon: "spartanshields:iron_tower_shield"
 			id: "17A6E5FAA626F85A"
 			rewards: [
@@ -243,10 +243,9 @@
 				}
 				{
 					id: "38DAB38E8E6EC162"
-					stat: "minecraft:damage_blocked_by_shield"
-					title: "Block a hundred hits"
-					type: "stat"
-					value: 1000
+					stage: "fq.skill_defense.tower_shield.timed1"
+					title: "Block 50 hearts of damage"
+					type: "gamestage"
 				}
 			]
 			title: "Behind the Wall of Iron"

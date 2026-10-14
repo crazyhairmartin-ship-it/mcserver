@@ -1322,7 +1322,9 @@ global.QUEST_GIVERS = [
     "glow": true,
     "where": {
       "biomes": [
-        "minecraft:badlands"
+        "minecraft:badlands",
+        "minecraft:eroded_badlands",
+        "minecraft:wooded_badlands"
       ]
     },
     "entity": "friendsandfoes:mauler",
@@ -1416,6 +1418,30 @@ global.QUEST_GIVERS = [
     "prev_tasks": [
       "29900BA5DCBCB363"
     ]
+  },
+  {
+    "quest": "skill_defense:tower_shield",
+    "stage": "fq.skill_defense.tower_shield.timed1",
+    "type": "timed",
+    "seconds": 900,
+    "goal": {
+      "kind": "stat",
+      "stat": "minecraft:damage_blocked_by_shield",
+      "count": 500
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "Shield up. Let them hit it, not you.",
+      "Fifteen minutes. Hold it."
+    ],
+    "start": "Raise the shield",
+    "requires": [],
+    "quest_id": "17A6E5FAA626F85A",
+    "prev_tasks": [
+      "08740C26581F222A"
+    ],
+    "name": ""
   },
   {
     "quest": "skill_defense:scout_outpost",

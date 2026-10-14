@@ -414,7 +414,9 @@
             "glow": true,
             "where": {
               "biomes": [
-                "minecraft:badlands"
+                "minecraft:badlands",
+                "minecraft:eroded_badlands",
+                "minecraft:wooded_badlands"
               ]
             },
             "then": "kill",
