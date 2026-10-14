@@ -1481,6 +1481,7 @@ global.QUEST_CHARACTERS = {
   "agathe": {
     "name": "Sister Agathe",
     "entity": "irons_spellbooks:priest",
+    "home": "the crypt under Reece's church",
     "personality": "A wandering priest of the Arcane Order who hunts the undead. Stern, fearless and deadpan; shares Wren's faith in Notch but in a fiercer, holy-warrior way, and considers the undead a personal insult to His work.",
     "idle": [
       "The dead should stay down. I help them remember.",
@@ -1537,12 +1538,12 @@ global.QUEST_CHARACTERS = {
   "gil": {
     "name": "Gil the Ferryman",
     "profession": "minecraft:fisherman",
-    "personality": "Ferryman at a river crossing near Reece. Laid-back, chatty and philosophical about rivers; never hurries, charges in favours instead of coin.",
+    "personality": "Ferryman on Reece's lake who rows people out across the water. Laid-back, chatty and philosophical about the lake; never hurries, charges in favours instead of coin.",
     "idle": [
-      "River's in no hurry. Neither am I.",
+      "The lake's in no hurry. Neither am I.",
       "Fare's a favour. Always has been.",
-      "Seen a lot of people cross this river. Most of them came back.",
-      "Every river reaches the sea eventually. No sense rushing it.",
+      "Seen a lot of people row out on this lake. Most of them rowed back.",
+      "Still water, deep thoughts. That's what my old dad used to say. He fell in a lot.",
       "Hop in. Mind the wet bit. It's all the wet bit.",
       "Bram sends his love. And his worries. Mostly his worries."
     ],

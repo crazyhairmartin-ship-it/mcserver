@@ -71,6 +71,7 @@ characters only (see "Report" below).
 - **Quests are a pathway, never a gate.** Boss and mob quests ask for the `kill` (only counts while the quest is open),
   not the boss's drop or advancement.
 - **Fishing competitions aren't timed**: a `drop` task with `"from": ["fishing"]` (a prize fish).
+- **Reece** sits on a lake (no river). Its people and where they stand: `src/npc_positions.json`.
 - **Disabled content:** Alex's Caves' Magnetic Caves and Toxic Caves are off; never use them.
 - Variety matters: the plan's `types` say what kind of quest it is; keep that kind.
 
