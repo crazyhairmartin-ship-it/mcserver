@@ -1137,6 +1137,420 @@ global.QUEST_GIVERS = [
     "where": {},
     "entity": "bloomingnature:wandering_gardener",
     "profession": ""
+  },
+  {
+    "quest": "skill_attack:the_board",
+    "stage": "fq.skill_attack.the_board.talk0",
+    "type": "talk",
+    "lines": [
+      "You want work. Good. Work pays.",
+      "The office posts contracts on bounty boards. Every village has one.",
+      "Find a board. Take a contract. Don't take one you can't finish.",
+      "I've buried hunters who did."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "corvin",
+    "quest_id": "66D1456CE8A66CD9",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_attack:dummy_drills",
+    "stage": "fq.skill_attack.dummy_drills.timed1",
+    "type": "timed",
+    "seconds": 60,
+    "goal": {
+      "kind": "stat",
+      "stat": "minecraft:damage_dealt",
+      "count": 600
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "Sixty seconds. Hit the dummy.",
+      "Combos, not flailing. Go."
+    ],
+    "start": "Start the drill",
+    "requires": [],
+    "quest_id": "05ED0897B80BC017",
+    "prev_tasks": [
+      "23251680D2BC69A0"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_attack:the_rascal",
+    "stage": "fq.skill_attack.the_rascal.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Hee hee! You found me!",
+      "Again! Count to ten!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2B4C5724BBC07DC3",
+    "prev_tasks": [
+      "1AE4D14D39158074"
+    ],
+    "name": "Rascal",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {
+      "below_y": 60
+    },
+    "entity": "friendsandfoes:rascal",
+    "profession": ""
+  },
+  {
+    "quest": "skill_attack:the_rascal",
+    "stage": "fq.skill_attack.the_rascal.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Oh! You're good at this.",
+      "One more. Go on, I dare you."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2B4C5724BBC07DC3",
+    "prev_tasks": [
+      "1AE4D14D39158074",
+      "79E5513924405FCD"
+    ],
+    "name": "Rascal",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {
+      "below_y": 60
+    },
+    "entity": "friendsandfoes:rascal",
+    "profession": ""
+  },
+  {
+    "quest": "skill_attack:the_rascal",
+    "stage": "fq.skill_attack.the_rascal.enc3",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Found me again! Fine, fine. Take the shiny things.",
+      "I only borrowed them. Mostly."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2B4C5724BBC07DC3",
+    "prev_tasks": [
+      "1AE4D14D39158074",
+      "79E5513924405FCD",
+      "6CC5DC3DCC0B3835"
+    ],
+    "name": "Rascal",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {
+      "below_y": 60
+    },
+    "entity": "friendsandfoes:rascal",
+    "profession": ""
+  },
+  {
+    "quest": "skill_attack:weapon_of_choice",
+    "stage": "fq.skill_attack.weapon_of_choice.talk1",
+    "type": "talk",
+    "lines": [
+      "A longsword. Honest steel.",
+      "Wear it where you can draw it fast. A weapon in your pack is a weapon you don't have.",
+      "Every scar on me came from a blade I reached for too late."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "corvin",
+    "quest_id": "16A792515094940D",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_attack:spider_queen",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:spider"
+    ],
+    "chance": 0.15,
+    "item": "kubejs:quest_spider_queen_2",
+    "requires": [],
+    "quest_id": "0F9649EDAAD9CD0F",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_attack:feral_bounty",
+    "stage": "fq.skill_attack.feral_bounty.enc0",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "Grrrrk!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "4B642E1F9001341A",
+    "prev_tasks": [],
+    "name": "The Mauler",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": 40,
+    "glow": true,
+    "where": {
+      "biomes": [
+        "minecraft:badlands"
+      ]
+    },
+    "entity": "friendsandfoes:mauler",
+    "profession": ""
+  },
+  {
+    "quest": "skill_defense:enlist",
+    "stage": "fq.skill_defense.enlist.talk1",
+    "type": "talk",
+    "lines": [
+      "Another recruit. Fine. Stand up straight.",
+      "A shield. Good. You can't hold a wall without one.",
+      "The watch protects villages, villagers and, er, anyone who happens to be nearby. Farmers, say.",
+      "I don't mean any farmer in particular. Moving on. You're in."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "hale",
+    "quest_id": "4FBB87F832FB11BF",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_defense:night_watch",
+    "stage": "fq.skill_defense.night_watch.timed1",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "hold",
+      "radius": 20.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:zombie",
+        "count": 3,
+        "every": 40
+      },
+      {
+        "entity": "minecraft:skeleton",
+        "count": 2,
+        "every": 60
+      }
+    ],
+    "lines": [
+      "Night's falling. Take your post at the gate.",
+      "Hold it until dawn. Don't wander off."
+    ],
+    "start": "Take the watch",
+    "requires": [],
+    "quest_id": "30D9FEE24CE49B2D",
+    "prev_tasks": [
+      "367D0548CA1478E7"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_defense:weak_spots",
+    "stage": "fq.skill_defense.weak_spots.talk0",
+    "type": "talk",
+    "lines": [
+      "Ah, there you are. Mind my knees.",
+      "Back in the Marsh Campaign we lost a whole wall to one loose gate.",
+      "See that gap in the fence? And that lane with no light? Fix them. Hale will want it done by sundown, and he'll pretend he didn't ask.",
+      "Fence, a gate, and light. Off you go."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "brannock",
+    "quest_id": "179142861278109E",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_defense:weak_spots",
+    "stage": "fq.skill_defense.weak_spots.build1",
+    "type": "build",
+    "keys": [
+      "#minecraft:fence_gates",
+      "#minecraft:fences",
+      "minecraft:torch"
+    ],
+    "counts": [
+      1,
+      6,
+      6
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "179142861278109E",
+    "prev_tasks": [
+      "29900BA5DCBCB363"
+    ]
+  },
+  {
+    "quest": "skill_defense:scout_outpost",
+    "stage": "fq.skill_defense.scout_outpost.timed0",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "ctov:pillager_outpost_badlands",
+        "ctov:pillager_outpost_beach",
+        "ctov:pillager_outpost_dark_forest",
+        "ctov:pillager_outpost_desert",
+        "ctov:pillager_outpost_jungle",
+        "ctov:pillager_outpost_mountain",
+        "ctov:pillager_outpost_plains",
+        "ctov:pillager_outpost_savanna",
+        "ctov:pillager_outpost_snowy",
+        "ctov:pillager_outpost_swamp",
+        "ctov:pillager_outpost_taiga",
+        "dungeons_arise:illager_campsite",
+        "dungeons_arise:illager_corsair",
+        "dungeons_arise:illager_fort",
+        "dungeons_arise:illager_galley",
+        "dungeons_arise:illager_windmill",
+        "friendsandfoes:iceologer_cabin",
+        "friendsandfoes:illusioner_shack",
+        "friendsandfoes:illusioner_training_grounds",
+        "irons_spellbooks:evoker_fort",
+        "minecraft:mansion",
+        "minecraft:pillager_outpost",
+        "mvs:small_pillager_tower",
+        "mvs:villager_statue",
+        "nova_structures:illager_camp",
+        "nova_structures:illager_hideout",
+        "nova_structures:illager_manor",
+        "structory:outcast_villager_desert",
+        "structory:outcast_villager_grassy",
+        "structory_towers:pillager_lookout",
+        "towns_and_towers:exclusives/pillager_outpost_classic",
+        "towns_and_towers:exclusives/pillager_outpost_iberian",
+        "towns_and_towers:exclusives/pillager_outpost_mediterranean",
+        "towns_and_towers:exclusives/pillager_outpost_oriental",
+        "towns_and_towers:exclusives/pillager_outpost_rustic",
+        "towns_and_towers:exclusives/pillager_outpost_swedish",
+        "towns_and_towers:exclusives/pillager_outpost_tudor",
+        "towns_and_towers:pillager_outpost_badlands",
+        "towns_and_towers:pillager_outpost_beach",
+        "towns_and_towers:pillager_outpost_birch_forest",
+        "towns_and_towers:pillager_outpost_desert",
+        "towns_and_towers:pillager_outpost_flower_forest",
+        "towns_and_towers:pillager_outpost_forest",
+        "towns_and_towers:pillager_outpost_grove",
+        "towns_and_towers:pillager_outpost_jungle",
+        "towns_and_towers:pillager_outpost_meadow",
+        "towns_and_towers:pillager_outpost_mushroom_fields",
+        "towns_and_towers:pillager_outpost_ocean",
+        "towns_and_towers:pillager_outpost_old_growth_taiga",
+        "towns_and_towers:pillager_outpost_savanna",
+        "towns_and_towers:pillager_outpost_savanna_plateau",
+        "towns_and_towers:pillager_outpost_snowy_beach",
+        "towns_and_towers:pillager_outpost_snowy_plains",
+        "towns_and_towers:pillager_outpost_snowy_slopes",
+        "towns_and_towers:pillager_outpost_snowy_taiga",
+        "towns_and_towers:pillager_outpost_sparse_jungle",
+        "towns_and_towers:pillager_outpost_sunflower_plains",
+        "towns_and_towers:pillager_outpost_swamp",
+        "towns_and_towers:pillager_outpost_taiga",
+        "towns_and_towers:pillager_outpost_wooded_badlands"
+      ],
+      "label": "the outpost"
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Stay low. Don't take a scratch, or you've been seen.",
+      "Reach the outpost and count the crossbows."
+    ],
+    "start": "Begin the scouting",
+    "requires": [],
+    "quest_id": "6BCC69413DA4908A",
+    "prev_tasks": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_defense:first_raid",
+    "stage": "fq.skill_defense.first_raid.timed1",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "hold",
+      "radius": 20.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:pillager",
+        "count": 3,
+        "every": 30
+      },
+      {
+        "entity": "minecraft:vindicator",
+        "count": 2,
+        "every": 45
+      }
+    ],
+    "lines": [
+      "Here they come! To the gate!",
+      "Hold the line!"
+    ],
+    "start": "Hold the gate",
+    "requires": [],
+    "quest_id": "5AF168685597D93F",
+    "prev_tasks": [
+      "43BD5FD1FD86B5D0"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_defense:first_raid",
+    "stage": "fq.skill_defense.first_raid.talk2",
+    "type": "talk",
+    "lines": [
+      "Well held. Forty years of raids, and I haven't seen it done better by a new recruit.",
+      "I wore this through every one. It never cracked. Take it.",
+      "Tell Hale I said so. He'll go red. He always does."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "brannock",
+    "quest_id": "5AF168685597D93F",
+    "open_task": ""
   }
 ]
 global.QUEST_CHARACTERS = {

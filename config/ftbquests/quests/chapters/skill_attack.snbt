@@ -1,0 +1,511 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_attack"
+	group: "1CAE106B8DA521D5"
+	icon: "minecraft:iron_sword"
+	id: "626A3D882908CBA0"
+	order_index: 9
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Bounty Master Corvin Ash posts the office's work on boards in the villages. Find a board and take your first contract from it."]
+			icon: "bountiful:bountyboard"
+			id: "66D1456CE8A66CD9"
+			rewards: [
+				{
+					id: "7D043E00A1DC8494"
+					item: "bountiful:bounty-common"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 50"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "45C9F6E7452541D3"
+					silent: true
+					title: "+50 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1FFBD44E1E6A7954"
+					stage: "fq.skill_attack.the_board.talk0"
+					title: "Talk to Bounty Master Corvin Ash"
+					type: "gamestage"
+				}
+				{
+					id: "0C9181557955F701"
+					structure: "#fotf:groups/villages"
+					title: "Find a village's bounty board"
+					type: "structure"
+				}
+				{
+					id: "38272AB30B64E20D"
+					item: "bountiful:bounty"
+					title: "Take a contract from the board"
+					type: "item"
+				}
+			]
+			title: "Wanted"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["66D1456CE8A66CD9"]
+			description: ["No hunter goes out untrained. Make a target dummy, then hit it hard and fast for a minute."]
+			icon: "dummmmmmy:target_dummy"
+			id: "05ED0897B80BC017"
+			rewards: [
+				{
+					count: 4
+					id: "3C7BE72D34725D07"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 80"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "3EED70A5CBDC476D"
+					silent: true
+					title: "+80 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "23251680D2BC69A0"
+					item: "dummmmmmy:target_dummy"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "510424F480801B75"
+					stage: "fq.skill_attack.dummy_drills.timed1"
+					title: "Deal the damage in a minute"
+					type: "gamestage"
+				}
+			]
+			title: "Drills on the Dummy"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["05ED0897B80BC017"]
+			description: ["The first proper contract: the outskirts of a village crawl with zombies of every odd variety. Put down fifteen."]
+			icon: "minecraft:zombie_head"
+			id: "1F4A8A1833B71CA8"
+			rewards: [
+				{
+					count: 8
+					id: "66DBEBBCE8DD893E"
+					item: "minecraft:bread"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "5CABA15464682038"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 120"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "3B556074860F68AE"
+					silent: true
+					title: "+120 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "06D7AF3696476980"
+					structure: "#fotf:groups/villages"
+					title: "Reach a village"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:zombie"
+					id: "6770724DA667861D"
+					title: "Put down fifteen zombies"
+					type: "kill"
+					value: 15L
+				}
+			]
+			title: "Night Shift"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F4A8A1833B71CA8"]
+			description: ["A bounty on a 'thief' who robs miners. The thief is a rascal, and it is playing hide-and-seek in an old mineshaft. Find it three times and it will pay you off."]
+			icon: "friendsandfoes:rascal_spawn_egg"
+			id: "2B4C5724BBC07DC3"
+			rewards: [
+				{
+					count: 8
+					id: "53F406915EF55B4E"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "26A25106DBD2C4BA"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 160"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "3A31367181AB65AB"
+					silent: true
+					title: "+160 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1AE4D14D39158074"
+					structure: "#fotf:groups/mines"
+					title: "Go into the mineshaft"
+					type: "structure"
+				}
+				{
+					id: "79E5513924405FCD"
+					stage: "fq.skill_attack.the_rascal.enc1"
+					title: "Meet Rascal"
+					type: "gamestage"
+				}
+				{
+					id: "6CC5DC3DCC0B3835"
+					stage: "fq.skill_attack.the_rascal.enc2"
+					title: "Meet Rascal"
+					type: "gamestage"
+				}
+				{
+					id: "016C5F0162A3A5FC"
+					stage: "fq.skill_attack.the_rascal.enc3"
+					title: "Meet Rascal"
+					type: "gamestage"
+				}
+			]
+			title: "The Thief in the Mine"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["1F4A8A1833B71CA8"]
+			description: ["Ash wants you to choose your style. Forge an iron Spartan weapon and wear it like a hunter."]
+			icon: "spartanweaponry:iron_longsword"
+			id: "16A792515094940D"
+			rewards: [
+				{
+					id: "28AA2920C76D2B73"
+					item: "minecraft:grindstone"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "7C0F3BDC69836330"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 180"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "1E28347E40E45148"
+					silent: true
+					title: "+180 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4F13F46F519AEE63"
+					item: "spartanweaponry:iron_longsword"
+					only_from_crafting: true
+					title: "Forge an iron Spartan weapon"
+					type: "item"
+				}
+				{
+					id: "1A910B21334AA4D8"
+					stage: "fq.skill_attack.weapon_of_choice.talk1"
+					title: "Talk to Bounty Master Corvin Ash"
+					type: "gamestage"
+				}
+			]
+			title: "Weapon of Choice"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["16A792515094940D"]
+			description: ["You find the remains of a fallen bounty hunter with a contract still clutched in their bones. You read it, and you can see how it ends."]
+			icon: "minecraft:writable_book"
+			id: "5369FBAE0038D6B1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0FA3406127A15552"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"A dead hunter's notes. The last page is unfinished.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Hunter's Journal\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 150"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "303B85FA1D6B83E7"
+					silent: true
+					title: "+150 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "45A586F63792BBCF"
+					observe_type: "block"
+					timer: 20L
+					title: "Discovered"
+					to_observe: "realmrpg_skeletons:hunted_skeleton"
+					type: "observation"
+				}
+				{
+					id: "05A3BF035B26F816"
+					title: "I read the contract"
+					type: "checkmark"
+				}
+			]
+			title: "The Unfinished Contract"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5369FBAE0038D6B1"]
+			description: ["The journal points to a dungeon below a village. Go down and clear it."]
+			icon: "minecraft:spawner"
+			id: "2188906CAFC0AE48"
+			rewards: [
+				{
+					count: 8
+					id: "2F84EE81D7D7D74A"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "6CFC65B7287869B8"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "47426C08CE483CDC"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 200"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "31B7BCB27ACEDFE2"
+					silent: true
+					title: "+200 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2DFE2C54C6B0C607"
+					structure: "#fotf:groups/yungs_dungeons"
+					title: "Find the dungeon"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:zombie"
+					id: "6B2EEF1E81639088"
+					type: "kill"
+					value: 8L
+				}
+				{
+					entity: "minecraft:skeleton"
+					id: "33215AC9C3142999"
+					type: "kill"
+					value: 8L
+				}
+			]
+			title: "Clearing the Cellar"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2188906CAFC0AE48"]
+			description: ["A spider dungeon has been sending its brood into the fields. Clear it, and cut the poison sac from its biggest spider as proof."]
+			icon: "minecraft:spider_eye"
+			id: "0F9649EDAAD9CD0F"
+			rewards: [
+				{
+					id: "2ED9CE2ABB217700"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:bane_of_arthropods"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Bane of the Brood\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 240"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "6A16503F8B7E91D4"
+					silent: true
+					title: "+240 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "557621A6B96D87E9"
+					structure: "betterdungeons:spider_dungeon"
+					title: "Find the spider dungeon"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:cave_spider"
+					id: "5D91792892C6923A"
+					type: "kill"
+					value: 12L
+				}
+				{
+					id: "21E6A76E7E6FFA5D"
+					item: "kubejs:quest_spider_queen_2"
+					type: "item"
+				}
+			]
+			title: "Silk and Venom"
+			x: 9.0d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"2188906CAFC0AE48"
+				"63C3DB46B7298A13"
+			]
+			description: ["The dead won't stay down in an old graveyard. Spend a night there and put them back in the ground."]
+			icon: "minecraft:bone"
+			id: "133EBE77FE89381D"
+			rewards: [
+				{
+					id: "31FBFA9A22484A66"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:smite"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Rest Easy\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 240"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "01FFD42BB65B1925"
+					silent: true
+					title: "+240 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7FD8F95FF341B27F"
+					structure: "#fotf:groups/graveyards"
+					title: "Reach the graveyard"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:zombie"
+					id: "74DC2B16E97C330D"
+					type: "kill"
+					value: 8L
+				}
+				{
+					entity: "minecraft:skeleton"
+					id: "563C3C142B3DED9C"
+					type: "kill"
+					value: 7L
+				}
+			]
+			title: "Graveyard Shift"
+			x: 9.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["0F9649EDAAD9CD0F"]
+			description: ["A beast-tamer's bounty: a mauler, small, fast and all teeth, has been savaging travellers in the badlands. Find it, survive its rush, and the tamer's feral claws are your pay."]
+			icon: "artifacts:feral_claws"
+			id: "4B642E1F9001341A"
+			rewards: [
+				{
+					id: "0698EA2BF78D0219"
+					item: "artifacts:feral_claws"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 300"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "252A4E0ADF7C5515"
+					silent: true
+					title: "+300 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "46F90E140DFFED50"
+					stage: "fq.skill_attack.feral_bounty.enc0"
+					title: "Defeat The Mauler"
+					type: "gamestage"
+				}
+			]
+			title: "The Mauler"
+			x: 10.5d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Attack path"]
+	title: "The Bounty Office"
+}

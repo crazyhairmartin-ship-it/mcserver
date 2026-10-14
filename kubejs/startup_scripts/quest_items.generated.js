@@ -5,4 +5,5 @@ StartupEvents.registry('item', event => {
   event.create("quest_opening_cup_1").displayName("The Ribboned Trout").texture("minecraft:item/cod").maxStackSize(1).tooltip("A prize catch").glow(true)
   event.create("quest_prologue_dungeon_1").displayName("Second Journal Page").texture("minecraft:item/paper").maxStackSize(1).tooltip("Quest item").glow(true)
   event.create("quest_river_heat_4").displayName("The Heat's Marked Fish").texture("minecraft:item/cod").maxStackSize(1).tooltip("A prize catch").glow(true)
+  event.create("quest_spider_queen_2").displayName("Queen's Poison Sac").texture("minecraft:item/spider_eye").maxStackSize(1).tooltip("Proof of the kill").glow(true)
 })

@@ -1,0 +1,361 @@
+{
+  "title": "The Village Watch",
+  "subtitle": "Defense path",
+  "icon": "minecraft:shield",
+  "group": "skills",
+  "order": 8,
+  "quests": [
+    {
+      "id": "enlist",
+      "title": "Enlist",
+      "text": [
+        "Captain Hale enlists anyone who turns up with a shield. Make one and swear to the watch."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:shield",
+          "crafted": true,
+          "title": "Craft a shield"
+        },
+        {
+          "talk": "character",
+          "character": "hale",
+          "lines": [
+            "Another recruit. Fine. Stand up straight.",
+            "A shield. Good. You can't hold a wall without one.",
+            "The watch protects villages, villagers and, er, anyone who happens to be nearby. Farmers, say.",
+            "I don't mean any farmer in particular. Moving on. You're in."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather_chestplate",
+          "name": "Watch Tabard",
+          "lore": [
+            "Issued to new recruits of the Village Watch."
+          ]
+        },
+        {
+          "skill": "defense",
+          "xp": 50
+        }
+      ],
+      "icon": "minecraft:shield"
+    },
+    {
+      "id": "night_watch",
+      "title": "First Night on the Wall",
+      "after": [
+        "enlist"
+      ],
+      "text": [
+        "Stand the gate of Reece from dusk to dawn beside the guards, and don't give an inch."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "timed": {
+            "seconds": 600,
+            "goal": {
+              "hold": {
+                "radius": 20
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:zombie",
+                "count": 3,
+                "every": 40
+              },
+              {
+                "entity": "minecraft:skeleton",
+                "count": 2,
+                "every": 60
+              }
+            ],
+            "lines": [
+              "Night's falling. Take your post at the gate.",
+              "Hold it until dawn. Don't wander off."
+            ],
+            "start": "Take the watch"
+          },
+          "title": "Hold the gate until dawn"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanshields:copper_basic_shield"
+        },
+        {
+          "skill": "defense",
+          "xp": 90
+        }
+      ],
+      "icon": "minecraft:lantern"
+    },
+    {
+      "id": "weak_spots",
+      "title": "Weak Spots",
+      "after": [
+        "night_watch"
+      ],
+      "text": [
+        "Walk the edge of Reece with Sergeant Brannock and fix what he points at: a gap in the fence, a dark lane without torches."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "brannock",
+          "lines": [
+            "Ah, there you are. Mind my knees.",
+            "Back in the Marsh Campaign we lost a whole wall to one loose gate.",
+            "See that gap in the fence? And that lane with no light? Fix them. Hale will want it done by sundown, and he'll pretend he didn't ask.",
+            "Fence, a gate, and light. Off you go."
+          ]
+        },
+        {
+          "build": {
+            "blocks": {
+              "#minecraft:fence_gates": 1,
+              "#minecraft:fences": 6,
+              "minecraft:torch": 6
+            },
+            "radius": 10
+          },
+          "title": "Fix the fence and light the lane"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:lantern",
+          "count": 4
+        },
+        {
+          "item": "minecraft:oak_fence_gate",
+          "count": 2
+        },
+        {
+          "skill": "defense",
+          "xp": 110
+        }
+      ],
+      "icon": "minecraft:oak_fence_gate"
+    },
+    {
+      "id": "arm_a_guard",
+      "title": "Arm the Watch",
+      "after": [
+        "weak_spots"
+      ],
+      "text": [
+        "Some villages have no guards at all. Give a willing villager a sword to make a guard, then arm a second with a crossbow and armour."
+      ],
+      "tasks": [
+        {
+          "advancement": "minecraft:adventure/recruit_guard",
+          "title": "Make a villager a guard"
+        },
+        {
+          "item": "minecraft:crossbow",
+          "crafted": true
+        },
+        {
+          "item": "minecraft:iron_chestplate"
+        },
+        {
+          "checkmark": "I armed a second guard"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_helmet"
+        },
+        {
+          "item": "minecraft:iron_leggings"
+        },
+        {
+          "item": "minecraft:iron_boots"
+        },
+        {
+          "skill": "defense",
+          "xp": 150
+        }
+      ],
+      "icon": "guardvillagers:guard_spawn_egg"
+    },
+    {
+      "id": "tower_shield",
+      "title": "Behind the Wall of Iron",
+      "after": [
+        "arm_a_guard"
+      ],
+      "text": [
+        "Brannock fights behind a tower shield. Craft an iron one and take a hundred hits on it."
+      ],
+      "tasks": [
+        {
+          "item": "spartanshields:iron_tower_shield",
+          "crafted": true
+        },
+        {
+          "stat": "minecraft:damage_blocked_by_shield",
+          "count": 1000,
+          "title": "Block a hundred hits"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:white_banner",
+          "name": "Iron Wall Banner",
+          "lore": [
+            "The mark of those who held the line."
+          ]
+        },
+        {
+          "skill": "defense",
+          "xp": 200
+        }
+      ],
+      "icon": "spartanshields:iron_tower_shield"
+    },
+    {
+      "id": "scout_outpost",
+      "title": "Eyes on the Outpost",
+      "after": [
+        "arm_a_guard",
+        "main_story:act1_start"
+      ],
+      "text": [
+        "Pillagers have been seen on the roads. Find their outpost and count the crossbows from cover, without being spotted."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 600,
+            "goal": {
+              "structure": "#illager_hideouts",
+              "label": "the outpost"
+            },
+            "lines": [
+              "Stay low. Don't take a scratch, or you've been seen.",
+              "Reach the outpost and count the crossbows."
+            ],
+            "start": "Begin the scouting",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Reach the outpost unseen"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "skill": "defense",
+          "xp": 220
+        }
+      ],
+      "icon": "minecraft:spyglass"
+    },
+    {
+      "id": "first_raid",
+      "title": "At the Gate",
+      "after": [
+        "scout_outpost",
+        "tower_shield"
+      ],
+      "text": [
+        "The pillagers come. Stand at the village gate through the whole raid with the guards.",
+        "Afterwards Brannock gives you the crystal heart he wore through forty years of raids."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "timed": {
+            "seconds": 300,
+            "goal": {
+              "hold": {
+                "radius": 20
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:pillager",
+                "count": 3,
+                "every": 30
+              },
+              {
+                "entity": "minecraft:vindicator",
+                "count": 2,
+                "every": 45
+              }
+            ],
+            "lines": [
+              "Here they come! To the gate!",
+              "Hold the line!"
+            ],
+            "start": "Hold the gate"
+          },
+          "title": "Hold the gate through the raid"
+        },
+        {
+          "talk": "character",
+          "character": "brannock",
+          "lines": [
+            "Well held. Forty years of raids, and I haven't seen it done better by a new recruit.",
+            "I wore this through every one. It never cracked. Take it.",
+            "Tell Hale I said so. He'll go red. He always does."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:crystal_heart"
+        },
+        {
+          "skill": "defense",
+          "xp": 300
+        }
+      ],
+      "icon": "artifacts:crystal_heart",
+      "signature": "artifacts:crystal_heart"
+    },
+    {
+      "id": "iceologer",
+      "title": "The Cold Caster",
+      "after": [
+        "first_raid"
+      ],
+      "text": [
+        "A snowy village is freezing under ice-chunk storms. Track the iceologer back to its cabin and end it."
+      ],
+      "tasks": [
+        {
+          "structure": "friendsandfoes:iceologer_cabin",
+          "title": "Find the iceologer's cabin"
+        },
+        {
+          "kill": "friendsandfoes:iceologer",
+          "title": "Defeat the iceologer"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "friendsandfoes:totem_of_freezing"
+        },
+        {
+          "skill": "defense",
+          "xp": 280
+        }
+      ],
+      "icon": "friendsandfoes:totem_of_freezing"
+    }
+  ]
+}

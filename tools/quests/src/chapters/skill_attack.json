@@ -1,0 +1,440 @@
+{
+  "title": "The Bounty Office",
+  "subtitle": "Attack path",
+  "icon": "minecraft:iron_sword",
+  "group": "skills",
+  "order": 6,
+  "quests": [
+    {
+      "id": "the_board",
+      "title": "Wanted",
+      "text": [
+        "Bounty Master Corvin Ash posts the office's work on boards in the villages. Find a board and take your first contract from it."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "corvin",
+          "lines": [
+            "You want work. Good. Work pays.",
+            "The office posts contracts on bounty boards. Every village has one.",
+            "Find a board. Take a contract. Don't take one you can't finish.",
+            "I've buried hunters who did."
+          ]
+        },
+        {
+          "structure": "#villages",
+          "title": "Find a village's bounty board"
+        },
+        {
+          "item": "bountiful:bounty",
+          "title": "Take a contract from the board"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bountiful:bounty-common"
+        },
+        {
+          "skill": "attack",
+          "xp": 50
+        }
+      ],
+      "icon": "bountiful:bountyboard"
+    },
+    {
+      "id": "dummy_drills",
+      "title": "Drills on the Dummy",
+      "after": [
+        "the_board"
+      ],
+      "text": [
+        "No hunter goes out untrained. Make a target dummy, then hit it hard and fast for a minute."
+      ],
+      "tasks": [
+        {
+          "item": "dummmmmmy:target_dummy",
+          "crafted": true
+        },
+        {
+          "timed": {
+            "seconds": 60,
+            "goal": {
+              "stat": "minecraft:damage_dealt",
+              "count": 600
+            },
+            "lines": [
+              "Sixty seconds. Hit the dummy.",
+              "Combos, not flailing. Go."
+            ],
+            "start": "Start the drill"
+          },
+          "title": "Deal the damage in a minute"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 80
+        }
+      ],
+      "icon": "dummmmmmy:target_dummy"
+    },
+    {
+      "id": "first_contract",
+      "title": "Night Shift",
+      "after": [
+        "dummy_drills"
+      ],
+      "text": [
+        "The first proper contract: the outskirts of a village crawl with zombies of every odd variety. Put down fifteen."
+      ],
+      "tasks": [
+        {
+          "structure": "#villages",
+          "title": "Reach a village"
+        },
+        {
+          "kill": "minecraft:zombie",
+          "count": 15,
+          "title": "Put down fifteen zombies"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bread",
+          "count": 8
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:zombie_head"
+    },
+    {
+      "id": "the_rascal",
+      "title": "The Thief in the Mine",
+      "after": [
+        "first_contract"
+      ],
+      "text": [
+        "A bounty on a 'thief' who robs miners. The thief is a rascal, and it is playing hide-and-seek in an old mineshaft. Find it three times and it will pay you off."
+      ],
+      "tasks": [
+        {
+          "structure": "#mines",
+          "title": "Go into the mineshaft"
+        },
+        {
+          "encounter": {
+            "entity": "friendsandfoes:rascal",
+            "name": "Rascal",
+            "where": {
+              "below_y": 60
+            },
+            "then": "talk",
+            "lines": [
+              "Hee hee! You found me!",
+              "Again! Count to ten!"
+            ]
+          }
+        },
+        {
+          "encounter": {
+            "entity": "friendsandfoes:rascal",
+            "name": "Rascal",
+            "where": {
+              "below_y": 60
+            },
+            "then": "talk",
+            "lines": [
+              "Oh! You're good at this.",
+              "One more. Go on, I dare you."
+            ]
+          }
+        },
+        {
+          "encounter": {
+            "entity": "friendsandfoes:rascal",
+            "name": "Rascal",
+            "where": {
+              "below_y": 60
+            },
+            "then": "talk",
+            "lines": [
+              "Found me again! Fine, fine. Take the shiny things.",
+              "I only borrowed them. Mostly."
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 8
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 6
+        },
+        {
+          "skill": "attack",
+          "xp": 160
+        }
+      ],
+      "icon": "friendsandfoes:rascal_spawn_egg"
+    },
+    {
+      "id": "weapon_of_choice",
+      "title": "Weapon of Choice",
+      "after": [
+        "first_contract"
+      ],
+      "text": [
+        "Ash wants you to choose your style. Forge an iron Spartan weapon and wear it like a hunter."
+      ],
+      "tasks": [
+        {
+          "item": "spartanweaponry:iron_longsword",
+          "crafted": true,
+          "title": "Forge an iron Spartan weapon"
+        },
+        {
+          "talk": "character",
+          "character": "corvin",
+          "lines": [
+            "A longsword. Honest steel.",
+            "Wear it where you can draw it fast. A weapon in your pack is a weapon you don't have.",
+            "Every scar on me came from a blade I reached for too late."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:grindstone"
+        },
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 6
+        },
+        {
+          "skill": "attack",
+          "xp": 180
+        }
+      ],
+      "icon": "spartanweaponry:iron_longsword"
+    },
+    {
+      "id": "fallen_adventurer",
+      "title": "The Unfinished Contract",
+      "after": [
+        "weapon_of_choice"
+      ],
+      "text": [
+        "You find the remains of a fallen bounty hunter with a contract still clutched in their bones. You read it, and you can see how it ends."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I read the contract"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "The Hunter's Journal",
+          "lore": [
+            "A dead hunter's notes. The last page is unfinished."
+          ]
+        },
+        {
+          "skill": "attack",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:writable_book",
+      "discover": {
+        "observe": "realmrpg_skeletons:hunted_skeleton",
+        "ticks": 20
+      }
+    },
+    {
+      "id": "dungeon_sweep",
+      "title": "Clearing the Cellar",
+      "after": [
+        "fallen_adventurer"
+      ],
+      "text": [
+        "The journal points to a dungeon below a village. Go down and clear it."
+      ],
+      "tasks": [
+        {
+          "structure": "#yungs_dungeons",
+          "title": "Find the dungeon"
+        },
+        {
+          "kill": "minecraft:zombie",
+          "count": 8
+        },
+        {
+          "kill": "minecraft:skeleton",
+          "count": 8
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 8
+        },
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 4
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:spawner"
+    },
+    {
+      "id": "spider_queen",
+      "title": "Silk and Venom",
+      "after": [
+        "dungeon_sweep"
+      ],
+      "text": [
+        "A spider dungeon has been sending its brood into the fields. Clear it, and cut the poison sac from its biggest spider as proof."
+      ],
+      "tasks": [
+        {
+          "structure": "betterdungeons:spider_dungeon",
+          "title": "Find the spider dungeon"
+        },
+        {
+          "kill": "minecraft:cave_spider",
+          "count": 12
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:spider"
+            ],
+            "chance": 0.15,
+            "item": {
+              "name": "Queen's Poison Sac",
+              "tooltip": "Proof of the kill",
+              "texture": "minecraft:item/spider_eye"
+            }
+          },
+          "consume": false
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Bane of the Brood",
+          "enchant": {
+            "minecraft:bane_of_arthropods": 3
+          }
+        },
+        {
+          "skill": "attack",
+          "xp": 240
+        }
+      ],
+      "icon": "minecraft:spider_eye"
+    },
+    {
+      "id": "graveyard_shift",
+      "title": "Graveyard Shift",
+      "after": [
+        "dungeon_sweep",
+        "main_story:act1_start"
+      ],
+      "text": [
+        "The dead won't stay down in an old graveyard. Spend a night there and put them back in the ground."
+      ],
+      "tasks": [
+        {
+          "structure": "#graveyards",
+          "title": "Reach the graveyard"
+        },
+        {
+          "kill": "minecraft:zombie",
+          "count": 8
+        },
+        {
+          "kill": "minecraft:skeleton",
+          "count": 7
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Rest Easy",
+          "enchant": {
+            "minecraft:smite": 3
+          }
+        },
+        {
+          "skill": "attack",
+          "xp": 240
+        }
+      ],
+      "icon": "minecraft:bone"
+    },
+    {
+      "id": "feral_bounty",
+      "title": "The Mauler",
+      "after": [
+        "spider_queen"
+      ],
+      "text": [
+        "A beast-tamer's bounty: a mauler, small, fast and all teeth, has been savaging travellers in the badlands. Find it, survive its rush, and the tamer's feral claws are your pay."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "friendsandfoes:mauler",
+            "name": "The Mauler",
+            "health": 40,
+            "glow": true,
+            "where": {
+              "biomes": [
+                "minecraft:badlands"
+              ]
+            },
+            "then": "kill",
+            "lines": [
+              "Grrrrk!"
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:feral_claws"
+        },
+        {
+          "skill": "attack",
+          "xp": 300
+        }
+      ],
+      "icon": "artifacts:feral_claws",
+      "signature": "artifacts:feral_claws"
+    }
+  ]
+}

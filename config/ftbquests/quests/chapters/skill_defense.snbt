@@ -1,0 +1,390 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_defense"
+	group: "1CAE106B8DA521D5"
+	icon: "minecraft:shield"
+	id: "4E40E9A7DF1E3A23"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Captain Hale enlists anyone who turns up with a shield. Make one and swear to the watch."]
+			icon: "minecraft:shield"
+			id: "4FBB87F832FB11BF"
+			rewards: [
+				{
+					id: "7F02113671EDE8AC"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_chestplate"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Issued to new recruits of the Village Watch.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Watch Tabard\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 50"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "13C362DB52BECAC1"
+					silent: true
+					title: "+50 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2E344E0F69C07999"
+					item: "minecraft:shield"
+					only_from_crafting: true
+					title: "Craft a shield"
+					type: "item"
+				}
+				{
+					id: "1A781DE793042732"
+					stage: "fq.skill_defense.enlist.talk1"
+					title: "Talk to Captain Hale"
+					type: "gamestage"
+				}
+			]
+			title: "Enlist"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4FBB87F832FB11BF"]
+			description: ["Stand the gate of Reece from dusk to dawn beside the guards, and don't give an inch."]
+			icon: "minecraft:lantern"
+			id: "30D9FEE24CE49B2D"
+			rewards: [
+				{
+					id: "45B5C0F4067AB206"
+					item: "spartanshields:copper_basic_shield"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 90"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "31997FBE79F7C0E2"
+					silent: true
+					title: "+90 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "367D0548CA1478E7"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "210DEE21116F30FC"
+					stage: "fq.skill_defense.night_watch.timed1"
+					title: "Hold the gate until dawn"
+					type: "gamestage"
+				}
+			]
+			title: "First Night on the Wall"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["30D9FEE24CE49B2D"]
+			description: ["Walk the edge of Reece with Sergeant Brannock and fix what he points at: a gap in the fence, a dark lane without torches."]
+			icon: "minecraft:oak_fence_gate"
+			id: "179142861278109E"
+			rewards: [
+				{
+					count: 4
+					id: "61A5128AC7609C16"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "1EC18F966C330F27"
+					item: "minecraft:oak_fence_gate"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 110"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "2D0C088AC9CE4744"
+					silent: true
+					title: "+110 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "29900BA5DCBCB363"
+					stage: "fq.skill_defense.weak_spots.talk0"
+					title: "Talk to Sergeant Brannock"
+					type: "gamestage"
+				}
+				{
+					id: "54C0CAA4AD5B102F"
+					stage: "fq.skill_defense.weak_spots.build1"
+					title: "Fix the fence and light the lane"
+					type: "gamestage"
+				}
+			]
+			title: "Weak Spots"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["179142861278109E"]
+			description: ["Some villages have no guards at all. Give a willing villager a sword to make a guard, then arm a second with a crossbow and armour."]
+			icon: "guardvillagers:guard_spawn_egg"
+			id: "4C9DAB22C45F610C"
+			rewards: [
+				{
+					id: "199A047EB4ADE3C2"
+					item: "minecraft:iron_helmet"
+					type: "item"
+				}
+				{
+					id: "40751535170B9017"
+					item: "minecraft:iron_leggings"
+					type: "item"
+				}
+				{
+					id: "4B40E31E9F93B870"
+					item: "minecraft:iron_boots"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 150"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "4073FB02D3017697"
+					silent: true
+					title: "+150 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					advancement: "minecraft:adventure/recruit_guard"
+					criterion: ""
+					id: "2AF85723F5936D7A"
+					title: "Make a villager a guard"
+					type: "advancement"
+				}
+				{
+					id: "30132B0AE514E672"
+					item: "minecraft:crossbow"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "4ADE6FBF5D0D341C"
+					item: "minecraft:iron_chestplate"
+					type: "item"
+				}
+				{
+					id: "00E986743CAD9A06"
+					title: "I armed a second guard"
+					type: "checkmark"
+				}
+			]
+			title: "Arm the Watch"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4C9DAB22C45F610C"]
+			description: ["Brannock fights behind a tower shield. Craft an iron one and take a hundred hits on it."]
+			icon: "spartanshields:iron_tower_shield"
+			id: "17A6E5FAA626F85A"
+			rewards: [
+				{
+					id: "19469EE64759FBB7"
+					item: {
+						Count: 1b
+						id: "minecraft:white_banner"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"The mark of those who held the line.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Iron Wall Banner\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 200"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "1075E4B1BE2DBB85"
+					silent: true
+					title: "+200 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "08740C26581F222A"
+					item: "spartanshields:iron_tower_shield"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "38DAB38E8E6EC162"
+					stat: "minecraft:damage_blocked_by_shield"
+					title: "Block a hundred hits"
+					type: "stat"
+					value: 1000
+				}
+			]
+			title: "Behind the Wall of Iron"
+			x: 6.0d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"4C9DAB22C45F610C"
+				"63C3DB46B7298A13"
+			]
+			description: ["Pillagers have been seen on the roads. Find their outpost and count the crossbows from cover, without being spotted."]
+			icon: "minecraft:spyglass"
+			id: "6BCC69413DA4908A"
+			rewards: [
+				{
+					id: "09DD4CA0AE305EEC"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 220"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "67F03408FF866198"
+					silent: true
+					title: "+220 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4AAEC9A44E72C897"
+					stage: "fq.skill_defense.scout_outpost.timed0"
+					title: "Reach the outpost unseen"
+					type: "gamestage"
+				}
+			]
+			title: "Eyes on the Outpost"
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"6BCC69413DA4908A"
+				"17A6E5FAA626F85A"
+			]
+			description: [
+				"The pillagers come. Stand at the village gate through the whole raid with the guards."
+				""
+				"Afterwards Brannock gives you the crystal heart he wore through forty years of raids."
+			]
+			icon: "artifacts:crystal_heart"
+			id: "5AF168685597D93F"
+			rewards: [
+				{
+					id: "37C8D58AD1AD4DF0"
+					item: "artifacts:crystal_heart"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 300"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "29D12859A4E123D5"
+					silent: true
+					title: "+300 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "43BD5FD1FD86B5D0"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "3446DC0E6CC52980"
+					stage: "fq.skill_defense.first_raid.timed1"
+					title: "Hold the gate through the raid"
+					type: "gamestage"
+				}
+				{
+					id: "7D7A6E6DA28D5AA8"
+					stage: "fq.skill_defense.first_raid.talk2"
+					title: "Talk to Sergeant Brannock"
+					type: "gamestage"
+				}
+			]
+			title: "At the Gate"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5AF168685597D93F"]
+			description: ["A snowy village is freezing under ice-chunk storms. Track the iceologer back to its cabin and end it."]
+			icon: "friendsandfoes:totem_of_freezing"
+			id: "17D6AACC39DA1FF4"
+			rewards: [
+				{
+					id: "4590F2B1BA3B59BB"
+					item: "friendsandfoes:totem_of_freezing"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 280"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "6A674E3321D005EA"
+					silent: true
+					title: "+280 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "566A90ECBCDD1AE6"
+					structure: "friendsandfoes:iceologer_cabin"
+					title: "Find the iceologer's cabin"
+					type: "structure"
+				}
+				{
+					entity: "friendsandfoes:iceologer"
+					id: "1B0BD0A5A8F500CE"
+					title: "Defeat the iceologer"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Cold Caster"
+			x: 9.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Defense path"]
+	title: "The Village Watch"
+}
