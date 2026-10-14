@@ -1439,14 +1439,17 @@ global.QUEST_CHARACTERS = {
   "juniper": {
     "name": "Postmistress Juniper Quill",
     "profession": "minecraft:cartographer",
-    "personality": "Runs the Couriers' post office. Brisk, fast-talking and always in a hurry, obsessed with schedules, stamps and the record time for every route; speaks in clipped bursts.",
+    "personality": "Runs the Couriers' post office. Brisk, fast-talking and always in a hurry, obsessed with schedules, stamps and the record time for every route; speaks in clipped bursts. Works alongside the Ender Mail carriers and takes every job they can't: too big, alive, fragile, no mailbox, or needs a signature. Respects the endermen's speed, resents their tea breaks.",
     "idle": [
       "Running late? You're running late. Everyone's running late.",
       "Signed, sealed, sprinted.",
       "The record to Gazelle Harbour is still open. Just saying.",
       "Rain, snow, creepers: the post goes through.",
       "Stamp. Stamp. Stamp. Lovely.",
-      "Don't stop to chat on a run. You're chatting now. Off you go."
+      "Don't stop to chat on a run. You're chatting now. Off you go.",
+      "The endermen do letters. We do everything else. Everything.",
+      "No mailbox out there? Then it's a Couriers job.",
+      "A carrier won't take a live chicken. I've asked."
     ],
     "entity": "minecraft:villager"
   },
