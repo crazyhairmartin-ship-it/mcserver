@@ -621,6 +621,35 @@ def build_build(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     return task, entry
 
 
+def build_photo(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "photo" task (Camerapture): done when the player takes a picture while the quest is open and the subject is
+    right: {"entity": id} (under the crosshair, or within 8 blocks), {"structure": id/#group}, {"biome": id} or
+    {"place": id} (standing there). Add "label" for the task title ("the lighthouse")."""
+    spec = t['photo']
+    reg = ctx['registry']
+    if not isinstance(spec, dict):
+        problems.error(where, '"photo" needs {"entity"|"structure"|"biome"|"place": ...}')
+        return None, None
+    target = None
+    if 'entity' in spec:
+        reg.check('entities', spec['entity'], where, spec.get('unchecked', False))
+        target = {'kind': 'entity', 'entity': spec['entity'], 'distance': float(spec.get('distance', 24))}
+    elif 'biome' in spec:
+        reg.check('biomes', spec['biome'], where, spec.get('unchecked', False))
+        target = {'kind': 'biome', 'biome': spec['biome']}
+    elif 'structure' in spec or 'place' in spec:
+        target = build_destination({k: spec[k] for k in ('structure', 'place', 'label') if k in spec}, reg, where, problems)
+    if not target:
+        problems.error(where, '"photo" needs one of "entity", "structure", "biome" or "place"')
+        return None, None
+    label = spec.get('label') or spec.get('entity') or spec.get('biome') or target.get('label', 'it')
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.photo{n}', 'type': 'photo',
+             'target': target, 'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', 'Take a photo of ' + str(label).split(':')[-1].replace('_', ' '))}
+    return task, entry
+
+
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
     """A "unique drop" task: while the quest is open, the listed mobs can drop a quest item (or, with "fishing" in "from",
     it can be fished up); the task is to bring it."""
@@ -910,6 +939,11 @@ def main():
                         givers.append(entry)
                 elif isinstance(t, dict) and 'timed' in t:
                     task, entry = build_timed(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
+                                              problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and 'photo' in t:
+                    task, entry = build_photo(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
                                               problems)
                     if entry:
                         givers.append(entry)

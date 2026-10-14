@@ -88,8 +88,8 @@ Also supported (see `tools/quests/README.md`): **escorts** (encounter `"then": "
 usually with `waves`), **building** (a `build` task), **puzzles players change** (`protect` with `"reset_minutes"`),
 and **character shops** (give the character at the end of each chain one or two themed deals in pack.json).
 
-Some plan entries need mechanics the generator still doesn't have: photos, and anything else the README doesn't
-list. **Write the quest anyway** with the nearest supported tasks (a
+Photos are supported too: a `photo` task (Camerapture camera; reward the camera, `camerapture:camera`, in the first
+photo quest). Some plan entries may still need mechanics the generator doesn't have: anything the README doesn't list. **Write the quest anyway** with the nearest supported tasks (a
 `checkmark` for "solve the puzzle", a `kill` count for a defence, an `observe` or `structure` for "find it"), so the
 chain stays whole and playable. Then add one line per quest to `tools/quests/src/plans/followups.md` under "Engine needed":
 `- <chapter>:<id>: needs <mechanic>; written as <what you used>`.

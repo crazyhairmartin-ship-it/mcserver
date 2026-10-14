@@ -2744,6 +2744,10 @@ file = "kubejs/server_scripts/quest_npcs.js"
 hash = "83da7ea1b04bbd6c7e779339df7431bf1f781aecabb4985c913834ac834f85a4"
 
 [[files]]
+file = "kubejs/server_scripts/quest_photos.js"
+hash = "f664e20ad4777792e6283125cd66c76ddd8500e6ff8d87f9c4890c68ae4fcd50"
+
+[[files]]
 file = "kubejs/server_scripts/quest_shops.js"
 hash = "8e217cd37f136f07e0229950605abcaef240ffcbaf197baa837bfa3d36327929"
 
@@ -2899,6 +2903,11 @@ metafile = true
 [[files]]
 file = "mods/caelus.pw.toml"
 hash = "da069e723737ae49203f7572eb774be0fd21f5f083ce7a7ee1bed25916befca8"
+metafile = true
+
+[[files]]
+file = "mods/camerapture.pw.toml"
+hash = "ee21941828784740b1150f9646a2828ef5a753e4b6b2155b7809ebe5ff88cd6d"
 metafile = true
 
 [[files]]
