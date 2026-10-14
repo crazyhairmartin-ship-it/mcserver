@@ -44,7 +44,8 @@ function questOpen(player, giver) {
   if (!giver.quest_id || !$QuestFile || !$QuestFile.INSTANCE) return true
   try {
     let file = $QuestFile.INSTANCE
-    let data = file.getOrCreateTeamData(player)
+    // explicit overload: KubeJS can also turn a player into a UUID, so the plain call is ambiguous
+    let data = file['getOrCreateTeamData(net.minecraft.world.entity.Entity)'](player)
     let quest = file.getQuest($QuestLong.parseLong(giver.quest_id, 16))
     if (!quest || !data.canStartTasks(quest) || data.isCompleted(quest)) return false
     if (giver.open_task) {
