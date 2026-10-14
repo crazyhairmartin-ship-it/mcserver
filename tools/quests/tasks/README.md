@@ -214,3 +214,4 @@ Total 759 (with the 119 already written, the plan's 878).
 | T03 | yes | 26 | 16 engine, 0 links | `Quests T03` in git log |
 | T04 | yes | 22 | 11 engine, 0 links | `Quests T04` in git log |
 | T05 | yes | 32 | 9 engine, 0 links | `Quests T05` in git log |
+| T06 | yes | 24 | 6 engine, 0 links | `Quests T06` in git log |

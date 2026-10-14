@@ -368,6 +368,33 @@ global.QUEST_GIVERS = [
     "prev_tasks": []
   },
   {
+    "quest": "milestones:easy_enchant",
+    "stage": "fq.milestones.easy_enchant.build0",
+    "type": "build",
+    "keys": [
+      "minecraft:enchanting_table",
+      "minecraft:bookshelf"
+    ],
+    "counts": [
+      1,
+      15
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "51C3D168DEC7B89B",
+    "prev_tasks": []
+  },
+  {
+    "quest": "milestones:waystones_10",
+    "stage": "fq.milestones.waystones_10.waystones0",
+    "type": "waystones",
+    "count": 10,
+    "wild": false,
+    "requires": [],
+    "quest_id": "67B0CC62615667C0",
+    "prev_tasks": []
+  },
+  {
     "quest": "skill_mining:guild_card",
     "stage": "fq.skill_mining.guild_card",
     "type": "org",

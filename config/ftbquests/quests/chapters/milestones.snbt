@@ -1,0 +1,941 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "milestones"
+	group: "21A013AB1B54542A"
+	icon: "minecraft:experience_bottle"
+	id: "60D3DEA9FEC52B63"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["2145643E4E5C72B6"]
+			description: ["Maren has left a page in the Field Guide for the first thing every newcomer to Reece does properly: smelt iron. Tools that don't snap are the start of everything."]
+			icon: "minecraft:iron_ingot"
+			id: "155E0588AA5DB674"
+			rewards: [
+				{
+					id: "31113DF58C802D5F"
+					item: "minecraft:bucket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 40"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "4E881C221FDA156A"
+					silent: true
+					title: "+40 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "103C927FA205A545"
+					item: "minecraft:iron_ingot"
+					title: "Smelt an iron ingot"
+					type: "item"
+				}
+			]
+			title: "Iron Age"
+			x: 0.0d
+			y: -5.25d
+		}
+		{
+			dependencies: ["155E0588AA5DB674"]
+			description: ["A page in the Field Guide, in Maren's neatest hand: the day you pull up your first diamond is worth remembering. Dig deep, and watch for lava."]
+			icon: "minecraft:diamond"
+			id: "3BC3822D1C32520A"
+			rewards: [
+				{
+					id: "64EC4BFBF73B3E08"
+					item: {
+						Count: 1b
+						id: "minecraft:iron_pickaxe"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:unbreaking"
+									lvl: 2s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"For the first diamond.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Deep Digger\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 120"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "1FFA1BF364A1D444"
+					silent: true
+					title: "+120 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "51F0935CB97FC280"
+					item: "minecraft:diamond"
+					title: "Mine your first diamond"
+					type: "item"
+				}
+			]
+			title: "Hard as Diamond"
+			x: 1.5d
+			y: -5.25d
+		}
+		{
+			dependencies: ["3BC3822D1C32520A"]
+			description: ["The Field Guide reminds you that one diamond tool does not make an adventurer. Armour that turns a skeleton's arrows is what keeps you alive far from home."]
+			icon: "minecraft:diamond_chestplate"
+			id: "5C38220D6536E865"
+			rewards: [
+				{
+					count: 3
+					id: "4F200D97F0A5B37D"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 250"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "53AD9527D50723A7"
+					silent: true
+					title: "+250 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "42D9438ADD6A81C9"
+					item: "minecraft:diamond_helmet"
+					title: "Forge a diamond helmet"
+					type: "item"
+				}
+				{
+					id: "29D02FA11B59157C"
+					item: "minecraft:diamond_chestplate"
+					title: "Forge a diamond chestplate"
+					type: "item"
+				}
+				{
+					id: "1A11A754343DC91D"
+					item: "minecraft:diamond_leggings"
+					title: "Forge diamond leggings"
+					type: "item"
+				}
+				{
+					id: "4BFC4D50A79F2E83"
+					item: "minecraft:diamond_boots"
+					title: "Forge diamond boots"
+					type: "item"
+				}
+			]
+			title: "Shining Kit"
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["5C38220D6536E865"]
+			description: ["The Field Guide has a smudged page about the Nether's rarest metal, the only thing that outlasts diamond. Smelt ancient debris and you have it."]
+			icon: "minecraft:netherite_ingot"
+			id: "118630D5B2F44476"
+			rewards: [
+				{
+					count: 2
+					id: "1A16B61BCDB57C5B"
+					item: "minecraft:ancient_debris"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 350"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "46D2837DE2E2DB68"
+					silent: true
+					title: "+350 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "700D309340835F28"
+					item: "minecraft:netherite_ingot"
+					title: "Smelt your first netherite ingot"
+					type: "item"
+				}
+			]
+			title: "Netherite"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["118630D5B2F44476"]
+			description: ["One ingot is a start. The last page of Maren's armour chapter is for those who dress head to toe in netherite."]
+			icon: "minecraft:netherite_chestplate"
+			id: "2E388F12D28B948C"
+			rewards: [
+				{
+					id: "1CB5699885EE51A0"
+					item: "minecraft:enchanted_golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 700"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "5737A565F3650B42"
+					silent: true
+					title: "+700 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "670F839667BC3F32"
+					item: "minecraft:netherite_helmet"
+					title: "Forge a netherite helmet"
+					type: "item"
+				}
+				{
+					id: "07D9321FF4BFB663"
+					item: "minecraft:netherite_chestplate"
+					title: "Forge a netherite chestplate"
+					type: "item"
+				}
+				{
+					id: "5A2BE33D6A90031A"
+					item: "minecraft:netherite_leggings"
+					title: "Forge netherite leggings"
+					type: "item"
+				}
+				{
+					id: "353F0684205575CE"
+					item: "minecraft:netherite_boots"
+					title: "Forge netherite boots"
+					type: "item"
+				}
+			]
+			title: "Black as Night"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3BC3822D1C32520A"]
+			description: ["Maren swears that with Easy Magic an enchanting table forgives you: it keeps your lapis and books and lets you reroll the offers. Build a proper table, fifteen bookshelves around it, and see."]
+			icon: "minecraft:enchanting_table"
+			id: "51C3D168DEC7B89B"
+			rewards: [
+				{
+					count: 16
+					id: "6DBF099401321C03"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "5A4223DF740C4F7B"
+					item: "minecraft:bookshelf"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 120"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "4C87CD50F826C2ED"
+					silent: true
+					title: "+120 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6AAFE1B860E784BD"
+					stage: "fq.milestones.easy_enchant.build0"
+					title: "Build an enchanting table ringed with bookshelves"
+					type: "gamestage"
+				}
+			]
+			title: "Easy Magic"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["51C3D168DEC7B89B"]
+			description: ["The best enchantments cost thirty levels. Maren calls it the Thirty Club, and its only rule is that you've paid the fee at least once."]
+			icon: "minecraft:experience_bottle"
+			id: "2F2C765E90565EAB"
+			rewards: [
+				{
+					count: 8
+					id: "45A1016327AAF2C9"
+					item: "minecraft:experience_bottle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "73CE7C90E48D87EA"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "168DA5CB164B05E9"
+					points: false
+					title: "Reach level thirty to afford the best enchantments"
+					type: "xp"
+					value: 30L
+				}
+			]
+			title: "The Thirty Club"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["2145643E4E5C72B6"]
+			description: ["Maren marks your progress in the margin of the Field Guide: the first ten levels are the ones that teach you to stay alive."]
+			icon: "minecraft:experience_bottle"
+			id: "639B017507FB4911"
+			rewards: [
+				{
+					count: 4
+					id: "6E0408E0142E66D7"
+					item: "minecraft:experience_bottle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 50"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "0E6B29BC6AAF0F01"
+					silent: true
+					title: "+50 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2CCAF6C07E682BE9"
+					points: false
+					title: "Reach experience level ten"
+					type: "xp"
+					value: 10L
+				}
+			]
+			title: "Experienced"
+			x: 0.0d
+			y: -3.75d
+		}
+		{
+			dependencies: ["639B017507FB4911"]
+			description: ["Fifty levels is a lot of cave-diving, kills and smelting. The Field Guide has a page for those who have lived that long."]
+			icon: "minecraft:enchanted_book"
+			id: "649D8B5ABB1E83AB"
+			rewards: [
+				{
+					id: "04CEB9BCB4B85730"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Seasoned\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 400"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "3792B806E9E44483"
+					silent: true
+					title: "+400 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5712EBE01E6624BD"
+					points: false
+					title: "Reach experience level fifty"
+					type: "xp"
+					value: 50L
+				}
+			]
+			title: "Seasoned"
+			x: 1.5d
+			y: -3.75d
+		}
+		{
+			dependencies: ["5DC7AF18441E83F8"]
+			description: ["Sister Wren noticed you spending your skill points wisely, and Maren added a page to the Guide: master one trade and the villages will treat you differently."]
+			icon: "fotfskills:skill_tonic"
+			id: "6B3ACCE5356186A1"
+			rewards: [
+				{
+					id: "1030C5E91E85D0FF"
+					item: "fotfskills:skill_tonic"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 200"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "5FE6ACFEE777C101"
+					silent: true
+					title: "+200 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1F4AC13D7F844EE4"
+					title: "I reached level ten in a skill tree"
+					type: "checkmark"
+				}
+			]
+			title: "A Trade Mastered"
+			x: 0.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["2145643E4E5C72B6"]
+			description: ["Maren says the best way to learn the land is to walk it. A kilometre on foot gets you out of the village and into the wild."]
+			icon: "minecraft:leather_boots"
+			id: "756977307060B1FD"
+			rewards: [
+				{
+					id: "1867786E85F79989"
+					item: "minecraft:leather_boots"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 20"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "5114966D98185D7D"
+					silent: true
+					title: "+20 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1693E808C1DD2C48"
+					stat: "minecraft:walk_one_cm"
+					title: "Walk one kilometre"
+					type: "stat"
+					value: 100000
+				}
+			]
+			title: "The First Mile"
+			x: 0.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["756977307060B1FD"]
+			description: ["The Couriers say a runner who hasn't walked ten kilometres isn't a runner. The Field Guide agrees."]
+			icon: "minecraft:leather_boots"
+			id: "5578ED4FECFFDD40"
+			rewards: [
+				{
+					id: "35FCAD2DB3031757"
+					item: "waystones:waystone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 100"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "0E695BAD90F2112B"
+					silent: true
+					title: "+100 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7A7FD6B7CBF70528"
+					stat: "minecraft:walk_one_cm"
+					title: "Walk ten kilometres"
+					type: "stat"
+					value: 1000000
+				}
+			]
+			title: "The Long Walk"
+			x: 1.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["5578ED4FECFFDD40"]
+			description: ["A hundred kilometres is a long way to go on foot. Maren has pasted a page about it into the Guide, with a note: new boots."]
+			icon: "minecraft:iron_boots"
+			id: "54469E2DCC406CF5"
+			rewards: [
+				{
+					id: "6AB66A0E8D2E6A67"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_boots"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 3s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"A hundred kilometres.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Well-Worn Boots\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "0BA1DC503231C8B5"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "78E65431F1F66454"
+					stat: "minecraft:walk_one_cm"
+					title: "Walk a hundred kilometres"
+					type: "stat"
+					value: 10000000
+				}
+			]
+			title: "Worn Soles"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["756977307060B1FD"]
+			description: ["Gil the Ferryman says anyone can row across a pond, but five kilometres by boat makes a sailor. The Guide has a page for it."]
+			icon: "minecraft:oak_boat"
+			id: "57B372C93D453333"
+			rewards: [
+				{
+					count: 4
+					id: "5D56A8EAD2F6AE06"
+					item: "minecraft:white_wool"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 100"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "07992D9FA97F0F87"
+					silent: true
+					title: "+100 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2BE2B0EC9E5507AC"
+					stat: "minecraft:boat_one_cm"
+					title: "Sail five kilometres"
+					type: "stat"
+					value: 500000
+				}
+			]
+			title: "Sea Legs"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["756977307060B1FD"]
+			description: ["The Sanctuary keepers say a good rider knows their mount's temper by the end of five kilometres, and will be sore by the end of it too."]
+			icon: "minecraft:saddle"
+			id: "5E862B1E7383C93D"
+			rewards: [
+				{
+					id: "4EDB14F84051C6B1"
+					item: "minecraft:iron_horse_armor"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 100"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "3EA0C55FF3847CA4"
+					silent: true
+					title: "+100 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3398118D7084EB9A"
+					stat: "minecraft:horse_one_cm"
+					title: "Ride five kilometres on horseback"
+					type: "stat"
+					value: 500000
+				}
+			]
+			title: "Saddle Sore"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["5578ED4FECFFDD40"]
+			description: ["Few things beat flying, and the Field Guide has a page for those who have gone ten kilometres on elytra wings."]
+			icon: "minecraft:elytra"
+			id: "08D5034F76F073FB"
+			rewards: [
+				{
+					count: 16
+					id: "22C4E2B1C9358C1F"
+					item: "minecraft:firework_rocket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 500"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "54269885A33D6D86"
+					silent: true
+					title: "+500 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6B0E6B64660A9F3A"
+					stat: "minecraft:aviate_one_cm"
+					title: "Fly ten kilometres"
+					type: "stat"
+					value: 1000000
+				}
+			]
+			title: "Cloud Walker"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2145643E4E5C72B6"]
+			description: ["Elder Maren marks a week on her calendar for every newcomer who sticks around. Survive seven days and nights in Reece and she'll bake you something."]
+			icon: "minecraft:cake"
+			id: "73B252B38AADD3CD"
+			rewards: [
+				{
+					id: "5E97BEA62AE3CAD7"
+					item: "minecraft:cake"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 40"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "7535E1983F2CF5EE"
+					silent: true
+					title: "+40 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2805FCBEA3967309"
+					stat: "minecraft:play_time"
+					title: "Survive seven in-game days"
+					type: "stat"
+					value: 168000
+				}
+			]
+			title: "A Week in Reece"
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["73B252B38AADD3CD"]
+			description: ["Thirty days: Maren's calendar has a gold star for it. The clock on the wall of her library was given to the first person to manage it."]
+			icon: "minecraft:clock"
+			id: "4337C8C27E0A1344"
+			rewards: [
+				{
+					id: "5A606C658955E96A"
+					item: "minecraft:clock"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "15AF6D1BDB4122A8"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 120"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "2E57ADC48EE4A769"
+					silent: true
+					title: "+120 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0425F35B6F11163F"
+					stat: "minecraft:play_time"
+					title: "Survive thirty in-game days"
+					type: "stat"
+					value: 720000
+				}
+			]
+			title: "A Month of Mornings"
+			x: 1.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["4337C8C27E0A1344"]
+			description: ["A hundred dawns is a long time to stay alive. Maren stitches a banner for those who reach it, with their name along the hem."]
+			icon: "minecraft:white_banner"
+			id: "2131AA7A9697D2CD"
+			rewards: [
+				{
+					id: "3B8226A8ADAE70BE"
+					item: {
+						Count: 1b
+						id: "minecraft:white_banner"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Stitched by Elder Maren.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"A Hundred Dawns\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 300"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "26FA382645DD3FD1"
+					silent: true
+					title: "+300 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "690E018554DB23BE"
+					stat: "minecraft:play_time"
+					title: "Survive a hundred in-game days"
+					type: "stat"
+					value: 2400000
+				}
+			]
+			title: "A Hundred Dawns"
+			x: 3.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["155E0588AA5DB674"]
+			description: ["Dagna Holt says a miner who hasn't shifted a thousand stones hasn't earned the title. The Field Guide has a tally page."]
+			icon: "minecraft:cobblestone"
+			id: "0890BCF6C252CB37"
+			rewards: [
+				{
+					id: "0C8F471223A64DE5"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Thousand Stones\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 150"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "349E845832DA4598"
+					silent: true
+					title: "+150 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 1000L
+					id: "01288AB76A55AAEB"
+					item: "minecraft:cobblestone"
+					title: "Haul a thousand stones out of the ground"
+					type: "item"
+				}
+			]
+			title: "Thousand Stones"
+			x: 1.5d
+			y: 3.75d
+		}
+		{
+			dependencies: ["155E0588AA5DB674"]
+			description: ["Corvin Ash keeps a tally of the monsters killed in Reece's name, and the five hundredth earns a page in the Field Guide."]
+			icon: "minecraft:iron_sword"
+			id: "028E21C6DBB639FD"
+			rewards: [
+				{
+					id: "6EFEBA3A1C1B1105"
+					item: "spartanweaponry:iron_longsword"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 250"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0785D612282C2E65"
+					silent: true
+					title: "+250 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5336AF40C5FBE1F2"
+					stat: "minecraft:mob_kills"
+					title: "Defeat five hundred monsters"
+					type: "stat"
+					value: 500
+				}
+			]
+			title: "Monster Hunter"
+			x: 1.5d
+			y: 5.25d
+		}
+		{
+			dependencies: ["67959C699393E730"]
+			description: ["Waystones are the Couriers' trade secret, and ten of them is a whole network. The Field Guide says that someone who knows ten waystones can get home from anywhere."]
+			icon: "waystones:waystone"
+			id: "67B0CC62615667C0"
+			rewards: [
+				{
+					count: 4
+					id: "76143EC0DCF884E3"
+					item: "waystones:warp_scroll"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "13B2498A2EE28755"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "763BBAE9EE101D12"
+					stage: "fq.milestones.waystones_10.waystones0"
+					title: "Attune ten different waystones"
+					type: "gamestage"
+				}
+			]
+			title: "Every Road Home"
+			x: 0.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3661C4BA0AE508E0"]
+			description: ["Old Edda keeps a ledger of the gravestones she has seen emptied. If you ever fall, open your own and carry on, and she'll add a tick beside your name."]
+			icon: "gravestone:gravestone"
+			id: "25ABD3A5339D9DD9"
+			rewards: [
+				{
+					id: "590F44FD6410F11B"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 60"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "38F5B737C4EB199B"
+					silent: true
+					title: "+60 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "278A2626B6A12BCC"
+					title: "I recovered my belongings from my own gravestone"
+					type: "checkmark"
+				}
+			]
+			title: "Not Today"
+			x: 0.0d
+			y: 3.75d
+		}
+		{
+			dependencies: ["78A4F31AD155C96E"]
+			description: ["Olsen and Odile agree on one thing: a backpack that holds more is worth the gold. Upgrade yours to gold or diamond."]
+			icon: "sophisticatedbackpacks:gold_backpack"
+			id: "37AF375C5B32FD13"
+			rewards: [
+				{
+					id: "16997117014A56DD"
+					item: "sophisticatedbackpacks:stack_upgrade_tier_1"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 250"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "0B0DC681BC4E3D1A"
+					silent: true
+					title: "+250 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1FDD51FD013EC1C1"
+					item: "sophisticatedbackpacks:gold_backpack"
+					title: "Upgrade a backpack to gold or diamond"
+					type: "item"
+				}
+			]
+			title: "Bigger on the Inside"
+			x: 0.0d
+			y: 5.25d
+		}
+	]
+	subtitle: ["Small pats on the back for the long road"]
+	title: "Milestones"
+}

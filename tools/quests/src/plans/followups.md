@@ -43,6 +43,12 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - village_errands:the_abandoned_camp: needs clue searching and tracks; written as a checkmark and an encounter
 - village_errands:runaway_horse: needs riding a horse home and stabling it; written as tame plus a checkmark
 - village_errands:map_the_region: needs copying a master map; written as crafting a map
+- milestones:enchant_30: needs enchanting an item at level 30; written as reaching level 30
+- milestones:skill_level_10: needs a Pufferfish skill level; written as a checkmark
+- milestones:mine_1000: needs a blocks-mined count (Ultimine included); written as carrying 1000 cobblestone
+- milestones:back_from_grave: needs recovering from your own gravestone; written as a checkmark
+- milestones:backpack_upgrade: needs gold or diamond (either); written as the gold backpack only
+- milestones:fly_10km: needs elytra or aircraft flight; written as the aviate stat (aircraft may not count)
 
 ## Links to restore
 
