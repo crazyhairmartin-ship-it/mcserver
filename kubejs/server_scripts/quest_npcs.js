@@ -150,7 +150,8 @@ function npcFindSpotAround(player, cx, cz, minDist, maxDist) {
     let dist = minDist + Math.random() * (maxDist - minDist)
     let x = Math.floor(cx + Math.cos(angle) * dist)
     let z = Math.floor(cz + Math.sin(angle) * dist)
-    for (let dy = 6; dy >= -6; dy--) {
+    let reach = maxDist > 20 ? 14 : 6   // farther spots need more height range on uneven ground
+    for (let dy = reach; dy >= -reach; dy--) {
       let y = Math.floor(player.y) + dy
       let feet = level.getBlock(x, y, z)
       let head = level.getBlock(x, y + 1, z)
@@ -163,6 +164,31 @@ function npcFindSpotAround(player, cx, cz, minDist, maxDist) {
     }
   }
   return null
+}
+
+// Quest mobs to fight are tougher and bigger than wild ones: boost = {health, damage, speed: multipliers, scale: a
+// number or [min, max]} from the generator. Applied with attribute modifiers (mobs without an attribute just skip it),
+// then healed to the new maximum, then sized with Pehkui (no easing, so they never visibly grow).
+const NPC_BOOST_IDS = { health: '6f9a1d3e-0b1a-4c5e-9f1e-1a2b3c4d5e01', damage: '6f9a1d3e-0b1a-4c5e-9f1e-1a2b3c4d5e02',
+  speed: '6f9a1d3e-0b1a-4c5e-9f1e-1a2b3c4d5e03' }
+const NPC_BOOST_ATTRS = { health: 'minecraft:generic.max_health', damage: 'minecraft:generic.attack_damage',
+  speed: 'minecraft:generic.movement_speed' }
+
+function npcBoost(server, selector, boost) {
+  if (!boost) return
+  let run = cmd => server.runCommandSilent('execute as ' + selector + ' run ' + cmd)
+  Object.keys(NPC_BOOST_ATTRS).forEach(k => {
+    let m = Number(boost[k] || 1)
+    if (m != 1) run('attribute @s ' + NPC_BOOST_ATTRS[k] + ' modifier add ' + NPC_BOOST_IDS[k] + ' fq_quest_' + k + ' '
+      + (m - 1) + ' multiply_base')
+  })
+  run('data merge entity @s {Health:100000f}')
+  let sc = boost.scale
+  if (sc && typeof sc == 'object') sc = Number(sc[0]) + Math.random() * (Number(sc[1]) - Number(sc[0]))
+  if (sc && Number(sc) != 1) {
+    run('scale delay set pehkui:base 0 @s')
+    run('scale set pehkui:base ' + Number(sc).toFixed(2) + ' @s')
+  }
 }
 
 function npcConditionsMet(player, where) {
@@ -221,6 +247,7 @@ function npcTickEncounters(player) {
     spawned.addTag('fq_enc.' + enc.stage)
     spawned.addTag('fq_owner.' + String(player.uuid))
     spawned.spawn()
+    if (enc.then == 'kill') npcBoost(player.server, String(spawned.uuid), enc.boost)
     let newRec = new $NpcCompoundTag()
     newRec.putString('uuid', String(spawned.uuid))
     newRec.putLong('until', now + enc.minutes * 60 * 1000)
@@ -642,7 +669,7 @@ function npcTickSpawns(player) {
       rec.putLong('next', now + NPC_SPAWN_GAP_MS)
       return
     }
-    let nbt = { Tags: [tag] }
+    let nbt = { Tags: [tag, 'fq_new'] }
     if (sp.name) nbt.CustomName = JSON.stringify({ text: sp.name })
     if (sp.glow) nbt.Glowing = true
     if (sp.health) {
@@ -650,10 +677,12 @@ function npcTickSpawns(player) {
       nbt.Health = sp.health
     }
     for (let i = 0; i < sp.wave; i++) {
-      let spot = npcFindSpot(player, 6, 12)
+      let spot = npcFindSpot(player, 16, 28)
       if (!spot) continue
       server.runCommandSilent('execute in ' + player.level.dimension + ' run summon ' + sp.entity + ' ' + spot.x + ' '
         + spot.y + ' ' + spot.z + ' ' + JSON.stringify(nbt))
+      npcBoost(server, '@e[tag=fq_new]', sp.boost)
+      server.runCommandSilent('tag @e[tag=fq_new] remove fq_new')
     }
     rec.putLong('next', now + NPC_SPAWN_GAP_MS)
   })

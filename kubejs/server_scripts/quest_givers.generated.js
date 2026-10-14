@@ -87,6 +87,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": true,
+    "boost": null,
     "task_id": "3B013FE38A04943B",
     "requires": [],
     "quest_id": "2B39666FF280C4A5",
@@ -130,6 +131,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -212,6 +214,15 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
+    "boost": {
+      "health": 1.5,
+      "damage": 1.25,
+      "speed": 1.0,
+      "scale": [
+        1.0,
+        1.2
+      ]
+    },
     "task_id": "03AADC37055738AC",
     "requires": [],
     "quest_id": "1BC2581969526C71",
@@ -238,6 +249,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -258,10 +270,16 @@ global.QUEST_GIVERS = [
     ],
     "name": "The Iceologer",
     "distance": [
-      8,
-      16
+      24,
+      40
     ],
     "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
     "health": null,
     "glow": true,
     "where": {
@@ -287,10 +305,16 @@ global.QUEST_GIVERS = [
     "prev_tasks": [],
     "name": "The Trickster",
     "distance": [
-      8,
-      16
+      24,
+      40
     ],
     "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
     "health": null,
     "glow": false,
     "where": {
@@ -337,6 +361,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": true,
+    "boost": null,
     "task_id": "06BC17686935B003",
     "requires": [],
     "quest_id": "59C4414FBC2456AA",
@@ -380,6 +405,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {
@@ -409,6 +435,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {
@@ -542,6 +569,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -703,10 +731,16 @@ global.QUEST_GIVERS = [
     ],
     "name": "Drowned",
     "distance": [
-      8,
-      16
+      24,
+      40
     ],
     "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
     "health": 20,
     "glow": false,
     "where": {},
@@ -731,10 +765,16 @@ global.QUEST_GIVERS = [
     ],
     "name": "Drowned",
     "distance": [
-      8,
-      16
+      24,
+      40
     ],
     "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
     "health": 20,
     "glow": false,
     "where": {},
@@ -1182,6 +1222,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -1605,6 +1646,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -1633,6 +1675,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -1662,6 +1705,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -1755,6 +1799,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -1873,10 +1918,16 @@ global.QUEST_GIVERS = [
     ],
     "name": "The Bandit",
     "distance": [
-      8,
-      16
+      24,
+      40
     ],
     "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
     "health": 40,
     "glow": true,
     "where": {},
@@ -1946,6 +1997,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -1995,6 +2047,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -2069,6 +2122,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -2276,6 +2330,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -2649,6 +2704,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -2674,6 +2730,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -2735,6 +2792,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -2844,6 +2902,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -3023,6 +3082,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {
@@ -3053,6 +3113,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {
@@ -3084,6 +3145,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {
@@ -3129,6 +3191,15 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
+    "boost": {
+      "health": 1.5,
+      "damage": 1.25,
+      "speed": 1.0,
+      "scale": [
+        1.0,
+        1.2
+      ]
+    },
     "task_id": "6B2EEF1E81639088",
     "requires": [],
     "quest_id": "2188906CAFC0AE48",
@@ -3157,6 +3228,15 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
+    "boost": {
+      "health": 1.5,
+      "damage": 1.25,
+      "speed": 1.0,
+      "scale": [
+        1.0,
+        1.2
+      ]
+    },
     "task_id": "33215AC9C3142999",
     "requires": [],
     "quest_id": "2188906CAFC0AE48",
@@ -3182,6 +3262,15 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
+    "boost": {
+      "health": 1.5,
+      "damage": 1.25,
+      "speed": 1.0,
+      "scale": [
+        1.0,
+        1.2
+      ]
+    },
     "task_id": "5D91792892C6923A",
     "requires": [],
     "quest_id": "0F9649EDAAD9CD0F",
@@ -3224,6 +3313,15 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
+    "boost": {
+      "health": 1.5,
+      "damage": 1.25,
+      "speed": 1.0,
+      "scale": [
+        1.0,
+        1.2
+      ]
+    },
     "task_id": "74DC2B16E97C330D",
     "requires": [],
     "quest_id": "133EBE77FE89381D",
@@ -3251,6 +3349,15 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
+    "boost": {
+      "health": 1.5,
+      "damage": 1.25,
+      "speed": 1.0,
+      "scale": [
+        1.0,
+        1.2
+      ]
+    },
     "task_id": "563C3C142B3DED9C",
     "requires": [],
     "quest_id": "133EBE77FE89381D",
@@ -3273,10 +3380,16 @@ global.QUEST_GIVERS = [
     "prev_tasks": [],
     "name": "The Mauler",
     "distance": [
-      8,
-      16
+      24,
+      40
     ],
     "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
     "health": 40,
     "glow": true,
     "where": {
@@ -3427,6 +3540,15 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
+    "boost": {
+      "health": 1.5,
+      "damage": 1.25,
+      "speed": 1.0,
+      "scale": [
+        1.0,
+        1.2
+      ]
+    },
     "task_id": "375E7CC694CECD13",
     "requires": [],
     "quest_id": "28D94C2FF4C50692",
@@ -3456,6 +3578,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {
@@ -3507,10 +3630,16 @@ global.QUEST_GIVERS = [
     ],
     "name": "Camp Grizzly",
     "distance": [
-      8,
-      16
+      24,
+      40
     ],
     "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
     "health": 60,
     "glow": true,
     "where": {},
@@ -3539,6 +3668,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -3855,6 +3985,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": true,
+    "boost": null,
     "task_id": "1B0BD0A5A8F500CE",
     "requires": [],
     "quest_id": "17D6AACC39DA1FF4",
@@ -4061,6 +4192,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {
@@ -4410,6 +4542,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {
@@ -4655,10 +4788,16 @@ global.QUEST_GIVERS = [
     "prev_tasks": [],
     "name": "The Pyromancer",
     "distance": [
-      8,
-      16
+      24,
+      40
     ],
     "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
     "health": 60,
     "glow": false,
     "where": {},
@@ -4725,6 +4864,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {
@@ -4805,6 +4945,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},
@@ -4982,6 +5123,15 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
+    "boost": {
+      "health": 1.5,
+      "damage": 1.25,
+      "speed": 1.0,
+      "scale": [
+        1.0,
+        1.2
+      ]
+    },
     "task_id": "138D27AE967571D0",
     "requires": [],
     "quest_id": "70A91DD5D9F62E0F",
@@ -5013,6 +5163,7 @@ global.QUEST_GIVERS = [
       16
     ],
     "minutes": 20.0,
+    "boost": null,
     "health": null,
     "glow": false,
     "where": {},

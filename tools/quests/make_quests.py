@@ -440,7 +440,8 @@ def build_encounter(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, proble
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.enc{n}', 'type': 'encounter',
              'then': then, 'lines': spec.get('lines', []), 'arrive': spec.get('arrive', ''), 'requires': [],
              'quest_id': quest_id, 'prev_tasks': list(prev_tasks), 'name': spec.get('name', ''),
-             'distance': spec.get('distance', [8, 16]), 'minutes': float(spec.get('minutes', 20)),
+             'distance': spec.get('distance', [24, 40] if then == 'kill' else [8, 16]),
+             'minutes': float(spec.get('minutes', 20)), 'boost': build_boost(spec, then == 'kill', where, problems),
              'health': spec.get('health'), 'glow': bool(spec.get('glow', False)), 'where': {}}
     if 'character' in spec:
         char = ctx['characters'].get(spec['character'])
@@ -737,6 +738,25 @@ def build_spellkill(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, proble
     return task, entry
 
 
+# quest mobs to fight are tougher and bigger than wild ones (Dylan, 2026-10-14); "boost" on an encounter or spawn
+# overrides: {"health": 2, "damage": 1.5, "speed": 1.0, "scale": 1.25}, or false for none
+BOOST_QUARRY = {'health': 2.0, 'damage': 1.5, 'speed': 1.0, 'scale': 1.25}
+BOOST_WAVE = {'health': 1.5, 'damage': 1.25, 'speed': 1.0, 'scale': [1.0, 1.2]}
+
+
+def build_boost(spec, default_on, where, problems, wave=False):
+    b = spec.get('boost', None)
+    if b is False or (b is None and not default_on):
+        return None
+    out = dict(BOOST_WAVE if wave else BOOST_QUARRY)
+    if isinstance(b, dict):
+        for k, v in b.items():
+            if k not in out:
+                problems.error(where, f'"boost" takes health, damage, speed and scale, not {k!r}')
+            out[k] = v
+    return out
+
+
 def build_spawn(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     """A kill task's "spawn": when the player reaches "at" while the step is open, the enemies spawn around them in
     waves of "wave" (default up to 6) until the kill count is done; leftovers vanish when they leave. "ensure": true
@@ -754,6 +774,7 @@ def build_spawn(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.spawn{n}', 'type': 'spawn',
              'entity': t['kill'], 'at': at, 'wave': int(spec.get('wave', min(count, 6))), 'name': spec.get('name', ''),
              'health': spec.get('health'), 'glow': bool(spec.get('glow', False)), 'ensure': bool(spec.get('ensure', False)),
+             'boost': build_boost(spec, not spec.get('ensure', False), where, problems, wave=True),
              'task_id': fid('task', chapter, qid, str(n)), 'requires': [], 'quest_id': quest_id,
              'prev_tasks': list(prev_tasks)}
     return entry
