@@ -691,6 +691,29 @@ def build_waystones(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, proble
     return task, entry
 
 
+def build_cast(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "cast" task (Iron's Spells): cast spells while the step is open. {"cast": "any", "count": 100},
+    {"cast": "irons_spellbooks:firebolt", "count": 20} or {"cast": {"school": "irons_spellbooks:fire"}, "count": 20}."""
+    spec = t['cast']
+    if isinstance(spec, dict):
+        school = spec.get('school', '')
+        spell = ''
+        if not school:
+            problems.error(where, '"cast" as an object needs "school", like irons_spellbooks:fire')
+    else:
+        school, spell = '', '' if spec == 'any' else str(spec)
+        if spell and ':' not in spell:
+            problems.error(where, f'spell id {spell!r} needs a namespace, like irons_spellbooks:{spell}')
+    count = int(t.get('count', 1))
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.cast{n}', 'type': 'cast',
+             'spell': spell, 'school': school, 'count': count, 'requires': [], 'quest_id': quest_id,
+             'prev_tasks': list(prev_tasks)}
+    what = spell.split(':')[-1].replace('_', ' ') if spell else (school.split(':')[-1] + ' spells' if school else 'spells')
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', f'Cast {what} {count} time{"s" if count > 1 else ""}' if spell else f'Cast {count} {what}')}
+    return task, entry
+
+
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
     """A "unique drop" task: while the quest is open, the listed mobs can drop a quest item (or, with "fishing" in "from",
     it can be fished up); the task is to bring it."""
@@ -981,6 +1004,11 @@ def main():
                 elif isinstance(t, dict) and 'timed' in t:
                     task, entry = build_timed(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
                                               problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and 'cast' in t:
+                    task, entry = build_cast(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
+                                             problems)
                     if entry:
                         givers.append(entry)
                 elif isinstance(t, dict) and 'waystones' in t:

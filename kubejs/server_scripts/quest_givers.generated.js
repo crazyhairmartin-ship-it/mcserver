@@ -2910,6 +2910,20 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "magic:first_spellbook",
+    "stage": "fq.magic.first_spellbook.cast2",
+    "type": "cast",
+    "spell": "",
+    "school": "",
+    "count": 10,
+    "requires": [],
+    "quest_id": "06999C12176240CD",
+    "prev_tasks": [
+      "268CC0E75583B7FD",
+      "6489FE291061FA56"
+    ]
+  },
+  {
     "quest": "magic:the_study",
     "stage": "fq.magic.the_study.build0",
     "type": "build",
@@ -2971,6 +2985,20 @@ global.QUEST_GIVERS = [
     "where": {},
     "entity": "irons_spellbooks:pyromancer",
     "profession": ""
+  },
+  {
+    "quest": "magic:school_of_fire",
+    "stage": "fq.magic.school_of_fire.cast2",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:fire",
+    "count": 20,
+    "requires": [],
+    "quest_id": "37D8CE7836BA8E4D",
+    "prev_tasks": [
+      "3A12C01BB6DD9F77",
+      "642238B7573A4ED3"
+    ]
   },
   {
     "quest": "magic:mangrove_hut",
@@ -3096,6 +3124,17 @@ global.QUEST_GIVERS = [
     "where": {},
     "entity": "minecraft:villager",
     "profession": "minecraft:librarian"
+  },
+  {
+    "quest": "magic:mana_milestone",
+    "stage": "fq.magic.mana_milestone.cast0",
+    "type": "cast",
+    "spell": "",
+    "school": "",
+    "count": 100,
+    "requires": [],
+    "quest_id": "6CF10DAB4DA641F9",
+    "prev_tasks": []
   },
   {
     "quest": "skill_taming:stray_wolf",

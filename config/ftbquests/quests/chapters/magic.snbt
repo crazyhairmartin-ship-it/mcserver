@@ -218,11 +218,6 @@
 					title: "Talk to them"
 					type: "gamestage"
 				}
-				{
-					id: "757C4D6D1A3D9FDD"
-					title: "I traded for a healing potion"
-					type: "checkmark"
-				}
 			]
 			title: "The Priest's Blessing"
 			x: 1.5d
@@ -347,8 +342,9 @@
 				}
 				{
 					id: "205717012AC6E439"
-					title: "I cast my first spell ten times at the dummy"
-					type: "checkmark"
+					stage: "fq.magic.first_spellbook.cast2"
+					title: "Cast your first spell ten times"
+					type: "gamestage"
 				}
 			]
 			title: "A Book of One's Own"
@@ -506,11 +502,10 @@
 					type: "item"
 				}
 				{
-					entity: "minecraft:zombie"
 					id: "61AD5BE3ABEB060E"
-					title: "Set twenty mobs alight"
-					type: "kill"
-					value: 20L
+					stage: "fq.magic.school_of_fire.cast2"
+					title: "Cast fire spells twenty times"
+					type: "gamestage"
 				}
 			]
 			title: "School of Fire"
@@ -750,8 +745,9 @@
 			tasks: [
 				{
 					id: "7CD8DFA543BBEA14"
-					title: "I cast a hundred spells"
-					type: "checkmark"
+					stage: "fq.magic.mana_milestone.cast0"
+					title: "Cast a hundred spells"
+					type: "gamestage"
 				}
 			]
 			title: "A Hundred Sparks"

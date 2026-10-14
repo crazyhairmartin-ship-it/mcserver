@@ -52,8 +52,7 @@ Q = [
                             "Something is stirring beneath the old graves. The dead are restless.",
                             "Sister Agathe hunts them. She keeps to the crypt under Reece's church, when she's "
                             "not on the road.",
-                            "Take a healing draught, for the road. Notch's blessing on you."]},
-                 {"checkmark": "I traded for a healing potion"}],
+                            "Take a healing draught, for the road. Notch's blessing on you."]}],
           rewards=[reward_item("irons_spellbooks:greater_healing_potion"), skill("magic", 100)]),
 
     quest("first_ink", "Ink and Parchment", icon="irons_spellbooks:inscription_table", after=["the_order_calls"],
@@ -74,7 +73,7 @@ Q = [
           text=["Bind a copper spellbook and inscribe your first spell into it, then cast it ten times at a target "
                 "dummy."],
           tasks=[item("irons_spellbooks:copper_spell_book", crafted=True), item("dummmmmmy:target_dummy"),
-                 {"checkmark": "I cast my first spell ten times at the dummy"}],
+                 {"cast": "any", "count": 10, "title": "Cast your first spell ten times"}],
           rewards=[reward_item("irons_spellbooks:mana_ring"), skill("magic", 160)]),
 
     quest("the_study", "The Study", icon="irons_spellbooks:wisewood_bookshelf", after=["first_spellbook"],
@@ -108,7 +107,7 @@ Q = [
     quest("school_of_fire", "School of Fire", icon="irons_spellbooks:fire_rune", after=["pyromancer_tower"],
           text=["Craft a fire rune, scribe firebolt onto a scroll, and set twenty mobs alight with it."],
           tasks=[item("irons_spellbooks:fire_rune", crafted=True), item("irons_spellbooks:scroll_fire"),
-                 {"kill": "minecraft:zombie", "count": 20, "title": "Set twenty mobs alight"}],
+                 {"cast": {"school": "irons_spellbooks:fire"}, "count": 20, "title": "Cast fire spells twenty times"}],
           rewards=[reward_item("irons_spellbooks:fireward_ring"), skill("magic", 200)]),
 
     quest("mangrove_hut", "The Apothecarist", icon="irons_spellbooks:apothecarist_spawn_egg", after=["the_priest"],
@@ -164,7 +163,7 @@ Q = [
 
     quest("mana_milestone", "A Hundred Sparks", icon="irons_spellbooks:mana_upgrade_orb", after=["school_of_fire"],
           text=["Cast a hundred spells, of any school. Orrin says it's how you learn where your mana runs out."],
-          tasks=[{"checkmark": "I cast a hundred spells"}],
+          tasks=[{"cast": "any", "count": 100, "title": "Cast a hundred spells"}],
           rewards=[reward_item("irons_spellbooks:mana_upgrade_orb"), skill("magic", 280)]),
 ]
 

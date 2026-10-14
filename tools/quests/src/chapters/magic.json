@@ -168,9 +168,6 @@
             "Sister Agathe hunts them. She keeps to the crypt under Reece's church, when she's not on the road.",
             "Take a healing draught, for the road. Notch's blessing on you."
           ]
-        },
-        {
-          "checkmark": "I traded for a healing potion"
         }
       ],
       "rewards": [
@@ -266,7 +263,9 @@
           "item": "dummmmmmy:target_dummy"
         },
         {
-          "checkmark": "I cast my first spell ten times at the dummy"
+          "cast": "any",
+          "count": 10,
+          "title": "Cast your first spell ten times"
         }
       ],
       "rewards": [
@@ -409,9 +408,11 @@
           "item": "irons_spellbooks:scroll_fire"
         },
         {
-          "kill": "minecraft:zombie",
+          "cast": {
+            "school": "irons_spellbooks:fire"
+          },
           "count": 20,
-          "title": "Set twenty mobs alight"
+          "title": "Cast fire spells twenty times"
         }
       ],
       "rewards": [
@@ -634,7 +635,9 @@
       ],
       "tasks": [
         {
-          "checkmark": "I cast a hundred spells"
+          "cast": "any",
+          "count": 100,
+          "title": "Cast a hundred spells"
         }
       ],
       "rewards": [

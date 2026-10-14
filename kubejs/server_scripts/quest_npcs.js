@@ -65,7 +65,7 @@ ServerEvents.commandRegistry(event => {
       target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
       tags.forEach(t => target.removeTag(t))
       let data = target.persistentData
-      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient'].forEach(k => data.remove(k))
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast'].forEach(k => data.remove(k))
       server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
       ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
       return 1
@@ -578,6 +578,27 @@ global.fqOnBred = (player, child) => {
       player.tell(Text.yellow('Bred. Quest updated.'))
     } else {
       counts.putInt(b.stage, n)
+    }
+  })
+}
+
+// ---- cast tasks ----
+// Iron's Spells casts (startup_scripts/quest_casting.js) count toward open "cast" steps: any spell, one spell, or a
+// school's spells.
+
+global.fqOnCast = (player, spellId, school) => {
+  let counts = npcData(player, 'fqCast')
+  npcEntries('cast').forEach(c => {
+    if (player.tags.contains(c.stage) || (c.spell && c.spell != spellId) || (c.school && c.school != school)
+      || !questOpen(player, c)) return
+    let n = counts.getInt(c.stage) + 1
+    if (n >= c.count) {
+      counts.remove(c.stage)
+      questAddStage(player, c.stage)
+      player.tell(Text.yellow('Quest updated.'))
+    } else {
+      counts.putInt(c.stage, n)
+      if (c.count >= 10 && n % Math.max(1, Math.floor(c.count / 10)) == 0) player.setStatusMessage(Text.gray('Spells cast: ' + n + ' / ' + c.count))
     }
   })
 }

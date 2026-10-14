@@ -110,7 +110,7 @@ hash = "62ba0917b9a55387719b7a2e3d82ac58ae0546149ec510281c9d66a2add08318"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/magic.snbt"
-hash = "b19cedfd763d7bf6f05813ab54f70c0f82b86873cd2e99923e3a370fa68988eb"
+hash = "2a574952c6d5115b86525c65b2c37cc9aab48d9dbeb9b05f9c0f5a4daeba7f5e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
@@ -2765,7 +2765,7 @@ hash = "81238517f42d04aa513d472ee44c4eb212593671c2e57aa3273f67d942e11863"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "b5b7e5b549038881db6807043c3e413ceaeeaecffc4270b7aca8dc92408f4397"
+hash = "df60ff28bfa46a0f2e14fb3d9fba2dfb83b59fbbf3a491da6ea282648ff52843"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2773,7 +2773,7 @@ hash = "26bffec8ccf318f1f517c90a964dc702443d7786da300888ec48b01e44ab5d0e"
 
 [[files]]
 file = "kubejs/server_scripts/quest_npcs.js"
-hash = "25a0fe4e46221c4aa3bba995c04177aede1f85effb2681b8f9cb7a146b621d2b"
+hash = "373c6ddc9eede26d01a48be77665e2d59a9a6f2a3be6f4afbae00e744c66b766"
 
 [[files]]
 file = "kubejs/server_scripts/quest_photos.js"
@@ -2838,6 +2838,10 @@ hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
 [[files]]
 file = "kubejs/startup_scripts/quest_breeding.js"
 hash = "68f8a25be434c5c617ec21c9d0c675da8bfa07bf2e6a7a00852aabbd6a0b8f14"
+
+[[files]]
+file = "kubejs/startup_scripts/quest_casting.js"
+hash = "8a743d15ab49c06a21aa2e7f6b28469a4b4f8e4aa986ee3d2d748bf71961c21a"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_fishing.js"

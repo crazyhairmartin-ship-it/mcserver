@@ -28,14 +28,10 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_crafting:megatorch: needs a night with no spawns in the ring; written as a build and a timed hold
 - skill_crafting:painted_signs: needs repainting signs and hanging wares; written as dye bottles, signs and a checkmark
 - magic:reroll_the_fates: needs a check for a book with two named enchantments; written as carrying an enchanted book and a checkmark
-- magic:the_priest: needs trading with the priest for a healing potion; written as talking to a priest and a checkmark
-- magic:first_spellbook: needs inscribing a spell and casting it ten times at a dummy; written as crafting the book, carrying a dummy and a checkmark
 - magic:pyromancers_duel: needs a spells-only duel that ends in a yield; written as a kill encounter
-- magic:school_of_fire: needs setting twenty mobs alight with firebolt; written as twenty zombie kills
 - magic:the_poisoned_traveller: needs a timed brewing puzzle with a sequence of cures; written as an encounter and a checkmark
 - magic:witch_ingredients: needs a bottle of the witch's own brew; written as a quest drop from witches
 - magic:wizard_tower: needs a warded door puzzle; written as a checkmark
-- magic:mana_milestone: needs a count of spells cast; written as a checkmark
 - small_favours:sf_witch_bargain: needs a brewed pot of tea judged by the witch; written as the kettle crafted, black tea consumed and talking to a witch
 - small_favours:sf_the_crossing: needs holding off drowned until the jetty on a boat crossing; written as two drowned kill encounters then reaching a village
 

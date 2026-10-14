@@ -91,7 +91,7 @@ Also supported (see `tools/quests/README.md`): **escorts** (encounter `"then": "
 usually with `waves`), **building** (a `build` task), **puzzles players change** (`protect` with `"reset_minutes"`),
 and **character shops** (give the character at the end of each chain one or two themed deals in pack.json).
 
-Runs and deliveries are a `timed` goal to a `structure` or `place` with `"away"` (distance from the start), never a sprint stat. Attuning waystones is a `waystones` task. Taming and breeding have their own tasks (`tame`, `breed`); use them, never a checkmark or the generic tame advancement. Photos are supported too: a `photo` task (Camerapture camera; reward the camera, `camerapture:camera`, in the first
+Runs and deliveries are a `timed` goal to a `structure` or `place` with `"away"` (distance from the start), never a sprint stat. Attuning waystones is a `waystones` task. Spellcasting is a `cast` task (Iron's Spells is the only magic mod; there is no Ars Nouveau). Taming and breeding have their own tasks (`tame`, `breed`); use them, never a checkmark or the generic tame advancement. Photos are supported too: a `photo` task (Camerapture camera; reward the camera, `camerapture:camera`, in the first
 photo quest). Some plan entries may still need mechanics the generator doesn't have: anything the README doesn't list. **Write the quest anyway** with the nearest supported tasks (a
 `checkmark` for "solve the puzzle", a `kill` count for a defence, an `observe` or `structure` for "find it"), so the
 chain stays whole and playable. Then add one line per quest to `tools/quests/src/plans/followups.md` under "Engine needed":
