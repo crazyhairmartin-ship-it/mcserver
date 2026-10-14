@@ -74,8 +74,12 @@ ServerEvents.commandRegistry(event => {
       // face the way the player faces: /tp sets the body and head rotation (KubeJS can't reach setYRot here)
       ctx.source.server.runCommandSilent('tp ' + entity.uuid + ' ' + player.x + ' ' + player.y + ' ' + player.z
         + ' ' + player.yaw + ' 0')
-      // pack.json "scale": Pehkui size (Dagna is short); it's saved on the entity, so it survives restarts
-      if (info.scale) ctx.source.server.runCommandSilent('scale set pehkui:base ' + info.scale + ' ' + entity.uuid)
+      // pack.json "scale": Pehkui size (Dagna is short). Pehkui doesn't save base scale unless told to persist.
+      // The change eases in on the entity's next ticks (nothing ticks while the server is empty).
+      if (info.scale) {
+        ctx.source.server.runCommandSilent('scale set pehkui:base ' + info.scale + ' ' + entity.uuid)
+        ctx.source.server.runCommandSilent('scale persist set pehkui:base true ' + entity.uuid)
+      }
       player.tell(Text.green('Placed ' + info.name + '. Place again to move them.'))
       return 1
     })))
