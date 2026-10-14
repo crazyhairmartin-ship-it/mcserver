@@ -182,8 +182,9 @@ finished, and for a quest with a `giver` or `discover`, its first task done.
 
 How it works: accepting adds the player tag `fq.<chapter>.<quest>`, and the quest's hidden first task waits for it
 (FTB Quests reads player tags as stages). `talk` tasks add `fq.<chapter>.<quest>.talk<n>`. A quest that a giver
-`requires` gets an invisible reward adding `fq.<chapter>.<quest>.done`. To reset someone's quest giver state:
-`/tag <player> remove fq.<chapter>.<quest>` (and change their progress with `/ftbquests change_progress`). The
+`requires` gets an invisible reward adding `fq.<chapter>.<quest>.done`. To reset someone completely (testing): `/questreset <player>` (op) clears their FTB progress, every `fq.` tag, pending
+offers, encounters, challenges and quest drops. For one quest: `/tag <player> remove fq.<chapter>.<quest>` (and change
+their progress with `/ftbquests change_progress`). The
 behaviour lives in `kubejs/server_scripts/quest_givers.js`.
 
 ### Organisations, pools and characters (pack.json)

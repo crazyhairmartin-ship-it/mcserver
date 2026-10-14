@@ -53,6 +53,23 @@ function npcStatValue(player, stat) {
 
 ServerEvents.commandRegistry(event => {
   let { commands: Commands, arguments: Arguments } = event
+  // /questreset <player> (ops): back to a fresh start for testing: FTB progress, quest tags, offers, encounters,
+  // challenges and quest drops all cleared
+  event.register(Commands.literal('questreset')
+    .requires(src => src.hasPermission(2))
+    .then(Commands.argument('player', Arguments.PLAYER.create(event)).executes(ctx => {
+      let target = Arguments.PLAYER.getResult(ctx, 'player')
+      let server = ctx.source.server
+      server.runCommandSilent('ftbquests change_progress ' + target.username + ' reset 1')
+      let tags = []
+      target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
+      tags.forEach(t => target.removeTag(t))
+      let data = target.persistentData
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt'].forEach(k => data.remove(k))
+      server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
+      ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
+      return 1
+    })))
   event.register(Commands.literal('questnpc')
     .requires(src => src.hasPermission(2))
     .then(Commands.literal('place').then(Commands.argument('id', Arguments.STRING.create(event)).executes(ctx => {
