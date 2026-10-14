@@ -63,6 +63,8 @@ ServerEvents.commandRegistry(event => {
         ctx.source.sendSystemMessage(Text.red('No character "' + id + '" (tools/quests/src/pack.json "characters")'))
         return 0
       }
+      // placing again moves the character: the old one (in loaded chunks) goes first
+      ctx.source.server.runCommandSilent('kill @e[tag=fq_npc.' + id + ']')
       let entity = player.level.createEntity(info.entity || 'minecraft:villager')
       entity.setPos(player.x, player.y, player.z)
       npcDress(entity, info.name, info.profession, { Invulnerable: true, NoAI: true, Silent: true })
@@ -72,7 +74,7 @@ ServerEvents.commandRegistry(event => {
       // face the way the player faces: /tp sets the body and head rotation (KubeJS can't reach setYRot here)
       ctx.source.server.runCommandSilent('tp ' + entity.uuid + ' ' + player.x + ' ' + player.y + ' ' + player.z
         + ' ' + player.yaw + ' 0')
-      player.tell(Text.green('Placed ' + info.name + '.'))
+      player.tell(Text.green('Placed ' + info.name + '. Place again to move them.'))
       return 1
     })))
     .then(Commands.literal('remove').then(Commands.argument('id', Arguments.STRING.create(event)).executes(ctx => {

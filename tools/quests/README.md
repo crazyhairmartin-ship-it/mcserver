@@ -200,7 +200,8 @@ behaviour lives in `kubejs/server_scripts/quest_givers.js`.
 - **Pools:** quests sharing a `pool` are side quests. When a representative has no storyline quest for the
   player, it offers one pool quest the player can take now, chosen by that villager's own identity, so different
   villagers (and villages) offer different ones.
-- **Characters:** `/questnpc place <id>` (op) puts the character where you stand, facing your way: it never
+- **Characters:** `/questnpc place <id>` (op) puts the character where you stand, facing your way (placing again
+  moves them): it never
   despawns, doesn't move and can't be hurt. `/questnpc remove <id>` removes it (in loaded chunks), `/questnpc list`
   lists them. A plain right-click talks to a character; it never opens a trading screen, and says an `idle` line
   when it has nothing for you. Encounters can bring a character to the player instead.
