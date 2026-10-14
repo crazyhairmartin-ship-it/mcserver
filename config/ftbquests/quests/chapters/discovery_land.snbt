@@ -69,8 +69,8 @@
 			y: -24.75d
 		}
 		{
-			description: ["The bandit towers signal each other with bells. If both ring within a minute, the lookouts panic and flee, leaving their stash behind."]
-			icon: "minecraft:bell"
+			description: ["The bandits who hold these towers keep a ledger of every caravan they've robbed, torn into pages and hidden among their stores so no one man can sell them out. Fight off the archers and find the pages: the villages they robbed will want to know."]
+			icon: "minecraft:writable_book"
 			id: "31B5D0DF12491B9E"
 			invisible: true
 			invisible_until_tasks: 1
@@ -112,17 +112,14 @@
 					value: 6L
 				}
 				{
+					count: 3L
 					id: "1E9080772E5B6630"
-					title: "I rang the first tower's bell"
-					type: "checkmark"
-				}
-				{
-					id: "72AB133BE8905675"
-					title: "I rang the second bell within a minute"
-					type: "checkmark"
+					item: "kubejs:quest_bells_of_the_bandit_towers_1"
+					title: "Find the three ledger pages in the bandits' stores"
+					type: "item"
 				}
 			]
-			title: "Ring Both Bells"
+			title: "The Bandits' Ledger"
 			x: 0.0d
 			y: -23.25d
 		}
@@ -489,7 +486,7 @@
 			y: -14.25d
 		}
 		{
-			description: ["Shiraz Palace's treasury is sealed behind a riddle in tiles. Read the mosaics in each court and set the treasury's levers in the order they tell."]
+			description: ["Shiraz Palace kept a fire burning in every court, and the old scholars wrote that the treasury answers only to a palace whose fires are lit. Relight the dead court fires and search for the treasury's seal among the palace stores."]
 			icon: "minecraft:gold_block"
 			id: "15F185E6F6CD7A2B"
 			invisible: true
@@ -525,18 +522,15 @@
 				}
 				{
 					id: "05EC0FFCF5F7F28F"
-					title: "I read the mosaic in the first court"
-					type: "checkmark"
+					stage: "fq.discovery_land.palace_of_shiraz.use0"
+					title: "Relight three of the court fires"
+					type: "gamestage"
 				}
 				{
 					id: "29061FB4202147A0"
-					title: "I read the mosaic in the second court"
-					type: "checkmark"
-				}
-				{
-					id: "74FE24ACE7F6D900"
-					title: "I set the treasury's levers in the order the mosaics tell"
-					type: "checkmark"
+					item: "kubejs:quest_palace_of_shiraz_1"
+					title: "Find the treasury seal"
+					type: "item"
 				}
 			]
 			title: "The Palace Treasury"
@@ -673,7 +667,7 @@
 			y: -9.75d
 		}
 		{
-			description: ["An abandoned temple keeps the old order's altar intact. The inscriptions name four offerings that will open its reliquary."]
+			description: ["An abandoned temple of the old order still keeps its sacred fire pit. The inscriptions name four offerings to be burned there before the reliquary will open."]
 			icon: "minecraft:lapis_block"
 			id: "42EC142977978997"
 			invisible: true
@@ -752,8 +746,9 @@
 				}
 				{
 					id: "0819BDD8A65DCA8E"
-					title: "I laid the four offerings on the altar"
-					type: "checkmark"
+					stage: "fq.discovery_land.temple_of_the_old_order.use4"
+					title: "Burn the offerings at the temple's fire"
+					type: "gamestage"
 				}
 			]
 			title: "The Old Order's Temple"
@@ -970,7 +965,7 @@
 			y: -2.25d
 		}
 		{
-			description: ["The old manor's doors lock behind you, and the portraits move at night. Four keys are hidden behind the portraits, and the study holds the family's last letter."]
+			description: ["The old manor's doors lock behind you. The family who lived here hid four keys among the house's stores before they fled, and the last of them opens the study where their final letter waits."]
 			icon: "supplementaries:key"
 			id: "3C9944827995F07E"
 			invisible: true
@@ -1010,24 +1005,11 @@
 					type: "structure"
 				}
 				{
+					count: 4L
 					id: "605E95A24C82D6EE"
-					title: "I found the first key behind a portrait"
-					type: "checkmark"
-				}
-				{
-					id: "153B1CAC1826DBC7"
-					title: "I found the second key behind a portrait"
-					type: "checkmark"
-				}
-				{
-					id: "7D26D0ED1554FD5D"
-					title: "I found the third key behind a portrait"
-					type: "checkmark"
-				}
-				{
-					id: "5E380D435CA9E91A"
-					title: "I found the fourth key and opened the study"
-					type: "checkmark"
+					item: "kubejs:quest_old_manor_ghost_0"
+					title: "Find the family's four keys"
+					type: "item"
 				}
 			]
 			title: "The Old Manor"
@@ -1035,7 +1017,7 @@
 			y: -0.75d
 		}
 		{
-			description: ["An ancient temple sits on a mountain peak above the clouds. Its four braziers have been dark for centuries. Light them and watch the sun rise from the top."]
+			description: ["An ancient temple sits on a mountain peak above the clouds. The shepherds below say that once, four fires burned at its corners and the whole valley could see it. Bring fire back to the peak."]
 			icon: "grapplemod:grapplinghook"
 			id: "0586F4B195399D75"
 			invisible: true
@@ -1072,13 +1054,8 @@
 				{
 					id: "6C2E9A4E4771E608"
 					stage: "fq.discovery_land.temple_on_the_peak.build0"
-					title: "Light the four braziers"
+					title: "Set four fires burning at the temple"
 					type: "gamestage"
-				}
-				{
-					id: "4A79E2DE364F2FBC"
-					title: "I watched the sun rise from the top"
-					type: "checkmark"
 				}
 			]
 			title: "The Temple on the Peak"
@@ -1187,13 +1164,9 @@
 				}
 				{
 					id: "318CE40396872350"
-					title: "I climbed the blade to the hilt"
-					type: "checkmark"
-				}
-				{
-					id: "4F6F04AA1C52D57C"
-					title: "I found the forger's mark on the hilt"
-					type: "checkmark"
+					item: "kubejs:quest_warped_greatsword_0"
+					title: "Climb to the hilt and find the forger's mark"
+					type: "item"
 				}
 			]
 			title: "The Sword in the Hill"
@@ -1237,8 +1210,9 @@
 				}
 				{
 					id: "54E4B9B913592A26"
-					title: "I climbed the tower and rang the bell"
-					type: "checkmark"
+					stage: "fq.discovery_land.the_cathedral.use0"
+					title: "Climb the tower and ring the bell"
+					type: "gamestage"
 				}
 				{
 					id: "26478C4713B0B786"
@@ -1402,7 +1376,7 @@
 			y: 9.75d
 		}
 		{
-			description: ["The desert temple's tomb is sealed, and its corridors are trapped. Find the hidden levers, survive the pressure plates and open the pharaoh's vault."]
+			description: ["The desert temple's tomb is sealed, and its corridors are trapped. The builders left hidden switches for their own way in. Press them, mind the plates, and find what the pharaoh was buried with."]
 			icon: "minecraft:gold_block"
 			id: "2CEA8C6D7D49BEBA"
 			invisible: true
@@ -1452,18 +1426,15 @@
 				}
 				{
 					id: "409793AF3B816EED"
-					title: "I found the hidden levers"
-					type: "checkmark"
+					stage: "fq.discovery_land.pharaohs_vault.use0"
+					title: "Find and press three hidden switches"
+					type: "gamestage"
 				}
 				{
 					id: "14AB908770E7B929"
-					title: "I crossed the pressure plates unharmed"
-					type: "checkmark"
-				}
-				{
-					id: "06DAE2363B29F09C"
-					title: "I opened the pharaoh's vault"
-					type: "checkmark"
+					item: "kubejs:quest_pharaohs_vault_1"
+					title: "Find what the pharaoh was buried with"
+					type: "item"
 				}
 			]
 			title: "The Pharaoh's Vault"
@@ -1521,8 +1492,15 @@
 				}
 				{
 					id: "382CD6D86A53879A"
-					title: "I reached the treasure room before the floors closed"
-					type: "checkmark"
+					stage: "fq.discovery_land.jungle_temple_traps.timed0"
+					title: "Get inside before the floors close"
+					type: "gamestage"
+				}
+				{
+					id: "7EF946018445037D"
+					item: "kubejs:quest_jungle_temple_traps_1"
+					title: "Claim the idol"
+					type: "item"
 				}
 			]
 			title: "Traps of the Jungle Temple"

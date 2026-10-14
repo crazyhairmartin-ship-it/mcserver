@@ -827,6 +827,59 @@ def build_stats(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     return task, entry
 
 
+def build_use(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "use" task: right-click "count" different blocks of that kind (id, "#tag" or list) while the step is open.
+    Optional "at" (only inside that place/structure), "within" seconds (all of them inside that window: ring both bells
+    within a minute), "holding" an item (an offering) and "consume" (it's used up). Build puzzles on blocks the
+    structure really has: tools/quests/src/structure_contents.json."""
+    keys = t['use']
+    keys = keys if isinstance(keys, list) else [keys]
+    for k in keys:
+        if not k.startswith('#'):
+            ctx['registry'].check('items', k, where, t.get('unchecked', False))
+    at = build_destination(t['at'], ctx['registry'], where, problems) if 'at' in t else None
+    holding = t.get('holding', '')
+    if holding:
+        ctx['registry'].check('items', holding, where)
+    count = int(t.get('count', 1))
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.use{n}', 'type': 'use', 'keys': keys,
+             'count': count, 'at': at, 'within': int(t.get('within', 0)), 'holding': holding,
+             'consume': bool(t.get('consume', False)), 'requires': [], 'quest_id': quest_id,
+             'prev_tasks': list(prev_tasks)}
+    name = keys[0].lstrip('#').split(':')[-1].replace('_', ' ')
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', f'Use {count} {name}{"s" if count > 1 else ""}')}
+    return task, entry
+
+
+def build_search(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "search" task: open the containers (chests, barrels, pots, Lootr chests...) inside "at" and the quest's item
+    turns up in "count" different ones, straight into the player's pack. {"search": {"at": {"structure": id},
+    "count": 4, "item": {"name": "Portrait Key", "texture": "minecraft:item/tripwire_hook"},
+    "found": "Behind a loose board you find a key."}}. The items are the step: carrying "count" of them completes it."""
+    spec = t['search']
+    if not isinstance(spec, dict) or 'at' not in spec or not isinstance(spec.get('item'), dict):
+        problems.error(where, '"search" needs "at" and "item": {"name": ...}')
+        return None, None
+    at = build_destination(spec['at'], ctx['registry'], where, problems)
+    if not at:
+        return None, None
+    it = dict(spec['item'])
+    it.setdefault('tooltip', 'Quest item')
+    item_id = quest_item_id({'item': it}, chapter, f'{qid}_{n}', ctx, where, problems)
+    if not item_id:
+        return None, None
+    count = int(spec.get('count', 1))
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.search{n}', 'type': 'search',
+             'at': at, 'count': count, 'item': item_id, 'found': spec.get('found', ''), 'requires': [],
+             'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'item', 'item': item_id,
+            'title': t.get('title', f'Search for {it["name"]}')}
+    if count != 1:
+        task['count'] = L(count)
+    return task, entry
+
+
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
     """A "unique drop" task: while the quest is open, the listed mobs can drop a quest item (or, with "fishing" in "from",
     it can be fished up); the task is to bring it."""
@@ -1127,6 +1180,11 @@ def main():
                 elif isinstance(t, dict) and 'cast' in t:
                     task, entry = build_cast(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
                                              problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and ('use' in t or 'search' in t):
+                    builder = build_use if 'use' in t else build_search
+                    task, entry = builder(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere, problems)
                     if entry:
                         givers.append(entry)
                 elif isinstance(t, dict) and ('mine' in t or 'skill_level' in t or 'stats' in t):

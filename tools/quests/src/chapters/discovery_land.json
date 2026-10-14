@@ -72,9 +72,9 @@
     },
     {
       "id": "bells_of_the_bandit_towers",
-      "title": "Ring Both Bells",
+      "title": "The Bandits' Ledger",
       "text": [
-        "The bandit towers signal each other with bells. If both ring within a minute, the lookouts panic and flee, leaving their stash behind."
+        "The bandits who hold these towers keep a ledger of every caravan they've robbed, torn into pages and hidden among their stores so no one man can sell them out. Fight off the archers and find the pages: the villages they robbed will want to know."
       ],
       "tasks": [
         {
@@ -90,10 +90,19 @@
           "title": "Fight off the archers on the walkways"
         },
         {
-          "checkmark": "I rang the first tower's bell"
-        },
-        {
-          "checkmark": "I rang the second bell within a minute"
+          "search": {
+            "at": {
+              "structure": "dungeons_arise:bandit_towers"
+            },
+            "count": 3,
+            "item": {
+              "name": "Ledger Page",
+              "tooltip": "A page of the bandits' accounts",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "Under the sacks you find a torn ledger page."
+          },
+          "title": "Find the three ledger pages in the bandits' stores"
         }
       ],
       "rewards": [
@@ -110,7 +119,7 @@
           "xp": 200
         }
       ],
-      "icon": "minecraft:bell",
+      "icon": "minecraft:writable_book",
       "discover": {
         "structure": "dungeons_arise:bandit_towers"
       }
@@ -467,17 +476,32 @@
       "id": "palace_of_shiraz",
       "title": "The Palace Treasury",
       "text": [
-        "Shiraz Palace's treasury is sealed behind a riddle in tiles. Read the mosaics in each court and set the treasury's levers in the order they tell."
+        "Shiraz Palace kept a fire burning in every court, and the old scholars wrote that the treasury answers only to a palace whose fires are lit. Relight the dead court fires and search for the treasury's seal among the palace stores."
       ],
       "tasks": [
         {
-          "checkmark": "I read the mosaic in the first court"
+          "use": "#minecraft:campfires",
+          "count": 3,
+          "holding": "minecraft:flint_and_steel",
+          "at": {
+            "structure": "dungeons_arise:shiraz_palace"
+          },
+          "title": "Relight three of the court fires"
         },
         {
-          "checkmark": "I read the mosaic in the second court"
-        },
-        {
-          "checkmark": "I set the treasury's levers in the order the mosaics tell"
+          "search": {
+            "at": {
+              "structure": "dungeons_arise:shiraz_palace"
+            },
+            "count": 1,
+            "item": {
+              "name": "Treasury Seal",
+              "tooltip": "The palace treasury's brass seal",
+              "texture": "minecraft:item/gold_nugget"
+            },
+            "found": "With the fires lit, you notice a brass seal glinting at the bottom of the chest."
+          },
+          "title": "Find the treasury seal"
         }
       ],
       "rewards": [
@@ -603,7 +627,7 @@
       "id": "temple_of_the_old_order",
       "title": "The Old Order's Temple",
       "text": [
-        "An abandoned temple keeps the old order's altar intact. The inscriptions name four offerings that will open its reliquary."
+        "An abandoned temple of the old order still keeps its sacred fire pit. The inscriptions name four offerings to be burned there before the reliquary will open."
       ],
       "tasks": [
         {
@@ -628,7 +652,11 @@
           "title": "Gather the offering of words"
         },
         {
-          "checkmark": "I laid the four offerings on the altar"
+          "use": "#minecraft:campfires",
+          "at": {
+            "structure": "dungeons_arise:abandoned_temple"
+          },
+          "title": "Burn the offerings at the temple's fire"
         }
       ],
       "rewards": [
@@ -819,20 +847,23 @@
       "id": "old_manor_ghost",
       "title": "The Old Manor",
       "text": [
-        "The old manor's doors lock behind you, and the portraits move at night. Four keys are hidden behind the portraits, and the study holds the family's last letter."
+        "The old manor's doors lock behind you. The family who lived here hid four keys among the house's stores before they fled, and the last of them opens the study where their final letter waits."
       ],
       "tasks": [
         {
-          "checkmark": "I found the first key behind a portrait"
-        },
-        {
-          "checkmark": "I found the second key behind a portrait"
-        },
-        {
-          "checkmark": "I found the third key behind a portrait"
-        },
-        {
-          "checkmark": "I found the fourth key and opened the study"
+          "search": {
+            "at": {
+              "structure": "structory:old_manor"
+            },
+            "count": 4,
+            "item": {
+              "name": "Manor Key",
+              "tooltip": "One of the family's four keys",
+              "texture": "minecraft:item/tripwire_hook"
+            },
+            "found": "Wrapped in an old cloth, a heavy iron key."
+          },
+          "title": "Find the family's four keys"
         }
       ],
       "rewards": [
@@ -860,7 +891,7 @@
       "id": "temple_on_the_peak",
       "title": "The Temple on the Peak",
       "text": [
-        "An ancient temple sits on a mountain peak above the clouds. Its four braziers have been dark for centuries. Light them and watch the sun rise from the top."
+        "An ancient temple sits on a mountain peak above the clouds. The shepherds below say that once, four fires burned at its corners and the whole valley could see it. Bring fire back to the peak."
       ],
       "tasks": [
         {
@@ -870,10 +901,7 @@
             },
             "radius": 12
           },
-          "title": "Light the four braziers"
-        },
-        {
-          "checkmark": "I watched the sun rise from the top"
+          "title": "Set four fires burning at the temple"
         }
       ],
       "rewards": [
@@ -964,10 +992,19 @@
       ],
       "tasks": [
         {
-          "checkmark": "I climbed the blade to the hilt"
-        },
-        {
-          "checkmark": "I found the forger's mark on the hilt"
+          "search": {
+            "at": {
+              "structure": "structory_towers:warped_greatsword"
+            },
+            "count": 1,
+            "item": {
+              "name": "Forger's Token",
+              "tooltip": "Stamped with a smith's mark",
+              "texture": "minecraft:item/iron_nugget"
+            },
+            "found": "In the hilt's hollow lies a smith's token, stamped with a mark you don't know."
+          },
+          "title": "Climb to the hilt and find the forger's mark"
         }
       ],
       "rewards": [
@@ -996,7 +1033,11 @@
       ],
       "tasks": [
         {
-          "checkmark": "I climbed the tower and rang the bell"
+          "use": "minecraft:bell",
+          "at": {
+            "structure": "mvs:cathedral"
+          },
+          "title": "Climb the tower and ring the bell"
         },
         {
           "encounter": {
@@ -1152,17 +1193,31 @@
       "id": "pharaohs_vault",
       "title": "The Pharaoh's Vault",
       "text": [
-        "The desert temple's tomb is sealed, and its corridors are trapped. Find the hidden levers, survive the pressure plates and open the pharaoh's vault."
+        "The desert temple's tomb is sealed, and its corridors are trapped. The builders left hidden switches for their own way in. Press them, mind the plates, and find what the pharaoh was buried with."
       ],
       "tasks": [
         {
-          "checkmark": "I found the hidden levers"
+          "use": "#minecraft:buttons",
+          "count": 3,
+          "at": {
+            "structure": "betterdeserttemples:desert_temple"
+          },
+          "title": "Find and press three hidden switches"
         },
         {
-          "checkmark": "I crossed the pressure plates unharmed"
-        },
-        {
-          "checkmark": "I opened the pharaoh's vault"
+          "search": {
+            "at": {
+              "structure": "betterdeserttemples:desert_temple"
+            },
+            "count": 1,
+            "item": {
+              "name": "Pharaoh's Ankh",
+              "tooltip": "Gold, and warm to the touch",
+              "texture": "minecraft:item/gold_ingot"
+            },
+            "found": "Among the grave goods lies a golden ankh, warm to the touch."
+          },
+          "title": "Find what the pharaoh was buried with"
         }
       ],
       "rewards": [
@@ -1195,7 +1250,37 @@
       ],
       "tasks": [
         {
-          "checkmark": "I reached the treasure room before the floors closed"
+          "timed": {
+            "seconds": 180,
+            "goal": {
+              "structure": "betterjungletemples:jungle_temple",
+              "label": "the treasure room"
+            },
+            "lines": [
+              "The carving's warning echoes in your head: before the floors close."
+            ],
+            "start": "Enter the temple",
+            "no": [
+              "teleport",
+              "pearls"
+            ]
+          },
+          "title": "Get inside before the floors close"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "betterjungletemples:jungle_temple"
+            },
+            "count": 1,
+            "item": {
+              "name": "Idol of the Deep Jungle",
+              "tooltip": "Jade, cold as river water",
+              "texture": "minecraft:item/emerald"
+            },
+            "found": "Behind the treasure, a small jade idol."
+          },
+          "title": "Claim the idol"
         }
       ],
       "rewards": [

@@ -27,6 +27,7 @@ tools/quests/
                             which mods, landmarks and artifacts have quests (spoiler-free)
   src/mod_roles.json        which mods should appear in quests (libraries, client and admin mods don't)
   src/landmarks.json        plain names, landmarks seen in the world, feature landmarks, scenery, YUNG's replacements
+  src/structure_contents.json  what blocks and entities each structure's pieces contain (make_structure_contents.py)
 ```
 
 `python tools/quests/make_quests.py` checks everything and writes:
@@ -116,6 +117,8 @@ Quest fields:
 | `{"spellkill": ["minecraft:zombie", "minecraft:husk"], "school": "fire", "count": 20}` (`"any"` mob or school) | The player kills that many with a school's magic (the spell lands the killing blow) while the step is open. Schools: fire, ice, lightning, holy, ender, blood, evocation, nature, eldritch |
 | `{"cast": "any", "count": 100}` (or a spell id like `"irons_spellbooks:firebolt"`, or `{"school": "irons_spellbooks:fire"}`) | The player casts that many Iron's Spells spells (scrolls count) while the step is open |
 | `{"waystones": 3, "wild": true}` | The player attunes that many waystones they didn't have when the step opened (`wild`: only waystones found in the wild; `"total": true`: every waystone they have counts, for milestones) |
+| `{"use": "minecraft:bell", "count": 2, "at": {"structure": "..."}, "within": 60, "holding": "minecraft:flint_and_steel", "consume": false}` | The player right-clicks that many different blocks of that kind (id, `#tag` or list) while the step is open; `at`, `within` (seconds, all together), `holding` (an item in hand, e.g. an offering) and `consume` (use it up) are optional. The block still does its own thing. Check `src/structure_contents.json` that the structure really has the block |
+| `{"search": {"at": {"structure": "structory:old_manor"}, "count": 4, "item": {"name": "Manor Key", "texture": "minecraft:item/tripwire_hook"}, "found": "Wrapped in cloth, a heavy key."}}` | Opening containers (chests, barrels, pots...) inside `at` turns up the quest item, once per container, until the player has `count`; carrying them completes the step |
 | `{"mine": "any", "count": 1000}` (or an id, `#tag` or list) | The player breaks that many blocks while the step is open (Ultimine counts each block). `{"mine": "gravestone:gravestone"}` is recovering a gravestone |
 | `{"skill_level": 10, "tree": "mining"}` (`"any"` tree) | A Pufferfish skill tree reaches that level |
 | `{"stats": ["minecraft:walk_one_cm", "minecraft:sprint_one_cm"], "count": 100000}` | The lifetime sum of those statistics reaches the count (milestones; distance on foot should add walking, sprinting, crouching, swimming and climbing) |

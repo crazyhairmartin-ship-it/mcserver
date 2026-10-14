@@ -40,14 +40,18 @@ Q = [
           rewards=[reward_item("spartanweaponry:iron_halberd"), reward_item("minecraft:emerald", 8),
                    skill("attack", 200)]),
 
-    quest("bells_of_the_bandit_towers", "Ring Both Bells", icon="minecraft:bell",
+    quest("bells_of_the_bandit_towers", "The Bandits' Ledger", icon="minecraft:writable_book",
           discover={"structure": "dungeons_arise:bandit_towers"},
-          text=["The bandit towers signal each other with bells. If both ring within a minute, the lookouts "
-                "panic and flee, leaving their stash behind."],
+          text=["The bandits who hold these towers keep a ledger of every caravan they've robbed, torn into pages and "
+                "hidden among their stores so no one man can sell them out. Fight off the archers and find the "
+                "pages: the villages they robbed will want to know."],
           tasks=[fight("minecraft:pillager", 6, "dungeons_arise:bandit_towers", "Tower Archers",
                        "Fight off the archers on the walkways"),
-                 {"checkmark": "I rang the first tower's bell"},
-                 {"checkmark": "I rang the second bell within a minute"}],
+                 {"search": {"at": {"structure": "dungeons_arise:bandit_towers"}, "count": 3,
+                             "item": {"name": "Ledger Page", "tooltip": "A page of the bandits' accounts",
+                                      "texture": "minecraft:item/paper"},
+                             "found": "Under the sacks you find a torn ledger page."},
+                  "title": "Find the three ledger pages in the bandits' stores"}],
           rewards=[reward_item("minecraft:arrow", 48), reward_item("minecraft:emerald", 4), skill("range", 200)]),
 
     quest("the_great_cage", "The Great Cage", icon="minecraft:parrot_spawn_egg",
@@ -123,11 +127,16 @@ Q = [
 
     quest("palace_of_shiraz", "The Palace Treasury", icon="minecraft:gold_block",
           discover={"structure": "dungeons_arise:shiraz_palace"},
-          text=["Shiraz Palace's treasury is sealed behind a riddle in tiles. Read the mosaics in each court and set "
-                "the treasury's levers in the order they tell."],
-          tasks=[{"checkmark": "I read the mosaic in the first court"},
-                 {"checkmark": "I read the mosaic in the second court"},
-                 {"checkmark": "I set the treasury's levers in the order the mosaics tell"}],
+          text=["Shiraz Palace kept a fire burning in every court, and the old scholars wrote that the treasury "
+                "answers only to a palace whose fires are lit. Relight the dead court fires and search for the "
+                "treasury's seal among the palace stores."],
+          tasks=[{"use": "#minecraft:campfires", "count": 3, "holding": "minecraft:flint_and_steel",
+                  "at": {"structure": "dungeons_arise:shiraz_palace"}, "title": "Relight three of the court fires"},
+                 {"search": {"at": {"structure": "dungeons_arise:shiraz_palace"}, "count": 1,
+                             "item": {"name": "Treasury Seal", "tooltip": "The palace treasury's brass seal",
+                                      "texture": "minecraft:item/gold_nugget"},
+                             "found": "With the fires lit, you notice a brass seal glinting at the bottom of the chest."},
+                  "title": "Find the treasury seal"}],
           rewards=[reward_item("minecraft:gold_block", 4), reward_item("minecraft:enchanted_golden_apple"),
                    skill("attack", 500)]),
 
@@ -155,13 +164,14 @@ Q = [
 
     quest("temple_of_the_old_order", "The Old Order's Temple", icon="minecraft:lapis_block",
           discover={"structure": "dungeons_arise:abandoned_temple"},
-          text=["An abandoned temple keeps the old order's altar intact. The inscriptions name four offerings that "
-                "will open its reliquary."],
+          text=["An abandoned temple of the old order still keeps its sacred fire pit. The inscriptions name four "
+                "offerings to be burned there before the reliquary will open."],
           tasks=[item("minecraft:lapis_lazuli", 4, consume=True, title="Gather the offering of lapis"),
                  item("minecraft:candle", consume=True, title="Gather the offering of light"),
                  item("minecraft:emerald", consume=True, title="Gather the offering of wealth"),
                  item("minecraft:book", consume=True, title="Gather the offering of words"),
-                 {"checkmark": "I laid the four offerings on the altar"}],
+                 {"use": "#minecraft:campfires", "at": {"structure": "dungeons_arise:abandoned_temple"},
+                  "title": "Burn the offerings at the temple's fire"}],
           rewards=[reward_item("minecraft:lapis_lazuli", 16),
                    reward_item("minecraft:enchanted_book", name="The Old Order's Gift", enchant={"minecraft:protection": 2}),
                    skill("magic", 200)]),
@@ -210,21 +220,22 @@ Q = [
 
     quest("old_manor_ghost", "The Old Manor", icon="supplementaries:key",
           discover={"structure": "structory:old_manor"},
-          text=["The old manor's doors lock behind you, and the portraits move at night. Four keys are hidden behind "
-                "the portraits, and the study holds the family's last letter."],
-          tasks=[{"checkmark": "I found the first key behind a portrait"},
-                 {"checkmark": "I found the second key behind a portrait"},
-                 {"checkmark": "I found the third key behind a portrait"},
-                 {"checkmark": "I found the fourth key and opened the study"}],
+          text=["The old manor's doors lock behind you. The family who lived here hid four keys among the house's "
+                "stores before they fled, and the last of them opens the study where their final letter waits."],
+          tasks=[{"search": {"at": {"structure": "structory:old_manor"}, "count": 4,
+                             "item": {"name": "Manor Key", "tooltip": "One of the family's four keys",
+                                      "texture": "minecraft:item/tripwire_hook"},
+                             "found": "Wrapped in an old cloth, a heavy iron key."},
+                  "title": "Find the family's four keys"}],
           rewards=[reward_item("supplementaries:key"), reward_item("supplementaries:safe"),
                    reward_item("minecraft:gold_ingot", 8), skill("magic", 220)]),
 
     quest("temple_on_the_peak", "The Temple on the Peak", icon="grapplemod:grapplinghook",
           discover={"structure": "structory_towers:ancient_temple"},
-          text=["An ancient temple sits on a mountain peak above the clouds. Its four braziers have been dark for "
-                "centuries. Light them and watch the sun rise from the top."],
-          tasks=[{"build": {"blocks": {"minecraft:campfire": 4}, "radius": 12}, "title": "Light the four braziers"},
-                 {"checkmark": "I watched the sun rise from the top"}],
+          text=["An ancient temple sits on a mountain peak above the clouds. The shepherds below say that once, four "
+                "fires burned at its corners and the whole valley could see it. Bring fire back to the peak."],
+          tasks=[{"build": {"blocks": {"minecraft:campfire": 4}, "radius": 12},
+                  "title": "Set four fires burning at the temple"}],
           rewards=[reward_item("grapplemod:grapplinghook"), reward_item("minecraft:golden_carrot", 8),
                    skill("agility", 250)]),
 
@@ -242,8 +253,11 @@ Q = [
           discover={"structure": "structory_towers:warped_greatsword"},
           text=["A giant warped sword is driven into the shattered hills, as if dropped from the Nether. The forger's "
                 "mark on its hilt names who made it."],
-          tasks=[{"checkmark": "I climbed the blade to the hilt"},
-                 {"checkmark": "I found the forger's mark on the hilt"}],
+          tasks=[{"search": {"at": {"structure": "structory_towers:warped_greatsword"}, "count": 1,
+                             "item": {"name": "Forger's Token", "tooltip": "Stamped with a smith's mark",
+                                      "texture": "minecraft:item/iron_nugget"},
+                             "found": "In the hilt's hollow lies a smith's token, stamped with a mark you don't know."},
+                  "title": "Climb to the hilt and find the forger's mark"}],
           rewards=[reward_item("spartanweaponry:diamond_greatsword"), reward_item("minecraft:warped_fungus", 8),
                    skill("attack", 300)]),
 
@@ -251,7 +265,8 @@ Q = [
           discover={"structure": "mvs:cathedral"},
           text=["A cathedral stands alone in the wilds, its bell tower cracked. Climb the tower and ring the bell; a "
                 "cleric will arrive to say why the town around it never got built."],
-          tasks=[{"checkmark": "I climbed the tower and rang the bell"},
+          tasks=[{"use": "minecraft:bell", "at": {"structure": "mvs:cathedral"},
+                  "title": "Climb the tower and ring the bell"},
                  enc(["I heard the bell! Nobody's rung it in years.",
                       "The town was never built because the builders found something under the foundations, "
                       "and left in the night. Nobody will say what."],
@@ -290,11 +305,15 @@ Q = [
 
     quest("pharaohs_vault", "The Pharaoh's Vault", icon="minecraft:gold_block",
           discover={"structure": "betterdeserttemples:desert_temple"},
-          text=["The desert temple's tomb is sealed, and its corridors are trapped. Find the hidden levers, survive "
-                "the pressure plates and open the pharaoh's vault."],
-          tasks=[{"checkmark": "I found the hidden levers"},
-                 {"checkmark": "I crossed the pressure plates unharmed"},
-                 {"checkmark": "I opened the pharaoh's vault"}],
+          text=["The desert temple's tomb is sealed, and its corridors are trapped. The builders left hidden switches "
+                "for their own way in. Press them, mind the plates, and find what the pharaoh was buried with."],
+          tasks=[{"use": "#minecraft:buttons", "count": 3, "at": {"structure": "betterdeserttemples:desert_temple"},
+                  "title": "Find and press three hidden switches"},
+                 {"search": {"at": {"structure": "betterdeserttemples:desert_temple"}, "count": 1,
+                             "item": {"name": "Pharaoh's Ankh", "tooltip": "Gold, and warm to the touch",
+                                      "texture": "minecraft:item/gold_ingot"},
+                             "found": "Among the grave goods lies a golden ankh, warm to the touch."},
+                  "title": "Find what the pharaoh was buried with"}],
           rewards=[reward_item("minecraft:gold_ingot", 10),
                    reward_item("minecraft:enchanted_book", name="Pharaoh's Blessing", enchant={"minecraft:fire_aspect": 1}),
                    skill("attack", 220)]),
@@ -303,7 +322,16 @@ Q = [
           discover={"structure": "betterjungletemples:jungle_temple"},
           text=["A jungle temple's halls are full of dart traps and crushing floors. A carving at the entrance gives "
                 "a warning and a deadline: be at the treasure room before the floors close."],
-          tasks=[{"checkmark": "I reached the treasure room before the floors closed"}],
+          tasks=[{"timed": {"seconds": 180, "goal": {"structure": "betterjungletemples:jungle_temple",
+                                                     "label": "the treasure room"},
+                            "lines": ["The carving's warning echoes in your head: before the floors close."],
+                            "start": "Enter the temple", "no": ["teleport", "pearls"]},
+                  "title": "Get inside before the floors close"},
+                 {"search": {"at": {"structure": "betterjungletemples:jungle_temple"}, "count": 1,
+                             "item": {"name": "Idol of the Deep Jungle", "tooltip": "Jade, cold as river water",
+                                      "texture": "minecraft:item/emerald"},
+                             "found": "Behind the treasure, a small jade idol."},
+                  "title": "Claim the idol"}],
           rewards=[reward_item("minecraft:emerald", 6),
                    reward_item("minecraft:enchanted_book", name="Light Landing", enchant={"minecraft:feather_falling": 3}),
                    skill("agility", 220)]),

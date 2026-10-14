@@ -183,6 +183,27 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "discovery_land:bells_of_the_bandit_towers",
+    "stage": "fq.discovery_land.bells_of_the_bandit_towers.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:bandit_towers"
+      ],
+      "label": "the destination"
+    },
+    "count": 3,
+    "item": "kubejs:quest_bells_of_the_bandit_towers_1",
+    "found": "Under the sacks you find a torn ledger page.",
+    "requires": [],
+    "quest_id": "31B5D0DF12491B9E",
+    "prev_tasks": [
+      "5195141FD96348B3",
+      "160DD2D626602457"
+    ]
+  },
+  {
     "quest": "discovery_land:the_great_cage",
     "stage": "fq.discovery_land.the_great_cage.spawn0",
     "type": "spawn",
@@ -459,6 +480,51 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "discovery_land:palace_of_shiraz",
+    "stage": "fq.discovery_land.palace_of_shiraz.use0",
+    "type": "use",
+    "keys": [
+      "#minecraft:campfires"
+    ],
+    "count": 3,
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:shiraz_palace"
+      ],
+      "label": "the destination"
+    },
+    "within": 0,
+    "holding": "minecraft:flint_and_steel",
+    "consume": false,
+    "requires": [],
+    "quest_id": "15F185E6F6CD7A2B",
+    "prev_tasks": [
+      "105F6DE81F1CC166"
+    ]
+  },
+  {
+    "quest": "discovery_land:palace_of_shiraz",
+    "stage": "fq.discovery_land.palace_of_shiraz.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:shiraz_palace"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_palace_of_shiraz_1",
+    "found": "With the fires lit, you notice a brass seal glinting at the bottom of the chest.",
+    "requires": [],
+    "quest_id": "15F185E6F6CD7A2B",
+    "prev_tasks": [
+      "105F6DE81F1CC166",
+      "05EC0FFCF5F7F28F"
+    ]
+  },
+  {
     "quest": "discovery_land:thornborn_ascent",
     "stage": "fq.discovery_land.thornborn_ascent.spawn0",
     "type": "spawn",
@@ -511,6 +577,34 @@ global.QUEST_GIVERS = [
       "399C9F394F37361E"
     ],
     "name": ""
+  },
+  {
+    "quest": "discovery_land:temple_of_the_old_order",
+    "stage": "fq.discovery_land.temple_of_the_old_order.use4",
+    "type": "use",
+    "keys": [
+      "#minecraft:campfires"
+    ],
+    "count": 1,
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:abandoned_temple"
+      ],
+      "label": "the destination"
+    },
+    "within": 0,
+    "holding": "",
+    "consume": false,
+    "requires": [],
+    "quest_id": "42EC142977978997",
+    "prev_tasks": [
+      "0415278027E467B8",
+      "478F22328AEC21CA",
+      "558FC8F39C30627C",
+      "73224E5DC9A13DD6",
+      "2DBE12F8805F85C8"
+    ]
   },
   {
     "quest": "discovery_land:spore_folk",
@@ -663,6 +757,26 @@ global.QUEST_GIVERS = [
     "open_task": "262E623497A12FF1"
   },
   {
+    "quest": "discovery_land:old_manor_ghost",
+    "stage": "fq.discovery_land.old_manor_ghost.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "structory:old_manor"
+      ],
+      "label": "the destination"
+    },
+    "count": 4,
+    "item": "kubejs:quest_old_manor_ghost_0",
+    "found": "Wrapped in an old cloth, a heavy iron key.",
+    "requires": [],
+    "quest_id": "3C9944827995F07E",
+    "prev_tasks": [
+      "13F3B30515B17CE7"
+    ]
+  },
+  {
     "quest": "discovery_land:temple_on_the_peak",
     "stage": "fq.discovery_land.temple_on_the_peak.build0",
     "type": "build",
@@ -740,6 +854,50 @@ global.QUEST_GIVERS = [
     "open_task": "4F6DB7080AD34DF8",
     "lines": [],
     "name": ""
+  },
+  {
+    "quest": "discovery_land:warped_greatsword",
+    "stage": "fq.discovery_land.warped_greatsword.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "structory_towers:warped_greatsword"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_warped_greatsword_0",
+    "found": "In the hilt's hollow lies a smith's token, stamped with a mark you don't know.",
+    "requires": [],
+    "quest_id": "22A2F0B6553586B9",
+    "prev_tasks": [
+      "2FC83916A2F5D92D"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_cathedral",
+    "stage": "fq.discovery_land.the_cathedral.use0",
+    "type": "use",
+    "keys": [
+      "minecraft:bell"
+    ],
+    "count": 1,
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mvs:cathedral"
+      ],
+      "label": "the destination"
+    },
+    "within": 0,
+    "holding": "",
+    "consume": false,
+    "requires": [],
+    "quest_id": "2F65C72E742D5EF8",
+    "prev_tasks": [
+      "2A92A9BCD6D377BE"
+    ]
   },
   {
     "quest": "discovery_land:the_cathedral",
@@ -832,6 +990,100 @@ global.QUEST_GIVERS = [
     "quest_id": "186B39D9F482FD8A",
     "prev_tasks": [
       "0CFE90BEB31CC41E"
+    ]
+  },
+  {
+    "quest": "discovery_land:pharaohs_vault",
+    "stage": "fq.discovery_land.pharaohs_vault.use0",
+    "type": "use",
+    "keys": [
+      "#minecraft:buttons"
+    ],
+    "count": 3,
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterdeserttemples:desert_temple"
+      ],
+      "label": "the destination"
+    },
+    "within": 0,
+    "holding": "",
+    "consume": false,
+    "requires": [],
+    "quest_id": "2CEA8C6D7D49BEBA",
+    "prev_tasks": [
+      "5E73C749927C45A4"
+    ]
+  },
+  {
+    "quest": "discovery_land:pharaohs_vault",
+    "stage": "fq.discovery_land.pharaohs_vault.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterdeserttemples:desert_temple"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_pharaohs_vault_1",
+    "found": "Among the grave goods lies a golden ankh, warm to the touch.",
+    "requires": [],
+    "quest_id": "2CEA8C6D7D49BEBA",
+    "prev_tasks": [
+      "5E73C749927C45A4",
+      "409793AF3B816EED"
+    ]
+  },
+  {
+    "quest": "discovery_land:jungle_temple_traps",
+    "stage": "fq.discovery_land.jungle_temple_traps.timed0",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "betterjungletemples:jungle_temple"
+      ],
+      "label": "the treasure room"
+    },
+    "no": [
+      "teleport",
+      "pearls"
+    ],
+    "waves": [],
+    "lines": [
+      "The carving's warning echoes in your head: before the floors close."
+    ],
+    "start": "Enter the temple",
+    "requires": [],
+    "quest_id": "348BD58F5AB44808",
+    "prev_tasks": [
+      "7CA81D502DFDB3C0"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "discovery_land:jungle_temple_traps",
+    "stage": "fq.discovery_land.jungle_temple_traps.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterjungletemples:jungle_temple"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_jungle_temple_traps_1",
+    "found": "Behind the treasure, a small jade idol.",
+    "requires": [],
+    "quest_id": "348BD58F5AB44808",
+    "prev_tasks": [
+      "7CA81D502DFDB3C0",
+      "382CD6D86A53879A"
     ]
   },
   {

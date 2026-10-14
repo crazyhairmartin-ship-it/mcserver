@@ -65,7 +65,7 @@ ServerEvents.commandRegistry(event => {
       target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
       tags.forEach(t => target.removeTag(t))
       let data = target.persistentData
-      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill', 'fqSpawn', 'fqMine'].forEach(k => data.remove(k))
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill', 'fqSpawn', 'fqMine', 'fqUse', 'fqSearch'].forEach(k => data.remove(k))
       server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
       ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
       return 1
@@ -797,6 +797,64 @@ function npcTickMilestones(player) {
     player.tell(Text.yellow('Milestone reached. Quest updated.'))
   })
 }
+
+// ---- use and search tasks ----
+// use: right-clicking blocks of the listed kind (in "at", holding the offering if one is named) counts each different
+// block once; with "within", only uses inside that many seconds of each other count together (ring both bells within a
+// minute). The block still does its own thing (the bell rings, the lever flips).
+// search: opening containers inside "at" turns up the quest's item, once per container, until the player has found
+// "count" of them. The item goes straight into their pack.
+
+const NPC_CONTAINERS = /chest|barrel|shulker|crate|decorated_pot|basket|cabinet|drawer|cupboard|locker|safe|sack|jar/
+
+function npcSpotKey(player, block) {
+  return String(player.level.dimension) + '|' + block.x + '|' + block.y + '|' + block.z
+}
+
+BlockEvents.rightClicked(event => {
+  let player = event.player
+  if (!player || player.level.clientSide || String(event.hand) != 'MAIN_HAND') return
+  let block = event.block
+  let spot = npcSpotKey(player, block)
+  let now = Date.now()
+  npcEntries('use').forEach(u => {
+    if (player.tags.contains(u.stage) || !u.keys.some(k => npcBlockMatches(block, k))) return
+    if (u.holding && String(player.mainHandItem.id) != u.holding) return
+    if (u.at && !npcAtDestination(player, u.at)) return
+    if (!questOpen(player, u)) return
+    let all = npcData(player, 'fqUse')
+    let used = all.contains(u.stage) ? all.getCompound(u.stage) : new $NpcCompoundTag()
+    if (u.within) {
+      let stale = []
+      used.allKeys.forEach(k => { if (now - used.getLong(k) > u.within * 1000) stale.push(String(k)) })
+      stale.forEach(k => used.remove(k))
+    }
+    if (used.contains(spot)) return
+    used.putLong(spot, now)
+    all.put(u.stage, used)
+    if (u.holding && u.consume) player.mainHandItem.shrink(1)
+    let n = used.allKeys.size()
+    if (n >= u.count) {
+      all.remove(u.stage)
+      questAddStage(player, u.stage)
+      player.tell(Text.yellow('Quest updated.'))
+    } else if (u.count > 1) {
+      player.setStatusMessage(Text.gray(n + ' / ' + u.count + (u.within ? ' (quick!)' : '')))
+    }
+  })
+  if (!NPC_CONTAINERS.test(String(block.id).split(':')[1] || '')) return
+  npcEntries('search').forEach(s => {
+    if (!questOpen(player, s) || !npcAtDestination(player, s.at)) return
+    let all = npcData(player, 'fqSearch')
+    let found = all.contains(s.stage) ? all.getCompound(s.stage) : new $NpcCompoundTag()
+    if (found.contains(spot) || found.allKeys.size() >= s.count) return
+    found.putBoolean(spot, true)
+    all.put(s.stage, found)
+    player.server.runCommandSilent('give ' + player.username + ' ' + s.item + ' 1')
+    player.tell(Text.italic(s.found || 'You find something you were looking for.').gray())
+    player.setStatusMessage(Text.gray(found.allKeys.size() + ' / ' + s.count))
+  })
+})
 
 // ---- waystones tasks ----
 // Every 5 seconds: how many waystones the player has attuned (Waystones' own list), optionally only wild ones. The

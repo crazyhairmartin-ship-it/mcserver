@@ -64,6 +64,12 @@ characters only (see "Report" below).
 
 ### Design rules (the owner's, non-negotiable)
 
+- **Build on what's really there.** Before writing a puzzle or interaction at a structure, look it up in
+  `tools/quests/src/structure_contents.json` (what blocks and entities its pieces actually contain). Never invent
+  levers, bells, altars, portraits or mosaics a structure doesn't have. Use what it has: `use` its bells, levers,
+  buttons, candles or campfires; `search` its chests and barrels for the quest's items; or have the player bring and
+  place what's missing (a `build`). If a structure says `"pieces": 0`, its contents are unknown: stick to `search`
+  (nearly every structure has containers), `spawn` fights and `observe`.
 - **Every quest and every step has an in-world reason.** Someone wants it, something is wrong, something changes
   because you did it. Never a bare count ("cast 20 spells", "kill 15 zombies"): say who needs it and why ("the dead
   won't stay down; only fire lays them to rest: burn twenty"), and make the step title say it in-world too. Odd jobs
