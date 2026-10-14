@@ -1219,6 +1219,36 @@ global.QUEST_CHARACTERS = {
       "Back in my day we mined by candlelight, an' we were grateful for the candle.",
       "Lava's like a bad landlord, lass. Quiet till it takes everythin' ye own."
     ],
+    "shop": [
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 1
+          }
+        ],
+        "give": {
+          "item": "minecraft:torch",
+          "count": 32
+        },
+        "quest_id": "5CECB57780CAAE48",
+        "requires": "skill_mining:underminer"
+      },
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 4
+          }
+        ],
+        "give": {
+          "item": "minecraft:iron_ingot",
+          "count": 8
+        },
+        "quest_id": "5CECB57780CAAE48",
+        "requires": "skill_mining:underminer"
+      }
+    ],
     "entity": "minecraft:villager"
   },
   "marta": {
@@ -1234,6 +1264,36 @@ global.QUEST_CHARACTERS = {
       "Did you eat? You didn't eat. I can tell. I've packed you a lunch. And a dinner. And a second lunch.",
       "Somebody left flowers on my fence again! Isn't this village just wonderful?",
       "Oh, don't thank me! Actually, do. It's lovely. Thank me again."
+    ],
+    "shop": [
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 1
+          }
+        ],
+        "give": {
+          "item": "minecraft:bone_meal",
+          "count": 24
+        },
+        "quest_id": "4B308F7DA35AF12D",
+        "requires": "skill_farming:smarter_farmers"
+      },
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 2
+          }
+        ],
+        "give": {
+          "item": "farmersdelight:rich_soil",
+          "count": 8
+        },
+        "quest_id": "4B308F7DA35AF12D",
+        "requires": "skill_farming:smarter_farmers"
+      }
     ],
     "entity": "minecraft:villager"
   },
@@ -1251,6 +1311,36 @@ global.QUEST_CHARACTERS = {
       "I once caught a cod so large it had its own cod inside. True story. Ask anyone. Don't ask Silas.",
       "Fish don't bite for the worthy. They bite for the ones who stay."
     ],
+    "shop": [
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 1
+          }
+        ],
+        "give": {
+          "item": "aquaculture:worm",
+          "count": 16
+        },
+        "quest_id": "60955F52DA61EE39",
+        "requires": "skill_fishing:hundred_fish"
+      },
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 12
+          }
+        ],
+        "give": {
+          "item": "aquaculture:neptunium_ingot",
+          "count": 1
+        },
+        "quest_id": "60955F52DA61EE39",
+        "requires": "skill_fishing:hundred_fish"
+      }
+    ],
     "entity": "minecraft:villager"
   },
   "bess": {
@@ -1266,6 +1356,36 @@ global.QUEST_CHARACTERS = {
       "Elbows off my bar. ...Fine. Leave them. You've had a long day.",
       "Hungry's no excuse for rude. Say please. Good. Here's extra.",
       "Dagna's lot drink like fish and tip like misers. I love them anyway."
+    ],
+    "shop": [
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 1
+          }
+        ],
+        "give": {
+          "item": "farmersdelight:beef_stew",
+          "count": 2
+        },
+        "quest_id": "43B8EDF637747BB1",
+        "requires": "skill_cooking:food_critic"
+      },
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 1
+          }
+        ],
+        "give": {
+          "item": "farmersdelight:vegetable_soup",
+          "count": 2
+        },
+        "quest_id": "43B8EDF637747BB1",
+        "requires": "skill_cooking:food_critic"
+      }
     ],
     "entity": "minecraft:villager"
   },
@@ -1283,6 +1403,36 @@ global.QUEST_CHARACTERS = {
       "My mother always said a calm mind grows a calm garden. My garden is very nervous.",
       "Have you noticed how many things in a forest can sting you? I have. I made a list. It's long. Would you like the list?"
     ],
+    "shop": [
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 1
+          }
+        ],
+        "give": {
+          "item": "herbalbrews:lavender_tea",
+          "count": 2
+        },
+        "quest_id": "26F59242EDC4A79D",
+        "requires": "skill_foraging:swamp_hermit"
+      },
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 1
+          }
+        ],
+        "give": {
+          "item": "herbalbrews:green_tea",
+          "count": 2
+        },
+        "quest_id": "26F59242EDC4A79D",
+        "requires": "skill_foraging:swamp_hermit"
+      }
+    ],
     "entity": "minecraft:villager"
   },
   "bram": {
@@ -1298,6 +1448,36 @@ global.QUEST_CHARACTERS = {
       "Did you know bread rises? Every single time! Isn't that marvellous?",
       "The jam jar wouldn't open. I sat on the floor and wept. Then Bess opened it with one hand.",
       "Best day ever! Again!"
+    ],
+    "shop": [
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 1
+          }
+        ],
+        "give": {
+          "item": "bakery:crusty_bread",
+          "count": 4
+        },
+        "quest_id": "4E02AA86A0AF09DF",
+        "requires": "small_favours:sf_the_loaf"
+      },
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 3
+          }
+        ],
+        "give": {
+          "item": "bakery:strawberry_cake",
+          "count": 1
+        },
+        "quest_id": "4E02AA86A0AF09DF",
+        "requires": "small_favours:sf_the_loaf"
+      }
     ],
     "entity": "minecraft:villager"
   },

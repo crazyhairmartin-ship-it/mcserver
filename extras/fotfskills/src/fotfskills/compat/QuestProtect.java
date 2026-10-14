@@ -15,7 +15,8 @@ import java.util.function.Predicate;
  * the game side is QuestProtectHooks. Ids are "namespace:path"; a leading "#" means a tag.
  */
 public final class QuestProtect {
-    public record Rule(List<String> structures, List<String> blocks) {}
+    /** resetSeconds: blocks of this rule that players place inside the structure are cleared after this long (0: never). */
+    public record Rule(List<String> structures, List<String> blocks, int resetSeconds) {}
 
     private static volatile List<Rule> rules = List.of();
 
@@ -49,7 +50,8 @@ public final class QuestProtect {
             List<String> structures = strings(o.get("structures"));
             List<String> blocks = strings(o.get("blocks"));
             if (!structures.isEmpty() && !blocks.isEmpty()) {
-                out.add(new Rule(List.copyOf(structures), List.copyOf(blocks)));
+                int reset = o.has("reset") && o.get("reset").isJsonPrimitive() ? Math.max(0, o.get("reset").getAsInt()) : 0;
+                out.add(new Rule(List.copyOf(structures), List.copyOf(blocks), reset));
             }
         }
         return List.copyOf(out);

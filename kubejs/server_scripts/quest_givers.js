@@ -186,6 +186,7 @@ ItemEvents.entityInteracted(event => {
     let info = (global.QUEST_CHARACTERS || {})[questCharacterId(target)] || {}
     let idle = info.idle || ['...']
     questSay(player, String(target.displayName.string), [idle[Math.floor(Math.random() * idle.length)]])
+    if (typeof shopHint === 'function') shopHint(player, questCharacterId(target))
     event.cancel()
   }
 })

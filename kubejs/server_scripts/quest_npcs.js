@@ -139,12 +139,17 @@ ServerEvents.commandRegistry(event => {
 // ---- encounters ----
 
 function npcFindSpot(player, minDist, maxDist) {
+  return npcFindSpotAround(player, player.x, player.z, minDist, maxDist)
+}
+
+// a standing spot (air at feet and head, solid ground, not liquid) minDist-maxDist from (cx, cz), near the player's height
+function npcFindSpotAround(player, cx, cz, minDist, maxDist) {
   let level = player.level
   for (let attempt = 0; attempt < 24; attempt++) {
-    let angle = Math.random() * Math.PI * 2
+    let angle = Math.random() * 6.283185307179586   // 2 pi (Rhino here has no Math.PI)
     let dist = minDist + Math.random() * (maxDist - minDist)
-    let x = Math.floor(player.x + Math.cos(angle) * dist)
-    let z = Math.floor(player.z + Math.sin(angle) * dist)
+    let x = Math.floor(cx + Math.cos(angle) * dist)
+    let z = Math.floor(cz + Math.sin(angle) * dist)
     for (let dy = 6; dy >= -6; dy--) {
       let y = Math.floor(player.y) + dy
       let feet = level.getBlock(x, y, z)
@@ -204,7 +209,8 @@ function npcTickEncounters(player) {
     let spawned = player.level.createEntity(enc.entity)
     spawned.setPos(spot.x, spot.y, spot.z)
     let extra = {}
-    if (enc.then == 'talk') extra.Invulnerable = true
+    if (enc.then == 'talk' || enc.then == 'escort') extra.Invulnerable = true
+    if (enc.then == 'escort') extra.NoAI = true   // they follow by hopping to your side (npcTickEscorts), not wandering
     if (enc.health) {
       extra.Attributes = [{ Name: 'minecraft:generic.max_health', Base: enc.health }]
       extra.Health = enc.health
@@ -243,6 +249,15 @@ ItemEvents.entityInteracted(event => {
     player.tell(Text.gray(enc.name + ' isn\'t looking for you.'))
     return
   }
+  if (enc.then == 'escort' && !player.tags.contains(enc.stage)) {
+    let rec = npcData(player, 'fqEnc').getCompound(enc.stage)
+    if (!rec.getBoolean('escorting')) {
+      questSay(player, enc.name, enc.lines)
+      rec.putBoolean('escorting', true)
+      player.tell(Text.yellow('Take ' + enc.name + ' to ' + (enc.to ? enc.to.label : 'safety') + ". They'll keep up."))
+    }
+    return
+  }
   if (enc.then != 'talk' || player.tags.contains(enc.stage)) return
   questSay(player, enc.name, enc.lines)
   questAddStage(player, enc.stage)
@@ -251,6 +266,32 @@ ItemEvents.entityInteracted(event => {
 })
 
 // ---- timed challenges ----
+// Goals: kill a number of a mob, raise a statistic, reach a place or a structure, or hold the spot where you started
+// (stay within "radius" until the time is up; leaving fails). "waves" spawn mobs around the player (or the held spot)
+// every "every" seconds while it runs; they're removed when it ends.
+
+let $NpcQuestWorld = null
+try {
+  $NpcQuestWorld = Java.loadClass('fotfskills.compat.QuestWorld')
+} catch (e) {
+  console.warn('quest_npcs: fotfskills QuestWorld not found; structure goals, escorts to structures and build tasks won\'t work')
+}
+
+function npcInStructure(level, x, y, z, structures) {
+  if (!$NpcQuestWorld) return false
+  return structures.some(s => $NpcQuestWorld.inStructure(level, x, y, z, s))
+}
+
+function npcInBox(entity, box) {
+  return String(entity.level.dimension) == box.dimension && entity.x >= box.min[0] && entity.x <= box.max[0]
+    && entity.y >= box.min[1] && entity.y <= box.max[1] && entity.z >= box.min[2] && entity.z <= box.max[2]
+}
+
+// has the entity reached a destination ({kind: place, box} or {kind: structure, structures})?
+function npcAtDestination(entity, dest) {
+  if (dest.kind == 'place') return npcInBox(entity, dest.box)
+  return npcInStructure(entity.level, entity.x, entity.y, entity.z, dest.structures)
+}
 
 function npcStartChallenge(player, stage) {
   let ch = npcEntries('timed').find(g => g.stage == stage)
@@ -259,13 +300,18 @@ function npcStartChallenge(player, stage) {
     return false
   }
   let rec = new $NpcCompoundTag()
+  rec.putLong('start', Date.now())
   rec.putLong('until', Date.now() + ch.seconds * 1000)
   rec.putInt('count', 0)
   npcRememberSpot(player, rec)
+  rec.putDouble('hx', player.x)
+  rec.putDouble('hy', player.y)
+  rec.putDouble('hz', player.z)
   if (ch.goal.kind == 'stat') rec.putInt('base', npcStatValue(player, ch.goal.stat))
   npcData(player, 'fqTimed').put(stage, rec)
   if (ch.lines.length) questSay(player, ch.name, ch.lines)
   player.tell(Text.yellow('Go! You have ' + ch.seconds + ' seconds.'))
+  if (ch.goal.kind == 'hold') player.tell(Text.gray('Hold this spot: stay within ' + ch.goal.radius + ' blocks.'))
   if ((ch.no || []).length) player.tell(Text.gray('No ' + ch.no.map(b => NPC_BAN_WORDS[b]).join(', ') + " until it's over."))
   return true
 }
@@ -274,10 +320,50 @@ function npcChallengeProgress(player, ch, rec) {
   let goal = ch.goal
   if (goal.kind == 'kill') return [rec.getInt('count'), goal.count]
   if (goal.kind == 'stat') return [npcStatValue(player, goal.stat) - rec.getInt('base'), goal.count]
-  let box = goal.box
-  let inside = String(player.level.dimension) == box.dimension && player.x >= box.min[0] && player.x <= box.max[0]
-    && player.y >= box.min[1] && player.y <= box.max[1] && player.z >= box.min[2] && player.z <= box.max[2]
-  return [inside ? 1 : 0, 1]
+  if (goal.kind == 'hold') return [0, 1]   // done when the time runs out (npcTickChallenges)
+  return [npcAtDestination(player, goal) ? 1 : 0, 1]
+}
+
+function npcHoldDistance(player, rec) {
+  let dx = player.x - rec.getDouble('hx'), dz = player.z - rec.getDouble('hz')
+  return Math.sqrt(dx * dx + dz * dz)
+}
+
+function npcSpawnWaves(player, ch, rec) {
+  let waves = ch.waves || []
+  if (!waves.length) return
+  let elapsed = (Date.now() - rec.getLong('start')) / 1000
+  let cx = ch.goal.kind == 'hold' ? rec.getDouble('hx') : player.x
+  let cz = ch.goal.kind == 'hold' ? rec.getDouble('hz') : player.z
+  waves.forEach((w, i) => {
+    let rounds = rec.getInt('w' + i)
+    if (elapsed < rounds * w.every) return
+    rec.putInt('w' + i, rounds + 1)
+    for (let n = 0; n < w.count; n++) {
+      let spot = npcFindSpotAround(player, cx, cz, 10, 16)
+      if (!spot) continue
+      player.server.runCommandSilent('execute in ' + player.level.dimension + ' run summon ' + w.entity + ' '
+        + spot.x + ' ' + spot.y + ' ' + spot.z + ' {Tags:["fq_wave","fq_wave.' + player.uuid + '"]}')
+    }
+  })
+}
+
+function npcClearWaves(player) {
+  player.server.runCommandSilent('kill @e[tag=fq_wave.' + player.uuid + ']')
+}
+
+function npcFinishChallenge(player, ch, won) {
+  npcData(player, 'fqTimed').remove(ch.stage)
+  npcClearWaves(player)
+  if (won) {
+    questAddStage(player, ch.stage)
+    player.setStatusMessage(Text.green('Challenge complete!'))
+    player.tell(Text.yellow('Challenge complete! Quest updated.'))
+  } else {
+    player.setStatusMessage(Text.red('Out of time!'))
+    player.tell(Text.of([Text.red('Out of time. '),
+      Text.green('[Try again]').clickRunCommand('/quest challenge ' + ch.stage).hover('Restart the challenge')]))
+  }
 }
 
 function npcTickChallenges(player) {
@@ -292,6 +378,7 @@ function npcTickChallenges(player) {
     if (running.contains(ch.stage)) {
       let rec = running.getCompound(ch.stage)
       let broken = npcBrokenBan(player, ch, rec)
+      if (!broken && ch.goal.kind == 'hold' && npcHoldDistance(player, rec) > ch.goal.radius) broken = 'You left the spot.'
       if (broken) {
         npcFailChallenge(player, ch, broken)
         return
@@ -299,17 +386,14 @@ function npcTickChallenges(player) {
       let progress = npcChallengeProgress(player, ch, rec)
       let left = Math.ceil((rec.getLong('until') - now) / 1000)
       if (progress[0] >= progress[1]) {
-        running.remove(ch.stage)
-        questAddStage(player, ch.stage)
-        player.setStatusMessage(Text.green('Challenge complete!'))
-        player.tell(Text.yellow('Challenge complete! Quest updated.'))
+        npcFinishChallenge(player, ch, true)
       } else if (left <= 0) {
-        running.remove(ch.stage)
-        player.setStatusMessage(Text.red('Out of time!'))
-        player.tell(Text.of([Text.red('Out of time. '),
-          Text.green('[Try again]').clickRunCommand('/quest challenge ' + ch.stage).hover('Restart the challenge')]))
+        npcFinishChallenge(player, ch, ch.goal.kind == 'hold')
       } else {
-        let label = ch.goal.kind == 'place' ? 'Reach ' + ch.goal.label : progress[0] + ' / ' + progress[1]
+        npcSpawnWaves(player, ch, rec)
+        let label = ch.goal.kind == 'hold' ? 'Hold on'
+          : (ch.goal.kind == 'place' || ch.goal.kind == 'structure') ? 'Reach ' + ch.goal.label
+          : progress[0] + ' / ' + progress[1]
         player.setStatusMessage(Text.of([Text.gold(left + 's  '), Text.white(label)]))
       }
       return
@@ -321,12 +405,63 @@ function npcTickChallenges(player) {
   })
 }
 
+// ---- escorts (encounter "then": "escort") ----
+// Talk to them and they come along: they keep up with you (a short hop to your side whenever you're more than a few
+// blocks ahead) until they reach the destination, then thank you and the step is done.
+
+function npcTickEscorts(player) {
+  let state = npcData(player, 'fqEnc')
+  npcEntries('encounter').forEach(enc => {
+    if (enc.then != 'escort' || !state.contains(enc.stage) || player.tags.contains(enc.stage)) return
+    let rec = state.getCompound(enc.stage)
+    if (!rec.getBoolean('escorting')) return
+    let entity = npcEntity(player, String(rec.getString('uuid')))
+    if (!entity || !entity.isAlive()) {
+      rec.putBoolean('escorting', false)   // lost (unloaded, other dimension): they turn up again and wait to be asked
+      return
+    }
+    rec.putLong('until', Date.now() + enc.minutes * 60 * 1000)
+    if (enc.to && npcAtDestination(entity, enc.to)) {
+      if (enc.thanks && enc.thanks.length) questSay(player, enc.name, enc.thanks)
+      questAddStage(player, enc.stage)
+      player.tell(Text.yellow('Quest updated.'))
+      player.server.scheduleInTicks(100, () => { if (entity.isAlive()) entity.discard() })
+      state.remove(enc.stage)
+      return
+    }
+    let dx = entity.x - player.x, dz = entity.z - player.z
+    let dist = Math.sqrt(dx * dx + dz * dz)
+    if (dist > 3.5) {
+      let k = dist > 0.01 ? 2 / dist : 0
+      player.server.runCommandSilent('execute in ' + player.level.dimension + ' run tp ' + entity.uuid + ' '
+        + (player.x + dx * k) + ' ' + player.y + ' ' + (player.z + dz * k) + ' facing entity ' + player.uuid)
+    }
+  })
+}
+
+// ---- build tasks ----
+// Done when the listed blocks are within "radius" of the player while the step is open; checked every 5 seconds.
+
+function npcTickBuilds(player) {
+  if (!$NpcQuestWorld) return
+  npcEntries('build').forEach(b => {
+    if (player.tags.contains(b.stage) || !questOpen(player, b)) return
+    let counts = $NpcQuestWorld.countBlocks(player.level, player.x, player.y, player.z, b.radius, b.keys)
+    for (let i = 0; i < b.counts.length; i++) {
+      if (counts[i] < b.counts[i]) return
+    }
+    questAddStage(player, b.stage)
+    player.tell(Text.yellow('That looks right. Quest updated.'))
+  })
+}
+
 // ---- shortcuts a challenge switches off (timed "no") ----
 // teleport: waystones, warp and return scrolls, warp stones, chorus fruit, and (caught afterwards) any jump of over
 // 64 blocks in a second or a change of dimension. mounts: you're taken off whatever you ride. elytra: gliding ends the
 // challenge. pearls: ender pearls can't be thrown. Grappling hooks are always allowed.
 
-const NPC_BAN_WORDS = { teleport: 'teleporting', mounts: 'riding', elytra: 'gliding', pearls: 'ender pearls' }
+const NPC_BAN_WORDS = { teleport: 'teleporting', mounts: 'riding', elytra: 'gliding', pearls: 'ender pearls',
+  hurt: 'getting hit' }
 const NPC_TELEPORT_ITEMS = ['waystones:warp_scroll', 'waystones:bound_scroll', 'waystones:return_scroll',
   'waystones:warp_stone', 'minecraft:chorus_fruit']
 const NPC_TELEPORT_DISTANCE = 64
@@ -380,6 +515,7 @@ function npcBrokenBan(player, ch, rec) {
 
 function npcFailChallenge(player, ch, why) {
   npcData(player, 'fqTimed').remove(ch.stage)
+  npcClearWaves(player)
   player.setStatusMessage(Text.red('Challenge failed'))
   player.tell(Text.of([Text.red(why + ' '),
     Text.green('[Try again]').clickRunCommand('/quest challenge ' + ch.stage).hover('Restart the challenge')]))
@@ -404,13 +540,26 @@ BlockEvents.rightClicked(event => {
   }
 })
 
+// hurt: taking damage from any creature fails a stealth challenge
+EntityEvents.hurt('minecraft:player', event => {
+  let player = event.entity
+  if (player.level.clientSide) return
+  let attacker = null
+  try { attacker = event.source.actual } catch (e) { attacker = null }
+  if (!attacker || attacker.isPlayer()) return
+  let ch = npcBans(player).hurt
+  if (ch) npcFailChallenge(player, ch, 'You were caught.')
+})
+
 // ---- ticking and kills ----
 
 PlayerEvents.tick(event => {
   let player = event.player
   if (player.level.clientSide || player.tickCount % 20 != 0) return
   npcTickChallenges(player)
+  npcTickEscorts(player)
   if (player.tickCount % 40 == 0) npcTickEncounters(player)
+  if (player.tickCount % 100 == 0) npcTickBuilds(player)
 })
 
 EntityEvents.death(event => {

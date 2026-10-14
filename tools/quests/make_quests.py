@@ -435,8 +435,8 @@ def build_encounter(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, proble
         return None, None
     reg = ctx['registry']
     then = spec.get('then', 'talk')
-    if then not in ('talk', 'kill'):
-        problems.error(where, 'encounter "then" must be "talk" or "kill"')
+    if then not in ('talk', 'kill', 'escort'):
+        problems.error(where, 'encounter "then" must be "talk", "kill" or "escort"')
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.enc{n}', 'type': 'encounter',
              'then': then, 'lines': spec.get('lines', []), 'arrive': spec.get('arrive', ''), 'requires': [],
              'quest_id': quest_id, 'prev_tasks': list(prev_tasks), 'name': spec.get('name', ''),
@@ -462,13 +462,19 @@ def build_encounter(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, proble
     if cond.get('dimension'):
         reg.check('dimensions', cond['dimension'], where)
     entry['where'] = {k: cond[k] for k in ('biomes', 'dimension', 'below_y', 'above_y') if k in cond}
-    title = t.get('title', ('Meet ' if then == 'talk' else 'Defeat ') + entry['name'])
+    if then == 'escort':
+        dest = build_destination(spec.get('to'), reg, where, problems)
+        if dest:
+            entry['to'] = dest
+        entry['thanks'] = spec.get('thanks', [])
+    verb = {'talk': 'Meet ', 'kill': 'Defeat ', 'escort': 'Escort '}.get(then, 'Meet ')
+    title = t.get('title', verb + entry['name'] + (' to ' + entry['to']['label'] if entry.get('to') else ''))
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'], 'title': title}
     return task, entry
 
 
 # shortcuts a timed challenge can switch off (kubejs/server_scripts/quest_npcs.js)
-TIMED_BANS = ('teleport', 'mounts', 'elytra', 'pearls')  # never grappling hooks: Dylan wants them allowed
+TIMED_BANS = ('teleport', 'mounts', 'elytra', 'pearls', 'hurt')  # never grappling hooks: Dylan wants them allowed
 
 
 def build_timed(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
@@ -496,16 +502,32 @@ def build_timed(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
             return None, None
         out_goal = {'kind': 'place', 'box': place_box(PLACES[goal['place']]),
                     'label': PLACES[goal['place']].get('name', goal['place'])}
+    elif 'hold' in goal:
+        hold = goal['hold'] if isinstance(goal['hold'], dict) else {}
+        out_goal = {'kind': 'hold', 'radius': float(hold.get('radius', 8))}
+    elif 'structure' in goal:
+        dest = build_destination({'structure': goal['structure'], 'label': goal.get('label', 'the destination')},
+                                 ctx['registry'], where, problems)
+        if not dest:
+            return None, None
+        out_goal = dict(dest)
     else:
-        problems.error(where, 'timed goal must be "kill", "stat" or "place"')
+        problems.error(where, 'timed goal must be "kill", "stat", "place", "structure" or "hold"')
         return None, None
+    waves = []
+    for w in spec.get('waves', []):
+        if not isinstance(w, dict) or 'entity' not in w:
+            problems.error(where, 'each wave needs an "entity" (and "count", "every" seconds)')
+            continue
+        ctx['registry'].check('entities', w['entity'], where, w.get('unchecked', False))
+        waves.append({'entity': w['entity'], 'count': int(w.get('count', 3)), 'every': int(w.get('every', 20))})
     banned = spec.get('no', [])
     banned = banned if isinstance(banned, list) else [banned]
     for b in banned:
         if b not in TIMED_BANS:
             problems.error(where, f'timed "no": unknown shortcut {b!r} (one of {", ".join(TIMED_BANS)})')
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.timed{n}', 'type': 'timed',
-             'seconds': seconds, 'goal': out_goal, 'no': [b for b in banned if b in TIMED_BANS], 'lines': spec.get('lines', []), 'start': spec.get('start', 'Start'),
+             'seconds': seconds, 'goal': out_goal, 'no': [b for b in banned if b in TIMED_BANS], 'waves': waves, 'lines': spec.get('lines', []), 'start': spec.get('start', 'Start'),
              'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks), 'name': spec.get('name', '')}
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
             'title': t.get('title', f'Challenge ({seconds // 60}:{seconds % 60:02d})')}
@@ -533,22 +555,70 @@ def build_protect(spec, reg, where, problems):
     if not structures or not blocks:
         problems.error(where, '"protect" needs at least one structure and one block')
         return None
-    out_structures = []
-    for sid in structures:
+    out_structures = expand_structures(structures, reg, where, problems)
+    for b in blocks:
+        if not (isinstance(b, str) and b.startswith('#')):
+            reg.check('items', b, where, spec.get('unchecked', False))
+    rule = {'structures': out_structures, 'blocks': list(blocks)}
+    minutes = spec.get('reset_minutes', 0)
+    if minutes:
+        rule['reset'] = int(float(minutes) * 60)
+    return rule
+
+
+def expand_structures(structures, reg, where, problems):
+    """Structure ids, "#group" (src/structure_groups.json, expanded) or "#namespace:tag" (kept as is)."""
+    out = []
+    for sid in structures if isinstance(structures, list) else [structures]:
         if isinstance(sid, str) and sid.startswith('#') and ':' not in sid:
             if sid[1:] not in STRUCTURE_GROUPS:
                 problems.error(where, f'unknown structure group {sid} (tools/quests/src/structure_groups.json)')
                 continue
-            out_structures += STRUCTURE_GROUPS[sid[1:]]
+            out += STRUCTURE_GROUPS[sid[1:]]
         elif isinstance(sid, str) and sid.startswith('#'):
-            out_structures.append(sid)
+            out.append(sid)
         else:
             reg.check('structures', sid, where)
-            out_structures.append(sid)
+            out.append(sid)
+    return sorted(set(out))
+
+
+def build_destination(to, reg, where, problems):
+    """Where an escort or timed goal is headed: {"place": id} or {"structure": id / "#group" / "#ns:tag"}."""
+    if isinstance(to, dict) and 'place' in to:
+        if to['place'] not in PLACES:
+            problems.error(where, f'unknown place {to["place"]!r} (tools/quests/src/places.json)')
+            return None
+        return {'kind': 'place', 'box': place_box(PLACES[to['place']]), 'label': PLACES[to['place']].get('name', to['place'])}
+    if isinstance(to, dict) and 'structure' in to:
+        structures = expand_structures(to['structure'], reg, where, problems)
+        if not structures:
+            return None
+        return {'kind': 'structure', 'structures': structures, 'label': to.get('label', 'the destination')}
+    problems.error(where, 'a destination needs {"place": id} or {"structure": id}')
+    return None
+
+
+def build_build(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "build" task: done when the blocks are within "radius" of the player (checked every few seconds while the
+    step is open). "blocks": {"minecraft:campfire": 1, "#minecraft:logs": 20}."""
+    spec = t['build']
+    blocks = spec.get('blocks') if isinstance(spec, dict) else None
+    if not isinstance(blocks, dict) or not blocks:
+        problems.error(where, '"build" needs "blocks": {"id or #tag": count}')
+        return None, None
     for b in blocks:
-        if not (isinstance(b, str) and b.startswith('#')):
-            reg.check('items', b, where, spec.get('unchecked', False))
-    return {'structures': sorted(set(out_structures)), 'blocks': list(blocks)}
+        if not b.startswith('#'):
+            ctx['registry'].check('items', b, where, spec.get('unchecked', False))
+    radius = int(spec.get('radius', 8))
+    if not 1 <= radius <= 12:
+        problems.error(where, '"build" radius must be 1-12')
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.build{n}', 'type': 'build',
+             'keys': list(blocks), 'counts': [int(v) for v in blocks.values()], 'radius': radius, 'requires': [],
+             'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', 'Build it')}
+    return task, entry
 
 
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
@@ -843,6 +913,11 @@ def main():
                                               problems)
                     if entry:
                         givers.append(entry)
+                elif isinstance(t, dict) and 'build' in t:
+                    task, entry = build_build(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
+                                              problems)
+                    if entry:
+                        givers.append(entry)
                 elif isinstance(t, dict) and 'drop' in t:
                     task, entry = build_task_drop(t, name, qid, n, quest['id'], open_task, talk_requires, ctx, twhere,
                                                   problems)
@@ -925,6 +1000,27 @@ def main():
 
     for w in problems.warnings:
         print('warning: ' + w)
+    for cid, char in characters.items():
+        offers = []
+        for n, o in enumerate(char.get('shop', [])):
+            swhere = f'pack.json > character {cid} > shop {n + 1}'
+            if not isinstance(o, dict) or not isinstance(o.get('give'), dict) or not o.get('cost'):
+                problems.error(swhere, 'a shop offer needs "cost": [{"item", "count"}] and "give": {"item", "count"}')
+                continue
+            for c in o['cost'] + [o['give']]:
+                reg.check('items', c.get('item'), swhere, c.get('unchecked', False))
+            offer = {'cost': [{'item': c['item'], 'count': int(c.get('count', 1))} for c in o['cost']],
+                     'give': dict(o['give']), 'quest_id': '', 'requires': o.get('requires', '')}
+            offer['give']['count'] = int(offer['give'].get('count', 1))
+            if o.get('requires'):
+                ref = tuple(o['requires'].split(':', 1)) if ':' in o['requires'] else None
+                if ref not in known:
+                    problems.error(swhere, f'"requires" points at unknown quest {o["requires"]!r} (chapter:quest)')
+                    continue
+                offer['quest_id'] = known[ref]
+            offers.append(offer)
+        if 'shop' in char:
+            char['shop'] = offers
     if problems.errors:
         for e in problems.errors:
             print('error: ' + e)

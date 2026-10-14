@@ -83,8 +83,13 @@ blocks the puzzle depends on (never whole buildings), and a timed challenge the 
 always allowed: never ban them, even where a plan summary says to. Use them
 rather than logging them.
 
-Some plan entries need mechanics the generator doesn't have yet: escorts, stealth, defending a spot, checking a
-build, photos, per-player resets of a changed puzzle. **Write the quest anyway** with the nearest supported tasks (a
+Also supported (see `tools/quests/README.md`): **escorts** (encounter `"then": "escort"` with `"to"`),
+**stealth** (a `timed` goal to a place or structure with `"no": ["hurt"]`), **defending a spot** (a `timed` `hold` goal,
+usually with `waves`), **building** (a `build` task), **puzzles players change** (`protect` with `"reset_minutes"`),
+and **character shops** (give the character at the end of each chain one or two themed deals in pack.json).
+
+Some plan entries need mechanics the generator still doesn't have: photos, and anything else the README doesn't
+list. **Write the quest anyway** with the nearest supported tasks (a
 `checkmark` for "solve the puzzle", a `kill` count for a defence, an `observe` or `structure` for "find it"), so the
 chain stays whole and playable. Then add one line per quest to `tools/quests/src/plans/followups.md` under "Engine needed":
 `- <chapter>:<id>: needs <mechanic>; written as <what you used>`.

@@ -72,6 +72,9 @@ public final class FotfSkills {
             MinecraftForge.EVENT_BUS.register(new fotfskills.compat.VillageWaystones());
         }
         MinecraftForge.EVENT_BUS.register(new fotfskills.compat.QuestProtectHooks());
+        if (ModList.get().isLoaded("ftbquests")) {
+            MinecraftForge.EVENT_BUS.register(new fotfskills.compat.SharedKillHooks());
+        }
         MinecraftForge.EVENT_BUS.register(new FarmPerks());
         MinecraftForge.EVENT_BUS.register(new FoodPerks());
         MinecraftForge.EVENT_BUS.register(new FishingPerks());

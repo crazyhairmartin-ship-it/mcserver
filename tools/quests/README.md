@@ -90,7 +90,7 @@ Quest fields:
 | `optional` | Doesn't block chapter completion |
 | `signature` | The artifact this quest is built around, e.g. `"artifacts:snorkel"`. Each artifact may be the signature of one quest only (a standalone quest, or one step of a main, realm or skill chain); giving an artifact from a quest that isn't built around it is a warning. `--artifacts` lists artifacts without one |
 | `giver` | The quest is handed out by a villager, mob or item instead of being in the book from the start (below) |
-| `protect` | Puzzle blocks: `{"structure": "mos:atlantis_tribune", "blocks": ["minecraft:sea_lantern"]}` (or a list of them). Inside that structure (an id, a `#group` from `src/structure_groups.json`, or `#namespace:tag`), those blocks (ids or `#namespace:tag`) can't be broken by survival players, blown up or pushed by pistons, for everyone, always. Only list the blocks the puzzle depends on; everything else stays normal survival. Enforced by the fotfskills add-on |
+| `protect` | Puzzle blocks: `{"structure": "mos:atlantis_tribune", "blocks": ["minecraft:sea_lantern"]}` (or a list of them). Inside that structure (an id, a `#group` from `src/structure_groups.json`, or `#namespace:tag`), those blocks (ids or `#namespace:tag`) can't be broken by survival players, blown up or pushed by pistons, for everyone, always. Only list the blocks the puzzle depends on; everything else stays normal survival. Add `"reset_minutes": 10` when the puzzle has players place those blocks: placed ones can be taken back by players and are cleared after that long (and on server stop), so the next player finds the puzzle as it was. Enforced by the fotfskills add-on |
 | `discover` | The quest is found out in the world: a task (usually `structure`, `biome`, `item`, `dimension` or `stat`) that's hidden; when it's done the quest appears. E.g. `"discover": {"biome": "minecraft:cherry_grove"}` |
 
 ## Tasks
@@ -109,9 +109,10 @@ Quest fields:
 | `{"stat": "minecraft:fish_caught", "count": 50}` | A vanilla statistic reaches the count (`minecraft:walk_one_cm`, `minecraft:aviate_one_cm`, `minecraft:fish_caught`, ...) |
 | `{"checkmark": "I've read this"}` | The player ticks it |
 | `{"talk": "villager", "profession": "minecraft:cleric", "lines": [...]}` | Sneak + right-click that villager while on the quest; they say the lines. `"talk": "entity"` with `"entity"` (and optional `"named"`) for a mob, `"talk": "org"` with `"org"` for any representative of an organisation, `"talk": "character"` with `"character"` for a named character (plain right-click) |
-| `{"encounter": {"character": "id" or "entity": "minecraft:wolf", "name": "Old Grey", "then": "talk" or "kill", "lines": [...], "arrive": "...", "health": 60, "glow": true, "distance": [8, 16], "minutes": 20, "where": {"biomes": [...], "dimension": "...", "below_y": 0, "above_y": 60}}}` | When the quest reaches this step (earlier tasks done) and `where` fits, the character or mob appears 8-16 blocks from the player. `talk`: right-click it (it can't be hurt); `kill`: defeat it. It leaves after `minutes` if ignored and comes back 2 minutes later; it's removed when the step is done. Only its player can complete it |
-| `{"timed": {"seconds": 300, "goal": {"kill": "minecraft:zombie", "count": 10} or {"stat": "minecraft:fish_caught", "count": 5} or {"place": "reece"}, "lines": [...], "start": "Start", "no": ["teleport", "mounts"]}}` | When the quest reaches this step, the player gets a clickable [Start] in chat (repeated every 5 minutes until started). Timer and progress show on the action bar; reach the goal in time to complete the step, or click [Try again]. `no` switches shortcuts off while it runs: `teleport` (waystones, warp/return scrolls, warp stones, chorus fruit are blocked; any other jump over 64 blocks in a second or a dimension change fails it), `mounts` (dismounted), `elytra` (gliding fails it), `pearls` (ender pearls blocked). Grappling hooks are always allowed |
+| `{"encounter": {"character": "id" or "entity": "minecraft:wolf", "name": "Old Grey", "then": "talk" or "kill", "lines": [...], "arrive": "...", "health": 60, "glow": true, "distance": [8, 16], "minutes": 20, "where": {"biomes": [...], "dimension": "...", "below_y": 0, "above_y": 60}}}` | When the quest reaches this step (earlier tasks done) and `where` fits, the character or mob appears 8-16 blocks from the player. `talk`: right-click it (it can't be hurt); `kill`: defeat it; `escort` (with `"to": {"place": id}` or `{"structure": id or "#group", "label": "the camp"}` and optional `"thanks": [...]`): right-click it and it comes along, keeping up with you, until it's inside the destination. It leaves after `minutes` if ignored and comes back 2 minutes later; it's removed when the step is done. Only its player can complete it |
+| `{"timed": {"seconds": 300, "goal": {"kill": "minecraft:zombie", "count": 10} or {"stat": "minecraft:fish_caught", "count": 5} or {"place": "reece"} or {"structure": "minecraft:pillager_outpost", "label": "the outpost"} or {"hold": {"radius": 8}}, "waves": [{"entity": "minecraft:zombie", "count": 3, "every": 20}], "lines": [...], "start": "Start", "no": ["teleport", "mounts"]}}` | When the quest reaches this step, the player gets a clickable [Start] in chat (repeated every 5 minutes until started). Timer and progress show on the action bar; reach the goal in time to complete the step, or click [Try again]. `no` switches shortcuts off while it runs: `teleport` (waystones, warp/return scrolls, warp stones, chorus fruit are blocked; any other jump over 64 blocks in a second or a dimension change fails it), `mounts` (dismounted), `elytra` (gliding fails it), `pearls` (ender pearls blocked), `hurt` (taking damage from any creature fails it: stealth). Grappling hooks are always allowed. `hold`: stay within the radius of where you started until the time runs out (defending a spot; leaving fails). `waves` spawn mobs around you (or the held spot) every `every` seconds while it runs; they're removed when it ends |
 | `{"stage": "my_stage"}` | The player has that stage (a player tag; for scripted quests) |
+| `{"build": {"blocks": {"minecraft:campfire": 1, "#minecraft:logs": 20}, "radius": 8}}` | The blocks are within `radius` (1-12) of the player while the step is open (checked every 5 seconds). For "build a shrine/camp/pen" quests |
 | `{"drop": {"from": ["minecraft:wolf"], "chance": 0.2, "item": {"name": "Alpha's Fang"}}, "count": 1}` | A unique quest drop: while the quest is open, those mobs can drop the quest item (new `kubejs:quest_*` item, or an existing id); the task is to bring it (`"consume": false` to keep it). Drops never happen outside the quest. `"from": ["fishing"]` makes it a fished item instead (a prize fish) |
 
 Any task can have a `"title"`. Add `"unchecked": true` for ids that only exist at runtime (Every Compat's blocks, tags).
@@ -211,13 +212,21 @@ behaviour lives in `kubejs/server_scripts/quest_givers.js`.
 All of this lives in `kubejs/server_scripts/quest_givers.js` (givers, talk, pools, drops) and `quest_npcs.js`
 (characters, encounters, timed challenges).
 
+### Shops
+
+A character can have a `"shop"` in pack.json: deals that open for a player once they've finished a quest.
+`[{"requires": "small_favours:sf_the_loaf", "cost": [{"item": "minecraft:emerald", "count": 1}], "give": {"item":
+"bakery:crusty_bread", "count": 4}}]` (`give` may have `name` and `lore`). Right-clicking the character shows
+[See deals] once any are open; buying needs the player within 8 blocks of them. Good deals are a chain's reward that
+lasts: give the character at the end of each chain one or two offers themed on that chain. Lives in
+`kubejs/server_scripts/quest_shops.js`.
+
 ## Progress
 
 Quest progress is solo: everyone has their own. FTB Teams is only installed because FTB Quests needs it; claims and
 parties stay with Open Parties and Claims.
 
-## To do
-
-- **Shared kill credit:** when a quest mob or boss dies, credit the kill to everyone nearby who helped, or to the
-  killer's OPAC party members within range, so friends can quest together with solo progress (FTB only credits the
-  last hit). Requested by Dylan 2026-10-14.
+**Questing together:** when a mob dies, everyone who hurt it in the last 30 seconds and is within 64 blocks, and the
+killer's Open Parties and Claims party members within 32 blocks, also get the kill on their open kill tasks
+(fotfskills `SharedKillHooks`; FTB Quests itself only credits the last hit). Encounters and timed-challenge kills
+still belong to their own player.

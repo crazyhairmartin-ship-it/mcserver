@@ -2733,15 +2733,19 @@ hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "8255518fb5bf5a67d7d8f00219d6b93ec59359606993721f5aa879c42b6d1cd0"
+hash = "61609cab32784a16f5f09de86b55a4996cabd47641779630d86aba3c4a299b56"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
-hash = "df8ff5f2c992c53c867947fd16c8d2e2cd416f652b2ef50fd65a8c2f40916002"
+hash = "935da3bc6d65063156dbec3c657b712255f0d668535fb121558e7c0b81ebf57d"
 
 [[files]]
 file = "kubejs/server_scripts/quest_npcs.js"
-hash = "a8aabec35f5b463aa088a9fbc9be70ee389ca0aa0a48ed3fa377c73105e711af"
+hash = "83da7ea1b04bbd6c7e779339df7431bf1f781aecabb4985c913834ac834f85a4"
+
+[[files]]
+file = "kubejs/server_scripts/quest_shops.js"
+hash = "8e217cd37f136f07e0229950605abcaef240ffcbaf197baa837bfa3d36327929"
 
 [[files]]
 file = "kubejs/server_scripts/saddle_recipe.js"
