@@ -42,16 +42,23 @@ public final class WeaponLayout {
         int[] shown = new int[n];
         boolean[] placed = new boolean[n];
         java.util.Arrays.fill(shown, -1);
-        for (int s = 0; s < n; s++) {               // weapons already in a slot of their kind, and other items, stay put
-            if (kinds[s] == OTHER || (kinds[s] != EMPTY && kinds[s] == places[s])) {
+        for (int s = 0; s < n; s++) {               // weapons already in a slot of their kind stay put
+            if (isWeapon(kinds[s]) && kinds[s] == places[s]) {
                 shown[s] = s;
                 placed[s] = true;
             }
         }
-        for (int s = 0; s < n; s++) {               // weapons in the wrong kind of slot move to a free one of their kind
-            if (!placed[s] && kinds[s] != EMPTY) {
+        // weapons in the wrong kind of slot take one of their kind: an empty slot's first, then one whose weapon is
+        // moving away too, then a tool's or block's (those give way to weapons)
+        for (int pass = 0; pass < 3; pass++) {
+            for (int s = 0; s < n; s++) {
+                if (placed[s] || !isWeapon(kinds[s])) {
+                    continue;
+                }
                 for (int d = 0; d < n; d++) {
-                    if (shown[d] < 0 && places[d] == kinds[s]) {
+                    int there = kinds[d];
+                    boolean ok = pass == 0 ? there == EMPTY : pass == 1 ? isWeapon(there) : there == OTHER;
+                    if (shown[d] < 0 && places[d] == kinds[s] && ok) {
                         shown[d] = s;
                         placed[s] = true;
                         break;
@@ -59,7 +66,13 @@ public final class WeaponLayout {
                 }
             }
         }
-        for (int s = 0; s < n; s++) {               // empty slots and overflow fill what's left, their own slot first
+        for (int s = 0; s < n; s++) {               // tools and blocks keep their slot if it's still free
+            if (!placed[s] && kinds[s] == OTHER && shown[s] < 0) {
+                shown[s] = s;
+                placed[s] = true;
+            }
+        }
+        for (int s = 0; s < n; s++) {               // everything else fills what's left, its own slot first
             if (placed[s]) {
                 continue;
             }
@@ -71,6 +84,10 @@ public final class WeaponLayout {
             placed[s] = true;
         }
         return shown;
+    }
+
+    private static boolean isWeapon(int kind) {
+        return kind == BACK || kind == HIP;
     }
 
     /** The display slot showing this hotbar slot's item. */

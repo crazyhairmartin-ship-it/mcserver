@@ -16,13 +16,24 @@ public final class WeaponLayoutTest {
 
         // a sword in slot 1 and a greatsword in slot 3 swap places
         int[] swap = WeaponLayout.arrange(new int[]{H, E, B, E, E, E, E, E, E}, PLACES);
-        check(swap[0] == 2 && swap[2] == 0, "greatsword (slot 3) shows on the back, sword (slot 1) on the hip: " + Arrays.toString(swap));
+        check(PLACES[indexOf(swap, 2)] == B && PLACES[indexOf(swap, 0)] == H, "greatsword (slot 3) shows on the back, sword (slot 1) on a hip: " + Arrays.toString(swap));
         check(isPermutation(swap), "every slot shown once");
 
-        // tools and blocks keep their slot when it's free
+        // tools and blocks keep their slot when weapons don't need it
         int[] tools = WeaponLayout.arrange(new int[]{N, H, N, E, E, E, E, E, B}, PLACES);
-        check(tools[0] == 0 && tools[2] == 2, "untyped items stay put: " + Arrays.toString(tools));
+        check(tools[2] == 2, "a tool in a hip slot stays when a free hip slot exists: " + Arrays.toString(tools));
         check(PLACES[indexOf(tools, 1)] == H && PLACES[indexOf(tools, 8)] == B, "typed items go to their kind: " + Arrays.toString(tools));
+
+        // Dylan's hotbar: rapier (hip) in slot 1, pickaxes/grapple/blocks/food elsewhere, scythe (back) in slot 5
+        int[] dylan = WeaponLayout.arrange(new int[]{H, N, N, N, B, E, N, N, N}, PLACES);
+        check(PLACES[indexOf(dylan, 4)] == B, "scythe shows on the back: " + Arrays.toString(dylan));
+        check(PLACES[indexOf(dylan, 0)] == H, "rapier shows on a hip: " + Arrays.toString(dylan));
+        check(isPermutation(dylan), "every slot shown once");
+
+        // back slots all held by tools: a back weapon still takes one (tools give way to weapons)
+        int[] full = WeaponLayout.arrange(new int[]{N, N, E, E, B, E, N, N, E}, PLACES);
+        check(PLACES[indexOf(full, 4)] == B, "back weapon displaces a tool: " + Arrays.toString(full));
+        check(isPermutation(full), "every slot shown once");
 
         // five back weapons, four back places: the fifth shows wherever there's room
         int[] crowd = WeaponLayout.arrange(new int[]{B, B, B, B, B, E, E, E, E}, PLACES);
@@ -31,7 +42,7 @@ public final class WeaponLayoutTest {
         for (int d = 0; d < 9; d++) if (PLACES[d] == B && crowd[d] < 5) onBack++;
         check(onBack == 4, "all four back places used by back weapons");
 
-        check(WeaponLayout.displayOf(swap, 2) == 0, "the selected slot follows its item");
+        check(swap[WeaponLayout.displayOf(swap, 2)] == 2, "the selected slot follows its item");
         System.out.println("WeaponLayoutTest ok");
     }
 
