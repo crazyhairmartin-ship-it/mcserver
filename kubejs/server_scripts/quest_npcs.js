@@ -82,12 +82,18 @@ ServerEvents.commandRegistry(event => {
       }
       // placing again moves the character: the old one (in loaded chunks) goes first
       ctx.source.server.runCommandSilent('kill @e[tag=fq_npc.' + id + ']')
-      let entity = player.level.createEntity(info.entity || 'minecraft:villager')
-      entity.setPos(player.x, player.y, player.z)
-      npcDress(entity, info.name, info.profession, { Invulnerable: true, NoAI: true, Silent: true })
-      entity.addTag('fq_npc')
-      entity.addTag('fq_npc.' + id)
-      entity.spawn()
+      // /summon builds the mob from its data in one step. createEntity + mergeNbt reads a mob's data before it's in
+      // the world, which some mobs can't do (Ender Mail's carrier crashes saving itself), so characters are summoned
+      let nbt = { CustomName: JSON.stringify({ text: info.name }), CustomNameVisible: true, PersistenceRequired: true,
+        Invulnerable: true, NoAI: true, Silent: true, Tags: ['fq_npc', 'fq_npc.' + id] }
+      if (info.profession) nbt.VillagerData = { profession: info.profession, level: 5, type: 'minecraft:plains' }
+      let summoned = ctx.source.server.runCommandSilent('execute in ' + player.level.dimension + ' run summon '
+        + (info.entity || 'minecraft:villager') + ' ' + player.x + ' ' + player.y + ' ' + player.z + ' ' + JSON.stringify(nbt))
+      if (!summoned) {
+        player.tell(Text.red('Could not summon ' + info.name + ' (' + (info.entity || 'minecraft:villager') + '). See the server log.'))
+        return 0
+      }
+      let entity = { uuid: '@e[tag=fq_npc.' + id + ',limit=1]' }   // the commands below only need a target
       // face the way the player faces: /tp sets the body and head rotation (KubeJS can't reach setYRot here)
       ctx.source.server.runCommandSilent('tp ' + entity.uuid + ' ' + player.x + ' ' + player.y + ' ' + player.z
         + ' ' + player.yaw + ' 0')
