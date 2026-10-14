@@ -49,6 +49,12 @@ titles, plots or steps. Format: see the docstring of `tools/quests/coverage.py`.
 - **Timed challenges** can switch off shortcuts for their duration where they'd trivialise the challenge:
   waystone and warp-scroll teleports, riding mounts, and per challenge other movement (elytra/wings, grappling
   hooks, ender pearls). Each timed quest says which.
+- **Protecting objectives: specific blocks, not areas.** The blocks a puzzle or quest depends on (braziers,
+  levers, altars, a monument's pieces) can't be broken, blown up or pushed by pistons; everything around them stays
+  normal survival. Clever solutions are welcome (any route, tool or trick that works), just not breaking the
+  puzzle. Anything a quest changes resets for the next player. Named characters and givers can't be hurt, don't
+  despawn or convert, and respawn at their spot if lost; Reece itself is a server claim. Structure loot is per player
+  (Lootr), quest items drop only for the player on the quest, and progress is per player or FTB team.
 - **Odd jobs and nonsense** (`odd_jobs.json`): deliberately pointless standalone quests with token rewards.
 
 ## Tiers (when in the game)
