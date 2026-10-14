@@ -1,0 +1,558 @@
+{
+  "title": "The Sanctuary",
+  "subtitle": "Taming path",
+  "icon": "minecraft:bone",
+  "group": "skills",
+  "order": 11,
+  "quests": [
+    {
+      "id": "stray_wolf",
+      "title": "The Stray",
+      "text": [
+        "A shepherd says a half-starved wolf follows the flock at a distance. Tame it, give it a collar tag and bring it to Fern's pen at the edge of Reece."
+      ],
+      "tasks": [
+        {
+          "advancement": "minecraft:husbandry/tame_an_animal",
+          "title": "Tame the wolf"
+        },
+        {
+          "item": "domesticationinnovation:collar_tag"
+        },
+        {
+          "place": "reece"
+        },
+        {
+          "talk": "character",
+          "character": "fern",
+          "lines": [
+            "Oh, look at you. Thin as a rake. Come in, come in.",
+            "You did well. Most people shout at strays. You waited.",
+            "I'll name it later. Names come when they're ready.",
+            "There's more to do here, if you'd like to help."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone",
+          "count": 16
+        },
+        {
+          "skill": "taming",
+          "xp": 50
+        }
+      ],
+      "icon": "minecraft:bone",
+      "giver": {
+        "type": "org",
+        "org": "sanctuary",
+        "lines": [
+          "There's a wolf that follows my flock at a distance. Half-starved, poor thing.",
+          "If you can win its trust, Keeper Fern at the sanctuary in Reece will take it in."
+        ],
+        "accept": "I'll try"
+      }
+    },
+    {
+      "id": "first_pens",
+      "title": "Pens and Pet Beds",
+      "after": [
+        "stray_wolf"
+      ],
+      "text": [
+        "The sanctuary is a single fence. Build proper pens and pet beds so rescued animals have a place to rest."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "item": "domesticationinnovation:pet_bed_brown",
+          "crafted": true
+        },
+        {
+          "build": {
+            "blocks": {
+              "#minecraft:fences": 12,
+              "#minecraft:fence_gates": 1,
+              "minecraft:hay_block": 2
+            },
+            "radius": 10
+          },
+          "title": "Build a pen"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "domesticationinnovation:pet_bed_blue"
+        },
+        {
+          "item": "domesticationinnovation:pet_bed_red"
+        },
+        {
+          "skill": "taming",
+          "xp": 90
+        }
+      ],
+      "icon": "domesticationinnovation:pet_bed_brown"
+    },
+    {
+      "id": "lame_horse",
+      "title": "The Lame Horse",
+      "after": [
+        "stray_wolf"
+      ],
+      "text": [
+        "Travellers abandoned a lame horse at their horse campsite. Find the camp, feed the horse back to health with apples and hay, tame it and ride it home slowly."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:horse_campsite",
+          "title": "Find the horse campsite"
+        },
+        {
+          "item": "minecraft:apple",
+          "count": 3,
+          "consume": true
+        },
+        {
+          "item": "minecraft:hay_block",
+          "consume": true
+        },
+        {
+          "checkmark": "I tamed the horse"
+        },
+        {
+          "place": "reece",
+          "title": "Ride the horse home"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:saddle"
+        },
+        {
+          "skill": "taming",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:saddle"
+    },
+    {
+      "id": "fox_kits",
+      "title": "Kits at the Hut",
+      "after": [
+        "first_pens"
+      ],
+      "text": [
+        "A hunter's fox hut has orphaned kits nearby. Win the wary foxes' trust by breeding a pair with sweet berries."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:fox_hut",
+          "title": "Find the fox hut"
+        },
+        {
+          "item": "minecraft:sweet_berries",
+          "count": 4,
+          "consume": true
+        },
+        {
+          "advancement": "minecraft:husbandry/breed_an_animal",
+          "title": "Breed a pair of animals"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:glow_berries",
+          "count": 16
+        },
+        {
+          "skill": "taming",
+          "xp": 110
+        }
+      ],
+      "icon": "minecraft:sweet_berries"
+    },
+    {
+      "id": "critter_census",
+      "title": "The Critter Census",
+      "after": [
+        "stray_wolf"
+      ],
+      "text": [
+        "Fern keeps a census of the small animals around Reece. Find an otter, a red panda, a ferret and a shima enaga, and tame a ferret to help with the count."
+      ],
+      "tasks": [
+        {
+          "observe": "crittersandcompanions:otter",
+          "ticks": 20,
+          "title": "Find an otter"
+        },
+        {
+          "observe": "crittersandcompanions:red_panda",
+          "ticks": 20,
+          "title": "Find a red panda"
+        },
+        {
+          "observe": "crittersandcompanions:ferret",
+          "ticks": 20,
+          "title": "Find a ferret"
+        },
+        {
+          "observe": "crittersandcompanions:shima_enaga",
+          "ticks": 20,
+          "title": "Find a shima enaga"
+        },
+        {
+          "checkmark": "I tamed a ferret"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "crittersandcompanions:silk_lead"
+        },
+        {
+          "skill": "taming",
+          "xp": 100
+        }
+      ],
+      "icon": "crittersandcompanions:ferret_spawn_egg"
+    },
+    {
+      "id": "butterfly_net",
+      "title": "Wings in a Bottle",
+      "after": [
+        "critter_census"
+      ],
+      "text": [
+        "Start the sanctuary's butterfly collection. Bottle five different butterflies across meadows and forests, without harming a single one."
+      ],
+      "tasks": [
+        {
+          "item": "butterflies:butterfly_net",
+          "crafted": true
+        },
+        {
+          "item": "butterflies:bottled_butterfly_cabbage"
+        },
+        {
+          "item": "butterflies:bottled_butterfly_common"
+        },
+        {
+          "item": "butterflies:bottled_butterfly_monarch"
+        },
+        {
+          "item": "butterflies:bottled_butterfly_admiral"
+        },
+        {
+          "item": "butterflies:bottled_butterfly_morpho"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "butterflies:banner_pattern_butterfly"
+        },
+        {
+          "skill": "taming",
+          "xp": 120
+        }
+      ],
+      "icon": "butterflies:butterfly_net"
+    },
+    {
+      "id": "cat_colony",
+      "title": "The Cats of the Ruin",
+      "after": [
+        "fox_kits"
+      ],
+      "text": [
+        "A colony of stray cats lives in a crumbling ruin that creepers have overrun. Clear the creepers, coax every cat out with fish, and the old cat-lady of the ruin will leave you her slippers."
+      ],
+      "tasks": [
+        {
+          "structure": "#ruins",
+          "title": "Find the overrun ruin"
+        },
+        {
+          "kill": "minecraft:creeper",
+          "count": 5
+        },
+        {
+          "item": "minecraft:cod",
+          "count": 4,
+          "consume": true,
+          "title": "Coax the cats out with fish"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "The Cat-Lady of the Ruin",
+            "then": "talk",
+            "lines": [
+              "Oh, my darlings! All of them, safe!",
+              "I've lived among these ruins forty winters, and never once had the creepers outstay a good broom. But five at once...",
+              "Take my slippers, dear. The cats insist."
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:kitty_slippers"
+        },
+        {
+          "skill": "taming",
+          "xp": 250
+        }
+      ],
+      "icon": "artifacts:kitty_slippers",
+      "signature": "artifacts:kitty_slippers"
+    },
+    {
+      "id": "sled_dogs",
+      "title": "Lost in the Blizzard",
+      "after": [
+        "stray_wolf"
+      ],
+      "text": [
+        "The snowy dog hut's sled team ran off in a blizzard. Track the wolves across the snow and tame each one back."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:snowy_dog_hut",
+          "title": "Find the snowy dog hut"
+        },
+        {
+          "item": "minecraft:bone",
+          "count": 8,
+          "consume": true
+        },
+        {
+          "checkmark": "I tamed the sled team"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "domesticationinnovation:feather_on_a_stick"
+        },
+        {
+          "skill": "taming",
+          "xp": 180
+        }
+      ],
+      "icon": "domesticationinnovation:feather_on_a_stick"
+    },
+    {
+      "id": "butterfly_house",
+      "title": "The Butterfly House",
+      "after": [
+        "butterfly_net"
+      ],
+      "text": [
+        "Build a glass butterfly house, raise caterpillars in jars through chrysalis to butterfly, and release them inside among the flowers."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:glass": 30,
+              "#minecraft:flowers": 8
+            },
+            "radius": 12
+          },
+          "title": "Build a glass butterfly house"
+        },
+        {
+          "item": "butterflies:bottled_caterpillar_common"
+        },
+        {
+          "checkmark": "I released the butterflies"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "butterflies:admiral_egg",
+          "count": 2
+        },
+        {
+          "item": "butterflies:atlas_egg",
+          "count": 2
+        },
+        {
+          "skill": "taming",
+          "xp": 200
+        }
+      ],
+      "icon": "butterflies:bottled_caterpillar_common"
+    },
+    {
+      "id": "koi_pond",
+      "title": "The Koi Pond",
+      "after": [
+        "first_pens"
+      ],
+      "text": [
+        "A merchant's koi are dying in a stagnant pool. Bucket them, dig a proper pond at the sanctuary with lily pads and clams, and add a dumbo octopus for the visitors."
+      ],
+      "tasks": [
+        {
+          "item": "crittersandcompanions:koi_fish_bucket",
+          "count": 2
+        },
+        {
+          "item": "crittersandcompanions:dumbo_octopus_bucket"
+        },
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:lily_pad": 4,
+              "crittersandcompanions:clam": 2
+            },
+            "radius": 10
+          },
+          "title": "Dig a pond with lily pads and clams"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "crittersandcompanions:pearl_necklace_1"
+        },
+        {
+          "skill": "taming",
+          "xp": 220
+        }
+      ],
+      "icon": "crittersandcompanions:koi_fish_bucket"
+    },
+    {
+      "id": "pet_enchanting",
+      "title": "A Collar Worth Wearing",
+      "after": [
+        "sled_dogs"
+      ],
+      "text": [
+        "Fern shows you how to enchant a collar tag: Health Boost and a creeper-sniffing Defusal, so your wolf can guard the sanctuary."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "fern",
+          "lines": [
+            "A collar tag is only paper and string until someone believes in it.",
+            "Health Boost for stamina. Defusal so your wolf will sniff out a creeper before it makes its mind up.",
+            "The books will teach you the rest."
+          ]
+        },
+        {
+          "item": "domesticationinnovation:collar_tag",
+          "crafted": true
+        },
+        {
+          "checkmark": "I enchanted a collar tag"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Hale and Hearty",
+          "enchant": {
+            "domesticationinnovation:health_boost": 1
+          }
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Nose for Trouble",
+          "enchant": {
+            "domesticationinnovation:defusal": 1
+          }
+        },
+        {
+          "skill": "taming",
+          "xp": 160
+        }
+      ],
+      "icon": "domesticationinnovation:collar_tag"
+    },
+    {
+      "id": "eggs_to_hatch",
+      "title": "Eggs to Hatch",
+      "after": [
+        "koi_pond"
+      ],
+      "text": [
+        "A storm flooded the riverbank nests. Collect duck, tortoise and snail eggs before they're lost, hatch them at the sanctuary and keep the young safe until they're grown."
+      ],
+      "tasks": [
+        {
+          "item": "naturalist:duck_egg",
+          "count": 2
+        },
+        {
+          "item": "naturalist:tortoise_egg"
+        },
+        {
+          "item": "naturalist:snail_eggs"
+        },
+        {
+          "place": "reece"
+        },
+        {
+          "checkmark": "The young have grown"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "naturalist:bug_net"
+        },
+        {
+          "skill": "taming",
+          "xp": 240
+        }
+      ],
+      "icon": "naturalist:duck_egg"
+    },
+    {
+      "id": "dragonfly_rider",
+      "title": "Shimmering Wings",
+      "after": [
+        "critter_census"
+      ],
+      "text": [
+        "Tame a dragonfly by the marsh and make it iron armour so it can patrol the sanctuary's pond for pests."
+      ],
+      "tasks": [
+        {
+          "observe": "crittersandcompanions:dragonfly",
+          "ticks": 20,
+          "title": "Find a dragonfly"
+        },
+        {
+          "item": "crittersandcompanions:iron_dragonfly_armor",
+          "crafted": true
+        },
+        {
+          "checkmark": "I tamed and armoured a dragonfly"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "crittersandcompanions:dragonfly_wing",
+          "count": 4
+        },
+        {
+          "skill": "taming",
+          "xp": 220
+        }
+      ],
+      "icon": "crittersandcompanions:iron_dragonfly_armor"
+    }
+  ]
+}

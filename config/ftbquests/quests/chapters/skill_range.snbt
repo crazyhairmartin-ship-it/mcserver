@@ -1,0 +1,503 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_range"
+	group: "1CAE106B8DA521D5"
+	icon: "minecraft:bow"
+	id: "6664717B0C97D447"
+	order_index: 10
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Huntmistress Vance won't take a hunter who can't make their own gear. Craft a bow and a quiver's worth of arrows, then swear the lodge oath at the hunters' lodge on the hill west of Reece."]
+			icon: "minecraft:bow"
+			id: "21A75F22C2549AD7"
+			rewards: [
+				{
+					id: "31B78F09F098DC02"
+					item: {
+						Count: 1b
+						id: "minecraft:lead"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Worn by hunters of the lodge.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Lodge Armband\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "207E29DE9287DABD"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 50"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "013031D6B81CBF27"
+					silent: true
+					title: "+50 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5008A11697A90DF9"
+					item: "minecraft:bow"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "265AB9E290A7AC4D"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					id: "1343332CC1FB4F62"
+					stage: "fq.skill_range.lodge_oath.talk2"
+					title: "Talk to Huntmistress Orla Vance"
+					type: "gamestage"
+				}
+			]
+			title: "Bow and Oath"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["21A75F22C2549AD7"]
+			description: ["A fletcher shows you how to follow hoof prints through the woods. Track a deer, and take venison and an antler."]
+			icon: "naturalist:antler"
+			id: "2E300668DD3888FA"
+			rewards: [
+				{
+					count: 8
+					id: "20E055808AC96A3A"
+					item: "minecraft:leather"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 80"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "4A1B0974B6DF4CDF"
+					silent: true
+					title: "+80 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4A08C0F9D45A411F"
+					stage: "fq.skill_range.first_tracks.talk0"
+					title: "Talk to a representative of the Hunters' Lodge"
+					type: "gamestage"
+				}
+				{
+					count: 2L
+					id: "515D93533A71111D"
+					item: "naturalist:venison"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "30DDB4B411432ABE"
+					item: "naturalist:antler"
+					type: "item"
+				}
+			]
+			title: "First Tracks"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["21A75F22C2549AD7"]
+			description: ["At the lodge's range, put ten arrows into target blocks at longer and longer distances."]
+			icon: "minecraft:target"
+			id: "0108284F08587B74"
+			rewards: [
+				{
+					count: 32
+					id: "4DFF8FC1FE2CB85F"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "38860A0F14AD45DD"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 80"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "4217A874AB371A3B"
+					silent: true
+					title: "+80 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "38A85960ED51D50B"
+					item: "minecraft:target"
+					only_from_crafting: true
+					title: "Make three target blocks"
+					type: "item"
+				}
+				{
+					id: "274C307A288D4CE6"
+					title: "I put ten arrows into the targets"
+					type: "checkmark"
+				}
+			]
+			title: "Bullseye"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["2E300668DD3888FA"]
+			description: ["Wild boars are tearing up a village's fields. Hunt down the sounder before it ruins the harvest, and keep the bushmeat."]
+			icon: "naturalist:bushmeat"
+			id: "28D94C2FF4C50692"
+			rewards: [
+				{
+					count: 8
+					id: "5F71BC54E0DE28A0"
+					item: "naturalist:cooked_bushmeat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 120"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "7DA55D18954E678D"
+					silent: true
+					title: "+120 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4A50582BDE0BC097"
+					structure: "#fotf:groups/villages"
+					title: "Reach the troubled village"
+					type: "structure"
+				}
+				{
+					entity: "naturalist:boar"
+					id: "375E7CC694CECD13"
+					type: "kill"
+					value: 4L
+				}
+				{
+					count: 3L
+					id: "09DE7150A787A7CE"
+					item: "naturalist:bushmeat"
+					type: "item"
+				}
+			]
+			title: "Tusks in the Turnips"
+			x: 3.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["0108284F08587B74"]
+			description: ["Old Tobiah swears by thrown weapons, and by never whistling in a forest. Craft iron throwing knives, a tomahawk and javelins, and put them to use."]
+			icon: "spartanweaponry:iron_throwing_knife"
+			id: "42C48A36F4BC3C7D"
+			rewards: [
+				{
+					id: "260BE9D93953B016"
+					item: "spartanweaponry:copper_boomerang"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 150"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "5D4580FED72F5D7B"
+					silent: true
+					title: "+150 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4D02DCCBE6FD70D8"
+					item: "spartanweaponry:iron_throwing_knife"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "678E3549580D102B"
+					item: "spartanweaponry:iron_tomahawk"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "56256E31E79BA2CB"
+					item: "spartanweaponry:iron_javelin"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					entity: "minecraft:zombie"
+					id: "59D097A1E3088062"
+					title: "Make kills with your thrown steel"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "Thrown Steel"
+			x: 3.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["28D94C2FF4C50692"]
+			description: ["The lodge keeps a lookout in a firewatch tower deep in the forest. Climb it, meet the watcher and mark three game trails from the top."]
+			icon: "minecraft:spyglass"
+			id: "37A041AF59989C0B"
+			rewards: [
+				{
+					id: "684CEF5A7CB16070"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 150"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "462F9A24E47792BA"
+					silent: true
+					title: "+150 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "606B6D279CA53E5A"
+					structure: "#fotf:groups/firewatch_towers"
+					title: "Climb the firewatch tower"
+					type: "structure"
+				}
+				{
+					id: "01E919B05F2117C1"
+					stage: "fq.skill_range.firewatch.enc1"
+					title: "Meet Tower Watcher"
+					type: "gamestage"
+				}
+				{
+					id: "43B1C3632E54951B"
+					title: "I marked three game trails"
+					type: "checkmark"
+				}
+			]
+			title: "The Lookout"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["37A041AF59989C0B"]
+			description: ["From the tower, the watcher points out a deer far below. Craft a longbow and drop it with one shot from the top, before it wanders off."]
+			icon: "spartanweaponry:iron_longbow"
+			id: "004680A7B5640E87"
+			rewards: [
+				{
+					count: 32
+					id: "292BB20319E295EB"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "371B7C8B2518EC62"
+					item: "minecraft:spectral_arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 180"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "55D5AEEFFF776540"
+					silent: true
+					title: "+180 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3A492188F9839FFB"
+					item: "spartanweaponry:iron_longbow"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "0A5A25949A77E9EB"
+					structure: "#fotf:groups/firewatch_towers"
+					type: "structure"
+				}
+				{
+					id: "2FE9D21C5F99E133"
+					stage: "fq.skill_range.longbow.timed2"
+					title: "Drop the deer in three minutes"
+					type: "gamestage"
+				}
+			]
+			title: "The Longbow"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["37A041AF59989C0B"]
+			description: ["A hunting party's camp has gone quiet. Find it, follow the claw marks and rescue the last hunter from the tree where a grizzly bear has kept him for two days."]
+			icon: "alexsmobs:bear_fur"
+			id: "67F3C28CA78A2583"
+			rewards: [
+				{
+					count: 2
+					id: "1A53CE2558C05B52"
+					item: "alexsmobs:bear_fur"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 220"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "2FBE9BDB386F6EAC"
+					silent: true
+					title: "+220 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "71658AB1EC619F91"
+					structure: "#fotf:groups/camps"
+					title: "Find the silent camp"
+					type: "structure"
+				}
+				{
+					id: "3ED5E18CD4B6A5F3"
+					stage: "fq.skill_range.silent_camp.enc1"
+					title: "Defeat Camp Grizzly"
+					type: "gamestage"
+				}
+				{
+					id: "703E1A364F73B0D9"
+					stage: "fq.skill_range.silent_camp.enc2"
+					title: "Meet Stranded Hunter"
+					type: "gamestage"
+				}
+			]
+			title: "The Silent Camp"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["42C48A36F4BC3C7D"]
+			description: ["The lodge collects strange pelts and bones. Bring down odd-looking zombies, spiders and skeletons with arrows, and bring proof of each."]
+			icon: "minecraft:spider_eye"
+			id: "2C61C8C9E573FF77"
+			rewards: [
+				{
+					count: 16
+					id: "47401BCFE702BE21"
+					item: "minecraft:spectral_arrow"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "08DC6EB319588D04"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 200"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "7289A2519E82B939"
+					silent: true
+					title: "+200 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "10BE768F422E8372"
+					item: "kubejs:quest_odd_coats_0"
+					type: "item"
+				}
+				{
+					id: "65A2E126808764B9"
+					item: "kubejs:quest_odd_coats_1"
+					type: "item"
+				}
+				{
+					id: "5C3865541219F85A"
+					item: "kubejs:quest_odd_coats_2"
+					type: "item"
+				}
+			]
+			title: "Odd Coats"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"2C61C8C9E573FF77"
+				"63C3DB46B7298A13"
+			]
+			description: ["Some nights call for a heavier weapon. Craft a heavy crossbow and bolts and drop twenty skeletons before dawn."]
+			icon: "spartanweaponry:iron_heavy_crossbow"
+			id: "7D98A4C062669C93"
+			rewards: [
+				{
+					count: 32
+					id: "43B706D23C35E67B"
+					item: "spartanweaponry:bolt"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 280"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "185EF9602A7C1623"
+					silent: true
+					title: "+280 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1C6DE038E3E3E085"
+					item: "spartanweaponry:iron_heavy_crossbow"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "4197626A30231256"
+					item: "spartanweaponry:bolt"
+					type: "item"
+				}
+				{
+					entity: "minecraft:skeleton"
+					id: "3C6F4D9686171272"
+					type: "kill"
+					value: 20L
+				}
+			]
+			title: "Bolts at Night"
+			x: 6.0d
+			y: 1.5d
+		}
+	]
+	subtitle: ["Range path"]
+	title: "The Hunters' Lodge"
+}

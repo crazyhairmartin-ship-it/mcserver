@@ -1,0 +1,460 @@
+{
+  "title": "The Hunters' Lodge",
+  "subtitle": "Range path",
+  "icon": "minecraft:bow",
+  "group": "skills",
+  "order": 7,
+  "quests": [
+    {
+      "id": "lodge_oath",
+      "title": "Bow and Oath",
+      "text": [
+        "Huntmistress Vance won't take a hunter who can't make their own gear. Craft a bow and a quiver's worth of arrows, then swear the lodge oath at the hunters' lodge on the hill west of Reece."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:bow",
+          "crafted": true
+        },
+        {
+          "item": "minecraft:arrow",
+          "count": 32
+        },
+        {
+          "talk": "character",
+          "character": "orla",
+          "lines": [
+            "A bow you made yourself. Good.",
+            "The lodge has one oath. Never waste a kill.",
+            "Take what you need, use what you take, and leave the rest to grow.",
+            "Say it, and you're one of us."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:lead",
+          "name": "Lodge Armband",
+          "lore": [
+            "Worn by hunters of the lodge."
+          ]
+        },
+        {
+          "item": "minecraft:arrow",
+          "count": 16
+        },
+        {
+          "skill": "range",
+          "xp": 50
+        }
+      ],
+      "icon": "minecraft:bow"
+    },
+    {
+      "id": "first_tracks",
+      "title": "First Tracks",
+      "after": [
+        "lodge_oath"
+      ],
+      "text": [
+        "A fletcher shows you how to follow hoof prints through the woods. Track a deer, and take venison and an antler."
+      ],
+      "tasks": [
+        {
+          "talk": "org",
+          "org": "hunters",
+          "lines": [
+            "Hoof prints, see? Deep at the front, so it was walking, not running.",
+            "Follow them quietly, keep downwind, and take only what you'll eat.",
+            "Bring back the venison. The antler is for the lodge wall."
+          ]
+        },
+        {
+          "item": "naturalist:venison",
+          "count": 2
+        },
+        {
+          "drop": {
+            "from": [
+              "naturalist:deer"
+            ],
+            "chance": 0.4,
+            "item": "naturalist:antler"
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather",
+          "count": 8
+        },
+        {
+          "skill": "range",
+          "xp": 80
+        }
+      ],
+      "icon": "naturalist:antler"
+    },
+    {
+      "id": "target_practice",
+      "title": "Bullseye",
+      "after": [
+        "lodge_oath"
+      ],
+      "text": [
+        "At the lodge's range, put ten arrows into target blocks at longer and longer distances."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:target",
+          "count": 3,
+          "crafted": true,
+          "title": "Make three target blocks"
+        },
+        {
+          "checkmark": "I put ten arrows into the targets"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:arrow",
+          "count": 32
+        },
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 4
+        },
+        {
+          "skill": "range",
+          "xp": 80
+        }
+      ],
+      "icon": "minecraft:target"
+    },
+    {
+      "id": "boar_trouble",
+      "title": "Tusks in the Turnips",
+      "after": [
+        "first_tracks"
+      ],
+      "text": [
+        "Wild boars are tearing up a village's fields. Hunt down the sounder before it ruins the harvest, and keep the bushmeat."
+      ],
+      "tasks": [
+        {
+          "structure": "#villages",
+          "title": "Reach the troubled village"
+        },
+        {
+          "kill": "naturalist:boar",
+          "count": 4
+        },
+        {
+          "item": "naturalist:bushmeat",
+          "count": 3
+        }
+      ],
+      "rewards": [
+        {
+          "item": "naturalist:cooked_bushmeat",
+          "count": 8
+        },
+        {
+          "skill": "range",
+          "xp": 120
+        }
+      ],
+      "icon": "naturalist:bushmeat"
+    },
+    {
+      "id": "throwing_steel",
+      "title": "Thrown Steel",
+      "after": [
+        "target_practice"
+      ],
+      "text": [
+        "Old Tobiah swears by thrown weapons, and by never whistling in a forest. Craft iron throwing knives, a tomahawk and javelins, and put them to use."
+      ],
+      "tasks": [
+        {
+          "item": "spartanweaponry:iron_throwing_knife",
+          "crafted": true
+        },
+        {
+          "item": "spartanweaponry:iron_tomahawk",
+          "crafted": true
+        },
+        {
+          "item": "spartanweaponry:iron_javelin",
+          "crafted": true
+        },
+        {
+          "kill": "minecraft:zombie",
+          "count": 6,
+          "title": "Make kills with your thrown steel"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanweaponry:copper_boomerang"
+        },
+        {
+          "skill": "range",
+          "xp": 150
+        }
+      ],
+      "icon": "spartanweaponry:iron_throwing_knife"
+    },
+    {
+      "id": "firewatch",
+      "title": "The Lookout",
+      "after": [
+        "boar_trouble"
+      ],
+      "text": [
+        "The lodge keeps a lookout in a firewatch tower deep in the forest. Climb it, meet the watcher and mark three game trails from the top."
+      ],
+      "tasks": [
+        {
+          "structure": "#firewatch_towers",
+          "title": "Climb the firewatch tower"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Tower Watcher",
+            "where": {
+              "above_y": 60
+            },
+            "then": "talk",
+            "lines": [
+              "Welcome up! Mind the third rung, it's loose.",
+              "See the trails? Deer to the east, boar by the stream, something big in the north.",
+              "Mark them. The lodge will want the map."
+            ]
+          }
+        },
+        {
+          "checkmark": "I marked three game trails"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "skill": "range",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:spyglass"
+    },
+    {
+      "id": "longbow",
+      "title": "The Longbow",
+      "after": [
+        "firewatch"
+      ],
+      "text": [
+        "From the tower, the watcher points out a deer far below. Craft a longbow and drop it with one shot from the top, before it wanders off."
+      ],
+      "tasks": [
+        {
+          "item": "spartanweaponry:iron_longbow",
+          "crafted": true
+        },
+        {
+          "structure": "#firewatch_towers"
+        },
+        {
+          "timed": {
+            "seconds": 180,
+            "goal": {
+              "kill": "naturalist:deer",
+              "count": 1
+            },
+            "lines": [
+              "There. Far below. You won't get long.",
+              "One good shot."
+            ],
+            "start": "Take the shot",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Drop the deer in three minutes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:arrow",
+          "count": 32
+        },
+        {
+          "item": "minecraft:spectral_arrow",
+          "count": 8
+        },
+        {
+          "skill": "range",
+          "xp": 180
+        }
+      ],
+      "icon": "spartanweaponry:iron_longbow"
+    },
+    {
+      "id": "silent_camp",
+      "title": "The Silent Camp",
+      "after": [
+        "firewatch"
+      ],
+      "text": [
+        "A hunting party's camp has gone quiet. Find it, follow the claw marks and rescue the last hunter from the tree where a grizzly bear has kept him for two days."
+      ],
+      "tasks": [
+        {
+          "structure": "#camps",
+          "title": "Find the silent camp"
+        },
+        {
+          "encounter": {
+            "entity": "alexsmobs:grizzly_bear",
+            "name": "Camp Grizzly",
+            "health": 60,
+            "glow": true,
+            "then": "kill",
+            "lines": [
+              "Grrrrr!"
+            ]
+          }
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Stranded Hunter",
+            "then": "talk",
+            "lines": [
+              "Is it gone? Is it really gone?",
+              "Two days up this tree. Two days! Thank you, friend. Tell the lodge I'm alive."
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexsmobs:bear_fur",
+          "count": 2
+        },
+        {
+          "skill": "range",
+          "xp": 220
+        }
+      ],
+      "icon": "alexsmobs:bear_fur"
+    },
+    {
+      "id": "odd_coats",
+      "title": "Odd Coats",
+      "after": [
+        "throwing_steel"
+      ],
+      "text": [
+        "The lodge collects strange pelts and bones. Bring down odd-looking zombies, spiders and skeletons with arrows, and bring proof of each."
+      ],
+      "tasks": [
+        {
+          "drop": {
+            "from": [
+              "minecraft:zombie"
+            ],
+            "chance": 0.15,
+            "item": {
+              "name": "Odd Hide",
+              "tooltip": "Proof for the lodge",
+              "texture": "minecraft:item/rotten_flesh"
+            }
+          },
+          "consume": false
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:spider"
+            ],
+            "chance": 0.15,
+            "item": {
+              "name": "Odd Fang",
+              "tooltip": "Proof for the lodge",
+              "texture": "minecraft:item/spider_eye"
+            }
+          },
+          "consume": false
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:skeleton"
+            ],
+            "chance": 0.15,
+            "item": {
+              "name": "Odd Bone",
+              "tooltip": "Proof for the lodge",
+              "texture": "minecraft:item/bone"
+            }
+          },
+          "consume": false
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spectral_arrow",
+          "count": 16
+        },
+        {
+          "item": "minecraft:arrow",
+          "count": 32
+        },
+        {
+          "skill": "range",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:spider_eye"
+    },
+    {
+      "id": "heavy_crossbow",
+      "title": "Bolts at Night",
+      "after": [
+        "odd_coats",
+        "main_story:act1_start"
+      ],
+      "text": [
+        "Some nights call for a heavier weapon. Craft a heavy crossbow and bolts and drop twenty skeletons before dawn."
+      ],
+      "tasks": [
+        {
+          "item": "spartanweaponry:iron_heavy_crossbow",
+          "crafted": true
+        },
+        {
+          "item": "spartanweaponry:bolt",
+          "count": 32
+        },
+        {
+          "kill": "minecraft:skeleton",
+          "count": 20
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanweaponry:bolt",
+          "count": 32
+        },
+        {
+          "skill": "range",
+          "xp": 280
+        }
+      ],
+      "icon": "spartanweaponry:iron_heavy_crossbow"
+    }
+  ]
+}

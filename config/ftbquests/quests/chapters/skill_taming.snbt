@@ -1,0 +1,750 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_taming"
+	group: "1CAE106B8DA521D5"
+	icon: "minecraft:bone"
+	id: "1A74F48138BCAF58"
+	order_index: 12
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["A shepherd says a half-starved wolf follows the flock at a distance. Tame it, give it a collar tag and bring it to Fern's pen at the edge of Reece."]
+			icon: "minecraft:bone"
+			id: "1A6788BE27A0CD4A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "1AA6237B07FA74D9"
+					item: "minecraft:bone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 50"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "4C832D07520BC7E0"
+					silent: true
+					title: "+50 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "07AF4D89F90E88E1"
+					stage: "fq.skill_taming.stray_wolf"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					advancement: "minecraft:husbandry/tame_an_animal"
+					criterion: ""
+					id: "42967623A0B3934D"
+					title: "Tame the wolf"
+					type: "advancement"
+				}
+				{
+					id: "4E88C7C59F33EAB8"
+					item: "domesticationinnovation:collar_tag"
+					type: "item"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "4AA12C8B90EC3661"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "6C137CBF646A80D5"
+					stage: "fq.skill_taming.stray_wolf.talk3"
+					title: "Talk to Keeper Fern Thistlewood"
+					type: "gamestage"
+				}
+			]
+			title: "The Stray"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A6788BE27A0CD4A"]
+			description: ["The sanctuary is a single fence. Build proper pens and pet beds so rescued animals have a place to rest."]
+			icon: "domesticationinnovation:pet_bed_brown"
+			id: "15EC4037069981A0"
+			rewards: [
+				{
+					id: "72444B45F17E2C54"
+					item: "domesticationinnovation:pet_bed_blue"
+					type: "item"
+				}
+				{
+					id: "4DD86EC58A9A4C34"
+					item: "domesticationinnovation:pet_bed_red"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 90"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "3D0786A7975082F9"
+					silent: true
+					title: "+90 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "783DDAC89D0F6E92"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "23C2225DDD4F3DA4"
+					item: "domesticationinnovation:pet_bed_brown"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "535180A081B9E752"
+					stage: "fq.skill_taming.first_pens.build2"
+					title: "Build a pen"
+					type: "gamestage"
+				}
+			]
+			title: "Pens and Pet Beds"
+			x: 1.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["1A6788BE27A0CD4A"]
+			description: ["Travellers abandoned a lame horse at their horse campsite. Find the camp, feed the horse back to health with apples and hay, tame it and ride it home slowly."]
+			icon: "minecraft:saddle"
+			id: "480DD6F8670C1468"
+			rewards: [
+				{
+					id: "6B544813B5E3C965"
+					item: "minecraft:saddle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 100"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "3B1187E3A0562BA5"
+					silent: true
+					title: "+100 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "135375DF3C924C3D"
+					structure: "mvs:horse_campsite"
+					title: "Find the horse campsite"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 3L
+					id: "2F0EF53AD127F855"
+					item: "minecraft:apple"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "564FDCBB31536E18"
+					item: "minecraft:hay_block"
+					type: "item"
+				}
+				{
+					id: "17E9F5096B36E382"
+					title: "I tamed the horse"
+					type: "checkmark"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "443FB556347791EA"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Ride the horse home"
+					type: "location"
+				}
+			]
+			title: "The Lame Horse"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["15EC4037069981A0"]
+			description: ["A hunter's fox hut has orphaned kits nearby. Win the wary foxes' trust by breeding a pair with sweet berries."]
+			icon: "minecraft:sweet_berries"
+			id: "13AA793F6D1BC16D"
+			rewards: [
+				{
+					count: 16
+					id: "7BC88B198E62D6E5"
+					item: "minecraft:glow_berries"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 110"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "66A3CEB567793FE8"
+					silent: true
+					title: "+110 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "518558FD7F04C810"
+					structure: "mvs:fox_hut"
+					title: "Find the fox hut"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "00BBB818EEC00EF9"
+					item: "minecraft:sweet_berries"
+					type: "item"
+				}
+				{
+					advancement: "minecraft:husbandry/breed_an_animal"
+					criterion: ""
+					id: "622DCA62E2E9769F"
+					title: "Breed a pair of animals"
+					type: "advancement"
+				}
+			]
+			title: "Kits at the Hut"
+			x: 3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1A6788BE27A0CD4A"]
+			description: ["Fern keeps a census of the small animals around Reece. Find an otter, a red panda, a ferret and a shima enaga, and tame a ferret to help with the count."]
+			icon: "crittersandcompanions:ferret_spawn_egg"
+			id: "0ED09A00977BAAB9"
+			rewards: [
+				{
+					id: "36D20F487691A938"
+					item: "crittersandcompanions:silk_lead"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 100"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "12D8F0F775FAEB92"
+					silent: true
+					title: "+100 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5A824AD1A25C9A07"
+					observe_type: "entity_type"
+					timer: 20L
+					title: "Find an otter"
+					to_observe: "crittersandcompanions:otter"
+					type: "observation"
+				}
+				{
+					id: "73110DC9144BBD95"
+					observe_type: "entity_type"
+					timer: 20L
+					title: "Find a red panda"
+					to_observe: "crittersandcompanions:red_panda"
+					type: "observation"
+				}
+				{
+					id: "6FF4E30F1CC33703"
+					observe_type: "entity_type"
+					timer: 20L
+					title: "Find a ferret"
+					to_observe: "crittersandcompanions:ferret"
+					type: "observation"
+				}
+				{
+					id: "05A9D893B5E09C93"
+					observe_type: "entity_type"
+					timer: 20L
+					title: "Find a shima enaga"
+					to_observe: "crittersandcompanions:shima_enaga"
+					type: "observation"
+				}
+				{
+					id: "5A5BA80567C4D2A1"
+					title: "I tamed a ferret"
+					type: "checkmark"
+				}
+			]
+			title: "The Critter Census"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["0ED09A00977BAAB9"]
+			description: ["Start the sanctuary's butterfly collection. Bottle five different butterflies across meadows and forests, without harming a single one."]
+			icon: "butterflies:butterfly_net"
+			id: "7EE102D3991CDF25"
+			rewards: [
+				{
+					id: "7DD26C474319C003"
+					item: "butterflies:banner_pattern_butterfly"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 120"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "76B7BF14AEE0D243"
+					silent: true
+					title: "+120 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2979DC310ECE10D4"
+					item: "butterflies:butterfly_net"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "411415B5C1F39C31"
+					item: "butterflies:bottled_butterfly_cabbage"
+					type: "item"
+				}
+				{
+					id: "0D1E32FAA74D3FCD"
+					item: "butterflies:bottled_butterfly_common"
+					type: "item"
+				}
+				{
+					id: "37D7D5AE977A7D71"
+					item: "butterflies:bottled_butterfly_monarch"
+					type: "item"
+				}
+				{
+					id: "6E4CF668CDA07DD6"
+					item: "butterflies:bottled_butterfly_admiral"
+					type: "item"
+				}
+				{
+					id: "78E3CE18AD7DE3F0"
+					item: "butterflies:bottled_butterfly_morpho"
+					type: "item"
+				}
+			]
+			title: "Wings in a Bottle"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["13AA793F6D1BC16D"]
+			description: ["A colony of stray cats lives in a crumbling ruin that creepers have overrun. Clear the creepers, coax every cat out with fish, and the old cat-lady of the ruin will leave you her slippers."]
+			icon: "artifacts:kitty_slippers"
+			id: "70A91DD5D9F62E0F"
+			rewards: [
+				{
+					id: "666E526CC3E9E258"
+					item: "artifacts:kitty_slippers"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 250"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "29FA175B77AF3E7F"
+					silent: true
+					title: "+250 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3438BD9B78032E8C"
+					structure: "#fotf:groups/ruins"
+					title: "Find the overrun ruin"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:creeper"
+					id: "138D27AE967571D0"
+					type: "kill"
+					value: 5L
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "64C62AA8D565D927"
+					item: "minecraft:cod"
+					title: "Coax the cats out with fish"
+					type: "item"
+				}
+				{
+					id: "56CE7208D6C95B1B"
+					stage: "fq.skill_taming.cat_colony.enc3"
+					title: "Meet The Cat-Lady of the Ruin"
+					type: "gamestage"
+				}
+			]
+			title: "The Cats of the Ruin"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1A6788BE27A0CD4A"]
+			description: ["The snowy dog hut's sled team ran off in a blizzard. Track the wolves across the snow and tame each one back."]
+			icon: "domesticationinnovation:feather_on_a_stick"
+			id: "3FC330D6BE47EDE0"
+			rewards: [
+				{
+					id: "0BF9C4C075AAB9C1"
+					item: "domesticationinnovation:feather_on_a_stick"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 180"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "5FEDCFA4ACC743EA"
+					silent: true
+					title: "+180 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6302ED310BE29C9A"
+					structure: "mvs:snowy_dog_hut"
+					title: "Find the snowy dog hut"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "3D4DB27B74F58AEA"
+					item: "minecraft:bone"
+					type: "item"
+				}
+				{
+					id: "661C084A7C1B7660"
+					title: "I tamed the sled team"
+					type: "checkmark"
+				}
+			]
+			title: "Lost in the Blizzard"
+			x: 1.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["7EE102D3991CDF25"]
+			description: ["Build a glass butterfly house, raise caterpillars in jars through chrysalis to butterfly, and release them inside among the flowers."]
+			icon: "butterflies:bottled_caterpillar_common"
+			id: "624E8EFB92BDAE88"
+			rewards: [
+				{
+					count: 2
+					id: "12E710D89484CCA3"
+					item: "butterflies:admiral_egg"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "2D69359DD99C605D"
+					item: "butterflies:atlas_egg"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 200"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "78D3715349E7141F"
+					silent: true
+					title: "+200 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "5BD8E465E384C580"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "30DFDC2C0E2D2AEB"
+					stage: "fq.skill_taming.butterfly_house.build1"
+					title: "Build a glass butterfly house"
+					type: "gamestage"
+				}
+				{
+					id: "37D50BF855AEE571"
+					item: "butterflies:bottled_caterpillar_common"
+					type: "item"
+				}
+				{
+					id: "56602D09B95DCDB3"
+					title: "I released the butterflies"
+					type: "checkmark"
+				}
+			]
+			title: "The Butterfly House"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["15EC4037069981A0"]
+			description: ["A merchant's koi are dying in a stagnant pool. Bucket them, dig a proper pond at the sanctuary with lily pads and clams, and add a dumbo octopus for the visitors."]
+			icon: "crittersandcompanions:koi_fish_bucket"
+			id: "74D054A89C57852A"
+			rewards: [
+				{
+					id: "4FE39D08BC0C545E"
+					item: "crittersandcompanions:pearl_necklace_1"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 220"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "4F5F7CEA6D948E5A"
+					silent: true
+					title: "+220 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "5766A83748047DCC"
+					item: "crittersandcompanions:koi_fish_bucket"
+					type: "item"
+				}
+				{
+					id: "3F34E5DE2081101A"
+					item: "crittersandcompanions:dumbo_octopus_bucket"
+					type: "item"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "6BAADA65A2855EF8"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "155F4D44E9FDDA69"
+					stage: "fq.skill_taming.koi_pond.build3"
+					title: "Dig a pond with lily pads and clams"
+					type: "gamestage"
+				}
+			]
+			title: "The Koi Pond"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3FC330D6BE47EDE0"]
+			description: ["Fern shows you how to enchant a collar tag: Health Boost and a creeper-sniffing Defusal, so your wolf can guard the sanctuary."]
+			icon: "domesticationinnovation:collar_tag"
+			id: "3E29F1CF1159CD62"
+			rewards: [
+				{
+					id: "046FF9E1DB38CEDD"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "domesticationinnovation:health_boost"
+									lvl: 1s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Hale and Hearty\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "294647019DB8DAD7"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "domesticationinnovation:defusal"
+									lvl: 1s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Nose for Trouble\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 160"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "075015DD0401D5E7"
+					silent: true
+					title: "+160 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7907E1774C8E9680"
+					stage: "fq.skill_taming.pet_enchanting.talk0"
+					title: "Talk to Keeper Fern Thistlewood"
+					type: "gamestage"
+				}
+				{
+					id: "210C6C87B0C6D58D"
+					item: "domesticationinnovation:collar_tag"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "2B778FB8A95F93CE"
+					title: "I enchanted a collar tag"
+					type: "checkmark"
+				}
+			]
+			title: "A Collar Worth Wearing"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["74D054A89C57852A"]
+			description: ["A storm flooded the riverbank nests. Collect duck, tortoise and snail eggs before they're lost, hatch them at the sanctuary and keep the young safe until they're grown."]
+			icon: "naturalist:duck_egg"
+			id: "5B7B7BC386A0C1A4"
+			rewards: [
+				{
+					id: "5DE43FFAD24641B8"
+					item: "naturalist:bug_net"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 240"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "176AA031FF2794B8"
+					silent: true
+					title: "+240 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "70342E6F4C0D420E"
+					item: "naturalist:duck_egg"
+					type: "item"
+				}
+				{
+					id: "6F70457A8A232726"
+					item: "naturalist:tortoise_egg"
+					type: "item"
+				}
+				{
+					id: "2B823E4034E4E9D8"
+					item: "naturalist:snail_eggs"
+					type: "item"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "6F0823D9803D5A7C"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "650AAFDA2777A302"
+					title: "The young have grown"
+					type: "checkmark"
+				}
+			]
+			title: "Eggs to Hatch"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0ED09A00977BAAB9"]
+			description: ["Tame a dragonfly by the marsh and make it iron armour so it can patrol the sanctuary's pond for pests."]
+			icon: "crittersandcompanions:iron_dragonfly_armor"
+			id: "058FCDA2CEDB6C3E"
+			rewards: [
+				{
+					count: 4
+					id: "599BF0CCF7B94CD1"
+					item: "crittersandcompanions:dragonfly_wing"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 220"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "19151D242CC18362"
+					silent: true
+					title: "+220 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "338227AE155431B2"
+					observe_type: "entity_type"
+					timer: 20L
+					title: "Find a dragonfly"
+					to_observe: "crittersandcompanions:dragonfly"
+					type: "observation"
+				}
+				{
+					id: "5E9E3F6846C0FC32"
+					item: "crittersandcompanions:iron_dragonfly_armor"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "09B98A45539557A1"
+					title: "I tamed and armoured a dragonfly"
+					type: "checkmark"
+				}
+			]
+			title: "Shimmering Wings"
+			x: 3.0d
+			y: 3.0d
+		}
+	]
+	subtitle: ["Taming path"]
+	title: "The Sanctuary"
+}

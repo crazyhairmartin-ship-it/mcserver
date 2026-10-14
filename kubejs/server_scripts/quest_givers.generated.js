@@ -1331,6 +1331,216 @@ global.QUEST_GIVERS = [
     "profession": ""
   },
   {
+    "quest": "skill_range:lodge_oath",
+    "stage": "fq.skill_range.lodge_oath.talk2",
+    "type": "talk",
+    "lines": [
+      "A bow you made yourself. Good.",
+      "The lodge has one oath. Never waste a kill.",
+      "Take what you need, use what you take, and leave the rest to grow.",
+      "Say it, and you're one of us."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "orla",
+    "quest_id": "21A75F22C2549AD7",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_range:first_tracks",
+    "stage": "fq.skill_range.first_tracks.talk0",
+    "type": "talk",
+    "lines": [
+      "Hoof prints, see? Deep at the front, so it was walking, not running.",
+      "Follow them quietly, keep downwind, and take only what you'll eat.",
+      "Bring back the venison. The antler is for the lodge wall."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "hunters",
+    "professions": [
+      "minecraft:fletcher"
+    ],
+    "org_name": "Hunters' Lodge",
+    "quest_id": "2E300668DD3888FA",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_range:first_tracks",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "naturalist:deer"
+    ],
+    "chance": 0.4,
+    "item": "naturalist:antler",
+    "requires": [
+      "fq.skill_range.first_tracks.talk0"
+    ],
+    "quest_id": "2E300668DD3888FA",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_range:firewatch",
+    "stage": "fq.skill_range.firewatch.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Welcome up! Mind the third rung, it's loose.",
+      "See the trails? Deer to the east, boar by the stream, something big in the north.",
+      "Mark them. The lodge will want the map."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "37A041AF59989C0B",
+    "prev_tasks": [
+      "606B6D279CA53E5A"
+    ],
+    "name": "Tower Watcher",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {
+      "above_y": 60
+    },
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_range:longbow",
+    "stage": "fq.skill_range.longbow.timed2",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "kill",
+      "entity": "naturalist:deer",
+      "count": 1
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "There. Far below. You won't get long.",
+      "One good shot."
+    ],
+    "start": "Take the shot",
+    "requires": [],
+    "quest_id": "004680A7B5640E87",
+    "prev_tasks": [
+      "3A492188F9839FFB",
+      "0A5A25949A77E9EB"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_range:silent_camp",
+    "stage": "fq.skill_range.silent_camp.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "Grrrrr!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "67F3C28CA78A2583",
+    "prev_tasks": [
+      "71658AB1EC619F91"
+    ],
+    "name": "Camp Grizzly",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": 60,
+    "glow": true,
+    "where": {},
+    "entity": "alexsmobs:grizzly_bear",
+    "profession": ""
+  },
+  {
+    "quest": "skill_range:silent_camp",
+    "stage": "fq.skill_range.silent_camp.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Is it gone? Is it really gone?",
+      "Two days up this tree. Two days! Thank you, friend. Tell the lodge I'm alive."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "67F3C28CA78A2583",
+    "prev_tasks": [
+      "71658AB1EC619F91",
+      "3ED5E18CD4B6A5F3"
+    ],
+    "name": "Stranded Hunter",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_range:odd_coats",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:zombie"
+    ],
+    "chance": 0.15,
+    "item": "kubejs:quest_odd_coats_0",
+    "requires": [],
+    "quest_id": "2C61C8C9E573FF77",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_range:odd_coats",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:spider"
+    ],
+    "chance": 0.15,
+    "item": "kubejs:quest_odd_coats_1",
+    "requires": [],
+    "quest_id": "2C61C8C9E573FF77",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_range:odd_coats",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:skeleton"
+    ],
+    "chance": 0.15,
+    "item": "kubejs:quest_odd_coats_2",
+    "requires": [],
+    "quest_id": "2C61C8C9E573FF77",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
     "quest": "skill_defense:enlist",
     "stage": "fq.skill_defense.enlist.talk1",
     "type": "talk",
@@ -1576,6 +1786,152 @@ global.QUEST_GIVERS = [
     "match": "character",
     "character": "brannock",
     "quest_id": "5AF168685597D93F",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_taming:stray_wolf",
+    "stage": "fq.skill_taming.stray_wolf",
+    "type": "org",
+    "lines": [
+      "There's a wolf that follows my flock at a distance. Half-starved, poor thing.",
+      "If you can win its trust, Keeper Fern at the sanctuary in Reece will take it in."
+    ],
+    "accept": "I'll try",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "sanctuary",
+    "professions": [
+      "minecraft:shepherd",
+      "minecraft:leatherworker"
+    ],
+    "org_name": "Sanctuary Keepers"
+  },
+  {
+    "quest": "skill_taming:stray_wolf",
+    "stage": "fq.skill_taming.stray_wolf.talk3",
+    "type": "talk",
+    "lines": [
+      "Oh, look at you. Thin as a rake. Come in, come in.",
+      "You did well. Most people shout at strays. You waited.",
+      "I'll name it later. Names come when they're ready.",
+      "There's more to do here, if you'd like to help."
+    ],
+    "requires": [
+      "fq.skill_taming.stray_wolf"
+    ],
+    "name": "",
+    "match": "character",
+    "character": "fern",
+    "quest_id": "1A6788BE27A0CD4A",
+    "open_task": "07AF4D89F90E88E1"
+  },
+  {
+    "quest": "skill_taming:first_pens",
+    "stage": "fq.skill_taming.first_pens.build2",
+    "type": "build",
+    "keys": [
+      "#minecraft:fences",
+      "#minecraft:fence_gates",
+      "minecraft:hay_block"
+    ],
+    "counts": [
+      12,
+      1,
+      2
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "15EC4037069981A0",
+    "prev_tasks": [
+      "783DDAC89D0F6E92",
+      "23C2225DDD4F3DA4"
+    ]
+  },
+  {
+    "quest": "skill_taming:cat_colony",
+    "stage": "fq.skill_taming.cat_colony.enc3",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Oh, my darlings! All of them, safe!",
+      "I've lived among these ruins forty winters, and never once had the creepers outstay a good broom. But five at once...",
+      "Take my slippers, dear. The cats insist."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "70A91DD5D9F62E0F",
+    "prev_tasks": [
+      "3438BD9B78032E8C",
+      "138D27AE967571D0",
+      "64C62AA8D565D927"
+    ],
+    "name": "The Cat-Lady of the Ruin",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_taming:butterfly_house",
+    "stage": "fq.skill_taming.butterfly_house.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:glass",
+      "#minecraft:flowers"
+    ],
+    "counts": [
+      30,
+      8
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "624E8EFB92BDAE88",
+    "prev_tasks": [
+      "5BD8E465E384C580"
+    ]
+  },
+  {
+    "quest": "skill_taming:koi_pond",
+    "stage": "fq.skill_taming.koi_pond.build3",
+    "type": "build",
+    "keys": [
+      "minecraft:lily_pad",
+      "crittersandcompanions:clam"
+    ],
+    "counts": [
+      4,
+      2
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "74D054A89C57852A",
+    "prev_tasks": [
+      "5766A83748047DCC",
+      "3F34E5DE2081101A",
+      "6BAADA65A2855EF8"
+    ]
+  },
+  {
+    "quest": "skill_taming:pet_enchanting",
+    "stage": "fq.skill_taming.pet_enchanting.talk0",
+    "type": "talk",
+    "lines": [
+      "A collar tag is only paper and string until someone believes in it.",
+      "Health Boost for stamina. Defusal so your wolf will sniff out a creeper before it makes its mind up.",
+      "The books will teach you the rest."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "fern",
+    "quest_id": "3E29F1CF1159CD62",
     "open_task": ""
   }
 ]
