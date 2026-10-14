@@ -126,7 +126,7 @@ hash = "3a78e2e9b47b0199b5a823e0dec5cd82d5b6816d7b8f70c92230eff797a3f743"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_defense.snbt"
-hash = "f04615a3f94e766c815ab62be352919641ff7a85ef10f157608418e5b6892146"
+hash = "2a19cdf6b364217ea54360f0f831b7e6cf638cca6473a553521f45b1d463cb1a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_farming.snbt"
@@ -143,6 +143,14 @@ hash = "8378dc367b891e71686fdc6c4a6efd482d42d4dc88c406c50cdcdbe0e49e919f"
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_mining.snbt"
 hash = "0b7d46442f99b90304785c212c2e1b914b63557d7c809481be79260c284dff8f"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/skill_range.snbt"
+hash = "10a1fa7b95bd946b66790fecf2f543fe72de5c7a497c35743ba700c6c2696213"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/skill_taming.snbt"
+hash = "b4e59265f63d4ab39e717e31fe52aa4fe49390db5b1b890b081fee5364bac6e6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/small_favours.snbt"
@@ -2741,7 +2749,7 @@ hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "c74b4bf046c28c56c9f5b545b8d1016db5b96f510a132d4b7d5115e13ffab236"
+hash = "04dde4979ef1c97c86471746111edccee3eeb8fec2ef6c5c73ee936a43f631a4"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2817,7 +2825,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "44f1dc90bcb70b1f667f5f3a96e594e500237a7f870cc561bc4df1b3a8e635bc"
+hash = "c6cc33861113e91b8d62a4b05b11260577d83cc38c1c1922803dbfc8837e448a"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
