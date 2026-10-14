@@ -112,7 +112,11 @@ public final class StructureVerify {
                 continue;
             }
             level.m_6325_(pos.m_123341_() >> 4, pos.m_123343_() >> 4);
+            // locate gives a spot at a fixed height that may sit outside the structure's box: scan the column
             StructureStart start = level.m_215010_().m_220494_(pos, structure);
+            for (int y = level.m_141937_(); !start.m_73603_() && y < level.m_151558_(); y += 4) {
+                start = level.m_215010_().m_220494_(new BlockPos(pos.m_123341_(), y, pos.m_123343_()), structure);
+            }
             if (!start.m_73603_()) {
                 say(src, "fotfverify " + sid + " copy at " + pos.m_123341_() + "," + pos.m_123343_() + " no start");
                 continue;
