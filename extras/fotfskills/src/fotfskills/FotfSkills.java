@@ -72,6 +72,7 @@ public final class FotfSkills {
             MinecraftForge.EVENT_BUS.register(new fotfskills.compat.VillageWaystones());
         }
         MinecraftForge.EVENT_BUS.register(new fotfskills.compat.QuestProtectHooks());
+        MinecraftForge.EVENT_BUS.register(new fotfskills.compat.StructureVerify());
         if (ModList.get().isLoaded("ftbquests")) {
             MinecraftForge.EVENT_BUS.register(new fotfskills.compat.SharedKillHooks());
         }
