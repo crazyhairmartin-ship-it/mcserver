@@ -5,8 +5,10 @@ Q = [
     quest("welcome", "Welcome to Reece", icon="minecraft:oak_sapling", shape="diamond", size=1.5,
           text=["Elder Maren is waiting by Reece's well. She meets every newcomer herself.",
                 "Find her in Reece and say hello."],
-          tasks=[talk_char("maren", ["Ah, a new face. Welcome to Reece.",
-                                     "Take this. It's the Field Guide; I wrote half of it, so be kind.",
+          tasks=[talk_char("maren", ["Ah, a new face! Welcome to Reece, dearie.",
+                                     "Let me look at you. Muddy boots, empty pockets. You'll fit right in.",
+                                     "Take this. It's the Field Guide. I wrote half of it, dearie, so be kind.",
+                                     "And some bread, and torches. Don't argue. Nobody argues with me.",
                                      "Have a look around before night falls. Reece is small, but it's friendly."])],
           rewards=[give_guide(), reward_item("minecraft:bread", 4), reward_item("minecraft:torch", 16)]),
 
@@ -38,9 +40,10 @@ Q = [
           text=["Changed your mind about a skill? Sister Wren, Reece's cleric, brews skill tonics that let you "
                 "unlearn a tree's choices.",
                 "Ask her how they work, and keep one in reserve."],
-          tasks=[talk_char("wren", ["A skill tonic undoes what you've learned in one tree, and gives the points back.",
-                                    "It tastes awful. That's how you know it works.",
-                                    "Keep this one. You'll be glad of it one day."])],
+          tasks=[talk_char("wren", ["Notch gave us the gift of learning, and in His mercy, the gift of unlearning too.",
+                                    "A skill tonic undoes what you've learned in one tree, and gives the points back.",
+                                    "It tastes awful. That's how you know it works. Even Notch's mercy has a price.",
+                                    "Keep this one. You'll be glad of it one day. Go with Notch."])],
           rewards=[reward_item("fotfskills:skill_tonic")]),
 
     quest("first_timber", "Timber!", icon="minecraft:oak_log", after=["welcome"],
@@ -78,7 +81,8 @@ Q = [
 
     quest("gravestone", "The Sexton's Promise", icon="gravestone:gravestone", after=["reece_tour"],
           text=["Old Edda keeps Reece's graveyard. She has something to tell every newcomer."],
-          tasks=[talk_char("edda", ["Everyone comes to the graveyard eventually. Some sooner than others.",
+          tasks=[talk_char("edda", ["Oh. A visitor. Not a resident. Yet.",
+                                    "Everyone comes to the graveyard eventually. Some sooner than others.",
                                     "If you fall out there, a gravestone holds your things where you died. Only you "
                                     "can open it.",
                                     "This belonged to the last adventurer who didn't come back. Read it. Then don't "
@@ -142,8 +146,10 @@ Q = [
     quest("clerics_worry", "The Cleric's Worry", icon="minecraft:candle", shape="diamond", size=1.25,
           after=["field_guide", "guilds_of_the_field"],
           text=["Sister Wren has been watching the forest. She'd like a word."],
-          tasks=[talk_char("wren", ["The forest has gone quiet. No fireflies at dusk, no birdsong.",
-                                    "And the old spirits don't answer my prayers any more.",
+          tasks=[talk_char("wren", ["Notch planted the first forest with His own hands. I've always felt Him nearest there.",
+                                    "But the forest has gone quiet. No fireflies at dusk, no birdsong.",
+                                    "The old spirits He set to keep the woods don't answer my prayers any more.",
+                                    "I've lit every candle in the shrine. Notch is silent, and so are they.",
                                     "I don't know what's wrong. Will you help me find out?"])],
           rewards=[give('minecraft:potion{Potion:"minecraft:healing"}', "A healing potion")]),
 ]

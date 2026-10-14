@@ -39,9 +39,11 @@ global.QUEST_GIVERS = [
     "stage": "fq.main_story.act1_start.talk0",
     "type": "talk",
     "lines": [
+      "I've read them twice. Notch forgive me, I almost wish I hadn't.",
       "The wardens hold the old places shut. And someone thinks they're being drained.",
       "The first of them sleeps in iron, under the hills.",
-      "Be careful. Whatever's draining them is still out there."
+      "Take this armour. It was blessed at the shrine, for what that's worth.",
+      "Be careful. Whatever's draining them is still out there. Notch keep you."
     ],
     "requires": [],
     "name": "",
@@ -55,9 +57,11 @@ global.QUEST_GIVERS = [
     "stage": "fq.main_story.act1_wrought_practice.talk0",
     "type": "talk",
     "lines": [
+      "Armour that breathes. I've seen it once. Lost good people that day.",
       "Iron giants are slow to turn. Get behind it and strike.",
       "Build yourself a target dummy and practise until it's habit.",
-      "Then go and look. Look. Don't fight it until you're ready."
+      "Then go and look. Look. Don't fight it until you're ready.",
+      "...And come back. That's an order. People here would miss you."
     ],
     "requires": [],
     "name": "",
@@ -71,8 +75,10 @@ global.QUEST_GIVERS = [
     "stage": "fq.main_story.act1_wrought_report.talk0",
     "type": "talk",
     "lines": [
-      "It wasn't evil. It was starving.",
+      "You're alive. Thank Notch. Tell me everything.",
+      "...It wasn't evil. It was starving.",
       "Something had been feeding on it, a little at a time, for years.",
+      "Notch made the wardens to guard His world. Who would dare drain them?",
       "Then it's not just this one. It's all of them."
     ],
     "requires": [],
@@ -198,6 +204,8 @@ global.QUEST_GIVERS = [
     "type": "talk",
     "lines": [
       "Raiders come when they smell weakness. We'll show them none.",
+      "We fight at the village edge. Nobody gets near the fields. Nobody.",
+      "...Marta's fields, I mean. The farms. All the farms. Equally.",
       "Bring the omen in when you're ready. My guards will stand with you."
     ],
     "requires": [],
@@ -287,8 +295,10 @@ global.QUEST_GIVERS = [
     "stage": "fq.small_favours.sf_out_of_flour.talk0",
     "type": "talk",
     "lines": [
-      "A loaf? I'd love to. I'd love to. But there's no flour.",
-      "The windmill's stopped turning. Would you go and ask Hesk what's wrong?",
+      "A loaf? For the road? Oh, I'd love to! I'd love to! But there's no flour!",
+      "None! Not a pinch! I checked the sack four times. It's a catastrophe!",
+      "The windmill's stopped turning. If the mill stops, the bread stops, and if the bread stops... I can't say it.",
+      "Would you go and ask Hesk what's wrong? Oh, you would? You're a hero!",
       "It's just one small favour."
     ],
     "requires": [],
@@ -303,8 +313,10 @@ global.QUEST_GIVERS = [
     "stage": "fq.small_favours.sf_torn_sails.talk0",
     "type": "talk",
     "lines": [
-      "Storm tore the sails clean through. Can't grind a thing.",
-      "New sails need canvas. Canvas means Nell. Ask Nell, would you?",
+      "Oh. Hello. Sorry. Bram sent you? Sorry about Bram.",
+      "The storm... it tore the sails. Clean through. I can't grind a thing.",
+      "New sails need canvas. Canvas means Nell. I'd ask her myself, only... she frightens me a little.",
+      "Would you ask Nell? If it's not too much trouble. Sorry.",
       "One small favour, that's all."
     ],
     "requires": [],
@@ -319,8 +331,10 @@ global.QUEST_GIVERS = [
     "stage": "fq.small_favours.sf_broken_shuttle.talk0",
     "type": "talk",
     "lines": [
-      "Canvas? Of course. Except my shuttle snapped this morning.",
-      "Olsen could carve me a new one. And bring me straw while you're at it, I'm out.",
+      "Stop. Wipe your feet. Both of them. Now step on the mat. The middle.",
+      "Canvas? Of course. Except my shuttle snapped this morning, at seven minutes past six, and nothing has been right since.",
+      "Olsen could carve me a new one. Tell him the exact length. I've written it down. Twice.",
+      "And bring me straw while you're at it. Sixteen bundles. Not fifteen. Sixteen.",
       "Just a small favour."
     ],
     "requires": [],
@@ -336,7 +350,9 @@ global.QUEST_GIVERS = [
     "type": "talk",
     "lines": [
       "A shuttle? From ordinary birch? Absolutely not.",
-      "Only the old birches past the woods will do. The ones with the bees.",
+      "Young birch grows too fast. All sap and no sense. It'll warp before the season's out.",
+      "Only the old birches past the woods will do. The ones with the bees. Roots deep in good black soil, the way trees ought to grow.",
+      "Fell them clean, with an axe. None of that gadgetry. Do it right or don't do it.",
       "Eight logs, no stings. It's a very small favour, really."
     ],
     "requires": [],
@@ -351,8 +367,9 @@ global.QUEST_GIVERS = [
     "stage": "fq.small_favours.sf_unwinding.talk0",
     "type": "talk",
     "lines": [
-      "My shuttle! Lovely work. He's insufferable, but lovely work.",
-      "Here's your canvas. Off you go to Hesk."
+      "My shuttle! Let me measure it. ...Exactly right. To the hair. Infuriating.",
+      "He's insufferable, but lovely work.",
+      "Here's your canvas. Folded in eight. Keep it folded in eight. Off you go to Hesk."
     ],
     "requires": [],
     "name": "",
@@ -366,8 +383,9 @@ global.QUEST_GIVERS = [
     "stage": "fq.small_favours.sf_unwinding.talk1",
     "type": "talk",
     "lines": [
-      "Canvas! She did it! Give me an hour.",
-      "...There. Sails on, mill turning. One bag of flour, as promised."
+      "Canvas? For me? Oh. Oh, thank you. Give me an hour.",
+      "...There. Sails on, mill turning. Listen to it.",
+      "One bag of flour, as promised. I hope it's enough. Sorry if it isn't."
     ],
     "requires": [
       "fq.small_favours.sf_unwinding.talk0"
@@ -408,8 +426,10 @@ global.QUEST_GIVERS = [
     "stage": "fq.small_favours.sf_the_loaf.talk0",
     "type": "talk",
     "lines": [
-      "Flour! Real flour! You're a marvel.",
+      "Is that... is that flour? Real flour? I think I'm going to cry. I am crying.",
+      "You're a marvel! A legend! I'll name a bun after you!",
       "One crusty loaf, as promised. And a breadbox, since you went to all that trouble.",
+      "And three loaves, actually. Four's too many. Three's perfect. Oh, best day ever!",
       "Next time I ask a small favour, you have my permission to run."
     ],
     "requires": [],
@@ -424,8 +444,10 @@ global.QUEST_GIVERS = [
     "stage": "fq.start.welcome.talk0",
     "type": "talk",
     "lines": [
-      "Ah, a new face. Welcome to Reece.",
-      "Take this. It's the Field Guide; I wrote half of it, so be kind.",
+      "Ah, a new face! Welcome to Reece, dearie.",
+      "Let me look at you. Muddy boots, empty pockets. You'll fit right in.",
+      "Take this. It's the Field Guide. I wrote half of it, dearie, so be kind.",
+      "And some bread, and torches. Don't argue. Nobody argues with me.",
       "Have a look around before night falls. Reece is small, but it's friendly."
     ],
     "requires": [],
@@ -478,9 +500,10 @@ global.QUEST_GIVERS = [
     "stage": "fq.start.skill_tonic.talk0",
     "type": "talk",
     "lines": [
+      "Notch gave us the gift of learning, and in His mercy, the gift of unlearning too.",
       "A skill tonic undoes what you've learned in one tree, and gives the points back.",
-      "It tastes awful. That's how you know it works.",
-      "Keep this one. You'll be glad of it one day."
+      "It tastes awful. That's how you know it works. Even Notch's mercy has a price.",
+      "Keep this one. You'll be glad of it one day. Go with Notch."
     ],
     "requires": [],
     "name": "",
@@ -494,6 +517,7 @@ global.QUEST_GIVERS = [
     "stage": "fq.start.gravestone.talk0",
     "type": "talk",
     "lines": [
+      "Oh. A visitor. Not a resident. Yet.",
       "Everyone comes to the graveyard eventually. Some sooner than others.",
       "If you fall out there, a gravestone holds your things where you died. Only you can open it.",
       "This belonged to the last adventurer who didn't come back. Read it. Then don't be them."
@@ -771,8 +795,10 @@ global.QUEST_GIVERS = [
     "stage": "fq.start.clerics_worry.talk0",
     "type": "talk",
     "lines": [
-      "The forest has gone quiet. No fireflies at dusk, no birdsong.",
-      "And the old spirits don't answer my prayers any more.",
+      "Notch planted the first forest with His own hands. I've always felt Him nearest there.",
+      "But the forest has gone quiet. No fireflies at dusk, no birdsong.",
+      "The old spirits He set to keep the woods don't answer my prayers any more.",
+      "I've lit every candle in the shrine. Notch is silent, and so are they.",
       "I don't know what's wrong. Will you help me find out?"
     ],
     "requires": [],
@@ -820,9 +846,10 @@ global.QUEST_GIVERS = [
     "stage": "fq.skill_fishing.sign_up.talk0",
     "type": "talk",
     "lines": [
-      "Another hopeful! Splendid.",
+      "Another hopeful! Splendid. Fresh bait for the old society.",
+      "When I joined, I fished nine days for my first bite. On the tenth, a pike pulled me clean off the jetty. I kept hold. I'm still holding, in a way.",
       "Five fish, any kind, plain rod. Show me you can land them and you're in.",
-      "The season's long. Bring patience."
+      "The season's a long line, my friend. Bring patience, and tie good knots."
     ],
     "requires": [],
     "name": "",
@@ -838,7 +865,9 @@ global.QUEST_GIVERS = [
     "then": "talk",
     "lines": [
       "Silas Pike. Champion angler. You'll have heard of me.",
+      "...You haven't heard of me? Everyone's heard of me. Ask anyone. Don't ask Halloway.",
       "That rod? Ha. I bet you can't hook Grandfather, the old carp on this bank.",
+      "I've caught him loads of times. Loads. I just threw him back. Every time.",
       "Go on then. Fish until he bites. I'll wait. I'm very patient when I'm winning."
     ],
     "arrive": "",
@@ -907,8 +936,10 @@ global.QUEST_GIVERS = [
     "stage": "fq.skill_cooking.first_order.talk0",
     "type": "talk",
     "lines": [
-      "You can cook? Wonderful. You're hired. Probably.",
-      "Eight steaks and eight loaves for tonight's regulars. Go on, chop chop."
+      "You. Yes, you. Can you cook? Don't lie to me, I'll know.",
+      "Good. You're hired. Probably.",
+      "Eight steaks and eight loaves for tonight's regulars. Go on, chop chop.",
+      "And eat something yourself first. I won't have my cooks fainting in my kitchen."
     ],
     "requires": [],
     "name": "",
@@ -1112,124 +1143,225 @@ global.QUEST_CHARACTERS = {
   "maren": {
     "name": "Elder Maren",
     "profession": "minecraft:librarian",
+    "personality": "Warm, grandmotherly village elder who mothers every newcomer and calls the adventurer 'dearie'. Proud of the Field Guide she half-wrote; a little nosy about village gossip.",
     "idle": [
-      "Reece is small, but it's never quiet for long.",
-      "Read the Field Guide when you're unsure. I wrote half of it."
+      "Reece is small, dearie, but it's never quiet for long.",
+      "Read the Field Guide when you're unsure, dearie. I wrote half of it, and the good half at that.",
+      "Have you eaten today, dearie? You look peaky.",
+      "Mind you're home before dark, dearie. The roads aren't kind at night.",
+      "When I was your age, dearie, I walked to the coast and back in a week. Uphill both ways, somehow.",
+      "Captain Hale polishes his armour by Marta's field every morning. I'm sure it's a coincidence, dearie.",
+      "Don't let Silas Pike get under your skin, dearie. He's all bluster and no fish.",
+      "Oh, it's you, dearie. Come in, come in. Wipe your feet, Nell's watching."
     ],
     "entity": "minecraft:villager"
   },
   "wren": {
     "name": "Sister Wren",
     "profession": "minecraft:cleric",
+    "personality": "Gentle, devout cleric whose faith is in Notch, the creator who built the world block by block. Speaks of Notch's grace, His handiwork and His silence; worried the forest spirits He set to guard it have gone quiet.",
     "idle": [
-      "The forest still hasn't answered me.",
-      "Light a candle at the shrine if you pass it."
+      "The forest still hasn't answered me. Notch, grant me patience.",
+      "Light a candle at the shrine if you pass it. Notch sees every small light.",
+      "In the beginning there was only the void, and Notch placed the first block. Every block since is a prayer.",
+      "By Notch's grace, you're still in one piece. Do try to keep it that way.",
+      "Some say Notch left this world long ago. I think He's only resting, like the land in winter.",
+      "Blessed are the builders, for they carry on His work.",
+      "Notch gave us the sun to work by and the night to keep us humble.",
+      "Go with Notch, traveller. And take a torch. Faith is good; torches are better."
     ],
     "entity": "minecraft:villager"
   },
   "edda": {
     "name": "Old Edda",
     "profession": "minecraft:nitwit",
+    "personality": "Dry, ominous old graveyard keeper with gallows humour. Unbothered by death, quietly fond of the living.",
     "idle": [
       "Everyone comes back to the graveyard eventually. Some come back sooner.",
-      "Mind how you go."
+      "Mind how you go.",
+      "I dig a fresh hole every Monday. Just in case.",
+      "Lovely weather for a funeral.",
+      "The ground's soft this time of year. Easier digging.",
+      "I've buried three adventurers who said 'it's only one creeper'.",
+      "You've got a healthy look about you. For now.",
+      "The dead are good company. They never interrupt."
     ],
     "entity": "minecraft:villager"
   },
   "hale": {
     "name": "Captain Hale",
     "entity": "guardvillagers:guard",
+    "personality": "Gruff captain of the guard with a tough exterior and a soft heart underneath. Barks orders, hides kindness, and has an obvious crush on Marta Furrow; gets flustered and backpedals whenever she comes up.",
     "idle": [
       "Watch the tree line at dusk.",
-      "Keep your shield up and your back to a wall."
+      "Keep your shield up and your back to a wall.",
+      "Soft hands get you killed out there. Toughen up.",
+      "I don't do feelings. I do patrols.",
+      "Marta? What about her? The fields are... well guarded. That's all. Move along.",
+      "Found a kitten in the barracks this morning. Put it out. ...In a basket. By the fire. Out of the way.",
+      "Fear's fine. Fear keeps you alive. Just don't let it hold the sword.",
+      "If Marta asks, I didn't leave flowers on her fence. Someone did. Not me.",
+      "You did good out there. Don't let it go to your head."
     ]
   },
   "dagna": {
     "name": "Guildmaster Dagna Holt",
     "profession": "minecraft:toolsmith",
+    "scale": 0.8,
+    "personality": "Short, stout, fiercely Scottish guildmaster of the Miners' Guild (aye, wee, ken, dinnae, cannae, och, lass). Blunt and proud, can't stand slackers or blunt picks, secretly delighted by a hard worker.",
     "idle": [
-      "A good pick and a better lantern. That's all a miner needs.",
-      "Mind the gravel."
+      "A guid pick an' a better lantern. That's aw a miner needs.",
+      "Mind the gravel, ye daft thing.",
+      "Aye, I'm wee. The tunnels dinnae mind, an' neither should you.",
+      "Ye ken what they say: dig straight doon an' ye'll meet yer maker.",
+      "Cannae abide a miner wi' a blunt pick. It's a disgrace tae the Guild.",
+      "Diamonds? Och, shiny rocks. Iron's what builds a village.",
+      "Back in my day we mined by candlelight, an' we were grateful for the candle.",
+      "Lava's like a bad landlord, lass. Quiet till it takes everythin' ye own."
     ],
     "entity": "minecraft:villager"
   },
   "marta": {
     "name": "Marta Furrow",
     "profession": "minecraft:farmer",
+    "personality": "Overbearingly nice farmer who smothers everyone with kindness, food, compliments and help nobody asked for. Completely oblivious to Captain Hale's crush.",
     "idle": [
-      "Rain's coming. The barley knows it before I do.",
-      "There's always work in the fields."
+      "Oh, look at you! You're doing so well! Have a carrot. Have two. Have a sack.",
+      "Rain's coming, sweetheart. The barley knows it before I do. Do you have a coat? Take my coat.",
+      "You're the nicest person I've met today! Well, you and everyone else, but especially you!",
+      "There's always work in the fields, but you rest first. I insist. No, really. I insist.",
+      "Captain Hale walks past my field four times a day! Such a dedicated man. He must love patrolling.",
+      "Did you eat? You didn't eat. I can tell. I've packed you a lunch. And a dinner. And a second lunch.",
+      "Somebody left flowers on my fence again! Isn't this village just wonderful?",
+      "Oh, don't thank me! Actually, do. It's lovely. Thank me again."
     ],
     "entity": "minecraft:villager"
   },
   "halloway": {
     "name": "Commodore Marlow Halloway",
     "profession": "minecraft:fisherman",
+    "personality": "Grand old commodore of the Anglers' Society (she). Speaks in fishing metaphors and spins tall old fisherman's tales that get bigger every telling. Fond of, but dismissive of, Silas.",
     "idle": [
-      "The society meets on the jetty. Bring a rod.",
-      "Tide's turning. Good time to fish."
+      "The society meets on the jetty. Bring a rod, and a patient heart.",
+      "Tide's turning. Good time to fish. Good time for most things, really.",
+      "Life's a long line, my friend. Some days it's all weed, some days it's a whopper.",
+      "Did I tell you about the pike that towed me across the whole lake? Took my boat, my hat and my second-best husband.",
+      "Never trust a calm lake. The still water's where the old ones sleep.",
+      "A hasty hand snaps the line. Reel slow, live long.",
+      "I once caught a cod so large it had its own cod inside. True story. Ask anyone. Don't ask Silas.",
+      "Fish don't bite for the worthy. They bite for the ones who stay."
     ],
     "entity": "minecraft:villager"
   },
   "bess": {
     "name": "Bess Copperpot",
     "profession": "minecraft:butcher",
+    "personality": "Tough-as-nails tavern keeper with a loving heart. Barks, scolds and threatens, then feeds you extra and worries about you behind your back.",
     "idle": [
-      "Stew's on. Pull up a stool.",
-      "Nobody leaves my tavern hungry."
+      "Stew's on. Sit down before I sit you down.",
+      "Nobody leaves my tavern hungry. Nobody leaves without paying, either.",
+      "Wipe that look off your face and eat something. You're all bones.",
+      "Broke a chair over a raider's head once. Charged him for the chair.",
+      "You come back in one piece, you hear me? I'm not cooking a funeral supper for you.",
+      "Elbows off my bar. ...Fine. Leave them. You've had a long day.",
+      "Hungry's no excuse for rude. Say please. Good. Here's extra.",
+      "Dagna's lot drink like fish and tip like misers. I love them anyway."
     ],
     "entity": "minecraft:villager"
   },
   "rue": {
     "name": "Mother Rue",
     "profession": "minecraft:cleric",
+    "personality": "Anxious, long-winded herbalist. Over-explains, worries about every possible danger, wanders off topic mid-sentence and apologises for it.",
     "idle": [
-      "Every weed is a medicine to someone.",
-      "Pick only what you need."
+      "Every weed is a medicine to someone, you know. Well, nearly every weed. Some are poison. Quite a lot are poison, actually. So do check with me first. Please.",
+      "Pick only what you need. And wash your hands after. And before, maybe. Oh, I worry about this so much.",
+      "Did you hear thunder? I thought I heard thunder. The lavender won't like thunder. I don't like thunder.",
+      "I was going to tell you something important. About mushrooms. Or possibly boots. No... it'll come to me. Sorry.",
+      "If you're going into the woods, take bandages, and water, and spare socks, and tell someone where you're going, and, oh, just be careful, won't you?",
+      "Sorry, I'm drying the chamomile, and if I stop now it'll go... well, it won't go anywhere, but it'll go wrong.",
+      "My mother always said a calm mind grows a calm garden. My garden is very nervous.",
+      "Have you noticed how many things in a forest can sting you? I have. I made a list. It's long. Would you like the list?"
     ],
     "entity": "minecraft:villager"
   },
   "bram": {
     "name": "Bram the Baker",
     "profession": "minecraft:farmer",
+    "personality": "Cheerful, helpless baker who wildly overreacts: every small problem is a catastrophe, every small win a miracle. Means well, panics often.",
     "idle": [
-      "Smell that? No, nor do I. No flour, no bread.",
-      "Mind the oven, it bites."
+      "Smell that? No, nor do I. No flour, no bread. No bread, no village. Is this how it ends?!",
+      "Mind the oven, it bites! It bit me twice last week! I've forgiven it!",
+      "A customer smiled at me today! A smile! I may need to lie down.",
+      "I dropped a bun. It's ruined. Everything's ruined. ...Oh, it landed on the cloth. Hooray!",
+      "You look hungry! Or tired! Or both! Oh no, do you need a doctor? Have a scone.",
+      "Did you know bread rises? Every single time! Isn't that marvellous?",
+      "The jam jar wouldn't open. I sat on the floor and wept. Then Bess opened it with one hand.",
+      "Best day ever! Again!"
     ],
     "entity": "minecraft:villager"
   },
   "hesk": {
     "name": "Miller Hesk",
     "profession": "minecraft:farmer",
+    "personality": "Meek, quiet miller. Speaks softly, trails off, apologises constantly and hates to be any trouble. A little afraid of Nell.",
     "idle": [
-      "The mill turns when the wind does.",
-      "Grain in, flour out. Usually."
+      "Oh. Hello. Sorry. I didn't see you there.",
+      "The mill turns when the wind does. I just... sort of stand here.",
+      "Grain in, flour out. Usually. If that's all right.",
+      "...Sorry, did you say something? I didn't want to interrupt.",
+      "I don't like to be any trouble.",
+      "The wind's nice today. I didn't say that too loudly, did I?",
+      "Nell says I sweep wrong. She's probably right.",
+      "Thank you for... um. Thank you."
     ],
     "entity": "minecraft:villager"
   },
   "nell": {
     "name": "Nell the Weaver",
     "profession": "minecraft:shepherd",
+    "personality": "Obsessively orderly, controlling weaver. Everything must be counted, straightened and done exactly her way; notices every speck out of place and corrects everyone.",
     "idle": [
-      "Straw, canvas, wool. Everything starts as something plainer.",
-      "Don't touch the loom."
+      "Don't touch the loom. Don't look at the loom. You're looking at it.",
+      "Straw, canvas, wool. Everything in its pile, every pile in its row.",
+      "That thread is three shades off. I'll be up all night now.",
+      "Stand on the mat. No, the middle of the mat. The middle.",
+      "I counted my bobbins this morning. Forty-two. I'll count them again at noon. Just in case.",
+      "Hesk sweeps the mill floor in circles. Circles! I've drawn him a diagram.",
+      "If you're going to stand there, stand there straight.",
+      "Did you move that basket? Someone moved that basket. It was a finger's width to the left."
     ],
     "entity": "minecraft:villager"
   },
   "olsen": {
     "name": "Olsen the Carpenter",
     "profession": "minecraft:mason",
+    "personality": "Plain-spoken carpenter and man of the soil. Big on tradition and doing things the right way, with no shortcuts; respects good timber, honest work and patience.",
     "idle": [
-      "Measure twice. Then measure again, because you got it wrong.",
-      "Only the old birch will do."
+      "Measure twice, cut once. Measure a third time if you want it to last.",
+      "Only the old birch will do. The young stuff's all sap and no sense.",
+      "Good wood comes from good soil. Good soil comes from patience.",
+      "There's a right way and a quick way. They're rarely the same way.",
+      "My father built that fence. His father planted the tree it came from. That's how it's done.",
+      "Hands in the dirt keep a man honest.",
+      "Nails are for people in a hurry. I use pegs.",
+      "Don't rush the grain. It's been growing longer than you've been alive."
     ],
     "entity": "minecraft:villager"
   },
   "silas": {
     "name": "Silas Pike",
     "profession": "minecraft:fisherman",
+    "personality": "Smug, boastful rival angler, endlessly competitive, but easily flustered: stammers and backpedals when challenged, beaten or caught out.",
     "idle": [
-      "Back again? I'll still out-fish you."
+      "Back again? I'll still out-fish you.",
+      "Champion angler three seasons running. Well, two. Well... it's complicated.",
+      "Nice cast. For a beginner. I mean it. Mostly.",
+      "My hooks are hand-forged. Yours are... they're fine. They're fine! Stop looking at me like that.",
+      "I once caught a fish so big... What? I'm allowed stories too! Halloway doesn't own stories!",
+      "W-well, of course you caught that. Anyone could have. I let you, really.",
+      "Stand back and watch a master. ...Don't watch that one. That was a practice cast.",
+      "I'm not nervous. My hands always shake like this. It's the cold."
     ],
     "entity": "minecraft:villager"
   }

@@ -4,8 +4,10 @@ from common import chapter, quest, talk_char, talk_org, item, reward_item, skill
 Q = [
     quest("first_order", "First Order", icon="minecraft:cooked_beef",
           text=["Bess Copperpot runs Reece's tavern, and tonight she's a cook short."],
-          tasks=[talk_char("bess", ["You can cook? Wonderful. You're hired. Probably.",
-                                    "Eight steaks and eight loaves for tonight's regulars. Go on, chop chop."]),
+          tasks=[talk_char("bess", ["You. Yes, you. Can you cook? Don't lie to me, I'll know.",
+                                    "Good. You're hired. Probably.",
+                                    "Eight steaks and eight loaves for tonight's regulars. Go on, chop chop.",
+                                    "And eat something yourself first. I won't have my cooks fainting in my kitchen."]),
                  item("minecraft:cooked_beef", 8, consume=True), item("minecraft:bread", 8, consume=True)],
           rewards=[reward_item("farmersdelight:flint_knife"), reward_item("minecraft:emerald", 4), skill("cook", 60)]),
 

@@ -56,9 +56,11 @@ ACT1 = [
           after=["prologue_letter", "prologue_home"],
           text=["Both journal pages together tell of guardians: the wardens, who hold the old places shut.",
                 "Sister Wren has read them twice."],
-          tasks=[talk_char("wren", ["The wardens hold the old places shut. And someone thinks they're being drained.",
+          tasks=[talk_char("wren", ["I've read them twice. Notch forgive me, I almost wish I hadn't.",
+                                    "The wardens hold the old places shut. And someone thinks they're being drained.",
                                     "The first of them sleeps in iron, under the hills.",
-                                    "Be careful. Whatever's draining them is still out there."])],
+                                    "Take this armour. It was blessed at the shrine, for what that's worth.",
+                                    "Be careful. Whatever's draining them is still out there. Notch keep you."])],
           rewards=[reward_item("minecraft:iron_chestplate")]),
 
     quest("act1_iron_kit", "Iron and Edge", icon="spartanweaponry:iron_longsword", after=["act1_start"],
@@ -85,9 +87,11 @@ ACT1 = [
           after=["act1_temple", "act1_mineshaft"],
           text=["Armour that breathes, in a sealed chamber. Captain Hale of the Village watch knows what that means, "
                 "and wants you ready before you go anywhere near it."],
-          tasks=[talk_char("hale", ["Iron giants are slow to turn. Get behind it and strike.",
+          tasks=[talk_char("hale", ["Armour that breathes. I've seen it once. Lost good people that day.",
+                                    "Iron giants are slow to turn. Get behind it and strike.",
                                     "Build yourself a target dummy and practise until it's habit.",
-                                    "Then go and look. Look. Don't fight it until you're ready."]),
+                                    "Then go and look. Look. Don't fight it until you're ready.",
+                                    "...And come back. That's an order. People here would miss you."]),
                  item("dummmmmmy:target_dummy")],
           rewards=[skill("defense", 80)]),
 
@@ -106,8 +110,10 @@ ACT1 = [
 
     quest("act1_wrought_report", "Rust on the Seal", icon="minecraft:iron_nugget", after=["act1_wroughtnaut"],
           text=["Take what you learned back to Sister Wren."],
-          tasks=[talk_char("wren", ["It wasn't evil. It was starving.",
+          tasks=[talk_char("wren", ["You're alive. Thank Notch. Tell me everything.",
+                                    "...It wasn't evil. It was starving.",
                                     "Something had been feeding on it, a little at a time, for years.",
+                                    "Notch made the wardens to guard His world. Who would dare drain them?",
                                     "Then it's not just this one. It's all of them."])],
           rewards=[reward_item("minecraft:emerald", 8)]),
 
@@ -149,6 +155,8 @@ ACT1 = [
           text=["Captain Hale has a plan: draw the raiders out on your terms. Carry the Bad Omen into a village and "
                 "hold it through a full raid."],
           tasks=[talk_char("hale", ["Raiders come when they smell weakness. We'll show them none.",
+                                    "We fight at the village edge. Nobody gets near the fields. Nobody.",
+                                    "...Marta's fields, I mean. The farms. All the farms. Equally.",
                                     "Bring the omen in when you're ready. My guards will stand with you."]),
                  {"advancement": "minecraft:adventure/hero_of_the_village"}],
           rewards=[reward_item("minecraft:totem_of_undying"), skill("defense", 200)]),

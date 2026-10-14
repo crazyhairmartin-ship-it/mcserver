@@ -232,9 +232,11 @@
           "talk": "character",
           "character": "wren",
           "lines": [
+            "I've read them twice. Notch forgive me, I almost wish I hadn't.",
             "The wardens hold the old places shut. And someone thinks they're being drained.",
             "The first of them sleeps in iron, under the hills.",
-            "Be careful. Whatever's draining them is still out there."
+            "Take this armour. It was blessed at the shrine, for what that's worth.",
+            "Be careful. Whatever's draining them is still out there. Notch keep you."
           ]
         }
       ],
@@ -363,9 +365,11 @@
           "talk": "character",
           "character": "hale",
           "lines": [
+            "Armour that breathes. I've seen it once. Lost good people that day.",
             "Iron giants are slow to turn. Get behind it and strike.",
             "Build yourself a target dummy and practise until it's habit.",
-            "Then go and look. Look. Don't fight it until you're ready."
+            "Then go and look. Look. Don't fight it until you're ready.",
+            "...And come back. That's an order. People here would miss you."
           ]
         },
         {
@@ -445,8 +449,10 @@
           "talk": "character",
           "character": "wren",
           "lines": [
-            "It wasn't evil. It was starving.",
+            "You're alive. Thank Notch. Tell me everything.",
+            "...It wasn't evil. It was starving.",
             "Something had been feeding on it, a little at a time, for years.",
+            "Notch made the wardens to guard His world. Who would dare drain them?",
             "Then it's not just this one. It's all of them."
           ]
         }
@@ -626,6 +632,8 @@
           "character": "hale",
           "lines": [
             "Raiders come when they smell weakness. We'll show them none.",
+            "We fight at the village edge. Nobody gets near the fields. Nobody.",
+            "...Marta's fields, I mean. The farms. All the farms. Equally.",
             "Bring the omen in when you're ready. My guards will stand with you."
           ]
         },

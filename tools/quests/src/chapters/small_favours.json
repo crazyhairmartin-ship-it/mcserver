@@ -19,8 +19,10 @@
           "talk": "character",
           "character": "bram",
           "lines": [
-            "A loaf? I'd love to. I'd love to. But there's no flour.",
-            "The windmill's stopped turning. Would you go and ask Hesk what's wrong?",
+            "A loaf? For the road? Oh, I'd love to! I'd love to! But there's no flour!",
+            "None! Not a pinch! I checked the sack four times. It's a catastrophe!",
+            "The windmill's stopped turning. If the mill stops, the bread stops, and if the bread stops... I can't say it.",
+            "Would you go and ask Hesk what's wrong? Oh, you would? You're a hero!",
             "It's just one small favour."
           ]
         }
@@ -46,8 +48,10 @@
           "talk": "character",
           "character": "hesk",
           "lines": [
-            "Storm tore the sails clean through. Can't grind a thing.",
-            "New sails need canvas. Canvas means Nell. Ask Nell, would you?",
+            "Oh. Hello. Sorry. Bram sent you? Sorry about Bram.",
+            "The storm... it tore the sails. Clean through. I can't grind a thing.",
+            "New sails need canvas. Canvas means Nell. I'd ask her myself, only... she frightens me a little.",
+            "Would you ask Nell? If it's not too much trouble. Sorry.",
             "One small favour, that's all."
           ]
         }
@@ -74,8 +78,10 @@
           "talk": "character",
           "character": "nell",
           "lines": [
-            "Canvas? Of course. Except my shuttle snapped this morning.",
-            "Olsen could carve me a new one. And bring me straw while you're at it, I'm out.",
+            "Stop. Wipe your feet. Both of them. Now step on the mat. The middle.",
+            "Canvas? Of course. Except my shuttle snapped this morning, at seven minutes past six, and nothing has been right since.",
+            "Olsen could carve me a new one. Tell him the exact length. I've written it down. Twice.",
+            "And bring me straw while you're at it. Sixteen bundles. Not fifteen. Sixteen.",
             "Just a small favour."
           ]
         },
@@ -108,7 +114,9 @@
           "character": "olsen",
           "lines": [
             "A shuttle? From ordinary birch? Absolutely not.",
-            "Only the old birches past the woods will do. The ones with the bees.",
+            "Young birch grows too fast. All sap and no sense. It'll warp before the season's out.",
+            "Only the old birches past the woods will do. The ones with the bees. Roots deep in good black soil, the way trees ought to grow.",
+            "Fell them clean, with an axe. None of that gadgetry. Do it right or don't do it.",
             "Eight logs, no stings. It's a very small favour, really."
           ]
         },
@@ -144,8 +152,9 @@
           "talk": "character",
           "character": "nell",
           "lines": [
-            "My shuttle! Lovely work. He's insufferable, but lovely work.",
-            "Here's your canvas. Off you go to Hesk."
+            "My shuttle! Let me measure it. ...Exactly right. To the hair. Infuriating.",
+            "He's insufferable, but lovely work.",
+            "Here's your canvas. Folded in eight. Keep it folded in eight. Off you go to Hesk."
           ],
           "title": "Bring Nell the shuttle"
         },
@@ -153,8 +162,9 @@
           "talk": "character",
           "character": "hesk",
           "lines": [
-            "Canvas! She did it! Give me an hour.",
-            "...There. Sails on, mill turning. One bag of flour, as promised."
+            "Canvas? For me? Oh. Oh, thank you. Give me an hour.",
+            "...There. Sails on, mill turning. Listen to it.",
+            "One bag of flour, as promised. I hope it's enough. Sorry if it isn't."
           ],
           "title": "Bring Hesk the canvas"
         }
@@ -216,8 +226,10 @@
           "talk": "character",
           "character": "bram",
           "lines": [
-            "Flour! Real flour! You're a marvel.",
+            "Is that... is that flour? Real flour? I think I'm going to cry. I am crying.",
+            "You're a marvel! A legend! I'll name a bun after you!",
             "One crusty loaf, as promised. And a breadbox, since you went to all that trouble.",
+            "And three loaves, actually. Four's too many. Three's perfect. Oh, best day ever!",
             "Next time I ask a small favour, you have my permission to run."
           ]
         }
