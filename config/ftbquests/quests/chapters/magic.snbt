@@ -1,0 +1,764 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "magic"
+	group: "1CAE106B8DA521D5"
+	icon: "irons_spellbooks:iron_spell_book"
+	id: "62992D91381C77D9"
+	order_index: 14
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["63C3DB46B7298A13"]
+			description: ["A village librarian slips you a note: the Arcane Order is recruiting, and the entrance fee is ten books and a quill. Bring them to Archmage Orrin Vael in Reece."]
+			icon: "minecraft:book"
+			id: "198637F8BCD45325"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "6A3558160AE000BA"
+					item: {
+						Count: 1b
+						id: "minecraft:book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Eight schools. Orrin has underlined the dangerous ones.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Guide to the Schools\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 80"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "7064E806D405D259"
+					silent: true
+					title: "+80 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6FF6887888F6AB4F"
+					stage: "fq.magic.the_order_calls"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 10L
+					id: "0027B2880578AAA8"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "7D6434B3E65C0C94"
+					item: "minecraft:feather"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "56E1235FE32DFE9B"
+					item: "minecraft:ink_sac"
+					type: "item"
+				}
+				{
+					id: "472126FDCEFC4307"
+					stage: "fq.magic.the_order_calls.talk3"
+					title: "Talk to Archmage Orrin Vael"
+					type: "gamestage"
+				}
+			]
+			title: "The Order Calls"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["198637F8BCD45325"]
+			description: ["Orrin despises guesswork. Build an enchanting table ringed by fifteen bookshelves, and enchant your first tool."]
+			icon: "minecraft:enchanting_table"
+			id: "336CE4ED79FDECC3"
+			rewards: [
+				{
+					count: 16
+					id: "2D8385FF5667E4AD"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 100"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "5D7B0C74916520F1"
+					silent: true
+					title: "+100 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "093AAAE33E96D1E6"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "6AF8AF3FB7C0E2C2"
+					stage: "fq.magic.an_honest_table.build1"
+					title: "Build an enchanting table ringed with bookshelves"
+					type: "gamestage"
+				}
+				{
+					advancement: "minecraft:story/enchant_item"
+					criterion: ""
+					id: "6B45307D2C151B2C"
+					title: "Enchant an item"
+					type: "advancement"
+				}
+			]
+			title: "An Honest Table"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["336CE4ED79FDECC3"]
+			description: ["Orrin's test: produce a book with two enchantments he names, using the table's re-roll, without wasting more than ten levels."]
+			icon: "minecraft:enchanted_book"
+			id: "7DD119EF0502B52C"
+			rewards: [
+				{
+					id: "714C5CECC58A1773"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"A Careful Hand\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 120"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "251A3183580F8E10"
+					silent: true
+					title: "+120 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "03C4202B8567ABD7"
+					stage: "fq.magic.reroll_the_fates.talk0"
+					title: "Talk to Archmage Orrin Vael"
+					type: "gamestage"
+				}
+				{
+					id: "137D0AED09AC00E2"
+					item: "minecraft:enchanted_book"
+					type: "item"
+				}
+				{
+					id: "328288C55B8C6F8D"
+					title: "I made the book without wasting ten levels"
+					type: "checkmark"
+				}
+			]
+			title: "Reroll the Fates"
+			x: 3.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["198637F8BCD45325"]
+			description: ["Priests of the Order wander between villages. Find one, trade with him for a healing potion and hear about the undead stirring beneath old graves."]
+			icon: "irons_spellbooks:priest_spawn_egg"
+			id: "05EC86DA29A28F2C"
+			rewards: [
+				{
+					id: "2301176DA6EED15B"
+					item: "irons_spellbooks:greater_healing_potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 100"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "1B044C6A46F4959F"
+					silent: true
+					title: "+100 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3D698C5491DD2957"
+					structure: "#fotf:groups/villages"
+					title: "Find a village priest"
+					type: "structure"
+				}
+				{
+					id: "44C65A611AC7513E"
+					stage: "fq.magic.the_priest.talk1"
+					title: "Talk to them"
+					type: "gamestage"
+				}
+				{
+					id: "757C4D6D1A3D9FDD"
+					title: "I traded for a healing potion"
+					type: "checkmark"
+				}
+			]
+			title: "The Priest's Blessing"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["198637F8BCD45325"]
+			description: ["Craft an inscription table, mix common ink, and copy a scroll for the library's records."]
+			icon: "irons_spellbooks:inscription_table"
+			id: "5DBC8BF23F558833"
+			rewards: [
+				{
+					count: 16
+					id: "64A120265201FB36"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "61E0D033932C7447"
+					item: "irons_spellbooks:common_ink"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 110"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "6459953DEE55C2EF"
+					silent: true
+					title: "+110 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "31F92DEF814D6593"
+					item: "irons_spellbooks:inscription_table"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "1E7A499CBC99563C"
+					item: "irons_spellbooks:common_ink"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "25B3718EFA5B4DB8"
+					item: "irons_spellbooks:scroll"
+					type: "item"
+				}
+			]
+			title: "Ink and Parchment"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5DBC8BF23F558833"]
+			description: ["Break down unwanted scrolls and enchanted gear into arcane essence, and gather twenty: the Order's currency."]
+			icon: "irons_spellbooks:arcane_essence"
+			id: "50E05C3C90937E21"
+			rewards: [
+				{
+					id: "0F7535F9ED8C7BC2"
+					item: "irons_spellbooks:blank_rune"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 130"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "4C96C2D239DB8145"
+					silent: true
+					title: "+130 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 20L
+					id: "3E0FCC1C560CD839"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+			]
+			title: "Essence of the Arcane"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["50E05C3C90937E21"]
+			description: ["Bind a copper spellbook and inscribe your first spell into it, then cast it ten times at a target dummy."]
+			icon: "irons_spellbooks:copper_spell_book"
+			id: "06999C12176240CD"
+			rewards: [
+				{
+					id: "6FDEF07F164C7B20"
+					item: "irons_spellbooks:mana_ring"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 160"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "0D4079917E19E42D"
+					silent: true
+					title: "+160 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "268CC0E75583B7FD"
+					item: "irons_spellbooks:copper_spell_book"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "6489FE291061FA56"
+					item: "dummmmmmy:target_dummy"
+					type: "item"
+				}
+				{
+					id: "205717012AC6E439"
+					title: "I cast my first spell ten times at the dummy"
+					type: "checkmark"
+				}
+			]
+			title: "A Book of One's Own"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["06999C12176240CD"]
+			description: ["Every mage needs a study. Build one with wisewood bookshelves, a brazier, a pedestal for your book and a scroll rack."]
+			icon: "irons_spellbooks:wisewood_bookshelf"
+			id: "6EC2430CF00C3E91"
+			rewards: [
+				{
+					count: 32
+					id: "0F69594E83DA4F6E"
+					item: "irons_spellbooks:wisewood_planks"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "18923DD3CA12AD50"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 150"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "65DAE95064CB09A6"
+					silent: true
+					title: "+150 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "78BC606D8593712B"
+					stage: "fq.magic.the_study.build0"
+					title: "Build a study"
+					type: "gamestage"
+				}
+			]
+			title: "The Study"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["06999C12176240CD"]
+			description: ["Orrin's old rival keeps a tower near the badlands. Find the Pyromancer Tower and ask its pyromancer to teach you, politely."]
+			icon: "irons_spellbooks:pyromancer_spawn_egg"
+			id: "584ADBE4C6FEB091"
+			rewards: [
+				{
+					id: "0B42478F9E87F82E"
+					item: "irons_spellbooks:scroll_fire"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 160"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "5E44A1A5DD6B1CB4"
+					silent: true
+					title: "+160 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7F874FF5EE0B4F60"
+					structure: "irons_spellbooks:pyromancer_tower"
+					title: "Find the Pyromancer Tower"
+					type: "structure"
+				}
+				{
+					id: "190CDE02EEC9D934"
+					stage: "fq.magic.pyromancer_tower.talk1"
+					title: "Talk to them"
+					type: "gamestage"
+				}
+			]
+			title: "The Pyromancer's Tower"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["584ADBE4C6FEB091"]
+			description: ["The pyromancer only teaches those who can take a fireball. Duel him with spells until he yields."]
+			icon: "irons_spellbooks:pyromancer_helmet"
+			id: "143274D452E80D0A"
+			rewards: [
+				{
+					id: "2C449784953EB46C"
+					item: "irons_spellbooks:pyromancer_helmet"
+					type: "item"
+				}
+				{
+					id: "4A9F803195C9E092"
+					item: "irons_spellbooks:fire_rune"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 220"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "01A8A6F5F14D8B9B"
+					silent: true
+					title: "+220 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "77CC9DE6A95DEEEB"
+					stage: "fq.magic.pyromancers_duel.enc0"
+					title: "Defeat The Pyromancer"
+					type: "gamestage"
+				}
+			]
+			title: "Trial by Fire"
+			x: 7.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["584ADBE4C6FEB091"]
+			description: ["Craft a fire rune, scribe firebolt onto a scroll, and set twenty mobs alight with it."]
+			icon: "irons_spellbooks:fire_rune"
+			id: "37D8CE7836BA8E4D"
+			rewards: [
+				{
+					id: "3A612BAB9B1BFC6E"
+					item: "irons_spellbooks:fireward_ring"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "459E7535F87D14E3"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3A12C01BB6DD9F77"
+					item: "irons_spellbooks:fire_rune"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "642238B7573A4ED3"
+					item: "irons_spellbooks:scroll_fire"
+					type: "item"
+				}
+				{
+					entity: "minecraft:zombie"
+					id: "61AD5BE3ABEB060E"
+					title: "Set twenty mobs alight"
+					type: "kill"
+					value: 20L
+				}
+			]
+			title: "School of Fire"
+			x: 7.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["05EC86DA29A28F2C"]
+			description: ["Deep in the mangroves lives the Apothecarist, who trades potions for odd ingredients. Find the hut and trade her a stack of mangrove roots and spider eyes."]
+			icon: "irons_spellbooks:apothecarist_spawn_egg"
+			id: "44BA04D96739B3CC"
+			rewards: [
+				{
+					id: "26BBAB4680ED653B"
+					item: "irons_spellbooks:oakskin_elixir"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 180"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "41F57506C5294626"
+					silent: true
+					title: "+180 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "25D1A23D8A222BE6"
+					structure: "irons_spellbooks:mangrove_hut"
+					title: "Find the Apothecarist's hut"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 32L
+					id: "65129692C2EFD8CD"
+					item: "minecraft:mangrove_roots"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "07BE317F4A359DAC"
+					item: "minecraft:spider_eye"
+					type: "item"
+				}
+				{
+					id: "4F410AE7987F23CF"
+					stage: "fq.magic.mangrove_hut.talk3"
+					title: "Talk to them"
+					type: "gamestage"
+				}
+			]
+			title: "The Apothecarist"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["44BA04D96739B3CC"]
+			description: ["A courier staggers out of the swamp, poisoned, withered and slowing by the minute. Keep him alive with what the Apothecarist taught you: brew a cure for each ailment in turn, before the next one sets in."]
+			icon: "artifacts:antidote_vessel"
+			id: "392FFF5F5EB2A584"
+			rewards: [
+				{
+					id: "327B2E0AAE5F214A"
+					item: "artifacts:antidote_vessel"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 260"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "72BFFFCDF6D39863"
+					silent: true
+					title: "+260 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "08CB07793A8AE544"
+					item: "irons_spellbooks:alchemist_cauldron"
+					type: "item"
+				}
+				{
+					id: "5F162006BCEECA39"
+					stage: "fq.magic.the_poisoned_traveller.enc1"
+					title: "Meet Poisoned Courier"
+					type: "gamestage"
+				}
+				{
+					id: "7967E76C446DC0A1"
+					title: "I brewed a cure for each ailment"
+					type: "checkmark"
+				}
+			]
+			title: "The Poisoned Traveller"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["44BA04D96739B3CC"]
+			description: ["The Apothecarist won't go near the witches, but she wants their stock. Visit a witch hut and bring back a witch's redstone, glowstone and a bottle of her brew."]
+			icon: "minecraft:glowstone_dust"
+			id: "224EB89020D836A4"
+			rewards: [
+				{
+					id: "237216C4C2DAD573"
+					item: "irons_spellbooks:poisonward_ring"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "0A8606A264B4CC40"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "532434995969E712"
+					structure: "#fotf:groups/witch_huts"
+					title: "Find a witch's hut"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "18C858CBA2594922"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "6A204601FCE530E0"
+					item: "minecraft:glowstone_dust"
+					type: "item"
+				}
+				{
+					id: "3836E5B9375B481F"
+					item: "kubejs:quest_witch_ingredients_3"
+					type: "item"
+				}
+			]
+			title: "Hags' Pantry"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["06999C12176240CD"]
+			description: ["Pip, Orrin's apprentice, ran off with three of his books. Track her to a wizard tower in the old forests, solve the warded door, and talk her into coming home."]
+			icon: "irons_spellbooks:wizard_hat"
+			id: "3A2D93C02CE80A99"
+			rewards: [
+				{
+					id: "7D4A1E214F55F06B"
+					item: "irons_spellbooks:wizard_hat"
+					type: "item"
+				}
+				{
+					id: "46B9E0CEBFAF12B0"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Orrin's Borrowed Book\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 240"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "0B88CDB26D8C0FFB"
+					silent: true
+					title: "+240 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "275E46ADE5A7DE73"
+					structure: "structory_towers:wizard_tower"
+					title: "Find the wizard tower"
+					type: "structure"
+				}
+				{
+					id: "5125ACB7E1B6A1AE"
+					title: "I solved the warded door"
+					type: "checkmark"
+				}
+				{
+					id: "37723357904407DD"
+					stage: "fq.magic.wizard_tower.enc2"
+					title: "Meet Pip"
+					type: "gamestage"
+				}
+			]
+			title: "The Lost Apprentice"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["37D8CE7836BA8E4D"]
+			description: ["Cast a hundred spells, of any school. Orrin says it's how you learn where your mana runs out."]
+			icon: "irons_spellbooks:mana_upgrade_orb"
+			id: "6CF10DAB4DA641F9"
+			rewards: [
+				{
+					id: "4730A459D2B39DC7"
+					item: "irons_spellbooks:mana_upgrade_orb"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 280"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "127011C40BE4BD7B"
+					silent: true
+					title: "+280 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7CD8DFA543BBEA14"
+					title: "I cast a hundred spells"
+					type: "checkmark"
+				}
+			]
+			title: "A Hundred Sparks"
+			x: 9.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Magic path"]
+	title: "The Arcane Order"
+}

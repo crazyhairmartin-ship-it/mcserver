@@ -105,7 +105,7 @@ that already exists.
 
 The Reece cast is in `pack.json`; use them, never rename them. If your slice needs a character who isn't there (an
 encounter-only stranger, a quest-specific villager), add them to `characters` with `name`, `entity`/`profession`,
-`personality` (one or two sentences) and 4 to 6 `idle` lines, and list them in your report so Dylan can adjust names
+`personality` (one or two sentences), 4 to 6 `idle` lines and 2 `hail` lines (what they call out when they have something for the player), and list them in your report so Dylan can adjust names
 and personalities. Characters who live in Reece need placing in game: say so in the report (Dylan places them with
 `/questnpc place <id>`).
 
@@ -204,3 +204,4 @@ Total 759 (with the 119 already written, the plan's 878).
 | T01 | yes | 18 | 5 engine, 0 links | `Quests T01` in git log |
 | T02 | yes | 23 | 11 engine, 0 links | `Quests T02` in git log |
 | T03 | yes | 26 | 16 engine, 0 links | `Quests T03` in git log |
+| T04 | yes | 22 | 11 engine, 0 links | `Quests T04` in git log |

@@ -126,7 +126,7 @@
     }
   ],
   "characters": {
-    "_about": "Named characters placed in Reece with /questnpc place <id>, or brought by encounters. Each: name, entity (default minecraft:villager), profession (villagers), scale (Pehkui size, optional), equip (gear by slot: head chest legs feet mainhand offhand), home (where they live when it isn't Reece itself; quests send players there), personality (how to write them), shop (deals unlocked per player by finishing a quest: [{\"requires\": \"chapter:quest\", \"cost\": [{\"item\", \"count\"}], \"give\": {\"item\", \"count\", \"name\"?, \"lore\"?}}]), idle (lines when they have nothing for you).",
+    "_about": "Named characters placed in Reece with /questnpc place <id>, or brought by encounters. Each: name, entity (default minecraft:villager), profession (villagers), scale (Pehkui size, optional), equip (gear by slot: head chest legs feet mainhand offhand), home (where they live when it isn't Reece itself; quests send players there), personality (how to write them), shop (deals unlocked per player by finishing a quest: [{\"requires\": \"chapter:quest\", \"cost\": [{\"item\", \"count\"}], \"give\": {\"item\", \"count\", \"name\"?, \"lore\"?}}]), hail (lines they call out when they have something for you and you walk past), idle (lines when they have nothing for you).",
     "maren": {
       "name": "Elder Maren",
       "profession": "minecraft:librarian",
@@ -140,6 +140,10 @@
         "Captain Hale polishes his armour by Marta's field every morning. I'm sure it's a coincidence, dearie.",
         "Don't let Silas Pike get under your skin, dearie. He's all bluster and no fish.",
         "Oh, it's you, dearie. Come in, come in. Wipe your feet, Nell's watching."
+      ],
+      "hail": [
+        "Oh, dearie! Just the person. Come here a moment.",
+        "Dearie! Have you got a minute for an old woman?"
       ]
     },
     "wren": {
@@ -155,6 +159,10 @@
         "Blessed are the builders, for they carry on His work.",
         "Notch gave us the sun to work by and the night to keep us humble.",
         "Go with Notch, traveller. And take a torch. Faith is good; torches are better."
+      ],
+      "hail": [
+        "Traveller! Notch must have sent you.",
+        "A word, if you have a moment. I've been praying you'd come."
       ]
     },
     "edda": {
@@ -186,6 +194,10 @@
         "Fear's fine. Fear keeps you alive. Just don't let it hold the sword.",
         "If Marta asks, I didn't leave flowers on her fence. Someone did. Not me.",
         "You did good out there. Don't let it go to your head."
+      ],
+      "hail": [
+        "You. Recruit. Over here.",
+        "Got a job for you. Don't make that face."
       ]
     },
     "dagna": {
@@ -230,6 +242,10 @@
             "count": 8
           }
         }
+      ],
+      "hail": [
+        "Oi! You, aye, you. Ah've a job.",
+        "C'mere a wee minute."
       ]
     },
     "marta": {
@@ -273,6 +289,10 @@
             "count": 8
           }
         }
+      ],
+      "hail": [
+        "Sweetheart! Come here, I need you! And you need a snack!",
+        "Oh, you're here! Wonderful! Don't go anywhere!"
       ]
     },
     "halloway": {
@@ -316,6 +336,10 @@
             "count": 1
           }
         }
+      ],
+      "hail": [
+        "Ahoy! The tide's brought you in at just the right time.",
+        "Cast an ear this way, angler."
       ]
     },
     "bess": {
@@ -359,6 +383,10 @@
             "count": 2
           }
         }
+      ],
+      "hail": [
+        "You. Come here. I'm not asking twice.",
+        "Sit down a minute. I've got work for you."
       ]
     },
     "rue": {
@@ -402,6 +430,10 @@
             "count": 2
           }
         }
+      ],
+      "hail": [
+        "Oh! Oh, excuse me, sorry, have you got a moment? Several moments, possibly?",
+        "Sorry, sorry, I hate to bother you, but..."
       ]
     },
     "bram": {
@@ -445,6 +477,10 @@
             "count": 1
           }
         }
+      ],
+      "hail": [
+        "Oh thank goodness, it's you! I have a tiny crisis!",
+        "Help! No, wait, not help. Well. A bit of help."
       ]
     },
     "hesk": {
@@ -518,6 +554,10 @@
         "Paid on proof. Not stories. Proof.",
         "Sharpen it before you need it, not after.",
         "I've buried better hunters than you. Don't make me bury you."
+      ],
+      "hail": [
+        "Hunter. There's coin in it.",
+        "New contract. Come and look."
       ]
     },
     "brannock": {
@@ -589,6 +629,10 @@
         "No mailbox out there? Then it's a Couriers job.",
         "A carrier won't take a live chicken. I've asked.",
         "Vworp, stop staring at the gravel. We have a schedule."
+      ],
+      "hail": [
+        "Runner! Yes, you. Parcel's waiting.",
+        "Clock's ticking. Come here."
       ]
     },
     "vworp": {
@@ -606,6 +650,10 @@
         "*holds out a stamp, very proudly*",
         "Juniper says: no stopping. *vwoop*",
         "*stares at a cobblestone block for a long time, then looks away guiltily*"
+      ],
+      "hail": [
+        "*vwoop* ...Juniper. Waiting.",
+        "*waves a stamp at you*"
       ]
     },
     "fern": {
@@ -619,6 +667,10 @@
         "People ask me if I get lonely. I have forty-three friends. Some of them are ducks.",
         "If you find something hurt out there, bring it here. Don't argue, just bring it.",
         "Mind the llama. She has opinions."
+      ],
+      "hail": [
+        "Shh. Come here, slowly. I need your help.",
+        "Ah. You. The animals like you. I need that."
       ]
     },
     "orrin": {
@@ -632,6 +684,10 @@
         "Ah, a student! No? Pity. You'd be a terrible student. Wonderful.",
         "I had three copies of that book. I now have none, and one apprentice.",
         "Mind the runes on the floor. Some of them are still awake."
+      ],
+      "hail": [
+        "Ah! A pair of hands! Splendid. Come, come.",
+        "You there! You look like someone who reads. Or could learn."
       ]
     },
     "agathe": {
@@ -705,6 +761,60 @@
         "Still water, deep thoughts. That's what my old dad used to say. He fell in a lot.",
         "Hop in. Mind the wet bit. It's all the wet bit.",
         "Bram sends his love. And his worries. Mostly his worries."
+      ],
+      "shop": [
+        {
+          "requires": "small_favours:sf_the_crossing",
+          "cost": [
+            {
+              "item": "minecraft:emerald",
+              "count": 2
+            }
+          ],
+          "give": {
+            "item": "lilis_lucky_lures:fishing_net",
+            "count": 1
+          }
+        },
+        {
+          "requires": "small_favours:sf_the_crossing",
+          "cost": [
+            {
+              "item": "minecraft:emerald",
+              "count": 1
+            }
+          ],
+          "give": {
+            "item": "aquaculture:worm",
+            "count": 16
+          }
+        }
+      ]
+    },
+    "ada": {
+      "name": "Ada the Net-Maker",
+      "profession": "minecraft:fisherman",
+      "home": "the next village along the lake shore from Reece",
+      "personality": "Brisk, practical net-maker who ties knots faster than she talks. Takes pride in a net that never tears, hates running short of anything, and says 'mind the mesh' to everyone.",
+      "idle": [
+        "Mind the mesh.",
+        "A good net outlasts its maker. Mine will outlast three.",
+        "Out of rope again. Always out of rope.",
+        "Gil owes me for the last net. In favours. He always pays in favours.",
+        "Knots don't lie. People do. Knots don't."
+      ]
+    },
+    "tamsin": {
+      "name": "Farmer Tamsin",
+      "profession": "minecraft:farmer",
+      "home": "the farming village beyond Ada's, a little further round the lake",
+      "personality": "Weathered, stubborn flax farmer with a soft spot for her scarecrow, which she talks to and considers part of the family. Slow to trust, quick to complain about crows and witches.",
+      "idle": [
+        "Crows again. Always crows.",
+        "The scarecrow's looking a bit bare. He feels it, you know.",
+        "Flax doesn't grow itself. Neither does patience.",
+        "Don't stand in the beans.",
+        "Never trust a witch's cat. Or a witch. Or the cat."
       ]
     }
   }

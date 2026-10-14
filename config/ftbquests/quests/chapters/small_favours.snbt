@@ -30,7 +30,7 @@
 			]
 			title: "Just a Loaf"
 			x: 0.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3961E48F6276ED87"]
@@ -58,7 +58,7 @@
 			]
 			title: "Torn Sails"
 			x: 1.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["43BE52B6F054011C"]
@@ -93,7 +93,7 @@
 			]
 			title: "The Broken Shuttle"
 			x: 3.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["4CB27A0EAA885B6A"]
@@ -134,7 +134,7 @@
 			]
 			title: "Only the Old Birch Will Do"
 			x: 4.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["0C593D9BED4DC0BC"]
@@ -168,7 +168,7 @@
 			]
 			title: "Shuttle, Canvas, Sails"
 			x: 6.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["738A2B6847C7CC67"]
@@ -203,7 +203,7 @@
 			]
 			title: "The Fox and the Flour"
 			x: 7.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["4FA3D31A0985F860"]
@@ -245,6 +245,261 @@
 			title: "The Loaf"
 			x: 9.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["63C3DB46B7298A13"]
+			description: ["Gil the ferryman will row anyone across to the island village, for a fee."]
+			icon: "lilis_lucky_lures:fishing_net"
+			id: "34F01726A509E958"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 60"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "6066139148BB9A5B"
+					silent: true
+					title: "+60 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "265F7F28E8256555"
+					stage: "fq.small_favours.sf_ferry_fee.talk0"
+					title: "Talk to Gil the Ferryman"
+					type: "gamestage"
+				}
+			]
+			title: "The Ferryman's Fee"
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["34F01726A509E958"]
+			description: ["Ada can knot a net blindfolded. She's out of rope."]
+			icon: "supplementaries:rope"
+			id: "412DD613ED71C1C5"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 80"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "5F05875D55BB7722"
+					silent: true
+					title: "+80 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4CC798698EF5788D"
+					stage: "fq.small_favours.sf_out_of_rope.talk0"
+					title: "Ask Ada about the net"
+					type: "gamestage"
+				}
+			]
+			title: "Out of Rope"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["412DD613ED71C1C5"]
+			description: ["Farmer Tamsin won't spare a stalk until her scarecrow has its hat back."]
+			icon: "minecraft:carved_pumpkin"
+			id: "26F77219DACB7B52"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 90"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "79F95BEAB00AF190"
+					silent: true
+					title: "+90 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "41056987A28093B7"
+					stage: "fq.small_favours.sf_scarecrow_hat.talk0"
+					title: "Talk to Farmer Tamsin"
+					type: "gamestage"
+				}
+				{
+					id: "08E9F7F16085C516"
+					structure: "#fotf:groups/witch_huts"
+					title: "Find the witch's hut"
+					type: "structure"
+				}
+			]
+			title: "The Scarecrow's Hat"
+			x: 3.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["26F77219DACB7B52"]
+			description: ["The witch will give the hat back, for a pot of proper black tea brewed in a copper kettle. She's very particular about the kettle."]
+			icon: "herbalbrews:copper_tea_kettle"
+			id: "098979D1387FF972"
+			rewards: [
+				{
+					id: "2B02B865AF6D5558"
+					item: {
+						Count: 1b
+						id: "minecraft:carved_pumpkin"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"A faded hat, slightly chewed by a cat.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Scarecrow's Hat\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 100"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "6A78AA45723C9F63"
+					silent: true
+					title: "+100 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1565A2F01FF5CF3E"
+					item: "herbalbrews:copper_tea_kettle"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "5DC3C46EBFFE9785"
+					item: "herbalbrews:black_tea"
+					type: "item"
+				}
+				{
+					id: "5E73EB8F38B5F474"
+					stage: "fq.small_favours.sf_witch_bargain.talk2"
+					title: "Trade the tea to the witch"
+					type: "gamestage"
+				}
+			]
+			title: "A Witch's Bargain"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["098979D1387FF972"]
+			description: ["Return the hat to its scarecrow, and Tamsin gives you a sheaf of flax. Twist it into rope and take it to Ada, who knots the net while you wait."]
+			icon: "supplementaries:flax"
+			id: "1A1E490CB4BEEE4A"
+			rewards: [
+				{
+					id: "5A957BB522F01422"
+					item: "lilis_lucky_lures:fishing_net"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 120"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "0965C057269E96E4"
+					silent: true
+					title: "+120 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "372C0DD83158C0BA"
+					stage: "fq.small_favours.sf_hat_flax_rope.talk0"
+					title: "Return the hat to Tamsin"
+					type: "gamestage"
+				}
+				{
+					count: 8L
+					id: "27501EA17D1CE212"
+					item: "supplementaries:flax"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "0FEC8BD93F5E1879"
+					item: "supplementaries:rope"
+					only_from_crafting: true
+					type: "item"
+				}
+				{
+					id: "3A5BB6416A2E36A3"
+					stage: "fq.small_favours.sf_hat_flax_rope.talk3"
+					title: "Take the rope to Ada"
+					type: "gamestage"
+				}
+			]
+			title: "Hat, Flax, Rope"
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["1A1E490CB4BEEE4A"]
+			description: ["Gil takes the net, keeps his word and rows you out to the island village. Halfway across, the drowned come up around the boat."]
+			icon: "smallships:oak_rowboat"
+			id: "391769AB938D3B91"
+			rewards: [
+				{
+					id: "53526A725B765E76"
+					item: "smallships:oak_rowboat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 200"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "386614975AB3048A"
+					silent: true
+					title: "+200 Fishing XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.25d
+			tasks: [
+				{
+					consume_items: true
+					id: "4D0D330D2E5562AE"
+					item: "lilis_lucky_lures:fishing_net"
+					type: "item"
+				}
+				{
+					id: "53CA9212F0AAEDD4"
+					stage: "fq.small_favours.sf_the_crossing.talk1"
+					title: "Talk to Gil the Ferryman"
+					type: "gamestage"
+				}
+				{
+					id: "42DFA747A463457C"
+					stage: "fq.small_favours.sf_the_crossing.enc2"
+					title: "Defeat Drowned"
+					type: "gamestage"
+				}
+				{
+					id: "1871084E95960E14"
+					stage: "fq.small_favours.sf_the_crossing.enc3"
+					title: "Defeat Drowned"
+					type: "gamestage"
+				}
+				{
+					id: "46A4D2147C9DD778"
+					structure: "#fotf:groups/villages"
+					title: "Reach the island village"
+					type: "structure"
+				}
+			]
+			title: "The Crossing"
+			x: 7.5d
+			y: 0.75d
 		}
 	]
 	subtitle: ["One small favour leads to another"]

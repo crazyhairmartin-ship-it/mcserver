@@ -440,6 +440,181 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "small_favours:sf_ferry_fee",
+    "stage": "fq.small_favours.sf_ferry_fee.talk0",
+    "type": "talk",
+    "lines": [
+      "Island village? Sure, I'll row you. Fare's a favour, as ever.",
+      "Well. Not quite a favour this time. I'd like a good fishing net.",
+      "Mine's more hole than net. Ada up the lake shore makes the best in the country.",
+      "Next village along. Tell her Gil sent you. She'll sigh. Everyone sighs at me.",
+      "It's a small favour. The lake isn't going anywhere."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "gil",
+    "quest_id": "34F01726A509E958",
+    "open_task": ""
+  },
+  {
+    "quest": "small_favours:sf_out_of_rope",
+    "stage": "fq.small_favours.sf_out_of_rope.talk0",
+    "type": "talk",
+    "lines": [
+      "Gil's net? Gil owes me for the last one. In favours. I have a drawer of them.",
+      "I'll do it, but I'm out of rope. Rope means flax, and flax means Tamsin.",
+      "Farmer Tamsin, in the village round the lake. Mind the beans.",
+      "Tell her I'll swap a net for a sheaf. She'll grumble. Mind the mesh."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "ada",
+    "quest_id": "412DD613ED71C1C5",
+    "open_task": ""
+  },
+  {
+    "quest": "small_favours:sf_scarecrow_hat",
+    "stage": "fq.small_favours.sf_scarecrow_hat.talk0",
+    "type": "talk",
+    "lines": [
+      "Flax? From me? Not a stalk. Not till he has his hat.",
+      "A witch's black cat ran off with it into the swamp. Nobody goes near that hut, and I don't blame them.",
+      "You look brave. Or daft. Either'll do. Go and get it.",
+      "He feels it, you know. The bareness."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "tamsin",
+    "quest_id": "26F77219DACB7B52",
+    "open_task": ""
+  },
+  {
+    "quest": "small_favours:sf_witch_bargain",
+    "stage": "fq.small_favours.sf_witch_bargain.talk2",
+    "type": "talk",
+    "lines": [
+      "Tea? In a copper kettle? Oh, you do know the old ways.",
+      "Hat? Yes, the cat brought it. He's very proud of himself. Terrible creature.",
+      "Take it. And tell the scarecrow I said he looks better with it.",
+      "Now go away before I put the kettle back on."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "entity",
+    "entity": "minecraft:witch",
+    "named": "",
+    "quest_id": "098979D1387FF972",
+    "open_task": ""
+  },
+  {
+    "quest": "small_favours:sf_hat_flax_rope",
+    "stage": "fq.small_favours.sf_hat_flax_rope.talk0",
+    "type": "talk",
+    "lines": [
+      "My scarecrow's hat! Chewed, but his. Look at him. He's glowing.",
+      "Flax, as promised. A whole sheaf. Don't tread on it.",
+      "Tell Ada the rope's on me. Honest work, that."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "tamsin",
+    "quest_id": "1A1E490CB4BEEE4A",
+    "open_task": ""
+  },
+  {
+    "quest": "small_favours:sf_hat_flax_rope",
+    "stage": "fq.small_favours.sf_hat_flax_rope.talk3",
+    "type": "talk",
+    "lines": [
+      "Rope! Good, strong rope. Sit down. Don't touch the mesh.",
+      "...There. A proper net, knotted while you waited.",
+      "Give it to Gil. Tell him it's the last one I do on credit."
+    ],
+    "requires": [
+      "fq.small_favours.sf_hat_flax_rope.talk0"
+    ],
+    "name": "",
+    "match": "character",
+    "character": "ada",
+    "quest_id": "1A1E490CB4BEEE4A",
+    "open_task": ""
+  },
+  {
+    "quest": "small_favours:sf_the_crossing",
+    "stage": "fq.small_favours.sf_the_crossing.talk1",
+    "type": "talk",
+    "lines": [
+      "Ada's net! Look at the weave. She's forgiven me, I think.",
+      "A deal's a deal. Hop in, mind the wet bit.",
+      "...Funny. The lake's gone quiet. It's never quiet."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "gil",
+    "quest_id": "391769AB938D3B91",
+    "open_task": ""
+  },
+  {
+    "quest": "small_favours:sf_the_crossing",
+    "stage": "fq.small_favours.sf_the_crossing.enc2",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*A drowned lurches up beside the boat.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "391769AB938D3B91",
+    "prev_tasks": [
+      "4D0D330D2E5562AE",
+      "53CA9212F0AAEDD4"
+    ],
+    "name": "Drowned",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": 20,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:drowned",
+    "profession": ""
+  },
+  {
+    "quest": "small_favours:sf_the_crossing",
+    "stage": "fq.small_favours.sf_the_crossing.enc3",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*Another drowned climbs out of the water.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "391769AB938D3B91",
+    "prev_tasks": [
+      "4D0D330D2E5562AE",
+      "53CA9212F0AAEDD4",
+      "42DFA747A463457C"
+    ],
+    "name": "Drowned",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": 20,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:drowned",
+    "profession": ""
+  },
+  {
     "quest": "start:welcome",
     "stage": "fq.start.welcome.talk0",
     "type": "talk",
@@ -2643,6 +2818,286 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "magic:the_order_calls",
+    "stage": "fq.magic.the_order_calls",
+    "type": "org",
+    "lines": [
+      "Psst. The Arcane Order is recruiting, and I'm meant to be discreet about it.",
+      "The fee is ten books and a quill. Take them to Archmage Orrin Vael in the library tower in Reece."
+    ],
+    "accept": "I'm interested",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "arcane",
+    "professions": [
+      "minecraft:librarian",
+      "irons_spellbooks:priest"
+    ],
+    "org_name": "Arcane Order"
+  },
+  {
+    "quest": "magic:the_order_calls",
+    "stage": "fq.magic.the_order_calls.talk3",
+    "type": "talk",
+    "lines": [
+      "Ten books and a quill! Marvellous. Marvellous! Now where did I put my spectacles?",
+      "Ah. On my head. As is traditional.",
+      "Magic, apprentice, is the art of knowing precisely what you are doing. Guesswork is for amateurs and goblins.",
+      "Schools, spells, scrolls. We shall start at the beginning and end somewhere rather more alarming.",
+      "Pip? PIP! Oh, never mind."
+    ],
+    "requires": [
+      "fq.magic.the_order_calls"
+    ],
+    "name": "",
+    "match": "character",
+    "character": "orrin",
+    "quest_id": "198637F8BCD45325",
+    "open_task": "6FF6887888F6AB4F"
+  },
+  {
+    "quest": "magic:an_honest_table",
+    "stage": "fq.magic.an_honest_table.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:enchanting_table",
+      "minecraft:bookshelf"
+    ],
+    "counts": [
+      1,
+      15
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "336CE4ED79FDECC3",
+    "prev_tasks": [
+      "093AAAE33E96D1E6"
+    ]
+  },
+  {
+    "quest": "magic:reroll_the_fates",
+    "stage": "fq.magic.reroll_the_fates.talk0",
+    "type": "talk",
+    "lines": [
+      "Two enchantments on one book. Sharpness and Unbreaking, I think. Or was it Mending? I wrote it down somewhere.",
+      "You may re-roll the table. That is what the instrument is for.",
+      "But no more than ten levels wasted. Fortune favours the frugal."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "orrin",
+    "quest_id": "7DD119EF0502B52C",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:the_priest",
+    "stage": "fq.magic.the_priest.talk1",
+    "type": "talk",
+    "lines": [
+      "Peace, traveller. The Order's work is quiet but never finished.",
+      "Something is stirring beneath the old graves. The dead are restless.",
+      "Sister Agathe hunts them. She keeps to the crypt under Reece's church, when she's not on the road.",
+      "Take a healing draught, for the road. Notch's blessing on you."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "entity",
+    "entity": "irons_spellbooks:priest",
+    "named": "",
+    "quest_id": "05EC86DA29A28F2C",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:the_study",
+    "stage": "fq.magic.the_study.build0",
+    "type": "build",
+    "keys": [
+      "irons_spellbooks:wisewood_bookshelf",
+      "irons_spellbooks:brazier",
+      "supplementaries:pedestal",
+      "handcrafted:oak_shelf"
+    ],
+    "counts": [
+      4,
+      1,
+      1,
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "6EC2430CF00C3E91",
+    "prev_tasks": []
+  },
+  {
+    "quest": "magic:pyromancer_tower",
+    "stage": "fq.magic.pyromancer_tower.talk1",
+    "type": "talk",
+    "lines": [
+      "Orrin sent you? That old windbag. Is he still losing his spectacles?",
+      "Teach you? Politely, you say. Hm. Most people just throw things at me.",
+      "I only teach those who can take a fireball. Prove it."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "entity",
+    "entity": "irons_spellbooks:pyromancer",
+    "named": "",
+    "quest_id": "584ADBE4C6FEB091",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:pyromancers_duel",
+    "stage": "fq.magic.pyromancers_duel.enc0",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "Ha! Let's see what the old windbag taught you!",
+      "Enough! You've earned it."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "143274D452E80D0A",
+    "prev_tasks": [],
+    "name": "The Pyromancer",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": 60,
+    "glow": false,
+    "where": {},
+    "entity": "irons_spellbooks:pyromancer",
+    "profession": ""
+  },
+  {
+    "quest": "magic:mangrove_hut",
+    "stage": "fq.magic.mangrove_hut.talk3",
+    "type": "talk",
+    "lines": [
+      "Roots and eyes! You've done your reading.",
+      "Every ailment has its cure. You only have to know which.",
+      "Take this elixir. It'll toughen your skin against sharp things."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "entity",
+    "entity": "irons_spellbooks:apothecarist",
+    "named": "",
+    "quest_id": "44BA04D96739B3CC",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:the_poisoned_traveller",
+    "stage": "fq.magic.the_poisoned_traveller.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Help... I drank from the wrong spring... everything hurts...",
+      "Poison, then withering, then... I can't feel my legs.",
+      "You did it? I'm... I can breathe. Thank you."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "392FFF5F5EB2A584",
+    "prev_tasks": [
+      "08CB07793A8AE544"
+    ],
+    "name": "Poisoned Courier",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {
+      "biomes": [
+        "minecraft:swamp",
+        "minecraft:mangrove_swamp"
+      ]
+    },
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "magic:witch_ingredients",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:witch"
+    ],
+    "chance": 0.4,
+    "item": "minecraft:redstone",
+    "requires": [],
+    "quest_id": "224EB89020D836A4",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "magic:witch_ingredients",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:witch"
+    ],
+    "chance": 0.4,
+    "item": "minecraft:glowstone_dust",
+    "requires": [],
+    "quest_id": "224EB89020D836A4",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "magic:witch_ingredients",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:witch"
+    ],
+    "chance": 0.3,
+    "item": "kubejs:quest_witch_ingredients_3",
+    "requires": [],
+    "quest_id": "224EB89020D836A4",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "magic:wizard_tower",
+    "stage": "fq.magic.wizard_tower.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Oh. Orrin sent you. Of course he did. Is he cross?",
+      "I only borrowed them. All three. They were looking lonely.",
+      "This door took me an hour. I'm quite proud of it, actually.",
+      "Fine. Fine! I'll go home. But I'm keeping the hat."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "3A2D93C02CE80A99",
+    "prev_tasks": [
+      "275E46ADE5A7DE73",
+      "5125ACB7E1B6A1AE"
+    ],
+    "name": "Pip",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "minecraft:librarian"
+  },
+  {
     "quest": "skill_taming:stray_wolf",
     "stage": "fq.skill_taming.stray_wolf",
     "type": "org",
@@ -2896,6 +3351,10 @@ global.QUEST_CHARACTERS = {
       "Don't let Silas Pike get under your skin, dearie. He's all bluster and no fish.",
       "Oh, it's you, dearie. Come in, come in. Wipe your feet, Nell's watching."
     ],
+    "hail": [
+      "Oh, dearie! Just the person. Come here a moment.",
+      "Dearie! Have you got a minute for an old woman?"
+    ],
     "entity": "minecraft:villager"
   },
   "wren": {
@@ -2911,6 +3370,10 @@ global.QUEST_CHARACTERS = {
       "Blessed are the builders, for they carry on His work.",
       "Notch gave us the sun to work by and the night to keep us humble.",
       "Go with Notch, traveller. And take a torch. Faith is good; torches are better."
+    ],
+    "hail": [
+      "Traveller! Notch must have sent you.",
+      "A word, if you have a moment. I've been praying you'd come."
     ],
     "entity": "minecraft:villager"
   },
@@ -2944,6 +3407,10 @@ global.QUEST_CHARACTERS = {
       "Fear's fine. Fear keeps you alive. Just don't let it hold the sword.",
       "If Marta asks, I didn't leave flowers on her fence. Someone did. Not me.",
       "You did good out there. Don't let it go to your head."
+    ],
+    "hail": [
+      "You. Recruit. Over here.",
+      "Got a job for you. Don't make that face."
     ]
   },
   "dagna": {
@@ -2991,6 +3458,10 @@ global.QUEST_CHARACTERS = {
         "requires": "skill_mining:underminer"
       }
     ],
+    "hail": [
+      "Oi! You, aye, you. Ah've a job.",
+      "C'mere a wee minute."
+    ],
     "entity": "minecraft:villager"
   },
   "marta": {
@@ -3036,6 +3507,10 @@ global.QUEST_CHARACTERS = {
         "quest_id": "4B308F7DA35AF12D",
         "requires": "skill_farming:smarter_farmers"
       }
+    ],
+    "hail": [
+      "Sweetheart! Come here, I need you! And you need a snack!",
+      "Oh, you're here! Wonderful! Don't go anywhere!"
     ],
     "entity": "minecraft:villager"
   },
@@ -3083,6 +3558,10 @@ global.QUEST_CHARACTERS = {
         "requires": "skill_fishing:hundred_fish"
       }
     ],
+    "hail": [
+      "Ahoy! The tide's brought you in at just the right time.",
+      "Cast an ear this way, angler."
+    ],
     "entity": "minecraft:villager"
   },
   "bess": {
@@ -3128,6 +3607,10 @@ global.QUEST_CHARACTERS = {
         "quest_id": "43B8EDF637747BB1",
         "requires": "skill_cooking:food_critic"
       }
+    ],
+    "hail": [
+      "You. Come here. I'm not asking twice.",
+      "Sit down a minute. I've got work for you."
     ],
     "entity": "minecraft:villager"
   },
@@ -3175,6 +3658,10 @@ global.QUEST_CHARACTERS = {
         "requires": "skill_foraging:swamp_hermit"
       }
     ],
+    "hail": [
+      "Oh! Oh, excuse me, sorry, have you got a moment? Several moments, possibly?",
+      "Sorry, sorry, I hate to bother you, but..."
+    ],
     "entity": "minecraft:villager"
   },
   "bram": {
@@ -3220,6 +3707,10 @@ global.QUEST_CHARACTERS = {
         "quest_id": "4E02AA86A0AF09DF",
         "requires": "small_favours:sf_the_loaf"
       }
+    ],
+    "hail": [
+      "Oh thank goodness, it's you! I have a tiny crisis!",
+      "Help! No, wait, not help. Well. A bit of help."
     ],
     "entity": "minecraft:villager"
   },
@@ -3299,6 +3790,10 @@ global.QUEST_CHARACTERS = {
       "Sharpen it before you need it, not after.",
       "I've buried better hunters than you. Don't make me bury you."
     ],
+    "hail": [
+      "Hunter. There's coin in it.",
+      "New contract. Come and look."
+    ],
     "entity": "minecraft:villager"
   },
   "brannock": {
@@ -3374,6 +3869,10 @@ global.QUEST_CHARACTERS = {
       "A carrier won't take a live chicken. I've asked.",
       "Vworp, stop staring at the gravel. We have a schedule."
     ],
+    "hail": [
+      "Runner! Yes, you. Parcel's waiting.",
+      "Clock's ticking. Come here."
+    ],
     "entity": "minecraft:villager"
   },
   "vworp": {
@@ -3391,6 +3890,10 @@ global.QUEST_CHARACTERS = {
       "*holds out a stamp, very proudly*",
       "Juniper says: no stopping. *vwoop*",
       "*stares at a cobblestone block for a long time, then looks away guiltily*"
+    ],
+    "hail": [
+      "*vwoop* ...Juniper. Waiting.",
+      "*waves a stamp at you*"
     ]
   },
   "fern": {
@@ -3405,6 +3908,10 @@ global.QUEST_CHARACTERS = {
       "If you find something hurt out there, bring it here. Don't argue, just bring it.",
       "Mind the llama. She has opinions."
     ],
+    "hail": [
+      "Shh. Come here, slowly. I need your help.",
+      "Ah. You. The animals like you. I need that."
+    ],
     "entity": "minecraft:villager"
   },
   "orrin": {
@@ -3418,6 +3925,10 @@ global.QUEST_CHARACTERS = {
       "Ah, a student! No? Pity. You'd be a terrible student. Wonderful.",
       "I had three copies of that book. I now have none, and one apprentice.",
       "Mind the runes on the floor. Some of them are still awake."
+    ],
+    "hail": [
+      "Ah! A pair of hands! Splendid. Come, come.",
+      "You there! You look like someone who reads. Or could learn."
     ],
     "entity": "minecraft:villager"
   },
@@ -3495,6 +4006,64 @@ global.QUEST_CHARACTERS = {
       "Still water, deep thoughts. That's what my old dad used to say. He fell in a lot.",
       "Hop in. Mind the wet bit. It's all the wet bit.",
       "Bram sends his love. And his worries. Mostly his worries."
+    ],
+    "shop": [
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 2
+          }
+        ],
+        "give": {
+          "item": "lilis_lucky_lures:fishing_net",
+          "count": 1
+        },
+        "quest_id": "391769AB938D3B91",
+        "requires": "small_favours:sf_the_crossing"
+      },
+      {
+        "cost": [
+          {
+            "item": "minecraft:emerald",
+            "count": 1
+          }
+        ],
+        "give": {
+          "item": "aquaculture:worm",
+          "count": 16
+        },
+        "quest_id": "391769AB938D3B91",
+        "requires": "small_favours:sf_the_crossing"
+      }
+    ],
+    "entity": "minecraft:villager"
+  },
+  "ada": {
+    "name": "Ada the Net-Maker",
+    "profession": "minecraft:fisherman",
+    "home": "the next village along the lake shore from Reece",
+    "personality": "Brisk, practical net-maker who ties knots faster than she talks. Takes pride in a net that never tears, hates running short of anything, and says 'mind the mesh' to everyone.",
+    "idle": [
+      "Mind the mesh.",
+      "A good net outlasts its maker. Mine will outlast three.",
+      "Out of rope again. Always out of rope.",
+      "Gil owes me for the last net. In favours. He always pays in favours.",
+      "Knots don't lie. People do. Knots don't."
+    ],
+    "entity": "minecraft:villager"
+  },
+  "tamsin": {
+    "name": "Farmer Tamsin",
+    "profession": "minecraft:farmer",
+    "home": "the farming village beyond Ada's, a little further round the lake",
+    "personality": "Weathered, stubborn flax farmer with a soft spot for her scarecrow, which she talks to and considers part of the family. Slow to trust, quick to complain about crows and witches.",
+    "idle": [
+      "Crows again. Always crows.",
+      "The scarecrow's looking a bit bare. He feels it, you know.",
+      "Flax doesn't grow itself. Neither does patience.",
+      "Don't stand in the beans.",
+      "Never trust a witch's cat. Or a witch. Or the cat."
     ],
     "entity": "minecraft:villager"
   }

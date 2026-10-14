@@ -78,5 +78,79 @@ REECE = [
           rewards=[reward_item("bakery:crusty_bread", 3), reward_item("bakery:breadbox"), skill("cook", 80)]),
 ]
 
+LAKE = [
+    quest("sf_ferry_fee", "The Ferryman's Fee", icon="lilis_lucky_lures:fishing_net",
+          after=["main_story:act1_start"],
+          text=["Gil the ferryman will row anyone across to the island village, for a fee."],
+          tasks=[talk_char("gil", ["Island village? Sure, I'll row you. Fare's a favour, as ever.",
+                                   "Well. Not quite a favour this time. I'd like a good fishing net.",
+                                   "Mine's more hole than net. Ada up the lake shore makes the best in the "
+                                   "country.",
+                                   "Next village along. Tell her Gil sent you. She'll sigh. Everyone sighs at me.",
+                                   "It's a small favour. The lake isn't going anywhere."])],
+          rewards=[skill("fish", 60)]),
+
+    quest("sf_out_of_rope", "Out of Rope", icon="supplementaries:rope", after=["sf_ferry_fee"],
+          text=["Ada can knot a net blindfolded. She's out of rope."],
+          tasks=[talk_char("ada", ["Gil's net? Gil owes me for the last one. In favours. I have a drawer of them.",
+                                   "I'll do it, but I'm out of rope. Rope means flax, and flax means Tamsin.",
+                                   "Farmer Tamsin, in the village round the lake. Mind the beans.",
+                                   "Tell her I'll swap a net for a sheaf. She'll grumble. Mind the mesh."],
+                          title="Ask Ada about the net")],
+          rewards=[skill("agility", 80)]),
+
+    quest("sf_scarecrow_hat", "The Scarecrow's Hat", icon="minecraft:carved_pumpkin", after=["sf_out_of_rope"],
+          text=["Farmer Tamsin won't spare a stalk until her scarecrow has its hat back."],
+          tasks=[talk_char("tamsin", ["Flax? From me? Not a stalk. Not till he has his hat.",
+                                      "A witch's black cat ran off with it into the swamp. Nobody goes near that "
+                                      "hut, and I don't blame them.",
+                                      "You look brave. Or daft. Either'll do. Go and get it.",
+                                      "He feels it, you know. The bareness."]),
+                 {"structure": "#witch_huts", "title": "Find the witch's hut"}],
+          rewards=[skill("agility", 90)]),
+
+    quest("sf_witch_bargain", "A Witch's Bargain", icon="herbalbrews:copper_tea_kettle", after=["sf_scarecrow_hat"],
+          text=["The witch will give the hat back, for a pot of proper black tea brewed in a copper kettle. She's "
+                "very particular about the kettle."],
+          tasks=[item("herbalbrews:copper_tea_kettle", crafted=True), item("herbalbrews:black_tea", consume=True),
+                 {"talk": "entity", "entity": "minecraft:witch",
+                  "lines": ["Tea? In a copper kettle? Oh, you do know the old ways.",
+                            "Hat? Yes, the cat brought it. He's very proud of himself. Terrible creature.",
+                            "Take it. And tell the scarecrow I said he looks better with it.",
+                            "Now go away before I put the kettle back on."],
+                  "title": "Trade the tea to the witch"}],
+          rewards=[reward_item("minecraft:carved_pumpkin", name="The Scarecrow's Hat",
+                               lore=["A faded hat, slightly chewed by a cat."]), skill("magic", 100)]),
+
+    quest("sf_hat_flax_rope", "Hat, Flax, Rope", icon="supplementaries:flax", after=["sf_witch_bargain"],
+          text=["Return the hat to its scarecrow, and Tamsin gives you a sheaf of flax. Twist it into rope and "
+                "take it to Ada, who knots the net while you wait."],
+          tasks=[talk_char("tamsin", ["My scarecrow's hat! Chewed, but his. Look at him. He's glowing.",
+                                      "Flax, as promised. A whole sheaf. Don't tread on it.",
+                                      "Tell Ada the rope's on me. Honest work, that."],
+                           title="Return the hat to Tamsin"),
+                 item("supplementaries:flax", 8), item("supplementaries:rope", 4, crafted=True),
+                 talk_char("ada", ["Rope! Good, strong rope. Sit down. Don't touch the mesh.",
+                                   "...There. A proper net, knotted while you waited.",
+                                   "Give it to Gil. Tell him it's the last one I do on credit."],
+                           title="Take the rope to Ada")],
+          rewards=[reward_item("lilis_lucky_lures:fishing_net"), skill("craft", 120)]),
+
+    quest("sf_the_crossing", "The Crossing", icon="smallships:oak_rowboat", shape="diamond", size=1.25,
+          after=["sf_hat_flax_rope"],
+          text=["Gil takes the net, keeps his word and rows you out to the island village. Halfway across, the "
+                "drowned come up around the boat."],
+          tasks=[item("lilis_lucky_lures:fishing_net", consume=True),
+                 talk_char("gil", ["Ada's net! Look at the weave. She's forgiven me, I think.",
+                                   "A deal's a deal. Hop in, mind the wet bit.",
+                                   "...Funny. The lake's gone quiet. It's never quiet."]),
+                 encounter(["*A drowned lurches up beside the boat.*"], then="kill",
+                           entity="minecraft:drowned", name="Drowned", health=20),
+                 encounter(["*Another drowned climbs out of the water.*"], then="kill",
+                           entity="minecraft:drowned", name="Drowned", health=20),
+                 {"structure": "#villages", "title": "Reach the island village"}],
+          rewards=[reward_item("smallships:oak_rowboat"), skill("fish", 200)]),
+]
+
 chapter("small_favours", "Small Favours", "One small favour leads to another", "bakery:crusty_bread", "side", 0,
-        REECE)
+        REECE + LAKE)

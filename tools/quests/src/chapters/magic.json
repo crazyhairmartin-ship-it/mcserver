@@ -1,0 +1,652 @@
+{
+  "title": "The Arcane Order",
+  "subtitle": "Magic path",
+  "icon": "irons_spellbooks:iron_spell_book",
+  "group": "skills",
+  "order": 10,
+  "quests": [
+    {
+      "id": "the_order_calls",
+      "title": "The Order Calls",
+      "after": [
+        "main_story:act1_start"
+      ],
+      "text": [
+        "A village librarian slips you a note: the Arcane Order is recruiting, and the entrance fee is ten books and a quill. Bring them to Archmage Orrin Vael in Reece."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:book",
+          "count": 10,
+          "consume": true
+        },
+        {
+          "item": "minecraft:feather",
+          "consume": true
+        },
+        {
+          "item": "minecraft:ink_sac",
+          "consume": true
+        },
+        {
+          "talk": "character",
+          "character": "orrin",
+          "lines": [
+            "Ten books and a quill! Marvellous. Marvellous! Now where did I put my spectacles?",
+            "Ah. On my head. As is traditional.",
+            "Magic, apprentice, is the art of knowing precisely what you are doing. Guesswork is for amateurs and goblins.",
+            "Schools, spells, scrolls. We shall start at the beginning and end somewhere rather more alarming.",
+            "Pip? PIP! Oh, never mind."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:book",
+          "name": "Guide to the Schools",
+          "lore": [
+            "Eight schools. Orrin has underlined the dangerous ones."
+          ]
+        },
+        {
+          "skill": "magic",
+          "xp": 80
+        }
+      ],
+      "icon": "minecraft:book",
+      "giver": {
+        "type": "org",
+        "org": "arcane",
+        "lines": [
+          "Psst. The Arcane Order is recruiting, and I'm meant to be discreet about it.",
+          "The fee is ten books and a quill. Take them to Archmage Orrin Vael in the library tower in Reece."
+        ],
+        "accept": "I'm interested"
+      }
+    },
+    {
+      "id": "an_honest_table",
+      "title": "An Honest Table",
+      "after": [
+        "the_order_calls"
+      ],
+      "text": [
+        "Orrin despises guesswork. Build an enchanting table ringed by fifteen bookshelves, and enchant your first tool."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:enchanting_table": 1,
+              "minecraft:bookshelf": 15
+            },
+            "radius": 8
+          },
+          "title": "Build an enchanting table ringed with bookshelves"
+        },
+        {
+          "advancement": "minecraft:story/enchant_item",
+          "title": "Enchant an item"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:lapis_lazuli",
+          "count": 16
+        },
+        {
+          "skill": "magic",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:enchanting_table"
+    },
+    {
+      "id": "reroll_the_fates",
+      "title": "Reroll the Fates",
+      "after": [
+        "an_honest_table"
+      ],
+      "text": [
+        "Orrin's test: produce a book with two enchantments he names, using the table's re-roll, without wasting more than ten levels."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "orrin",
+          "lines": [
+            "Two enchantments on one book. Sharpness and Unbreaking, I think. Or was it Mending? I wrote it down somewhere.",
+            "You may re-roll the table. That is what the instrument is for.",
+            "But no more than ten levels wasted. Fortune favours the frugal."
+          ]
+        },
+        {
+          "item": "minecraft:enchanted_book"
+        },
+        {
+          "checkmark": "I made the book without wasting ten levels"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "A Careful Hand",
+          "enchant": {
+            "minecraft:unbreaking": 3
+          }
+        },
+        {
+          "skill": "magic",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:enchanted_book"
+    },
+    {
+      "id": "the_priest",
+      "title": "The Priest's Blessing",
+      "after": [
+        "the_order_calls"
+      ],
+      "text": [
+        "Priests of the Order wander between villages. Find one, trade with him for a healing potion and hear about the undead stirring beneath old graves."
+      ],
+      "tasks": [
+        {
+          "structure": "#villages",
+          "title": "Find a village priest"
+        },
+        {
+          "talk": "entity",
+          "entity": "irons_spellbooks:priest",
+          "lines": [
+            "Peace, traveller. The Order's work is quiet but never finished.",
+            "Something is stirring beneath the old graves. The dead are restless.",
+            "Sister Agathe hunts them. She keeps to the crypt under Reece's church, when she's not on the road.",
+            "Take a healing draught, for the road. Notch's blessing on you."
+          ]
+        },
+        {
+          "checkmark": "I traded for a healing potion"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:greater_healing_potion"
+        },
+        {
+          "skill": "magic",
+          "xp": 100
+        }
+      ],
+      "icon": "irons_spellbooks:priest_spawn_egg"
+    },
+    {
+      "id": "first_ink",
+      "title": "Ink and Parchment",
+      "after": [
+        "the_order_calls"
+      ],
+      "text": [
+        "Craft an inscription table, mix common ink, and copy a scroll for the library's records."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:inscription_table",
+          "crafted": true
+        },
+        {
+          "item": "irons_spellbooks:common_ink",
+          "crafted": true
+        },
+        {
+          "item": "irons_spellbooks:scroll"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:paper",
+          "count": 16
+        },
+        {
+          "item": "irons_spellbooks:common_ink",
+          "count": 4
+        },
+        {
+          "skill": "magic",
+          "xp": 110
+        }
+      ],
+      "icon": "irons_spellbooks:inscription_table"
+    },
+    {
+      "id": "arcane_essence",
+      "title": "Essence of the Arcane",
+      "after": [
+        "first_ink"
+      ],
+      "text": [
+        "Break down unwanted scrolls and enchanted gear into arcane essence, and gather twenty: the Order's currency."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:arcane_essence",
+          "count": 20
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:blank_rune"
+        },
+        {
+          "skill": "magic",
+          "xp": 130
+        }
+      ],
+      "icon": "irons_spellbooks:arcane_essence"
+    },
+    {
+      "id": "first_spellbook",
+      "title": "A Book of One's Own",
+      "after": [
+        "arcane_essence"
+      ],
+      "text": [
+        "Bind a copper spellbook and inscribe your first spell into it, then cast it ten times at a target dummy."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:copper_spell_book",
+          "crafted": true
+        },
+        {
+          "item": "dummmmmmy:target_dummy"
+        },
+        {
+          "checkmark": "I cast my first spell ten times at the dummy"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:mana_ring"
+        },
+        {
+          "skill": "magic",
+          "xp": 160
+        }
+      ],
+      "icon": "irons_spellbooks:copper_spell_book"
+    },
+    {
+      "id": "the_study",
+      "title": "The Study",
+      "after": [
+        "first_spellbook"
+      ],
+      "text": [
+        "Every mage needs a study. Build one with wisewood bookshelves, a brazier, a pedestal for your book and a scroll rack."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "irons_spellbooks:wisewood_bookshelf": 4,
+              "irons_spellbooks:brazier": 1,
+              "supplementaries:pedestal": 1,
+              "handcrafted:oak_shelf": 1
+            },
+            "radius": 8
+          },
+          "title": "Build a study"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:wisewood_planks",
+          "count": 32
+        },
+        {
+          "item": "minecraft:book",
+          "count": 8
+        },
+        {
+          "skill": "magic",
+          "xp": 150
+        }
+      ],
+      "icon": "irons_spellbooks:wisewood_bookshelf"
+    },
+    {
+      "id": "pyromancer_tower",
+      "title": "The Pyromancer's Tower",
+      "after": [
+        "first_spellbook"
+      ],
+      "text": [
+        "Orrin's old rival keeps a tower near the badlands. Find the Pyromancer Tower and ask its pyromancer to teach you, politely."
+      ],
+      "tasks": [
+        {
+          "structure": "irons_spellbooks:pyromancer_tower",
+          "title": "Find the Pyromancer Tower"
+        },
+        {
+          "talk": "entity",
+          "entity": "irons_spellbooks:pyromancer",
+          "lines": [
+            "Orrin sent you? That old windbag. Is he still losing his spectacles?",
+            "Teach you? Politely, you say. Hm. Most people just throw things at me.",
+            "I only teach those who can take a fireball. Prove it."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:scroll_fire"
+        },
+        {
+          "skill": "magic",
+          "xp": 160
+        }
+      ],
+      "icon": "irons_spellbooks:pyromancer_spawn_egg"
+    },
+    {
+      "id": "pyromancers_duel",
+      "title": "Trial by Fire",
+      "after": [
+        "pyromancer_tower"
+      ],
+      "text": [
+        "The pyromancer only teaches those who can take a fireball. Duel him with spells until he yields."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "irons_spellbooks:pyromancer",
+            "name": "The Pyromancer",
+            "health": 60,
+            "then": "kill",
+            "lines": [
+              "Ha! Let's see what the old windbag taught you!",
+              "Enough! You've earned it."
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:pyromancer_helmet"
+        },
+        {
+          "item": "irons_spellbooks:fire_rune"
+        },
+        {
+          "skill": "magic",
+          "xp": 220
+        }
+      ],
+      "icon": "irons_spellbooks:pyromancer_helmet"
+    },
+    {
+      "id": "school_of_fire",
+      "title": "School of Fire",
+      "after": [
+        "pyromancer_tower"
+      ],
+      "text": [
+        "Craft a fire rune, scribe firebolt onto a scroll, and set twenty mobs alight with it."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:fire_rune",
+          "crafted": true
+        },
+        {
+          "item": "irons_spellbooks:scroll_fire"
+        },
+        {
+          "kill": "minecraft:zombie",
+          "count": 20,
+          "title": "Set twenty mobs alight"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:fireward_ring"
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "irons_spellbooks:fire_rune"
+    },
+    {
+      "id": "mangrove_hut",
+      "title": "The Apothecarist",
+      "after": [
+        "the_priest"
+      ],
+      "text": [
+        "Deep in the mangroves lives the Apothecarist, who trades potions for odd ingredients. Find the hut and trade her a stack of mangrove roots and spider eyes."
+      ],
+      "tasks": [
+        {
+          "structure": "irons_spellbooks:mangrove_hut",
+          "title": "Find the Apothecarist's hut"
+        },
+        {
+          "item": "minecraft:mangrove_roots",
+          "count": 32,
+          "consume": true
+        },
+        {
+          "item": "minecraft:spider_eye",
+          "count": 8,
+          "consume": true
+        },
+        {
+          "talk": "entity",
+          "entity": "irons_spellbooks:apothecarist",
+          "lines": [
+            "Roots and eyes! You've done your reading.",
+            "Every ailment has its cure. You only have to know which.",
+            "Take this elixir. It'll toughen your skin against sharp things."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:oakskin_elixir"
+        },
+        {
+          "skill": "magic",
+          "xp": 180
+        }
+      ],
+      "icon": "irons_spellbooks:apothecarist_spawn_egg"
+    },
+    {
+      "id": "the_poisoned_traveller",
+      "title": "The Poisoned Traveller",
+      "after": [
+        "mangrove_hut"
+      ],
+      "text": [
+        "A courier staggers out of the swamp, poisoned, withered and slowing by the minute. Keep him alive with what the Apothecarist taught you: brew a cure for each ailment in turn, before the next one sets in."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:alchemist_cauldron"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Poisoned Courier",
+            "where": {
+              "biomes": [
+                "minecraft:swamp",
+                "minecraft:mangrove_swamp"
+              ]
+            },
+            "then": "talk",
+            "lines": [
+              "Help... I drank from the wrong spring... everything hurts...",
+              "Poison, then withering, then... I can't feel my legs.",
+              "You did it? I'm... I can breathe. Thank you."
+            ]
+          }
+        },
+        {
+          "checkmark": "I brewed a cure for each ailment"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:antidote_vessel"
+        },
+        {
+          "skill": "magic",
+          "xp": 260
+        }
+      ],
+      "icon": "artifacts:antidote_vessel",
+      "signature": "artifacts:antidote_vessel"
+    },
+    {
+      "id": "witch_ingredients",
+      "title": "Hags' Pantry",
+      "after": [
+        "mangrove_hut"
+      ],
+      "text": [
+        "The Apothecarist won't go near the witches, but she wants their stock. Visit a witch hut and bring back a witch's redstone, glowstone and a bottle of her brew."
+      ],
+      "tasks": [
+        {
+          "structure": "#witch_huts",
+          "title": "Find a witch's hut"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:witch"
+            ],
+            "chance": 0.4,
+            "item": "minecraft:redstone"
+          }
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:witch"
+            ],
+            "chance": 0.4,
+            "item": "minecraft:glowstone_dust"
+          }
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:witch"
+            ],
+            "chance": 0.3,
+            "item": {
+              "name": "Witch's Brew",
+              "tooltip": "A bottle of her own stock",
+              "texture": "minecraft:item/potion"
+            }
+          },
+          "consume": false
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:poisonward_ring"
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:glowstone_dust"
+    },
+    {
+      "id": "wizard_tower",
+      "title": "The Lost Apprentice",
+      "after": [
+        "first_spellbook"
+      ],
+      "text": [
+        "Pip, Orrin's apprentice, ran off with three of his books. Track her to a wizard tower in the old forests, solve the warded door, and talk her into coming home."
+      ],
+      "tasks": [
+        {
+          "structure": "structory_towers:wizard_tower",
+          "title": "Find the wizard tower"
+        },
+        {
+          "checkmark": "I solved the warded door"
+        },
+        {
+          "encounter": {
+            "character": "pip",
+            "then": "talk",
+            "lines": [
+              "Oh. Orrin sent you. Of course he did. Is he cross?",
+              "I only borrowed them. All three. They were looking lonely.",
+              "This door took me an hour. I'm quite proud of it, actually.",
+              "Fine. Fine! I'll go home. But I'm keeping the hat."
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:wizard_hat"
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Orrin's Borrowed Book",
+          "enchant": {
+            "minecraft:mending": 1
+          }
+        },
+        {
+          "skill": "magic",
+          "xp": 240
+        }
+      ],
+      "icon": "irons_spellbooks:wizard_hat"
+    },
+    {
+      "id": "mana_milestone",
+      "title": "A Hundred Sparks",
+      "after": [
+        "school_of_fire"
+      ],
+      "text": [
+        "Cast a hundred spells, of any school. Orrin says it's how you learn where your mana runs out."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I cast a hundred spells"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:mana_upgrade_orb"
+        },
+        {
+          "skill": "magic",
+          "xp": 280
+        }
+      ],
+      "icon": "irons_spellbooks:mana_upgrade_orb"
+    }
+  ]
+}
