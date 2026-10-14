@@ -689,7 +689,7 @@ def main():
             continue
         c = dict(c)
         c.setdefault('entity', 'minecraft:villager')
-        reg.check('entities', c['entity'], f'pack.json > character {cid}')
+        reg.check('entities', c['entity'], f'pack.json > character {cid}', c.get('unchecked', False))
         characters[cid] = c
     ctx = {'registry': reg, 'skills': skills, 'orgs': orgs, 'characters': characters, 'signatures': {},
            'artifact_rewards': [], 'protect': [], 'tables': {}, 'quest_items': {}, 'done_stages': set()}
