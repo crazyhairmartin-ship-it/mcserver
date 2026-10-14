@@ -126,7 +126,7 @@
     }
   ],
   "characters": {
-    "_about": "Named characters placed in Reece with /questnpc place <id>, or brought by encounters. Each: name, entity (default minecraft:villager), profession (villagers), scale (Pehkui size, optional), home (where they live when it isn't Reece itself; quests send players there), personality (how to write them), idle (lines when they have nothing for you).",
+    "_about": "Named characters placed in Reece with /questnpc place <id>, or brought by encounters. Each: name, entity (default minecraft:villager), profession (villagers), scale (Pehkui size, optional), equip (gear by slot: head chest legs feet mainhand offhand), home (where they live when it isn't Reece itself; quests send players there), personality (how to write them), idle (lines when they have nothing for you).",
     "maren": {
       "name": "Elder Maren",
       "profession": "minecraft:librarian",
@@ -448,6 +448,12 @@
     "agathe": {
       "name": "Sister Agathe",
       "entity": "irons_spellbooks:priest",
+      "equip": {
+        "head": "irons_spellbooks:priest_helmet",
+        "chest": "irons_spellbooks:priest_chestplate",
+        "legs": "irons_spellbooks:priest_leggings",
+        "feet": "irons_spellbooks:priest_boots"
+      },
       "home": "the crypt under Reece's church",
       "personality": "A wandering priest of the Arcane Order who hunts the undead. Stern, fearless and deadpan; shares Wren's faith in Notch but in a fiercer, holy-warrior way, and considers the undead a personal insult to His work.",
       "idle": [

@@ -91,6 +91,14 @@ ServerEvents.commandRegistry(event => {
       // face the way the player faces: /tp sets the body and head rotation (KubeJS can't reach setYRot here)
       ctx.source.server.runCommandSilent('tp ' + entity.uuid + ' ' + player.x + ' ' + player.y + ' ' + player.z
         + ' ' + player.yaw + ' 0')
+      // pack.json "equip": {"head", "chest", "legs", "feet", "mainhand", "offhand": item id}; script-made mobs skip their
+      // natural spawn gear (Iron's priests come without their armour)
+      Object.keys(info.equip || {}).forEach(slot => {
+        let where = (slot == 'mainhand' || slot == 'offhand') ? 'weapon.' + slot : 'armor.' + slot
+        ctx.source.server.runCommandSilent('item replace entity ' + entity.uuid + ' ' + where + ' with ' + info.equip[slot])
+      })
+      if (info.equip) ctx.source.server.runCommandSilent('data merge entity ' + entity.uuid
+        + ' {ArmorDropChances:[0f,0f,0f,0f],HandDropChances:[0f,0f]}')
       // pack.json "scale": Pehkui size (Dagna is short). Pehkui doesn't save base scale unless told to persist.
       // The change eases in on the entity's next ticks (nothing ticks while the server is empty).
       if (info.scale) {

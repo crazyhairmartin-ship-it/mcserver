@@ -1481,6 +1481,12 @@ global.QUEST_CHARACTERS = {
   "agathe": {
     "name": "Sister Agathe",
     "entity": "irons_spellbooks:priest",
+    "equip": {
+      "head": "irons_spellbooks:priest_helmet",
+      "chest": "irons_spellbooks:priest_chestplate",
+      "legs": "irons_spellbooks:priest_leggings",
+      "feet": "irons_spellbooks:priest_boots"
+    },
     "home": "the crypt under Reece's church",
     "personality": "A wandering priest of the Arcane Order who hunts the undead. Stern, fearless and deadpan; shares Wren's faith in Notch but in a fiercer, holy-warrior way, and considers the undead a personal insult to His work.",
     "idle": [
