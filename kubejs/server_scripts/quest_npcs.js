@@ -65,7 +65,7 @@ ServerEvents.commandRegistry(event => {
       target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
       tags.forEach(t => target.removeTag(t))
       let data = target.persistentData
-      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill', 'fqSpawn'].forEach(k => data.remove(k))
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill', 'fqSpawn', 'fqMine'].forEach(k => data.remove(k))
       server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
       ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
       return 1
@@ -739,6 +739,65 @@ global.fqOnCast = (player, spellId, school) => {
   })
 }
 
+// ---- mine, skill_level and stats tasks ----
+// mine: blocks broken while the step is open (Ultimine breaks each block, so they all count).
+// skill_level: a Pufferfish skill tree's level (checked every 5 seconds). stats: the lifetime sum of several vanilla
+// statistics (checked every 5 seconds), for milestones like distance travelled on foot.
+
+let $NpcSkillsAPI = null
+try {
+  $NpcSkillsAPI = Java.loadClass('net.puffish.skillsmod.api.SkillsAPI')
+} catch (e) {
+  console.warn("quest_npcs: Pufferfish's Skills not found; skill_level tasks won't work")
+}
+
+BlockEvents.broken(event => {
+  let player = event.player
+  if (!player || player.level.clientSide) return
+  let counts = null
+  npcEntries('mine').forEach(m => {
+    if (player.tags.contains(m.stage) || (m.keys.length && !m.keys.some(k => npcBlockMatches(event.block, k)))
+      || !questOpen(player, m)) return
+    if (!counts) counts = npcData(player, 'fqMine')
+    let n = counts.getInt(m.stage) + 1
+    if (n >= m.count) {
+      counts.remove(m.stage)
+      questAddStage(player, m.stage)
+      player.tell(Text.yellow('Quest updated.'))
+    } else {
+      counts.putInt(m.stage, n)
+      if (m.count >= 50 && n % Math.floor(m.count / 10) == 0) player.setStatusMessage(Text.gray(n + ' / ' + m.count))
+    }
+  })
+})
+
+function npcSkillLevel(player, tree) {
+  if (!$NpcSkillsAPI) return 0
+  let best = 0
+  $NpcSkillsAPI.streamCategories().toList().forEach(cat => {
+    if (tree != 'any' && String(cat.getId()) != 'puffish_skills:' + tree) return
+    let xp = cat.getExperience()
+    if (xp.isPresent()) best = Math.max(best, xp.get().getLevel(player))
+  })
+  return best
+}
+
+function npcTickMilestones(player) {
+  npcEntries('skill_level').forEach(k => {
+    if (player.tags.contains(k.stage) || !questOpen(player, k) || npcSkillLevel(player, k.tree) < k.level) return
+    questAddStage(player, k.stage)
+    player.tell(Text.yellow('Milestone reached. Quest updated.'))
+  })
+  npcEntries('stats').forEach(k => {
+    if (player.tags.contains(k.stage) || !questOpen(player, k)) return
+    let sum = 0
+    k.stats.forEach(st => { sum += npcStatValue(player, st) })
+    if (sum < k.count) return
+    questAddStage(player, k.stage)
+    player.tell(Text.yellow('Milestone reached. Quest updated.'))
+  })
+}
+
 // ---- waystones tasks ----
 // Every 5 seconds: how many waystones the player has attuned (Waystones' own list), optionally only wild ones. The
 // count when the step opened is the baseline; the step is done when that many more have been attuned.
@@ -768,6 +827,13 @@ function npcTickWaystones(player) {
     }
     if (!questOpen(player, t)) return
     let now = npcWaystoneCount(player, t.wild)
+    if (t.total) {
+      if (now >= t.count) {
+        questAddStage(player, t.stage)
+        player.tell(Text.yellow('Milestone reached. Quest updated.'))
+      }
+      return
+    }
     if (!bases.contains(t.stage)) {
       bases.putInt(t.stage, now)
       return
@@ -888,6 +954,7 @@ PlayerEvents.tick(event => {
   if (player.tickCount % 100 == 0) npcTickBuilds(player)
   if (player.tickCount % 100 == 50) npcTickTames(player)
   if (player.tickCount % 100 == 75) npcTickWaystones(player)
+  if (player.tickCount % 100 == 25) npcTickMilestones(player)
 })
 
 EntityEvents.death(event => {

@@ -679,12 +679,14 @@ def build_animal(t, kind, chapter, qid, n, quest_id, prev_tasks, ctx, where, pro
 
 def build_waystones(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     """A "waystones" task: the player attunes this many waystones they didn't have when the step opened.
-    {"waystones": 3, "wild": true} counts only waystones found in the wild (not villages or player-made)."""
+    {"waystones": 3, "wild": true} counts only waystones found in the wild (not villages or player-made);
+    "total": true counts every waystone they have, old ones too (milestones)."""
     count = int(t['waystones'])
     if count < 1:
         problems.error(where, '"waystones" needs a count of 1 or more')
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.waystones{n}', 'type': 'waystones',
-             'count': count, 'wild': bool(t.get('wild', False)), 'requires': [], 'quest_id': quest_id,
+             'count': count, 'wild': bool(t.get('wild', False)), 'total': bool(t.get('total', False)),
+             'requires': [], 'quest_id': quest_id,
              'prev_tasks': list(prev_tasks)}
     default = f'Attune {count} {"wild " if entry["wild"] else ""}waystone{"s" if count > 1 else ""}'
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
@@ -778,6 +780,51 @@ def build_spawn(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
              'task_id': fid('task', chapter, qid, str(n)), 'requires': [], 'quest_id': quest_id,
              'prev_tasks': list(prev_tasks)}
     return entry
+
+
+def build_mine(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "mine" task: break that many blocks (any, an id, "#tag", or a list) while the step is open; Ultimine counts.
+    {"mine": "any", "count": 1000} or {"mine": "gravestone:gravestone"}."""
+    keys = t['mine']
+    keys = [] if keys == 'any' else (keys if isinstance(keys, list) else [keys])
+    for k in keys:
+        if not k.startswith('#'):
+            ctx['registry'].check('items', k, where, t.get('unchecked', False))
+    count = int(t.get('count', 1))
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.mine{n}', 'type': 'mine', 'keys': keys,
+             'count': count, 'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', f'Mine {count} blocks')}
+    return task, entry
+
+
+def build_skill_level(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "skill_level" task: reach that level in a Pufferfish skill tree ("tree": a tree like "mining", or "any")."""
+    level = int(t['skill_level'])
+    tree = t.get('tree', 'any')
+    if tree != 'any' and tree not in ctx['skills']:
+        problems.error(where, f'unknown skill tree {tree!r} (one of {", ".join(sorted(ctx["skills"]))}, or "any")')
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.skill{n}', 'type': 'skill_level',
+             'level': level, 'tree': tree, 'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
+    what = 'a skill' if tree == 'any' else ctx['skills'][tree][0]
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', f'Reach level {level} in {what}')}
+    return task, entry
+
+
+def build_stats(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "stats" task: the lifetime sum of several vanilla statistics reaches "count" (milestones, e.g. distance
+    travelled on foot: walk + sprint + crouch + swim)."""
+    stats = t['stats']
+    if not isinstance(stats, list) or not stats or not all(':' in x for x in stats):
+        problems.error(where, '"stats" needs a list of namespaced statistics, like minecraft:walk_one_cm')
+        return None, None
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.stats{n}', 'type': 'stats',
+             'stats': stats, 'count': int(t.get('count', 1)), 'requires': [], 'quest_id': quest_id,
+             'prev_tasks': list(prev_tasks)}
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', 'Reach the milestone')}
+    return task, entry
 
 
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
@@ -1080,6 +1127,11 @@ def main():
                 elif isinstance(t, dict) and 'cast' in t:
                     task, entry = build_cast(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
                                              problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and ('mine' in t or 'skill_level' in t or 'stats' in t):
+                    builder = build_mine if 'mine' in t else build_skill_level if 'skill_level' in t else build_stats
+                    task, entry = builder(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere, problems)
                     if entry:
                         givers.append(entry)
                 elif isinstance(t, dict) and 'waystones' in t:

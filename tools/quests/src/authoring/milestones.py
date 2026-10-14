@@ -5,6 +5,9 @@ from common import chapter, quest, item, reward_item, skill
 KM = 100000   # centimetres in a kilometre (the walk, boat, horse and flight stats count centimetres)
 DAY = 24000   # ticks in an in-game day (the play_time stat counts ticks)
 
+# distance travelled on foot: every way of moving yourself, not only walking (sprinting is its own statistic)
+ON_FOOT = ["minecraft:walk_one_cm", "minecraft:sprint_one_cm", "minecraft:crouch_one_cm", "minecraft:swim_one_cm", "minecraft:walk_on_water_one_cm", "minecraft:walk_under_water_one_cm", "minecraft:climb_one_cm"]
+
 Q = [
     quest("first_iron", "Iron Age", icon="minecraft:iron_ingot", after=["start:welcome"],
           text=["Maren has left a page in the Field Guide for the first thing every newcomer to Reece does properly: "
@@ -73,24 +76,24 @@ Q = [
     quest("skill_level_10", "A Trade Mastered", icon="fotfskills:skill_tonic", after=["start:skill_trees"],
           text=["Sister Wren noticed you spending your skill points wisely, and Maren added a page to the Guide: "
                 "master one trade and the villages will treat you differently."],
-          tasks=[{"checkmark": "I reached level ten in a skill tree"}],
+          tasks=[{"skill_level": 10, "tree": "any", "title": "Reach level ten in any skill tree"}],
           rewards=[reward_item("fotfskills:skill_tonic"), skill("craft", 200)]),
 
     quest("walk_1km", "The First Mile", icon="minecraft:leather_boots", after=["start:welcome"],
           text=["Maren says the best way to learn the land is to walk it. A kilometre on foot gets you out of the "
                 "village and into the wild."],
-          tasks=[{"stat": "minecraft:walk_one_cm", "count": 1 * KM, "title": "Walk one kilometre"}],
+          tasks=[{"stats": ON_FOOT, "count": 1 * KM, "title": "Travel one kilometre on foot"}],
           rewards=[reward_item("minecraft:leather_boots"), skill("agility", 20)]),
 
     quest("walk_10km", "The Long Walk", icon="minecraft:leather_boots", after=["walk_1km"],
           text=["The Couriers say a runner who hasn't walked ten kilometres isn't a runner. The Field Guide agrees."],
-          tasks=[{"stat": "minecraft:walk_one_cm", "count": 10 * KM, "title": "Walk ten kilometres"}],
+          tasks=[{"stats": ON_FOOT, "count": 10 * KM, "title": "Travel ten kilometres on foot"}],
           rewards=[reward_item("waystones:waystone"), skill("agility", 100)]),
 
     quest("walk_100km", "Worn Soles", icon="minecraft:iron_boots", after=["walk_10km"],
           text=["A hundred kilometres is a long way to go on foot. Maren has pasted a page about it into the Guide, "
                 "with a note: new boots."],
-          tasks=[{"stat": "minecraft:walk_one_cm", "count": 100 * KM, "title": "Walk a hundred kilometres"}],
+          tasks=[{"stats": ON_FOOT, "count": 100 * KM, "title": "Travel a hundred kilometres on foot"}],
           rewards=[reward_item("minecraft:leather_boots", name="Well-Worn Boots", lore=["A hundred kilometres."],
                                enchant={"minecraft:feather_falling": 3}), skill("agility", 300)]),
 
@@ -134,7 +137,7 @@ Q = [
     quest("mine_1000", "Thousand Stones", icon="minecraft:cobblestone", after=["first_iron"],
           text=["Dagna Holt says a miner who hasn't shifted a thousand stones hasn't earned the title. The Field "
                 "Guide has a tally page."],
-          tasks=[item("minecraft:cobblestone", 1000, title="Haul a thousand stones out of the ground")],
+          tasks=[{"mine": "any", "count": 1000, "title": "Dig a thousand blocks out of the ground"}],
           rewards=[reward_item("minecraft:enchanted_book", name="Thousand Stones", enchant={"minecraft:efficiency": 3}),
                    skill("mining", 150)]),
 
@@ -147,20 +150,20 @@ Q = [
     quest("waystones_10", "Every Road Home", icon="waystones:waystone", after=["start:waystone_reece"],
           text=["Waystones are the Couriers' trade secret, and ten of them is a whole network. The Field Guide says "
                 "that someone who knows ten waystones can get home from anywhere."],
-          tasks=[{"waystones": 10, "title": "Attune ten different waystones"}],
+          tasks=[{"waystones": 10, "total": True, "title": "Attune ten different waystones"}],
           rewards=[reward_item("waystones:warp_scroll", 4), skill("agility", 150)]),
 
     quest("back_from_grave", "Not Today", icon="gravestone:gravestone", after=["start:gravestone"],
           text=["Old Edda keeps a ledger of the gravestones she has seen emptied. If you ever fall, open your own "
                 "and carry on, and she'll add a tick beside your name."],
-          tasks=[{"checkmark": "I recovered my belongings from my own gravestone"}],
+          tasks=[{"mine": "gravestone:gravestone", "title": "Recover your belongings from your gravestone"}],
           rewards=[reward_item("minecraft:golden_apple"), skill("defense", 60)]),
 
     quest("backpack_upgrade", "Bigger on the Inside", icon="sophisticatedbackpacks:gold_backpack",
           after=["start:backpack"],
           text=["Olsen and Odile agree on one thing: a backpack that holds more is worth the gold. Upgrade yours "
                 "to gold or diamond."],
-          tasks=[item("sophisticatedbackpacks:gold_backpack", title="Upgrade a backpack to gold or diamond")],
+          tasks=[item("sophisticatedbackpacks:gold_backpack", title="Upgrade a backpack to gold")],
           rewards=[reward_item("sophisticatedbackpacks:stack_upgrade_tier_1"), skill("craft", 250)]),
 ]
 

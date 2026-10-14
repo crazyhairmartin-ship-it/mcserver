@@ -408,8 +408,9 @@
 			tasks: [
 				{
 					id: "1F4AC13D7F844EE4"
-					title: "I reached level ten in a skill tree"
-					type: "checkmark"
+					stage: "fq.milestones.skill_level_10.skill0"
+					title: "Reach level ten in any skill tree"
+					type: "gamestage"
 				}
 			]
 			title: "A Trade Mastered"
@@ -440,10 +441,9 @@
 			tasks: [
 				{
 					id: "1693E808C1DD2C48"
-					stat: "minecraft:walk_one_cm"
-					title: "Walk one kilometre"
-					type: "stat"
-					value: 100000
+					stage: "fq.milestones.walk_1km.stats0"
+					title: "Travel one kilometre on foot"
+					type: "gamestage"
 				}
 			]
 			title: "The First Mile"
@@ -474,10 +474,9 @@
 			tasks: [
 				{
 					id: "7A7FD6B7CBF70528"
-					stat: "minecraft:walk_one_cm"
-					title: "Walk ten kilometres"
-					type: "stat"
-					value: 1000000
+					stage: "fq.milestones.walk_10km.stats0"
+					title: "Travel ten kilometres on foot"
+					type: "gamestage"
 				}
 			]
 			title: "The Long Walk"
@@ -523,10 +522,9 @@
 			tasks: [
 				{
 					id: "78E65431F1F66454"
-					stat: "minecraft:walk_one_cm"
-					title: "Walk a hundred kilometres"
-					type: "stat"
-					value: 10000000
+					stage: "fq.milestones.walk_100km.stats0"
+					title: "Travel a hundred kilometres on foot"
+					type: "gamestage"
 				}
 			]
 			title: "Worn Soles"
@@ -791,11 +789,10 @@
 			]
 			tasks: [
 				{
-					count: 1000L
 					id: "01288AB76A55AAEB"
-					item: "minecraft:cobblestone"
-					title: "Haul a thousand stones out of the ground"
-					type: "item"
+					stage: "fq.milestones.mine_1000.mine0"
+					title: "Dig a thousand blocks out of the ground"
+					type: "gamestage"
 				}
 			]
 			title: "Thousand Stones"
@@ -894,8 +891,9 @@
 			tasks: [
 				{
 					id: "278A2626B6A12BCC"
-					title: "I recovered my belongings from my own gravestone"
-					type: "checkmark"
+					stage: "fq.milestones.back_from_grave.mine0"
+					title: "Recover your belongings from your gravestone"
+					type: "gamestage"
 				}
 			]
 			title: "Not Today"
@@ -927,7 +925,7 @@
 				{
 					id: "1FDD51FD013EC1C1"
 					item: "sophisticatedbackpacks:gold_backpack"
-					title: "Upgrade a backpack to gold or diamond"
+					title: "Upgrade a backpack to gold"
 					type: "item"
 				}
 			]

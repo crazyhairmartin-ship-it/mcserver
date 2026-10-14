@@ -377,13 +377,100 @@ global.QUEST_GIVERS = [
     "prev_tasks": []
   },
   {
+    "quest": "milestones:skill_level_10",
+    "stage": "fq.milestones.skill_level_10.skill0",
+    "type": "skill_level",
+    "level": 10,
+    "tree": "any",
+    "requires": [],
+    "quest_id": "6B3ACCE5356186A1",
+    "prev_tasks": []
+  },
+  {
+    "quest": "milestones:walk_1km",
+    "stage": "fq.milestones.walk_1km.stats0",
+    "type": "stats",
+    "stats": [
+      "minecraft:walk_one_cm",
+      "minecraft:sprint_one_cm",
+      "minecraft:crouch_one_cm",
+      "minecraft:swim_one_cm",
+      "minecraft:walk_on_water_one_cm",
+      "minecraft:walk_under_water_one_cm",
+      "minecraft:climb_one_cm"
+    ],
+    "count": 100000,
+    "requires": [],
+    "quest_id": "756977307060B1FD",
+    "prev_tasks": []
+  },
+  {
+    "quest": "milestones:walk_10km",
+    "stage": "fq.milestones.walk_10km.stats0",
+    "type": "stats",
+    "stats": [
+      "minecraft:walk_one_cm",
+      "minecraft:sprint_one_cm",
+      "minecraft:crouch_one_cm",
+      "minecraft:swim_one_cm",
+      "minecraft:walk_on_water_one_cm",
+      "minecraft:walk_under_water_one_cm",
+      "minecraft:climb_one_cm"
+    ],
+    "count": 1000000,
+    "requires": [],
+    "quest_id": "5578ED4FECFFDD40",
+    "prev_tasks": []
+  },
+  {
+    "quest": "milestones:walk_100km",
+    "stage": "fq.milestones.walk_100km.stats0",
+    "type": "stats",
+    "stats": [
+      "minecraft:walk_one_cm",
+      "minecraft:sprint_one_cm",
+      "minecraft:crouch_one_cm",
+      "minecraft:swim_one_cm",
+      "minecraft:walk_on_water_one_cm",
+      "minecraft:walk_under_water_one_cm",
+      "minecraft:climb_one_cm"
+    ],
+    "count": 10000000,
+    "requires": [],
+    "quest_id": "54469E2DCC406CF5",
+    "prev_tasks": []
+  },
+  {
+    "quest": "milestones:mine_1000",
+    "stage": "fq.milestones.mine_1000.mine0",
+    "type": "mine",
+    "keys": [],
+    "count": 1000,
+    "requires": [],
+    "quest_id": "0890BCF6C252CB37",
+    "prev_tasks": []
+  },
+  {
     "quest": "milestones:waystones_10",
     "stage": "fq.milestones.waystones_10.waystones0",
     "type": "waystones",
     "count": 10,
     "wild": false,
+    "total": true,
     "requires": [],
     "quest_id": "67B0CC62615667C0",
+    "prev_tasks": []
+  },
+  {
+    "quest": "milestones:back_from_grave",
+    "stage": "fq.milestones.back_from_grave.mine0",
+    "type": "mine",
+    "keys": [
+      "gravestone:gravestone"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "25ABD3A5339D9DD9",
     "prev_tasks": []
   },
   {
@@ -2444,6 +2531,7 @@ global.QUEST_GIVERS = [
     "type": "waystones",
     "count": 2,
     "wild": false,
+    "total": false,
     "requires": [],
     "quest_id": "37FE4B10C2BAC817",
     "prev_tasks": [
@@ -4198,6 +4286,7 @@ global.QUEST_GIVERS = [
     "type": "waystones",
     "count": 3,
     "wild": true,
+    "total": false,
     "requires": [],
     "quest_id": "1A3C75E1E67C28EC",
     "prev_tasks": []

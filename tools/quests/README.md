@@ -115,7 +115,10 @@ Quest fields:
 | `{"stage": "my_stage"}` | The player has that stage (a player tag; for scripted quests) |
 | `{"spellkill": ["minecraft:zombie", "minecraft:husk"], "school": "fire", "count": 20}` (`"any"` mob or school) | The player kills that many with a school's magic (the spell lands the killing blow) while the step is open. Schools: fire, ice, lightning, holy, ender, blood, evocation, nature, eldritch |
 | `{"cast": "any", "count": 100}` (or a spell id like `"irons_spellbooks:firebolt"`, or `{"school": "irons_spellbooks:fire"}`) | The player casts that many Iron's Spells spells (scrolls count) while the step is open |
-| `{"waystones": 3, "wild": true}` | The player attunes that many waystones they didn't have when the step opened (`wild`: only waystones found in the wild) |
+| `{"waystones": 3, "wild": true}` | The player attunes that many waystones they didn't have when the step opened (`wild`: only waystones found in the wild; `"total": true`: every waystone they have counts, for milestones) |
+| `{"mine": "any", "count": 1000}` (or an id, `#tag` or list) | The player breaks that many blocks while the step is open (Ultimine counts each block). `{"mine": "gravestone:gravestone"}` is recovering a gravestone |
+| `{"skill_level": 10, "tree": "mining"}` (`"any"` tree) | A Pufferfish skill tree reaches that level |
+| `{"stats": ["minecraft:walk_one_cm", "minecraft:sprint_one_cm"], "count": 100000}` | The lifetime sum of those statistics reaches the count (milestones; distance on foot should add walking, sprinting, crouching, swimming and climbing) |
 | `{"tame": "minecraft:wolf", "count": 1}` (or a list of mobs) | Animals of that kind become the player's while the step is open (seen within 24 blocks; pets they already had don't count). Works for modded pets that save an owner |
 | `{"breed": "minecraft:cow", "count": 2}` (or a list) | The player breeds that many while the step is open |
 | `{"photo": {"entity": "alexsmobs:elephant"}}` (or `"structure"`, `"biome"`, `"place"`; optional `"label"`, `"distance"`) | The player takes a picture with a Camerapture camera while the step is open and the subject fits: the mob is under the crosshair (or within 8 blocks), or they're standing in the structure, biome or place. Copies don't count |

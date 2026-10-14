@@ -300,7 +300,9 @@
       ],
       "tasks": [
         {
-          "checkmark": "I reached level ten in a skill tree"
+          "skill_level": 10,
+          "tree": "any",
+          "title": "Reach level ten in any skill tree"
         }
       ],
       "rewards": [
@@ -325,9 +327,17 @@
       ],
       "tasks": [
         {
-          "stat": "minecraft:walk_one_cm",
+          "stats": [
+            "minecraft:walk_one_cm",
+            "minecraft:sprint_one_cm",
+            "minecraft:crouch_one_cm",
+            "minecraft:swim_one_cm",
+            "minecraft:walk_on_water_one_cm",
+            "minecraft:walk_under_water_one_cm",
+            "minecraft:climb_one_cm"
+          ],
           "count": 100000,
-          "title": "Walk one kilometre"
+          "title": "Travel one kilometre on foot"
         }
       ],
       "rewards": [
@@ -352,9 +362,17 @@
       ],
       "tasks": [
         {
-          "stat": "minecraft:walk_one_cm",
+          "stats": [
+            "minecraft:walk_one_cm",
+            "minecraft:sprint_one_cm",
+            "minecraft:crouch_one_cm",
+            "minecraft:swim_one_cm",
+            "minecraft:walk_on_water_one_cm",
+            "minecraft:walk_under_water_one_cm",
+            "minecraft:climb_one_cm"
+          ],
           "count": 1000000,
-          "title": "Walk ten kilometres"
+          "title": "Travel ten kilometres on foot"
         }
       ],
       "rewards": [
@@ -379,9 +397,17 @@
       ],
       "tasks": [
         {
-          "stat": "minecraft:walk_one_cm",
+          "stats": [
+            "minecraft:walk_one_cm",
+            "minecraft:sprint_one_cm",
+            "minecraft:crouch_one_cm",
+            "minecraft:swim_one_cm",
+            "minecraft:walk_on_water_one_cm",
+            "minecraft:walk_under_water_one_cm",
+            "minecraft:climb_one_cm"
+          ],
           "count": 10000000,
-          "title": "Walk a hundred kilometres"
+          "title": "Travel a hundred kilometres on foot"
         }
       ],
       "rewards": [
@@ -585,9 +611,9 @@
       ],
       "tasks": [
         {
-          "item": "minecraft:cobblestone",
+          "mine": "any",
           "count": 1000,
-          "title": "Haul a thousand stones out of the ground"
+          "title": "Dig a thousand blocks out of the ground"
         }
       ],
       "rewards": [
@@ -644,6 +670,7 @@
       "tasks": [
         {
           "waystones": 10,
+          "total": true,
           "title": "Attune ten different waystones"
         }
       ],
@@ -670,7 +697,8 @@
       ],
       "tasks": [
         {
-          "checkmark": "I recovered my belongings from my own gravestone"
+          "mine": "gravestone:gravestone",
+          "title": "Recover your belongings from your gravestone"
         }
       ],
       "rewards": [
@@ -696,7 +724,7 @@
       "tasks": [
         {
           "item": "sophisticatedbackpacks:gold_backpack",
-          "title": "Upgrade a backpack to gold or diamond"
+          "title": "Upgrade a backpack to gold"
         }
       ],
       "rewards": [
