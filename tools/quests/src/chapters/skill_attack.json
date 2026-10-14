@@ -282,11 +282,13 @@
         },
         {
           "kill": "minecraft:zombie",
-          "count": 8
+          "count": 8,
+          "title": "Clear the dead out of the cellar"
         },
         {
           "kill": "minecraft:skeleton",
-          "count": 8
+          "count": 8,
+          "title": "Clear the bones out of the cellar"
         }
       ],
       "rewards": [
@@ -325,7 +327,8 @@
         },
         {
           "kill": "minecraft:cave_spider",
-          "count": 12
+          "count": 12,
+          "title": "Clear out the brood"
         },
         {
           "drop": {
@@ -374,11 +377,13 @@
         },
         {
           "kill": "minecraft:zombie",
-          "count": 8
+          "count": 8,
+          "title": "Put the risen back in the ground"
         },
         {
           "kill": "minecraft:skeleton",
-          "count": 7
+          "count": 7,
+          "title": "Put the walking bones back in the ground"
         }
       ],
       "rewards": [

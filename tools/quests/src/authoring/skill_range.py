@@ -34,7 +34,7 @@ Q = [
           text=["Wild boars are tearing up a village's fields. Hunt down the sounder before it ruins the harvest, "
                 "and keep the bushmeat."],
           tasks=[{"structure": "#villages", "title": "Reach the troubled village"},
-                 {"kill": "naturalist:boar", "count": 4}, item("naturalist:bushmeat", 3)],
+                 {"kill": "naturalist:boar", "count": 4, "title": "Drive the sounder off the fields"}, item("naturalist:bushmeat", 3)],
           rewards=[reward_item("naturalist:cooked_bushmeat", 8), skill("range", 120)]),
 
     quest("throwing_steel", "Thrown Steel", icon="spartanweaponry:iron_throwing_knife", after=["target_practice"],
@@ -98,7 +98,7 @@ Q = [
           text=["Some nights call for a heavier weapon. Craft a heavy crossbow and bolts and drop twenty skeletons "
                 "before dawn."],
           tasks=[item("spartanweaponry:iron_heavy_crossbow", crafted=True), item("spartanweaponry:bolt", 32),
-                 {"kill": "minecraft:skeleton", "count": 20}],
+                 {"kill": "minecraft:skeleton", "count": 20, "title": "Hold the night: drop twenty skeletons"}],
           rewards=[reward_item("spartanweaponry:bolt", 32), skill("range", 280)]),
 ]
 

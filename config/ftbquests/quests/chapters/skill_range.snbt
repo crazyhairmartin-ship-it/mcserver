@@ -192,6 +192,7 @@
 				{
 					entity: "naturalist:boar"
 					id: "375E7CC694CECD13"
+					title: "Drive the sounder off the fields"
 					type: "kill"
 					value: 4L
 				}
@@ -489,6 +490,7 @@
 				{
 					entity: "minecraft:skeleton"
 					id: "3C6F4D9686171272"
+					title: "Hold the night: drop twenty skeletons"
 					type: "kill"
 					value: 20L
 				}

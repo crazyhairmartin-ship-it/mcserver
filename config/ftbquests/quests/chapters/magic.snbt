@@ -309,7 +309,7 @@
 		}
 		{
 			dependencies: ["50E05C3C90937E21"]
-			description: ["Bind a copper spellbook and inscribe your first spell into it, then cast it ten times at a target dummy."]
+			description: ["Orrin won't let an untested caster anywhere near the library's rare books. Bind a copper spellbook, inscribe your first spell, and prove your control on a target dummy until it comes cleanly."]
 			icon: "irons_spellbooks:copper_spell_book"
 			id: "06999C12176240CD"
 			rewards: [
@@ -343,7 +343,7 @@
 				{
 					id: "205717012AC6E439"
 					stage: "fq.magic.first_spellbook.cast2"
-					title: "Cast your first spell ten times"
+					title: "Practise on the dummy until it comes cleanly"
 					type: "gamestage"
 				}
 			]
@@ -470,7 +470,11 @@
 		}
 		{
 			dependencies: ["584ADBE4C6FEB091"]
-			description: ["Craft a fire rune, scribe firebolt onto a scroll, and set twenty mobs alight with it."]
+			description: [
+				"The pyromancer will teach you, once you've earned it. The dead keep clawing out of the old graves around her tower, and only fire lays them to rest for good."
+				""
+				"Craft a fire rune, scribe a fire spell, and cleanse twenty of the restless dead with flame."
+			]
 			icon: "irons_spellbooks:fire_rune"
 			id: "37D8CE7836BA8E4D"
 			rewards: [
@@ -503,8 +507,8 @@
 				}
 				{
 					id: "61AD5BE3ABEB060E"
-					stage: "fq.magic.school_of_fire.cast2"
-					title: "Cast fire spells twenty times"
+					stage: "fq.magic.school_of_fire.spellkill2"
+					title: "Lay twenty of the dead to rest with fire"
 					type: "gamestage"
 				}
 			]
@@ -723,7 +727,11 @@
 		}
 		{
 			dependencies: ["37D8CE7836BA8E4D"]
-			description: ["Cast a hundred spells, of any school. Orrin says it's how you learn where your mana runs out."]
+			description: [
+				"Orrin is raising a ward of runes around Reece against whatever is draining the old places. Every spell cast by a sworn member of the Order feeds a spark of its echo into the ring."
+				""
+				"A hundred sparks will wake it. Cast them anywhere; the ward hears."
+			]
 			icon: "irons_spellbooks:mana_upgrade_orb"
 			id: "6CF10DAB4DA641F9"
 			rewards: [
@@ -746,7 +754,7 @@
 				{
 					id: "7CD8DFA543BBEA14"
 					stage: "fq.magic.mana_milestone.cast0"
-					title: "Cast a hundred spells"
+					title: "Feed the ward a hundred spells"
 					type: "gamestage"
 				}
 			]

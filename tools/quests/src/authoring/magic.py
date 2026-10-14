@@ -70,10 +70,10 @@ Q = [
 
     quest("first_spellbook", "A Book of One's Own", icon="irons_spellbooks:copper_spell_book",
           after=["arcane_essence"],
-          text=["Bind a copper spellbook and inscribe your first spell into it, then cast it ten times at a target "
-                "dummy."],
+          text=["Orrin won't let an untested caster anywhere near the library's rare books. Bind a copper spellbook, "
+                "inscribe your first spell, and prove your control on a target dummy until it comes cleanly."],
           tasks=[item("irons_spellbooks:copper_spell_book", crafted=True), item("dummmmmmy:target_dummy"),
-                 {"cast": "any", "count": 10, "title": "Cast your first spell ten times"}],
+                 {"cast": "any", "count": 10, "title": "Practise on the dummy until it comes cleanly"}],
           rewards=[reward_item("irons_spellbooks:mana_ring"), skill("magic", 160)]),
 
     quest("the_study", "The Study", icon="irons_spellbooks:wisewood_bookshelf", after=["first_spellbook"],
@@ -105,9 +105,13 @@ Q = [
                    skill("magic", 220)]),
 
     quest("school_of_fire", "School of Fire", icon="irons_spellbooks:fire_rune", after=["pyromancer_tower"],
-          text=["Craft a fire rune, scribe firebolt onto a scroll, and set twenty mobs alight with it."],
+          text=["The pyromancer will teach you, once you've earned it. The dead keep clawing out of the old graves "
+                "around her tower, and only fire lays them to rest for good.",
+                "Craft a fire rune, scribe a fire spell, and cleanse twenty of the restless dead with flame."],
           tasks=[item("irons_spellbooks:fire_rune", crafted=True), item("irons_spellbooks:scroll_fire"),
-                 {"cast": {"school": "irons_spellbooks:fire"}, "count": 20, "title": "Cast fire spells twenty times"}],
+                 {"spellkill": ["minecraft:zombie", "minecraft:husk", "minecraft:skeleton", "minecraft:stray",
+                                "minecraft:zombie_villager", "minecraft:drowned"], "school": "fire", "count": 20,
+                  "title": "Lay twenty of the dead to rest with fire"}],
           rewards=[reward_item("irons_spellbooks:fireward_ring"), skill("magic", 200)]),
 
     quest("mangrove_hut", "The Apothecarist", icon="irons_spellbooks:apothecarist_spawn_egg", after=["the_priest"],
@@ -162,8 +166,10 @@ Q = [
                    skill("magic", 240)]),
 
     quest("mana_milestone", "A Hundred Sparks", icon="irons_spellbooks:mana_upgrade_orb", after=["school_of_fire"],
-          text=["Cast a hundred spells, of any school. Orrin says it's how you learn where your mana runs out."],
-          tasks=[{"cast": "any", "count": 100, "title": "Cast a hundred spells"}],
+          text=["Orrin is raising a ward of runes around Reece against whatever is draining the old places. Every "
+                "spell cast by a sworn member of the Order feeds a spark of its echo into the ring.",
+                "A hundred sparks will wake it. Cast them anywhere; the ward hears."],
+          tasks=[{"cast": "any", "count": 100, "title": "Feed the ward a hundred spells"}],
           rewards=[reward_item("irons_spellbooks:mana_upgrade_orb"), skill("magic", 280)]),
 ]
 

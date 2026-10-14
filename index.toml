@@ -110,11 +110,11 @@ hash = "62ba0917b9a55387719b7a2e3d82ac58ae0546149ec510281c9d66a2add08318"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/magic.snbt"
-hash = "2a574952c6d5115b86525c65b2c37cc9aab48d9dbeb9b05f9c0f5a4daeba7f5e"
+hash = "c6b59a94329a2c707bfa24c79ac420ae5dc964759e0e30985f5a1226224c5401"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
-hash = "8b0f3ad76ba00e100fc3475bf0e85515b7dd6f8adda3521e16cdd5ef58f289c7"
+hash = "baf183e67a5d174c8ecd246725d7bf3f21da66cb001c2d626f90f886f25d6651"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/odd_jobs.snbt"
@@ -126,7 +126,7 @@ hash = "76656f9f06f31fd42b85c337ae5ac896475871a1235d72ac2ccccece9847bc9c"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_attack.snbt"
-hash = "96fe1e55bbd0614b451baea41994d601b53f9ae8ebef5fa3dd928fa413e97415"
+hash = "5904f5080741c1e44719751033d5fd7c10f32069a00bf0d6fe839b996f2e98cf"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_cooking.snbt"
@@ -158,11 +158,11 @@ hash = "0b7d46442f99b90304785c212c2e1b914b63557d7c809481be79260c284dff8f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_range.snbt"
-hash = "f2c4e27267752cec5877728bc7282be5de2cc8e2e1e3ab404e79b173a3247d36"
+hash = "1e27ad18f6c8fad104b909e35dd3a0387bef3d551b0fa358aea8777e39f17e06"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_taming.snbt"
-hash = "98e5c85ad904c5940f2c57949a0d9aa23043fd3237ccc5248d1fa45db8b328ad"
+hash = "8a27828c9230a9985eb25f4356b1fa601c895a9c678e9a1f82bd7527b2532385"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/small_favours.snbt"
@@ -2765,7 +2765,7 @@ hash = "81238517f42d04aa513d472ee44c4eb212593671c2e57aa3273f67d942e11863"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "df60ff28bfa46a0f2e14fb3d9fba2dfb83b59fbbf3a491da6ea282648ff52843"
+hash = "3919af497f6e68c24fc7811b9c1a7613881576f6410d68527ff40d4244c40e6d"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2773,7 +2773,7 @@ hash = "26bffec8ccf318f1f517c90a964dc702443d7786da300888ec48b01e44ab5d0e"
 
 [[files]]
 file = "kubejs/server_scripts/quest_npcs.js"
-hash = "373c6ddc9eede26d01a48be77665e2d59a9a6f2a3be6f4afbae00e744c66b766"
+hash = "f76d62dcfc371e77fe8d1b00af77fafb7bd5ff9b68ae1054c8d235a3a9be2bb1"
 
 [[files]]
 file = "kubejs/server_scripts/quest_photos.js"

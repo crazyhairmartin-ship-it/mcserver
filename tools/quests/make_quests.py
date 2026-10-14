@@ -714,6 +714,29 @@ def build_cast(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     return task, entry
 
 
+SPELL_SCHOOLS = ('fire', 'ice', 'lightning', 'holy', 'ender', 'blood', 'evocation', 'nature', 'eldritch', 'any')
+
+
+def build_spellkill(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "spellkill" task (Iron's Spells): kill mobs with a school's magic while the step is open, the spell landing
+    the killing blow. {"spellkill": ["minecraft:zombie", "minecraft:skeleton"], "school": "fire", "count": 12}
+    ("any" for any mob or any school)."""
+    mobs = t['spellkill']
+    mobs = [] if mobs == 'any' else (mobs if isinstance(mobs, list) else [mobs])
+    for m in mobs:
+        ctx['registry'].check('entities', m, where, t.get('unchecked', False))
+    school = t.get('school', 'any')
+    if school not in SPELL_SCHOOLS:
+        problems.error(where, f'spellkill "school" must be one of {", ".join(SPELL_SCHOOLS)}')
+    count = int(t.get('count', 1))
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.spellkill{n}', 'type': 'spellkill',
+             'entities': mobs, 'school': school, 'count': count, 'requires': [], 'quest_id': quest_id,
+             'prev_tasks': list(prev_tasks)}
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', f'Defeat {count} with {"magic" if school == "any" else school + " magic"}')}
+    return task, entry
+
+
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
     """A "unique drop" task: while the quest is open, the listed mobs can drop a quest item (or, with "fishing" in "from",
     it can be fished up); the task is to bring it."""
@@ -1004,6 +1027,11 @@ def main():
                 elif isinstance(t, dict) and 'timed' in t:
                     task, entry = build_timed(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
                                               problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and 'spellkill' in t:
+                    task, entry = build_spellkill(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
+                                                  problems)
                     if entry:
                         givers.append(entry)
                 elif isinstance(t, dict) and 'cast' in t:

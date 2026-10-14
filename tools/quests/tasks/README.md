@@ -64,6 +64,14 @@ characters only (see "Report" below).
 
 ### Design rules (the owner's, non-negotiable)
 
+- **Every quest and every step has an in-world reason.** Someone wants it, something is wrong, something changes
+  because you did it. Never a bare count ("cast 20 spells", "kill 15 zombies"): say who needs it and why ("the dead
+  won't stay down; only fire lays them to rest: burn twenty"), and make the step title say it in-world too. Odd jobs
+  can have silly reasons, but they still have one.
+- **Magic has many schools; use them.** Different quests should lean on different Iron's Spells schools (fire,
+  ice, lightning, holy, ender, blood, evocation, nature, eldritch) where the story fits: holy against the undead, ice
+  for a fire that needs putting out, nature for a blighted grove. `spellkill` (kills landed by a school) and `cast`
+  (a spell or a school) make that real.
 - **Finish where you are.** A quest completes at its objective (follow the map, get the loot, done). No routine walk
   back to an NPC. Returning to a giver is right at the end of a chain, or mid-chain when they then send you somewhere
   different. Never "go to X, back to the village, back to X": do the business at X in one trip. Mid-chain news can

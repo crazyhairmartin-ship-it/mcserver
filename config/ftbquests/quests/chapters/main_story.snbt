@@ -541,6 +541,7 @@
 				{
 					entity: "mowziesmobs:ferrous_wroughtnaut"
 					id: "3B013FE38A04943B"
+					title: "Put the iron giant back to sleep"
 					type: "kill"
 					value: 1L
 				}
@@ -631,6 +632,7 @@
 				{
 					entity: "minecraft:pillager"
 					id: "03AADC37055738AC"
+					title: "Clear the outpost off the trade road"
 					type: "kill"
 					value: 6L
 				}
@@ -828,6 +830,7 @@
 				{
 					entity: "mowziesmobs:umvuthi"
 					id: "06BC17686935B003"
+					title: "Break the circle of masks"
 					type: "kill"
 					value: 1L
 				}

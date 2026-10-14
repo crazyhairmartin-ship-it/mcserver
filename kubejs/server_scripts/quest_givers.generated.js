@@ -2988,10 +2988,17 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "magic:school_of_fire",
-    "stage": "fq.magic.school_of_fire.cast2",
-    "type": "cast",
-    "spell": "",
-    "school": "irons_spellbooks:fire",
+    "stage": "fq.magic.school_of_fire.spellkill2",
+    "type": "spellkill",
+    "entities": [
+      "minecraft:zombie",
+      "minecraft:husk",
+      "minecraft:skeleton",
+      "minecraft:stray",
+      "minecraft:zombie_villager",
+      "minecraft:drowned"
+    ],
+    "school": "fire",
     "count": 20,
     "requires": [],
     "quest_id": "37D8CE7836BA8E4D",

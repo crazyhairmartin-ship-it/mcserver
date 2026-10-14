@@ -105,7 +105,7 @@ ACT1 = [
           after=["act1_wrought_scout", "act1_iron_kit"],
           text=["Wake the Ferrous Wroughtnaut and beat it. Dodge its axe and strike its exposed back, like Hale "
                 "taught you."],
-          tasks=[{"kill": "mowziesmobs:ferrous_wroughtnaut"}],
+          tasks=[{"kill": "mowziesmobs:ferrous_wroughtnaut", "title": "Put the iron giant back to sleep"}],
           rewards=[reward_item("minecraft:golden_apple", 2), skill("attack", 200)]),
 
     quest("act1_wrought_report", "Rust on the Seal", icon="minecraft:iron_nugget", after=["act1_wroughtnaut"],
@@ -129,7 +129,7 @@ ACT1 = [
     quest("act1_outpost", "Banners on the Hill", icon="minecraft:white_banner", after=["act1_wrought_report"],
           text=["Pillagers have raised an outpost near the trade road. Clear it and take down its captain."],
           tasks=[{"structure": "#illager_hideouts", "title": "Find the outpost"},
-                 {"kill": "minecraft:pillager", "count": 6}],
+                 {"kill": "minecraft:pillager", "count": 6, "title": "Clear the outpost off the trade road"}],
           rewards=[reward_item("minecraft:crossbow"), reward_item("minecraft:arrow", 32)]),
 
     quest("act1_iceologer", "Frost on the Wind", icon="minecraft:packed_ice", after=["act1_outpost"],
@@ -172,7 +172,7 @@ ACT1 = [
           after=["act1_umvuthana_scout"],
           text=["Face Umvuthi and its followers in the heart of the grove. Break the circle of masks before the sun "
                 "spell lands."],
-          tasks=[{"kill": "mowziesmobs:umvuthi"}],
+          tasks=[{"kill": "mowziesmobs:umvuthi", "title": "Break the circle of masks"}],
           rewards=[reward_item("minecraft:diamond", 3), skill("attack", 250)]),
 
     quest("act1_finale", "A Door in the Flowers", icon="minecraft:diamond", shape="diamond", size=1.75,

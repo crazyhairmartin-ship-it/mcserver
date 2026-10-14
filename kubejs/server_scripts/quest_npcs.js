@@ -65,7 +65,7 @@ ServerEvents.commandRegistry(event => {
       target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
       tags.forEach(t => target.removeTag(t))
       let data = target.persistentData
-      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast'].forEach(k => data.remove(k))
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill'].forEach(k => data.remove(k))
       server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
       ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
       return 1
@@ -582,6 +582,36 @@ global.fqOnBred = (player, child) => {
   })
 }
 
+// ---- spellkill tasks ----
+// A kill counts when one of Iron's Spells' schools landed the killing blow (its damage types' message ids).
+
+const NPC_SPELL_DAMAGE = { fire_magic: 'fire', fire_field: 'fire', ice_magic: 'ice', lightning_magic: 'lightning',
+  holy_magic: 'holy', ender_magic: 'ender', dragon_breath_pool: 'ender', blood_magic: 'blood', heartstop: 'blood',
+  blood_cauldron: 'blood', evocation_magic: 'evocation', nature_magic: 'nature', poison_cloud: 'nature',
+  eldritch_magic: 'eldritch' }
+
+function npcCountSpellKill(player, entity, source) {
+  let msg = ''
+  try { msg = String(source.getType()) } catch (e) { msg = '' }
+  let school = NPC_SPELL_DAMAGE[msg]
+  if (!school) return
+  let type = String(entity.type)
+  let counts = npcData(player, 'fqSpellKill')
+  npcEntries('spellkill').forEach(k => {
+    if (player.tags.contains(k.stage) || (k.school != 'any' && k.school != school)
+      || (k.entities.length && k.entities.indexOf(type) < 0) || !questOpen(player, k)) return
+    let n = counts.getInt(k.stage) + 1
+    if (n >= k.count) {
+      counts.remove(k.stage)
+      questAddStage(player, k.stage)
+      player.tell(Text.yellow('Quest updated.'))
+    } else {
+      counts.putInt(k.stage, n)
+      player.setStatusMessage(Text.gray(n + ' / ' + k.count))
+    }
+  })
+}
+
 // ---- cast tasks ----
 // Iron's Spells casts (startup_scripts/quest_casting.js) count toward open "cast" steps: any spell, one spell, or a
 // school's spells.
@@ -771,6 +801,7 @@ EntityEvents.death(event => {
   // kills for running timed challenges
   let player = source.player
   if (!player) return
+  npcCountSpellKill(player, entity, source)
   let running = npcData(player, 'fqTimed')
   let type = String(entity.type)
   npcEntries('timed').forEach(ch => {

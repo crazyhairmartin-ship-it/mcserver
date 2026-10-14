@@ -66,7 +66,8 @@ Q = [
     quest("dungeon_sweep", "Clearing the Cellar", icon="minecraft:spawner", after=["fallen_adventurer"],
           text=["The journal points to a dungeon below a village. Go down and clear it."],
           tasks=[{"structure": "#yungs_dungeons", "title": "Find the dungeon"},
-                 {"kill": "minecraft:zombie", "count": 8}, {"kill": "minecraft:skeleton", "count": 8}],
+                 {"kill": "minecraft:zombie", "count": 8, "title": "Clear the dead out of the cellar"},
+                 {"kill": "minecraft:skeleton", "count": 8, "title": "Clear the bones out of the cellar"}],
           rewards=[reward_item("minecraft:iron_ingot", 8), reward_item("minecraft:gold_ingot", 4),
                    reward_item("minecraft:emerald", 4), skill("attack", 200)]),
 
@@ -74,7 +75,7 @@ Q = [
           text=["A spider dungeon has been sending its brood into the fields. Clear it, and cut the poison sac "
                 "from its biggest spider as proof."],
           tasks=[{"structure": "betterdungeons:spider_dungeon", "title": "Find the spider dungeon"},
-                 {"kill": "minecraft:cave_spider", "count": 12},
+                 {"kill": "minecraft:cave_spider", "count": 12, "title": "Clear out the brood"},
                  {"drop": {"from": ["minecraft:spider"], "chance": 0.15,
                            "item": {"name": "Queen's Poison Sac", "tooltip": "Proof of the kill",
                                     "texture": "minecraft:item/spider_eye"}}, "consume": False}],
@@ -86,7 +87,8 @@ Q = [
           text=["The dead won't stay down in an old graveyard. Spend a night there and put them back in the "
                 "ground."],
           tasks=[{"structure": "#graveyards", "title": "Reach the graveyard"},
-                 {"kill": "minecraft:zombie", "count": 8}, {"kill": "minecraft:skeleton", "count": 7}],
+                 {"kill": "minecraft:zombie", "count": 8, "title": "Put the risen back in the ground"},
+                 {"kill": "minecraft:skeleton", "count": 7, "title": "Put the walking bones back in the ground"}],
           rewards=[reward_item("minecraft:enchanted_book", name="Rest Easy", enchant={"minecraft:smite": 3}),
                    skill("attack", 240)]),
 

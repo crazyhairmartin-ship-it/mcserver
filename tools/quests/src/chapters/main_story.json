@@ -418,7 +418,8 @@
       ],
       "tasks": [
         {
-          "kill": "mowziesmobs:ferrous_wroughtnaut"
+          "kill": "mowziesmobs:ferrous_wroughtnaut",
+          "title": "Put the iron giant back to sleep"
         }
       ],
       "rewards": [
@@ -514,7 +515,8 @@
         },
         {
           "kill": "minecraft:pillager",
-          "count": 6
+          "count": 6,
+          "title": "Clear the outpost off the trade road"
         }
       ],
       "rewards": [
@@ -691,7 +693,8 @@
       ],
       "tasks": [
         {
-          "kill": "mowziesmobs:umvuthi"
+          "kill": "mowziesmobs:umvuthi",
+          "title": "Break the circle of masks"
         }
       ],
       "rewards": [

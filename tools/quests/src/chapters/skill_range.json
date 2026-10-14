@@ -147,7 +147,8 @@
         },
         {
           "kill": "naturalist:boar",
-          "count": 4
+          "count": 4,
+          "title": "Drive the sounder off the fields"
         },
         {
           "item": "naturalist:bushmeat",
@@ -441,7 +442,8 @@
         },
         {
           "kill": "minecraft:skeleton",
-          "count": 20
+          "count": 20,
+          "title": "Hold the night: drop twenty skeletons"
         }
       ],
       "rewards": [

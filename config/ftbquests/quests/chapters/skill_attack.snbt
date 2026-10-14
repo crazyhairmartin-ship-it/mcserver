@@ -338,12 +338,14 @@
 				{
 					entity: "minecraft:zombie"
 					id: "6B2EEF1E81639088"
+					title: "Clear the dead out of the cellar"
 					type: "kill"
 					value: 8L
 				}
 				{
 					entity: "minecraft:skeleton"
 					id: "33215AC9C3142999"
+					title: "Clear the bones out of the cellar"
 					type: "kill"
 					value: 8L
 				}
@@ -397,6 +399,7 @@
 				{
 					entity: "minecraft:cave_spider"
 					id: "5D91792892C6923A"
+					title: "Clear out the brood"
 					type: "kill"
 					value: 12L
 				}
@@ -458,12 +461,14 @@
 				{
 					entity: "minecraft:zombie"
 					id: "74DC2B16E97C330D"
+					title: "Put the risen back in the ground"
 					type: "kill"
 					value: 8L
 				}
 				{
 					entity: "minecraft:skeleton"
 					id: "563C3C142B3DED9C"
+					title: "Put the walking bones back in the ground"
 					type: "kill"
 					value: 7L
 				}
