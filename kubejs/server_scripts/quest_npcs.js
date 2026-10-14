@@ -260,7 +260,7 @@ function npcStartChallenge(player, stage) {
   npcData(player, 'fqTimed').put(stage, rec)
   if (ch.lines.length) questSay(player, ch.name, ch.lines)
   player.tell(Text.yellow('Go! You have ' + ch.seconds + ' seconds.'))
-  if ((ch.no || []).length) player.tell(Text.gray('No ' + ch.no.map(b => NPC_BAN_WORDS[b]).join(', ') + ' until it's over.'))
+  if ((ch.no || []).length) player.tell(Text.gray('No ' + ch.no.map(b => NPC_BAN_WORDS[b]).join(', ') + " until it's over."))
   return true
 }
 
