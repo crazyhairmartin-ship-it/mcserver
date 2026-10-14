@@ -583,7 +583,7 @@
       "landmarks": [
         "alexscaves:underground_cabin"
       ],
-      "reward": "Cave Map, a magnet"
+      "reward": "Cave Map, bioluminescent torches"
     },
     {
       "id": "act2_caves_beat",
@@ -596,13 +596,13 @@
       "after": [
         "act2_cave_map"
       ],
-      "summary": "In the Magnetic Caves and the Primordial Caves, gather a scarlet neodymium ingot and amber; both hum with the same dark pulse as the crystal.",
+      "summary": "In the Primordial Caves and the Forlorn Hollows, gather amber and pure darkness; both hum with the same dark pulse as the crystal.",
       "mods": [
         "alexscaves"
       ],
       "landmarks": [
-        "alexscaves:ferrocave",
-        "alexscaves:dino_bowl"
+        "alexscaves:dino_bowl",
+        "alexscaves:forlorn_canyon"
       ],
       "reward": "Cave gear, Mining XP"
     },
@@ -1040,8 +1040,8 @@
       "reward": "Defense XP, a diving map"
     },
     {
-      "id": "act3_tremorzilla",
-      "title": "Something Green Hatches",
+      "id": "act3_tremorsaurus",
+      "title": "Something Big Hatches",
       "tier": "act3",
       "types": [
         "tame",
@@ -1050,14 +1050,14 @@
       "after": [
         "act3_netherite"
       ],
-      "summary": "Optional: in the Toxic Caves, find a Tremorzilla egg and raise it, or fight a wild one (500 health).",
+      "summary": "Optional: find a tremorsaurus egg near the primordial volcano and raise the hatchling, or fight a wild tremorsaurus.",
       "mods": [
         "alexscaves"
       ],
       "landmarks": [
-        "alexscaves:acid_pit"
+        "alexscaves:volcano"
       ],
-      "reward": "Radon bottles, Taming XP"
+      "reward": "Cooked dinosaur chops, Taming XP"
     },
     {
       "id": "act3_finale",

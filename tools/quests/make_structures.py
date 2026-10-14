@@ -157,6 +157,18 @@ def towns_and_towers_disabled(pack_dir):
     return {m.group(1) for m in re.finditer(r'"([a-z0-9_]+)"\s*:\s*false', text)}
 
 
+def alexscaves_disabled(pack_dir):
+    """Alex's Caves biomes switched off with disabled_completely in config/alexscaves_biome_generation."""
+    folder = os.path.join(pack_dir, 'config', 'alexscaves_biome_generation')
+    if not os.path.isdir(folder):
+        return set()
+    off = set()
+    for name in os.listdir(folder):
+        if name.endswith('.json') and json.load(open(os.path.join(folder, name))).get('disabled_completely'):
+            off.add('alexscaves:' + name[:-5])
+    return off
+
+
 def rarity(placement):
     kind = placement.get('type', '')
     if kind.endswith('concentric_rings'):
@@ -183,6 +195,7 @@ def main():
     files = read_sources(vanilla, pack_jars(mods_dir, pack_dir), pack_dir)
     tags = resolve_tags(files['biome_tag'])
     tt_off = towns_and_towers_disabled(pack_dir)
+    ac_off = alexscaves_disabled(pack_dir)
 
     sets = {set_id: (versions[-1][1].get('placement', {}),
                      [e.get('structure') for e in versions[-1][1].get('structures', []) if e.get('structure')])
@@ -231,6 +244,8 @@ def main():
             status, why = 'yes', ''
             if not biomes:
                 status, why = 'no', 'no biomes it can generate in'
+            elif biomes <= ac_off:
+                status, why = 'no', 'its biomes are switched off in config/alexscaves_biome_generation'
             if ns in ('t_and_t', 'towns_and_towers') and path.split('/')[-1] in tt_off:
                 status, why = 'no', 'switched off in config/towns_and_towers'
         out[sid] = {'mod': MOD_NAMES.get(ns, ns), 'dimensions': dims, 'biomes': biome_label, 'biome_count': len(biomes),

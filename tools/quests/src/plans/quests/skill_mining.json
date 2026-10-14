@@ -379,18 +379,19 @@
    "title": "Strange Minerals",
    "tier": "act2",
    "types": [
-    "fetch",
-    "deliver"
+    "collect",
+    "explore"
    ],
    "after": [
     "surveyors_glass"
    ],
-   "summary": "Rumours of magnetic rock deep under the world: bring the guild's metallurgist a sample of galena and raw scarlet neodymium from the Magnetic Caves, and a lump of amber from the Primordial Caves (Alex's Caves; the caves' own questline goes deeper).",
+   "summary": "Rumours of strange stone deep under the world: dig samples of amber from the Primordial Caves, guanostone from the Forlorn Hollows and abyssmarine from the Abyssal Chasm (Alex's Caves; the caves' own questline goes deeper).",
    "mods": [
     "alexscaves"
    ],
    "landmarks": [
-    "alexscaves:ferrocave"
+    "alexscaves:dino_bowl",
+    "alexscaves:forlorn_canyon"
    ],
    "reward": "Mining XP, a guild note pointing to the caves' own questline"
   },
