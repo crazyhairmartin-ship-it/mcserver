@@ -214,15 +214,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
-    "boost": {
-      "health": 1.5,
-      "damage": 1.25,
-      "speed": 1.0,
-      "scale": [
-        1.0,
-        1.2
-      ]
-    },
+    "boost": null,
     "task_id": "03AADC37055738AC",
     "requires": [],
     "quest_id": "1BC2581969526C71",
@@ -3218,15 +3210,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
-    "boost": {
-      "health": 1.5,
-      "damage": 1.25,
-      "speed": 1.0,
-      "scale": [
-        1.0,
-        1.2
-      ]
-    },
+    "boost": null,
     "task_id": "6B2EEF1E81639088",
     "requires": [],
     "quest_id": "2188906CAFC0AE48",
@@ -3255,15 +3239,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
-    "boost": {
-      "health": 1.5,
-      "damage": 1.25,
-      "speed": 1.0,
-      "scale": [
-        1.0,
-        1.2
-      ]
-    },
+    "boost": null,
     "task_id": "33215AC9C3142999",
     "requires": [],
     "quest_id": "2188906CAFC0AE48",
@@ -3289,15 +3265,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
-    "boost": {
-      "health": 1.5,
-      "damage": 1.25,
-      "speed": 1.0,
-      "scale": [
-        1.0,
-        1.2
-      ]
-    },
+    "boost": null,
     "task_id": "5D91792892C6923A",
     "requires": [],
     "quest_id": "0F9649EDAAD9CD0F",
@@ -3340,15 +3308,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
-    "boost": {
-      "health": 1.5,
-      "damage": 1.25,
-      "speed": 1.0,
-      "scale": [
-        1.0,
-        1.2
-      ]
-    },
+    "boost": null,
     "task_id": "74DC2B16E97C330D",
     "requires": [],
     "quest_id": "133EBE77FE89381D",
@@ -3376,15 +3336,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
-    "boost": {
-      "health": 1.5,
-      "damage": 1.25,
-      "speed": 1.0,
-      "scale": [
-        1.0,
-        1.2
-      ]
-    },
+    "boost": null,
     "task_id": "563C3C142B3DED9C",
     "requires": [],
     "quest_id": "133EBE77FE89381D",
@@ -3567,15 +3519,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
-    "boost": {
-      "health": 1.5,
-      "damage": 1.25,
-      "speed": 1.0,
-      "scale": [
-        1.0,
-        1.2
-      ]
-    },
+    "boost": null,
     "task_id": "375E7CC694CECD13",
     "requires": [],
     "quest_id": "28D94C2FF4C50692",
@@ -5150,15 +5094,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "ensure": false,
-    "boost": {
-      "health": 1.5,
-      "damage": 1.25,
-      "speed": 1.0,
-      "scale": [
-        1.0,
-        1.2
-      ]
-    },
+    "boost": null,
     "task_id": "138D27AE967571D0",
     "requires": [],
     "quest_id": "70A91DD5D9F62E0F",

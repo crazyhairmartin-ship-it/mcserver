@@ -738,8 +738,8 @@ def build_spellkill(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, proble
     return task, entry
 
 
-# quest mobs to fight are tougher and bigger than wild ones (Dylan, 2026-10-14); "boost" on an encounter or spawn
-# overrides: {"health": 2, "damage": 1.5, "speed": 1.0, "scale": 1.25}, or false for none
+# named quest targets (kill encounters) are tougher and bigger than wild ones; spawn waves are normal unless they ask
+# (Dylan, 2026-10-14). "boost" on an encounter or spawn overrides: {"health": 2, "damage": 1.5, "speed": 1.0, "scale": 1.25}, or false for none
 BOOST_QUARRY = {'health': 2.0, 'damage': 1.5, 'speed': 1.0, 'scale': 1.25}
 BOOST_WAVE = {'health': 1.5, 'damage': 1.25, 'speed': 1.0, 'scale': [1.0, 1.2]}
 
@@ -774,7 +774,7 @@ def build_spawn(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.spawn{n}', 'type': 'spawn',
              'entity': t['kill'], 'at': at, 'wave': int(spec.get('wave', min(count, 6))), 'name': spec.get('name', ''),
              'health': spec.get('health'), 'glow': bool(spec.get('glow', False)), 'ensure': bool(spec.get('ensure', False)),
-             'boost': build_boost(spec, not spec.get('ensure', False), where, problems, wave=True),
+             'boost': build_boost(spec, False, where, problems, wave=True),
              'task_id': fid('task', chapter, qid, str(n)), 'requires': [], 'quest_id': quest_id,
              'prev_tasks': list(prev_tasks)}
     return entry
