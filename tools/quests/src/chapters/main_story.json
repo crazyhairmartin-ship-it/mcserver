@@ -1,0 +1,734 @@
+{
+  "title": "The Silent Forest",
+  "subtitle": "The main story",
+  "icon": "minecraft:written_book",
+  "group": "story",
+  "order": 0,
+  "quests": [
+    {
+      "id": "prologue_silent_wood",
+      "title": "The Silent Wood",
+      "after": [
+        "start:clerics_worry"
+      ],
+      "text": [
+        "Sister Wren wants to know what's wrong with the forest. Go to the forest's edge after dusk and wait out one night.",
+        "No fairies dance. The butterflies are gone. And something has scored the bark of the oldest tree."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:forest",
+          "title": "Go to the forest"
+        },
+        {
+          "checkmark": "I waited out the night"
+        }
+      ],
+      "rewards": [
+        {
+          "command": "/give {p} minecraft:potion{Potion:\"minecraft:night_vision\"}",
+          "title": "A night vision potion"
+        }
+      ],
+      "icon": "minecraft:oak_sapling"
+    },
+    {
+      "id": "prologue_shrine",
+      "title": "A Shrine for the Quiet",
+      "after": [
+        "prologue_silent_wood"
+      ],
+      "text": [
+        "Sister Wren asks for a small wayside shrine: mossy stone, candles, and wildflowers gathered from three different places.",
+        "Build it wherever feels right."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:mossy_cobblestone",
+          "count": 16
+        },
+        {
+          "item": "minecraft:candle",
+          "count": 4
+        },
+        {
+          "item": "minecraft:cornflower"
+        },
+        {
+          "item": "minecraft:allium"
+        },
+        {
+          "item": "minecraft:lily_of_the_valley"
+        },
+        {
+          "checkmark": "I built the shrine"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:candle",
+          "count": 8
+        },
+        {
+          "skill": "forage",
+          "xp": 60
+        }
+      ],
+      "icon": "minecraft:candle"
+    },
+    {
+      "id": "prologue_home",
+      "title": "Somewhere to Come Back To",
+      "after": [
+        "prologue_silent_wood"
+      ],
+      "text": [
+        "You can't sleep in a sleeping bag forever. Build your first home near Reece, with a bed, a chest, a table and chairs."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:red_bed"
+        },
+        {
+          "item": "minecraft:chest"
+        },
+        {
+          "item": "handcrafted:oak_table"
+        },
+        {
+          "item": "handcrafted:oak_chair",
+          "count": 2
+        },
+        {
+          "checkmark": "My home is built"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "another_furniture:oak_chair",
+          "count": 2
+        },
+        {
+          "skill": "craft",
+          "xp": 60
+        }
+      ],
+      "icon": "minecraft:red_bed"
+    },
+    {
+      "id": "prologue_fallen",
+      "title": "The Fallen Adventurer",
+      "after": [
+        "prologue_shrine"
+      ],
+      "text": [
+        "Out in the wild lie the remains of adventurers who never came home, still in their rusted gear.",
+        "Find one. Something in the forest's silence points that way."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I found a fallen adventurer"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:stone_sword"
+        },
+        {
+          "skill": "agility",
+          "xp": 60
+        }
+      ],
+      "icon": "minecraft:skeleton_skull"
+    },
+    {
+      "id": "prologue_dungeon",
+      "title": "What the Dark Keeps",
+      "after": [
+        "prologue_fallen"
+      ],
+      "text": [
+        "The adventurer's journal speaks of 'the wardens growing weak', and points to an old dungeon.",
+        "Clear a dungeon, and find the second journal page on one of its guardians."
+      ],
+      "tasks": [
+        {
+          "structure": "#yungs_dungeons",
+          "title": "Find the dungeon"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:zombie",
+              "minecraft:skeleton",
+              "minecraft:spider"
+            ],
+            "chance": 0.2,
+            "item": {
+              "name": "Second Journal Page",
+              "texture": "minecraft:item/paper"
+            }
+          },
+          "consume": false
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 8
+        },
+        {
+          "skill": "attack",
+          "xp": 80
+        }
+      ],
+      "icon": "minecraft:spawner"
+    },
+    {
+      "id": "prologue_letter",
+      "title": "Word to the Neighbours",
+      "after": [
+        "prologue_dungeon"
+      ],
+      "text": [
+        "Sister Wren writes to the cleric of the next village along the road. Deliver her letter in person; his reply will follow you home by post."
+      ],
+      "tasks": [
+        {
+          "talk": "villager",
+          "profession": "minecraft:cleric",
+          "lines": [
+            "A letter from Sister Wren? It's been too long.",
+            "Tell her I'll write back. The post's slow, but it gets there."
+          ],
+          "title": "Deliver the letter to another village's cleric"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "fotfmail:letter",
+          "count": 4
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 5
+        }
+      ],
+      "icon": "fotfmail:letter"
+    },
+    {
+      "id": "act1_start",
+      "title": "The First Wardens",
+      "after": [
+        "prologue_letter",
+        "prologue_home"
+      ],
+      "text": [
+        "Both journal pages together tell of guardians: the wardens, who hold the old places shut.",
+        "Sister Wren has read them twice."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "wren",
+          "lines": [
+            "The wardens hold the old places shut. And someone thinks they're being drained.",
+            "The first of them sleeps in iron, under the hills.",
+            "Be careful. Whatever's draining them is still out there."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_chestplate"
+        }
+      ],
+      "icon": "minecraft:written_book",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act1_iron_kit",
+      "title": "Iron and Edge",
+      "after": [
+        "act1_start"
+      ],
+      "text": [
+        "Arm yourself for what's ahead: a proper weapon, a shield and full iron armour.",
+        "Any Spartan Weaponry iron weapon will do; the quest asks for a longsword, but the choice is yours."
+      ],
+      "tasks": [
+        {
+          "item": "spartanweaponry:iron_longsword"
+        },
+        {
+          "item": "spartanshields:iron_basic_shield"
+        },
+        {
+          "item": "minecraft:iron_helmet"
+        },
+        {
+          "item": "minecraft:iron_leggings"
+        },
+        {
+          "item": "minecraft:iron_boots"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:sharpness": 2
+          }
+        },
+        {
+          "skill": "attack",
+          "xp": 80
+        }
+      ],
+      "icon": "spartanweaponry:iron_longsword"
+    },
+    {
+      "id": "act1_temple",
+      "title": "Sand and Vine",
+      "after": [
+        "act1_start"
+      ],
+      "text": [
+        "Search a desert or jungle temple. Get past its traps to the inner chamber, where a mural shows a hooded iron giant."
+      ],
+      "tasks": [
+        {
+          "structure": "#temples",
+          "title": "Reach a temple's inner chamber"
+        },
+        {
+          "checkmark": "I saw the mural"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 6
+        },
+        {
+          "skill": "agility",
+          "xp": 80
+        }
+      ],
+      "icon": "minecraft:chiseled_sandstone"
+    },
+    {
+      "id": "act1_mineshaft",
+      "title": "The Echo in the Shaft",
+      "after": [
+        "act1_start"
+      ],
+      "text": [
+        "Miners in an old mineshaft heard metal footsteps below them. Explore it, mine 16 iron, and look for scrape marks leading down."
+      ],
+      "tasks": [
+        {
+          "structure": "#mines",
+          "title": "Explore a mineshaft"
+        },
+        {
+          "item": "minecraft:raw_iron",
+          "count": 16
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:lantern"
+        },
+        {
+          "skill": "mining",
+          "xp": 80
+        }
+      ],
+      "icon": "minecraft:rail"
+    },
+    {
+      "id": "act1_wrought_practice",
+      "title": "Strike From Behind",
+      "after": [
+        "act1_temple",
+        "act1_mineshaft"
+      ],
+      "text": [
+        "Armour that breathes, in a sealed chamber. Captain Hale of the Village watch knows what that means, and wants you ready before you go anywhere near it."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "hale",
+          "lines": [
+            "Iron giants are slow to turn. Get behind it and strike.",
+            "Build yourself a target dummy and practise until it's habit.",
+            "Then go and look. Look. Don't fight it until you're ready."
+          ]
+        },
+        {
+          "item": "dummmmmmy:target_dummy"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "defense",
+          "xp": 80
+        }
+      ],
+      "icon": "dummmmmmy:target_dummy"
+    },
+    {
+      "id": "act1_wrought_scout",
+      "title": "The Iron Door",
+      "after": [
+        "act1_wrought_practice"
+      ],
+      "text": [
+        "Follow the scrape marks to a Wrought Chamber and look at its sealed door. The armour inside is breathing."
+      ],
+      "tasks": [
+        {
+          "structure": "mowziesmobs:wrought_chamber",
+          "title": "Find a Wrought Chamber"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass"
+        }
+      ],
+      "icon": "minecraft:iron_door"
+    },
+    {
+      "id": "act1_wroughtnaut",
+      "title": "The Ferrous Wroughtnaut",
+      "after": [
+        "act1_wrought_scout",
+        "act1_iron_kit"
+      ],
+      "text": [
+        "Wake the Ferrous Wroughtnaut and beat it. Dodge its axe and strike its exposed back, like Hale taught you."
+      ],
+      "tasks": [
+        {
+          "kill": "mowziesmobs:ferrous_wroughtnaut"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_apple",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:iron_axe",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act1_wrought_report",
+      "title": "Rust on the Seal",
+      "after": [
+        "act1_wroughtnaut"
+      ],
+      "text": [
+        "Take what you learned back to Sister Wren."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "wren",
+          "lines": [
+            "It wasn't evil. It was starving.",
+            "Something had been feeding on it, a little at a time, for years.",
+            "Then it's not just this one. It's all of them."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 8
+        }
+      ],
+      "icon": "minecraft:iron_nugget"
+    },
+    {
+      "id": "act1_magic_branch",
+      "title": "A Priest on the Road",
+      "after": [
+        "act1_wrought_report"
+      ],
+      "text": [
+        "On the road, a travelling priest of the Arcane order stops you. He's been following the same trail."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Travelling Priest",
+            "then": "talk",
+            "lines": [
+              "The drain smells of old magic. Very old.",
+              "There's a Pyromancer Tower not far from here. Its keepers know more than they say.",
+              "If you've a head for magic, start there."
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:scroll"
+        },
+        {
+          "item": "irons_spellbooks:common_ink"
+        }
+      ],
+      "icon": "irons_spellbooks:scroll"
+    },
+    {
+      "id": "act1_outpost",
+      "title": "Banners on the Hill",
+      "after": [
+        "act1_wrought_report"
+      ],
+      "text": [
+        "Pillagers have raised an outpost near the trade road. Clear it and take down its captain."
+      ],
+      "tasks": [
+        {
+          "structure": "#illager_hideouts",
+          "title": "Find the outpost"
+        },
+        {
+          "kill": "minecraft:pillager",
+          "count": 6
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:crossbow"
+        },
+        {
+          "item": "minecraft:arrow",
+          "count": 32
+        }
+      ],
+      "icon": "minecraft:white_banner"
+    },
+    {
+      "id": "act1_iceologer",
+      "title": "Frost on the Wind",
+      "after": [
+        "act1_outpost"
+      ],
+      "text": [
+        "A frightened trader comes looking for help: something froze his caravan in the snowy taiga."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:wandering_trader",
+            "name": "Frightened Trader",
+            "then": "talk",
+            "lines": [
+              "It came out of the snow. Ice everywhere, in a heartbeat.",
+              "My caravan's frozen solid in the taiga. Please, stop it before it finds a village."
+            ]
+          }
+        },
+        {
+          "encounter": {
+            "entity": "friendsandfoes:iceologer",
+            "name": "The Iceologer",
+            "then": "kill",
+            "glow": true,
+            "where": {
+              "biomes": [
+                "minecraft:snowy_taiga",
+                "minecraft:taiga",
+                "minecraft:grove",
+                "minecraft:snowy_plains"
+              ]
+            }
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather_chestplate"
+        },
+        {
+          "skill": "attack",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:packed_ice"
+    },
+    {
+      "id": "act1_illusioner",
+      "title": "Four of Him",
+      "after": [
+        "act1_iceologer"
+      ],
+      "text": [
+        "An Illusioner haunts the woods. Find the real one among its copies and defeat it."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:illusioner",
+            "name": "The Trickster",
+            "then": "kill",
+            "where": {
+              "biomes": [
+                "minecraft:forest",
+                "minecraft:dark_forest",
+                "minecraft:birch_forest"
+              ]
+            }
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bow",
+          "name": "Trickster's Bow",
+          "enchant": {
+            "minecraft:power": 2
+          }
+        },
+        {
+          "skill": "range",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:bow"
+    },
+    {
+      "id": "act1_raid",
+      "title": "The Long Night",
+      "after": [
+        "act1_illusioner"
+      ],
+      "text": [
+        "Captain Hale has a plan: draw the raiders out on your terms. Carry the Bad Omen into a village and hold it through a full raid."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "hale",
+          "lines": [
+            "Raiders come when they smell weakness. We'll show them none.",
+            "Bring the omen in when you're ready. My guards will stand with you."
+          ]
+        },
+        {
+          "advancement": "minecraft:adventure/hero_of_the_village"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:totem_of_undying"
+        },
+        {
+          "skill": "defense",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:totem_of_undying"
+    },
+    {
+      "id": "act1_umvuthana_scout",
+      "title": "Masks in the Grass",
+      "after": [
+        "act1_raid"
+      ],
+      "text": [
+        "Travel to the savanna and find the Umvuthana Grove. Watch the Umvuthana from cover and count their masks."
+      ],
+      "tasks": [
+        {
+          "structure": "mowziesmobs:umvuthana_grove",
+          "title": "Find the grove"
+        },
+        {
+          "observe": "mowziesmobs:umvuthana",
+          "ticks": 60,
+          "title": "Watch an Umvuthana"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "agility",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:acacia_sapling"
+    },
+    {
+      "id": "act1_umvuthi",
+      "title": "Umvuthi, the Sunbird",
+      "after": [
+        "act1_umvuthana_scout"
+      ],
+      "text": [
+        "Face Umvuthi and its followers in the heart of the grove. Break the circle of masks before the sun spell lands."
+      ],
+      "tasks": [
+        {
+          "kill": "mowziesmobs:umvuthi"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:diamond",
+          "count": 3
+        },
+        {
+          "skill": "attack",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:sunflower",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act1_finale",
+      "title": "A Door in the Flowers",
+      "after": [
+        "act1_umvuthi",
+        "act1_wroughtnaut"
+      ],
+      "text": [
+        "With two wardens freed, Sister Wren remembers the spirits' own realm.",
+        "Dig a pool, ring it with flowers and drop a diamond in. The way into the Twilight Forest opens."
+      ],
+      "tasks": [
+        {
+          "dimension": "twilightforest:twilight_forest",
+          "title": "Enter the Twilight Forest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:diamond"
+        },
+        {
+          "skill": "magic",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:diamond",
+      "shape": "diamond",
+      "size": 1.75
+    }
+  ]
+}

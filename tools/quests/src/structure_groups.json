@@ -421,5 +421,9 @@
     "cataclysm:abandoned_village",
     "cataclysm:desert_occupied_village",
     "cataclysm:desert_site"
+  ],
+  "temples": [
+    "betterdeserttemples:desert_temple",
+    "betterjungletemples:jungle_temple"
   ]
 }
