@@ -2733,7 +2733,7 @@ hash = "9ab8f53804920f2568fe94b5b0891e447a15444c4eedaed2c70b2e18603894c2"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
-hash = "a1437f3f1fb56145e30df1c949fd873586d23620d66fb8e07f63fa01e5125a93"
+hash = "d981c6aa8000160ba5941fe87570aec1c987e62c28074792c869037480a23275"
 
 [[files]]
 file = "kubejs/server_scripts/quest_npcs.js"
@@ -2790,6 +2790,10 @@ hash = "8401f71d28bcb037ad3787668b01e855e49f61d2983bc9f78455b2eac57cfbe7"
 [[files]]
 file = "kubejs/startup_scripts/protect_boats.js"
 hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
+
+[[files]]
+file = "kubejs/startup_scripts/quest_fishing.js"
+hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
