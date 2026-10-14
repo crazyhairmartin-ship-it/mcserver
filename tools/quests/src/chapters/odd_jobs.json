@@ -1,0 +1,231 @@
+{
+  "title": "Odd Jobs and Nonsense",
+  "subtitle": "Pointless, and proud of it",
+  "icon": "minecraft:carved_pumpkin",
+  "group": "side",
+  "order": 1,
+  "quests": [
+    {
+      "id": "pn_take_a_seat",
+      "title": "Take a Seat",
+      "text": [
+        "Sit in a Handcrafted chair, on an Another Furniture bench and on a Let's Do sofa. That's it."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I sat in all three"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "handcrafted:oak_chair"
+        }
+      ],
+      "icon": "handcrafted:oak_chair"
+    },
+    {
+      "id": "pn_gerald",
+      "title": "Gerald",
+      "text": [
+        "Name a piece of cobblestone 'Gerald' at an anvil and keep him in your inventory for seven days."
+      ],
+      "tasks": [
+        {
+          "checkmark": "Gerald and I are inseparable"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cobblestone"
+        }
+      ],
+      "icon": "minecraft:cobblestone"
+    },
+    {
+      "id": "pn_bonk",
+      "title": "Bonk",
+      "text": [
+        "Hit a target dummy one hundred times. It doesn't mind."
+      ],
+      "tasks": [
+        {
+          "item": "dummmmmmy:target_dummy"
+        },
+        {
+          "checkmark": "Bonked a hundred times"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:stick"
+        }
+      ],
+      "icon": "dummmmmmy:target_dummy"
+    },
+    {
+      "id": "pn_pumpkin_head",
+      "title": "Pumpkin Head",
+      "text": [
+        "Wear a carved pumpkin on your head for a whole day and night."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:carved_pumpkin"
+        },
+        {
+          "checkmark": "I wore it the whole time"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:jack_o_lantern"
+        }
+      ],
+      "icon": "minecraft:carved_pumpkin"
+    },
+    {
+      "id": "pn_cake_tower",
+      "title": "Too Much Cake",
+      "text": [
+        "Build a cake tower three tiers high, and don't eat any of it."
+      ],
+      "tasks": [
+        {
+          "item": "bakery:cake_tower"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bakery:strawberry_cake_slice"
+        }
+      ],
+      "icon": "bakery:cake_tower"
+    },
+    {
+      "id": "pn_rainbow_sheep",
+      "title": "Every Colour",
+      "text": [
+        "Dye sixteen sheep sixteen different colours and get them in one pen."
+      ],
+      "tasks": [
+        {
+          "checkmark": "The pen is a rainbow"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:white_wool"
+        }
+      ],
+      "icon": "minecraft:white_wool"
+    },
+    {
+      "id": "pn_soap",
+      "title": "Squeaky Clean",
+      "text": [
+        "Make some soap and wash the dye off something that really didn't need washing."
+      ],
+      "tasks": [
+        {
+          "item": "supplementaries:soap"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:soap"
+        }
+      ],
+      "icon": "supplementaries:soap"
+    },
+    {
+      "id": "pn_busker",
+      "title": "Busker",
+      "text": [
+        "Play a whole song on an instrument in a village square. Nobody claps."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I played. Nobody clapped."
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald"
+        }
+      ],
+      "icon": "immersive_melodies:lute"
+    },
+    {
+      "id": "pn_pig_ferry",
+      "title": "Pig Ferry",
+      "text": [
+        "Ride a pig across a river with a carrot on a stick, and stay dry."
+      ],
+      "tasks": [
+        {
+          "checkmark": "The pig and I made it across"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:carrot"
+        }
+      ],
+      "icon": "minecraft:carrot_on_a_stick"
+    },
+    {
+      "id": "pn_flower_peak",
+      "title": "Summit Flower",
+      "text": [
+        "Put a flower pot with a flower in it on the very highest block of a village."
+      ],
+      "tasks": [
+        {
+          "checkmark": "The village has a summit flower"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:dandelion"
+        }
+      ],
+      "icon": "minecraft:flower_pot"
+    },
+    {
+      "id": "pn_rain_dance",
+      "title": "Rain Dance",
+      "text": [
+        "Stand outside, uncovered, through a whole thunderstorm."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I'm soaked"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:wet_sponge"
+        }
+      ],
+      "icon": "minecraft:water_bucket"
+    },
+    {
+      "id": "pn_ducks_in_a_row",
+      "title": "Ducks in a Row",
+      "text": [
+        "Get five ducks to stand in a straight line. Leads allowed."
+      ],
+      "tasks": [
+        {
+          "checkmark": "They're in a row. For now."
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bread"
+        }
+      ],
+      "icon": "minecraft:feather"
+    }
+  ]
+}

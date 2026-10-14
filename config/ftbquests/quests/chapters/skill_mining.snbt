@@ -1,0 +1,542 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_mining"
+	group: "1CAE106B8DA521D5"
+	icon: "minecraft:iron_pickaxe"
+	id: "335ECC7019CC40A9"
+	order_index: 1
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["The Miners' Guild signs up anyone who can prove they'll swing a pick."]
+			icon: "minecraft:stone_pickaxe"
+			id: "68DD37B4E2D23995"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "280510DE4AF7255C"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 60"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "1923F440365434D9"
+					silent: true
+					title: "+60 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "175487522DCF61C8"
+					stage: "fq.skill_mining.guild_card"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 32L
+					id: "78BE86E300466149"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "5E4EC50CF99FDAF0"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					id: "2E390CE9ED99A64A"
+					item: "minecraft:stone_pickaxe"
+					only_from_crafting: true
+					type: "item"
+				}
+			]
+			title: "The Guild Card"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["68DD37B4E2D23995"]
+			description: ["Your first paid shift: the shallow seams the guild leases near the village."]
+			icon: "minecraft:raw_copper"
+			id: "106F34284E0B558E"
+			rewards: [
+				{
+					count: 64
+					id: "7C7A863E0F63FCEB"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 80"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "4884210D985C5436"
+					silent: true
+					title: "+80 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 24L
+					id: "56A8E9FCFD64FF8C"
+					item: "minecraft:raw_copper"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "08C291EAD93F7B1C"
+					item: "minecraft:coal"
+					type: "item"
+				}
+			]
+			title: "First Shift"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["106F34284E0B558E"]
+			description: ["A small collapse has trapped an apprentice in a tunnel. Dig through the gravel without bringing the rest down, and get him out."]
+			icon: "minecraft:gravel"
+			id: "34679A6345ADA8B5"
+			rewards: [
+				{
+					id: "7EDCC0998CCBC7A3"
+					item: "minecraft:iron_pickaxe"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 100"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "6748DBFAD8F0BB3E"
+					silent: true
+					title: "+100 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6C27FD8D2F643D63"
+					stage: "fq.skill_mining.canary_call.enc0"
+					title: "Meet Trapped Apprentice"
+					type: "gamestage"
+				}
+			]
+			title: "The Canary Stopped Singing"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["34679A6345ADA8B5"]
+			description: ["After the scare the guild drills its crews in safety: ladders, scaffolding, and plenty of light."]
+			icon: "minecraft:scaffolding"
+			id: "7A88289CAA3BADAC"
+			rewards: [
+				{
+					count: 32
+					id: "24200E13BC4EC018"
+					item: "supplementaries:rope"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 80"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "2555EE3F6EAF447E"
+					silent: true
+					title: "+80 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "5B1D197D99B5D64A"
+					item: "minecraft:ladder"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "39C7A5EC0D50D4F0"
+					item: "minecraft:scaffolding"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "19BE195E7070047A"
+					item: "minecraft:torch"
+					type: "item"
+				}
+			]
+			title: "Shoring Up"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7A88289CAA3BADAC"]
+			description: ["The guild is mapping every abandoned mineshaft before someone falls into one. Find one and recover a lantern and a rail from its deepest gallery."]
+			icon: "minecraft:rail"
+			id: "1AF48795694EDE25"
+			rewards: [
+				{
+					id: "30F22BB84E5EFFC5"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 100"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "6132EF2927809760"
+					silent: true
+					title: "+100 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7BA7F0A4A4C1EE15"
+					structure: "#fotf:groups/mines"
+					title: "Find an old mineshaft"
+					type: "structure"
+				}
+				{
+					id: "1747507673A2391B"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					id: "721E8BE9D659D635"
+					item: "minecraft:rail"
+					type: "item"
+				}
+			]
+			title: "The Old Workings"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1AF48795694EDE25"]
+			description: ["The guild's smiths need metal: mine raw iron, smelt it, and forge a full set of iron tools for the next rescue crew."]
+			icon: "minecraft:iron_pickaxe"
+			id: "5BF794EC9C9F25D1"
+			rewards: [
+				{
+					id: "26559FCB40F8381A"
+					item: "minecraft:blast_furnace"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 150"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "6BFE17F75CC35949"
+					silent: true
+					title: "+150 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 48L
+					id: "115057AE15974255"
+					item: "minecraft:raw_iron"
+					type: "item"
+				}
+				{
+					id: "2CF5ED3BCEF7D932"
+					item: "minecraft:iron_pickaxe"
+					type: "item"
+				}
+				{
+					id: "499A0FE6C8D715C2"
+					item: "minecraft:iron_shovel"
+					type: "item"
+				}
+				{
+					id: "46AD54EC1D1E1C85"
+					item: "minecraft:iron_axe"
+					type: "item"
+				}
+			]
+			title: "The Iron Seam"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5BF794EC9C9F25D1"]
+			description: ["Every torch in an old mineshaft has gone out, and a guild surveyor is somewhere inside. Follow his tapping and the glow lichen he scraped on the walls."]
+			icon: "artifacts:night_vision_goggles"
+			id: "2948ECE03AAACF8C"
+			rewards: [
+				{
+					id: "604384C8B10DDBF4"
+					item: "artifacts:night_vision_goggles"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 200"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "4991BF0481FE3D16"
+					silent: true
+					title: "+200 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "26B560645E145918"
+					structure: "#fotf:groups/mines"
+					title: "Go into the dark"
+					type: "structure"
+				}
+				{
+					id: "185F6185D192E89F"
+					stage: "fq.skill_mining.lights_out.enc1"
+					title: "Meet Lost Surveyor"
+					type: "gamestage"
+				}
+			]
+			title: "Lights Out"
+			x: 9.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["5BF794EC9C9F25D1"]
+			description: ["The guild's best miners break a whole vein in one swing. Hold the Ultimine key and try it."]
+			icon: "minecraft:iron_ore"
+			id: "0D6646EA07D76186"
+			rewards: [
+				{
+					count: 16
+					id: "7FE63E1EB6C1FD06"
+					item: "minecraft:cooked_beef"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 150"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "7765F0303AEAA8DF"
+					silent: true
+					title: "+150 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "7F2A7741682F68EF"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "4DF12F446E2E55DA"
+					item: "minecraft:raw_iron"
+					type: "item"
+				}
+			]
+			title: "Vein Breaker"
+			x: 9.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["0D6646EA07D76186"]
+			description: ["A prospector's letter speaks of ore in the high peaks. Climb the tallest mountains and mine alpine ore and salt."]
+			icon: "meadow:alpine_iron_ore"
+			id: "6A2F1201A7D35432"
+			rewards: [
+				{
+					count: 32
+					id: "73C680B437F88096"
+					item: "supplementaries:rope"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 200"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "22D57DD510602EF4"
+					silent: true
+					title: "+200 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4E9CF6CC3AC54975"
+					item: "meadow:alpine_iron_ore"
+					type: "item"
+				}
+				{
+					id: "6236AE1A6FEC3C07"
+					item: "meadow:alpine_copper_ore"
+					type: "item"
+				}
+				{
+					id: "69834D821EE33E5F"
+					item: "meadow:alpine_salt"
+					type: "item"
+				}
+			]
+			title: "Alpine Prospect"
+			x: 10.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["0D6646EA07D76186"]
+			description: ["A mining camp out in the wilds is short of everything. Take them food, light and tools."]
+			icon: "minecraft:bread"
+			id: "2E72B3CF17531F59"
+			rewards: [
+				{
+					count: 2
+					id: "76042BA6C070A30C"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 200"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "2370CA6E6CEABE5C"
+					silent: true
+					title: "+200 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "250D8343C5C6E918"
+					structure: "#fotf:groups/mining_camps"
+					title: "Find the mining camp"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 32L
+					id: "3FEF160CFF0EF742"
+					item: "minecraft:bread"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "3BDFE80193343DE2"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "3A9B3721F296CF5D"
+					item: "minecraft:iron_pickaxe"
+					type: "item"
+				}
+			]
+			title: "Supplies for the Camp"
+			x: 10.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["6A2F1201A7D35432"]
+			description: ["Fill in the guild's depth chart: what lies at every level of the world."]
+			icon: "minecraft:lapis_lazuli"
+			id: "08B9942D3B6ED797"
+			rewards: [
+				{
+					id: "285A40D8F8D807C1"
+					item: "minecraft:compass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 250"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "78672CD50A627E4D"
+					silent: true
+					title: "+250 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "56D9E49EA1D22BD6"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "662FB59455F11531"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "1B562736004F9301"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "25F3EA586E364C2D"
+					item: "minecraft:pointed_dripstone"
+					type: "item"
+				}
+			]
+			title: "The Depth Chart"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["08B9942D3B6ED797"]
+			description: ["Miners talk of a ghostly figure that digs beside you in the deep and then vanishes. Find the Underminer and watch where it goes."]
+			icon: "minecraft:iron_pickaxe"
+			id: "5CECB57780CAAE48"
+			rewards: [
+				{
+					count: 16
+					id: "7DFD6095B3D76898"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 300"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "7D7590DD1B6E5103"
+					silent: true
+					title: "+300 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4E02E93123BE3386"
+					observe_type: "entity_type"
+					timer: 60L
+					title: "Watch the Underminer"
+					to_observe: "alexsmobs:underminer"
+					type: "observation"
+				}
+			]
+			title: "The Underminer"
+			x: 13.5d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Mining path"]
+	title: "The Miners' Guild"
+}

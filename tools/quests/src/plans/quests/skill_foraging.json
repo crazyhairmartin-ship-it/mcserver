@@ -1,0 +1,563 @@
+{
+ "line": "Foraging path",
+ "chapter": "skill_foraging",
+ "group": "skills",
+ "giver": "Herbalists: cleric representatives in every village; the Head Herbalist in Reece for key moments",
+ "feel": "A botanist's field journal: rare plants, wild biomes and restoring a dying grove",
+ "quests": [
+  {
+   "id": "field_journal",
+   "title": "A Blank Field Journal",
+   "tier": "prologue",
+   "types": [
+    "talk",
+    "craft"
+   ],
+   "after": [],
+   "summary": "A village cleric of the Herbalists hands you a blank field journal and asks you to start it properly: craft a book and quill and press your first five different flowers into it.",
+   "mods": [],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Foraging XP, a herbalist's satchel"
+  },
+  {
+   "id": "hedgerows",
+   "title": "Hedgerow Pickings",
+   "tier": "prologue",
+   "types": [
+    "collect"
+   ],
+   "after": [
+    "field_journal"
+   ],
+   "summary": "Walk the hedgerows around the village and fill a basket: sweet berries, brown and red mushrooms, a wildflower (Biomes O' Plenty) and a daisy (Regions Unexplored).",
+   "mods": [
+    "biomesoplenty",
+    "regions_unexplored",
+    "farmersdelight"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Foraging XP, a wooden basket"
+  },
+  {
+   "id": "six_saplings",
+   "title": "Six Saplings",
+   "tier": "prologue",
+   "types": [
+    "collect"
+   ],
+   "after": [
+    "field_journal"
+   ],
+   "summary": "Every forager learns the trees first: collect saplings of six different trees and note where each grew.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Foraging XP, bone meal and a flint knife for bark"
+  },
+  {
+   "id": "loggers_camp",
+   "title": "The Loggers' Camp",
+   "tier": "prologue",
+   "types": [
+    "deliver",
+    "collect"
+   ],
+   "after": [
+    "six_saplings"
+   ],
+   "summary": "The loggers at a Meadow logging camp are behind on their order: chop and deliver 64 pine logs, and bring back the strips of tree bark the herbalists use for tinctures.",
+   "mods": [
+    "meadow",
+    "farmersdelight"
+   ],
+   "landmarks": [
+    "meadow:logging_camp"
+   ],
+   "reward": "Foraging XP, a woodcutter (Meadow)"
+  },
+  {
+   "id": "first_tea",
+   "title": "The First Tea",
+   "tier": "prologue",
+   "types": [
+    "brew",
+    "collect"
+   ],
+   "after": [
+    "hedgerows"
+   ],
+   "summary": "Find wild rooibos, wild coffee or wild yerba mate (Herbal Brews), dry the leaves and brew your first pot in a tea kettle for the cleric.",
+   "mods": [
+    "herbalbrews"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, a copper tea kettle"
+  },
+  {
+   "id": "outpost_notes",
+   "title": "The Forager's Outpost",
+   "tier": "act1",
+   "types": [
+    "discover",
+    "fetch"
+   ],
+   "after": [
+    "loggers_camp"
+   ],
+   "summary": "Find a forager outpost out in the wilds and recover the notes its last keeper left on the herbs of that region; copy them into your journal.",
+   "mods": [
+    "structory_towers"
+   ],
+   "landmarks": [
+    "#forager_outposts"
+   ],
+   "reward": "Foraging XP, a pressed-flower page of rare finds"
+  },
+  {
+   "id": "lavender_sleep",
+   "title": "Lavender for the Sleepless",
+   "tier": "act1",
+   "types": [
+    "brew",
+    "deliver"
+   ],
+   "after": [
+    "first_tea"
+   ],
+   "summary": "A villager hasn't slept in a week: gather lavender from a Biomes O' Plenty lavender field and lavender blossom (Herbal Brews), brew lavender tea and deliver it warm.",
+   "mods": [
+    "biomesoplenty",
+    "herbalbrews"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, a bed and lavender seeds"
+  },
+  {
+   "id": "bloom_catalogue",
+   "title": "The Bloom Catalogue",
+   "tier": "act1",
+   "types": [
+    "collect"
+   ],
+   "after": [
+    "outpost_notes"
+   ],
+   "summary": "Catalogue the wildflowers of the temperate lands (Blooming Nature): pink foxglove, bluebell, blue lupine, gladiolus and white orchid, one of each pressed in the journal.",
+   "mods": [
+    "bloomingnature"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, a big flower pot"
+  },
+  {
+   "id": "wandering_gardener",
+   "title": "The Wandering Gardener",
+   "tier": "act1",
+   "types": [
+    "encounter",
+    "trade"
+   ],
+   "after": [
+    "bloom_catalogue"
+   ],
+   "summary": "A wandering gardener (Blooming Nature) shows up on the road with seeds you've never seen; trade her pressed flowers for saplings of chestnut, larch and ebony.",
+   "mods": [
+    "bloomingnature"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, three rare saplings"
+  },
+  {
+   "id": "swamp_hermit",
+   "title": "The Swamp Hermit",
+   "tier": "act1",
+   "types": [
+    "talk",
+    "trade"
+   ],
+   "after": [
+    "lavender_sleep"
+   ],
+   "summary": "An old hermit herbalist lives in a swamp hut. Bring her cattails, reeds and a hibiscus, and she teaches you to brew hibiscus tea and hands you a page on bog plants.",
+   "mods": [
+    "bloomingnature",
+    "herbalbrews",
+    "biomesoplenty"
+   ],
+   "landmarks": [
+    "#witch_huts",
+    "bloomingnature:swamp_hut"
+   ],
+   "reward": "Foraging XP, a witch hat (Herbal Brews)"
+  },
+  {
+   "id": "wild_herbs",
+   "title": "Wild Herbs",
+   "tier": "act1",
+   "types": [
+    "collect",
+    "brew"
+   ],
+   "after": [
+    "first_tea"
+   ],
+   "summary": "The Herbalists' oldest remedies come from weeds: find wild nettle and wild ribwort (Farm & Charm) and brew nettle tea and ribwort tea for a coughing farmhand.",
+   "mods": [
+    "farm_and_charm"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, tea cups and a recipe card"
+  },
+  {
+   "id": "alpine_flora",
+   "title": "Alpine Flora",
+   "tier": "act1",
+   "types": [
+    "explore",
+    "collect"
+   ],
+   "after": [
+    "bloom_catalogue"
+   ],
+   "summary": "Climb to the high meadows of the tallest peaks (Tectonic) and press the alpine flowers that grow nowhere else: enzian, saxifrage, delphinium and the alpine poppy (Meadow).",
+   "mods": [
+    "tectonic",
+    "meadow"
+   ],
+   "landmarks": [
+    "meadow:observation_post"
+   ],
+   "reward": "Foraging XP, fur boots"
+  },
+  {
+   "id": "truffles",
+   "title": "Truffle Season",
+   "tier": "act1",
+   "types": [
+    "hunt",
+    "collect"
+   ],
+   "after": [
+    "wild_herbs"
+   ],
+   "summary": "Herbalists prize truffles and hazelnuts: follow boars and squirrels (WilderNature) through the woods and gather 4 truffles and 16 hazelnuts.",
+   "mods": [
+    "wildernature"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, a truffle-hunter's cloak (fur cloak)"
+  },
+  {
+   "id": "wanderers_map",
+   "title": "Mapping the Wild",
+   "tier": "act2",
+   "types": [
+    "discover",
+    "milestone"
+   ],
+   "after": [
+    "outpost_notes",
+    "main_story:act2_start"
+   ],
+   "summary": "Fill the journal's map: set foot in 20 different biomes, at least five of them from Biomes O' Plenty and five from Regions Unexplored. The Herbalists craft you a Nature's Compass to keep going.",
+   "mods": [
+    "biomesoplenty",
+    "regions_unexplored",
+    "naturescompass"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, a Nature's Compass"
+  },
+  {
+   "id": "magnolia_bloom",
+   "title": "Magnolia and Jacaranda",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "collect"
+   ],
+   "after": [
+    "wanderers_map"
+   ],
+   "summary": "The journal has blank pages for the flowering forests: pink magnolia flowers from a magnolia woodland (Regions Unexplored) and a jacaranda sapling from a jacaranda glade (Biomes O' Plenty).",
+   "mods": [
+    "regions_unexplored",
+    "biomesoplenty"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, a magnolia sapling"
+  },
+  {
+   "id": "redwood_giant",
+   "title": "The Redwood Giant",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "puzzle"
+   ],
+   "after": [
+    "wanderers_map"
+   ],
+   "summary": "Find the tallest redwood in a redwood forest, climb it to measure it with a dropped rope, and bring down a redwood sapling and a branch of its leaves.",
+   "mods": [
+    "biomesoplenty",
+    "regions_unexplored"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, climbing gear (ladders and rope)"
+  },
+  {
+   "id": "lost_botanist",
+   "title": "The Lost Botanist",
+   "tier": "act2",
+   "types": [
+    "rescue",
+    "encounter"
+   ],
+   "after": [
+    "swamp_hermit"
+   ],
+   "summary": "A visiting botanist went into the bog and didn't come back. Follow his trail of dropped pressed flowers across a muskeg or bog (Biomes O' Plenty) and find him stuck in the mud at nightfall.",
+   "mods": [
+    "biomesoplenty"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, his own field journal, full of rare sketches"
+  },
+  {
+   "id": "glowing_grotto",
+   "title": "The Glowing Grotto",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "collect"
+   ],
+   "after": [
+    "lost_botanist"
+   ],
+   "summary": "The botanist's journal points underground: find a glowing grotto (Biomes O' Plenty) and collect glowshrooms, glowflowers and glowworm silk.",
+   "mods": [
+    "biomesoplenty"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, a glowing moss lantern"
+  },
+  {
+   "id": "bioshroom_caves",
+   "title": "Bioshroom Caves",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "collect"
+   ],
+   "after": [
+    "glowing_grotto"
+   ],
+   "summary": "Below the grotto lies another wonder: bioshroom caves (Regions Unexplored). Gather blue, green and pink bioshrooms and a sprig of cave hyssop.",
+   "mods": [
+    "regions_unexplored"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, glowing bioshroom blocks"
+  },
+  {
+   "id": "rainforest_run",
+   "title": "Before It Wilts",
+   "tier": "act2",
+   "types": [
+    "timed",
+    "deliver"
+   ],
+   "after": [
+    "magnolia_bloom"
+   ],
+   "summary": "The Herbalists need a fresh bird of paradise (Blooming Nature) and a mahogany sapling from the rainforest for a cure; bring them back to Reece before the next sunrise.",
+   "mods": [
+    "bloomingnature",
+    "biomesoplenty"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, a potion of healing brewed with them"
+  },
+  {
+   "id": "snowbelles",
+   "title": "Snowbelles",
+   "tier": "act2",
+   "types": [
+    "collect",
+    "explore"
+   ],
+   "after": [
+    "wanderers_map"
+   ],
+   "summary": "In the cold north grow snowbelles in many colours (Regions Unexplored) and snowblossom trees (Biomes O' Plenty): press six snowbelle colours and bring a snowblossom sapling.",
+   "mods": [
+    "regions_unexplored",
+    "biomesoplenty"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, warm fur armour (Meadow)"
+  },
+  {
+   "id": "herbarium",
+   "title": "The Herbarium",
+   "tier": "act2",
+   "types": [
+    "build"
+   ],
+   "after": [
+    "bioshroom_caves",
+    "snowbelles"
+   ],
+   "summary": "Build the Herbalists a herbarium in Reece: glass, big flower pots (Meadow and Blooming Nature), and a living specimen of every plant you've pressed so far.",
+   "mods": [
+    "meadow",
+    "bloomingnature"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, the herbarium's key and a seat on the Herbalists' council"
+  },
+  {
+   "id": "nether_botany",
+   "title": "Nether Botany",
+   "tier": "act3",
+   "types": [
+    "explore",
+    "collect"
+   ],
+   "after": [
+    "main_story:act3_start",
+    "herbarium"
+   ],
+   "summary": "Even the Nether grows things: crimson and warped fungi, a burning blossom and a hellbark sapling (Biomes O' Plenty), and a glistering bloom (Regions Unexplored), carried home without burning.",
+   "mods": [
+    "biomesoplenty",
+    "regions_unexplored"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, fire resistance potions"
+  },
+  {
+   "id": "dying_grove",
+   "title": "The Dying Grove",
+   "tier": "act3",
+   "types": [
+    "farm",
+    "build",
+    "brew"
+   ],
+   "after": [
+    "nether_botany"
+   ],
+   "summary": "The Herbalists' sacred grove near Reece is withering into dead forest. Clear the dead logs, cure the soil with herbal infusions and bone meal, and replant it with the saplings you've collected until leaves grow back.",
+   "mods": [
+    "herbalbrews",
+    "biomesoplenty"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, a flowering oak sapling from the grove's heart"
+  },
+  {
+   "id": "mystic_trees",
+   "title": "The Three Impossible Trees",
+   "tier": "act3",
+   "types": [
+    "collect",
+    "explore"
+   ],
+   "after": [
+    "dying_grove"
+   ],
+   "summary": "An old page lists trees no one has grown in Reece: a magic sapling from a mystic grove, a rainbow birch sapling, and a golden larch sapling (Biomes O' Plenty, Regions Unexplored).",
+   "mods": [
+    "biomesoplenty",
+    "regions_unexplored"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, the impossible trees planted in the herbarium"
+  },
+  {
+   "id": "origin_valley",
+   "title": "The Origin Valley",
+   "tier": "act4",
+   "types": [
+    "discover",
+    "explore"
+   ],
+   "after": [
+    "main_story:act4_start",
+    "mystic_trees"
+   ],
+   "summary": "Legend says all plants began in one valley where the grass is the old green; find an origin valley (Biomes O' Plenty) and take an origin sapling and origin grass.",
+   "mods": [
+    "biomesoplenty"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, an origin sapling of your own"
+  },
+  {
+   "id": "end_flora",
+   "title": "Flowers at the End",
+   "tier": "act4",
+   "types": [
+    "explore",
+    "collect"
+   ],
+   "after": [
+    "main_story:act4_finale",
+    "origin_valley"
+   ],
+   "summary": "With the Dragon gone, the Herbalists want the End's plants: chorus flowers, an endbloom and enderphyte (Biomes O' Plenty), and an empyreal sapling, plus a look at an enderbloom grove.",
+   "mods": [
+    "biomesoplenty",
+    "mes"
+   ],
+   "landmarks": [
+    "mes:enderbloom_grove"
+   ],
+   "reward": "Foraging XP, a chorus garden kit"
+  },
+  {
+   "id": "almanac",
+   "title": "The Complete Almanac",
+   "tier": "act5",
+   "types": [
+    "milestone",
+    "deliver"
+   ],
+   "after": [
+    "main_story:act5_start",
+    "end_flora"
+   ],
+   "summary": "Finish the field journal: 60 different plants pressed, from all three dimensions, and hand it to the Head Herbalist in Reece to be copied for every village.",
+   "mods": [
+    "biomesoplenty",
+    "regions_unexplored",
+    "bloomingnature",
+    "meadow",
+    "herbalbrews"
+   ],
+   "landmarks": [],
+   "reward": "Foraging XP, the almanac bound in leather with your name on it"
+  },
+  {
+   "id": "greenwarden",
+   "title": "Greenwarden",
+   "tier": "act5",
+   "types": [
+    "talk",
+    "milestone"
+   ],
+   "after": [
+    "almanac"
+   ],
+   "summary": "The Head Herbalist names you Greenwarden of the wild lands and gives you the axe the order uses only on dead wood.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Foraging XP, Greenwarden (named netherite axe: Efficiency V, Unbreaking III, Mending, unbreakable)"
+  }
+ ]
+}

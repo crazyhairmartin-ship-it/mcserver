@@ -1,0 +1,432 @@
+{
+  "title": "The Miners' Guild",
+  "subtitle": "Mining path",
+  "icon": "minecraft:iron_pickaxe",
+  "group": "skills",
+  "order": 0,
+  "quests": [
+    {
+      "id": "guild_card",
+      "title": "The Guild Card",
+      "text": [
+        "The Miners' Guild signs up anyone who can prove they'll swing a pick."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:cobblestone",
+          "count": 32,
+          "consume": true
+        },
+        {
+          "item": "minecraft:coal",
+          "count": 16,
+          "consume": true
+        },
+        {
+          "item": "minecraft:stone_pickaxe",
+          "crafted": true
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:lantern"
+        },
+        {
+          "skill": "mining",
+          "xp": 60
+        }
+      ],
+      "icon": "minecraft:stone_pickaxe",
+      "giver": {
+        "type": "org",
+        "org": "miners",
+        "lines": [
+          "Want to join the Miners' Guild? Prove you'll swing a pick.",
+          "Bring me cobblestone, coal and a pickaxe you made yourself."
+        ],
+        "accept": "Sign me up"
+      }
+    },
+    {
+      "id": "first_shift",
+      "title": "First Shift",
+      "after": [
+        "guild_card"
+      ],
+      "text": [
+        "Your first paid shift: the shallow seams the guild leases near the village."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:raw_copper",
+          "count": 24
+        },
+        {
+          "item": "minecraft:coal",
+          "count": 16
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:torch",
+          "count": 64
+        },
+        {
+          "skill": "mining",
+          "xp": 80
+        }
+      ],
+      "icon": "minecraft:raw_copper"
+    },
+    {
+      "id": "canary_call",
+      "title": "The Canary Stopped Singing",
+      "after": [
+        "first_shift"
+      ],
+      "text": [
+        "A small collapse has trapped an apprentice in a tunnel. Dig through the gravel without bringing the rest down, and get him out."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Trapped Apprentice",
+            "where": {
+              "below_y": 50
+            },
+            "then": "talk",
+            "lines": [
+              "I thought nobody was coming!",
+              "The whole roof just... went. Thank you. I'll follow you out."
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_pickaxe"
+        },
+        {
+          "skill": "mining",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:gravel"
+    },
+    {
+      "id": "shoring_up",
+      "title": "Shoring Up",
+      "after": [
+        "canary_call"
+      ],
+      "text": [
+        "After the scare the guild drills its crews in safety: ladders, scaffolding, and plenty of light."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:ladder",
+          "count": 16
+        },
+        {
+          "item": "minecraft:scaffolding",
+          "count": 16
+        },
+        {
+          "item": "minecraft:torch",
+          "count": 64
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:rope",
+          "count": 32
+        },
+        {
+          "skill": "mining",
+          "xp": 80
+        }
+      ],
+      "icon": "minecraft:scaffolding"
+    },
+    {
+      "id": "old_workings",
+      "title": "The Old Workings",
+      "after": [
+        "shoring_up"
+      ],
+      "text": [
+        "The guild is mapping every abandoned mineshaft before someone falls into one. Find one and recover a lantern and a rail from its deepest gallery."
+      ],
+      "tasks": [
+        {
+          "structure": "#mines",
+          "title": "Find an old mineshaft"
+        },
+        {
+          "item": "minecraft:lantern"
+        },
+        {
+          "item": "minecraft:rail"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:map"
+        },
+        {
+          "skill": "mining",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:rail"
+    },
+    {
+      "id": "iron_seam",
+      "title": "The Iron Seam",
+      "after": [
+        "old_workings"
+      ],
+      "text": [
+        "The guild's smiths need metal: mine raw iron, smelt it, and forge a full set of iron tools for the next rescue crew."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:raw_iron",
+          "count": 48
+        },
+        {
+          "item": "minecraft:iron_pickaxe"
+        },
+        {
+          "item": "minecraft:iron_shovel"
+        },
+        {
+          "item": "minecraft:iron_axe"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:blast_furnace"
+        },
+        {
+          "skill": "mining",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:iron_pickaxe"
+    },
+    {
+      "id": "lights_out",
+      "title": "Lights Out",
+      "after": [
+        "iron_seam"
+      ],
+      "text": [
+        "Every torch in an old mineshaft has gone out, and a guild surveyor is somewhere inside. Follow his tapping and the glow lichen he scraped on the walls."
+      ],
+      "tasks": [
+        {
+          "structure": "#mines",
+          "title": "Go into the dark"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Lost Surveyor",
+            "where": {
+              "below_y": 40
+            },
+            "then": "talk",
+            "lines": [
+              "You found me! I scraped lichen on every wall I passed.",
+              "Here, take my spare goggles. I'm never coming down here without a second pair again."
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:night_vision_goggles"
+        },
+        {
+          "skill": "mining",
+          "xp": 200
+        }
+      ],
+      "icon": "artifacts:night_vision_goggles",
+      "signature": "artifacts:night_vision_goggles"
+    },
+    {
+      "id": "vein_breaker",
+      "title": "Vein Breaker",
+      "after": [
+        "iron_seam"
+      ],
+      "text": [
+        "The guild's best miners break a whole vein in one swing. Hold the Ultimine key and try it."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:coal",
+          "count": 64
+        },
+        {
+          "item": "minecraft:raw_iron",
+          "count": 32
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cooked_beef",
+          "count": 16
+        },
+        {
+          "skill": "mining",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:iron_ore"
+    },
+    {
+      "id": "alpine_prospect",
+      "title": "Alpine Prospect",
+      "after": [
+        "vein_breaker"
+      ],
+      "text": [
+        "A prospector's letter speaks of ore in the high peaks. Climb the tallest mountains and mine alpine ore and salt."
+      ],
+      "tasks": [
+        {
+          "item": "meadow:alpine_iron_ore"
+        },
+        {
+          "item": "meadow:alpine_copper_ore"
+        },
+        {
+          "item": "meadow:alpine_salt"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:rope",
+          "count": 32
+        },
+        {
+          "skill": "mining",
+          "xp": 200
+        }
+      ],
+      "icon": "meadow:alpine_iron_ore"
+    },
+    {
+      "id": "supply_run",
+      "title": "Supplies for the Camp",
+      "after": [
+        "vein_breaker"
+      ],
+      "text": [
+        "A mining camp out in the wilds is short of everything. Take them food, light and tools."
+      ],
+      "tasks": [
+        {
+          "structure": "#mining_camps",
+          "title": "Find the mining camp"
+        },
+        {
+          "item": "minecraft:bread",
+          "count": 32,
+          "consume": true
+        },
+        {
+          "item": "minecraft:torch",
+          "count": 64,
+          "consume": true
+        },
+        {
+          "item": "minecraft:iron_pickaxe",
+          "count": 4,
+          "consume": true
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:lantern",
+          "count": 2
+        },
+        {
+          "skill": "mining",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:bread"
+    },
+    {
+      "id": "depth_chart",
+      "title": "The Depth Chart",
+      "after": [
+        "alpine_prospect"
+      ],
+      "text": [
+        "Fill in the guild's depth chart: what lies at every level of the world."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:redstone",
+          "count": 16
+        },
+        {
+          "item": "minecraft:lapis_lazuli",
+          "count": 16
+        },
+        {
+          "item": "minecraft:raw_gold",
+          "count": 8
+        },
+        {
+          "item": "minecraft:pointed_dripstone",
+          "count": 4
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:compass"
+        },
+        {
+          "skill": "mining",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:lapis_lazuli"
+    },
+    {
+      "id": "underminer",
+      "title": "The Underminer",
+      "after": [
+        "depth_chart"
+      ],
+      "text": [
+        "Miners talk of a ghostly figure that digs beside you in the deep and then vanishes. Find the Underminer and watch where it goes."
+      ],
+      "tasks": [
+        {
+          "observe": "alexsmobs:underminer",
+          "ticks": 60,
+          "title": "Watch the Underminer"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:raw_gold",
+          "count": 16
+        },
+        {
+          "skill": "mining",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:iron_pickaxe"
+    }
+  ]
+}

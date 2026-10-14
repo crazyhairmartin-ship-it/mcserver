@@ -1,0 +1,252 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "small_favours"
+	group: "097503D344895135"
+	icon: "bakery:crusty_bread"
+	id: "02B49E474A499313"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["2145643E4E5C72B6"]
+			description: ["Bram the baker would gladly give you a loaf for the road, if he had any flour."]
+			icon: "bakery:crusty_bread"
+			id: "3961E48F6276ED87"
+			rewards: [
+				{
+					id: "3D973E743CAE0167"
+					item: "bakery:bread_with_jam"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "11F43A4BAF427789"
+					stage: "fq.small_favours.sf_out_of_flour.talk0"
+					title: "Talk to Bram the Baker"
+					type: "gamestage"
+				}
+			]
+			title: "Just a Loaf"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3961E48F6276ED87"]
+			description: ["Miller Hesk is standing under his windmill, looking at it."]
+			icon: "minecraft:white_wool"
+			id: "43BE52B6F054011C"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 30"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "28808E3907F294D3"
+					silent: true
+					title: "+30 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5103DD3BA5CFEF79"
+					stage: "fq.small_favours.sf_torn_sails.talk0"
+					title: "Talk to Miller Hesk"
+					type: "gamestage"
+				}
+			]
+			title: "Torn Sails"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["43BE52B6F054011C"]
+			description: ["Nell the weaver would weave canvas this minute, if her loom worked."]
+			icon: "farmersdelight:straw"
+			id: "4CB27A0EAA885B6A"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 30"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "783DA05AA32E523E"
+					silent: true
+					title: "+30 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "093D3D8DCEB8A45D"
+					stage: "fq.small_favours.sf_broken_shuttle.talk0"
+					title: "Talk to Nell the Weaver"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "0E2710BBAE8242FE"
+					item: "farmersdelight:straw"
+					type: "item"
+				}
+			]
+			title: "The Broken Shuttle"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4CB27A0EAA885B6A"]
+			description: ["Olsen the carpenter will carve a shuttle. Eventually. He has standards."]
+			icon: "minecraft:birch_log"
+			id: "0C593D9BED4DC0BC"
+			rewards: [
+				{
+					count: 3
+					id: "5A42283ADA9B1926"
+					item: "minecraft:honeycomb"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 50"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "51BBB9BB6338A5E7"
+					silent: true
+					title: "+50 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7F0F2877CDAEA19A"
+					stage: "fq.small_favours.sf_old_birch.talk0"
+					title: "Talk to Olsen the Carpenter"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "21BE135C7B406DE9"
+					item: "minecraft:birch_log"
+					type: "item"
+				}
+			]
+			title: "Only the Old Birch Will Do"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0C593D9BED4DC0BC"]
+			description: ["Now everything can happen in the right order. Take the shuttle to Nell, and the canvas to Hesk."]
+			icon: "farmersdelight:canvas"
+			id: "738A2B6847C7CC67"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 60"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "5D37D7F865B45FA8"
+					silent: true
+					title: "+60 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "24B22C7F8FC58CDA"
+					stage: "fq.small_favours.sf_unwinding.talk0"
+					title: "Bring Nell the shuttle"
+					type: "gamestage"
+				}
+				{
+					id: "7B2ED9F20FF63865"
+					stage: "fq.small_favours.sf_unwinding.talk1"
+					title: "Bring Hesk the canvas"
+					type: "gamestage"
+				}
+			]
+			title: "Shuttle, Canvas, Sails"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["738A2B6847C7CC67"]
+			description: ["On the road back to Reece, something small and orange snatches the flour bag and bolts."]
+			icon: "minecraft:sweet_berries"
+			id: "4FA3D31A0985F860"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 50"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "1D5CA73A6DB1016C"
+					silent: true
+					title: "+50 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1FB22A01B1CE064F"
+					stage: "fq.small_favours.sf_fox_and_flour.enc0"
+					title: "Meet Flour Thief"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "72D8565A99C2B32E"
+					item: "minecraft:sweet_berries"
+					type: "item"
+				}
+			]
+			title: "The Fox and the Flour"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4FA3D31A0985F860"]
+			description: ["Bram has been waiting."]
+			icon: "bakery:breadbox"
+			id: "4E02AA86A0AF09DF"
+			rewards: [
+				{
+					count: 3
+					id: "5C9D2A39A0DC836E"
+					item: "bakery:crusty_bread"
+					type: "item"
+				}
+				{
+					id: "752FE891CCFC6CDF"
+					item: "bakery:breadbox"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 80"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "77D2FE029BAE0ACB"
+					silent: true
+					title: "+80 Cooking XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.25d
+			tasks: [
+				{
+					id: "0C1C9162DA9A89A0"
+					stage: "fq.small_favours.sf_the_loaf.talk0"
+					title: "Talk to Bram the Baker"
+					type: "gamestage"
+				}
+			]
+			title: "The Loaf"
+			x: 9.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["One small favour leads to another"]
+	title: "Small Favours"
+}

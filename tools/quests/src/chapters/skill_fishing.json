@@ -1,0 +1,380 @@
+{
+  "title": "The Anglers' Society",
+  "subtitle": "Fishing path",
+  "icon": "minecraft:fishing_rod",
+  "group": "skills",
+  "order": 2,
+  "quests": [
+    {
+      "id": "sign_up",
+      "title": "Entry Form",
+      "text": [
+        "Commodore Halloway runs the Anglers' Society from Reece. She'll sign you up for the season if you can land five fish with a plain rod."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "halloway",
+          "lines": [
+            "Another hopeful! Splendid.",
+            "Five fish, any kind, plain rod. Show me you can land them and you're in.",
+            "The season's long. Bring patience."
+          ]
+        },
+        {
+          "stat": "minecraft:fish_caught",
+          "count": 5,
+          "title": "Catch five fish"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:worm",
+          "count": 16
+        },
+        {
+          "skill": "fish",
+          "xp": 60
+        }
+      ],
+      "icon": "minecraft:fishing_rod"
+    },
+    {
+      "id": "bait_and_tackle",
+      "title": "Bait and Tackle",
+      "after": [
+        "sign_up"
+      ],
+      "text": [
+        "Every member keeps a worm farm for bait and a tackle box for hooks and bobbers."
+      ],
+      "tasks": [
+        {
+          "item": "aquaculture:worm_farm"
+        },
+        {
+          "item": "aquaculture:tackle_box"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:bobber"
+        },
+        {
+          "item": "aquaculture:fishing_line"
+        },
+        {
+          "skill": "fish",
+          "xp": 80
+        }
+      ],
+      "icon": "aquaculture:tackle_box"
+    },
+    {
+      "id": "a_rival_appears",
+      "title": "A Rival on the Bank",
+      "after": [
+        "bait_and_tackle"
+      ],
+      "text": [
+        "Someone is coming along the bank, and he looks very pleased with himself."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "character": "silas",
+            "then": "talk",
+            "lines": [
+              "Silas Pike. Champion angler. You'll have heard of me.",
+              "That rod? Ha. I bet you can't hook Grandfather, the old carp on this bank.",
+              "Go on then. Fish until he bites. I'll wait. I'm very patient when I'm winning."
+            ]
+          }
+        },
+        {
+          "drop": {
+            "from": [
+              "fishing"
+            ],
+            "chance": 0.12,
+            "item": {
+              "name": "Grandfather, the Old Carp",
+              "texture": "minecraft:item/cod",
+              "tooltip": "A prize catch"
+            }
+          },
+          "consume": false
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "fish",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:cod"
+    },
+    {
+      "id": "opening_cup",
+      "title": "The Opening Cup",
+      "after": [
+        "a_rival_appears"
+      ],
+      "text": [
+        "The first competition of the season, at the nearest fishing hut. The cup goes to whoever lands the society's ribboned trout. The winner wears the lucky angler's hat until next year, or for good, says the Commodore."
+      ],
+      "tasks": [
+        {
+          "structure": "#fishing_huts",
+          "title": "Go to a fishing hut"
+        },
+        {
+          "drop": {
+            "from": [
+              "fishing"
+            ],
+            "chance": 0.1,
+            "item": {
+              "name": "The Ribboned Trout",
+              "texture": "minecraft:item/cod",
+              "tooltip": "A prize catch"
+            }
+          },
+          "consume": false
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:anglers_hat"
+        },
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "artifacts:anglers_hat",
+      "signature": "artifacts:anglers_hat"
+    },
+    {
+      "id": "hundred_fish",
+      "title": "Tally Book",
+      "after": [
+        "opening_cup"
+      ],
+      "text": [
+        "The society keeps a lifetime tally for every member. A hundred fish ranks you for the summer heats."
+      ],
+      "tasks": [
+        {
+          "stat": "minecraft:fish_caught",
+          "count": 100,
+          "title": "Catch a hundred fish"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:iron_hook"
+        },
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:writable_book"
+    },
+    {
+      "id": "river_heat",
+      "title": "The River Heat",
+      "after": [
+        "opening_cup"
+      ],
+      "text": [
+        "Heat one runs along a river: a brown trout, a smallmouth bass, a bluegill and a perch, and then the heat's marked fish."
+      ],
+      "tasks": [
+        {
+          "item": "aquaculture:brown_trout"
+        },
+        {
+          "item": "aquaculture:smallmouth_bass"
+        },
+        {
+          "item": "aquaculture:bluegill"
+        },
+        {
+          "item": "aquaculture:perch"
+        },
+        {
+          "drop": {
+            "from": [
+              "fishing"
+            ],
+            "chance": 0.1,
+            "item": {
+              "name": "The Heat's Marked Fish",
+              "texture": "minecraft:item/cod",
+              "tooltip": "A prize catch"
+            }
+          },
+          "consume": false
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:iron_fishing_rod"
+        },
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "aquaculture:brown_trout"
+    },
+    {
+      "id": "hooks_and_lines",
+      "title": "Hooked",
+      "after": [
+        "river_heat"
+      ],
+      "text": [
+        "Silas won the heat on a technicality and won't stop bragging about his hooks. Make your own, so the next heat is fair."
+      ],
+      "tasks": [
+        {
+          "item": "aquaculture:light_hook"
+        },
+        {
+          "item": "aquaculture:heavy_hook"
+        },
+        {
+          "item": "aquaculture:double_hook"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:gold_hook"
+        },
+        {
+          "skill": "fish",
+          "xp": 120
+        }
+      ],
+      "icon": "aquaculture:double_hook"
+    },
+    {
+      "id": "trap_and_net",
+      "title": "Traps and Nets",
+      "after": [
+        "river_heat"
+      ],
+      "text": [
+        "Not every angler sits with a rod. Build a fish trap and a fishing net and set them overnight."
+      ],
+      "tasks": [
+        {
+          "item": "lilis_lucky_lures:fish_trap"
+        },
+        {
+          "item": "lilis_lucky_lures:fishing_net"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "lilis_lucky_lures:fish_bag"
+        },
+        {
+          "skill": "fish",
+          "xp": 120
+        }
+      ],
+      "icon": "lilis_lucky_lures:fish_trap"
+    },
+    {
+      "id": "lighthouse_ledger",
+      "title": "The Keeper's Ledger",
+      "after": [
+        "hooks_and_lines"
+      ],
+      "text": [
+        "The season's record book is kept at a lighthouse on the coast. Take the keeper a fresh cod meal and read the records, including one of Silas's that looks forged."
+      ],
+      "tasks": [
+        {
+          "structure": "#lighthouses",
+          "title": "Find a lighthouse"
+        },
+        {
+          "item": "lilis_lucky_lures:cooked_cod_meal",
+          "consume": true
+        },
+        {
+          "checkmark": "I read the records"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:lantern"
+    },
+    {
+      "id": "beach_weigh_in",
+      "title": "Beach Weigh-in",
+      "after": [
+        "lighthouse_ledger"
+      ],
+      "text": [
+        "The coastal heat ends with a party at a beach hut: catch three tropical fish, grill them, and serve the judges."
+      ],
+      "tasks": [
+        {
+          "structure": "beachparty:beach_hut",
+          "title": "Find the beach hut"
+        },
+        {
+          "item": "lilis_lucky_lures:grilled_tropical_fish",
+          "count": 3,
+          "consume": true
+        }
+      ],
+      "rewards": [
+        {
+          "item": "lilis_lucky_lures:fish_trophy_frame"
+        },
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "lilis_lucky_lures:grilled_tropical_fish"
+    },
+    {
+      "id": "dropped_rod",
+      "title": "The Rod at the Bottom",
+      "after": [
+        "beach_weigh_in"
+      ],
+      "text": [
+        "The society's heirloom rod went over the side of a boat in the deepest lake around. Silas swears it wasn't him. Dive down and get it back; the old diver's snorkel is yours afterwards."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I brought the heirloom rod up"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:snorkel"
+        },
+        {
+          "skill": "fish",
+          "xp": 200
+        }
+      ],
+      "icon": "artifacts:snorkel",
+      "signature": "artifacts:snorkel"
+    }
+  ]
+}

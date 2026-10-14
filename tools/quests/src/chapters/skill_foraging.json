@@ -1,0 +1,461 @@
+{
+  "title": "The Herbalists",
+  "subtitle": "Foraging path",
+  "icon": "minecraft:oak_sapling",
+  "group": "skills",
+  "order": 4,
+  "quests": [
+    {
+      "id": "field_journal",
+      "title": "A Blank Field Journal",
+      "text": [
+        "Every herbalist keeps a field journal. Start yours properly: a book and quill, and five different flowers pressed into it."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:writable_book"
+        },
+        {
+          "item": "minecraft:dandelion"
+        },
+        {
+          "item": "minecraft:poppy"
+        },
+        {
+          "item": "minecraft:oxeye_daisy"
+        },
+        {
+          "item": "minecraft:azure_bluet"
+        },
+        {
+          "item": "minecraft:cornflower"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bundle"
+        },
+        {
+          "skill": "forage",
+          "xp": 60
+        }
+      ],
+      "icon": "minecraft:writable_book",
+      "giver": {
+        "type": "org",
+        "org": "herbalists",
+        "lines": [
+          "A forager's first tool isn't a knife. It's a journal.",
+          "Make yourself a book and quill, and press your first flowers into it."
+        ],
+        "accept": "I'll start one"
+      }
+    },
+    {
+      "id": "hedgerows",
+      "title": "Hedgerow Pickings",
+      "after": [
+        "field_journal"
+      ],
+      "text": [
+        "Walk the hedgerows around the village and fill a basket."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:sweet_berries",
+          "count": 16
+        },
+        {
+          "item": "minecraft:brown_mushroom",
+          "count": 4
+        },
+        {
+          "item": "minecraft:red_mushroom",
+          "count": 4
+        },
+        {
+          "item": "biomesoplenty:wildflower"
+        },
+        {
+          "item": "regions_unexplored:daisy"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "forage",
+          "xp": 80
+        }
+      ],
+      "icon": "minecraft:sweet_berries"
+    },
+    {
+      "id": "six_saplings",
+      "title": "Six Saplings",
+      "after": [
+        "field_journal"
+      ],
+      "text": [
+        "Every forager learns the trees first. Collect six kinds of sapling."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:oak_sapling"
+        },
+        {
+          "item": "minecraft:birch_sapling"
+        },
+        {
+          "item": "minecraft:spruce_sapling"
+        },
+        {
+          "item": "minecraft:jungle_sapling"
+        },
+        {
+          "item": "minecraft:acacia_sapling"
+        },
+        {
+          "item": "minecraft:dark_oak_sapling"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone_meal",
+          "count": 16
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:oak_sapling"
+    },
+    {
+      "id": "loggers_camp",
+      "title": "The Loggers' Camp",
+      "after": [
+        "six_saplings"
+      ],
+      "text": [
+        "The loggers at a meadow logging camp are behind on their order. Chop pine for them."
+      ],
+      "tasks": [
+        {
+          "structure": "meadow:logging_camp",
+          "title": "Find the logging camp"
+        },
+        {
+          "item": "meadow:pine_log",
+          "count": 64,
+          "consume": true
+        }
+      ],
+      "rewards": [
+        {
+          "item": "meadow:woodcutter"
+        },
+        {
+          "skill": "forage",
+          "xp": 120
+        }
+      ],
+      "icon": "meadow:pine_log"
+    },
+    {
+      "id": "first_tea",
+      "title": "The First Tea",
+      "after": [
+        "hedgerows"
+      ],
+      "text": [
+        "Find wild rooibos, coffee or yerba mate, dry the leaves, and brew your first pot."
+      ],
+      "tasks": [
+        {
+          "item": "herbalbrews:rooibos_tea"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "herbalbrews:copper_tea_kettle"
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "herbalbrews:tea_kettle"
+    },
+    {
+      "id": "outpost_notes",
+      "title": "The Forager's Outpost",
+      "after": [
+        "loggers_camp"
+      ],
+      "text": [
+        "Find a forager's outpost in the wilds and copy the notes its last keeper left on the herbs of that region."
+      ],
+      "tasks": [
+        {
+          "structure": "#forager_outposts",
+          "title": "Find a forager's outpost"
+        },
+        {
+          "checkmark": "I copied the notes"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:paper"
+    },
+    {
+      "id": "lavender_sleep",
+      "title": "Lavender for the Sleepless",
+      "after": [
+        "first_tea"
+      ],
+      "text": [
+        "A villager hasn't slept in a week. Gather lavender, brew lavender tea, and take it to them warm."
+      ],
+      "tasks": [
+        {
+          "item": "herbalbrews:lavender_blossom",
+          "count": 4
+        },
+        {
+          "item": "herbalbrews:lavender_tea",
+          "consume": true
+        },
+        {
+          "talk": "org",
+          "org": "growers",
+          "lines": [
+            "Lavender tea? Oh... I might actually sleep tonight. Thank you."
+          ],
+          "title": "Give it to the sleepless farmer"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:white_bed"
+        },
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "herbalbrews:lavender_tea"
+    },
+    {
+      "id": "bloom_catalogue",
+      "title": "The Bloom Catalogue",
+      "after": [
+        "outpost_notes"
+      ],
+      "text": [
+        "Catalogue the wildflowers of the temperate lands, one of each pressed in your journal."
+      ],
+      "tasks": [
+        {
+          "item": "bloomingnature:bluebell"
+        },
+        {
+          "item": "regions_unexplored:blue_lupine"
+        },
+        {
+          "item": "bloomingnature:gladiolus"
+        },
+        {
+          "item": "bloomingnature:white_orchid"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "meadow:big_flower_pot"
+        },
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "bloomingnature:bluebell"
+    },
+    {
+      "id": "wandering_gardener",
+      "title": "The Wandering Gardener",
+      "after": [
+        "bloom_catalogue"
+      ],
+      "text": [
+        "A gardener is coming down the road with a cart full of seeds you've never seen."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "bloomingnature:wandering_gardener",
+            "name": "The Wandering Gardener",
+            "then": "talk",
+            "lines": [
+              "Pressed flowers! Oh, you're one of us.",
+              "I'll trade you saplings for those. Chestnut, larch, ebony. Plant them somewhere they'll be loved."
+            ]
+          }
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bloomingnature:chestnut_sapling"
+        },
+        {
+          "item": "bloomingnature:larch_sapling"
+        },
+        {
+          "item": "bloomingnature:ebony_sapling"
+        },
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "bloomingnature:chestnut_sapling"
+    },
+    {
+      "id": "swamp_hermit",
+      "title": "The Swamp Hermit",
+      "after": [
+        "lavender_sleep"
+      ],
+      "text": [
+        "An old hermit herbalist lives in a swamp hut. Bring her cattails, reeds and a hibiscus, and she'll teach you her tea."
+      ],
+      "tasks": [
+        {
+          "structure": "#witch_huts",
+          "title": "Find the swamp hut"
+        },
+        {
+          "item": "bloomingnature:cattail",
+          "count": 4
+        },
+        {
+          "item": "bloomingnature:reed",
+          "count": 4
+        },
+        {
+          "item": "herbalbrews:hibiscus"
+        },
+        {
+          "item": "herbalbrews:hibiscus_tea"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "herbalbrews:witch_hat"
+        },
+        {
+          "skill": "forage",
+          "xp": 200
+        }
+      ],
+      "icon": "herbalbrews:hibiscus_tea"
+    },
+    {
+      "id": "wild_herbs",
+      "title": "Wild Herbs",
+      "after": [
+        "first_tea"
+      ],
+      "text": [
+        "The Herbalists' oldest remedies come from weeds. Find wild nettle and ribwort and brew their teas."
+      ],
+      "tasks": [
+        {
+          "item": "farm_and_charm:wild_nettle"
+        },
+        {
+          "item": "farm_and_charm:wild_ribwort"
+        },
+        {
+          "item": "farm_and_charm:nettle_tea"
+        },
+        {
+          "item": "farm_and_charm:ribwort_tea"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "farm_and_charm:wild_nettle"
+    },
+    {
+      "id": "alpine_flora",
+      "title": "Alpine Flora",
+      "after": [
+        "bloom_catalogue"
+      ],
+      "text": [
+        "Climb to the high meadows of the tallest peaks and press the alpine flowers that grow nowhere else."
+      ],
+      "tasks": [
+        {
+          "item": "meadow:enzian"
+        },
+        {
+          "item": "meadow:saxifrage"
+        },
+        {
+          "item": "meadow:delphinium"
+        },
+        {
+          "item": "meadow:alpine_poppy"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "meadow:fur_boots"
+        },
+        {
+          "skill": "forage",
+          "xp": 200
+        }
+      ],
+      "icon": "meadow:enzian"
+    },
+    {
+      "id": "truffles",
+      "title": "Truffle Season",
+      "after": [
+        "wild_herbs"
+      ],
+      "text": [
+        "Herbalists prize truffles and hazelnuts. Follow the boars and squirrels through the woods."
+      ],
+      "tasks": [
+        {
+          "item": "wildernature:truffle",
+          "count": 4
+        },
+        {
+          "item": "wildernature:hazelnut",
+          "count": 16
+        }
+      ],
+      "rewards": [
+        {
+          "item": "wildernature:fur_cloak"
+        },
+        {
+          "skill": "forage",
+          "xp": 200
+        }
+      ],
+      "icon": "wildernature:truffle"
+    }
+  ]
+}

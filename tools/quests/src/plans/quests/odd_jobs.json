@@ -1,0 +1,184 @@
+{
+  "line": "Odd jobs and nonsense",
+  "chapter": "odd_jobs",
+  "group": "world",
+  "giver": "Nobody: they're in the book from the start, for anyone who wants them.",
+  "feel": "Pointless standalone quests for fun, with token rewards.",
+  "quests": [
+    {
+      "id": "pn_take_a_seat",
+      "title": "Take a Seat",
+      "tier": "any",
+      "types": [
+        "milestone"
+      ],
+      "after": [],
+      "summary": "Sit in a Handcrafted chair, on an Another Furniture bench and on a Let's Do sofa. That's it.",
+      "mods": [
+        "handcrafted",
+        "another_furniture",
+        "furniture"
+      ],
+      "landmarks": [],
+      "reward": "A cushion"
+    },
+    {
+      "id": "pn_gerald",
+      "title": "Gerald",
+      "tier": "any",
+      "types": [
+        "craft",
+        "milestone"
+      ],
+      "after": [],
+      "summary": "Name a piece of cobblestone 'Gerald' at an anvil and keep him in your inventory for seven days.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Gerald's friend (another cobblestone)"
+    },
+    {
+      "id": "pn_bonk",
+      "title": "Bonk",
+      "tier": "any",
+      "types": [
+        "contest"
+      ],
+      "after": [],
+      "summary": "Hit a target dummy one hundred times. It doesn't mind.",
+      "mods": [
+        "dummmmmmy"
+      ],
+      "landmarks": [],
+      "reward": "A slightly dented dummy"
+    },
+    {
+      "id": "pn_pumpkin_head",
+      "title": "Pumpkin Head",
+      "tier": "any",
+      "types": [
+        "milestone"
+      ],
+      "after": [],
+      "summary": "Wear a carved pumpkin on your head for a whole day and night.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "A jack o'lantern"
+    },
+    {
+      "id": "pn_cake_tower",
+      "title": "Too Much Cake",
+      "tier": "any",
+      "types": [
+        "cook",
+        "build"
+      ],
+      "after": [],
+      "summary": "Build a Bakery cake tower three tiers high, and don't eat any of it.",
+      "mods": [
+        "bakery"
+      ],
+      "landmarks": [],
+      "reward": "One slice of cake"
+    },
+    {
+      "id": "pn_rainbow_sheep",
+      "title": "Every Colour",
+      "tier": "any",
+      "types": [
+        "collect",
+        "tame"
+      ],
+      "after": [],
+      "summary": "Dye sixteen sheep sixteen different colours and get them in one pen.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "A single white wool"
+    },
+    {
+      "id": "pn_soap",
+      "title": "Squeaky Clean",
+      "tier": "any",
+      "types": [
+        "craft"
+      ],
+      "after": [],
+      "summary": "Craft Supplementaries soap and wash the dye off something that really didn't need washing.",
+      "mods": [
+        "supplementaries"
+      ],
+      "landmarks": [],
+      "reward": "A bubble"
+    },
+    {
+      "id": "pn_busker",
+      "title": "Busker",
+      "tier": "any",
+      "types": [
+        "contest"
+      ],
+      "after": [],
+      "summary": "Play a whole song on an Immersive Melodies instrument in a village square. Nobody claps.",
+      "mods": [
+        "immersive_melodies"
+      ],
+      "landmarks": [],
+      "reward": "One emerald, thrown"
+    },
+    {
+      "id": "pn_pig_ferry",
+      "title": "Pig Ferry",
+      "tier": "any",
+      "types": [
+        "ride"
+      ],
+      "after": [],
+      "summary": "Ride a pig across a river with a carrot on a stick, and stay dry.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "A carrot"
+    },
+    {
+      "id": "pn_flower_peak",
+      "title": "Summit Flower",
+      "tier": "any",
+      "types": [
+        "build",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Put a flower pot with a flower in it on the very highest block of a village.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "A dandelion"
+    },
+    {
+      "id": "pn_rain_dance",
+      "title": "Rain Dance",
+      "tier": "any",
+      "types": [
+        "milestone"
+      ],
+      "after": [],
+      "summary": "Stand outside, uncovered, through a whole thunderstorm.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "A wet sponge"
+    },
+    {
+      "id": "pn_ducks_in_a_row",
+      "title": "Ducks in a Row",
+      "tier": "any",
+      "types": [
+        "tame",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "Get five ducks to stand in a straight line. Leads allowed.",
+      "mods": [
+        "naturalist"
+      ],
+      "landmarks": [],
+      "reward": "Bread crumbs (one bread)"
+    }
+  ]
+}

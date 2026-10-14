@@ -1,0 +1,884 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "main_story"
+	group: "484C028E38528A76"
+	icon: "minecraft:written_book"
+	id: "2A1FDF1829BC9D09"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["2EA3306BE3105559"]
+			description: [
+				"Sister Wren wants to know what's wrong with the forest. Go to the forest's edge after dusk and wait out one night."
+				""
+				"No fairies dance. The butterflies are gone. And something has scored the bark of the oldest tree."
+			]
+			icon: "minecraft:oak_sapling"
+			id: "1E031F30EF3B80F4"
+			rewards: [
+				{
+					command: "/give {p} minecraft:potion{Potion:\"minecraft:night_vision\"}"
+					elevate_perms: true
+					id: "01471BD8F4F9F768"
+					silent: true
+					title: "A night vision potion"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:forest"
+					id: "0212B1D709D06419"
+					title: "Go to the forest"
+					type: "biome"
+				}
+				{
+					id: "08EC85EAD58FC37E"
+					title: "I waited out the night"
+					type: "checkmark"
+				}
+			]
+			title: "The Silent Wood"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1E031F30EF3B80F4"]
+			description: [
+				"Sister Wren asks for a small wayside shrine: mossy stone, candles, and wildflowers gathered from three different places."
+				""
+				"Build it wherever feels right."
+			]
+			icon: "minecraft:candle"
+			id: "594B5DC615A7020F"
+			rewards: [
+				{
+					count: 8
+					id: "5F2F8EBD35B8C219"
+					item: "minecraft:candle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 60"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "70F307B8902FB9A4"
+					silent: true
+					title: "+60 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "65B33306E3537604"
+					item: "minecraft:mossy_cobblestone"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "3C85A2A31241F3ED"
+					item: "minecraft:candle"
+					type: "item"
+				}
+				{
+					id: "081D99692E971363"
+					item: "minecraft:cornflower"
+					type: "item"
+				}
+				{
+					id: "011ABE0F543917EB"
+					item: "minecraft:allium"
+					type: "item"
+				}
+				{
+					id: "558FB0A010385B4F"
+					item: "minecraft:lily_of_the_valley"
+					type: "item"
+				}
+				{
+					id: "0E39B10F2543565B"
+					title: "I built the shrine"
+					type: "checkmark"
+				}
+			]
+			title: "A Shrine for the Quiet"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["1E031F30EF3B80F4"]
+			description: ["You can't sleep in a sleeping bag forever. Build your first home near Reece, with a bed, a chest, a table and chairs."]
+			icon: "minecraft:red_bed"
+			id: "19E7A43D59702336"
+			rewards: [
+				{
+					count: 2
+					id: "56188B7E716F550C"
+					item: "another_furniture:oak_chair"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 60"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "2BF69C2524285BD7"
+					silent: true
+					title: "+60 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "25E27A40D4822D9E"
+					item: "minecraft:red_bed"
+					type: "item"
+				}
+				{
+					id: "13A7A7B307C030E0"
+					item: "minecraft:chest"
+					type: "item"
+				}
+				{
+					id: "1DB01CC96FEFEA6E"
+					item: "handcrafted:oak_table"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "5BDF2057124FD5E2"
+					item: "handcrafted:oak_chair"
+					type: "item"
+				}
+				{
+					id: "184959EB6CE6D30E"
+					title: "My home is built"
+					type: "checkmark"
+				}
+			]
+			title: "Somewhere to Come Back To"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["594B5DC615A7020F"]
+			description: [
+				"Out in the wild lie the remains of adventurers who never came home, still in their rusted gear."
+				""
+				"Find one. Something in the forest's silence points that way."
+			]
+			icon: "minecraft:skeleton_skull"
+			id: "123B57BA87B8A2B9"
+			rewards: [
+				{
+					id: "2B68401C3085FA07"
+					item: "minecraft:stone_sword"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 60"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "0756D6FBCF822B46"
+					silent: true
+					title: "+60 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6782D4DE816C79DA"
+					title: "I found a fallen adventurer"
+					type: "checkmark"
+				}
+			]
+			title: "The Fallen Adventurer"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["123B57BA87B8A2B9"]
+			description: [
+				"The adventurer's journal speaks of 'the wardens growing weak', and points to an old dungeon."
+				""
+				"Clear a dungeon, and find the second journal page on one of its guardians."
+			]
+			icon: "minecraft:spawner"
+			id: "4DC559166309E3D7"
+			rewards: [
+				{
+					count: 8
+					id: "0B1362CCD5EBAB7D"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 80"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "590098A56FADC35B"
+					silent: true
+					title: "+80 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2A75FECDA372428D"
+					structure: "#fotf:groups/yungs_dungeons"
+					title: "Find the dungeon"
+					type: "structure"
+				}
+				{
+					id: "360E83FA2024D47C"
+					item: "kubejs:quest_prologue_dungeon_1"
+					type: "item"
+				}
+			]
+			title: "What the Dark Keeps"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4DC559166309E3D7"]
+			description: ["Sister Wren writes to the cleric of the next village along the road. Deliver her letter in person; his reply will follow you home by post."]
+			icon: "fotfmail:letter"
+			id: "2C6E983B037C98AE"
+			rewards: [
+				{
+					count: 4
+					id: "61122F76F2192DFC"
+					item: "fotfmail:letter"
+					type: "item"
+				}
+				{
+					count: 5
+					id: "0C18E6BBF1E94305"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "6F4B7F69ABA57C47"
+					stage: "fq.main_story.prologue_letter.talk0"
+					title: "Deliver the letter to another village's cleric"
+					type: "gamestage"
+				}
+			]
+			title: "Word to the Neighbours"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2C6E983B037C98AE"
+				"19E7A43D59702336"
+			]
+			description: [
+				"Both journal pages together tell of guardians: the wardens, who hold the old places shut."
+				""
+				"Sister Wren has read them twice."
+			]
+			icon: "minecraft:written_book"
+			id: "63C3DB46B7298A13"
+			rewards: [
+				{
+					id: "035D0C80D18006FB"
+					item: "minecraft:iron_chestplate"
+					type: "item"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					id: "69AB4895FC500942"
+					stage: "fq.main_story.act1_start.talk0"
+					title: "Talk to Sister Wren"
+					type: "gamestage"
+				}
+			]
+			title: "The First Wardens"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["63C3DB46B7298A13"]
+			description: [
+				"Arm yourself for what's ahead: a proper weapon, a shield and full iron armour."
+				""
+				"Any Spartan Weaponry iron weapon will do; the quest asks for a longsword, but the choice is yours."
+			]
+			icon: "spartanweaponry:iron_longsword"
+			id: "60CDE2905B805478"
+			rewards: [
+				{
+					id: "518DE92388BCE6CA"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 2s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 80"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "320B247DE6ADDB35"
+					silent: true
+					title: "+80 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "31948BDD9F786F54"
+					item: "spartanweaponry:iron_longsword"
+					type: "item"
+				}
+				{
+					id: "0FBD6EFDE0533E22"
+					item: "spartanshields:iron_basic_shield"
+					type: "item"
+				}
+				{
+					id: "7FC7875383815EEF"
+					item: "minecraft:iron_helmet"
+					type: "item"
+				}
+				{
+					id: "0078E04FFC0C75B5"
+					item: "minecraft:iron_leggings"
+					type: "item"
+				}
+				{
+					id: "06F19986F7469F0F"
+					item: "minecraft:iron_boots"
+					type: "item"
+				}
+			]
+			title: "Iron and Edge"
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["63C3DB46B7298A13"]
+			description: ["Search a desert or jungle temple. Get past its traps to the inner chamber, where a mural shows a hooded iron giant."]
+			icon: "minecraft:chiseled_sandstone"
+			id: "3DA7EB8B804B1AA7"
+			rewards: [
+				{
+					count: 6
+					id: "140D244ED4B09E44"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 80"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "444352A64A71AFC7"
+					silent: true
+					title: "+80 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6AF763B1FE83B6B9"
+					structure: "#fotf:groups/temples"
+					title: "Reach a temple's inner chamber"
+					type: "structure"
+				}
+				{
+					id: "00A9B4EE5AFC6B1C"
+					title: "I saw the mural"
+					type: "checkmark"
+				}
+			]
+			title: "Sand and Vine"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["63C3DB46B7298A13"]
+			description: ["Miners in an old mineshaft heard metal footsteps below them. Explore it, mine 16 iron, and look for scrape marks leading down."]
+			icon: "minecraft:rail"
+			id: "561B307729715F23"
+			rewards: [
+				{
+					id: "48532993EA0626C5"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 80"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "235326729CDC7128"
+					silent: true
+					title: "+80 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2E19315DFDFC5947"
+					structure: "#fotf:groups/mines"
+					title: "Explore a mineshaft"
+					type: "structure"
+				}
+				{
+					count: 16L
+					id: "606421346A54D2E8"
+					item: "minecraft:raw_iron"
+					type: "item"
+				}
+			]
+			title: "The Echo in the Shaft"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3DA7EB8B804B1AA7"
+				"561B307729715F23"
+			]
+			description: ["Armour that breathes, in a sealed chamber. Captain Hale of the Village watch knows what that means, and wants you ready before you go anywhere near it."]
+			icon: "dummmmmmy:target_dummy"
+			id: "0A074034C2BCE311"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 80"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "10397FFA76E395A6"
+					silent: true
+					title: "+80 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5587287D685EF089"
+					stage: "fq.main_story.act1_wrought_practice.talk0"
+					title: "Talk to Captain Hale"
+					type: "gamestage"
+				}
+				{
+					id: "554730289DF8CA07"
+					item: "dummmmmmy:target_dummy"
+					type: "item"
+				}
+			]
+			title: "Strike From Behind"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0A074034C2BCE311"]
+			description: ["Follow the scrape marks to a Wrought Chamber and look at its sealed door. The armour inside is breathing."]
+			icon: "minecraft:iron_door"
+			id: "646ED9E30D84227A"
+			rewards: [
+				{
+					id: "67E18D5FC26AA7D2"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "09E89FEB57225A37"
+					structure: "mowziesmobs:wrought_chamber"
+					title: "Find a Wrought Chamber"
+					type: "structure"
+				}
+			]
+			title: "The Iron Door"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"646ED9E30D84227A"
+				"60CDE2905B805478"
+			]
+			description: ["Wake the Ferrous Wroughtnaut and beat it. Dodge its axe and strike its exposed back, like Hale taught you."]
+			icon: "minecraft:iron_axe"
+			id: "2B39666FF280C4A5"
+			rewards: [
+				{
+					count: 2
+					id: "17A3FD39BA26EAA4"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 200"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "4E34909A1A7DE73E"
+					silent: true
+					title: "+200 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "mowziesmobs:ferrous_wroughtnaut"
+					id: "3B013FE38A04943B"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Ferrous Wroughtnaut"
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2B39666FF280C4A5"]
+			description: ["Take what you learned back to Sister Wren."]
+			icon: "minecraft:iron_nugget"
+			id: "249AD3E89E4C4753"
+			rewards: [
+				{
+					count: 8
+					id: "6C54A1527C7B8AE6"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5339917A719A90CA"
+					stage: "fq.main_story.act1_wrought_report.talk0"
+					title: "Talk to Sister Wren"
+					type: "gamestage"
+				}
+			]
+			title: "Rust on the Seal"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["249AD3E89E4C4753"]
+			description: ["On the road, a travelling priest of the Arcane order stops you. He's been following the same trail."]
+			icon: "irons_spellbooks:scroll"
+			id: "68DE0514F973002D"
+			rewards: [
+				{
+					id: "2DFC199738A110C0"
+					item: "irons_spellbooks:scroll"
+					type: "item"
+				}
+				{
+					id: "2D3E90FAB74D7B43"
+					item: "irons_spellbooks:common_ink"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1DEA6F484DD69799"
+					stage: "fq.main_story.act1_magic_branch.enc0"
+					title: "Meet Travelling Priest"
+					type: "gamestage"
+				}
+			]
+			title: "A Priest on the Road"
+			x: 16.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["249AD3E89E4C4753"]
+			description: ["Pillagers have raised an outpost near the trade road. Clear it and take down its captain."]
+			icon: "minecraft:white_banner"
+			id: "1BC2581969526C71"
+			rewards: [
+				{
+					id: "2EE53C25EF3604FD"
+					item: "minecraft:crossbow"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "18955C982B6FC8EC"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "0EED4909D897A485"
+					structure: "#fotf:groups/illager_hideouts"
+					title: "Find the outpost"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:pillager"
+					id: "03AADC37055738AC"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "Banners on the Hill"
+			x: 16.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["1BC2581969526C71"]
+			description: ["A frightened trader comes looking for help: something froze his caravan in the snowy taiga."]
+			icon: "minecraft:packed_ice"
+			id: "1F1DECCEBC618CB4"
+			rewards: [
+				{
+					id: "0A2AD72C1B4E0B6B"
+					item: "minecraft:leather_chestplate"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 120"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "3307AE12D4F3E63A"
+					silent: true
+					title: "+120 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3D554E7CBBFE8327"
+					stage: "fq.main_story.act1_iceologer.enc0"
+					title: "Meet Frightened Trader"
+					type: "gamestage"
+				}
+				{
+					id: "017A88476CBBFABE"
+					stage: "fq.main_story.act1_iceologer.enc1"
+					title: "Defeat The Iceologer"
+					type: "gamestage"
+				}
+			]
+			title: "Frost on the Wind"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1F1DECCEBC618CB4"]
+			description: ["An Illusioner haunts the woods. Find the real one among its copies and defeat it."]
+			icon: "minecraft:bow"
+			id: "110BCDDAD0DAC901"
+			rewards: [
+				{
+					id: "08F8E73F3C25CD9B"
+					item: {
+						Count: 1b
+						id: "minecraft:bow"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:power"
+									lvl: 2s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Trickster's Bow\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 120"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "7AF3A22D9E18A7F1"
+					silent: true
+					title: "+120 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5339832265454AB5"
+					stage: "fq.main_story.act1_illusioner.enc0"
+					title: "Defeat The Trickster"
+					type: "gamestage"
+				}
+			]
+			title: "Four of Him"
+			x: 19.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["110BCDDAD0DAC901"]
+			description: ["Captain Hale has a plan: draw the raiders out on your terms. Carry the Bad Omen into a village and hold it through a full raid."]
+			icon: "minecraft:totem_of_undying"
+			id: "4AE9CEDBE440DDE0"
+			rewards: [
+				{
+					id: "0F42877CCDEF8FF8"
+					item: "minecraft:totem_of_undying"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 200"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "7DBBDBBAF96F53ED"
+					silent: true
+					title: "+200 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0414483F088C658A"
+					stage: "fq.main_story.act1_raid.talk0"
+					title: "Talk to Captain Hale"
+					type: "gamestage"
+				}
+				{
+					advancement: "minecraft:adventure/hero_of_the_village"
+					criterion: ""
+					id: "33BE3F7D8A8B756F"
+					type: "advancement"
+				}
+			]
+			title: "The Long Night"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4AE9CEDBE440DDE0"]
+			description: ["Travel to the savanna and find the Umvuthana Grove. Watch the Umvuthana from cover and count their masks."]
+			icon: "minecraft:acacia_sapling"
+			id: "076104249873E889"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 120"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "5AD8FB004E5310D4"
+					silent: true
+					title: "+120 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "23E6173F5B99BE76"
+					structure: "mowziesmobs:umvuthana_grove"
+					title: "Find the grove"
+					type: "structure"
+				}
+				{
+					id: "43AB0BA5933BA20C"
+					observe_type: "entity_type"
+					timer: 60L
+					title: "Watch an Umvuthana"
+					to_observe: "mowziesmobs:umvuthana"
+					type: "observation"
+				}
+			]
+			title: "Masks in the Grass"
+			x: 22.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["076104249873E889"]
+			description: ["Face Umvuthi and its followers in the heart of the grove. Break the circle of masks before the sun spell lands."]
+			icon: "minecraft:sunflower"
+			id: "59C4414FBC2456AA"
+			rewards: [
+				{
+					count: 3
+					id: "2DFE373AC10F0C81"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 250"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "18A4453E45682FFF"
+					silent: true
+					title: "+250 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "mowziesmobs:umvuthi"
+					id: "06BC17686935B003"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Umvuthi, the Sunbird"
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"59C4414FBC2456AA"
+				"2B39666FF280C4A5"
+			]
+			description: [
+				"With two wardens freed, Sister Wren remembers the spirits' own realm."
+				""
+				"Dig a pool, ring it with flowers and drop a diamond in. The way into the Twilight Forest opens."
+			]
+			icon: "minecraft:diamond"
+			id: "3365AF8ACD0C3DDB"
+			rewards: [
+				{
+					id: "11BE50BE5A717FBB"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 150"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "503E136242BDBD2F"
+					silent: true
+					title: "+150 Magic XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.75d
+			tasks: [
+				{
+					dimension: "twilightforest:twilight_forest"
+					id: "274868807C9B5C8D"
+					title: "Enter the Twilight Forest"
+					type: "dimension"
+				}
+			]
+			title: "A Door in the Flowers"
+			x: 25.5d
+			y: 0.0d
+		}
+	]
+	subtitle: ["The main story"]
+	title: "The Silent Forest"
+}

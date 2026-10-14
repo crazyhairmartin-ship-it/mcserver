@@ -1,0 +1,288 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "odd_jobs"
+	group: "097503D344895135"
+	icon: "minecraft:carved_pumpkin"
+	id: "6C2F9AD807662C08"
+	order_index: 4
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Sit in a Handcrafted chair, on an Another Furniture bench and on a Let's Do sofa. That's it."]
+			icon: "handcrafted:oak_chair"
+			id: "2019DECAF5228555"
+			rewards: [
+				{
+					id: "263784DC6438BC3F"
+					item: "handcrafted:oak_chair"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "160C51E647B07FD5"
+					title: "I sat in all three"
+					type: "checkmark"
+				}
+			]
+			title: "Take a Seat"
+			x: 0.0d
+			y: -8.25d
+		}
+		{
+			description: ["Name a piece of cobblestone 'Gerald' at an anvil and keep him in your inventory for seven days."]
+			icon: "minecraft:cobblestone"
+			id: "49FFDA41F2870B43"
+			rewards: [
+				{
+					id: "0002A1C6E08D139F"
+					item: "minecraft:cobblestone"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "36B7FBB27C51E699"
+					title: "Gerald and I are inseparable"
+					type: "checkmark"
+				}
+			]
+			title: "Gerald"
+			x: 0.0d
+			y: -6.75d
+		}
+		{
+			description: ["Hit a target dummy one hundred times. It doesn't mind."]
+			icon: "dummmmmmy:target_dummy"
+			id: "3F79D35FEDE9A1CB"
+			rewards: [
+				{
+					id: "2D0A7FE53BBBF965"
+					item: "minecraft:stick"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5AC80E66FE882454"
+					item: "dummmmmmy:target_dummy"
+					type: "item"
+				}
+				{
+					id: "423BDE5B9EBB3CCD"
+					title: "Bonked a hundred times"
+					type: "checkmark"
+				}
+			]
+			title: "Bonk"
+			x: 0.0d
+			y: -5.25d
+		}
+		{
+			description: ["Wear a carved pumpkin on your head for a whole day and night."]
+			icon: "minecraft:carved_pumpkin"
+			id: "18D6041C9A9E8B0C"
+			rewards: [
+				{
+					id: "2A96F93E6EA3CCB5"
+					item: "minecraft:jack_o_lantern"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "787927266612484A"
+					item: "minecraft:carved_pumpkin"
+					type: "item"
+				}
+				{
+					id: "6C87084492877F7B"
+					title: "I wore it the whole time"
+					type: "checkmark"
+				}
+			]
+			title: "Pumpkin Head"
+			x: 0.0d
+			y: -3.75d
+		}
+		{
+			description: ["Build a cake tower three tiers high, and don't eat any of it."]
+			icon: "bakery:cake_tower"
+			id: "1DFADBE4619780D0"
+			rewards: [
+				{
+					id: "7CA71CDF929FAC16"
+					item: "bakery:strawberry_cake_slice"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "4AF68CD365034CA3"
+					item: "bakery:cake_tower"
+					type: "item"
+				}
+			]
+			title: "Too Much Cake"
+			x: 0.0d
+			y: -2.25d
+		}
+		{
+			description: ["Dye sixteen sheep sixteen different colours and get them in one pen."]
+			icon: "minecraft:white_wool"
+			id: "26106536CFE9E993"
+			rewards: [
+				{
+					id: "78BE57FF8F2FCD06"
+					item: "minecraft:white_wool"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "7AF8251CD589CD5F"
+					title: "The pen is a rainbow"
+					type: "checkmark"
+				}
+			]
+			title: "Every Colour"
+			x: 0.0d
+			y: -0.75d
+		}
+		{
+			description: ["Make some soap and wash the dye off something that really didn't need washing."]
+			icon: "supplementaries:soap"
+			id: "72A2679B08A0228B"
+			rewards: [
+				{
+					id: "4C6DBBDC6EE2070B"
+					item: "supplementaries:soap"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "4C406FB0EAC600DA"
+					item: "supplementaries:soap"
+					type: "item"
+				}
+			]
+			title: "Squeaky Clean"
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			description: ["Play a whole song on an instrument in a village square. Nobody claps."]
+			icon: "immersive_melodies:lute"
+			id: "05807B8F600DBFC4"
+			rewards: [
+				{
+					id: "5E069C1DB9C5C749"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1DB761061D8B5AEC"
+					title: "I played. Nobody clapped."
+					type: "checkmark"
+				}
+			]
+			title: "Busker"
+			x: 0.0d
+			y: 2.25d
+		}
+		{
+			description: ["Ride a pig across a river with a carrot on a stick, and stay dry."]
+			icon: "minecraft:carrot_on_a_stick"
+			id: "08B1E2B7ADC2D4CB"
+			rewards: [
+				{
+					id: "5317DCEF8FF121BF"
+					item: "minecraft:carrot"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "1DBC1706CDC78DD2"
+					title: "The pig and I made it across"
+					type: "checkmark"
+				}
+			]
+			title: "Pig Ferry"
+			x: 0.0d
+			y: 3.75d
+		}
+		{
+			description: ["Put a flower pot with a flower in it on the very highest block of a village."]
+			icon: "minecraft:flower_pot"
+			id: "6221671B2ED86057"
+			rewards: [
+				{
+					id: "2230B45BB91B6EFC"
+					item: "minecraft:dandelion"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "2EC5CF4A9F1933FB"
+					title: "The village has a summit flower"
+					type: "checkmark"
+				}
+			]
+			title: "Summit Flower"
+			x: 0.0d
+			y: 5.25d
+		}
+		{
+			description: ["Stand outside, uncovered, through a whole thunderstorm."]
+			icon: "minecraft:water_bucket"
+			id: "7BEC0637CCE84CC6"
+			rewards: [
+				{
+					id: "367380E1E055BD80"
+					item: "minecraft:wet_sponge"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "5F1E216650414072"
+					title: "I'm soaked"
+					type: "checkmark"
+				}
+			]
+			title: "Rain Dance"
+			x: 0.0d
+			y: 6.75d
+		}
+		{
+			description: ["Get five ducks to stand in a straight line. Leads allowed."]
+			icon: "minecraft:feather"
+			id: "4ADAC4C6875FEABC"
+			rewards: [
+				{
+					id: "0BCCBE3D8CDE73B3"
+					item: "minecraft:bread"
+					type: "item"
+				}
+			]
+			tasks: [
+				{
+					id: "61AB7D63EAC08EAD"
+					title: "They're in a row. For now."
+					type: "checkmark"
+				}
+			]
+			title: "Ducks in a Row"
+			x: 0.0d
+			y: 8.25d
+		}
+	]
+	subtitle: ["Pointless, and proud of it"]
+	title: "Odd Jobs and Nonsense"
+}

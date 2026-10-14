@@ -1,0 +1,596 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_cooking"
+	group: "1CAE106B8DA521D5"
+	icon: "farmersdelight:cooking_pot"
+	id: "7930BD066DA3E61F"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Bess Copperpot runs Reece's tavern, and tonight she's a cook short."]
+			icon: "minecraft:cooked_beef"
+			id: "761735B4497F7228"
+			rewards: [
+				{
+					id: "516F37B649988535"
+					item: "farmersdelight:flint_knife"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "1A9619DE409CC593"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 60"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "2A358A3982298B1D"
+					silent: true
+					title: "+60 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0ABC35106085C60A"
+					stage: "fq.skill_cooking.first_order.talk0"
+					title: "Talk to Bess Copperpot"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "6F59AD0DE7CF1767"
+					item: "minecraft:cooked_beef"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "34117CDB5FC49D3F"
+					item: "minecraft:bread"
+					type: "item"
+				}
+			]
+			title: "First Order"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["761735B4497F7228"]
+			description: ["A proper kitchen needs a cutting board and a sharp knife. Prep cabbage leaves, minced beef and salmon slices for the shelf."]
+			icon: "farmersdelight:cutting_board"
+			id: "774FB01336EB8DFD"
+			rewards: [
+				{
+					id: "03A9293923BAAA2B"
+					item: "farmersdelight:skillet"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 80"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "2BAA9431A416BE7C"
+					silent: true
+					title: "+80 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "39C1E72E2DAE75B6"
+					item: "farmersdelight:cutting_board"
+					type: "item"
+				}
+				{
+					id: "19EE4505F1E9F683"
+					item: "farmersdelight:iron_knife"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6EB12B9A6E68F713"
+					item: "farmersdelight:cabbage_leaf"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "33FCAE595EDF48EE"
+					item: "farmersdelight:minced_beef"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1BA2C0A5EE547801"
+					item: "farmersdelight:salmon_slice"
+					type: "item"
+				}
+			]
+			title: "Knife and Board"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["774FB01336EB8DFD"]
+			description: ["Every tavern lives on its stew pot. Cook beef stew, vegetable soup and chicken soup."]
+			icon: "farmersdelight:cooking_pot"
+			id: "162610212C661542"
+			rewards: [
+				{
+					id: "5408479CBD7D9AB0"
+					item: "farmersdelight:cooking_pot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 100"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "64655647AD5D2777"
+					silent: true
+					title: "+100 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "4B48F9D68C88824C"
+					item: "farmersdelight:beef_stew"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7CC5F55A18060D00"
+					item: "farmersdelight:vegetable_soup"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "010B82E701E5B3E7"
+					item: "farmersdelight:chicken_soup"
+					type: "item"
+				}
+			]
+			title: "The Stew Pot"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["162610212C661542"]
+			description: ["Three regulars can't make it to the tavern today, so the tavern goes to them: an egg sandwich for the old miner, hot cocoa for the cleric's apprentice, and mushroom rice for the farmer."]
+			icon: "farmersdelight:egg_sandwich"
+			id: "3281E1583E4AA92A"
+			rewards: [
+				{
+					count: 6
+					id: "6EAB0B04B9DFA9EF"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 120"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "689D4872D2679424"
+					silent: true
+					title: "+120 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "499257BCA40419B9"
+					stage: "fq.skill_cooking.regulars.talk0"
+					title: "The old miner"
+					type: "gamestage"
+				}
+				{
+					id: "29E2C192D86DB92C"
+					stage: "fq.skill_cooking.regulars.talk1"
+					title: "The cleric's apprentice"
+					type: "gamestage"
+				}
+				{
+					id: "3859032D0C0FCB62"
+					stage: "fq.skill_cooking.regulars.talk2"
+					title: "The farmer"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					id: "20335651963FD080"
+					item: "farmersdelight:egg_sandwich"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "63DB014D8545891E"
+					item: "farmersdelight:hot_cocoa"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "491E3E7D5F511397"
+					item: "farmersdelight:mushroom_rice"
+					type: "item"
+				}
+			]
+			title: "The Regulars"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["761735B4497F7228"]
+			description: ["Travellers camped on the road need feeding. Set up a grill and cook barbecue sticks and grilled salmon for them."]
+			icon: "camping:grill"
+			id: "63A0B8BA72279DF4"
+			rewards: [
+				{
+					id: "5AB9C9E8EB9FE5C9"
+					item: "camping:sleeping_bag_green"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 100"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "509CC443855A18B7"
+					silent: true
+					title: "+100 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4E5843D7FA86B126"
+					structure: "#fotf:groups/camps"
+					title: "Find a traveller's camp"
+					type: "structure"
+				}
+				{
+					id: "4811A270DFDCBE6E"
+					item: "camping:grill"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "3BA301725563FC34"
+					item: "farmersdelight:barbecue_stick"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "18B31DCDB25D3FA3"
+					item: "farmersdelight:grilled_salmon"
+					type: "item"
+				}
+			]
+			title: "Campfire Supper"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3281E1583E4AA92A"]
+			description: ["Bess wants to link the taverns between villages into a network. Find a tavern out on the roads and meet its keeper, who shares their house recipe."]
+			icon: "minecraft:oak_sign"
+			id: "756907B81B1DAF98"
+			rewards: [
+				{
+					id: "16294B09F059FAC3"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 150"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "361E432174456210"
+					silent: true
+					title: "+150 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "070A1F604F5AD259"
+					structure: "#fotf:groups/taverns"
+					title: "Find a tavern"
+					type: "structure"
+				}
+				{
+					id: "50952D905842127A"
+					stage: "fq.skill_cooking.tavern_road.talk1"
+					title: "Talk to a representative of the Tavern Keepers"
+					type: "gamestage"
+				}
+			]
+			title: "The Tavern Road"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["756907B81B1DAF98"]
+			description: ["The tavern needs breakfast. Build a baker station and bake for the morning crowd."]
+			icon: "bakery:baker_station"
+			id: "6DB6F5AE6A4A26EE"
+			rewards: [
+				{
+					id: "3FFAE10C00DA8770"
+					item: "bakery:bread_knife"
+					type: "item"
+				}
+				{
+					id: "60E4FF69386C4595"
+					item: "bakery:rolling_pin"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 150"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "4438F9BF4C0FDF4E"
+					silent: true
+					title: "+150 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "22EAF9BC997CB07F"
+					item: "bakery:baker_station"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1F914590357A7C32"
+					item: "bakery:baguette"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "74CF3AF566275487"
+					item: "bakery:croissant"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "354BD16F4E5BF07D"
+					item: "bakery:braided_bread"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1C836D48AEA99F9D"
+					item: "bakery:crusty_bread"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "036BB941753A4FF1"
+					item: "bakery:toast"
+					type: "item"
+				}
+				{
+					id: "0D0DFF4FE31459D1"
+					item: "bakery:strawberry_cake"
+					type: "item"
+				}
+			]
+			title: "A Baker's Dozen"
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6DB6F5AE6A4A26EE"]
+			description: ["A cart that smells of cinnamon is coming up the road."]
+			icon: "bakery:chocolate_gateau"
+			id: "2354F1470F4DB75C"
+			rewards: [
+				{
+					count: 2
+					id: "49873248A19748CC"
+					item: "bakery:chocolate_jam"
+					type: "item"
+				}
+				{
+					id: "06E415FB152800C9"
+					item: "bakery:cake_stand"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 150"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "455E3C60B337D422"
+					silent: true
+					title: "+150 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0A90D0A9026E065B"
+					stage: "fq.skill_cooking.wandering_baker.enc0"
+					title: "Meet The Wandering Baker"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "0601CC29B0FAC28C"
+					item: "bakery:strawberry_jam"
+					type: "item"
+				}
+			]
+			title: "The Wandering Baker"
+			x: 9.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["756907B81B1DAF98"]
+			description: ["The morning regulars want tea and coffee before the first bell."]
+			icon: "herbalbrews:green_tea"
+			id: "45638EB22BB27EDF"
+			rewards: [
+				{
+					id: "61DA7E2ACD46C521"
+					item: "herbalbrews:jug"
+					type: "item"
+				}
+				{
+					id: "74754C15164502D4"
+					item: "herbalbrews:tea_leaf_crate"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 150"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "07063C0645BA4628"
+					silent: true
+					title: "+150 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "0952B4856C67E9ED"
+					item: "herbalbrews:green_tea"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "431E8191B8FC6F5E"
+					item: "herbalbrews:black_tea"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "563F78C825584437"
+					item: "herbalbrews:milk_coffee"
+					type: "item"
+				}
+			]
+			title: "Morning Tea"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["756907B81B1DAF98"]
+			description: ["No tavern without beer. Build a brewing station and brew wheat beer and hops beer for the bar."]
+			icon: "brewery:beer_mug"
+			id: "2C68475D4929EDA2"
+			rewards: [
+				{
+					id: "528E9D3784227ED9"
+					item: "brewery:bar_counter"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "3B8837FB9646F1A9"
+					item: "brewery:hops_seeds"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 150"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "4BF7ED9F4042E03A"
+					silent: true
+					title: "+150 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1B891DFE96570826"
+					item: "brewery:wooden_brewingstation"
+					type: "item"
+				}
+				{
+					id: "09C428754C9A1948"
+					item: "brewery:beer_wheat"
+					type: "item"
+				}
+				{
+					id: "48980AE9B038E241"
+					item: "brewery:beer_hops"
+					type: "item"
+				}
+			]
+			title: "The First Brew"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"6DB6F5AE6A4A26EE"
+				"162610212C661542"
+			]
+			description: ["A famous food critic has arrived unannounced. Serve three courses, properly plated and under a cloche."]
+			icon: "candlelight:cloche"
+			id: "43B8EDF637747BB1"
+			rewards: [
+				{
+					id: "21FC71FB8B83C063"
+					item: "candlelight:chefs_jacket"
+					type: "item"
+				}
+				{
+					id: "51B28B2F84928175"
+					item: "candlelight:cooking_hat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 200"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "487B9E9E740218BF"
+					silent: true
+					title: "+200 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "76B8D039696DDB6B"
+					stage: "fq.skill_cooking.food_critic.enc0"
+					title: "Meet The Food Critic"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					id: "69F072CEE3B586C6"
+					item: "candlelight:salad"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "77EE83A744782B3E"
+					item: "candlelight:roastbeef_with_glazed_carrots"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "74EFDC9C25554358"
+					item: "candlelight:chocolate_mousse"
+					type: "item"
+				}
+			]
+			title: "The Food Critic"
+			x: 9.0d
+			y: 0.75d
+		}
+	]
+	subtitle: ["Cooking path"]
+	title: "The Tavern Keepers"
+}

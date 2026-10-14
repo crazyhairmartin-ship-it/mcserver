@@ -1,0 +1,23 @@
+{
+  "_about": "Named places quests can send players to: {\"place\": \"reece\"}. pos is the centre (x, y, z); radius in blocks (default 48). Fill in real coordinates before using a place.",
+  "_example_reece": {
+    "name": "Reece",
+    "pos": [
+      0,
+      64,
+      0
+    ],
+    "radius": 64,
+    "dimension": "minecraft:overworld"
+  },
+  "reece": {
+    "name": "Reece",
+    "pos": [
+      3354,
+      69,
+      -4124
+    ],
+    "radius": 64,
+    "dimension": "minecraft:overworld"
+  }
+}

@@ -1,0 +1,1529 @@
+{
+  "line": "Out in the world: the land",
+  "chapter": "discovery_land",
+  "group": "world",
+  "giver": "The world itself: each quest stays hidden until the player finds its place, item or biome, then appears with a toast. A few point back to an organisation in the nearest village.",
+  "feel": "Stumbling on something strange on the road: a short, self-contained story per place, most of them one sitting long. Dangerous dungeons wait for the right act; small places and biomes are for anyone.",
+  "quests": [
+    {
+      "id": "bandit_toll_road",
+      "title": "The Toll Road",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "kill",
+        "rescue"
+      ],
+      "after": [],
+      "summary": "Entering a bandit village, the player finds a merchant held for a toll he can't pay. Clear out the bandits and their leader, then walk the freed merchant to the nearest village, where he sells at cost for good.",
+      "mods": [
+        "dungeons_arise",
+        "spartanweaponry"
+      ],
+      "landmarks": [
+        "dungeons_arise:bandit_village"
+      ],
+      "reward": "Attack XP, a Spartan iron halberd, emeralds"
+    },
+    {
+      "id": "bells_of_the_bandit_towers",
+      "title": "Ring Both Bells",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "puzzle",
+        "kill"
+      ],
+      "after": [],
+      "summary": "The bandit towers signal each other with bells; ring the bell on top of each tower within a minute of the other while archers shoot from the walkways, and the towers' lookouts flee, leaving their stash.",
+      "mods": [
+        "dungeons_arise",
+        "supplementaries"
+      ],
+      "landmarks": [
+        "dungeons_arise:bandit_towers"
+      ],
+      "reward": "Range XP, a Supplementaries quiver, arrows"
+    },
+    {
+      "id": "the_great_cage",
+      "title": "The Great Cage",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "explore",
+        "rescue"
+      ],
+      "after": [],
+      "summary": "A giant aviary stands open on the mountainside with its keepers long gone. Climb its tiers, clear what nests there now and free three caged birds (parrots or Alex's Mobs birds) before they starve.",
+      "mods": [
+        "dungeons_arise",
+        "alexsmobs",
+        "domesticationinnovation"
+      ],
+      "landmarks": [
+        "dungeons_arise:aviary"
+      ],
+      "reward": "Taming XP, a Domestication Innovation collar tag, feathers"
+    },
+    {
+      "id": "steam_and_shadows",
+      "title": "Steam and Shadows",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "kill"
+      ],
+      "after": [],
+      "summary": "The bathhouse's pools still steam, and something lurks under the water. Clear the halls, then find the bath master's ledger that names who drowned here and why.",
+      "mods": [
+        "dungeons_arise",
+        "supplementaries"
+      ],
+      "landmarks": [
+        "dungeons_arise:bathhouse"
+      ],
+      "reward": "Defense XP, Supplementaries soap, a stack of towels and bread"
+    },
+    {
+      "id": "the_cold_forge",
+      "title": "The Foundry's Last Blueprint",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "fetch",
+        "craft"
+      ],
+      "after": [],
+      "summary": "The foundry's furnaces have gone cold but its blueprints survive. Fight past its guardians, recover the master smith's plans and forge the piece they describe at a smithing table back home.",
+      "mods": [
+        "dungeons_arise",
+        "spartanshields"
+      ],
+      "landmarks": [
+        "dungeons_arise:foundry"
+      ],
+      "reward": "Crafting XP, a Spartan Shields iron tower shield, iron blocks"
+    },
+    {
+      "id": "siege_of_keep_kayra",
+      "title": "The Siege of Keep Kayra",
+      "tier": "act3",
+      "types": [
+        "discover",
+        "explore",
+        "kill",
+        "defend"
+      ],
+      "after": [],
+      "summary": "Keep Kayra's garrison went mad and still holds the walls. Fight up through the gatehouse and towers to the keep's lord, then hold the throne room against his last wave.",
+      "mods": [
+        "dungeons_arise",
+        "bettercombat",
+        "spartanweaponry"
+      ],
+      "landmarks": [
+        "dungeons_arise:keep_kayra"
+      ],
+      "reward": "Defense XP, an enchanted Spartan diamond longsword, a banner of the keep"
+    },
+    {
+      "id": "clockwork_hive",
+      "title": "The Clockwork Hive",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "drop",
+        "kill"
+      ],
+      "after": [],
+      "summary": "The mechanical nest hums with things that aren't quite alive. Hunt its guardians until one drops a Mainspring (quest item), the heart of the hive, and bring it to a Crafters' guild mason to study.",
+      "mods": [
+        "dungeons_arise"
+      ],
+      "landmarks": [
+        "dungeons_arise:mechanical_nest"
+      ],
+      "reward": "Crafting XP, redstone and copper blocks"
+    },
+    {
+      "id": "asylum_samples",
+      "title": "Samples from the Asylum",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "stealth",
+        "fetch",
+        "brew"
+      ],
+      "after": [],
+      "summary": "The plague asylum's wards still hold the sick and what feeds on them. Slip in, collect three samples from its apothecary and brew the cure from its notes, which the Herbalists want a copy of.",
+      "mods": [
+        "dungeons_arise",
+        "herbalbrews"
+      ],
+      "landmarks": [
+        "dungeons_arise:plague_asylum"
+      ],
+      "reward": "Foraging XP, HerbalBrews teas, potions of healing"
+    },
+    {
+      "id": "palace_of_shiraz",
+      "title": "The Palace Treasury",
+      "tier": "act3",
+      "types": [
+        "discover",
+        "puzzle",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Shiraz Palace's treasury is sealed behind a riddle in tiles. Explore the palace, read the mosaics in each court and set the treasury's levers in the order they tell.",
+      "mods": [
+        "dungeons_arise"
+      ],
+      "landmarks": [
+        "dungeons_arise:shiraz_palace"
+      ],
+      "reward": "Attack XP, gold blocks, an enchanted golden apple"
+    },
+    {
+      "id": "thornborn_ascent",
+      "title": "The Thornborn Ascent",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "explore",
+        "kill"
+      ],
+      "after": [],
+      "summary": "Thorns have swallowed the Thornborn Towers from the roots up. Climb to the top while the vines' guardians fight back, and bring down a cutting of the first thorn.",
+      "mods": [
+        "dungeons_arise",
+        "naturalist"
+      ],
+      "landmarks": [
+        "dungeons_arise:thornborn_towers"
+      ],
+      "reward": "Foraging XP, rare saplings, an enchanted axe"
+    },
+    {
+      "id": "the_infested_temple",
+      "title": "Swarming Stones",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "kill",
+        "timed"
+      ],
+      "after": [],
+      "summary": "Every wall of the infested temple hides silverfish. Reach the inner sanctum and smash its brood stones within five minutes, before the swarm closes the way out.",
+      "mods": [
+        "dungeons_arise",
+        "ftbultimine"
+      ],
+      "landmarks": [
+        "dungeons_arise:infested_temple"
+      ],
+      "reward": "Mining XP, an efficiency book, torches"
+    },
+    {
+      "id": "temple_of_the_old_order",
+      "title": "The Old Order's Temple",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "An abandoned temple keeps the old order's altar intact. Find the four offerings its inscriptions name in its side rooms and lay them on the altar to open the reliquary.",
+      "mods": [
+        "dungeons_arise"
+      ],
+      "landmarks": [
+        "dungeons_arise:abandoned_temple"
+      ],
+      "reward": "Magic XP, lapis, an enchanted book"
+    },
+    {
+      "id": "spore_folk",
+      "title": "The Spore Folk",
+      "tier": "prologue",
+      "types": [
+        "discover",
+        "talk",
+        "trade"
+      ],
+      "after": [],
+      "summary": "A village built inside giant mushrooms trades in caps and spores. Trade with its people and learn to grow their mushrooms, bringing back a full set of mushroom blocks.",
+      "mods": [
+        "dungeons_arise",
+        "farmersdelight"
+      ],
+      "landmarks": [
+        "dungeons_arise:mushroom_village"
+      ],
+      "reward": "Farming XP, Farmer's Delight mushroom colonies, mushroom stew"
+    },
+    {
+      "id": "the_lonely_cap",
+      "title": "The Lonely Cap",
+      "tier": "any",
+      "types": [
+        "discover",
+        "fetch"
+      ],
+      "after": [],
+      "summary": "A single mushroom house stands far from anywhere, its owner missing. Follow the spore trail from his doorstep to a cave where he's trapped by spiders, and lead him home.",
+      "mods": [
+        "dungeons_arise"
+      ],
+      "landmarks": [
+        "dungeons_arise:mushroom_house"
+      ],
+      "reward": "Foraging XP, suspicious stew, mushroom seeds"
+    },
+    {
+      "id": "the_scorched_mines",
+      "title": "Fire in the Hole",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "explore",
+        "rescue"
+      ],
+      "after": [],
+      "summary": "The scorched mines burn and the last shift never came up. Find the trapped miners through the heat (fire resistance helps) and get them out before the next collapse.",
+      "mods": [
+        "dungeons_arise"
+      ],
+      "landmarks": [
+        "dungeons_arise:scorched_mines"
+      ],
+      "reward": "Mining XP, potions of fire resistance, gold ore"
+    },
+    {
+      "id": "empty_stands",
+      "title": "Empty Stands",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "talk"
+      ],
+      "after": [],
+      "summary": "The coliseum's stands are empty but its gates still open for a challenger. A note pinned to the gate sends the player to the Bounty office, who know who runs the fights now.",
+      "mods": [
+        "dungeons_arise",
+        "bountiful"
+      ],
+      "landmarks": [
+        "dungeons_arise:coliseum",
+        "feature:bountiful:bounty_boards"
+      ],
+      "reward": "Attack XP, a bounty decree"
+    },
+    {
+      "id": "witch_villa_tea_party",
+      "title": "Tea at the Witch Villa",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "brew",
+        "stealth"
+      ],
+      "after": [],
+      "summary": "The witches of the swamp villa are holding a tea party and their recipe book is on the table. Sneak in, copy the book (or steal it), and brew their strangest potion yourself.",
+      "mods": [
+        "mr_dungeons_andtaverns",
+        "herbalbrews"
+      ],
+      "landmarks": [
+        "nova_structures:witch_villa"
+      ],
+      "reward": "Magic XP, splash potions, a cauldron"
+    },
+    {
+      "id": "old_manor_ghost",
+      "title": "The Old Manor",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "The old manor's doors lock behind the player, and the portraits move at night. Find the four keys hidden behind the portraits and open the study where the family's last letter waits.",
+      "mods": [
+        "structory",
+        "supplementaries"
+      ],
+      "landmarks": [
+        "structory:old_manor"
+      ],
+      "reward": "Magic XP, a Supplementaries key and safe, gold"
+    },
+    {
+      "id": "chapel_in_the_pines",
+      "title": "The Chapel in the Pines",
+      "tier": "any",
+      "types": [
+        "discover",
+        "talk",
+        "fetch"
+      ],
+      "after": [],
+      "summary": "An abandoned chapel still has a bell but no rope. Bring rope and candles to restore it, ring it at dusk, and see who comes out of the forest.",
+      "mods": [
+        "structory",
+        "supplementaries",
+        "candlelight"
+      ],
+      "landmarks": [
+        "structory:abandoned_chapel"
+      ],
+      "reward": "Defense XP, Candlelight candles, a bell"
+    },
+    {
+      "id": "outcasts",
+      "title": "The Outcasts",
+      "tier": "any",
+      "types": [
+        "discover",
+        "talk",
+        "trade"
+      ],
+      "after": [],
+      "summary": "Villagers cast out of their village live in a shack on their own. Hear their side, then carry their apology (and a gift) back to the nearest village, and see if they're welcome again.",
+      "mods": [
+        "structory",
+        "ctov"
+      ],
+      "landmarks": [
+        "structory:outcast_villager_grassy",
+        "structory:outcast_villager_desert",
+        "#villages"
+      ],
+      "reward": "Defense XP, emeralds, a cheaper trade at that village"
+    },
+    {
+      "id": "northern_runes",
+      "title": "Northern Runes",
+      "tier": "any",
+      "types": [
+        "discover",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "Northern ruins carry runes on their standing stones. Read three of them (in three different ruins) and the words combine into a direction to a buried chest.",
+      "mods": [
+        "structory",
+        "explorerscompass"
+      ],
+      "landmarks": [
+        "structory:northern_ruin"
+      ],
+      "reward": "Magic XP, a treasure chest, an Explorer's Compass"
+    },
+    {
+      "id": "temple_on_the_peak",
+      "title": "The Temple on the Peak",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "travel"
+      ],
+      "after": [],
+      "summary": "An ancient temple sits on a mountain peak above the clouds. Climb to it without flying, light its four braziers and watch the sun rise from the top.",
+      "mods": [
+        "structory_towers",
+        "tectonic",
+        "grapplemod"
+      ],
+      "landmarks": [
+        "structory_towers:ancient_temple"
+      ],
+      "reward": "Agility XP, a Grappling Hook, golden carrots"
+    },
+    {
+      "id": "engineers_plans",
+      "title": "The Engineer's Plans",
+      "tier": "any",
+      "types": [
+        "discover",
+        "fetch",
+        "craft"
+      ],
+      "after": [],
+      "summary": "The mangrove engineer left plans for a machine half-built. Gather the parts listed in his notes and finish it: a working piston door built from his drawing.",
+      "mods": [
+        "structory_towers"
+      ],
+      "landmarks": [
+        "structory_towers:engineer_tower"
+      ],
+      "reward": "Crafting XP, pistons, redstone"
+    },
+    {
+      "id": "mirage_outpost",
+      "title": "The Mirage",
+      "tier": "any",
+      "types": [
+        "discover",
+        "timed",
+        "travel"
+      ],
+      "after": [],
+      "summary": "The desert outpost keeps a water barrel and a logbook of travellers who never arrived. Cross the dunes to the next oasis before your water runs out (a timed run) and add your name to the log.",
+      "mods": [
+        "structory_towers"
+      ],
+      "landmarks": [
+        "structory_towers:mirage_outpost"
+      ],
+      "reward": "Agility XP, a water flask (potions of water breathing) and dried food"
+    },
+    {
+      "id": "sacred_relic",
+      "title": "The Sacred Relic",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "puzzle",
+        "fetch"
+      ],
+      "after": [],
+      "summary": "The relic temple's altar is empty; its relic was taken by the jungle's thieves. Track the relic to a nearby ruin and return it to its altar to wake the temple.",
+      "mods": [
+        "structory_towers"
+      ],
+      "landmarks": [
+        "structory_towers:sacred_relic_temple"
+      ],
+      "reward": "Magic XP, emeralds, a lapis block"
+    },
+    {
+      "id": "warped_greatsword",
+      "title": "The Sword in the Hill",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "A giant warped sword is driven into the shattered hills, as if dropped from the Nether. Climb its blade and find the forger's mark on the hilt, which names its maker.",
+      "mods": [
+        "structory_towers",
+        "spartanweaponry"
+      ],
+      "landmarks": [
+        "structory_towers:warped_greatsword"
+      ],
+      "reward": "Attack XP, a Spartan greatsword, warped fungus"
+    },
+    {
+      "id": "the_cathedral",
+      "title": "The Cathedral",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "talk"
+      ],
+      "after": [],
+      "summary": "A cathedral stands alone in the wilds, its bell tower cracked. Climb the tower, ring the bell, and a cleric arrives to say why the town around it never got built.",
+      "mods": [
+        "mvs",
+        "immersive_melodies"
+      ],
+      "landmarks": [
+        "mvs:cathedral"
+      ],
+      "reward": "Magic XP, an Immersive Melodies piano, golden apples"
+    },
+    {
+      "id": "gallows_hill",
+      "title": "Gallows Hill",
+      "tier": "any",
+      "types": [
+        "discover",
+        "puzzle",
+        "talk"
+      ],
+      "after": [],
+      "summary": "A notice on the gallows names a thief who swore he was innocent. Find the real culprit's dropped coin purse nearby and clear the dead man's name with the Village watch.",
+      "mods": [
+        "mvs",
+        "guardvillagers"
+      ],
+      "landmarks": [
+        "mvs:gallows"
+      ],
+      "reward": "Defense XP, emeralds"
+    },
+    {
+      "id": "the_tree_monument",
+      "title": "Grove of Remembrance",
+      "tier": "any",
+      "types": [
+        "discover",
+        "farm",
+        "build"
+      ],
+      "after": [],
+      "summary": "A monument to a felled forest stands on bare ground. Plant a sapling of every vanilla tree around it and bone-meal them up, and the grove returns.",
+      "mods": [
+        "mvs"
+      ],
+      "landmarks": [
+        "mvs:tree_monument"
+      ],
+      "reward": "Foraging XP, bone meal, a stack of saplings"
+    },
+    {
+      "id": "nobodys_home",
+      "title": "Nobody's Home",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Lonely houses stand empty along the roads, tables still set. Search three of them for pages of the same diary and learn where the families went.",
+      "mods": [
+        "mvs",
+        "handcrafted"
+      ],
+      "landmarks": [
+        "mvs:house",
+        "mvs:lil_house",
+        "mvs:tall_house",
+        "mvs:deepslate_house",
+        "mvs:diorite_and_deepslate_house",
+        "mvs:azelea_house",
+        "mvs:mud_brick_house_1",
+        "mvs:small_swamp_house",
+        "mvs:desert_house"
+      ],
+      "reward": "Crafting XP, Handcrafted furniture, a bed"
+    },
+    {
+      "id": "warped_in_the_overworld",
+      "title": "Wrong Side of the Portal",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "fetch"
+      ],
+      "after": [],
+      "summary": "Warped wood houses and towers stand in the Overworld where nothing warped should grow. Collect a sample of their wood and take it to the Arcane order, who suspect a leak from the Nether.",
+      "mods": [
+        "mvs"
+      ],
+      "landmarks": [
+        "mvs:warped_house",
+        "mvs:large_warped_tower"
+      ],
+      "reward": "Magic XP, warped planks, an ender pearl"
+    },
+    {
+      "id": "beacon_gone_dark",
+      "title": "A Beacon Gone Dark",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "fetch",
+        "build"
+      ],
+      "after": [],
+      "summary": "A ruined beacon still has its pyramid, half-robbed. Replace the missing blocks and light it again, and see the beam from miles away.",
+      "mods": [
+        "mvs"
+      ],
+      "landmarks": [
+        "mvs:ruined_beacon"
+      ],
+      "reward": "Mining XP, iron blocks, a beacon effect chosen at the ruin"
+    },
+    {
+      "id": "desert_mimic",
+      "title": "Too Good to Be True",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "encounter",
+        "kill"
+      ],
+      "after": [],
+      "summary": "A desert ruin with an unguarded chest in plain sight. The chest bites: beat the mimic, and the real loot is under the sand where it sat.",
+      "mods": [
+        "t_and_t",
+        "artifacts"
+      ],
+      "landmarks": [
+        "towns_and_towers:mimic_desert"
+      ],
+      "reward": "Attack XP, gold, a golden horse armour"
+    },
+    {
+      "id": "pharaohs_vault",
+      "title": "The Pharaoh's Vault",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "puzzle",
+        "explore"
+      ],
+      "after": [],
+      "summary": "The desert temple's tomb is sealed, and its corridors are trapped. Find the hidden levers, survive the pressure plates and open the pharaoh's vault.",
+      "mods": [
+        "betterdeserttemples"
+      ],
+      "landmarks": [
+        "betterdeserttemples:desert_temple"
+      ],
+      "reward": "Attack XP, gold, an enchanted book"
+    },
+    {
+      "id": "jungle_temple_traps",
+      "title": "Traps of the Jungle Temple",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "puzzle",
+        "timed"
+      ],
+      "after": [],
+      "summary": "A jungle temple's halls are full of dart traps and crushing floors. Get from the entrance to the treasure room within the time its warning carving gives.",
+      "mods": [
+        "betterjungletemples"
+      ],
+      "landmarks": [
+        "betterjungletemples:jungle_temple"
+      ],
+      "reward": "Agility XP, emeralds, a book of Feather Falling"
+    },
+    {
+      "id": "circle_of_stones",
+      "title": "The Circle of Stones",
+      "tier": "any",
+      "types": [
+        "discover",
+        "puzzle",
+        "brew"
+      ],
+      "after": [],
+      "summary": "A witch's circle of stones stands in the swamp under a full moon. Brew the potion carved into its stones and pour it at the centre; a witch's familiar answers.",
+      "mods": [
+        "betterwitchhuts",
+        "bookoffamiliars"
+      ],
+      "landmarks": [
+        "betterwitchhuts:witch_circle"
+      ],
+      "reward": "Magic XP, a Book of Familiars, redstone"
+    },
+    {
+      "id": "reading_the_obelisks",
+      "title": "Reading the Obelisks",
+      "tier": "any",
+      "types": [
+        "discover",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "Obelisks in the desert carry the same carvings in different orders. Visit three, note the carvings, and the one symbol they all share points to a cache.",
+      "mods": [
+        "yungsextras"
+      ],
+      "landmarks": [
+        "feature:yungsextras:desert_obelisks"
+      ],
+      "reward": "Magic XP, sandstone and gold"
+    },
+    {
+      "id": "the_bridge_builder",
+      "title": "The Bridge Builder",
+      "tier": "prologue",
+      "types": [
+        "discover",
+        "travel",
+        "build"
+      ],
+      "after": [],
+      "summary": "Crossing one of the old river bridges, the player finds the builder's plaque asking for one more. Build a Macaw's bridge across another river.",
+      "mods": [
+        "yungsbridges",
+        "mcwbridges"
+      ],
+      "landmarks": [
+        "feature:yungsbridges:bridges"
+      ],
+      "reward": "Crafting XP, Macaw's bridge parts, logs"
+    },
+    {
+      "id": "shards_of_the_trail",
+      "title": "Shards of the Trail",
+      "tier": "any",
+      "types": [
+        "discover",
+        "puzzle",
+        "collect",
+        "craft"
+      ],
+      "after": [],
+      "summary": "Trail ruins hide their past under suspicious gravel. Brush out four different pottery sherds and fit them on a decorated pot, and maybe the Relic disc turns up too.",
+      "mods": [],
+      "landmarks": [
+        "minecraft:trail_ruins"
+      ],
+      "reward": "Crafting XP, a brush, a sniffer egg"
+    },
+    {
+      "id": "the_broken_gate",
+      "title": "The Broken Gate",
+      "tier": "prologue",
+      "types": [
+        "discover",
+        "collect",
+        "build"
+      ],
+      "after": [],
+      "summary": "A ruined portal stands half-collapsed with crying obsidian in its frame. Find the missing obsidian and rebuild the frame, but don't light it yet: the Arcane order wants a word first.",
+      "mods": [],
+      "landmarks": [
+        "#ruined_portals"
+      ],
+      "reward": "Mining XP, a flint and steel, gold"
+    },
+    {
+      "id": "igloo_basement",
+      "title": "The Igloo's Basement",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "rescue",
+        "brew"
+      ],
+      "after": [],
+      "summary": "Under an igloo's carpet, a ladder leads to a cell holding a zombie villager. Cure him with weakness and a golden apple, and he tells you whose igloo it was.",
+      "mods": [
+        "mvs"
+      ],
+      "landmarks": [
+        "minecraft:igloo",
+        "mvs:small_igloo",
+        "mvs:medium_igloo_1",
+        "mvs:medium_igloo_2"
+      ],
+      "reward": "Magic XP, a brewing stand, a golden apple"
+    },
+    {
+      "id": "the_bakery",
+      "title": "Fresh from the Oven",
+      "tier": "any",
+      "types": [
+        "discover",
+        "cook",
+        "deliver"
+      ],
+      "after": [],
+      "summary": "The village bakery's baker is behind on orders. Bake a strawberry cake, a baguette and a tray of cupcakes at its station and deliver them before the festival.",
+      "mods": [
+        "bakery",
+        "farm_and_charm"
+      ],
+      "landmarks": [
+        "bakery:bakery"
+      ],
+      "reward": "Cooking XP, a Bakery rolling pin, bread"
+    },
+    {
+      "id": "brewfest",
+      "title": "Brewfest",
+      "tier": "any",
+      "types": [
+        "discover",
+        "brew",
+        "contest"
+      ],
+      "after": [],
+      "summary": "A brewfest tent stands in the plains with a contest board. Brew three beers, enter the best, and beat the brewfest regulars (and the Beer Elemental they keep in the cellar).",
+      "mods": [
+        "brewery",
+        "farm_and_charm"
+      ],
+      "landmarks": [
+        "brewery:brewfest_tent"
+      ],
+      "reward": "Cooking XP, a brewfest hat, a wooden brewing station"
+    },
+    {
+      "id": "the_chalet",
+      "title": "Fondue at the Chalet",
+      "tier": "any",
+      "types": [
+        "discover",
+        "cook"
+      ],
+      "after": [],
+      "summary": "The alpine chalet's cook makes fondue for climbers. Bring cheese of three kinds from Meadow's animals and cook the fondue together.",
+      "mods": [
+        "meadow"
+      ],
+      "landmarks": [
+        "meadow:chalet"
+      ],
+      "reward": "Cooking XP, Meadow cheese, fur boots"
+    },
+    {
+      "id": "the_observation_post",
+      "title": "The Observation Post",
+      "tier": "any",
+      "types": [
+        "discover",
+        "photo",
+        "hunt"
+      ],
+      "after": [],
+      "summary": "An alpine observation post has a camera on its sill and a list of animals to sight. Photograph three of them (a water buffalo, a horned sheep and an eagle-eyed bird) with Meadow's camera.",
+      "mods": [
+        "meadow",
+        "naturalist"
+      ],
+      "landmarks": [
+        "meadow:observation_post"
+      ],
+      "reward": "Range XP, a Meadow camera, a spyglass"
+    },
+    {
+      "id": "the_gardeners_cottage",
+      "title": "The Gardener's Cottage",
+      "tier": "any",
+      "types": [
+        "discover",
+        "talk",
+        "farm"
+      ],
+      "after": [],
+      "summary": "A cottage in the woods with a garden gone wild. Talk to the wandering gardener who lives there, help replant her beds with BloomingNature flowers and earn a cutting of each.",
+      "mods": [
+        "bloomingnature"
+      ],
+      "landmarks": [
+        "bloomingnature:cottage"
+      ],
+      "reward": "Foraging XP, BloomingNature flowers, a flower box"
+    },
+    {
+      "id": "gingerbread_house",
+      "title": "The Gingerbread House",
+      "tier": "any",
+      "types": [
+        "discover",
+        "encounter",
+        "cook"
+      ],
+      "after": [],
+      "summary": "A gingerbread house in the snow, and a gingerbread golem that won't let anyone eat the walls. Bake it some gingerbread cookies and eggnog to win it over.",
+      "mods": [
+        "snowyspirit"
+      ],
+      "landmarks": [
+        "snowyspirit:gingerbread_house"
+      ],
+      "reward": "Cooking XP, a sled, candy canes"
+    },
+    {
+      "id": "butterfly_lovers",
+      "title": "The Butterfly Lovers",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect",
+        "talk"
+      ],
+      "after": [],
+      "summary": "A lonely grave where two butterflies always circle. Read the legend on it, catch a pair of matching butterflies and release them at the grave.",
+      "mods": [
+        "butterflies"
+      ],
+      "landmarks": [
+        "butterflies:liangshanbo_grave"
+      ],
+      "reward": "Taming XP, a butterfly net, flowers"
+    },
+    {
+      "id": "fallen_adventurer",
+      "title": "Bring Them Home",
+      "tier": "any",
+      "types": [
+        "discover",
+        "deliver",
+        "talk"
+      ],
+      "after": [],
+      "summary": "A skeleton in armour lies where an adventurer fell. Take the name tag and gear found on it to the nearest village and tell the family, who have a gift for the one who brought news.",
+      "mods": [
+        "realmrpg_skeletons",
+        "gravestone"
+      ],
+      "landmarks": [
+        "feature:realmrpg_skeletons:fallen_adventurers",
+        "#villages"
+      ],
+      "reward": "Defense XP, the adventurer's sword (renamed)"
+    },
+    {
+      "id": "waystone_network",
+      "title": "Stones That Remember",
+      "tier": "prologue",
+      "types": [
+        "discover",
+        "travel",
+        "milestone"
+      ],
+      "after": [],
+      "summary": "Activating a wild waystone for the first time starts it. Find and attune five waystones, then make a warp scroll and use it.",
+      "mods": [
+        "waystones"
+      ],
+      "landmarks": [
+        "feature:waystones:waystones"
+      ],
+      "reward": "Agility XP, warp scrolls, a return scroll"
+    },
+    {
+      "id": "frostbitten_ruins",
+      "title": "Frostbitten Ruins",
+      "tier": "act2",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Frozen spires and an abandoned village in the snow, built by no people anyone knows. Something very large sleeps far below; the player notes it and leaves (come back after the Dragon).",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:abandoned_village",
+        "cataclysm:abandoned_spire",
+        "cataclysm:abandoned_temple"
+      ],
+      "reward": "Magic XP, a page of the old ruins' writing"
+    },
+    {
+      "id": "occupied_dunes",
+      "title": "Occupied Dunes",
+      "tier": "act3",
+      "types": [
+        "discover",
+        "kill",
+        "explore"
+      ],
+      "after": [],
+      "summary": "A desert village has been occupied by Kobolediator scouts, and a dig site nearby goes deeper than it should. Drive the scouts off, read the foreman's notes, and leave the pit alone for now.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:desert_occupied_village",
+        "cataclysm:desert_site"
+      ],
+      "reward": "Attack XP, gold, the foreman's notes"
+    },
+    {
+      "id": "return_to_the_ruins",
+      "title": "Back to the Ruins",
+      "tier": "act5",
+      "types": [
+        "explore",
+        "talk"
+      ],
+      "after": [
+        "frostbitten_ruins",
+        "occupied_dunes",
+        "main_story:act5_start"
+      ],
+      "summary": "Now the old ruins' writing makes sense: the snow ruins and the desert dig sites point to the Cataclysm's prisons. Revisit one of each and read the inscriptions that name what's buried there.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "#cataclysm_ruins"
+      ],
+      "reward": "Magic XP, a hint toward the Cataclysm strongholds"
+    },
+    {
+      "id": "biome_cherry_grove",
+      "title": "Petals on the Wind",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering a cherry grove for the first time. Collect pink petals, a cherry sapling and honey from the grove's bees.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Foraging XP, cherry saplings"
+    },
+    {
+      "id": "biome_mushroom_fields",
+      "title": "Mooshroom Shores",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Landing on a mushroom island. Find the mushroom idol that stands on some of them and milk a mooshroom for stew.",
+      "mods": [
+        "mvs"
+      ],
+      "landmarks": [
+        "mvs:mushroom_statue"
+      ],
+      "reward": "Farming XP, mycelium, a bowl of mushroom stew"
+    },
+    {
+      "id": "biome_lavender_field",
+      "title": "Lavender Haze",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect",
+        "brew"
+      ],
+      "after": [],
+      "summary": "Entering a Biomes O' Plenty lavender field. Gather lavender and brew a calming tea from it.",
+      "mods": [
+        "biomesoplenty",
+        "herbalbrews"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, HerbalBrews tea"
+    },
+    {
+      "id": "biome_origin_valley",
+      "title": "Where It All Began",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Stumbling into the rare Origin Valley, where the world looks as it did long ago. Collect a block of its old grass and a rose.",
+      "mods": [
+        "biomesoplenty"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, a nostalgic painting"
+    },
+    {
+      "id": "biome_alpha_grove",
+      "title": "Alpha Grove",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering Regions Unexplored's alpha grove, all old-style leaves and grass. Bring back its saplings and leaves before you forget what it looked like.",
+      "mods": [
+        "regions_unexplored"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, alpha saplings"
+    },
+    {
+      "id": "biome_mystic_grove",
+      "title": "The Mystic Grove",
+      "tier": "any",
+      "types": [
+        "discover",
+        "encounter"
+      ],
+      "after": [],
+      "summary": "Entering a mystic grove. A fairy shows itself among the glowing flowers if you wait quietly; follow it to its ring.",
+      "mods": [
+        "biomesoplenty",
+        "fays_fairies"
+      ],
+      "landmarks": [],
+      "reward": "Magic XP, a fairy in a bottle"
+    },
+    {
+      "id": "biome_ominous_woods",
+      "title": "The Ominous Woods",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "kill",
+        "timed"
+      ],
+      "after": [],
+      "summary": "Entering the ominous woods at night, the player is hunted. Survive until dawn inside the woods, killing what comes.",
+      "mods": [
+        "biomesoplenty"
+      ],
+      "landmarks": [],
+      "reward": "Defense XP, a shield, torches"
+    },
+    {
+      "id": "biome_redwoods",
+      "title": "Giants of the Forest",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect",
+        "travel"
+      ],
+      "after": [],
+      "summary": "Entering a redwood forest (Biomes O' Plenty or Regions Unexplored). Climb a redwood to the top and bring down its wood.",
+      "mods": [
+        "biomesoplenty",
+        "regions_unexplored"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, redwood logs, an axe"
+    },
+    {
+      "id": "biome_volcano",
+      "title": "The Mountain That Smokes",
+      "tier": "act1",
+      "types": [
+        "discover",
+        "explore",
+        "fetch"
+      ],
+      "after": [],
+      "summary": "Finding a Biomes O' Plenty volcano. Reach its crater, scoop a bucket of lava and bring back black sand and magma.",
+      "mods": [
+        "biomesoplenty"
+      ],
+      "landmarks": [],
+      "reward": "Mining XP, a fire resistance potion, obsidian"
+    },
+    {
+      "id": "biome_hot_springs",
+      "title": "Hot Springs",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Finding hot springs. Soak in the thermal water until fully healed, then take a bottle home.",
+      "mods": [
+        "biomesoplenty",
+        "comforts"
+      ],
+      "landmarks": [],
+      "reward": "Agility XP, a Comforts hammock"
+    },
+    {
+      "id": "biome_snowblossom",
+      "title": "Snowblossom",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering a snowblossom grove, white petals in the snow. Collect snowblossom leaves and a sapling.",
+      "mods": [
+        "biomesoplenty"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, snowblossom saplings"
+    },
+    {
+      "id": "biome_wasteland",
+      "title": "The Wasteland",
+      "tier": "any",
+      "types": [
+        "discover",
+        "travel"
+      ],
+      "after": [],
+      "summary": "Entering a dried-out wasteland. Cross it on foot and find the dead tree at its heart.",
+      "mods": [
+        "biomesoplenty"
+      ],
+      "landmarks": [],
+      "reward": "Agility XP, dead wood, water"
+    },
+    {
+      "id": "biome_pumpkin_patch",
+      "title": "The Pumpkin Patch",
+      "tier": "any",
+      "types": [
+        "discover",
+        "farm"
+      ],
+      "after": [],
+      "summary": "Entering a pumpkin patch (Biomes O' Plenty) or pumpkin fields (Regions Unexplored). Pick the biggest pumpkins and carve a jack o'lantern.",
+      "mods": [
+        "biomesoplenty",
+        "regions_unexplored"
+      ],
+      "landmarks": [],
+      "reward": "Farming XP, pumpkin pie"
+    },
+    {
+      "id": "biome_baobab_savanna",
+      "title": "Under the Baobabs",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering a baobab savanna. Collect baobab wood and watch the herds go by.",
+      "mods": [
+        "regions_unexplored",
+        "naturalist"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, baobab saplings"
+    },
+    {
+      "id": "biome_chalk_cliffs",
+      "title": "White Cliffs",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Finding Regions Unexplored's chalk cliffs above the sea. Climb from the beach to the top without falling.",
+      "mods": [
+        "regions_unexplored",
+        "parcool"
+      ],
+      "landmarks": [],
+      "reward": "Agility XP, chalk blocks"
+    },
+    {
+      "id": "biome_spires",
+      "title": "Among the Spires",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Entering the stone spires (Regions Unexplored) or towering cliffs. Stand on top of the tallest spire you can find.",
+      "mods": [
+        "regions_unexplored",
+        "grapplemod"
+      ],
+      "landmarks": [],
+      "reward": "Agility XP, a grappling hook upgrade"
+    },
+    {
+      "id": "biome_magnolia",
+      "title": "Magnolia in Bloom",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering a magnolia woodland or glistering meadow. Gather magnolia flowers and the meadow's shining grass.",
+      "mods": [
+        "regions_unexplored"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, magnolia saplings"
+    },
+    {
+      "id": "biome_ashen_woodland",
+      "title": "Ashen Woods",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering the ashen woodland, burnt by an old fire. Collect ash and find a surviving sapling.",
+      "mods": [
+        "regions_unexplored"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, bone meal"
+    },
+    {
+      "id": "biome_saguaro",
+      "title": "Land of Cacti",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering a saguaro or joshua desert. Collect saguaro cactus and a joshua tree sapling, and don't hug the cactus.",
+      "mods": [
+        "regions_unexplored"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, green dye"
+    },
+    {
+      "id": "tectonic_peaks",
+      "title": "Above the Clouds",
+      "tier": "any",
+      "types": [
+        "discover",
+        "travel",
+        "milestone"
+      ],
+      "after": [],
+      "summary": "Tectonic's mountains climb far higher than vanilla. Stand above Y 300 on foot and look down on the clouds.",
+      "mods": [
+        "tectonic"
+      ],
+      "landmarks": [],
+      "reward": "Agility XP, a spyglass, golden carrots"
+    },
+    {
+      "id": "tectonic_canyon",
+      "title": "The Deep Valley",
+      "tier": "any",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Tectonic's rivers cut deep valleys. Follow one down to where it meets the sea and fish at its mouth.",
+      "mods": [
+        "tectonic",
+        "aquaculture"
+      ],
+      "landmarks": [],
+      "reward": "Fishing XP, bait"
+    },
+    {
+      "id": "biome_ice_spikes",
+      "title": "Ice Spikes",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering an ice spikes plain. Mine packed ice from the top of a spike with silk touch.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Mining XP, blue ice"
+    },
+    {
+      "id": "biome_badlands",
+      "title": "The Painted Badlands",
+      "tier": "any",
+      "types": [
+        "discover",
+        "collect"
+      ],
+      "after": [],
+      "summary": "Entering the badlands. Collect every colour of terracotta from the canyon walls.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Mining XP, gold"
+    },
+    {
+      "id": "biome_grand_tour",
+      "title": "The Grand Tour",
+      "tier": "any",
+      "types": [
+        "milestone",
+        "travel"
+      ],
+      "after": [
+        "biome_cherry_grove"
+      ],
+      "summary": "Visit twenty different Overworld biomes, a Nature's Compass helps. Each new biome is ticked on the list.",
+      "mods": [
+        "naturescompass",
+        "biomesoplenty",
+        "regions_unexplored",
+        "sophisticatedbackpacks"
+      ],
+      "landmarks": [],
+      "reward": "Agility XP, a Nature's Compass, a Sophisticated backpack upgrade"
+    },
+    {
+      "id": "found_music_disc",
+      "title": "A Song from Somewhere",
+      "tier": "any",
+      "types": [
+        "discover",
+        "craft"
+      ],
+      "after": [],
+      "summary": "Picking up any music disc starts it. Build a jukebox and play the disc, then learn the tune on an Immersive Melodies instrument.",
+      "mods": [
+        "immersive_melodies"
+      ],
+      "landmarks": [],
+      "reward": "Crafting XP, a lute"
+    },
+    {
+      "id": "antique_ink",
+      "title": "Antique Ink",
+      "tier": "any",
+      "types": [
+        "discover",
+        "craft",
+        "explore"
+      ],
+      "after": [],
+      "summary": "Finding a bottle of antique ink in a chest starts it. Ink a map with it and the map shows an old landmark that isn't on new maps; go there.",
+      "mods": [
+        "supplementaries",
+        "explorerscompass"
+      ],
+      "landmarks": [],
+      "reward": "Crafting XP, a globe, an Explorer's Compass"
+    },
+    {
+      "id": "the_strange_key",
+      "title": "The Strange Key",
+      "tier": "any",
+      "types": [
+        "discover",
+        "puzzle"
+      ],
+      "after": [],
+      "summary": "Finding a lone Supplementaries key in a dungeon chest starts it. Its tag names a safe; find it in a ruin nearby and open it.",
+      "mods": [
+        "supplementaries"
+      ],
+      "landmarks": [
+        "#ruins"
+      ],
+      "reward": "Mining XP, the safe's contents"
+    },
+    {
+      "id": "sniffer_egg",
+      "title": "An Ancient Egg",
+      "tier": "any",
+      "types": [
+        "discover",
+        "tame",
+        "farm"
+      ],
+      "after": [],
+      "summary": "Finding a sniffer egg starts it. Hatch it on moss, raise the sniffer and plant the first ancient seed it digs up.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Taming XP, torchflowers, a pitcher plant"
+    }
+  ]
+}

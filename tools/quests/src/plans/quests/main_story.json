@@ -1,0 +1,1820 @@
+{
+  "line": "Main story",
+  "chapter": "main_story",
+  "group": "story",
+  "giver": "Sister Wren (Reece's cleric), the spirits, and characters who come to you",
+  "feel": "A mystery that grows into a reckoning: the silent forest, the drained wardens, the eight sleepers, and the fire at the end.",
+  "quests": [
+    {
+      "id": "prologue_silent_wood",
+      "title": "The Silent Wood",
+      "tier": "prologue",
+      "types": [
+        "explore",
+        "timed"
+      ],
+      "after": [
+        "start:clerics_worry"
+      ],
+      "summary": "Go to the forest edge after dusk and wait out one night: no fairies dance, the butterflies are gone, and something has scored the bark of the oldest tree.",
+      "mods": [
+        "fays_fairies",
+        "butterflies"
+      ],
+      "landmarks": [],
+      "reward": "Night vision potion"
+    },
+    {
+      "id": "prologue_shrine",
+      "title": "A Shrine for the Quiet",
+      "tier": "prologue",
+      "types": [
+        "build",
+        "fetch"
+      ],
+      "after": [
+        "prologue_silent_wood"
+      ],
+      "summary": "Sister Wren asks for a small wayside shrine: build it from mossy stone and candles, and offer wildflowers from three biomes.",
+      "mods": [
+        "candlelight",
+        "bloomingnature",
+        "wildernature"
+      ],
+      "landmarks": [],
+      "reward": "Candles, Herbalists' favour"
+    },
+    {
+      "id": "prologue_home",
+      "title": "Somewhere to Come Back To",
+      "tier": "prologue",
+      "types": [
+        "build"
+      ],
+      "after": [
+        "prologue_silent_wood"
+      ],
+      "summary": "Build your first home near Reece with a bed, a chest, a table and chairs from Handcrafted or Another Furniture.",
+      "mods": [
+        "handcrafted",
+        "another_furniture"
+      ],
+      "landmarks": [],
+      "reward": "A cushion set, a cupboard"
+    },
+    {
+      "id": "prologue_fallen",
+      "title": "The Fallen Adventurer",
+      "tier": "prologue",
+      "types": [
+        "discover",
+        "explore"
+      ],
+      "after": [
+        "prologue_shrine"
+      ],
+      "summary": "Find the remains of an adventurer in the wild; their rusted gear holds a journal page about 'the wardens growing weak'.",
+      "mods": [
+        "realmrpg_skeletons"
+      ],
+      "landmarks": [
+        "feature:realmrpg_skeletons:fallen_adventurers"
+      ],
+      "reward": "The journal page, a stone sword"
+    },
+    {
+      "id": "prologue_dungeon",
+      "title": "What the Dark Keeps",
+      "tier": "prologue",
+      "types": [
+        "explore",
+        "kill"
+      ],
+      "after": [
+        "prologue_fallen"
+      ],
+      "summary": "The journal points to an old dungeon: clear a YUNG's dungeon of its spawners and find the second journal page in its loot.",
+      "mods": [
+        "betterdungeons",
+        "lootr"
+      ],
+      "landmarks": [
+        "#yungs_dungeons"
+      ],
+      "reward": "Iron ingots, a Lootr chest's treasure"
+    },
+    {
+      "id": "prologue_letter",
+      "title": "Word to the Neighbours",
+      "tier": "prologue",
+      "types": [
+        "deliver",
+        "travel"
+      ],
+      "after": [
+        "prologue_dungeon"
+      ],
+      "summary": "Sister Wren sends you to the cleric of the next village with the first letter of Friends of the Forest Mail; deliver it in person, and his reply follows you home by post.",
+      "mods": [
+        "fotfmail",
+        "endermail"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "A mailbox, emeralds"
+    },
+    {
+      "id": "act1_start",
+      "title": "The First Wardens",
+      "tier": "act1",
+      "types": [
+        "talk"
+      ],
+      "after": [
+        "prologue_letter",
+        "prologue_home"
+      ],
+      "summary": "Both journal pages together tell of guardians, the wardens, who hold the old places shut. Sister Wren fears they are being drained, and names the first of them.",
+      "mods": [
+        "patchouli"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Iron armour piece, the Act I page in the Field Guide"
+    },
+    {
+      "id": "act1_iron_kit",
+      "title": "Iron and Edge",
+      "tier": "act1",
+      "types": [
+        "craft"
+      ],
+      "after": [
+        "act1_start"
+      ],
+      "summary": "Arm yourself for what's ahead: craft a Spartan Weaponry weapon of your choice, a Spartan shield and full iron armour.",
+      "mods": [
+        "spartanweaponry",
+        "spartanshields",
+        "bettercombat"
+      ],
+      "landmarks": [],
+      "reward": "A whetstone kit (Sharpness book)"
+    },
+    {
+      "id": "act1_temple",
+      "title": "Sand and Vine",
+      "tier": "act1",
+      "types": [
+        "explore",
+        "puzzle"
+      ],
+      "after": [
+        "act1_start"
+      ],
+      "summary": "Search a YUNG's desert or jungle temple: solve its traps and levers to reach the inner chamber, where a mural shows a hooded iron giant.",
+      "mods": [
+        "betterdeserttemples",
+        "betterjungletemples"
+      ],
+      "landmarks": [
+        "betterdeserttemples:desert_temple",
+        "betterjungletemples:jungle_temple"
+      ],
+      "reward": "Gold, a temple relic"
+    },
+    {
+      "id": "act1_mineshaft",
+      "title": "The Echo in the Shaft",
+      "tier": "act1",
+      "types": [
+        "explore",
+        "collect"
+      ],
+      "after": [
+        "act1_start"
+      ],
+      "summary": "Miners in a YUNG's mineshaft heard metal footsteps below: explore it, gather 16 iron ore, and find the scrape marks leading down.",
+      "mods": [
+        "bettermineshafts"
+      ],
+      "landmarks": [
+        "#mines"
+      ],
+      "reward": "A lantern, Mining XP"
+    },
+    {
+      "id": "act1_wrought_scout",
+      "title": "The Iron Door",
+      "tier": "act1",
+      "types": [
+        "explore"
+      ],
+      "after": [
+        "act1_wrought_practice"
+      ],
+      "summary": "Follow the scrape marks to a Wrought Chamber and look at its sealed door without stepping in. The armour inside is breathing.",
+      "mods": [
+        "mowziesmobs"
+      ],
+      "landmarks": [
+        "mowziesmobs:wrought_chamber"
+      ],
+      "reward": "A spyglass"
+    },
+    {
+      "id": "act1_wrought_practice",
+      "title": "Strike From Behind",
+      "tier": "act1",
+      "types": [
+        "contest",
+        "timed"
+      ],
+      "after": [
+        "act1_temple",
+        "act1_mineshaft"
+      ],
+      "summary": "Rumours of armour that breathes in a sealed chamber: the Village watch's captain sets up a MmmMmmMmmMmm target dummy first. Land ten hits from behind within a minute while dodging her swings, the way you'll have to fight it.",
+      "mods": [
+        "dummmmmmy",
+        "guardvillagers"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Defense XP, a target dummy"
+    },
+    {
+      "id": "act1_wroughtnaut",
+      "title": "The Ferrous Wroughtnaut",
+      "tier": "act1",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act1_wrought_scout",
+        "act1_iron_kit"
+      ],
+      "summary": "Wake the Ferrous Wroughtnaut (40 health, hits for 30) and beat it by dodging its axe and striking its exposed back.",
+      "mods": [
+        "mowziesmobs"
+      ],
+      "landmarks": [
+        "mowziesmobs:wrought_chamber"
+      ],
+      "reward": "Golden apples, a Wrought Helm display stand"
+    },
+    {
+      "id": "act1_wrought_report",
+      "title": "Rust on the Seal",
+      "tier": "act1",
+      "types": [
+        "talk",
+        "deliver"
+      ],
+      "after": [
+        "act1_wroughtnaut"
+      ],
+      "summary": "Bring the Wroughtnaut's broken seal-plate to Sister Wren: the warden wasn't evil, it was starving, and something had fed on it.",
+      "mods": [
+        "mowziesmobs"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Story page, emeralds"
+    },
+    {
+      "id": "act1_magic_branch",
+      "title": "A Priest on the Road",
+      "tier": "act1",
+      "types": [
+        "talk",
+        "explore"
+      ],
+      "after": [
+        "act1_wrought_report"
+      ],
+      "summary": "A travelling priest of the Arcane order says the drain smells of old magic and points you to a Pyromancer Tower. Branch: the magic questline continues from here.",
+      "mods": [
+        "irons_spellbooks"
+      ],
+      "landmarks": [
+        "irons_spellbooks:pyromancer_tower"
+      ],
+      "reward": "A scroll, an ink"
+    },
+    {
+      "id": "act1_outpost",
+      "title": "Banners on the Hill",
+      "tier": "act1",
+      "types": [
+        "explore",
+        "kill"
+      ],
+      "after": [
+        "act1_wrought_report"
+      ],
+      "summary": "Pillagers have raised an outpost near the trade road: clear it, take down its captain and burn the banner.",
+      "mods": [
+        "t_and_t",
+        "ctov"
+      ],
+      "landmarks": [
+        "#illager_hideouts"
+      ],
+      "reward": "A crossbow, arrows"
+    },
+    {
+      "id": "act1_iceologer",
+      "title": "Frost on the Wind",
+      "tier": "act1",
+      "types": [
+        "encounter",
+        "kill"
+      ],
+      "after": [
+        "act1_outpost"
+      ],
+      "summary": "A frightened trader rides into Reece: an Iceologer froze his caravan in the snowy taiga. Track it down and end it before it reaches the village.",
+      "mods": [
+        "friendsandfoes"
+      ],
+      "landmarks": [],
+      "reward": "Warm clothing (leather set), Attack XP"
+    },
+    {
+      "id": "act1_illusioner",
+      "title": "Four of Him",
+      "tier": "act1",
+      "types": [
+        "encounter",
+        "puzzle"
+      ],
+      "after": [
+        "act1_iceologer"
+      ],
+      "summary": "An Illusioner haunts the woods near a village; find the real one among its copies and defeat it.",
+      "mods": [
+        "friendsandfoes",
+        "guardvillagers"
+      ],
+      "landmarks": [],
+      "reward": "A bow of the trickster (Power II)"
+    },
+    {
+      "id": "act1_raid",
+      "title": "The Long Night",
+      "tier": "act1",
+      "types": [
+        "defend",
+        "timed"
+      ],
+      "after": [
+        "act1_illusioner"
+      ],
+      "summary": "Captain Hale hires Guard Villagers to stand with you; carry the Bad Omen into Reece and hold the village through a full raid without losing a guard.",
+      "mods": [
+        "guardvillagers",
+        "ctov"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Totem of Undying, Defense XP"
+    },
+    {
+      "id": "act1_umvuthana_scout",
+      "title": "Masks in the Grass",
+      "tier": "act1",
+      "types": [
+        "travel",
+        "stealth"
+      ],
+      "after": [
+        "act1_raid"
+      ],
+      "summary": "Travel to the savanna and find the Umvuthana Grove; watch the Umvuthana from cover without being spotted and count their masks.",
+      "mods": [
+        "mowziesmobs"
+      ],
+      "landmarks": [
+        "mowziesmobs:umvuthana_grove"
+      ],
+      "reward": "Ranger's tea, Agility XP"
+    },
+    {
+      "id": "act1_umvuthi",
+      "title": "Umvuthi, the Sunbird",
+      "tier": "act1",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act1_umvuthana_scout"
+      ],
+      "summary": "Face Umvuthi (150 health) and its followers in the heart of the grove; break the circle of masks before the sun spell lands.",
+      "mods": [
+        "mowziesmobs"
+      ],
+      "landmarks": [
+        "mowziesmobs:umvuthana_grove"
+      ],
+      "reward": "Diamonds, Attack XP"
+    },
+    {
+      "id": "act1_finale",
+      "title": "A Door in the Flowers",
+      "tier": "act1",
+      "types": [
+        "build",
+        "explore"
+      ],
+      "after": [
+        "act1_umvuthi",
+        "act1_wroughtnaut"
+      ],
+      "summary": "With two wardens freed, Sister Wren remembers the spirits' own realm: dig a pool, ring it with flowers and drop a diamond in to open the Twilight Forest portal.",
+      "mods": [
+        "twilightforest"
+      ],
+      "landmarks": [],
+      "reward": "Diamond, flowers, the Act II page"
+    },
+    {
+      "id": "act2_start",
+      "title": "Where the Spirits Went",
+      "tier": "act2",
+      "types": [
+        "explore",
+        "talk"
+      ],
+      "after": [
+        "act1_finale"
+      ],
+      "summary": "Step through into the Twilight Forest and find its quest grove: the spirits are here, hiding, and they speak of the drain as a hunger rising from below.",
+      "mods": [
+        "twilightforest"
+      ],
+      "landmarks": [
+        "twilightforest:quest_grove"
+      ],
+      "reward": "A Magic Map"
+    },
+    {
+      "id": "act2_twilight_branch",
+      "title": "The Twilight Calls (Part 1)",
+      "tier": "act2",
+      "types": [
+        "explore",
+        "boss"
+      ],
+      "after": [
+        "act2_start"
+      ],
+      "summary": "The spirits ask you to lift the first curses: defeat the Naga in its courtyard and the Lich in its tower. Branch: the Twilight Forest questline holds the rest of this realm.",
+      "mods": [
+        "twilightforest",
+        "spartantwilight"
+      ],
+      "landmarks": [
+        "twilightforest:naga_courtyard",
+        "twilightforest:lich_tower"
+      ],
+      "reward": "Naga scales, a Twilight trophy shelf"
+    },
+    {
+      "id": "act2_frostmaw_tale",
+      "title": "Ice Where None Should Be",
+      "tier": "act2",
+      "types": [
+        "talk",
+        "discover"
+      ],
+      "after": [
+        "act2_start"
+      ],
+      "summary": "Reece's shepherd lost a flock to a white beast in the snowy hills; the spirits name it Frostmaw, a warden of winter woken too early.",
+      "mods": [
+        "mowziesmobs"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Frost-resistant boots"
+    },
+    {
+      "id": "act2_frostmaw_trail",
+      "title": "Tracks in the Snow",
+      "tier": "act2",
+      "types": [
+        "hunt",
+        "explore"
+      ],
+      "after": [
+        "act2_frostmaw_tale"
+      ],
+      "summary": "Follow broken ice and frozen carcasses across a snowy biome to where Frostmaw sleeps, and leave a trap of lit campfires at its den.",
+      "mods": [
+        "mowziesmobs",
+        "camping"
+      ],
+      "landmarks": [
+        "mowziesmobs:frostmaw_spawn"
+      ],
+      "reward": "Fire charges"
+    },
+    {
+      "id": "act2_frostmaw",
+      "title": "Frostmaw",
+      "tier": "act2",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act2_frostmaw_trail"
+      ],
+      "summary": "Wake and defeat Frostmaw (250 health) without letting its ice breath freeze you to the ground.",
+      "mods": [
+        "mowziesmobs"
+      ],
+      "landmarks": [
+        "mowziesmobs:frostmaw_spawn"
+      ],
+      "reward": "Golden apples, Defense XP"
+    },
+    {
+      "id": "act2_ice_crystal",
+      "title": "The Cold Heart",
+      "tier": "act2",
+      "types": [
+        "collect"
+      ],
+      "after": [
+        "act2_frostmaw"
+      ],
+      "summary": "Frostmaw leaves an Ice Crystal behind, flecked with dark veins. As you pick it up, a letter from Sister Wren arrives: the veins are proof the drain comes from deep underground.",
+      "mods": [
+        "mowziesmobs"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "A Frostmaw plushie, story page"
+    },
+    {
+      "id": "act2_cave_map",
+      "title": "A Map of the Underworld",
+      "tier": "act2",
+      "types": [
+        "trade",
+        "explore"
+      ],
+      "after": [
+        "act2_ice_crystal"
+      ],
+      "summary": "Find a cave tablet or trade a cartographer for an Alex's Caves Cave Map and follow it to your first cave biome. Branch: the Underworld questline takes over below.",
+      "mods": [
+        "alexscaves"
+      ],
+      "landmarks": [
+        "alexscaves:underground_cabin"
+      ],
+      "reward": "Cave Map, bioluminescent torches"
+    },
+    {
+      "id": "act2_caves_beat",
+      "title": "Roots of the Drain",
+      "tier": "act2",
+      "types": [
+        "explore",
+        "collect"
+      ],
+      "after": [
+        "act2_cave_map"
+      ],
+      "summary": "In the Primordial Caves and the Forlorn Hollows, gather amber and pure darkness; both hum with the same dark pulse as the crystal.",
+      "mods": [
+        "alexscaves"
+      ],
+      "landmarks": [
+        "alexscaves:dino_bowl",
+        "alexscaves:forlorn_canyon"
+      ],
+      "reward": "Cave gear, Mining XP"
+    },
+    {
+      "id": "act2_monument_prep",
+      "title": "Breath of the Deep",
+      "tier": "act2",
+      "types": [
+        "brew",
+        "craft"
+      ],
+      "after": [
+        "act2_ice_crystal"
+      ],
+      "summary": "Brew potions of water breathing and night vision and enchant a helmet with Respiration at an Easy Magic table for the ocean monument.",
+      "mods": [
+        "easymagic"
+      ],
+      "landmarks": [],
+      "reward": "Prismarine shards, a turtle helmet"
+    },
+    {
+      "id": "act2_elder_guardian",
+      "title": "The Elder of the Sea",
+      "tier": "act2",
+      "types": [
+        "explore",
+        "boss"
+      ],
+      "after": [
+        "act2_monument_prep"
+      ],
+      "summary": "Dive into a YUNG's Better Ocean Monument and defeat one of its Elder Guardians, the ocean's own warden, half drained already.",
+      "mods": [
+        "betteroceanmonuments"
+      ],
+      "landmarks": [
+        "betteroceanmonuments:ocean_monument"
+      ],
+      "reward": "Sponges, Heart of the Sea"
+    },
+    {
+      "id": "act2_pyramid_scout",
+      "title": "The Sealed Pyramid",
+      "tier": "act2",
+      "types": [
+        "explore",
+        "kill"
+      ],
+      "after": [
+        "act2_caves_beat"
+      ],
+      "summary": "Scout a Cataclysm Cursed Pyramid in the desert: clear its outer halls of Koboletons and defeat a Kobolediator for Ancient Metal. Copy the runes on its sealed inner door while you're there.",
+      "mods": [
+        "cataclysm",
+        "lootintegrations_cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:cursed_pyramid",
+        "#cataclysm_ruins"
+      ],
+      "reward": "Ancient Metal nuggets"
+    },
+    {
+      "id": "act2_prison_scout",
+      "title": "The Frosted Prison",
+      "tier": "act2",
+      "types": [
+        "explore",
+        "kill"
+      ],
+      "after": [
+        "act2_pyramid_scout"
+      ],
+      "summary": "Scout a Frosted Prison in the snowy plains and defeat an Aptrgangr guarding its gate for Black Steel. The inner door is sealed and something vast sleeps behind it; copy the runes on it too.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:frosted_prison"
+      ],
+      "reward": "Black Steel ingots"
+    },
+    {
+      "id": "act2_sealed_doors",
+      "title": "Doors That Will Not Open",
+      "tier": "act2",
+      "types": [
+        "talk",
+        "puzzle"
+      ],
+      "after": [
+        "act2_prison_scout"
+      ],
+      "summary": "Bring both copies of the Door of Seal runes to the Arcane order's librarian: eight seals, eight sleepers, and none can be broken yet.",
+      "mods": [
+        "cataclysm",
+        "irons_spellbooks"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "A runed tablet, Magic XP"
+    },
+    {
+      "id": "act2_scout_steel",
+      "title": "Steel From the Sleepers",
+      "tier": "act2",
+      "types": [
+        "craft"
+      ],
+      "after": [
+        "act2_sealed_doors"
+      ],
+      "summary": "Forge a Spartan Weaponry: Cataclysm weapon from the Ancient Metal or Black Steel you took from the guardians.",
+      "mods": [
+        "spartancataclysm",
+        "spartanweaponry"
+      ],
+      "landmarks": [],
+      "reward": "Attack XP, a weapon rack"
+    },
+    {
+      "id": "act2_monastery_climb",
+      "title": "The Peak Above the Clouds",
+      "tier": "act2",
+      "types": [
+        "travel",
+        "timed"
+      ],
+      "after": [
+        "act2_elder_guardian",
+        "act2_scout_steel"
+      ],
+      "summary": "The last Overworld warden waits at a mountaintop Monastery: climb the peak with ParCool moves and a grappling hook before the storm closes in.",
+      "mods": [
+        "parcool",
+        "grapplemod",
+        "mowziesmobs"
+      ],
+      "landmarks": [
+        "mowziesmobs:monastery"
+      ],
+      "reward": "Agility XP, a grappling hook"
+    },
+    {
+      "id": "act2_sculptor",
+      "title": "The Sculptor",
+      "tier": "act2",
+      "types": [
+        "boss",
+        "puzzle"
+      ],
+      "after": [
+        "act2_monastery_climb"
+      ],
+      "summary": "Climb the Sculptor's pillar trial while it reshapes the stone beneath you, then defeat it (140 health).",
+      "mods": [
+        "mowziesmobs"
+      ],
+      "landmarks": [
+        "mowziesmobs:monastery"
+      ],
+      "reward": "Diamonds, Agility XP"
+    },
+    {
+      "id": "act2_finale",
+      "title": "The Red Glow",
+      "tier": "act2",
+      "types": [
+        "build",
+        "travel"
+      ],
+      "after": [
+        "act2_sculptor",
+        "act2_frostmaw",
+        "act2_twilight_branch"
+      ],
+      "summary": "From the peak you see a red scar on the horizon: a ruined portal. Repair or build a Nether portal and step into the Nether for the first time.",
+      "mods": [],
+      "landmarks": [
+        "#ruined_portals"
+      ],
+      "reward": "Fire resistance potions, the Act III page"
+    },
+    {
+      "id": "act3_start",
+      "title": "The Burning Realm",
+      "tier": "act3",
+      "types": [
+        "explore",
+        "talk"
+      ],
+      "after": [
+        "act2_finale"
+      ],
+      "summary": "In the Nether, a lost Reece courier hides in a ruin; she saw the drain's threads running toward the fortresses. Branch: the Nether questline starts here.",
+      "mods": [
+        "mns",
+        "structory_towers"
+      ],
+      "landmarks": [
+        "#nether_outposts"
+      ],
+      "reward": "Gold armour, a Nether map"
+    },
+    {
+      "id": "act3_fortress",
+      "title": "Blaze and Bone",
+      "tier": "act3",
+      "types": [
+        "explore",
+        "collect"
+      ],
+      "after": [
+        "act3_start"
+      ],
+      "summary": "Raid a YUNG's Better Nether Fortress for 12 blaze rods and nether wart.",
+      "mods": [
+        "betterfortresses"
+      ],
+      "landmarks": [
+        "betterfortresses:fortress"
+      ],
+      "reward": "A brewing stand kit"
+    },
+    {
+      "id": "act3_eyes",
+      "title": "Eyes That See",
+      "tier": "act3",
+      "types": [
+        "craft"
+      ],
+      "after": [
+        "act3_fortress"
+      ],
+      "summary": "Craft Eyes of Ender, then turn one into a Mowzie's Cataclysm eye (Wrought, Sun, Frostmaw or Tongbi): they find wardens' homes, a second way to every Mowzie structure.",
+      "mods": [
+        "mowzies_cataclysm"
+      ],
+      "landmarks": [],
+      "reward": "Ender pearls"
+    },
+    {
+      "id": "act3_wildfire_scout",
+      "title": "The Citadel of Flame",
+      "tier": "act3",
+      "types": [
+        "explore",
+        "stealth"
+      ],
+      "after": [
+        "act3_fortress"
+      ],
+      "summary": "Find the Friends & Foes Nether citadel and slip past its blazes to see the Wildfire on its throne.",
+      "mods": [
+        "friendsandfoes"
+      ],
+      "landmarks": [
+        "friendsandfoes:citadel"
+      ],
+      "reward": "Fire resistance potions"
+    },
+    {
+      "id": "act3_wildfire",
+      "title": "The Wildfire",
+      "tier": "act3",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act3_wildfire_scout"
+      ],
+      "summary": "Defeat the Wildfire (120 health) by breaking its shields and dodging its fire waves.",
+      "mods": [
+        "friendsandfoes"
+      ],
+      "landmarks": [
+        "friendsandfoes:citadel"
+      ],
+      "reward": "Wildfire crown display, Attack XP"
+    },
+    {
+      "id": "act3_debris",
+      "title": "Debris From Below",
+      "tier": "act3",
+      "types": [
+        "collect"
+      ],
+      "after": [
+        "act3_start"
+      ],
+      "summary": "Mine 8 ancient debris deep in the Nether; Ultimine and beds help, but watch your footing.",
+      "mods": [
+        "ftbultimine"
+      ],
+      "landmarks": [],
+      "reward": "Mining XP, TNT"
+    },
+    {
+      "id": "act3_netherite",
+      "title": "The Black Smith",
+      "tier": "act3",
+      "types": [
+        "craft",
+        "explore"
+      ],
+      "after": [
+        "act3_debris"
+      ],
+      "summary": "Loot a netherite upgrade template from a bastion and upgrade your first netherite piece.",
+      "mods": [],
+      "landmarks": [
+        "minecraft:bastion_remnant"
+      ],
+      "reward": "A second upgrade template"
+    },
+    {
+      "id": "act3_twilight_branch",
+      "title": "The Twilight Calls (Part 2)",
+      "tier": "act3",
+      "types": [
+        "boss",
+        "craft"
+      ],
+      "after": [
+        "act3_netherite",
+        "act2_twilight_branch"
+      ],
+      "summary": "The spirits' second curse: defeat the Hydra in its fiery lair and forge a Fiery weapon from its blood with Spartan Weaponry: Twilight Forest. Branch: the Twilight questline continues.",
+      "mods": [
+        "twilightforest",
+        "spartantwilight"
+      ],
+      "landmarks": [
+        "twilightforest:hydra_lair"
+      ],
+      "reward": "Fiery ingots"
+    },
+    {
+      "id": "act3_dead_king",
+      "title": "The Dead King's Crypt",
+      "tier": "act3",
+      "types": [
+        "explore",
+        "talk"
+      ],
+      "after": [
+        "act3_start"
+      ],
+      "summary": "Optional branch: the Arcane order traces the drain to Iron's Catacombs and the Dead King (500 health). Reaching the catacombs opens the magic questline's chain, which holds the fight.",
+      "mods": [
+        "irons_spellbooks"
+      ],
+      "landmarks": [
+        "irons_spellbooks:catacombs"
+      ],
+      "reward": "Magic XP, a catacombs map"
+    },
+    {
+      "id": "act3_skulls",
+      "title": "Three Black Skulls",
+      "tier": "act3",
+      "types": [
+        "drop",
+        "kill"
+      ],
+      "after": [
+        "act3_wildfire",
+        "act3_netherite"
+      ],
+      "summary": "Hunt wither skeletons in fortresses until you hold three wither skeleton skulls; a fourth, cursed one only drops while this quest is open.",
+      "mods": [
+        "betterfortresses"
+      ],
+      "landmarks": [
+        "betterfortresses:fortress"
+      ],
+      "reward": "Looting book"
+    },
+    {
+      "id": "act3_wither",
+      "title": "The Wither",
+      "tier": "act3",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act3_skulls"
+      ],
+      "summary": "Summon the Wither far from Reece, in a pit you dig deep underground, and destroy it (300 health). The world's wardens are being turned; this one was made to be.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Nether star"
+    },
+    {
+      "id": "act3_beacon",
+      "title": "A Light for Reece",
+      "tier": "act3",
+      "types": [
+        "build"
+      ],
+      "after": [
+        "act3_wither"
+      ],
+      "summary": "Build a beacon on a pyramid in Reece's square so the village has a light the drain can't reach.",
+      "mods": [
+        "ctov"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Iron blocks, village reputation"
+    },
+    {
+      "id": "act3_hullbreaker",
+      "title": "Something Below the Chasm",
+      "tier": "act3",
+      "types": [
+        "explore",
+        "talk"
+      ],
+      "after": [
+        "act3_netherite"
+      ],
+      "summary": "Optional branch: a diver's logbook speaks of something huge circling a ruined submarine in the Abyssal Chasm. Finding the trench opens the Alex's Caves questline's chain, which holds the Hullbreaker fight.",
+      "mods": [
+        "alexscaves"
+      ],
+      "landmarks": [
+        "alexscaves:ocean_trench",
+        "alexscaves:abyssal_ruins"
+      ],
+      "reward": "Defense XP, a diving map"
+    },
+    {
+      "id": "act3_tremorsaurus",
+      "title": "Something Big Hatches",
+      "tier": "act3",
+      "types": [
+        "tame",
+        "farm"
+      ],
+      "after": [
+        "act3_netherite"
+      ],
+      "summary": "Optional: find a tremorsaurus egg near the primordial volcano and raise the hatchling, or fight a wild tremorsaurus.",
+      "mods": [
+        "alexscaves"
+      ],
+      "landmarks": [
+        "alexscaves:volcano"
+      ],
+      "reward": "Cooked dinosaur chops, Taming XP"
+    },
+    {
+      "id": "act3_finale",
+      "title": "Where the Eyes Fall",
+      "tier": "act3",
+      "types": [
+        "travel",
+        "explore"
+      ],
+      "after": [
+        "act3_beacon",
+        "act3_twilight_branch"
+      ],
+      "summary": "Throw Eyes of Ender across the land until they dive, then dig down into a YUNG's Better Stronghold.",
+      "mods": [
+        "betterstrongholds"
+      ],
+      "landmarks": [
+        "betterstrongholds:stronghold"
+      ],
+      "reward": "Eyes of Ender, the Act IV page"
+    },
+    {
+      "id": "act4_start",
+      "title": "The Stronghold Library",
+      "tier": "act4",
+      "types": [
+        "explore",
+        "talk"
+      ],
+      "after": [
+        "act3_finale"
+      ],
+      "summary": "In the stronghold's library, a book left by the Field Guide's author warns that the Void's dragon is the last seal keeping the eight sleepers down.",
+      "mods": [
+        "betterstrongholds"
+      ],
+      "landmarks": [
+        "betterstrongholds:stronghold"
+      ],
+      "reward": "Enchanted books"
+    },
+    {
+      "id": "act4_twilight_branch",
+      "title": "The Twilight Calls (Part 3)",
+      "tier": "act4",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act4_start"
+      ],
+      "summary": "The spirits' last curse: climb to the Aurora Palace and free the Snow Queen's frozen court. Branch: the Twilight questline ends there.",
+      "mods": [
+        "twilightforest"
+      ],
+      "landmarks": [
+        "twilightforest:aurora_palace"
+      ],
+      "reward": "Ice bombs, Twilight trophy"
+    },
+    {
+      "id": "act4_portal_room",
+      "title": "Twelve Empty Eyes",
+      "tier": "act4",
+      "types": [
+        "puzzle",
+        "craft"
+      ],
+      "after": [
+        "act4_start"
+      ],
+      "summary": "Find the portal room and fill every frame. Before you jump, a spirit voice begs you to come back.",
+      "mods": [
+        "betterstrongholds"
+      ],
+      "landmarks": [
+        "betterstrongholds:stronghold"
+      ],
+      "reward": "Slow falling potions"
+    },
+    {
+      "id": "act4_crystals",
+      "title": "Towers of Light",
+      "tier": "act4",
+      "types": [
+        "kill",
+        "timed"
+      ],
+      "after": [
+        "act4_portal_room"
+      ],
+      "summary": "On YUNG's rebuilt End island, destroy every End crystal on its towers within ten minutes of arriving.",
+      "mods": [
+        "betterendisland"
+      ],
+      "landmarks": [
+        "feature:betterendisland:end_island"
+      ],
+      "reward": "Arrows, ender pearls"
+    },
+    {
+      "id": "act4_dragon",
+      "title": "The Ender Dragon",
+      "tier": "act4",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act4_crystals"
+      ],
+      "summary": "Defeat the Ender Dragon (200 health). Branch: the End questline opens with the gateway.",
+      "mods": [
+        "betterendisland"
+      ],
+      "landmarks": [
+        "feature:betterendisland:end_island"
+      ],
+      "reward": "Dragon's breath, End XP"
+    },
+    {
+      "id": "act4_end_cities",
+      "title": "Wings at the Edge",
+      "tier": "act4",
+      "types": [
+        "explore",
+        "collect"
+      ],
+      "after": [
+        "act4_dragon"
+      ],
+      "summary": "Through the gateway, raid an End city for an elytra and 8 shulker shells.",
+      "mods": [
+        "nullscape",
+        "elytraslot"
+      ],
+      "landmarks": [
+        "minecraft:end_city"
+      ],
+      "reward": "Fireworks, Agility XP"
+    },
+    {
+      "id": "act4_mega_ship",
+      "title": "Ships Beyond the Void",
+      "tier": "act4",
+      "types": [
+        "explore"
+      ],
+      "after": [
+        "act4_end_cities"
+      ],
+      "summary": "Find one of Moog's End mega-ships drifting over Nullscape's islands and read its captain's log about a ruined citadel.",
+      "mods": [
+        "mes",
+        "nullscape"
+      ],
+      "landmarks": [
+        "#end_mega_ships"
+      ],
+      "reward": "Chorus fruit, a void shard"
+    },
+    {
+      "id": "act4_void_worm",
+      "title": "The Void Worm",
+      "tier": "act4",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act4_end_cities"
+      ],
+      "summary": "Optional: feed a Mysterious Worm to the void in the End and defeat the Void Worm that rises.",
+      "mods": [
+        "alexsmobs"
+      ],
+      "landmarks": [],
+      "reward": "Void worm beak, End XP"
+    },
+    {
+      "id": "act4_warden",
+      "title": "The Deep Dark Listener",
+      "tier": "act4",
+      "types": [
+        "stealth",
+        "boss"
+      ],
+      "after": [
+        "act4_start"
+      ],
+      "summary": "Optional: sneak through an ancient city and take its echo shards; fight the Warden (500 health) only if you must.",
+      "mods": [],
+      "landmarks": [
+        "minecraft:ancient_city"
+      ],
+      "reward": "Swift Sneak book"
+    },
+    {
+      "id": "act4_finale",
+      "title": "The Eight Wake",
+      "tier": "act4",
+      "types": [
+        "talk",
+        "encounter"
+      ],
+      "after": [
+        "act4_dragon",
+        "act4_end_cities"
+      ],
+      "summary": "Back in Reece the ground shakes: the dragon was the Void's guard, and with it gone the eight sealed strongholds wake. A spirit messenger appears to tell you the drain's source burns in the Nether.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Netherite scrap, the Act V page"
+    },
+    {
+      "id": "act5_start",
+      "title": "The Reckoning",
+      "tier": "act5",
+      "types": [
+        "talk",
+        "craft"
+      ],
+      "after": [
+        "act4_finale"
+      ],
+      "summary": "Sister Wren and the guild leaders gather in Reece: break the eight in turn, weakest first. Craft the Infernal Forge to work the sleepers' metals.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Netherite ingot, Cataclysm field notes"
+    },
+    {
+      "id": "act5_monstrous_eye",
+      "title": "An Eye of Netherite",
+      "tier": "act5",
+      "types": [
+        "craft",
+        "travel"
+      ],
+      "after": [
+        "act5_start"
+      ],
+      "summary": "Craft a Monstrous Eye from netherite scrap and follow it through the Nether to the Soul Black Smith.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:soul_black_smith"
+      ],
+      "reward": "Fire resistance potions"
+    },
+    {
+      "id": "act5_monstrosity",
+      "title": "The Netherite Monstrosity",
+      "tier": "act5",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act5_monstrous_eye"
+      ],
+      "summary": "Defeat the Netherite Monstrosity (600 health, damage-capped) in the forge where it was built.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:soul_black_smith"
+      ],
+      "reward": "Attack XP, golden apples"
+    },
+    {
+      "id": "act5_void_eye",
+      "title": "An Eye of the Void",
+      "tier": "act5",
+      "types": [
+        "craft",
+        "travel"
+      ],
+      "after": [
+        "act5_monstrosity"
+      ],
+      "summary": "Craft a Void Eye from shulker shells and follow it across the End highlands to the Ruined Citadel.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:ruined_citadel"
+      ],
+      "reward": "Ender pearls, slow falling potions"
+    },
+    {
+      "id": "act5_ender_golems",
+      "title": "Golems of the Citadel",
+      "tier": "act5",
+      "types": [
+        "kill",
+        "explore"
+      ],
+      "after": [
+        "act5_void_eye"
+      ],
+      "summary": "Clear the Ruined Citadel's Ender Golems and Endermapteras without falling into the void traps.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:ruined_citadel"
+      ],
+      "reward": "Void shards"
+    },
+    {
+      "id": "act5_ender_guardian",
+      "title": "The Ender Guardian",
+      "tier": "act5",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act5_ender_golems"
+      ],
+      "summary": "Defeat the Ender Guardian (333 health) and claim the Gauntlet of Guard.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:ruined_citadel"
+      ],
+      "reward": "Defense XP, enderite"
+    },
+    {
+      "id": "act5_mech_eye",
+      "title": "An Eye of Gears",
+      "tier": "act5",
+      "types": [
+        "craft",
+        "explore"
+      ],
+      "after": [
+        "act5_ender_guardian"
+      ],
+      "summary": "Craft a Mech Eye and follow it down to the Ancient Factory buried deep underground.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:ancient_factory"
+      ],
+      "reward": "Mining XP, torches"
+    },
+    {
+      "id": "act5_factory_power",
+      "title": "Cold Furnaces",
+      "tier": "act5",
+      "types": [
+        "puzzle",
+        "fetch"
+      ],
+      "after": [
+        "act5_mech_eye"
+      ],
+      "summary": "The factory's furnaces are dead: bring lava power cells to restart its machines and reach the Harbinger's chamber before its Prowlers notice.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:ancient_factory"
+      ],
+      "reward": "Lava power cell, Crafting XP"
+    },
+    {
+      "id": "act5_harbinger",
+      "title": "The Harbinger",
+      "tier": "act5",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act5_factory_power"
+      ],
+      "summary": "Defeat the Harbinger (390 health), a machine built in the Wither's image, mirroring your fight in Act III.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:ancient_factory"
+      ],
+      "reward": "Witherite ingots"
+    },
+    {
+      "id": "act5_storm_eye",
+      "title": "An Eye of Storms",
+      "tier": "act5",
+      "types": [
+        "craft",
+        "ride"
+      ],
+      "after": [
+        "act5_harbinger"
+      ],
+      "summary": "Craft a Storm Eye with prismarine and diamonds, then sail a Small Ships vessel across the warm ocean to the Acropolis.",
+      "mods": [
+        "cataclysm",
+        "smallships"
+      ],
+      "landmarks": [
+        "cataclysm:acropolis"
+      ],
+      "reward": "A cog, water breathing potions"
+    },
+    {
+      "id": "act5_clawdian",
+      "title": "Claws of the Acropolis",
+      "tier": "act5",
+      "types": [
+        "kill",
+        "explore"
+      ],
+      "after": [
+        "act5_storm_eye"
+      ],
+      "summary": "Cut through the Acropolis's Hippocamtus and Cindaria and defeat a Clawdian (225 health) guarding the storm altar.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:acropolis"
+      ],
+      "reward": "Chitin claws"
+    },
+    {
+      "id": "act5_scylla",
+      "title": "Scylla",
+      "tier": "act5",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act5_clawdian"
+      ],
+      "summary": "Defeat Scylla (390 health) in the eye of her storm.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:acropolis"
+      ],
+      "reward": "Essence of the storm"
+    },
+    {
+      "id": "act5_desert_eye",
+      "title": "Back to the Pyramid",
+      "tier": "act5",
+      "types": [
+        "craft",
+        "travel"
+      ],
+      "after": [
+        "act5_scylla"
+      ],
+      "summary": "Craft a Desert Eye and return to the Cursed Pyramid you scouted in Act II; its seal now answers.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:cursed_pyramid"
+      ],
+      "reward": "Sand-proof goggles (night vision potions)"
+    },
+    {
+      "id": "act5_wadjets",
+      "title": "The Serpent Guard",
+      "tier": "act5",
+      "types": [
+        "kill"
+      ],
+      "after": [
+        "act5_desert_eye"
+      ],
+      "summary": "Defeat the Wadjets and Kobolediators of the inner pyramid and arm yourself with a Spartan Weaponry: Cataclysm Ancient Metal weapon.",
+      "mods": [
+        "cataclysm",
+        "spartancataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:cursed_pyramid"
+      ],
+      "reward": "Ancient Metal ingots"
+    },
+    {
+      "id": "act5_remnant",
+      "title": "The Ancient Remnant",
+      "tier": "act5",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act5_wadjets"
+      ],
+      "summary": "Defeat the Ancient Remnant (450 health) beneath the pyramid, then fuse its Sandstorm in a Bottle with the Gauntlet of Guard into the Gauntlet of Maelstrom.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:cursed_pyramid"
+      ],
+      "reward": "Necklace of the Desert"
+    },
+    {
+      "id": "act5_abyssal_sacrifice",
+      "title": "The Abyssal Sacrifice",
+      "tier": "act5",
+      "types": [
+        "fetch",
+        "craft"
+      ],
+      "after": [
+        "act5_remnant"
+      ],
+      "summary": "Gather a Heart of the Sea, nautilus shells and mineral blocks for the Abyssal Sacrifice, and craft an Abyss Eye to find the Sunken City.",
+      "mods": [
+        "cataclysm",
+        "aquaculture"
+      ],
+      "landmarks": [],
+      "reward": "Fishing XP, a conduit"
+    },
+    {
+      "id": "act5_sunken_city",
+      "title": "The Drowned Streets",
+      "tier": "act5",
+      "types": [
+        "explore",
+        "kill"
+      ],
+      "after": [
+        "act5_abyssal_sacrifice"
+      ],
+      "summary": "Dive into the Sunken City in the deep ocean, clear its Deeplings and defeat a Coral Golem.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:sunken_city"
+      ],
+      "reward": "Crystallized coral"
+    },
+    {
+      "id": "act5_leviathan",
+      "title": "The Leviathan",
+      "tier": "act5",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act5_sunken_city"
+      ],
+      "summary": "Place the Abyssal Sacrifice on the Altar of the Abyss and defeat the Leviathan (400 health) in its own water.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:sunken_city"
+      ],
+      "reward": "Tidal Claws"
+    },
+    {
+      "id": "act5_cursed_eye",
+      "title": "A Warning in Ice",
+      "tier": "act5",
+      "types": [
+        "encounter",
+        "craft"
+      ],
+      "after": [
+        "act5_leviathan"
+      ],
+      "summary": "On the road north, an old Village watch veteran finds you and warns of Maledictus's lifting slam, the move that ends most who face it. Craft a Cursed Eye and stock up on totems.",
+      "mods": [
+        "cataclysm",
+        "guardvillagers"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Totem of Undying"
+    },
+    {
+      "id": "act5_aptrgangr",
+      "title": "The Prison Wakes",
+      "tier": "act5",
+      "types": [
+        "explore",
+        "kill"
+      ],
+      "after": [
+        "act5_cursed_eye"
+      ],
+      "summary": "Return to the Frosted Prison, now unsealed, and fight through Draugr and Aptrgangr to its lowest cell block.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:frosted_prison"
+      ],
+      "reward": "Black Steel"
+    },
+    {
+      "id": "act5_maledictus",
+      "title": "Maledictus",
+      "tier": "act5",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act5_aptrgangr"
+      ],
+      "summary": "Defeat Maledictus (420 health) and keep moving when it rises to slam; craft Cursium armour from what it leaves.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:frosted_prison"
+      ],
+      "reward": "Cursium upgrade template"
+    },
+    {
+      "id": "act5_luxtructosaurus",
+      "title": "The Volcano Wakes",
+      "tier": "act5",
+      "types": [
+        "explore",
+        "talk"
+      ],
+      "after": [
+        "act5_start"
+      ],
+      "summary": "Optional side branch: tremors from a Primordial Caves volcano point to something ancient stirring. Reaching the volcano opens the Alex's Caves questline's finale, which holds the Luxtructosaurus fight.",
+      "mods": [
+        "alexscaves"
+      ],
+      "landmarks": [
+        "alexscaves:volcano"
+      ],
+      "reward": "Attack XP, a Primordial Caves map"
+    },
+    {
+      "id": "act5_flame_eye",
+      "title": "An Eye of Flame",
+      "tier": "act5",
+      "types": [
+        "craft",
+        "travel"
+      ],
+      "after": [
+        "act5_last_preparations"
+      ],
+      "summary": "Craft the Flame Eye and follow it into the nether wastes to the Burning Arena: the source of the drain, glowing with every warden's stolen strength.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:burning_arena"
+      ],
+      "reward": "Fire resistance potions"
+    },
+    {
+      "id": "act5_last_preparations",
+      "title": "All of Reece Behind You",
+      "tier": "act5",
+      "types": [
+        "fetch",
+        "talk"
+      ],
+      "after": [
+        "act5_maledictus"
+      ],
+      "summary": "Every organisation sends something for the last fight: food from the Tavern keepers, potions from the Herbalists, a blessed shield from the Village watch. Collect them all in Reece.",
+      "mods": [
+        "farmersdelight",
+        "spartanshields",
+        "ctov"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "A feast, a named shield, healing potions"
+    },
+    {
+      "id": "act5_revenants",
+      "title": "The Ash Guard",
+      "tier": "act5",
+      "types": [
+        "kill"
+      ],
+      "after": [
+        "act5_flame_eye"
+      ],
+      "summary": "Clear the Ignited Revenants and Berserkers that guard the Burning Arena's approach.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:burning_arena"
+      ],
+      "reward": "Burning ashes"
+    },
+    {
+      "id": "final_boss",
+      "title": "Ignis",
+      "tier": "act5",
+      "types": [
+        "boss"
+      ],
+      "after": [
+        "act5_revenants",
+        "act5_monstrosity",
+        "act5_ender_guardian",
+        "act5_harbinger",
+        "act5_scylla",
+        "act5_remnant",
+        "act5_leviathan",
+        "act5_maledictus"
+      ],
+      "summary": "Face Ignis (450 health), the fire that fed on the world's wardens, and put it out.",
+      "mods": [
+        "cataclysm"
+      ],
+      "landmarks": [
+        "cataclysm:burning_arena"
+      ],
+      "reward": "Ignitium, the Ignitium upgrade template"
+    },
+    {
+      "id": "epilogue",
+      "title": "The Forest Sings",
+      "tier": "act5",
+      "types": [
+        "talk",
+        "explore"
+      ],
+      "after": [
+        "final_boss"
+      ],
+      "summary": "Walk back into the forest at dusk: the fairies and fireflies have returned, and Sister Wren holds a festival in Reece in your honour.",
+      "mods": [
+        "fays_fairies",
+        "butterflies",
+        "ctov"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "A unique named sword, the end of the story"
+    }
+  ]
+}

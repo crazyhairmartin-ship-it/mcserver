@@ -1,0 +1,709 @@
+{
+ "line": "Agility path",
+ "chapter": "skill_agility",
+ "group": "skills",
+ "giver": "The Couriers: cartographers in every village hand out runs; Postmistress Wren Halloway runs the Couriers' post office in Reece and gives the key runs",
+ "feel": "Deliveries against the clock: first on foot between villages and over rooftops, then by hook and zipline, then by sea in ever bigger ships, and finally by air. Every run has a parcel, a recipient and a deadline.",
+ "quests": [
+  {
+   "id": "sign_the_roster",
+   "title": "Sign the Roster",
+   "tier": "prologue",
+   "types": [
+    "talk",
+    "deliver"
+   ],
+   "after": [],
+   "summary": "A cartographer pins a Couriers' notice to the board: runners wanted. Sign on at the Reece post office and carry your first signed letter to the nearest village's cartographer.",
+   "mods": [
+    "fotfmail"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Agility XP, a courier's satchel (bundle) and a stack of letters"
+  },
+  {
+   "id": "first_timed_run",
+   "title": "Beat the Bell",
+   "tier": "prologue",
+   "types": [
+    "timed",
+    "deliver"
+   ],
+   "after": [
+    "sign_the_roster"
+   ],
+   "summary": "Wren's runner has twisted an ankle and the morning post must reach the next village before the noon bell. Make the run on the clock; arrive in time and the runner gives you their shoes for good.",
+   "mods": [
+    "fotfmail",
+    "artifacts"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "signature": "artifacts:running_shoes",
+   "reward": "Agility XP, Running Shoes"
+  },
+  {
+   "id": "rooftop_basics",
+   "title": "Over, Not Around",
+   "tier": "prologue",
+   "types": [
+    "puzzle",
+    "timed"
+   ],
+   "after": [
+    "sign_the_roster"
+   ],
+   "summary": "Couriers don't take the street. Learn ParCool's vault, roll and wall-run on a marked rooftop line across Reece and finish it under the time on the chalk board.",
+   "mods": [
+    "parcool"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Agility XP, a ParCool guide and traceur gloves"
+  },
+  {
+   "id": "carry_the_chest",
+   "title": "Don't Unpack It",
+   "tier": "prologue",
+   "types": [
+    "deliver",
+    "puzzle"
+   ],
+   "after": [
+    "sign_the_roster"
+   ],
+   "summary": "A family is moving house and their strongbox can't be emptied on the way. Pick up the whole chest with Carry On and walk it to the new cottage, then carry their sleeping cat over too.",
+   "mods": [
+    "carryon"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Agility XP, a lunch basket"
+  },
+  {
+   "id": "storm_cliff_parcel",
+   "title": "Under a Grey Sky",
+   "tier": "prologue",
+   "types": [
+    "deliver",
+    "encounter"
+   ],
+   "after": [
+    "first_timed_run"
+   ],
+   "summary": "A courier stranded by a thunderstorm on a cliff path (encounter) begs you to finish their run: take the parcel down the wet cliff route to the cove below without falling. Their umbrella is the thanks.",
+   "mods": [
+    "artifacts",
+    "fotfmail"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "signature": "artifacts:umbrella",
+   "reward": "Agility XP, Umbrella"
+  },
+  {
+   "id": "post_office",
+   "title": "Stamps and Tape",
+   "tier": "act1",
+   "types": [
+    "craft",
+    "build"
+   ],
+   "after": [
+    "first_timed_run"
+   ],
+   "summary": "Wren wants a real post office: craft Ender Mail packing tape, stamps and a package controller, set up a locker at the Reece post office and send your first stamped package to another village's locker.",
+   "mods": [
+    "endermail"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Agility XP, a stack of stamps"
+  },
+  {
+   "id": "waystone_route",
+   "title": "Marking the Route",
+   "tier": "act1",
+   "types": [
+    "discover",
+    "travel"
+   ],
+   "after": [
+    "post_office"
+   ],
+   "summary": "Old couriers left waystones along the roads. Find and attune three wild waystones between Reece and the neighbouring villages so later runs can start halfway.",
+   "mods": [
+    "waystones"
+   ],
+   "landmarks": [
+    "feature:waystones:waystones",
+    "#villages"
+   ],
+   "reward": "Agility XP, warp scrolls"
+  },
+  {
+   "id": "great_bridge_run",
+   "title": "Before the Light Goes",
+   "tier": "act1",
+   "types": [
+    "timed",
+    "travel"
+   ],
+   "after": [
+    "waystone_route"
+   ],
+   "summary": "A parcel of medicine must cross a great ravine bridge to a village on the far side before dusk. Find the old stone bridge and make the crossing on the clock.",
+   "mods": [
+    "yungsbridges"
+   ],
+   "landmarks": [
+    "feature:yungsbridges:bridges"
+   ],
+   "reward": "Agility XP, swiftness potions"
+  },
+  {
+   "id": "rooftop_route",
+   "title": "The Long Drop Line",
+   "tier": "act1",
+   "types": [
+    "timed",
+    "puzzle"
+   ],
+   "after": [
+    "rooftop_basics"
+   ],
+   "summary": "A large village's couriers race a rooftop route with drops that would break legs. Run the whole line, gaps and drops included, under the record; the record holder hands over their bouncy boots.",
+   "mods": [
+    "parcool",
+    "artifacts"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "signature": "artifacts:bunny_hoppers",
+   "reward": "Agility XP, Bunny Hoppers"
+  },
+  {
+   "id": "night_post",
+   "title": "The Night Post",
+   "tier": "act1",
+   "types": [
+    "deliver",
+    "timed",
+    "encounter"
+   ],
+   "after": [
+    "great_bridge_run"
+   ],
+   "summary": "An urgent letter must go out after dark across open country. Monsters ambush the road (encounter): take the hits and keep running, because stopping to fight loses the deadline. Wren gives you the necklace she wore on her own night runs.",
+   "mods": [
+    "fotfmail",
+    "artifacts"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "signature": "artifacts:panic_necklace",
+   "reward": "Agility XP, Panic Necklace"
+  },
+  {
+   "id": "tower_zipline",
+   "title": "Line from the Tower",
+   "tier": "act1",
+   "types": [
+    "explore",
+    "build"
+   ],
+   "after": [
+    "waystone_route"
+   ],
+   "summary": "The Couriers' lookout is an old cartographer tower. Climb it, and rig a ParCool zipline from its top to the road below so runners can drop letters down in seconds.",
+   "mods": [
+    "parcool"
+   ],
+   "landmarks": [
+    "mvs:cartographer_tower"
+   ],
+   "reward": "Agility XP, iron zipline hooks"
+  },
+  {
+   "id": "first_grapple",
+   "title": "Hook and Swing",
+   "tier": "act1",
+   "types": [
+    "craft",
+    "timed"
+   ],
+   "after": [
+    "tower_zipline"
+   ],
+   "summary": "Craft a grappling hook and swing across a canyon course the Couriers marked with flags, faster than the long way round on foot.",
+   "mods": [
+    "grapplemod"
+   ],
+   "landmarks": [],
+   "reward": "Agility XP, a rope upgrade"
+  },
+  {
+   "id": "ledge_rescue",
+   "title": "Stuck on the Ledge",
+   "tier": "act1",
+   "types": [
+    "rescue",
+    "encounter"
+   ],
+   "after": [
+    "first_grapple"
+   ],
+   "summary": "A young courier who took a shortcut is stuck on a cliff ledge with a broken leg (encounter). Grapple down, pick them up with Carry On and bring them and their satchel safely back to the village.",
+   "mods": [
+    "grapplemod",
+    "carryon"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Agility XP, healing potions and the courier's sealed letters to finish"
+  },
+  {
+   "id": "first_ferry",
+   "title": "Across the Bay",
+   "tier": "act1",
+   "types": [
+    "craft",
+    "ride",
+    "deliver"
+   ],
+   "after": [
+    "post_office"
+   ],
+   "summary": "A beach village's post piles up across the water. Build a Small Ships rowboat, then a cog, and ferry three crates of mail over the bay.",
+   "mods": [
+    "smallships"
+   ],
+   "landmarks": [
+    "ctov:medium/village_beach"
+   ],
+   "reward": "Agility XP, a sail"
+  },
+  {
+   "id": "water_run",
+   "title": "No Boats Allowed",
+   "tier": "act2",
+   "types": [
+    "timed",
+    "travel"
+   ],
+   "after": [
+    "first_ferry"
+   ],
+   "summary": "A bet in the beach village: cross the lake to the far pier without a boat and before the hourglass runs out. Sprint, swim and leap; the bet's winner keeps the strange shoes that run on water.",
+   "mods": [
+    "artifacts"
+   ],
+   "landmarks": [
+    "ctov:medium/village_beach"
+   ],
+   "signature": "artifacts:aqua_dashers",
+   "reward": "Agility XP, Aqua-Dashers"
+  },
+  {
+   "id": "mountain_post",
+   "title": "Powder Road",
+   "tier": "act2",
+   "types": [
+    "deliver",
+    "timed"
+   ],
+   "after": [
+    "night_post"
+   ],
+   "summary": "An alpine village is snowed in and waiting for winter supplies. Carry the parcel over the powder snow fields to the mountain outpost before the storm closes the pass; the outpost's courier gives you their snowshoes.",
+   "mods": [
+    "artifacts",
+    "fotfmail"
+   ],
+   "landmarks": [
+    "ctov:medium/village_mountain_alpine"
+   ],
+   "signature": "artifacts:snowshoes",
+   "reward": "Agility XP, Snowshoes"
+  },
+  {
+   "id": "monastery_climb",
+   "title": "Speed Climb",
+   "tier": "act2",
+   "types": [
+    "timed",
+    "craft"
+   ],
+   "after": [
+    "ledge_rescue"
+   ],
+   "summary": "Upgrade your hook with a motor and get wall-run boots, then race up the peak below a monastery against a rival courier's time.",
+   "mods": [
+    "grapplemod",
+    "parcool"
+   ],
+   "landmarks": [
+    "mowziesmobs:monastery"
+   ],
+   "reward": "Agility XP, a motor upgrade"
+  },
+  {
+   "id": "brigg_charter",
+   "title": "The Lighthouse Run",
+   "tier": "act2",
+   "types": [
+    "craft",
+    "deliver"
+   ],
+   "after": [
+    "first_ferry"
+   ],
+   "summary": "The lighthouse keeper's oil comes by sea. Build a brigg with cargo room and take a full load of lamp oil and letters up the coast to the lighthouse.",
+   "mods": [
+    "smallships"
+   ],
+   "landmarks": [
+    "#lighthouses"
+   ],
+   "reward": "Agility XP, a spyglass and a cannon"
+  },
+  {
+   "id": "ships_at_sea",
+   "title": "Mail for the Fleet",
+   "tier": "act2",
+   "types": [
+    "travel",
+    "deliver",
+    "talk"
+   ],
+   "after": [
+    "brigg_charter"
+   ],
+   "summary": "An outcast fisherman lives on his little boat far out at sea, and his family ashore hasn't heard from him in months. Sail out, find a boat at sea and hand him their letters; he has a reply to send back.",
+   "mods": [
+    "smallships",
+    "fotfmail"
+   ],
+   "landmarks": [
+    "#ships_at_sea"
+   ],
+   "reward": "Agility XP, a sea chart (explorer map) and the fisherman's reply"
+  },
+  {
+   "id": "first_flight",
+   "title": "Bamboo Wings",
+   "tier": "act2",
+   "types": [
+    "craft",
+    "ride",
+    "deliver"
+   ],
+   "after": [
+    "monastery_climb"
+   ],
+   "summary": "A firewatch tower deep in the woods needs post nobody can walk to in a day. Build an Immersive Aircraft bamboo hopper and fly the first airmail to its keeper.",
+   "mods": [
+    "immersive_aircraft"
+   ],
+   "landmarks": [
+    "#firewatch_towers"
+   ],
+   "reward": "Agility XP, a propeller and fuel"
+  },
+  {
+   "id": "runaway_float",
+   "title": "The Float That Got Away",
+   "tier": "act2",
+   "types": [
+    "explore",
+    "encounter"
+   ],
+   "after": [
+    "first_flight"
+   ],
+   "summary": "A child's pool float slipped its string and drifted up to an island floating in the sky (encounter with the crying child). Get up there by hook, plane or pillar and bring it back; the child lets you keep it.",
+   "mods": [
+    "artifacts",
+    "grapplemod"
+   ],
+   "landmarks": [
+    "#moog_sky_islands"
+   ],
+   "signature": "artifacts:helium_flamingo",
+   "reward": "Agility XP, Helium Flamingo"
+  },
+  {
+   "id": "catch_a_cloud",
+   "title": "Bottle a Cloud",
+   "tier": "act3",
+   "types": [
+    "explore",
+    "puzzle"
+   ],
+   "after": [
+    "runaway_float"
+   ],
+   "summary": "The sky villagers say the best clouds gather above their highest roof. Climb the sky village to its very top and bottle one, the old way.",
+   "mods": [
+    "skyvillages",
+    "artifacts",
+    "parcool"
+   ],
+   "landmarks": [
+    "skyvillages:skyvillage"
+   ],
+   "signature": "artifacts:cloud_in_a_bottle",
+   "reward": "Agility XP, Cloud in a Bottle"
+  },
+  {
+   "id": "sky_post_office",
+   "title": "Post Office in the Clouds",
+   "tier": "act3",
+   "types": [
+    "build",
+    "deliver",
+    "talk"
+   ],
+   "after": [
+    "catch_a_cloud"
+   ],
+   "summary": "The sky village has never had a post office. Set up an Ender Mail locker there, then carry the first ground-mail up and the first sky-mail down.",
+   "mods": [
+    "skyvillages",
+    "endermail"
+   ],
+   "landmarks": [
+    "skyvillages:skyvillage"
+   ],
+   "reward": "Agility XP, a package controller"
+  },
+  {
+   "id": "drakkar_race",
+   "title": "Oars Against the Wind",
+   "tier": "act3",
+   "types": [
+    "contest",
+    "timed",
+    "craft"
+   ],
+   "after": [
+    "ships_at_sea",
+    "main_story:act3_start"
+   ],
+   "summary": "A rival harbour's couriers say their drakkar is faster than anything the Couriers sail. Build your own drakkar and beat them along the coast course, buoy to buoy.",
+   "mods": [
+    "smallships"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Agility XP, a stack of sails and the rivals' banner"
+  },
+  {
+   "id": "galley_convoy",
+   "title": "Convoy to the Sea Town",
+   "tier": "act3",
+   "types": [
+    "escort",
+    "ride"
+   ],
+   "after": [
+    "drakkar_race"
+   ],
+   "summary": "A merchant convoy must reach a beach village across the gulf through waters a pillager ship and a pirate wreck patrol. Captain a galley and keep the cargo cog afloat all the way.",
+   "mods": [
+    "smallships",
+    "dungeons_arise"
+   ],
+   "landmarks": [
+    "towns_and_towers:pillager_outpost_ocean",
+    "dungeons_arise:undead_pirate_ship",
+    "ctov:large/village_beach"
+   ],
+   "reward": "Agility XP, cannonballs and the merchant's trade goods"
+  },
+  {
+   "id": "airmail_day",
+   "title": "Three Villages, One Day",
+   "tier": "act3",
+   "types": [
+    "timed",
+    "deliver",
+    "craft"
+   ],
+   "after": [
+    "first_flight"
+   ],
+   "summary": "Build a biplane and run the airmail: three villages, three parcels, one day from sunrise to sunset.",
+   "mods": [
+    "immersive_aircraft"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Agility XP, an enhanced propeller"
+  },
+  {
+   "id": "wings_of_the_post",
+   "title": "Feathers Not Engines",
+   "tier": "act3",
+   "types": [
+    "craft",
+    "ride",
+    "travel"
+   ],
+   "after": [
+    "sky_post_office"
+   ],
+   "summary": "Wren's grandfather flew the post on homemade wings. Craft a pair of Icarus feathered wings and glide from the sky village back down to Reece without touching the ground.",
+   "mods": [
+    "icarus",
+    "skyvillages"
+   ],
+   "landmarks": [
+    "skyvillages:skyvillage"
+   ],
+   "reward": "Agility XP, Icarus wings in the Couriers' colours"
+  },
+  {
+   "id": "airship_logbook",
+   "title": "The Lost Couriers' Log",
+   "tier": "act4",
+   "types": [
+    "explore",
+    "fetch"
+   ],
+   "after": [
+    "wings_of_the_post",
+    "main_story:act4_start"
+   ],
+   "summary": "A courier crew vanished chasing a great airship through the clouds. Reach one of the airships and bring back their logbook from among the dangers aboard.",
+   "mods": [
+    "immersive_aircraft",
+    "dungeons_arise",
+    "icarus"
+   ],
+   "landmarks": [
+    "#airships"
+   ],
+   "reward": "Agility XP, the log's route map and a gyroscope"
+  },
+  {
+   "id": "cargo_airship",
+   "title": "Freight by Air",
+   "tier": "act4",
+   "types": [
+    "craft",
+    "deliver"
+   ],
+   "after": [
+    "airmail_day"
+   ],
+   "summary": "The far villages want bulk goods, not letters. Build a cargo airship and fly a full hold of building supplies to a village beyond the mountains.",
+   "mods": [
+    "immersive_aircraft"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Agility XP, a steel boiler"
+  },
+  {
+   "id": "sharestone_network",
+   "title": "Every Village a Stop",
+   "tier": "act4",
+   "types": [
+    "build",
+    "craft"
+   ],
+   "after": [
+    "waystone_route",
+    "cargo_airship"
+   ],
+   "summary": "Make the Couriers' network permanent: craft sharestones and warp plates and place one in every village the Couriers serve, all linked to the Reece post office.",
+   "mods": [
+    "waystones"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Agility XP, warp stones"
+  },
+  {
+   "id": "wings_and_armour",
+   "title": "Elytra on the Route",
+   "tier": "act4",
+   "types": [
+    "milestone",
+    "ride"
+   ],
+   "after": [
+    "main_story:act4_finale"
+   ],
+   "summary": "Elytra from the End change everything: wear them in the Elytra Slot alongside your chestplate and fly the full courier circuit of five villages without landing.",
+   "mods": [
+    "elytraslot"
+   ],
+   "landmarks": [
+    "#villages"
+   ],
+   "reward": "Agility XP, firework rockets"
+  },
+  {
+   "id": "grand_relay",
+   "title": "The Grand Relay",
+   "tier": "act5",
+   "types": [
+    "timed",
+    "contest",
+    "travel"
+   ],
+   "after": [
+    "galley_convoy",
+    "airship_logbook",
+    "wings_and_armour",
+    "main_story:act5_start"
+   ],
+   "summary": "The Couriers' great race: one parcel around the whole network in a single day, on foot over rooftops, by ship across the bay and by air to the sky village, against the best runners from every village.",
+   "mods": [
+    "parcool",
+    "smallships",
+    "immersive_aircraft",
+    "skyvillages",
+    "waystones"
+   ],
+   "landmarks": [
+    "#villages",
+    "skyvillages:skyvillage"
+   ],
+   "reward": "Agility XP, the relay pennant"
+  },
+  {
+   "id": "courier_capstone",
+   "title": "Seven Leagues",
+   "tier": "act5",
+   "types": [
+    "talk",
+    "milestone"
+   ],
+   "after": [
+    "grand_relay",
+    "sharestone_network"
+   ],
+   "summary": "Wren hands you the post office keys and the Couriers' oldest treasure, reforged for you.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Agility XP, Wren's Seven-League Boots (named netherite boots: Feather Falling IV, Depth Strider III, Soul Speed III, Unbreaking III, Mending)"
+  }
+ ]
+}

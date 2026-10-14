@@ -1,0 +1,37 @@
+{
+	icon: "minecraft:emerald"
+	id: "002BC51E7429A2B8"
+	loot_size: 1
+	order_index: 1
+	rewards: [
+		{
+			count: 6
+			id: "2EBDBF187570057F"
+			item: "minecraft:emerald"
+			type: "item"
+			weight: 5.0
+		}
+		{
+			count: 6
+			id: "68CE20F4EDA6E019"
+			item: "minecraft:golden_carrot"
+			type: "item"
+			weight: 3.0
+		}
+		{
+			count: 4
+			id: "115F21236C13933C"
+			item: "minecraft:experience_bottle"
+			type: "item"
+			weight: 2.0
+		}
+		{
+			count: 12
+			id: "3B91369B5E6ED102"
+			item: "minecraft:lapis_lazuli"
+			type: "item"
+		}
+	]
+	title: "Village Favours"
+	use_title: true
+}

@@ -1,0 +1,591 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "skill_farming"
+	group: "1CAE106B8DA521D5"
+	icon: "minecraft:wheat"
+	id: "5DB652C9B5024590"
+	order_index: 5
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["The Growers' Co-op means to hold a proper Harvest Festival again. It starts with wheat."]
+			icon: "minecraft:wheat"
+			id: "301B7D300BFC8EE4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "46FD8015CA2054FE"
+					item: "minecraft:stone_hoe"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "55F20E39ECC88536"
+					item: "minecraft:wheat_seeds"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 60"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "3A324BBA69A3F506"
+					silent: true
+					title: "+60 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "416B568C94438159"
+					stage: "fq.skill_farming.coop_share"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					count: 64L
+					id: "00EF1F131A8C9832"
+					item: "minecraft:wheat"
+					type: "item"
+				}
+			]
+			title: "A Share in the Co-op"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["301B7D300BFC8EE4"]
+			description: ["Protect the plot: build a scarecrow, fill a composter, and make fertilizer for the next planting."]
+			icon: "farm_and_charm:scarecrow"
+			id: "3D51BA461A391C60"
+			rewards: [
+				{
+					id: "57C8C5B641C1C67A"
+					item: "farm_and_charm:pitchfork"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 80"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "6D46D0985B84F33F"
+					silent: true
+					title: "+80 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6A6FDDA76945BD6C"
+					item: "farm_and_charm:scarecrow"
+					type: "item"
+				}
+				{
+					id: "7D6877503929E47B"
+					item: "minecraft:composter"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "0E31D4A37E6A6C9C"
+					item: "farm_and_charm:fertilizer"
+					type: "item"
+				}
+			]
+			title: "Scarecrow and Compost"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["301B7D300BFC8EE4"]
+			description: ["The co-op wants new crops for the festival. Find wild tomatoes, lettuce, onions and oats, and wild cabbages, and gather their seeds."]
+			icon: "farm_and_charm:wild_tomatoes"
+			id: "2CC1C35CD8C1FB81"
+			rewards: [
+				{
+					id: "05285DB9C5C921D5"
+					item: "farm_and_charm:crafting_bowl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 100"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "7A8936812054ED1E"
+					silent: true
+					title: "+100 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4322EBD6014082BE"
+					item: "farm_and_charm:tomato_seeds"
+					type: "item"
+				}
+				{
+					id: "1FB180CFC52202C2"
+					item: "farm_and_charm:lettuce_seeds"
+					type: "item"
+				}
+				{
+					id: "3584E83DA9F5F3E9"
+					item: "farm_and_charm:onion"
+					type: "item"
+				}
+				{
+					id: "6475F06CF120264E"
+					item: "farm_and_charm:oat_seeds"
+					type: "item"
+				}
+				{
+					id: "0204563B0FF726EE"
+					item: "farmersdelight:cabbage_seeds"
+					type: "item"
+				}
+			]
+			title: "Seeds from the Wild"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["2CC1C35CD8C1FB81"]
+			description: ["Village farmers replant with whatever seeds they're given. Fence and water a new field in a village, hand a farmer carrots, potatoes and beetroot, and watch him keep it planted."]
+			icon: "minecraft:carrot"
+			id: "4B308F7DA35AF12D"
+			rewards: [
+				{
+					id: "250DCE96A0A7636D"
+					item: "minecraft:iron_hoe"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 100"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "42FF7C3FDD956F61"
+					silent: true
+					title: "+100 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5944DC9D7A335F77"
+					stage: "fq.skill_farming.smarter_farmers.talk0"
+					title: "Talk to a farmer"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "0CB1BC806AC831A7"
+					item: "minecraft:carrot"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "6AD79702CB1AC09D"
+					item: "minecraft:potato"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "519CC14E7A995D8A"
+					item: "minecraft:beetroot_seeds"
+					type: "item"
+				}
+			]
+			title: "A Farmer Who Thinks"
+			x: 3.0d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3D51BA461A391C60"
+				"2CC1C35CD8C1FB81"
+			]
+			description: ["The festival is announced for the autumn, and the co-op's spring planting begins."]
+			icon: "farm_and_charm:strawberry"
+			id: "2D8D03D2E227F298"
+			rewards: [
+				{
+					id: "746EE1A9A017C5D7"
+					item: "minecraft:yellow_banner"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 150"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "5EE5F8493FE7663E"
+					silent: true
+					title: "+150 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "279EB33D2180D6D6"
+					item: "farm_and_charm:tomato"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "44A1F53670EA798B"
+					item: "farm_and_charm:lettuce"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "7324E5082231C3F6"
+					item: "farm_and_charm:strawberry"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "6C201C6912077C02"
+					item: "farm_and_charm:onion"
+					type: "item"
+				}
+			]
+			title: "Spring Planting"
+			x: 3.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["2D8D03D2E227F298"]
+			description: ["See how a farmstead is laid out, then raise a barn of your own with a feeding trough, a chicken coop and a loft of straw bales."]
+			icon: "farm_and_charm:feeding_trough"
+			id: "023DFC889C4C6A08"
+			rewards: [
+				{
+					id: "73F1E3A7F09709B1"
+					item: "farm_and_charm:supply_cart"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 150"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "671F2FCAF76CEFF6"
+					silent: true
+					title: "+150 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0DC61838F1758221"
+					structure: "#fotf:groups/farmsteads"
+					title: "Visit a farmstead"
+					type: "structure"
+				}
+				{
+					id: "5BE15B3241164697"
+					item: "farm_and_charm:feeding_trough"
+					type: "item"
+				}
+				{
+					id: "3F4F7010D4ACFE3C"
+					item: "farm_and_charm:chicken_coop"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "77F1ADD0CF37D853"
+					item: "farmersdelight:straw_bale"
+					type: "item"
+				}
+			]
+			title: "Barn Raising"
+			x: 4.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["023DFC889C4C6A08"]
+			description: ["Make organic compost and let it turn to rich soil, then grow mushroom colonies on it for the co-op's kitchen garden."]
+			icon: "farmersdelight:rich_soil"
+			id: "5948A4CB146200DE"
+			rewards: [
+				{
+					id: "160914081CB495A0"
+					item: "farm_and_charm:water_sprinkler"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 150"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "7C8C6C773C0D2C0C"
+					silent: true
+					title: "+150 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "58315D5A765E8908"
+					item: "farmersdelight:organic_compost"
+					type: "item"
+				}
+				{
+					id: "6536F715A3FFC08B"
+					item: "farmersdelight:brown_mushroom_colony"
+					type: "item"
+				}
+				{
+					id: "15A8882BAB3D2142"
+					item: "farmersdelight:red_mushroom_colony"
+					type: "item"
+				}
+			]
+			title: "Rich Soil"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5948A4CB146200DE"]
+			description: ["The festival needs rice. Find wild rice by a river and grow a paddy of it in shallow water."]
+			icon: "farmersdelight:rice_bale"
+			id: "42EB6EF06F0A1436"
+			rewards: [
+				{
+					count: 2
+					id: "4B51BE61C8DB029C"
+					item: "farmersdelight:canvas_rug"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 150"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "67FB4FB2B5BDD069"
+					silent: true
+					title: "+150 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1B95DF826AAC0372"
+					item: "farmersdelight:rice_bale"
+					type: "item"
+				}
+			]
+			title: "Rice Paddies"
+			x: 7.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["023DFC889C4C6A08"]
+			description: ["The co-op's cheesemaker wants milk from the meadow's animals, turned into a cheese block in a cheese form."]
+			icon: "meadow:cheese_block"
+			id: "236C1503B618CC84"
+			rewards: [
+				{
+					id: "392A21865B4E0AE9"
+					item: "meadow:cheese_rack"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 150"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "0D1D808E1FEE2A08"
+					silent: true
+					title: "+150 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6580E6D2256AF391"
+					item: "meadow:cheese_form"
+					type: "item"
+				}
+				{
+					id: "0B114B69F7FC4617"
+					item: "meadow:cheese_block"
+					type: "item"
+				}
+			]
+			title: "The Cheese Wheel"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D8D03D2E227F298"]
+			description: ["Plant long rows of corn, harvest them, and turn the kernels into popcorn for the festival stall."]
+			icon: "farm_and_charm:corn"
+			id: "2543E23B6C663557"
+			rewards: [
+				{
+					count: 2
+					id: "707DD3BFCA4F1006"
+					item: "cornexpansion:popcorn_tin"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 150"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "19893B62EB75476A"
+					silent: true
+					title: "+150 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 32L
+					id: "3CE66022FC9C4832"
+					item: "farm_and_charm:corn"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "207254EDA973D961"
+					item: "cornexpansion:popcorn"
+					type: "item"
+				}
+			]
+			title: "Corn Rows"
+			x: 4.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2D8D03D2E227F298"]
+			description: ["Start the co-op's vineyard: red and white grapes, and one of the wilder varieties from the savanna, the taiga or the jungle, grown on lattices."]
+			icon: "vinery:red_grape"
+			id: "31C83AD3F862AC71"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 150"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "7B7F5461DB1DEA2D"
+					silent: true
+					title: "+150 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "77B1C867E7A53886"
+					item: "vinery:red_grape"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "01784DD8122D4053"
+					item: "vinery:white_grape"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "7DCB9F94047D8C96"
+					item: "vinery:oak_lattice"
+					type: "item"
+				}
+				{
+					id: "39EF24C880DB0FCE"
+					item: "vinery:savanna_grapes_red"
+					type: "item"
+				}
+			]
+			title: "The Vineyard"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["31C83AD3F862AC71"]
+			description: ["Press grapes and apples and ferment them, so there's red wine and cider for the festival toast."]
+			icon: "vinery:red_wine"
+			id: "65EEBE3C01D56D40"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 200"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "23C33866E8BDC5FE"
+					silent: true
+					title: "+200 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6AA3F3E94F489E5E"
+					item: "vinery:apple_press"
+					type: "item"
+				}
+				{
+					id: "1D1EA408A18154C3"
+					item: "vinery:fermentation_barrel"
+					type: "item"
+				}
+				{
+					id: "1E8994945AD63AFF"
+					item: "vinery:red_wine"
+					type: "item"
+				}
+				{
+					id: "459284242409D67B"
+					item: "vinery:apple_cider"
+					type: "item"
+				}
+			]
+			title: "The Festival Toast"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["236C1503B618CC84"]
+			description: ["Shearing day at the co-op: shear the meadow's wooly and horned sheep for the festival's bunting."]
+			icon: "minecraft:shears"
+			id: "0FEEDACC79C60454"
+			rewards: [
+				{
+					id: "1A6ADD86A938522B"
+					item: "minecraft:shears"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 150"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "76C311E4EE2529CC"
+					silent: true
+					title: "+150 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "07A4E169BB2F8A80"
+					item: "meadow:highland_wool"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "08923150D409A4DD"
+					item: "meadow:flecked_wool"
+					type: "item"
+				}
+			]
+			title: "Shearing Day"
+			x: 7.5d
+			y: 0.75d
+		}
+	]
+	subtitle: ["Farming path"]
+	title: "The Growers' Co-op"
+}

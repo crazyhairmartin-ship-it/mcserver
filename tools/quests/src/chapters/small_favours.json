@@ -1,0 +1,243 @@
+{
+  "title": "Small Favours",
+  "subtitle": "One small favour leads to another",
+  "icon": "bakery:crusty_bread",
+  "group": "side",
+  "order": 0,
+  "quests": [
+    {
+      "id": "sf_out_of_flour",
+      "title": "Just a Loaf",
+      "after": [
+        "start:welcome"
+      ],
+      "text": [
+        "Bram the baker would gladly give you a loaf for the road, if he had any flour."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "bram",
+          "lines": [
+            "A loaf? I'd love to. I'd love to. But there's no flour.",
+            "The windmill's stopped turning. Would you go and ask Hesk what's wrong?",
+            "It's just one small favour."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bakery:bread_with_jam"
+        }
+      ],
+      "icon": "bakery:crusty_bread"
+    },
+    {
+      "id": "sf_torn_sails",
+      "title": "Torn Sails",
+      "after": [
+        "sf_out_of_flour"
+      ],
+      "text": [
+        "Miller Hesk is standing under his windmill, looking at it."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "hesk",
+          "lines": [
+            "Storm tore the sails clean through. Can't grind a thing.",
+            "New sails need canvas. Canvas means Nell. Ask Nell, would you?",
+            "One small favour, that's all."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "farm",
+          "xp": 30
+        }
+      ],
+      "icon": "minecraft:white_wool"
+    },
+    {
+      "id": "sf_broken_shuttle",
+      "title": "The Broken Shuttle",
+      "after": [
+        "sf_torn_sails"
+      ],
+      "text": [
+        "Nell the weaver would weave canvas this minute, if her loom worked."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "nell",
+          "lines": [
+            "Canvas? Of course. Except my shuttle snapped this morning.",
+            "Olsen could carve me a new one. And bring me straw while you're at it, I'm out.",
+            "Just a small favour."
+          ]
+        },
+        {
+          "item": "farmersdelight:straw",
+          "count": 16,
+          "consume": true
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "forage",
+          "xp": 30
+        }
+      ],
+      "icon": "farmersdelight:straw"
+    },
+    {
+      "id": "sf_old_birch",
+      "title": "Only the Old Birch Will Do",
+      "after": [
+        "sf_broken_shuttle"
+      ],
+      "text": [
+        "Olsen the carpenter will carve a shuttle. Eventually. He has standards."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "olsen",
+          "lines": [
+            "A shuttle? From ordinary birch? Absolutely not.",
+            "Only the old birches past the woods will do. The ones with the bees.",
+            "Eight logs, no stings. It's a very small favour, really."
+          ]
+        },
+        {
+          "item": "minecraft:birch_log",
+          "count": 8,
+          "consume": true
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:honeycomb",
+          "count": 3
+        },
+        {
+          "skill": "forage",
+          "xp": 50
+        }
+      ],
+      "icon": "minecraft:birch_log"
+    },
+    {
+      "id": "sf_unwinding",
+      "title": "Shuttle, Canvas, Sails",
+      "after": [
+        "sf_old_birch"
+      ],
+      "text": [
+        "Now everything can happen in the right order. Take the shuttle to Nell, and the canvas to Hesk."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "nell",
+          "lines": [
+            "My shuttle! Lovely work. He's insufferable, but lovely work.",
+            "Here's your canvas. Off you go to Hesk."
+          ],
+          "title": "Bring Nell the shuttle"
+        },
+        {
+          "talk": "character",
+          "character": "hesk",
+          "lines": [
+            "Canvas! She did it! Give me an hour.",
+            "...There. Sails on, mill turning. One bag of flour, as promised."
+          ],
+          "title": "Bring Hesk the canvas"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "craft",
+          "xp": 60
+        }
+      ],
+      "icon": "farmersdelight:canvas"
+    },
+    {
+      "id": "sf_fox_and_flour",
+      "title": "The Fox and the Flour",
+      "after": [
+        "sf_unwinding"
+      ],
+      "text": [
+        "On the road back to Reece, something small and orange snatches the flour bag and bolts."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:fox",
+            "name": "Flour Thief",
+            "then": "talk",
+            "lines": [
+              "*The fox drops the flour bag, eyeing your berries.*",
+              "*It takes the berries and trots off, very pleased with itself.*"
+            ]
+          }
+        },
+        {
+          "item": "minecraft:sweet_berries",
+          "count": 8,
+          "consume": true
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "taming",
+          "xp": 50
+        }
+      ],
+      "icon": "minecraft:sweet_berries"
+    },
+    {
+      "id": "sf_the_loaf",
+      "title": "The Loaf",
+      "after": [
+        "sf_fox_and_flour"
+      ],
+      "text": [
+        "Bram has been waiting."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "bram",
+          "lines": [
+            "Flour! Real flour! You're a marvel.",
+            "One crusty loaf, as promised. And a breadbox, since you went to all that trouble.",
+            "Next time I ask a small favour, you have my permission to run."
+          ]
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bakery:crusty_bread",
+          "count": 3
+        },
+        {
+          "item": "bakery:breadbox"
+        },
+        {
+          "skill": "cook",
+          "xp": 80
+        }
+      ],
+      "icon": "bakery:breadbox",
+      "shape": "diamond",
+      "size": 1.25
+    }
+  ]
+}

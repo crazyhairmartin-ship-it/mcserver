@@ -1,0 +1,351 @@
+{
+  "line": "Small favours",
+  "chapter": "small_favours",
+  "group": "world",
+  "giver": "Townsfolk in Reece and the villages around it (Bram the baker, Gil the ferryman) and a piglin camp's gatekeeper: each favour needs another favour first, and the chain unwinds back to whoever started it.",
+  "feel": "One small favour that turns into eight: escalating errands between people, each step somewhere new, ending with a modest reward and a good story.",
+  "quests": [
+    {
+      "id": "sf_out_of_flour",
+      "title": "Just a Loaf",
+      "tier": "prologue",
+      "types": [
+        "talk",
+        "travel"
+      ],
+      "after": [
+        "start:welcome"
+      ],
+      "summary": "Bram the baker in Reece would gladly give you a crusty loaf for the road, if he had any flour. The windmill on the edge of town has stopped; would you go and see what's wrong with it?",
+      "mods": [
+        "bakery"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "A bun to be going on with"
+    },
+    {
+      "id": "sf_torn_sails",
+      "title": "Torn Sails",
+      "tier": "prologue",
+      "types": [
+        "talk"
+      ],
+      "after": [
+        "sf_out_of_flour"
+      ],
+      "summary": "Miller Hesk's sails tore in last night's storm and he can't grind a thing until they're mended. New sails need canvas, and canvas means Nell the weaver.",
+      "mods": [
+        "farmersdelight"
+      ],
+      "landmarks": [],
+      "reward": "Farming XP"
+    },
+    {
+      "id": "sf_broken_shuttle",
+      "title": "The Broken Shuttle",
+      "tier": "prologue",
+      "types": [
+        "collect",
+        "talk"
+      ],
+      "after": [
+        "sf_torn_sails"
+      ],
+      "summary": "Nell would weave canvas this minute, but her loom's shuttle snapped. Cut her a bundle of straw with a knife while you're about it, then ask Olsen the carpenter for a new shuttle.",
+      "mods": [
+        "farmersdelight"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP"
+    },
+    {
+      "id": "sf_old_birch",
+      "title": "Only the Old Birch Will Do",
+      "tier": "prologue",
+      "types": [
+        "explore",
+        "collect"
+      ],
+      "after": [
+        "sf_broken_shuttle"
+      ],
+      "summary": "Olsen carves shuttles from one wood only: the old birches in the woods past Reece, where the bees nest. Bring him eight logs without a single sting (a campfire under the nest calms them).",
+      "mods": [
+        "farmersdelight"
+      ],
+      "landmarks": [],
+      "reward": "Foraging XP, honeycomb"
+    },
+    {
+      "id": "sf_unwinding",
+      "title": "Shuttle, Canvas, Sails",
+      "tier": "prologue",
+      "types": [
+        "deliver",
+        "craft"
+      ],
+      "after": [
+        "sf_old_birch"
+      ],
+      "summary": "Olsen carves the shuttle, Nell weaves the canvas, and Hesk can finally refit his sails. Carry each piece on to the next pair of hands.",
+      "mods": [
+        "farmersdelight",
+        "handcrafted"
+      ],
+      "landmarks": [],
+      "reward": "Crafting XP"
+    },
+    {
+      "id": "sf_fox_and_flour",
+      "title": "The Fox and the Flour",
+      "tier": "prologue",
+      "types": [
+        "encounter",
+        "explore",
+        "trade"
+      ],
+      "after": [
+        "sf_unwinding"
+      ],
+      "summary": "Hesk grinds a full bag of flour, and on the road back a fox snatches it and bolts. Follow it to its den and swap it a handful of sweet berries for the bag.",
+      "mods": [
+        "farm_and_charm"
+      ],
+      "landmarks": [],
+      "reward": "Taming XP"
+    },
+    {
+      "id": "sf_the_loaf",
+      "title": "The Loaf",
+      "tier": "prologue",
+      "types": [
+        "deliver",
+        "cook"
+      ],
+      "after": [
+        "sf_fox_and_flour"
+      ],
+      "summary": "Bram finally has flour. He bakes the crusty loaf he promised, and then, since you went to all that trouble, a whole breadbox to keep it in.",
+      "mods": [
+        "bakery"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Cooking XP, crusty bread and a breadbox"
+    },
+    {
+      "id": "sf_ferry_fee",
+      "title": "The Ferryman's Fee",
+      "tier": "act1",
+      "types": [
+        "talk"
+      ],
+      "after": [
+        "main_story:act1_start"
+      ],
+      "summary": "Gil the ferryman will row anyone across to the island village, for a fee: a good fishing net. The net-maker Ada lives in the next village downriver.",
+      "mods": [
+        "lilis_lucky_lures",
+        "smallships"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Fishing XP"
+    },
+    {
+      "id": "sf_out_of_rope",
+      "title": "Out of Rope",
+      "tier": "act1",
+      "types": [
+        "talk",
+        "travel"
+      ],
+      "after": [
+        "sf_ferry_fee"
+      ],
+      "summary": "Ada can knot a net blindfolded, but she's out of rope, and rope means flax. Farmer Tamsin grows flax in the village beyond.",
+      "mods": [
+        "supplementaries"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Agility XP"
+    },
+    {
+      "id": "sf_scarecrow_hat",
+      "title": "The Scarecrow's Hat",
+      "tier": "act1",
+      "types": [
+        "talk",
+        "explore"
+      ],
+      "after": [
+        "sf_out_of_rope"
+      ],
+      "summary": "Tamsin won't spare a stalk until her scarecrow has its hat back. A witch's black cat ran off with it into the swamp, and nobody goes near that hut.",
+      "mods": [
+        "betterwitchhuts"
+      ],
+      "landmarks": [
+        "#witch_huts"
+      ],
+      "reward": "Exploration XP"
+    },
+    {
+      "id": "sf_witch_bargain",
+      "title": "A Witch's Bargain",
+      "tier": "act1",
+      "types": [
+        "brew",
+        "trade"
+      ],
+      "after": [
+        "sf_scarecrow_hat"
+      ],
+      "summary": "The witch will give the hat back, for a pot of proper black tea brewed in a copper kettle. She's very particular about the kettle.",
+      "mods": [
+        "herbalbrews",
+        "betterwitchhuts"
+      ],
+      "landmarks": [
+        "#witch_huts"
+      ],
+      "reward": "Magic XP"
+    },
+    {
+      "id": "sf_hat_flax_rope",
+      "title": "Hat, Flax, Rope",
+      "tier": "act1",
+      "types": [
+        "deliver",
+        "craft"
+      ],
+      "after": [
+        "sf_witch_bargain"
+      ],
+      "summary": "Return the hat to its scarecrow and Tamsin gives you a sheaf of flax. Twist it into rope and take it to Ada, who knots the net while you wait.",
+      "mods": [
+        "supplementaries",
+        "lilis_lucky_lures"
+      ],
+      "landmarks": [],
+      "reward": "Crafting XP"
+    },
+    {
+      "id": "sf_the_crossing",
+      "title": "The Crossing",
+      "tier": "act1",
+      "types": [
+        "deliver",
+        "travel",
+        "encounter"
+      ],
+      "after": [
+        "sf_hat_flax_rope"
+      ],
+      "summary": "Gil takes the net, keeps his word and rows you out to the island village. Halfway across, the drowned come up around the boat; keep them off until you reach the jetty.",
+      "mods": [
+        "smallships"
+      ],
+      "landmarks": [
+        "#villages"
+      ],
+      "reward": "Fishing XP, Gil's spare rowboat"
+    },
+    {
+      "id": "sf_permit",
+      "title": "Paperwork",
+      "tier": "act3",
+      "types": [
+        "talk"
+      ],
+      "after": [
+        "main_story:act3_start"
+      ],
+      "summary": "The piglin camp's gatekeeper won't let a stranger barter without a permit, stamped by the chief's clerk. The clerk is in the big tent. Probably.",
+      "mods": [
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [
+        "nova_structures:piglin_camp"
+      ],
+      "reward": "A few gold nuggets"
+    },
+    {
+      "id": "sf_dry_ink",
+      "title": "The Ink Has Dried",
+      "tier": "act3",
+      "types": [
+        "travel",
+        "collect"
+      ],
+      "after": [
+        "sf_permit"
+      ],
+      "summary": "The clerk can't write a permit: his ink has dried in the heat. He wants glow ink, from glow squid in the Overworld, because that's what the chief's permits have always been written in.",
+      "mods": [],
+      "landmarks": [],
+      "reward": "Fishing XP"
+    },
+    {
+      "id": "sf_cracked_stamp",
+      "title": "The Cracked Stamp",
+      "tier": "act3",
+      "types": [
+        "craft",
+        "talk"
+      ],
+      "after": [
+        "sf_dry_ink"
+      ],
+      "summary": "Ink sorted, the clerk finds his stamp cracked. A brute at the camp's forge will cast a new one from a gold block, if you beat him at arm-wrestling first (survive his swings for a minute).",
+      "mods": [
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [],
+      "reward": "Defense XP"
+    },
+    {
+      "id": "sf_sleeping_chief",
+      "title": "Signed by the Chief",
+      "tier": "act3",
+      "types": [
+        "puzzle",
+        "encounter"
+      ],
+      "after": [
+        "sf_cracked_stamp"
+      ],
+      "summary": "Stamped, but not signed: the chief is asleep, and waking him badly is how outsiders get eaten. Piglins dance to a drum; play one by his bed until he wakes in a good mood.",
+      "mods": [
+        "immersive_melodies"
+      ],
+      "landmarks": [],
+      "reward": "Bartering bundle"
+    },
+    {
+      "id": "sf_permit_granted",
+      "title": "Permit Granted",
+      "tier": "act3",
+      "types": [
+        "deliver"
+      ],
+      "after": [
+        "sf_sleeping_chief"
+      ],
+      "summary": "Hand the signed, stamped permit to the gatekeeper. He reads it twice, upside down, and lets you in to trade.",
+      "mods": [
+        "mr_dungeons_andtaverns"
+      ],
+      "landmarks": [
+        "nova_structures:piglin_camp"
+      ],
+      "reward": "A framed permit (item frame and paper), gold nuggets"
+    }
+  ]
+}

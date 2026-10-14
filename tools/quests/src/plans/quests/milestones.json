@@ -1,0 +1,413 @@
+{
+ "line": "Milestones",
+ "chapter": "milestones",
+ "group": "story",
+ "giver": "The Field Guide",
+ "feel": "Small pats on the back for the long road.",
+ "quests": [
+  {
+   "id": "first_iron",
+   "title": "Iron Age",
+   "tier": "prologue",
+   "types": [
+    "milestone",
+    "collect"
+   ],
+   "after": [
+    "start:welcome"
+   ],
+   "summary": "Smelt your first iron ingot.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "A bucket"
+  },
+  {
+   "id": "first_diamond",
+   "title": "Hard as Diamond",
+   "tier": "act1",
+   "types": [
+    "milestone",
+    "collect"
+   ],
+   "after": [
+    "first_iron"
+   ],
+   "summary": "Mine your first diamond.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "An iron pickaxe with Unbreaking"
+  },
+  {
+   "id": "diamond_kit",
+   "title": "Shining Kit",
+   "tier": "act2",
+   "types": [
+    "milestone",
+    "craft"
+   ],
+   "after": [
+    "first_diamond"
+   ],
+   "summary": "Wear a full set of diamond armour.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Golden apples"
+  },
+  {
+   "id": "first_netherite",
+   "title": "Netherite",
+   "tier": "act3",
+   "types": [
+    "milestone",
+    "craft"
+   ],
+   "after": [
+    "diamond_kit"
+   ],
+   "summary": "Make your first netherite ingot.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Ancient debris"
+  },
+  {
+   "id": "full_netherite",
+   "title": "Black as Night",
+   "tier": "act4",
+   "types": [
+    "milestone",
+    "craft"
+   ],
+   "after": [
+    "first_netherite"
+   ],
+   "summary": "Wear a full set of netherite armour.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Enchanted golden apple"
+  },
+  {
+   "id": "easy_enchant",
+   "title": "Easy Magic",
+   "tier": "act1",
+   "types": [
+    "milestone",
+    "craft"
+   ],
+   "after": [
+    "first_diamond"
+   ],
+   "summary": "Build an enchanting table with 15 bookshelves; with Easy Magic it keeps your lapis and books and lets you reroll the offers.",
+   "mods": [
+    "easymagic"
+   ],
+   "landmarks": [],
+   "reward": "Lapis lazuli, bookshelves"
+  },
+  {
+   "id": "enchant_30",
+   "title": "The Thirty Club",
+   "tier": "act2",
+   "types": [
+    "milestone"
+   ],
+   "after": [
+    "easy_enchant"
+   ],
+   "summary": "Enchant an item at level 30.",
+   "mods": [
+    "easymagic"
+   ],
+   "landmarks": [],
+   "reward": "Experience bottles"
+  },
+  {
+   "id": "levels_10",
+   "title": "Experienced",
+   "tier": "prologue",
+   "types": [
+    "milestone"
+   ],
+   "after": [
+    "start:welcome"
+   ],
+   "summary": "Reach experience level 10.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Experience bottles"
+  },
+  {
+   "id": "levels_50",
+   "title": "Seasoned",
+   "tier": "act3",
+   "types": [
+    "milestone"
+   ],
+   "after": [
+    "levels_10"
+   ],
+   "summary": "Reach experience level 50.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Mending book"
+  },
+  {
+   "id": "skill_level_10",
+   "title": "A Trade Mastered",
+   "tier": "act2",
+   "types": [
+    "milestone"
+   ],
+   "after": [
+    "start:skill_trees"
+   ],
+   "summary": "Reach level 10 in any Pufferfish skill tree.",
+   "mods": [
+    "puffish_skills"
+   ],
+   "landmarks": [],
+   "reward": "A skill tonic"
+  },
+  {
+   "id": "walk_1km",
+   "title": "The First Mile",
+   "tier": "start",
+   "types": [
+    "milestone",
+    "travel"
+   ],
+   "after": [
+    "start:welcome"
+   ],
+   "summary": "Walk 1 km.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Leather boots"
+  },
+  {
+   "id": "walk_10km",
+   "title": "The Long Walk",
+   "tier": "any",
+   "types": [
+    "milestone",
+    "travel"
+   ],
+   "after": [
+    "walk_1km"
+   ],
+   "summary": "Walk 10 km.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "Agility XP, a waystone"
+  },
+  {
+   "id": "walk_100km",
+   "title": "Worn Soles",
+   "tier": "any",
+   "types": [
+    "milestone",
+    "travel"
+   ],
+   "after": [
+    "walk_10km"
+   ],
+   "summary": "Walk 100 km.",
+   "mods": [
+    "parcool"
+   ],
+   "landmarks": [],
+   "reward": "Agility XP, Feather Falling boots"
+  },
+  {
+   "id": "sail_5km",
+   "title": "Sea Legs",
+   "tier": "any",
+   "types": [
+    "milestone",
+    "ride"
+   ],
+   "after": [
+    "walk_1km"
+   ],
+   "summary": "Travel 5 km by boat or Small Ships vessel.",
+   "mods": [
+    "smallships"
+   ],
+   "landmarks": [],
+   "reward": "A sail, Fishing XP"
+  },
+  {
+   "id": "ride_5km",
+   "title": "Saddle Sore",
+   "tier": "any",
+   "types": [
+    "milestone",
+    "ride"
+   ],
+   "after": [
+    "walk_1km"
+   ],
+   "summary": "Ride 5 km on horseback (or on a unicorn).",
+   "mods": [
+    "ultimate_unicorn_mod"
+   ],
+   "landmarks": [],
+   "reward": "Horse armour, Taming XP"
+  },
+  {
+   "id": "fly_10km",
+   "title": "Cloud Walker",
+   "tier": "act4",
+   "types": [
+    "milestone",
+    "travel"
+   ],
+   "after": [
+    "walk_10km"
+   ],
+   "summary": "Fly 10 km with an elytra or an Immersive Aircraft.",
+   "mods": [
+    "immersive_aircraft",
+    "elytraslot"
+   ],
+   "landmarks": [],
+   "reward": "Fireworks"
+  },
+  {
+   "id": "days_7",
+   "title": "A Week in Reece",
+   "tier": "start",
+   "types": [
+    "milestone"
+   ],
+   "after": [
+    "start:welcome"
+   ],
+   "summary": "Survive 7 in-game days.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "A cake"
+  },
+  {
+   "id": "days_30",
+   "title": "A Month of Mornings",
+   "tier": "any",
+   "types": [
+    "milestone"
+   ],
+   "after": [
+    "days_7"
+   ],
+   "summary": "Survive 30 in-game days.",
+   "mods": [
+    "hourglass"
+   ],
+   "landmarks": [],
+   "reward": "A clock, emeralds"
+  },
+  {
+   "id": "days_100",
+   "title": "A Hundred Dawns",
+   "tier": "any",
+   "types": [
+    "milestone"
+   ],
+   "after": [
+    "days_30"
+   ],
+   "summary": "Survive 100 in-game days.",
+   "mods": [],
+   "landmarks": [],
+   "reward": "A named banner"
+  },
+  {
+   "id": "mine_1000",
+   "title": "Thousand Stones",
+   "tier": "any",
+   "types": [
+    "milestone"
+   ],
+   "after": [
+    "first_iron"
+   ],
+   "summary": "Mine 1000 blocks (Ultimine counts every one).",
+   "mods": [
+    "ftbultimine"
+   ],
+   "landmarks": [],
+   "reward": "Mining XP, an efficiency book"
+  },
+  {
+   "id": "mobs_500",
+   "title": "Monster Hunter",
+   "tier": "any",
+   "types": [
+    "milestone",
+    "kill"
+   ],
+   "after": [
+    "first_iron"
+   ],
+   "summary": "Defeat 500 hostile mobs.",
+   "mods": [
+    "bettercombat"
+   ],
+   "landmarks": [],
+   "reward": "Attack XP, a Spartan weapon"
+  },
+  {
+   "id": "waystones_10",
+   "title": "Every Road Home",
+   "tier": "any",
+   "types": [
+    "milestone",
+    "explore"
+   ],
+   "after": [
+    "start:waystone_reece"
+   ],
+   "summary": "Attune to 10 different waystones.",
+   "mods": [
+    "waystones"
+   ],
+   "landmarks": [
+    "feature:waystones:waystones"
+   ],
+   "reward": "Warp scrolls"
+  },
+  {
+   "id": "back_from_grave",
+   "title": "Not Today",
+   "tier": "any",
+   "types": [
+    "milestone"
+   ],
+   "after": [
+    "start:gravestone"
+   ],
+   "summary": "Recover your belongings from your own gravestone.",
+   "mods": [
+    "gravestone"
+   ],
+   "landmarks": [],
+   "reward": "A totem fragment (golden apple)"
+  },
+  {
+   "id": "backpack_upgrade",
+   "title": "Bigger on the Inside",
+   "tier": "act2",
+   "types": [
+    "milestone",
+    "craft"
+   ],
+   "after": [
+    "start:backpack"
+   ],
+   "summary": "Upgrade a backpack to gold or diamond.",
+   "mods": [
+    "sophisticatedbackpacks"
+   ],
+   "landmarks": [],
+   "reward": "A stack upgrade"
+  }
+ ]
+}
