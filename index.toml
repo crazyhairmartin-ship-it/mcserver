@@ -150,7 +150,7 @@ hash = "10a1fa7b95bd946b66790fecf2f543fe72de5c7a497c35743ba700c6c2696213"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_taming.snbt"
-hash = "b4e59265f63d4ab39e717e31fe52aa4fe49390db5b1b890b081fee5364bac6e6"
+hash = "110a4d2a7f3fed16c2ea00da65492aa09a6623390218ed7170efa60cec7574e8"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/small_favours.snbt"
@@ -2749,7 +2749,7 @@ hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "04dde4979ef1c97c86471746111edccee3eeb8fec2ef6c5c73ee936a43f631a4"
+hash = "8f717cb9647a1639dd84ba8d00ed14a94462b7d9b837e0972f1424cc8f8167d9"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2757,7 +2757,7 @@ hash = "26bffec8ccf318f1f517c90a964dc702443d7786da300888ec48b01e44ab5d0e"
 
 [[files]]
 file = "kubejs/server_scripts/quest_npcs.js"
-hash = "2241de805a4750eef9ba84289dc912178457ac8afac27f915302e7ee8f75cfca"
+hash = "493fc191826bdaf15891f124e47372edd41a56eded3f735e12c8163c607757ce"
 
 [[files]]
 file = "kubejs/server_scripts/quest_photos.js"
@@ -2818,6 +2818,10 @@ hash = "8401f71d28bcb037ad3787668b01e855e49f61d2983bc9f78455b2eac57cfbe7"
 [[files]]
 file = "kubejs/startup_scripts/protect_boats.js"
 hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
+
+[[files]]
+file = "kubejs/startup_scripts/quest_breeding.js"
+hash = "68f8a25be434c5c617ec21c9d0c675da8bfa07bf2e6a7a00852aabbd6a0b8f14"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_fishing.js"

@@ -39,11 +39,10 @@
 					type: "gamestage"
 				}
 				{
-					advancement: "minecraft:husbandry/tame_an_animal"
-					criterion: ""
 					id: "42967623A0B3934D"
+					stage: "fq.skill_taming.stray_wolf.tame0"
 					title: "Tame the wolf"
-					type: "advancement"
+					type: "gamestage"
 				}
 				{
 					id: "4E88C7C59F33EAB8"
@@ -166,8 +165,9 @@
 				}
 				{
 					id: "17E9F5096B36E382"
-					title: "I tamed the horse"
-					type: "checkmark"
+					stage: "fq.skill_taming.lame_horse.tame3"
+					title: "Tame the horse"
+					type: "gamestage"
 				}
 				{
 					dimension: "minecraft:overworld"
@@ -220,11 +220,10 @@
 					type: "item"
 				}
 				{
-					advancement: "minecraft:husbandry/breed_an_animal"
-					criterion: ""
 					id: "622DCA62E2E9769F"
-					title: "Breed a pair of animals"
-					type: "advancement"
+					stage: "fq.skill_taming.fox_kits.breed2"
+					title: "Breed a pair of foxes"
+					type: "gamestage"
 				}
 			]
 			title: "Kits at the Hut"
@@ -287,8 +286,9 @@
 				}
 				{
 					id: "5A5BA80567C4D2A1"
-					title: "I tamed a ferret"
-					type: "checkmark"
+					stage: "fq.skill_taming.critter_census.tame4"
+					title: "Tame a ferret"
+					type: "gamestage"
 				}
 			]
 			title: "The Critter Census"
@@ -443,8 +443,9 @@
 				}
 				{
 					id: "661C084A7C1B7660"
-					title: "I tamed the sled team"
-					type: "checkmark"
+					stage: "fq.skill_taming.sled_dogs.tame2"
+					title: "Tame the sled team back"
+					type: "gamestage"
 				}
 			]
 			title: "Lost in the Blizzard"
@@ -736,8 +737,9 @@
 				}
 				{
 					id: "09B98A45539557A1"
-					title: "I tamed and armoured a dragonfly"
-					type: "checkmark"
+					stage: "fq.skill_taming.dragonfly_rider.tame2"
+					title: "Tame a dragonfly"
+					type: "gamestage"
 				}
 			]
 			title: "Shimmering Wings"

@@ -13,7 +13,7 @@
       ],
       "tasks": [
         {
-          "advancement": "minecraft:husbandry/tame_an_animal",
+          "tame": "minecraft:wolf",
           "title": "Tame the wolf"
         },
         {
@@ -121,7 +121,8 @@
           "consume": true
         },
         {
-          "checkmark": "I tamed the horse"
+          "tame": "minecraft:horse",
+          "title": "Tame the horse"
         },
         {
           "place": "reece",
@@ -159,8 +160,8 @@
           "consume": true
         },
         {
-          "advancement": "minecraft:husbandry/breed_an_animal",
-          "title": "Breed a pair of animals"
+          "breed": "minecraft:fox",
+          "title": "Breed a pair of foxes"
         }
       ],
       "rewards": [
@@ -206,7 +207,8 @@
           "title": "Find a shima enaga"
         },
         {
-          "checkmark": "I tamed a ferret"
+          "tame": "crittersandcompanions:ferret",
+          "title": "Tame a ferret"
         }
       ],
       "rewards": [
@@ -330,7 +332,9 @@
           "consume": true
         },
         {
-          "checkmark": "I tamed the sled team"
+          "tame": "minecraft:wolf",
+          "count": 3,
+          "title": "Tame the sled team back"
         }
       ],
       "rewards": [
@@ -539,7 +543,8 @@
           "crafted": true
         },
         {
-          "checkmark": "I tamed and armoured a dragonfly"
+          "tame": "crittersandcompanions:dragonfly",
+          "title": "Tame a dragonfly"
         }
       ],
       "rewards": [

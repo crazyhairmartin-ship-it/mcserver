@@ -9,7 +9,7 @@ Q = [
                                         "take it in."], "I'll try"),
           text=["A shepherd says a half-starved wolf follows the flock at a distance. Tame it, give it a collar "
                 "tag and bring it to Fern's pen at the edge of Reece."],
-          tasks=[{"advancement": "minecraft:husbandry/tame_an_animal", "title": "Tame the wolf"},
+          tasks=[{"tame": "minecraft:wolf", "title": "Tame the wolf"},
                  item("domesticationinnovation:collar_tag"), {"place": "reece"},
                  talk_char("fern", ["Oh, look at you. Thin as a rake. Come in, come in.",
                                     "You did well. Most people shout at strays. You waited.",
@@ -31,7 +31,7 @@ Q = [
                 "health with apples and hay, tame it and ride it home slowly."],
           tasks=[{"structure": "mvs:horse_campsite", "title": "Find the horse campsite"},
                  item("minecraft:apple", 3, consume=True), item("minecraft:hay_block", 1, consume=True),
-                 {"checkmark": "I tamed the horse"}, {"place": "reece", "title": "Ride the horse home"}],
+                 {"tame": "minecraft:horse", "title": "Tame the horse"}, {"place": "reece", "title": "Ride the horse home"}],
           rewards=[reward_item("minecraft:saddle"), skill("taming", 100)]),
 
     quest("fox_kits", "Kits at the Hut", icon="minecraft:sweet_berries", after=["first_pens"],
@@ -39,7 +39,7 @@ Q = [
                 "sweet berries."],
           tasks=[{"structure": "mvs:fox_hut", "title": "Find the fox hut"},
                  item("minecraft:sweet_berries", 4, consume=True),
-                 {"advancement": "minecraft:husbandry/breed_an_animal", "title": "Breed a pair of animals"}],
+                 {"breed": "minecraft:fox", "title": "Breed a pair of foxes"}],
           rewards=[reward_item("minecraft:glow_berries", 16), skill("taming", 110)]),
 
     quest("critter_census", "The Critter Census", icon="crittersandcompanions:ferret_spawn_egg",
@@ -50,7 +50,7 @@ Q = [
                  {"observe": "crittersandcompanions:red_panda", "ticks": 20, "title": "Find a red panda"},
                  {"observe": "crittersandcompanions:ferret", "ticks": 20, "title": "Find a ferret"},
                  {"observe": "crittersandcompanions:shima_enaga", "ticks": 20, "title": "Find a shima enaga"},
-                 {"checkmark": "I tamed a ferret"}],
+                 {"tame": "crittersandcompanions:ferret", "title": "Tame a ferret"}],
           rewards=[reward_item("crittersandcompanions:silk_lead"), skill("taming", 100)]),
 
     quest("butterfly_net", "Wings in a Bottle", icon="butterflies:butterfly_net", after=["critter_census"],
@@ -81,7 +81,7 @@ Q = [
           text=["The snowy dog hut's sled team ran off in a blizzard. Track the wolves across the snow and tame "
                 "each one back."],
           tasks=[{"structure": "mvs:snowy_dog_hut", "title": "Find the snowy dog hut"},
-                 item("minecraft:bone", 8, consume=True), {"checkmark": "I tamed the sled team"}],
+                 item("minecraft:bone", 8, consume=True), {"tame": "minecraft:wolf", "count": 3, "title": "Tame the sled team back"}],
           rewards=[reward_item("domesticationinnovation:feather_on_a_stick"), skill("taming", 180)]),
 
     quest("butterfly_house", "The Butterfly House", icon="butterflies:bottled_caterpillar_common",
@@ -133,7 +133,7 @@ Q = [
                 "pests."],
           tasks=[{"observe": "crittersandcompanions:dragonfly", "ticks": 20, "title": "Find a dragonfly"},
                  item("crittersandcompanions:iron_dragonfly_armor", crafted=True),
-                 {"checkmark": "I tamed and armoured a dragonfly"}],
+                 {"tame": "crittersandcompanions:dragonfly", "title": "Tame a dragonfly"}],
           rewards=[reward_item("crittersandcompanions:dragonfly_wing", 4), skill("taming", 220)]),
 ]
 

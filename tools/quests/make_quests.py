@@ -650,6 +650,27 @@ def build_photo(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     return task, entry
 
 
+def build_animal(t, kind, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """A "tame" or "breed" task: done when the player tames (an animal becomes theirs) or breeds "count" of the mob(s)
+    while the step is open. {"tame": "minecraft:wolf"} or {"tame": ["minecraft:horse", "minecraft:donkey"], "count": 2}."""
+    mobs = t[kind]
+    mobs = mobs if isinstance(mobs, list) else [mobs]
+    if not mobs:
+        problems.error(where, f'"{kind}" needs a mob id or a list of them')
+        return None, None
+    for m in mobs:
+        ctx['registry'].check('entities', m, where, t.get('unchecked', False))
+    count = int(t.get('count', 1))
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.{kind}{n}', 'type': kind,
+             'entities': list(mobs), 'count': count, 'requires': [], 'quest_id': quest_id,
+             'prev_tasks': list(prev_tasks)}
+    name = mobs[0].split(':')[-1].replace('_', ' ')
+    verb = 'Tame' if kind == 'tame' else 'Breed'
+    title = t.get('title', f'{verb} {count} {name}s' if count > 1 else f'{verb} a {name}')
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'], 'title': title}
+    return task, entry
+
+
 def build_task_drop(t, chapter, qid, n, quest_id, open_task, requires, ctx, where, problems):
     """A "unique drop" task: while the quest is open, the listed mobs can drop a quest item (or, with "fishing" in "from",
     it can be fished up); the task is to bring it."""
@@ -940,6 +961,11 @@ def main():
                 elif isinstance(t, dict) and 'timed' in t:
                     task, entry = build_timed(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
                                               problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and ('tame' in t or 'breed' in t):
+                    task, entry = build_animal(t, 'tame' if 'tame' in t else 'breed', name, qid, n, quest['id'],
+                                               [x['id'] for x in tasks], ctx, twhere, problems)
                     if entry:
                         givers.append(entry)
                 elif isinstance(t, dict) and 'photo' in t:

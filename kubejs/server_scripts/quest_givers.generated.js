@@ -1809,6 +1809,20 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "skill_taming:stray_wolf",
+    "stage": "fq.skill_taming.stray_wolf.tame0",
+    "type": "tame",
+    "entities": [
+      "minecraft:wolf"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "1A6788BE27A0CD4A",
+    "prev_tasks": [
+      "07AF4D89F90E88E1"
+    ]
+  },
+  {
+    "quest": "skill_taming:stray_wolf",
     "stage": "fq.skill_taming.stray_wolf.talk3",
     "type": "talk",
     "lines": [
@@ -1849,6 +1863,54 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_taming:lame_horse",
+    "stage": "fq.skill_taming.lame_horse.tame3",
+    "type": "tame",
+    "entities": [
+      "minecraft:horse"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "480DD6F8670C1468",
+    "prev_tasks": [
+      "135375DF3C924C3D",
+      "2F0EF53AD127F855",
+      "564FDCBB31536E18"
+    ]
+  },
+  {
+    "quest": "skill_taming:fox_kits",
+    "stage": "fq.skill_taming.fox_kits.breed2",
+    "type": "breed",
+    "entities": [
+      "minecraft:fox"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "13AA793F6D1BC16D",
+    "prev_tasks": [
+      "518558FD7F04C810",
+      "00BBB818EEC00EF9"
+    ]
+  },
+  {
+    "quest": "skill_taming:critter_census",
+    "stage": "fq.skill_taming.critter_census.tame4",
+    "type": "tame",
+    "entities": [
+      "crittersandcompanions:ferret"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "0ED09A00977BAAB9",
+    "prev_tasks": [
+      "5A824AD1A25C9A07",
+      "73110DC9144BBD95",
+      "6FF4E30F1CC33703",
+      "05A9D893B5E09C93"
+    ]
+  },
+  {
     "quest": "skill_taming:cat_colony",
     "stage": "fq.skill_taming.cat_colony.enc3",
     "type": "encounter",
@@ -1877,6 +1939,21 @@ global.QUEST_GIVERS = [
     "where": {},
     "entity": "minecraft:villager",
     "profession": ""
+  },
+  {
+    "quest": "skill_taming:sled_dogs",
+    "stage": "fq.skill_taming.sled_dogs.tame2",
+    "type": "tame",
+    "entities": [
+      "minecraft:wolf"
+    ],
+    "count": 3,
+    "requires": [],
+    "quest_id": "3FC330D6BE47EDE0",
+    "prev_tasks": [
+      "6302ED310BE29C9A",
+      "3D4DB27B74F58AEA"
+    ]
   },
   {
     "quest": "skill_taming:butterfly_house",
@@ -1933,6 +2010,21 @@ global.QUEST_GIVERS = [
     "character": "fern",
     "quest_id": "3E29F1CF1159CD62",
     "open_task": ""
+  },
+  {
+    "quest": "skill_taming:dragonfly_rider",
+    "stage": "fq.skill_taming.dragonfly_rider.tame2",
+    "type": "tame",
+    "entities": [
+      "crittersandcompanions:dragonfly"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "058FCDA2CEDB6C3E",
+    "prev_tasks": [
+      "338227AE155431B2",
+      "5E9E3F6846C0FC32"
+    ]
   }
 ]
 global.QUEST_CHARACTERS = {

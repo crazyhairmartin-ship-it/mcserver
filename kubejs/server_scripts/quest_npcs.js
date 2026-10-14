@@ -65,7 +65,7 @@ ServerEvents.commandRegistry(event => {
       target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
       tags.forEach(t => target.removeTag(t))
       let data = target.persistentData
-      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos'].forEach(k => data.remove(k))
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed'].forEach(k => data.remove(k))
       server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
       ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
       return 1
@@ -499,6 +499,72 @@ function npcTickBuilds(player) {
   })
 }
 
+// ---- tame and breed tasks ----
+// tame: every 5 seconds, animals of the listed kinds within 24 blocks that belong to the player are noted. Those
+// already theirs when the step opened are ignored; each new one counts. Works for any mod's pet that saves its owner
+// as "Owner" or "OwnerUUID" (vanilla tameables and horses, and most modded pets).
+// breed: Forge's baby event (startup_scripts/quest_breeding.js) counts babies the player bred while the step is open.
+
+let $NpcAABB = Java.loadClass('net.minecraft.world.phys.AABB')
+const NPC_TAME_RANGE = 24
+
+function npcOwnerOf(entity) {
+  let nbt = entity.nbt
+  if (!nbt) return ''
+  try {
+    if (nbt.hasUUID('Owner')) return String(nbt.getUUID('Owner'))
+  } catch (e) {
+    // not a UUID here
+  }
+  return String(nbt.getString('Owner') || nbt.getString('OwnerUUID') || '')
+}
+
+function npcTickTames(player) {
+  let open = npcEntries('tame').filter(t => !player.tags.contains(t.stage) && questOpen(player, t))
+  if (!open.length) return
+  let me = String(player.uuid)
+  let r = NPC_TAME_RANGE
+  let box = new $NpcAABB(player.x - r, player.y - r, player.z - r, player.x + r, player.y + r, player.z + r)
+  let owned = []
+  player.level.getEntitiesWithin(box).forEach(e => {
+    let type = String(e.type)
+    if (open.some(t => t.entities.indexOf(type) >= 0) && npcOwnerOf(e) == me) owned.push({ type: type, id: String(e.uuid) })
+  })
+  let all = npcData(player, 'fqTame')
+  open.forEach(t => {
+    let first = !all.contains(t.stage)
+    let rec = first ? new $NpcCompoundTag() : all.getCompound(t.stage)
+    owned.forEach(o => {
+      if (t.entities.indexOf(o.type) >= 0 && !rec.contains(o.id)) rec.putInt(o.id, first ? 0 : 1)
+    })
+    all.put(t.stage, rec)
+    let count = 0
+    rec.allKeys.forEach(k => { if (rec.getInt(k) == 1) count++ })
+    if (count >= t.count) {
+      all.remove(t.stage)
+      questAddStage(player, t.stage)
+      player.tell(Text.yellow('Tamed. Quest updated.'))
+    }
+  })
+}
+
+global.fqOnBred = (player, child) => {
+  if (!player || player.level.clientSide) return
+  let type = String(child.type)
+  let counts = npcData(player, 'fqBreed')
+  npcEntries('breed').forEach(b => {
+    if (player.tags.contains(b.stage) || b.entities.indexOf(type) < 0 || !questOpen(player, b)) return
+    let n = counts.getInt(b.stage) + 1
+    if (n >= b.count) {
+      counts.remove(b.stage)
+      questAddStage(player, b.stage)
+      player.tell(Text.yellow('Bred. Quest updated.'))
+    } else {
+      counts.putInt(b.stage, n)
+    }
+  })
+}
+
 // ---- shortcuts a challenge switches off (timed "no") ----
 // teleport: waystones, warp and return scrolls, warp stones, chorus fruit, and (caught afterwards) any jump of over
 // 64 blocks in a second or a change of dimension. mounts: you're taken off whatever you ride. elytra: gliding ends the
@@ -604,6 +670,7 @@ PlayerEvents.tick(event => {
   npcTickEscorts(player)
   if (player.tickCount % 40 == 0) npcTickEncounters(player)
   if (player.tickCount % 100 == 0) npcTickBuilds(player)
+  if (player.tickCount % 100 == 50) npcTickTames(player)
 })
 
 EntityEvents.death(event => {
