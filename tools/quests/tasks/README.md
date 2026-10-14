@@ -68,7 +68,9 @@ characters only (see "Report" below).
   `tools/quests/src/structure_contents.json` (what blocks and entities its pieces actually contain). Never invent
   levers, bells, altars, portraits or mosaics a structure doesn't have. Use what it has: `use` its bells, levers,
   buttons, candles or campfires; `search` its chests and barrels for the quest's items; or have the player bring and
-  place what's missing (a `build`). If a structure says `"pieces": 0`, its contents are unknown: stick to `search`
+  place what's missing (a `build`). The list says what a structure *can* contain; the reviewer then checks your puzzles against real generated copies
+  (`verify_puzzles.py`), so keep counts modest (needing 3 of something the list shows in many pieces is safe; needing
+  1 of something in a single piece may fail). If a structure says `"pieces": 0`, its contents are unknown: stick to `search`
   (nearly every structure has containers), `spawn` fights and `observe`.
 - **Every quest and every step has an in-world reason.** Someone wants it, something is wrong, something changes
   because you did it. Never a bare count ("cast 20 spells", "kill 15 zombies"): say who needs it and why ("the dead

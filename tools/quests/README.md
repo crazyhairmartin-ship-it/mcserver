@@ -28,6 +28,8 @@ tools/quests/
   src/mod_roles.json        which mods should appear in quests (libraries, client and admin mods don't)
   src/landmarks.json        plain names, landmarks seen in the world, feature landmarks, scenery, YUNG's replacements
   src/structure_contents.json  what blocks and entities each structure's pieces contain (make_structure_contents.py)
+  verify_puzzles.py         checks every use/search puzzle step against real generated copies on the test server
+                            (fotfskills /fotfverify), writes src/plans/puzzle_check.md
 ```
 
 `python tools/quests/make_quests.py` checks everything and writes:

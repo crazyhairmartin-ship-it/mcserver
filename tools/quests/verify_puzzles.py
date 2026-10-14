@@ -17,6 +17,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '..'))
 GIVERS = os.path.join(ROOT, 'kubejs', 'server_scripts', 'quest_givers.generated.js')
@@ -29,10 +30,26 @@ def givers():
     return json.loads(m.group(1))
 
 
-def rcon(container, cmd):
-    out = subprocess.run(['docker', 'exec', container, 'rcon-cli', '--', cmd], capture_output=True, text=True,
-                         timeout=900).stdout
-    return re.sub(r'\x1b\[[0-9;]*m', '', out)
+LOG = os.path.join(os.path.dirname(ROOT), 'server-test', 'data', 'logs', 'latest.log')
+
+
+def verify(container, sid, cmd):
+    """Run a /fotfverify and read its result lines from the test server's log (rcon replies can arrive late and get
+    mixed up with the next command's while big structures generate)."""
+    start = os.path.getsize(LOG)
+    subprocess.Popen(['docker', 'exec', container, 'rcon-cli', '--', cmd], stdout=subprocess.DEVNULL,
+                     stderr=subprocess.DEVNULL)
+    marker = 'fotfverify ' + sid + ' '
+    deadline = time.time() + 1200
+    while time.time() < deadline:
+        time.sleep(3)
+        with open(LOG, encoding='utf-8', errors='replace') as fh:
+            fh.seek(start)
+            new_text = fh.read()
+        lines = [line[line.index(marker):] for line in new_text.splitlines() if marker in line]
+        if any(' summary ' in line or ' unknown structure' in line for line in lines):
+            return lines
+    return []
 
 
 def main():
@@ -53,8 +70,7 @@ def main():
         keys = sorted({c[3] for c in checks if sid in c[2]})
         flat = sorted({k for ks in keys for k in ks.split(',')})
         print(f'checking {sid} ({", ".join(flat)})...', flush=True)
-        out = rcon(container, f'fotfverify {sid} {copies} {",".join(flat)}')
-        lines = [l for l in out.splitlines() if l.startswith('fotfverify')]
+        lines = verify(container, sid, f'fotfverify "{sid}" {copies} {",".join(flat)}')
         summary = next((l for l in lines if ' summary ' in l), '')
         found = int(re.search(r'copies=(\d+)', summary).group(1)) if summary else 0
         mins = dict(re.findall(r'(\S+)_min=(\d+)', summary))
