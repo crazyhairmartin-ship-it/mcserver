@@ -895,7 +895,7 @@ def main():
         'default_reward_team': False, 'default_consume_items': False, 'default_autoclaim_rewards': 'disabled',
         'default_quest_shape': pack.get('default_shape', 'circle'), 'default_quest_disable_jei': False,
         'detection_delay': 20, 'disable_gui': False, 'drop_loot_crates': False, 'emergency_items_cooldown': 300,
-        'grid_scale': D(0.5), 'lock_message': '', 'pause_game': False, 'progression_mode': 'flexible',
+        'grid_scale': D(0.5), 'lock_message': '', 'pause_game': False, 'progression_mode': 'linear',
         'loot_crate_no_drop': {'boss': 0, 'monster': 600, 'passive': 4000},
     }
     if os.path.isdir(OUT):

@@ -47,7 +47,8 @@ function questOpen(player, giver) {
     // explicit overload: KubeJS can also turn a player into a UUID, so the plain call is ambiguous
     let data = file['getOrCreateTeamData(net.minecraft.world.entity.Entity)'](player)
     let quest = file.getQuest($QuestLong.parseLong(giver.quest_id, 16))
-    if (!quest || !data.canStartTasks(quest) || data.isCompleted(quest)) return false
+    // dependencies directly, not canStartTasks: in FTB's flexible mode that's true even before the quests ahead are done
+    if (!quest || !data.areDependenciesComplete(quest) || data.isCompleted(quest)) return false
     if (giver.open_task) {
       let first = file.getTask($QuestLong.parseLong(giver.open_task, 16))
       if (first && !data.isCompleted(first)) return false
