@@ -1,0 +1,1593 @@
+{
+  "title": "Out in the Land",
+  "subtitle": "Strange places on the road",
+  "icon": "minecraft:compass",
+  "group": "explore",
+  "order": 0,
+  "quests": [
+    {
+      "id": "bandit_toll_road",
+      "title": "The Toll Road",
+      "text": [
+        "A bandit village sits on the road, and a merchant is held at its gate for a toll he cannot pay. Clear out the bandits and their leader, then walk him to safety."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:pillager",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:bandit_village"
+            },
+            "wave": 4,
+            "name": "Toll Bandits"
+          },
+          "title": "Drive off the bandits holding the merchant"
+        },
+        {
+          "kill": "minecraft:vindicator",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:bandit_village"
+            },
+            "wave": 1,
+            "name": "Bandit Leader"
+          },
+          "title": "Defeat the bandit leader"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Freed Merchant",
+            "to": {
+              "structure": "#villages",
+              "label": "the nearest village"
+            },
+            "then": "escort",
+            "lines": [
+              "They let me go? You actually... Thank you! Take me to a proper village, please."
+            ]
+          },
+          "title": "Walk the freed merchant to the nearest village"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanweaponry:iron_halberd"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 8
+        },
+        {
+          "skill": "attack",
+          "xp": 200
+        }
+      ],
+      "icon": "spartanweaponry:iron_halberd",
+      "discover": {
+        "structure": "dungeons_arise:bandit_village"
+      }
+    },
+    {
+      "id": "bells_of_the_bandit_towers",
+      "title": "Ring Both Bells",
+      "text": [
+        "The bandit towers signal each other with bells. If both ring within a minute, the lookouts panic and flee, leaving their stash behind."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:pillager",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:bandit_towers"
+            },
+            "wave": 4,
+            "name": "Tower Archers"
+          },
+          "title": "Fight off the archers on the walkways"
+        },
+        {
+          "checkmark": "I rang the first tower's bell"
+        },
+        {
+          "checkmark": "I rang the second bell within a minute"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:arrow",
+          "count": 48
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 4
+        },
+        {
+          "skill": "range",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:bell",
+      "discover": {
+        "structure": "dungeons_arise:bandit_towers"
+      }
+    },
+    {
+      "id": "the_great_cage",
+      "title": "The Great Cage",
+      "text": [
+        "A giant aviary stands open on the mountainside with its keepers long gone. Birds are still caged inside, and they will starve."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:vex",
+          "count": 5,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:aviary"
+            },
+            "wave": 4,
+            "name": "Aviary Nesters"
+          },
+          "title": "Clear the nesters off the upper tiers"
+        },
+        {
+          "tame": "minecraft:parrot",
+          "count": 3,
+          "title": "Free and befriend three caged birds"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "domesticationinnovation:collar_tag"
+        },
+        {
+          "item": "minecraft:feather",
+          "count": 16
+        },
+        {
+          "skill": "taming",
+          "xp": 260
+        }
+      ],
+      "icon": "minecraft:parrot_spawn_egg",
+      "discover": {
+        "structure": "dungeons_arise:aviary"
+      }
+    },
+    {
+      "id": "steam_and_shadows",
+      "title": "Steam and Shadows",
+      "text": [
+        "The bathhouse's pools still steam, and something lurks under the water. Someone drowned here, and the bath master's ledger says who and why."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:drowned",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:bathhouse"
+            },
+            "wave": 4,
+            "name": "Bathhouse Drowned"
+          },
+          "title": "Clear the drowned from the pools"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:drowned"
+            ],
+            "chance": 0.5,
+            "item": {
+              "name": "the Bath Master's Ledger",
+              "texture": "minecraft:item/book",
+              "tooltip": "Needed for the job"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take the Bath Master's Ledger"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:soap",
+          "count": 2
+        },
+        {
+          "item": "minecraft:bread",
+          "count": 8
+        },
+        {
+          "skill": "defense",
+          "xp": 180
+        }
+      ],
+      "icon": "supplementaries:soap",
+      "discover": {
+        "structure": "dungeons_arise:bathhouse"
+      }
+    },
+    {
+      "id": "the_cold_forge",
+      "title": "The Foundry's Last Blueprint",
+      "text": [
+        "The foundry's furnaces have gone cold but its guardians still walk the floor, keeping the master smith's plans. Take the plans, and forge what they describe."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:iron_golem",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:foundry"
+            },
+            "wave": 2,
+            "name": "Foundry Guardians"
+          },
+          "title": "Fight past the foundry's guardians"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:iron_golem"
+            ],
+            "chance": 0.6,
+            "item": {
+              "name": "the Master Smith's Plans",
+              "texture": "minecraft:item/map",
+              "tooltip": "Needed for the job"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take the Master Smith's Plans"
+        },
+        {
+          "item": "spartanshields:iron_tower_shield",
+          "crafted": true,
+          "title": "Forge the shield the plans describe"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_block",
+          "count": 4
+        },
+        {
+          "item": "spartanshields:iron_tower_shield"
+        },
+        {
+          "skill": "craft",
+          "xp": 300
+        }
+      ],
+      "icon": "spartanshields:iron_tower_shield",
+      "discover": {
+        "structure": "dungeons_arise:foundry"
+      }
+    },
+    {
+      "id": "siege_of_keep_kayra",
+      "title": "The Siege of Keep Kayra",
+      "text": [
+        "Keep Kayra's garrison went mad and still holds its walls. Fight up through the gatehouse to the lord of the keep, then hold his throne room against the last of his men."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:vindicator",
+          "count": 10,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:keep_kayra"
+            },
+            "wave": 5,
+            "name": "Mad Garrison"
+          },
+          "title": "Fight up through the gatehouse and towers"
+        },
+        {
+          "kill": "minecraft:vindicator",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:keep_kayra"
+            },
+            "wave": 1,
+            "name": "Lord of the Keep",
+            "ensure": true
+          },
+          "title": "Defeat the keep's mad lord"
+        },
+        {
+          "timed": {
+            "seconds": 180,
+            "goal": {
+              "hold": {
+                "radius": 16
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:vindicator",
+                "count": 3,
+                "every": 30
+              }
+            ],
+            "lines": [
+              "His last men are coming. Hold the throne room!"
+            ],
+            "start": "Hold the throne room"
+          },
+          "title": "Hold the throne room against his last wave"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanweaponry:diamond_longsword",
+          "name": "Kayra's Edge",
+          "lore": [
+            "Taken from the mad lord's hand."
+          ],
+          "enchant": {
+            "minecraft:sharpness": 3
+          }
+        },
+        {
+          "item": "minecraft:white_banner",
+          "name": "Banner of Keep Kayra"
+        },
+        {
+          "skill": "defense",
+          "xp": 500
+        }
+      ],
+      "icon": "spartanweaponry:diamond_longsword",
+      "discover": {
+        "structure": "dungeons_arise:keep_kayra"
+      }
+    },
+    {
+      "id": "clockwork_hive",
+      "title": "The Clockwork Hive",
+      "text": [
+        "The mechanical nest hums with things that aren't quite alive. Its guardians carry a mainspring: the heart of the hive. A Crafters' guild mason would very much like to study it."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:iron_golem",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:mechanical_nest"
+            },
+            "wave": 2,
+            "name": "Hive Guardians"
+          },
+          "title": "Hunt the hive's guardians"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:iron_golem"
+            ],
+            "chance": 0.5,
+            "item": {
+              "name": "a Mainspring",
+              "texture": "minecraft:item/clock_00",
+              "tooltip": "The heart of the hive"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take a Mainspring"
+        },
+        {
+          "talk": "org",
+          "org": "crafters",
+          "lines": [
+            "A mainspring? From the hive itself? Let me see.",
+            "Beautiful. Dreadful. Whoever made this had patience.",
+            "The guild will pay you for the loan, and I'll write up what it does."
+          ],
+          "title": "Show the mainspring to a Crafters' guild mason"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:redstone_block",
+          "count": 4
+        },
+        {
+          "item": "minecraft:copper_block",
+          "count": 8
+        },
+        {
+          "skill": "craft",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:redstone_block",
+      "discover": {
+        "structure": "dungeons_arise:mechanical_nest"
+      }
+    },
+    {
+      "id": "asylum_samples",
+      "title": "Samples from the Asylum",
+      "text": [
+        "The plague asylum's wards still hold the sick and what feeds on them. The Herbalists want samples from its apothecary, and a cure brewed from the notes."
+      ],
+      "tasks": [
+        {
+          "drop": {
+            "from": [
+              "minecraft:zombie_villager"
+            ],
+            "chance": 0.4,
+            "item": {
+              "name": "an Asylum Sample",
+              "texture": "minecraft:item/glass_bottle",
+              "tooltip": "Taken from the apothecary's wards"
+            }
+          },
+          "count": 3,
+          "consume": false,
+          "title": "Take an Asylum Sample"
+        },
+        {
+          "checkmark": "I brewed the cure from the apothecary's notes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "herbalbrews:lavender_tea",
+          "count": 2
+        },
+        {
+          "item": "irons_spellbooks:greater_healing_potion",
+          "count": 2
+        },
+        {
+          "skill": "forage",
+          "xp": 300
+        }
+      ],
+      "icon": "herbalbrews:lavender_tea",
+      "discover": {
+        "structure": "dungeons_arise:plague_asylum"
+      }
+    },
+    {
+      "id": "palace_of_shiraz",
+      "title": "The Palace Treasury",
+      "text": [
+        "Shiraz Palace's treasury is sealed behind a riddle in tiles. Read the mosaics in each court and set the treasury's levers in the order they tell."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I read the mosaic in the first court"
+        },
+        {
+          "checkmark": "I read the mosaic in the second court"
+        },
+        {
+          "checkmark": "I set the treasury's levers in the order the mosaics tell"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_block",
+          "count": 4
+        },
+        {
+          "item": "minecraft:enchanted_golden_apple"
+        },
+        {
+          "skill": "attack",
+          "xp": 500
+        }
+      ],
+      "icon": "minecraft:gold_block",
+      "discover": {
+        "structure": "dungeons_arise:shiraz_palace"
+      }
+    },
+    {
+      "id": "thornborn_ascent",
+      "title": "The Thornborn Ascent",
+      "text": [
+        "Thorns have swallowed the Thornborn Towers from the roots up, and the vines fight back. Climb to the top and bring down a cutting of the first thorn."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:spider",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:thornborn_towers"
+            },
+            "wave": 4,
+            "name": "Thorn Guardians"
+          },
+          "title": "Fight the thorns' guardians on the climb"
+        },
+        {
+          "item": "minecraft:vine",
+          "count": 4,
+          "title": "Cut a piece of the first thorn from the summit"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_axe",
+          "name": "Thornbreaker",
+          "lore": [
+            "Cut from the Thornborn Towers."
+          ],
+          "enchant": {
+            "minecraft:sharpness": 3
+          }
+        },
+        {
+          "item": "minecraft:cherry_sapling",
+          "count": 4
+        },
+        {
+          "skill": "forage",
+          "xp": 280
+        }
+      ],
+      "icon": "minecraft:vine",
+      "discover": {
+        "structure": "dungeons_arise:thornborn_towers"
+      }
+    },
+    {
+      "id": "the_infested_temple",
+      "title": "Swarming Stones",
+      "text": [
+        "Every wall of the infested temple hides silverfish. Reach the inner sanctum and smash its brood stones before the swarm closes the way out."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 300,
+            "goal": {
+              "kill": "minecraft:silverfish",
+              "count": 15
+            },
+            "waves": [
+              {
+                "entity": "minecraft:silverfish",
+                "count": 4,
+                "every": 20
+              }
+            ],
+            "lines": [
+              "The walls are moving. Break the brood stones!"
+            ],
+            "start": "Smash the brood stones"
+          },
+          "title": "Smash the brood stones before the swarm closes in"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Quarry Hands",
+          "enchant": {
+            "minecraft:efficiency": 3
+          }
+        },
+        {
+          "item": "minecraft:torch",
+          "count": 32
+        },
+        {
+          "skill": "mining",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:infested_stone",
+      "discover": {
+        "structure": "dungeons_arise:infested_temple"
+      }
+    },
+    {
+      "id": "temple_of_the_old_order",
+      "title": "The Old Order's Temple",
+      "text": [
+        "An abandoned temple keeps the old order's altar intact. The inscriptions name four offerings that will open its reliquary."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:lapis_lazuli",
+          "count": 4,
+          "consume": true,
+          "title": "Gather the offering of lapis"
+        },
+        {
+          "item": "minecraft:candle",
+          "consume": true,
+          "title": "Gather the offering of light"
+        },
+        {
+          "item": "minecraft:emerald",
+          "consume": true,
+          "title": "Gather the offering of wealth"
+        },
+        {
+          "item": "minecraft:book",
+          "consume": true,
+          "title": "Gather the offering of words"
+        },
+        {
+          "checkmark": "I laid the four offerings on the altar"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:lapis_lazuli",
+          "count": 16
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "The Old Order's Gift",
+          "enchant": {
+            "minecraft:protection": 2
+          }
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:lapis_block",
+      "discover": {
+        "structure": "dungeons_arise:abandoned_temple"
+      }
+    },
+    {
+      "id": "spore_folk",
+      "title": "The Spore Folk",
+      "text": [
+        "A village built inside giant mushrooms trades in caps and spores. Their people will teach you to grow the mushrooms, if you bring back a full set of blocks."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Spore Elder",
+            "then": "talk",
+            "lines": [
+              "Visitors from above! We trade caps and spores for kindness.",
+              "Grow them in the dark, damp and quiet. Never hurry a mushroom."
+            ]
+          },
+          "title": "Trade with the spore folk"
+        },
+        {
+          "item": "minecraft:red_mushroom_block",
+          "title": "Gather a red mushroom block"
+        },
+        {
+          "item": "minecraft:brown_mushroom_block",
+          "title": "Gather a brown mushroom block"
+        },
+        {
+          "item": "minecraft:mushroom_stem",
+          "title": "Gather a mushroom stem"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farmersdelight:red_mushroom_colony",
+          "count": 2
+        },
+        {
+          "item": "farmersdelight:brown_mushroom_colony",
+          "count": 2
+        },
+        {
+          "item": "minecraft:mushroom_stew",
+          "count": 4
+        },
+        {
+          "skill": "farm",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:red_mushroom_block",
+      "discover": {
+        "structure": "dungeons_arise:mushroom_village"
+      }
+    },
+    {
+      "id": "the_scorched_mines",
+      "title": "Fire in the Hole",
+      "text": [
+        "The scorched mines burn, and the last shift never came up. Find the trapped miners through the heat and get them out before the next collapse."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Trapped Miner",
+            "to": {
+              "structure": "#villages",
+              "label": "a village, out of the heat"
+            },
+            "then": "escort",
+            "lines": [
+              "Here! Behind the rubble! The roof came down hours ago!"
+            ]
+          },
+          "title": "Lead the trapped miners out of the fire"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "item": "minecraft:raw_gold",
+          "count": 8
+        },
+        {
+          "skill": "mining",
+          "xp": 280
+        }
+      ],
+      "icon": "minecraft:magma_block",
+      "discover": {
+        "structure": "dungeons_arise:scorched_mines"
+      }
+    },
+    {
+      "id": "empty_stands",
+      "title": "Empty Stands",
+      "text": [
+        "The coliseum's stands are empty, but its gates still open for a challenger. A note pinned to the gate sends you to the Bounty Office, who know who runs the fights now."
+      ],
+      "tasks": [
+        {
+          "talk": "org",
+          "org": "bounty",
+          "lines": [
+            "The coliseum? Still open? Hm.",
+            "A hunter named Dray ran the fights, until he stopped coming to the office.",
+            "Take a decree. If you fight there, fight for coin."
+          ],
+          "title": "Ask the Bounty Office who runs the fights now"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bountiful:decree"
+        },
+        {
+          "skill": "attack",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:iron_sword",
+      "discover": {
+        "structure": "dungeons_arise:coliseum"
+      }
+    },
+    {
+      "id": "witch_villa_tea_party",
+      "title": "Tea at the Witch Villa",
+      "text": [
+        "The witches of the swamp villa are holding a tea party, and their recipe book lies open on the table. Copy it unseen, and brew their strangest potion yourself."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I copied the witches' recipe book unseen"
+        },
+        {
+          "item": "minecraft:splash_potion",
+          "title": "Brew the witches' strangest potion"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:splash_potion",
+          "count": 3
+        },
+        {
+          "item": "minecraft:cauldron"
+        },
+        {
+          "skill": "magic",
+          "xp": 220
+        }
+      ],
+      "icon": "minecraft:cauldron",
+      "discover": {
+        "structure": "nova_structures:witch_villa"
+      }
+    },
+    {
+      "id": "old_manor_ghost",
+      "title": "The Old Manor",
+      "text": [
+        "The old manor's doors lock behind you, and the portraits move at night. Four keys are hidden behind the portraits, and the study holds the family's last letter."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I found the first key behind a portrait"
+        },
+        {
+          "checkmark": "I found the second key behind a portrait"
+        },
+        {
+          "checkmark": "I found the third key behind a portrait"
+        },
+        {
+          "checkmark": "I found the fourth key and opened the study"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:key"
+        },
+        {
+          "item": "supplementaries:safe"
+        },
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 8
+        },
+        {
+          "skill": "magic",
+          "xp": 220
+        }
+      ],
+      "icon": "supplementaries:key",
+      "discover": {
+        "structure": "structory:old_manor"
+      }
+    },
+    {
+      "id": "temple_on_the_peak",
+      "title": "The Temple on the Peak",
+      "text": [
+        "An ancient temple sits on a mountain peak above the clouds. Its four braziers have been dark for centuries. Light them and watch the sun rise from the top."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "minecraft:campfire": 4
+            },
+            "radius": 12
+          },
+          "title": "Light the four braziers"
+        },
+        {
+          "checkmark": "I watched the sun rise from the top"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "grapplemod:grapplinghook"
+        },
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 250
+        }
+      ],
+      "icon": "grapplemod:grapplinghook",
+      "discover": {
+        "structure": "structory_towers:ancient_temple"
+      }
+    },
+    {
+      "id": "sacred_relic",
+      "title": "The Sacred Relic",
+      "text": [
+        "The relic temple's altar is empty. Jungle thieves took the relic, and their trail leads to a nearby ruin."
+      ],
+      "tasks": [
+        {
+          "structure": "#ruins",
+          "title": "Follow the thieves' trail to a ruin"
+        },
+        {
+          "kill": "minecraft:pillager",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "#ruins"
+            },
+            "wave": 4,
+            "name": "Relic Thieves"
+          },
+          "title": "Take the relic back from the thieves"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:pillager"
+            ],
+            "chance": 0.6,
+            "item": {
+              "name": "the Sacred Relic",
+              "texture": "minecraft:item/lapis_lazuli",
+              "tooltip": "Needed for the job"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take the Sacred Relic"
+        },
+        {
+          "structure": "structory_towers:sacred_relic_temple",
+          "title": "Return the relic to its altar"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 8
+        },
+        {
+          "item": "minecraft:lapis_block"
+        },
+        {
+          "skill": "magic",
+          "xp": 240
+        }
+      ],
+      "icon": "minecraft:lapis_block",
+      "discover": {
+        "structure": "structory_towers:sacred_relic_temple"
+      }
+    },
+    {
+      "id": "warped_greatsword",
+      "title": "The Sword in the Hill",
+      "text": [
+        "A giant warped sword is driven into the shattered hills, as if dropped from the Nether. The forger's mark on its hilt names who made it."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I climbed the blade to the hilt"
+        },
+        {
+          "checkmark": "I found the forger's mark on the hilt"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanweaponry:diamond_greatsword"
+        },
+        {
+          "item": "minecraft:warped_fungus",
+          "count": 8
+        },
+        {
+          "skill": "attack",
+          "xp": 300
+        }
+      ],
+      "icon": "spartanweaponry:diamond_greatsword",
+      "discover": {
+        "structure": "structory_towers:warped_greatsword"
+      }
+    },
+    {
+      "id": "the_cathedral",
+      "title": "The Cathedral",
+      "text": [
+        "A cathedral stands alone in the wilds, its bell tower cracked. Climb the tower and ring the bell; a cleric will arrive to say why the town around it never got built."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I climbed the tower and rang the bell"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Wandering Cleric",
+            "then": "talk",
+            "lines": [
+              "I heard the bell! Nobody's rung it in years.",
+              "The town was never built because the builders found something under the foundations, and left in the night. Nobody will say what."
+            ]
+          },
+          "title": "Meet the cleric who answers the bell"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "immersive_melodies:piano"
+        },
+        {
+          "item": "minecraft:golden_apple",
+          "count": 2
+        },
+        {
+          "skill": "magic",
+          "xp": 220
+        }
+      ],
+      "icon": "minecraft:bell",
+      "discover": {
+        "structure": "mvs:cathedral"
+      }
+    },
+    {
+      "id": "warped_in_the_overworld",
+      "title": "Wrong Side of the Portal",
+      "text": [
+        "Warped wood houses and towers stand in the Overworld where nothing warped should grow. The Arcane Order suspect a leak from the Nether, and want a sample."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:warped_planks",
+          "count": 4,
+          "consume": true,
+          "title": "Take a sample of the warped wood"
+        },
+        {
+          "talk": "org",
+          "org": "arcane",
+          "lines": [
+            "Warped planks, in the Overworld? That shouldn't be possible.",
+            "A leak from the Nether, then. The Order will look into it.",
+            "Well done. Keep away from the portal until we know more."
+          ],
+          "title": "Show the sample to the Arcane Order"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:warped_planks",
+          "count": 16
+        },
+        {
+          "item": "minecraft:ender_pearl"
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:warped_planks",
+      "discover": {
+        "structure": "mvs:warped_house"
+      }
+    },
+    {
+      "id": "beacon_gone_dark",
+      "title": "A Beacon Gone Dark",
+      "text": [
+        "A ruined beacon still has its pyramid, half-robbed by looters. Replace the missing blocks and light it again, so the beam can be seen from miles away."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:iron_block",
+          "count": 9,
+          "consume": true,
+          "title": "Gather iron blocks to rebuild the pyramid"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:iron_block": 9
+            },
+            "radius": 8
+          },
+          "title": "Rebuild the beacon's pyramid"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_block",
+          "count": 4
+        },
+        {
+          "skill": "mining",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:beacon",
+      "discover": {
+        "structure": "mvs:ruined_beacon"
+      }
+    },
+    {
+      "id": "desert_mimic",
+      "title": "Too Good to Be True",
+      "text": [
+        "A desert ruin has a chest sitting out in the open, unguarded. The chest bites. Beat the mimic, and the real loot is under the sand where it sat."
+      ],
+      "tasks": [
+        {
+          "kill": "artifacts:mimic",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "towns_and_towers:mimic_desert"
+            },
+            "wave": 1,
+            "name": "Hungry Chest",
+            "ensure": true
+          },
+          "title": "Beat the mimic guarding the loot"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 12
+        },
+        {
+          "item": "minecraft:golden_horse_armor"
+        },
+        {
+          "skill": "attack",
+          "xp": 220
+        }
+      ],
+      "icon": "artifacts:mimic_spawn_egg",
+      "discover": {
+        "structure": "towns_and_towers:mimic_desert"
+      }
+    },
+    {
+      "id": "pharaohs_vault",
+      "title": "The Pharaoh's Vault",
+      "text": [
+        "The desert temple's tomb is sealed, and its corridors are trapped. Find the hidden levers, survive the pressure plates and open the pharaoh's vault."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I found the hidden levers"
+        },
+        {
+          "checkmark": "I crossed the pressure plates unharmed"
+        },
+        {
+          "checkmark": "I opened the pharaoh's vault"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 10
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Pharaoh's Blessing",
+          "enchant": {
+            "minecraft:fire_aspect": 1
+          }
+        },
+        {
+          "skill": "attack",
+          "xp": 220
+        }
+      ],
+      "icon": "minecraft:gold_block",
+      "discover": {
+        "structure": "betterdeserttemples:desert_temple"
+      }
+    },
+    {
+      "id": "jungle_temple_traps",
+      "title": "Traps of the Jungle Temple",
+      "text": [
+        "A jungle temple's halls are full of dart traps and crushing floors. A carving at the entrance gives a warning and a deadline: be at the treasure room before the floors close."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I reached the treasure room before the floors closed"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 6
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Light Landing",
+          "enchant": {
+            "minecraft:feather_falling": 3
+          }
+        },
+        {
+          "skill": "agility",
+          "xp": 220
+        }
+      ],
+      "icon": "minecraft:tripwire_hook",
+      "discover": {
+        "structure": "betterjungletemples:jungle_temple"
+      }
+    },
+    {
+      "id": "the_bridge_builder",
+      "title": "The Bridge Builder",
+      "text": [
+        "On one of the old river bridges you find the builder's plaque: it asks that someone build one more. Cross another river with a bridge of your own."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "mcwbridges:oak_log_bridge_middle": 6,
+              "mcwbridges:oak_bridge_pier": 2
+            },
+            "radius": 12
+          },
+          "title": "Build a bridge across a river"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "mcwbridges:oak_log_bridge_middle",
+          "count": 8
+        },
+        {
+          "item": "minecraft:oak_log",
+          "count": 32
+        },
+        {
+          "skill": "craft",
+          "xp": 120
+        }
+      ],
+      "icon": "mcwbridges:oak_log_bridge_middle",
+      "discover": {
+        "stat": "minecraft:walk_one_cm",
+        "count": 200000
+      }
+    },
+    {
+      "id": "the_broken_gate",
+      "title": "The Broken Gate",
+      "text": [
+        "A ruined portal stands half-collapsed with crying obsidian in its frame. Rebuild the frame, but don't light it yet: the Arcane Order want a word first."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:obsidian",
+          "count": 10,
+          "title": "Gather obsidian to mend the frame"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:obsidian": 10
+            },
+            "radius": 8
+          },
+          "title": "Rebuild the portal's frame"
+        },
+        {
+          "talk": "org",
+          "org": "arcane",
+          "lines": [
+            "You rebuilt a portal? Unlit, I hope.",
+            "Portals are doors, and doors can be opened from either side.",
+            "Leave it cold until we've looked at it. Please."
+          ],
+          "title": "Tell the Arcane Order before you light it"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:flint_and_steel"
+        },
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 4
+        },
+        {
+          "skill": "mining",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:crying_obsidian",
+      "discover": {
+        "structure": "#ruined_portals"
+      }
+    },
+    {
+      "id": "igloo_basement",
+      "title": "The Igloo's Basement",
+      "text": [
+        "Under an igloo's carpet, a ladder leads to a cell holding a zombie villager. Cure him with weakness and a golden apple, and he will tell you whose igloo it was."
+      ],
+      "tasks": [
+        {
+          "advancement": "minecraft:story/cure_zombie_villager",
+          "title": "Cure the prisoner in the cell"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:brewing_stand"
+        },
+        {
+          "item": "minecraft:golden_apple"
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:golden_apple",
+      "discover": {
+        "structure": "minecraft:igloo"
+      }
+    },
+    {
+      "id": "waystone_network",
+      "title": "Stones That Remember",
+      "text": [
+        "Activating a wild waystone starts something. The Couriers say there's a whole network of them, each one remembers the others."
+      ],
+      "tasks": [
+        {
+          "waystones": 5,
+          "wild": true,
+          "title": "Attune five waystones in the wild"
+        },
+        {
+          "item": "waystones:warp_scroll",
+          "crafted": true,
+          "title": "Make a warp scroll"
+        },
+        {
+          "checkmark": "I used the warp scroll"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "waystones:warp_scroll",
+          "count": 4
+        },
+        {
+          "item": "waystones:return_scroll"
+        },
+        {
+          "skill": "agility",
+          "xp": 120
+        }
+      ],
+      "icon": "waystones:waystone",
+      "discover": {
+        "stat": "minecraft:walk_one_cm",
+        "count": 100000
+      }
+    },
+    {
+      "id": "frostbitten_ruins",
+      "title": "Frostbitten Ruins",
+      "text": [
+        "Frozen spires and an abandoned village in the snow, built by no people anyone knows. Something very large sleeps far below. Note it, copy the writing, and leave it alone for now."
+      ],
+      "tasks": [
+        {
+          "checkmark": "I copied the ruins' writing and left whatever sleeps below"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "Page of the Old Ruins' Writing",
+          "lore": [
+            "Copied in the snow, in a shaking hand."
+          ]
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:blue_ice",
+      "discover": {
+        "structure": "cataclysm:abandoned_spire"
+      }
+    },
+    {
+      "id": "occupied_dunes",
+      "title": "Occupied Dunes",
+      "text": [
+        "A desert village has been occupied by scouts of something that digs, and a dig site nearby goes deeper than it should. Drive the scouts off, read the foreman's notes, and leave the pit alone."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:koboleton",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:desert_occupied_village"
+            },
+            "wave": 4,
+            "name": "Dune Scouts"
+          },
+          "title": "Drive the scouts out of the village"
+        },
+        {
+          "drop": {
+            "from": [
+              "cataclysm:koboleton"
+            ],
+            "chance": 0.5,
+            "item": {
+              "name": "the Foreman's Notes",
+              "texture": "minecraft:item/paper",
+              "tooltip": "Needed for the job"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take the Foreman's Notes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 12
+        },
+        {
+          "skill": "attack",
+          "xp": 400
+        }
+      ],
+      "icon": "minecraft:gold_ingot",
+      "discover": {
+        "structure": "cataclysm:desert_occupied_village"
+      }
+    },
+    {
+      "id": "return_to_the_ruins",
+      "title": "Back to the Ruins",
+      "after": [
+        "frostbitten_ruins",
+        "occupied_dunes"
+      ],
+      "text": [
+        "Now the old ruins' writing makes sense: the snow ruins and the desert dig site point to the prisons of something buried. Revisit one of each and read the inscriptions that name it."
+      ],
+      "tasks": [
+        {
+          "structure": "cataclysm:abandoned_temple",
+          "title": "Return to the snow ruins to read the inscriptions"
+        },
+        {
+          "structure": "cataclysm:desert_site",
+          "title": "Return to the dig site to read its inscriptions"
+        },
+        {
+          "checkmark": "I read the inscriptions that name what is buried here"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "Names of the Buried",
+          "lore": [
+            "The inscriptions point toward the strongholds."
+          ]
+        },
+        {
+          "skill": "magic",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:writable_book"
+    },
+    {
+      "id": "biome_ominous_woods",
+      "title": "The Ominous Woods",
+      "text": [
+        "Entering the ominous woods at night, you hear something hunting through the trees. Survive until dawn without leaving the woods."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 600,
+            "goal": {
+              "hold": {
+                "radius": 30
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:zombie",
+                "count": 3,
+                "every": 25
+              },
+              {
+                "entity": "minecraft:skeleton",
+                "count": 2,
+                "every": 45
+              }
+            ],
+            "lines": [
+              "Something is hunting you through the trees. Hold until dawn."
+            ],
+            "start": "Stand until dawn"
+          },
+          "title": "Survive the night in the ominous woods"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:shield"
+        },
+        {
+          "item": "minecraft:torch",
+          "count": 32
+        },
+        {
+          "skill": "defense",
+          "xp": 220
+        }
+      ],
+      "icon": "minecraft:dark_oak_log",
+      "discover": {
+        "biome": "biomesoplenty:ominous_woods"
+      }
+    },
+    {
+      "id": "biome_volcano",
+      "title": "The Mountain That Smokes",
+      "text": [
+        "You've found a volcano, smoking and black. The Miners' Guild would pay for lava, black sand and magma from its crater."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:lava_bucket",
+          "title": "Scoop a bucket of lava from the crater"
+        },
+        {
+          "item": "biomesoplenty:black_sand",
+          "count": 8,
+          "title": "Take black sand from the slopes"
+        },
+        {
+          "item": "minecraft:magma_block",
+          "count": 4,
+          "title": "Chip magma from the crater's rim"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:obsidian",
+          "count": 8
+        },
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "skill": "mining",
+          "xp": 220
+        }
+      ],
+      "icon": "minecraft:lava_bucket",
+      "discover": {
+        "biome": "biomesoplenty:volcano"
+      }
+    }
+  ]
+}

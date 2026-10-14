@@ -45,6 +45,23 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - village_errands:map_the_region: needs copying a master map; written as crafting a map
 - milestones:enchant_30: needs enchanting an item at level 30; written as reaching level 30
 - milestones:fly_10km: needs elytra or aircraft flight; written as the aviate stat (aircraft may not count)
+- discovery_land:bells_of_the_bandit_towers: needs ringing two bells within a minute; written as a fight and two checkmarks
+- discovery_land:asylum_samples: needs brewing a cure from the notes; written as quest drops and a checkmark
+- discovery_land:palace_of_shiraz: needs a mosaic lever puzzle; written as checkmarks
+- discovery_land:temple_of_the_old_order: needs laying offerings on an altar; written as items consumed and a checkmark
+- discovery_land:witch_villa_tea_party: needs stealing the recipe book and brewing the potion; written as a checkmark and a splash potion
+- discovery_land:old_manor_ghost: needs four portrait keys and a locked-door puzzle; written as checkmarks
+- discovery_land:temple_on_the_peak: needs lighting four braziers and a no-flying climb; written as a campfire build and a checkmark
+- discovery_land:warped_greatsword: needs the forger's mark on the hilt; written as checkmarks
+- discovery_land:the_cathedral: needs ringing the bell; written as a checkmark and a cleric encounter
+- discovery_land:beacon_gone_dark: needs finding the beacon's missing blocks; written as rebuilding the iron pyramid
+- discovery_land:pharaohs_vault: needs hidden levers and pressure-plate traps; written as checkmarks
+- discovery_land:jungle_temple_traps: needs a timed run from the entrance to the treasure room; written as a checkmark
+- discovery_land:the_bridge_builder: needs discovering a Yung's bridge (no structure id); written as a discover on walking 2 km
+- discovery_land:waystone_network: needs discovering a wild waystone; written as a discover on walking 1 km
+- discovery_land:igloo_basement: needs curing with weakness and a golden apple at the cell; written as the cure advancement
+- discovery_land:frostbitten_ruins: needs noting what sleeps below; written as a checkmark
+- discovery_land:occupied_dunes: needs Kobolediator scouts; written as koboletons
 
 ## Links to restore
-
+- discovery_land:return_to_the_ruins: restore after main_story:act5_start

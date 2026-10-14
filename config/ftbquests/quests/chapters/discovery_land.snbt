@@ -1,0 +1,2006 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "discovery_land"
+	group: "76581968F62E459A"
+	icon: "minecraft:compass"
+	id: "2F50BC8E86E3F020"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["A bandit village sits on the road, and a merchant is held at its gate for a toll he cannot pay. Clear out the bandits and their leader, then walk him to safety."]
+			icon: "spartanweaponry:iron_halberd"
+			id: "1F4433CF17E0D05A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "06121172EA68F1EC"
+					item: "spartanweaponry:iron_halberd"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "2873BBEA79BC63C6"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 200"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "32171E1DC05EC241"
+					silent: true
+					title: "+200 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "78E338A90FDB992A"
+					structure: "dungeons_arise:bandit_village"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:pillager"
+					id: "4B6C42D3958A7645"
+					title: "Drive off the bandits holding the merchant"
+					type: "kill"
+					value: 8L
+				}
+				{
+					entity: "minecraft:vindicator"
+					id: "7B8F4392320BDFB6"
+					title: "Defeat the bandit leader"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "42B23960C9B227D1"
+					stage: "fq.discovery_land.bandit_toll_road.enc2"
+					title: "Walk the freed merchant to the nearest village"
+					type: "gamestage"
+				}
+			]
+			title: "The Toll Road"
+			x: 0.0d
+			y: -24.75d
+		}
+		{
+			description: ["The bandit towers signal each other with bells. If both ring within a minute, the lookouts panic and flee, leaving their stash behind."]
+			icon: "minecraft:bell"
+			id: "31B5D0DF12491B9E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 48
+					id: "2FF1817A4E44269D"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "6C2611C1E043E079"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 200"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "5EE8B90651D41C06"
+					silent: true
+					title: "+200 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5195141FD96348B3"
+					structure: "dungeons_arise:bandit_towers"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:pillager"
+					id: "160DD2D626602457"
+					title: "Fight off the archers on the walkways"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "1E9080772E5B6630"
+					title: "I rang the first tower's bell"
+					type: "checkmark"
+				}
+				{
+					id: "72AB133BE8905675"
+					title: "I rang the second bell within a minute"
+					type: "checkmark"
+				}
+			]
+			title: "Ring Both Bells"
+			x: 0.0d
+			y: -23.25d
+		}
+		{
+			description: ["A giant aviary stands open on the mountainside with its keepers long gone. Birds are still caged inside, and they will starve."]
+			icon: "minecraft:parrot_spawn_egg"
+			id: "295BFFCD0E0C6EE8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "1CA3D3E285A138F6"
+					item: "domesticationinnovation:collar_tag"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "3DF1B1239F4937EE"
+					item: "minecraft:feather"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 260"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "2D68E11B5D243699"
+					silent: true
+					title: "+260 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7F0331156D87E7D9"
+					structure: "dungeons_arise:aviary"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:vex"
+					id: "746242E069ABFAC6"
+					title: "Clear the nesters off the upper tiers"
+					type: "kill"
+					value: 5L
+				}
+				{
+					id: "7798FFC84DBB491B"
+					stage: "fq.discovery_land.the_great_cage.tame1"
+					title: "Free and befriend three caged birds"
+					type: "gamestage"
+				}
+			]
+			title: "The Great Cage"
+			x: 0.0d
+			y: -21.75d
+		}
+		{
+			description: ["The bathhouse's pools still steam, and something lurks under the water. Someone drowned here, and the bath master's ledger says who and why."]
+			icon: "supplementaries:soap"
+			id: "62B1247679F9D2B7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "17587F23BF4D2A82"
+					item: "supplementaries:soap"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "52001B08873E868B"
+					item: "minecraft:bread"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 180"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "339E398068AE8AB1"
+					silent: true
+					title: "+180 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6FBF1D17F54BAE47"
+					structure: "dungeons_arise:bathhouse"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:drowned"
+					id: "3D8926860E437242"
+					title: "Clear the drowned from the pools"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "2716AE730E6AD7B3"
+					item: "kubejs:quest_steam_and_shadows_1"
+					title: "Take the Bath Master's Ledger"
+					type: "item"
+				}
+			]
+			title: "Steam and Shadows"
+			x: 0.0d
+			y: -20.25d
+		}
+		{
+			description: ["The foundry's furnaces have gone cold but its guardians still walk the floor, keeping the master smith's plans. Take the plans, and forge what they describe."]
+			icon: "spartanshields:iron_tower_shield"
+			id: "5E09BE622A671A3A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "40C8666E4A9B2F16"
+					item: "minecraft:iron_block"
+					type: "item"
+				}
+				{
+					id: "61630CC747530DE0"
+					item: "spartanshields:iron_tower_shield"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 300"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "2C3676888B559335"
+					silent: true
+					title: "+300 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "55C2C9B3B3FB02DA"
+					structure: "dungeons_arise:foundry"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:iron_golem"
+					id: "5997EF692A4834C8"
+					title: "Fight past the foundry's guardians"
+					type: "kill"
+					value: 4L
+				}
+				{
+					id: "60A2CD3F2E115EC1"
+					item: "kubejs:quest_the_cold_forge_1"
+					title: "Take the Master Smith's Plans"
+					type: "item"
+				}
+				{
+					id: "707DDC1CDE5701BC"
+					item: "spartanshields:iron_tower_shield"
+					only_from_crafting: true
+					title: "Forge the shield the plans describe"
+					type: "item"
+				}
+			]
+			title: "The Foundry's Last Blueprint"
+			x: 0.0d
+			y: -18.75d
+		}
+		{
+			description: ["Keep Kayra's garrison went mad and still holds its walls. Fight up through the gatehouse to the lord of the keep, then hold his throne room against the last of his men."]
+			icon: "spartanweaponry:diamond_longsword"
+			id: "151A3C9160E03040"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "13E85074B55A7674"
+					item: {
+						Count: 1b
+						id: "spartanweaponry:diamond_longsword"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 3s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Taken from the mad lord's hand.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Kayra's Edge\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "454DB2B4EC7C7835"
+					item: {
+						Count: 1b
+						id: "minecraft:white_banner"
+						tag: {
+							display: {
+								Name: "{\"text\": \"Banner of Keep Kayra\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 500"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "1779AD6421EB166A"
+					silent: true
+					title: "+500 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "258303EE31EBEF48"
+					structure: "dungeons_arise:keep_kayra"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:vindicator"
+					id: "11F9660A4C7393D5"
+					title: "Fight up through the gatehouse and towers"
+					type: "kill"
+					value: 10L
+				}
+				{
+					entity: "minecraft:vindicator"
+					id: "06CA1ADCFC004962"
+					title: "Defeat the keep's mad lord"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "1B7842B2ADA36699"
+					stage: "fq.discovery_land.siege_of_keep_kayra.timed2"
+					title: "Hold the throne room against his last wave"
+					type: "gamestage"
+				}
+			]
+			title: "The Siege of Keep Kayra"
+			x: 0.0d
+			y: -17.25d
+		}
+		{
+			description: ["The mechanical nest hums with things that aren't quite alive. Its guardians carry a mainspring: the heart of the hive. A Crafters' guild mason would very much like to study it."]
+			icon: "minecraft:redstone_block"
+			id: "13AA9B1063E62F34"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "27F986BB2CA2B760"
+					item: "minecraft:redstone_block"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "12299A531B1752A1"
+					item: "minecraft:copper_block"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 300"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "33271C7A92B70E6F"
+					silent: true
+					title: "+300 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6002C48B9E115F9F"
+					structure: "dungeons_arise:mechanical_nest"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:iron_golem"
+					id: "5E2193C61F443A2B"
+					title: "Hunt the hive's guardians"
+					type: "kill"
+					value: 4L
+				}
+				{
+					id: "3179578F695146BE"
+					item: "kubejs:quest_clockwork_hive_1"
+					title: "Take a Mainspring"
+					type: "item"
+				}
+				{
+					id: "21CA4E017E3C8B93"
+					stage: "fq.discovery_land.clockwork_hive.talk2"
+					title: "Show the mainspring to a Crafters' guild mason"
+					type: "gamestage"
+				}
+			]
+			title: "The Clockwork Hive"
+			x: 0.0d
+			y: -15.75d
+		}
+		{
+			description: ["The plague asylum's wards still hold the sick and what feeds on them. The Herbalists want samples from its apothecary, and a cure brewed from the notes."]
+			icon: "herbalbrews:lavender_tea"
+			id: "0F01DBD6A27ADF95"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "0F4526B2C7A38AB1"
+					item: "herbalbrews:lavender_tea"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "08B1A12051E8ECC9"
+					item: "irons_spellbooks:greater_healing_potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 300"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "1940F1EFAEC80B8F"
+					silent: true
+					title: "+300 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "74659C7DE9C36967"
+					structure: "dungeons_arise:plague_asylum"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 3L
+					id: "179C68834FC6B108"
+					item: "kubejs:quest_asylum_samples_0"
+					title: "Take an Asylum Sample"
+					type: "item"
+				}
+				{
+					id: "35D07E52A3C469BE"
+					title: "I brewed the cure from the apothecary's notes"
+					type: "checkmark"
+				}
+			]
+			title: "Samples from the Asylum"
+			x: 0.0d
+			y: -14.25d
+		}
+		{
+			description: ["Shiraz Palace's treasury is sealed behind a riddle in tiles. Read the mosaics in each court and set the treasury's levers in the order they tell."]
+			icon: "minecraft:gold_block"
+			id: "15F185E6F6CD7A2B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "64B7AFFB3A3BD0AB"
+					item: "minecraft:gold_block"
+					type: "item"
+				}
+				{
+					id: "48A2B0D05B3FE2C7"
+					item: "minecraft:enchanted_golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 500"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "42E0C9CC23FA42CC"
+					silent: true
+					title: "+500 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "105F6DE81F1CC166"
+					structure: "dungeons_arise:shiraz_palace"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "05EC0FFCF5F7F28F"
+					title: "I read the mosaic in the first court"
+					type: "checkmark"
+				}
+				{
+					id: "29061FB4202147A0"
+					title: "I read the mosaic in the second court"
+					type: "checkmark"
+				}
+				{
+					id: "74FE24ACE7F6D900"
+					title: "I set the treasury's levers in the order the mosaics tell"
+					type: "checkmark"
+				}
+			]
+			title: "The Palace Treasury"
+			x: 0.0d
+			y: -12.75d
+		}
+		{
+			description: ["Thorns have swallowed the Thornborn Towers from the roots up, and the vines fight back. Climb to the top and bring down a cutting of the first thorn."]
+			icon: "minecraft:vine"
+			id: "33265D92E44AD423"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "1CA12E2266515BE4"
+					item: {
+						Count: 1b
+						id: "minecraft:iron_axe"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 3s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Cut from the Thornborn Towers.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Thornbreaker\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "3882C5173AE8F57D"
+					item: "minecraft:cherry_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 280"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "13A9E2FC5A205312"
+					silent: true
+					title: "+280 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7FF174F71EC9378E"
+					structure: "dungeons_arise:thornborn_towers"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:spider"
+					id: "32E98BC412BCBF3A"
+					title: "Fight the thorns' guardians on the climb"
+					type: "kill"
+					value: 8L
+				}
+				{
+					count: 4L
+					id: "55344EC06135FB63"
+					item: "minecraft:vine"
+					title: "Cut a piece of the first thorn from the summit"
+					type: "item"
+				}
+			]
+			title: "The Thornborn Ascent"
+			x: 0.0d
+			y: -11.25d
+		}
+		{
+			description: ["Every wall of the infested temple hides silverfish. Reach the inner sanctum and smash its brood stones before the swarm closes the way out."]
+			icon: "minecraft:infested_stone"
+			id: "4A4399C051C9C495"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "1CADCC4B15CA54CD"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Quarry Hands\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 32
+					id: "261667AEED47EF41"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 250"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "5CE570919B00555F"
+					silent: true
+					title: "+250 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "399C9F394F37361E"
+					structure: "dungeons_arise:infested_temple"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "5A5C75966D624657"
+					stage: "fq.discovery_land.the_infested_temple.timed0"
+					title: "Smash the brood stones before the swarm closes in"
+					type: "gamestage"
+				}
+			]
+			title: "Swarming Stones"
+			x: 0.0d
+			y: -9.75d
+		}
+		{
+			description: ["An abandoned temple keeps the old order's altar intact. The inscriptions name four offerings that will open its reliquary."]
+			icon: "minecraft:lapis_block"
+			id: "42EC142977978997"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "721D33964C42775A"
+					item: "minecraft:lapis_lazuli"
+					type: "item"
+				}
+				{
+					id: "4B684ABFB5C0DD79"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:protection"
+									lvl: 2s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"The Old Order's Gift\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "1823757C7AFB537D"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0415278027E467B8"
+					structure: "dungeons_arise:abandoned_temple"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "478F22328AEC21CA"
+					item: "minecraft:lapis_lazuli"
+					title: "Gather the offering of lapis"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "558FC8F39C30627C"
+					item: "minecraft:candle"
+					title: "Gather the offering of light"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "73224E5DC9A13DD6"
+					item: "minecraft:emerald"
+					title: "Gather the offering of wealth"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "2DBE12F8805F85C8"
+					item: "minecraft:book"
+					title: "Gather the offering of words"
+					type: "item"
+				}
+				{
+					id: "0819BDD8A65DCA8E"
+					title: "I laid the four offerings on the altar"
+					type: "checkmark"
+				}
+			]
+			title: "The Old Order's Temple"
+			x: 0.0d
+			y: -8.25d
+		}
+		{
+			description: ["A village built inside giant mushrooms trades in caps and spores. Their people will teach you to grow the mushrooms, if you bring back a full set of blocks."]
+			icon: "minecraft:red_mushroom_block"
+			id: "1053963D198D253A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "11F2A7B5A8868A0C"
+					item: "farmersdelight:red_mushroom_colony"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "0A62AEB88FEC76EC"
+					item: "farmersdelight:brown_mushroom_colony"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "1C5774A108FCB1AF"
+					item: "minecraft:mushroom_stew"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 100"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "2D26A3AC361977DA"
+					silent: true
+					title: "+100 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4B9D2A3709745196"
+					structure: "dungeons_arise:mushroom_village"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "4B2AC4063EC957FA"
+					stage: "fq.discovery_land.spore_folk.enc0"
+					title: "Trade with the spore folk"
+					type: "gamestage"
+				}
+				{
+					id: "096435BB2D073ECB"
+					item: "minecraft:red_mushroom_block"
+					title: "Gather a red mushroom block"
+					type: "item"
+				}
+				{
+					id: "1C7BF097C6EC886D"
+					item: "minecraft:brown_mushroom_block"
+					title: "Gather a brown mushroom block"
+					type: "item"
+				}
+				{
+					id: "0C53069E4E40774E"
+					item: "minecraft:mushroom_stem"
+					title: "Gather a mushroom stem"
+					type: "item"
+				}
+			]
+			title: "The Spore Folk"
+			x: 0.0d
+			y: -6.75d
+		}
+		{
+			description: ["The scorched mines burn, and the last shift never came up. Find the trapped miners through the heat and get them out before the next collapse."]
+			icon: "minecraft:magma_block"
+			id: "07C0E7B21A57C3AB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "0A990E3BBEAA977A"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "27F6539FDE63B3D7"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 280"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "5BEAF823BC24E4DA"
+					silent: true
+					title: "+280 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "14370C47A97B370E"
+					structure: "dungeons_arise:scorched_mines"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "286982F1D186F849"
+					stage: "fq.discovery_land.the_scorched_mines.enc0"
+					title: "Lead the trapped miners out of the fire"
+					type: "gamestage"
+				}
+			]
+			title: "Fire in the Hole"
+			x: 0.0d
+			y: -5.25d
+		}
+		{
+			description: ["The coliseum's stands are empty, but its gates still open for a challenger. A note pinned to the gate sends you to the Bounty Office, who know who runs the fights now."]
+			icon: "minecraft:iron_sword"
+			id: "7480C073AFA1DE9C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "3C1A3311266A7AD9"
+					item: "bountiful:decree"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 150"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "650688D2D49ADC27"
+					silent: true
+					title: "+150 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "262E623497A12FF1"
+					structure: "dungeons_arise:coliseum"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "4DE9B0321C8E9E3C"
+					stage: "fq.discovery_land.empty_stands.talk0"
+					title: "Ask the Bounty Office who runs the fights now"
+					type: "gamestage"
+				}
+			]
+			title: "Empty Stands"
+			x: 0.0d
+			y: -3.75d
+		}
+		{
+			description: ["The witches of the swamp villa are holding a tea party, and their recipe book lies open on the table. Copy it unseen, and brew their strangest potion yourself."]
+			icon: "minecraft:cauldron"
+			id: "4DD7843DF61B996D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 3
+					id: "5FF9BE531222E0EA"
+					item: "minecraft:splash_potion"
+					type: "item"
+				}
+				{
+					id: "5E0FD590C7D30246"
+					item: "minecraft:cauldron"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 220"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "7416A45E253C9111"
+					silent: true
+					title: "+220 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0E0974AABDEB787F"
+					structure: "nova_structures:witch_villa"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "2839995B1B6802D1"
+					title: "I copied the witches' recipe book unseen"
+					type: "checkmark"
+				}
+				{
+					id: "3C6C174864313BDC"
+					item: "minecraft:splash_potion"
+					title: "Brew the witches' strangest potion"
+					type: "item"
+				}
+			]
+			title: "Tea at the Witch Villa"
+			x: 0.0d
+			y: -2.25d
+		}
+		{
+			description: ["The old manor's doors lock behind you, and the portraits move at night. Four keys are hidden behind the portraits, and the study holds the family's last letter."]
+			icon: "supplementaries:key"
+			id: "3C9944827995F07E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "5E05229F9016F5D6"
+					item: "supplementaries:key"
+					type: "item"
+				}
+				{
+					id: "193985787BAC195C"
+					item: "supplementaries:safe"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "1190238FFEBEB335"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 220"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "1CD0173C99F64B00"
+					silent: true
+					title: "+220 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "13F3B30515B17CE7"
+					structure: "structory:old_manor"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "605E95A24C82D6EE"
+					title: "I found the first key behind a portrait"
+					type: "checkmark"
+				}
+				{
+					id: "153B1CAC1826DBC7"
+					title: "I found the second key behind a portrait"
+					type: "checkmark"
+				}
+				{
+					id: "7D26D0ED1554FD5D"
+					title: "I found the third key behind a portrait"
+					type: "checkmark"
+				}
+				{
+					id: "5E380D435CA9E91A"
+					title: "I found the fourth key and opened the study"
+					type: "checkmark"
+				}
+			]
+			title: "The Old Manor"
+			x: 0.0d
+			y: -0.75d
+		}
+		{
+			description: ["An ancient temple sits on a mountain peak above the clouds. Its four braziers have been dark for centuries. Light them and watch the sun rise from the top."]
+			icon: "grapplemod:grapplinghook"
+			id: "0586F4B195399D75"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "052C379EA699AFF0"
+					item: "grapplemod:grapplinghook"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "781A75499F7C8D7C"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 250"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "19A2D31269886910"
+					silent: true
+					title: "+250 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2EF967F77FF4437A"
+					structure: "structory_towers:ancient_temple"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "6C2E9A4E4771E608"
+					stage: "fq.discovery_land.temple_on_the_peak.build0"
+					title: "Light the four braziers"
+					type: "gamestage"
+				}
+				{
+					id: "4A79E2DE364F2FBC"
+					title: "I watched the sun rise from the top"
+					type: "checkmark"
+				}
+			]
+			title: "The Temple on the Peak"
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			description: ["The relic temple's altar is empty. Jungle thieves took the relic, and their trail leads to a nearby ruin."]
+			icon: "minecraft:lapis_block"
+			id: "7422FCC959B19614"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "785978E339855A2F"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "5E7FABA5C54921CE"
+					item: "minecraft:lapis_block"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 240"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "786C9BA4DA7FC0BD"
+					silent: true
+					title: "+240 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4F6DB7080AD34DF8"
+					structure: "structory_towers:sacred_relic_temple"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "3175BF3A981BF806"
+					structure: "#fotf:groups/ruins"
+					title: "Follow the thieves' trail to a ruin"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:pillager"
+					id: "2EFFCB89FB5C08CB"
+					title: "Take the relic back from the thieves"
+					type: "kill"
+					value: 4L
+				}
+				{
+					id: "371CCCAA6F1A1192"
+					item: "kubejs:quest_sacred_relic_2"
+					title: "Take the Sacred Relic"
+					type: "item"
+				}
+				{
+					id: "70C2D304BF6E7C80"
+					structure: "structory_towers:sacred_relic_temple"
+					title: "Return the relic to its altar"
+					type: "structure"
+				}
+			]
+			title: "The Sacred Relic"
+			x: 0.0d
+			y: 2.25d
+		}
+		{
+			description: ["A giant warped sword is driven into the shattered hills, as if dropped from the Nether. The forger's mark on its hilt names who made it."]
+			icon: "spartanweaponry:diamond_greatsword"
+			id: "22A2F0B6553586B9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "5598C03CCA4851C7"
+					item: "spartanweaponry:diamond_greatsword"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "544631EEDEA93227"
+					item: "minecraft:warped_fungus"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 300"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "19AA9C402F20C70C"
+					silent: true
+					title: "+300 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2FC83916A2F5D92D"
+					structure: "structory_towers:warped_greatsword"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "318CE40396872350"
+					title: "I climbed the blade to the hilt"
+					type: "checkmark"
+				}
+				{
+					id: "4F6F04AA1C52D57C"
+					title: "I found the forger's mark on the hilt"
+					type: "checkmark"
+				}
+			]
+			title: "The Sword in the Hill"
+			x: 0.0d
+			y: 3.75d
+		}
+		{
+			description: ["A cathedral stands alone in the wilds, its bell tower cracked. Climb the tower and ring the bell; a cleric will arrive to say why the town around it never got built."]
+			icon: "minecraft:bell"
+			id: "2F65C72E742D5EF8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "40E341CD88B2F420"
+					item: "immersive_melodies:piano"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "73DF47A9CEE3C0FF"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 220"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "3A61E52ADB40E5E1"
+					silent: true
+					title: "+220 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2A92A9BCD6D377BE"
+					structure: "mvs:cathedral"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "54E4B9B913592A26"
+					title: "I climbed the tower and rang the bell"
+					type: "checkmark"
+				}
+				{
+					id: "26478C4713B0B786"
+					stage: "fq.discovery_land.the_cathedral.enc1"
+					title: "Meet the cleric who answers the bell"
+					type: "gamestage"
+				}
+			]
+			title: "The Cathedral"
+			x: 0.0d
+			y: 5.25d
+		}
+		{
+			description: ["Warped wood houses and towers stand in the Overworld where nothing warped should grow. The Arcane Order suspect a leak from the Nether, and want a sample."]
+			icon: "minecraft:warped_planks"
+			id: "6BE8A200960E008A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "7976CA10BE434002"
+					item: "minecraft:warped_planks"
+					type: "item"
+				}
+				{
+					id: "291529631089EED6"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "1E8E6E14B8371C66"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5AA2C04CC74CEEBB"
+					structure: "mvs:warped_house"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "412031D5FC3E2F98"
+					item: "minecraft:warped_planks"
+					title: "Take a sample of the warped wood"
+					type: "item"
+				}
+				{
+					id: "5C00CCA2D55F3179"
+					stage: "fq.discovery_land.warped_in_the_overworld.talk1"
+					title: "Show the sample to the Arcane Order"
+					type: "gamestage"
+				}
+			]
+			title: "Wrong Side of the Portal"
+			x: 0.0d
+			y: 6.75d
+		}
+		{
+			description: ["A ruined beacon still has its pyramid, half-robbed by looters. Replace the missing blocks and light it again, so the beam can be seen from miles away."]
+			icon: "minecraft:beacon"
+			id: "2C87B720749F034A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "6D5FD7B393A27DA1"
+					item: "minecraft:iron_block"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 300"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "5E3572D39D9B622E"
+					silent: true
+					title: "+300 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7EFDFD56A96F2FC4"
+					structure: "mvs:ruined_beacon"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 9L
+					id: "1808358D8A553F46"
+					item: "minecraft:iron_block"
+					title: "Gather iron blocks to rebuild the pyramid"
+					type: "item"
+				}
+				{
+					id: "56A4EBEAE8E168B1"
+					stage: "fq.discovery_land.beacon_gone_dark.build1"
+					title: "Rebuild the beacon's pyramid"
+					type: "gamestage"
+				}
+			]
+			title: "A Beacon Gone Dark"
+			x: 0.0d
+			y: 8.25d
+		}
+		{
+			description: ["A desert ruin has a chest sitting out in the open, unguarded. The chest bites. Beat the mimic, and the real loot is under the sand where it sat."]
+			icon: "artifacts:mimic_spawn_egg"
+			id: "186B39D9F482FD8A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 12
+					id: "5AB139556F02D30C"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "2010184B5C6309FF"
+					item: "minecraft:golden_horse_armor"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 220"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0FE4F4D5D157BC57"
+					silent: true
+					title: "+220 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0CFE90BEB31CC41E"
+					structure: "towns_and_towers:mimic_desert"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "artifacts:mimic"
+					id: "337F18F5953B3F80"
+					title: "Beat the mimic guarding the loot"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Too Good to Be True"
+			x: 0.0d
+			y: 9.75d
+		}
+		{
+			description: ["The desert temple's tomb is sealed, and its corridors are trapped. Find the hidden levers, survive the pressure plates and open the pharaoh's vault."]
+			icon: "minecraft:gold_block"
+			id: "2CEA8C6D7D49BEBA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 10
+					id: "13CB571393B6B9FE"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					id: "712A9B75B3D38683"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:fire_aspect"
+									lvl: 1s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Pharaoh's Blessing\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 220"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "6370B056E3B7B1F2"
+					silent: true
+					title: "+220 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5E73C749927C45A4"
+					structure: "betterdeserttemples:desert_temple"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "409793AF3B816EED"
+					title: "I found the hidden levers"
+					type: "checkmark"
+				}
+				{
+					id: "14AB908770E7B929"
+					title: "I crossed the pressure plates unharmed"
+					type: "checkmark"
+				}
+				{
+					id: "06DAE2363B29F09C"
+					title: "I opened the pharaoh's vault"
+					type: "checkmark"
+				}
+			]
+			title: "The Pharaoh's Vault"
+			x: 0.0d
+			y: 11.25d
+		}
+		{
+			description: ["A jungle temple's halls are full of dart traps and crushing floors. A carving at the entrance gives a warning and a deadline: be at the treasure room before the floors close."]
+			icon: "minecraft:tripwire_hook"
+			id: "348BD58F5AB44808"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 6
+					id: "39F9C85D86298B8C"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "3A494A59C1C8EBEE"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Light Landing\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 220"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "3AFCC094E9B9A11F"
+					silent: true
+					title: "+220 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7CA81D502DFDB3C0"
+					structure: "betterjungletemples:jungle_temple"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "382CD6D86A53879A"
+					title: "I reached the treasure room before the floors closed"
+					type: "checkmark"
+				}
+			]
+			title: "Traps of the Jungle Temple"
+			x: 0.0d
+			y: 12.75d
+		}
+		{
+			description: ["On one of the old river bridges you find the builder's plaque: it asks that someone build one more. Cross another river with a bridge of your own."]
+			icon: "mcwbridges:oak_log_bridge_middle"
+			id: "0185A440E3104817"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "268C515C6F687A5A"
+					item: "mcwbridges:oak_log_bridge_middle"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "5D93D1337743718C"
+					item: "minecraft:oak_log"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 120"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "36F4CA6EE7A7E788"
+					silent: true
+					title: "+120 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7B8ED0846BF8564F"
+					stat: "minecraft:walk_one_cm"
+					title: "Discovered"
+					type: "stat"
+					value: 200000
+				}
+				{
+					id: "027538071D36453C"
+					stage: "fq.discovery_land.the_bridge_builder.build0"
+					title: "Build a bridge across a river"
+					type: "gamestage"
+				}
+			]
+			title: "The Bridge Builder"
+			x: 0.0d
+			y: 14.25d
+		}
+		{
+			description: ["A ruined portal stands half-collapsed with crying obsidian in its frame. Rebuild the frame, but don't light it yet: the Arcane Order want a word first."]
+			icon: "minecraft:crying_obsidian"
+			id: "0AB4357F3BACE708"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "6F4CA802FB279B44"
+					item: "minecraft:flint_and_steel"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "19E3C0797696DB94"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 100"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "2069923DDD28769F"
+					silent: true
+					title: "+100 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3F16BACCA591A87D"
+					structure: "#fotf:groups/ruined_portals"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 10L
+					id: "46CA5EBF4FEDFEB7"
+					item: "minecraft:obsidian"
+					title: "Gather obsidian to mend the frame"
+					type: "item"
+				}
+				{
+					id: "2AA1216F08A55CE6"
+					stage: "fq.discovery_land.the_broken_gate.build1"
+					title: "Rebuild the portal's frame"
+					type: "gamestage"
+				}
+				{
+					id: "183285E0A82E24C3"
+					stage: "fq.discovery_land.the_broken_gate.talk2"
+					title: "Tell the Arcane Order before you light it"
+					type: "gamestage"
+				}
+			]
+			title: "The Broken Gate"
+			x: 0.0d
+			y: 15.75d
+		}
+		{
+			description: ["Under an igloo's carpet, a ladder leads to a cell holding a zombie villager. Cure him with weakness and a golden apple, and he will tell you whose igloo it was."]
+			icon: "minecraft:golden_apple"
+			id: "5BB93D176B60E9F2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "5B208A9E09F954B0"
+					item: "minecraft:brewing_stand"
+					type: "item"
+				}
+				{
+					id: "38B83DE66397380F"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "414DB262D29AF5E3"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "00EF61C3A8AA3B93"
+					structure: "minecraft:igloo"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					advancement: "minecraft:story/cure_zombie_villager"
+					criterion: ""
+					id: "7C5650AAAC28B412"
+					title: "Cure the prisoner in the cell"
+					type: "advancement"
+				}
+			]
+			title: "The Igloo's Basement"
+			x: 0.0d
+			y: 17.25d
+		}
+		{
+			description: ["Activating a wild waystone starts something. The Couriers say there's a whole network of them, each one remembers the others."]
+			icon: "waystones:waystone"
+			id: "3A407C701179F305"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "79D592ED209545CB"
+					item: "waystones:warp_scroll"
+					type: "item"
+				}
+				{
+					id: "3BFA6BCA9610F6B6"
+					item: "waystones:return_scroll"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 120"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "4FD142DC90DBB1B4"
+					silent: true
+					title: "+120 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "600B96B586412EAE"
+					stat: "minecraft:walk_one_cm"
+					title: "Discovered"
+					type: "stat"
+					value: 100000
+				}
+				{
+					id: "02293F533087CA5F"
+					stage: "fq.discovery_land.waystone_network.waystones0"
+					title: "Attune five waystones in the wild"
+					type: "gamestage"
+				}
+				{
+					id: "3672660C3C595851"
+					item: "waystones:warp_scroll"
+					only_from_crafting: true
+					title: "Make a warp scroll"
+					type: "item"
+				}
+				{
+					id: "4EF173856BE99AB9"
+					title: "I used the warp scroll"
+					type: "checkmark"
+				}
+			]
+			title: "Stones That Remember"
+			x: 0.0d
+			y: 18.75d
+		}
+		{
+			description: ["Frozen spires and an abandoned village in the snow, built by no people anyone knows. Something very large sleeps far below. Note it, copy the writing, and leave it alone for now."]
+			icon: "minecraft:blue_ice"
+			id: "2A40902E9C043A92"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "1BE132A8A8C66B3F"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Copied in the snow, in a shaking hand.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Page of the Old Ruins' Writing\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "6BAAE771B7231DD2"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "171A3422DDC9B699"
+					structure: "cataclysm:abandoned_spire"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "645871839109EA3D"
+					title: "I copied the ruins' writing and left whatever sleeps below"
+					type: "checkmark"
+				}
+			]
+			title: "Frostbitten Ruins"
+			x: 0.0d
+			y: 20.25d
+		}
+		{
+			description: ["A desert village has been occupied by scouts of something that digs, and a dig site nearby goes deeper than it should. Drive the scouts off, read the foreman's notes, and leave the pit alone."]
+			icon: "minecraft:gold_ingot"
+			id: "7258A06F7E75A240"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 12
+					id: "5DD0BC12FCF5CE87"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 400"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "1798E22DF5131365"
+					silent: true
+					title: "+400 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "11D0D5013D600EAA"
+					structure: "cataclysm:desert_occupied_village"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:koboleton"
+					id: "32B171A37B05C10F"
+					title: "Drive the scouts out of the village"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "7251A6DE7AF759B4"
+					item: "kubejs:quest_occupied_dunes_1"
+					title: "Take the Foreman's Notes"
+					type: "item"
+				}
+			]
+			title: "Occupied Dunes"
+			x: 0.0d
+			y: 21.75d
+		}
+		{
+			dependencies: [
+				"2A40902E9C043A92"
+				"7258A06F7E75A240"
+			]
+			description: ["Now the old ruins' writing makes sense: the snow ruins and the desert dig site point to the prisons of something buried. Revisit one of each and read the inscriptions that name it."]
+			icon: "minecraft:writable_book"
+			id: "6186D50D6E1E381F"
+			rewards: [
+				{
+					id: "12802DE7E877577E"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"The inscriptions point toward the strongholds.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Names of the Buried\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "2A1C609F85F57756"
+					silent: true
+					title: "+700 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "36D62A6F2675C181"
+					structure: "cataclysm:abandoned_temple"
+					title: "Return to the snow ruins to read the inscriptions"
+					type: "structure"
+				}
+				{
+					id: "71A7EAFE0BCFA4AD"
+					structure: "cataclysm:desert_site"
+					title: "Return to the dig site to read its inscriptions"
+					type: "structure"
+				}
+				{
+					id: "12A607A5CDB9073D"
+					title: "I read the inscriptions that name what is buried here"
+					type: "checkmark"
+				}
+			]
+			title: "Back to the Ruins"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			description: ["Entering the ominous woods at night, you hear something hunting through the trees. Survive until dawn without leaving the woods."]
+			icon: "minecraft:dark_oak_log"
+			id: "04AE3B47642B33FB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "4ED67B5E5537D323"
+					item: "minecraft:shield"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "505707A200A94B16"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 220"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "3B9119331092C22C"
+					silent: true
+					title: "+220 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:ominous_woods"
+					id: "3513206DF268DF43"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "4373A4F12C66F78B"
+					stage: "fq.discovery_land.biome_ominous_woods.timed0"
+					title: "Survive the night in the ominous woods"
+					type: "gamestage"
+				}
+			]
+			title: "The Ominous Woods"
+			x: 0.0d
+			y: 23.25d
+		}
+		{
+			description: ["You've found a volcano, smoking and black. The Miners' Guild would pay for lava, black sand and magma from its crater."]
+			icon: "minecraft:lava_bucket"
+			id: "63B44F93BE2471F3"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "5E4FBA8DCD545E28"
+					item: "minecraft:obsidian"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "697702584B9EF854"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 220"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "303DCDD3BAF86710"
+					silent: true
+					title: "+220 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:volcano"
+					id: "7DAD42C974ECA67A"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "4EFD7E5AD97E7274"
+					item: "minecraft:lava_bucket"
+					title: "Scoop a bucket of lava from the crater"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "3B5DE924210A0CAD"
+					item: "biomesoplenty:black_sand"
+					title: "Take black sand from the slopes"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6F3224519A7733D3"
+					item: "minecraft:magma_block"
+					title: "Chip magma from the crater's rim"
+					type: "item"
+				}
+			]
+			title: "The Mountain That Smokes"
+			x: 0.0d
+			y: 24.75d
+		}
+	]
+	subtitle: ["Strange places on the road"]
+	title: "Out in the Land"
+}

@@ -3,6 +3,982 @@
 // Who gives which quest. Read by quest_givers.js.
 global.QUEST_GIVERS = [
   {
+    "quest": "discovery_land:bandit_toll_road",
+    "stage": "fq.discovery_land.bandit_toll_road.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:bandit_village"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Toll Bandits",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "4B6C42D3958A7645",
+    "requires": [],
+    "quest_id": "1F4433CF17E0D05A",
+    "prev_tasks": [
+      "78E338A90FDB992A"
+    ]
+  },
+  {
+    "quest": "discovery_land:bandit_toll_road",
+    "stage": "fq.discovery_land.bandit_toll_road.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:vindicator",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:bandit_village"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Bandit Leader",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "7B8F4392320BDFB6",
+    "requires": [],
+    "quest_id": "1F4433CF17E0D05A",
+    "prev_tasks": [
+      "78E338A90FDB992A",
+      "4B6C42D3958A7645"
+    ]
+  },
+  {
+    "quest": "discovery_land:bandit_toll_road",
+    "stage": "fq.discovery_land.bandit_toll_road.enc2",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "They let me go? You actually... Thank you! Take me to a proper village, please."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1F4433CF17E0D05A",
+    "prev_tasks": [
+      "78E338A90FDB992A",
+      "4B6C42D3958A7645",
+      "7B8F4392320BDFB6"
+    ],
+    "name": "Freed Merchant",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "the nearest village"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "discovery_land:bells_of_the_bandit_towers",
+    "stage": "fq.discovery_land.bells_of_the_bandit_towers.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:bandit_towers"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Tower Archers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "160DD2D626602457",
+    "requires": [],
+    "quest_id": "31B5D0DF12491B9E",
+    "prev_tasks": [
+      "5195141FD96348B3"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_great_cage",
+    "stage": "fq.discovery_land.the_great_cage.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:vex",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:aviary"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Aviary Nesters",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "746242E069ABFAC6",
+    "requires": [],
+    "quest_id": "295BFFCD0E0C6EE8",
+    "prev_tasks": [
+      "7F0331156D87E7D9"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_great_cage",
+    "stage": "fq.discovery_land.the_great_cage.tame1",
+    "type": "tame",
+    "entities": [
+      "minecraft:parrot"
+    ],
+    "count": 3,
+    "requires": [],
+    "quest_id": "295BFFCD0E0C6EE8",
+    "prev_tasks": [
+      "7F0331156D87E7D9",
+      "746242E069ABFAC6"
+    ]
+  },
+  {
+    "quest": "discovery_land:steam_and_shadows",
+    "stage": "fq.discovery_land.steam_and_shadows.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:drowned",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:bathhouse"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Bathhouse Drowned",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "3D8926860E437242",
+    "requires": [],
+    "quest_id": "62B1247679F9D2B7",
+    "prev_tasks": [
+      "6FBF1D17F54BAE47"
+    ]
+  },
+  {
+    "quest": "discovery_land:steam_and_shadows",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:drowned"
+    ],
+    "chance": 0.5,
+    "item": "kubejs:quest_steam_and_shadows_1",
+    "requires": [],
+    "quest_id": "62B1247679F9D2B7",
+    "open_task": "6FBF1D17F54BAE47",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "discovery_land:the_cold_forge",
+    "stage": "fq.discovery_land.the_cold_forge.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:iron_golem",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:foundry"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Foundry Guardians",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5997EF692A4834C8",
+    "requires": [],
+    "quest_id": "5E09BE622A671A3A",
+    "prev_tasks": [
+      "55C2C9B3B3FB02DA"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_cold_forge",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:iron_golem"
+    ],
+    "chance": 0.6,
+    "item": "kubejs:quest_the_cold_forge_1",
+    "requires": [],
+    "quest_id": "5E09BE622A671A3A",
+    "open_task": "55C2C9B3B3FB02DA",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "discovery_land:siege_of_keep_kayra",
+    "stage": "fq.discovery_land.siege_of_keep_kayra.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:vindicator",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:keep_kayra"
+      ],
+      "label": "the destination"
+    },
+    "wave": 5,
+    "name": "Mad Garrison",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "11F9660A4C7393D5",
+    "requires": [],
+    "quest_id": "151A3C9160E03040",
+    "prev_tasks": [
+      "258303EE31EBEF48"
+    ]
+  },
+  {
+    "quest": "discovery_land:siege_of_keep_kayra",
+    "stage": "fq.discovery_land.siege_of_keep_kayra.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:vindicator",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:keep_kayra"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Lord of the Keep",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "06CA1ADCFC004962",
+    "requires": [],
+    "quest_id": "151A3C9160E03040",
+    "prev_tasks": [
+      "258303EE31EBEF48",
+      "11F9660A4C7393D5"
+    ]
+  },
+  {
+    "quest": "discovery_land:siege_of_keep_kayra",
+    "stage": "fq.discovery_land.siege_of_keep_kayra.timed2",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "hold",
+      "radius": 16.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:vindicator",
+        "count": 3,
+        "every": 30
+      }
+    ],
+    "lines": [
+      "His last men are coming. Hold the throne room!"
+    ],
+    "start": "Hold the throne room",
+    "requires": [],
+    "quest_id": "151A3C9160E03040",
+    "prev_tasks": [
+      "258303EE31EBEF48",
+      "11F9660A4C7393D5",
+      "06CA1ADCFC004962"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "discovery_land:clockwork_hive",
+    "stage": "fq.discovery_land.clockwork_hive.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:iron_golem",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:mechanical_nest"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Hive Guardians",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5E2193C61F443A2B",
+    "requires": [],
+    "quest_id": "13AA9B1063E62F34",
+    "prev_tasks": [
+      "6002C48B9E115F9F"
+    ]
+  },
+  {
+    "quest": "discovery_land:clockwork_hive",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:iron_golem"
+    ],
+    "chance": 0.5,
+    "item": "kubejs:quest_clockwork_hive_1",
+    "requires": [],
+    "quest_id": "13AA9B1063E62F34",
+    "open_task": "6002C48B9E115F9F",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "discovery_land:clockwork_hive",
+    "stage": "fq.discovery_land.clockwork_hive.talk2",
+    "type": "talk",
+    "lines": [
+      "A mainspring? From the hive itself? Let me see.",
+      "Beautiful. Dreadful. Whoever made this had patience.",
+      "The guild will pay you for the loan, and I'll write up what it does."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "crafters",
+    "professions": [
+      "minecraft:mason"
+    ],
+    "org_name": "Crafters' Guild",
+    "quest_id": "13AA9B1063E62F34",
+    "open_task": "6002C48B9E115F9F"
+  },
+  {
+    "quest": "discovery_land:asylum_samples",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:zombie_villager"
+    ],
+    "chance": 0.4,
+    "item": "kubejs:quest_asylum_samples_0",
+    "requires": [],
+    "quest_id": "0F01DBD6A27ADF95",
+    "open_task": "74659C7DE9C36967",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "discovery_land:thornborn_ascent",
+    "stage": "fq.discovery_land.thornborn_ascent.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:spider",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:thornborn_towers"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Thorn Guardians",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "32E98BC412BCBF3A",
+    "requires": [],
+    "quest_id": "33265D92E44AD423",
+    "prev_tasks": [
+      "7FF174F71EC9378E"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_infested_temple",
+    "stage": "fq.discovery_land.the_infested_temple.timed0",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "kill",
+      "entity": "minecraft:silverfish",
+      "count": 15
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:silverfish",
+        "count": 4,
+        "every": 20
+      }
+    ],
+    "lines": [
+      "The walls are moving. Break the brood stones!"
+    ],
+    "start": "Smash the brood stones",
+    "requires": [],
+    "quest_id": "4A4399C051C9C495",
+    "prev_tasks": [
+      "399C9F394F37361E"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "discovery_land:spore_folk",
+    "stage": "fq.discovery_land.spore_folk.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Visitors from above! We trade caps and spores for kindness.",
+      "Grow them in the dark, damp and quiet. Never hurry a mushroom."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1053963D198D253A",
+    "prev_tasks": [
+      "4B9D2A3709745196"
+    ],
+    "name": "Spore Elder",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "discovery_land:the_scorched_mines",
+    "stage": "fq.discovery_land.the_scorched_mines.enc0",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Here! Behind the rubble! The roof came down hours ago!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "07C0E7B21A57C3AB",
+    "prev_tasks": [
+      "14370C47A97B370E"
+    ],
+    "name": "Trapped Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "a village, out of the heat"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "discovery_land:empty_stands",
+    "stage": "fq.discovery_land.empty_stands.talk0",
+    "type": "talk",
+    "lines": [
+      "The coliseum? Still open? Hm.",
+      "A hunter named Dray ran the fights, until he stopped coming to the office.",
+      "Take a decree. If you fight there, fight for coin."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "bounty",
+    "professions": [
+      "minecraft:weaponsmith"
+    ],
+    "org_name": "Bounty Office",
+    "quest_id": "7480C073AFA1DE9C",
+    "open_task": "262E623497A12FF1"
+  },
+  {
+    "quest": "discovery_land:temple_on_the_peak",
+    "stage": "fq.discovery_land.temple_on_the_peak.build0",
+    "type": "build",
+    "keys": [
+      "minecraft:campfire"
+    ],
+    "counts": [
+      4
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "0586F4B195399D75",
+    "prev_tasks": [
+      "2EF967F77FF4437A"
+    ]
+  },
+  {
+    "quest": "discovery_land:sacred_relic",
+    "stage": "fq.discovery_land.sacred_relic.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:trail_ruins",
+        "mos:ruined_archway",
+        "mos:ruined_castle",
+        "mos:ruined_church",
+        "mos:ruined_house",
+        "mss:castle_ruin",
+        "mvs:castle_ruins",
+        "mvs:log_ruin",
+        "mvs:ruined_beacon",
+        "mvs:small_ruin",
+        "mvs:statue_ruins",
+        "nova_structures:desert_ruins",
+        "nova_structures:jungle_ruins",
+        "nova_structures:ruin_town",
+        "nova_structures:wild_ruin",
+        "structory:dense_forest_ruin",
+        "structory:jungle_ruin",
+        "structory:northern_ruin",
+        "structory:ruin_grassy",
+        "structory:swamp_ruin",
+        "structory:taiga_ruin_surface",
+        "structory:taiga_ruin_underground"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Relic Thieves",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "2EFFCB89FB5C08CB",
+    "requires": [],
+    "quest_id": "7422FCC959B19614",
+    "prev_tasks": [
+      "4F6DB7080AD34DF8",
+      "3175BF3A981BF806"
+    ]
+  },
+  {
+    "quest": "discovery_land:sacred_relic",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:pillager"
+    ],
+    "chance": 0.6,
+    "item": "kubejs:quest_sacred_relic_2",
+    "requires": [],
+    "quest_id": "7422FCC959B19614",
+    "open_task": "4F6DB7080AD34DF8",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "discovery_land:the_cathedral",
+    "stage": "fq.discovery_land.the_cathedral.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "I heard the bell! Nobody's rung it in years.",
+      "The town was never built because the builders found something under the foundations, and left in the night. Nobody will say what."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2F65C72E742D5EF8",
+    "prev_tasks": [
+      "2A92A9BCD6D377BE",
+      "54E4B9B913592A26"
+    ],
+    "name": "Wandering Cleric",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "discovery_land:warped_in_the_overworld",
+    "stage": "fq.discovery_land.warped_in_the_overworld.talk1",
+    "type": "talk",
+    "lines": [
+      "Warped planks, in the Overworld? That shouldn't be possible.",
+      "A leak from the Nether, then. The Order will look into it.",
+      "Well done. Keep away from the portal until we know more."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "arcane",
+    "professions": [
+      "minecraft:librarian",
+      "irons_spellbooks:priest"
+    ],
+    "org_name": "Arcane Order",
+    "quest_id": "6BE8A200960E008A",
+    "open_task": "5AA2C04CC74CEEBB"
+  },
+  {
+    "quest": "discovery_land:beacon_gone_dark",
+    "stage": "fq.discovery_land.beacon_gone_dark.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:iron_block"
+    ],
+    "counts": [
+      9
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "2C87B720749F034A",
+    "prev_tasks": [
+      "7EFDFD56A96F2FC4",
+      "1808358D8A553F46"
+    ]
+  },
+  {
+    "quest": "discovery_land:desert_mimic",
+    "stage": "fq.discovery_land.desert_mimic.spawn0",
+    "type": "spawn",
+    "entity": "artifacts:mimic",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "towns_and_towers:mimic_desert"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Hungry Chest",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "337F18F5953B3F80",
+    "requires": [],
+    "quest_id": "186B39D9F482FD8A",
+    "prev_tasks": [
+      "0CFE90BEB31CC41E"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_bridge_builder",
+    "stage": "fq.discovery_land.the_bridge_builder.build0",
+    "type": "build",
+    "keys": [
+      "mcwbridges:oak_log_bridge_middle",
+      "mcwbridges:oak_bridge_pier"
+    ],
+    "counts": [
+      6,
+      2
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "0185A440E3104817",
+    "prev_tasks": [
+      "7B8ED0846BF8564F"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_broken_gate",
+    "stage": "fq.discovery_land.the_broken_gate.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:obsidian"
+    ],
+    "counts": [
+      10
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "0AB4357F3BACE708",
+    "prev_tasks": [
+      "3F16BACCA591A87D",
+      "46CA5EBF4FEDFEB7"
+    ]
+  },
+  {
+    "quest": "discovery_land:the_broken_gate",
+    "stage": "fq.discovery_land.the_broken_gate.talk2",
+    "type": "talk",
+    "lines": [
+      "You rebuilt a portal? Unlit, I hope.",
+      "Portals are doors, and doors can be opened from either side.",
+      "Leave it cold until we've looked at it. Please."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "arcane",
+    "professions": [
+      "minecraft:librarian",
+      "irons_spellbooks:priest"
+    ],
+    "org_name": "Arcane Order",
+    "quest_id": "0AB4357F3BACE708",
+    "open_task": "3F16BACCA591A87D"
+  },
+  {
+    "quest": "discovery_land:waystone_network",
+    "stage": "fq.discovery_land.waystone_network.waystones0",
+    "type": "waystones",
+    "count": 5,
+    "wild": true,
+    "total": false,
+    "requires": [],
+    "quest_id": "3A407C701179F305",
+    "prev_tasks": [
+      "600B96B586412EAE"
+    ]
+  },
+  {
+    "quest": "discovery_land:occupied_dunes",
+    "stage": "fq.discovery_land.occupied_dunes.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:koboleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:desert_occupied_village"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Dune Scouts",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "32B171A37B05C10F",
+    "requires": [],
+    "quest_id": "7258A06F7E75A240",
+    "prev_tasks": [
+      "11D0D5013D600EAA"
+    ]
+  },
+  {
+    "quest": "discovery_land:occupied_dunes",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "cataclysm:koboleton"
+    ],
+    "chance": 0.5,
+    "item": "kubejs:quest_occupied_dunes_1",
+    "requires": [],
+    "quest_id": "7258A06F7E75A240",
+    "open_task": "11D0D5013D600EAA",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "discovery_land:biome_ominous_woods",
+    "stage": "fq.discovery_land.biome_ominous_woods.timed0",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "hold",
+      "radius": 30.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:zombie",
+        "count": 3,
+        "every": 25
+      },
+      {
+        "entity": "minecraft:skeleton",
+        "count": 2,
+        "every": 45
+      }
+    ],
+    "lines": [
+      "Something is hunting you through the trees. Hold until dawn."
+    ],
+    "start": "Stand until dawn",
+    "requires": [],
+    "quest_id": "04AE3B47642B33FB",
+    "prev_tasks": [
+      "3513206DF268DF43"
+    ],
+    "name": ""
+  },
+  {
     "quest": "main_story:prologue_dungeon",
     "stage": "",
     "type": "task_drop",

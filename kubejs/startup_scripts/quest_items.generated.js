@@ -2,12 +2,18 @@
 // Quest items: letters, notes and keepsakes that start quests (see quest_givers.js).
 StartupEvents.registry('item', event => {
   event.create("quest_a_rival_appears_1").displayName("Grandfather, the Old Carp").texture("minecraft:item/cod").maxStackSize(1).tooltip("A prize catch").glow(true)
+  event.create("quest_asylum_samples_0").displayName("an Asylum Sample").texture("minecraft:item/glass_bottle").maxStackSize(1).tooltip("Taken from the apothecary's wards").glow(true)
+  event.create("quest_clockwork_hive_1").displayName("a Mainspring").texture("minecraft:item/clock_00").maxStackSize(1).tooltip("The heart of the hive").glow(true)
+  event.create("quest_occupied_dunes_1").displayName("the Foreman's Notes").texture("minecraft:item/paper").maxStackSize(1).tooltip("Needed for the job").glow(true)
   event.create("quest_odd_coats_0").displayName("Odd Hide").texture("minecraft:item/rotten_flesh").maxStackSize(1).tooltip("Proof for the lodge").glow(true)
   event.create("quest_odd_coats_1").displayName("Odd Fang").texture("minecraft:item/spider_eye").maxStackSize(1).tooltip("Proof for the lodge").glow(true)
   event.create("quest_odd_coats_2").displayName("Odd Bone").texture("minecraft:item/bone").maxStackSize(1).tooltip("Proof for the lodge").glow(true)
   event.create("quest_opening_cup_1").displayName("The Ribboned Trout").texture("minecraft:item/cod").maxStackSize(1).tooltip("A prize catch").glow(true)
   event.create("quest_prologue_dungeon_1").displayName("Second Journal Page").texture("minecraft:item/paper").maxStackSize(1).tooltip("Quest item").glow(true)
   event.create("quest_river_heat_4").displayName("The Heat's Marked Fish").texture("minecraft:item/cod").maxStackSize(1).tooltip("A prize catch").glow(true)
+  event.create("quest_sacred_relic_2").displayName("the Sacred Relic").texture("minecraft:item/lapis_lazuli").maxStackSize(1).tooltip("Needed for the job").glow(true)
   event.create("quest_spider_queen_2").displayName("Queen's Poison Sac").texture("minecraft:item/spider_eye").maxStackSize(1).tooltip("Proof of the kill").glow(true)
+  event.create("quest_steam_and_shadows_1").displayName("the Bath Master's Ledger").texture("minecraft:item/book").maxStackSize(1).tooltip("Needed for the job").glow(true)
+  event.create("quest_the_cold_forge_1").displayName("the Master Smith's Plans").texture("minecraft:item/map").maxStackSize(1).tooltip("Needed for the job").glow(true)
   event.create("quest_witch_ingredients_3").displayName("Witch's Brew").texture("minecraft:item/potion").maxStackSize(1).tooltip("A bottle of her own stock").glow(true)
 })
