@@ -1107,6 +1107,1307 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "village_errands:water_from_three_wells",
+    "stage": "fq.village_errands.water_from_three_wells",
+    "type": "org",
+    "lines": [
+      "Every well has its own water, and every water brews its own tea. Or so I swear.",
+      "Fill three bottles from three wells for me, and I'll prove it."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "herbalists",
+    "professions": [
+      "minecraft:cleric"
+    ],
+    "org_name": "Herbalists",
+    "pool": "herbalists_errands"
+  },
+  {
+    "quest": "village_errands:make_a_wish",
+    "stage": "fq.village_errands.make_a_wish",
+    "type": "org",
+    "lines": [
+      "I dropped my lucky coin into a wishing well. I only wanted to make a wish!",
+      "It's the one with a roof and a statue, past the old ruins. Could you fish it out?"
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "herbalists",
+    "professions": [
+      "minecraft:cleric"
+    ],
+    "org_name": "Herbalists",
+    "pool": "herbalists_errands"
+  },
+  {
+    "quest": "village_errands:honey_from_the_dome",
+    "stage": "fq.village_errands.honey_from_the_dome",
+    "type": "org",
+    "lines": [
+      "Honey's the best thing for a sore throat, and mine has run out.",
+      "The bees in the birch woods keep a great glass dome of hives. Calm them with a campfire first. They sting less."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "herbalists",
+    "professions": [
+      "minecraft:cleric"
+    ],
+    "org_name": "Herbalists",
+    "pool": "herbalists_errands"
+  },
+  {
+    "quest": "village_errands:honey_from_the_dome",
+    "stage": "fq.village_errands.honey_from_the_dome.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:campfire"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "37C76C0F1B18EC7C",
+    "prev_tasks": [
+      "12CCFC70726A8C38",
+      "0861A104CC1D6BE6"
+    ]
+  },
+  {
+    "quest": "village_errands:sand_in_the_bucket",
+    "stage": "fq.village_errands.sand_in_the_bucket",
+    "type": "org",
+    "lines": [
+      "Folk say the desert wells never run dry. I'd like to know how.",
+      "Bring me a bucket from one, and a cutting of the cactus that grows beside it."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "growers",
+    "professions": [
+      "minecraft:farmer"
+    ],
+    "org_name": "Growers' Co-op",
+    "pool": "growers_errands"
+  },
+  {
+    "quest": "village_errands:the_desert_pump",
+    "stage": "fq.village_errands.the_desert_pump",
+    "type": "org",
+    "lines": [
+      "My field's dry as old bread and there's no river for miles.",
+      "I've heard there's a pump out in the dunes that still works. Fill a bucket there and bring it back to water my new field."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "growers",
+    "professions": [
+      "minecraft:farmer"
+    ],
+    "org_name": "Growers' Co-op",
+    "pool": "growers_errands"
+  },
+  {
+    "quest": "village_errands:the_desert_pump",
+    "stage": "fq.village_errands.the_desert_pump.build3",
+    "type": "build",
+    "keys": [
+      "minecraft:farmland"
+    ],
+    "counts": [
+      4
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "0CE3D2E3C13CB362",
+    "prev_tasks": [
+      "41D5ADB820C136AA",
+      "74B01D0CEA0F71A2",
+      "1E14B20E80AD3BC0",
+      "3E24016E1C600A8E"
+    ]
+  },
+  {
+    "quest": "village_errands:stall_of_your_own",
+    "stage": "fq.village_errands.stall_of_your_own",
+    "type": "org",
+    "lines": [
+      "The Co-op wants a stall at the next market, and the old trestle table won't do.",
+      "You've seen the roadside stalls. Copy one in the village and put some produce on display."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "growers",
+    "professions": [
+      "minecraft:farmer"
+    ],
+    "org_name": "Growers' Co-op",
+    "pool": "growers_errands"
+  },
+  {
+    "quest": "village_errands:stall_of_your_own",
+    "stage": "fq.village_errands.stall_of_your_own.build1",
+    "type": "build",
+    "keys": [
+      "another_furniture:oak_table",
+      "another_furniture:red_awning",
+      "farmersdelight:wooden_basket"
+    ],
+    "counts": [
+      1,
+      1,
+      2
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "1142F96773755924",
+    "prev_tasks": [
+      "01A8E53359C9CAB4",
+      "6B78C8D12C5D7F74"
+    ]
+  },
+  {
+    "quest": "village_errands:seeds_for_sky_farms",
+    "stage": "fq.village_errands.seeds_for_sky_farms",
+    "type": "org",
+    "lines": [
+      "The sky villagers can't get seeds up to their islands. They'd be grateful for any.",
+      "Four sorts, please. Then help them plant."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "growers",
+    "professions": [
+      "minecraft:farmer"
+    ],
+    "org_name": "Growers' Co-op",
+    "pool": "growers_errands"
+  },
+  {
+    "quest": "village_errands:seeds_for_sky_farms",
+    "stage": "fq.village_errands.seeds_for_sky_farms.build5",
+    "type": "build",
+    "keys": [
+      "minecraft:farmland"
+    ],
+    "counts": [
+      6
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "69CB82C811F65384",
+    "prev_tasks": [
+      "446C9C241735E5DD",
+      "51EE0DE3D44B1A3D",
+      "5A96AF8BB30B274F",
+      "06199C0CD1FE820F",
+      "7F124FA896349ABE",
+      "282C743F9F47C697"
+    ]
+  },
+  {
+    "quest": "village_errands:flour_run",
+    "stage": "fq.village_errands.flour_run",
+    "type": "org",
+    "lines": [
+      "The co-op's mill has broken, and the baker is down to her last scoop of flour.",
+      "There's a windmill out in the wild that still turns. Take it some wheat."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "growers",
+    "professions": [
+      "minecraft:farmer"
+    ],
+    "org_name": "Growers' Co-op",
+    "pool": "growers_errands"
+  },
+  {
+    "quest": "village_errands:restore_the_fountain",
+    "stage": "fq.village_errands.restore_the_fountain",
+    "type": "org",
+    "lines": [
+      "Our village square wants a proper stone fountain, and nobody remembers how the old ones were cut.",
+      "There's one standing out in the wild. Look it over, then build one at home."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "crafters",
+    "professions": [
+      "minecraft:mason"
+    ],
+    "org_name": "Crafters' Guild",
+    "pool": "crafters_errands"
+  },
+  {
+    "quest": "village_errands:restore_the_fountain",
+    "stage": "fq.village_errands.restore_the_fountain.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:stone_bricks",
+      "minecraft:stone_brick_stairs",
+      "minecraft:chiseled_stone_bricks"
+    ],
+    "counts": [
+      16,
+      4,
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "178AAF9DE9861AAF",
+    "prev_tasks": [
+      "58B697798F735E4D",
+      "21245C4E1BD4B44D"
+    ]
+  },
+  {
+    "quest": "village_errands:salvage_the_ruins",
+    "stage": "fq.village_errands.salvage_the_ruins",
+    "type": "org",
+    "lines": [
+      "Old stone has a character new stone lacks, and the guild wants some for the chapel repairs.",
+      "Bring me blocks from two different ruins near here. Take what's loose, not the walls."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "crafters",
+    "professions": [
+      "minecraft:mason"
+    ],
+    "org_name": "Crafters' Guild",
+    "pool": "crafters_errands"
+  },
+  {
+    "quest": "village_errands:the_travelling_market",
+    "stage": "fq.village_errands.the_travelling_market",
+    "type": "org",
+    "lines": [
+      "Travellers swear the roadside stalls sell spices you can't get in town.",
+      "Find two stalls and a cart, and bring me what their owners left behind."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "tavern",
+    "professions": [
+      "minecraft:butcher"
+    ],
+    "org_name": "Tavern Keepers",
+    "pool": "tavern_errands"
+  },
+  {
+    "quest": "village_errands:cook_over_open_fire",
+    "stage": "fq.village_errands.cook_over_open_fire",
+    "type": "org",
+    "lines": [
+      "Food tastes better outdoors, and I'll hear no argument.",
+      "There's a fire camp out in the wild. Cook me a proper meal there and bring it back while it's still warm."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "tavern",
+    "professions": [
+      "minecraft:butcher"
+    ],
+    "org_name": "Tavern Keepers",
+    "pool": "tavern_errands"
+  },
+  {
+    "quest": "village_errands:the_prankster",
+    "stage": "fq.village_errands.the_prankster",
+    "type": "org",
+    "lines": [
+      "Every time I sit down, there's a rude noise, and the whole village laughs.",
+      "I know it's one of the villagers. Find out which, would you? Quietly."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "tavern",
+    "professions": [
+      "minecraft:butcher"
+    ],
+    "org_name": "Tavern Keepers",
+    "pool": "tavern_errands"
+  },
+  {
+    "quest": "village_errands:the_prankster",
+    "stage": "fq.village_errands.the_prankster.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Hee hee hee! You can't catch me!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7A2904E9BC8E2BB2",
+    "prev_tasks": [
+      "42DBBF4C13221D62",
+      "5D9A0EEB6B6A14BC"
+    ],
+    "name": "The Prankster",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "village_errands:the_prankster",
+    "stage": "fq.village_errands.the_prankster.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Oh, you found me again! Best of three!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7A2904E9BC8E2BB2",
+    "prev_tasks": [
+      "42DBBF4C13221D62",
+      "5D9A0EEB6B6A14BC",
+      "18B2C0EFD73EEA1D"
+    ],
+    "name": "The Prankster",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "village_errands:the_prankster",
+    "stage": "fq.village_errands.the_prankster.enc3",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Fine, fine! You win! Take the cushion, and don't tell the butcher."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7A2904E9BC8E2BB2",
+    "prev_tasks": [
+      "42DBBF4C13221D62",
+      "5D9A0EEB6B6A14BC",
+      "18B2C0EFD73EEA1D",
+      "6478F6E7E3A57543"
+    ],
+    "name": "The Prankster",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "village_errands:scout_the_castle",
+    "stage": "fq.village_errands.scout_the_castle",
+    "type": "org",
+    "lines": [
+      "We think raiders are camping in the old castle ruins. We can't see from here.",
+      "Go and count their fires, and don't get spotted. If you're hurt, they know you're there."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "watch",
+    "professions": [
+      "guardvillagers:guard"
+    ],
+    "org_name": "Village Watch",
+    "pool": "watch_errands"
+  },
+  {
+    "quest": "village_errands:scout_the_castle",
+    "stage": "fq.village_errands.scout_the_castle.timed0",
+    "type": "timed",
+    "seconds": 420,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "mvs:castle_ruins"
+      ],
+      "label": "the castle ruins"
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Stay low. If anything hurts you, they've seen you."
+    ],
+    "start": "Begin scouting",
+    "requires": [],
+    "quest_id": "7F39DEE833380B51",
+    "prev_tasks": [
+      "165CD15C97F9B0D7"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "village_errands:the_abandoned_camp",
+    "stage": "fq.village_errands.the_abandoned_camp",
+    "type": "org",
+    "lines": [
+      "We found a camp, fire still warm and nobody in sight.",
+      "Search it for clues, and find out where the campers went. They may need help."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "watch",
+    "professions": [
+      "guardvillagers:guard"
+    ],
+    "org_name": "Village Watch",
+    "pool": "watch_errands"
+  },
+  {
+    "quest": "village_errands:the_abandoned_camp",
+    "stage": "fq.village_errands.the_abandoned_camp.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Oh! You found us! We ran when we heard wolves, and we couldn't find the way back."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "3D0EAB1C6DBE698F",
+    "prev_tasks": [
+      "6021D4BF92AC3BF7",
+      "47BDD1734EBDB578",
+      "01DFB36A718C7768"
+    ],
+    "name": "Lost Camper",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "village_errands:fortified_village",
+    "stage": "fq.village_errands.fortified_village",
+    "type": "org",
+    "lines": [
+      "Our captain would like to learn how a walled village holds out.",
+      "Visit one, talk to its guards and help hold the wall for a night."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "watch",
+    "professions": [
+      "guardvillagers:guard"
+    ],
+    "org_name": "Village Watch",
+    "pool": "watch_errands"
+  },
+  {
+    "quest": "village_errands:fortified_village",
+    "stage": "fq.village_errands.fortified_village.talk1",
+    "type": "talk",
+    "lines": [
+      "Visitor from the watch? Welcome. Mind the gate, it sticks.",
+      "We keep two on the wall at all times, and one on the roof.",
+      "Raiders always come at dusk. You can stand with us tonight."
+    ],
+    "requires": [
+      "fq.village_errands.fortified_village"
+    ],
+    "name": "",
+    "match": "org",
+    "org": "watch",
+    "professions": [
+      "guardvillagers:guard"
+    ],
+    "org_name": "Village Watch",
+    "quest_id": "4FC828E6CAE8B8FD",
+    "open_task": "250BFBA01FD07F04"
+  },
+  {
+    "quest": "village_errands:fortified_village",
+    "stage": "fq.village_errands.fortified_village.timed2",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "hold",
+      "radius": 20.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:pillager",
+        "count": 2,
+        "every": 40
+      },
+      {
+        "entity": "minecraft:zombie",
+        "count": 3,
+        "every": 30
+      }
+    ],
+    "lines": [
+      "Night's coming. Man the wall!"
+    ],
+    "start": "Man the wall",
+    "requires": [],
+    "quest_id": "4FC828E6CAE8B8FD",
+    "prev_tasks": [
+      "250BFBA01FD07F04",
+      "14F29E9065B73027",
+      "291DFA206B702491"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "village_errands:a_name_on_the_gallows",
+    "stage": "fq.village_errands.a_name_on_the_gallows",
+    "type": "org",
+    "lines": [
+      "A merchant was robbed on the road, and the bandit's hiding out near the old gallows hill.",
+      "Bring him to justice. I'd rather he didn't get away."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "watch",
+    "professions": [
+      "guardvillagers:guard"
+    ],
+    "org_name": "Village Watch",
+    "pool": "watch_errands"
+  },
+  {
+    "quest": "village_errands:a_name_on_the_gallows",
+    "stage": "fq.village_errands.a_name_on_the_gallows.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "You'll never take me alive!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1D7C05D1C4FE1157",
+    "prev_tasks": [
+      "74018806D51B42F3",
+      "4A7CFC6F01EE93F9"
+    ],
+    "name": "The Bandit",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": 40,
+    "glow": true,
+    "where": {},
+    "entity": "minecraft:pillager",
+    "profession": ""
+  },
+  {
+    "quest": "village_errands:statue_rubbings",
+    "stage": "fq.village_errands.statue_rubbings",
+    "type": "org",
+    "lines": [
+      "The carvings on the fallen statues out in the ruins are some of the oldest writing around.",
+      "Make me rubbings of them with paper and charcoal. I'd go, but my knees."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "arcane",
+    "professions": [
+      "minecraft:librarian",
+      "irons_spellbooks:priest"
+    ],
+    "org_name": "Arcane Order",
+    "pool": "arcane_errands"
+  },
+  {
+    "quest": "village_errands:outcast_fisherman",
+    "stage": "fq.village_errands.outcast_fisherman",
+    "type": "org",
+    "lines": [
+      "There's a fisherman who left his village to live on a boat. They say he has the best bait on the water.",
+      "Find his boat and trade for some. He'll like emeralds, I expect."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "anglers",
+    "professions": [
+      "minecraft:fisherman"
+    ],
+    "org_name": "Anglers' Society",
+    "pool": "anglers_errands"
+  },
+  {
+    "quest": "village_errands:outcast_fisherman",
+    "stage": "fq.village_errands.outcast_fisherman.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Visitors? Out here? Well, sit down, sit down.",
+      "Why did I leave? The village talked too much. The sea doesn't.",
+      "Take the bait. Worms from my own bed. And take the boat when I'm done with it."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1A2F47855344A58E",
+    "prev_tasks": [
+      "4A5B5248E2E93A4F",
+      "79659B92B3835AA2",
+      "64BDFBB37364CA2A"
+    ],
+    "name": "Outcast Fisherman",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "village_errands:supplies_for_the_boat",
+    "stage": "fq.village_errands.supplies_for_the_boat",
+    "type": "org",
+    "lines": [
+      "That fisherman on his boat is out of bread and rope.",
+      "Take him some. If he's pleased, he'll tell you where the big fish bite."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "anglers",
+    "professions": [
+      "minecraft:fisherman"
+    ],
+    "org_name": "Anglers' Society",
+    "pool": "anglers_errands"
+  },
+  {
+    "quest": "village_errands:supplies_for_the_boat",
+    "stage": "fq.village_errands.supplies_for_the_boat.enc3",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Bread! And rope! You're a lifesaver.",
+      "The big fish bite at dusk in the deep water off the headland. Don't tell Halloway."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "753A05CA3EA3A01A",
+    "prev_tasks": [
+      "0EA7BEC3AC3C7364",
+      "616AFB9180512196",
+      "4616DFBBB983EF3D",
+      "6663E5138473DE11"
+    ],
+    "name": "Outcast Fisherman",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "village_errands:storm_at_sea",
+    "stage": "fq.village_errands.storm_at_sea",
+    "type": "org",
+    "lines": [
+      "A thunderstorm has caught a fisherman's boat far out at sea!",
+      "Get to him before it passes, and bring him back to the harbour alive."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "anglers",
+    "professions": [
+      "minecraft:fisherman"
+    ],
+    "org_name": "Anglers' Society",
+    "pool": "anglers_errands"
+  },
+  {
+    "quest": "village_errands:storm_at_sea",
+    "stage": "fq.village_errands.storm_at_sea.timed0",
+    "type": "timed",
+    "seconds": 420,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "structory:boat"
+      ],
+      "label": "the stricken boat",
+      "away": 100
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "The storm is building. Get to the boat!"
+    ],
+    "start": "Race the storm",
+    "requires": [],
+    "quest_id": "26E7E0078F2FD7E4",
+    "prev_tasks": [
+      "59D8B31F05213435"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "village_errands:storm_at_sea",
+    "stage": "fq.village_errands.storm_at_sea.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Thank the tides! The mast went an hour ago. Take me home!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "26E7E0078F2FD7E4",
+    "prev_tasks": [
+      "59D8B31F05213435",
+      "4C20BBF0B926543F"
+    ],
+    "name": "Stranded Fisherman",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "the harbour"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "village_errands:lost_cart",
+    "stage": "fq.village_errands.lost_cart",
+    "type": "org",
+    "lines": [
+      "A courier's cart broke down in the jungle with parcels aboard.",
+      "Find it and carry what's on it to the jungle village. Those parcels are overdue."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "couriers",
+    "professions": [
+      "minecraft:cartographer"
+    ],
+    "org_name": "Couriers",
+    "pool": "couriers_errands"
+  },
+  {
+    "quest": "village_errands:ruins_on_the_map",
+    "stage": "fq.village_errands.ruins_on_the_map",
+    "type": "org",
+    "lines": [
+      "I'm mapping the wild ruins so travellers don't wander into them by night.",
+      "A desert ruin, a jungle ruin and a swamp ruin. Visit each and mark them."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "couriers",
+    "professions": [
+      "minecraft:cartographer"
+    ],
+    "org_name": "Couriers",
+    "pool": "couriers_errands"
+  },
+  {
+    "quest": "village_errands:parcel_for_the_sky",
+    "stage": "fq.village_errands.parcel_for_the_sky",
+    "type": "org",
+    "lines": [
+      "I've a parcel for a sky village, and the carriers won't fly that high.",
+      "Get it up there within the day and collect the signature."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "couriers",
+    "professions": [
+      "minecraft:cartographer"
+    ],
+    "org_name": "Couriers",
+    "pool": "couriers_errands"
+  },
+  {
+    "quest": "village_errands:parcel_for_the_sky",
+    "stage": "fq.village_errands.parcel_for_the_sky.timed1",
+    "type": "timed",
+    "seconds": 1200,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "skyvillages:skyvillage"
+      ],
+      "label": "the sky village"
+    },
+    "no": [
+      "teleport",
+      "elytra"
+    ],
+    "waves": [],
+    "lines": [
+      "Twenty minutes to reach the sky village. No teleporting."
+    ],
+    "start": "Set off",
+    "requires": [],
+    "quest_id": "0A8E45C817D55342",
+    "prev_tasks": [
+      "02F558BB2F72200B",
+      "62EF0D882AADE52D"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "village_errands:sky_village_fall",
+    "stage": "fq.village_errands.sky_village_fall",
+    "type": "org",
+    "lines": [
+      "A sky villager's child fell off the edge and floated down on a parasol!",
+      "She'll be on the ground somewhere near their island. Get her back up there."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "couriers",
+    "professions": [
+      "minecraft:cartographer"
+    ],
+    "org_name": "Couriers",
+    "pool": "couriers_errands"
+  },
+  {
+    "quest": "village_errands:sky_village_fall",
+    "stage": "fq.village_errands.sky_village_fall.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "I fell off! It was so high! I want to go home!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "676FE9701748555C",
+    "prev_tasks": [
+      "622119AEC2751224",
+      "08AAEDB0A9864019"
+    ],
+    "name": "Fallen Sky Child",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "skyvillages:skyvillage"
+      ],
+      "label": "the sky village"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "village_errands:map_the_region",
+    "stage": "fq.village_errands.map_the_region",
+    "type": "org",
+    "lines": [
+      "The cartographer's tower in the wilds keeps a master map of this whole region.",
+      "Climb it, copy what you can and fill in the land around our village."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "couriers",
+    "professions": [
+      "minecraft:cartographer"
+    ],
+    "org_name": "Couriers",
+    "pool": "couriers_errands"
+  },
+  {
+    "quest": "village_errands:letter_to_a_village",
+    "stage": "fq.village_errands.letter_to_a_village",
+    "type": "org",
+    "lines": [
+      "I've a letter for a villager in the next village along the road.",
+      "Deliver it by hand or by mail. Either way, it needs to get there."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "couriers",
+    "professions": [
+      "minecraft:cartographer"
+    ],
+    "org_name": "Couriers",
+    "pool": "couriers_errands"
+  },
+  {
+    "quest": "village_errands:letter_to_a_village",
+    "stage": "fq.village_errands.letter_to_a_village.talk2",
+    "type": "talk",
+    "lines": [
+      "A letter? For me? Oh, how lovely.",
+      "I shall write a reply tonight. Tell the courier it's coming."
+    ],
+    "requires": [
+      "fq.village_errands.letter_to_a_village"
+    ],
+    "name": "",
+    "match": "villager",
+    "profession": "minecraft:librarian",
+    "quest_id": "73AFAE0723EEA3AD",
+    "open_task": "41158E4E39DEA724"
+  },
+  {
+    "quest": "village_errands:the_wild_waystone",
+    "stage": "fq.village_errands.the_wild_waystone",
+    "type": "org",
+    "lines": [
+      "It takes our runners half a day to reach the next village on foot.",
+      "If both villages' waystones were linked, they could cross in a blink."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "couriers",
+    "professions": [
+      "minecraft:cartographer"
+    ],
+    "org_name": "Couriers",
+    "pool": "couriers_errands"
+  },
+  {
+    "quest": "village_errands:the_wild_waystone",
+    "stage": "fq.village_errands.the_wild_waystone.waystones0",
+    "type": "waystones",
+    "count": 2,
+    "wild": false,
+    "requires": [],
+    "quest_id": "37FE4B10C2BAC817",
+    "prev_tasks": [
+      "482A904CBAD6EE1E"
+    ]
+  },
+  {
+    "quest": "village_errands:village_jungle",
+    "stage": "fq.village_errands.village_jungle",
+    "type": "org",
+    "lines": [
+      "We've never reached the village in the sparse jungle. Nobody has a map.",
+      "Find it, introduce yourself and bring back a list of what they trade."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "couriers",
+    "professions": [
+      "minecraft:cartographer"
+    ],
+    "org_name": "Couriers",
+    "pool": "couriers_errands"
+  },
+  {
+    "quest": "village_errands:village_jungle",
+    "stage": "fq.village_errands.village_jungle.talk1",
+    "type": "talk",
+    "lines": [
+      "A visitor! We get so few. Welcome.",
+      "We trade cocoa and bamboo, mostly. Fruit in season.",
+      "Tell your couriers the road is open."
+    ],
+    "requires": [
+      "fq.village_errands.village_jungle"
+    ],
+    "name": "",
+    "match": "villager",
+    "profession": "any",
+    "quest_id": "12E2EF72D6B730A0",
+    "open_task": "281C1E3BDCCA0B7F"
+  },
+  {
+    "quest": "village_errands:runaway_horse",
+    "stage": "fq.village_errands.runaway_horse",
+    "type": "org",
+    "lines": [
+      "My horse bolted and ran off to the wild horse pen. She's frightened, not bad.",
+      "Find her, calm her and bring her home."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "sanctuary",
+    "professions": [
+      "minecraft:shepherd",
+      "minecraft:leatherworker"
+    ],
+    "org_name": "Sanctuary Keepers",
+    "pool": "sanctuary_errands"
+  },
+  {
+    "quest": "village_errands:runaway_horse",
+    "stage": "fq.village_errands.runaway_horse.tame1",
+    "type": "tame",
+    "entities": [
+      "minecraft:horse"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "3507498A584392C5",
+    "prev_tasks": [
+      "12DD603193F91E8A",
+      "723401333CD2B28D"
+    ]
+  },
+  {
+    "quest": "village_errands:fox_in_the_hut",
+    "stage": "fq.village_errands.fox_in_the_hut",
+    "type": "org",
+    "lines": [
+      "Foxes have taken over a hut in the taiga, and there are kits.",
+      "Breed a pair with sweet berries, and bring a kit back to the Sanctuary."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "sanctuary",
+    "professions": [
+      "minecraft:shepherd",
+      "minecraft:leatherworker"
+    ],
+    "org_name": "Sanctuary Keepers",
+    "pool": "sanctuary_errands"
+  },
+  {
+    "quest": "village_errands:fox_in_the_hut",
+    "stage": "fq.village_errands.fox_in_the_hut.breed1",
+    "type": "breed",
+    "entities": [
+      "minecraft:fox"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "072692B1994F356D",
+    "prev_tasks": [
+      "679C0355F8D8200E",
+      "2E4DCD5E4CBA9510"
+    ]
+  },
+  {
+    "quest": "village_errands:fox_in_the_hut",
+    "stage": "fq.village_errands.fox_in_the_hut.tame2",
+    "type": "tame",
+    "entities": [
+      "minecraft:fox"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "072692B1994F356D",
+    "prev_tasks": [
+      "679C0355F8D8200E",
+      "2E4DCD5E4CBA9510",
+      "06E0A094F149ECBC"
+    ]
+  },
+  {
+    "quest": "village_errands:sled_dogs",
+    "stage": "fq.village_errands.sled_dogs",
+    "type": "org",
+    "lines": [
+      "The Sanctuary wants a sled team for winter deliveries.",
+      "Tame wolves near the snowy dog hut, then see how a team pulls a sled."
+    ],
+    "accept": "I'll do it",
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "sanctuary",
+    "professions": [
+      "minecraft:shepherd",
+      "minecraft:leatherworker"
+    ],
+    "org_name": "Sanctuary Keepers",
+    "pool": "sanctuary_errands"
+  },
+  {
+    "quest": "village_errands:sled_dogs",
+    "stage": "fq.village_errands.sled_dogs.tame1",
+    "type": "tame",
+    "entities": [
+      "minecraft:wolf"
+    ],
+    "count": 2,
+    "requires": [],
+    "quest_id": "4F17709F702E780D",
+    "prev_tasks": [
+      "542A0B78B2624D3B",
+      "16DE8BC57895EDEE"
+    ]
+  },
+  {
     "quest": "skill_cooking:first_order",
     "stage": "fq.skill_cooking.first_order.talk0",
     "type": "talk",

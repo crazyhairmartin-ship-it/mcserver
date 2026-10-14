@@ -110,7 +110,7 @@ hash = "62ba0917b9a55387719b7a2e3d82ac58ae0546149ec510281c9d66a2add08318"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/magic.snbt"
-hash = "c6b59a94329a2c707bfa24c79ac420ae5dc964759e0e30985f5a1226224c5401"
+hash = "d294cf88e96aaa0e6a6a6a2afc375b14e97d4d3a2e66043fbc406cfe262da2a0"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
@@ -122,23 +122,23 @@ hash = "b6de6780106c5e9c1d4234376e3fe5648e27e34cde87e60f3012144d80c8318b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_agility.snbt"
-hash = "76656f9f06f31fd42b85c337ae5ac896475871a1235d72ac2ccccece9847bc9c"
+hash = "9b8ea3f748902a33075039546d95811bc562c58c1313bb94a4e54a221127325a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_attack.snbt"
-hash = "5904f5080741c1e44719751033d5fd7c10f32069a00bf0d6fe839b996f2e98cf"
+hash = "731f1cbd18156870ef9861d30e34f5c5555a70cc4199ae98be470362df6d2e2a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_cooking.snbt"
-hash = "3a78e2e9b47b0199b5a823e0dec5cd82d5b6816d7b8f70c92230eff797a3f743"
+hash = "d9571aeadbc0f7ca80f1f842ad40335c3b6957fa820450ab6015e9a849b75396"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_crafting.snbt"
-hash = "0a774c3f198506095f6df5288e44544cdf0198b576f26cbfc7a140d17a3f73b0"
+hash = "71f348de664e054cc7854b878f96d804b60f1aef0d2b0fe0d0e99505f561c2dc"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_defense.snbt"
-hash = "7592438806417d86e805c65de8e3ca7a04d4c11f09e3ddc996e15ce9549e40ee"
+hash = "83a9b362d6019510301f9f17586ec1d495b2a635e1c261e8727f6da4aac794ca"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_farming.snbt"
@@ -150,7 +150,7 @@ hash = "b0400cc98b660f96817385bca53398de06f5130e24d0b5f5690ae1468398e7b4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_foraging.snbt"
-hash = "8378dc367b891e71686fdc6c4a6efd482d42d4dc88c406c50cdcdbe0e49e919f"
+hash = "28e16f8f83437e206be7fb393bb0eb93d33a380f22ecfc2a059110b476e5f61d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_mining.snbt"
@@ -158,11 +158,11 @@ hash = "0b7d46442f99b90304785c212c2e1b914b63557d7c809481be79260c284dff8f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_range.snbt"
-hash = "1e27ad18f6c8fad104b909e35dd3a0387bef3d551b0fa358aea8777e39f17e06"
+hash = "78784b4c37b9581603ad70ae841e282a086af91e189c91ee476c8b141a2b42b1"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_taming.snbt"
-hash = "8a27828c9230a9985eb25f4356b1fa601c895a9c678e9a1f82bd7527b2532385"
+hash = "6d7aa8ae9558bceeadec27fbad39c72225b2d779005d425d11ceda87528339e6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/small_favours.snbt"
@@ -171,6 +171,10 @@ hash = "bab9812b3a104adc421e35c14424dde6904ae5d78f5b04c902bf054aa504c8ea"
 [[files]]
 file = "config/ftbquests/quests/chapters/start.snbt"
 hash = "3205cd1a62482427a83b27ab7c7a9f91c09a7f75bea2ab13256e626be234c3fc"
+
+[[files]]
+file = "config/ftbquests/quests/chapters/village_errands.snbt"
+hash = "5cfd17cf40249d049c74ec3f499e2fc9c34d364acfa4fe2e359fc355b83a6959"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -2765,7 +2769,7 @@ hash = "81238517f42d04aa513d472ee44c4eb212593671c2e57aa3273f67d942e11863"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "3919af497f6e68c24fc7811b9c1a7613881576f6410d68527ff40d4244c40e6d"
+hash = "74ff5216954439b65313c55e405048b3ca6d01e46f4c173ef06676d36c2e8a8a"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"

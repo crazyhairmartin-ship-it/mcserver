@@ -34,6 +34,15 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - magic:wizard_tower: needs a warded door puzzle; written as a checkmark
 - small_favours:sf_witch_bargain: needs a brewed pot of tea judged by the witch; written as the kettle crafted, black tea consumed and talking to a witch
 - small_favours:sf_the_crossing: needs holding off drowned until the jetty on a boat crossing; written as two drowned kill encounters then reaching a village
+- village_errands:water_from_three_wells: needs bottles filled at three different wells; written as one well structure and three potions
+- village_errands:make_a_wish: needs a coin found in a well's bottom; written as carrying a gold nugget
+- village_errands:lost_cart: needs picking up the cart's parcels (Carry On); written as a checkmark between two structures
+- village_errands:scout_the_castle: needs counting what is seen from cover; written as an unseen timed approach and a checkmark
+- village_errands:statue_rubbings: needs taking rubbings from carvings; written as paper, charcoal and visiting both ruins
+- village_errands:fortified_village: needs any fortified village; written as the plains fortified village
+- village_errands:the_abandoned_camp: needs clue searching and tracks; written as a checkmark and an encounter
+- village_errands:runaway_horse: needs riding a horse home and stabling it; written as tame plus a checkmark
+- village_errands:map_the_region: needs copying a master map; written as crafting a map
 
 ## Links to restore
 

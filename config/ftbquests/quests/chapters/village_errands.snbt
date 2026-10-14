@@ -1,0 +1,1833 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "village_errands"
+	group: "097503D344895135"
+	icon: "minecraft:emerald"
+	id: "1463D0A90444B02A"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["A Herbalist swears every well's water makes a different tea, and wants proof from three wells."]
+			icon: "minecraft:potion"
+			id: "389891129FD341F6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "3A6327C90CB665B1"
+					item: "herbalbrews:green_tea_leaf"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 60"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "5B06651CB8C1AC1A"
+					silent: true
+					title: "+60 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "55441845C73F3CCF"
+					stage: "fq.village_errands.water_from_three_wells"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "5BF885B6461DA623"
+					structure: "#fotf:groups/wells"
+					title: "Find a well to draw water from"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 3L
+					id: "4DC47D9F9F91C8FA"
+					item: "minecraft:potion"
+					title: "Bring her three bottles of well water"
+					type: "item"
+				}
+			]
+			title: "Water from Three Wells"
+			x: 0.0d
+			y: -19.5d
+		}
+		{
+			description: ["A young Herbalist lost her lucky coin in a wishing well and cannot bear to be without it."]
+			icon: "minecraft:gold_nugget"
+			id: "51F60970AB484ABE"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "3A18D02FBB8F7C5D"
+					item: "minecraft:rabbit_foot"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "42C635E714FD1819"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 100"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "58395071D49BFD12"
+					silent: true
+					title: "+100 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1AF2DC37BDE568AB"
+					stage: "fq.village_errands.make_a_wish"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "6483486496892E33"
+					structure: "dungeons_arise:wishing_well"
+					title: "Find the wishing well"
+					type: "structure"
+				}
+				{
+					id: "30F6D31530F9C7B8"
+					item: "minecraft:gold_nugget"
+					title: "Fish her lucky coin from the bottom"
+					type: "item"
+				}
+			]
+			title: "Make a Wish"
+			x: 0.0d
+			y: -18.0d
+		}
+		{
+			description: ["A Herbalist is out of honey, and the bee dome in the birch woods has plenty."]
+			icon: "minecraft:honey_bottle"
+			id: "37C76C0F1B18EC7C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "6A11D7580C9DDC01"
+					item: "minecraft:beehive"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 120"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "2E53F1A98CA82999"
+					silent: true
+					title: "+120 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "12CCFC70726A8C38"
+					stage: "fq.village_errands.honey_from_the_dome"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "0861A104CC1D6BE6"
+					structure: "mvs:bee_dome"
+					title: "Find the bee dome in the birch woods"
+					type: "structure"
+				}
+				{
+					id: "6F04ACDD50AC22CD"
+					stage: "fq.village_errands.honey_from_the_dome.build1"
+					title: "Light a campfire to calm the bees"
+					type: "gamestage"
+				}
+				{
+					count: 2L
+					id: "4830530FBF7C48CE"
+					item: "minecraft:honey_bottle"
+					title: "Collect honey for her tea"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2157763D89DE5774"
+					item: "minecraft:honeycomb"
+					title: "Collect combs for her salves"
+					type: "item"
+				}
+			]
+			title: "Honey from the Dome"
+			x: 0.0d
+			y: -16.5d
+		}
+		{
+			description: ["The Growers' co-op wants to know how desert wells never run dry, and what grows beside them."]
+			icon: "minecraft:cactus"
+			id: "3544F171C172F65B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "0CFA00C9165656C8"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 100"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "2EF3EF0075529B40"
+					silent: true
+					title: "+100 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "39DE970B8ABF9A7C"
+					stage: "fq.village_errands.sand_in_the_bucket"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "2B20D877F8E98F70"
+					structure: "mss:desert_well"
+					title: "Find a desert well"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "3FEBB7CE14A0DE7E"
+					item: "minecraft:water_bucket"
+					title: "Draw a bucket of its water"
+					type: "item"
+				}
+				{
+					id: "71E014790CBDBA02"
+					item: "minecraft:cactus"
+					title: "Cut a piece of the cactus beside it"
+					type: "item"
+				}
+			]
+			title: "Desert Water"
+			x: 0.0d
+			y: -15.0d
+		}
+		{
+			description: ["A desert farmer needs water for a new field and the only working pump is out in the dunes."]
+			icon: "minecraft:bucket"
+			id: "0CE3D2E3C13CB362"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "6688E4E706FF7BEF"
+					item: "farm_and_charm:tomato_seeds"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "6EA12D68EE7AC67A"
+					item: "farm_and_charm:lettuce_seeds"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 120"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "3E0F594FCC76480A"
+					silent: true
+					title: "+120 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "41D5ADB820C136AA"
+					stage: "fq.village_errands.the_desert_pump"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "74B01D0CEA0F71A2"
+					structure: "mvs:desert_pump"
+					title: "Find the working pump in the dunes"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "1E14B20E80AD3BC0"
+					item: "minecraft:water_bucket"
+					title: "Fill a bucket for her thirsty field"
+					type: "item"
+				}
+				{
+					id: "3E24016E1C600A8E"
+					structure: "#fotf:groups/villages"
+					title: "Carry it to the desert village"
+					type: "structure"
+				}
+				{
+					id: "68A6C22BDB7FA0E0"
+					stage: "fq.village_errands.the_desert_pump.build3"
+					title: "Water her new field"
+					type: "gamestage"
+				}
+			]
+			title: "The Pump Still Works"
+			x: 0.0d
+			y: -13.5d
+		}
+		{
+			dependencies: ["5F1A80228546C8A0"]
+			description: ["The Growers' co-op wants a stall at the next market, built like the roadside ones, with produce on it."]
+			icon: "another_furniture:red_awning"
+			id: "1142F96773755924"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "6E282DB6471FD64F"
+					item: "minecraft:bell"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "2F8E9F803B580F47"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 150"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "4317AD495D32F3B2"
+					silent: true
+					title: "+150 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "01A8E53359C9CAB4"
+					stage: "fq.village_errands.stall_of_your_own"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "6B78C8D12C5D7F74"
+					structure: "mvs:red_stall"
+					title: "Look over a roadside stall for ideas"
+					type: "structure"
+				}
+				{
+					id: "00E3F388BB4FFAEE"
+					stage: "fq.village_errands.stall_of_your_own.build1"
+					title: "Set up a market stall in the village"
+					type: "gamestage"
+				}
+			]
+			title: "A Stall of Your Own"
+			x: 1.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["0A8E45C817D55342"]
+			description: ["The sky villagers cannot get seeds up to their floating fields, so they are going hungry."]
+			icon: "minecraft:wheat_seeds"
+			id: "69CB82C811F65384"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 5
+					id: "6D05D8B67CF45938"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 200"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "3215AA1DE81C1D29"
+					silent: true
+					title: "+200 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "446C9C241735E5DD"
+					stage: "fq.village_errands.seeds_for_sky_farms"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "51EE0DE3D44B1A3D"
+					structure: "skyvillages:skyvillage"
+					title: "Climb to the sky village"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "5A96AF8BB30B274F"
+					item: "minecraft:wheat_seeds"
+					title: "Give them wheat seeds"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "06199C0CD1FE820F"
+					item: "minecraft:beetroot_seeds"
+					title: "Give them beetroot seeds"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "7F124FA896349ABE"
+					item: "minecraft:melon_seeds"
+					title: "Give them melon seeds"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "282C743F9F47C697"
+					item: "minecraft:pumpkin_seeds"
+					title: "Give them pumpkin seeds"
+					type: "item"
+				}
+				{
+					id: "49C20555791437BE"
+					stage: "fq.village_errands.seeds_for_sky_farms.build5"
+					title: "Help plant their island fields"
+					type: "gamestage"
+				}
+			]
+			title: "Seeds for the Sky Farms"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			description: ["The Growers' co-op's mill has broken, and the baker needs flour before the next market day."]
+			icon: "farm_and_charm:flour"
+			id: "23CAA6C492AFAFBD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "3973EB6D8614E728"
+					item: "farm_and_charm:flour"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "5BF674617BCEB616"
+					item: "bakery:bread"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 130"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "72E1F5758B7CC975"
+					silent: true
+					title: "+130 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6FB8E49B43E46A78"
+					stage: "fq.village_errands.flour_run"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "6F97CEE8A3EC566E"
+					item: "minecraft:wheat"
+					title: "Gather wheat to grind"
+					type: "item"
+				}
+				{
+					id: "62E17170F753C94B"
+					structure: "mvs:windmill"
+					title: "Find the windmill that still turns"
+					type: "structure"
+				}
+				{
+					count: 8L
+					id: "5B505FA27A689574"
+					item: "farm_and_charm:flour"
+					title: "Grind the wheat into flour for the baker"
+					type: "item"
+				}
+			]
+			title: "The Flour Run"
+			x: 0.0d
+			y: -12.0d
+		}
+		{
+			description: ["A Crafters' guild mason wants the village square to have a stone fountain like the old ones."]
+			icon: "minecraft:chiseled_stone_bricks"
+			id: "178AAF9DE9861AAF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 32
+					id: "31663F8BF5BAE307"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "08988945CDAF949F"
+					item: "minecraft:chiseled_stone_bricks"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 130"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "5743B9E0CBA0C6B5"
+					silent: true
+					title: "+130 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "58B697798F735E4D"
+					stage: "fq.village_errands.restore_the_fountain"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "21245C4E1BD4B44D"
+					structure: "mvs:stone_fountain"
+					title: "Study the old fountain in the wild"
+					type: "structure"
+				}
+				{
+					id: "6FB42FD4C18AE790"
+					stage: "fq.village_errands.restore_the_fountain.build1"
+					title: "Build a fountain for the village square"
+					type: "gamestage"
+				}
+			]
+			title: "Restore the Fountain"
+			x: 0.0d
+			y: -10.5d
+		}
+		{
+			description: ["The Crafters' guild needs old stone with a history to it for the chapel repairs."]
+			icon: "minecraft:mossy_stone_bricks"
+			id: "0F50048380ED67C2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 32
+					id: "5F8960CE572EE52A"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 100"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "4AF0DE499FC29DA7"
+					silent: true
+					title: "+100 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0C7650D71D088A45"
+					stage: "fq.village_errands.salvage_the_ruins"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "4DE3B0389C127752"
+					structure: "structory:ruin_grassy"
+					title: "Salvage stone from a grassy ruin"
+					type: "structure"
+				}
+				{
+					id: "214F008A5278874A"
+					structure: "mvs:small_ruin"
+					title: "Salvage stone from a second ruin"
+					type: "structure"
+				}
+				{
+					count: 8L
+					id: "72F2A284183D55BB"
+					item: "minecraft:mossy_stone_bricks"
+					title: "Bring mossy stone for the chapel"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "71F505CD3138A922"
+					item: "minecraft:cracked_stone_bricks"
+					title: "Bring weathered stone for the chapel"
+					type: "item"
+				}
+			]
+			title: "Salvage"
+			x: 0.0d
+			y: -9.0d
+		}
+		{
+			description: ["A tavern keeper heard that the roadside stalls sell spices unavailable in town and wants a taste."]
+			icon: "farmersdelight:onion"
+			id: "5F1A80228546C8A0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "03D53AC00E4F219D"
+					item: "farmersdelight:rice"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "77E267C51C3184E6"
+					item: "farmersdelight:cabbage_seeds"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 120"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "370BFFB8A151A1D8"
+					silent: true
+					title: "+120 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "310EECCF49912870"
+					stage: "fq.village_errands.the_travelling_market"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "5DACBC5A30874A7B"
+					structure: "mvs:red_stall"
+					title: "Find a roadside stall"
+					type: "structure"
+				}
+				{
+					id: "58B66A318D1F7218"
+					structure: "mvs:blue_stall"
+					title: "Find a second stall"
+					type: "structure"
+				}
+				{
+					id: "61BBC498B5CA60E9"
+					structure: "mvs:cart"
+					title: "Find a trader's cart"
+					type: "structure"
+				}
+				{
+					count: 4L
+					id: "01160990DB003EC9"
+					item: "farmersdelight:onion"
+					title: "Collect what the traders left for her kitchen"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "385BAB8A2FB123BF"
+					item: "farmersdelight:tomato"
+					title: "Collect tomatoes for her sauces"
+					type: "item"
+				}
+			]
+			title: "The Travelling Market"
+			x: 0.0d
+			y: -7.5d
+		}
+		{
+			description: ["A tavern keeper insists food tastes better cooked outdoors, and wants a meal from a wild fire camp."]
+			icon: "camping:grill"
+			id: "6E5593429B66A7B9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "40A449D4619B5310"
+					item: "camping:grill"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 90"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "4E25EB9E4B4E4A8C"
+					silent: true
+					title: "+90 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6293D6982297C20F"
+					stage: "fq.village_errands.cook_over_open_fire"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "219E39076F6D68E7"
+					structure: "mvs:fire_camp"
+					title: "Find the wild fire camp"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "563E42123ED9026E"
+					item: "minecraft:cooked_beef"
+					title: "Cook a meal over the camp fire"
+					type: "item"
+				}
+			]
+			title: "Cook over an Open Fire"
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			description: ["The village butcher cannot sit without a rude noise, and the whole village laughs. Somebody is responsible."]
+			icon: "artifacts:whoopee_cushion"
+			id: "7A2904E9BC8E2BB2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "36C3233C1F83BF33"
+					item: "artifacts:whoopee_cushion"
+					type: "item"
+				}
+				{
+					id: "60FE1099FB99265A"
+					item: "minecraft:cake"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "44CF5CC0F7FCD008"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "42DBBF4C13221D62"
+					stage: "fq.village_errands.the_prankster"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "5D9A0EEB6B6A14BC"
+					structure: "#fotf:groups/villages"
+					title: "Follow the giggles through the village"
+					type: "structure"
+				}
+				{
+					id: "18B2C0EFD73EEA1D"
+					stage: "fq.village_errands.the_prankster.enc1"
+					title: "Spot the giggling villager"
+					type: "gamestage"
+				}
+				{
+					id: "6478F6E7E3A57543"
+					stage: "fq.village_errands.the_prankster.enc2"
+					title: "Catch him in a game of hide and seek"
+					type: "gamestage"
+				}
+				{
+					id: "2C5B1735EAFADC16"
+					stage: "fq.village_errands.the_prankster.enc3"
+					title: "Make the prankster give up the cushion"
+					type: "gamestage"
+				}
+			]
+			title: "Something Smells Funny"
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			description: ["The Village Watch fear raiders are camped in the old castle ruins and need someone to look without being seen."]
+			icon: "minecraft:spyglass"
+			id: "7F39DEE833380B51"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "087049B163519417"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 80"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "3EC505CC2166189D"
+					silent: true
+					title: "+80 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "165CD15C97F9B0D7"
+					stage: "fq.village_errands.scout_the_castle"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "14CDC09099AEA008"
+					stage: "fq.village_errands.scout_the_castle.timed0"
+					title: "Creep up to the castle unseen"
+					type: "gamestage"
+				}
+				{
+					id: "4C96CABE6F6209BC"
+					title: "I counted their fires and left unseen"
+					type: "checkmark"
+				}
+			]
+			title: "Scout the Castle"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			description: ["The Village Watch found an abandoned camp with the fire still warm, and fear for the campers."]
+			icon: "minecraft:campfire"
+			id: "3D0EAB1C6DBE698F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "3262B173D30737B4"
+					item: "minecraft:campfire"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "0F966E8838A2560D"
+					item: "minecraft:cooked_beef"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 120"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "58E2CB969AAEFB94"
+					silent: true
+					title: "+120 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6021D4BF92AC3BF7"
+					stage: "fq.village_errands.the_abandoned_camp"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "47BDD1734EBDB578"
+					structure: "structory:abandoned_camp"
+					title: "Search the abandoned camp for clues"
+					type: "structure"
+				}
+				{
+					id: "01DFB36A718C7768"
+					title: "I found tracks leading away from the camp"
+					type: "checkmark"
+				}
+				{
+					id: "0A94E60DA6BE399D"
+					stage: "fq.village_errands.the_abandoned_camp.enc2"
+					title: "Find the missing campers"
+					type: "gamestage"
+				}
+			]
+			title: "Who Left the Camp?"
+			x: 0.0d
+			y: -1.5d
+		}
+		{
+			description: ["The Village Watch's captain wants to learn from a fortified village, and the best lesson is to help hold its wall."]
+			icon: "spartanshields:iron_tower_shield"
+			id: "4FC828E6CAE8B8FD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "23FEC05F52ACAD71"
+					item: "spartanshields:iron_basic_shield"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 220"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "4EDF0E35AE68CC9A"
+					silent: true
+					title: "+220 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "250BFBA01FD07F04"
+					stage: "fq.village_errands.fortified_village"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "14F29E9065B73027"
+					structure: "ctov:medium/village_plains_fortified"
+					title: "Travel to a fortified village"
+					type: "structure"
+				}
+				{
+					id: "291DFA206B702491"
+					stage: "fq.village_errands.fortified_village.talk1"
+					title: "Talk to the wall's guards"
+					type: "gamestage"
+				}
+				{
+					id: "07D91C527952D1DB"
+					stage: "fq.village_errands.fortified_village.timed2"
+					title: "Hold the wall through the night"
+					type: "gamestage"
+				}
+			]
+			title: "Behind the Walls"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			description: ["The Village Watch want the bandit who robbed a merchant brought to justice before he vanishes."]
+			icon: "minecraft:iron_sword"
+			id: "1D7C05D1C4FE1157"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 6
+					id: "39D4D901E97679B1"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 140"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "50735D6F8488FA65"
+					silent: true
+					title: "+140 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "74018806D51B42F3"
+					stage: "fq.village_errands.a_name_on_the_gallows"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "4A7CFC6F01EE93F9"
+					structure: "mvs:gallows"
+					title: "Track the bandit to the gallows hill"
+					type: "structure"
+				}
+				{
+					id: "726446FAB8668A03"
+					stage: "fq.village_errands.a_name_on_the_gallows.enc1"
+					title: "Bring the bandit to justice"
+					type: "gamestage"
+				}
+			]
+			title: "Justice"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			description: ["An Arcane Order librarian wants copies of the carvings on fallen statues, which may be some of the oldest writing around."]
+			icon: "minecraft:paper"
+			id: "52F86F94B2A79B45"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "38E1E03236CDCC1B"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 100"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "4BAE86900AF5D715"
+					silent: true
+					title: "+100 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1290361D02C0F5F6"
+					stage: "fq.village_errands.statue_rubbings"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					count: 4L
+					id: "60107B5383D669D1"
+					item: "minecraft:paper"
+					title: "Bring paper to take rubbings"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "10731DEE28F9D663"
+					item: "minecraft:charcoal"
+					title: "Bring charcoal to take rubbings"
+					type: "item"
+				}
+				{
+					id: "6899682EEB471377"
+					structure: "mvs:statue_ruins"
+					title: "Rub the carvings on a fallen statue"
+					type: "structure"
+				}
+				{
+					id: "227A801F333E2F67"
+					structure: "mvs:log_ruin"
+					title: "Rub the carvings on a log ruin"
+					type: "structure"
+				}
+			]
+			title: "Statue Rubbings"
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			description: ["The Anglers' Society talk of a fisherman who left his village for a boat, and keeps the best bait."]
+			icon: "aquaculture:worm"
+			id: "1A2F47855344A58E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "76813FBBBFBD66BE"
+					item: "aquaculture:worm"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 100"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "4ED9114F0EF9BDFB"
+					silent: true
+					title: "+100 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4A5B5248E2E93A4F"
+					stage: "fq.village_errands.outcast_fisherman"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "79659B92B3835AA2"
+					structure: "structory:boat"
+					title: "Find the outcast's boat at sea"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "64BDFBB37364CA2A"
+					item: "minecraft:emerald"
+					title: "Pay for his best bait"
+					type: "item"
+				}
+				{
+					id: "5B621CB3FC93E2ED"
+					stage: "fq.village_errands.outcast_fisherman.enc2"
+					title: "Trade with the outcast"
+					type: "gamestage"
+				}
+			]
+			title: "The Outcast Fisherman"
+			x: 0.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["1A2F47855344A58E"]
+			description: ["The outcast fisherman is out of bread and rope, and cannot leave his boat to buy more."]
+			icon: "minecraft:bread"
+			id: "753A05CA3EA3A01A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "6AB0D69C646CBB92"
+					item: "aquaculture:gold_hook"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 140"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "4F822D031E85B62F"
+					silent: true
+					title: "+140 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0EA7BEC3AC3C7364"
+					stage: "fq.village_errands.supplies_for_the_boat"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "616AFB9180512196"
+					item: "minecraft:bread"
+					title: "Gather bread for the fisherman"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "4616DFBBB983EF3D"
+					item: "supplementaries:rope"
+					title: "Gather rope for his lines"
+					type: "item"
+				}
+				{
+					id: "6663E5138473DE11"
+					structure: "structory:boat"
+					title: "Sail out to his boat"
+					type: "structure"
+				}
+				{
+					id: "700518224E2A1BF8"
+					stage: "fq.village_errands.supplies_for_the_boat.enc3"
+					title: "Hand over the supplies"
+					type: "gamestage"
+				}
+			]
+			title: "Supplies for the Boat"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["753A05CA3EA3A01A"]
+			description: ["A thunderstorm has caught a fisherman's boat far out at sea, and the storm will not last."]
+			icon: "smallships:oak_cog"
+			id: "26E7E0078F2FD7E4"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "05E9264BF33AAAEA"
+					item: "smallships:oak_cog"
+					type: "item"
+				}
+				{
+					id: "47275B2CD7D958BE"
+					item: {
+						Count: 1b
+						id: "minecraft:fishing_rod"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:lure"
+									lvl: 2s
+								}
+								{
+									id: "minecraft:luck_of_the_sea"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Pulled from a wrecked boat.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Storm-Tested\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 220"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "620F53EA04B0457A"
+					silent: true
+					title: "+220 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "59D8B31F05213435"
+					stage: "fq.village_errands.storm_at_sea"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "4C20BBF0B926543F"
+					stage: "fq.village_errands.storm_at_sea.timed0"
+					title: "Race out to the stricken boat"
+					type: "gamestage"
+				}
+				{
+					id: "19D43CE8AEAE4D15"
+					stage: "fq.village_errands.storm_at_sea.enc1"
+					title: "Bring him back to harbour"
+					type: "gamestage"
+				}
+			]
+			title: "Storm at Sea"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			description: ["A courier's bamboo cart broke down in the jungle with parcels aboard, and the parcels are overdue."]
+			icon: "minecraft:chest"
+			id: "62E060B62C8524DB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "6318E02E7A18045A"
+					item: "sophisticatedbackpacks:backpack"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "421424D7CFFD4359"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "537B22DD5C0609C0"
+					stage: "fq.village_errands.lost_cart"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "6173F405FC90C80E"
+					structure: "mvs:medium_bamboo_cart"
+					title: "Find the broken cart"
+					type: "structure"
+				}
+				{
+					id: "3B2323B8A84149F8"
+					title: "I loaded the parcels from the cart"
+					type: "checkmark"
+				}
+				{
+					id: "1111D1420A61F306"
+					structure: "nova_structures:village_jungle"
+					title: "Carry the parcels to the jungle village"
+					type: "structure"
+				}
+			]
+			title: "The Lost Cart"
+			x: 0.0d
+			y: 6.0d
+		}
+		{
+			description: ["A courier is mapping the wild ruins so that travellers do not wander into them after dark."]
+			icon: "minecraft:map"
+			id: "1E88483206F97F11"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "5AD0A937C30A4E30"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "2ED4C702E6036E6B"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 160"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "363F7C66E87D88C4"
+					silent: true
+					title: "+160 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5A655200FD734560"
+					stage: "fq.village_errands.ruins_on_the_map"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "6A57C30C4EB32979"
+					structure: "nova_structures:desert_ruins"
+					title: "Mark the desert ruin"
+					type: "structure"
+				}
+				{
+					id: "2FB02382012EE24A"
+					structure: "nova_structures:jungle_ruins"
+					title: "Mark the jungle ruin"
+					type: "structure"
+				}
+				{
+					id: "22A9373DFAABC48E"
+					structure: "structory:swamp_ruin"
+					title: "Mark the swamp ruin"
+					type: "structure"
+				}
+			]
+			title: "Ruins on the Map"
+			x: 0.0d
+			y: 7.5d
+		}
+		{
+			description: ["The Couriers have a parcel for a sky village that the Ender Mail carriers will not deliver."]
+			icon: "endermail:package"
+			id: "0A8E45C817D55342"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 6
+					id: "194DCFD6086EB26B"
+					item: "endermail:stamp"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 200"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "42BDE9D87947AC78"
+					silent: true
+					title: "+200 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "02F558BB2F72200B"
+					stage: "fq.village_errands.parcel_for_the_sky"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "62EF0D882AADE52D"
+					item: "endermail:package"
+					title: "Take the parcel for the sky village"
+					type: "item"
+				}
+				{
+					id: "7D00D20ECE804FBC"
+					stage: "fq.village_errands.parcel_for_the_sky.timed1"
+					title: "Reach the sky village in time"
+					type: "gamestage"
+				}
+				{
+					id: "52BD3AC8FD5A2B15"
+					title: "I collected the signature"
+					type: "checkmark"
+				}
+			]
+			title: "A Parcel for the Sky"
+			x: 0.0d
+			y: 9.0d
+		}
+		{
+			dependencies: ["0A8E45C817D55342"]
+			description: ["A sky villager's child fell off the edge and floated down on a parasol, and her parents are frantic."]
+			icon: "beachparty:beach_parasol"
+			id: "676FE9701748555C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "33449E7A1435F150"
+					item: "beachparty:beach_parasol"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "2F71B212A966E203"
+					item: "minecraft:feather"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 180"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "196217AC82B41FCD"
+					silent: true
+					title: "+180 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "622119AEC2751224"
+					stage: "fq.village_errands.sky_village_fall"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "08AAEDB0A9864019"
+					structure: "skyvillages:skyvillage"
+					title: "Reach the sky village"
+					type: "structure"
+				}
+				{
+					id: "44C420F08472301D"
+					stage: "fq.village_errands.sky_village_fall.enc1"
+					title: "Bring the child safely home"
+					type: "gamestage"
+				}
+			]
+			title: "The Long Way Down"
+			x: 1.5d
+			y: 2.25d
+		}
+		{
+			description: ["A courier needs an up-to-date map of the region, and the best one hangs in a cartographer's tower."]
+			icon: "supplementaries:globe"
+			id: "79D7A2DB58550F2B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "73E397268507DAA4"
+					item: "supplementaries:globe"
+					type: "item"
+				}
+				{
+					id: "2CF6E79FF9067626"
+					item: "explorerscompass:explorerscompass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "7E12485C8EE42852"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "23DDF46A6C1D48FE"
+					stage: "fq.village_errands.map_the_region"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "51411180FB2CE0C2"
+					structure: "mvs:cartographer_tower"
+					title: "Climb the cartographer's tower"
+					type: "structure"
+				}
+				{
+					id: "5095FB2B639B3FE2"
+					item: "minecraft:map"
+					only_from_crafting: true
+					title: "Make a map to copy from the master"
+					type: "item"
+				}
+			]
+			title: "Map the Region"
+			x: 0.0d
+			y: 10.5d
+		}
+		{
+			description: ["A courier has a letter for a villager in the next village along the road."]
+			icon: "fotfmail:letter"
+			id: "73AFAE0723EEA3AD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "6455CF3F59CB5D7C"
+					item: "fotfmail:letter"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "350842D3A1862AB9"
+					item: "endermail:stamp"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 70"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "69E587262E5B444B"
+					silent: true
+					title: "+70 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "41158E4E39DEA724"
+					stage: "fq.village_errands.letter_to_a_village"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					id: "44ADE90C0DC250C3"
+					item: "fotfmail:letter"
+					title: "Take the letter along the road"
+					type: "item"
+				}
+				{
+					id: "0F39C288C4E9707B"
+					structure: "#fotf:groups/villages"
+					title: "Reach the next village"
+					type: "structure"
+				}
+				{
+					id: "47C0B8EFEFD4C69E"
+					stage: "fq.village_errands.letter_to_a_village.talk2"
+					title: "Hand it to the librarian"
+					type: "gamestage"
+				}
+			]
+			title: "Letter to Another Village"
+			x: 0.0d
+			y: 12.0d
+		}
+		{
+			description: ["The Couriers want two villages' waystones linked, so that runners can cross between them in a blink."]
+			icon: "waystones:warp_stone"
+			id: "37FE4B10C2BAC817"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "77968DA55EC78572"
+					item: "waystones:warp_stone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 90"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "3A19E36E0547CD6E"
+					silent: true
+					title: "+90 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "482A904CBAD6EE1E"
+					stage: "fq.village_errands.the_wild_waystone"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "0847C69C8EBA32B0"
+					stage: "fq.village_errands.the_wild_waystone.waystones0"
+					title: "Attune this village's waystone and the next one's"
+					type: "gamestage"
+				}
+				{
+					id: "1812484D1433C9E7"
+					item: "waystones:warp_stone"
+					title: "Carry a warp stone between them"
+					type: "item"
+				}
+			]
+			title: "Linking the Villages"
+			x: 0.0d
+			y: 13.5d
+		}
+		{
+			description: ["The Couriers have never reached the village in the sparse jungle and would like to know what they trade."]
+			icon: "minecraft:cocoa_beans"
+			id: "12E2EF72D6B730A0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "620B407C3409F501"
+					item: "minecraft:cocoa_beans"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "471790AFD9161DC2"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 160"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "3B6AD9A526824BED"
+					silent: true
+					title: "+160 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "281C1E3BDCCA0B7F"
+					stage: "fq.village_errands.village_jungle"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "31B6DEC36FC192B4"
+					structure: "nova_structures:village_jungle"
+					title: "Find the village in the sparse jungle"
+					type: "structure"
+				}
+				{
+					id: "0EEDCF94E9DECC99"
+					stage: "fq.village_errands.village_jungle.talk1"
+					title: "Ask what they trade"
+					type: "gamestage"
+				}
+			]
+			title: "The Jungle Village"
+			x: 0.0d
+			y: 15.0d
+		}
+		{
+			description: ["A Sanctuary keeper's horse ran off to a wild horse pen, and she is frightened rather than bad."]
+			icon: "minecraft:saddle"
+			id: "3507498A584392C5"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "3C89CAD2D67F0DDA"
+					item: "minecraft:saddle"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "1E6D82A8FC2876B5"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 120"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "6A925E5952E62BF6"
+					silent: true
+					title: "+120 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "12DD603193F91E8A"
+					stage: "fq.village_errands.runaway_horse"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "723401333CD2B28D"
+					structure: "mvs:horse_pen"
+					title: "Find the wild horse pen"
+					type: "structure"
+				}
+				{
+					id: "7B01403AC34CF515"
+					stage: "fq.village_errands.runaway_horse.tame1"
+					title: "Win the horse's trust and tame her"
+					type: "gamestage"
+				}
+				{
+					id: "11D2B2942DECF8DC"
+					title: "I rode her back and stabled her"
+					type: "checkmark"
+				}
+			]
+			title: "The Runaway Horse"
+			x: 0.0d
+			y: 16.5d
+		}
+		{
+			description: ["Foxes have taken over a hut in the taiga, and a Sanctuary keeper wants a kit raised safely."]
+			icon: "minecraft:sweet_berries"
+			id: "072692B1994F356D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "45A2CC285435E18E"
+					item: "minecraft:sweet_berries"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 120"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "40DC81655E8B4AD9"
+					silent: true
+					title: "+120 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "679C0355F8D8200E"
+					stage: "fq.village_errands.fox_in_the_hut"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "2E4DCD5E4CBA9510"
+					structure: "mvs:fox_hut"
+					title: "Find the foxes' hut"
+					type: "structure"
+				}
+				{
+					id: "06E0A094F149ECBC"
+					stage: "fq.village_errands.fox_in_the_hut.breed1"
+					title: "Breed a pair of foxes"
+					type: "gamestage"
+				}
+				{
+					id: "0097EE8291C877A8"
+					stage: "fq.village_errands.fox_in_the_hut.tame2"
+					title: "Take a kit under your care"
+					type: "gamestage"
+				}
+			]
+			title: "The Fox in the Hut"
+			x: 0.0d
+			y: 18.0d
+		}
+		{
+			description: ["The Sanctuary keepers want a sled team for winter deliveries, and need to see how wolves pull."]
+			icon: "snowyspirit:sled_oak"
+			id: "4F17709F702E780D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "3715796016E90A7C"
+					item: "snowyspirit:sled_oak"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "29207174325F6B37"
+					item: "minecraft:bone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 150"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "2BBF398FF935BF71"
+					silent: true
+					title: "+150 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "542A0B78B2624D3B"
+					stage: "fq.village_errands.sled_dogs"
+					title: "Accepted"
+					type: "gamestage"
+				}
+				{
+					id: "16DE8BC57895EDEE"
+					structure: "mvs:snowy_dog_hut"
+					title: "Find the snowy dog hut"
+					type: "structure"
+				}
+				{
+					id: "1C54F0DF90744E6F"
+					stage: "fq.village_errands.sled_dogs.tame1"
+					title: "Tame two wolves for the team"
+					type: "gamestage"
+				}
+				{
+					advancement: "snowyspirit:adventure/sled_with_wolf"
+					criterion: ""
+					id: "22552A03C9254BD1"
+					title: "Ride a sled pulled by a wolf"
+					type: "advancement"
+				}
+			]
+			title: "Sled Dogs"
+			x: 0.0d
+			y: 19.5d
+		}
+	]
+	subtitle: ["Small jobs for the people around you"]
+	title: "Village Errands"
+}

@@ -1,0 +1,1632 @@
+{
+  "title": "Village Errands",
+  "subtitle": "Small jobs for the people around you",
+  "icon": "minecraft:emerald",
+  "group": "side",
+  "order": 2,
+  "quests": [
+    {
+      "id": "water_from_three_wells",
+      "title": "Water from Three Wells",
+      "text": [
+        "A Herbalist swears every well's water makes a different tea, and wants proof from three wells."
+      ],
+      "tasks": [
+        {
+          "structure": "#wells",
+          "title": "Find a well to draw water from"
+        },
+        {
+          "item": "minecraft:potion",
+          "count": 3,
+          "consume": true,
+          "title": "Bring her three bottles of well water"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "herbalbrews:green_tea_leaf",
+          "count": 8
+        },
+        {
+          "skill": "forage",
+          "xp": 60
+        }
+      ],
+      "icon": "minecraft:potion",
+      "giver": {
+        "type": "org",
+        "org": "herbalists",
+        "lines": [
+          "Every well has its own water, and every water brews its own tea. Or so I swear.",
+          "Fill three bottles from three wells for me, and I'll prove it."
+        ],
+        "accept": "I'll do it",
+        "pool": "herbalists_errands"
+      }
+    },
+    {
+      "id": "make_a_wish",
+      "title": "Make a Wish",
+      "text": [
+        "A young Herbalist lost her lucky coin in a wishing well and cannot bear to be without it."
+      ],
+      "tasks": [
+        {
+          "structure": "dungeons_arise:wishing_well",
+          "title": "Find the wishing well"
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "title": "Fish her lucky coin from the bottom"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:rabbit_foot"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 3
+        },
+        {
+          "skill": "forage",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:gold_nugget",
+      "giver": {
+        "type": "org",
+        "org": "herbalists",
+        "lines": [
+          "I dropped my lucky coin into a wishing well. I only wanted to make a wish!",
+          "It's the one with a roof and a statue, past the old ruins. Could you fish it out?"
+        ],
+        "accept": "I'll do it",
+        "pool": "herbalists_errands"
+      }
+    },
+    {
+      "id": "honey_from_the_dome",
+      "title": "Honey from the Dome",
+      "text": [
+        "A Herbalist is out of honey, and the bee dome in the birch woods has plenty."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:bee_dome",
+          "title": "Find the bee dome in the birch woods"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:campfire": 1
+            },
+            "radius": 8
+          },
+          "title": "Light a campfire to calm the bees"
+        },
+        {
+          "item": "minecraft:honey_bottle",
+          "count": 2,
+          "title": "Collect honey for her tea"
+        },
+        {
+          "item": "minecraft:honeycomb",
+          "count": 4,
+          "title": "Collect combs for her salves"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:beehive"
+        },
+        {
+          "skill": "forage",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:honey_bottle",
+      "giver": {
+        "type": "org",
+        "org": "herbalists",
+        "lines": [
+          "Honey's the best thing for a sore throat, and mine has run out.",
+          "The bees in the birch woods keep a great glass dome of hives. Calm them with a campfire first. They sting less."
+        ],
+        "accept": "I'll do it",
+        "pool": "herbalists_errands"
+      }
+    },
+    {
+      "id": "sand_in_the_bucket",
+      "title": "Desert Water",
+      "text": [
+        "The Growers' co-op wants to know how desert wells never run dry, and what grows beside them."
+      ],
+      "tasks": [
+        {
+          "structure": "mss:desert_well",
+          "title": "Find a desert well"
+        },
+        {
+          "item": "minecraft:water_bucket",
+          "consume": true,
+          "title": "Draw a bucket of its water"
+        },
+        {
+          "item": "minecraft:cactus",
+          "title": "Cut a piece of the cactus beside it"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone_meal",
+          "count": 16
+        },
+        {
+          "skill": "farm",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:cactus",
+      "giver": {
+        "type": "org",
+        "org": "growers",
+        "lines": [
+          "Folk say the desert wells never run dry. I'd like to know how.",
+          "Bring me a bucket from one, and a cutting of the cactus that grows beside it."
+        ],
+        "accept": "I'll do it",
+        "pool": "growers_errands"
+      }
+    },
+    {
+      "id": "the_desert_pump",
+      "title": "The Pump Still Works",
+      "text": [
+        "A desert farmer needs water for a new field and the only working pump is out in the dunes."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:desert_pump",
+          "title": "Find the working pump in the dunes"
+        },
+        {
+          "item": "minecraft:water_bucket",
+          "consume": true,
+          "title": "Fill a bucket for her thirsty field"
+        },
+        {
+          "structure": "#villages",
+          "title": "Carry it to the desert village"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:farmland": 4
+            },
+            "radius": 10
+          },
+          "title": "Water her new field"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farm_and_charm:tomato_seeds",
+          "count": 8
+        },
+        {
+          "item": "farm_and_charm:lettuce_seeds",
+          "count": 8
+        },
+        {
+          "skill": "farm",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:bucket",
+      "giver": {
+        "type": "org",
+        "org": "growers",
+        "lines": [
+          "My field's dry as old bread and there's no river for miles.",
+          "I've heard there's a pump out in the dunes that still works. Fill a bucket there and bring it back to water my new field."
+        ],
+        "accept": "I'll do it",
+        "pool": "growers_errands"
+      }
+    },
+    {
+      "id": "stall_of_your_own",
+      "title": "A Stall of Your Own",
+      "after": [
+        "the_travelling_market"
+      ],
+      "text": [
+        "The Growers' co-op wants a stall at the next market, built like the roadside ones, with produce on it."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:red_stall",
+          "title": "Look over a roadside stall for ideas"
+        },
+        {
+          "build": {
+            "blocks": {
+              "another_furniture:oak_table": 1,
+              "another_furniture:red_awning": 1,
+              "farmersdelight:wooden_basket": 2
+            },
+            "radius": 10
+          },
+          "title": "Set up a market stall in the village"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bell"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 4
+        },
+        {
+          "skill": "farm",
+          "xp": 150
+        }
+      ],
+      "icon": "another_furniture:red_awning",
+      "giver": {
+        "type": "org",
+        "org": "growers",
+        "lines": [
+          "The Co-op wants a stall at the next market, and the old trestle table won't do.",
+          "You've seen the roadside stalls. Copy one in the village and put some produce on display."
+        ],
+        "accept": "I'll do it",
+        "pool": "growers_errands"
+      }
+    },
+    {
+      "id": "seeds_for_sky_farms",
+      "title": "Seeds for the Sky Farms",
+      "after": [
+        "parcel_for_the_sky"
+      ],
+      "text": [
+        "The sky villagers cannot get seeds up to their floating fields, so they are going hungry."
+      ],
+      "tasks": [
+        {
+          "structure": "skyvillages:skyvillage",
+          "title": "Climb to the sky village"
+        },
+        {
+          "item": "minecraft:wheat_seeds",
+          "count": 8,
+          "consume": true,
+          "title": "Give them wheat seeds"
+        },
+        {
+          "item": "minecraft:beetroot_seeds",
+          "count": 8,
+          "consume": true,
+          "title": "Give them beetroot seeds"
+        },
+        {
+          "item": "minecraft:melon_seeds",
+          "count": 4,
+          "consume": true,
+          "title": "Give them melon seeds"
+        },
+        {
+          "item": "minecraft:pumpkin_seeds",
+          "count": 4,
+          "consume": true,
+          "title": "Give them pumpkin seeds"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:farmland": 6
+            },
+            "radius": 10
+          },
+          "title": "Help plant their island fields"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 5
+        },
+        {
+          "skill": "farm",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:wheat_seeds",
+      "giver": {
+        "type": "org",
+        "org": "growers",
+        "lines": [
+          "The sky villagers can't get seeds up to their islands. They'd be grateful for any.",
+          "Four sorts, please. Then help them plant."
+        ],
+        "accept": "I'll do it",
+        "pool": "growers_errands"
+      }
+    },
+    {
+      "id": "flour_run",
+      "title": "The Flour Run",
+      "text": [
+        "The Growers' co-op's mill has broken, and the baker needs flour before the next market day."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:wheat",
+          "count": 16,
+          "consume": true,
+          "title": "Gather wheat to grind"
+        },
+        {
+          "structure": "mvs:windmill",
+          "title": "Find the windmill that still turns"
+        },
+        {
+          "item": "farm_and_charm:flour",
+          "count": 8,
+          "title": "Grind the wheat into flour for the baker"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farm_and_charm:flour",
+          "count": 16
+        },
+        {
+          "item": "bakery:bread",
+          "count": 8
+        },
+        {
+          "skill": "farm",
+          "xp": 130
+        }
+      ],
+      "icon": "farm_and_charm:flour",
+      "giver": {
+        "type": "org",
+        "org": "growers",
+        "lines": [
+          "The co-op's mill has broken, and the baker is down to her last scoop of flour.",
+          "There's a windmill out in the wild that still turns. Take it some wheat."
+        ],
+        "accept": "I'll do it",
+        "pool": "growers_errands"
+      }
+    },
+    {
+      "id": "restore_the_fountain",
+      "title": "Restore the Fountain",
+      "text": [
+        "A Crafters' guild mason wants the village square to have a stone fountain like the old ones."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:stone_fountain",
+          "title": "Study the old fountain in the wild"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:stone_bricks": 16,
+              "minecraft:stone_brick_stairs": 4,
+              "minecraft:chiseled_stone_bricks": 1
+            },
+            "radius": 10
+          },
+          "title": "Build a fountain for the village square"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:stone_bricks",
+          "count": 32
+        },
+        {
+          "item": "minecraft:chiseled_stone_bricks",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 130
+        }
+      ],
+      "icon": "minecraft:chiseled_stone_bricks",
+      "giver": {
+        "type": "org",
+        "org": "crafters",
+        "lines": [
+          "Our village square wants a proper stone fountain, and nobody remembers how the old ones were cut.",
+          "There's one standing out in the wild. Look it over, then build one at home."
+        ],
+        "accept": "I'll do it",
+        "pool": "crafters_errands"
+      }
+    },
+    {
+      "id": "salvage_the_ruins",
+      "title": "Salvage",
+      "text": [
+        "The Crafters' guild needs old stone with a history to it for the chapel repairs."
+      ],
+      "tasks": [
+        {
+          "structure": "structory:ruin_grassy",
+          "title": "Salvage stone from a grassy ruin"
+        },
+        {
+          "structure": "mvs:small_ruin",
+          "title": "Salvage stone from a second ruin"
+        },
+        {
+          "item": "minecraft:mossy_stone_bricks",
+          "count": 8,
+          "title": "Bring mossy stone for the chapel"
+        },
+        {
+          "item": "minecraft:cracked_stone_bricks",
+          "count": 8,
+          "title": "Bring weathered stone for the chapel"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:stone_bricks",
+          "count": 32
+        },
+        {
+          "skill": "craft",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:mossy_stone_bricks",
+      "giver": {
+        "type": "org",
+        "org": "crafters",
+        "lines": [
+          "Old stone has a character new stone lacks, and the guild wants some for the chapel repairs.",
+          "Bring me blocks from two different ruins near here. Take what's loose, not the walls."
+        ],
+        "accept": "I'll do it",
+        "pool": "crafters_errands"
+      }
+    },
+    {
+      "id": "the_travelling_market",
+      "title": "The Travelling Market",
+      "text": [
+        "A tavern keeper heard that the roadside stalls sell spices unavailable in town and wants a taste."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:red_stall",
+          "title": "Find a roadside stall"
+        },
+        {
+          "structure": "mvs:blue_stall",
+          "title": "Find a second stall"
+        },
+        {
+          "structure": "mvs:cart",
+          "title": "Find a trader's cart"
+        },
+        {
+          "item": "farmersdelight:onion",
+          "count": 4,
+          "title": "Collect what the traders left for her kitchen"
+        },
+        {
+          "item": "farmersdelight:tomato",
+          "count": 4,
+          "title": "Collect tomatoes for her sauces"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farmersdelight:rice",
+          "count": 16
+        },
+        {
+          "item": "farmersdelight:cabbage_seeds",
+          "count": 8
+        },
+        {
+          "skill": "cook",
+          "xp": 120
+        }
+      ],
+      "icon": "farmersdelight:onion",
+      "giver": {
+        "type": "org",
+        "org": "tavern",
+        "lines": [
+          "Travellers swear the roadside stalls sell spices you can't get in town.",
+          "Find two stalls and a cart, and bring me what their owners left behind."
+        ],
+        "accept": "I'll do it",
+        "pool": "tavern_errands"
+      }
+    },
+    {
+      "id": "cook_over_open_fire",
+      "title": "Cook over an Open Fire",
+      "text": [
+        "A tavern keeper insists food tastes better cooked outdoors, and wants a meal from a wild fire camp."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:fire_camp",
+          "title": "Find the wild fire camp"
+        },
+        {
+          "item": "minecraft:cooked_beef",
+          "count": 2,
+          "consume": true,
+          "title": "Cook a meal over the camp fire"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "camping:grill"
+        },
+        {
+          "skill": "cook",
+          "xp": 90
+        }
+      ],
+      "icon": "camping:grill",
+      "giver": {
+        "type": "org",
+        "org": "tavern",
+        "lines": [
+          "Food tastes better outdoors, and I'll hear no argument.",
+          "There's a fire camp out in the wild. Cook me a proper meal there and bring it back while it's still warm."
+        ],
+        "accept": "I'll do it",
+        "pool": "tavern_errands"
+      }
+    },
+    {
+      "id": "the_prankster",
+      "title": "Something Smells Funny",
+      "text": [
+        "The village butcher cannot sit without a rude noise, and the whole village laughs. Somebody is responsible."
+      ],
+      "tasks": [
+        {
+          "structure": "#villages",
+          "title": "Follow the giggles through the village"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "The Prankster",
+            "then": "talk",
+            "lines": [
+              "Hee hee hee! You can't catch me!"
+            ]
+          },
+          "title": "Spot the giggling villager"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "The Prankster",
+            "then": "talk",
+            "lines": [
+              "Oh, you found me again! Best of three!"
+            ]
+          },
+          "title": "Catch him in a game of hide and seek"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "The Prankster",
+            "then": "talk",
+            "lines": [
+              "Fine, fine! You win! Take the cushion, and don't tell the butcher."
+            ]
+          },
+          "title": "Make the prankster give up the cushion"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:whoopee_cushion"
+        },
+        {
+          "item": "minecraft:cake"
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "artifacts:whoopee_cushion",
+      "signature": "artifacts:whoopee_cushion",
+      "giver": {
+        "type": "org",
+        "org": "tavern",
+        "lines": [
+          "Every time I sit down, there's a rude noise, and the whole village laughs.",
+          "I know it's one of the villagers. Find out which, would you? Quietly."
+        ],
+        "accept": "I'll do it",
+        "pool": "tavern_errands"
+      }
+    },
+    {
+      "id": "scout_the_castle",
+      "title": "Scout the Castle",
+      "text": [
+        "The Village Watch fear raiders are camped in the old castle ruins and need someone to look without being seen."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 420,
+            "goal": {
+              "structure": "mvs:castle_ruins",
+              "label": "the castle ruins"
+            },
+            "lines": [
+              "Stay low. If anything hurts you, they've seen you."
+            ],
+            "start": "Begin scouting",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Creep up to the castle unseen"
+        },
+        {
+          "checkmark": "I counted their fires and left unseen"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "skill": "defense",
+          "xp": 80
+        }
+      ],
+      "icon": "minecraft:spyglass",
+      "giver": {
+        "type": "org",
+        "org": "watch",
+        "lines": [
+          "We think raiders are camping in the old castle ruins. We can't see from here.",
+          "Go and count their fires, and don't get spotted. If you're hurt, they know you're there."
+        ],
+        "accept": "I'll do it",
+        "pool": "watch_errands"
+      }
+    },
+    {
+      "id": "the_abandoned_camp",
+      "title": "Who Left the Camp?",
+      "text": [
+        "The Village Watch found an abandoned camp with the fire still warm, and fear for the campers."
+      ],
+      "tasks": [
+        {
+          "structure": "structory:abandoned_camp",
+          "title": "Search the abandoned camp for clues"
+        },
+        {
+          "checkmark": "I found tracks leading away from the camp"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Lost Camper",
+            "then": "talk",
+            "lines": [
+              "Oh! You found us! We ran when we heard wolves, and we couldn't find the way back."
+            ]
+          },
+          "title": "Find the missing campers"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:campfire"
+        },
+        {
+          "item": "minecraft:cooked_beef",
+          "count": 8
+        },
+        {
+          "skill": "defense",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:campfire",
+      "giver": {
+        "type": "org",
+        "org": "watch",
+        "lines": [
+          "We found a camp, fire still warm and nobody in sight.",
+          "Search it for clues, and find out where the campers went. They may need help."
+        ],
+        "accept": "I'll do it",
+        "pool": "watch_errands"
+      }
+    },
+    {
+      "id": "fortified_village",
+      "title": "Behind the Walls",
+      "text": [
+        "The Village Watch's captain wants to learn from a fortified village, and the best lesson is to help hold its wall."
+      ],
+      "tasks": [
+        {
+          "structure": "ctov:medium/village_plains_fortified",
+          "title": "Travel to a fortified village"
+        },
+        {
+          "talk": "org",
+          "org": "watch",
+          "lines": [
+            "Visitor from the watch? Welcome. Mind the gate, it sticks.",
+            "We keep two on the wall at all times, and one on the roof.",
+            "Raiders always come at dusk. You can stand with us tonight."
+          ],
+          "title": "Talk to the wall's guards"
+        },
+        {
+          "timed": {
+            "seconds": 300,
+            "goal": {
+              "hold": {
+                "radius": 20
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:pillager",
+                "count": 2,
+                "every": 40
+              },
+              {
+                "entity": "minecraft:zombie",
+                "count": 3,
+                "every": 30
+              }
+            ],
+            "lines": [
+              "Night's coming. Man the wall!"
+            ],
+            "start": "Man the wall"
+          },
+          "title": "Hold the wall through the night"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanshields:iron_basic_shield"
+        },
+        {
+          "skill": "defense",
+          "xp": 220
+        }
+      ],
+      "icon": "spartanshields:iron_tower_shield",
+      "giver": {
+        "type": "org",
+        "org": "watch",
+        "lines": [
+          "Our captain would like to learn how a walled village holds out.",
+          "Visit one, talk to its guards and help hold the wall for a night."
+        ],
+        "accept": "I'll do it",
+        "pool": "watch_errands"
+      }
+    },
+    {
+      "id": "a_name_on_the_gallows",
+      "title": "Justice",
+      "text": [
+        "The Village Watch want the bandit who robbed a merchant brought to justice before he vanishes."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:gallows",
+          "title": "Track the bandit to the gallows hill"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:pillager",
+            "name": "The Bandit",
+            "health": 40,
+            "glow": true,
+            "then": "kill",
+            "lines": [
+              "You'll never take me alive!"
+            ]
+          },
+          "title": "Bring the bandit to justice"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 6
+        },
+        {
+          "skill": "defense",
+          "xp": 140
+        }
+      ],
+      "icon": "minecraft:iron_sword",
+      "giver": {
+        "type": "org",
+        "org": "watch",
+        "lines": [
+          "A merchant was robbed on the road, and the bandit's hiding out near the old gallows hill.",
+          "Bring him to justice. I'd rather he didn't get away."
+        ],
+        "accept": "I'll do it",
+        "pool": "watch_errands"
+      }
+    },
+    {
+      "id": "statue_rubbings",
+      "title": "Statue Rubbings",
+      "text": [
+        "An Arcane Order librarian wants copies of the carvings on fallen statues, which may be some of the oldest writing around."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:paper",
+          "count": 4,
+          "title": "Bring paper to take rubbings"
+        },
+        {
+          "item": "minecraft:charcoal",
+          "count": 4,
+          "title": "Bring charcoal to take rubbings"
+        },
+        {
+          "structure": "mvs:statue_ruins",
+          "title": "Rub the carvings on a fallen statue"
+        },
+        {
+          "structure": "mvs:log_ruin",
+          "title": "Rub the carvings on a log ruin"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:book",
+          "count": 4
+        },
+        {
+          "skill": "magic",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:paper",
+      "giver": {
+        "type": "org",
+        "org": "arcane",
+        "lines": [
+          "The carvings on the fallen statues out in the ruins are some of the oldest writing around.",
+          "Make me rubbings of them with paper and charcoal. I'd go, but my knees."
+        ],
+        "accept": "I'll do it",
+        "pool": "arcane_errands"
+      }
+    },
+    {
+      "id": "outcast_fisherman",
+      "title": "The Outcast Fisherman",
+      "text": [
+        "The Anglers' Society talk of a fisherman who left his village for a boat, and keeps the best bait."
+      ],
+      "tasks": [
+        {
+          "structure": "structory:boat",
+          "title": "Find the outcast's boat at sea"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 2,
+          "consume": true,
+          "title": "Pay for his best bait"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Outcast Fisherman",
+            "then": "talk",
+            "lines": [
+              "Visitors? Out here? Well, sit down, sit down.",
+              "Why did I leave? The village talked too much. The sea doesn't.",
+              "Take the bait. Worms from my own bed. And take the boat when I'm done with it."
+            ]
+          },
+          "title": "Trade with the outcast"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:worm",
+          "count": 16
+        },
+        {
+          "skill": "fish",
+          "xp": 100
+        }
+      ],
+      "icon": "aquaculture:worm",
+      "giver": {
+        "type": "org",
+        "org": "anglers",
+        "lines": [
+          "There's a fisherman who left his village to live on a boat. They say he has the best bait on the water.",
+          "Find his boat and trade for some. He'll like emeralds, I expect."
+        ],
+        "accept": "I'll do it",
+        "pool": "anglers_errands"
+      }
+    },
+    {
+      "id": "supplies_for_the_boat",
+      "title": "Supplies for the Boat",
+      "after": [
+        "outcast_fisherman"
+      ],
+      "text": [
+        "The outcast fisherman is out of bread and rope, and cannot leave his boat to buy more."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:bread",
+          "count": 16,
+          "consume": true,
+          "title": "Gather bread for the fisherman"
+        },
+        {
+          "item": "supplementaries:rope",
+          "count": 8,
+          "consume": true,
+          "title": "Gather rope for his lines"
+        },
+        {
+          "structure": "structory:boat",
+          "title": "Sail out to his boat"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Outcast Fisherman",
+            "then": "talk",
+            "lines": [
+              "Bread! And rope! You're a lifesaver.",
+              "The big fish bite at dusk in the deep water off the headland. Don't tell Halloway."
+            ]
+          },
+          "title": "Hand over the supplies"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:gold_hook"
+        },
+        {
+          "skill": "fish",
+          "xp": 140
+        }
+      ],
+      "icon": "minecraft:bread",
+      "giver": {
+        "type": "org",
+        "org": "anglers",
+        "lines": [
+          "That fisherman on his boat is out of bread and rope.",
+          "Take him some. If he's pleased, he'll tell you where the big fish bite."
+        ],
+        "accept": "I'll do it",
+        "pool": "anglers_errands"
+      }
+    },
+    {
+      "id": "storm_at_sea",
+      "title": "Storm at Sea",
+      "after": [
+        "supplies_for_the_boat"
+      ],
+      "text": [
+        "A thunderstorm has caught a fisherman's boat far out at sea, and the storm will not last."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 420,
+            "goal": {
+              "structure": "structory:boat",
+              "label": "the stricken boat",
+              "away": 100
+            },
+            "lines": [
+              "The storm is building. Get to the boat!"
+            ],
+            "start": "Race the storm",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Race out to the stricken boat"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Stranded Fisherman",
+            "to": {
+              "structure": "#villages",
+              "label": "the harbour"
+            },
+            "then": "escort",
+            "lines": [
+              "Thank the tides! The mast went an hour ago. Take me home!"
+            ]
+          },
+          "title": "Bring him back to harbour"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "smallships:oak_cog"
+        },
+        {
+          "item": "minecraft:fishing_rod",
+          "name": "Storm-Tested",
+          "lore": [
+            "Pulled from a wrecked boat."
+          ],
+          "enchant": {
+            "minecraft:lure": 2,
+            "minecraft:luck_of_the_sea": 1
+          }
+        },
+        {
+          "skill": "fish",
+          "xp": 220
+        }
+      ],
+      "icon": "smallships:oak_cog",
+      "giver": {
+        "type": "org",
+        "org": "anglers",
+        "lines": [
+          "A thunderstorm has caught a fisherman's boat far out at sea!",
+          "Get to him before it passes, and bring him back to the harbour alive."
+        ],
+        "accept": "I'll do it",
+        "pool": "anglers_errands"
+      }
+    },
+    {
+      "id": "lost_cart",
+      "title": "The Lost Cart",
+      "text": [
+        "A courier's bamboo cart broke down in the jungle with parcels aboard, and the parcels are overdue."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:medium_bamboo_cart",
+          "title": "Find the broken cart"
+        },
+        {
+          "checkmark": "I loaded the parcels from the cart"
+        },
+        {
+          "structure": "nova_structures:village_jungle",
+          "title": "Carry the parcels to the jungle village"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "sophisticatedbackpacks:backpack"
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:chest",
+      "giver": {
+        "type": "org",
+        "org": "couriers",
+        "lines": [
+          "A courier's cart broke down in the jungle with parcels aboard.",
+          "Find it and carry what's on it to the jungle village. Those parcels are overdue."
+        ],
+        "accept": "I'll do it",
+        "pool": "couriers_errands"
+      }
+    },
+    {
+      "id": "ruins_on_the_map",
+      "title": "Ruins on the Map",
+      "text": [
+        "A courier is mapping the wild ruins so that travellers do not wander into them after dark."
+      ],
+      "tasks": [
+        {
+          "structure": "nova_structures:desert_ruins",
+          "title": "Mark the desert ruin"
+        },
+        {
+          "structure": "nova_structures:jungle_ruins",
+          "title": "Mark the jungle ruin"
+        },
+        {
+          "structure": "structory:swamp_ruin",
+          "title": "Mark the swamp ruin"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:map"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 160
+        }
+      ],
+      "icon": "minecraft:map",
+      "giver": {
+        "type": "org",
+        "org": "couriers",
+        "lines": [
+          "I'm mapping the wild ruins so travellers don't wander into them by night.",
+          "A desert ruin, a jungle ruin and a swamp ruin. Visit each and mark them."
+        ],
+        "accept": "I'll do it",
+        "pool": "couriers_errands"
+      }
+    },
+    {
+      "id": "parcel_for_the_sky",
+      "title": "A Parcel for the Sky",
+      "text": [
+        "The Couriers have a parcel for a sky village that the Ender Mail carriers will not deliver."
+      ],
+      "tasks": [
+        {
+          "item": "endermail:package",
+          "title": "Take the parcel for the sky village"
+        },
+        {
+          "timed": {
+            "seconds": 1200,
+            "goal": {
+              "structure": "skyvillages:skyvillage",
+              "label": "the sky village"
+            },
+            "lines": [
+              "Twenty minutes to reach the sky village. No teleporting."
+            ],
+            "start": "Set off",
+            "no": [
+              "teleport",
+              "elytra"
+            ]
+          },
+          "title": "Reach the sky village in time"
+        },
+        {
+          "checkmark": "I collected the signature"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "endermail:stamp",
+          "count": 6
+        },
+        {
+          "skill": "agility",
+          "xp": 200
+        }
+      ],
+      "icon": "endermail:package",
+      "giver": {
+        "type": "org",
+        "org": "couriers",
+        "lines": [
+          "I've a parcel for a sky village, and the carriers won't fly that high.",
+          "Get it up there within the day and collect the signature."
+        ],
+        "accept": "I'll do it",
+        "pool": "couriers_errands"
+      }
+    },
+    {
+      "id": "sky_village_fall",
+      "title": "The Long Way Down",
+      "after": [
+        "parcel_for_the_sky"
+      ],
+      "text": [
+        "A sky villager's child fell off the edge and floated down on a parasol, and her parents are frantic."
+      ],
+      "tasks": [
+        {
+          "structure": "skyvillages:skyvillage",
+          "title": "Reach the sky village"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Fallen Sky Child",
+            "to": {
+              "structure": "skyvillages:skyvillage",
+              "label": "the sky village"
+            },
+            "then": "escort",
+            "lines": [
+              "I fell off! It was so high! I want to go home!"
+            ]
+          },
+          "title": "Bring the child safely home"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "beachparty:beach_parasol"
+        },
+        {
+          "item": "minecraft:feather",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 180
+        }
+      ],
+      "icon": "beachparty:beach_parasol",
+      "giver": {
+        "type": "org",
+        "org": "couriers",
+        "lines": [
+          "A sky villager's child fell off the edge and floated down on a parasol!",
+          "She'll be on the ground somewhere near their island. Get her back up there."
+        ],
+        "accept": "I'll do it",
+        "pool": "couriers_errands"
+      }
+    },
+    {
+      "id": "map_the_region",
+      "title": "Map the Region",
+      "text": [
+        "A courier needs an up-to-date map of the region, and the best one hangs in a cartographer's tower."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:cartographer_tower",
+          "title": "Climb the cartographer's tower"
+        },
+        {
+          "item": "minecraft:map",
+          "crafted": true,
+          "title": "Make a map to copy from the master"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:globe"
+        },
+        {
+          "item": "explorerscompass:explorerscompass"
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "supplementaries:globe",
+      "giver": {
+        "type": "org",
+        "org": "couriers",
+        "lines": [
+          "The cartographer's tower in the wilds keeps a master map of this whole region.",
+          "Climb it, copy what you can and fill in the land around our village."
+        ],
+        "accept": "I'll do it",
+        "pool": "couriers_errands"
+      }
+    },
+    {
+      "id": "letter_to_a_village",
+      "title": "Letter to Another Village",
+      "text": [
+        "A courier has a letter for a villager in the next village along the road."
+      ],
+      "tasks": [
+        {
+          "item": "fotfmail:letter",
+          "consume": true,
+          "title": "Take the letter along the road"
+        },
+        {
+          "structure": "#villages",
+          "title": "Reach the next village"
+        },
+        {
+          "talk": "villager",
+          "profession": "minecraft:librarian",
+          "lines": [
+            "A letter? For me? Oh, how lovely.",
+            "I shall write a reply tonight. Tell the courier it's coming."
+          ],
+          "title": "Hand it to the librarian"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "fotfmail:letter",
+          "count": 4
+        },
+        {
+          "item": "endermail:stamp",
+          "count": 2
+        },
+        {
+          "skill": "agility",
+          "xp": 70
+        }
+      ],
+      "icon": "fotfmail:letter",
+      "giver": {
+        "type": "org",
+        "org": "couriers",
+        "lines": [
+          "I've a letter for a villager in the next village along the road.",
+          "Deliver it by hand or by mail. Either way, it needs to get there."
+        ],
+        "accept": "I'll do it",
+        "pool": "couriers_errands"
+      }
+    },
+    {
+      "id": "the_wild_waystone",
+      "title": "Linking the Villages",
+      "text": [
+        "The Couriers want two villages' waystones linked, so that runners can cross between them in a blink."
+      ],
+      "tasks": [
+        {
+          "waystones": 2,
+          "title": "Attune this village's waystone and the next one's"
+        },
+        {
+          "item": "waystones:warp_stone",
+          "title": "Carry a warp stone between them"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "waystones:warp_stone"
+        },
+        {
+          "skill": "agility",
+          "xp": 90
+        }
+      ],
+      "icon": "waystones:warp_stone",
+      "giver": {
+        "type": "org",
+        "org": "couriers",
+        "lines": [
+          "It takes our runners half a day to reach the next village on foot.",
+          "If both villages' waystones were linked, they could cross in a blink."
+        ],
+        "accept": "I'll do it",
+        "pool": "couriers_errands"
+      }
+    },
+    {
+      "id": "village_jungle",
+      "title": "The Jungle Village",
+      "text": [
+        "The Couriers have never reached the village in the sparse jungle and would like to know what they trade."
+      ],
+      "tasks": [
+        {
+          "structure": "nova_structures:village_jungle",
+          "title": "Find the village in the sparse jungle"
+        },
+        {
+          "talk": "villager",
+          "profession": "any",
+          "lines": [
+            "A visitor! We get so few. Welcome.",
+            "We trade cocoa and bamboo, mostly. Fruit in season.",
+            "Tell your couriers the road is open."
+          ],
+          "title": "Ask what they trade"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cocoa_beans",
+          "count": 16
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 160
+        }
+      ],
+      "icon": "minecraft:cocoa_beans",
+      "giver": {
+        "type": "org",
+        "org": "couriers",
+        "lines": [
+          "We've never reached the village in the sparse jungle. Nobody has a map.",
+          "Find it, introduce yourself and bring back a list of what they trade."
+        ],
+        "accept": "I'll do it",
+        "pool": "couriers_errands"
+      }
+    },
+    {
+      "id": "runaway_horse",
+      "title": "The Runaway Horse",
+      "text": [
+        "A Sanctuary keeper's horse ran off to a wild horse pen, and she is frightened rather than bad."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:horse_pen",
+          "title": "Find the wild horse pen"
+        },
+        {
+          "tame": "minecraft:horse",
+          "title": "Win the horse's trust and tame her"
+        },
+        {
+          "checkmark": "I rode her back and stabled her"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:saddle"
+        },
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 6
+        },
+        {
+          "skill": "taming",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:saddle",
+      "giver": {
+        "type": "org",
+        "org": "sanctuary",
+        "lines": [
+          "My horse bolted and ran off to the wild horse pen. She's frightened, not bad.",
+          "Find her, calm her and bring her home."
+        ],
+        "accept": "I'll do it",
+        "pool": "sanctuary_errands"
+      }
+    },
+    {
+      "id": "fox_in_the_hut",
+      "title": "The Fox in the Hut",
+      "text": [
+        "Foxes have taken over a hut in the taiga, and a Sanctuary keeper wants a kit raised safely."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:fox_hut",
+          "title": "Find the foxes' hut"
+        },
+        {
+          "breed": "minecraft:fox",
+          "title": "Breed a pair of foxes"
+        },
+        {
+          "tame": "minecraft:fox",
+          "title": "Take a kit under your care"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:sweet_berries",
+          "count": 16
+        },
+        {
+          "skill": "taming",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:sweet_berries",
+      "giver": {
+        "type": "org",
+        "org": "sanctuary",
+        "lines": [
+          "Foxes have taken over a hut in the taiga, and there are kits.",
+          "Breed a pair with sweet berries, and bring a kit back to the Sanctuary."
+        ],
+        "accept": "I'll do it",
+        "pool": "sanctuary_errands"
+      }
+    },
+    {
+      "id": "sled_dogs",
+      "title": "Sled Dogs",
+      "text": [
+        "The Sanctuary keepers want a sled team for winter deliveries, and need to see how wolves pull."
+      ],
+      "tasks": [
+        {
+          "structure": "mvs:snowy_dog_hut",
+          "title": "Find the snowy dog hut"
+        },
+        {
+          "tame": "minecraft:wolf",
+          "count": 2,
+          "title": "Tame two wolves for the team"
+        },
+        {
+          "advancement": "snowyspirit:adventure/sled_with_wolf",
+          "title": "Ride a sled pulled by a wolf"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "snowyspirit:sled_oak"
+        },
+        {
+          "item": "minecraft:bone",
+          "count": 8
+        },
+        {
+          "skill": "taming",
+          "xp": 150
+        }
+      ],
+      "icon": "snowyspirit:sled_oak",
+      "giver": {
+        "type": "org",
+        "org": "sanctuary",
+        "lines": [
+          "The Sanctuary wants a sled team for winter deliveries.",
+          "Tame wolves near the snowy dog hut, then see how a team pulls a sled."
+        ],
+        "accept": "I'll do it",
+        "pool": "sanctuary_errands"
+      }
+    }
+  ]
+}
