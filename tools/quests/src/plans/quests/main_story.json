@@ -213,8 +213,7 @@
         "explore"
       ],
       "after": [
-        "act1_temple",
-        "act1_mineshaft"
+        "act1_wrought_practice"
       ],
       "summary": "Follow the scrape marks to a Wrought Chamber and look at its sealed door without stepping in. The armour inside is breathing.",
       "mods": [
@@ -234,9 +233,10 @@
         "timed"
       ],
       "after": [
-        "act1_wrought_scout"
+        "act1_temple",
+        "act1_mineshaft"
       ],
-      "summary": "The Village watch's captain sets up a MmmMmmMmmMmm target dummy: land ten hits from behind within a minute while dodging her swings, the way you'll fight the Wroughtnaut.",
+      "summary": "Rumours of armour that breathes in a sealed chamber: the Village watch's captain sets up a MmmMmmMmmMmm target dummy first. Land ten hits from behind within a minute while dodging her swings, the way you'll have to fight it.",
       "mods": [
         "dummmmmmy",
         "guardvillagers"
@@ -254,7 +254,7 @@
         "boss"
       ],
       "after": [
-        "act1_wrought_practice",
+        "act1_wrought_scout",
         "act1_iron_kit"
       ],
       "summary": "Wake the Ferrous Wroughtnaut (40 health, hits for 30) and beat it by dodging its axe and striking its exposed back.",
@@ -654,7 +654,7 @@
       "after": [
         "act2_caves_beat"
       ],
-      "summary": "Scout a Cataclysm Cursed Pyramid in the desert: clear its outer halls of Koboletons and defeat a Kobolediator for Ancient Metal.",
+      "summary": "Scout a Cataclysm Cursed Pyramid in the desert: clear its outer halls of Koboletons and defeat a Kobolediator for Ancient Metal. Copy the runes on its sealed inner door while you're there.",
       "mods": [
         "cataclysm",
         "lootintegrations_cataclysm"
@@ -676,7 +676,7 @@
       "after": [
         "act2_pyramid_scout"
       ],
-      "summary": "Scout a Frosted Prison in the snowy plains and defeat an Aptrgangr guarding its gate for Black Steel. The inner door is sealed; something vast sleeps behind it.",
+      "summary": "Scout a Frosted Prison in the snowy plains and defeat an Aptrgangr guarding its gate for Black Steel. The inner door is sealed and something vast sleeps behind it; copy the runes on it too.",
       "mods": [
         "cataclysm"
       ],
@@ -690,20 +690,19 @@
       "title": "Doors That Will Not Open",
       "tier": "act2",
       "types": [
-        "puzzle",
-        "talk"
+        "talk",
+        "puzzle"
       ],
       "after": [
         "act2_prison_scout"
       ],
-      "summary": "Study the Door of Seal in both strongholds and copy its runes for the Arcane order's librarian: eight seals, eight sleepers, and none can be broken yet.",
+      "summary": "Bring both copies of the Door of Seal runes to the Arcane order's librarian: eight seals, eight sleepers, and none can be broken yet.",
       "mods": [
         "cataclysm",
         "irons_spellbooks"
       ],
       "landmarks": [
-        "cataclysm:cursed_pyramid",
-        "cataclysm:frosted_prison"
+        "#villages"
       ],
       "reward": "A runed tablet, Magic XP"
     },
@@ -1717,7 +1716,7 @@
         "travel"
       ],
       "after": [
-        "act5_maledictus"
+        "act5_last_preparations"
       ],
       "summary": "Craft the Flame Eye and follow it into the nether wastes to the Burning Arena: the source of the drain, glowing with every warden's stolen strength.",
       "mods": [
@@ -1737,7 +1736,7 @@
         "talk"
       ],
       "after": [
-        "act5_flame_eye"
+        "act5_maledictus"
       ],
       "summary": "Every organisation sends something for the last fight: food from the Tavern keepers, potions from the Herbalists, a blessed shield from the Village watch. Collect them all in Reece.",
       "mods": [
@@ -1758,7 +1757,7 @@
         "kill"
       ],
       "after": [
-        "act5_last_preparations"
+        "act5_flame_eye"
       ],
       "summary": "Clear the Ignited Revenants and Berserkers that guard the Burning Arena's approach.",
       "mods": [

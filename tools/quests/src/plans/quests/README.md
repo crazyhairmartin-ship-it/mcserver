@@ -36,11 +36,15 @@ titles, plots or steps. Format: see the docstring of `tools/quests/coverage.py`.
   inside bigger quests or simply places to find. Coverage is not a target.
 - **Pacing: finish where you are.** Most quests complete at the objective: follow the map, get the loot, done;
   no walk back to an NPC. A giver hands out the first quest of a chain and the rest open in the book as each step
-  finishes. Returning to a giver is good **at the end of a chain** (the payoff, the next chain) and **occasionally
-  mid-chain as a change of plans** (new information, a twist), never as routine: at most about one mid-chain return
-  per five quests, and never two out-and-back steps in a row. Mid-chain news can also reach the player in the field:
+  finishes. Returning to a giver is good **at the end of a chain** (the payoff, the next chain) and **mid-chain when
+  they then send you somewhere different** (new information, a change of plans). What to avoid is **leaving a
+  place only to come straight back to it** (out to X, back to the village, out to X again): do the business at X
+  in one trip. Mid-chain news can also reach the player in the field:
   a letter by mail, or the character turning up. "Bring it back" stays where delivering is the point (couriers,
   village errands).
+- **Small favours** (`small_favours.json`): One Small Favour-style chains where each favour needs another first;
+  every step goes somewhere new, and the chain unwinds back to whoever started it.
+- **Odd jobs and nonsense** (`odd_jobs.json`): deliberately pointless standalone quests with token rewards.
 
 ## Tiers (when in the game)
 
