@@ -66,8 +66,12 @@ ServerEvents.commandRegistry(event => {
       let entity = player.level.createEntity(info.entity || 'minecraft:villager')
       entity.setPos(player.x, player.y, player.z)
       npcDress(entity, info.name, info.profession, { Invulnerable: true, NoAI: true, Silent: true })
-      entity.setYRot(player.getYRot())
-      entity.setYHeadRot(player.getYRot())
+      // runtime (SRG) names: KubeJS doesn't remap setYRot/setYHeadRot. m_146908_ getYRot, m_146922_ setYRot,
+      // m_5616_ setYHeadRot, m_5618_ setYBodyRot
+      let yaw = player.m_146908_()
+      entity.m_146922_(yaw)
+      entity.m_5616_(yaw)
+      entity.m_5618_(yaw)
       entity.addTag('fq_npc')
       entity.addTag('fq_npc.' + id)
       entity.spawn()
