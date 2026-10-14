@@ -227,6 +227,12 @@ lasts: give the character at the end of each chain one or two offers themed on t
 Quest progress is solo: everyone has their own. FTB Teams is only installed because FTB Quests needs it; claims and
 parties stay with Open Parties and Claims.
 
+**Protected homes:** a box around every character in `src/npc_positions.json` (12 blocks out sideways, 6 below and 16
+above their feet, `AREA_*` in make_quests.py) can't have blocks broken or placed by survival players, and explosions
+and pistons leave it alone (fotfskills `QuestAreas`). Using things there still works (doors, chests, waystones,
+mailboxes, chairs, trading), crops can be harvested and replanted, and ops and creative players are never stopped.
+After placing or moving a character, record their spot in npc_positions.json and rebuild, or the box stays where it was.
+
 **Questing together:** when a mob dies, everyone who hurt it in the last 30 seconds and is within 64 blocks, and the
 killer's Open Parties and Claims party members within 32 blocks, also get the kill on their open kill tasks
 (fotfskills `SharedKillHooks`; FTB Quests itself only credits the last hit). Encounters and timed-challenge kills

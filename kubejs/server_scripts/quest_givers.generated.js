@@ -1836,3 +1836,384 @@ global.QUEST_ORGS = {
 }
 // Puzzle blocks that can't be broken, blown up or pushed inside these structures (fotfskills QuestProtect).
 global.QUEST_PROTECT = []
+// Protected areas around the quest characters (src/npc_positions.json): no breaking or placing (fotfskills QuestAreas).
+global.QUEST_AREAS = [
+  {
+    "id": "agathe",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3360,
+      55,
+      -4113
+    ],
+    "max": [
+      3384,
+      77,
+      -4089
+    ]
+  },
+  {
+    "id": "bess",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3344,
+      62,
+      -4128
+    ],
+    "max": [
+      3368,
+      84,
+      -4104
+    ]
+  },
+  {
+    "id": "bram",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3406,
+      57,
+      -4133
+    ],
+    "max": [
+      3430,
+      79,
+      -4109
+    ]
+  },
+  {
+    "id": "brannock",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3350,
+      67,
+      -4094
+    ],
+    "max": [
+      3374,
+      89,
+      -4070
+    ]
+  },
+  {
+    "id": "corvin",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3333,
+      61,
+      -4145
+    ],
+    "max": [
+      3357,
+      83,
+      -4121
+    ]
+  },
+  {
+    "id": "dagna",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3333,
+      62,
+      -4085
+    ],
+    "max": [
+      3357,
+      84,
+      -4061
+    ]
+  },
+  {
+    "id": "edda",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3288,
+      72,
+      -4100
+    ],
+    "max": [
+      3312,
+      94,
+      -4076
+    ]
+  },
+  {
+    "id": "fern",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3405,
+      57,
+      -4132
+    ],
+    "max": [
+      3429,
+      79,
+      -4108
+    ]
+  },
+  {
+    "id": "gil",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3396,
+      57,
+      -4068
+    ],
+    "max": [
+      3420,
+      79,
+      -4044
+    ]
+  },
+  {
+    "id": "hale",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3358,
+      57,
+      -4101
+    ],
+    "max": [
+      3382,
+      79,
+      -4077
+    ]
+  },
+  {
+    "id": "halloway",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3405,
+      57,
+      -4080
+    ],
+    "max": [
+      3429,
+      79,
+      -4056
+    ]
+  },
+  {
+    "id": "hesk",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3425,
+      57,
+      -4100
+    ],
+    "max": [
+      3449,
+      79,
+      -4076
+    ]
+  },
+  {
+    "id": "ilse",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3361,
+      71,
+      -4106
+    ],
+    "max": [
+      3385,
+      93,
+      -4082
+    ]
+  },
+  {
+    "id": "juniper",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3363,
+      58,
+      -4089
+    ],
+    "max": [
+      3387,
+      80,
+      -4065
+    ]
+  },
+  {
+    "id": "maren",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3338,
+      61,
+      -4136
+    ],
+    "max": [
+      3362,
+      83,
+      -4112
+    ]
+  },
+  {
+    "id": "marta",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3392,
+      57,
+      -4102
+    ],
+    "max": [
+      3416,
+      79,
+      -4078
+    ]
+  },
+  {
+    "id": "nell",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3310,
+      63,
+      -4105
+    ],
+    "max": [
+      3334,
+      85,
+      -4081
+    ]
+  },
+  {
+    "id": "odile",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3380,
+      58,
+      -4093
+    ],
+    "max": [
+      3404,
+      80,
+      -4069
+    ]
+  },
+  {
+    "id": "olsen",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3296,
+      64,
+      -4176
+    ],
+    "max": [
+      3320,
+      86,
+      -4152
+    ]
+  },
+  {
+    "id": "orla",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3146,
+      111,
+      -4087
+    ],
+    "max": [
+      3170,
+      133,
+      -4063
+    ]
+  },
+  {
+    "id": "orrin",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3327,
+      65,
+      -4073
+    ],
+    "max": [
+      3351,
+      87,
+      -4049
+    ]
+  },
+  {
+    "id": "pip",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3281,
+      46,
+      -4071
+    ],
+    "max": [
+      3305,
+      68,
+      -4047
+    ]
+  },
+  {
+    "id": "rue",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3304,
+      62,
+      -4142
+    ],
+    "max": [
+      3328,
+      84,
+      -4118
+    ]
+  },
+  {
+    "id": "tobiah",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3149,
+      111,
+      -4085
+    ],
+    "max": [
+      3173,
+      133,
+      -4061
+    ]
+  },
+  {
+    "id": "vesna",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3323,
+      62,
+      -4114
+    ],
+    "max": [
+      3347,
+      84,
+      -4090
+    ]
+  },
+  {
+    "id": "vworp",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3363,
+      63,
+      -4087
+    ],
+    "max": [
+      3387,
+      85,
+      -4063
+    ]
+  },
+  {
+    "id": "wren",
+    "dimension": "minecraft:overworld",
+    "min": [
+      3365,
+      59,
+      -4113
+    ],
+    "max": [
+      3389,
+      81,
+      -4089
+    ]
+  }
+]

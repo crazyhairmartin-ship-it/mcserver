@@ -1112,8 +1112,30 @@ def main():
           'global.QUEST_CHARACTERS = ' + json.dumps(characters, indent=2) + '\n'
           'global.QUEST_ORGS = ' + json.dumps(orgs, indent=2) + '\n'
           '// Puzzle blocks that can\'t be broken, blown up or pushed inside these structures (fotfskills QuestProtect).\n'
-          'global.QUEST_PROTECT = ' + json.dumps(ctx['protect'], indent=2) + '\n')
+          'global.QUEST_PROTECT = ' + json.dumps(ctx['protect'], indent=2) + '\n'
+          '// Protected areas around the quest characters (src/npc_positions.json): no breaking or placing (fotfskills QuestAreas).\n'
+          'global.QUEST_AREAS = ' + json.dumps(npc_areas(), indent=2) + '\n')
     print('wrote ' + summary)
+
+
+# protected box around each placed character: this far out sideways, below and above their feet
+AREA_SIDE, AREA_BELOW, AREA_ABOVE = 12, 6, 16
+
+
+def npc_areas():
+    """Boxes around every character in src/npc_positions.json (overworld unless it says), so their homes can't be broken."""
+    path = os.path.join(SRC, 'npc_positions.json')
+    if not os.path.exists(path):
+        return []
+    out = []
+    for cid, p in sorted(json.load(open(path, encoding='utf-8')).items()):
+        if cid.startswith('_') or not isinstance(p, dict) or len(p.get('pos', [])) != 3:
+            continue
+        x, y, z = (int(v // 1) for v in p['pos'])
+        out.append({'id': cid, 'dimension': p.get('dimension', 'minecraft:overworld'),
+                    'min': [x - AREA_SIDE, y - AREA_BELOW, z - AREA_SIDE],
+                    'max': [x + AREA_SIDE, y + AREA_ABOVE, z + AREA_SIDE]})
+    return out
 
 
 def write(path, text):

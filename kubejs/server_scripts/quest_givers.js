@@ -30,6 +30,7 @@ try {
 // puzzle blocks (quest "protect"): the fotfskills add-on enforces them; hand it this load's rules
 try {
   Java.loadClass('fotfskills.compat.QuestProtect').configure(JSON.stringify(global.QUEST_PROTECT || []))
+  Java.loadClass('fotfskills.compat.QuestAreas').configure(JSON.stringify(global.QUEST_AREAS || []))
 } catch (e) {
   console.warn('quest_givers: fotfskills QuestProtect not found; puzzle blocks are not protected: ' + e)
 }

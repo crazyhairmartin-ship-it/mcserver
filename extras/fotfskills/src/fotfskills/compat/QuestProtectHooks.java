@@ -41,6 +41,11 @@ public final class QuestProtectHooks {
             return;
         }
         String dim = level.m_46472_().m_135782_().toString();
+        if (areaBlocks(player, level, event.getPos(), event.getState())) {
+            event.setCanceled(true);
+            player.m_5661_(Component.m_237113_("§7This place is protected."), true);
+            return;
+        }
         if (PLACED.contains(dim, event.getPos().m_121878_())) {
             PLACED.remove(dim, event.getPos().m_121878_());   // a block a player put there: theirs to take back
             return;
@@ -55,6 +60,11 @@ public final class QuestProtectHooks {
     public void onPlace(BlockEvent.EntityPlaceEvent event) {
         if (!(event.getEntity() instanceof Player player) || player.m_7500_()
                 || !(event.getLevel() instanceof ServerLevel level)) {
+            return;
+        }
+        if (areaBlocks(player, level, event.getPos(), event.getPlacedBlock())) {
+            event.setCanceled(true);
+            player.m_5661_(Component.m_237113_("§7This place is protected."), true);
             return;
         }
         QuestProtect.Rule r = rule(level, event.getPos(), event.getPlacedBlock());
@@ -94,15 +104,15 @@ public final class QuestProtectHooks {
 
     @SubscribeEvent
     public void onExplosion(ExplosionEvent.Detonate event) {
-        if (QuestProtect.rules().isEmpty() || !(event.getLevel() instanceof ServerLevel level)) {
+        if ((QuestProtect.rules().isEmpty() && QuestAreas.areas().isEmpty()) || !(event.getLevel() instanceof ServerLevel level)) {
             return;
         }
-        event.getAffectedBlocks().removeIf(pos -> rule(level, pos, level.m_8055_(pos)) != null);
+        event.getAffectedBlocks().removeIf(pos -> inArea(level, pos) || rule(level, pos, level.m_8055_(pos)) != null);
     }
 
     @SubscribeEvent
     public void onPiston(PistonEvent.Pre event) {
-        if (QuestProtect.rules().isEmpty() || !(event.getLevel() instanceof ServerLevel level)) {
+        if ((QuestProtect.rules().isEmpty() && QuestAreas.areas().isEmpty()) || !(event.getLevel() instanceof ServerLevel level)) {
             return;
         }
         PistonStructureResolver resolver = event.getStructureHelper();
@@ -116,11 +126,26 @@ public final class QuestProtectHooks {
 
     private static boolean anyProtected(ServerLevel level, List<BlockPos> positions) {
         for (BlockPos pos : positions) {
-            if (rule(level, pos, level.m_8055_(pos)) != null) {
+            if (inArea(level, pos) || rule(level, pos, level.m_8055_(pos)) != null) {
                 return true;
             }
         }
         return false;
+    }
+
+    static boolean inArea(ServerLevel level, BlockPos pos) {
+        List<QuestAreas.Area> areas = QuestAreas.areas();
+        return !areas.isEmpty() && QuestAreas.inside(areas, level.m_46472_().m_135782_().toString(),
+                pos.m_123341_(), pos.m_123342_(), pos.m_123343_());
+    }
+
+    /** A protected area stops this player breaking or placing this block here (ops and crops are let through). */
+    private static boolean areaBlocks(Player player, ServerLevel level, BlockPos pos, BlockState state) {
+        if (player.m_20310_(2) || !inArea(level, pos)) {
+            return false;
+        }
+        ResourceLocation crops = ResourceLocation.m_135820_("minecraft:crops");
+        return !state.m_204336_(TagKey.m_203882_(Registries.f_256747_, crops));
     }
 
     /** The rule protecting this block here, or null. */
