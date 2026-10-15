@@ -439,14 +439,14 @@
             "at": {
               "structure": "#end_mega_ships"
             },
-            "count": 3,
+            "count": 2,
             "item": {
               "name": "a Logbook Page",
               "texture": "minecraft:item/paper"
             },
             "found": "A page of the captain's log, brittle with age."
           },
-          "title": "Collect the logbook pages from other mega ships"
+          "title": "Collect logbook pages from the mega ships"
         }
       ],
       "rewards": [
@@ -970,14 +970,14 @@
             "at": {
               "structure": "mes:endscraps"
             },
-            "count": 3,
+            "count": 1,
             "item": {
               "name": "a Void Leftover",
               "texture": "minecraft:item/paper"
             },
             "found": "Something the void left behind."
           },
-          "title": "Sift three scrap heaps for the void's leftovers"
+          "title": "Sift a scrap heap for the void's leftovers"
         }
       ],
       "rewards": [

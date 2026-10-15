@@ -54,6 +54,17 @@
    "containers": 5
   }
  },
+ "betterstrongholds:stronghold": {
+  "copies": 3,
+  "lines": [
+   "fotfverify betterstrongholds:stronghold copy 1 at 1840,1392 pieces=785 containers=162",
+   "fotfverify betterstrongholds:stronghold copy 2 at -5232,-880 pieces=466 containers=75",
+   "fotfverify betterstrongholds:stronghold copy 3 at 3008,-4016 pieces=1016 containers=160"
+  ],
+  "mins": {
+   "containers": 75
+  }
+ },
  "betterwitchhuts:witch_circle": {
   "copies": 3,
   "lines": [],
@@ -271,6 +282,92 @@
    "containers": 4
   }
  },
+ "mes:endscraps": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mes:endscraps copy 1 at -3200,-2432 pieces=1 containers=1",
+   "fotfverify mes:endscraps copy 2 at 6112,-5088 pieces=1 containers=1",
+   "fotfverify mes:endscraps copy 3 at -3248,4160 pieces=1 containers=1"
+  ],
+  "mins": {
+   "containers": 1
+  }
+ },
+ "mes:manuscript_shrine": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mes:manuscript_shrine copy 1 at -2608,832 pieces=1 containers=1",
+   "fotfverify mes:manuscript_shrine copy 2 at 4128,-3088 pieces=1 containers=1",
+   "fotfverify mes:manuscript_shrine copy 3 at -3920,2000 pieces=1 containers=1"
+  ],
+  "mins": {
+   "containers": 1
+  }
+ },
+ "mes:mega_ship": {
+  "copies": 2,
+  "lines": [
+   "fotfverify mes:mega_ship copy 1 at -11616,624 pieces=9 containers=2",
+   "fotfverify mes:mega_ship copy 2 at 15328,-8896 pieces=9 containers=2"
+  ],
+  "mins": {
+   "containers": 2
+  }
+ },
+ "mes:mega_ship_basic": {
+  "copies": 2,
+  "lines": [
+   "fotfverify mes:mega_ship_basic copy 1 at 8864,6400 pieces=16 containers=34",
+   "fotfverify mes:mega_ship_basic copy 2 at -14544,10992 pieces=16 containers=34"
+  ],
+  "mins": {
+   "containers": 34
+  }
+ },
+ "mes:mega_ship_crashed": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mes:mega_ship_crashed copy 1 at 4064,4544 pieces=3 containers=8",
+   "fotfverify mes:mega_ship_crashed copy 2 at -15584,10304 pieces=3 containers=8",
+   "fotfverify mes:mega_ship_crashed copy 3 at 6576,-5472 pieces=3 containers=8"
+  ],
+  "mins": {
+   "containers": 8
+  }
+ },
+ "mes:monolith": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mes:monolith copy 1 at -560,3040 pieces=1 containers=1",
+   "fotfverify mes:monolith copy 2 at 5808,-1504 pieces=1 containers=1",
+   "fotfverify mes:monolith copy 3 at -3680,-752 pieces=1 containers=1"
+  ],
+  "mins": {
+   "containers": 1
+  }
+ },
+ "mes:mythic_garden": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mes:mythic_garden copy 1 at 3280,2000 pieces=1 containers=4",
+   "fotfverify mes:mythic_garden copy 2 at -5840,3952 pieces=1 containers=4",
+   "fotfverify mes:mythic_garden copy 3 at -6496,-8496 pieces=1 containers=4"
+  ],
+  "mins": {
+   "containers": 4
+  }
+ },
+ "mes:starlight_voyager": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mes:starlight_voyager copy 1 at -3488,-800 pieces=1 containers=2",
+   "fotfverify mes:starlight_voyager copy 2 at 5664,3856 pieces=1 containers=2",
+   "fotfverify mes:starlight_voyager copy 3 at 2832,5712 pieces=1 containers=2"
+  ],
+  "mins": {
+   "containers": 2
+  }
+ },
  "minecraft:ancient_city": {
   "copies": 3,
   "lines": [
@@ -481,6 +578,17 @@
    "containers": 6
   }
  },
+ "nova_structures:donjon": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:donjon copy 1 at -14944,-16992 pieces=15011 containers=106",
+   "fotfverify nova_structures:donjon copy 2 at -22672,8480 pieces=14989 containers=83",
+   "fotfverify nova_structures:donjon copy 3 at 27520,5712 pieces=14915 containers=76"
+  ],
+  "mins": {
+   "containers": 76
+  }
+ },
  "nova_structures:firewatch_tower_birch": {
   "copies": 3,
   "lines": [
@@ -609,6 +717,17 @@
    "containers": 17
   }
  },
+ "structory_towers:end/end_tower": {
+  "copies": 3,
+  "lines": [
+   "fotfverify structory_towers:end/end_tower copy 1 at 512,688 pieces=2 containers=2",
+   "fotfverify structory_towers:end/end_tower copy 2 at 2960,-896 pieces=2 containers=2",
+   "fotfverify structory_towers:end/end_tower copy 3 at -6288,-672 pieces=2 containers=2"
+  ],
+  "mins": {
+   "containers": 2
+  }
+ },
  "structory_towers:engineer_tower": {
   "copies": 1,
   "lines": [],
@@ -698,6 +817,17 @@
   "lines": [],
   "mins": {
    "containers": 0
+  }
+ },
+ "twilightforest:troll_cave": {
+  "copies": 3,
+  "lines": [
+   "fotfverify twilightforest:troll_cave copy 1 at -503,-487 pieces=17 containers=7",
+   "fotfverify twilightforest:troll_cave copy 2 at 4344,-455 pieces=21 containers=12",
+   "fotfverify twilightforest:troll_cave copy 3 at -4615,-471 pieces=20 containers=9"
+  ],
+  "mins": {
+   "containers": 7
   }
  }
 }

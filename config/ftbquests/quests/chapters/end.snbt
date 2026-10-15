@@ -487,10 +487,10 @@
 					type: "gamestage"
 				}
 				{
-					count: 3L
+					count: 2L
 					id: "48B61D4A0AD26FCC"
 					item: "kubejs:quest_ships_ghost_1"
-					title: "Collect the logbook pages from other mega ships"
+					title: "Collect logbook pages from the mega ships"
 					type: "item"
 				}
 			]
@@ -1052,10 +1052,9 @@
 			]
 			tasks: [
 				{
-					count: 3L
 					id: "5D9B18E3B0277F84"
 					item: "kubejs:quest_salvage_the_scraps_0"
-					title: "Sift three scrap heaps for the void's leftovers"
+					title: "Sift a scrap heap for the void's leftovers"
 					type: "item"
 				}
 			]

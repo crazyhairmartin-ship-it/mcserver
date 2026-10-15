@@ -93,7 +93,7 @@ ACT4 = [
                 "crashed ships, so he can learn why the fleet fell."],
           tasks=[enc(["My logbook pages. Scattered through the other ships. Why did we fall?"], entity="minecraft:allay", name="The Captain's Ghost",
                      title="Hear the ghost captain on the bridge"),
-                 search("#end_mega_ships", 3, "a Logbook Page", "A page of the captain's log, brittle with age.", title="Collect the logbook pages from other mega ships")],
+                 search("#end_mega_ships", 2, "a Logbook Page", "A page of the captain's log, brittle with age.", title="Collect logbook pages from the mega ships")],
           rewards=[reward_item("minecraft:leather_chestplate", name="The Captain's Coat", lore=["Worn on the bridge of a fallen fleet."]),
                    skill("magic", 650)]),
 
@@ -194,7 +194,7 @@ ACT4 = [
     quest("salvage_the_scraps", "Salvage the Scraps", icon="minecraft:iron_ingot", after=["beyond_the_gateway"],
           text=["Broken pillars, spikes and scrap heaps litter the islands. Sift three of them for the void's "
                 "leftovers."],
-          tasks=[search("mes:endscraps", 3, "a Void Leftover", "Something the void left behind.", title="Sift three scrap heaps for the void's leftovers")],
+          tasks=[search("mes:endscraps", 1, "a Void Leftover", "Something the void left behind.", title="Sift a scrap heap for the void's leftovers")],
           rewards=[reward_item("minecraft:ender_pearl", 4), reward_item("minecraft:iron_ingot", 8), skill("craft", 300)]),
 
     quest("null_space", "Null Space", icon="minecraft:amethyst_block", after=["first_flight"],

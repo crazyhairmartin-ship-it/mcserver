@@ -11487,7 +11487,7 @@ global.QUEST_GIVERS = [
       ],
       "label": "the destination"
     },
-    "count": 3,
+    "count": 2,
     "item": "kubejs:quest_ships_ghost_1",
     "found": "A page of the captain's log, brittle with age.",
     "requires": [],
@@ -11782,7 +11782,7 @@ global.QUEST_GIVERS = [
       ],
       "label": "the destination"
     },
-    "count": 3,
+    "count": 1,
     "item": "kubejs:quest_salvage_the_scraps_0",
     "found": "Something the void left behind.",
     "requires": [],

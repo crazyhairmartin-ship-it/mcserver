@@ -260,12 +260,12 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - end:first_flight: needs five kilometres with the elytra; written as a timed flight to a far End city
 - end:the_wings: needs the ship's hold and an elytra slot; written as the elytra carried
 - end:chorus_garden: needs flowers replanted on end stone; written as a chorus flower and purpur build
-- end:ships_ghost: needs logbook pages in several different ships; written as a search of mega ships for three pages
+- end:ships_ghost: needs logbook pages in several different ships; written as a search of mega ships for two pages
 - end:manuscript_shrine: needs reading texts without meeting the gaze; written as a hurt-free hold and a search
 - end:spire_climb: needs a reading at the top; written as a timed climb to the spire's top
 - end:quiet_meadows: needs resting a minute in each; written as one timed hold and visits
 - end:void_wildlife: needs feeding an endergrade until it follows; written as a tame
-- end:salvage_the_scraps: needs sifting three different structures; written as a search of three scrap heaps
+- end:salvage_the_scraps: needs sifting three different structures; written as a search of one scrap heap
 - end:null_space: needs flying over the biomes; written as standing in each
 - end:the_sealed_citadel: needs noting the Ender Golems; written as observing one
 - skill_attack:coliseum: needs a ladder of rounds; written as two spawned fights
