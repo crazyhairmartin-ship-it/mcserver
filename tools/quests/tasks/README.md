@@ -222,6 +222,10 @@ task first (T11, T18, T25, T28): other chapters link to its anchors. Counts are 
 | T10 | 1 | 23 | `discovery_sky_and_underground` (all, 23) |
 | TD | 2 | 0 | **Do this first.** Rewrite all existing dialogue short (see "Task TD" below) |
 | TF | - | 0 | Upgrade the logged stand-ins to real tasks (see "Task TF" below) |
+| TF1 | - | 0 | Task TF for only: `alexs_caves`, `discovery_land`, `discovery_sea`, `discovery_sky_and_underground`, `end`, `magic` |
+| TF2 | - | 0 | Task TF for only: `main_story`, `milestones`, `nether`, `skill_agility`, `skill_attack`, `skill_cooking` |
+| TF3 | - | 0 | Task TF for only: `skill_crafting`, `skill_defense`, `skill_farming`, `skill_fishing`, `skill_foraging`, `skill_mining`, `skill_range` |
+| TF4 | - | 0 | Task TF for only: `skill_taming`, `small_favours`, `twilight`, `village_errands` |
 | T11 | 2 | 17 | `main_story` (act2, 17) |
 | T12 | 2 | 29 | `skill_attack` (act2, 7); `skill_defense` (act2, 8); `skill_range` (act2, 7); `skill_taming` (act2, 7) |
 | T13 | 2 | 33 | `skill_agility` (act2, 7); `skill_crafting` (act2, 10); `magic` (act2, 16) |
@@ -245,6 +249,10 @@ task first (T11, T18, T25, T28): other chapters link to its anchors. Counts are 
 Total 759 (with the 119 already written, the plan's 878).
 
 ## Task TF: upgrade the stand-ins
+
+(The first TF pass ran out of room after 13 lines; TF1 to TF4 split the rest by chapter, one session each. Check every
+line in your chapters: for example, `interact` covers giving a wolf a collar or feeding a mob, `make` covers brewing
+or cooking something specific, `be` covers storms, sunsets and riding, `mine` covers harvesting.)
 
 `src/plans/followups.md` lists ~300 quests written with a stand-in because the engine couldn't do something at the
 time. Many can now be done properly: the README's task list has grown a lot since they were written (`use`, `search`,
