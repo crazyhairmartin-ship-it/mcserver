@@ -1761,7 +1761,8 @@
       "id": "arena_of_embers",
       "title": "The Arena of Embers",
       "after": [
-        "the_soul_forge"
+        "the_soul_forge",
+        "main_story:act5_start"
       ],
       "text": [
         "In the deepest wastes, a sealed arena burns with blue fire. Listen at its doors. Even Vesna won't go nearer."

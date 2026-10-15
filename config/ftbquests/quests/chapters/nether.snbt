@@ -1987,7 +1987,10 @@
 			y: 3.0d
 		}
 		{
-			dependencies: ["6E8B3E8057914058"]
+			dependencies: [
+				"6E8B3E8057914058"
+				"7E4E9B0F1E370B80"
+			]
 			description: ["In the deepest wastes, a sealed arena burns with blue fire. Listen at its doors. Even Vesna won't go nearer."]
 			icon: "minecraft:blaze_rod"
 			id: "0C45CF71D832D927"

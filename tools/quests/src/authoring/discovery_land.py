@@ -383,12 +383,13 @@ Q = [
           rewards=[reward_item("minecraft:gold_ingot", 12), skill("attack", 400)]),
 
     quest("return_to_the_ruins", "Back to the Ruins", icon="minecraft:writable_book",
-          after=["frostbitten_ruins", "occupied_dunes"],
+          after=["frostbitten_ruins", "occupied_dunes", "main_story:act5_start"],
           text=["Now the old ruins' writing makes sense: the snow ruins and the desert dig site point to the "
                 "prisons of something buried. Revisit one of each and read the inscriptions that name it."],
           tasks=[{"structure": "cataclysm:abandoned_temple", "title": "Return to the snow ruins to read the inscriptions"},
                  {"structure": "cataclysm:desert_site", "title": "Return to the dig site to read its inscriptions"},
-                 {"checkmark": "I read the inscriptions that name what is buried here"}],
+                 enc(["The old writing, now readable. It names what is buried here."], entity="minecraft:allay", name="Spirit of the Ruins",
+                     title="Have the inscriptions read to you, naming what is buried here")],
           rewards=[reward_item("minecraft:writable_book", name="Names of the Buried",
                                lore=["The inscriptions point toward the strongholds."]), skill("magic", 700)]),
 

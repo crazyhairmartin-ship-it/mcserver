@@ -249,7 +249,7 @@ ACT5 = [
                  search("#airships", 1, "the Captain's Chest", "The captain's chest, bound in brass.", title="Take the captain's chest")],
           rewards=[reward_item("minecraft:white_banner", name="The Sky Pirates' Banner"), reward_item("minecraft:emerald", 16), skill("attack", 850)]),
 
-    quest("void_eye", "The Void Eye", icon="cataclysm:void_eye", after=["the_sealed_citadel", "shells_for_boxes"],
+    quest("void_eye", "The Void Eye", icon="cataclysm:void_eye", after=["the_sealed_citadel", "shells_for_boxes", "main_story:act5_start"],
           text=["The guardian woke with the others. Craft the Void Eye from shulker shells and an eye of ender, and "
                 "give Ilse the finished chart of the End."],
           tasks=[item("minecraft:shulker_shell", 4, title="Gather shulker shells for the eye"),

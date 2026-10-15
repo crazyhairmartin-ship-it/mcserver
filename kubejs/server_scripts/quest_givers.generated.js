@@ -1194,6 +1194,34 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "discovery_land:return_to_the_ruins",
+    "stage": "fq.discovery_land.return_to_the_ruins.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "The old writing, now readable. It names what is buried here."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "6186D50D6E1E381F",
+    "prev_tasks": [
+      "36D62A6F2675C181",
+      "71A7EAFE0BCFA4AD"
+    ],
+    "name": "Spirit of the Ruins",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:allay",
+    "profession": ""
+  },
+  {
     "quest": "discovery_land:biome_ominous_woods",
     "stage": "fq.discovery_land.biome_ominous_woods.timed0",
     "type": "timed",
@@ -3280,6 +3308,627 @@ global.QUEST_GIVERS = [
     "where": {},
     "entity": "minecraft:allay",
     "profession": ""
+  },
+  {
+    "quest": "main_story:act5_start",
+    "stage": "fq.main_story.act5_start.talk0",
+    "type": "talk",
+    "lines": [
+      "The eight must be broken, weakest first. Notch guide you.",
+      "Craft the Infernal Forge to work their metals."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "wren",
+    "quest_id": "7E4E9B0F1E370B80",
+    "open_task": ""
+  },
+  {
+    "quest": "main_story:act5_monstrosity",
+    "stage": "fq.main_story.act5_monstrosity.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:netherite_monstrosity",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:soul_black_smith"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Netherite Monstrosity",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "45A44BAEF5E031B5",
+    "requires": [],
+    "quest_id": "78AE00F471B825AB",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_ender_golems",
+    "stage": "fq.main_story.act5_ender_golems.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:ender_golem",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:ruined_citadel"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Citadel Golems",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "79A31F494A79802F",
+    "requires": [],
+    "quest_id": "02210A2815A0204A",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_ender_golems",
+    "stage": "fq.main_story.act5_ender_golems.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:endermaptera",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:ruined_citadel"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Citadel Endermapteras",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "18D0635B04CCC2F3",
+    "requires": [],
+    "quest_id": "02210A2815A0204A",
+    "prev_tasks": [
+      "79A31F494A79802F"
+    ]
+  },
+  {
+    "quest": "main_story:act5_ender_guardian",
+    "stage": "fq.main_story.act5_ender_guardian.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:ender_guardian",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:ruined_citadel"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Ender Guardian",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "49ECB550B9E34056",
+    "requires": [],
+    "quest_id": "227BB644E726B5A0",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_factory_power",
+    "stage": "fq.main_story.act5_factory_power.timed1",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:ancient_factory"
+      ],
+      "label": "the Harbinger's chamber",
+      "away": 40
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "The Prowlers will notice. Reach the chamber quietly."
+    ],
+    "start": "Restart the machines",
+    "requires": [],
+    "quest_id": "06528662D226ADDC",
+    "prev_tasks": [
+      "4D4FD0035939DAC5"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "main_story:act5_harbinger",
+    "stage": "fq.main_story.act5_harbinger.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:the_harbinger",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:ancient_factory"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Harbinger",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "0210B22FD9764B15",
+    "requires": [],
+    "quest_id": "1AEF2A6D29B0DAAA",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_clawdian",
+    "stage": "fq.main_story.act5_clawdian.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:hippocamtus",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:acropolis"
+      ],
+      "label": "the destination"
+    },
+    "wave": 3,
+    "name": "Acropolis Hippocamtus",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "7D99E531C6D362A8",
+    "requires": [],
+    "quest_id": "1633E96ED57541C9",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_clawdian",
+    "stage": "fq.main_story.act5_clawdian.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:clawdian",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:acropolis"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Clawdian",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "25A33C38B0A3F8EF",
+    "requires": [],
+    "quest_id": "1633E96ED57541C9",
+    "prev_tasks": [
+      "7D99E531C6D362A8"
+    ]
+  },
+  {
+    "quest": "main_story:act5_scylla",
+    "stage": "fq.main_story.act5_scylla.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:scylla",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:acropolis"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Scylla",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "4523DB9E3ADAF3B7",
+    "requires": [],
+    "quest_id": "04F9CCAF3908B873",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_wadjets",
+    "stage": "fq.main_story.act5_wadjets.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:wadjet",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:cursed_pyramid"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Serpent Guard",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "2B4FB2B8D703D82A",
+    "requires": [],
+    "quest_id": "4DC7277EA4787695",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_wadjets",
+    "stage": "fq.main_story.act5_wadjets.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:kobolediator",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:cursed_pyramid"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Pyramid Kobolediators",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "516BD893CFDC9705",
+    "requires": [],
+    "quest_id": "4DC7277EA4787695",
+    "prev_tasks": [
+      "2B4FB2B8D703D82A"
+    ]
+  },
+  {
+    "quest": "main_story:act5_remnant",
+    "stage": "fq.main_story.act5_remnant.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:ancient_remnant",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:cursed_pyramid"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Ancient Remnant",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "4F065F14F738C5D0",
+    "requires": [],
+    "quest_id": "754670C6DA3F9481",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_sunken_city",
+    "stage": "fq.main_story.act5_sunken_city.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:deepling",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:sunken_city"
+      ],
+      "label": "the destination"
+    },
+    "wave": 3,
+    "name": "Drowned Deeplings",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "368874B794D748DF",
+    "requires": [],
+    "quest_id": "67E2F5900D4DD245",
+    "prev_tasks": [
+      "75FBDC38CD7636FA"
+    ]
+  },
+  {
+    "quest": "main_story:act5_sunken_city",
+    "stage": "fq.main_story.act5_sunken_city.spawn2",
+    "type": "spawn",
+    "entity": "cataclysm:coral_golem",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:sunken_city"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "A Coral Golem",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "12CE35FD50B75DD0",
+    "requires": [],
+    "quest_id": "67E2F5900D4DD245",
+    "prev_tasks": [
+      "75FBDC38CD7636FA",
+      "368874B794D748DF"
+    ]
+  },
+  {
+    "quest": "main_story:act5_leviathan",
+    "stage": "fq.main_story.act5_leviathan.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:the_leviathan",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:sunken_city"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Leviathan",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "241A06C3DD17999A",
+    "requires": [],
+    "quest_id": "2ACCF1C258228583",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_cursed_eye",
+    "stage": "fq.main_story.act5_cursed_eye.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Maledictus lifts, then slams. Keep moving. Stock up on totems."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "19173A9F2FAB4545",
+    "prev_tasks": [],
+    "name": "Watch Veteran",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "guardvillagers:guard",
+    "profession": ""
+  },
+  {
+    "quest": "main_story:act5_aptrgangr",
+    "stage": "fq.main_story.act5_aptrgangr.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:draugr",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:frosted_prison"
+      ],
+      "label": "the destination"
+    },
+    "wave": 3,
+    "name": "Prison Draugr",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "3246B6B248D4510C",
+    "requires": [],
+    "quest_id": "15C6193D24A3613B",
+    "prev_tasks": [
+      "52B7AFB8B9EDECFC"
+    ]
+  },
+  {
+    "quest": "main_story:act5_aptrgangr",
+    "stage": "fq.main_story.act5_aptrgangr.spawn2",
+    "type": "spawn",
+    "entity": "cataclysm:aptrgangr",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:frosted_prison"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Prison Aptrgangr",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "38CAFFA7BBC2847D",
+    "requires": [],
+    "quest_id": "15C6193D24A3613B",
+    "prev_tasks": [
+      "52B7AFB8B9EDECFC",
+      "3246B6B248D4510C"
+    ]
+  },
+  {
+    "quest": "main_story:act5_maledictus",
+    "stage": "fq.main_story.act5_maledictus.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:maledictus",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:frosted_prison"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Maledictus",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "16501D888A5E1793",
+    "requires": [],
+    "quest_id": "0FAA9C1E70A4FB1A",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_last_preparations",
+    "stage": "fq.main_story.act5_last_preparations.talk1",
+    "type": "talk",
+    "lines": [
+      "A feast for the last fight. Eat well.",
+      "Come back, hear?"
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "tavern",
+    "professions": [
+      "minecraft:butcher"
+    ],
+    "org_name": "Tavern Keepers",
+    "quest_id": "7D2176F12B45774C",
+    "open_task": ""
+  },
+  {
+    "quest": "main_story:act5_last_preparations",
+    "stage": "fq.main_story.act5_last_preparations.talk2",
+    "type": "talk",
+    "lines": [
+      "Healing draughts. Drink them early."
+    ],
+    "requires": [
+      "fq.main_story.act5_last_preparations.talk1"
+    ],
+    "name": "",
+    "match": "org",
+    "org": "herbalists",
+    "professions": [
+      "minecraft:cleric"
+    ],
+    "org_name": "Herbalists",
+    "quest_id": "7D2176F12B45774C",
+    "open_task": ""
+  },
+  {
+    "quest": "main_story:act5_last_preparations",
+    "stage": "fq.main_story.act5_last_preparations.talk3",
+    "type": "talk",
+    "lines": [
+      "A blessed shield. The watch stands behind you."
+    ],
+    "requires": [
+      "fq.main_story.act5_last_preparations.talk1",
+      "fq.main_story.act5_last_preparations.talk2"
+    ],
+    "name": "",
+    "match": "org",
+    "org": "watch",
+    "professions": [
+      "guardvillagers:guard"
+    ],
+    "org_name": "Village Watch",
+    "quest_id": "7D2176F12B45774C",
+    "open_task": ""
+  },
+  {
+    "quest": "main_story:act5_revenants",
+    "stage": "fq.main_story.act5_revenants.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:ignited_revenant",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:burning_arena"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Ash Revenants",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "7FE2674C584AD3EF",
+    "requires": [],
+    "quest_id": "323D67733417C52B",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act5_revenants",
+    "stage": "fq.main_story.act5_revenants.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:ignited_berserker",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:burning_arena"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Ash Berserkers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "6435F679DC437935",
+    "requires": [],
+    "quest_id": "323D67733417C52B",
+    "prev_tasks": [
+      "7FE2674C584AD3EF"
+    ]
+  },
+  {
+    "quest": "main_story:final_boss",
+    "stage": "fq.main_story.final_boss.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:ignis",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:burning_arena"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Ignis",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "34045C32BA84D2C9",
+    "requires": [],
+    "quest_id": "29423F87BFE497DD",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:epilogue",
+    "stage": "fq.main_story.epilogue.talk1",
+    "type": "talk",
+    "lines": [
+      "The fairies are back. The fireflies too. Notch be thanked.",
+      "Come. Reece has a festival for you."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "wren",
+    "quest_id": "0F8F25D9DA92FE7B",
+    "open_task": ""
   },
   {
     "quest": "milestones:easy_enchant",

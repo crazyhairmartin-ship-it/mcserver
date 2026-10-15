@@ -359,7 +359,7 @@ ACT3 = [
                   "title": "Creep close enough to look, and leave unseen"}],
           rewards=[reward_item("minecraft:soul_lantern", 4), skill("mining", 340)]),
 
-    quest("arena_of_embers", "The Arena of Embers", icon="minecraft:blaze_rod", after=["the_soul_forge"],
+    quest("arena_of_embers", "The Arena of Embers", icon="minecraft:blaze_rod", after=["the_soul_forge", "main_story:act5_start"],
           discover={"structure": "cataclysm:burning_arena"},
           text=["In the deepest wastes, a sealed arena burns with blue fire. Listen at its doors. Even Vesna won't go "
                 "nearer."],

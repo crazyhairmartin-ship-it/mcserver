@@ -2788,6 +2788,1191 @@
 			x: 67.5d
 			y: 1.5d
 		}
+		{
+			dependencies: ["2E8CA4F3F9117FF6"]
+			description: ["Sister Wren and the guild leaders gather in Reece: break the eight in turn, weakest first. Craft the Infernal Forge to work the sleepers' metals."]
+			icon: "cataclysm:infernal_forge"
+			id: "7E4E9B0F1E370B80"
+			rewards: [
+				{
+					id: "78A322FED4D50C67"
+					item: "minecraft:netherite_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 800"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "126B3D9CB532A156"
+					silent: true
+					title: "+800 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "65B22EE1B9730EBA"
+					stage: "fq.main_story.act5_start.talk0"
+					title: "Hear Sister Wren and the guild leaders at the gathering"
+					type: "gamestage"
+				}
+				{
+					id: "1E4AE8C7E19B5494"
+					item: "cataclysm:infernal_forge"
+					only_from_crafting: true
+					title: "Craft the Infernal Forge"
+					type: "item"
+				}
+			]
+			title: "The Reckoning"
+			x: 69.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E4E9B0F1E370B80"]
+			description: ["Craft a Monstrous Eye from netherite scrap and follow it through the Nether to the Soul Black Smith."]
+			icon: "cataclysm:monstrous_eye"
+			id: "016D76CC361021EE"
+			rewards: [
+				{
+					count: 4
+					id: "1BEA27803E7D9268"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 800"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "1B6B9E4250734582"
+					silent: true
+					title: "+800 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "444EF1C62F240836"
+					item: "cataclysm:monstrous_eye"
+					only_from_crafting: true
+					title: "Craft a Monstrous Eye"
+					type: "item"
+				}
+				{
+					id: "1200EF9081AB6512"
+					structure: "cataclysm:soul_black_smith"
+					title: "Follow the eye through the Nether to the Soul Black Smith"
+					type: "structure"
+				}
+			]
+			title: "An Eye of Netherite"
+			x: 70.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["016D76CC361021EE"]
+			description: ["Defeat the Netherite Monstrosity in the forge where it was built."]
+			icon: "minecraft:netherite_block"
+			id: "78AE00F471B825AB"
+			rewards: [
+				{
+					count: 3
+					id: "1E4EEEA5462ADBBE"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 850"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "58B1176A9FAD72F3"
+					silent: true
+					title: "+850 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "cataclysm:netherite_monstrosity"
+					id: "45A44BAEF5E031B5"
+					title: "Defeat the Monstrosity in the forge where it was built"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Netherite Monstrosity"
+			x: 72.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["78AE00F471B825AB"]
+			description: ["Craft a Void Eye from shulker shells and follow it across the End highlands to the Ruined Citadel."]
+			icon: "cataclysm:void_eye"
+			id: "0EB49EBE98E3AA23"
+			rewards: [
+				{
+					count: 8
+					id: "428937BFE624A5FC"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "18C4D461439C0FF9"
+					item: "minecraft:potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 820"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "572C0320322DCA63"
+					silent: true
+					title: "+820 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3AF28411F1806DF2"
+					item: "cataclysm:void_eye"
+					only_from_crafting: true
+					title: "Craft a Void Eye"
+					type: "item"
+				}
+				{
+					id: "21ACAE8C7B266167"
+					structure: "cataclysm:ruined_citadel"
+					title: "Follow the eye across the End highlands to the Ruined Citadel"
+					type: "structure"
+				}
+			]
+			title: "An Eye of the Void"
+			x: 73.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0EB49EBE98E3AA23"]
+			description: ["Clear the Ruined Citadel's Ender Golems and Endermapteras without falling into the void traps."]
+			icon: "cataclysm:void_shard"
+			id: "02210A2815A0204A"
+			rewards: [
+				{
+					count: 2
+					id: "42715C244BF738B3"
+					item: "cataclysm:void_shard"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 850"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0BD8010202E0C22B"
+					silent: true
+					title: "+850 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:ender_golem"
+					id: "79A31F494A79802F"
+					title: "Clear the citadel's Ender Golems"
+					type: "kill"
+					value: 4L
+				}
+				{
+					entity: "cataclysm:endermaptera"
+					id: "18D0635B04CCC2F3"
+					title: "Clear its Endermapteras"
+					type: "kill"
+					value: 4L
+				}
+			]
+			title: "Golems of the Citadel"
+			x: 75.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["02210A2815A0204A"]
+			description: ["Defeat the Ender Guardian and claim the Gauntlet of Guard."]
+			icon: "cataclysm:gauntlet_of_guard"
+			id: "227BB644E726B5A0"
+			rewards: [
+				{
+					id: "1288B9670FA06433"
+					item: "cataclysm:gauntlet_of_guard"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 900"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "3DE0A0759C92E35B"
+					silent: true
+					title: "+900 Defense XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "cataclysm:ender_guardian"
+					id: "49ECB550B9E34056"
+					title: "Defeat the Ender Guardian in the citadel"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Ender Guardian"
+			x: 76.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["227BB644E726B5A0"]
+			description: ["Craft a Mech Eye and follow it down to the Ancient Factory buried deep underground."]
+			icon: "cataclysm:mech_eye"
+			id: "0CA514DC8C0212FA"
+			rewards: [
+				{
+					count: 32
+					id: "43F7A7BC994FF565"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 850"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "2D137C64A4A5F8EC"
+					silent: true
+					title: "+850 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7323C83E36F603D4"
+					item: "cataclysm:mech_eye"
+					only_from_crafting: true
+					title: "Craft a Mech Eye"
+					type: "item"
+				}
+				{
+					id: "21D79BDE68466727"
+					structure: "cataclysm:ancient_factory"
+					title: "Follow the eye down to the buried Ancient Factory"
+					type: "structure"
+				}
+			]
+			title: "An Eye of Gears"
+			x: 78.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0CA514DC8C0212FA"]
+			description: ["The factory's furnaces are dead. Bring lava power cells to restart its machines and reach the Harbinger's chamber before its Prowlers notice."]
+			icon: "minecraft:blast_furnace"
+			id: "06528662D226ADDC"
+			rewards: [
+				{
+					id: "14D6E145D23998EE"
+					item: "cataclysm:lava_power_cell"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 850"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "790E2D519AC8EE7B"
+					silent: true
+					title: "+850 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "4D4FD0035939DAC5"
+					item: "cataclysm:lava_power_cell"
+					title: "Bring lava power cells to restart the machines"
+					type: "item"
+				}
+				{
+					id: "092E5738393A553F"
+					stage: "fq.main_story.act5_factory_power.timed1"
+					title: "Reach the Harbinger's chamber before the Prowlers notice"
+					type: "gamestage"
+				}
+			]
+			title: "Cold Furnaces"
+			x: 79.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["06528662D226ADDC"]
+			description: ["Defeat the Harbinger, a machine built in the Wither's image, mirroring your fight in Act III."]
+			icon: "cataclysm:witherite_ingot"
+			id: "1AEF2A6D29B0DAAA"
+			rewards: [
+				{
+					count: 2
+					id: "2D93191D4399A49C"
+					item: "cataclysm:witherite_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 900"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "789B143A7F4AE846"
+					silent: true
+					title: "+900 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "cataclysm:the_harbinger"
+					id: "0210B22FD9764B15"
+					title: "Defeat the Harbinger in its chamber"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Harbinger"
+			x: 81.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1AEF2A6D29B0DAAA"]
+			description: ["Craft a Storm Eye with prismarine and diamonds, then sail a vessel across the warm ocean to the Acropolis."]
+			icon: "cataclysm:storm_eye"
+			id: "1657B7BC0D27A0DB"
+			rewards: [
+				{
+					id: "3622798D71F383ED"
+					item: "smallships:oak_cog"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "3692BB2F0ACAA0A4"
+					item: "minecraft:potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 850"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "2BE302A73F2731F4"
+					silent: true
+					title: "+850 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "54D68982DDA7D6B7"
+					item: "cataclysm:storm_eye"
+					only_from_crafting: true
+					title: "Craft a Storm Eye"
+					type: "item"
+				}
+				{
+					id: "6A71475359A893A3"
+					structure: "cataclysm:acropolis"
+					title: "Sail across the warm ocean to the Acropolis"
+					type: "structure"
+				}
+			]
+			title: "An Eye of Storms"
+			x: 82.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1657B7BC0D27A0DB"]
+			description: ["Cut through the Acropolis's Hippocamtus and Cindaria and defeat a Clawdian guarding the storm altar."]
+			icon: "cataclysm:chitin_claw"
+			id: "1633E96ED57541C9"
+			rewards: [
+				{
+					count: 2
+					id: "71B8CA62DBD08B1D"
+					item: "cataclysm:chitin_claw"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 880"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "3072A38400A6EA17"
+					silent: true
+					title: "+880 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:hippocamtus"
+					id: "7D99E531C6D362A8"
+					title: "Cut through the Hippocamtus"
+					type: "kill"
+					value: 3L
+				}
+				{
+					entity: "cataclysm:clawdian"
+					id: "25A33C38B0A3F8EF"
+					title: "Defeat the Clawdian guarding the storm altar"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Claws of the Acropolis"
+			x: 84.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1633E96ED57541C9"]
+			description: ["Defeat Scylla in the eye of her storm."]
+			icon: "cataclysm:essence_of_the_storm"
+			id: "04F9CCAF3908B873"
+			rewards: [
+				{
+					id: "0A5D5EDD86BF389F"
+					item: "cataclysm:essence_of_the_storm"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 920"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "11DACA2B747E59BB"
+					silent: true
+					title: "+920 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "cataclysm:scylla"
+					id: "4523DB9E3ADAF3B7"
+					title: "Defeat Scylla in the eye of her storm"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Scylla"
+			x: 85.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["04F9CCAF3908B873"]
+			description: ["Craft a Desert Eye and return to the Cursed Pyramid you scouted in Act II. Its seal now answers."]
+			icon: "cataclysm:desert_eye"
+			id: "7384C72FBC9EA838"
+			rewards: [
+				{
+					count: 16
+					id: "2983D4BB11BC9AB0"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 850"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "3970F16F6697B26E"
+					silent: true
+					title: "+850 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "58DA673C27E8459F"
+					item: "cataclysm:desert_eye"
+					only_from_crafting: true
+					title: "Craft a Desert Eye"
+					type: "item"
+				}
+				{
+					id: "704E306511CE75EE"
+					structure: "cataclysm:cursed_pyramid"
+					title: "Return to the Cursed Pyramid whose seal now answers"
+					type: "structure"
+				}
+			]
+			title: "Back to the Pyramid"
+			x: 87.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7384C72FBC9EA838"]
+			description: ["Defeat the Wadjets and Kobolediators of the inner pyramid and arm yourself with an Ancient Metal weapon."]
+			icon: "spartancataclysm:ancient_metal_greatsword"
+			id: "4DC7277EA4787695"
+			rewards: [
+				{
+					count: 4
+					id: "2F3721976B2F0B0B"
+					item: "cataclysm:ancient_metal_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 900"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "3A3416A9C0BB7766"
+					silent: true
+					title: "+900 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:wadjet"
+					id: "2B4FB2B8D703D82A"
+					title: "Defeat the inner pyramid's Wadjets"
+					type: "kill"
+					value: 4L
+				}
+				{
+					entity: "cataclysm:kobolediator"
+					id: "516BD893CFDC9705"
+					title: "Defeat its Kobolediators"
+					type: "kill"
+					value: 2L
+				}
+				{
+					id: "7B16BA5EA4EDF385"
+					item: "spartancataclysm:ancient_metal_greatsword"
+					only_from_crafting: true
+					title: "Forge an Ancient Metal weapon"
+					type: "item"
+				}
+			]
+			title: "The Serpent Guard"
+			x: 88.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4DC7277EA4787695"]
+			description: ["Defeat the Ancient Remnant beneath the pyramid, then fuse its Sandstorm in a Bottle with the Gauntlet of Guard into the Gauntlet of Maelstrom."]
+			icon: "cataclysm:gauntlet_of_maelstrom"
+			id: "754670C6DA3F9481"
+			rewards: [
+				{
+					id: "2E2B36A6ADC1AB44"
+					item: "cataclysm:necklace_of_the_desert"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 950"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "73366F9357F34FD3"
+					silent: true
+					title: "+950 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "cataclysm:ancient_remnant"
+					id: "4F065F14F738C5D0"
+					title: "Defeat the Ancient Remnant beneath the pyramid"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "182B83A7C9658859"
+					item: "cataclysm:gauntlet_of_maelstrom"
+					only_from_crafting: true
+					title: "Fuse the Gauntlet of Maelstrom"
+					type: "item"
+				}
+			]
+			title: "The Ancient Remnant"
+			x: 90.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["754670C6DA3F9481"]
+			description: ["Gather a Heart of the Sea, nautilus shells and mineral blocks for the Abyssal Sacrifice, and craft an Abyss Eye to find the Sunken City."]
+			icon: "cataclysm:abyss_eye"
+			id: "6833AB51BAE9DA73"
+			rewards: [
+				{
+					id: "638040AAA943365C"
+					item: "minecraft:conduit"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 850"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "103BB6739B435AE0"
+					silent: true
+					title: "+850 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4E2E4A43A06DA103"
+					item: "minecraft:heart_of_the_sea"
+					title: "Gather a Heart of the Sea"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "0BDE14654F557F0D"
+					item: "minecraft:nautilus_shell"
+					title: "Gather nautilus shells"
+					type: "item"
+				}
+				{
+					id: "623877CAB25D386B"
+					item: "cataclysm:abyss_eye"
+					only_from_crafting: true
+					title: "Craft an Abyss Eye to find the Sunken City"
+					type: "item"
+				}
+			]
+			title: "The Abyssal Sacrifice"
+			x: 91.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6833AB51BAE9DA73"]
+			description: ["Dive into the Sunken City in the deep ocean, clear its Deeplings and defeat a Coral Golem."]
+			icon: "minecraft:brain_coral"
+			id: "67E2F5900D4DD245"
+			rewards: [
+				{
+					count: 4
+					id: "1EB066618DC85753"
+					item: "cataclysm:crystallized_coral"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 900"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0A7B9A5C5F969E20"
+					silent: true
+					title: "+900 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "75FBDC38CD7636FA"
+					structure: "cataclysm:sunken_city"
+					title: "Dive into the Sunken City"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:deepling"
+					id: "368874B794D748DF"
+					title: "Clear the city's Deeplings"
+					type: "kill"
+					value: 6L
+				}
+				{
+					entity: "cataclysm:coral_golem"
+					id: "12CE35FD50B75DD0"
+					title: "Defeat a Coral Golem"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Drowned Streets"
+			x: 93.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["67E2F5900D4DD245"]
+			description: ["Place the Abyssal Sacrifice on the Altar of the Abyss and defeat the Leviathan in its own water."]
+			icon: "cataclysm:tidal_claws"
+			id: "2ACCF1C258228583"
+			rewards: [
+				{
+					id: "231283D7327EAFC7"
+					item: "cataclysm:tidal_claws"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 950"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "2B40D9128A9AC248"
+					silent: true
+					title: "+950 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "cataclysm:the_leviathan"
+					id: "241A06C3DD17999A"
+					title: "Defeat the Leviathan in its own water"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Leviathan"
+			x: 94.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2ACCF1C258228583"]
+			description: ["On the road north, an old Village Watch veteran finds you and warns of Maledictus's lifting slam, the move that ends most who face it. Craft a Cursed Eye and stock up on totems."]
+			icon: "cataclysm:cursed_eye"
+			id: "19173A9F2FAB4545"
+			rewards: [
+				{
+					id: "05A001A5DC09050D"
+					item: "minecraft:totem_of_undying"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 880"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "1ADD699B8E0E943A"
+					silent: true
+					title: "+880 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2305A2D78793215E"
+					stage: "fq.main_story.act5_cursed_eye.enc0"
+					title: "Hear the old Watch veteran's warning on the road north"
+					type: "gamestage"
+				}
+				{
+					id: "14163BDFF3A45FDB"
+					item: "cataclysm:cursed_eye"
+					only_from_crafting: true
+					title: "Craft a Cursed Eye"
+					type: "item"
+				}
+				{
+					id: "4631FCEEEA90A0BF"
+					item: "minecraft:totem_of_undying"
+					title: "Stock up on a totem of undying"
+					type: "item"
+				}
+			]
+			title: "A Warning in Ice"
+			x: 96.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["19173A9F2FAB4545"]
+			description: ["Return to the Frosted Prison, now unsealed, and fight through Draugr and Aptrgangr to its lowest cell block."]
+			icon: "cataclysm:black_steel_ingot"
+			id: "15C6193D24A3613B"
+			rewards: [
+				{
+					count: 4
+					id: "5D6EB73C5E81B78D"
+					item: "cataclysm:black_steel_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 920"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0E08874E2F8262B2"
+					silent: true
+					title: "+920 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "52B7AFB8B9EDECFC"
+					structure: "cataclysm:frosted_prison"
+					title: "Return to the unsealed Frosted Prison"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:draugr"
+					id: "3246B6B248D4510C"
+					title: "Fight through the Draugr"
+					type: "kill"
+					value: 6L
+				}
+				{
+					entity: "cataclysm:aptrgangr"
+					id: "38CAFFA7BBC2847D"
+					title: "Fight through the Aptrgangr to the lowest cell block"
+					type: "kill"
+					value: 2L
+				}
+			]
+			title: "The Prison Wakes"
+			x: 97.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["15C6193D24A3613B"]
+			description: ["Defeat Maledictus and keep moving when it rises to slam. Craft Cursium armour from what it leaves."]
+			icon: "cataclysm:cursium_ingot"
+			id: "0FAA9C1E70A4FB1A"
+			rewards: [
+				{
+					id: "17754883EA465E9E"
+					item: "cataclysm:cursium_upgrade_smithing_template"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 950"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0A34AB14DB5647EB"
+					silent: true
+					title: "+950 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "cataclysm:maledictus"
+					id: "16501D888A5E1793"
+					title: "Defeat Maledictus, moving when it rises to slam"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 2L
+					id: "3534759E1A748342"
+					item: "cataclysm:cursium_ingot"
+					title: "Collect what it leaves for Cursium armour"
+					type: "item"
+				}
+			]
+			title: "Maledictus"
+			x: 99.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E4E9B0F1E370B80"]
+			description: ["Optional side branch: tremors from a Primordial Caves volcano point to something ancient stirring. Reaching the volcano opens the Alex's Caves questline's finale."]
+			icon: "alexscaves:spawn_egg_luxtructosaurus"
+			id: "657A8719FE233000"
+			rewards: [
+				{
+					id: "6B9F8292EF227FBB"
+					item: "alexscaves:cave_map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 800"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "7A9C8D5991B24100"
+					silent: true
+					title: "+800 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2FA751227C88B03D"
+					structure: "alexscaves:volcano"
+					title: "Follow the tremors to the Primordial Caves volcano"
+					type: "structure"
+				}
+			]
+			title: "The Volcano Wakes"
+			x: 70.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["7D2176F12B45774C"]
+			description: ["Craft the Flame Eye and follow it into the nether wastes to the Burning Arena: the source of the drain, glowing with every warden's stolen strength."]
+			icon: "cataclysm:flame_eye"
+			id: "3F2E8D9381E077EC"
+			rewards: [
+				{
+					count: 8
+					id: "40D30DDCBFB5E0EE"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 900"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "79C0F56E64F483F9"
+					silent: true
+					title: "+900 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6503C82461FFC99B"
+					item: "cataclysm:flame_eye"
+					only_from_crafting: true
+					title: "Craft the Flame Eye"
+					type: "item"
+				}
+				{
+					id: "0B0BDFB2A077A1F0"
+					structure: "cataclysm:burning_arena"
+					title: "Follow the eye into the nether wastes to the Burning Arena"
+					type: "structure"
+				}
+			]
+			title: "An Eye of Flame"
+			x: 102.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0FAA9C1E70A4FB1A"]
+			description: ["Every organisation sends something for the last fight: food from the Tavern keepers, potions from the Herbalists, a blessed shield from the Village watch. Collect them all in Reece."]
+			icon: "minecraft:cake"
+			id: "7D2176F12B45774C"
+			rewards: [
+				{
+					count: 2
+					id: "7CF1DC32BA9E1693"
+					item: "minecraft:cake"
+					type: "item"
+				}
+				{
+					id: "2A42874C6DEBC58A"
+					item: {
+						Count: 1b
+						id: "spartanshields:netherite_basic_shield"
+						tag: {
+							display: {
+								Name: "{\"text\": \"The Watch's Blessed Shield\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "5C1FF66EA6F90C9B"
+					item: "irons_spellbooks:greater_healing_potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 900"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "5951627412ABEA58"
+					silent: true
+					title: "+900 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "3FAFD4D7A0F671B6"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "3FC088F7C04C8AC8"
+					stage: "fq.main_story.act5_last_preparations.talk1"
+					title: "Collect a feast from the Tavern keepers"
+					type: "gamestage"
+				}
+				{
+					id: "0AA1FF9E7CE7DB2D"
+					stage: "fq.main_story.act5_last_preparations.talk2"
+					title: "Collect healing potions from the Herbalists"
+					type: "gamestage"
+				}
+				{
+					id: "20798A9B50E59C50"
+					stage: "fq.main_story.act5_last_preparations.talk3"
+					title: "Collect a blessed shield from the Village watch"
+					type: "gamestage"
+				}
+			]
+			title: "All of Reece Behind You"
+			x: 100.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F2E8D9381E077EC"]
+			description: ["Clear the Ignited Revenants and Berserkers that guard the Burning Arena's approach."]
+			icon: "cataclysm:burning_ashes"
+			id: "323D67733417C52B"
+			rewards: [
+				{
+					count: 4
+					id: "7F4E6793ACD795A6"
+					item: "cataclysm:burning_ashes"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 920"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "05AE316C9221E014"
+					silent: true
+					title: "+920 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:ignited_revenant"
+					id: "7FE2674C584AD3EF"
+					title: "Clear the Ignited Revenants"
+					type: "kill"
+					value: 4L
+				}
+				{
+					entity: "cataclysm:ignited_berserker"
+					id: "6435F679DC437935"
+					title: "Clear the Ignited Berserkers"
+					type: "kill"
+					value: 2L
+				}
+			]
+			title: "The Ash Guard"
+			x: 103.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"323D67733417C52B"
+				"78AE00F471B825AB"
+				"227BB644E726B5A0"
+				"1AEF2A6D29B0DAAA"
+				"04F9CCAF3908B873"
+				"754670C6DA3F9481"
+				"2ACCF1C258228583"
+				"0FAA9C1E70A4FB1A"
+			]
+			description: ["Face Ignis, the fire that fed on the world's wardens, and put it out."]
+			icon: "cataclysm:ignitium_ingot"
+			id: "29423F87BFE497DD"
+			rewards: [
+				{
+					count: 4
+					id: "7707242ACF51ACA2"
+					item: "cataclysm:ignitium_ingot"
+					type: "item"
+				}
+				{
+					id: "5F6256851B9D2C81"
+					item: "cataclysm:ignitium_upgrade_smithing_template"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 1000"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "3BD33FCA78E2A67F"
+					silent: true
+					title: "+1000 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 2.0d
+			tasks: [
+				{
+					entity: "cataclysm:ignis"
+					id: "34045C32BA84D2C9"
+					title: "Put out Ignis, the fire that fed on the wardens"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Ignis"
+			x: 105.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29423F87BFE497DD"]
+			description: ["Walk back into the forest at dusk. The fairies and fireflies have returned, and Sister Wren holds a festival in Reece in your honour."]
+			icon: "minecraft:oak_sapling"
+			id: "0F8F25D9DA92FE7B"
+			rewards: [
+				{
+					id: "009A58545F4867F8"
+					item: {
+						Count: 1b
+						id: "minecraft:diamond_sword"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 5s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The end of the story.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Forest's Thanks\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 1000"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "09FEBB6D08276227"
+					silent: true
+					title: "+1000 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:forest"
+					id: "6B547A2647175B7E"
+					title: "Walk back into the forest at dusk"
+					type: "biome"
+				}
+				{
+					id: "4966A46084CBDA55"
+					stage: "fq.main_story.epilogue.talk1"
+					title: "Join Sister Wren's festival in your honour"
+					type: "gamestage"
+				}
+			]
+			title: "The Forest Sings"
+			x: 106.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["The main story"]
 	title: "The Silent Forest"

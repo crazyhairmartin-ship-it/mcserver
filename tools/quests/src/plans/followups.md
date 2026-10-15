@@ -287,8 +287,12 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_fishing:almanac: needs every species; written as eight species caught
 - skill_fishing:semi_final: needs beating two other champions; written as Silas's encounter and a prize-fish drop
 - skill_mining:great_collapse: needs reaching seven pockets of survivors; written as three escorts from the collapse
+- main_story:act5_start: needs the guild leaders gathering; written as a talk with Sister Wren and the forge crafted
+- main_story:act5_factory_power: needs lava power cells restarting the machines; written as cells carried and a hurt-free timed crossing
+- main_story:act5_remnant: needs the fusion at a crafting step; written as the boss fight and the gauntlet crafted
+- main_story:act5_abyssal_sacrifice: needs mineral blocks for the sacrifice; written as the heart, shells and the eye
+- main_story:act5_leviathan: needs the sacrifice placed on the altar; written as the boss fight at the Sunken City
+- main_story:act5_last_preparations: needs every organisation to send gifts; written as three org talks in Reece
+- main_story:final_boss: needs Ignis to be present when the other sleepers are down; written as a boss spawn at the Burning Arena
 
 ## Links to restore
-- discovery_land:return_to_the_ruins: restore after main_story:act5_start
-- nether:monstrous_eye: restore after main_story:act5_start
-- end:void_eye: restore after main_story:act5_start

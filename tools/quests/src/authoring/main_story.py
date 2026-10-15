@@ -546,5 +546,192 @@ ACT4 = [
           rewards=[reward_item("minecraft:netherite_scrap", 2), skill("agility", 700)]),
 ]
 
+ACT5 = [
+    quest("act5_start", "The Reckoning", icon="cataclysm:infernal_forge", after=["act4_finale"],
+          text=["Sister Wren and the guild leaders gather in Reece: break the eight in turn, weakest first. Craft the "
+                "Infernal Forge to work the sleepers' metals."],
+          tasks=[talk_char("wren", ["The eight must be broken, weakest first. Notch guide you.", "Craft the Infernal Forge to work their metals."],
+                           title="Hear Sister Wren and the guild leaders at the gathering"),
+                 item("cataclysm:infernal_forge", crafted=True, title="Craft the Infernal Forge")],
+          rewards=[reward_item("minecraft:netherite_ingot"), skill("craft", 800)]),
+
+    quest("act5_monstrous_eye", "An Eye of Netherite", icon="cataclysm:monstrous_eye", after=["act5_start"],
+          text=["Craft a Monstrous Eye from netherite scrap and follow it through the Nether to the Soul Black Smith."],
+          tasks=[item("cataclysm:monstrous_eye", crafted=True, title="Craft a Monstrous Eye"),
+                 {"structure": "cataclysm:soul_black_smith", "title": "Follow the eye through the Nether to the Soul Black Smith"}],
+          rewards=[reward_item("minecraft:magma_cream", 4), skill("craft", 800)]),
+
+    quest("act5_monstrosity", "The Netherite Monstrosity", icon="minecraft:netherite_block",
+          shape="diamond", size=1.5, after=["act5_monstrous_eye"],
+          text=["Defeat the Netherite Monstrosity in the forge where it was built."],
+          tasks=[boss("cataclysm:netherite_monstrosity", "cataclysm:soul_black_smith", "The Netherite Monstrosity", "Defeat the Monstrosity in the forge where it was built")],
+          rewards=[reward_item("minecraft:golden_apple", 3), skill("attack", 850)]),
+
+    quest("act5_void_eye", "An Eye of the Void", icon="cataclysm:void_eye", after=["act5_monstrosity"],
+          text=["Craft a Void Eye from shulker shells and follow it across the End highlands to the Ruined Citadel."],
+          tasks=[item("cataclysm:void_eye", crafted=True, title="Craft a Void Eye"),
+                 {"structure": "cataclysm:ruined_citadel", "title": "Follow the eye across the End highlands to the Ruined Citadel"}],
+          rewards=[reward_item("minecraft:ender_pearl", 8), reward_item("minecraft:potion", 2), skill("craft", 820)]),
+
+    quest("act5_ender_golems", "Golems of the Citadel", icon="cataclysm:void_shard", after=["act5_void_eye"],
+          text=["Clear the Ruined Citadel's Ender Golems and Endermapteras without falling into the void traps."],
+          tasks=[fight("cataclysm:ender_golem", 4, "cataclysm:ruined_citadel", "Citadel Golems", "Clear the citadel's Ender Golems", wave=2),
+                 fight("cataclysm:endermaptera", 4, "cataclysm:ruined_citadel", "Citadel Endermapteras", "Clear its Endermapteras", wave=2)],
+          rewards=[reward_item("cataclysm:void_shard", 2), skill("attack", 850)]),
+
+    quest("act5_ender_guardian", "The Ender Guardian", icon="cataclysm:gauntlet_of_guard", shape="diamond", size=1.5, after=["act5_ender_golems"],
+          text=["Defeat the Ender Guardian and claim the Gauntlet of Guard."],
+          tasks=[boss("cataclysm:ender_guardian", "cataclysm:ruined_citadel", "The Ender Guardian", "Defeat the Ender Guardian in the citadel")],
+          rewards=[reward_item("cataclysm:gauntlet_of_guard"), skill("defense", 900)]),
+
+    quest("act5_mech_eye", "An Eye of Gears", icon="cataclysm:mech_eye", after=["act5_ender_guardian"],
+          text=["Craft a Mech Eye and follow it down to the Ancient Factory buried deep underground."],
+          tasks=[item("cataclysm:mech_eye", crafted=True, title="Craft a Mech Eye"),
+                 {"structure": "cataclysm:ancient_factory", "title": "Follow the eye down to the buried Ancient Factory"}],
+          rewards=[reward_item("minecraft:torch", 32), skill("mining", 850)]),
+
+    quest("act5_factory_power", "Cold Furnaces", icon="minecraft:blast_furnace", after=["act5_mech_eye"],
+          text=["The factory's furnaces are dead. Bring lava power cells to restart its machines and reach the "
+                "Harbinger's chamber before its Prowlers notice."],
+          tasks=[item("cataclysm:lava_power_cell", 2, title="Bring lava power cells to restart the machines"),
+                 {"timed": {"seconds": 300, "goal": {"structure": "cataclysm:ancient_factory", "label": "the Harbinger's chamber", "away": 40},
+                            "lines": ["The Prowlers will notice. Reach the chamber quietly."], "start": "Restart the machines", "no": ["hurt"]},
+                  "title": "Reach the Harbinger's chamber before the Prowlers notice"}],
+          rewards=[reward_item("cataclysm:lava_power_cell"), skill("craft", 850)]),
+
+    quest("act5_harbinger", "The Harbinger", icon="cataclysm:witherite_ingot", shape="diamond", size=1.5, after=["act5_factory_power"],
+          text=["Defeat the Harbinger, a machine built in the Wither's image, mirroring your fight in Act III."],
+          tasks=[boss("cataclysm:the_harbinger", "cataclysm:ancient_factory", "The Harbinger", "Defeat the Harbinger in its chamber")],
+          rewards=[reward_item("cataclysm:witherite_ingot", 2), skill("attack", 900)]),
+
+    quest("act5_storm_eye", "An Eye of Storms", icon="cataclysm:storm_eye", after=["act5_harbinger"],
+          text=["Craft a Storm Eye with prismarine and diamonds, then sail a vessel across the warm ocean to the "
+                "Acropolis."],
+          tasks=[item("cataclysm:storm_eye", crafted=True, title="Craft a Storm Eye"),
+                 {"structure": "cataclysm:acropolis", "title": "Sail across the warm ocean to the Acropolis"}],
+          rewards=[reward_item("smallships:oak_cog"), reward_item("minecraft:potion", 2), skill("agility", 850)]),
+
+    quest("act5_clawdian", "Claws of the Acropolis", icon="cataclysm:chitin_claw", after=["act5_storm_eye"],
+          text=["Cut through the Acropolis's Hippocamtus and Cindaria and defeat a Clawdian guarding the storm "
+                "altar."],
+          tasks=[fight("cataclysm:hippocamtus", 3, "cataclysm:acropolis", "Acropolis Hippocamtus", "Cut through the Hippocamtus", wave=3),
+                 boss("cataclysm:clawdian", "cataclysm:acropolis", "The Clawdian", "Defeat the Clawdian guarding the storm altar")],
+          rewards=[reward_item("cataclysm:chitin_claw", 2), skill("attack", 880)]),
+
+    quest("act5_scylla", "Scylla", icon="cataclysm:essence_of_the_storm", shape="diamond", size=1.5, after=["act5_clawdian"],
+          text=["Defeat Scylla in the eye of her storm."],
+          tasks=[boss("cataclysm:scylla", "cataclysm:acropolis", "Scylla", "Defeat Scylla in the eye of her storm")],
+          rewards=[reward_item("cataclysm:essence_of_the_storm"), skill("attack", 920)]),
+
+    quest("act5_desert_eye", "Back to the Pyramid", icon="cataclysm:desert_eye", after=["act5_scylla"],
+          text=["Craft a Desert Eye and return to the Cursed Pyramid you scouted in Act II. Its seal now answers."],
+          tasks=[item("cataclysm:desert_eye", crafted=True, title="Craft a Desert Eye"),
+                 {"structure": "cataclysm:cursed_pyramid", "title": "Return to the Cursed Pyramid whose seal now answers"}],
+          rewards=[reward_item("minecraft:golden_carrot", 16), skill("craft", 850)]),
+
+    quest("act5_wadjets", "The Serpent Guard", icon="spartancataclysm:ancient_metal_greatsword", after=["act5_desert_eye"],
+          text=["Defeat the Wadjets and Kobolediators of the inner pyramid and arm yourself with an Ancient Metal "
+                "weapon."],
+          tasks=[fight("cataclysm:wadjet", 4, "cataclysm:cursed_pyramid", "Serpent Guard", "Defeat the inner pyramid's Wadjets", wave=2),
+                 fight("cataclysm:kobolediator", 2, "cataclysm:cursed_pyramid", "Pyramid Kobolediators", "Defeat its Kobolediators", wave=2),
+                 item("spartancataclysm:ancient_metal_greatsword", crafted=True, title="Forge an Ancient Metal weapon")],
+          rewards=[reward_item("cataclysm:ancient_metal_ingot", 4), skill("attack", 900)]),
+
+    quest("act5_remnant", "The Ancient Remnant", icon="cataclysm:gauntlet_of_maelstrom", shape="diamond", size=1.5, after=["act5_wadjets"],
+          text=["Defeat the Ancient Remnant beneath the pyramid, then fuse its Sandstorm in a Bottle with the "
+                "Gauntlet of Guard into the Gauntlet of Maelstrom."],
+          tasks=[boss("cataclysm:ancient_remnant", "cataclysm:cursed_pyramid", "The Ancient Remnant", "Defeat the Ancient Remnant beneath the pyramid"),
+                 item("cataclysm:gauntlet_of_maelstrom", crafted=True, title="Fuse the Gauntlet of Maelstrom")],
+          rewards=[reward_item("cataclysm:necklace_of_the_desert"), skill("attack", 950)]),
+
+    quest("act5_abyssal_sacrifice", "The Abyssal Sacrifice", icon="cataclysm:abyss_eye", after=["act5_remnant"],
+          text=["Gather a Heart of the Sea, nautilus shells and mineral blocks for the Abyssal Sacrifice, and craft "
+                "an Abyss Eye to find the Sunken City."],
+          tasks=[item("minecraft:heart_of_the_sea", title="Gather a Heart of the Sea"),
+                 item("minecraft:nautilus_shell", 4, title="Gather nautilus shells"),
+                 item("cataclysm:abyss_eye", crafted=True, title="Craft an Abyss Eye to find the Sunken City")],
+          rewards=[reward_item("minecraft:conduit"), skill("fish", 850)]),
+
+    quest("act5_sunken_city", "The Drowned Streets", icon="minecraft:brain_coral", after=["act5_abyssal_sacrifice"],
+          text=["Dive into the Sunken City in the deep ocean, clear its Deeplings and defeat a Coral Golem."],
+          tasks=[{"structure": "cataclysm:sunken_city", "title": "Dive into the Sunken City"},
+                 fight("cataclysm:deepling", 6, "cataclysm:sunken_city", "Drowned Deeplings", "Clear the city's Deeplings", wave=3),
+                 boss("cataclysm:coral_golem", "cataclysm:sunken_city", "A Coral Golem", "Defeat a Coral Golem")],
+          rewards=[reward_item("cataclysm:crystallized_coral", 4), skill("attack", 900)]),
+
+    quest("act5_leviathan", "The Leviathan", icon="cataclysm:tidal_claws", shape="diamond", size=1.5, after=["act5_sunken_city"],
+          text=["Place the Abyssal Sacrifice on the Altar of the Abyss and defeat the Leviathan in its own water."],
+          tasks=[boss("cataclysm:the_leviathan", "cataclysm:sunken_city", "The Leviathan", "Defeat the Leviathan in its own water")],
+          rewards=[reward_item("cataclysm:tidal_claws"), skill("attack", 950)]),
+
+    quest("act5_cursed_eye", "A Warning in Ice", icon="cataclysm:cursed_eye", after=["act5_leviathan"],
+          text=["On the road north, an old Village Watch veteran finds you and warns of Maledictus's lifting slam, "
+                "the move that ends most who face it. Craft a Cursed Eye and stock up on totems."],
+          tasks=[enc(["Maledictus lifts, then slams. Keep moving. Stock up on totems."], entity="guardvillagers:guard", name="Watch Veteran",
+                     title="Hear the old Watch veteran's warning on the road north"),
+                 item("cataclysm:cursed_eye", crafted=True, title="Craft a Cursed Eye"),
+                 item("minecraft:totem_of_undying", title="Stock up on a totem of undying")],
+          rewards=[reward_item("minecraft:totem_of_undying"), skill("craft", 880)]),
+
+    quest("act5_aptrgangr", "The Prison Wakes", icon="cataclysm:black_steel_ingot", after=["act5_cursed_eye"],
+          text=["Return to the Frosted Prison, now unsealed, and fight through Draugr and Aptrgangr to its lowest "
+                "cell block."],
+          tasks=[{"structure": "cataclysm:frosted_prison", "title": "Return to the unsealed Frosted Prison"},
+                 fight("cataclysm:draugr", 6, "cataclysm:frosted_prison", "Prison Draugr", "Fight through the Draugr", wave=3),
+                 fight("cataclysm:aptrgangr", 2, "cataclysm:frosted_prison", "Prison Aptrgangr", "Fight through the Aptrgangr to the lowest cell block", wave=2)],
+          rewards=[reward_item("cataclysm:black_steel_ingot", 4), skill("attack", 920)]),
+
+    quest("act5_maledictus", "Maledictus", icon="cataclysm:cursium_ingot", shape="diamond", size=1.5, after=["act5_aptrgangr"],
+          text=["Defeat Maledictus and keep moving when it rises to slam. Craft Cursium armour from what it leaves."],
+          tasks=[boss("cataclysm:maledictus", "cataclysm:frosted_prison", "Maledictus", "Defeat Maledictus, moving when it rises to slam"),
+                 item("cataclysm:cursium_ingot", 2, title="Collect what it leaves for Cursium armour")],
+          rewards=[reward_item("cataclysm:cursium_upgrade_smithing_template"), skill("attack", 950)]),
+
+    quest("act5_luxtructosaurus", "The Volcano Wakes", icon="alexscaves:spawn_egg_luxtructosaurus", after=["act5_start"],
+          text=["Optional side branch: tremors from a Primordial Caves volcano point to something ancient stirring. "
+                "Reaching the volcano opens the Alex's Caves questline's finale."],
+          tasks=[{"structure": "alexscaves:volcano", "title": "Follow the tremors to the Primordial Caves volcano"}],
+          rewards=[reward_item("alexscaves:cave_map"), skill("attack", 800)]),
+
+    quest("act5_flame_eye", "An Eye of Flame", icon="cataclysm:flame_eye", after=["act5_last_preparations"],
+          text=["Craft the Flame Eye and follow it into the nether wastes to the Burning Arena: the source of the "
+                "drain, glowing with every warden's stolen strength."],
+          tasks=[item("cataclysm:flame_eye", crafted=True, title="Craft the Flame Eye"),
+                 {"structure": "cataclysm:burning_arena", "title": "Follow the eye into the nether wastes to the Burning Arena"}],
+          rewards=[reward_item("minecraft:magma_cream", 8), skill("craft", 900)]),
+
+    quest("act5_last_preparations", "All of Reece Behind You", icon="minecraft:cake", after=["act5_maledictus"],
+          text=["Every organisation sends something for the last fight: food from the Tavern keepers, potions from "
+                "the Herbalists, a blessed shield from the Village watch. Collect them all in Reece."],
+          tasks=[{"place": "reece"},
+                 talk_org("tavern", ["A feast for the last fight. Eat well.", "Come back, hear?"], title="Collect a feast from the Tavern keepers"),
+                 talk_org("herbalists", ["Healing draughts. Drink them early."], title="Collect healing potions from the Herbalists"),
+                 talk_org("watch", ["A blessed shield. The watch stands behind you."], title="Collect a blessed shield from the Village watch")],
+          rewards=[reward_item("minecraft:cake", 2), reward_item("spartanshields:netherite_basic_shield", name="The Watch's Blessed Shield"),
+                   reward_item("irons_spellbooks:greater_healing_potion", 4), skill("defense", 900)]),
+
+    quest("act5_revenants", "The Ash Guard", icon="cataclysm:burning_ashes", after=["act5_flame_eye"],
+          text=["Clear the Ignited Revenants and Berserkers that guard the Burning Arena's approach."],
+          tasks=[fight("cataclysm:ignited_revenant", 4, "cataclysm:burning_arena", "Ash Revenants", "Clear the Ignited Revenants", wave=2),
+                 fight("cataclysm:ignited_berserker", 2, "cataclysm:burning_arena", "Ash Berserkers", "Clear the Ignited Berserkers", wave=2)],
+          rewards=[reward_item("cataclysm:burning_ashes", 4), skill("attack", 920)]),
+
+    quest("final_boss", "Ignis", icon="cataclysm:ignitium_ingot", shape="diamond", size=2.0,
+          after=["act5_revenants", "act5_monstrosity", "act5_ender_guardian", "act5_harbinger", "act5_scylla", "act5_remnant",
+                 "act5_leviathan", "act5_maledictus"],
+          text=["Face Ignis, the fire that fed on the world's wardens, and put it out."],
+          tasks=[boss("cataclysm:ignis", "cataclysm:burning_arena", "Ignis", "Put out Ignis, the fire that fed on the wardens")],
+          rewards=[reward_item("cataclysm:ignitium_ingot", 4), reward_item("cataclysm:ignitium_upgrade_smithing_template"), skill("attack", 1000)]),
+
+    quest("epilogue", "The Forest Sings", icon="minecraft:oak_sapling", after=["final_boss"],
+          text=["Walk back into the forest at dusk. The fairies and fireflies have returned, and Sister Wren holds a "
+                "festival in Reece in your honour."],
+          tasks=[{"biome": "minecraft:forest", "title": "Walk back into the forest at dusk"},
+                 talk_char("wren", ["The fairies are back. The fireflies too. Notch be thanked.", "Come. Reece has a festival for you."],
+                           title="Join Sister Wren's festival in your honour")],
+          rewards=[reward_item("minecraft:diamond_sword", name="The Forest's Thanks", lore=["The end of the story."],
+                               enchant={"minecraft:sharpness": 5, "minecraft:unbreaking": 3}), skill("agility", 1000)]),
+]
+
 chapter("main_story", "The Silent Forest", "The main story", "minecraft:written_book", "story", 0,
-        PROLOGUE + ACT1 + ACT2 + ACT3 + ACT4)
+        PROLOGUE + ACT1 + ACT2 + ACT3 + ACT4 + ACT5)

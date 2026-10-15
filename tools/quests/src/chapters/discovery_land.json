@@ -1543,7 +1543,8 @@
       "title": "Back to the Ruins",
       "after": [
         "frostbitten_ruins",
-        "occupied_dunes"
+        "occupied_dunes",
+        "main_story:act5_start"
       ],
       "text": [
         "Now the old ruins' writing makes sense: the snow ruins and the desert dig site point to the prisons of something buried. Revisit one of each and read the inscriptions that name it."
@@ -1558,7 +1559,15 @@
           "title": "Return to the dig site to read its inscriptions"
         },
         {
-          "checkmark": "I read the inscriptions that name what is buried here"
+          "encounter": {
+            "entity": "minecraft:allay",
+            "name": "Spirit of the Ruins",
+            "then": "talk",
+            "lines": [
+              "The old writing, now readable. It names what is buried here."
+            ]
+          },
+          "title": "Have the inscriptions read to you, naming what is buried here"
         }
       ],
       "rewards": [

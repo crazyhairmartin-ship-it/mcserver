@@ -2487,6 +2487,1098 @@
         }
       ],
       "icon": "minecraft:netherite_scrap"
+    },
+    {
+      "id": "act5_start",
+      "title": "The Reckoning",
+      "after": [
+        "act4_finale"
+      ],
+      "text": [
+        "Sister Wren and the guild leaders gather in Reece: break the eight in turn, weakest first. Craft the Infernal Forge to work the sleepers' metals."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "wren",
+          "lines": [
+            "The eight must be broken, weakest first. Notch guide you.",
+            "Craft the Infernal Forge to work their metals."
+          ],
+          "title": "Hear Sister Wren and the guild leaders at the gathering"
+        },
+        {
+          "item": "cataclysm:infernal_forge",
+          "crafted": true,
+          "title": "Craft the Infernal Forge"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_ingot"
+        },
+        {
+          "skill": "craft",
+          "xp": 800
+        }
+      ],
+      "icon": "cataclysm:infernal_forge"
+    },
+    {
+      "id": "act5_monstrous_eye",
+      "title": "An Eye of Netherite",
+      "after": [
+        "act5_start"
+      ],
+      "text": [
+        "Craft a Monstrous Eye from netherite scrap and follow it through the Nether to the Soul Black Smith."
+      ],
+      "tasks": [
+        {
+          "item": "cataclysm:monstrous_eye",
+          "crafted": true,
+          "title": "Craft a Monstrous Eye"
+        },
+        {
+          "structure": "cataclysm:soul_black_smith",
+          "title": "Follow the eye through the Nether to the Soul Black Smith"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 800
+        }
+      ],
+      "icon": "cataclysm:monstrous_eye"
+    },
+    {
+      "id": "act5_monstrosity",
+      "title": "The Netherite Monstrosity",
+      "after": [
+        "act5_monstrous_eye"
+      ],
+      "text": [
+        "Defeat the Netherite Monstrosity in the forge where it was built."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:netherite_monstrosity",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:soul_black_smith"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Netherite Monstrosity"
+          },
+          "title": "Defeat the Monstrosity in the forge where it was built"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_apple",
+          "count": 3
+        },
+        {
+          "skill": "attack",
+          "xp": 850
+        }
+      ],
+      "icon": "minecraft:netherite_block",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act5_void_eye",
+      "title": "An Eye of the Void",
+      "after": [
+        "act5_monstrosity"
+      ],
+      "text": [
+        "Craft a Void Eye from shulker shells and follow it across the End highlands to the Ruined Citadel."
+      ],
+      "tasks": [
+        {
+          "item": "cataclysm:void_eye",
+          "crafted": true,
+          "title": "Craft a Void Eye"
+        },
+        {
+          "structure": "cataclysm:ruined_citadel",
+          "title": "Follow the eye across the End highlands to the Ruined Citadel"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 8
+        },
+        {
+          "item": "minecraft:potion",
+          "count": 2
+        },
+        {
+          "skill": "craft",
+          "xp": 820
+        }
+      ],
+      "icon": "cataclysm:void_eye"
+    },
+    {
+      "id": "act5_ender_golems",
+      "title": "Golems of the Citadel",
+      "after": [
+        "act5_void_eye"
+      ],
+      "text": [
+        "Clear the Ruined Citadel's Ender Golems and Endermapteras without falling into the void traps."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:ender_golem",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:ruined_citadel"
+            },
+            "wave": 2,
+            "name": "Citadel Golems"
+          },
+          "title": "Clear the citadel's Ender Golems"
+        },
+        {
+          "kill": "cataclysm:endermaptera",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:ruined_citadel"
+            },
+            "wave": 2,
+            "name": "Citadel Endermapteras"
+          },
+          "title": "Clear its Endermapteras"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:void_shard",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 850
+        }
+      ],
+      "icon": "cataclysm:void_shard"
+    },
+    {
+      "id": "act5_ender_guardian",
+      "title": "The Ender Guardian",
+      "after": [
+        "act5_ender_golems"
+      ],
+      "text": [
+        "Defeat the Ender Guardian and claim the Gauntlet of Guard."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:ender_guardian",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:ruined_citadel"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Ender Guardian"
+          },
+          "title": "Defeat the Ender Guardian in the citadel"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:gauntlet_of_guard"
+        },
+        {
+          "skill": "defense",
+          "xp": 900
+        }
+      ],
+      "icon": "cataclysm:gauntlet_of_guard",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act5_mech_eye",
+      "title": "An Eye of Gears",
+      "after": [
+        "act5_ender_guardian"
+      ],
+      "text": [
+        "Craft a Mech Eye and follow it down to the Ancient Factory buried deep underground."
+      ],
+      "tasks": [
+        {
+          "item": "cataclysm:mech_eye",
+          "crafted": true,
+          "title": "Craft a Mech Eye"
+        },
+        {
+          "structure": "cataclysm:ancient_factory",
+          "title": "Follow the eye down to the buried Ancient Factory"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:torch",
+          "count": 32
+        },
+        {
+          "skill": "mining",
+          "xp": 850
+        }
+      ],
+      "icon": "cataclysm:mech_eye"
+    },
+    {
+      "id": "act5_factory_power",
+      "title": "Cold Furnaces",
+      "after": [
+        "act5_mech_eye"
+      ],
+      "text": [
+        "The factory's furnaces are dead. Bring lava power cells to restart its machines and reach the Harbinger's chamber before its Prowlers notice."
+      ],
+      "tasks": [
+        {
+          "item": "cataclysm:lava_power_cell",
+          "count": 2,
+          "title": "Bring lava power cells to restart the machines"
+        },
+        {
+          "timed": {
+            "seconds": 300,
+            "goal": {
+              "structure": "cataclysm:ancient_factory",
+              "label": "the Harbinger's chamber",
+              "away": 40
+            },
+            "lines": [
+              "The Prowlers will notice. Reach the chamber quietly."
+            ],
+            "start": "Restart the machines",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Reach the Harbinger's chamber before the Prowlers notice"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:lava_power_cell"
+        },
+        {
+          "skill": "craft",
+          "xp": 850
+        }
+      ],
+      "icon": "minecraft:blast_furnace"
+    },
+    {
+      "id": "act5_harbinger",
+      "title": "The Harbinger",
+      "after": [
+        "act5_factory_power"
+      ],
+      "text": [
+        "Defeat the Harbinger, a machine built in the Wither's image, mirroring your fight in Act III."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:the_harbinger",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:ancient_factory"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Harbinger"
+          },
+          "title": "Defeat the Harbinger in its chamber"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:witherite_ingot",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 900
+        }
+      ],
+      "icon": "cataclysm:witherite_ingot",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act5_storm_eye",
+      "title": "An Eye of Storms",
+      "after": [
+        "act5_harbinger"
+      ],
+      "text": [
+        "Craft a Storm Eye with prismarine and diamonds, then sail a vessel across the warm ocean to the Acropolis."
+      ],
+      "tasks": [
+        {
+          "item": "cataclysm:storm_eye",
+          "crafted": true,
+          "title": "Craft a Storm Eye"
+        },
+        {
+          "structure": "cataclysm:acropolis",
+          "title": "Sail across the warm ocean to the Acropolis"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "smallships:oak_cog"
+        },
+        {
+          "item": "minecraft:potion",
+          "count": 2
+        },
+        {
+          "skill": "agility",
+          "xp": 850
+        }
+      ],
+      "icon": "cataclysm:storm_eye"
+    },
+    {
+      "id": "act5_clawdian",
+      "title": "Claws of the Acropolis",
+      "after": [
+        "act5_storm_eye"
+      ],
+      "text": [
+        "Cut through the Acropolis's Hippocamtus and Cindaria and defeat a Clawdian guarding the storm altar."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:hippocamtus",
+          "count": 3,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:acropolis"
+            },
+            "wave": 3,
+            "name": "Acropolis Hippocamtus"
+          },
+          "title": "Cut through the Hippocamtus"
+        },
+        {
+          "kill": "cataclysm:clawdian",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:acropolis"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Clawdian"
+          },
+          "title": "Defeat the Clawdian guarding the storm altar"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:chitin_claw",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 880
+        }
+      ],
+      "icon": "cataclysm:chitin_claw"
+    },
+    {
+      "id": "act5_scylla",
+      "title": "Scylla",
+      "after": [
+        "act5_clawdian"
+      ],
+      "text": [
+        "Defeat Scylla in the eye of her storm."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:scylla",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:acropolis"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "Scylla"
+          },
+          "title": "Defeat Scylla in the eye of her storm"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:essence_of_the_storm"
+        },
+        {
+          "skill": "attack",
+          "xp": 920
+        }
+      ],
+      "icon": "cataclysm:essence_of_the_storm",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act5_desert_eye",
+      "title": "Back to the Pyramid",
+      "after": [
+        "act5_scylla"
+      ],
+      "text": [
+        "Craft a Desert Eye and return to the Cursed Pyramid you scouted in Act II. Its seal now answers."
+      ],
+      "tasks": [
+        {
+          "item": "cataclysm:desert_eye",
+          "crafted": true,
+          "title": "Craft a Desert Eye"
+        },
+        {
+          "structure": "cataclysm:cursed_pyramid",
+          "title": "Return to the Cursed Pyramid whose seal now answers"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 16
+        },
+        {
+          "skill": "craft",
+          "xp": 850
+        }
+      ],
+      "icon": "cataclysm:desert_eye"
+    },
+    {
+      "id": "act5_wadjets",
+      "title": "The Serpent Guard",
+      "after": [
+        "act5_desert_eye"
+      ],
+      "text": [
+        "Defeat the Wadjets and Kobolediators of the inner pyramid and arm yourself with an Ancient Metal weapon."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:wadjet",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:cursed_pyramid"
+            },
+            "wave": 2,
+            "name": "Serpent Guard"
+          },
+          "title": "Defeat the inner pyramid's Wadjets"
+        },
+        {
+          "kill": "cataclysm:kobolediator",
+          "count": 2,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:cursed_pyramid"
+            },
+            "wave": 2,
+            "name": "Pyramid Kobolediators"
+          },
+          "title": "Defeat its Kobolediators"
+        },
+        {
+          "item": "spartancataclysm:ancient_metal_greatsword",
+          "crafted": true,
+          "title": "Forge an Ancient Metal weapon"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:ancient_metal_ingot",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 900
+        }
+      ],
+      "icon": "spartancataclysm:ancient_metal_greatsword"
+    },
+    {
+      "id": "act5_remnant",
+      "title": "The Ancient Remnant",
+      "after": [
+        "act5_wadjets"
+      ],
+      "text": [
+        "Defeat the Ancient Remnant beneath the pyramid, then fuse its Sandstorm in a Bottle with the Gauntlet of Guard into the Gauntlet of Maelstrom."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:ancient_remnant",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:cursed_pyramid"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Ancient Remnant"
+          },
+          "title": "Defeat the Ancient Remnant beneath the pyramid"
+        },
+        {
+          "item": "cataclysm:gauntlet_of_maelstrom",
+          "crafted": true,
+          "title": "Fuse the Gauntlet of Maelstrom"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:necklace_of_the_desert"
+        },
+        {
+          "skill": "attack",
+          "xp": 950
+        }
+      ],
+      "icon": "cataclysm:gauntlet_of_maelstrom",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act5_abyssal_sacrifice",
+      "title": "The Abyssal Sacrifice",
+      "after": [
+        "act5_remnant"
+      ],
+      "text": [
+        "Gather a Heart of the Sea, nautilus shells and mineral blocks for the Abyssal Sacrifice, and craft an Abyss Eye to find the Sunken City."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:heart_of_the_sea",
+          "title": "Gather a Heart of the Sea"
+        },
+        {
+          "item": "minecraft:nautilus_shell",
+          "count": 4,
+          "title": "Gather nautilus shells"
+        },
+        {
+          "item": "cataclysm:abyss_eye",
+          "crafted": true,
+          "title": "Craft an Abyss Eye to find the Sunken City"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:conduit"
+        },
+        {
+          "skill": "fish",
+          "xp": 850
+        }
+      ],
+      "icon": "cataclysm:abyss_eye"
+    },
+    {
+      "id": "act5_sunken_city",
+      "title": "The Drowned Streets",
+      "after": [
+        "act5_abyssal_sacrifice"
+      ],
+      "text": [
+        "Dive into the Sunken City in the deep ocean, clear its Deeplings and defeat a Coral Golem."
+      ],
+      "tasks": [
+        {
+          "structure": "cataclysm:sunken_city",
+          "title": "Dive into the Sunken City"
+        },
+        {
+          "kill": "cataclysm:deepling",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:sunken_city"
+            },
+            "wave": 3,
+            "name": "Drowned Deeplings"
+          },
+          "title": "Clear the city's Deeplings"
+        },
+        {
+          "kill": "cataclysm:coral_golem",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:sunken_city"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "A Coral Golem"
+          },
+          "title": "Defeat a Coral Golem"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:crystallized_coral",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 900
+        }
+      ],
+      "icon": "minecraft:brain_coral"
+    },
+    {
+      "id": "act5_leviathan",
+      "title": "The Leviathan",
+      "after": [
+        "act5_sunken_city"
+      ],
+      "text": [
+        "Place the Abyssal Sacrifice on the Altar of the Abyss and defeat the Leviathan in its own water."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:the_leviathan",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:sunken_city"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Leviathan"
+          },
+          "title": "Defeat the Leviathan in its own water"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:tidal_claws"
+        },
+        {
+          "skill": "attack",
+          "xp": 950
+        }
+      ],
+      "icon": "cataclysm:tidal_claws",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act5_cursed_eye",
+      "title": "A Warning in Ice",
+      "after": [
+        "act5_leviathan"
+      ],
+      "text": [
+        "On the road north, an old Village Watch veteran finds you and warns of Maledictus's lifting slam, the move that ends most who face it. Craft a Cursed Eye and stock up on totems."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "guardvillagers:guard",
+            "name": "Watch Veteran",
+            "then": "talk",
+            "lines": [
+              "Maledictus lifts, then slams. Keep moving. Stock up on totems."
+            ]
+          },
+          "title": "Hear the old Watch veteran's warning on the road north"
+        },
+        {
+          "item": "cataclysm:cursed_eye",
+          "crafted": true,
+          "title": "Craft a Cursed Eye"
+        },
+        {
+          "item": "minecraft:totem_of_undying",
+          "title": "Stock up on a totem of undying"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:totem_of_undying"
+        },
+        {
+          "skill": "craft",
+          "xp": 880
+        }
+      ],
+      "icon": "cataclysm:cursed_eye"
+    },
+    {
+      "id": "act5_aptrgangr",
+      "title": "The Prison Wakes",
+      "after": [
+        "act5_cursed_eye"
+      ],
+      "text": [
+        "Return to the Frosted Prison, now unsealed, and fight through Draugr and Aptrgangr to its lowest cell block."
+      ],
+      "tasks": [
+        {
+          "structure": "cataclysm:frosted_prison",
+          "title": "Return to the unsealed Frosted Prison"
+        },
+        {
+          "kill": "cataclysm:draugr",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:frosted_prison"
+            },
+            "wave": 3,
+            "name": "Prison Draugr"
+          },
+          "title": "Fight through the Draugr"
+        },
+        {
+          "kill": "cataclysm:aptrgangr",
+          "count": 2,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:frosted_prison"
+            },
+            "wave": 2,
+            "name": "Prison Aptrgangr"
+          },
+          "title": "Fight through the Aptrgangr to the lowest cell block"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:black_steel_ingot",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 920
+        }
+      ],
+      "icon": "cataclysm:black_steel_ingot"
+    },
+    {
+      "id": "act5_maledictus",
+      "title": "Maledictus",
+      "after": [
+        "act5_aptrgangr"
+      ],
+      "text": [
+        "Defeat Maledictus and keep moving when it rises to slam. Craft Cursium armour from what it leaves."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:maledictus",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:frosted_prison"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "Maledictus"
+          },
+          "title": "Defeat Maledictus, moving when it rises to slam"
+        },
+        {
+          "item": "cataclysm:cursium_ingot",
+          "count": 2,
+          "title": "Collect what it leaves for Cursium armour"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:cursium_upgrade_smithing_template"
+        },
+        {
+          "skill": "attack",
+          "xp": 950
+        }
+      ],
+      "icon": "cataclysm:cursium_ingot",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act5_luxtructosaurus",
+      "title": "The Volcano Wakes",
+      "after": [
+        "act5_start"
+      ],
+      "text": [
+        "Optional side branch: tremors from a Primordial Caves volcano point to something ancient stirring. Reaching the volcano opens the Alex's Caves questline's finale."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:volcano",
+          "title": "Follow the tremors to the Primordial Caves volcano"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:cave_map"
+        },
+        {
+          "skill": "attack",
+          "xp": 800
+        }
+      ],
+      "icon": "alexscaves:spawn_egg_luxtructosaurus"
+    },
+    {
+      "id": "act5_flame_eye",
+      "title": "An Eye of Flame",
+      "after": [
+        "act5_last_preparations"
+      ],
+      "text": [
+        "Craft the Flame Eye and follow it into the nether wastes to the Burning Arena: the source of the drain, glowing with every warden's stolen strength."
+      ],
+      "tasks": [
+        {
+          "item": "cataclysm:flame_eye",
+          "crafted": true,
+          "title": "Craft the Flame Eye"
+        },
+        {
+          "structure": "cataclysm:burning_arena",
+          "title": "Follow the eye into the nether wastes to the Burning Arena"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 8
+        },
+        {
+          "skill": "craft",
+          "xp": 900
+        }
+      ],
+      "icon": "cataclysm:flame_eye"
+    },
+    {
+      "id": "act5_last_preparations",
+      "title": "All of Reece Behind You",
+      "after": [
+        "act5_maledictus"
+      ],
+      "text": [
+        "Every organisation sends something for the last fight: food from the Tavern keepers, potions from the Herbalists, a blessed shield from the Village watch. Collect them all in Reece."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "talk": "org",
+          "org": "tavern",
+          "lines": [
+            "A feast for the last fight. Eat well.",
+            "Come back, hear?"
+          ],
+          "title": "Collect a feast from the Tavern keepers"
+        },
+        {
+          "talk": "org",
+          "org": "herbalists",
+          "lines": [
+            "Healing draughts. Drink them early."
+          ],
+          "title": "Collect healing potions from the Herbalists"
+        },
+        {
+          "talk": "org",
+          "org": "watch",
+          "lines": [
+            "A blessed shield. The watch stands behind you."
+          ],
+          "title": "Collect a blessed shield from the Village watch"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cake",
+          "count": 2
+        },
+        {
+          "item": "spartanshields:netherite_basic_shield",
+          "name": "The Watch's Blessed Shield"
+        },
+        {
+          "item": "irons_spellbooks:greater_healing_potion",
+          "count": 4
+        },
+        {
+          "skill": "defense",
+          "xp": 900
+        }
+      ],
+      "icon": "minecraft:cake"
+    },
+    {
+      "id": "act5_revenants",
+      "title": "The Ash Guard",
+      "after": [
+        "act5_flame_eye"
+      ],
+      "text": [
+        "Clear the Ignited Revenants and Berserkers that guard the Burning Arena's approach."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:ignited_revenant",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:burning_arena"
+            },
+            "wave": 2,
+            "name": "Ash Revenants"
+          },
+          "title": "Clear the Ignited Revenants"
+        },
+        {
+          "kill": "cataclysm:ignited_berserker",
+          "count": 2,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:burning_arena"
+            },
+            "wave": 2,
+            "name": "Ash Berserkers"
+          },
+          "title": "Clear the Ignited Berserkers"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:burning_ashes",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 920
+        }
+      ],
+      "icon": "cataclysm:burning_ashes"
+    },
+    {
+      "id": "final_boss",
+      "title": "Ignis",
+      "after": [
+        "act5_revenants",
+        "act5_monstrosity",
+        "act5_ender_guardian",
+        "act5_harbinger",
+        "act5_scylla",
+        "act5_remnant",
+        "act5_leviathan",
+        "act5_maledictus"
+      ],
+      "text": [
+        "Face Ignis, the fire that fed on the world's wardens, and put it out."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:ignis",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:burning_arena"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "Ignis"
+          },
+          "title": "Put out Ignis, the fire that fed on the wardens"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:ignitium_ingot",
+          "count": 4
+        },
+        {
+          "item": "cataclysm:ignitium_upgrade_smithing_template"
+        },
+        {
+          "skill": "attack",
+          "xp": 1000
+        }
+      ],
+      "icon": "cataclysm:ignitium_ingot",
+      "shape": "diamond",
+      "size": 2.0
+    },
+    {
+      "id": "epilogue",
+      "title": "The Forest Sings",
+      "after": [
+        "final_boss"
+      ],
+      "text": [
+        "Walk back into the forest at dusk. The fairies and fireflies have returned, and Sister Wren holds a festival in Reece in your honour."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:forest",
+          "title": "Walk back into the forest at dusk"
+        },
+        {
+          "talk": "character",
+          "character": "wren",
+          "lines": [
+            "The fairies are back. The fireflies too. Notch be thanked.",
+            "Come. Reece has a festival for you."
+          ],
+          "title": "Join Sister Wren's festival in your honour"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:diamond_sword",
+          "name": "The Forest's Thanks",
+          "lore": [
+            "The end of the story."
+          ],
+          "enchant": {
+            "minecraft:sharpness": 5,
+            "minecraft:unbreaking": 3
+          }
+        },
+        {
+          "skill": "agility",
+          "xp": 1000
+        }
+      ],
+      "icon": "minecraft:oak_sapling"
     }
   ]
 }

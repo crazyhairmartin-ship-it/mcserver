@@ -1819,6 +1819,7 @@
 			dependencies: [
 				"2A40902E9C043A92"
 				"7258A06F7E75A240"
+				"7E4E9B0F1E370B80"
 			]
 			description: ["Now the old ruins' writing makes sense: the snow ruins and the desert dig site point to the prisons of something buried. Revisit one of each and read the inscriptions that name it."]
 			icon: "minecraft:writable_book"
@@ -1863,8 +1864,9 @@
 				}
 				{
 					id: "12A607A5CDB9073D"
-					title: "I read the inscriptions that name what is buried here"
-					type: "checkmark"
+					stage: "fq.discovery_land.return_to_the_ruins.enc2"
+					title: "Have the inscriptions read to you, naming what is buried here"
+					type: "gamestage"
 				}
 			]
 			title: "Back to the Ruins"
