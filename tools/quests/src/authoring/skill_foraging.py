@@ -63,9 +63,7 @@ Q = [
     quest("wandering_gardener", "The Wandering Gardener", icon="bloomingnature:chestnut_sapling",
           after=["bloom_catalogue"],
           text=["A gardener is coming down the road with a cart full of seeds you've never seen."],
-          tasks=[encounter(["Pressed flowers! Oh, you're one of us.",
-                            "I'll trade you saplings for those. Chestnut, larch, ebony. Plant them somewhere they'll "
-                            "be loved."], entity="bloomingnature:wandering_gardener", name="The Wandering Gardener")],
+          tasks=[encounter(["Pressed flowers! You're one of us.", "Take saplings for them. Plant them where they'll be loved."], entity="bloomingnature:wandering_gardener", name="The Wandering Gardener")],
           rewards=[reward_item("bloomingnature:chestnut_sapling"), reward_item("bloomingnature:larch_sapling"),
                    reward_item("bloomingnature:ebony_sapling"), skill("forage", 150)]),
 

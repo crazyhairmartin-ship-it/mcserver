@@ -21,10 +21,8 @@
           "talk": "character",
           "character": "hale",
           "lines": [
-            "Another recruit. Fine. Stand up straight.",
-            "A shield. Good. You can't hold a wall without one.",
-            "The watch protects villages, villagers and, er, anyone who happens to be nearby. Farmers, say.",
-            "I don't mean any farmer in particular. Moving on. You're in."
+            "Another recruit. A shield, good. Stand up straight.",
+            "The watch protects villagers. And farmers. No farmer in particular. You're in."
           ]
         }
       ],
@@ -110,10 +108,8 @@
           "talk": "character",
           "character": "brannock",
           "lines": [
-            "Ah, there you are. Mind my knees.",
-            "Back in the Marsh Campaign we lost a whole wall to one loose gate.",
-            "See that gap in the fence? And that lane with no light? Fix them. Hale will want it done by sundown, and he'll pretend he didn't ask.",
-            "Fence, a gate, and light. Off you go."
+            "Mind my knees. See that gap in the fence, that dark lane?",
+            "Fix them before sundown. Hale will pretend he didn't ask."
           ]
         },
         {
@@ -316,9 +312,8 @@
           "talk": "character",
           "character": "brannock",
           "lines": [
-            "Well held. Forty years of raids, and I haven't seen it done better by a new recruit.",
-            "I wore this through every one. It never cracked. Take it.",
-            "Tell Hale I said so. He'll go red. He always does."
+            "Well held. I wore this through forty years of raids. Take it.",
+            "Tell Hale I said so. He'll go red."
           ]
         }
       ],

@@ -5,20 +5,12 @@ from common import chapter, quest, talk_char, item, reward_item, skill, giver_or
 
 Q = [
     quest("the_order_calls", "The Order Calls", icon="minecraft:book", after=["main_story:act1_start"],
-          giver=giver_org("arcane", ["Psst. The Arcane Order is recruiting, and I'm meant to be discreet about it.",
-                                     "The fee is ten books and a quill. Take them to Archmage Orrin Vael in the "
-                                     "library tower in Reece."], "I'm interested"),
+          giver=giver_org("arcane", ["The Arcane Order is recruiting. Discreetly.", "Bring ten books and a quill to Archmage Orrin in Reece."], "I'm interested"),
           text=["A village librarian slips you a note: the Arcane Order is recruiting, and the entrance fee is ten "
                 "books and a quill. Bring them to Archmage Orrin Vael in Reece."],
           tasks=[item("minecraft:book", 10, consume=True), item("minecraft:feather", consume=True),
                  item("minecraft:ink_sac", consume=True),
-                 talk_char("orrin", ["Ten books and a quill! Marvellous. Marvellous! Now where did I put my spectacles?",
-                                     "Ah. On my head. As is traditional.",
-                                     "Magic, apprentice, is the art of knowing precisely what you are doing. "
-                                     "Guesswork is for amateurs and goblins.",
-                                     "Schools, spells, scrolls. We shall start at the beginning and end somewhere "
-                                     "rather more alarming.",
-                                     "Pip? PIP! Oh, never mind."])],
+                 talk_char("orrin", ["Ten books and a quill! Marvellous! Where are my spectacles?", "Ah. On my head. Welcome, apprentice."])],
           rewards=[reward_item("minecraft:book", name="Guide to the Schools",
                                lore=["Eight schools. Orrin has underlined the dangerous ones."]),
                    skill("magic", 80)]),
@@ -35,10 +27,7 @@ Q = [
     quest("reroll_the_fates", "Reroll the Fates", icon="minecraft:enchanted_book", after=["an_honest_table"],
           text=["Orrin's test: produce a book with two enchantments he names, using the table's re-roll, without "
                 "wasting more than ten levels."],
-          tasks=[talk_char("orrin", ["Two enchantments on one book. Sharpness and Unbreaking, I think. Or was it "
-                                     "Mending? I wrote it down somewhere.",
-                                     "You may re-roll the table. That is what the instrument is for.",
-                                     "But no more than ten levels wasted. Fortune favours the frugal."]),
+          tasks=[talk_char("orrin", ["Two enchantments on one book, wasting no more than ten levels.", "Fortune favours the frugal."]),
                  item("minecraft:enchanted_book"), {"checkmark": "I made the book without wasting ten levels"}],
           rewards=[reward_item("minecraft:enchanted_book", name="A Careful Hand",
                                enchant={"minecraft:unbreaking": 3}), skill("magic", 120)]),
@@ -48,11 +37,7 @@ Q = [
                 "hear about the undead stirring beneath old graves."],
           tasks=[{"structure": "#villages", "title": "Find a village priest"},
                  {"talk": "entity", "entity": "irons_spellbooks:priest",
-                  "lines": ["Peace, traveller. The Order's work is quiet but never finished.",
-                            "Something is stirring beneath the old graves. The dead are restless.",
-                            "Sister Agathe hunts them. She keeps to the crypt under Reece's church, when she's "
-                            "not on the road.",
-                            "Take a healing draught, for the road. Notch's blessing on you."]}],
+                  "lines": ["Something stirs beneath the old graves. Sister Agathe hunts it.", "Take a healing draught. Notch's blessing."]}],
           rewards=[reward_item("irons_spellbooks:greater_healing_potion"), skill("magic", 100)]),
 
     quest("first_ink", "Ink and Parchment", icon="irons_spellbooks:inscription_table", after=["the_order_calls"],
@@ -91,9 +76,7 @@ Q = [
                 "pyromancer to teach you, politely."],
           tasks=[{"structure": "irons_spellbooks:pyromancer_tower", "title": "Find the Pyromancer Tower"},
                  {"talk": "entity", "entity": "irons_spellbooks:pyromancer",
-                  "lines": ["Orrin sent you? That old windbag. Is he still losing his spectacles?",
-                            "Teach you? Politely, you say. Hm. Most people just throw things at me.",
-                            "I only teach those who can take a fireball. Prove it."]}],
+                  "lines": ["Orrin sent you? Politely? Hm. I teach those who can take a fireball."]}],
           rewards=[reward_item("irons_spellbooks:scroll_fire"), skill("magic", 160)]),
 
     quest("pyromancers_duel", "Trial by Fire", icon="irons_spellbooks:pyromancer_helmet",
@@ -120,9 +103,7 @@ Q = [
           tasks=[{"structure": "irons_spellbooks:mangrove_hut", "title": "Find the Apothecarist's hut"},
                  item("minecraft:mangrove_roots", 32, consume=True), item("minecraft:spider_eye", 8, consume=True),
                  {"talk": "entity", "entity": "irons_spellbooks:apothecarist",
-                  "lines": ["Roots and eyes! You've done your reading.",
-                            "Every ailment has its cure. You only have to know which.",
-                            "Take this elixir. It'll toughen your skin against sharp things."]}],
+                  "lines": ["Roots and eyes. You've done your reading.", "Take this elixir. It toughens the skin."]}],
           rewards=[reward_item("irons_spellbooks:oakskin_elixir"), skill("magic", 180)]),
 
     quest("the_poisoned_traveller", "The Poisoned Traveller", icon="artifacts:antidote_vessel",
@@ -131,9 +112,7 @@ Q = [
                 "with what the Apothecarist taught you: brew a cure for each ailment in turn, before the next one "
                 "sets in."],
           tasks=[item("irons_spellbooks:alchemist_cauldron"),
-                 encounter(["Help... I drank from the wrong spring... everything hurts...",
-                            "Poison, then withering, then... I can't feel my legs.",
-                            "You did it? I'm... I can breathe. Thank you."],
+                 encounter(["Poison... then withering... I can't feel my legs.", "You cured me? Thank you."],
                            entity="minecraft:villager", name="Poisoned Courier",
                            where={"biomes": ["minecraft:swamp", "minecraft:mangrove_swamp"]}),
                  {"checkmark": "I brewed a cure for each ailment"}],
@@ -155,10 +134,7 @@ Q = [
                 "forests, solve the warded door, and talk her into coming home."],
           tasks=[{"structure": "structory_towers:wizard_tower", "title": "Find the wizard tower"},
                  {"checkmark": "I solved the warded door"},
-                 encounter(["Oh. Orrin sent you. Of course he did. Is he cross?",
-                            "I only borrowed them. All three. They were looking lonely.",
-                            "This door took me an hour. I'm quite proud of it, actually.",
-                            "Fine. Fine! I'll go home. But I'm keeping the hat."],
+                 encounter(["Orrin sent you? I only borrowed the books.", "Fine, I'll go home. I'm keeping the hat."],
                            character="pip")],
           rewards=[reward_item("irons_spellbooks:wizard_hat"),
                    reward_item("minecraft:enchanted_book", name="Orrin's Borrowed Book",

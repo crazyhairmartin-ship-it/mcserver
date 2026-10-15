@@ -20,26 +20,21 @@ def errand(org, lines, accept="I'll do it"):
 Q = [
     # ---- Herbalists ----
     quest("water_from_three_wells", "Water from Three Wells", icon="minecraft:potion",
-          giver=errand("herbalists", ["Every well has its own water, and every water brews its own tea. Or so I swear.",
-                                      "Fill three bottles from three wells for me, and I'll prove it."]),
+          giver=errand("herbalists", ["Every well's water brews a different tea. I swear it.", "Bring me bottles from three wells."]),
           text=["A Herbalist swears every well's water makes a different tea, and wants proof from three wells."],
           tasks=[{"structure": "#wells", "title": "Find a well to draw water from"},
                  item("minecraft:potion", 3, consume=True, title="Bring her three bottles of well water")],
           rewards=[reward_item("herbalbrews:green_tea_leaf", 8), skill("forage", 60)]),
 
     quest("make_a_wish", "Make a Wish", icon="minecraft:gold_nugget",
-          giver=errand("herbalists", ["I dropped my lucky coin into a wishing well. I only wanted to make a wish!",
-                                      "It's the one with a roof and a statue, past the old ruins. Could you "
-                                      "fish it out?"]),
+          giver=errand("herbalists", ["I dropped my lucky coin in a wishing well.", "Fish it out? It's the one with a roof."]),
           text=["A young Herbalist lost her lucky coin in a wishing well and cannot bear to be without it."],
           tasks=[{"structure": "dungeons_arise:wishing_well", "title": "Find the wishing well"},
                  item("minecraft:gold_nugget", title="Fish her lucky coin from the bottom")],
           rewards=[reward_item("minecraft:rabbit_foot"), reward_item("minecraft:emerald", 3), skill("forage", 100)]),
 
     quest("honey_from_the_dome", "Honey from the Dome", icon="minecraft:honey_bottle",
-          giver=errand("herbalists", ["Honey's the best thing for a sore throat, and mine has run out.",
-                                      "The bees in the birch woods keep a great glass dome of hives. Calm them "
-                                      "with a campfire first. They sting less."]),
+          giver=errand("herbalists", ["Mine's run out. The birch woods have a bee dome.", "Calm the bees with a campfire first."]),
           text=["A Herbalist is out of honey, and the bee dome in the birch woods has plenty."],
           tasks=[{"structure": "mvs:bee_dome", "title": "Find the bee dome in the birch woods"},
                  {"build": {"blocks": {"minecraft:campfire": 1}, "radius": 8}, "title": "Light a campfire to calm the bees"},
@@ -49,8 +44,7 @@ Q = [
 
     # ---- Growers' co-op ----
     quest("sand_in_the_bucket", "Desert Water", icon="minecraft:cactus",
-          giver=errand("growers", ["Folk say the desert wells never run dry. I'd like to know how.",
-                                   "Bring me a bucket from one, and a cutting of the cactus that grows beside it."]),
+          giver=errand("growers", ["Desert wells never run dry. I'd like to know why.", "Bring a bucket, and some cactus from beside it."]),
           text=["The Growers' co-op wants to know how desert wells never run dry, and what grows beside them."],
           tasks=[{"structure": "mss:desert_well", "title": "Find a desert well"},
                  item("minecraft:water_bucket", consume=True, title="Draw a bucket of its water"),
@@ -58,9 +52,7 @@ Q = [
           rewards=[reward_item("minecraft:bone_meal", 16), skill("farm", 100)]),
 
     quest("the_desert_pump", "The Pump Still Works", icon="minecraft:bucket",
-          giver=errand("growers", ["My field's dry as old bread and there's no river for miles.",
-                                   "I've heard there's a pump out in the dunes that still works. Fill a bucket "
-                                   "there and bring it back to water my new field."]),
+          giver=errand("growers", ["My field's dry. A pump out in the dunes still works.", "Fill a bucket there and water my field."]),
           text=["A desert farmer needs water for a new field and the only working pump is out in the dunes."],
           tasks=[{"structure": "mvs:desert_pump", "title": "Find the working pump in the dunes"},
                  item("minecraft:water_bucket", consume=True, title="Fill a bucket for her thirsty field"),
@@ -71,9 +63,7 @@ Q = [
 
     quest("stall_of_your_own", "A Stall of Your Own", icon="another_furniture:red_awning",
           after=["the_travelling_market"],
-          giver=errand("growers", ["The Co-op wants a stall at the next market, and the old trestle table won't do.",
-                                   "You've seen the roadside stalls. Copy one in the village and put some "
-                                   "produce on display."]),
+          giver=errand("growers", ["The Co-op needs a market stall. Copy a roadside one.", "Put some produce on display."]),
           text=["The Growers' co-op wants a stall at the next market, built like the roadside ones, with produce on it."],
           tasks=[{"structure": "mvs:red_stall", "title": "Look over a roadside stall for ideas"},
                  {"build": {"blocks": {"another_furniture:oak_table": 1, "another_furniture:red_awning": 1,
@@ -82,8 +72,7 @@ Q = [
           rewards=[reward_item("minecraft:bell"), reward_item("minecraft:emerald", 4), skill("farm", 150)]),
 
     quest("seeds_for_sky_farms", "Seeds for the Sky Farms", icon="minecraft:wheat_seeds", after=["parcel_for_the_sky"],
-          giver=errand("growers", ["The sky villagers can't get seeds up to their islands. They'd be grateful for any.",
-                                   "Four sorts, please. Then help them plant."]),
+          giver=errand("growers", ["Sky villagers can't get seeds up to their islands.", "Bring four sorts, then help them plant."]),
           text=["The sky villagers cannot get seeds up to their floating fields, so they are going hungry."],
           tasks=[{"structure": "skyvillages:skyvillage", "title": "Climb to the sky village"},
                  item("minecraft:wheat_seeds", 8, consume=True, title="Give them wheat seeds"),
@@ -94,8 +83,7 @@ Q = [
           rewards=[reward_item("minecraft:emerald", 5), skill("farm", 200)]),
 
     quest("flour_run", "The Flour Run", icon="farm_and_charm:flour",
-          giver=errand("growers", ["The co-op's mill has broken, and the baker is down to her last scoop of flour.",
-                                   "There's a windmill out in the wild that still turns. Take it some wheat."]),
+          giver=errand("growers", ["Our mill's broken and the baker's nearly out of flour.", "A windmill out in the wild still turns. Take wheat."]),
           text=["The Growers' co-op's mill has broken, and the baker needs flour before the next market day."],
           tasks=[item("minecraft:wheat", 16, consume=True, title="Gather wheat to grind"),
                  {"structure": "mvs:windmill", "title": "Find the windmill that still turns"},
@@ -104,9 +92,7 @@ Q = [
 
     # ---- Crafters' guild ----
     quest("restore_the_fountain", "Restore the Fountain", icon="minecraft:chiseled_stone_bricks",
-          giver=errand("crafters", ["Our village square wants a proper stone fountain, and nobody remembers how "
-                                    "the old ones were cut.",
-                                    "There's one standing out in the wild. Look it over, then build one at home."]),
+          giver=errand("crafters", ["Our square needs a stone fountain. Nobody remembers how.", "Study the one in the wild, then build ours."]),
           text=["A Crafters' guild mason wants the village square to have a stone fountain like the old ones."],
           tasks=[{"structure": "mvs:stone_fountain", "title": "Study the old fountain in the wild"},
                  {"build": {"blocks": {"minecraft:stone_bricks": 16, "minecraft:stone_brick_stairs": 4,
@@ -116,10 +102,7 @@ Q = [
                    skill("craft", 130)]),
 
     quest("salvage_the_ruins", "Salvage", icon="minecraft:mossy_stone_bricks",
-          giver=errand("crafters", ["Old stone has a character new stone lacks, and the guild wants some for the "
-                                    "chapel repairs.",
-                                    "Bring me blocks from two different ruins near here. Take what's loose, not "
-                                    "the walls."]),
+          giver=errand("crafters", ["Old stone has character. The guild needs some for chapel repairs.", "Bring blocks from two ruins. Loose ones, not walls."]),
           text=["The Crafters' guild needs old stone with a history to it for the chapel repairs."],
           tasks=[{"structure": "structory:ruin_grassy", "title": "Salvage stone from a grassy ruin"},
                  {"structure": "mvs:small_ruin", "title": "Salvage stone from a second ruin"},
@@ -141,9 +124,7 @@ Q = [
                    skill("cook", 120)]),
 
     quest("cook_over_open_fire", "Cook over an Open Fire", icon="camping:grill",
-          giver=errand("tavern", ["Food tastes better outdoors, and I'll hear no argument.",
-                                  "There's a fire camp out in the wild. Cook me a proper meal there and bring "
-                                  "it back while it's still warm."]),
+          giver=errand("tavern", ["Food tastes better outdoors. No arguments.", "Cook me a meal at a wild fire camp. Bring it warm."]),
           text=["A tavern keeper insists food tastes better cooked outdoors, and wants a meal from a wild fire camp."],
           tasks=[{"structure": "mvs:fire_camp", "title": "Find the wild fire camp"},
                  item("minecraft:cooked_beef", 2, consume=True, title="Cook a meal over the camp fire")],
@@ -167,9 +148,7 @@ Q = [
 
     # ---- Village Watch ----
     quest("scout_the_castle", "Scout the Castle", icon="minecraft:spyglass",
-          giver=errand("watch", ["We think raiders are camping in the old castle ruins. We can't see from here.",
-                                 "Go and count their fires, and don't get spotted. If you're hurt, they know "
-                                 "you're there."]),
+          giver=errand("watch", ["Raiders may be camped in the old castle ruins.", "Count their fires unseen. If you're hurt, they know you're there."]),
           text=["The Village Watch fear raiders are camped in the old castle ruins and need someone to look "
                 "without being seen."],
           tasks=[{"timed": {"seconds": 420, "goal": {"structure": "mvs:castle_ruins", "label": "the castle ruins"},
@@ -179,12 +158,11 @@ Q = [
           rewards=[reward_item("minecraft:spyglass"), skill("defense", 80)]),
 
     quest("the_abandoned_camp", "Who Left the Camp?", icon="minecraft:campfire",
-          giver=errand("watch", ["We found a camp, fire still warm and nobody in sight.",
-                                 "Search it for clues, and find out where the campers went. They may need help."]),
+          giver=errand("watch", ["We found a camp, fire still warm, nobody in sight.", "Find out where the campers went. They may need help."]),
           text=["The Village Watch found an abandoned camp with the fire still warm, and fear for the campers."],
           tasks=[{"structure": "structory:abandoned_camp", "title": "Search the abandoned camp for clues"},
                  {"checkmark": "I found tracks leading away from the camp"},
-                 enc(["Oh! You found us! We ran when we heard wolves, and we couldn't find the way back."],
+                 enc(["You found us! Wolves scared us off, and we lost the way back."],
                            entity="minecraft:villager", name="Lost Camper", title="Find the missing campers")],
           rewards=[reward_item("minecraft:campfire"), reward_item("minecraft:cooked_beef", 8), skill("defense", 120)]),
 
@@ -194,9 +172,7 @@ Q = [
           text=["The Village Watch's captain wants to learn from a fortified village, and the best lesson is to "
                 "help hold its wall."],
           tasks=[{"structure": "ctov:medium/village_plains_fortified", "title": "Travel to a fortified village"},
-                 talk_org("watch", ["Visitor from the watch? Welcome. Mind the gate, it sticks.",
-                                    "We keep two on the wall at all times, and one on the roof.",
-                                    "Raiders always come at dusk. You can stand with us tonight."],
+                 talk_org("watch", ["Visitor from the watch? Raiders come at dusk.", "You can stand with us tonight. Mind the gate."],
                           title="Talk to the wall's guards"),
                  {"timed": {"seconds": 300, "goal": {"hold": {"radius": 20}},
                             "waves": [{"entity": "minecraft:pillager", "count": 2, "every": 40},
@@ -206,9 +182,7 @@ Q = [
           rewards=[reward_item("spartanshields:iron_basic_shield"), skill("defense", 220)]),
 
     quest("a_name_on_the_gallows", "Justice", icon="minecraft:iron_sword",
-          giver=errand("watch", ["A merchant was robbed on the road, and the bandit's hiding out near the old "
-                                 "gallows hill.",
-                                 "Bring him to justice. I'd rather he didn't get away."]),
+          giver=errand("watch", ["A merchant was robbed. The bandit hides near the old gallows hill.", "Bring him to justice."]),
           text=["The Village Watch want the bandit who robbed a merchant brought to justice before he vanishes."],
           tasks=[{"structure": "mvs:gallows", "title": "Track the bandit to the gallows hill"},
                  enc(["You'll never take me alive!"], then="kill", entity="minecraft:pillager",
@@ -217,9 +191,7 @@ Q = [
 
     # ---- Arcane order ----
     quest("statue_rubbings", "Statue Rubbings", icon="minecraft:paper",
-          giver=errand("arcane", ["The carvings on the fallen statues out in the ruins are some of the oldest "
-                                  "writing around.",
-                                  "Make me rubbings of them with paper and charcoal. I'd go, but my knees."]),
+          giver=errand("arcane", ["The fallen statues' carvings are some of the oldest writing around.", "Take rubbings with paper and charcoal. I'd go, but my knees."]),
           text=["An Arcane Order librarian wants copies of the carvings on fallen statues, which may be some of the "
                 "oldest writing around."],
           tasks=[item("minecraft:paper", 4, title="Bring paper to take rubbings"),
@@ -230,15 +202,11 @@ Q = [
 
     # ---- Anglers' society ----
     quest("outcast_fisherman", "The Outcast Fisherman", icon="aquaculture:worm",
-          giver=errand("anglers", ["There's a fisherman who left his village to live on a boat. They say he has "
-                                   "the best bait on the water.",
-                                   "Find his boat and trade for some. He'll like emeralds, I expect."]),
+          giver=errand("anglers", ["A fisherman left his village to live on a boat.", "Find him and trade emeralds for his best bait."]),
           text=["The Anglers' Society talk of a fisherman who left his village for a boat, and keeps the best bait."],
           tasks=[{"structure": "structory:boat", "title": "Find the outcast's boat at sea"},
                  item("minecraft:emerald", 2, consume=True, title="Pay for his best bait"),
-                 enc(["Visitors? Out here? Well, sit down, sit down.",
-                            "Why did I leave? The village talked too much. The sea doesn't.",
-                            "Take the bait. Worms from my own bed. And take the boat when I'm done with it."],
+                 enc(["Visitors out here? The village talked too much. The sea doesn't.", "Take the bait. Worms from my own bed."],
                            entity="minecraft:villager", name="Outcast Fisherman", title="Trade with the outcast")],
           rewards=[reward_item("aquaculture:worm", 16), skill("fish", 100)]),
 
@@ -249,8 +217,7 @@ Q = [
           tasks=[item("minecraft:bread", 16, consume=True, title="Gather bread for the fisherman"),
                  item("supplementaries:rope", 8, consume=True, title="Gather rope for his lines"),
                  {"structure": "structory:boat", "title": "Sail out to his boat"},
-                 enc(["Bread! And rope! You're a lifesaver.",
-                            "The big fish bite at dusk in the deep water off the headland. Don't tell Halloway."],
+                 enc(["Bread and rope! You're a lifesaver.", "Big fish bite at dusk off the headland. Don't tell Halloway."],
                            entity="minecraft:villager", name="Outcast Fisherman", title="Hand over the supplies")],
           rewards=[reward_item("aquaculture:gold_hook"), skill("fish", 140)]),
 
@@ -272,9 +239,7 @@ Q = [
 
     # ---- Couriers ----
     quest("lost_cart", "The Lost Cart", icon="minecraft:chest",
-          giver=errand("couriers", ["A courier's cart broke down in the jungle with parcels aboard.",
-                                    "Find it and carry what's on it to the jungle village. Those parcels are "
-                                    "overdue."]),
+          giver=errand("couriers", ["A courier's cart broke down in the jungle. Parcels are overdue.", "Carry them to the jungle village."]),
           text=["A courier's bamboo cart broke down in the jungle with parcels aboard, and the parcels are overdue."],
           tasks=[{"structure": "mvs:medium_bamboo_cart", "title": "Find the broken cart"},
                  {"checkmark": "I loaded the parcels from the cart"},
@@ -282,8 +247,7 @@ Q = [
           rewards=[reward_item("sophisticatedbackpacks:backpack"), skill("agility", 150)]),
 
     quest("ruins_on_the_map", "Ruins on the Map", icon="minecraft:map",
-          giver=errand("couriers", ["I'm mapping the wild ruins so travellers don't wander into them by night.",
-                                    "A desert ruin, a jungle ruin and a swamp ruin. Visit each and mark them."]),
+          giver=errand("couriers", ["I'm mapping wild ruins so travellers avoid them at night.", "Mark a desert ruin, a jungle ruin and a swamp ruin."]),
           text=["A courier is mapping the wild ruins so that travellers do not wander into them after dark."],
           tasks=[{"structure": "nova_structures:desert_ruins", "title": "Mark the desert ruin"},
                  {"structure": "nova_structures:jungle_ruins", "title": "Mark the jungle ruin"},
@@ -347,15 +311,12 @@ Q = [
                                     "Find it, introduce yourself and bring back a list of what they trade."]),
           text=["The Couriers have never reached the village in the sparse jungle and would like to know what they trade."],
           tasks=[{"structure": "nova_structures:village_jungle", "title": "Find the village in the sparse jungle"},
-                 talk_villager("any", ["A visitor! We get so few. Welcome.",
-                                       "We trade cocoa and bamboo, mostly. Fruit in season.",
-                                       "Tell your couriers the road is open."], title="Ask what they trade")],
+                 talk_villager("any", ["A visitor! We trade cocoa, bamboo and fruit in season.", "Tell your couriers the road is open."], title="Ask what they trade")],
           rewards=[reward_item("minecraft:cocoa_beans", 16), reward_item("minecraft:emerald", 4), skill("agility", 160)]),
 
     # ---- Sanctuary keepers ----
     quest("runaway_horse", "The Runaway Horse", icon="minecraft:saddle",
-          giver=errand("sanctuary", ["My horse bolted and ran off to the wild horse pen. She's frightened, not bad.",
-                                     "Find her, calm her and bring her home."]),
+          giver=errand("sanctuary", ["My horse bolted to the wild horse pen. She's frightened, not bad.", "Find her, calm her, bring her home."]),
           text=["A Sanctuary keeper's horse ran off to a wild horse pen, and she is frightened rather than bad."],
           tasks=[{"structure": "mvs:horse_pen", "title": "Find the wild horse pen"},
                  {"tame": "minecraft:horse", "title": "Win the horse's trust and tame her"},
@@ -372,8 +333,7 @@ Q = [
           rewards=[reward_item("minecraft:sweet_berries", 16), skill("taming", 120)]),
 
     quest("sled_dogs", "Sled Dogs", icon="snowyspirit:sled_oak",
-          giver=errand("sanctuary", ["The Sanctuary wants a sled team for winter deliveries.",
-                                     "Tame wolves near the snowy dog hut, then see how a team pulls a sled."]),
+          giver=errand("sanctuary", ["The Sanctuary wants a sled team for winter.", "Tame wolves near the snowy dog hut and try a sled."]),
           text=["The Sanctuary keepers want a sled team for winter deliveries, and need to see how wolves pull."],
           tasks=[{"structure": "mvs:snowy_dog_hut", "title": "Find the snowy dog hut"},
                  {"tame": "minecraft:wolf", "count": 2, "title": "Tame two wolves for the team"},

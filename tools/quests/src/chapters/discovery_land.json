@@ -46,7 +46,7 @@
             },
             "then": "escort",
             "lines": [
-              "They let me go? You actually... Thank you! Take me to a proper village, please."
+              "Free? Thank you! Take me to a proper village, please."
             ]
           },
           "title": "Walk the freed merchant to the nearest village"
@@ -400,9 +400,8 @@
           "talk": "org",
           "org": "crafters",
           "lines": [
-            "A mainspring? From the hive itself? Let me see.",
-            "Beautiful. Dreadful. Whoever made this had patience.",
-            "The guild will pay you for the loan, and I'll write up what it does."
+            "A mainspring from the hive itself? Remarkable.",
+            "The guild will pay for the loan. I'll study it."
           ],
           "title": "Show the mainspring to a Crafters' guild mason"
         }
@@ -789,9 +788,8 @@
           "talk": "org",
           "org": "bounty",
           "lines": [
-            "The coliseum? Still open? Hm.",
-            "A hunter named Dray ran the fights, until he stopped coming to the office.",
-            "Take a decree. If you fight there, fight for coin."
+            "Still open? A hunter named Dray ran the fights once.",
+            "Take a decree. Fight for coin."
           ],
           "title": "Ask the Bounty Office who runs the fights now"
         }
@@ -1045,8 +1043,8 @@
             "name": "Wandering Cleric",
             "then": "talk",
             "lines": [
-              "I heard the bell! Nobody's rung it in years.",
-              "The town was never built because the builders found something under the foundations, and left in the night. Nobody will say what."
+              "Nobody's rung that bell in years!",
+              "The builders found something under the foundations and left. Nobody says what."
             ]
           },
           "title": "Meet the cleric who answers the bell"
@@ -1087,9 +1085,8 @@
           "talk": "org",
           "org": "arcane",
           "lines": [
-            "Warped planks, in the Overworld? That shouldn't be possible.",
-            "A leak from the Nether, then. The Order will look into it.",
-            "Well done. Keep away from the portal until we know more."
+            "Warped planks in the Overworld? A leak from the Nether.",
+            "The Order will look into it. Stay clear of the portal."
           ],
           "title": "Show the sample to the Arcane Order"
         }
@@ -1368,9 +1365,8 @@
           "talk": "org",
           "org": "arcane",
           "lines": [
-            "You rebuilt a portal? Unlit, I hope.",
-            "Portals are doors, and doors can be opened from either side.",
-            "Leave it cold until we've looked at it. Please."
+            "Portals are doors, and doors open from either side.",
+            "Leave it cold until we've looked at it."
           ],
           "title": "Tell the Arcane Order before you light it"
         }
@@ -1771,9 +1767,8 @@
             "name": "Chapel Keeper",
             "then": "talk",
             "lines": [
-              "I heard the bell! After all these years!",
-              "I used to keep this chapel. The forest took the road, and I took the forest.",
-              "Thank you for ringing it. It sounds just as I remembered."
+              "The bell! After all these years!",
+              "I kept this chapel once. Thank you for ringing it."
             ]
           },
           "title": "See who comes out of the forest"
@@ -2022,9 +2017,8 @@
           "talk": "org",
           "org": "watch",
           "lines": [
-            "A purse stitched with the wrong initials? That changes things.",
-            "The man they hanged was framed. We'll have his name cleared.",
-            "Thank you for coming forward."
+            "Wrong initials? Then the hanged man was framed.",
+            "We'll clear his name."
           ],
           "title": "Clear the dead man's name with the Watch"
         }
@@ -2297,8 +2291,7 @@
             "name": "Harried Baker",
             "then": "talk",
             "lines": [
-              "You baked all of it? And on time? I could kiss you. I won't. Flour.",
-              "Take a rolling pin. I have three."
+              "All of it, on time? Take a rolling pin. I have three."
             ]
           },
           "title": "Deliver the baking before the festival"
@@ -2542,8 +2535,7 @@
           "talk": "entity",
           "entity": "snowyspirit:gingerbread_golem",
           "lines": [
-            "Crumble crumble. You brought cookies? And a drink?",
-            "My house, my walls. But you may have one gumdrop.",
+            "Cookies, and a drink? Fine. One gumdrop.",
             "Merry Midwinter."
           ],
           "title": "Win over the gingerbread golem"
@@ -2622,9 +2614,8 @@
           "talk": "org",
           "org": "watch",
           "lines": [
-            "A name tag? Let me see. Oh, no. Not young Brin.",
-            "The family will want to know. We'll tell them gently.",
-            "They'll want you to have his sword, I think."
+            "A name tag. Oh, no. Not young Brin.",
+            "We'll tell the family gently. His sword is yours."
           ],
           "title": "Tell the family through the Village Watch"
         }

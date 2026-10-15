@@ -3,9 +3,7 @@ from common import chapter, quest, talk_villager, item, reward_item, skill, give
 
 Q = [
     quest("coop_share", "A Share in the Co-op", icon="minecraft:wheat",
-          giver=giver_org("growers", ["Fancy a share in the Growers' Co-op? Everyone pulls their weight.",
-                                      "Till a plot, plant wheat, bring in your first harvest. This year we mean to "
-                                      "hold a proper Harvest Festival again."], "Count me in"),
+          giver=giver_org("growers", ["Fancy a share in the Growers' Co-op? Everyone pulls their weight.", "Till a plot, plant wheat, bring in a first harvest for the festival."], "Count me in"),
           text=["The Growers' Co-op means to hold a proper Harvest Festival again. It starts with wheat."],
           tasks=[item("minecraft:wheat", 64)],
           rewards=[reward_item("minecraft:stone_hoe"), reward_item("minecraft:wheat_seeds", 16), skill("farm", 60)]),

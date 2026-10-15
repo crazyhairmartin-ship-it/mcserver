@@ -254,11 +254,8 @@
           "talk": "character",
           "character": "wren",
           "lines": [
-            "I've read them twice. Notch forgive me, I almost wish I hadn't.",
-            "The wardens hold the old places shut. And someone thinks they're being drained.",
-            "The first of them sleeps in iron, under the hills.",
-            "Take this armour. It was blessed at the shrine, for what that's worth.",
-            "Be careful. Whatever's draining them is still out there. Notch keep you."
+            "The wardens hold the old places shut, and something is draining them.",
+            "The first sleeps in iron under the hills. Take this blessed armour."
           ]
         }
       ],
@@ -399,11 +396,8 @@
           "talk": "character",
           "character": "hale",
           "lines": [
-            "Armour that breathes. I've seen it once. Lost good people that day.",
-            "Iron giants are slow to turn. Get behind it and strike.",
-            "Build yourself a target dummy and practise until it's habit.",
-            "Then go and look. Look. Don't fight it until you're ready.",
-            "...And come back. That's an order. People here would miss you."
+            "Iron giants turn slowly. Get behind it and strike.",
+            "Practise on a dummy. Look first, fight later. And come back."
           ]
         },
         {
@@ -491,11 +485,8 @@
           "talk": "character",
           "character": "wren",
           "lines": [
-            "You're alive. Thank Notch. Tell me everything.",
-            "...It wasn't evil. It was starving.",
-            "Something had been feeding on it, a little at a time, for years.",
-            "Notch made the wardens to guard His world. Who would dare drain them?",
-            "Then it's not just this one. It's all of them."
+            "You're alive. It wasn't evil. It was starving.",
+            "Something fed on it for years. It's all of the wardens."
           ]
         }
       ],
@@ -523,9 +514,8 @@
             "name": "Travelling Priest",
             "then": "talk",
             "lines": [
-              "The drain smells of old magic. Very old.",
-              "There's a Pyromancer Tower not far from here. Its keepers know more than they say.",
-              "If you've a head for magic, start there."
+              "The drain smells of old magic. Try the Pyromancer Tower.",
+              "Its keepers know more than they say."
             ]
           }
         }
@@ -593,8 +583,8 @@
             "name": "Frightened Trader",
             "then": "talk",
             "lines": [
-              "It came out of the snow. Ice everywhere, in a heartbeat.",
-              "My caravan's frozen solid in the taiga. Please, stop it before it finds a village."
+              "Ice, in a heartbeat. My caravan is frozen in the taiga.",
+              "Stop it before it finds a village."
             ]
           }
         },
@@ -680,10 +670,8 @@
           "talk": "character",
           "character": "hale",
           "lines": [
-            "Raiders come when they smell weakness. We'll show them none.",
-            "We fight at the village edge. Nobody gets near the fields. Nobody.",
-            "...Marta's fields, I mean. The farms. All the farms. Equally.",
-            "Bring the omen in when you're ready. My guards will stand with you."
+            "We fight at the village edge. Nobody gets near the fields.",
+            "...Marta's fields. All the farms, equally. Bring the omen."
           ]
         },
         {

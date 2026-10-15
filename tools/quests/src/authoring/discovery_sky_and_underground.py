@@ -98,9 +98,7 @@ Q = [
                 "supplies. Bring him some from the ground."],
           tasks=[item("minecraft:bread", 8, consume=True, title="Bring bread up from the ground"),
                  item("minecraft:cooked_beef", 4, consume=True, title="Bring meat up from the ground"),
-                 enc(["Food! Real food! I've been living on cloud berries for a year.",
-                      "I came up here to escape someone. I forget who. It's very peaceful.",
-                      "Take this feather. It's the lightest thing I own."],
+                 enc(["Real food! I've lived on cloud berries a year.", "Take this feather. Lightest thing I own."],
                      entity="minecraft:villager", name="Sky Hermit", title="Hand over the supplies and hear his story")],
           rewards=[reward_item("minecraft:feather", 8), reward_item("minecraft:golden_carrot", 4), skill("agility", 150)]),
 
@@ -186,9 +184,7 @@ Q = [
     quest("the_cave_tablet", "A Carved Tablet", icon="alexscaves:cave_tablet",
           discover={"item": "alexscaves:cave_tablet"},
           text=["A tablet carved with a place far below. A cartographer in some village will know what it's worth."],
-          tasks=[talk_villager("minecraft:cartographer", ["This tablet shows a cave deeper than any I've charted.",
-                                                          "Magnets, acid, strange light... I'd keep it close.",
-                                                          "Here, a map. The tablet is yours."],
+          tasks=[talk_villager("minecraft:cartographer", ["A cave deeper than any I've charted. Magnets, acid, strange light.", "Here, a map. Keep the tablet."],
                                title="Show the tablet to a cartographer")],
           rewards=[reward_item("minecraft:map"), skill("mining", 200)]),
 

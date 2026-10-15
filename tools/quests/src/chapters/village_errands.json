@@ -38,8 +38,8 @@
         "type": "org",
         "org": "herbalists",
         "lines": [
-          "Every well has its own water, and every water brews its own tea. Or so I swear.",
-          "Fill three bottles from three wells for me, and I'll prove it."
+          "Every well's water brews a different tea. I swear it.",
+          "Bring me bottles from three wells."
         ],
         "accept": "I'll do it",
         "pool": "herbalists_errands"
@@ -79,8 +79,8 @@
         "type": "org",
         "org": "herbalists",
         "lines": [
-          "I dropped my lucky coin into a wishing well. I only wanted to make a wish!",
-          "It's the one with a roof and a statue, past the old ruins. Could you fish it out?"
+          "I dropped my lucky coin in a wishing well.",
+          "Fish it out? It's the one with a roof."
         ],
         "accept": "I'll do it",
         "pool": "herbalists_errands"
@@ -131,8 +131,8 @@
         "type": "org",
         "org": "herbalists",
         "lines": [
-          "Honey's the best thing for a sore throat, and mine has run out.",
-          "The bees in the birch woods keep a great glass dome of hives. Calm them with a campfire first. They sting less."
+          "Mine's run out. The birch woods have a bee dome.",
+          "Calm the bees with a campfire first."
         ],
         "accept": "I'll do it",
         "pool": "herbalists_errands"
@@ -174,8 +174,8 @@
         "type": "org",
         "org": "growers",
         "lines": [
-          "Folk say the desert wells never run dry. I'd like to know how.",
-          "Bring me a bucket from one, and a cutting of the cactus that grows beside it."
+          "Desert wells never run dry. I'd like to know why.",
+          "Bring a bucket, and some cactus from beside it."
         ],
         "accept": "I'll do it",
         "pool": "growers_errands"
@@ -230,8 +230,8 @@
         "type": "org",
         "org": "growers",
         "lines": [
-          "My field's dry as old bread and there's no river for miles.",
-          "I've heard there's a pump out in the dunes that still works. Fill a bucket there and bring it back to water my new field."
+          "My field's dry. A pump out in the dunes still works.",
+          "Fill a bucket there and water my field."
         ],
         "accept": "I'll do it",
         "pool": "growers_errands"
@@ -281,8 +281,8 @@
         "type": "org",
         "org": "growers",
         "lines": [
-          "The Co-op wants a stall at the next market, and the old trestle table won't do.",
-          "You've seen the roadside stalls. Copy one in the village and put some produce on display."
+          "The Co-op needs a market stall. Copy a roadside one.",
+          "Put some produce on display."
         ],
         "accept": "I'll do it",
         "pool": "growers_errands"
@@ -351,8 +351,8 @@
         "type": "org",
         "org": "growers",
         "lines": [
-          "The sky villagers can't get seeds up to their islands. They'd be grateful for any.",
-          "Four sorts, please. Then help them plant."
+          "Sky villagers can't get seeds up to their islands.",
+          "Bring four sorts, then help them plant."
         ],
         "accept": "I'll do it",
         "pool": "growers_errands"
@@ -400,8 +400,8 @@
         "type": "org",
         "org": "growers",
         "lines": [
-          "The co-op's mill has broken, and the baker is down to her last scoop of flour.",
-          "There's a windmill out in the wild that still turns. Take it some wheat."
+          "Our mill's broken and the baker's nearly out of flour.",
+          "A windmill out in the wild still turns. Take wheat."
         ],
         "accept": "I'll do it",
         "pool": "growers_errands"
@@ -449,8 +449,8 @@
         "type": "org",
         "org": "crafters",
         "lines": [
-          "Our village square wants a proper stone fountain, and nobody remembers how the old ones were cut.",
-          "There's one standing out in the wild. Look it over, then build one at home."
+          "Our square needs a stone fountain. Nobody remembers how.",
+          "Study the one in the wild, then build ours."
         ],
         "accept": "I'll do it",
         "pool": "crafters_errands"
@@ -497,8 +497,8 @@
         "type": "org",
         "org": "crafters",
         "lines": [
-          "Old stone has a character new stone lacks, and the guild wants some for the chapel repairs.",
-          "Bring me blocks from two different ruins near here. Take what's loose, not the walls."
+          "Old stone has character. The guild needs some for chapel repairs.",
+          "Bring blocks from two ruins. Loose ones, not walls."
         ],
         "accept": "I'll do it",
         "pool": "crafters_errands"
@@ -592,8 +592,8 @@
         "type": "org",
         "org": "tavern",
         "lines": [
-          "Food tastes better outdoors, and I'll hear no argument.",
-          "There's a fire camp out in the wild. Cook me a proper meal there and bring it back while it's still warm."
+          "Food tastes better outdoors. No arguments.",
+          "Cook me a meal at a wild fire camp. Bring it warm."
         ],
         "accept": "I'll do it",
         "pool": "tavern_errands"
@@ -711,8 +711,8 @@
         "type": "org",
         "org": "watch",
         "lines": [
-          "We think raiders are camping in the old castle ruins. We can't see from here.",
-          "Go and count their fires, and don't get spotted. If you're hurt, they know you're there."
+          "Raiders may be camped in the old castle ruins.",
+          "Count their fires unseen. If you're hurt, they know you're there."
         ],
         "accept": "I'll do it",
         "pool": "watch_errands"
@@ -738,7 +738,7 @@
             "name": "Lost Camper",
             "then": "talk",
             "lines": [
-              "Oh! You found us! We ran when we heard wolves, and we couldn't find the way back."
+              "You found us! Wolves scared us off, and we lost the way back."
             ]
           },
           "title": "Find the missing campers"
@@ -762,8 +762,8 @@
         "type": "org",
         "org": "watch",
         "lines": [
-          "We found a camp, fire still warm and nobody in sight.",
-          "Search it for clues, and find out where the campers went. They may need help."
+          "We found a camp, fire still warm, nobody in sight.",
+          "Find out where the campers went. They may need help."
         ],
         "accept": "I'll do it",
         "pool": "watch_errands"
@@ -784,9 +784,8 @@
           "talk": "org",
           "org": "watch",
           "lines": [
-            "Visitor from the watch? Welcome. Mind the gate, it sticks.",
-            "We keep two on the wall at all times, and one on the roof.",
-            "Raiders always come at dusk. You can stand with us tonight."
+            "Visitor from the watch? Raiders come at dusk.",
+            "You can stand with us tonight. Mind the gate."
           ],
           "title": "Talk to the wall's guards"
         },
@@ -879,8 +878,8 @@
         "type": "org",
         "org": "watch",
         "lines": [
-          "A merchant was robbed on the road, and the bandit's hiding out near the old gallows hill.",
-          "Bring him to justice. I'd rather he didn't get away."
+          "A merchant was robbed. The bandit hides near the old gallows hill.",
+          "Bring him to justice."
         ],
         "accept": "I'll do it",
         "pool": "watch_errands"
@@ -927,8 +926,8 @@
         "type": "org",
         "org": "arcane",
         "lines": [
-          "The carvings on the fallen statues out in the ruins are some of the oldest writing around.",
-          "Make me rubbings of them with paper and charcoal. I'd go, but my knees."
+          "The fallen statues' carvings are some of the oldest writing around.",
+          "Take rubbings with paper and charcoal. I'd go, but my knees."
         ],
         "accept": "I'll do it",
         "pool": "arcane_errands"
@@ -957,9 +956,8 @@
             "name": "Outcast Fisherman",
             "then": "talk",
             "lines": [
-              "Visitors? Out here? Well, sit down, sit down.",
-              "Why did I leave? The village talked too much. The sea doesn't.",
-              "Take the bait. Worms from my own bed. And take the boat when I'm done with it."
+              "Visitors out here? The village talked too much. The sea doesn't.",
+              "Take the bait. Worms from my own bed."
             ]
           },
           "title": "Trade with the outcast"
@@ -980,8 +978,8 @@
         "type": "org",
         "org": "anglers",
         "lines": [
-          "There's a fisherman who left his village to live on a boat. They say he has the best bait on the water.",
-          "Find his boat and trade for some. He'll like emeralds, I expect."
+          "A fisherman left his village to live on a boat.",
+          "Find him and trade emeralds for his best bait."
         ],
         "accept": "I'll do it",
         "pool": "anglers_errands"
@@ -1019,8 +1017,8 @@
             "name": "Outcast Fisherman",
             "then": "talk",
             "lines": [
-              "Bread! And rope! You're a lifesaver.",
-              "The big fish bite at dusk in the deep water off the headland. Don't tell Halloway."
+              "Bread and rope! You're a lifesaver.",
+              "Big fish bite at dusk off the headland. Don't tell Halloway."
             ]
           },
           "title": "Hand over the supplies"
@@ -1156,8 +1154,8 @@
         "type": "org",
         "org": "couriers",
         "lines": [
-          "A courier's cart broke down in the jungle with parcels aboard.",
-          "Find it and carry what's on it to the jungle village. Those parcels are overdue."
+          "A courier's cart broke down in the jungle. Parcels are overdue.",
+          "Carry them to the jungle village."
         ],
         "accept": "I'll do it",
         "pool": "couriers_errands"
@@ -1201,8 +1199,8 @@
         "type": "org",
         "org": "couriers",
         "lines": [
-          "I'm mapping the wild ruins so travellers don't wander into them by night.",
-          "A desert ruin, a jungle ruin and a swamp ruin. Visit each and mark them."
+          "I'm mapping wild ruins so travellers avoid them at night.",
+          "Mark a desert ruin, a jungle ruin and a swamp ruin."
         ],
         "accept": "I'll do it",
         "pool": "couriers_errands"
@@ -1469,8 +1467,7 @@
           "talk": "villager",
           "profession": "any",
           "lines": [
-            "A visitor! We get so few. Welcome.",
-            "We trade cocoa and bamboo, mostly. Fruit in season.",
+            "A visitor! We trade cocoa, bamboo and fruit in season.",
             "Tell your couriers the road is open."
           ],
           "title": "Ask what they trade"
@@ -1539,8 +1536,8 @@
         "type": "org",
         "org": "sanctuary",
         "lines": [
-          "My horse bolted and ran off to the wild horse pen. She's frightened, not bad.",
-          "Find her, calm her and bring her home."
+          "My horse bolted to the wild horse pen. She's frightened, not bad.",
+          "Find her, calm her, bring her home."
         ],
         "accept": "I'll do it",
         "pool": "sanctuary_errands"
@@ -1627,8 +1624,8 @@
         "type": "org",
         "org": "sanctuary",
         "lines": [
-          "The Sanctuary wants a sled team for winter deliveries.",
-          "Tame wolves near the snowy dog hut, then see how a team pulls a sled."
+          "The Sanctuary wants a sled team for winter.",
+          "Tame wolves near the snowy dog hut and try a sled."
         ],
         "accept": "I'll do it",
         "pool": "sanctuary_errands"

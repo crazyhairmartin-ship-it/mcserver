@@ -24,10 +24,8 @@
           "talk": "character",
           "character": "orla",
           "lines": [
-            "A bow you made yourself. Good.",
-            "The lodge has one oath. Never waste a kill.",
-            "Take what you need, use what you take, and leave the rest to grow.",
-            "Say it, and you're one of us."
+            "A bow you made yourself. Good. The lodge has one oath.",
+            "Never waste a kill. Say it, and you're one of us."
           ]
         }
       ],
@@ -64,9 +62,8 @@
           "talk": "org",
           "org": "hunters",
           "lines": [
-            "Hoof prints, see? Deep at the front, so it was walking, not running.",
-            "Follow them quietly, keep downwind, and take only what you'll eat.",
-            "Bring back the venison. The antler is for the lodge wall."
+            "Deep at the front: walking, not running. Follow quietly, downwind.",
+            "Bring back the venison. The antler's for the lodge wall."
           ]
         },
         {
@@ -234,9 +231,8 @@
             },
             "then": "talk",
             "lines": [
-              "Welcome up! Mind the third rung, it's loose.",
-              "See the trails? Deer to the east, boar by the stream, something big in the north.",
-              "Mark them. The lodge will want the map."
+              "Welcome up! Deer east, boar by the stream, something big north.",
+              "Mark them. The lodge wants the map."
             ]
           }
         },
@@ -351,8 +347,8 @@
             "name": "Stranded Hunter",
             "then": "talk",
             "lines": [
-              "Is it gone? Is it really gone?",
-              "Two days up this tree. Two days! Thank you, friend. Tell the lodge I'm alive."
+              "Is it gone? Two days up this tree! Thank you, friend.",
+              "Tell the lodge I'm alive."
             ]
           }
         }

@@ -4,10 +4,7 @@ from common import chapter, quest, talk_char, talk_org, item, reward_item, skill
 Q = [
     quest("first_order", "First Order", icon="minecraft:cooked_beef",
           text=["Bess Copperpot runs Reece's tavern, and tonight she's a cook short."],
-          tasks=[talk_char("bess", ["You. Yes, you. Can you cook? Don't lie to me, I'll know.",
-                                    "Good. You're hired. Probably.",
-                                    "Eight steaks and eight loaves for tonight's regulars. Go on, chop chop.",
-                                    "And eat something yourself first. I won't have my cooks fainting in my kitchen."]),
+          tasks=[talk_char("bess", ["You. Can you cook? Good, you're hired. Probably.", "Eight steaks and eight loaves for tonight. Chop chop."]),
                  item("minecraft:cooked_beef", 8, consume=True), item("minecraft:bread", 8, consume=True)],
           rewards=[reward_item("farmersdelight:flint_knife"), reward_item("minecraft:emerald", 4), skill("cook", 60)]),
 
@@ -60,9 +57,7 @@ Q = [
 
     quest("wandering_baker", "The Wandering Baker", icon="bakery:chocolate_gateau", after=["bakers_dozen"],
           text=["A cart that smells of cinnamon is coming up the road."],
-          tasks=[encounter(["Jam! Do you have jam? I'll trade you anything for good jam.",
-                            "Strawberry? Perfect. Here: my chocolate gateau recipe. And there's a bakery out west "
-                            "you should see."], entity="bakery:wandering_baker", name="The Wandering Baker"),
+          tasks=[encounter(["Jam! Do you have jam? I'll trade you anything.", "Take my gateau recipe. There's a bakery out west you should see."], entity="bakery:wandering_baker", name="The Wandering Baker"),
                  item("bakery:strawberry_jam", 2, consume=True)],
           rewards=[reward_item("bakery:chocolate_jam", 2), reward_item("bakery:cake_stand"), skill("cook", 150)]),
 

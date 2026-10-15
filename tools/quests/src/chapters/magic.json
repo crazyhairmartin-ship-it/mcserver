@@ -32,11 +32,8 @@
           "talk": "character",
           "character": "orrin",
           "lines": [
-            "Ten books and a quill! Marvellous. Marvellous! Now where did I put my spectacles?",
-            "Ah. On my head. As is traditional.",
-            "Magic, apprentice, is the art of knowing precisely what you are doing. Guesswork is for amateurs and goblins.",
-            "Schools, spells, scrolls. We shall start at the beginning and end somewhere rather more alarming.",
-            "Pip? PIP! Oh, never mind."
+            "Ten books and a quill! Marvellous! Where are my spectacles?",
+            "Ah. On my head. Welcome, apprentice."
           ]
         }
       ],
@@ -58,8 +55,8 @@
         "type": "org",
         "org": "arcane",
         "lines": [
-          "Psst. The Arcane Order is recruiting, and I'm meant to be discreet about it.",
-          "The fee is ten books and a quill. Take them to Archmage Orrin Vael in the library tower in Reece."
+          "The Arcane Order is recruiting. Discreetly.",
+          "Bring ten books and a quill to Archmage Orrin in Reece."
         ],
         "accept": "I'm interested"
       }
@@ -118,9 +115,8 @@
           "talk": "character",
           "character": "orrin",
           "lines": [
-            "Two enchantments on one book. Sharpness and Unbreaking, I think. Or was it Mending? I wrote it down somewhere.",
-            "You may re-roll the table. That is what the instrument is for.",
-            "But no more than ten levels wasted. Fortune favours the frugal."
+            "Two enchantments on one book, wasting no more than ten levels.",
+            "Fortune favours the frugal."
           ]
         },
         {
@@ -163,10 +159,8 @@
           "talk": "entity",
           "entity": "irons_spellbooks:priest",
           "lines": [
-            "Peace, traveller. The Order's work is quiet but never finished.",
-            "Something is stirring beneath the old graves. The dead are restless.",
-            "Sister Agathe hunts them. She keeps to the crypt under Reece's church, when she's not on the road.",
-            "Take a healing draught, for the road. Notch's blessing on you."
+            "Something stirs beneath the old graves. Sister Agathe hunts it.",
+            "Take a healing draught. Notch's blessing."
           ]
         }
       ],
@@ -336,9 +330,7 @@
           "talk": "entity",
           "entity": "irons_spellbooks:pyromancer",
           "lines": [
-            "Orrin sent you? That old windbag. Is he still losing his spectacles?",
-            "Teach you? Politely, you say. Hm. Most people just throw things at me.",
-            "I only teach those who can take a fireball. Prove it."
+            "Orrin sent you? Politely? Hm. I teach those who can take a fireball."
           ]
         }
       ],
@@ -461,9 +453,8 @@
           "talk": "entity",
           "entity": "irons_spellbooks:apothecarist",
           "lines": [
-            "Roots and eyes! You've done your reading.",
-            "Every ailment has its cure. You only have to know which.",
-            "Take this elixir. It'll toughen your skin against sharp things."
+            "Roots and eyes. You've done your reading.",
+            "Take this elixir. It toughens the skin."
           ]
         }
       ],
@@ -503,9 +494,8 @@
             },
             "then": "talk",
             "lines": [
-              "Help... I drank from the wrong spring... everything hurts...",
-              "Poison, then withering, then... I can't feel my legs.",
-              "You did it? I'm... I can breathe. Thank you."
+              "Poison... then withering... I can't feel my legs.",
+              "You cured me? Thank you."
             ]
           }
         },
@@ -605,10 +595,8 @@
             "character": "pip",
             "then": "talk",
             "lines": [
-              "Oh. Orrin sent you. Of course he did. Is he cross?",
-              "I only borrowed them. All three. They were looking lonely.",
-              "This door took me an hour. I'm quite proud of it, actually.",
-              "Fine. Fine! I'll go home. But I'm keeping the hat."
+              "Orrin sent you? I only borrowed the books.",
+              "Fine, I'll go home. I'm keeping the hat."
             ]
           }
         }

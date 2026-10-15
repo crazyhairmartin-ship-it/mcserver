@@ -7,21 +7,12 @@ NO_SHORTCUTS = ["teleport", "mounts"]
 
 Q = [
     quest("sign_the_roster", "Sign the Roster", icon="fotfmail:letter_signed",
-          giver=giver_org("couriers", ["Runners wanted! The Ender Mail lot take the parcels, but somebody has to "
-                                       "carry the awkward jobs.",
-                                       "Sign on at the post office in Reece. Ask for Postmistress Quill, and be quick "
-                                       "about it."], "I'll sign on"),
+          giver=giver_org("couriers", ["Runners wanted! Somebody has to carry the awkward jobs.", "Sign on with Postmistress Quill in Reece."], "I'll sign on"),
           text=["A cartographer has pinned a Couriers' notice: runners wanted. Sign on at the Reece post office and "
                 "carry your first signed letter to a cartographer in another village."],
-          tasks=[talk_char("juniper", ["New runner? Good. Name, signature, go.",
-                                       "The carriers handle the parcels. We handle what they won't: anything alive, "
-                                       "hot, fragile or too big for a mailbox.",
-                                       "Sign this letter and take it to the cartographer in the next village. "
-                                       "Don't dawdle. Don't read it. Go."]),
+          tasks=[talk_char("juniper", ["New runner? Name, signature, go. We take what the carriers won't.", "Sign this letter. Take it to the next village's cartographer. Don't dawdle."]),
                  item("fotfmail:letter_signed", consume=True, title="Sign a letter for delivery"),
-                 talk_villager("minecraft:cartographer", ["A letter from Quill? About time.",
-                                                          "Signed and sealed. You'll do, runner.",
-                                                          "Come back when you want a longer run."],
+                 talk_villager("minecraft:cartographer", ["A letter from Quill? About time. You'll do, runner."],
                                title="Hand it to a cartographer in another village")],
           rewards=[reward_item("minecraft:bundle", name="Courier's Satchel"), reward_item("fotfmail:letter", 8),
                    skill("agility", 60)]),
@@ -59,9 +50,7 @@ Q = [
           signature="artifacts:umbrella",
           text=["A courier stranded on a cliff path by a thunderstorm begs you to finish their run. Take the parcel "
                 "down the wet cliff route to the cove below without falling. Their umbrella is the thanks."],
-          tasks=[encounter(["Oh, thank goodness! I can't go on. The path's like glass.",
-                            "Take the parcel down to the cove. Slowly! One slip and it's a long way down.",
-                            "Here, take my umbrella too. I won't need it where I'm going: back to bed."],
+          tasks=[encounter(["Thank goodness! The path's like glass. Take the parcel down to the cove.", "Take my umbrella too."],
                            entity="minecraft:villager", name="Stranded Courier", where={"above_y": 62}),
                  {"checkmark": "I delivered the parcel to the cove"}],
           rewards=[reward_item("artifacts:umbrella"), skill("agility", 140)]),
@@ -112,10 +101,7 @@ Q = [
                                       {"entity": "minecraft:skeleton", "count": 1, "every": 40}],
                             "lines": ["Night run. They'll come at you. Don't stop!"],
                             "start": "Start the night run", "no": NO_SHORTCUTS}, "title": "Run the night post"},
-                 talk_char("juniper", ["You made it? In one piece? ...Good. Timing was fine.",
-                                       "Night runs are the worst. Everything bites.",
-                                       "Here. I wore this on my own night runs. It works. Mostly because it "
-                                       "makes you run faster."])],
+                 talk_char("juniper", ["You made it. Night runs are the worst. Everything bites.", "Take this. I wore it on mine."])],
           rewards=[reward_item("artifacts:panic_necklace"), skill("agility", 260)]),
 
     quest("tower_zipline", "Line from the Tower", icon="parcool:iron_zipline_hook", after=["waystone_route"],
@@ -141,9 +127,7 @@ Q = [
           after=["first_grapple"],
           text=["A young courier who took a shortcut is stuck on a cliff ledge with a broken leg. Grapple down, "
                 "pick them up with Carry On and bring them and their satchel safely back."],
-          tasks=[encounter(["Down here! I can't move my leg. I took a shortcut...",
-                            "Please don't tell Juniper. She'll make me do the stairs forever.",
-                            "My satchel's got sealed letters in it. Can you finish them for me?"],
+          tasks=[encounter(["Down here! I can't move my leg. Please don't tell Juniper.", "My satchel has sealed letters. Can you finish them?"],
                            entity="minecraft:villager", name="Injured Courier", where={"above_y": 70},
                            then="escort", to={"structure": "#villages", "label": "the nearest village"},
                            thanks=["We made it. You're better at this than me.",

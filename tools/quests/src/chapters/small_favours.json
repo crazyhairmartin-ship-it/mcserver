@@ -19,11 +19,8 @@
           "talk": "character",
           "character": "bram",
           "lines": [
-            "A loaf? For the road? Oh, I'd love to! I'd love to! But there's no flour!",
-            "None! Not a pinch! I checked the sack four times. It's a catastrophe!",
-            "The windmill's stopped turning. If the mill stops, the bread stops, and if the bread stops... I can't say it.",
-            "Would you go and ask Hesk what's wrong? Oh, you would? You're a hero!",
-            "It's just one small favour."
+            "A loaf for the road? There's no flour! It's a catastrophe!",
+            "The windmill's stopped. Ask Hesk what's wrong? You're a hero!"
           ]
         }
       ],
@@ -48,11 +45,8 @@
           "talk": "character",
           "character": "hesk",
           "lines": [
-            "Oh. Hello. Sorry. Bram sent you? Sorry about Bram.",
-            "The storm... it tore the sails. Clean through. I can't grind a thing.",
-            "New sails need canvas. Canvas means Nell. I'd ask her myself, only... she frightens me a little.",
-            "Would you ask Nell? If it's not too much trouble. Sorry.",
-            "One small favour, that's all."
+            "Sorry. The storm tore the sails. I can't grind a thing.",
+            "New sails need canvas. Canvas means Nell. Would you ask her? Sorry."
           ]
         }
       ],
@@ -78,11 +72,8 @@
           "talk": "character",
           "character": "nell",
           "lines": [
-            "Stop. Wipe your feet. Both of them. Now step on the mat. The middle.",
-            "Canvas? Of course. Except my shuttle snapped this morning, at seven minutes past six, and nothing has been right since.",
-            "Olsen could carve me a new one. Tell him the exact length. I've written it down. Twice.",
-            "And bring me straw while you're at it. Sixteen bundles. Not fifteen. Sixteen.",
-            "Just a small favour."
+            "Wipe your feet. Canvas? My shuttle snapped at seven past six.",
+            "Olsen can carve a new one. And sixteen bundles of straw. Not fifteen."
           ]
         },
         {
@@ -113,11 +104,8 @@
           "talk": "character",
           "character": "olsen",
           "lines": [
-            "A shuttle? From ordinary birch? Absolutely not.",
-            "Young birch grows too fast. All sap and no sense. It'll warp before the season's out.",
-            "Only the old birches past the woods will do. The ones with the bees. Roots deep in good black soil, the way trees ought to grow.",
-            "Fell them clean, with an axe. None of that gadgetry. Do it right or don't do it.",
-            "Eight logs, no stings. It's a very small favour, really."
+            "A shuttle from ordinary birch? Absolutely not. It'll warp.",
+            "Only old birch past the woods, felled with an axe. Eight logs, no stings."
           ]
         },
         {
@@ -152,9 +140,8 @@
           "talk": "character",
           "character": "nell",
           "lines": [
-            "My shuttle! Let me measure it. ...Exactly right. To the hair. Infuriating.",
-            "He's insufferable, but lovely work.",
-            "Here's your canvas. Folded in eight. Keep it folded in eight. Off you go to Hesk."
+            "Exactly right, to the hair. Infuriating. Canvas, folded in eight.",
+            "Take it to Hesk."
           ],
           "title": "Bring Nell the shuttle"
         },
@@ -162,9 +149,8 @@
           "talk": "character",
           "character": "hesk",
           "lines": [
-            "Canvas? For me? Oh. Oh, thank you. Give me an hour.",
-            "...There. Sails on, mill turning. Listen to it.",
-            "One bag of flour, as promised. I hope it's enough. Sorry if it isn't."
+            "Canvas? Oh, thank you. Give me an hour.",
+            "There. Sails on, mill turning. One bag of flour. Sorry if it isn't enough."
           ],
           "title": "Bring Hesk the canvas"
         }
@@ -226,11 +212,8 @@
           "talk": "character",
           "character": "bram",
           "lines": [
-            "Is that... is that flour? Real flour? I think I'm going to cry. I am crying.",
-            "You're a marvel! A legend! I'll name a bun after you!",
-            "One crusty loaf, as promised. And a breadbox, since you went to all that trouble.",
-            "And three loaves, actually. Four's too many. Three's perfect. Oh, best day ever!",
-            "Next time I ask a small favour, you have my permission to run."
+            "Real flour! I'm crying. You're a legend! Three loaves and a breadbox.",
+            "Next favour, you have my permission to run."
           ]
         }
       ],
@@ -265,11 +248,8 @@
           "talk": "character",
           "character": "gil",
           "lines": [
-            "Island village? Sure, I'll row you. Fare's a favour, as ever.",
-            "Well. Not quite a favour this time. I'd like a good fishing net.",
-            "Mine's more hole than net. Ada up the lake shore makes the best in the country.",
-            "Next village along. Tell her Gil sent you. She'll sigh. Everyone sighs at me.",
-            "It's a small favour. The lake isn't going anywhere."
+            "I'll row you, for a good fishing net. Mine's more hole than net.",
+            "Ada, next village along the lake, makes the best. Tell her Gil sent you."
           ]
         }
       ],
@@ -295,10 +275,8 @@
           "talk": "character",
           "character": "ada",
           "lines": [
-            "Gil's net? Gil owes me for the last one. In favours. I have a drawer of them.",
-            "I'll do it, but I'm out of rope. Rope means flax, and flax means Tamsin.",
-            "Farmer Tamsin, in the village round the lake. Mind the beans.",
-            "Tell her I'll swap a net for a sheaf. She'll grumble. Mind the mesh."
+            "Gil owes me for the last net. I'm out of rope, though.",
+            "Rope means flax. Farmer Tamsin, round the lake. Mind the beans."
           ],
           "title": "Ask Ada about the net"
         }
@@ -325,10 +303,8 @@
           "talk": "character",
           "character": "tamsin",
           "lines": [
-            "Flax? From me? Not a stalk. Not till he has his hat.",
-            "A witch's black cat ran off with it into the swamp. Nobody goes near that hut, and I don't blame them.",
-            "You look brave. Or daft. Either'll do. Go and get it.",
-            "He feels it, you know. The bareness."
+            "Flax? Not a stalk, not till he has his hat.",
+            "A witch's cat took it into the swamp. Go and get it."
           ]
         },
         {
@@ -366,9 +342,7 @@
           "talk": "entity",
           "entity": "minecraft:witch",
           "lines": [
-            "Tea? In a copper kettle? Oh, you do know the old ways.",
-            "Hat? Yes, the cat brought it. He's very proud of himself. Terrible creature.",
-            "Take it. And tell the scarecrow I said he looks better with it.",
+            "Tea in a copper kettle. You know the old ways. Take the hat.",
             "Now go away before I put the kettle back on."
           ],
           "title": "Trade the tea to the witch"
@@ -403,9 +377,8 @@
           "talk": "character",
           "character": "tamsin",
           "lines": [
-            "My scarecrow's hat! Chewed, but his. Look at him. He's glowing.",
-            "Flax, as promised. A whole sheaf. Don't tread on it.",
-            "Tell Ada the rope's on me. Honest work, that."
+            "His hat! Chewed, but his. Look at him glow.",
+            "Take a sheaf of flax. Tell Ada the rope's on me."
           ],
           "title": "Return the hat to Tamsin"
         },
@@ -422,9 +395,8 @@
           "talk": "character",
           "character": "ada",
           "lines": [
-            "Rope! Good, strong rope. Sit down. Don't touch the mesh.",
-            "...There. A proper net, knotted while you waited.",
-            "Give it to Gil. Tell him it's the last one I do on credit."
+            "Good, strong rope. Sit. Don't touch the mesh.",
+            "There, knotted while you waited. Tell Gil it's the last on credit."
           ],
           "title": "Take the rope to Ada"
         }
@@ -458,9 +430,8 @@
           "talk": "character",
           "character": "gil",
           "lines": [
-            "Ada's net! Look at the weave. She's forgiven me, I think.",
-            "A deal's a deal. Hop in, mind the wet bit.",
-            "...Funny. The lake's gone quiet. It's never quiet."
+            "Ada's net! She's forgiven me, I think. Hop in, mind the wet bit.",
+            "The lake's gone quiet. It's never quiet."
           ]
         },
         {

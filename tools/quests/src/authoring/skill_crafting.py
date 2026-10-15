@@ -4,17 +4,11 @@ from common import chapter, quest, talk_char, item, reward_item, skill, giver_or
 
 Q = [
     quest("apprentice_papers", "Apprentice Papers", icon="handcrafted:oak_table",
-          giver=giver_org("crafters", ["The guild workshop in Reece is an empty barn, and Master Joiner Brask needs "
-                                       "hands.",
-                                       "Make a table and two chairs to show you can join wood, and she'll sign "
-                                       "you on."], "I'll sign on"),
+          giver=giver_org("crafters", ["The guild workshop in Reece is an empty barn.", "Make a table and two chairs, and Master Joiner Brask will sign you on."], "I'll sign on"),
           text=["The guild's workshop in Reece is an empty barn. Show you can join wood by making a table and two "
                 "chairs for the bare hall."],
           tasks=[item("handcrafted:oak_table", crafted=True), item("handcrafted:oak_chair", 2, crafted=True),
-                 talk_char("odile", ["A table and two chairs. Hmm. Turn them over.",
-                                     "Rule Nine of the guild: a joint you can't see still has to be true.",
-                                     "...They'll do. More than do. Welcome to the guild, apprentice.",
-                                     "Olsen would have used more nails. Don't tell him I said that."])],
+                 talk_char("odile", ["Turn them over. A joint you can't see still has to be true.", "They'll do. More than do. Welcome, apprentice."])],
           rewards=[reward_item("handcrafted:hammer"), reward_item("minecraft:oak_planks", 64),
                    skill("craft", 60)]),
 
@@ -34,8 +28,7 @@ Q = [
                  {"build": {"blocks": {"handcrafted:oak_fancy_bed": 1, "handcrafted:oak_cupboard": 1,
                                        "handcrafted:oak_nightstand": 1, "handcrafted:blue_cushion": 2},
                             "radius": 10}, "title": "Furnish the cottage"},
-                 encounter(["Oh... it feels like home again.", "Thank you, dear. Take my husband's tools. He'd have "
-                            "wanted a joiner to have them."],
+                 encounter(["It feels like home again. Thank you, dear.", "Take my husband's tools. He'd want a joiner to have them."],
                            entity="minecraft:villager", name="The Widow")],
           rewards=[reward_item("handcrafted:berry_jam_jar"), reward_item("minecraft:iron_axe"),
                    reward_item("minecraft:iron_pickaxe"), skill("craft", 130)]),

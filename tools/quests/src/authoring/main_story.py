@@ -58,11 +58,7 @@ ACT1 = [
           after=["prologue_letter", "prologue_home"],
           text=["Both journal pages together tell of guardians: the wardens, who hold the old places shut.",
                 "Sister Wren has read them twice."],
-          tasks=[talk_char("wren", ["I've read them twice. Notch forgive me, I almost wish I hadn't.",
-                                    "The wardens hold the old places shut. And someone thinks they're being drained.",
-                                    "The first of them sleeps in iron, under the hills.",
-                                    "Take this armour. It was blessed at the shrine, for what that's worth.",
-                                    "Be careful. Whatever's draining them is still out there. Notch keep you."])],
+          tasks=[talk_char("wren", ["The wardens hold the old places shut, and something is draining them.", "The first sleeps in iron under the hills. Take this blessed armour."])],
           rewards=[reward_item("minecraft:iron_chestplate")]),
 
     quest("act1_iron_kit", "Iron and Edge", icon="spartanweaponry:iron_longsword", after=["act1_start"],
@@ -93,11 +89,7 @@ ACT1 = [
           after=["act1_temple", "act1_mineshaft"],
           text=["Armour that breathes, in a sealed chamber. Captain Hale of the Village watch knows what that means, "
                 "and wants you ready before you go anywhere near it."],
-          tasks=[talk_char("hale", ["Armour that breathes. I've seen it once. Lost good people that day.",
-                                    "Iron giants are slow to turn. Get behind it and strike.",
-                                    "Build yourself a target dummy and practise until it's habit.",
-                                    "Then go and look. Look. Don't fight it until you're ready.",
-                                    "...And come back. That's an order. People here would miss you."]),
+          tasks=[talk_char("hale", ["Iron giants turn slowly. Get behind it and strike.", "Practise on a dummy. Look first, fight later. And come back."]),
                  item("dummmmmmy:target_dummy")],
           rewards=[skill("defense", 80)]),
 
@@ -117,20 +109,13 @@ ACT1 = [
 
     quest("act1_wrought_report", "Rust on the Seal", icon="minecraft:iron_nugget", after=["act1_wroughtnaut"],
           text=["Take what you learned back to Sister Wren."],
-          tasks=[talk_char("wren", ["You're alive. Thank Notch. Tell me everything.",
-                                    "...It wasn't evil. It was starving.",
-                                    "Something had been feeding on it, a little at a time, for years.",
-                                    "Notch made the wardens to guard His world. Who would dare drain them?",
-                                    "Then it's not just this one. It's all of them."])],
+          tasks=[talk_char("wren", ["You're alive. It wasn't evil. It was starving.", "Something fed on it for years. It's all of the wardens."])],
           rewards=[reward_item("minecraft:emerald", 8)]),
 
     quest("act1_magic_branch", "A Priest on the Road", icon="irons_spellbooks:scroll", after=["act1_wrought_report"],
           text=["On the road, a travelling priest of the Arcane order stops you. He's been following the same trail."],
           tasks=[{"encounter": {"entity": "minecraft:villager", "name": "Travelling Priest", "then": "talk",
-                                "lines": ["The drain smells of old magic. Very old.",
-                                          "There's a Pyromancer Tower not far from here. Its keepers know more than "
-                                          "they say.",
-                                          "If you've a head for magic, start there."]}}],
+                                "lines": ["The drain smells of old magic. Try the Pyromancer Tower.", "Its keepers know more than they say."]}}],
           rewards=[reward_item("irons_spellbooks:scroll"), reward_item("irons_spellbooks:common_ink")]),
 
     quest("act1_outpost", "Banners on the Hill", icon="minecraft:white_banner", after=["act1_wrought_report"],
@@ -143,9 +128,7 @@ ACT1 = [
     quest("act1_iceologer", "Frost on the Wind", icon="minecraft:packed_ice", after=["act1_outpost"],
           text=["A frightened trader comes looking for help: something froze his caravan in the snowy taiga."],
           tasks=[{"encounter": {"entity": "minecraft:wandering_trader", "name": "Frightened Trader", "then": "talk",
-                                "lines": ["It came out of the snow. Ice everywhere, in a heartbeat.",
-                                          "My caravan's frozen solid in the taiga. Please, stop it before it finds "
-                                          "a village."]}},
+                                "lines": ["Ice, in a heartbeat. My caravan is frozen in the taiga.", "Stop it before it finds a village."]}},
                  {"encounter": {"entity": "friendsandfoes:iceologer", "name": "The Iceologer", "then": "kill",
                                 "glow": True, "where": {"biomes": ["minecraft:snowy_taiga", "minecraft:taiga",
                                                                    "minecraft:grove", "minecraft:snowy_plains"]}}}],
@@ -162,10 +145,7 @@ ACT1 = [
     quest("act1_raid", "The Long Night", icon="minecraft:totem_of_undying", after=["act1_illusioner"],
           text=["Captain Hale has a plan: draw the raiders out on your terms. Carry the Bad Omen into a village and "
                 "hold it through a full raid."],
-          tasks=[talk_char("hale", ["Raiders come when they smell weakness. We'll show them none.",
-                                    "We fight at the village edge. Nobody gets near the fields. Nobody.",
-                                    "...Marta's fields, I mean. The farms. All the farms. Equally.",
-                                    "Bring the omen in when you're ready. My guards will stand with you."]),
+          tasks=[talk_char("hale", ["We fight at the village edge. Nobody gets near the fields.", "...Marta's fields. All the farms, equally. Bring the omen."]),
                  {"advancement": "minecraft:adventure/hero_of_the_village"}],
           rewards=[reward_item("minecraft:totem_of_undying"), skill("defense", 200)]),
 

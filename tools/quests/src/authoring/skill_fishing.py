@@ -14,11 +14,7 @@ Q = [
     quest("sign_up", "Entry Form", icon="minecraft:fishing_rod",
           text=["Commodore Halloway runs the Anglers' Society from Reece. She'll sign you up for the season if you "
                 "can land five fish with a plain rod."],
-          tasks=[talk_char("halloway", ["Another hopeful! Splendid. Fresh bait for the old society.",
-                                        "When I joined, I fished nine days for my first bite. On the tenth, a pike "
-                                        "pulled me clean off the jetty. I kept hold. I'm still holding, in a way.",
-                                        "Five fish, any kind, plain rod. Show me you can land them and you're in.",
-                                        "The season's a long line, my friend. Bring patience, and tie good knots."]),
+          tasks=[talk_char("halloway", ["Another hopeful! Land five fish with a plain rod and you're in.", "The season's a long line. Bring patience, and tie good knots."]),
                  {"timed": {"seconds": 1200, "goal": {"stat": "minecraft:fish_caught", "count": 5},
                             "lines": ["Five fish before the evening bell, plain rod. Off you go."],
                             "start": "Cast off"}, "title": "Land five fish before the evening bell"}],
@@ -31,11 +27,7 @@ Q = [
 
     quest("a_rival_appears", "A Rival on the Bank", icon="minecraft:cod", after=["bait_and_tackle"],
           text=["Someone is coming along the bank, and he looks very pleased with himself."],
-          tasks=[encounter(["Silas Pike. Champion angler. You'll have heard of me.",
-                            "...You haven't heard of me? Everyone's heard of me. Ask anyone. Don't ask Halloway.",
-                            "That rod? Ha. I bet you can't hook Grandfather, the old carp on this bank.",
-                            "I've caught him loads of times. Loads. I just threw him back. Every time.",
-                            "Go on then. Fish until he bites. I'll wait. I'm very patient when I'm winning."],
+          tasks=[encounter(["Silas Pike. Champion angler. You've heard of me. Everyone has.", "Bet you can't hook Grandfather, the old carp. I just throw him back."],
                            character="silas"),
                  prize("Grandfather, the Old Carp", 0.12)],
           rewards=[skill("fish", 100)]),

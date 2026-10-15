@@ -26,10 +26,8 @@
           "talk": "character",
           "character": "fern",
           "lines": [
-            "Oh, look at you. Thin as a rake. Come in, come in.",
-            "You did well. Most people shout at strays. You waited.",
-            "I'll name it later. Names come when they're ready.",
-            "There's more to do here, if you'd like to help."
+            "Thin as a rake. Come in. You waited, most people shout.",
+            "There's more to do here, if you'd help."
           ]
         }
       ],
@@ -48,8 +46,8 @@
         "type": "org",
         "org": "sanctuary",
         "lines": [
-          "There's a wolf that follows my flock at a distance. Half-starved, poor thing.",
-          "If you can win its trust, Keeper Fern at the sanctuary in Reece will take it in."
+          "A half-starved wolf follows my flock at a distance.",
+          "Win its trust, and Keeper Fern in Reece will take it in."
         ],
         "accept": "I'll try"
       }
@@ -299,8 +297,7 @@
             "name": "The Cat-Lady of the Ruin",
             "then": "talk",
             "lines": [
-              "Oh, my darlings! All of them, safe!",
-              "I've lived among these ruins forty winters, and never once had the creepers outstay a good broom. But five at once...",
+              "My darlings, all safe! Forty winters among these ruins.",
               "Take my slippers, dear. The cats insist."
             ]
           }
@@ -456,9 +453,8 @@
           "talk": "character",
           "character": "fern",
           "lines": [
-            "A collar tag is only paper and string until someone believes in it.",
-            "Health Boost for stamina. Defusal so your wolf will sniff out a creeper before it makes its mind up.",
-            "The books will teach you the rest."
+            "A collar tag is paper and string until someone believes in it.",
+            "Health Boost, and Defusal so your wolf sniffs out creepers."
           ]
         },
         {

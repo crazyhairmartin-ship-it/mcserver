@@ -7,19 +7,14 @@ Q = [
           text=["Huntmistress Vance won't take a hunter who can't make their own gear. Craft a bow and a quiver's "
                 "worth of arrows, then swear the lodge oath at the hunters' lodge on the hill west of Reece."],
           tasks=[item("minecraft:bow", crafted=True), item("minecraft:arrow", 32),
-                 talk_char("orla", ["A bow you made yourself. Good.",
-                                    "The lodge has one oath. Never waste a kill.",
-                                    "Take what you need, use what you take, and leave the rest to grow.",
-                                    "Say it, and you're one of us."])],
+                 talk_char("orla", ["A bow you made yourself. Good. The lodge has one oath.", "Never waste a kill. Say it, and you're one of us."])],
           rewards=[reward_item("minecraft:lead", name="Lodge Armband", lore=["Worn by hunters of the lodge."]),
                    reward_item("minecraft:arrow", 16), skill("range", 50)]),
 
     quest("first_tracks", "First Tracks", icon="naturalist:antler", after=["lodge_oath"],
           text=["A fletcher shows you how to follow hoof prints through the woods. Track a deer, and take venison "
                 "and an antler."],
-          tasks=[talk_org("hunters", ["Hoof prints, see? Deep at the front, so it was walking, not running.",
-                                      "Follow them quietly, keep downwind, and take only what you'll eat.",
-                                      "Bring back the venison. The antler is for the lodge wall."]),
+          tasks=[talk_org("hunters", ["Deep at the front: walking, not running. Follow quietly, downwind.", "Bring back the venison. The antler's for the lodge wall."]),
                  item("naturalist:venison", 2),
                  {"drop": {"from": ["naturalist:deer"], "chance": 0.4, "item": "naturalist:antler"}}],
           rewards=[reward_item("minecraft:leather", 8), skill("range", 80)]),
@@ -50,9 +45,7 @@ Q = [
           text=["The lodge keeps a lookout in a firewatch tower deep in the forest. Climb it, meet the watcher and "
                 "mark three game trails from the top."],
           tasks=[{"structure": "#firewatch_towers", "title": "Climb the firewatch tower"},
-                 encounter(["Welcome up! Mind the third rung, it's loose.",
-                            "See the trails? Deer to the east, boar by the stream, something big in the north.",
-                            "Mark them. The lodge will want the map."],
+                 encounter(["Welcome up! Deer east, boar by the stream, something big north.", "Mark them. The lodge wants the map."],
                            entity="minecraft:villager", name="Tower Watcher", where={"above_y": 60}),
                  {"search": {"at": {"structure": "#firewatch_towers"}, "count": 1,
                              "item": {"name": "Watcher's Trail Map", "tooltip": "Three game trails, inked from the top",
@@ -77,8 +70,7 @@ Q = [
           tasks=[{"structure": "#camps", "title": "Find the silent camp"},
                  encounter(["Grrrrr!"], then="kill", entity="alexsmobs:grizzly_bear", name="Camp Grizzly",
                            health=60, glow=True),
-                 encounter(["Is it gone? Is it really gone?",
-                            "Two days up this tree. Two days! Thank you, friend. Tell the lodge I'm alive."],
+                 encounter(["Is it gone? Two days up this tree! Thank you, friend.", "Tell the lodge I'm alive."],
                            entity="minecraft:villager", name="Stranded Hunter")],
           rewards=[reward_item("alexsmobs:bear_fur", 2), skill("range", 220)]),
 

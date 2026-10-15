@@ -16,10 +16,8 @@
           "talk": "character",
           "character": "bess",
           "lines": [
-            "You. Yes, you. Can you cook? Don't lie to me, I'll know.",
-            "Good. You're hired. Probably.",
-            "Eight steaks and eight loaves for tonight's regulars. Go on, chop chop.",
-            "And eat something yourself first. I won't have my cooks fainting in my kitchen."
+            "You. Can you cook? Good, you're hired. Probably.",
+            "Eight steaks and eight loaves for tonight. Chop chop."
           ]
         },
         {
@@ -321,8 +319,8 @@
             "name": "The Wandering Baker",
             "then": "talk",
             "lines": [
-              "Jam! Do you have jam? I'll trade you anything for good jam.",
-              "Strawberry? Perfect. Here: my chocolate gateau recipe. And there's a bakery out west you should see."
+              "Jam! Do you have jam? I'll trade you anything.",
+              "Take my gateau recipe. There's a bakery out west you should see."
             ]
           }
         },

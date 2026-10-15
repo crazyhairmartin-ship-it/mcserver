@@ -6,10 +6,7 @@ Q = [
     quest("the_board", "Wanted", icon="bountiful:bountyboard",
           text=["Bounty Master Corvin Ash posts the office's work on boards in the villages. Find a board and take "
                 "your first contract from it."],
-          tasks=[talk_char("corvin", ["You want work. Good. Work pays.",
-                                      "The office posts contracts on bounty boards. Every village has one.",
-                                      "Find a board. Take a contract. Don't take one you can't finish.",
-                                      "I've buried hunters who did."]),
+          tasks=[talk_char("corvin", ["You want work. Find a bounty board and take a contract.", "Don't take one you can't finish. I've buried hunters who did."]),
                  {"structure": "#villages", "title": "Find a village's bounty board"},
                  item("bountiful:bounty", title="Take a contract from the board")],
           rewards=[reward_item("bountiful:bounty-common"), skill("attack", 50)]),
@@ -46,10 +43,7 @@ Q = [
     quest("weapon_of_choice", "Weapon of Choice", icon="spartanweaponry:iron_longsword", after=["first_contract"],
           text=["Ash wants you to choose your style. Forge an iron Spartan weapon and wear it like a hunter."],
           tasks=[item("spartanweaponry:iron_longsword", crafted=True, title="Forge an iron Spartan weapon"),
-                 talk_char("corvin", ["A longsword. Honest steel.",
-                                      "Wear it where you can draw it fast. A weapon in your pack is a weapon you "
-                                      "don't have.",
-                                      "Every scar on me came from a blade I reached for too late."])],
+                 talk_char("corvin", ["A longsword. Honest steel. Wear it where you can draw it fast.", "Every scar on me came from a blade I reached for too late."])],
           rewards=[reward_item("minecraft:grindstone"), reward_item("minecraft:iron_ingot", 6),
                    skill("attack", 180)]),
 

@@ -6,11 +6,7 @@ Q = [
     quest("enlist", "Enlist", icon="minecraft:shield",
           text=["Captain Hale enlists anyone who turns up with a shield. Make one and swear to the watch."],
           tasks=[item("minecraft:shield", crafted=True, title="Craft a shield"),
-                 talk_char("hale", ["Another recruit. Fine. Stand up straight.",
-                                    "A shield. Good. You can't hold a wall without one.",
-                                    "The watch protects villages, villagers and, er, anyone who happens to be "
-                                    "nearby. Farmers, say.",
-                                    "I don't mean any farmer in particular. Moving on. You're in."])],
+                 talk_char("hale", ["Another recruit. A shield, good. Stand up straight.", "The watch protects villagers. And farmers. No farmer in particular. You're in."])],
           rewards=[reward_item("minecraft:leather_chestplate", name="Watch Tabard",
                                lore=["Issued to new recruits of the Village Watch."]),
                    skill("defense", 50)]),
@@ -29,11 +25,7 @@ Q = [
     quest("weak_spots", "Weak Spots", icon="minecraft:oak_fence_gate", after=["night_watch"],
           text=["Walk the edge of Reece with Sergeant Brannock and fix what he points at: a gap in the fence, a "
                 "dark lane without torches."],
-          tasks=[talk_char("brannock", ["Ah, there you are. Mind my knees.",
-                                        "Back in the Marsh Campaign we lost a whole wall to one loose gate.",
-                                        "See that gap in the fence? And that lane with no light? Fix them. "
-                                        "Hale will want it done by sundown, and he'll pretend he didn't ask.",
-                                        "Fence, a gate, and light. Off you go."]),
+          tasks=[talk_char("brannock", ["Mind my knees. See that gap in the fence, that dark lane?", "Fix them before sundown. Hale will pretend he didn't ask."]),
                  {"build": {"blocks": {"#minecraft:fence_gates": 1, "#minecraft:fences": 6, "minecraft:torch": 6},
                             "radius": 10}, "title": "Fix the fence and light the lane"}],
           rewards=[reward_item("minecraft:lantern", 4), reward_item("minecraft:oak_fence_gate", 2),
@@ -78,10 +70,7 @@ Q = [
                                       {"entity": "minecraft:vindicator", "count": 2, "every": 45}],
                             "lines": ["Here they come! To the gate!", "Hold the line!"],
                             "start": "Hold the gate"}, "title": "Hold the gate through the raid"},
-                 talk_char("brannock", ["Well held. Forty years of raids, and I haven't seen it done better "
-                                        "by a new recruit.",
-                                        "I wore this through every one. It never cracked. Take it.",
-                                        "Tell Hale I said so. He'll go red. He always does."])],
+                 talk_char("brannock", ["Well held. I wore this through forty years of raids. Take it.", "Tell Hale I said so. He'll go red."])],
           rewards=[reward_item("artifacts:crystal_heart"), skill("defense", 300)]),
 
     quest("iceologer", "The Cold Caster", icon="friendsandfoes:totem_of_freezing", after=["first_raid"],

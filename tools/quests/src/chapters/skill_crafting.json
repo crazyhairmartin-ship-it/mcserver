@@ -25,10 +25,8 @@
           "talk": "character",
           "character": "odile",
           "lines": [
-            "A table and two chairs. Hmm. Turn them over.",
-            "Rule Nine of the guild: a joint you can't see still has to be true.",
-            "...They'll do. More than do. Welcome to the guild, apprentice.",
-            "Olsen would have used more nails. Don't tell him I said that."
+            "Turn them over. A joint you can't see still has to be true.",
+            "They'll do. More than do. Welcome, apprentice."
           ]
         }
       ],
@@ -50,8 +48,8 @@
         "type": "org",
         "org": "crafters",
         "lines": [
-          "The guild workshop in Reece is an empty barn, and Master Joiner Brask needs hands.",
-          "Make a table and two chairs to show you can join wood, and she'll sign you on."
+          "The guild workshop in Reece is an empty barn.",
+          "Make a table and two chairs, and Master Joiner Brask will sign you on."
         ],
         "accept": "I'll sign on"
       }
@@ -124,8 +122,8 @@
             "name": "The Widow",
             "then": "talk",
             "lines": [
-              "Oh... it feels like home again.",
-              "Thank you, dear. Take my husband's tools. He'd have wanted a joiner to have them."
+              "It feels like home again. Thank you, dear.",
+              "Take my husband's tools. He'd want a joiner to have them."
             ]
           }
         }

@@ -4,17 +4,12 @@ from common import chapter, quest, talk_char, item, reward_item, skill, giver_or
 
 Q = [
     quest("stray_wolf", "The Stray", icon="minecraft:bone",
-          giver=giver_org("sanctuary", ["There's a wolf that follows my flock at a distance. Half-starved, poor thing.",
-                                        "If you can win its trust, Keeper Fern at the sanctuary in Reece will "
-                                        "take it in."], "I'll try"),
+          giver=giver_org("sanctuary", ["A half-starved wolf follows my flock at a distance.", "Win its trust, and Keeper Fern in Reece will take it in."], "I'll try"),
           text=["A shepherd says a half-starved wolf follows the flock at a distance. Tame it, give it a collar "
                 "tag and bring it to Fern's pen at the edge of Reece."],
           tasks=[{"tame": "minecraft:wolf", "title": "Tame the wolf"},
                  item("domesticationinnovation:collar_tag"), {"place": "reece"},
-                 talk_char("fern", ["Oh, look at you. Thin as a rake. Come in, come in.",
-                                    "You did well. Most people shout at strays. You waited.",
-                                    "I'll name it later. Names come when they're ready.",
-                                    "There's more to do here, if you'd like to help."])],
+                 talk_char("fern", ["Thin as a rake. Come in. You waited, most people shout.", "There's more to do here, if you'd help."])],
           rewards=[reward_item("minecraft:bone", 16), skill("taming", 50)]),
 
     quest("first_pens", "Pens and Pet Beds", icon="domesticationinnovation:pet_bed_brown", after=["stray_wolf"],
@@ -69,10 +64,7 @@ Q = [
           tasks=[{"structure": "#ruins", "title": "Find the overrun ruin"},
                  {"kill": "minecraft:creeper", "count": 5, "title": "Clear the creepers away from the cats", "spawn": {"at": {"structure": "#ruins"}}},
                  item("minecraft:cod", 4, consume=True, title="Coax the cats out with fish"),
-                 encounter(["Oh, my darlings! All of them, safe!",
-                            "I've lived among these ruins forty winters, and never once had the creepers "
-                            "outstay a good broom. But five at once...",
-                            "Take my slippers, dear. The cats insist."],
+                 encounter(["My darlings, all safe! Forty winters among these ruins.", "Take my slippers, dear. The cats insist."],
                            entity="minecraft:villager", name="The Cat-Lady of the Ruin")],
           rewards=[reward_item("artifacts:kitty_slippers"), skill("taming", 250)]),
 
@@ -108,10 +100,7 @@ Q = [
           after=["sled_dogs"],
           text=["Fern shows you how to enchant a collar tag: Health Boost and a creeper-sniffing Defusal, so your "
                 "wolf can guard the sanctuary."],
-          tasks=[talk_char("fern", ["A collar tag is only paper and string until someone believes in it.",
-                                    "Health Boost for stamina. Defusal so your wolf will sniff out a creeper "
-                                    "before it makes its mind up.",
-                                    "The books will teach you the rest."]),
+          tasks=[talk_char("fern", ["A collar tag is paper and string until someone believes in it.", "Health Boost, and Defusal so your wolf sniffs out creepers."]),
                  item("domesticationinnovation:collar_tag", crafted=True),
                  {"checkmark": "I enchanted a collar tag"}],
           rewards=[reward_item("minecraft:enchanted_book", name="Hale and Hearty",

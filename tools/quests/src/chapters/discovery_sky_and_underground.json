@@ -319,9 +319,8 @@
             "name": "Sky Hermit",
             "then": "talk",
             "lines": [
-              "Food! Real food! I've been living on cloud berries for a year.",
-              "I came up here to escape someone. I forget who. It's very peaceful.",
-              "Take this feather. It's the lightest thing I own."
+              "Real food! I've lived on cloud berries a year.",
+              "Take this feather. Lightest thing I own."
             ]
           },
           "title": "Hand over the supplies and hear his story"
@@ -736,9 +735,8 @@
           "talk": "villager",
           "profession": "minecraft:cartographer",
           "lines": [
-            "This tablet shows a cave deeper than any I've charted.",
-            "Magnets, acid, strange light... I'd keep it close.",
-            "Here, a map. The tablet is yours."
+            "A cave deeper than any I've charted. Magnets, acid, strange light.",
+            "Here, a map. Keep the tablet."
           ],
           "title": "Show the tablet to a cartographer"
         }

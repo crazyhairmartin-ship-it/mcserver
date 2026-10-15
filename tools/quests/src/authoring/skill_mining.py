@@ -47,8 +47,7 @@ Q = [
           text=["Every torch in an old mineshaft has gone out, and a guild surveyor is somewhere inside. Follow his "
                 "tapping and the glow lichen he scraped on the walls."],
           tasks=[{"structure": "#mines", "title": "Go into the dark"},
-                 encounter(["You found me! I scraped lichen on every wall I passed.",
-                            "Here, take my spare goggles. I'm never coming down here without a second pair again."],
+                 encounter(["You found me! I scraped lichen on every wall.", "Take my spare goggles. I'm never coming down without two pairs again."],
                            entity="minecraft:villager", name="Lost Surveyor", where={"below_y": 40})],
           rewards=[reward_item("artifacts:night_vision_goggles"), skill("mining", 200)]),
 

@@ -16,10 +16,8 @@
           "talk": "character",
           "character": "corvin",
           "lines": [
-            "You want work. Good. Work pays.",
-            "The office posts contracts on bounty boards. Every village has one.",
-            "Find a board. Take a contract. Don't take one you can't finish.",
-            "I've buried hunters who did."
+            "You want work. Find a bounty board and take a contract.",
+            "Don't take one you can't finish. I've buried hunters who did."
           ]
         },
         {
@@ -212,8 +210,7 @@
           "talk": "character",
           "character": "corvin",
           "lines": [
-            "A longsword. Honest steel.",
-            "Wear it where you can draw it fast. A weapon in your pack is a weapon you don't have.",
+            "A longsword. Honest steel. Wear it where you can draw it fast.",
             "Every scar on me came from a blade I reached for too late."
           ]
         }

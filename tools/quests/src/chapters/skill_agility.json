@@ -16,9 +16,8 @@
           "talk": "character",
           "character": "juniper",
           "lines": [
-            "New runner? Good. Name, signature, go.",
-            "The carriers handle the parcels. We handle what they won't: anything alive, hot, fragile or too big for a mailbox.",
-            "Sign this letter and take it to the cartographer in the next village. Don't dawdle. Don't read it. Go."
+            "New runner? Name, signature, go. We take what the carriers won't.",
+            "Sign this letter. Take it to the next village's cartographer. Don't dawdle."
           ]
         },
         {
@@ -30,9 +29,7 @@
           "talk": "villager",
           "profession": "minecraft:cartographer",
           "lines": [
-            "A letter from Quill? About time.",
-            "Signed and sealed. You'll do, runner.",
-            "Come back when you want a longer run."
+            "A letter from Quill? About time. You'll do, runner."
           ],
           "title": "Hand it to a cartographer in another village"
         }
@@ -56,8 +53,8 @@
         "type": "org",
         "org": "couriers",
         "lines": [
-          "Runners wanted! The Ender Mail lot take the parcels, but somebody has to carry the awkward jobs.",
-          "Sign on at the post office in Reece. Ask for Postmistress Quill, and be quick about it."
+          "Runners wanted! Somebody has to carry the awkward jobs.",
+          "Sign on with Postmistress Quill in Reece."
         ],
         "accept": "I'll sign on"
       }
@@ -207,9 +204,8 @@
             },
             "then": "talk",
             "lines": [
-              "Oh, thank goodness! I can't go on. The path's like glass.",
-              "Take the parcel down to the cove. Slowly! One slip and it's a long way down.",
-              "Here, take my umbrella too. I won't need it where I'm going: back to bed."
+              "Thank goodness! The path's like glass. Take the parcel down to the cove.",
+              "Take my umbrella too."
             ]
           }
         },
@@ -449,9 +445,8 @@
           "talk": "character",
           "character": "juniper",
           "lines": [
-            "You made it? In one piece? ...Good. Timing was fine.",
-            "Night runs are the worst. Everything bites.",
-            "Here. I wore this on my own night runs. It works. Mostly because it makes you run faster."
+            "You made it. Night runs are the worst. Everything bites.",
+            "Take this. I wore it on mine."
           ]
         }
       ],
@@ -583,9 +578,8 @@
             ],
             "then": "escort",
             "lines": [
-              "Down here! I can't move my leg. I took a shortcut...",
-              "Please don't tell Juniper. She'll make me do the stairs forever.",
-              "My satchel's got sealed letters in it. Can you finish them for me?"
+              "Down here! I can't move my leg. Please don't tell Juniper.",
+              "My satchel has sealed letters. Can you finish them?"
             ]
           }
         }
