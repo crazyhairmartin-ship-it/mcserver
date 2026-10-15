@@ -39,6 +39,7 @@ StartupEvents.registry('item', event => {
   event.create("quest_lighthouse_ledger_2").displayName("Season's Record Book").texture("minecraft:item/book").maxStackSize(1).tooltip("One of Silas's entries looks forged").glow(true)
   event.create("quest_lost_journal_2").displayName("the Expedition Journal").texture("minecraft:item/written_book").maxStackSize(1).tooltip("Quest item").glow(true)
   event.create("quest_mega_fortress_1").displayName("the Mega Fortress's Treasure").texture("minecraft:item/paper").maxStackSize(1).tooltip("Quest item").glow(true)
+  event.create("quest_miners_cabin_0").displayName("a Cave Tablet").texture("minecraft:item/clay_ball").maxStackSize(1).tooltip("Quest item").glow(true)
   event.create("quest_minotaurs_1").displayName("a Minotaur Axe").texture("minecraft:item/iron_axe").maxStackSize(1).tooltip("Taken from a minotaur").glow(true)
   event.create("quest_nether_houses_0").displayName("a Family Note").texture("minecraft:item/paper").maxStackSize(1).tooltip("Quest item").glow(true)
   event.create("quest_nether_houses_1").displayName("a Second Family Note").texture("minecraft:item/paper").maxStackSize(1).tooltip("Quest item").glow(true)

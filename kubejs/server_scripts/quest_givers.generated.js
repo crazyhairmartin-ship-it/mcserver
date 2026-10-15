@@ -5499,6 +5499,182 @@ global.QUEST_GIVERS = [
     "prev_tasks": []
   },
   {
+    "quest": "alexs_caves:miners_cabin",
+    "stage": "fq.alexs_caves.miners_cabin.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:underground_cabin"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_miners_cabin_0",
+    "found": "A carved tablet, pointing toward a hidden biome.",
+    "requires": [],
+    "quest_id": "042830F0187A1A85",
+    "prev_tasks": [
+      "26C0B4D7DFAC2B76"
+    ]
+  },
+  {
+    "quest": "alexs_caves:luxtructosaurus",
+    "stage": "fq.alexs_caves.luxtructosaurus.spawn0",
+    "type": "spawn",
+    "entity": "alexscaves:luxtructosaurus",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:volcano"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Luxtructosaurus",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "58357DFAE5D78B0F",
+    "requires": [],
+    "quest_id": "1B0C81A88186DBA9",
+    "prev_tasks": []
+  },
+  {
+    "quest": "alexs_caves:mine_guardian",
+    "stage": "fq.alexs_caves.mine_guardian.spawn0",
+    "type": "spawn",
+    "entity": "alexscaves:mine_guardian",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:abyssal_ruins"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Anchored Mine",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "55DDCA31202EECA9",
+    "requires": [],
+    "quest_id": "1BB392FE8F0700A1",
+    "prev_tasks": []
+  },
+  {
+    "quest": "alexs_caves:deep_ones",
+    "stage": "fq.alexs_caves.deep_ones.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "*The deep one bows, and holds out a staff of the sea.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "729618F11840BA96",
+    "prev_tasks": [
+      "454892CFD70827D1",
+      "1B61C993ADC37583"
+    ],
+    "name": "Deep One Elder",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "alexscaves:deep_one",
+    "profession": ""
+  },
+  {
+    "quest": "alexs_caves:magic_conch",
+    "stage": "fq.alexs_caves.magic_conch.be1",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "alexscaves:abyssal_chasm"
+      ],
+      "in_water": true
+    },
+    "requires": [],
+    "quest_id": "083477CAE3EDE584",
+    "prev_tasks": [
+      "572587B4E8EBE441"
+    ]
+  },
+  {
+    "quest": "alexs_caves:hullbreaker",
+    "stage": "fq.alexs_caves.hullbreaker.spawn0",
+    "type": "spawn",
+    "entity": "alexscaves:hullbreaker",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:ocean_trench"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Hullbreaker",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "7A8235E04DCD066F",
+    "requires": [],
+    "quest_id": "6CF5C1251809287C",
+    "prev_tasks": []
+  },
+  {
+    "quest": "alexs_caves:cloak_of_darkness",
+    "stage": "fq.alexs_caves.cloak_of_darkness.timed3",
+    "type": "timed",
+    "seconds": 90,
+    "goal": {
+      "kind": "hold",
+      "radius": 12.0
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Stay in the dark. Be unseen."
+    ],
+    "start": "Walk past the watcher",
+    "requires": [],
+    "quest_id": "28BEFA30449395F3",
+    "prev_tasks": [
+      "1A60D02E01F40EBD",
+      "60E93F650424B84A",
+      "3DE704AE5C18BB05"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "alexs_caves:crucible",
+    "stage": "fq.alexs_caves.crucible.build1",
+    "type": "build",
+    "keys": [
+      "alexscaves:conversion_crucible"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "0ECE3DD426B05814",
+    "prev_tasks": [
+      "54A9FB1F0769DC17"
+    ]
+  },
+  {
     "quest": "discovery_sea:bones_of_the_deep",
     "stage": "fq.discovery_sea.bones_of_the_deep.be0",
     "type": "be",

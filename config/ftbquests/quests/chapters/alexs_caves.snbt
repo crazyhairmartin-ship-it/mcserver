@@ -46,7 +46,7 @@
 			]
 			title: "Rumours from Below"
 			x: 0.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["498189A948BBD6D5"]
@@ -179,7 +179,7 @@
 			]
 			title: "Painted Walls"
 			x: 3.0d
-			y: -11.25d
+			y: -12.0d
 		}
 		{
 			dependencies: ["1FC08F2C4317DEF2"]
@@ -238,7 +238,7 @@
 			]
 			title: "Ancient Groves"
 			x: 3.0d
-			y: -9.75d
+			y: -10.5d
 		}
 		{
 			dependencies: ["1FC08F2C4317DEF2"]
@@ -290,7 +290,7 @@
 			]
 			title: "The Dinosaur Bowl"
 			x: 3.0d
-			y: -8.25d
+			y: -9.0d
 		}
 		{
 			dependencies: ["05164F19938BC6CA"]
@@ -330,7 +330,7 @@
 			]
 			title: "Claws Like Scythes"
 			x: 4.5d
-			y: -6.75d
+			y: -8.25d
 		}
 		{
 			dependencies: ["05164F19938BC6CA"]
@@ -380,7 +380,7 @@
 			]
 			title: "Primordial Supper"
 			x: 4.5d
-			y: -5.25d
+			y: -6.75d
 		}
 		{
 			dependencies: ["04D16C1A3313B799"]
@@ -436,7 +436,7 @@
 			]
 			title: "Dressed for the Hunt"
 			x: 6.0d
-			y: -1.5d
+			y: -5.25d
 		}
 		{
 			dependencies: ["05164F19938BC6CA"]
@@ -469,7 +469,7 @@
 			]
 			title: "Wings Over the Cave"
 			x: 4.5d
-			y: -3.75d
+			y: -5.25d
 		}
 		{
 			dependencies: ["05164F19938BC6CA"]
@@ -509,7 +509,7 @@
 			]
 			title: "The Stolen Egg"
 			x: 4.5d
-			y: -2.25d
+			y: -3.75d
 		}
 		{
 			dependencies: ["1FC08F2C4317DEF2"]
@@ -550,7 +550,7 @@
 			]
 			title: "Trapped in Amber"
 			x: 3.0d
-			y: -6.75d
+			y: -7.5d
 		}
 		{
 			dependencies: ["1FC08F2C4317DEF2"]
@@ -584,7 +584,7 @@
 			]
 			title: "The Volcano"
 			x: 3.0d
-			y: -5.25d
+			y: -6.0d
 		}
 		{
 			dependencies: ["242099BD464C1CC3"]
@@ -625,7 +625,7 @@
 			]
 			title: "The Tremorsaurus"
 			x: 4.5d
-			y: -0.75d
+			y: -2.25d
 		}
 		{
 			dependencies: ["498189A948BBD6D5"]
@@ -723,7 +723,7 @@
 			]
 			title: "Into the Abyss"
 			x: 3.0d
-			y: -3.75d
+			y: -4.5d
 		}
 		{
 			dependencies: ["6BCDC3D280E5556F"]
@@ -771,7 +771,7 @@
 			]
 			title: "The Sea Pig"
 			x: 4.5d
-			y: 0.75d
+			y: -0.75d
 		}
 		{
 			dependencies: ["6BCDC3D280E5556F"]
@@ -811,7 +811,7 @@
 			]
 			title: "Ruins of the Deep Ones"
 			x: 4.5d
-			y: 2.25d
+			y: 0.75d
 		}
 		{
 			dependencies: ["6BCDC3D280E5556F"]
@@ -867,7 +867,7 @@
 			]
 			title: "Deep Sea Sushi"
 			x: 4.5d
-			y: 3.75d
+			y: 2.25d
 		}
 		{
 			dependencies: ["498189A948BBD6D5"]
@@ -958,7 +958,7 @@
 			]
 			title: "Wings in the Dark"
 			x: 3.0d
-			y: -2.25d
+			y: -3.0d
 		}
 		{
 			dependencies: ["6FC84C9A4427EDDD"]
@@ -999,7 +999,7 @@
 			]
 			title: "Teeth in the Stone"
 			x: 3.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["6FC84C9A4427EDDD"]
@@ -1033,7 +1033,7 @@
 			]
 			title: "The Forlorn Canyon"
 			x: 3.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["50A37ACE46A8D84F"]
@@ -1073,7 +1073,7 @@
 			]
 			title: "Cross the Bridge"
 			x: 4.5d
-			y: 5.25d
+			y: 3.75d
 		}
 		{
 			dependencies: ["6FC84C9A4427EDDD"]
@@ -1106,7 +1106,7 @@
 			]
 			title: "The Watcher"
 			x: 3.0d
-			y: 2.25d
+			y: 1.5d
 		}
 		{
 			dependencies: ["110248A5873CF2BE"]
@@ -1141,7 +1141,7 @@
 			]
 			title: "The Forsaken"
 			x: 6.0d
-			y: 0.0d
+			y: -3.75d
 		}
 		{
 			dependencies: ["72111BA2231D5F6F"]
@@ -1197,7 +1197,7 @@
 			]
 			title: "The Dreadbow"
 			x: 7.5d
-			y: 0.0d
+			y: -3.0d
 		}
 		{
 			dependencies: ["498189A948BBD6D5"]
@@ -1296,7 +1296,7 @@
 			]
 			title: "Soda Lake Fishing"
 			x: 3.0d
-			y: 3.75d
+			y: 3.0d
 		}
 		{
 			dependencies: ["2708FB6BFA238099"]
@@ -1345,7 +1345,7 @@
 			]
 			title: "Brittle Brawl"
 			x: 3.0d
-			y: 5.25d
+			y: 4.5d
 		}
 		{
 			dependencies: ["2708FB6BFA238099"]
@@ -1384,7 +1384,7 @@
 			]
 			title: "Gingerbread Town"
 			x: 3.0d
-			y: 6.75d
+			y: 6.0d
 		}
 		{
 			dependencies: ["2708FB6BFA238099"]
@@ -1424,7 +1424,7 @@
 			]
 			title: "The Licowitch Tower"
 			x: 3.0d
-			y: 8.25d
+			y: 7.5d
 		}
 		{
 			dependencies: ["2708FB6BFA238099"]
@@ -1488,7 +1488,7 @@
 			]
 			title: "A Tour of Sweets"
 			x: 3.0d
-			y: 9.75d
+			y: 9.0d
 		}
 		{
 			dependencies: ["76366B88A8304BF6"]
@@ -1529,7 +1529,7 @@
 			]
 			title: "The Confection Oven"
 			x: 4.5d
-			y: 6.75d
+			y: 5.25d
 		}
 		{
 			dependencies: ["29C7837D57112C44"]
@@ -1582,7 +1582,7 @@
 			]
 			title: "The Grand Sundae"
 			x: 6.0d
-			y: 1.5d
+			y: -2.25d
 		}
 		{
 			dependencies: ["2708FB6BFA238099"]
@@ -1624,7 +1624,612 @@
 			]
 			title: "Gummy Friends"
 			x: 3.0d
-			y: 11.25d
+			y: 10.5d
+		}
+		{
+			description: ["You stumble on an underground cabin deep in the rock. A cave tablet lies among its chests, and it points toward a hidden biome."]
+			icon: "alexscaves:cave_tablet"
+			id: "042830F0187A1A85"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "28B9B90C57A29E74"
+					item: "alexscaves:cave_tablet"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "0F466D4AE15F0952"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 120"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "5A66CF969B3111F9"
+					silent: true
+					title: "+120 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "26C0B4D7DFAC2B76"
+					structure: "alexscaves:underground_cabin"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "7DC286C91E08AAE5"
+					item: "kubejs:quest_miners_cabin_0"
+					title: "Search the cabin's chests for the cave tablet"
+					type: "item"
+				}
+			]
+			title: "The Abandoned Cabin"
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"219DF8B34104E0E2"
+				"0687D5B70968797E"
+			]
+			description: ["Heavy bones and an amber curiosity, combined, make a catalyst that can wake something at the volcano."]
+			icon: "alexscaves:heavy_bone"
+			id: "777D1AB3DB446406"
+			rewards: [
+				{
+					id: "620A2287F70E8194"
+					item: "alexscaves:heavy_bone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 400"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "0F411B715958DE44"
+					silent: true
+					title: "+400 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "605459970F6D6FC5"
+					item: "alexscaves:heavy_bone"
+					title: "Carry heavy bones from the giant"
+					type: "item"
+				}
+				{
+					id: "6ADE70AF2B222F74"
+					item: "alexscaves:amber_curiosity"
+					title: "Carry an amber curiosity"
+					type: "item"
+				}
+				{
+					id: "2845E12CE16946B3"
+					item: "alexscaves:ominous_catalyst"
+					only_from_crafting: true
+					title: "Craft the Ominous Catalyst"
+					type: "item"
+				}
+			]
+			title: "Ominous Catalyst"
+			x: 6.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["777D1AB3DB446406"]
+			description: ["Use the Ominous Catalyst at the volcano to summon the Luxtructosaurus. Outlast its meteors and stomps."]
+			icon: "alexscaves:spawn_egg_luxtructosaurus"
+			id: "1B0C81A88186DBA9"
+			rewards: [
+				{
+					id: "0DAF43AD7EC8EF3B"
+					item: "alexscaves:tectonic_shard"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 650"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "573B6DD9A7897EB1"
+					silent: true
+					title: "+650 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "alexscaves:luxtructosaurus"
+					id: "58357DFAE5D78B0F"
+					title: "Outlast the Luxtructosaurus at the volcano"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Luxtructosaurus"
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1B0C81A88186DBA9"]
+			description: ["The underworld's final weapon is made from the tectonic shard. Craft the Extinction Spear."]
+			icon: "alexscaves:extinction_spear"
+			id: "6015FED89C6C57FC"
+			rewards: [
+				{
+					count: 2
+					id: "062A69B91A086417"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 700"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "17962BA53FA48D94"
+					silent: true
+					title: "+700 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3DD411D0226C1E55"
+					item: "alexscaves:tectonic_shard"
+					title: "Carry the tectonic shard"
+					type: "item"
+				}
+				{
+					id: "1010F245872310DE"
+					item: "alexscaves:extinction_spear"
+					only_from_crafting: true
+					title: "Craft the Extinction Spear"
+					type: "item"
+				}
+			]
+			title: "Extinction"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6BCDC3D280E5556F"]
+			description: ["The trench's floor is too deep to swim. Build a submarine and pilot it to the bottom."]
+			icon: "alexscaves:submarine"
+			id: "0720C76EBA6006F1"
+			rewards: [
+				{
+					count: 64
+					id: "4F362CA6AF3B4F7C"
+					item: "minecraft:copper_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 400"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "0DD25825634A0C90"
+					silent: true
+					title: "+400 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "724C3C88A5955CE1"
+					item: "alexscaves:submarine"
+					only_from_crafting: true
+					title: "Build a submarine"
+					type: "item"
+				}
+				{
+					id: "586714D717C0F8FA"
+					structure: "alexscaves:ocean_trench"
+					title: "Pilot it down to the trench's floor"
+					type: "structure"
+				}
+			]
+			title: "The Submarine"
+			x: 4.5d
+			y: 6.75d
+		}
+		{
+			dependencies: ["3E399695B73FCF9E"]
+			description: ["Mine guardians are living sea mines chained to anchors in the ruins. Take one down from a distance without getting caught in its blast."]
+			icon: "alexscaves:depth_charge"
+			id: "1BB392FE8F0700A1"
+			rewards: [
+				{
+					count: 4
+					id: "4BA9EB89BDDE5A43"
+					item: "alexscaves:depth_charge"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 380"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "42291651C3B994F5"
+					silent: true
+					title: "+380 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexscaves:mine_guardian"
+					id: "55DDCA31202EECA9"
+					title: "Take down a mine guardian from a distance"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Anchored"
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3E399695B73FCF9E"]
+			description: ["Earn the deep ones' trust with offerings at an abyssal altar and trade for their gear."]
+			icon: "alexscaves:spawn_egg_deep_one_knight"
+			id: "729618F11840BA96"
+			rewards: [
+				{
+					id: "22A985CA5981AD28"
+					item: "alexscaves:sea_staff"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 350"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "5AAA5E6E9BCD3E47"
+					silent: true
+					title: "+350 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "454892CFD70827D1"
+					structure: "alexscaves:abyssal_ruins"
+					title: "Find an abyssal altar in the ruins"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "1B61C993ADC37583"
+					item: "minecraft:prismarine_shard"
+					title: "Leave an offering of prismarine at the altar"
+					type: "item"
+				}
+				{
+					id: "2B3FB381FB5C1952"
+					stage: "fq.alexs_caves.deep_ones.enc2"
+					title: "Trade with the deep ones"
+					type: "gamestage"
+				}
+			]
+			title: "Trade with the Deep"
+			x: 6.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["729618F11840BA96"]
+			description: ["Win a magic conch from the deep ones, and blow it in the chasm. The deep ones you've befriended come to fight beside you."]
+			icon: "alexscaves:magic_conch"
+			id: "083477CAE3EDE584"
+			rewards: [
+				{
+					count: 4
+					id: "65FA43BF2503DDBB"
+					item: "crittersandcompanions:pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 380"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "469F3AB213774A2D"
+					silent: true
+					title: "+380 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "572587B4E8EBE441"
+					item: "alexscaves:magic_conch"
+					title: "Win a magic conch from the deep ones"
+					type: "item"
+				}
+				{
+					id: "39462BE9256423E1"
+					stage: "fq.alexs_caves.magic_conch.be1"
+					title: "Go to the chasm to blow the conch"
+					type: "gamestage"
+				}
+			]
+			title: "Call of the Conch"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0720C76EBA6006F1"
+				"729618F11840BA96"
+			]
+			description: ["The Hullbreaker, a giant bony angler that rams submarines, hunts the trench's floor. Bring it down from your sub or on foot."]
+			icon: "alexscaves:spawn_egg_hullbreaker"
+			id: "6CF5C1251809287C"
+			rewards: [
+				{
+					count: 2
+					id: "219C05E456622B34"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 500"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "58B7B606CC61C001"
+					silent: true
+					title: "+500 Fishing XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "alexscaves:hullbreaker"
+					id: "7A8235E04DCD066F"
+					title: "Bring down the Hullbreaker on the trench's floor"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Hullbreaker"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["110248A5873CF2BE"]
+			description: ["Spin shadow silk from what the hollows leave behind and craft the hood and cloak of darkness, then walk past a watcher without being seen."]
+			icon: "alexscaves:dark_tatters"
+			id: "28BEFA30449395F3"
+			rewards: [
+				{
+					count: 16
+					id: "3B984A52C676B587"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 400"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "1B6DEDDD60F483C7"
+					silent: true
+					title: "+400 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 6L
+					id: "1A60D02E01F40EBD"
+					item: "alexscaves:dark_tatters"
+					title: "Gather what the hollows leave behind"
+					type: "item"
+				}
+				{
+					id: "60E93F650424B84A"
+					item: "alexscaves:hood_of_darkness"
+					only_from_crafting: true
+					title: "Craft the hood of darkness"
+					type: "item"
+				}
+				{
+					id: "3DE704AE5C18BB05"
+					item: "alexscaves:cloak_of_darkness"
+					only_from_crafting: true
+					title: "Craft the cloak of darkness"
+					type: "item"
+				}
+				{
+					id: "460E8B6A1116B175"
+					stage: "fq.alexs_caves.cloak_of_darkness.timed3"
+					title: "Pass a watcher without being seen"
+					type: "gamestage"
+				}
+			]
+			title: "One With the Dark"
+			x: 6.0d
+			y: 3.75d
+		}
+		{
+			dependencies: ["72111BA2231D5F6F"]
+			description: ["The Forsaken's death leaves occult gems. Build a beholder and use it to watch far places."]
+			icon: "alexscaves:beholder"
+			id: "5C5B3888608BE1A7"
+			rewards: [
+				{
+					count: 8
+					id: "7C8754AF23AE25EA"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 420"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "3FD7EDC55AE94839"
+					silent: true
+					title: "+420 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0638E5425027C254"
+					item: "alexscaves:beholder"
+					only_from_crafting: true
+					title: "Build a beholder to watch far places"
+					type: "item"
+				}
+			]
+			title: "The Beholder"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2708FB6BFA238099"]
+			description: ["The Candy Cavity's gum worms are rideable, if you can hook one. Hook a gum worm with a candy cane hook and ride it."]
+			icon: "alexscaves:candy_cane_hook"
+			id: "4719FE669758E907"
+			rewards: [
+				{
+					id: "4FF1ADAFFA826053"
+					item: "alexscaves:candy_cane_hook"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 400"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "562D9384AD3DF70C"
+					silent: true
+					title: "+400 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "26B6264A3A0BB751"
+					item: "alexscaves:candy_cane_hook"
+					only_from_crafting: true
+					title: "Craft a candy cane hook"
+					type: "item"
+				}
+				{
+					id: "762607A827D8599D"
+					observe_type: "entity_type"
+					timer: 40L
+					title: "Hook a gum worm and ride it"
+					to_observe: "alexscaves:gum_worm"
+					type: "observation"
+				}
+			]
+			title: "The Gum Worm"
+			x: 3.0d
+			y: 12.0d
+		}
+		{
+			dependencies: [
+				"1FC08F2C4317DEF2"
+				"6BCDC3D280E5556F"
+				"6FC84C9A4427EDDD"
+				"2708FB6BFA238099"
+			]
+			description: ["Visit all four cave biomes and record them in your Cave Codex."]
+			icon: "alexscaves:cave_codex"
+			id: "609496B430DC674B"
+			rewards: [
+				{
+					id: "2ACC8A7F284F1B2E"
+					item: "alexscaves:conversion_crucible"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 420"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "6267550724B95BF9"
+					silent: true
+					title: "+420 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:primordial_caves"
+					id: "6AF6AFA4EFDD5EB6"
+					title: "Record the Primordial Caves"
+					type: "biome"
+				}
+				{
+					biome: "alexscaves:abyssal_chasm"
+					id: "6E66C7206588BFA6"
+					title: "Record the Abyssal Chasm"
+					type: "biome"
+				}
+				{
+					biome: "alexscaves:forlorn_hollows"
+					id: "1A781EAD9A38522F"
+					title: "Record the Forlorn Hollows"
+					type: "biome"
+				}
+				{
+					biome: "alexscaves:candy_cavity"
+					id: "14AFC1C989A3524E"
+					title: "Record the Candy Cavity"
+					type: "biome"
+				}
+			]
+			title: "Four Worlds Below"
+			x: 4.5d
+			y: 8.25d
+		}
+		{
+			dependencies: ["609496B430DC674B"]
+			description: ["A conversion crucible can turn an area into a cave biome. Set one up and make your own corner of the underworld."]
+			icon: "alexscaves:conversion_crucible"
+			id: "0ECE3DD426B05814"
+			rewards: [
+				{
+					count: 4
+					id: "602DF77EE6550064"
+					item: "alexscaves:caramel_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 420"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "52CCD6096C4DC49E"
+					silent: true
+					title: "+420 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "54A9FB1F0769DC17"
+					item: "alexscaves:conversion_crucible"
+					only_from_crafting: true
+					title: "Craft a conversion crucible"
+					type: "item"
+				}
+				{
+					id: "6253B7A0736D90E7"
+					stage: "fq.alexs_caves.crucible.build1"
+					title: "Set the crucible to convert an area"
+					type: "gamestage"
+				}
+			]
+			title: "The Conversion Crucible"
+			x: 6.0d
+			y: 5.25d
 		}
 	]
 	subtitle: ["Four strange worlds under the stone"]

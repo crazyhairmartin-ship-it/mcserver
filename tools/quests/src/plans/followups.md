@@ -191,6 +191,15 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - twilight:dark_tower: needs triggering builder blocks to climb; written as the tower and a borer fight
 - twilight:carminite: needs destroying reactors; written as golems fought, carminite carried and a reactor core
 - twilight:ur_ghast: needs breaking reactors when it retreats; written as the boss fight at the tower
+- alexs_caves:miners_cabin: needs a cave tablet found among the chests; written as a search (cabin contents unknown)
+- alexs_caves:luxtructosaurus: needs the catalyst used at the volcano; written as the boss fight there
+- alexs_caves:submarine: needs piloting to the trench's floor; written as crafting it and reaching the trench
+- alexs_caves:mine_guardian: needs killing at a distance away from the blast; written as a spawned fight
+- alexs_caves:deep_ones: needs offerings at an altar; written as prismarine consumed and a deep one encounter
+- alexs_caves:magic_conch: needs the conch to call allies; written as winning the conch and reaching the chasm
+- alexs_caves:cloak_of_darkness: needs walking past a watcher unseen; written as crafting and a hurt-free timed hold
+- alexs_caves:gum_worm: needs hooking and riding a worm; written as the hook crafted and a worm observed
+- alexs_caves:crucible: needs converting an area to a biome; written as the crucible crafted and set down
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

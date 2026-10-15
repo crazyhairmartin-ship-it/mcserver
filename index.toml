@@ -110,7 +110,7 @@ hash = "62ba0917b9a55387719b7a2e3d82ac58ae0546149ec510281c9d66a2add08318"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/alexs_caves.snbt"
-hash = "3f6e81b3bba908ad56a379f421a241ef2d2776ab80b78754973fa51abd22bfcf"
+hash = "a964da7ec25c9c8ca7c73097fdd62cb0672aefcbb79c1d040e993666ae2ef8dd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/discovery_land.snbt"
@@ -2801,7 +2801,7 @@ hash = "77546c4cc0ec84840f5fd7ab0b845a72406755c619b84f89740a3f8047957af8"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "968cb167828afa354fa4b4d7fac028d247b29b0d9e5ac9bf7674587a4977d8f0"
+hash = "41352c3c4427215edad333e871aa3fe50d6a174a3e88ffcb164b3601a75dd7c0"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2885,7 +2885,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "10a23fd74f4def205d2a869a804101ba0be8ab42b4d06579b32492b04a04c30c"
+hash = "a0ed85d0bc8bdbe78c6fc7712e4a4f50b2e35899371af7ef842614f0acda09a9"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
