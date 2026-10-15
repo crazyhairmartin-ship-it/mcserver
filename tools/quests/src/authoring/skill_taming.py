@@ -197,4 +197,60 @@ ACT2 = [
           rewards=[reward_item("ultimate_unicorn_mod:talisman"), skill("taming", 400)]),
 ]
 
-chapter("skill_taming", "The Sanctuary", "Taming path", "minecraft:bone", "skills", 11, Q + ACT2)
+ACT3 = [
+    quest("familiar_bond", "A Bond of Spirit", icon="bookoffamiliars:familiar_book", after=["fairy_meadow", "main_story:act3_start"],
+          text=["A visiting hedge witch gives Fern a Book of Familiars. Read it and bond a familiar of your own, a "
+                "companion bound by more than food."],
+          tasks=[item("bookoffamiliars:familiar_book", title="Take the hedge witch's Book of Familiars"),
+                 {"cast": "any", "count": 3, "title": "Read the book's bonding words aloud"},
+                 {"tame": "minecraft:cat", "title": "Bond a familiar of your own"}],
+          rewards=[reward_item("minecraft:cat_spawn_egg"), skill("taming", 450)]),
+
+    quest("pegasus", "Wings Over the Paddock", icon="ultimate_unicorn_mod:pegasus_feather", after=["unicorn_tracks"],
+          text=["Pegasus feathers keep drifting down onto the sanctuary. Find the winged horse in the mountains, "
+                "tame it and fly it home."],
+          tasks=[item("ultimate_unicorn_mod:pegasus_feather", title="Collect a drifting pegasus feather"),
+                 {"biome": "minecraft:jagged_peaks", "title": "Climb into the mountains where the feathers fall from"},
+                 {"tame": "ultimate_unicorn_mod:pegasus", "title": "Win the winged horse's trust"},
+                 {"place": "reece", "title": "Fly it home to the sanctuary"}],
+          rewards=[reward_item("ultimate_unicorn_mod:pegasus_feather", 4), skill("taming", 480)]),
+
+    quest("hippocamp", "Horse of the Sea", icon="ultimate_unicorn_mod:hippocamp_spawn_egg", after=["pegasus"],
+          text=["Fishermen speak of a horse with a fish's tail playing in their wake. Sail out past the boats at "
+                "sea, find the hippocamp and ride it."],
+          tasks=[{"structure": "#ships_at_sea", "title": "Sail out past the boats at sea"},
+                 {"tame": "ultimate_unicorn_mod:hippocamp", "title": "Win the hippocamp's trust and ride it"}],
+          rewards=[reward_item("ultimate_unicorn_mod:leather_horse_armor", name="Hippocamp Saddle Blanket", lore=["Dyed sea-blue."]),
+                   skill("taming", 500)]),
+
+    quest("nightmare", "The Nightmare", icon="ultimate_unicorn_mod:nightmare_hoof", after=["pegasus", "main_story:act3_start"],
+          text=["In the Nether, piglins have chained a burning nightmare horse in their camp. Free it and calm it "
+                "until it lets you ride."],
+          tasks=[{"structure": "nova_structures:piglin_camp", "title": "Find the camp where the nightmare is chained"},
+                 {"tame": "ultimate_unicorn_mod:nightmare", "title": "Free and calm the burning nightmare"}],
+          rewards=[reward_item("ultimate_unicorn_mod:nightmare_hoof"), skill("taming", 520)]),
+
+    quest("stolen_pet", "Wherever You Are", icon="domesticationinnovation:wayward_lantern", after=["pet_enchanting"],
+          text=["A child's dog was stolen by a passing illager band. Make a wayward lantern from the dog's deed of "
+                "ownership and follow its glow across the land to bring the dog home."],
+          tasks=[item("domesticationinnovation:deed_of_ownership", title="Take the dog's deed of ownership from the child"),
+                 item("domesticationinnovation:wayward_lantern", crafted=True, title="Make a wayward lantern from the deed"),
+                 {"structure": "#illager_hideouts", "title": "Follow the lantern's glow to the illagers' hideout"},
+                 enc(["*A dog barks, tied beside a tent.*"], then="escort", entity="minecraft:wolf", name="The Stolen Dog",
+                     to={"place": "reece"}, title="Bring the dog home")],
+          rewards=[reward_item("domesticationinnovation:deed_of_ownership"), skill("taming", 450)]),
+
+    quest("poachers", "Poachers at the Gate", icon="minecraft:iron_bars", after=["stolen_pet", "unicorn_tracks"],
+          text=["Word of a unicorn has reached the poachers' camp. They come for it at night. Defend the sanctuary "
+                "with your enchanted pets, then follow them back to their campsite and free the caged animals."],
+          tasks=[{"timed": {"seconds": 180, "goal": {"hold": {"radius": 20}},
+                            "waves": [{"entity": "minecraft:pillager", "count": 2, "every": 40}],
+                            "lines": ["Poachers at the gate! Protect the unicorn!"], "start": "Defend the sanctuary"},
+                  "title": "Defend the sanctuary through the poachers' night raid"},
+                 {"structure": "dungeons_arise:illager_campsite", "title": "Follow the poachers back to their campsite"},
+                 search("dungeons_arise:illager_campsite", 1, "the Cage Key", "A key on the poachers' ring.",
+                        texture="minecraft:item/tripwire_hook", title="Take the key and free the caged animals")],
+          rewards=[reward_item("minecraft:enchanted_book", name="Herding", enchant={"minecraft:unbreaking": 3}), skill("taming", 550)]),
+]
+
+chapter("skill_taming", "The Sanctuary", "Taming path", "minecraft:bone", "skills", 11, Q + ACT2 + ACT3)

@@ -160,4 +160,61 @@ ACT2 = [
                    skill("defense", 400)]),
 ]
 
-chapter("skill_defense", "The Village Watch", "Defense path", "minecraft:shield", "skills", 8, Q + ACT2)
+ACT3 = [
+    quest("manor_captives", "The Illager Manor", icon="minecraft:netherite_upgrade_smithing_template",
+          after=["sea_raiders", "main_story:act3_start"],
+          text=["The raiders' captives are held at an illager manor in a dark forest. Break in, free the villagers "
+                "and walk them home."],
+          tasks=[fight("minecraft:vindicator", 10, "nova_structures:illager_manor", "Manor Guards", "Break into the manor past its guards", wave=5),
+                 enc(["Free! Take us home, please!"], then="escort", entity="minecraft:villager", name="Freed Captive",
+                     to={"structure": "#villages", "label": "the nearest village"}, title="Walk the freed captives home")],
+          rewards=[reward_item("minecraft:netherite_upgrade_smithing_template"), skill("defense", 450)]),
+
+    quest("narrow_bridge", "Hold the Bridge", icon="artifacts:steadfast_spikes", after=["manor_captives"],
+          signature="artifacts:steadfast_spikes",
+          text=["Ravagers are coming over the only bridge to a village. Hold the middle of it for the full count "
+                "without being knocked off. The bridge-keeper's spiked boots are the thanks."],
+          tasks=[{"timed": {"seconds": 180, "goal": {"hold": {"radius": 6}},
+                            "waves": [{"entity": "minecraft:ravager", "count": 1, "every": 40}],
+                            "lines": ["Ravagers on the bridge. Hold the middle!"], "start": "Hold the bridge"},
+                  "title": "Hold the middle of the bridge against the ravagers"}],
+          rewards=[reward_item("artifacts:steadfast_spikes"), skill("defense", 480)]),
+
+    quest("forge_defence", "Fire at the Forge", icon="artifacts:flame_pendant", after=["narrow_bridge"],
+          signature="artifacts:flame_pendant",
+          text=["A Wildfire and its blazes come up through a ruined portal and go for a village's forge. Hold the "
+                "forge until they're beaten. The smith forges you a pendant from the Wildfire's crown."],
+          tasks=[{"structure": "#ruined_portals", "title": "Reach the ruined portal beside the village forge"},
+                 fight("minecraft:blaze", 6, "#ruined_portals", "Portal Blazes", "Beat the blazes coming through the portal"),
+                 boss("friendsandfoes:wildfire", "#ruined_portals", "The Wildfire", "Beat the Wildfire before it reaches the forge")],
+          rewards=[reward_item("artifacts:flame_pendant"), skill("defense", 520)]),
+
+    quest("lava_crossing", "Across the Lava", icon="artifacts:obsidian_skull", after=["forge_defence"],
+          signature="artifacts:obsidian_skull",
+          text=["A guard of the watch is held captive in a Nether keep across a lava lake. Bridge the lava, break in "
+                "and bring him out. He gives you the obsidian skull he carried for luck."],
+          tasks=[item("minecraft:cobblestone", 64, title="Carry stone to bridge the lava"),
+                 {"structure": "nova_structures:nether_keep", "title": "Bridge the lava to the keep"},
+                 enc(["You came! Get me out of here!"], then="escort", entity="guardvillagers:guard", name="Captive Guard",
+                     to={"place": "reece"}, title="Bring the captive guard out of the keep")],
+          rewards=[reward_item("artifacts:obsidian_skull"), skill("defense", 520)]),
+
+    quest("mansion", "The Illagers' Seat", icon="minecraft:totem_of_undying", after=["lava_crossing"],
+          text=["All the raids answer to the woodland mansion. Go in and kill its evokers to break their command."],
+          tasks=[fight("minecraft:evoker", 3, "minecraft:mansion", "Mansion Evokers", "Kill the mansion's evokers to break the raids' command", wave=1)],
+          rewards=[reward_item("minecraft:totem_of_undying", 2), skill("defense", 550)]),
+
+    quest("great_raid", "The Great Raid", icon="minecraft:emerald", after=["mansion"],
+          text=["In revenge, the illagers send their largest raid at a fortified village. Hold it through every "
+                "wave, ravagers and all, with its guards."],
+          tasks=[{"structure": "ctov:large/village_taiga_fortified", "title": "Man the fortified village's wall"},
+                 {"timed": {"seconds": 300, "goal": {"hold": {"radius": 20}},
+                            "waves": [{"entity": "minecraft:pillager", "count": 3, "every": 40},
+                                      {"entity": "minecraft:vindicator", "count": 2, "every": 50},
+                                      {"entity": "minecraft:ravager", "count": 1, "every": 90}],
+                            "lines": ["The largest raid yet. Hold the wall!"], "start": "Hold the wall"},
+                  "title": "Hold the wall through every wave with the guards"}],
+          rewards=[reward_item("minecraft:emerald", 24), skill("defense", 600)]),
+]
+
+chapter("skill_defense", "The Village Watch", "Defense path", "minecraft:shield", "skills", 8, Q + ACT2 + ACT3)

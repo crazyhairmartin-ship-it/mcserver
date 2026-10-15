@@ -11086,6 +11086,140 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "skill_attack:fortress_contract",
+    "stage": "fq.skill_attack.fortress_contract.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:wither_skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterfortresses:fortress"
+      ],
+      "label": "the destination"
+    },
+    "wave": 5,
+    "name": "Overrunning Skeletons",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "79179F4B4869B651",
+    "requires": [],
+    "quest_id": "6DF5E1B5753C127E",
+    "prev_tasks": [
+      "1C6A0DBC5354E89A"
+    ]
+  },
+  {
+    "quest": "skill_attack:brute_force",
+    "stage": "fq.skill_attack.brute_force.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:piglin_brute",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:bastion_remnant"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Treasure-Room Brutes",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "3A2D3496A5DB4AC1",
+    "requires": [],
+    "quest_id": "4105BCD664FFAF39",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_attack:fire_bounty",
+    "stage": "fq.skill_attack.fire_bounty.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:ignited_revenant",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:soul_black_smith"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Ignited Revenant",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "5899D503EAAD6A5C",
+    "requires": [],
+    "quest_id": "2AFEC15EB7A8DB28",
+    "prev_tasks": [
+      "2E53CDCA612D865F"
+    ]
+  },
+  {
+    "quest": "skill_attack:vampire_crypt",
+    "stage": "fq.skill_attack.vampire_crypt.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:vindicator",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:undead_crypt"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Pale Count",
+    "health": 80,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "39E1CB47408247DD",
+    "requires": [],
+    "quest_id": "3E56A04EFBF1A2F5",
+    "prev_tasks": [
+      "7C44E332EF314C40"
+    ]
+  },
+  {
+    "quest": "skill_attack:vampire_crypt",
+    "stage": "fq.skill_attack.vampire_crypt.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:undead_crypt"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_vampire_crypt_2",
+    "found": "A glove, stiff with old blood.",
+    "requires": [],
+    "quest_id": "3E56A04EFBF1A2F5",
+    "prev_tasks": [
+      "7C44E332EF314C40",
+      "39E1CB47408247DD"
+    ]
+  },
+  {
+    "quest": "skill_attack:laid_to_rest",
+    "stage": "fq.skill_attack.laid_to_rest.talk0",
+    "type": "talk",
+    "lines": [
+      "That's their hand. They were my partner. I stopped when they didn't come back.",
+      "Take my old badge. Hunt better than I did."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "corvin",
+    "quest_id": "3BA20A5E75FA1853",
+    "open_task": ""
+  },
+  {
     "quest": "skill_range:lodge_oath",
     "stage": "fq.skill_range.lodge_oath.talk2",
     "type": "talk",
@@ -11610,6 +11744,101 @@ global.QUEST_GIVERS = [
       "563331D3BA5988D9"
     ],
     "name": ""
+  },
+  {
+    "quest": "skill_range:bone_serpent",
+    "stage": "fq.skill_range.bone_serpent.enc0",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*The lava heaves, and bone breaks the surface.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1CCC2CC8A6DC74AD",
+    "prev_tasks": [],
+    "name": "The Lava Serpent",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": null,
+    "glow": false,
+    "where": {
+      "dimension": "minecraft:the_nether"
+    },
+    "entity": "alexsmobs:bone_serpent",
+    "profession": ""
+  },
+  {
+    "quest": "skill_range:warped_mosco",
+    "stage": "fq.skill_range.warped_mosco.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*A shrill drone, far too large.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7BAEAE07F1815DEE",
+    "prev_tasks": [
+      "58500D677F48B03A"
+    ],
+    "name": "The Warped Mosco",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": null,
+    "glow": false,
+    "where": {
+      "biomes": [
+        "minecraft:warped_forest"
+      ]
+    },
+    "entity": "alexsmobs:warped_mosco",
+    "profession": ""
+  },
+  {
+    "quest": "skill_range:trophy_hall",
+    "stage": "fq.skill_range.trophy_hall.build5",
+    "type": "build",
+    "keys": [
+      "handcrafted:bear_trophy",
+      "handcrafted:skeleton_trophy",
+      "handcrafted:fox_trophy",
+      "handcrafted:goat_trophy"
+    ],
+    "counts": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "64F899FB6A1588EE",
+    "prev_tasks": [
+      "3BDDB26B29EC8B4C",
+      "0227F2D9CE2D1361",
+      "482A28B98B29F1BE",
+      "7788277C0B58C6DE",
+      "543FCE172415A811"
+    ]
   },
   {
     "quest": "skill_defense:enlist",
@@ -12175,6 +12404,325 @@ global.QUEST_GIVERS = [
     "requires": [],
     "quest_id": "0EAA884E5B0B71AB",
     "prev_tasks": []
+  },
+  {
+    "quest": "skill_defense:manor_captives",
+    "stage": "fq.skill_defense.manor_captives.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:vindicator",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:illager_manor"
+      ],
+      "label": "the destination"
+    },
+    "wave": 5,
+    "name": "Manor Guards",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "13A5CCE02EB80C32",
+    "requires": [],
+    "quest_id": "617769D68CA776C6",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_defense:manor_captives",
+    "stage": "fq.skill_defense.manor_captives.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Free! Take us home, please!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "617769D68CA776C6",
+    "prev_tasks": [
+      "13A5CCE02EB80C32"
+    ],
+    "name": "Freed Captive",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "the nearest village"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_defense:narrow_bridge",
+    "stage": "fq.skill_defense.narrow_bridge.timed0",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "hold",
+      "radius": 6.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:ravager",
+        "count": 1,
+        "every": 40
+      }
+    ],
+    "lines": [
+      "Ravagers on the bridge. Hold the middle!"
+    ],
+    "start": "Hold the bridge",
+    "requires": [],
+    "quest_id": "54692B6AD7A416B4",
+    "prev_tasks": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_defense:forge_defence",
+    "stage": "fq.skill_defense.forge_defence.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:blaze",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:ruined_portal",
+        "minecraft:ruined_portal_desert",
+        "minecraft:ruined_portal_jungle",
+        "minecraft:ruined_portal_mountain",
+        "minecraft:ruined_portal_ocean",
+        "minecraft:ruined_portal_swamp"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Portal Blazes",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "37FAE95B8A8CCD26",
+    "requires": [],
+    "quest_id": "3BEEA6CE02B274CE",
+    "prev_tasks": [
+      "66BF14ED96F45EBA"
+    ]
+  },
+  {
+    "quest": "skill_defense:forge_defence",
+    "stage": "fq.skill_defense.forge_defence.spawn2",
+    "type": "spawn",
+    "entity": "friendsandfoes:wildfire",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:ruined_portal",
+        "minecraft:ruined_portal_desert",
+        "minecraft:ruined_portal_jungle",
+        "minecraft:ruined_portal_mountain",
+        "minecraft:ruined_portal_ocean",
+        "minecraft:ruined_portal_swamp"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Wildfire",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "0C9E486B31E1FAF0",
+    "requires": [],
+    "quest_id": "3BEEA6CE02B274CE",
+    "prev_tasks": [
+      "66BF14ED96F45EBA",
+      "37FAE95B8A8CCD26"
+    ]
+  },
+  {
+    "quest": "skill_defense:lava_crossing",
+    "stage": "fq.skill_defense.lava_crossing.enc2",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "You came! Get me out of here!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2E19F73DC760C07B",
+    "prev_tasks": [
+      "3DF872C5A2DDAAC0",
+      "57D70B9C56FA3482"
+    ],
+    "name": "Captive Guard",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "guardvillagers:guard",
+    "profession": "",
+    "to": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_defense:mansion",
+    "stage": "fq.skill_defense.mansion.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:evoker",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:mansion"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Mansion Evokers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "2D3D9F66FB60846E",
+    "requires": [],
+    "quest_id": "7A67623290143B98",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_defense:great_raid",
+    "stage": "fq.skill_defense.great_raid.timed1",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "hold",
+      "radius": 20.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:pillager",
+        "count": 3,
+        "every": 40
+      },
+      {
+        "entity": "minecraft:vindicator",
+        "count": 2,
+        "every": 50
+      },
+      {
+        "entity": "minecraft:ravager",
+        "count": 1,
+        "every": 90
+      }
+    ],
+    "lines": [
+      "The largest raid yet. Hold the wall!"
+    ],
+    "start": "Hold the wall",
+    "requires": [],
+    "quest_id": "575CA3D7FE794BA2",
+    "prev_tasks": [
+      "4AC002D7AB09AE49"
+    ],
+    "name": ""
   },
   {
     "quest": "skill_agility:sign_the_roster",
@@ -14265,6 +14813,171 @@ global.QUEST_GIVERS = [
     "quest_id": "08FFD670D22C479D",
     "prev_tasks": [
       "23D228146D658C2B"
+    ]
+  },
+  {
+    "quest": "skill_taming:familiar_bond",
+    "stage": "fq.skill_taming.familiar_bond.cast1",
+    "type": "cast",
+    "spell": "",
+    "school": "",
+    "count": 3,
+    "requires": [],
+    "quest_id": "030967CC3DC485A3",
+    "prev_tasks": [
+      "53376F5058D85ADB"
+    ]
+  },
+  {
+    "quest": "skill_taming:familiar_bond",
+    "stage": "fq.skill_taming.familiar_bond.tame2",
+    "type": "tame",
+    "entities": [
+      "minecraft:cat"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "030967CC3DC485A3",
+    "prev_tasks": [
+      "53376F5058D85ADB",
+      "4800622E264AC126"
+    ]
+  },
+  {
+    "quest": "skill_taming:pegasus",
+    "stage": "fq.skill_taming.pegasus.tame2",
+    "type": "tame",
+    "entities": [
+      "ultimate_unicorn_mod:pegasus"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "2959DC3595BD089D",
+    "prev_tasks": [
+      "5601B85883CC9143",
+      "4E2CB68DFB21AE52"
+    ]
+  },
+  {
+    "quest": "skill_taming:hippocamp",
+    "stage": "fq.skill_taming.hippocamp.tame1",
+    "type": "tame",
+    "entities": [
+      "ultimate_unicorn_mod:hippocamp"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "17B6E4E3436145D0",
+    "prev_tasks": [
+      "38070A0E55D03DB3"
+    ]
+  },
+  {
+    "quest": "skill_taming:nightmare",
+    "stage": "fq.skill_taming.nightmare.tame1",
+    "type": "tame",
+    "entities": [
+      "ultimate_unicorn_mod:nightmare"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "1285CEE70F49F108",
+    "prev_tasks": [
+      "2B3A3425E3298A23"
+    ]
+  },
+  {
+    "quest": "skill_taming:stolen_pet",
+    "stage": "fq.skill_taming.stolen_pet.enc3",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "*A dog barks, tied beside a tent.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "071981AD2405F6A4",
+    "prev_tasks": [
+      "3BEEE51A0E995784",
+      "60655F19DE036533",
+      "692B3F77664B4E18"
+    ],
+    "name": "The Stolen Dog",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:wolf",
+    "profession": "",
+    "to": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_taming:poachers",
+    "stage": "fq.skill_taming.poachers.timed0",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "hold",
+      "radius": 20.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:pillager",
+        "count": 2,
+        "every": 40
+      }
+    ],
+    "lines": [
+      "Poachers at the gate! Protect the unicorn!"
+    ],
+    "start": "Defend the sanctuary",
+    "requires": [],
+    "quest_id": "03A5D36255883B02",
+    "prev_tasks": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_taming:poachers",
+    "stage": "fq.skill_taming.poachers.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:illager_campsite"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_poachers_2",
+    "found": "A key on the poachers' ring.",
+    "requires": [],
+    "quest_id": "03A5D36255883B02",
+    "prev_tasks": [
+      "089ADEB6534F531A",
+      "23AF2CCB437FAB2A"
     ]
   }
 ]

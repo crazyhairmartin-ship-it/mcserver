@@ -168,4 +168,47 @@ ACT2 = [
                                lore=["Torn from a dead hunter's journal."]), skill("attack", 400)]),
 ]
 
-chapter("skill_attack", "The Bounty Office", "Attack path", "minecraft:iron_sword", "skills", 6, Q + ACT2)
+ACT3 = [
+    quest("fortress_contract", "Epic Contract: the Fortress", icon="bountiful:bounty-epic",
+          after=["hunter_trail", "main_story:act3_start"],
+          text=["An epic bounty from the board: wither skeletons have overrun a Nether fortress. Kill twenty and "
+                "bring three skulls as proof."],
+          tasks=[{"structure": "betterfortresses:fortress", "title": "Find the overrun Nether fortress"},
+                 fight("minecraft:wither_skeleton", 20, "betterfortresses:fortress", "Overrunning Skeletons", "Cull the fortress's wither skeletons", wave=5),
+                 item("minecraft:wither_skeleton_skull", 3, title="Bring three skulls as proof")],
+          rewards=[reward_item("bountiful:bounty-epic"), skill("attack", 450)]),
+
+    quest("brute_force", "Brute Force", icon="minecraft:piglin_brute_spawn_egg", after=["fortress_contract"],
+          text=["Piglin brutes guard a bastion's treasure room. A rare bounty wants five of them dead, without golden "
+                "armour to hide behind."],
+          tasks=[fight("minecraft:piglin_brute", 5, "minecraft:bastion_remnant", "Treasure-Room Brutes", "Put down five brutes guarding the treasure room")],
+          rewards=[reward_item("bountiful:bounty-rare"), skill("attack", 480)]),
+
+    quest("fire_bounty", "The Burning Revenant", icon="artifacts:fire_gauntlet", after=["fortress_contract"],
+          signature="artifacts:fire_gauntlet",
+          text=["A fire-wreathed revenant guards the soul blacksmith's forge in the Nether. Defeat the ignited "
+                "revenant and take the smith's fire gauntlet it was protecting."],
+          tasks=[{"structure": "cataclysm:soul_black_smith", "title": "Find the soul blacksmith's forge"},
+                 boss("cataclysm:ignited_revenant", "cataclysm:soul_black_smith", "The Ignited Revenant", "Defeat the ignited revenant at the forge")],
+          rewards=[reward_item("artifacts:fire_gauntlet"), skill("attack", 520)]),
+
+    quest("vampire_crypt", "The Pale Count", icon="artifacts:vampiric_glove", after=["hunter_trail"],
+          signature="artifacts:vampiric_glove",
+          text=["The trail ends at an undead crypt: the dead hunter was after a vampire noble. Go in at night, "
+                "defeat the Pale Count, and take the hunter's own glove, which drinks life from every blow."],
+          tasks=[{"structure": "nova_structures:undead_crypt", "title": "Find the crypt the hunter's trail ends at"},
+                 boss("minecraft:vindicator", "nova_structures:undead_crypt", "The Pale Count", "Defeat the Pale Count at night", health=80),
+                 search("nova_structures:undead_crypt", 1, "the Hunter's Glove", "A glove, stiff with old blood.",
+                        texture="minecraft:item/leather", title="Take the hunter's glove from the crypt")],
+          rewards=[reward_item("artifacts:vampiric_glove"), skill("attack", 540)]),
+
+    quest("laid_to_rest", "Laid to Rest", icon="minecraft:writable_book", after=["vampire_crypt"],
+          text=["Bring the dead hunter's journal back to Corvin Ash. He knew them, and finally tells you why he "
+                "stopped hunting."],
+          tasks=[talk_char("corvin", ["That's their hand. They were my partner. I stopped when they didn't come back.",
+                                      "Take my old badge. Hunt better than I did."],
+                           title="Bring the dead hunter's journal to Corvin Ash")],
+          rewards=[reward_item("minecraft:iron_ingot", name="Ash's Old Badge", lore=["Worn through forty contracts."]), skill("attack", 550)]),
+]
+
+chapter("skill_attack", "The Bounty Office", "Attack path", "minecraft:iron_sword", "skills", 6, Q + ACT2 + ACT3)

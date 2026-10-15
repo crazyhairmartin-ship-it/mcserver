@@ -815,6 +815,212 @@
         }
       ],
       "icon": "minecraft:writable_book"
+    },
+    {
+      "id": "fortress_contract",
+      "title": "Epic Contract: the Fortress",
+      "after": [
+        "hunter_trail",
+        "main_story:act3_start"
+      ],
+      "text": [
+        "An epic bounty from the board: wither skeletons have overrun a Nether fortress. Kill twenty and bring three skulls as proof."
+      ],
+      "tasks": [
+        {
+          "structure": "betterfortresses:fortress",
+          "title": "Find the overrun Nether fortress"
+        },
+        {
+          "kill": "minecraft:wither_skeleton",
+          "count": 20,
+          "spawn": {
+            "at": {
+              "structure": "betterfortresses:fortress"
+            },
+            "wave": 5,
+            "name": "Overrunning Skeletons"
+          },
+          "title": "Cull the fortress's wither skeletons"
+        },
+        {
+          "item": "minecraft:wither_skeleton_skull",
+          "count": 3,
+          "title": "Bring three skulls as proof"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bountiful:bounty-epic"
+        },
+        {
+          "skill": "attack",
+          "xp": 450
+        }
+      ],
+      "icon": "bountiful:bounty-epic"
+    },
+    {
+      "id": "brute_force",
+      "title": "Brute Force",
+      "after": [
+        "fortress_contract"
+      ],
+      "text": [
+        "Piglin brutes guard a bastion's treasure room. A rare bounty wants five of them dead, without golden armour to hide behind."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:piglin_brute",
+          "count": 5,
+          "spawn": {
+            "at": {
+              "structure": "minecraft:bastion_remnant"
+            },
+            "wave": 4,
+            "name": "Treasure-Room Brutes"
+          },
+          "title": "Put down five brutes guarding the treasure room"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bountiful:bounty-rare"
+        },
+        {
+          "skill": "attack",
+          "xp": 480
+        }
+      ],
+      "icon": "minecraft:piglin_brute_spawn_egg"
+    },
+    {
+      "id": "fire_bounty",
+      "title": "The Burning Revenant",
+      "after": [
+        "fortress_contract"
+      ],
+      "text": [
+        "A fire-wreathed revenant guards the soul blacksmith's forge in the Nether. Defeat the ignited revenant and take the smith's fire gauntlet it was protecting."
+      ],
+      "tasks": [
+        {
+          "structure": "cataclysm:soul_black_smith",
+          "title": "Find the soul blacksmith's forge"
+        },
+        {
+          "kill": "cataclysm:ignited_revenant",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:soul_black_smith"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Ignited Revenant"
+          },
+          "title": "Defeat the ignited revenant at the forge"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:fire_gauntlet"
+        },
+        {
+          "skill": "attack",
+          "xp": 520
+        }
+      ],
+      "icon": "artifacts:fire_gauntlet",
+      "signature": "artifacts:fire_gauntlet"
+    },
+    {
+      "id": "vampire_crypt",
+      "title": "The Pale Count",
+      "after": [
+        "hunter_trail"
+      ],
+      "text": [
+        "The trail ends at an undead crypt: the dead hunter was after a vampire noble. Go in at night, defeat the Pale Count, and take the hunter's own glove, which drinks life from every blow."
+      ],
+      "tasks": [
+        {
+          "structure": "nova_structures:undead_crypt",
+          "title": "Find the crypt the hunter's trail ends at"
+        },
+        {
+          "kill": "minecraft:vindicator",
+          "spawn": {
+            "at": {
+              "structure": "nova_structures:undead_crypt"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Pale Count",
+            "health": 80
+          },
+          "title": "Defeat the Pale Count at night"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:undead_crypt"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Hunter's Glove",
+              "texture": "minecraft:item/leather"
+            },
+            "found": "A glove, stiff with old blood."
+          },
+          "title": "Take the hunter's glove from the crypt"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:vampiric_glove"
+        },
+        {
+          "skill": "attack",
+          "xp": 540
+        }
+      ],
+      "icon": "artifacts:vampiric_glove",
+      "signature": "artifacts:vampiric_glove"
+    },
+    {
+      "id": "laid_to_rest",
+      "title": "Laid to Rest",
+      "after": [
+        "vampire_crypt"
+      ],
+      "text": [
+        "Bring the dead hunter's journal back to Corvin Ash. He knew them, and finally tells you why he stopped hunting."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "corvin",
+          "lines": [
+            "That's their hand. They were my partner. I stopped when they didn't come back.",
+            "Take my old badge. Hunt better than I did."
+          ],
+          "title": "Bring the dead hunter's journal to Corvin Ash"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_ingot",
+          "name": "Ash's Old Badge",
+          "lore": [
+            "Worn through forty contracts."
+          ]
+        },
+        {
+          "skill": "attack",
+          "xp": 550
+        }
+      ],
+      "icon": "minecraft:writable_book"
     }
   ]
 }

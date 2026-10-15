@@ -405,7 +405,7 @@
 			]
 			title: "The Cats of the Ruin"
 			x: 4.5d
-			y: -3.0d
+			y: -3.75d
 		}
 		{
 			dependencies: ["1A6788BE27A0CD4A"]
@@ -510,7 +510,7 @@
 			]
 			title: "The Butterfly House"
 			x: 4.5d
-			y: -1.5d
+			y: -2.25d
 		}
 		{
 			dependencies: ["15EC4037069981A0"]
@@ -697,7 +697,7 @@
 			]
 			title: "Eggs to Hatch"
 			x: 4.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["0ED09A00977BAAB9"]
@@ -861,7 +861,7 @@
 			]
 			title: "Monkey Business"
 			x: 4.5d
-			y: 1.5d
+			y: 0.75d
 		}
 		{
 			dependencies: ["494FC827FD995F41"]
@@ -1047,7 +1047,7 @@
 			]
 			title: "Barding"
 			x: 4.5d
-			y: 3.0d
+			y: 2.25d
 		}
 		{
 			dependencies: ["5DFF9704B9891005"]
@@ -1089,6 +1089,313 @@
 			title: "Silver Hoofprints"
 			x: 6.0d
 			y: 2.25d
+		}
+		{
+			dependencies: [
+				"42D03C61127A7393"
+				"1D96E8F9421E2B6A"
+			]
+			description: ["A visiting hedge witch gives Fern a Book of Familiars. Read it and bond a familiar of your own, a companion bound by more than food."]
+			icon: "bookoffamiliars:familiar_book"
+			id: "030967CC3DC485A3"
+			rewards: [
+				{
+					id: "54A8DB1F6B2788CF"
+					item: "minecraft:cat_spawn_egg"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 450"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "6EC1490AAA97A6C4"
+					silent: true
+					title: "+450 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "53376F5058D85ADB"
+					item: "bookoffamiliars:familiar_book"
+					title: "Take the hedge witch's Book of Familiars"
+					type: "item"
+				}
+				{
+					id: "4800622E264AC126"
+					stage: "fq.skill_taming.familiar_bond.cast1"
+					title: "Read the book's bonding words aloud"
+					type: "gamestage"
+				}
+				{
+					id: "0957AEA9358137AE"
+					stage: "fq.skill_taming.familiar_bond.tame2"
+					title: "Bond a familiar of your own"
+					type: "gamestage"
+				}
+			]
+			title: "A Bond of Spirit"
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["08FFD670D22C479D"]
+			description: ["Pegasus feathers keep drifting down onto the sanctuary. Find the winged horse in the mountains, tame it and fly it home."]
+			icon: "ultimate_unicorn_mod:pegasus_feather"
+			id: "2959DC3595BD089D"
+			rewards: [
+				{
+					count: 4
+					id: "1988711E1B57E7DE"
+					item: "ultimate_unicorn_mod:pegasus_feather"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 480"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "65B86F3789C35EEF"
+					silent: true
+					title: "+480 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5601B85883CC9143"
+					item: "ultimate_unicorn_mod:pegasus_feather"
+					title: "Collect a drifting pegasus feather"
+					type: "item"
+				}
+				{
+					biome: "minecraft:jagged_peaks"
+					id: "4E2CB68DFB21AE52"
+					title: "Climb into the mountains where the feathers fall from"
+					type: "biome"
+				}
+				{
+					id: "0875A38E4C1F0F6E"
+					stage: "fq.skill_taming.pegasus.tame2"
+					title: "Win the winged horse's trust"
+					type: "gamestage"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "1ABFEF3A0AC21813"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Fly it home to the sanctuary"
+					type: "location"
+				}
+			]
+			title: "Wings Over the Paddock"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2959DC3595BD089D"]
+			description: ["Fishermen speak of a horse with a fish's tail playing in their wake. Sail out past the boats at sea, find the hippocamp and ride it."]
+			icon: "ultimate_unicorn_mod:hippocamp_spawn_egg"
+			id: "17B6E4E3436145D0"
+			rewards: [
+				{
+					id: "446F39B612633B28"
+					item: {
+						Count: 1b
+						id: "ultimate_unicorn_mod:leather_horse_armor"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Dyed sea-blue.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Hippocamp Saddle Blanket\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 500"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "22AB1D2F59DD8E18"
+					silent: true
+					title: "+500 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "38070A0E55D03DB3"
+					structure: "#fotf:groups/ships_at_sea"
+					title: "Sail out past the boats at sea"
+					type: "structure"
+				}
+				{
+					id: "251DF26F8B07CCEA"
+					stage: "fq.skill_taming.hippocamp.tame1"
+					title: "Win the hippocamp's trust and ride it"
+					type: "gamestage"
+				}
+			]
+			title: "Horse of the Sea"
+			x: 9.0d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"2959DC3595BD089D"
+				"1D96E8F9421E2B6A"
+			]
+			description: ["In the Nether, piglins have chained a burning nightmare horse in their camp. Free it and calm it until it lets you ride."]
+			icon: "ultimate_unicorn_mod:nightmare_hoof"
+			id: "1285CEE70F49F108"
+			rewards: [
+				{
+					id: "2A54C7041D25F699"
+					item: "ultimate_unicorn_mod:nightmare_hoof"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 520"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "34712638E836962C"
+					silent: true
+					title: "+520 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2B3A3425E3298A23"
+					structure: "nova_structures:piglin_camp"
+					title: "Find the camp where the nightmare is chained"
+					type: "structure"
+				}
+				{
+					id: "102F406B02CB72BA"
+					stage: "fq.skill_taming.nightmare.tame1"
+					title: "Free and calm the burning nightmare"
+					type: "gamestage"
+				}
+			]
+			title: "The Nightmare"
+			x: 9.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3E29F1CF1159CD62"]
+			description: ["A child's dog was stolen by a passing illager band. Make a wayward lantern from the dog's deed of ownership and follow its glow across the land to bring the dog home."]
+			icon: "domesticationinnovation:wayward_lantern"
+			id: "071981AD2405F6A4"
+			rewards: [
+				{
+					id: "75D1450188A27CFD"
+					item: "domesticationinnovation:deed_of_ownership"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 450"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "64E2B722CCC01FFE"
+					silent: true
+					title: "+450 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3BEEE51A0E995784"
+					item: "domesticationinnovation:deed_of_ownership"
+					title: "Take the dog's deed of ownership from the child"
+					type: "item"
+				}
+				{
+					id: "60655F19DE036533"
+					item: "domesticationinnovation:wayward_lantern"
+					only_from_crafting: true
+					title: "Make a wayward lantern from the deed"
+					type: "item"
+				}
+				{
+					id: "692B3F77664B4E18"
+					structure: "#fotf:groups/illager_hideouts"
+					title: "Follow the lantern's glow to the illagers' hideout"
+					type: "structure"
+				}
+				{
+					id: "1DEB2067287A441D"
+					stage: "fq.skill_taming.stolen_pet.enc3"
+					title: "Bring the dog home"
+					type: "gamestage"
+				}
+			]
+			title: "Wherever You Are"
+			x: 4.5d
+			y: 3.75d
+		}
+		{
+			dependencies: [
+				"071981AD2405F6A4"
+				"08FFD670D22C479D"
+			]
+			description: ["Word of a unicorn has reached the poachers' camp. They come for it at night. Defend the sanctuary with your enchanted pets, then follow them back to their campsite and free the caged animals."]
+			icon: "minecraft:iron_bars"
+			id: "03A5D36255883B02"
+			rewards: [
+				{
+					id: "53E9125F61E85F07"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Herding\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 550"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "573920674AD5D483"
+					silent: true
+					title: "+550 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "089ADEB6534F531A"
+					stage: "fq.skill_taming.poachers.timed0"
+					title: "Defend the sanctuary through the poachers' night raid"
+					type: "gamestage"
+				}
+				{
+					id: "23AF2CCB437FAB2A"
+					structure: "dungeons_arise:illager_campsite"
+					title: "Follow the poachers back to their campsite"
+					type: "structure"
+				}
+				{
+					id: "2B8B475E7026C393"
+					item: "kubejs:quest_poachers_2"
+					title: "Take the key and free the caged animals"
+					type: "item"
+				}
+			]
+			title: "Poachers at the Gate"
+			x: 7.5d
+			y: 1.5d
 		}
 	]
 	subtitle: ["Taming path"]

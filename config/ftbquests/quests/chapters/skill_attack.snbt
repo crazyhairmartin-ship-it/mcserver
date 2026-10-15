@@ -862,6 +862,218 @@
 			x: 15.0d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"5375A64047A9BD30"
+				"1D96E8F9421E2B6A"
+			]
+			description: ["An epic bounty from the board: wither skeletons have overrun a Nether fortress. Kill twenty and bring three skulls as proof."]
+			icon: "bountiful:bounty-epic"
+			id: "6DF5E1B5753C127E"
+			rewards: [
+				{
+					id: "0F31A0051F54F595"
+					item: "bountiful:bounty-epic"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 450"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "073E83F1A6189236"
+					silent: true
+					title: "+450 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1C6A0DBC5354E89A"
+					structure: "betterfortresses:fortress"
+					title: "Find the overrun Nether fortress"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:wither_skeleton"
+					id: "79179F4B4869B651"
+					title: "Cull the fortress's wither skeletons"
+					type: "kill"
+					value: 20L
+				}
+				{
+					count: 3L
+					id: "1184231A10A743B4"
+					item: "minecraft:wither_skeleton_skull"
+					title: "Bring three skulls as proof"
+					type: "item"
+				}
+			]
+			title: "Epic Contract: the Fortress"
+			x: 16.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["6DF5E1B5753C127E"]
+			description: ["Piglin brutes guard a bastion's treasure room. A rare bounty wants five of them dead, without golden armour to hide behind."]
+			icon: "minecraft:piglin_brute_spawn_egg"
+			id: "4105BCD664FFAF39"
+			rewards: [
+				{
+					id: "58F18384F41A576A"
+					item: "bountiful:bounty-rare"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 480"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "69CFB70542776EB3"
+					silent: true
+					title: "+480 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:piglin_brute"
+					id: "3A2D3496A5DB4AC1"
+					title: "Put down five brutes guarding the treasure room"
+					type: "kill"
+					value: 5L
+				}
+			]
+			title: "Brute Force"
+			x: 18.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["6DF5E1B5753C127E"]
+			description: ["A fire-wreathed revenant guards the soul blacksmith's forge in the Nether. Defeat the ignited revenant and take the smith's fire gauntlet it was protecting."]
+			icon: "artifacts:fire_gauntlet"
+			id: "2AFEC15EB7A8DB28"
+			rewards: [
+				{
+					id: "5CE8B40F5CF95403"
+					item: "artifacts:fire_gauntlet"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 520"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "277CECC8CC5C53DB"
+					silent: true
+					title: "+520 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2E53CDCA612D865F"
+					structure: "cataclysm:soul_black_smith"
+					title: "Find the soul blacksmith's forge"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:ignited_revenant"
+					id: "5899D503EAAD6A5C"
+					title: "Defeat the ignited revenant at the forge"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Burning Revenant"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5375A64047A9BD30"]
+			description: ["The trail ends at an undead crypt: the dead hunter was after a vampire noble. Go in at night, defeat the Pale Count, and take the hunter's own glove, which drinks life from every blow."]
+			icon: "artifacts:vampiric_glove"
+			id: "3E56A04EFBF1A2F5"
+			rewards: [
+				{
+					id: "0B06A9FA6CE96F0F"
+					item: "artifacts:vampiric_glove"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 540"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "52A09A14732513C8"
+					silent: true
+					title: "+540 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7C44E332EF314C40"
+					structure: "nova_structures:undead_crypt"
+					title: "Find the crypt the hunter's trail ends at"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:vindicator"
+					id: "39E1CB47408247DD"
+					title: "Defeat the Pale Count at night"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "6B74EDC87DC01D9B"
+					item: "kubejs:quest_vampire_crypt_2"
+					title: "Take the hunter's glove from the crypt"
+					type: "item"
+				}
+			]
+			title: "The Pale Count"
+			x: 16.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3E56A04EFBF1A2F5"]
+			description: ["Bring the dead hunter's journal back to Corvin Ash. He knew them, and finally tells you why he stopped hunting."]
+			icon: "minecraft:writable_book"
+			id: "3BA20A5E75FA1853"
+			rewards: [
+				{
+					id: "1271E497BA00CD66"
+					item: {
+						Count: 1b
+						id: "minecraft:iron_ingot"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Worn through forty contracts.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Ash's Old Badge\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 550"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "5AB5B088F6449609"
+					silent: true
+					title: "+550 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "36EA2A34CCB58BE2"
+					stage: "fq.skill_attack.laid_to_rest.talk0"
+					title: "Bring the dead hunter's journal to Corvin Ash"
+					type: "gamestage"
+				}
+			]
+			title: "Laid to Rest"
+			x: 18.0d
+			y: 1.5d
+		}
 	]
 	subtitle: ["Attack path"]
 	title: "The Bounty Office"

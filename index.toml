@@ -150,7 +150,7 @@ hash = "4f1c42fcc91381bcfd6b92ee1366112c83d87c37a1995b926cec3db4a04aeb9a"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_attack.snbt"
-hash = "779b9aa37b1f845fd117f85da67e23b8fd6ed71917f9d429c1e407a920d1b6b6"
+hash = "053ffe9ca7307b3f3debbe390f0adf35f4194acc57149769496808220083b2e7"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_cooking.snbt"
@@ -162,7 +162,7 @@ hash = "102aaa7bb135a46cc86b4119d5ba0b728600773afba11f7a14965447562113ff"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_defense.snbt"
-hash = "5885640b44207d02a6344141f123e0e9d8ac0e0a081b4a1c29257124fdedbf59"
+hash = "3a6b580ee4df1e3921122027d95d5bcaa21b8c5340bc552b37530009877c5082"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_farming.snbt"
@@ -182,11 +182,11 @@ hash = "6225181cf427a9e17b63aca7bcf4e5d00bc541853af5c80517da37bcb0de8ed5"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_range.snbt"
-hash = "66b658456579770301c8e83031c4a8f67b645a2e2cab058b78b8785472b43636"
+hash = "f4d567c36683673ce037b80ead697dd3b7565044dca3ec8d9da96f316c7f3766"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_taming.snbt"
-hash = "0812147277a0513968a92165c70782678fd2ddfd83d22f312ed7da96edf0cb87"
+hash = "503722b231b98c94d402d435c415d9c0f6a2db0a3f13b7445d9f3b9d7ac1a6aa"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/small_favours.snbt"
@@ -2801,7 +2801,7 @@ hash = "77546c4cc0ec84840f5fd7ab0b845a72406755c619b84f89740a3f8047957af8"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "72175703c34a2d61607da86383c87cde368167495f113e5eb5e8aa42abacf726"
+hash = "4d347e9facfe269be4260fded3b717156af363af7eabf58d61896b4d7c11f56b"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2885,7 +2885,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "b8eeb8faf93535506b7652ab1114b2826f24aa2eeb368a99cf27f3ff704804b9"
+hash = "6f0370c6849c21dadbdbd431310a5fa761788d0329cab6ef097a7a061ea712fa"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"

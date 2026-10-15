@@ -201,6 +201,17 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - alexs_caves:cloak_of_darkness: needs walking past a watcher unseen; written as crafting and a hurt-free timed hold
 - alexs_caves:gum_worm: needs hooking and riding a worm; written as the hook crafted and a worm observed
 - alexs_caves:crucible: needs converting an area to a biome; written as the crucible crafted and set down
+- skill_attack:vampire_crypt: needs a vampire noble; written as a vindicator boss named the Pale Count at the crypt
+- skill_defense:narrow_bridge: needs a real bridge with falls; written as a timed hold with ravager waves
+- skill_defense:forge_defence: needs the village forge; written as a ruined-portal fight with blazes and the Wildfire
+- skill_defense:lava_crossing: needs a captive guard from the watch; written as a bridge-stone item, the keep and an escort
+- skill_defense:great_raid: needs a real raid in a village; written as a timed hold with waves at the fortified village
+- skill_range:bone_serpent: needs luring it out; written as a Nether encounter kill
+- skill_range:trophy_hall: needs five trophies of beasts; written as four trophies mounted
+- skill_taming:familiar_bond: needs a bonding rite; written as the book, three casts and taming a cat
+- skill_taming:pegasus: needs flying it home; written as taming and returning to Reece
+- skill_taming:stolen_pet: needs a pet's glow trail; written as the lantern and an escort of a wolf
+- skill_taming:poachers: needs defending with the player's pets; written as a timed hold and a key search
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

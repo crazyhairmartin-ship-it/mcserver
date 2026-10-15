@@ -745,6 +745,292 @@
         }
       ],
       "icon": "minecraft:white_banner"
+    },
+    {
+      "id": "manor_captives",
+      "title": "The Illager Manor",
+      "after": [
+        "sea_raiders",
+        "main_story:act3_start"
+      ],
+      "text": [
+        "The raiders' captives are held at an illager manor in a dark forest. Break in, free the villagers and walk them home."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:vindicator",
+          "count": 10,
+          "spawn": {
+            "at": {
+              "structure": "nova_structures:illager_manor"
+            },
+            "wave": 5,
+            "name": "Manor Guards"
+          },
+          "title": "Break into the manor past its guards"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Freed Captive",
+            "to": {
+              "structure": "#villages",
+              "label": "the nearest village"
+            },
+            "then": "escort",
+            "lines": [
+              "Free! Take us home, please!"
+            ]
+          },
+          "title": "Walk the freed captives home"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_upgrade_smithing_template"
+        },
+        {
+          "skill": "defense",
+          "xp": 450
+        }
+      ],
+      "icon": "minecraft:netherite_upgrade_smithing_template"
+    },
+    {
+      "id": "narrow_bridge",
+      "title": "Hold the Bridge",
+      "after": [
+        "manor_captives"
+      ],
+      "text": [
+        "Ravagers are coming over the only bridge to a village. Hold the middle of it for the full count without being knocked off. The bridge-keeper's spiked boots are the thanks."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 180,
+            "goal": {
+              "hold": {
+                "radius": 6
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:ravager",
+                "count": 1,
+                "every": 40
+              }
+            ],
+            "lines": [
+              "Ravagers on the bridge. Hold the middle!"
+            ],
+            "start": "Hold the bridge"
+          },
+          "title": "Hold the middle of the bridge against the ravagers"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:steadfast_spikes"
+        },
+        {
+          "skill": "defense",
+          "xp": 480
+        }
+      ],
+      "icon": "artifacts:steadfast_spikes",
+      "signature": "artifacts:steadfast_spikes"
+    },
+    {
+      "id": "forge_defence",
+      "title": "Fire at the Forge",
+      "after": [
+        "narrow_bridge"
+      ],
+      "text": [
+        "A Wildfire and its blazes come up through a ruined portal and go for a village's forge. Hold the forge until they're beaten. The smith forges you a pendant from the Wildfire's crown."
+      ],
+      "tasks": [
+        {
+          "structure": "#ruined_portals",
+          "title": "Reach the ruined portal beside the village forge"
+        },
+        {
+          "kill": "minecraft:blaze",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "#ruined_portals"
+            },
+            "wave": 4,
+            "name": "Portal Blazes"
+          },
+          "title": "Beat the blazes coming through the portal"
+        },
+        {
+          "kill": "friendsandfoes:wildfire",
+          "spawn": {
+            "at": {
+              "structure": "#ruined_portals"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Wildfire"
+          },
+          "title": "Beat the Wildfire before it reaches the forge"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:flame_pendant"
+        },
+        {
+          "skill": "defense",
+          "xp": 520
+        }
+      ],
+      "icon": "artifacts:flame_pendant",
+      "signature": "artifacts:flame_pendant"
+    },
+    {
+      "id": "lava_crossing",
+      "title": "Across the Lava",
+      "after": [
+        "forge_defence"
+      ],
+      "text": [
+        "A guard of the watch is held captive in a Nether keep across a lava lake. Bridge the lava, break in and bring him out. He gives you the obsidian skull he carried for luck."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:cobblestone",
+          "count": 64,
+          "title": "Carry stone to bridge the lava"
+        },
+        {
+          "structure": "nova_structures:nether_keep",
+          "title": "Bridge the lava to the keep"
+        },
+        {
+          "encounter": {
+            "entity": "guardvillagers:guard",
+            "name": "Captive Guard",
+            "to": {
+              "place": "reece"
+            },
+            "then": "escort",
+            "lines": [
+              "You came! Get me out of here!"
+            ]
+          },
+          "title": "Bring the captive guard out of the keep"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:obsidian_skull"
+        },
+        {
+          "skill": "defense",
+          "xp": 520
+        }
+      ],
+      "icon": "artifacts:obsidian_skull",
+      "signature": "artifacts:obsidian_skull"
+    },
+    {
+      "id": "mansion",
+      "title": "The Illagers' Seat",
+      "after": [
+        "lava_crossing"
+      ],
+      "text": [
+        "All the raids answer to the woodland mansion. Go in and kill its evokers to break their command."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:evoker",
+          "count": 3,
+          "spawn": {
+            "at": {
+              "structure": "minecraft:mansion"
+            },
+            "wave": 1,
+            "name": "Mansion Evokers"
+          },
+          "title": "Kill the mansion's evokers to break the raids' command"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:totem_of_undying",
+          "count": 2
+        },
+        {
+          "skill": "defense",
+          "xp": 550
+        }
+      ],
+      "icon": "minecraft:totem_of_undying"
+    },
+    {
+      "id": "great_raid",
+      "title": "The Great Raid",
+      "after": [
+        "mansion"
+      ],
+      "text": [
+        "In revenge, the illagers send their largest raid at a fortified village. Hold it through every wave, ravagers and all, with its guards."
+      ],
+      "tasks": [
+        {
+          "structure": "ctov:large/village_taiga_fortified",
+          "title": "Man the fortified village's wall"
+        },
+        {
+          "timed": {
+            "seconds": 300,
+            "goal": {
+              "hold": {
+                "radius": 20
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:pillager",
+                "count": 3,
+                "every": 40
+              },
+              {
+                "entity": "minecraft:vindicator",
+                "count": 2,
+                "every": 50
+              },
+              {
+                "entity": "minecraft:ravager",
+                "count": 1,
+                "every": 90
+              }
+            ],
+            "lines": [
+              "The largest raid yet. Hold the wall!"
+            ],
+            "start": "Hold the wall"
+          },
+          "title": "Hold the wall through every wave with the guards"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 24
+        },
+        {
+          "skill": "defense",
+          "xp": 600
+        }
+      ],
+      "icon": "minecraft:emerald"
     }
   ]
 }

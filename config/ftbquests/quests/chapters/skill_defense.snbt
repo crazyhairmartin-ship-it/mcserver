@@ -744,6 +744,250 @@
 			x: 15.0d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"0EAA884E5B0B71AB"
+				"1D96E8F9421E2B6A"
+			]
+			description: ["The raiders' captives are held at an illager manor in a dark forest. Break in, free the villagers and walk them home."]
+			icon: "minecraft:netherite_upgrade_smithing_template"
+			id: "617769D68CA776C6"
+			rewards: [
+				{
+					id: "5EB5B8328DC37869"
+					item: "minecraft:netherite_upgrade_smithing_template"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 450"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "7BCE05DC6239F470"
+					silent: true
+					title: "+450 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:vindicator"
+					id: "13A5CCE02EB80C32"
+					title: "Break into the manor past its guards"
+					type: "kill"
+					value: 10L
+				}
+				{
+					id: "0481074E9A3B79BF"
+					stage: "fq.skill_defense.manor_captives.enc1"
+					title: "Walk the freed captives home"
+					type: "gamestage"
+				}
+			]
+			title: "The Illager Manor"
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["617769D68CA776C6"]
+			description: ["Ravagers are coming over the only bridge to a village. Hold the middle of it for the full count without being knocked off. The bridge-keeper's spiked boots are the thanks."]
+			icon: "artifacts:steadfast_spikes"
+			id: "54692B6AD7A416B4"
+			rewards: [
+				{
+					id: "3941DB6747521A53"
+					item: "artifacts:steadfast_spikes"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 480"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "348AA0B64DB0EA23"
+					silent: true
+					title: "+480 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "12D1FB87491BE468"
+					stage: "fq.skill_defense.narrow_bridge.timed0"
+					title: "Hold the middle of the bridge against the ravagers"
+					type: "gamestage"
+				}
+			]
+			title: "Hold the Bridge"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["54692B6AD7A416B4"]
+			description: ["A Wildfire and its blazes come up through a ruined portal and go for a village's forge. Hold the forge until they're beaten. The smith forges you a pendant from the Wildfire's crown."]
+			icon: "artifacts:flame_pendant"
+			id: "3BEEA6CE02B274CE"
+			rewards: [
+				{
+					id: "3017DB6875C7D6BB"
+					item: "artifacts:flame_pendant"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 520"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "4870D1202FBA862B"
+					silent: true
+					title: "+520 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "66BF14ED96F45EBA"
+					structure: "#fotf:groups/ruined_portals"
+					title: "Reach the ruined portal beside the village forge"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:blaze"
+					id: "37FAE95B8A8CCD26"
+					title: "Beat the blazes coming through the portal"
+					type: "kill"
+					value: 6L
+				}
+				{
+					entity: "friendsandfoes:wildfire"
+					id: "0C9E486B31E1FAF0"
+					title: "Beat the Wildfire before it reaches the forge"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Fire at the Forge"
+			x: 19.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3BEEA6CE02B274CE"]
+			description: ["A guard of the watch is held captive in a Nether keep across a lava lake. Bridge the lava, break in and bring him out. He gives you the obsidian skull he carried for luck."]
+			icon: "artifacts:obsidian_skull"
+			id: "2E19F73DC760C07B"
+			rewards: [
+				{
+					id: "395DC7EBF32232CF"
+					item: "artifacts:obsidian_skull"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 520"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "4AB96E120396BA01"
+					silent: true
+					title: "+520 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "3DF872C5A2DDAAC0"
+					item: "minecraft:cobblestone"
+					title: "Carry stone to bridge the lava"
+					type: "item"
+				}
+				{
+					id: "57D70B9C56FA3482"
+					structure: "nova_structures:nether_keep"
+					title: "Bridge the lava to the keep"
+					type: "structure"
+				}
+				{
+					id: "6D6DE7B99E9928E6"
+					stage: "fq.skill_defense.lava_crossing.enc2"
+					title: "Bring the captive guard out of the keep"
+					type: "gamestage"
+				}
+			]
+			title: "Across the Lava"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2E19F73DC760C07B"]
+			description: ["All the raids answer to the woodland mansion. Go in and kill its evokers to break their command."]
+			icon: "minecraft:totem_of_undying"
+			id: "7A67623290143B98"
+			rewards: [
+				{
+					count: 2
+					id: "29E3B305D4FF161A"
+					item: "minecraft:totem_of_undying"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 550"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "083B53F0ADFC6F80"
+					silent: true
+					title: "+550 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:evoker"
+					id: "2D3D9F66FB60846E"
+					title: "Kill the mansion's evokers to break the raids' command"
+					type: "kill"
+					value: 3L
+				}
+			]
+			title: "The Illagers' Seat"
+			x: 22.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7A67623290143B98"]
+			description: ["In revenge, the illagers send their largest raid at a fortified village. Hold it through every wave, ravagers and all, with its guards."]
+			icon: "minecraft:emerald"
+			id: "575CA3D7FE794BA2"
+			rewards: [
+				{
+					count: 24
+					id: "475B9FDD23F34BA5"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 600"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "33B6FD5CC80351E9"
+					silent: true
+					title: "+600 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4AC002D7AB09AE49"
+					structure: "ctov:large/village_taiga_fortified"
+					title: "Man the fortified village's wall"
+					type: "structure"
+				}
+				{
+					id: "73D172C767391122"
+					stage: "fq.skill_defense.great_raid.timed1"
+					title: "Hold the wall through every wave with the guards"
+					type: "gamestage"
+				}
+			]
+			title: "The Great Raid"
+			x: 24.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Defense path"]
 	title: "The Village Watch"

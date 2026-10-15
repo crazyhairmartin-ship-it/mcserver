@@ -849,6 +849,205 @@
 			x: 13.5d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"2AC3DEBA9E4445DF"
+				"1D96E8F9421E2B6A"
+			]
+			description: ["The Nether has game too. Shoot soul vultures out of the sky over a soul sand valley and take a soul heart."]
+			icon: "alexsmobs:soul_heart"
+			id: "5AB279EFEF171A85"
+			rewards: [
+				{
+					id: "41DDB2D335EEAAB1"
+					item: "alexsmobs:soul_heart"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 450"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "0212A6A63CFD1244"
+					silent: true
+					title: "+450 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:soul_sand_valley"
+					id: "4603BC8EEA8CB833"
+					title: "Go to a soul sand valley's skies"
+					type: "biome"
+				}
+				{
+					entity: "alexsmobs:soul_vulture"
+					id: "46B9C0DF96FDE74A"
+					title: "Shoot soul vultures out of the sky for the lodge"
+					type: "kill"
+					value: 2L
+				}
+				{
+					id: "008525F806FBD60D"
+					item: "alexsmobs:soul_heart"
+					title: "Take a soul heart"
+					type: "item"
+				}
+			]
+			title: "Vultures of the Valley"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5AB279EFEF171A85"]
+			description: ["Lava lakes hide a bone serpent. Lure it out and bring it down from the shore before it pulls you in. Its tooth goes on the lodge wall."]
+			icon: "alexsmobs:bone_serpent_tooth"
+			id: "1CCC2CC8A6DC74AD"
+			rewards: [
+				{
+					id: "50A3A319ED1B6D5E"
+					item: "alexsmobs:bone_serpent_tooth"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 480"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "38C167DF3296F820"
+					silent: true
+					title: "+480 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "43613C754892740B"
+					stage: "fq.skill_range.bone_serpent.enc0"
+					title: "Lure the bone serpent out and bring it down from the shore"
+					type: "gamestage"
+				}
+				{
+					id: "6AD5E3BEEE29D8A1"
+					item: "alexsmobs:bone_serpent_tooth"
+					title: "Take its tooth for the lodge wall"
+					type: "item"
+				}
+			]
+			title: "The Serpent in the Lava"
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1CCC2CC8A6DC74AD"]
+			description: ["A crimson mosquito fed on warped fungus and grew into a monster. Track it to its warped forest and shoot it down."]
+			icon: "alexsmobs:warped_muscle"
+			id: "7BAEAE07F1815DEE"
+			rewards: [
+				{
+					id: "6A19D7EF66DFFF30"
+					item: "alexsmobs:warped_muscle"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "1A5DE44ECC26D988"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 500"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "0E53C4AA33B43606"
+					silent: true
+					title: "+500 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:warped_forest"
+					id: "58500D677F48B03A"
+					title: "Track the monster into the warped forest"
+					type: "biome"
+				}
+				{
+					id: "4C66E998D53BFCEF"
+					stage: "fq.skill_range.warped_mosco.enc1"
+					title: "Shoot down the monster mosquito"
+					type: "gamestage"
+				}
+			]
+			title: "The Warped Swarm"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7BAEAE07F1815DEE"]
+			description: ["The lodge in Reece needs a hall worthy of its hunters. Build it, and hang five trophies."]
+			icon: "handcrafted:bear_trophy"
+			id: "64F899FB6A1588EE"
+			rewards: [
+				{
+					id: "2546F5B2C02AF64B"
+					item: "handcrafted:bear_trophy"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 520"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "651468644C41B6AA"
+					silent: true
+					title: "+520 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "3BDDB26B29EC8B4C"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "0227F2D9CE2D1361"
+					item: "handcrafted:bear_trophy"
+					title: "Mount a bear trophy"
+					type: "item"
+				}
+				{
+					id: "482A28B98B29F1BE"
+					item: "handcrafted:skeleton_trophy"
+					title: "Mount a skeleton trophy"
+					type: "item"
+				}
+				{
+					id: "7788277C0B58C6DE"
+					item: "handcrafted:fox_trophy"
+					title: "Mount a fox trophy"
+					type: "item"
+				}
+				{
+					id: "543FCE172415A811"
+					item: "handcrafted:goat_trophy"
+					title: "Mount a goat trophy"
+					type: "item"
+				}
+				{
+					id: "408BBED7AA6F68EF"
+					stage: "fq.skill_range.trophy_hall.build5"
+					title: "Hang the trophies in the lodge's new hall"
+					type: "gamestage"
+				}
+			]
+			title: "The Trophy Hall"
+			x: 19.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Range path"]
 	title: "The Hunters' Lodge"

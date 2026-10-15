@@ -168,4 +168,42 @@ ACT2 = [
           rewards=[reward_item("spartanweaponry:diamond_longbow"), skill("range", 400)]),
 ]
 
-chapter("skill_range", "The Hunters' Lodge", "Range path", "minecraft:bow", "skills", 7, Q + ACT2)
+ACT3 = [
+    quest("soul_vultures", "Vultures of the Valley", icon="alexsmobs:soul_heart", after=["rival_lodge", "main_story:act3_start"],
+          text=["The Nether has game too. Shoot soul vultures out of the sky over a soul sand valley and take a soul "
+                "heart."],
+          tasks=[{"biome": "minecraft:soul_sand_valley", "title": "Go to a soul sand valley's skies"},
+                 {"kill": "alexsmobs:soul_vulture", "count": 2, "title": "Shoot soul vultures out of the sky for the lodge"},
+                 item("alexsmobs:soul_heart", title="Take a soul heart")],
+          rewards=[reward_item("alexsmobs:soul_heart"), skill("range", 450)]),
+
+    quest("bone_serpent", "The Serpent in the Lava", icon="alexsmobs:bone_serpent_tooth", after=["soul_vultures"],
+          text=["Lava lakes hide a bone serpent. Lure it out and bring it down from the shore before it pulls you "
+                "in. Its tooth goes on the lodge wall."],
+          tasks=[enc(["*The lava heaves, and bone breaks the surface.*"], then="kill", entity="alexsmobs:bone_serpent", name="The Lava Serpent",
+                     title="Lure the bone serpent out and bring it down from the shore", where={"dimension": "minecraft:the_nether"}),
+                 item("alexsmobs:bone_serpent_tooth", title="Take its tooth for the lodge wall")],
+          rewards=[reward_item("alexsmobs:bone_serpent_tooth"), skill("range", 480)]),
+
+    quest("warped_mosco", "The Warped Swarm", icon="alexsmobs:warped_muscle", after=["bone_serpent"],
+          text=["A crimson mosquito fed on warped fungus and grew into a monster. Track it to its warped forest and "
+                "shoot it down."],
+          tasks=[{"biome": "minecraft:warped_forest", "title": "Track the monster into the warped forest"},
+                 enc(["*A shrill drone, far too large.*"], then="kill", entity="alexsmobs:warped_mosco", name="The Warped Mosco",
+                     title="Shoot down the monster mosquito", where={"biomes": ["minecraft:warped_forest"]})],
+          rewards=[reward_item("alexsmobs:warped_muscle"), reward_item("minecraft:arrow", 32), skill("range", 500)]),
+
+    quest("trophy_hall", "The Trophy Hall", icon="handcrafted:bear_trophy", after=["warped_mosco"],
+          text=["The lodge in Reece needs a hall worthy of its hunters. Build it, and hang five trophies."],
+          tasks=[{"place": "reece"},
+                 item("handcrafted:bear_trophy", title="Mount a bear trophy"),
+                 item("handcrafted:skeleton_trophy", title="Mount a skeleton trophy"),
+                 item("handcrafted:fox_trophy", title="Mount a fox trophy"),
+                 item("handcrafted:goat_trophy", title="Mount a goat trophy"),
+                 {"build": {"blocks": {"handcrafted:bear_trophy": 1, "handcrafted:skeleton_trophy": 1,
+                                       "handcrafted:fox_trophy": 1, "handcrafted:goat_trophy": 1}, "radius": 12},
+                  "title": "Hang the trophies in the lodge's new hall"}],
+          rewards=[reward_item("handcrafted:bear_trophy"), skill("range", 520)]),
+]
+
+chapter("skill_range", "The Hunters' Lodge", "Range path", "minecraft:bow", "skills", 7, Q + ACT2 + ACT3)
