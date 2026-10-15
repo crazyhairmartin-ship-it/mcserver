@@ -1,5 +1,6 @@
 """Chapter: skill_foraging, the Herbalists' path: prologue and Act I (first release). Plan: src/plans/quests/skill_foraging.json."""
 from common import chapter, quest, talk_char, talk_org, item, reward_item, skill, giver_org, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 Q = [
     quest("field_journal", "A Blank Field Journal", icon="minecraft:writable_book",
@@ -91,4 +92,97 @@ Q = [
           rewards=[reward_item("wildernature:fur_cloak"), skill("forage", 200)]),
 ]
 
-chapter("skill_foraging", "The Herbalists", "Foraging path", "minecraft:oak_sapling", "skills", 4, Q)
+ACT2 = [
+    quest("wanderers_map", "Mapping the Wild", icon="naturescompass:naturescompass",
+          after=["outpost_notes", "main_story:act2_start"],
+          text=["The journal's map has more blanks than lines. Set foot in twenty different biomes, and the "
+                "Herbalists will craft you a Nature's Compass to keep going."],
+          tasks=[{"biomes": 20, "dimension": "minecraft:overworld", "title": "Set foot in twenty different biomes to fill the journal"},
+                 talk_org("herbalists", ["Twenty biomes! The journal's nearly full.", "A Nature's Compass will take you further."],
+                          title="Show the filled map to a Herbalist")],
+          rewards=[reward_item("naturescompass:naturescompass"), skill("forage", 250)]),
+
+    quest("magnolia_bloom", "Magnolia and Jacaranda", icon="biomesoplenty:jacaranda_sapling", after=["wanderers_map"],
+          text=["The journal has blank pages for the flowering forests: pink magnolia from a magnolia woodland and a "
+                "jacaranda sapling from a jacaranda glade."],
+          tasks=[{"biome": "regions_unexplored:magnolia_woodland", "title": "Find a magnolia woodland in bloom"},
+                 item("regions_unexplored:magnolia_leaves", 4, title="Press pink magnolia leaves for the journal"),
+                 {"biome": "biomesoplenty:jacaranda_glade", "title": "Find a jacaranda glade"},
+                 item("biomesoplenty:jacaranda_sapling", title="Take a jacaranda sapling for the journal")],
+          rewards=[reward_item("regions_unexplored:magnolia_sapling"), skill("forage", 260)]),
+
+    quest("redwood_giant", "The Redwood Giant", icon="biomesoplenty:redwood_sapling", after=["wanderers_map"],
+          text=["The journal wants the tallest redwood measured. Climb it, drop a rope to measure it, and bring down "
+                "a redwood sapling and a branch of its leaves."],
+          tasks=[{"biome": "biomesoplenty:redwood_forest", "title": "Find the tallest redwood in the forest"},
+                 {"build": {"blocks": {"supplementaries:rope": 12}, "radius": 12}, "title": "Drop a rope from the crown to measure it"},
+                 item("biomesoplenty:redwood_sapling", title="Bring down a redwood sapling"),
+                 item("biomesoplenty:redwood_leaves", 4, title="Bring down a branch of its leaves")],
+          rewards=[reward_item("minecraft:ladder", 16), reward_item("supplementaries:rope", 16), skill("forage", 280)]),
+
+    quest("lost_botanist", "The Lost Botanist", icon="minecraft:writable_book", after=["swamp_hermit"],
+          text=["A visiting botanist went into the bog and didn't come back. Follow his trail of dropped pressed "
+                "flowers across a muskeg or bog and find him stuck in the mud."],
+          tasks=[{"be": {"biomes": ["biomesoplenty:bog", "biomesoplenty:muskeg"]}, "title": "Follow the pressed-flower trail into the bog"},
+                 enc(["Oh, thank the bog! I've been stuck since nightfall.", "Take my field journal. It's full of rare sketches."],
+                     entity="minecraft:villager", name="Lost Botanist", title="Pull the botanist out of the mud",
+                     where={"biomes": ["biomesoplenty:bog", "biomesoplenty:muskeg"]})],
+          rewards=[reward_item("minecraft:writable_book", name="The Botanist's Field Journal",
+                               lore=["Full of rare sketches."]), skill("forage", 280)]),
+
+    quest("glowing_grotto", "The Glowing Grotto", icon="biomesoplenty:glowshroom", after=["lost_botanist"],
+          text=["The botanist's journal points underground. Find a glowing grotto and collect glowshrooms, "
+                "glowflowers and glowworm silk for the Herbalists."],
+          tasks=[{"biome": "biomesoplenty:glowing_grotto", "title": "Find the glowing grotto the journal names"},
+                 item("biomesoplenty:glowshroom", 4, title="Collect glowshrooms"),
+                 item("biomesoplenty:glowflower", 4, title="Collect glowflowers"),
+                 item("biomesoplenty:glowworm_silk", 4, title="Collect glowworm silk")],
+          rewards=[reward_item("biomesoplenty:glowing_moss_block", 8), reward_item("minecraft:lantern", 2), skill("forage", 300)]),
+
+    quest("bioshroom_caves", "Bioshroom Caves", icon="regions_unexplored:blue_bioshroom", after=["glowing_grotto"],
+          text=["Below the grotto lies another wonder: bioshroom caves. Gather blue, green and pink bioshrooms and a "
+                "sprig of cave hyssop for the Herbalists."],
+          tasks=[{"biome": "regions_unexplored:bioshroom_caves", "title": "Find the bioshroom caves below the grotto"},
+                 item("regions_unexplored:blue_bioshroom", 2, title="Gather blue bioshrooms"),
+                 item("regions_unexplored:green_bioshroom", 2, title="Gather green bioshrooms"),
+                 item("regions_unexplored:pink_bioshroom", 2, title="Gather pink bioshrooms"),
+                 item("regions_unexplored:cave_hyssop", title="Gather a sprig of cave hyssop")],
+          rewards=[reward_item("regions_unexplored:glowing_blue_bioshroom_block", 4), skill("forage", 320)]),
+
+    quest("rainforest_run", "Before It Wilts", icon="bloomingnature:bird_of_paradise", after=["magnolia_bloom"],
+          text=["The Herbalists need a fresh bird of paradise and a mahogany sapling from the rainforest for a cure. "
+                "Bring them back to Reece before they wilt."],
+          tasks=[{"biome": "biomesoplenty:rainforest", "title": "Go to the rainforest for the cure's ingredients"},
+                 item("bloomingnature:bird_of_paradise", title="Pick a fresh bird of paradise"),
+                 item("biomesoplenty:mahogany_sapling", title="Take a mahogany sapling"),
+                 {"timed": {"seconds": 900, "goal": {"place": "reece"},
+                            "lines": ["The flower wilts quickly. Get it to Reece!"], "start": "Rush the cure home",
+                            "no": ["teleport"]}, "title": "Reach Reece before the flower wilts"}],
+          rewards=[reward_item("irons_spellbooks:greater_healing_potion", 2), skill("forage", 330)]),
+
+    quest("snowbelles", "Snowbelles", icon="regions_unexplored:blue_snowbelle", after=["wanderers_map"],
+          text=["In the cold north grow snowbelles in many colours and snowblossom trees. Press six snowbelle colours "
+                "and bring a snowblossom sapling to the Herbalists."],
+          tasks=[{"be": {"biomes": ["minecraft:snowy_plains", "minecraft:snowy_taiga", "minecraft:grove", "minecraft:snowy_slopes"]},
+                  "title": "Travel into the cold north"},
+                 item("regions_unexplored:black_snowbelle", title="Press a black snowbelle"),
+                 item("regions_unexplored:blue_snowbelle", title="Press a blue snowbelle"),
+                 item("regions_unexplored:brown_snowbelle", title="Press a brown snowbelle"),
+                 item("regions_unexplored:cyan_snowbelle", title="Press a cyan snowbelle"),
+                 item("regions_unexplored:gray_snowbelle", title="Press a gray snowbelle"),
+                 item("regions_unexplored:green_snowbelle", title="Press a green snowbelle"),
+                 item("biomesoplenty:snowblossom_sapling", title="Take a snowblossom sapling")],
+          rewards=[reward_item("meadow:fur_boots"), skill("forage", 300)]),
+
+    quest("herbarium", "The Herbarium", icon="meadow:wooden_flower_pot_big", after=["bioshroom_caves", "snowbelles"],
+          text=["The Herbalists want a herbarium in Reece: glass, big flower pots, and a living specimen of every "
+                "plant you've pressed so far."],
+          tasks=[{"place": "reece"},
+                 {"build": {"blocks": {"minecraft:glass": 24, "meadow:wooden_flower_pot_big": 2, "bloomingnature:flower_pot_big": 2,
+                                       "regions_unexplored:blue_snowbelle": 1, "biomesoplenty:glowshroom": 1}, "radius": 12},
+                  "title": "Build the herbarium with a living specimen of every pressed plant"}],
+          rewards=[reward_item("minecraft:writable_book", name="The Herbarium's Key", lore=["A seat on the Herbalists' council."]),
+                   skill("forage", 400)]),
+]
+
+chapter("skill_foraging", "The Herbalists", "Foraging path", "minecraft:oak_sapling", "skills", 4, Q + ACT2)

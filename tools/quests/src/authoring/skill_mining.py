@@ -1,5 +1,6 @@
 """Chapter: skill_mining, the Miners' Guild path: prologue and Act I (first release). Plan: src/plans/quests/skill_mining.json."""
 from common import chapter, quest, talk_char, item, reward_item, skill, giver_org, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 Q = [
     quest("guild_card", "The Guild Card", icon="minecraft:stone_pickaxe",
@@ -82,4 +83,126 @@ Q = [
           rewards=[reward_item("minecraft:raw_gold", 16), skill("mining", 300)]),
 ]
 
-chapter("skill_mining", "The Miners' Guild", "Mining path", "minecraft:iron_pickaxe", "skills", 0, Q)
+ACT2 = [
+    quest("lost_crew", "The Lost Crew", icon="minecraft:diamond_pickaxe", after=["supply_run", "main_story:act2_start"],
+          text=["The camp's survey crew went down a mining system three days ago and never came up. Fight through "
+                "the infested galleries, find the three miners and get them out."],
+          tasks=[fight("minecraft:cave_spider", 8, "dungeons_arise:mining_system", "Gallery Brood",
+                       "Fight through the infested galleries"),
+                 enc(["Here! Behind the cart! Three days in the dark!"], then="escort", entity="minecraft:villager",
+                     name="Survey Miner", to={"structure": "#mining_camps", "label": "the camp"},
+                     title="Lead the first miner out"),
+                 enc(["I can walk. Just show me the way up."], then="escort", entity="minecraft:villager",
+                     name="Survey Miner", to={"structure": "#mining_camps", "label": "the camp"},
+                     title="Lead the second miner out"),
+                 enc(["My lamp died. Please, the lift!"], then="escort", entity="minecraft:villager",
+                     name="Survey Foreman", to={"structure": "#mining_camps", "label": "the camp"},
+                     title="Lead the foreman out")],
+          rewards=[reward_item("minecraft:diamond_pickaxe", name="The Foreman's Pick", lore=["From the rescued crew's foreman."],
+                               enchant={"minecraft:efficiency": 3}), skill("mining", 250)]),
+
+    quest("deepslate_descent", "Into the Deepslate", icon="minecraft:deepslate_diamond_ore", after=["lost_crew"],
+          text=["The guild's next shaft goes below Y -32. Mine down into the deepslate for diamond ore and cobbled "
+                "deepslate for the shaft walls."],
+          tasks=[{"be": {"below_y": -32}, "title": "Mine down below the old workings, past Y -32"},
+                 item("minecraft:deepslate_diamond_ore", 8, title="Mine deepslate diamond ore for the guild"),
+                 item("minecraft:cobbled_deepslate", 64, title="Gather cobbled deepslate for the shaft walls")],
+          rewards=[reward_item("minecraft:copper_ingot", name="Deepslate Guild Badge", lore=["For those who went below."]),
+                   skill("mining", 300)]),
+
+    quest("shift_meal", "The Shift Meal", icon="artifacts:onion_ring", after=["deepslate_descent"],
+          signature="artifacts:onion_ring",
+          text=["The guild cook feeds the rescue crews before the big descent. Forage onions, then cook onion soup "
+                "and pasta with onion sauce for a crew of six."],
+          tasks=[item("farm_and_charm:onion", 8, title="Grow or forage onions for the shift meal"),
+                 item("farm_and_charm:onion_soup", 6, consume=True, title="Cook onion soup for the crew"),
+                 item("farm_and_charm:pasta_with_onion_sauce", 6, consume=True, title="Cook pasta with onion sauce for the crew")],
+          rewards=[reward_item("artifacts:onion_ring"), skill("mining", 300)]),
+
+    quest("cave_in", "Cave-In", icon="artifacts:digging_claws", after=["shift_meal"],
+          signature="artifacts:digging_claws",
+          text=["The new deep shaft collapses with you and two miners behind the fall, and your pick is under the "
+                "rubble. Dig the tunnel open with a shovel before the air runs out. The old miner who survives "
+                "gives you his claws."],
+          tasks=[enc(["The roof came down! Dig, friend, dig!"], entity="minecraft:villager", name="Trapped Miner",
+                     title="Find the miners trapped behind the fall", where={"below_y": 50}),
+                 item("minecraft:iron_shovel", title="Take a shovel to dig the tunnel open"),
+                 {"timed": {"seconds": 150, "goal": {"hold": {"radius": 10}},
+                            "lines": ["The air is running out. Dig!"], "start": "Dig the tunnel open"},
+                  "title": "Dig through before the air runs out"}],
+          rewards=[reward_item("artifacts:digging_claws"), skill("mining", 380)]),
+
+    quest("three_seams", "Three Famous Seams", icon="artifacts:lucky_scarf", after=["deepslate_descent"],
+          signature="artifacts:lucky_scarf",
+          text=["An old prospector swears his scarf brings luck. Bet him you can bring emerald from the high peaks, "
+                "gold from a mesa mineshaft and diamond from the deepslate before he finishes his pipe."],
+          tasks=[enc(["Emerald, gold and diamond before my pipe's out? Ha! Go on."], entity="minecraft:villager",
+                     name="Old Prospector", title="Take the old prospector's bet"),
+                 item("minecraft:emerald", 4, title="Bring emerald from the high peaks"),
+                 {"structure": "bettermineshafts:mineshaft_mesa", "title": "Find a mesa mineshaft for the gold"},
+                 item("minecraft:raw_gold", 8, title="Bring gold from the mesa mineshaft"),
+                 item("minecraft:diamond", 3, title="Bring diamond from the deepslate")],
+          rewards=[reward_item("artifacts:lucky_scarf"), skill("mining", 330)]),
+
+    quest("spore_shaft", "The Spore Shaft", icon="minecraft:red_mushroom", after=["lost_crew"],
+          text=["Miners working the mushroom mines have gone strange from the spores. Escort four of them back "
+                "through the overgrown tunnels, keeping them away from the glowing caps."],
+          tasks=[{"structure": "dungeons_arise:mushroom_mines", "title": "Enter the mushroom mines"},
+                 enc(["Pretty... lights... so pretty..."], then="escort", entity="minecraft:villager", name="Spore Miner",
+                     to={"structure": "#mining_camps", "label": "the camp"}, title="Lead the first dazed miner out"),
+                 enc(["Where... where are we going?"], then="escort", entity="minecraft:villager", name="Spore Miner",
+                     to={"structure": "#mining_camps", "label": "the camp"}, title="Lead the second dazed miner out"),
+                 enc(["I hear singing..."], then="escort", entity="minecraft:villager", name="Spore Miner",
+                     to={"structure": "#mining_camps", "label": "the camp"}, title="Lead the third dazed miner out"),
+                 enc(["Is it dinner time?"], then="escort", entity="minecraft:villager", name="Spore Miner",
+                     to={"structure": "#mining_camps", "label": "the camp"}, title="Lead the fourth dazed miner out")],
+          rewards=[reward_item("minecraft:mushroom_stew", 4), reward_item("biomesoplenty:glowshroom", 8), skill("mining", 320)]),
+
+    quest("scorched_mines", "Fire Below", icon="minecraft:water_bucket", after=["spore_shaft"],
+          text=["A fire has broken out in the scorched mines, and the trapped miners are holding a gallery against "
+                "what crawled out of the burning seams. Reach them with fire resistance and water, and hold until "
+                "they're out."],
+          tasks=[item("minecraft:potion", 2, consume=True, title="Bring potions to survive the heat"),
+                 item("minecraft:water_bucket", 2, title="Bring water to douse the seams"),
+                 {"structure": "dungeons_arise:scorched_mines", "title": "Reach the trapped miners' gallery"},
+                 {"timed": {"seconds": 180, "goal": {"hold": {"radius": 12}},
+                            "waves": [{"entity": "minecraft:blaze", "count": 2, "every": 45}],
+                            "lines": ["The seams are spitting fire. Hold the gallery!"], "start": "Hold the gallery"},
+                  "title": "Hold the gallery until the miners are out"}],
+          rewards=[reward_item("minecraft:magma_cream", 6), reward_item("minecraft:raw_gold", 8), skill("mining", 350)]),
+
+    quest("surveyors_glass", "The Surveyor's Glass", icon="minecraft:spyglass", after=["deepslate_descent"],
+          text=["The guild surveyor wants to read the deep rock. Crack open an amethyst geode, bring amethyst shards "
+                "and copper, and craft her a spyglass and tinted glass."],
+          tasks=[item("minecraft:amethyst_shard", 16, title="Crack open a geode for amethyst shards"),
+                 item("minecraft:copper_ingot", 8, title="Bring copper for the lens fittings"),
+                 item("minecraft:spyglass", crafted=True, title="Craft the surveyor a spyglass"),
+                 item("minecraft:tinted_glass", 2, crafted=True, title="Craft tinted glass for her lamp")],
+          rewards=[reward_item("minecraft:spyglass"), skill("mining", 300)]),
+
+    quest("strange_minerals", "Strange Minerals", icon="alexscaves:amber", after=["surveyors_glass"],
+          text=["Rumours of strange stone deep under the world. Dig samples of amber from the Primordial Caves, guano "
+                "from the Forlorn Hollows and abyssmarine from the abyss."],
+          tasks=[{"structure": "alexscaves:dino_bowl", "title": "Find the Primordial Caves"},
+                 item("alexscaves:amber", 4, title="Dig amber samples"),
+                 {"structure": "alexscaves:forlorn_canyon", "title": "Find the Forlorn Hollows"},
+                 item("alexscaves:guano_block", 4, title="Dig guano samples"),
+                 item("alexscaves:abyssmarine", 4, title="Dig abyssmarine samples from the abyss")],
+          rewards=[reward_item("minecraft:writable_book", name="A Note on the Caves", lore=["The caves' own questline goes deeper."]),
+                   skill("mining", 350)]),
+
+    quest("lost_journal", "The Lost Expedition's Journal", icon="minecraft:written_book", after=["cave_in"],
+          text=["A guild expedition went too deep and found an ancient city. One survivor made it out without the "
+                "journal. Creep through the sculk without waking the Warden and bring it back from beside the "
+                "portal frame."],
+          tasks=[{"structure": "minecraft:ancient_city", "title": "Find the ancient city the expedition found"},
+                 {"timed": {"seconds": 300, "goal": {"structure": "minecraft:ancient_city", "label": "the portal frame", "away": 60},
+                            "lines": ["Quiet. Anything that touches you wakes the city."], "start": "Creep in",
+                            "no": ["hurt"]}, "title": "Creep across the city without waking the Warden"},
+                 search("minecraft:ancient_city", 1, "the Expedition Journal", "A water-stained journal, still legible.",
+                        texture="minecraft:item/written_book", title="Take the journal from beside the portal frame")],
+          rewards=[reward_item("minecraft:enchanted_book", name="Silent Step", enchant={"minecraft:swift_sneak": 3}),
+                   reward_item("minecraft:map"), skill("mining", 400)]),
+]
+
+chapter("skill_mining", "The Miners' Guild", "Mining path", "minecraft:iron_pickaxe", "skills", 0, Q + ACT2)

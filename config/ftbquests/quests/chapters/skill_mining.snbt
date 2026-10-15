@@ -498,7 +498,7 @@
 			]
 			title: "The Depth Chart"
 			x: 12.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["08B9942D3B6ED797"]
@@ -534,6 +534,601 @@
 			]
 			title: "The Underminer"
 			x: 13.5d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"2E72B3CF17531F59"
+				"2CF0262A21E6E0BC"
+			]
+			description: ["The camp's survey crew went down a mining system three days ago and never came up. Fight through the infested galleries, find the three miners and get them out."]
+			icon: "minecraft:diamond_pickaxe"
+			id: "7166D95771DCA79E"
+			rewards: [
+				{
+					id: "71671EE62874AF57"
+					item: {
+						Count: 1b
+						id: "minecraft:diamond_pickaxe"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 3s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"From the rescued crew's foreman.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Foreman's Pick\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 250"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "3AB5E6F56E423FE9"
+					silent: true
+					title: "+250 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:cave_spider"
+					id: "495427B6D815060A"
+					title: "Fight through the infested galleries"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "5505320FBA1D62A9"
+					stage: "fq.skill_mining.lost_crew.enc1"
+					title: "Lead the first miner out"
+					type: "gamestage"
+				}
+				{
+					id: "79F3FAEED987262B"
+					stage: "fq.skill_mining.lost_crew.enc2"
+					title: "Lead the second miner out"
+					type: "gamestage"
+				}
+				{
+					id: "11181824F29E3FA2"
+					stage: "fq.skill_mining.lost_crew.enc3"
+					title: "Lead the foreman out"
+					type: "gamestage"
+				}
+			]
+			title: "The Lost Crew"
+			x: 12.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["7166D95771DCA79E"]
+			description: ["The guild's next shaft goes below Y -32. Mine down into the deepslate for diamond ore and cobbled deepslate for the shaft walls."]
+			icon: "minecraft:deepslate_diamond_ore"
+			id: "5CDB7382CC2A6634"
+			rewards: [
+				{
+					id: "4C3970B533C54102"
+					item: {
+						Count: 1b
+						id: "minecraft:copper_ingot"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"For those who went below.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Deepslate Guild Badge\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 300"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "6ABA86EFC28B80B1"
+					silent: true
+					title: "+300 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5CCB571F69DD4D74"
+					stage: "fq.skill_mining.deepslate_descent.be0"
+					title: "Mine down below the old workings, past Y -32"
+					type: "gamestage"
+				}
+				{
+					count: 8L
+					id: "72D7D222CB4C0BDE"
+					item: "minecraft:deepslate_diamond_ore"
+					title: "Mine deepslate diamond ore for the guild"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "42961D38E2FE369D"
+					item: "minecraft:cobbled_deepslate"
+					title: "Gather cobbled deepslate for the shaft walls"
+					type: "item"
+				}
+			]
+			title: "Into the Deepslate"
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5CDB7382CC2A6634"]
+			description: ["The guild cook feeds the rescue crews before the big descent. Forage onions, then cook onion soup and pasta with onion sauce for a crew of six."]
+			icon: "artifacts:onion_ring"
+			id: "739C140F0C6E44B6"
+			rewards: [
+				{
+					id: "5D6C518529564E90"
+					item: "artifacts:onion_ring"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 300"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "4C55DC4982A626E3"
+					silent: true
+					title: "+300 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "5A8C09C03BFFDA5E"
+					item: "farm_and_charm:onion"
+					title: "Grow or forage onions for the shift meal"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 6L
+					id: "32814DA0A37D5524"
+					item: "farm_and_charm:onion_soup"
+					title: "Cook onion soup for the crew"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 6L
+					id: "42C330083F06A9D9"
+					item: "farm_and_charm:pasta_with_onion_sauce"
+					title: "Cook pasta with onion sauce for the crew"
+					type: "item"
+				}
+			]
+			title: "The Shift Meal"
+			x: 15.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["739C140F0C6E44B6"]
+			description: ["The new deep shaft collapses with you and two miners behind the fall, and your pick is under the rubble. Dig the tunnel open with a shovel before the air runs out. The old miner who survives gives you his claws."]
+			icon: "artifacts:digging_claws"
+			id: "62CE6B2F631204F6"
+			rewards: [
+				{
+					id: "35E72133B9B3972B"
+					item: "artifacts:digging_claws"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 380"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "6B28E53F12001226"
+					silent: true
+					title: "+380 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "08E33EACDE79E8A3"
+					stage: "fq.skill_mining.cave_in.enc0"
+					title: "Find the miners trapped behind the fall"
+					type: "gamestage"
+				}
+				{
+					id: "338DC2CCB7D6732F"
+					item: "minecraft:iron_shovel"
+					title: "Take a shovel to dig the tunnel open"
+					type: "item"
+				}
+				{
+					id: "72177F7D645B7C0F"
+					stage: "fq.skill_mining.cave_in.timed2"
+					title: "Dig through before the air runs out"
+					type: "gamestage"
+				}
+			]
+			title: "Cave-In"
+			x: 16.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["5CDB7382CC2A6634"]
+			description: ["An old prospector swears his scarf brings luck. Bet him you can bring emerald from the high peaks, gold from a mesa mineshaft and diamond from the deepslate before he finishes his pipe."]
+			icon: "artifacts:lucky_scarf"
+			id: "0CDDB014516AB566"
+			rewards: [
+				{
+					id: "0A44128CAFC5C48C"
+					item: "artifacts:lucky_scarf"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 330"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "0CE782C1766CB302"
+					silent: true
+					title: "+330 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "35B93399E3BB537E"
+					stage: "fq.skill_mining.three_seams.enc0"
+					title: "Take the old prospector's bet"
+					type: "gamestage"
+				}
+				{
+					count: 4L
+					id: "40A5EB0ACD19254B"
+					item: "minecraft:emerald"
+					title: "Bring emerald from the high peaks"
+					type: "item"
+				}
+				{
+					id: "0C06A1D64E544072"
+					structure: "bettermineshafts:mineshaft_mesa"
+					title: "Find a mesa mineshaft for the gold"
+					type: "structure"
+				}
+				{
+					count: 8L
+					id: "77DF20B621E7DEA3"
+					item: "minecraft:raw_gold"
+					title: "Bring gold from the mesa mineshaft"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "4E6CC87F256602A2"
+					item: "minecraft:diamond"
+					title: "Bring diamond from the deepslate"
+					type: "item"
+				}
+			]
+			title: "Three Famous Seams"
+			x: 15.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["7166D95771DCA79E"]
+			description: ["Miners working the mushroom mines have gone strange from the spores. Escort four of them back through the overgrown tunnels, keeping them away from the glowing caps."]
+			icon: "minecraft:red_mushroom"
+			id: "26385F7ACE012675"
+			rewards: [
+				{
+					count: 4
+					id: "1AA65B6CD6349489"
+					item: "minecraft:mushroom_stew"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "7394B4FB050AF3B1"
+					item: "biomesoplenty:glowshroom"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 320"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "7FA363689604FEC2"
+					silent: true
+					title: "+320 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "149684F3A0470B77"
+					structure: "dungeons_arise:mushroom_mines"
+					title: "Enter the mushroom mines"
+					type: "structure"
+				}
+				{
+					id: "053DA66087976DF9"
+					stage: "fq.skill_mining.spore_shaft.enc1"
+					title: "Lead the first dazed miner out"
+					type: "gamestage"
+				}
+				{
+					id: "7797E869962BB3DB"
+					stage: "fq.skill_mining.spore_shaft.enc2"
+					title: "Lead the second dazed miner out"
+					type: "gamestage"
+				}
+				{
+					id: "0B09FE3F204FB025"
+					stage: "fq.skill_mining.spore_shaft.enc3"
+					title: "Lead the third dazed miner out"
+					type: "gamestage"
+				}
+				{
+					id: "2BAF5BDB5554806F"
+					stage: "fq.skill_mining.spore_shaft.enc4"
+					title: "Lead the fourth dazed miner out"
+					type: "gamestage"
+				}
+			]
+			title: "The Spore Shaft"
+			x: 13.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["26385F7ACE012675"]
+			description: ["A fire has broken out in the scorched mines, and the trapped miners are holding a gallery against what crawled out of the burning seams. Reach them with fire resistance and water, and hold until they're out."]
+			icon: "minecraft:water_bucket"
+			id: "1CA591D4C280CE67"
+			rewards: [
+				{
+					count: 6
+					id: "6D69673A641BA24A"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "0B8ECF7692508917"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 350"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "0E3728990AB72EC2"
+					silent: true
+					title: "+350 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 2L
+					id: "1A30D9F0E582C0D4"
+					item: "minecraft:potion"
+					title: "Bring potions to survive the heat"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "5FD6F83CF376F569"
+					item: "minecraft:water_bucket"
+					title: "Bring water to douse the seams"
+					type: "item"
+				}
+				{
+					id: "687EF7618A7BBD6F"
+					structure: "dungeons_arise:scorched_mines"
+					title: "Reach the trapped miners' gallery"
+					type: "structure"
+				}
+				{
+					id: "1300793AD3DF97F9"
+					stage: "fq.skill_mining.scorched_mines.timed3"
+					title: "Hold the gallery until the miners are out"
+					type: "gamestage"
+				}
+			]
+			title: "Fire Below"
+			x: 15.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["5CDB7382CC2A6634"]
+			description: ["The guild surveyor wants to read the deep rock. Crack open an amethyst geode, bring amethyst shards and copper, and craft her a spyglass and tinted glass."]
+			icon: "minecraft:spyglass"
+			id: "5D61DF4218EBD0A9"
+			rewards: [
+				{
+					id: "7CD7B5EE9883A34E"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 300"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "2E4AD24971C95DDA"
+					silent: true
+					title: "+300 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 16L
+					id: "19913BCC3C3FE0A7"
+					item: "minecraft:amethyst_shard"
+					title: "Crack open a geode for amethyst shards"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "403F2E0AFF6922B9"
+					item: "minecraft:copper_ingot"
+					title: "Bring copper for the lens fittings"
+					type: "item"
+				}
+				{
+					id: "3C2753E11A6FFB9B"
+					item: "minecraft:spyglass"
+					only_from_crafting: true
+					title: "Craft the surveyor a spyglass"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1F3C10700147A1AE"
+					item: "minecraft:tinted_glass"
+					only_from_crafting: true
+					title: "Craft tinted glass for her lamp"
+					type: "item"
+				}
+			]
+			title: "The Surveyor's Glass"
+			x: 15.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["5D61DF4218EBD0A9"]
+			description: ["Rumours of strange stone deep under the world. Dig samples of amber from the Primordial Caves, guano from the Forlorn Hollows and abyssmarine from the abyss."]
+			icon: "alexscaves:amber"
+			id: "564077944A288A8C"
+			rewards: [
+				{
+					id: "0FE875C5EC02076B"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"The caves' own questline goes deeper.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"A Note on the Caves\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 350"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "7054A42D5DB89B65"
+					silent: true
+					title: "+350 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2F9A21A6326105F8"
+					structure: "alexscaves:dino_bowl"
+					title: "Find the Primordial Caves"
+					type: "structure"
+				}
+				{
+					count: 4L
+					id: "35EE6CCB8B8CE717"
+					item: "alexscaves:amber"
+					title: "Dig amber samples"
+					type: "item"
+				}
+				{
+					id: "2C546628935258D8"
+					structure: "alexscaves:forlorn_canyon"
+					title: "Find the Forlorn Hollows"
+					type: "structure"
+				}
+				{
+					count: 4L
+					id: "02DA250CE23D26D4"
+					item: "alexscaves:guano_block"
+					title: "Dig guano samples"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1D482B6D246E4ADC"
+					item: "alexscaves:abyssmarine"
+					title: "Dig abyssmarine samples from the abyss"
+					type: "item"
+				}
+			]
+			title: "Strange Minerals"
+			x: 16.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["62CE6B2F631204F6"]
+			description: ["A guild expedition went too deep and found an ancient city. One survivor made it out without the journal. Creep through the sculk without waking the Warden and bring it back from beside the portal frame."]
+			icon: "minecraft:written_book"
+			id: "41BA46277E47FC00"
+			rewards: [
+				{
+					id: "57037CDDEFDB7A7C"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:swift_sneak"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Silent Step\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "3644D6F119DA55F2"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 400"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "2F135F2D84885398"
+					silent: true
+					title: "+400 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6FE999F29DCAFF65"
+					structure: "minecraft:ancient_city"
+					title: "Find the ancient city the expedition found"
+					type: "structure"
+				}
+				{
+					id: "428152D0D1340AA4"
+					stage: "fq.skill_mining.lost_journal.timed1"
+					title: "Creep across the city without waking the Warden"
+					type: "gamestage"
+				}
+				{
+					id: "367C3B2A15BF62F2"
+					item: "kubejs:quest_lost_journal_2"
+					title: "Take the journal from beside the portal frame"
+					type: "item"
+				}
+			]
+			title: "The Lost Expedition's Journal"
+			x: 18.0d
 			y: 0.0d
 		}
 	]

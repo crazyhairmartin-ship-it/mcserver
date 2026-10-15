@@ -126,6 +126,16 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_fishing:buoy_race: needs a buoy course around the harbour; written as a timed swim to a far hut with no mounts
 - skill_fishing:jungle_heat: needs the heat to be in a river; written as a jungle biome and fish carried
 - skill_fishing:reef_survey: needs a living aquarium built; written as buckets and a raw seahorse
+- skill_foraging:magnolia_bloom: needs pink magnolia flowers (none as an item); written as magnolia leaves
+- skill_foraging:redwood_giant: needs measuring the tallest redwood; written as a rope build and redwood items
+- skill_foraging:lost_botanist: needs a trail of pressed flowers; written as being in a bog or muskeg and an encounter
+- skill_foraging:herbarium: needs a living specimen of every pressed plant; written as a glass and pots build with two specimens
+- skill_mining:lost_crew: needs finding the miners in the lifts; written as a spawned fight and three escorts
+- skill_mining:cave_in: needs digging the tunnel open; written as a shovel and a timed hold
+- skill_mining:three_seams: needs finishing before the pipe goes out; written as the items and a prospector encounter
+- skill_mining:spore_shaft: needs keeping miners from the caps; written as four escorts to the camp
+- skill_mining:strange_minerals: needs guanostone and abyssmarine (guano block used); written as dug samples at two cave structures
+- skill_mining:lost_journal: needs waking no Warden; written as a hurt-free timed crossing and a search
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

@@ -472,6 +472,431 @@
         }
       ],
       "icon": "wildernature:truffle"
+    },
+    {
+      "id": "wanderers_map",
+      "title": "Mapping the Wild",
+      "after": [
+        "outpost_notes",
+        "main_story:act2_start"
+      ],
+      "text": [
+        "The journal's map has more blanks than lines. Set foot in twenty different biomes, and the Herbalists will craft you a Nature's Compass to keep going."
+      ],
+      "tasks": [
+        {
+          "biomes": 20,
+          "dimension": "minecraft:overworld",
+          "title": "Set foot in twenty different biomes to fill the journal"
+        },
+        {
+          "talk": "org",
+          "org": "herbalists",
+          "lines": [
+            "Twenty biomes! The journal's nearly full.",
+            "A Nature's Compass will take you further."
+          ],
+          "title": "Show the filled map to a Herbalist"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "naturescompass:naturescompass"
+        },
+        {
+          "skill": "forage",
+          "xp": 250
+        }
+      ],
+      "icon": "naturescompass:naturescompass"
+    },
+    {
+      "id": "magnolia_bloom",
+      "title": "Magnolia and Jacaranda",
+      "after": [
+        "wanderers_map"
+      ],
+      "text": [
+        "The journal has blank pages for the flowering forests: pink magnolia from a magnolia woodland and a jacaranda sapling from a jacaranda glade."
+      ],
+      "tasks": [
+        {
+          "biome": "regions_unexplored:magnolia_woodland",
+          "title": "Find a magnolia woodland in bloom"
+        },
+        {
+          "item": "regions_unexplored:magnolia_leaves",
+          "count": 4,
+          "title": "Press pink magnolia leaves for the journal"
+        },
+        {
+          "biome": "biomesoplenty:jacaranda_glade",
+          "title": "Find a jacaranda glade"
+        },
+        {
+          "item": "biomesoplenty:jacaranda_sapling",
+          "title": "Take a jacaranda sapling for the journal"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "regions_unexplored:magnolia_sapling"
+        },
+        {
+          "skill": "forage",
+          "xp": 260
+        }
+      ],
+      "icon": "biomesoplenty:jacaranda_sapling"
+    },
+    {
+      "id": "redwood_giant",
+      "title": "The Redwood Giant",
+      "after": [
+        "wanderers_map"
+      ],
+      "text": [
+        "The journal wants the tallest redwood measured. Climb it, drop a rope to measure it, and bring down a redwood sapling and a branch of its leaves."
+      ],
+      "tasks": [
+        {
+          "biome": "biomesoplenty:redwood_forest",
+          "title": "Find the tallest redwood in the forest"
+        },
+        {
+          "build": {
+            "blocks": {
+              "supplementaries:rope": 12
+            },
+            "radius": 12
+          },
+          "title": "Drop a rope from the crown to measure it"
+        },
+        {
+          "item": "biomesoplenty:redwood_sapling",
+          "title": "Bring down a redwood sapling"
+        },
+        {
+          "item": "biomesoplenty:redwood_leaves",
+          "count": 4,
+          "title": "Bring down a branch of its leaves"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ladder",
+          "count": 16
+        },
+        {
+          "item": "supplementaries:rope",
+          "count": 16
+        },
+        {
+          "skill": "forage",
+          "xp": 280
+        }
+      ],
+      "icon": "biomesoplenty:redwood_sapling"
+    },
+    {
+      "id": "lost_botanist",
+      "title": "The Lost Botanist",
+      "after": [
+        "swamp_hermit"
+      ],
+      "text": [
+        "A visiting botanist went into the bog and didn't come back. Follow his trail of dropped pressed flowers across a muskeg or bog and find him stuck in the mud."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "biomes": [
+              "biomesoplenty:bog",
+              "biomesoplenty:muskeg"
+            ]
+          },
+          "title": "Follow the pressed-flower trail into the bog"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Lost Botanist",
+            "where": {
+              "biomes": [
+                "biomesoplenty:bog",
+                "biomesoplenty:muskeg"
+              ]
+            },
+            "then": "talk",
+            "lines": [
+              "Oh, thank the bog! I've been stuck since nightfall.",
+              "Take my field journal. It's full of rare sketches."
+            ]
+          },
+          "title": "Pull the botanist out of the mud"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "The Botanist's Field Journal",
+          "lore": [
+            "Full of rare sketches."
+          ]
+        },
+        {
+          "skill": "forage",
+          "xp": 280
+        }
+      ],
+      "icon": "minecraft:writable_book"
+    },
+    {
+      "id": "glowing_grotto",
+      "title": "The Glowing Grotto",
+      "after": [
+        "lost_botanist"
+      ],
+      "text": [
+        "The botanist's journal points underground. Find a glowing grotto and collect glowshrooms, glowflowers and glowworm silk for the Herbalists."
+      ],
+      "tasks": [
+        {
+          "biome": "biomesoplenty:glowing_grotto",
+          "title": "Find the glowing grotto the journal names"
+        },
+        {
+          "item": "biomesoplenty:glowshroom",
+          "count": 4,
+          "title": "Collect glowshrooms"
+        },
+        {
+          "item": "biomesoplenty:glowflower",
+          "count": 4,
+          "title": "Collect glowflowers"
+        },
+        {
+          "item": "biomesoplenty:glowworm_silk",
+          "count": 4,
+          "title": "Collect glowworm silk"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "biomesoplenty:glowing_moss_block",
+          "count": 8
+        },
+        {
+          "item": "minecraft:lantern",
+          "count": 2
+        },
+        {
+          "skill": "forage",
+          "xp": 300
+        }
+      ],
+      "icon": "biomesoplenty:glowshroom"
+    },
+    {
+      "id": "bioshroom_caves",
+      "title": "Bioshroom Caves",
+      "after": [
+        "glowing_grotto"
+      ],
+      "text": [
+        "Below the grotto lies another wonder: bioshroom caves. Gather blue, green and pink bioshrooms and a sprig of cave hyssop for the Herbalists."
+      ],
+      "tasks": [
+        {
+          "biome": "regions_unexplored:bioshroom_caves",
+          "title": "Find the bioshroom caves below the grotto"
+        },
+        {
+          "item": "regions_unexplored:blue_bioshroom",
+          "count": 2,
+          "title": "Gather blue bioshrooms"
+        },
+        {
+          "item": "regions_unexplored:green_bioshroom",
+          "count": 2,
+          "title": "Gather green bioshrooms"
+        },
+        {
+          "item": "regions_unexplored:pink_bioshroom",
+          "count": 2,
+          "title": "Gather pink bioshrooms"
+        },
+        {
+          "item": "regions_unexplored:cave_hyssop",
+          "title": "Gather a sprig of cave hyssop"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "regions_unexplored:glowing_blue_bioshroom_block",
+          "count": 4
+        },
+        {
+          "skill": "forage",
+          "xp": 320
+        }
+      ],
+      "icon": "regions_unexplored:blue_bioshroom"
+    },
+    {
+      "id": "rainforest_run",
+      "title": "Before It Wilts",
+      "after": [
+        "magnolia_bloom"
+      ],
+      "text": [
+        "The Herbalists need a fresh bird of paradise and a mahogany sapling from the rainforest for a cure. Bring them back to Reece before they wilt."
+      ],
+      "tasks": [
+        {
+          "biome": "biomesoplenty:rainforest",
+          "title": "Go to the rainforest for the cure's ingredients"
+        },
+        {
+          "item": "bloomingnature:bird_of_paradise",
+          "title": "Pick a fresh bird of paradise"
+        },
+        {
+          "item": "biomesoplenty:mahogany_sapling",
+          "title": "Take a mahogany sapling"
+        },
+        {
+          "timed": {
+            "seconds": 900,
+            "goal": {
+              "place": "reece"
+            },
+            "lines": [
+              "The flower wilts quickly. Get it to Reece!"
+            ],
+            "start": "Rush the cure home",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Reach Reece before the flower wilts"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:greater_healing_potion",
+          "count": 2
+        },
+        {
+          "skill": "forage",
+          "xp": 330
+        }
+      ],
+      "icon": "bloomingnature:bird_of_paradise"
+    },
+    {
+      "id": "snowbelles",
+      "title": "Snowbelles",
+      "after": [
+        "wanderers_map"
+      ],
+      "text": [
+        "In the cold north grow snowbelles in many colours and snowblossom trees. Press six snowbelle colours and bring a snowblossom sapling to the Herbalists."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "biomes": [
+              "minecraft:snowy_plains",
+              "minecraft:snowy_taiga",
+              "minecraft:grove",
+              "minecraft:snowy_slopes"
+            ]
+          },
+          "title": "Travel into the cold north"
+        },
+        {
+          "item": "regions_unexplored:black_snowbelle",
+          "title": "Press a black snowbelle"
+        },
+        {
+          "item": "regions_unexplored:blue_snowbelle",
+          "title": "Press a blue snowbelle"
+        },
+        {
+          "item": "regions_unexplored:brown_snowbelle",
+          "title": "Press a brown snowbelle"
+        },
+        {
+          "item": "regions_unexplored:cyan_snowbelle",
+          "title": "Press a cyan snowbelle"
+        },
+        {
+          "item": "regions_unexplored:gray_snowbelle",
+          "title": "Press a gray snowbelle"
+        },
+        {
+          "item": "regions_unexplored:green_snowbelle",
+          "title": "Press a green snowbelle"
+        },
+        {
+          "item": "biomesoplenty:snowblossom_sapling",
+          "title": "Take a snowblossom sapling"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "meadow:fur_boots"
+        },
+        {
+          "skill": "forage",
+          "xp": 300
+        }
+      ],
+      "icon": "regions_unexplored:blue_snowbelle"
+    },
+    {
+      "id": "herbarium",
+      "title": "The Herbarium",
+      "after": [
+        "bioshroom_caves",
+        "snowbelles"
+      ],
+      "text": [
+        "The Herbalists want a herbarium in Reece: glass, big flower pots, and a living specimen of every plant you've pressed so far."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:glass": 24,
+              "meadow:wooden_flower_pot_big": 2,
+              "bloomingnature:flower_pot_big": 2,
+              "regions_unexplored:blue_snowbelle": 1,
+              "biomesoplenty:glowshroom": 1
+            },
+            "radius": 12
+          },
+          "title": "Build the herbarium with a living specimen of every pressed plant"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "The Herbarium's Key",
+          "lore": [
+            "A seat on the Herbalists' council."
+          ]
+        },
+        {
+          "skill": "forage",
+          "xp": 400
+        }
+      ],
+      "icon": "meadow:wooden_flower_pot_big"
     }
   ]
 }

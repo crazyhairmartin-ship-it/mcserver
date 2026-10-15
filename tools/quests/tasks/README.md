@@ -273,3 +273,4 @@ rewards and quest text stay exactly as they are. Rebuild every chapter, then run
 | T12 | yes | 29 | 15 engine, 0 links | `Quests T12` in git log |
 | T13 | yes | 33 | 15 engine, 0 links | `Quests T13` in git log |
 | T14 | yes | 26 | 13 engine, 0 links | `Quests T14` in git log |
+| T15 | yes | 19 | 10 engine, 0 links | `Quests T15` in git log |

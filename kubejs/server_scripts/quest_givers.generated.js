@@ -3043,6 +3043,455 @@ global.QUEST_GIVERS = [
     "profession": ""
   },
   {
+    "quest": "skill_mining:lost_crew",
+    "stage": "fq.skill_mining.lost_crew.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:cave_spider",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:mining_system"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Gallery Brood",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "495427B6D815060A",
+    "requires": [],
+    "quest_id": "7166D95771DCA79E",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_mining:lost_crew",
+    "stage": "fq.skill_mining.lost_crew.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Here! Behind the cart! Three days in the dark!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7166D95771DCA79E",
+    "prev_tasks": [
+      "495427B6D815060A"
+    ],
+    "name": "Survey Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "mvs:mine_with_campsite",
+        "nova_structures:badlands_miner_outpost"
+      ],
+      "label": "the camp"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_mining:lost_crew",
+    "stage": "fq.skill_mining.lost_crew.enc2",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "I can walk. Just show me the way up."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7166D95771DCA79E",
+    "prev_tasks": [
+      "495427B6D815060A",
+      "5505320FBA1D62A9"
+    ],
+    "name": "Survey Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "mvs:mine_with_campsite",
+        "nova_structures:badlands_miner_outpost"
+      ],
+      "label": "the camp"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_mining:lost_crew",
+    "stage": "fq.skill_mining.lost_crew.enc3",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "My lamp died. Please, the lift!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7166D95771DCA79E",
+    "prev_tasks": [
+      "495427B6D815060A",
+      "5505320FBA1D62A9",
+      "79F3FAEED987262B"
+    ],
+    "name": "Survey Foreman",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "mvs:mine_with_campsite",
+        "nova_structures:badlands_miner_outpost"
+      ],
+      "label": "the camp"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_mining:deepslate_descent",
+    "stage": "fq.skill_mining.deepslate_descent.be0",
+    "type": "be",
+    "where": {
+      "below_y": -32
+    },
+    "requires": [],
+    "quest_id": "5CDB7382CC2A6634",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_mining:cave_in",
+    "stage": "fq.skill_mining.cave_in.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "The roof came down! Dig, friend, dig!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "62CE6B2F631204F6",
+    "prev_tasks": [],
+    "name": "Trapped Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {
+      "below_y": 50
+    },
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_mining:cave_in",
+    "stage": "fq.skill_mining.cave_in.timed2",
+    "type": "timed",
+    "seconds": 150,
+    "goal": {
+      "kind": "hold",
+      "radius": 10.0
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "The air is running out. Dig!"
+    ],
+    "start": "Dig the tunnel open",
+    "requires": [],
+    "quest_id": "62CE6B2F631204F6",
+    "prev_tasks": [
+      "08E33EACDE79E8A3",
+      "338DC2CCB7D6732F"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_mining:three_seams",
+    "stage": "fq.skill_mining.three_seams.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Emerald, gold and diamond before my pipe's out? Ha! Go on."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "0CDDB014516AB566",
+    "prev_tasks": [],
+    "name": "Old Prospector",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_mining:spore_shaft",
+    "stage": "fq.skill_mining.spore_shaft.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Pretty... lights... so pretty..."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "26385F7ACE012675",
+    "prev_tasks": [
+      "149684F3A0470B77"
+    ],
+    "name": "Spore Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "mvs:mine_with_campsite",
+        "nova_structures:badlands_miner_outpost"
+      ],
+      "label": "the camp"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_mining:spore_shaft",
+    "stage": "fq.skill_mining.spore_shaft.enc2",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Where... where are we going?"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "26385F7ACE012675",
+    "prev_tasks": [
+      "149684F3A0470B77",
+      "053DA66087976DF9"
+    ],
+    "name": "Spore Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "mvs:mine_with_campsite",
+        "nova_structures:badlands_miner_outpost"
+      ],
+      "label": "the camp"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_mining:spore_shaft",
+    "stage": "fq.skill_mining.spore_shaft.enc3",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "I hear singing..."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "26385F7ACE012675",
+    "prev_tasks": [
+      "149684F3A0470B77",
+      "053DA66087976DF9",
+      "7797E869962BB3DB"
+    ],
+    "name": "Spore Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "mvs:mine_with_campsite",
+        "nova_structures:badlands_miner_outpost"
+      ],
+      "label": "the camp"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_mining:spore_shaft",
+    "stage": "fq.skill_mining.spore_shaft.enc4",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Is it dinner time?"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "26385F7ACE012675",
+    "prev_tasks": [
+      "149684F3A0470B77",
+      "053DA66087976DF9",
+      "7797E869962BB3DB",
+      "0B09FE3F204FB025"
+    ],
+    "name": "Spore Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "mvs:mine_with_campsite",
+        "nova_structures:badlands_miner_outpost"
+      ],
+      "label": "the camp"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_mining:scorched_mines",
+    "stage": "fq.skill_mining.scorched_mines.timed3",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "hold",
+      "radius": 12.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:blaze",
+        "count": 2,
+        "every": 45
+      }
+    ],
+    "lines": [
+      "The seams are spitting fire. Hold the gallery!"
+    ],
+    "start": "Hold the gallery",
+    "requires": [],
+    "quest_id": "1CA591D4C280CE67",
+    "prev_tasks": [
+      "1A30D9F0E582C0D4",
+      "5FD6F83CF376F569",
+      "687EF7618A7BBD6F"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_mining:lost_journal",
+    "stage": "fq.skill_mining.lost_journal.timed1",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:ancient_city"
+      ],
+      "label": "the portal frame",
+      "away": 60
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Quiet. Anything that touches you wakes the city."
+    ],
+    "start": "Creep in",
+    "requires": [],
+    "quest_id": "41BA46277E47FC00",
+    "prev_tasks": [
+      "6FE999F29DCAFF65"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_mining:lost_journal",
+    "stage": "fq.skill_mining.lost_journal.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:ancient_city"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_lost_journal_2",
+    "found": "A water-stained journal, still legible.",
+    "requires": [],
+    "quest_id": "41BA46277E47FC00",
+    "prev_tasks": [
+      "6FE999F29DCAFF65",
+      "428152D0D1340AA4"
+    ]
+  },
+  {
     "quest": "small_favours:sf_out_of_flour",
     "stage": "fq.small_favours.sf_out_of_flour.talk0",
     "type": "talk",
@@ -7139,6 +7588,179 @@ global.QUEST_GIVERS = [
     "where": {},
     "entity": "bloomingnature:wandering_gardener",
     "profession": ""
+  },
+  {
+    "quest": "skill_foraging:wanderers_map",
+    "stage": "fq.skill_foraging.wanderers_map.biomes0",
+    "type": "biomes",
+    "count": 20,
+    "dimension": "minecraft:overworld",
+    "requires": [],
+    "quest_id": "319ECEE6DAD0DB85",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_foraging:wanderers_map",
+    "stage": "fq.skill_foraging.wanderers_map.talk1",
+    "type": "talk",
+    "lines": [
+      "Twenty biomes! The journal's nearly full.",
+      "A Nature's Compass will take you further."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "herbalists",
+    "professions": [
+      "minecraft:cleric"
+    ],
+    "org_name": "Herbalists",
+    "quest_id": "319ECEE6DAD0DB85",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_foraging:redwood_giant",
+    "stage": "fq.skill_foraging.redwood_giant.build1",
+    "type": "build",
+    "keys": [
+      "supplementaries:rope"
+    ],
+    "counts": [
+      12
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "0E89164FE6C31D73",
+    "prev_tasks": [
+      "4E88B444FA5EC711"
+    ]
+  },
+  {
+    "quest": "skill_foraging:lost_botanist",
+    "stage": "fq.skill_foraging.lost_botanist.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "biomesoplenty:bog",
+        "biomesoplenty:muskeg"
+      ]
+    },
+    "requires": [],
+    "quest_id": "54A7C980BF7742FB",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_foraging:lost_botanist",
+    "stage": "fq.skill_foraging.lost_botanist.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Oh, thank the bog! I've been stuck since nightfall.",
+      "Take my field journal. It's full of rare sketches."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "54A7C980BF7742FB",
+    "prev_tasks": [
+      "12E46D97E47B3D28"
+    ],
+    "name": "Lost Botanist",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {
+      "biomes": [
+        "biomesoplenty:bog",
+        "biomesoplenty:muskeg"
+      ]
+    },
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_foraging:rainforest_run",
+    "stage": "fq.skill_foraging.rainforest_run.timed3",
+    "type": "timed",
+    "seconds": 900,
+    "goal": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "The flower wilts quickly. Get it to Reece!"
+    ],
+    "start": "Rush the cure home",
+    "requires": [],
+    "quest_id": "2E62DCC10C9B9E4A",
+    "prev_tasks": [
+      "439C91EA7939E64D",
+      "2453016D3B85999D",
+      "30FE98EBB6753A63"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_foraging:snowbelles",
+    "stage": "fq.skill_foraging.snowbelles.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "minecraft:snowy_plains",
+        "minecraft:snowy_taiga",
+        "minecraft:grove",
+        "minecraft:snowy_slopes"
+      ]
+    },
+    "requires": [],
+    "quest_id": "7C3CB3207572F568",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_foraging:herbarium",
+    "stage": "fq.skill_foraging.herbarium.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:glass",
+      "meadow:wooden_flower_pot_big",
+      "bloomingnature:flower_pot_big",
+      "regions_unexplored:blue_snowbelle",
+      "biomesoplenty:glowshroom"
+    ],
+    "counts": [
+      24,
+      2,
+      2,
+      1,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "5D3BB92ECCA88EED",
+    "prev_tasks": [
+      "3CA307DA43456771"
+    ]
   },
   {
     "quest": "skill_crafting:apprentice_papers",

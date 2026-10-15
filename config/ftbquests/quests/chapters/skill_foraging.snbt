@@ -376,7 +376,7 @@
 			]
 			title: "The Bloom Catalogue"
 			x: 6.0d
-			y: -1.5d
+			y: -2.25d
 		}
 		{
 			dependencies: ["343769D7F54E5D91"]
@@ -419,7 +419,7 @@
 			]
 			title: "The Wandering Gardener"
 			x: 7.5d
-			y: -0.75d
+			y: -3.75d
 		}
 		{
 			dependencies: ["62D5E7813EFF573B"]
@@ -474,7 +474,7 @@
 			]
 			title: "The Swamp Hermit"
 			x: 6.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["41BA98A4CCC7B0A7"]
@@ -563,7 +563,7 @@
 			]
 			title: "Alpine Flora"
 			x: 7.5d
-			y: 0.75d
+			y: -2.25d
 		}
 		{
 			dependencies: ["09FBFF62BE544BE2"]
@@ -602,7 +602,511 @@
 			]
 			title: "Truffle Season"
 			x: 6.0d
-			y: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3DCB80E25404D919"
+				"2CF0262A21E6E0BC"
+			]
+			description: ["The journal's map has more blanks than lines. Set foot in twenty different biomes, and the Herbalists will craft you a Nature's Compass to keep going."]
+			icon: "naturescompass:naturescompass"
+			id: "319ECEE6DAD0DB85"
+			rewards: [
+				{
+					id: "716A16FE8FEB6617"
+					item: "naturescompass:naturescompass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 250"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "4919DE4525D92C0C"
+					silent: true
+					title: "+250 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1884B95B21C482E0"
+					stage: "fq.skill_foraging.wanderers_map.biomes0"
+					title: "Set foot in twenty different biomes to fill the journal"
+					type: "gamestage"
+				}
+				{
+					id: "65215FB8BD3BB12C"
+					stage: "fq.skill_foraging.wanderers_map.talk1"
+					title: "Show the filled map to a Herbalist"
+					type: "gamestage"
+				}
+			]
+			title: "Mapping the Wild"
+			x: 6.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["319ECEE6DAD0DB85"]
+			description: ["The journal has blank pages for the flowering forests: pink magnolia from a magnolia woodland and a jacaranda sapling from a jacaranda glade."]
+			icon: "biomesoplenty:jacaranda_sapling"
+			id: "773844DE2043F3B6"
+			rewards: [
+				{
+					id: "4486A0D7721B6AB0"
+					item: "regions_unexplored:magnolia_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 260"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "3EAE7CF476E27C42"
+					silent: true
+					title: "+260 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:magnolia_woodland"
+					id: "63A940AE6E660670"
+					title: "Find a magnolia woodland in bloom"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "05C7454A6B8EEF4D"
+					item: "regions_unexplored:magnolia_leaves"
+					title: "Press pink magnolia leaves for the journal"
+					type: "item"
+				}
+				{
+					biome: "biomesoplenty:jacaranda_glade"
+					id: "1F9636C15699BD59"
+					title: "Find a jacaranda glade"
+					type: "biome"
+				}
+				{
+					id: "1A7B524CDFE5D2EE"
+					item: "biomesoplenty:jacaranda_sapling"
+					title: "Take a jacaranda sapling for the journal"
+					type: "item"
+				}
+			]
+			title: "Magnolia and Jacaranda"
+			x: 7.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["319ECEE6DAD0DB85"]
+			description: ["The journal wants the tallest redwood measured. Climb it, drop a rope to measure it, and bring down a redwood sapling and a branch of its leaves."]
+			icon: "biomesoplenty:redwood_sapling"
+			id: "0E89164FE6C31D73"
+			rewards: [
+				{
+					count: 16
+					id: "3253EFE09ACFEA3F"
+					item: "minecraft:ladder"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "256E018998AFFF97"
+					item: "supplementaries:rope"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 280"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "058D9A8244EF92F5"
+					silent: true
+					title: "+280 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:redwood_forest"
+					id: "4E88B444FA5EC711"
+					title: "Find the tallest redwood in the forest"
+					type: "biome"
+				}
+				{
+					id: "4E42A779EB3F09A8"
+					stage: "fq.skill_foraging.redwood_giant.build1"
+					title: "Drop a rope from the crown to measure it"
+					type: "gamestage"
+				}
+				{
+					id: "37992FCF8600EC11"
+					item: "biomesoplenty:redwood_sapling"
+					title: "Bring down a redwood sapling"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1A7144CF0A333507"
+					item: "biomesoplenty:redwood_leaves"
+					title: "Bring down a branch of its leaves"
+					type: "item"
+				}
+			]
+			title: "The Redwood Giant"
+			x: 7.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["26F59242EDC4A79D"]
+			description: ["A visiting botanist went into the bog and didn't come back. Follow his trail of dropped pressed flowers across a muskeg or bog and find him stuck in the mud."]
+			icon: "minecraft:writable_book"
+			id: "54A7C980BF7742FB"
+			rewards: [
+				{
+					id: "2C5C406281E44A90"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Full of rare sketches.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Botanist's Field Journal\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 280"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "600180D43B51146E"
+					silent: true
+					title: "+280 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "12E46D97E47B3D28"
+					stage: "fq.skill_foraging.lost_botanist.be0"
+					title: "Follow the pressed-flower trail into the bog"
+					type: "gamestage"
+				}
+				{
+					id: "0011C215AE1272BD"
+					stage: "fq.skill_foraging.lost_botanist.enc1"
+					title: "Pull the botanist out of the mud"
+					type: "gamestage"
+				}
+			]
+			title: "The Lost Botanist"
+			x: 7.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["54A7C980BF7742FB"]
+			description: ["The botanist's journal points underground. Find a glowing grotto and collect glowshrooms, glowflowers and glowworm silk for the Herbalists."]
+			icon: "biomesoplenty:glowshroom"
+			id: "54CFAE7E6632988C"
+			rewards: [
+				{
+					count: 8
+					id: "5C2A4E3BCE9C53FE"
+					item: "biomesoplenty:glowing_moss_block"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "1F58F006C0EB906B"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 300"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "22729A6BABA4618B"
+					silent: true
+					title: "+300 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:glowing_grotto"
+					id: "615E2B1A541BB12A"
+					title: "Find the glowing grotto the journal names"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "41D9D039CAB1671D"
+					item: "biomesoplenty:glowshroom"
+					title: "Collect glowshrooms"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2B026DA0B060A3C5"
+					item: "biomesoplenty:glowflower"
+					title: "Collect glowflowers"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "707103B6769F1FC0"
+					item: "biomesoplenty:glowworm_silk"
+					title: "Collect glowworm silk"
+					type: "item"
+				}
+			]
+			title: "The Glowing Grotto"
+			x: 9.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["54CFAE7E6632988C"]
+			description: ["Below the grotto lies another wonder: bioshroom caves. Gather blue, green and pink bioshrooms and a sprig of cave hyssop for the Herbalists."]
+			icon: "regions_unexplored:blue_bioshroom"
+			id: "6D6E44C84F730F6B"
+			rewards: [
+				{
+					count: 4
+					id: "5BFA8BD8973FD83D"
+					item: "regions_unexplored:glowing_blue_bioshroom_block"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 320"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "3C50A0758710B498"
+					silent: true
+					title: "+320 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:bioshroom_caves"
+					id: "442604F1B99E7C67"
+					title: "Find the bioshroom caves below the grotto"
+					type: "biome"
+				}
+				{
+					count: 2L
+					id: "5B09EDFD4FD9F1A0"
+					item: "regions_unexplored:blue_bioshroom"
+					title: "Gather blue bioshrooms"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "41E59AF8E8ACF78A"
+					item: "regions_unexplored:green_bioshroom"
+					title: "Gather green bioshrooms"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "5F87DD1ECBA1D292"
+					item: "regions_unexplored:pink_bioshroom"
+					title: "Gather pink bioshrooms"
+					type: "item"
+				}
+				{
+					id: "7D739B2B9463E52D"
+					item: "regions_unexplored:cave_hyssop"
+					title: "Gather a sprig of cave hyssop"
+					type: "item"
+				}
+			]
+			title: "Bioshroom Caves"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["773844DE2043F3B6"]
+			description: ["The Herbalists need a fresh bird of paradise and a mahogany sapling from the rainforest for a cure. Bring them back to Reece before they wilt."]
+			icon: "bloomingnature:bird_of_paradise"
+			id: "2E62DCC10C9B9E4A"
+			rewards: [
+				{
+					count: 2
+					id: "138E62F77A969E9F"
+					item: "irons_spellbooks:greater_healing_potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 330"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "039408C68CCB1ACD"
+					silent: true
+					title: "+330 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:rainforest"
+					id: "439C91EA7939E64D"
+					title: "Go to the rainforest for the cure's ingredients"
+					type: "biome"
+				}
+				{
+					id: "2453016D3B85999D"
+					item: "bloomingnature:bird_of_paradise"
+					title: "Pick a fresh bird of paradise"
+					type: "item"
+				}
+				{
+					id: "30FE98EBB6753A63"
+					item: "biomesoplenty:mahogany_sapling"
+					title: "Take a mahogany sapling"
+					type: "item"
+				}
+				{
+					id: "752C67FD30D5D402"
+					stage: "fq.skill_foraging.rainforest_run.timed3"
+					title: "Reach Reece before the flower wilts"
+					type: "gamestage"
+				}
+			]
+			title: "Before It Wilts"
+			x: 9.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["319ECEE6DAD0DB85"]
+			description: ["In the cold north grow snowbelles in many colours and snowblossom trees. Press six snowbelle colours and bring a snowblossom sapling to the Herbalists."]
+			icon: "regions_unexplored:blue_snowbelle"
+			id: "7C3CB3207572F568"
+			rewards: [
+				{
+					id: "106C9FB56D3556C1"
+					item: "meadow:fur_boots"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 300"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "6E8F0E6316B13B8F"
+					silent: true
+					title: "+300 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4D60DB98B13B61DE"
+					stage: "fq.skill_foraging.snowbelles.be0"
+					title: "Travel into the cold north"
+					type: "gamestage"
+				}
+				{
+					id: "41671B8434EDFDF9"
+					item: "regions_unexplored:black_snowbelle"
+					title: "Press a black snowbelle"
+					type: "item"
+				}
+				{
+					id: "596225EF21518E24"
+					item: "regions_unexplored:blue_snowbelle"
+					title: "Press a blue snowbelle"
+					type: "item"
+				}
+				{
+					id: "2DF3AE0B5399AB39"
+					item: "regions_unexplored:brown_snowbelle"
+					title: "Press a brown snowbelle"
+					type: "item"
+				}
+				{
+					id: "00725DFAF3784039"
+					item: "regions_unexplored:cyan_snowbelle"
+					title: "Press a cyan snowbelle"
+					type: "item"
+				}
+				{
+					id: "1753E870E4B0BD13"
+					item: "regions_unexplored:gray_snowbelle"
+					title: "Press a gray snowbelle"
+					type: "item"
+				}
+				{
+					id: "5150409DE4DFA768"
+					item: "regions_unexplored:green_snowbelle"
+					title: "Press a green snowbelle"
+					type: "item"
+				}
+				{
+					id: "10D36AE8DCEAE27B"
+					item: "biomesoplenty:snowblossom_sapling"
+					title: "Take a snowblossom sapling"
+					type: "item"
+				}
+			]
+			title: "Snowbelles"
+			x: 7.5d
+			y: 3.75d
+		}
+		{
+			dependencies: [
+				"6D6E44C84F730F6B"
+				"7C3CB3207572F568"
+			]
+			description: ["The Herbalists want a herbarium in Reece: glass, big flower pots, and a living specimen of every plant you've pressed so far."]
+			icon: "meadow:wooden_flower_pot_big"
+			id: "5D3BB92ECCA88EED"
+			rewards: [
+				{
+					id: "66A3C1EC6A14D264"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"A seat on the Herbalists' council.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Herbarium's Key\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 400"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "279C41BE2AB49290"
+					silent: true
+					title: "+400 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "3CA307DA43456771"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "640B630C96B097E8"
+					stage: "fq.skill_foraging.herbarium.build1"
+					title: "Build the herbarium with a living specimen of every pressed plant"
+					type: "gamestage"
+				}
+			]
+			title: "The Herbarium"
+			x: 12.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Foraging path"]

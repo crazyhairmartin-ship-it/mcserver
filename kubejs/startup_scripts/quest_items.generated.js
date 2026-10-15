@@ -27,6 +27,7 @@ StartupEvents.registry('item', event => {
   event.create("quest_jungle_heat_4").displayName("The Heat's Marked Fish").texture("minecraft:item/cod").maxStackSize(1).tooltip("A prize catch").glow(true)
   event.create("quest_jungle_temple_traps_1").displayName("Idol of the Deep Jungle").texture("minecraft:item/emerald").maxStackSize(1).tooltip("Jade, cold as river water").glow(true)
   event.create("quest_lighthouse_ledger_2").displayName("Season's Record Book").texture("minecraft:item/book").maxStackSize(1).tooltip("One of Silas's entries looks forged").glow(true)
+  event.create("quest_lost_journal_2").displayName("the Expedition Journal").texture("minecraft:item/written_book").maxStackSize(1).tooltip("Quest item").glow(true)
   event.create("quest_nobodys_home_0").displayName("Diary Page").texture("minecraft:item/paper").maxStackSize(1).tooltip("Quest item").glow(true)
   event.create("quest_occupied_dunes_1").displayName("the Foreman's Notes").texture("minecraft:item/paper").maxStackSize(1).tooltip("Needed for the job").glow(true)
   event.create("quest_odd_coats_0").displayName("Odd Hide").texture("minecraft:item/rotten_flesh").maxStackSize(1).tooltip("Proof for the lodge").glow(true)
