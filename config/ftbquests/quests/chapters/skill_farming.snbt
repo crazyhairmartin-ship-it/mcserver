@@ -1183,6 +1183,113 @@
 			x: 10.5d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"4BCAEC6E3D92B157"
+				"1292C7281B851783"
+				"2B065B951D5A99D5"
+			]
+			description: ["The festival's prize table: a crate of every crop the co-op grows, from cabbages and rice to barley, strawberries, corn, grapes and Nether grapes."]
+			icon: "farmersdelight:cabbage_crate"
+			id: "3A4F2793AF97227F"
+			rewards: [
+				{
+					id: "1749FEE5508AAC3C"
+					item: "farm_and_charm:silo_wood"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 650"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "5A0F81E97BC4F61F"
+					silent: true
+					title: "+650 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7146A02B9C7C6426"
+					item: "farmersdelight:cabbage_crate"
+					title: "Fill a crate of cabbages"
+					type: "item"
+				}
+				{
+					id: "00D963A88D28F5D8"
+					item: "farmersdelight:rice_bag"
+					title: "Fill a bag of rice"
+					type: "item"
+				}
+				{
+					id: "58BB06855A75D859"
+					item: "farm_and_charm:corn_bag"
+					title: "Fill a bag of corn"
+					type: "item"
+				}
+				{
+					id: "6D8C2A5640AC2752"
+					item: "vinery:red_grape_bag"
+					title: "Fill a bag of grapes"
+					type: "item"
+				}
+				{
+					id: "04AA869503C2B942"
+					item: "nethervinery:crimson_grape_crate"
+					title: "Fill a crate of Nether grapes"
+					type: "item"
+				}
+			]
+			title: "Prize Crops"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3A4F2793AF97227F"]
+			description: ["Festival market day: run the co-op's stall against the other villages' farmers, selling your best produce to villagers for emeralds. Outsell them all and win the market master's hat."]
+			icon: "artifacts:villager_hat"
+			id: "7392BE863EF12BB2"
+			rewards: [
+				{
+					id: "4178785370610AF5"
+					item: "artifacts:villager_hat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 720"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "0D12C979E836520B"
+					silent: true
+					title: "+720 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "454D426A1B4C1D11"
+					structure: "#fotf:groups/moog_stalls_and_carts"
+					title: "Find the market stalls"
+					type: "structure"
+				}
+				{
+					count: 24L
+					id: "18212379777B1A84"
+					item: "minecraft:emerald"
+					title: "Sell your best produce for emeralds"
+					type: "item"
+				}
+				{
+					id: "6089AE7A9845A407"
+					stage: "fq.skill_farming.market_stall.enc2"
+					title: "Be named the market master's champion"
+					type: "gamestage"
+				}
+			]
+			title: "The Market Stall"
+			x: 13.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Farming path"]
 	title: "The Growers' Co-op"

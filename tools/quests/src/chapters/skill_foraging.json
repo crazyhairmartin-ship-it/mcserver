@@ -1024,6 +1024,82 @@
         }
       ],
       "icon": "biomesoplenty:magic_sapling"
+    },
+    {
+      "id": "origin_valley",
+      "title": "The Origin Valley",
+      "after": [
+        "main_story:act4_start",
+        "mystic_trees"
+      ],
+      "text": [
+        "Legend says all plants began in one valley where the grass is the old green. Find an origin valley and take an origin sapling and origin grass."
+      ],
+      "tasks": [
+        {
+          "biome": "biomesoplenty:origin_valley",
+          "title": "Find the valley where all plants began"
+        },
+        {
+          "item": "biomesoplenty:origin_sapling",
+          "title": "Take an origin sapling"
+        },
+        {
+          "item": "biomesoplenty:origin_grass_block",
+          "title": "Take origin grass"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "biomesoplenty:origin_sapling"
+        },
+        {
+          "skill": "forage",
+          "xp": 650
+        }
+      ],
+      "icon": "biomesoplenty:origin_sapling"
+    },
+    {
+      "id": "end_flora",
+      "title": "Flowers at the End",
+      "after": [
+        "main_story:act4_finale",
+        "origin_valley"
+      ],
+      "text": [
+        "With the Dragon gone, the Herbalists want the End's plants: chorus flowers, an endbloom and enderphyte, and an empyreal sapling, plus a look at an enderbloom grove."
+      ],
+      "tasks": [
+        {
+          "dimension": "minecraft:the_end",
+          "title": "Go out to the End's islands"
+        },
+        {
+          "item": "minecraft:chorus_flower",
+          "count": 2,
+          "title": "Gather chorus flowers"
+        },
+        {
+          "item": "biomesoplenty:empyreal_sapling",
+          "title": "Take an empyreal sapling"
+        },
+        {
+          "structure": "mes:enderbloom_grove",
+          "title": "Look over an enderbloom grove"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:chorus_flower",
+          "count": 8
+        },
+        {
+          "skill": "forage",
+          "xp": 720
+        }
+      ],
+      "icon": "minecraft:chorus_flower"
     }
   ]
 }

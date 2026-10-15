@@ -206,4 +206,38 @@ ACT3 = [
           rewards=[reward_item("handcrafted:bear_trophy"), skill("range", 520)]),
 ]
 
-chapter("skill_range", "The Hunters' Lodge", "Range path", "minecraft:bow", "skills", 7, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("netherite_longbow", "A Bow for the End", icon="spartanweaponry:netherite_longbow", after=["trophy_hall", "main_story:act4_start"],
+          text=["The hunts ahead need reach. Forge a netherite longbow and a huge quiver of arrows."],
+          tasks=[item("spartanweaponry:netherite_longbow", crafted=True, title="Forge a netherite longbow"),
+                 item("minecraft:arrow", 64, title="Fill a quiver for the hunts to come")],
+          rewards=[reward_item("minecraft:spectral_arrow", 32), skill("range", 700)]),
+
+    quest("void_swarm", "Swarm Out of the Void", icon="alexsmobs:ender_residue", after=["netherite_longbow"],
+          text=["In the End, enderiophage swarms drift between the islands. Thin them out with arrows and keep your "
+                "feet on the edge."],
+          tasks=[{"dimension": "minecraft:the_end", "title": "Go to the End's drifting islands"},
+                 {"kill": "alexsmobs:enderiophage", "count": 6, "title": "Thin the swarms with arrows from the island edge"},
+                 item("alexsmobs:ender_residue", 2, title="Take ender residue from the swarm")],
+          rewards=[reward_item("alexsmobs:ender_residue", 4), skill("range", 740)]),
+
+    quest("ironhide", "Old Ironhide", icon="naturalist:rhino_spawn_egg", after=["netherite_longbow"],
+          text=["First of the legendary beasts: a rhinoceros the size of a hut, its hide stopping ordinary arrows. "
+                "Find Old Ironhide on the plains and take him."],
+          tasks=[{"biome": "minecraft:savanna", "title": "Find Old Ironhide on the plains"},
+                 enc(["*A thunder of hooves.*"], then="kill", entity="naturalist:rhino", name="Old Ironhide", health=120, glow=True,
+                     title="Take down Old Ironhide", where={"biomes": ["minecraft:savanna", "minecraft:plains"]}),
+                 sample("Ironhide's Horn", ["naturalist:rhino"], 0.7, texture="minecraft:item/bone", tooltip="For the lodge wall")],
+          rewards=[reward_item("minecraft:bone", name="Ironhide's Horn", lore=["From the first legend."]), skill("range", 780)]),
+
+    quest("grey_widow", "The Grey Widow", icon="alexsmobs:tarantula_hawk_wing", after=["ironhide"],
+          text=["Second legend: a tarantula hawk that hunts travellers in the desert, faster in the air than any "
+                "arrow you've fired. Take its wing."],
+          tasks=[{"biome": "minecraft:desert", "title": "Go where the Grey Widow hunts"},
+                 enc(["*A shrill whine, high above.*"], then="kill", entity="alexsmobs:tarantula_hawk", name="The Grey Widow", health=100, glow=True,
+                     title="Shoot down the Grey Widow", where={"biomes": ["minecraft:desert"]}),
+                 item("alexsmobs:tarantula_hawk_wing", title="Take its wing")],
+          rewards=[reward_item("alexsmobs:tarantula_hawk_wing"), skill("range", 800)]),
+]
+
+chapter("skill_range", "The Hunters' Lodge", "Range path", "minecraft:bow", "skills", 7, Q + ACT2 + ACT3 + ACT4)

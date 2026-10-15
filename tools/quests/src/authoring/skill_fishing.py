@@ -233,4 +233,35 @@ ACT3 = [
           rewards=[reward_item("aquaculture:light_hook", name="Silas's Lucky Lure"), skill("fish", 500)]),
 ]
 
-chapter("skill_fishing", "The Anglers' Society", "Fishing path", "minecraft:fishing_rod", "skills", 2, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("almanac", "The Angler's Almanac", icon="minecraft:writable_book", after=["trophy_wall", "main_story:act4_start"],
+          text=["Fill the society's almanac. Catch the freshwater and saltwater species the society knows, from "
+                "minnow to muskellunge."],
+          tasks=[item("aquaculture:minnow", title="Catch a minnow"), item("aquaculture:bluegill", title="Catch a bluegill"),
+                 item("aquaculture:brown_trout", title="Catch a brown trout"), item("aquaculture:carp", title="Catch a carp"),
+                 item("aquaculture:catfish", title="Catch a catfish"), item("aquaculture:muskellunge", title="Catch a muskellunge"),
+                 item("aquaculture:atlantic_cod", title="Catch an Atlantic cod"), item("aquaculture:tuna", title="Catch a tuna")],
+          rewards=[reward_item("aquaculture:neptunium_hoe"), skill("fish", 650)]),
+
+    quest("old_whiskers", "Old Whiskers", icon="aquaculture:catfish_bucket", after=["silas_adrift"],
+          text=["Every swamp has a tale of a catfish as big as a boat, and this one is true. Lure Old Whiskers up "
+                "from the deepest swamp pool and land him alive in a bucket."],
+          tasks=[{"biome": "minecraft:swamp", "title": "Go to the deepest swamp pool"},
+                 {"drop": {"from": ["fishing"], "chance": 0.1,
+                           "item": {"name": "Old Whiskers", "texture": "minecraft:item/cod", "tooltip": "A catfish as big as a boat"}},
+                  "consume": False, "title": "Lure Old Whiskers up from the deep"},
+                 item("aquaculture:catfish_bucket", title="Land him alive in a bucket")],
+          rewards=[reward_item("aquaculture:obsidian_hook"), skill("fish", 700)]),
+
+    quest("semi_final", "The Lighthouse Semi-Final", icon="minecraft:lantern", after=["almanac", "old_whiskers"],
+          text=["The semi-final at a lighthouse, against Silas and the champions of two other villages: the first to "
+                "land the lighthouse keeper's silver mackerel wins. Fish until it bites."],
+          tasks=[{"structure": "#lighthouses", "title": "Go to the lighthouse for the semi-final"},
+                 enc(["Semi-final! I'll beat you to the mackerel!"], character="silas", title="Face Silas at the lighthouse"),
+                 {"drop": {"from": ["fishing"], "chance": 0.1,
+                           "item": {"name": "The Silver Mackerel", "texture": "minecraft:item/salmon", "tooltip": "The keeper's prize"}},
+                  "consume": False, "title": "Land the silver mackerel before the champions"}],
+          rewards=[reward_item("aquaculture:neptunium_helmet"), skill("fish", 780)]),
+]
+
+chapter("skill_fishing", "The Anglers' Society", "Fishing path", "minecraft:fishing_rod", "skills", 2, Q + ACT2 + ACT3 + ACT4)

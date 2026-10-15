@@ -73,7 +73,7 @@
 			]
 			title: "Sign the Roster"
 			x: 0.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["67CC933617723768"]
@@ -1044,7 +1044,7 @@
 			]
 			title: "Bottle a Cloud"
 			x: 15.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["0D02BBEBD98EBD5E"]
@@ -1096,7 +1096,7 @@
 			]
 			title: "Post Office in the Clouds"
 			x: 16.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: [
@@ -1324,6 +1324,210 @@
 			title: "Feathers Not Engines"
 			x: 18.0d
 			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0D381375D366D4CA"
+				"4BCAEC6E3D92B157"
+			]
+			description: ["A courier crew vanished chasing a great airship through the clouds. Reach one of the airships and bring back their logbook from among the dangers aboard."]
+			icon: "immersive_aircraft:gyroscope"
+			id: "14F0096CD204A27F"
+			rewards: [
+				{
+					id: "5BED8DAE13477A03"
+					item: "immersive_aircraft:gyroscope"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "2AA4C9089A3FA9D8"
+					silent: true
+					title: "+700 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "43CC0EDC49944792"
+					structure: "#fotf:groups/airships"
+					title: "Reach one of the airships"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:pillager"
+					id: "0D9F30631E11823D"
+					title: "Fight past the airship's guards"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "677C156169DD1415"
+					item: "kubejs:quest_airship_logbook_2"
+					title: "Find the lost couriers' logbook aboard"
+					type: "item"
+				}
+			]
+			title: "The Lost Couriers' Log"
+			x: 19.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3B8AA0CE04D6CE92"]
+			description: ["The far villages want bulk goods, not letters. Build a cargo airship and fly a full hold of building supplies to a village beyond the mountains."]
+			icon: "immersive_aircraft:cargo_airship"
+			id: "360AB63A6AE68A61"
+			rewards: [
+				{
+					id: "529D9B202D3C2789"
+					item: "immersive_aircraft:boiler"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 720"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "717C4F67A8C580DB"
+					silent: true
+					title: "+720 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "45B7DAFDCE765C73"
+					item: "immersive_aircraft:cargo_airship"
+					only_from_crafting: true
+					title: "Build a cargo airship"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "1BC469E40493A300"
+					item: "minecraft:stone_bricks"
+					title: "Load building stone"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 64L
+					id: "0CD0C5D392E5CDA7"
+					item: "minecraft:oak_planks"
+					title: "Load building timber"
+					type: "item"
+				}
+				{
+					id: "3AC25F5409133E7C"
+					stage: "fq.skill_agility.cargo_airship.timed3"
+					title: "Fly the supplies to a village beyond the mountains"
+					type: "gamestage"
+				}
+			]
+			title: "Freight by Air"
+			x: 15.0d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"1A3C75E1E67C28EC"
+				"360AB63A6AE68A61"
+			]
+			description: ["Make the Couriers' network permanent. Craft sharestones and warp plates and place them in the villages the Couriers serve, all linked to the Reece post office."]
+			icon: "waystones:sharestone"
+			id: "6E962F01BDBAC611"
+			rewards: [
+				{
+					count: 2
+					id: "0FC82B42470399F3"
+					item: "waystones:warp_stone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 740"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "7166B560594C0A33"
+					silent: true
+					title: "+740 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "1FE513F816FF7216"
+					item: "waystones:sharestone"
+					only_from_crafting: true
+					title: "Craft sharestones for the network"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "4DADA936DEACA5CB"
+					item: "waystones:warp_plate"
+					only_from_crafting: true
+					title: "Craft warp plates for the network"
+					type: "item"
+				}
+				{
+					id: "3BB24DA64382ED61"
+					structure: "#fotf:groups/villages"
+					title: "Take them out to a village on the route"
+					type: "structure"
+				}
+				{
+					id: "38507BCA32FBBD44"
+					stage: "fq.skill_agility.sharestone_network.build3"
+					title: "Place a sharestone and a warp plate in the village"
+					type: "gamestage"
+				}
+			]
+			title: "Every Village a Stop"
+			x: 16.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["2E8CA4F3F9117FF6"]
+			description: ["Elytra from the End change everything. Wear them in the elytra slot alongside your chestplate and fly the full courier circuit without landing."]
+			icon: "minecraft:elytra"
+			id: "70B7E5DEEAB4027F"
+			rewards: [
+				{
+					count: 32
+					id: "56E227A64B8E5DC6"
+					item: "minecraft:firework_rocket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 760"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "26C1A70925755860"
+					silent: true
+					title: "+760 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7408A03539B556EF"
+					item: "minecraft:elytra"
+					title: "Wear the elytra from the End"
+					type: "item"
+				}
+				{
+					id: "24FA991B4E44B4A2"
+					stage: "fq.skill_agility.wings_and_armour.timed1"
+					title: "Fly the courier circuit without landing"
+					type: "gamestage"
+				}
+			]
+			title: "Elytra on the Route"
+			x: 0.0d
+			y: 0.75d
 		}
 	]
 	subtitle: ["Agility path"]

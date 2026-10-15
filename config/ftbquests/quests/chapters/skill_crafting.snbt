@@ -420,7 +420,7 @@
 			]
 			title: "Somewhere to Sit"
 			x: 6.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["54AF1AAD5BD9EF61"]
@@ -1205,7 +1205,7 @@
 			]
 			title: "The Winter Festival"
 			x: 13.5d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1263,7 +1263,7 @@
 			]
 			title: "Lamps for the Dark Side"
 			x: 6.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["08A0E2C9723F44FE"]
@@ -1365,7 +1365,7 @@
 			]
 			title: "Anywhere in the Workshop"
 			x: 13.5d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1415,6 +1415,175 @@
 			title: "Bridge to the Island"
 			x: 12.0d
 			y: 2.25d
+		}
+		{
+			dependencies: [
+				"1CAEFEBB883E4FAA"
+				"4BCAEC6E3D92B157"
+			]
+			description: ["Every great guild hall has trophies. Make trophies from what you've hunted (a bear, a blaze, a skeleton) and mount them in the hall."]
+			icon: "handcrafted:bear_trophy"
+			id: "0077B64C7A56E4CA"
+			rewards: [
+				{
+					count: 16
+					id: "13E1C52E53F9D5A5"
+					item: "minecraft:experience_bottle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 700"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "0B6F81115E30DCE1"
+					silent: true
+					title: "+700 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7331F449F26AA184"
+					item: "handcrafted:bear_trophy"
+					only_from_crafting: true
+					title: "Make a bear trophy"
+					type: "item"
+				}
+				{
+					id: "51D81B8F7F3AB528"
+					item: "handcrafted:blaze_trophy"
+					only_from_crafting: true
+					title: "Make a blaze trophy"
+					type: "item"
+				}
+				{
+					id: "3AC8A973ED417269"
+					item: "handcrafted:skeleton_trophy"
+					only_from_crafting: true
+					title: "Make a skeleton trophy"
+					type: "item"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "0DF0E895AE5302DF"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "621EE394DEAC5FFD"
+					stage: "fq.skill_crafting.trophy_room.build4"
+					title: "Mount them in the guild hall"
+					type: "gamestage"
+				}
+			]
+			title: "The Guild's Trophies"
+			x: 13.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"0077B64C7A56E4CA"
+				"05759EB72D85EE9F"
+				"2E2A2BC28A1CF89C"
+			]
+			description: ["Build the guild hall from the founder's last blueprint: furnished with all three furniture traditions, a stage, the warehouse below and the trophy wall."]
+			icon: "minecraft:white_banner"
+			id: "23131BF9240EF997"
+			rewards: [
+				{
+					id: "6C8390E938666DF0"
+					item: {
+						Count: 1b
+						id: "minecraft:white_banner"
+						tag: {
+							display: {
+								Name: "{\"text\": \"The Guild Banner\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 740"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "09FABAD44EDB4C03"
+					silent: true
+					title: "+740 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "035FD912B883B71E"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "5852108948EA39F4"
+					stage: "fq.skill_crafting.guild_hall.build1"
+					title: "Raise the guild hall, furnished in all three traditions"
+					type: "gamestage"
+				}
+			]
+			title: "The Guild Hall"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["583CF5EA44ABACA3"]
+			description: ["Finish your masterwork backpack: netherite tier with an everlasting upgrade and an inception upgrade."]
+			icon: "sophisticatedbackpacks:netherite_backpack"
+			id: "27F9761C38CFD621"
+			rewards: [
+				{
+					id: "34930FF46511AF53"
+					item: "sophisticatedbackpacks:advanced_tool_swapper_upgrade"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 760"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "2C975573346D7E33"
+					silent: true
+					title: "+760 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "768F7C40B632DF76"
+					item: "sophisticatedbackpacks:netherite_backpack"
+					only_from_crafting: true
+					title: "Forge a netherite backpack"
+					type: "item"
+				}
+				{
+					id: "71C02A18B158EFA5"
+					item: "sophisticatedbackpacks:everlasting_upgrade"
+					only_from_crafting: true
+					title: "Fit an everlasting upgrade"
+					type: "item"
+				}
+				{
+					id: "7C2C3E0BBEDEE601"
+					item: "sophisticatedbackpacks:inception_upgrade"
+					only_from_crafting: true
+					title: "Fit an inception upgrade"
+					type: "item"
+				}
+			]
+			title: "A Pack That Never Wears Out"
+			x: 6.0d
+			y: 1.5d
 		}
 	]
 	subtitle: ["Crafting path"]

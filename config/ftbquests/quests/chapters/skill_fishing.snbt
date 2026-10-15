@@ -1082,7 +1082,7 @@
 			]
 			title: "Ghosts on the Fishing Grounds"
 			x: 24.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["240A172EAC69A9A0"]
@@ -1171,6 +1171,177 @@
 			]
 			title: "Silas Adrift"
 			x: 25.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"7D255442BFA172C8"
+				"4BCAEC6E3D92B157"
+			]
+			description: ["Fill the society's almanac. Catch the freshwater and saltwater species the society knows, from minnow to muskellunge."]
+			icon: "minecraft:writable_book"
+			id: "208D34EBE2CFA394"
+			rewards: [
+				{
+					id: "47F1EAE168888FBE"
+					item: "aquaculture:neptunium_hoe"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 650"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "067B881702B0668C"
+					silent: true
+					title: "+650 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "06ABEC2D399669F5"
+					item: "aquaculture:minnow"
+					title: "Catch a minnow"
+					type: "item"
+				}
+				{
+					id: "09A833189B9EB73D"
+					item: "aquaculture:bluegill"
+					title: "Catch a bluegill"
+					type: "item"
+				}
+				{
+					id: "481910CE245FC231"
+					item: "aquaculture:brown_trout"
+					title: "Catch a brown trout"
+					type: "item"
+				}
+				{
+					id: "178FB4D1210B65ED"
+					item: "aquaculture:carp"
+					title: "Catch a carp"
+					type: "item"
+				}
+				{
+					id: "6AB34C0E8C61A00C"
+					item: "aquaculture:catfish"
+					title: "Catch a catfish"
+					type: "item"
+				}
+				{
+					id: "4D35364D07B0271D"
+					item: "aquaculture:muskellunge"
+					title: "Catch a muskellunge"
+					type: "item"
+				}
+				{
+					id: "2BEDF6330B7687BF"
+					item: "aquaculture:atlantic_cod"
+					title: "Catch an Atlantic cod"
+					type: "item"
+				}
+				{
+					id: "6AB6E5EBAABFBB0C"
+					item: "aquaculture:tuna"
+					title: "Catch a tuna"
+					type: "item"
+				}
+			]
+			title: "The Angler's Almanac"
+			x: 24.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["1810AFFE25F96EDC"]
+			description: ["Every swamp has a tale of a catfish as big as a boat, and this one is true. Lure Old Whiskers up from the deepest swamp pool and land him alive in a bucket."]
+			icon: "aquaculture:catfish_bucket"
+			id: "378AF24FCDEFD6AD"
+			rewards: [
+				{
+					id: "65036E992411BBAB"
+					item: "aquaculture:obsidian_hook"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 700"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "31EBAD470EA62068"
+					silent: true
+					title: "+700 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:swamp"
+					id: "5ABB1B4DFA7B9BD8"
+					title: "Go to the deepest swamp pool"
+					type: "biome"
+				}
+				{
+					id: "2D1721728C12C67C"
+					item: "kubejs:quest_old_whiskers_1"
+					title: "Lure Old Whiskers up from the deep"
+					type: "item"
+				}
+				{
+					id: "1EB1384F32A42EF5"
+					item: "aquaculture:catfish_bucket"
+					title: "Land him alive in a bucket"
+					type: "item"
+				}
+			]
+			title: "Old Whiskers"
+			x: 27.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"208D34EBE2CFA394"
+				"378AF24FCDEFD6AD"
+			]
+			description: ["The semi-final at a lighthouse, against Silas and the champions of two other villages: the first to land the lighthouse keeper's silver mackerel wins. Fish until it bites."]
+			icon: "minecraft:lantern"
+			id: "71EECF65FBBC86CA"
+			rewards: [
+				{
+					id: "4521C19F0EB03542"
+					item: "aquaculture:neptunium_helmet"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 780"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "3AACC0569D996474"
+					silent: true
+					title: "+780 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1D4627C7060E05AB"
+					structure: "#fotf:groups/lighthouses"
+					title: "Go to the lighthouse for the semi-final"
+					type: "structure"
+				}
+				{
+					id: "21E34FE925435207"
+					stage: "fq.skill_fishing.semi_final.enc1"
+					title: "Face Silas at the lighthouse"
+					type: "gamestage"
+				}
+				{
+					id: "201D3F9AAECA8EB5"
+					item: "kubejs:quest_semi_final_2"
+					title: "Land the silver mackerel before the champions"
+					type: "item"
+				}
+			]
+			title: "The Lighthouse Semi-Final"
+			x: 28.5d
 			y: 0.0d
 		}
 	]

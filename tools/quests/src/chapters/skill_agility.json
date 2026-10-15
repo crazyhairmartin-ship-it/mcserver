@@ -1304,6 +1304,212 @@
         }
       ],
       "icon": "icarus:red_feathered_wings"
+    },
+    {
+      "id": "airship_logbook",
+      "title": "The Lost Couriers' Log",
+      "after": [
+        "wings_of_the_post",
+        "main_story:act4_start"
+      ],
+      "text": [
+        "A courier crew vanished chasing a great airship through the clouds. Reach one of the airships and bring back their logbook from among the dangers aboard."
+      ],
+      "tasks": [
+        {
+          "structure": "#airships",
+          "title": "Reach one of the airships"
+        },
+        {
+          "kill": "minecraft:pillager",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "#airships"
+            },
+            "wave": 4,
+            "name": "Airship Guards"
+          },
+          "title": "Fight past the airship's guards"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "#airships"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Couriers' Logbook",
+              "texture": "minecraft:item/written_book"
+            },
+            "found": "The couriers' logbook, wedged behind a locker."
+          },
+          "title": "Find the lost couriers' logbook aboard"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "immersive_aircraft:gyroscope"
+        },
+        {
+          "skill": "agility",
+          "xp": 700
+        }
+      ],
+      "icon": "immersive_aircraft:gyroscope"
+    },
+    {
+      "id": "cargo_airship",
+      "title": "Freight by Air",
+      "after": [
+        "airmail_day"
+      ],
+      "text": [
+        "The far villages want bulk goods, not letters. Build a cargo airship and fly a full hold of building supplies to a village beyond the mountains."
+      ],
+      "tasks": [
+        {
+          "item": "immersive_aircraft:cargo_airship",
+          "crafted": true,
+          "title": "Build a cargo airship"
+        },
+        {
+          "item": "minecraft:stone_bricks",
+          "count": 64,
+          "consume": true,
+          "title": "Load building stone"
+        },
+        {
+          "item": "minecraft:oak_planks",
+          "count": 64,
+          "consume": true,
+          "title": "Load building timber"
+        },
+        {
+          "timed": {
+            "seconds": 1200,
+            "goal": {
+              "structure": "#villages",
+              "label": "the village beyond the mountains",
+              "away": 400
+            },
+            "lines": [
+              "A full hold. Fly it over the mountains."
+            ],
+            "start": "Take off",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Fly the supplies to a village beyond the mountains"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "immersive_aircraft:boiler"
+        },
+        {
+          "skill": "agility",
+          "xp": 720
+        }
+      ],
+      "icon": "immersive_aircraft:cargo_airship"
+    },
+    {
+      "id": "sharestone_network",
+      "title": "Every Village a Stop",
+      "after": [
+        "waystone_route",
+        "cargo_airship"
+      ],
+      "text": [
+        "Make the Couriers' network permanent. Craft sharestones and warp plates and place them in the villages the Couriers serve, all linked to the Reece post office."
+      ],
+      "tasks": [
+        {
+          "item": "waystones:sharestone",
+          "count": 2,
+          "crafted": true,
+          "title": "Craft sharestones for the network"
+        },
+        {
+          "item": "waystones:warp_plate",
+          "count": 2,
+          "crafted": true,
+          "title": "Craft warp plates for the network"
+        },
+        {
+          "structure": "#villages",
+          "title": "Take them out to a village on the route"
+        },
+        {
+          "build": {
+            "blocks": {
+              "waystones:sharestone": 1,
+              "waystones:warp_plate": 1
+            },
+            "radius": 10
+          },
+          "title": "Place a sharestone and a warp plate in the village"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "waystones:warp_stone",
+          "count": 2
+        },
+        {
+          "skill": "agility",
+          "xp": 740
+        }
+      ],
+      "icon": "waystones:sharestone"
+    },
+    {
+      "id": "wings_and_armour",
+      "title": "Elytra on the Route",
+      "after": [
+        "main_story:act4_finale"
+      ],
+      "text": [
+        "Elytra from the End change everything. Wear them in the elytra slot alongside your chestplate and fly the full courier circuit without landing."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:elytra",
+          "title": "Wear the elytra from the End"
+        },
+        {
+          "timed": {
+            "seconds": 1200,
+            "goal": {
+              "structure": "#villages",
+              "label": "the circuit's last village",
+              "away": 800
+            },
+            "lines": [
+              "The full circuit, no landing."
+            ],
+            "start": "Start the circuit",
+            "no": [
+              "teleport",
+              "mounts"
+            ]
+          },
+          "title": "Fly the courier circuit without landing"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:firework_rocket",
+          "count": 32
+        },
+        {
+          "skill": "agility",
+          "xp": 760
+        }
+      ],
+      "icon": "minecraft:elytra"
     }
   ]
 }

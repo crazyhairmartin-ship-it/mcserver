@@ -1048,6 +1048,198 @@
 			x: 19.5d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"64F899FB6A1588EE"
+				"4BCAEC6E3D92B157"
+			]
+			description: ["The hunts ahead need reach. Forge a netherite longbow and a huge quiver of arrows."]
+			icon: "spartanweaponry:netherite_longbow"
+			id: "0F9A20AACA101B91"
+			rewards: [
+				{
+					count: 32
+					id: "23A7472E82CAD134"
+					item: "minecraft:spectral_arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 700"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "5254F6A9ED5A10E6"
+					silent: true
+					title: "+700 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7A23146CE111B1C6"
+					item: "spartanweaponry:netherite_longbow"
+					only_from_crafting: true
+					title: "Forge a netherite longbow"
+					type: "item"
+				}
+				{
+					count: 64L
+					id: "4B0B1283D2A7C049"
+					item: "minecraft:arrow"
+					title: "Fill a quiver for the hunts to come"
+					type: "item"
+				}
+			]
+			title: "A Bow for the End"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0F9A20AACA101B91"]
+			description: ["In the End, enderiophage swarms drift between the islands. Thin them out with arrows and keep your feet on the edge."]
+			icon: "alexsmobs:ender_residue"
+			id: "07F159DD9C375CFC"
+			rewards: [
+				{
+					count: 4
+					id: "3C029EF3FF8338FF"
+					item: "alexsmobs:ender_residue"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 740"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "3126F22132478D22"
+					silent: true
+					title: "+740 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:the_end"
+					id: "368976FAB692A588"
+					title: "Go to the End's drifting islands"
+					type: "dimension"
+				}
+				{
+					entity: "alexsmobs:enderiophage"
+					id: "6DE217A8942ABC70"
+					title: "Thin the swarms with arrows from the island edge"
+					type: "kill"
+					value: 6L
+				}
+				{
+					count: 2L
+					id: "79BF8DD7884E26DB"
+					item: "alexsmobs:ender_residue"
+					title: "Take ender residue from the swarm"
+					type: "item"
+				}
+			]
+			title: "Swarm Out of the Void"
+			x: 22.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["0F9A20AACA101B91"]
+			description: ["First of the legendary beasts: a rhinoceros the size of a hut, its hide stopping ordinary arrows. Find Old Ironhide on the plains and take him."]
+			icon: "naturalist:rhino_spawn_egg"
+			id: "27321C6BEF4A79B0"
+			rewards: [
+				{
+					id: "790D90C688759A0C"
+					item: {
+						Count: 1b
+						id: "minecraft:bone"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"From the first legend.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Ironhide's Horn\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 780"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "0B6DDE443EC51E7B"
+					silent: true
+					title: "+780 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:savanna"
+					id: "506BB07FF5A1FB0A"
+					title: "Find Old Ironhide on the plains"
+					type: "biome"
+				}
+				{
+					id: "2985B7799EA4D12E"
+					stage: "fq.skill_range.ironhide.enc1"
+					title: "Take down Old Ironhide"
+					type: "gamestage"
+				}
+				{
+					id: "1E37DD332913C997"
+					item: "kubejs:quest_ironhide_2"
+					title: "Take Ironhide's Horn"
+					type: "item"
+				}
+			]
+			title: "Old Ironhide"
+			x: 22.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["27321C6BEF4A79B0"]
+			description: ["Second legend: a tarantula hawk that hunts travellers in the desert, faster in the air than any arrow you've fired. Take its wing."]
+			icon: "alexsmobs:tarantula_hawk_wing"
+			id: "18932F20DE9B7A29"
+			rewards: [
+				{
+					id: "6BD209007FF508A6"
+					item: "alexsmobs:tarantula_hawk_wing"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 800"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "17E736D96142C9DA"
+					silent: true
+					title: "+800 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:desert"
+					id: "5CC94A017E29E7AE"
+					title: "Go where the Grey Widow hunts"
+					type: "biome"
+				}
+				{
+					id: "7563B13A4413DB94"
+					stage: "fq.skill_range.grey_widow.enc1"
+					title: "Shoot down the Grey Widow"
+					type: "gamestage"
+				}
+				{
+					id: "5DFE9837620B32C0"
+					item: "alexsmobs:tarantula_hawk_wing"
+					title: "Take its wing"
+					type: "item"
+				}
+			]
+			title: "The Grey Widow"
+			x: 24.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Range path"]
 	title: "The Hunters' Lodge"

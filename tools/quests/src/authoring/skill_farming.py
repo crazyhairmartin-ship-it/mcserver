@@ -195,4 +195,26 @@ ACT3 = [
           rewards=[reward_item("vinery:big_bottle"), skill("farm", 430)]),
 ]
 
-chapter("skill_farming", "The Growers' Co-op", "Farming path", "minecraft:wheat", "skills", 1, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("prize_crops", "Prize Crops", icon="farmersdelight:cabbage_crate", after=["main_story:act4_start", "giant_pumpkin", "eiswein"],
+          text=["The festival's prize table: a crate of every crop the co-op grows, from cabbages and rice to "
+                "barley, strawberries, corn, grapes and Nether grapes."],
+          tasks=[item("farmersdelight:cabbage_crate", title="Fill a crate of cabbages"),
+                 item("farmersdelight:rice_bag", title="Fill a bag of rice"),
+                 item("farm_and_charm:corn_bag", title="Fill a bag of corn"),
+                 item("vinery:red_grape_bag", title="Fill a bag of grapes"),
+                 item("nethervinery:crimson_grape_crate", title="Fill a crate of Nether grapes")],
+          rewards=[reward_item("farm_and_charm:silo_wood"), skill("farm", 650)]),
+
+    quest("market_stall", "The Market Stall", icon="artifacts:villager_hat", after=["prize_crops"],
+          signature="artifacts:villager_hat",
+          text=["Festival market day: run the co-op's stall against the other villages' farmers, selling your best "
+                "produce to villagers for emeralds. Outsell them all and win the market master's hat."],
+          tasks=[{"structure": "#moog_stalls_and_carts", "title": "Find the market stalls"},
+                 item("minecraft:emerald", 24, title="Sell your best produce for emeralds"),
+                 enc(["Best stall at the fair. Take the hat."], entity="minecraft:villager", name="Market Master",
+                     title="Be named the market master's champion")],
+          rewards=[reward_item("artifacts:villager_hat"), skill("farm", 720)]),
+]
+
+chapter("skill_farming", "The Growers' Co-op", "Farming path", "minecraft:wheat", "skills", 1, Q + ACT2 + ACT3 + ACT4)

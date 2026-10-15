@@ -1021,6 +1021,148 @@
         }
       ],
       "icon": "minecraft:writable_book"
+    },
+    {
+      "id": "coliseum",
+      "title": "Champion of the Coliseum",
+      "after": [
+        "arena_ladder",
+        "laid_to_rest",
+        "main_story:act4_start"
+      ],
+      "text": [
+        "The great coliseum holds the hardest ladder of all. Fight to the top with netherite and a Spartan weapon you've mastered."
+      ],
+      "tasks": [
+        {
+          "structure": "dungeons_arise:coliseum",
+          "title": "Enter the great coliseum"
+        },
+        {
+          "kill": "minecraft:vindicator",
+          "count": 10,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:coliseum"
+            },
+            "wave": 5,
+            "name": "Coliseum Champions"
+          },
+          "title": "Win the early rounds of the ladder"
+        },
+        {
+          "kill": "minecraft:ravager",
+          "count": 2,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:coliseum"
+            },
+            "wave": 1,
+            "name": "Coliseum Beasts"
+          },
+          "title": "Win the beast round at the top"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanweaponry:netherite_longsword"
+        },
+        {
+          "skill": "attack",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:netherite_sword"
+    },
+    {
+      "id": "plague_asylum",
+      "title": "The Plague Asylum",
+      "after": [
+        "coliseum"
+      ],
+      "text": [
+        "Nobody who goes into the plague asylum comes out. A legendary bounty is posted on whatever lives there. Clear it."
+      ],
+      "tasks": [
+        {
+          "structure": "dungeons_arise:plague_asylum",
+          "title": "Enter the plague asylum"
+        },
+        {
+          "kill": "minecraft:zombie_villager",
+          "count": 12,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:plague_asylum"
+            },
+            "wave": 6,
+            "name": "Asylum Sick"
+          },
+          "title": "Clear what lives in the asylum"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bountiful:bounty-epic",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 740
+        }
+      ],
+      "icon": "bountiful:bounty-epic"
+    },
+    {
+      "id": "void_contract",
+      "title": "Contract in the Void",
+      "after": [
+        "plague_asylum"
+      ],
+      "text": [
+        "Even the End gets bounties. Clear an End city's towers of shulkers and endermen for a client who won't give their name."
+      ],
+      "tasks": [
+        {
+          "structure": "minecraft:end_city",
+          "title": "Find the End city on the contract"
+        },
+        {
+          "kill": "minecraft:shulker",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "minecraft:end_city"
+            },
+            "wave": 2,
+            "name": "Tower Shulkers"
+          },
+          "title": "Clear the towers of shulkers"
+        },
+        {
+          "kill": "minecraft:enderman",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "minecraft:end_city"
+            },
+            "wave": 2,
+            "name": "City Endermen"
+          },
+          "title": "Clear the streets of endermen"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:shulker_shell",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 780
+        }
+      ],
+      "icon": "minecraft:shulker_shell"
     }
   ]
 }

@@ -977,6 +977,190 @@
         }
       ],
       "icon": "handcrafted:bear_trophy"
+    },
+    {
+      "id": "netherite_longbow",
+      "title": "A Bow for the End",
+      "after": [
+        "trophy_hall",
+        "main_story:act4_start"
+      ],
+      "text": [
+        "The hunts ahead need reach. Forge a netherite longbow and a huge quiver of arrows."
+      ],
+      "tasks": [
+        {
+          "item": "spartanweaponry:netherite_longbow",
+          "crafted": true,
+          "title": "Forge a netherite longbow"
+        },
+        {
+          "item": "minecraft:arrow",
+          "count": 64,
+          "title": "Fill a quiver for the hunts to come"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spectral_arrow",
+          "count": 32
+        },
+        {
+          "skill": "range",
+          "xp": 700
+        }
+      ],
+      "icon": "spartanweaponry:netherite_longbow"
+    },
+    {
+      "id": "void_swarm",
+      "title": "Swarm Out of the Void",
+      "after": [
+        "netherite_longbow"
+      ],
+      "text": [
+        "In the End, enderiophage swarms drift between the islands. Thin them out with arrows and keep your feet on the edge."
+      ],
+      "tasks": [
+        {
+          "dimension": "minecraft:the_end",
+          "title": "Go to the End's drifting islands"
+        },
+        {
+          "kill": "alexsmobs:enderiophage",
+          "count": 6,
+          "title": "Thin the swarms with arrows from the island edge"
+        },
+        {
+          "item": "alexsmobs:ender_residue",
+          "count": 2,
+          "title": "Take ender residue from the swarm"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexsmobs:ender_residue",
+          "count": 4
+        },
+        {
+          "skill": "range",
+          "xp": 740
+        }
+      ],
+      "icon": "alexsmobs:ender_residue"
+    },
+    {
+      "id": "ironhide",
+      "title": "Old Ironhide",
+      "after": [
+        "netherite_longbow"
+      ],
+      "text": [
+        "First of the legendary beasts: a rhinoceros the size of a hut, its hide stopping ordinary arrows. Find Old Ironhide on the plains and take him."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:savanna",
+          "title": "Find Old Ironhide on the plains"
+        },
+        {
+          "encounter": {
+            "entity": "naturalist:rhino",
+            "name": "Old Ironhide",
+            "health": 120,
+            "glow": true,
+            "where": {
+              "biomes": [
+                "minecraft:savanna",
+                "minecraft:plains"
+              ]
+            },
+            "then": "kill",
+            "lines": [
+              "*A thunder of hooves.*"
+            ]
+          },
+          "title": "Take down Old Ironhide"
+        },
+        {
+          "drop": {
+            "from": [
+              "naturalist:rhino"
+            ],
+            "chance": 0.7,
+            "item": {
+              "name": "Ironhide's Horn",
+              "texture": "minecraft:item/bone",
+              "tooltip": "For the lodge wall"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take Ironhide's Horn"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone",
+          "name": "Ironhide's Horn",
+          "lore": [
+            "From the first legend."
+          ]
+        },
+        {
+          "skill": "range",
+          "xp": 780
+        }
+      ],
+      "icon": "naturalist:rhino_spawn_egg"
+    },
+    {
+      "id": "grey_widow",
+      "title": "The Grey Widow",
+      "after": [
+        "ironhide"
+      ],
+      "text": [
+        "Second legend: a tarantula hawk that hunts travellers in the desert, faster in the air than any arrow you've fired. Take its wing."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:desert",
+          "title": "Go where the Grey Widow hunts"
+        },
+        {
+          "encounter": {
+            "entity": "alexsmobs:tarantula_hawk",
+            "name": "The Grey Widow",
+            "health": 100,
+            "glow": true,
+            "where": {
+              "biomes": [
+                "minecraft:desert"
+              ]
+            },
+            "then": "kill",
+            "lines": [
+              "*A shrill whine, high above.*"
+            ]
+          },
+          "title": "Shoot down the Grey Widow"
+        },
+        {
+          "item": "alexsmobs:tarantula_hawk_wing",
+          "title": "Take its wing"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexsmobs:tarantula_hawk_wing"
+        },
+        {
+          "skill": "range",
+          "xp": 800
+        }
+      ],
+      "icon": "alexsmobs:tarantula_hawk_wing"
     }
   ]
 }

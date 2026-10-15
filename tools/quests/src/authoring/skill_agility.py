@@ -282,4 +282,45 @@ ACT3 = [
                    skill("agility", 480)]),
 ]
 
-chapter("skill_agility", "The Couriers", "Agility path", "minecraft:leather_boots", "skills", 9, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("airship_logbook", "The Lost Couriers' Log", icon="immersive_aircraft:gyroscope", after=["wings_of_the_post", "main_story:act4_start"],
+          text=["A courier crew vanished chasing a great airship through the clouds. Reach one of the airships and "
+                "bring back their logbook from among the dangers aboard."],
+          tasks=[{"structure": "#airships", "title": "Reach one of the airships"},
+                 fight("minecraft:pillager", 6, "#airships", "Airship Guards", "Fight past the airship's guards"),
+                 search("#airships", 1, "the Couriers' Logbook", "The couriers' logbook, wedged behind a locker.",
+                        texture="minecraft:item/written_book", title="Find the lost couriers' logbook aboard")],
+          rewards=[reward_item("immersive_aircraft:gyroscope"), skill("agility", 700)]),
+
+    quest("cargo_airship", "Freight by Air", icon="immersive_aircraft:cargo_airship", after=["airmail_day"],
+          text=["The far villages want bulk goods, not letters. Build a cargo airship and fly a full hold of building "
+                "supplies to a village beyond the mountains."],
+          tasks=[item("immersive_aircraft:cargo_airship", crafted=True, title="Build a cargo airship"),
+                 item("minecraft:stone_bricks", 64, consume=True, title="Load building stone"),
+                 item("minecraft:oak_planks", 64, consume=True, title="Load building timber"),
+                 {"timed": {"seconds": 1200, "goal": {"structure": "#villages", "label": "the village beyond the mountains", "away": 400},
+                            "lines": ["A full hold. Fly it over the mountains."], "start": "Take off", "no": ["teleport"]},
+                  "title": "Fly the supplies to a village beyond the mountains"}],
+          rewards=[reward_item("immersive_aircraft:boiler"), skill("agility", 720)]),
+
+    quest("sharestone_network", "Every Village a Stop", icon="waystones:sharestone", after=["waystone_route", "cargo_airship"],
+          text=["Make the Couriers' network permanent. Craft sharestones and warp plates and place them in the "
+                "villages the Couriers serve, all linked to the Reece post office."],
+          tasks=[item("waystones:sharestone", 2, crafted=True, title="Craft sharestones for the network"),
+                 item("waystones:warp_plate", 2, crafted=True, title="Craft warp plates for the network"),
+                 {"structure": "#villages", "title": "Take them out to a village on the route"},
+                 {"build": {"blocks": {"waystones:sharestone": 1, "waystones:warp_plate": 1}, "radius": 10},
+                  "title": "Place a sharestone and a warp plate in the village"}],
+          rewards=[reward_item("waystones:warp_stone", 2), skill("agility", 740)]),
+
+    quest("wings_and_armour", "Elytra on the Route", icon="minecraft:elytra", after=["main_story:act4_finale"],
+          text=["Elytra from the End change everything. Wear them in the elytra slot alongside your chestplate and "
+                "fly the full courier circuit without landing."],
+          tasks=[item("minecraft:elytra", title="Wear the elytra from the End"),
+                 {"timed": {"seconds": 1200, "goal": {"structure": "#villages", "label": "the circuit's last village", "away": 800},
+                            "lines": ["The full circuit, no landing."], "start": "Start the circuit", "no": ["teleport", "mounts"]},
+                  "title": "Fly the courier circuit without landing"}],
+          rewards=[reward_item("minecraft:firework_rocket", 32), skill("agility", 760)]),
+]
+
+chapter("skill_agility", "The Couriers", "Agility path", "minecraft:leather_boots", "skills", 9, Q + ACT2 + ACT3 + ACT4)

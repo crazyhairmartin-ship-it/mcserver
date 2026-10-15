@@ -1273,6 +1273,110 @@
 			x: 16.5d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"4BCAEC6E3D92B157"
+				"424553AA628A1851"
+			]
+			description: ["Legend says all plants began in one valley where the grass is the old green. Find an origin valley and take an origin sapling and origin grass."]
+			icon: "biomesoplenty:origin_sapling"
+			id: "274ACFF8D73BD3EC"
+			rewards: [
+				{
+					id: "0E00ACA88DCBDD08"
+					item: "biomesoplenty:origin_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 650"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "1872953324F910E9"
+					silent: true
+					title: "+650 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:origin_valley"
+					id: "3750411A9190CD05"
+					title: "Find the valley where all plants began"
+					type: "biome"
+				}
+				{
+					id: "56290D66259A6FC6"
+					item: "biomesoplenty:origin_sapling"
+					title: "Take an origin sapling"
+					type: "item"
+				}
+				{
+					id: "738DA1D6E77EA340"
+					item: "biomesoplenty:origin_grass_block"
+					title: "Take origin grass"
+					type: "item"
+				}
+			]
+			title: "The Origin Valley"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2E8CA4F3F9117FF6"
+				"274ACFF8D73BD3EC"
+			]
+			description: ["With the Dragon gone, the Herbalists want the End's plants: chorus flowers, an endbloom and enderphyte, and an empyreal sapling, plus a look at an enderbloom grove."]
+			icon: "minecraft:chorus_flower"
+			id: "1EEF5766472E240A"
+			rewards: [
+				{
+					count: 8
+					id: "0361A4A6067FC0E1"
+					item: "minecraft:chorus_flower"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 720"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "39CE5A22414A651C"
+					silent: true
+					title: "+720 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:the_end"
+					id: "0C267B55FC901651"
+					title: "Go out to the End's islands"
+					type: "dimension"
+				}
+				{
+					count: 2L
+					id: "0B8E1D2EFDAB544B"
+					item: "minecraft:chorus_flower"
+					title: "Gather chorus flowers"
+					type: "item"
+				}
+				{
+					id: "75833724DB74728B"
+					item: "biomesoplenty:empyreal_sapling"
+					title: "Take an empyreal sapling"
+					type: "item"
+				}
+				{
+					id: "35BBDD84C1105704"
+					structure: "mes:enderbloom_grove"
+					title: "Look over an enderbloom grove"
+					type: "structure"
+				}
+			]
+			title: "Flowers at the End"
+			x: 19.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Foraging path"]
 	title: "The Herbalists"

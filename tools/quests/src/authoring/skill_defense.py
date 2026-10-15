@@ -217,4 +217,26 @@ ACT3 = [
           rewards=[reward_item("minecraft:emerald", 24), skill("defense", 600)]),
 ]
 
-chapter("skill_defense", "The Village Watch", "Defense path", "minecraft:shield", "skills", 8, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("netherite_shield", "Netherite Wall", icon="minecraft:netherite_chestplate", after=["great_raid", "main_story:act4_start"],
+          text=["Hale fears what is coming. Forge a netherite tower shield and a full set of netherite armour."],
+          tasks=[item("minecraft:netherite_helmet", title="Upgrade a netherite helmet"),
+                 item("minecraft:netherite_chestplate", title="Upgrade a netherite chestplate"),
+                 item("minecraft:netherite_leggings", title="Upgrade netherite leggings"),
+                 item("minecraft:netherite_boots", title="Upgrade netherite boots"),
+                 item("spartanshields:netherite_tower_shield", crafted=True, title="Forge a netherite tower shield")],
+          rewards=[reward_item("minecraft:netherite_scrap", 2), skill("defense", 700)]),
+
+    quest("last_stand_end", "Stand at World's End", icon="artifacts:chorus_totem", after=["netherite_shield"],
+          signature="artifacts:chorus_totem",
+          text=["Hale's scouts are trapped at an End city's foot. Hold the island against endermen and shulkers "
+                "until they're out. The watch's last-resort relic, the chorus totem, is yours afterwards."],
+          tasks=[{"structure": "minecraft:end_city", "title": "Reach the End city where the scouts are trapped"},
+                 {"timed": {"seconds": 240, "goal": {"hold": {"radius": 20}},
+                            "waves": [{"entity": "minecraft:enderman", "count": 3, "every": 30}, {"entity": "minecraft:shulker", "count": 1, "every": 60}],
+                            "lines": ["The scouts are climbing out. Hold the island!"], "start": "Hold the island"},
+                  "title": "Hold the island until the scouts are out"}],
+          rewards=[reward_item("artifacts:chorus_totem"), skill("defense", 760)]),
+]
+
+chapter("skill_defense", "The Village Watch", "Defense path", "minecraft:shield", "skills", 8, Q + ACT2 + ACT3 + ACT4)

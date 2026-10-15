@@ -253,4 +253,37 @@ ACT3 = [
           rewards=[reward_item("minecraft:enchanted_book", name="Herding", enchant={"minecraft:unbreaking": 3}), skill("taming", 550)]),
 ]
 
-chapter("skill_taming", "The Sanctuary", "Taming path", "minecraft:bone", "skills", 11, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("the_full_herd", "The Full Herd", icon="ultimate_unicorn_mod:diamond_horse_armor", after=["hippocamp", "nightmare", "main_story:act4_start"],
+          text=["Complete the sanctuary's magical herd. Add a kirin, a destrier and a reindeer to the unicorn, "
+                "pegasus, hippocamp and nightmare."],
+          tasks=[{"tame": "ultimate_unicorn_mod:kirin", "title": "Win a kirin's trust"},
+                 {"tame": "ultimate_unicorn_mod:destrier", "title": "Win a destrier's trust"},
+                 {"tame": "ultimate_unicorn_mod:reindeer", "title": "Win a reindeer's trust"}],
+          rewards=[reward_item("minecraft:diamond_horse_armor"), skill("taming", 700)]),
+
+    quest("end_ready_pets", "Pets for the Void", icon="domesticationinnovation:collar_tag", after=["poachers", "main_story:act4_start"],
+          text=["Your companions want to follow you to the End. Enchant their collars so they come back safe."],
+          tasks=[item("domesticationinnovation:collar_tag", crafted=True, title="Make a collar tag for the journey"),
+                 item("minecraft:enchanted_book", 3, title="Gather collar enchantments to keep pets safe in the void")],
+          rewards=[reward_item("sophisticatedbackpacks:magnet_upgrade"), reward_item("minecraft:chorus_fruit", 16), skill("taming", 720)]),
+
+    quest("pet_show", "Best in Show", icon="domesticationinnovation:pet_bed_red", after=["end_ready_pets", "falconry"],
+          text=["The sanctuary hosts a pet show for every village. Enter a companion judged on its collar and bed, "
+                "and beat the shepherds' champion sheepdog."],
+          tasks=[{"structure": "#villages", "title": "Take your companion to the village pet show"},
+                 {"build": {"blocks": {"domesticationinnovation:pet_bed_red": 1}, "radius": 10}, "title": "Set up your companion's bed for the judges"},
+                 enc(["Fine collar. Fine bed. Almost as good as the shepherds' champion."], entity="minecraft:villager", name="Show Judge",
+                     title="Have the judge rank your companion")],
+          rewards=[reward_item("minecraft:red_wool", 2), reward_item("crittersandcompanions:acorn_hat"), skill("taming", 740)]),
+
+    quest("butterfly_atlas", "The Complete Atlas", icon="butterflies:bottled_butterfly_ice", after=["butterfly_house"],
+          text=["Finish the butterfly collection with the rarest wings: the ice butterfly from frozen peaks, the lava "
+                "butterfly from the Nether and the obsidian one from the darkest places."],
+          tasks=[item("butterflies:bottled_butterfly_ice", title="Catch an ice butterfly in the frozen peaks"),
+                 item("butterflies:bottled_butterfly_lava", title="Catch a lava butterfly in the Nether"),
+                 item("butterflies:bottled_butterfly_obsidian", title="Catch an obsidian butterfly in the darkest places")],
+          rewards=[reward_item("alexscaves:gelatin_pink", 4), skill("taming", 760)]),
+]
+
+chapter("skill_taming", "The Sanctuary", "Taming path", "minecraft:bone", "skills", 11, Q + ACT2 + ACT3 + ACT4)

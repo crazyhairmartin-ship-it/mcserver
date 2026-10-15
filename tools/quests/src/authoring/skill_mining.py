@@ -240,4 +240,32 @@ ACT3 = [
           rewards=[reward_item("minecraft:netherite_ingot"), skill("mining", 500)]),
 ]
 
-chapter("skill_mining", "The Miners' Guild", "Mining path", "minecraft:iron_pickaxe", "skills", 0, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("obsidian_cut", "Cutting Obsidian", icon="minecraft:obsidian", after=["main_story:act4_start", "netherite_pick"],
+          text=["For the memorial and the guild's new deep doors: obsidian and crying obsidian, cut cleanly."],
+          tasks=[item("minecraft:obsidian", 64, title="Cut obsidian for the guild's deep doors"),
+                 item("minecraft:crying_obsidian", 16, title="Cut crying obsidian for the memorial")],
+          rewards=[reward_item("minecraft:deepslate_tiles", 64), skill("mining", 700)]),
+
+    quest("great_collapse", "The Great Collapse", icon="minecraft:diamond_block", after=["main_story:act4_start", "forge_cold", "lost_journal"],
+          text=["The deepest rescue: the old mine under Reece gives way at Y -58 with seven miners below. Reach "
+                "each pocket of survivors and bring them all up before the last torch burns down."],
+          tasks=[{"be": {"below_y": -55}, "title": "Dig down to the collapse at Y -58"},
+                 enc(["Here! A pocket of us, behind the gravel!"], then="escort", entity="minecraft:villager", name="Trapped Miner",
+                     to={"place": "reece"}, title="Bring the first pocket of survivors up"),
+                 enc(["Over here! The lava's close!"], then="escort", entity="minecraft:villager", name="Trapped Miner",
+                     to={"place": "reece"}, title="Bring the second pocket of survivors up"),
+                 enc(["The last torch! Hurry!"], then="escort", entity="minecraft:villager", name="Trapped Miner",
+                     to={"place": "reece"}, title="Bring the last pocket of survivors up")],
+          rewards=[reward_item("minecraft:diamond_block"), skill("mining", 780)]),
+
+    quest("memorial", "The Miners' Memorial", icon="minecraft:polished_deepslate", after=["great_collapse", "obsidian_cut"],
+          text=["Build the guild a memorial at the guildhall in Reece: polished deepslate, obsidian, lanterns and a "
+                "sign for every miner lost or saved on your rescues."],
+          tasks=[{"place": "reece"},
+                 {"build": {"blocks": {"minecraft:polished_deepslate": 16, "minecraft:obsidian": 8, "minecraft:lantern": 4, "minecraft:oak_sign": 4},
+                            "radius": 12}, "title": "Raise the memorial at the guildhall"}],
+          rewards=[reward_item("minecraft:oak_sign", name="The Memorial Plaque", lore=["Named for you."]), skill("mining", 800)]),
+]
+
+chapter("skill_mining", "The Miners' Guild", "Mining path", "minecraft:iron_pickaxe", "skills", 0, Q + ACT2 + ACT3 + ACT4)

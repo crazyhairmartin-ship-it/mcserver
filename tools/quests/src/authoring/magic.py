@@ -361,4 +361,43 @@ ACT3 = [
           rewards=[reward_item("irons_spellbooks:fire_cloth", 4), skill("magic", 500)]),
 ]
 
-chapter("magic", "The Arcane Order", "Magic path", "irons_spellbooks:iron_spell_book", "skills", 10, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("ancient_battleground", "The Ancient Battleground", icon="minecraft:iron_sword",
+          after=["nether_citadel"],
+          text=["Ancient Knights still keep watch on a Nether battlefield. Find it and defeat its Keepers, the "
+                "citadel's armoured guardians."],
+          tasks=[{"structure": "irons_spellbooks:ancient_battleground", "title": "Find the Nether battlefield"},
+                 fight("irons_spellbooks:citadel_keeper", 3, "irons_spellbooks:ancient_battleground", "Battlefield Keepers",
+                       "Defeat the Keepers who guard the field", wave=3)],
+          rewards=[reward_item("irons_spellbooks:keeper_flamberge"), skill("magic", 700)]),
+
+    quest("cinder_essence", "Cinder and Soul", icon="irons_spellbooks:cinder_essence", after=["nether_citadel"],
+          text=["Collect eight cinder essence from the citadel's guardians and the cinderous vaults. The forge needs "
+                "a soul of fire."],
+          tasks=[item("irons_spellbooks:cinder_essence", 8, title="Collect cinder essence from the citadel's guardians and vaults")],
+          rewards=[reward_item("irons_spellbooks:cinderous_soul_rune"), skill("magic", 720)]),
+
+    quest("pyrium", "Pyrium", icon="irons_spellbooks:pyrium_ingot", after=["cinder_essence"],
+          text=["Forge pyrium ingots from cinder essence and netherite, the metal the Flamebearer's followers "
+                "worked."],
+          tasks=[item("irons_spellbooks:pyrium_ingot", 2, crafted=True, title="Forge pyrium ingots from cinder essence and netherite")],
+          rewards=[reward_item("irons_spellbooks:pyrium_staff_haft"), skill("magic", 740)]),
+
+    quest("netherite_mage", "Robes of Netherite", icon="irons_spellbooks:netherite_mage_chestplate", after=["pyrium"],
+          text=["Upgrade your mage armour into a full netherite mage set."],
+          tasks=[item("irons_spellbooks:netherite_mage_helmet", title="Upgrade a netherite mage hood"),
+                 item("irons_spellbooks:netherite_mage_chestplate", title="Upgrade a netherite mage robe"),
+                 item("irons_spellbooks:netherite_mage_leggings", title="Upgrade netherite mage leggings"),
+                 item("irons_spellbooks:netherite_mage_boots", title="Upgrade netherite mage boots")],
+          rewards=[reward_item("irons_spellbooks:netherite_spell_book"), skill("magic", 780)]),
+
+    quest("eldritch_pages", "Eldritch Pages", icon="irons_spellbooks:scroll_eldritch", after=["pyrium", "main_story:act4_start"],
+          text=["Orrin says the void holds a school older than fire. Recover an eldritch manuscript from the End and "
+                "learn one eldritch spell from it."],
+          tasks=[{"structure": "mes:manuscript_shrine", "title": "Find the manuscript shrine in the End"},
+                 item("irons_spellbooks:eldritch_manuscript", title="Recover an eldritch manuscript"),
+                 {"cast": {"school": "irons_spellbooks:eldritch"}, "count": 1, "title": "Cast an eldritch spell learned from it"}],
+          rewards=[reward_item("irons_spellbooks:scroll_eldritch"), skill("magic", 800)]),
+]
+
+chapter("magic", "The Arcane Order", "Magic path", "irons_spellbooks:iron_spell_book", "skills", 10, Q + ACT2 + ACT3 + ACT4)

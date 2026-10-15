@@ -1175,6 +1175,154 @@
         }
       ],
       "icon": "minecraft:netherite_pickaxe"
+    },
+    {
+      "id": "obsidian_cut",
+      "title": "Cutting Obsidian",
+      "after": [
+        "main_story:act4_start",
+        "netherite_pick"
+      ],
+      "text": [
+        "For the memorial and the guild's new deep doors: obsidian and crying obsidian, cut cleanly."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:obsidian",
+          "count": 64,
+          "title": "Cut obsidian for the guild's deep doors"
+        },
+        {
+          "item": "minecraft:crying_obsidian",
+          "count": 16,
+          "title": "Cut crying obsidian for the memorial"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:deepslate_tiles",
+          "count": 64
+        },
+        {
+          "skill": "mining",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:obsidian"
+    },
+    {
+      "id": "great_collapse",
+      "title": "The Great Collapse",
+      "after": [
+        "main_story:act4_start",
+        "forge_cold",
+        "lost_journal"
+      ],
+      "text": [
+        "The deepest rescue: the old mine under Reece gives way at Y -58 with seven miners below. Reach each pocket of survivors and bring them all up before the last torch burns down."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "below_y": -55
+          },
+          "title": "Dig down to the collapse at Y -58"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Trapped Miner",
+            "to": {
+              "place": "reece"
+            },
+            "then": "escort",
+            "lines": [
+              "Here! A pocket of us, behind the gravel!"
+            ]
+          },
+          "title": "Bring the first pocket of survivors up"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Trapped Miner",
+            "to": {
+              "place": "reece"
+            },
+            "then": "escort",
+            "lines": [
+              "Over here! The lava's close!"
+            ]
+          },
+          "title": "Bring the second pocket of survivors up"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Trapped Miner",
+            "to": {
+              "place": "reece"
+            },
+            "then": "escort",
+            "lines": [
+              "The last torch! Hurry!"
+            ]
+          },
+          "title": "Bring the last pocket of survivors up"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:diamond_block"
+        },
+        {
+          "skill": "mining",
+          "xp": 780
+        }
+      ],
+      "icon": "minecraft:diamond_block"
+    },
+    {
+      "id": "memorial",
+      "title": "The Miners' Memorial",
+      "after": [
+        "great_collapse",
+        "obsidian_cut"
+      ],
+      "text": [
+        "Build the guild a memorial at the guildhall in Reece: polished deepslate, obsidian, lanterns and a sign for every miner lost or saved on your rescues."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:polished_deepslate": 16,
+              "minecraft:obsidian": 8,
+              "minecraft:lantern": 4,
+              "minecraft:oak_sign": 4
+            },
+            "radius": 12
+          },
+          "title": "Raise the memorial at the guildhall"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:oak_sign",
+          "name": "The Memorial Plaque",
+          "lore": [
+            "Named for you."
+          ]
+        },
+        {
+          "skill": "mining",
+          "xp": 800
+        }
+      ],
+      "icon": "minecraft:polished_deepslate"
     }
   ]
 }

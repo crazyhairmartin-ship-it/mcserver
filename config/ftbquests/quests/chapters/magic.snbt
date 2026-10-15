@@ -1887,6 +1887,214 @@
 			x: 21.0d
 			y: 0.0d
 		}
+		{
+			dependencies: ["41DBE986C41A932C"]
+			description: ["Ancient Knights still keep watch on a Nether battlefield. Find it and defeat its Keepers, the citadel's armoured guardians."]
+			icon: "minecraft:iron_sword"
+			id: "493AAA91A46E0E63"
+			rewards: [
+				{
+					id: "649444C6448AFBCF"
+					item: "irons_spellbooks:keeper_flamberge"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "4672FF94078B28A4"
+					silent: true
+					title: "+700 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "069807FB84D36243"
+					structure: "irons_spellbooks:ancient_battleground"
+					title: "Find the Nether battlefield"
+					type: "structure"
+				}
+				{
+					entity: "irons_spellbooks:citadel_keeper"
+					id: "5D7E21067AA24D39"
+					title: "Defeat the Keepers who guard the field"
+					type: "kill"
+					value: 3L
+				}
+			]
+			title: "The Ancient Battleground"
+			x: 22.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["41DBE986C41A932C"]
+			description: ["Collect eight cinder essence from the citadel's guardians and the cinderous vaults. The forge needs a soul of fire."]
+			icon: "irons_spellbooks:cinder_essence"
+			id: "4702717ADB650C56"
+			rewards: [
+				{
+					id: "49B446522A7F557D"
+					item: "irons_spellbooks:cinderous_soul_rune"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 720"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "755DC9C46D321329"
+					silent: true
+					title: "+720 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "6C0B18ED058596CD"
+					item: "irons_spellbooks:cinder_essence"
+					title: "Collect cinder essence from the citadel's guardians and vaults"
+					type: "item"
+				}
+			]
+			title: "Cinder and Soul"
+			x: 22.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["4702717ADB650C56"]
+			description: ["Forge pyrium ingots from cinder essence and netherite, the metal the Flamebearer's followers worked."]
+			icon: "irons_spellbooks:pyrium_ingot"
+			id: "1CBC1EBBC2A59B12"
+			rewards: [
+				{
+					id: "04D60FBD16A7F461"
+					item: "irons_spellbooks:pyrium_staff_haft"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 740"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "45249BC4606D88CE"
+					silent: true
+					title: "+740 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "716DD885B961F07A"
+					item: "irons_spellbooks:pyrium_ingot"
+					only_from_crafting: true
+					title: "Forge pyrium ingots from cinder essence and netherite"
+					type: "item"
+				}
+			]
+			title: "Pyrium"
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1CBC1EBBC2A59B12"]
+			description: ["Upgrade your mage armour into a full netherite mage set."]
+			icon: "irons_spellbooks:netherite_mage_chestplate"
+			id: "0AD0FA9726AD9791"
+			rewards: [
+				{
+					id: "20C239FD41EA37BD"
+					item: "irons_spellbooks:netherite_spell_book"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 780"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "191E11EF5BD58968"
+					silent: true
+					title: "+780 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "558CA2973ED6A378"
+					item: "irons_spellbooks:netherite_mage_helmet"
+					title: "Upgrade a netherite mage hood"
+					type: "item"
+				}
+				{
+					id: "23AED66BDBD512AD"
+					item: "irons_spellbooks:netherite_mage_chestplate"
+					title: "Upgrade a netherite mage robe"
+					type: "item"
+				}
+				{
+					id: "741FFB6CAC4ACB80"
+					item: "irons_spellbooks:netherite_mage_leggings"
+					title: "Upgrade netherite mage leggings"
+					type: "item"
+				}
+				{
+					id: "62F47BB40BF2A718"
+					item: "irons_spellbooks:netherite_mage_boots"
+					title: "Upgrade netherite mage boots"
+					type: "item"
+				}
+			]
+			title: "Robes of Netherite"
+			x: 25.5d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"1CBC1EBBC2A59B12"
+				"4BCAEC6E3D92B157"
+			]
+			description: ["Orrin says the void holds a school older than fire. Recover an eldritch manuscript from the End and learn one eldritch spell from it."]
+			icon: "irons_spellbooks:scroll_eldritch"
+			id: "152C29866CE2995E"
+			rewards: [
+				{
+					id: "0B54B3B94EBD69FB"
+					item: "irons_spellbooks:scroll_eldritch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 800"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "70C1B5CC834DD296"
+					silent: true
+					title: "+800 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7092CA7F53DFB985"
+					structure: "mes:manuscript_shrine"
+					title: "Find the manuscript shrine in the End"
+					type: "structure"
+				}
+				{
+					id: "58C32414C020A0CC"
+					item: "irons_spellbooks:eldritch_manuscript"
+					title: "Recover an eldritch manuscript"
+					type: "item"
+				}
+				{
+					id: "7A033710D27FDEDA"
+					stage: "fq.magic.eldritch_pages.cast2"
+					title: "Cast an eldritch spell learned from it"
+					type: "gamestage"
+				}
+			]
+			title: "Eldritch Pages"
+			x: 25.5d
+			y: 0.75d
+		}
 	]
 	subtitle: ["Magic path"]
 	title: "The Arcane Order"

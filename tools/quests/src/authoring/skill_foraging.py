@@ -215,4 +215,23 @@ ACT3 = [
           rewards=[reward_item("biomesoplenty:magic_sapling", 2), skill("forage", 460)]),
 ]
 
-chapter("skill_foraging", "The Herbalists", "Foraging path", "minecraft:oak_sapling", "skills", 4, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("origin_valley", "The Origin Valley", icon="biomesoplenty:origin_sapling", after=["main_story:act4_start", "mystic_trees"],
+          text=["Legend says all plants began in one valley where the grass is the old green. Find an origin valley "
+                "and take an origin sapling and origin grass."],
+          tasks=[{"biome": "biomesoplenty:origin_valley", "title": "Find the valley where all plants began"},
+                 item("biomesoplenty:origin_sapling", title="Take an origin sapling"),
+                 item("biomesoplenty:origin_grass_block", title="Take origin grass")],
+          rewards=[reward_item("biomesoplenty:origin_sapling"), skill("forage", 650)]),
+
+    quest("end_flora", "Flowers at the End", icon="minecraft:chorus_flower", after=["main_story:act4_finale", "origin_valley"],
+          text=["With the Dragon gone, the Herbalists want the End's plants: chorus flowers, an endbloom and "
+                "enderphyte, and an empyreal sapling, plus a look at an enderbloom grove."],
+          tasks=[{"dimension": "minecraft:the_end", "title": "Go out to the End's islands"},
+                 item("minecraft:chorus_flower", 2, title="Gather chorus flowers"),
+                 item("biomesoplenty:empyreal_sapling", title="Take an empyreal sapling"),
+                 {"structure": "mes:enderbloom_grove", "title": "Look over an enderbloom grove"}],
+          rewards=[reward_item("minecraft:chorus_flower", 8), skill("forage", 720)]),
+]
+
+chapter("skill_foraging", "The Herbalists", "Foraging path", "minecraft:oak_sapling", "skills", 4, Q + ACT2 + ACT3 + ACT4)

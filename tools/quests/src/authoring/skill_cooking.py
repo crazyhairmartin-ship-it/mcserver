@@ -211,4 +211,33 @@ ACT3 = [
           rewards=[reward_item("herbalbrews:flask"), reward_item("minecraft:leather_helmet", name="The Traveller's Top Hat"), skill("cook", 440)]),
 ]
 
-chapter("skill_cooking", "The Tavern Keepers", "Cooking path", "farmersdelight:cooking_pot", "skills", 3, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("feast_blocks", "The Wedding Feast", icon="farmersdelight:roast_chicken_block", after=["main_story:act4_start", "candlelit_dinner"],
+          text=["The couple from the candlelit dinner are marrying. Cook the feast centrepieces, a roast chicken, "
+                "honey-glazed ham, shepherd's pie and stuffed pumpkin, and carry them whole to the wedding."],
+          tasks=[item("farmersdelight:roast_chicken_block", consume=True, title="Cook a roast chicken centrepiece"),
+                 item("farmersdelight:honey_glazed_ham_block", consume=True, title="Cook a honey-glazed ham"),
+                 item("farmersdelight:shepherds_pie_block", consume=True, title="Cook a shepherd's pie"),
+                 item("farmersdelight:stuffed_pumpkin_block", consume=True, title="Cook a stuffed pumpkin"),
+                 {"structure": "#villages", "title": "Carry the feast whole to the wedding"}],
+          rewards=[reward_item("minecraft:cake", 2), skill("cook", 650)]),
+
+    quest("everlasting_recipe", "The Everlasting Recipe", icon="artifacts:everlasting_beef", after=["cook_off", "whiskey"],
+          signature="artifacts:everlasting_beef",
+          text=["The Reece tavern's own legend: a beef dish that never empties. Piece the recipe together from three "
+                "taverns' keepers, then cook its chain to earn it."],
+          tasks=[{"structure": "#taverns", "title": "Visit a tavern keeper for a piece of the recipe"},
+                 item("farm_and_charm:minced_beef", 4, consume=True, title="Cook the chain's first link: minced beef"),
+                 item("farm_and_charm:beef_patty_with_vegetables", consume=True, title="Cook the beef patty"),
+                 item("candlelight:beef_wellington", consume=True, title="Cook the chain's last link: beef wellington")],
+          rewards=[reward_item("artifacts:everlasting_beef"), skill("cook", 720)]),
+
+    quest("netherite_brewery", "The Master Brewer", icon="brewery:netherite_brewingstation", after=["everlasting_recipe"],
+          text=["Build a netherite brewing station and brew the whiskeys and dark brew for the banquet's toast."],
+          tasks=[item("brewery:netherite_brewingstation", crafted=True, title="Build a netherite brewing station"),
+                 item("brewery:whiskey_lilitusinglemalt", title="Brew a single malt for the toast"),
+                 item("brewery:dark_brew", title="Brew the dark brew for the toast")],
+          rewards=[reward_item("brewery:brewfest_regalia"), skill("cook", 780)]),
+]
+
+chapter("skill_cooking", "The Tavern Keepers", "Cooking path", "farmersdelight:cooking_pot", "skills", 3, Q + ACT2 + ACT3 + ACT4)

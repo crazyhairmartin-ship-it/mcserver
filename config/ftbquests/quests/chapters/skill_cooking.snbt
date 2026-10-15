@@ -770,7 +770,7 @@
 			]
 			title: "Wine Pairing"
 			x: 12.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["7E6BCEB6B9DC90A2"]
@@ -1304,6 +1304,175 @@
 			]
 			title: "A Cup for the Sick"
 			x: 15.0d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"4BCAEC6E3D92B157"
+				"308F015D470DE740"
+			]
+			description: ["The couple from the candlelit dinner are marrying. Cook the feast centrepieces, a roast chicken, honey-glazed ham, shepherd's pie and stuffed pumpkin, and carry them whole to the wedding."]
+			icon: "farmersdelight:roast_chicken_block"
+			id: "62E97EC99BC6DD25"
+			rewards: [
+				{
+					count: 2
+					id: "27FFCED834AE4C46"
+					item: "minecraft:cake"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 650"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "07380FB4C00820A9"
+					silent: true
+					title: "+650 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "14DF9F4C9B7D5AC9"
+					item: "farmersdelight:roast_chicken_block"
+					title: "Cook a roast chicken centrepiece"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "3089DA641B89708F"
+					item: "farmersdelight:honey_glazed_ham_block"
+					title: "Cook a honey-glazed ham"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "674A764982C52F91"
+					item: "farmersdelight:shepherds_pie_block"
+					title: "Cook a shepherd's pie"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "363932A3452A0CD8"
+					item: "farmersdelight:stuffed_pumpkin_block"
+					title: "Cook a stuffed pumpkin"
+					type: "item"
+				}
+				{
+					id: "05C635C24BFFA691"
+					structure: "#fotf:groups/villages"
+					title: "Carry the feast whole to the wedding"
+					type: "structure"
+				}
+			]
+			title: "The Wedding Feast"
+			x: 12.0d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"514CC04A75B1D874"
+				"0FF22298E16E6EF3"
+			]
+			description: ["The Reece tavern's own legend: a beef dish that never empties. Piece the recipe together from three taverns' keepers, then cook its chain to earn it."]
+			icon: "artifacts:everlasting_beef"
+			id: "395753B562341B35"
+			rewards: [
+				{
+					id: "790F6D39FB9B042F"
+					item: "artifacts:everlasting_beef"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 720"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "3D4BA2F1EA4B896A"
+					silent: true
+					title: "+720 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "516B3867A1D41AE2"
+					structure: "#fotf:groups/taverns"
+					title: "Visit a tavern keeper for a piece of the recipe"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "2691AAE96040A9E7"
+					item: "farm_and_charm:minced_beef"
+					title: "Cook the chain's first link: minced beef"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "6CE6806CD1436E41"
+					item: "farm_and_charm:beef_patty_with_vegetables"
+					title: "Cook the beef patty"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "30106FFD40C2CD89"
+					item: "candlelight:beef_wellington"
+					title: "Cook the chain's last link: beef wellington"
+					type: "item"
+				}
+			]
+			title: "The Everlasting Recipe"
+			x: 15.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["395753B562341B35"]
+			description: ["Build a netherite brewing station and brew the whiskeys and dark brew for the banquet's toast."]
+			icon: "brewery:netherite_brewingstation"
+			id: "5D9E4111B6100B45"
+			rewards: [
+				{
+					id: "5432E5E0B25907F4"
+					item: "brewery:brewfest_regalia"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 780"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "6093B54BE810E4C0"
+					silent: true
+					title: "+780 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "61BDFD6475EF8B0B"
+					item: "brewery:netherite_brewingstation"
+					only_from_crafting: true
+					title: "Build a netherite brewing station"
+					type: "item"
+				}
+				{
+					id: "1406CF94B4B8FFD6"
+					item: "brewery:whiskey_lilitusinglemalt"
+					title: "Brew a single malt for the toast"
+					type: "item"
+				}
+				{
+					id: "39934585BE75CEAB"
+					item: "brewery:dark_brew"
+					title: "Brew the dark brew for the toast"
+					type: "item"
+				}
+			]
+			title: "The Master Brewer"
+			x: 16.5d
 			y: 0.0d
 		}
 	]

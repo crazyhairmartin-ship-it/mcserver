@@ -211,4 +211,30 @@ ACT3 = [
           rewards=[reward_item("minecraft:iron_ingot", name="Ash's Old Badge", lore=["Worn through forty contracts."]), skill("attack", 550)]),
 ]
 
-chapter("skill_attack", "The Bounty Office", "Attack path", "minecraft:iron_sword", "skills", 6, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("coliseum", "Champion of the Coliseum", icon="minecraft:netherite_sword",
+          after=["arena_ladder", "laid_to_rest", "main_story:act4_start"],
+          text=["The great coliseum holds the hardest ladder of all. Fight to the top with netherite and a Spartan "
+                "weapon you've mastered."],
+          tasks=[{"structure": "dungeons_arise:coliseum", "title": "Enter the great coliseum"},
+                 fight("minecraft:vindicator", 10, "dungeons_arise:coliseum", "Coliseum Champions", "Win the early rounds of the ladder", wave=5),
+                 fight("minecraft:ravager", 2, "dungeons_arise:coliseum", "Coliseum Beasts", "Win the beast round at the top", wave=1)],
+          rewards=[reward_item("spartanweaponry:netherite_longsword"), skill("attack", 700)]),
+
+    quest("plague_asylum", "The Plague Asylum", icon="bountiful:bounty-epic", after=["coliseum"],
+          text=["Nobody who goes into the plague asylum comes out. A legendary bounty is posted on whatever lives "
+                "there. Clear it."],
+          tasks=[{"structure": "dungeons_arise:plague_asylum", "title": "Enter the plague asylum"},
+                 fight("minecraft:zombie_villager", 12, "dungeons_arise:plague_asylum", "Asylum Sick", "Clear what lives in the asylum", wave=6)],
+          rewards=[reward_item("bountiful:bounty-epic", 2), skill("attack", 740)]),
+
+    quest("void_contract", "Contract in the Void", icon="minecraft:shulker_shell", after=["plague_asylum"],
+          text=["Even the End gets bounties. Clear an End city's towers of shulkers and endermen for a client who "
+                "won't give their name."],
+          tasks=[{"structure": "minecraft:end_city", "title": "Find the End city on the contract"},
+                 fight("minecraft:shulker", 4, "minecraft:end_city", "Tower Shulkers", "Clear the towers of shulkers", wave=2),
+                 fight("minecraft:enderman", 4, "minecraft:end_city", "City Endermen", "Clear the streets of endermen", wave=2)],
+          rewards=[reward_item("minecraft:shulker_shell", 4), skill("attack", 780)]),
+]
+
+chapter("skill_attack", "The Bounty Office", "Attack path", "minecraft:iron_sword", "skills", 6, Q + ACT2 + ACT3 + ACT4)

@@ -809,7 +809,7 @@
 			]
 			title: "Lights in the Meadow"
 			x: 6.0d
-			y: -2.25d
+			y: -3.0d
 		}
 		{
 			dependencies: ["3E29F1CF1159CD62"]
@@ -908,7 +908,7 @@
 			]
 			title: "The Falconer's Glove"
 			x: 6.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["494FC827FD995F41"]
@@ -954,7 +954,7 @@
 			]
 			title: "The Elephant Caravan"
 			x: 6.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["480DD6F8670C1468"]
@@ -1088,7 +1088,7 @@
 			]
 			title: "Silver Hoofprints"
 			x: 6.0d
-			y: 2.25d
+			y: 1.5d
 		}
 		{
 			dependencies: [
@@ -1239,7 +1239,7 @@
 			]
 			title: "Horse of the Sea"
 			x: 9.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1281,7 +1281,7 @@
 			]
 			title: "The Nightmare"
 			x: 9.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["3E29F1CF1159CD62"]
@@ -1396,6 +1396,205 @@
 			title: "Poachers at the Gate"
 			x: 7.5d
 			y: 1.5d
+		}
+		{
+			dependencies: [
+				"17B6E4E3436145D0"
+				"1285CEE70F49F108"
+				"4BCAEC6E3D92B157"
+			]
+			description: ["Complete the sanctuary's magical herd. Add a kirin, a destrier and a reindeer to the unicorn, pegasus, hippocamp and nightmare."]
+			icon: "ultimate_unicorn_mod:diamond_horse_armor"
+			id: "4458555BAD71CF43"
+			rewards: [
+				{
+					id: "4DDB979513BA8675"
+					item: "minecraft:diamond_horse_armor"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 700"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "7F4CA196FE211B0A"
+					silent: true
+					title: "+700 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0E8FDE11BD42FF57"
+					stage: "fq.skill_taming.the_full_herd.tame0"
+					title: "Win a kirin's trust"
+					type: "gamestage"
+				}
+				{
+					id: "3D2467C7D32B605E"
+					stage: "fq.skill_taming.the_full_herd.tame1"
+					title: "Win a destrier's trust"
+					type: "gamestage"
+				}
+				{
+					id: "4989639CE8313C8B"
+					stage: "fq.skill_taming.the_full_herd.tame2"
+					title: "Win a reindeer's trust"
+					type: "gamestage"
+				}
+			]
+			title: "The Full Herd"
+			x: 10.5d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"03A5D36255883B02"
+				"4BCAEC6E3D92B157"
+			]
+			description: ["Your companions want to follow you to the End. Enchant their collars so they come back safe."]
+			icon: "domesticationinnovation:collar_tag"
+			id: "2C1BACD6482038BA"
+			rewards: [
+				{
+					id: "6D75A2BA118F6970"
+					item: "sophisticatedbackpacks:magnet_upgrade"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "58024751AC4A8006"
+					item: "minecraft:chorus_fruit"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 720"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "01F04185E34CFADA"
+					silent: true
+					title: "+720 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7BB8F7E876C433BD"
+					item: "domesticationinnovation:collar_tag"
+					only_from_crafting: true
+					title: "Make a collar tag for the journey"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "1C69DD36C2D3D5C2"
+					item: "minecraft:enchanted_book"
+					title: "Gather collar enchantments to keep pets safe in the void"
+					type: "item"
+				}
+			]
+			title: "Pets for the Void"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"2C1BACD6482038BA"
+				"4B2F17FA273E5290"
+			]
+			description: ["The sanctuary hosts a pet show for every village. Enter a companion judged on its collar and bed, and beat the shepherds' champion sheepdog."]
+			icon: "domesticationinnovation:pet_bed_red"
+			id: "31102AC2F67357E5"
+			rewards: [
+				{
+					count: 2
+					id: "3C113EB142E2F617"
+					item: "minecraft:red_wool"
+					type: "item"
+				}
+				{
+					id: "45365231BA845380"
+					item: "crittersandcompanions:acorn_hat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 740"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "7482D8B1EAEC7210"
+					silent: true
+					title: "+740 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3FA8C62608BEC16C"
+					structure: "#fotf:groups/villages"
+					title: "Take your companion to the village pet show"
+					type: "structure"
+				}
+				{
+					id: "434673CCE2BD2DE8"
+					stage: "fq.skill_taming.pet_show.build1"
+					title: "Set up your companion's bed for the judges"
+					type: "gamestage"
+				}
+				{
+					id: "47D1BC413CCA2CF5"
+					stage: "fq.skill_taming.pet_show.enc2"
+					title: "Have the judge rank your companion"
+					type: "gamestage"
+				}
+			]
+			title: "Best in Show"
+			x: 10.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["624E8EFB92BDAE88"]
+			description: ["Finish the butterfly collection with the rarest wings: the ice butterfly from frozen peaks, the lava butterfly from the Nether and the obsidian one from the darkest places."]
+			icon: "butterflies:bottled_butterfly_ice"
+			id: "0AA362F1D26DA6C1"
+			rewards: [
+				{
+					count: 4
+					id: "05B07A49B3F4FB49"
+					item: "alexscaves:gelatin_pink"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 760"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "43B5878441CCEDDF"
+					silent: true
+					title: "+760 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3733581294B9AEB1"
+					item: "butterflies:bottled_butterfly_ice"
+					title: "Catch an ice butterfly in the frozen peaks"
+					type: "item"
+				}
+				{
+					id: "46072B5A4E5D0877"
+					item: "butterflies:bottled_butterfly_lava"
+					title: "Catch a lava butterfly in the Nether"
+					type: "item"
+				}
+				{
+					id: "0B30ACFED8BE5385"
+					item: "butterflies:bottled_butterfly_obsidian"
+					title: "Catch an obsidian butterfly in the darkest places"
+					type: "item"
+				}
+			]
+			title: "The Complete Atlas"
+			x: 6.0d
+			y: 3.0d
 		}
 	]
 	subtitle: ["Taming path"]

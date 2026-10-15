@@ -272,4 +272,34 @@ ACT3 = [
           rewards=[reward_item("minecraft:prismarine", 32), reward_item("minecraft:cod", 16), skill("craft", 500)]),
 ]
 
-chapter("skill_crafting", "The Crafters' Guild", "Crafting path", "minecraft:crafting_table", "skills", 5, Q + ACT2 + ACT3)
+ACT4 = [
+    quest("trophy_room", "The Guild's Trophies", icon="handcrafted:bear_trophy", after=["guild_uniform", "main_story:act4_start"],
+          text=["Every great guild hall has trophies. Make trophies from what you've hunted (a bear, a blaze, a "
+                "skeleton) and mount them in the hall."],
+          tasks=[item("handcrafted:bear_trophy", crafted=True, title="Make a bear trophy"),
+                 item("handcrafted:blaze_trophy", crafted=True, title="Make a blaze trophy"),
+                 item("handcrafted:skeleton_trophy", crafted=True, title="Make a skeleton trophy"),
+                 {"place": "reece"},
+                 {"build": {"blocks": {"handcrafted:bear_trophy": 1, "handcrafted:blaze_trophy": 1, "handcrafted:skeleton_trophy": 1}, "radius": 12},
+                  "title": "Mount them in the guild hall"}],
+          rewards=[reward_item("minecraft:experience_bottle", 16), skill("craft", 700)]),
+
+    quest("guild_hall", "The Guild Hall", icon="minecraft:white_banner", after=["trophy_room", "wireless_workshop", "tower_lift"],
+          text=["Build the guild hall from the founder's last blueprint: furnished with all three furniture "
+                "traditions, a stage, the warehouse below and the trophy wall."],
+          tasks=[{"place": "reece"},
+                 {"build": {"blocks": {"handcrafted:oak_table": 2, "another_furniture:oak_bench": 4, "furniture:oak_bench": 2,
+                                       "supplementaries:bunting": 4, "obscuras_storage:crafting_terminal": 1, "handcrafted:bear_trophy": 1},
+                            "radius": 12}, "title": "Raise the guild hall, furnished in all three traditions"}],
+          rewards=[reward_item("minecraft:white_banner", name="The Guild Banner"), skill("craft", 740)]),
+
+    quest("endless_pack", "A Pack That Never Wears Out", icon="sophisticatedbackpacks:netherite_backpack", after=["pack_upgrades"],
+          text=["Finish your masterwork backpack: netherite tier with an everlasting upgrade and an inception "
+                "upgrade."],
+          tasks=[item("sophisticatedbackpacks:netherite_backpack", crafted=True, title="Forge a netherite backpack"),
+                 item("sophisticatedbackpacks:everlasting_upgrade", crafted=True, title="Fit an everlasting upgrade"),
+                 item("sophisticatedbackpacks:inception_upgrade", crafted=True, title="Fit an inception upgrade")],
+          rewards=[reward_item("sophisticatedbackpacks:advanced_tool_swapper_upgrade"), skill("craft", 760)]),
+]
+
+chapter("skill_crafting", "The Crafters' Guild", "Crafting path", "minecraft:crafting_table", "skills", 5, Q + ACT2 + ACT3 + ACT4)

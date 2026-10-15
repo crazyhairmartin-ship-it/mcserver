@@ -988,6 +988,107 @@
 			x: 24.0d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"575CA3D7FE794BA2"
+				"4BCAEC6E3D92B157"
+			]
+			description: ["Hale fears what is coming. Forge a netherite tower shield and a full set of netherite armour."]
+			icon: "minecraft:netherite_chestplate"
+			id: "6A896F62F387C307"
+			rewards: [
+				{
+					count: 2
+					id: "35E48CB634C29EF1"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 700"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "5DF58DB7999FD8AC"
+					silent: true
+					title: "+700 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "615531381B49D55B"
+					item: "minecraft:netherite_helmet"
+					title: "Upgrade a netherite helmet"
+					type: "item"
+				}
+				{
+					id: "456767B34170EBC1"
+					item: "minecraft:netherite_chestplate"
+					title: "Upgrade a netherite chestplate"
+					type: "item"
+				}
+				{
+					id: "6A80941AEC20D464"
+					item: "minecraft:netherite_leggings"
+					title: "Upgrade netherite leggings"
+					type: "item"
+				}
+				{
+					id: "2B299F2E2BCF048F"
+					item: "minecraft:netherite_boots"
+					title: "Upgrade netherite boots"
+					type: "item"
+				}
+				{
+					id: "31E2D7C4C5D5C959"
+					item: "spartanshields:netherite_tower_shield"
+					only_from_crafting: true
+					title: "Forge a netherite tower shield"
+					type: "item"
+				}
+			]
+			title: "Netherite Wall"
+			x: 25.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6A896F62F387C307"]
+			description: ["Hale's scouts are trapped at an End city's foot. Hold the island against endermen and shulkers until they're out. The watch's last-resort relic, the chorus totem, is yours afterwards."]
+			icon: "artifacts:chorus_totem"
+			id: "09F9BD148C5FF73B"
+			rewards: [
+				{
+					id: "74F11A0E74C5C510"
+					item: "artifacts:chorus_totem"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 760"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "0E1719A676D09F70"
+					silent: true
+					title: "+760 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4694709DF0735260"
+					structure: "minecraft:end_city"
+					title: "Reach the End city where the scouts are trapped"
+					type: "structure"
+				}
+				{
+					id: "1855B62B9B9830CD"
+					stage: "fq.skill_defense.last_stand_end.timed1"
+					title: "Hold the island until the scouts are out"
+					type: "gamestage"
+				}
+			]
+			title: "Stand at World's End"
+			x: 27.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Defense path"]
 	title: "The Village Watch"

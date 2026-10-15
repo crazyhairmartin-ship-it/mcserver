@@ -1074,6 +1074,146 @@
 			x: 18.0d
 			y: 1.5d
 		}
+		{
+			dependencies: [
+				"75B6A620059115D4"
+				"3BA20A5E75FA1853"
+				"4BCAEC6E3D92B157"
+			]
+			description: ["The great coliseum holds the hardest ladder of all. Fight to the top with netherite and a Spartan weapon you've mastered."]
+			icon: "minecraft:netherite_sword"
+			id: "7A14EE14A9014E48"
+			rewards: [
+				{
+					id: "3D87681169566BCB"
+					item: "spartanweaponry:netherite_longsword"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 700"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0A7CB17B1A37C2C9"
+					silent: true
+					title: "+700 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "576D39DD0BC64CB2"
+					structure: "dungeons_arise:coliseum"
+					title: "Enter the great coliseum"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:vindicator"
+					id: "285DBC4034996CE2"
+					title: "Win the early rounds of the ladder"
+					type: "kill"
+					value: 10L
+				}
+				{
+					entity: "minecraft:ravager"
+					id: "7DF56216C05B2F7E"
+					title: "Win the beast round at the top"
+					type: "kill"
+					value: 2L
+				}
+			]
+			title: "Champion of the Coliseum"
+			x: 19.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7A14EE14A9014E48"]
+			description: ["Nobody who goes into the plague asylum comes out. A legendary bounty is posted on whatever lives there. Clear it."]
+			icon: "bountiful:bounty-epic"
+			id: "0B4EBBFD7E292729"
+			rewards: [
+				{
+					count: 2
+					id: "6171BDF4CE9D63D4"
+					item: "bountiful:bounty-epic"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 740"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "3FF215AD051F1E4C"
+					silent: true
+					title: "+740 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5019C9267B0F6F2F"
+					structure: "dungeons_arise:plague_asylum"
+					title: "Enter the plague asylum"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:zombie_villager"
+					id: "29F74DC85D7E4AD7"
+					title: "Clear what lives in the asylum"
+					type: "kill"
+					value: 12L
+				}
+			]
+			title: "The Plague Asylum"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0B4EBBFD7E292729"]
+			description: ["Even the End gets bounties. Clear an End city's towers of shulkers and endermen for a client who won't give their name."]
+			icon: "minecraft:shulker_shell"
+			id: "79D6CDFC1981BCE7"
+			rewards: [
+				{
+					count: 4
+					id: "522BFFE36AB3A428"
+					item: "minecraft:shulker_shell"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 780"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "54D011ACE6FB22F7"
+					silent: true
+					title: "+780 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "69A3E036D3E5C338"
+					structure: "minecraft:end_city"
+					title: "Find the End city on the contract"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:shulker"
+					id: "772883388889F4F9"
+					title: "Clear the towers of shulkers"
+					type: "kill"
+					value: 4L
+				}
+				{
+					entity: "minecraft:enderman"
+					id: "4AD854DD53A022B7"
+					title: "Clear the streets of endermen"
+					type: "kill"
+					value: 4L
+				}
+			]
+			title: "Contract in the Void"
+			x: 22.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Attack path"]
 	title: "The Bounty Office"

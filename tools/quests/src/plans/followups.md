@@ -268,6 +268,25 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - end:salvage_the_scraps: needs sifting three different structures; written as a search of three scrap heaps
 - end:null_space: needs flying over the biomes; written as standing in each
 - end:the_sealed_citadel: needs noting the Ender Golems; written as observing one
+- skill_attack:coliseum: needs a ladder of rounds; written as two spawned fights
+- skill_defense:last_stand_end: needs the scouts to be rescued; written as a timed hold at an End city
+- skill_range:ironhide: needs the beast hiding on the plains; written as a savanna rhino encounter and a quest-drop horn
+- skill_range:grey_widow: needs the hawk to be faster than arrows; written as a desert encounter and the wing carried
+- skill_taming:end_ready_pets: needs specific collar enchantments (Void Cloud, Tethered Teleport, Fireproof); written as enchanted books carried
+- skill_taming:pet_show: needs the pet judged against the sheepdog; written as a village bed build and a judge encounter
+- skill_taming:butterfly_atlas: needs the rarest butterflies; written as three bottled butterflies
+- skill_agility:cargo_airship: needs a full hold; written as supplies consumed and a timed flight
+- skill_agility:sharestone_network: needs a stop in every village; written as one village build
+- skill_agility:wings_and_armour: needs five villages without landing; written as a timed flight to a far village
+- skill_crafting:guild_hall: needs the whole hall; written as a furniture and terminal build
+- magic:eldritch_pages: needs learning a spell from the manuscript; written as the manuscript carried and an eldritch cast
+- skill_cooking:feast_blocks: needs carrying the feast whole to the wedding; written as dishes consumed and a village
+- skill_cooking:everlasting_recipe: needs pieces from three taverns' keepers; written as a tavern visit and the dishes cooked
+- skill_farming:prize_crops: needs a crate of every crop; written as five crates and bags
+- skill_farming:market_stall: needs outselling other farmers; written as emeralds earned and a market master encounter
+- skill_fishing:almanac: needs every species; written as eight species caught
+- skill_fishing:semi_final: needs beating two other champions; written as Silas's encounter and a prize-fish drop
+- skill_mining:great_collapse: needs reaching seven pockets of survivors; written as three escorts from the collapse
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

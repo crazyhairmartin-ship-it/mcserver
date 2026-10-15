@@ -966,6 +966,93 @@
         }
       ],
       "icon": "vinery:red_wine"
+    },
+    {
+      "id": "prize_crops",
+      "title": "Prize Crops",
+      "after": [
+        "main_story:act4_start",
+        "giant_pumpkin",
+        "eiswein"
+      ],
+      "text": [
+        "The festival's prize table: a crate of every crop the co-op grows, from cabbages and rice to barley, strawberries, corn, grapes and Nether grapes."
+      ],
+      "tasks": [
+        {
+          "item": "farmersdelight:cabbage_crate",
+          "title": "Fill a crate of cabbages"
+        },
+        {
+          "item": "farmersdelight:rice_bag",
+          "title": "Fill a bag of rice"
+        },
+        {
+          "item": "farm_and_charm:corn_bag",
+          "title": "Fill a bag of corn"
+        },
+        {
+          "item": "vinery:red_grape_bag",
+          "title": "Fill a bag of grapes"
+        },
+        {
+          "item": "nethervinery:crimson_grape_crate",
+          "title": "Fill a crate of Nether grapes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farm_and_charm:silo_wood"
+        },
+        {
+          "skill": "farm",
+          "xp": 650
+        }
+      ],
+      "icon": "farmersdelight:cabbage_crate"
+    },
+    {
+      "id": "market_stall",
+      "title": "The Market Stall",
+      "after": [
+        "prize_crops"
+      ],
+      "text": [
+        "Festival market day: run the co-op's stall against the other villages' farmers, selling your best produce to villagers for emeralds. Outsell them all and win the market master's hat."
+      ],
+      "tasks": [
+        {
+          "structure": "#moog_stalls_and_carts",
+          "title": "Find the market stalls"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 24,
+          "title": "Sell your best produce for emeralds"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Market Master",
+            "then": "talk",
+            "lines": [
+              "Best stall at the fair. Take the hat."
+            ]
+          },
+          "title": "Be named the market master's champion"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:villager_hat"
+        },
+        {
+          "skill": "farm",
+          "xp": 720
+        }
+      ],
+      "icon": "artifacts:villager_hat",
+      "signature": "artifacts:villager_hat"
     }
   ]
 }

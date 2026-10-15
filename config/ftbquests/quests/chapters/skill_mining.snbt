@@ -1129,7 +1129,7 @@
 			]
 			title: "The Lost Expedition's Journal"
 			x: 18.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -1189,7 +1189,7 @@
 			]
 			title: "The Cold Forge"
 			x: 18.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -1330,6 +1330,160 @@
 			title: "Netherite Pick"
 			x: 16.5d
 			y: 2.25d
+		}
+		{
+			dependencies: [
+				"4BCAEC6E3D92B157"
+				"2EEE2CA1829AA4BD"
+			]
+			description: ["For the memorial and the guild's new deep doors: obsidian and crying obsidian, cut cleanly."]
+			icon: "minecraft:obsidian"
+			id: "3C3B936D408940C9"
+			rewards: [
+				{
+					count: 64
+					id: "041C8CF28135D6DA"
+					item: "minecraft:deepslate_tiles"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 700"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "167A1B3F2EC144E2"
+					silent: true
+					title: "+700 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "71185F5D8F394FDE"
+					item: "minecraft:obsidian"
+					title: "Cut obsidian for the guild's deep doors"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "6F7D53402762B54E"
+					item: "minecraft:crying_obsidian"
+					title: "Cut crying obsidian for the memorial"
+					type: "item"
+				}
+			]
+			title: "Cutting Obsidian"
+			x: 18.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"4BCAEC6E3D92B157"
+				"42EC23A1BBCA1612"
+				"41BA46277E47FC00"
+			]
+			description: ["The deepest rescue: the old mine under Reece gives way at Y -58 with seven miners below. Reach each pocket of survivors and bring them all up before the last torch burns down."]
+			icon: "minecraft:diamond_block"
+			id: "323A6423369FF67E"
+			rewards: [
+				{
+					id: "45A408BB5DF7DD60"
+					item: "minecraft:diamond_block"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 780"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "2EBEB7AE5A2FC467"
+					silent: true
+					title: "+780 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7189A55C518D31F7"
+					stage: "fq.skill_mining.great_collapse.be0"
+					title: "Dig down to the collapse at Y -58"
+					type: "gamestage"
+				}
+				{
+					id: "4CA346CA419AF914"
+					stage: "fq.skill_mining.great_collapse.enc1"
+					title: "Bring the first pocket of survivors up"
+					type: "gamestage"
+				}
+				{
+					id: "7A767E337ADFD6DE"
+					stage: "fq.skill_mining.great_collapse.enc2"
+					title: "Bring the second pocket of survivors up"
+					type: "gamestage"
+				}
+				{
+					id: "6A97A5BD37371893"
+					stage: "fq.skill_mining.great_collapse.enc3"
+					title: "Bring the last pocket of survivors up"
+					type: "gamestage"
+				}
+			]
+			title: "The Great Collapse"
+			x: 19.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"323A6423369FF67E"
+				"3C3B936D408940C9"
+			]
+			description: ["Build the guild a memorial at the guildhall in Reece: polished deepslate, obsidian, lanterns and a sign for every miner lost or saved on your rescues."]
+			icon: "minecraft:polished_deepslate"
+			id: "392EAABA4719230C"
+			rewards: [
+				{
+					id: "49B921D4DD49BC48"
+					item: {
+						Count: 1b
+						id: "minecraft:oak_sign"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Named for you.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Memorial Plaque\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 800"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "23B2B848BF2D494A"
+					silent: true
+					title: "+800 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "559ABFC8293E9BA9"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "7253B2030F3629C9"
+					stage: "fq.skill_mining.memorial.build1"
+					title: "Raise the memorial at the guildhall"
+					type: "gamestage"
+				}
+			]
+			title: "The Miners' Memorial"
+			x: 21.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Mining path"]

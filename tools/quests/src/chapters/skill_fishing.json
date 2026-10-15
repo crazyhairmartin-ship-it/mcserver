@@ -1066,6 +1066,158 @@
         }
       ],
       "icon": "minecraft:fishing_rod"
+    },
+    {
+      "id": "almanac",
+      "title": "The Angler's Almanac",
+      "after": [
+        "trophy_wall",
+        "main_story:act4_start"
+      ],
+      "text": [
+        "Fill the society's almanac. Catch the freshwater and saltwater species the society knows, from minnow to muskellunge."
+      ],
+      "tasks": [
+        {
+          "item": "aquaculture:minnow",
+          "title": "Catch a minnow"
+        },
+        {
+          "item": "aquaculture:bluegill",
+          "title": "Catch a bluegill"
+        },
+        {
+          "item": "aquaculture:brown_trout",
+          "title": "Catch a brown trout"
+        },
+        {
+          "item": "aquaculture:carp",
+          "title": "Catch a carp"
+        },
+        {
+          "item": "aquaculture:catfish",
+          "title": "Catch a catfish"
+        },
+        {
+          "item": "aquaculture:muskellunge",
+          "title": "Catch a muskellunge"
+        },
+        {
+          "item": "aquaculture:atlantic_cod",
+          "title": "Catch an Atlantic cod"
+        },
+        {
+          "item": "aquaculture:tuna",
+          "title": "Catch a tuna"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:neptunium_hoe"
+        },
+        {
+          "skill": "fish",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:writable_book"
+    },
+    {
+      "id": "old_whiskers",
+      "title": "Old Whiskers",
+      "after": [
+        "silas_adrift"
+      ],
+      "text": [
+        "Every swamp has a tale of a catfish as big as a boat, and this one is true. Lure Old Whiskers up from the deepest swamp pool and land him alive in a bucket."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:swamp",
+          "title": "Go to the deepest swamp pool"
+        },
+        {
+          "drop": {
+            "from": [
+              "fishing"
+            ],
+            "chance": 0.1,
+            "item": {
+              "name": "Old Whiskers",
+              "texture": "minecraft:item/cod",
+              "tooltip": "A catfish as big as a boat"
+            }
+          },
+          "consume": false,
+          "title": "Lure Old Whiskers up from the deep"
+        },
+        {
+          "item": "aquaculture:catfish_bucket",
+          "title": "Land him alive in a bucket"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:obsidian_hook"
+        },
+        {
+          "skill": "fish",
+          "xp": 700
+        }
+      ],
+      "icon": "aquaculture:catfish_bucket"
+    },
+    {
+      "id": "semi_final",
+      "title": "The Lighthouse Semi-Final",
+      "after": [
+        "almanac",
+        "old_whiskers"
+      ],
+      "text": [
+        "The semi-final at a lighthouse, against Silas and the champions of two other villages: the first to land the lighthouse keeper's silver mackerel wins. Fish until it bites."
+      ],
+      "tasks": [
+        {
+          "structure": "#lighthouses",
+          "title": "Go to the lighthouse for the semi-final"
+        },
+        {
+          "encounter": {
+            "character": "silas",
+            "then": "talk",
+            "lines": [
+              "Semi-final! I'll beat you to the mackerel!"
+            ]
+          },
+          "title": "Face Silas at the lighthouse"
+        },
+        {
+          "drop": {
+            "from": [
+              "fishing"
+            ],
+            "chance": 0.1,
+            "item": {
+              "name": "The Silver Mackerel",
+              "texture": "minecraft:item/salmon",
+              "tooltip": "The keeper's prize"
+            }
+          },
+          "consume": false,
+          "title": "Land the silver mackerel before the champions"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:neptunium_helmet"
+        },
+        {
+          "skill": "fish",
+          "xp": 780
+        }
+      ],
+      "icon": "minecraft:lantern"
     }
   ]
 }

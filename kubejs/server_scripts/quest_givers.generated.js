@@ -3950,6 +3950,178 @@ global.QUEST_GIVERS = [
     "prev_tasks": []
   },
   {
+    "quest": "skill_mining:great_collapse",
+    "stage": "fq.skill_mining.great_collapse.be0",
+    "type": "be",
+    "where": {
+      "below_y": -55
+    },
+    "requires": [],
+    "quest_id": "323A6423369FF67E",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_mining:great_collapse",
+    "stage": "fq.skill_mining.great_collapse.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Here! A pocket of us, behind the gravel!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "323A6423369FF67E",
+    "prev_tasks": [
+      "7189A55C518D31F7"
+    ],
+    "name": "Trapped Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_mining:great_collapse",
+    "stage": "fq.skill_mining.great_collapse.enc2",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Over here! The lava's close!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "323A6423369FF67E",
+    "prev_tasks": [
+      "7189A55C518D31F7",
+      "4CA346CA419AF914"
+    ],
+    "name": "Trapped Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_mining:great_collapse",
+    "stage": "fq.skill_mining.great_collapse.enc3",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "The last torch! Hurry!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "323A6423369FF67E",
+    "prev_tasks": [
+      "7189A55C518D31F7",
+      "4CA346CA419AF914",
+      "7A767E337ADFD6DE"
+    ],
+    "name": "Trapped Miner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_mining:memorial",
+    "stage": "fq.skill_mining.memorial.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:polished_deepslate",
+      "minecraft:obsidian",
+      "minecraft:lantern",
+      "minecraft:oak_sign"
+    ],
+    "counts": [
+      16,
+      8,
+      4,
+      4
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "392EAABA4719230C",
+    "prev_tasks": [
+      "559ABFC8293E9BA9"
+    ]
+  },
+  {
     "quest": "small_favours:sf_out_of_flour",
     "stage": "fq.small_favours.sf_out_of_flour.talk0",
     "type": "talk",
@@ -7009,6 +7181,34 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_farming:market_stall",
+    "stage": "fq.skill_farming.market_stall.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Best stall at the fair. Take the hat."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7392BE863EF12BB2",
+    "prev_tasks": [
+      "454D426A1B4C1D11",
+      "18212379777B1A84"
+    ],
+    "name": "Market Master",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
     "quest": "discovery_sky_and_underground:volcano_in_the_sky",
     "stage": "fq.discovery_sky_and_underground.volcano_in_the_sky.search1",
     "type": "search",
@@ -8879,6 +9079,63 @@ global.QUEST_GIVERS = [
       "label": "Reece"
     },
     "thanks": []
+  },
+  {
+    "quest": "skill_fishing:old_whiskers",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "fishing"
+    ],
+    "chance": 0.1,
+    "item": "kubejs:quest_old_whiskers_1",
+    "requires": [],
+    "quest_id": "378AF24FCDEFD6AD",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_fishing:semi_final",
+    "stage": "fq.skill_fishing.semi_final.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Semi-final! I'll beat you to the mackerel!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "71EECF65FBBC86CA",
+    "prev_tasks": [
+      "1D4627C7060E05AB"
+    ],
+    "name": "Silas Pike",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "minecraft:fisherman"
+  },
+  {
+    "quest": "skill_fishing:semi_final",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "fishing"
+    ],
+    "chance": 0.1,
+    "item": "kubejs:quest_semi_final_2",
+    "requires": [],
+    "quest_id": "71EECF65FBBC86CA",
+    "open_task": "",
+    "lines": [],
+    "name": ""
   },
   {
     "quest": "village_errands:water_from_three_wells",
@@ -12019,6 +12276,57 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_crafting:trophy_room",
+    "stage": "fq.skill_crafting.trophy_room.build4",
+    "type": "build",
+    "keys": [
+      "handcrafted:bear_trophy",
+      "handcrafted:blaze_trophy",
+      "handcrafted:skeleton_trophy"
+    ],
+    "counts": [
+      1,
+      1,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "0077B64C7A56E4CA",
+    "prev_tasks": [
+      "7331F449F26AA184",
+      "51D81B8F7F3AB528",
+      "3AC8A973ED417269",
+      "0DF0E895AE5302DF"
+    ]
+  },
+  {
+    "quest": "skill_crafting:guild_hall",
+    "stage": "fq.skill_crafting.guild_hall.build1",
+    "type": "build",
+    "keys": [
+      "handcrafted:oak_table",
+      "another_furniture:oak_bench",
+      "furniture:oak_bench",
+      "supplementaries:bunting",
+      "obscuras_storage:crafting_terminal",
+      "handcrafted:bear_trophy"
+    ],
+    "counts": [
+      2,
+      4,
+      2,
+      4,
+      1,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "23131BF9240EF997",
+    "prev_tasks": [
+      "035FD912B883B71E"
+    ]
+  },
+  {
     "quest": "skill_attack:the_board",
     "stage": "fq.skill_attack.the_board.talk0",
     "type": "talk",
@@ -12745,6 +13053,133 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "skill_attack:coliseum",
+    "stage": "fq.skill_attack.coliseum.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:vindicator",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:coliseum"
+      ],
+      "label": "the destination"
+    },
+    "wave": 5,
+    "name": "Coliseum Champions",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "285DBC4034996CE2",
+    "requires": [],
+    "quest_id": "7A14EE14A9014E48",
+    "prev_tasks": [
+      "576D39DD0BC64CB2"
+    ]
+  },
+  {
+    "quest": "skill_attack:coliseum",
+    "stage": "fq.skill_attack.coliseum.spawn2",
+    "type": "spawn",
+    "entity": "minecraft:ravager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:coliseum"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Coliseum Beasts",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "7DF56216C05B2F7E",
+    "requires": [],
+    "quest_id": "7A14EE14A9014E48",
+    "prev_tasks": [
+      "576D39DD0BC64CB2",
+      "285DBC4034996CE2"
+    ]
+  },
+  {
+    "quest": "skill_attack:plague_asylum",
+    "stage": "fq.skill_attack.plague_asylum.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:zombie_villager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:plague_asylum"
+      ],
+      "label": "the destination"
+    },
+    "wave": 6,
+    "name": "Asylum Sick",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "29F74DC85D7E4AD7",
+    "requires": [],
+    "quest_id": "0B4EBBFD7E292729",
+    "prev_tasks": [
+      "5019C9267B0F6F2F"
+    ]
+  },
+  {
+    "quest": "skill_attack:void_contract",
+    "stage": "fq.skill_attack.void_contract.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:shulker",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:end_city"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Tower Shulkers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "772883388889F4F9",
+    "requires": [],
+    "quest_id": "79D6CDFC1981BCE7",
+    "prev_tasks": [
+      "69A3E036D3E5C338"
+    ]
+  },
+  {
+    "quest": "skill_attack:void_contract",
+    "stage": "fq.skill_attack.void_contract.spawn2",
+    "type": "spawn",
+    "entity": "minecraft:enderman",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:end_city"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "City Endermen",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "4AD854DD53A022B7",
+    "requires": [],
+    "quest_id": "79D6CDFC1981BCE7",
+    "prev_tasks": [
+      "69A3E036D3E5C338",
+      "772883388889F4F9"
+    ]
+  },
+  {
     "quest": "skill_range:lodge_oath",
     "stage": "fq.skill_range.lodge_oath.talk2",
     "type": "talk",
@@ -13364,6 +13799,94 @@ global.QUEST_GIVERS = [
       "7788277C0B58C6DE",
       "543FCE172415A811"
     ]
+  },
+  {
+    "quest": "skill_range:ironhide",
+    "stage": "fq.skill_range.ironhide.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*A thunder of hooves.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "27321C6BEF4A79B0",
+    "prev_tasks": [
+      "506BB07FF5A1FB0A"
+    ],
+    "name": "Old Ironhide",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": 120,
+    "glow": true,
+    "where": {
+      "biomes": [
+        "minecraft:savanna",
+        "minecraft:plains"
+      ]
+    },
+    "entity": "naturalist:rhino",
+    "profession": ""
+  },
+  {
+    "quest": "skill_range:ironhide",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "naturalist:rhino"
+    ],
+    "chance": 0.7,
+    "item": "kubejs:quest_ironhide_2",
+    "requires": [],
+    "quest_id": "27321C6BEF4A79B0",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_range:grey_widow",
+    "stage": "fq.skill_range.grey_widow.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*A shrill whine, high above.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "18932F20DE9B7A29",
+    "prev_tasks": [
+      "5CC94A017E29E7AE"
+    ],
+    "name": "The Grey Widow",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": 100,
+    "glow": true,
+    "where": {
+      "biomes": [
+        "minecraft:desert"
+      ]
+    },
+    "entity": "alexsmobs:tarantula_hawk",
+    "profession": ""
   },
   {
     "quest": "skill_defense:enlist",
@@ -14246,6 +14769,39 @@ global.QUEST_GIVERS = [
     "quest_id": "575CA3D7FE794BA2",
     "prev_tasks": [
       "4AC002D7AB09AE49"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_defense:last_stand_end",
+    "stage": "fq.skill_defense.last_stand_end.timed1",
+    "type": "timed",
+    "seconds": 240,
+    "goal": {
+      "kind": "hold",
+      "radius": 20.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:enderman",
+        "count": 3,
+        "every": 30
+      },
+      {
+        "entity": "minecraft:shulker",
+        "count": 1,
+        "every": 60
+      }
+    ],
+    "lines": [
+      "The scouts are climbing out. Hold the island!"
+    ],
+    "start": "Hold the island",
+    "requires": [],
+    "quest_id": "09F9BD148C5FF73B",
+    "prev_tasks": [
+      "4694709DF0735260"
     ],
     "name": ""
   },
@@ -15432,6 +15988,272 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "skill_agility:airship_logbook",
+    "stage": "fq.skill_agility.airship_logbook.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:heavenly_challenger",
+        "dungeons_arise:heavenly_conqueror",
+        "dungeons_arise:heavenly_rider",
+        "dungeons_arise:small_blimp"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Airship Guards",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "0D9F30631E11823D",
+    "requires": [],
+    "quest_id": "14F0096CD204A27F",
+    "prev_tasks": [
+      "43CC0EDC49944792"
+    ]
+  },
+  {
+    "quest": "skill_agility:airship_logbook",
+    "stage": "fq.skill_agility.airship_logbook.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:heavenly_challenger",
+        "dungeons_arise:heavenly_conqueror",
+        "dungeons_arise:heavenly_rider",
+        "dungeons_arise:small_blimp"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_airship_logbook_2",
+    "found": "The couriers' logbook, wedged behind a locker.",
+    "requires": [],
+    "quest_id": "14F0096CD204A27F",
+    "prev_tasks": [
+      "43CC0EDC49944792",
+      "0D9F30631E11823D"
+    ]
+  },
+  {
+    "quest": "skill_agility:cargo_airship",
+    "stage": "fq.skill_agility.cargo_airship.timed3",
+    "type": "timed",
+    "seconds": 1200,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "the village beyond the mountains",
+      "away": 400
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "A full hold. Fly it over the mountains."
+    ],
+    "start": "Take off",
+    "requires": [],
+    "quest_id": "360AB63A6AE68A61",
+    "prev_tasks": [
+      "45B7DAFDCE765C73",
+      "1BC469E40493A300",
+      "0CD0C5D392E5CDA7"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:sharestone_network",
+    "stage": "fq.skill_agility.sharestone_network.build3",
+    "type": "build",
+    "keys": [
+      "waystones:sharestone",
+      "waystones:warp_plate"
+    ],
+    "counts": [
+      1,
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "6E962F01BDBAC611",
+    "prev_tasks": [
+      "1FE513F816FF7216",
+      "4DADA936DEACA5CB",
+      "3BB24DA64382ED61"
+    ]
+  },
+  {
+    "quest": "skill_agility:wings_and_armour",
+    "stage": "fq.skill_agility.wings_and_armour.timed1",
+    "type": "timed",
+    "seconds": 1200,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "the circuit's last village",
+      "away": 800
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "The full circuit, no landing."
+    ],
+    "start": "Start the circuit",
+    "requires": [],
+    "quest_id": "70B7E5DEEAB4027F",
+    "prev_tasks": [
+      "7408A03539B556EF"
+    ],
+    "name": ""
+  },
+  {
     "quest": "magic:the_order_calls",
     "stage": "fq.magic.the_order_calls",
     "type": "org",
@@ -16265,6 +17087,45 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "magic:ancient_battleground",
+    "stage": "fq.magic.ancient_battleground.spawn1",
+    "type": "spawn",
+    "entity": "irons_spellbooks:citadel_keeper",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:ancient_battleground"
+      ],
+      "label": "the destination"
+    },
+    "wave": 3,
+    "name": "Battlefield Keepers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5D7E21067AA24D39",
+    "requires": [],
+    "quest_id": "493AAA91A46E0E63",
+    "prev_tasks": [
+      "069807FB84D36243"
+    ]
+  },
+  {
+    "quest": "magic:eldritch_pages",
+    "stage": "fq.magic.eldritch_pages.cast2",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:eldritch",
+    "count": 1,
+    "requires": [],
+    "quest_id": "152C29866CE2995E",
+    "prev_tasks": [
+      "7092CA7F53DFB985",
+      "58C32414C020A0CC"
+    ]
+  },
+  {
     "quest": "skill_taming:stray_wolf",
     "stage": "fq.skill_taming.stray_wolf",
     "type": "org",
@@ -16979,6 +17840,92 @@ global.QUEST_GIVERS = [
       "089ADEB6534F531A",
       "23AF2CCB437FAB2A"
     ]
+  },
+  {
+    "quest": "skill_taming:the_full_herd",
+    "stage": "fq.skill_taming.the_full_herd.tame0",
+    "type": "tame",
+    "entities": [
+      "ultimate_unicorn_mod:kirin"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "4458555BAD71CF43",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_taming:the_full_herd",
+    "stage": "fq.skill_taming.the_full_herd.tame1",
+    "type": "tame",
+    "entities": [
+      "ultimate_unicorn_mod:destrier"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "4458555BAD71CF43",
+    "prev_tasks": [
+      "0E8FDE11BD42FF57"
+    ]
+  },
+  {
+    "quest": "skill_taming:the_full_herd",
+    "stage": "fq.skill_taming.the_full_herd.tame2",
+    "type": "tame",
+    "entities": [
+      "ultimate_unicorn_mod:reindeer"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "4458555BAD71CF43",
+    "prev_tasks": [
+      "0E8FDE11BD42FF57",
+      "3D2467C7D32B605E"
+    ]
+  },
+  {
+    "quest": "skill_taming:pet_show",
+    "stage": "fq.skill_taming.pet_show.build1",
+    "type": "build",
+    "keys": [
+      "domesticationinnovation:pet_bed_red"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "31102AC2F67357E5",
+    "prev_tasks": [
+      "3FA8C62608BEC16C"
+    ]
+  },
+  {
+    "quest": "skill_taming:pet_show",
+    "stage": "fq.skill_taming.pet_show.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Fine collar. Fine bed. Almost as good as the shepherds' champion."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "31102AC2F67357E5",
+    "prev_tasks": [
+      "3FA8C62608BEC16C",
+      "434673CCE2BD2DE8"
+    ],
+    "name": "Show Judge",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
   }
 ]
 global.QUEST_CHARACTERS = {

@@ -1645,6 +1645,175 @@
         }
       ],
       "icon": "irons_spellbooks:fire_cloth"
+    },
+    {
+      "id": "ancient_battleground",
+      "title": "The Ancient Battleground",
+      "after": [
+        "nether_citadel"
+      ],
+      "text": [
+        "Ancient Knights still keep watch on a Nether battlefield. Find it and defeat its Keepers, the citadel's armoured guardians."
+      ],
+      "tasks": [
+        {
+          "structure": "irons_spellbooks:ancient_battleground",
+          "title": "Find the Nether battlefield"
+        },
+        {
+          "kill": "irons_spellbooks:citadel_keeper",
+          "count": 3,
+          "spawn": {
+            "at": {
+              "structure": "irons_spellbooks:ancient_battleground"
+            },
+            "wave": 3,
+            "name": "Battlefield Keepers"
+          },
+          "title": "Defeat the Keepers who guard the field"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:keeper_flamberge"
+        },
+        {
+          "skill": "magic",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:iron_sword"
+    },
+    {
+      "id": "cinder_essence",
+      "title": "Cinder and Soul",
+      "after": [
+        "nether_citadel"
+      ],
+      "text": [
+        "Collect eight cinder essence from the citadel's guardians and the cinderous vaults. The forge needs a soul of fire."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:cinder_essence",
+          "count": 8,
+          "title": "Collect cinder essence from the citadel's guardians and vaults"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:cinderous_soul_rune"
+        },
+        {
+          "skill": "magic",
+          "xp": 720
+        }
+      ],
+      "icon": "irons_spellbooks:cinder_essence"
+    },
+    {
+      "id": "pyrium",
+      "title": "Pyrium",
+      "after": [
+        "cinder_essence"
+      ],
+      "text": [
+        "Forge pyrium ingots from cinder essence and netherite, the metal the Flamebearer's followers worked."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:pyrium_ingot",
+          "count": 2,
+          "crafted": true,
+          "title": "Forge pyrium ingots from cinder essence and netherite"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:pyrium_staff_haft"
+        },
+        {
+          "skill": "magic",
+          "xp": 740
+        }
+      ],
+      "icon": "irons_spellbooks:pyrium_ingot"
+    },
+    {
+      "id": "netherite_mage",
+      "title": "Robes of Netherite",
+      "after": [
+        "pyrium"
+      ],
+      "text": [
+        "Upgrade your mage armour into a full netherite mage set."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:netherite_mage_helmet",
+          "title": "Upgrade a netherite mage hood"
+        },
+        {
+          "item": "irons_spellbooks:netherite_mage_chestplate",
+          "title": "Upgrade a netherite mage robe"
+        },
+        {
+          "item": "irons_spellbooks:netherite_mage_leggings",
+          "title": "Upgrade netherite mage leggings"
+        },
+        {
+          "item": "irons_spellbooks:netherite_mage_boots",
+          "title": "Upgrade netherite mage boots"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:netherite_spell_book"
+        },
+        {
+          "skill": "magic",
+          "xp": 780
+        }
+      ],
+      "icon": "irons_spellbooks:netherite_mage_chestplate"
+    },
+    {
+      "id": "eldritch_pages",
+      "title": "Eldritch Pages",
+      "after": [
+        "pyrium",
+        "main_story:act4_start"
+      ],
+      "text": [
+        "Orrin says the void holds a school older than fire. Recover an eldritch manuscript from the End and learn one eldritch spell from it."
+      ],
+      "tasks": [
+        {
+          "structure": "mes:manuscript_shrine",
+          "title": "Find the manuscript shrine in the End"
+        },
+        {
+          "item": "irons_spellbooks:eldritch_manuscript",
+          "title": "Recover an eldritch manuscript"
+        },
+        {
+          "cast": {
+            "school": "irons_spellbooks:eldritch"
+          },
+          "count": 1,
+          "title": "Cast an eldritch spell learned from it"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:scroll_eldritch"
+        },
+        {
+          "skill": "magic",
+          "xp": 800
+        }
+      ],
+      "icon": "irons_spellbooks:scroll_eldritch"
     }
   ]
 }
