@@ -956,9 +956,9 @@
 				}
 				{
 					id: "3C6C174864313BDC"
-					item: "minecraft:splash_potion"
+					stage: "fq.discovery_land.witch_villa_tea_party.make1"
 					title: "Brew the witches' strangest potion"
-					type: "item"
+					type: "gamestage"
 				}
 			]
 			title: "Tea at the Witch Villa"
@@ -1650,11 +1650,10 @@
 					type: "structure"
 				}
 				{
-					advancement: "minecraft:story/cure_zombie_villager"
-					criterion: ""
 					id: "7C5650AAAC28B412"
-					title: "Cure the prisoner in the cell"
-					type: "advancement"
+					stage: "fq.discovery_land.igloo_basement.interact0"
+					title: "Weaken the prisoner in the cell and feed them a golden apple"
+					type: "gamestage"
 				}
 			]
 			title: "The Igloo's Basement"

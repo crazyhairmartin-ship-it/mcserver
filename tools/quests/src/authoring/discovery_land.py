@@ -352,7 +352,8 @@ Q = [
           discover={"structure": "minecraft:igloo"},
           text=["Under an igloo's carpet, a ladder leads to a cell holding a zombie villager. Cure him with weakness "
                 "and a golden apple, and he will tell you whose igloo it was."],
-          tasks=[{"advancement": "minecraft:story/cure_zombie_villager", "title": "Cure the prisoner in the cell"}],
+          tasks=[{"interact": "minecraft:zombie_villager", "holding": "minecraft:golden_apple", "consume": True,
+                  "title": "Weaken the prisoner in the cell and feed them a golden apple"}],
           rewards=[reward_item("minecraft:brewing_stand"), reward_item("minecraft:golden_apple"), skill("magic", 200)]),
 
     quest("waystone_network", "Stones That Remember", icon="waystones:waystone",

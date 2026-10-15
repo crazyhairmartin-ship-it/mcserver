@@ -771,6 +771,22 @@ global.QUEST_GIVERS = [
     "open_task": "262E623497A12FF1"
   },
   {
+    "quest": "discovery_land:witch_villa_tea_party",
+    "stage": "fq.discovery_land.witch_villa_tea_party.make1",
+    "type": "make",
+    "count": 1,
+    "requires": [],
+    "quest_id": "4DD7843DF61B996D",
+    "prev_tasks": [
+      "0E0974AABDEB787F",
+      "2839995B1B6802D1"
+    ],
+    "items": [
+      "minecraft:splash_potion"
+    ],
+    "how": "brew"
+  },
+  {
     "quest": "discovery_land:old_manor_ghost",
     "stage": "fq.discovery_land.old_manor_ghost.search0",
     "type": "search",
@@ -1155,6 +1171,22 @@ global.QUEST_GIVERS = [
     "org_name": "Arcane Order",
     "quest_id": "0AB4357F3BACE708",
     "open_task": "3F16BACCA591A87D"
+  },
+  {
+    "quest": "discovery_land:igloo_basement",
+    "stage": "fq.discovery_land.igloo_basement.interact0",
+    "type": "interact",
+    "count": 1,
+    "requires": [],
+    "quest_id": "5BB93D176B60E9F2",
+    "prev_tasks": [
+      "00EF61C3A8AA3B93"
+    ],
+    "entities": [
+      "minecraft:zombie_villager"
+    ],
+    "holding": "minecraft:golden_apple",
+    "consume": true
   },
   {
     "quest": "discovery_land:waystone_network",
@@ -6974,6 +7006,21 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "discovery_sea:bones_of_the_deep",
+    "stage": "fq.discovery_sea.bones_of_the_deep.mine1",
+    "type": "mine",
+    "keys": [
+      "minecraft:bone_block"
+    ],
+    "count": 2,
+    "requires": [],
+    "quest_id": "40D1ED74B27B2948",
+    "prev_tasks": [
+      "15F98A76F9BB7C95",
+      "4F26C1602DACFA7A"
+    ]
+  },
+  {
     "quest": "discovery_sea:the_tribune_of_atlantis",
     "stage": "fq.discovery_sea.the_tribune_of_atlantis.build1",
     "type": "build",
@@ -7444,6 +7491,24 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "discovery_sea:the_faithful_hound",
+    "stage": "fq.discovery_sea.the_faithful_hound.interact2",
+    "type": "interact",
+    "count": 1,
+    "requires": [],
+    "quest_id": "12BF562B1FE5DE50",
+    "prev_tasks": [
+      "24C20989E44BCA67",
+      "2D96FAEA6896B5B9",
+      "5A941596519E24A0"
+    ],
+    "entities": [
+      "minecraft:wolf"
+    ],
+    "holding": "kubejs:quest_the_faithful_hound_1",
+    "consume": true
+  },
+  {
     "quest": "discovery_sea:underwater_garden",
     "stage": "fq.discovery_sea.underwater_garden.build5",
     "type": "build",
@@ -7564,6 +7629,20 @@ global.QUEST_GIVERS = [
       "2B723D8EDD3350B3",
       "315C0D9BBCE8F233",
       "4973317D292DB164"
+    ]
+  },
+  {
+    "quest": "discovery_sea:tropic_islands",
+    "stage": "fq.discovery_sea.tropic_islands.sleep3",
+    "type": "sleep",
+    "count": 1,
+    "requires": [],
+    "quest_id": "7DA46E85F94AA94C",
+    "prev_tasks": [
+      "2B723D8EDD3350B3",
+      "315C0D9BBCE8F233",
+      "4973317D292DB164",
+      "6F9237A56180BA5B"
     ]
   },
   {

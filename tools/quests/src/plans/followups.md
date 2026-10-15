@@ -45,7 +45,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - discovery_land:beacon_gone_dark: needs finding the beacon's missing blocks; written as rebuilding the iron pyramid
 - discovery_land:the_bridge_builder: needs discovering a Yung's bridge (no structure id); written as a discover on walking 2 km
 - discovery_land:waystone_network: needs discovering a wild waystone; written as a discover on walking 1 km
-- discovery_land:igloo_basement: needs curing with weakness and a golden apple at the cell; written as the cure advancement
 - discovery_land:frostbitten_ruins: needs noting what sleeps below; written as a checkmark
 - discovery_land:occupied_dunes: needs Kobolediator scouts; written as koboletons
 - discovery_land:outcasts: needs a cheaper trade at the village and either outcast hut; written as the grassy hut and an apology delivery
@@ -61,7 +60,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - discovery_sea:typhon: needs boarding from a boat; written as a fight and a timed hold
 - discovery_sea:last_orders: needs serving customers one at a time; written as four cocktails and a timed hold
 - discovery_sea:the_ritual_circle: needs shells on each stone at sunset; written as a radio, a disc and a search of the circle
-- discovery_sea:the_faithful_hound: needs giving a wolf the collar; written as a tame, a search and a checkmark
 - discovery_sea:drowned_village: needs learning the village's name; written as two searches and a checkmark
 - discovery_sea:beach_discs: needs every Beachparty disc played; written as four discs carried and a radio use
 - discovery_sea:dune_beach: needs seashells and sea stars (no ids); written as dune grass and a nautilus shell

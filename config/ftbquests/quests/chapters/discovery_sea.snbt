@@ -50,11 +50,10 @@
 					type: "gamestage"
 				}
 				{
-					count: 2L
 					id: "4EBDBDDA9E0AB27E"
-					item: "minecraft:bone_block"
-					title: "Take bone from the skeleton as proof"
-					type: "item"
+					stage: "fq.discovery_sea.bones_of_the_deep.mine1"
+					title: "Break bone from the skeleton as proof"
+					type: "gamestage"
 				}
 			]
 			title: "Bones of the Deep"
@@ -796,8 +795,9 @@
 				}
 				{
 					id: "324BFEB550BDCCE5"
-					title: "I gave the wolf the statue's collar"
-					type: "checkmark"
+					stage: "fq.discovery_sea.the_faithful_hound.interact2"
+					title: "Give the wolf the statue's collar"
+					type: "gamestage"
 				}
 			]
 			title: "The Faithful Hound"
@@ -1155,6 +1155,12 @@
 					id: "6F9237A56180BA5B"
 					stage: "fq.discovery_sea.tropic_islands.build2"
 					title: "Hang it between palms"
+					type: "gamestage"
+				}
+				{
+					id: "535AE6169355335B"
+					stage: "fq.discovery_sea.tropic_islands.sleep3"
+					title: "Sleep the night away in the hammock"
 					type: "gamestage"
 				}
 			]

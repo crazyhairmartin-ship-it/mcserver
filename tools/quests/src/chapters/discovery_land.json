@@ -821,7 +821,8 @@
           "checkmark": "I copied the witches' recipe book unseen"
         },
         {
-          "item": "minecraft:splash_potion",
+          "make": "minecraft:splash_potion",
+          "how": "brew",
           "title": "Brew the witches' strangest potion"
         }
       ],
@@ -1399,8 +1400,10 @@
       ],
       "tasks": [
         {
-          "advancement": "minecraft:story/cure_zombie_villager",
-          "title": "Cure the prisoner in the cell"
+          "interact": "minecraft:zombie_villager",
+          "holding": "minecraft:golden_apple",
+          "consume": true,
+          "title": "Weaken the prisoner in the cell and feed them a golden apple"
         }
       ],
       "rewards": [

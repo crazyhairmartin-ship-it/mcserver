@@ -20,9 +20,9 @@
           "title": "Dive down to the skeleton's skull"
         },
         {
-          "item": "minecraft:bone_block",
+          "mine": "minecraft:bone_block",
           "count": 2,
-          "title": "Take bone from the skeleton as proof"
+          "title": "Break bone from the skeleton as proof"
         }
       ],
       "rewards": [
@@ -674,7 +674,10 @@
           "title": "Search for the Statue's Collar"
         },
         {
-          "checkmark": "I gave the wolf the statue's collar"
+          "interact": "minecraft:wolf",
+          "holding": "kubejs:quest_the_faithful_hound_1",
+          "consume": true,
+          "title": "Give the wolf the statue's collar"
         }
       ],
       "rewards": [
@@ -944,6 +947,10 @@
             "radius": 10
           },
           "title": "Hang it between palms"
+        },
+        {
+          "sleep": 1,
+          "title": "Sleep the night away in the hammock"
         }
       ],
       "rewards": [

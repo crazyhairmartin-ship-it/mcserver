@@ -166,7 +166,8 @@ Q = [
           tasks=[{"tame": "minecraft:wolf", "title": "Tame a wolf to keep the statue company"},
                  search("mos:prismarine_dog_statue", 1, "the Statue's Collar", "A collar, green with age, in the statue's chest.",
                         texture="minecraft:item/lead"),
-                 {"checkmark": "I gave the wolf the statue's collar"}],
+                 {"interact": "minecraft:wolf", "holding": "kubejs:quest_the_faithful_hound_1", "consume": True,
+                  "title": "Give the wolf the statue's collar"}],
           rewards=[reward_item("domesticationinnovation:collar_tag"), skill("taming", 150)]),
 
     quest("underwater_garden", "The Underwater Garden", icon="minecraft:brain_coral",
