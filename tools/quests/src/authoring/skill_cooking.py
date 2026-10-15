@@ -1,5 +1,6 @@
 """Chapter: skill_cooking, the Tavern Keepers' path: prologue and Act I (first release). Plan: src/plans/quests/skill_cooking.json."""
 from common import chapter, quest, talk_char, talk_org, item, reward_item, skill, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 Q = [
     quest("first_order", "First Order", icon="minecraft:cooked_beef",
@@ -82,4 +83,90 @@ Q = [
           rewards=[reward_item("candlelight:chefs_jacket"), reward_item("candlelight:cooking_hat"), skill("cook", 200)]),
 ]
 
-chapter("skill_cooking", "The Tavern Keepers", "Cooking path", "farmersdelight:cooking_pot", "skills", 3, Q)
+ACT2 = [
+    quest("brewfest_night", "Brewfest Night", icon="artifacts:novelty_drinking_hat",
+          after=["first_brew", "main_story:act2_start"], signature="artifacts:novelty_drinking_hat",
+          text=["The brewers hold their festival night in a brewfest tent out in the world. Bring barley, oat and "
+                "nettle beers and pretzels, keep the mugs full all night, and win the drinking-song contest."],
+          tasks=[{"structure": "brewery:brewfest_tent", "title": "Find the brewfest tent"},
+                 item("brewery:beer_barley", consume=True, title="Bring barley beer for the tent"),
+                 item("brewery:beer_oat", consume=True, title="Bring oat beer for the tent"),
+                 item("brewery:beer_nettle", consume=True, title="Bring nettle beer for the tent"),
+                 item("brewery:pretzel", 4, consume=True, title="Bring pretzels to keep the crowd fed"),
+                 enc(["The mugs are full! Sing, friend! You win the song!", "Wear this hat. It's ridiculous."],
+                     entity="minecraft:villager", name="Brewmaster", title="Win the brewmaster's drinking-song contest")],
+          rewards=[reward_item("artifacts:novelty_drinking_hat"), skill("cook", 300)]),
+
+    quest("candlelit_dinner", "A Candlelit Dinner", icon="candlelight:dinner_bell", after=["food_critic"],
+          text=["The village elder wants a proper dinner for a wedding party. Furnish a dining room with a table, "
+                "chairs and a dinner bell, and serve lasagne and fillet steak to the guests."],
+          tasks=[{"structure": "#villages", "title": "Go to the elder's dining hall"},
+                 {"build": {"blocks": {"candlelight:oak_table": 1, "candlelight:oak_chair": 4, "candlelight:dinner_bell": 1},
+                            "radius": 10}, "title": "Furnish the dining room for the wedding party"},
+                 item("candlelight:lasagne", 4, consume=True, title="Serve lasagne to the guests"),
+                 item("candlelight:fillet_steak", 4, consume=True, title="Serve fillet steak to the guests")],
+          rewards=[reward_item("minecraft:gold_ingot", 6), skill("cook", 280)]),
+
+    quest("wine_pairing", "Wine Pairing", icon="vinery:red_wine", after=["candlelit_dinner"],
+          text=["The wedding wants every dish paired with its wine: salmon on white wine, beef with mushroom in "
+                "wine and potatoes, and a glass of red with the cheese."],
+          tasks=[item("candlelight:salmon_on_white_wine", consume=True, title="Cook salmon on white wine"),
+                 item("vinery:chenet_wine", consume=True, title="Pour the white wine for the salmon"),
+                 item("candlelight:beef_with_mushroom_in_wine_and_potatoes", consume=True, title="Cook beef in wine with potatoes"),
+                 item("vinery:red_wine", consume=True, title="Pour the red wine for the beef and cheese")],
+          rewards=[reward_item("vinery:acacia_wine_rack_mid"), skill("cook", 300)]),
+
+    quest("cheese_board", "The Cheese Board", icon="meadow:cheese_tart", after=["wine_pairing"],
+          text=["The tavern wants a cheese board from Meadow's cheeses: goat, sheep, buffalo and grain cheese, with "
+                "cheese tart and fondue on the side."],
+          tasks=[item("meadow:piece_of_goat_cheese", consume=True, title="Cut goat cheese for the board"),
+                 item("meadow:piece_of_sheep_cheese", consume=True, title="Cut sheep cheese for the board"),
+                 item("meadow:piece_of_buffalo_cheese", consume=True, title="Cut buffalo cheese for the board"),
+                 item("meadow:piece_of_grain_cheese", consume=True, title="Cut grain cheese for the board"),
+                 item("meadow:cheese_tart", title="Bake a cheese tart for the side"),
+                 item("meadow:fondue", title="Make a fondue for the side")],
+          rewards=[reward_item("meadow:cheese_form"), skill("cook", 320)]),
+
+    quest("popcorn_night", "Popcorn Night", icon="cornexpansion:popcorn_tin", after=["tea_time"],
+          text=["Music night at the tavern needs snacks. Make buttery, cheesy and candied popcorn in tins, with "
+                "grandma's cornbread for the band."],
+          tasks=[item("cornexpansion:buttery_popcorn_tin", title="Make buttery popcorn in a tin"),
+                 item("cornexpansion:cheesy_popcorn_tin", title="Make cheesy popcorn in a tin"),
+                 item("cornexpansion:candied_popcorn_tin", title="Make candied popcorn in a tin"),
+                 item("cornexpansion:grandmas_cornbread", title="Bake cornbread for the band")],
+          rewards=[reward_item("immersive_melodies:handpan"), skill("cook", 300)]),
+
+    quest("hot_delivery", "Still Hot", icon="farmersdelight:shepherds_pie_block", after=["tavern_road"],
+          text=["A tavern two villages away has run out of stew mid-feast. Carry a shepherd's pie and eight bowls of "
+                "beef stew there before the hour is up."],
+          tasks=[item("farmersdelight:shepherds_pie_block", consume=True, title="Take a shepherd's pie for the feast"),
+                 item("farmersdelight:beef_stew", 8, consume=True, title="Take eight bowls of beef stew"),
+                 {"timed": {"seconds": 480, "goal": {"structure": "#taverns", "label": "the feasting tavern", "away": 150},
+                            "lines": ["The feast is running dry. Hurry!"], "start": "Carry the food", "no": ["teleport"]},
+                  "title": "Reach the tavern before the food goes cold"}],
+          rewards=[reward_item("camping:small_backpack"), skill("cook", 300)]),
+
+    quest("greenwood_pub", "The Greenwood Pub", icon="brewery:small_barrel", after=["hot_delivery"],
+          text=["The greenwood pub in the deep forest is the last tavern on the network map. Bring its keeper a "
+                "barrel of your best beer and find out why no one has heard from them."],
+          tasks=[item("brewery:small_barrel", consume=True, title="Bring a barrel of your best beer"),
+                 {"structure": "dungeons_arise:greenwood_pub", "title": "Find the greenwood pub in the deep forest"},
+                 search("dungeons_arise:greenwood_pub", 1, "the Pub's Secret Ale Recipe", "A stained recipe, tucked in a barrel.",
+                        title="Search the pub for why it went silent")],
+          rewards=[reward_item("minecraft:writable_book", name="The Greenwood Ale Recipe", lore=["The pub's secret."]),
+                   skill("cook", 350)]),
+
+    quest("campfire_feast", "Feast Under the Stars", icon="camping:grill", after=["campfire_supper", "greenwood_pub"],
+          text=["Lead a caravan of travellers between taverns and feed them every night on the road: three camps, "
+                "three meals cooked on your camp grill."],
+          tasks=[{"structure": "mvs:campsite", "title": "Make camp for the first night"},
+                 item("farmersdelight:mutton_chops", 4, consume=True, title="Feed the first camp roasted mutton chops"),
+                 {"structure": "mvs:fire_camp", "title": "Make camp for the second night"},
+                 item("farmersdelight:fish_stew", 4, consume=True, title="Feed the second camp fish stew"),
+                 {"structure": "structory:abandoned_camp", "title": "Make camp for the third night"},
+                 item("farmersdelight:honey_glazed_ham", 2, consume=True, title="Feed the third camp honey-glazed ham"),
+                 {"build": {"blocks": {"camping:grill": 1}, "radius": 8}, "title": "Set your camp grill"}],
+          rewards=[reward_item("camping:large_backpack"), skill("cook", 400)]),
+]
+
+chapter("skill_cooking", "The Tavern Keepers", "Cooking path", "farmersdelight:cooking_pot", "skills", 3, Q + ACT2)

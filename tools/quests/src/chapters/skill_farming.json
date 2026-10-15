@@ -441,6 +441,444 @@
         }
       ],
       "icon": "minecraft:shears"
+    },
+    {
+      "id": "wandering_winemaker",
+      "title": "The Wandering Winemaker",
+      "after": [
+        "wine_press",
+        "main_story:act2_start"
+      ],
+      "text": [
+        "A wandering winemaker passes through the co-op's fields and wants to taste your wine. Trade him for cherry saplings and his advice on ageing."
+      ],
+      "tasks": [
+        {
+          "item": "vinery:cherry_wine",
+          "consume": true,
+          "title": "Pour your wine for the winemaker to taste"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Wandering Winemaker",
+            "then": "talk",
+            "lines": [
+              "Good body. A touch young. Age it in the dark.",
+              "Take these saplings. Plant an orchard."
+            ]
+          },
+          "title": "Trade with the winemaker"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cherry_sapling",
+          "count": 4
+        },
+        {
+          "item": "vinery:apple_tree_sapling",
+          "count": 2
+        },
+        {
+          "skill": "farm",
+          "xp": 250
+        }
+      ],
+      "icon": "vinery:cherry_wine"
+    },
+    {
+      "id": "orchard",
+      "title": "The Orchard",
+      "after": [
+        "wandering_winemaker"
+      ],
+      "text": [
+        "The co-op wants an orchard. Plant apple and cherry saplings, harvest a bag of apples and press apple juice."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "vinery:apple_tree_sapling": 2,
+              "minecraft:cherry_sapling": 2
+            },
+            "radius": 12
+          },
+          "title": "Plant the co-op's orchard"
+        },
+        {
+          "item": "minecraft:apple",
+          "count": 8,
+          "title": "Harvest apples from the orchard"
+        },
+        {
+          "item": "vinery:apple_juice",
+          "crafted": true,
+          "title": "Press apple juice for the co-op"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "vinery:apple_bag"
+        },
+        {
+          "item": "vinery:applesauce",
+          "count": 4
+        },
+        {
+          "skill": "farm",
+          "xp": 280
+        }
+      ],
+      "icon": "vinery:apple_bag"
+    },
+    {
+      "id": "field_wont_grow",
+      "title": "The Field That Won't Grow",
+      "after": [
+        "rich_soil",
+        "main_story:act2_start"
+      ],
+      "text": [
+        "Old Farmer Hobb's field has stood bare for years. Find out why, then restore it: lay rich soil, bone meal the rows and replant until it bears again. He gives you his old boots."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Old Farmer Hobb",
+            "then": "talk",
+            "lines": [
+              "Nothing grows. Not for years. The water pools in that corner."
+            ]
+          },
+          "title": "Hear why Hobb's field stands bare"
+        },
+        {
+          "build": {
+            "blocks": {
+              "farmersdelight:rich_soil": 12,
+              "minecraft:wheat": 8
+            },
+            "radius": 10
+          },
+          "title": "Lay rich soil and replant the field"
+        },
+        {
+          "item": "minecraft:bone_meal",
+          "count": 8,
+          "consume": true,
+          "title": "Bone meal the rows until they bear"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:rooted_boots"
+        },
+        {
+          "skill": "farm",
+          "xp": 350
+        }
+      ],
+      "icon": "artifacts:rooted_boots",
+      "signature": "artifacts:rooted_boots"
+    },
+    {
+      "id": "silo",
+      "title": "The Silo",
+      "after": [
+        "corn_rows"
+      ],
+      "text": [
+        "The co-op needs a silo to dry barley and oats for the winter and for the brewers."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "farm_and_charm:silo_wood": 1
+            },
+            "radius": 10
+          },
+          "title": "Build a silo for the co-op"
+        },
+        {
+          "item": "farm_and_charm:barley",
+          "count": 32,
+          "consume": true,
+          "title": "Fill it with barley to dry for the brewers"
+        },
+        {
+          "item": "farm_and_charm:oat",
+          "count": 32,
+          "consume": true,
+          "title": "Fill it with oats for the winter"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farm_and_charm:flour",
+          "count": 16
+        },
+        {
+          "skill": "farm",
+          "xp": 300
+        }
+      ],
+      "icon": "farm_and_charm:silo_wood"
+    },
+    {
+      "id": "outpost_crows",
+      "title": "Crows at the Outpost",
+      "after": [
+        "silo"
+      ],
+      "text": [
+        "A farmer outpost far from the village is losing its crop. Deliver seed corn and a scarecrow, and defend the field through the night from the mobs trampling it."
+      ],
+      "tasks": [
+        {
+          "item": "farm_and_charm:kernels",
+          "count": 8,
+          "consume": true,
+          "title": "Bring seed corn for the outpost's field"
+        },
+        {
+          "item": "farm_and_charm:scarecrow",
+          "consume": true,
+          "title": "Bring a scarecrow for the field"
+        },
+        {
+          "structure": "structory_towers:farmer_outpost",
+          "title": "Reach the farmer outpost"
+        },
+        {
+          "timed": {
+            "seconds": 240,
+            "goal": {
+              "hold": {
+                "radius": 20
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:zombie",
+                "count": 3,
+                "every": 30
+              }
+            ],
+            "lines": [
+              "Night falls. Defend the field."
+            ],
+            "start": "Defend the field"
+          },
+          "title": "Defend the field through the night"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farm_and_charm:chicken_nest"
+        },
+        {
+          "item": "minecraft:chicken_spawn_egg",
+          "count": 3
+        },
+        {
+          "skill": "farm",
+          "xp": 330
+        }
+      ],
+      "icon": "farm_and_charm:scarecrow"
+    },
+    {
+      "id": "livestock_fair",
+      "title": "The Livestock Fair",
+      "after": [
+        "cheese_wheel"
+      ],
+      "text": [
+        "The festival's livestock fair judges the best pairs. Breed cows, sheep, pigs, chickens and a water buffalo to show."
+      ],
+      "tasks": [
+        {
+          "breed": "minecraft:cow",
+          "title": "Breed a pair of cows for the fair"
+        },
+        {
+          "breed": "minecraft:sheep",
+          "title": "Breed a pair of sheep for the fair"
+        },
+        {
+          "breed": "minecraft:pig",
+          "title": "Breed a pair of pigs for the fair"
+        },
+        {
+          "breed": "minecraft:chicken",
+          "title": "Breed a pair of chickens for the fair"
+        },
+        {
+          "breed": "meadow:water_buffalo",
+          "title": "Breed a pair of water buffalo for the fair"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "farm_and_charm:feeding_trough"
+        },
+        {
+          "skill": "farm",
+          "xp": 330
+        }
+      ],
+      "icon": "farm_and_charm:feeding_trough"
+    },
+    {
+      "id": "giant_pumpkin",
+      "title": "The Giant Pumpkin",
+      "after": [
+        "livestock_fair"
+      ],
+      "text": [
+        "The pumpkin contest: grow pumpkins in a patch or your own field and bring the co-op a full stack in one harvest."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:pumpkin",
+          "count": 64,
+          "title": "Bring the co-op a full stack of pumpkins"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:pumpkin_pie",
+          "count": 8
+        },
+        {
+          "skill": "farm",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:pumpkin"
+    },
+    {
+      "id": "mead",
+      "title": "Bees and Mead",
+      "after": [
+        "wine_press"
+      ],
+      "text": [
+        "The festival needs mead. Keep a hive near the flower fields, harvest honey bottles and honeycomb with a campfire beneath, and ferment it."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "minecraft:beehive": 1,
+              "minecraft:campfire": 1
+            },
+            "radius": 8
+          },
+          "title": "Set a hive over a campfire near the flowers"
+        },
+        {
+          "item": "minecraft:honey_bottle",
+          "count": 4,
+          "title": "Harvest honey for the mead"
+        },
+        {
+          "item": "minecraft:honeycomb",
+          "count": 4,
+          "title": "Harvest honeycomb for the mead"
+        },
+        {
+          "item": "vinery:mead",
+          "crafted": true,
+          "title": "Ferment mead for the festival"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:beehive"
+        },
+        {
+          "item": "vinery:mead",
+          "count": 2
+        },
+        {
+          "skill": "farm",
+          "xp": 320
+        }
+      ],
+      "icon": "vinery:mead"
+    },
+    {
+      "id": "hard_winter",
+      "title": "The Hard Winter",
+      "after": [
+        "silo"
+      ],
+      "text": [
+        "A snowy village's harvest failed and they won't see spring without help. Deliver bread, potato soup and barley soup, and seed for next year, before winter closes in."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:bread",
+          "count": 64,
+          "consume": true,
+          "title": "Gather bread to feed the snowed-in village"
+        },
+        {
+          "item": "farm_and_charm:potato_soup",
+          "count": 16,
+          "consume": true,
+          "title": "Gather potato soup for the village"
+        },
+        {
+          "item": "farm_and_charm:barley_soup",
+          "count": 16,
+          "consume": true,
+          "title": "Gather barley soup for the village"
+        },
+        {
+          "item": "minecraft:wheat_seeds",
+          "count": 32,
+          "consume": true,
+          "title": "Gather seed for next year's fields"
+        },
+        {
+          "timed": {
+            "seconds": 900,
+            "goal": {
+              "structure": "minecraft:village_snowy",
+              "label": "the snowy village",
+              "away": 200
+            },
+            "lines": [
+              "Winter closes in. Get the food through."
+            ],
+            "start": "Set out",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Get the food to the snowy village before winter closes in"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "The Snowy Village's Pledge",
+          "lore": [
+            "A festival pledge, signed by every household."
+          ]
+        },
+        {
+          "skill": "farm",
+          "xp": 400
+        }
+      ],
+      "icon": "minecraft:bread"
     }
   ]
 }

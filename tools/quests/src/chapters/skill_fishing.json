@@ -400,6 +400,372 @@
       ],
       "icon": "artifacts:snorkel",
       "signature": "artifacts:snorkel"
+    },
+    {
+      "id": "net_thieves",
+      "title": "Net Thieves",
+      "after": [
+        "dropped_rod"
+      ],
+      "text": [
+        "Fish keep vanishing from the society's nets at a fishing hut. Feathers and tracks lead to a seagull flock nesting nearby."
+      ],
+      "tasks": [
+        {
+          "structure": "#fishing_huts",
+          "title": "Go to the fishing hut where the fish go missing"
+        },
+        {
+          "kill": "alexsmobs:seagull",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "#fishing_huts"
+            },
+            "wave": 4,
+            "name": "Net-Thief Gulls"
+          },
+          "title": "Drive off the gulls stealing the society's fish"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:oak_fish_mount"
+        },
+        {
+          "skill": "fish",
+          "xp": 200
+        }
+      ],
+      "icon": "aquaculture:oak_fish_mount"
+    },
+    {
+      "id": "buoy_race",
+      "title": "Between the Buoys",
+      "after": [
+        "dropped_rod"
+      ],
+      "text": [
+        "Silas challenges you to a swim, no boats: out around the buoys of the harbour and back to the jetty before him. The race-master's flippers go to the winner."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "character": "silas",
+            "then": "talk",
+            "lines": [
+              "Race me! No boats! I'll be at the jetty before you're wet!"
+            ]
+          },
+          "title": "Take up Silas's challenge"
+        },
+        {
+          "timed": {
+            "seconds": 180,
+            "goal": {
+              "structure": "#fishing_huts",
+              "label": "the far jetty",
+              "away": 60
+            },
+            "lines": [
+              "No boats. Around the buoys and back!"
+            ],
+            "start": "Start the swim",
+            "no": [
+              "teleport",
+              "mounts"
+            ]
+          },
+          "title": "Swim the harbour course before Silas"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:flippers"
+        },
+        {
+          "skill": "fish",
+          "xp": 280
+        }
+      ],
+      "icon": "artifacts:flippers",
+      "signature": "artifacts:flippers"
+    },
+    {
+      "id": "jungle_heat",
+      "title": "Teeth in the River",
+      "after": [
+        "buoy_race",
+        "main_story:act2_start"
+      ],
+      "text": [
+        "The jungle heat: land an arapaima, a tambaqui and a piranha from a jungle river, and the heat's marked fish, without being bitten to the bone."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:jungle",
+          "title": "Go to a jungle river for the heat"
+        },
+        {
+          "item": "aquaculture:arapaima",
+          "title": "Land an arapaima"
+        },
+        {
+          "item": "aquaculture:tambaqui",
+          "title": "Land a tambaqui"
+        },
+        {
+          "item": "aquaculture:piranha",
+          "title": "Land a piranha"
+        },
+        {
+          "drop": {
+            "from": [
+              "fishing"
+            ],
+            "chance": 0.12,
+            "item": {
+              "name": "The Heat's Marked Fish",
+              "texture": "minecraft:item/cod",
+              "tooltip": "A prize catch"
+            }
+          },
+          "consume": false,
+          "title": "Land the heat's marked fish"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:diamond_hook"
+        },
+        {
+          "skill": "fish",
+          "xp": 320
+        }
+      ],
+      "icon": "aquaculture:piranha"
+    },
+    {
+      "id": "desert_heat",
+      "title": "Oasis Heat",
+      "after": [
+        "buoy_race"
+      ],
+      "text": [
+        "A heat on the desert rivers: bring back the society's three 'river of sand' fish, the bayad, the boulti and the capitaine."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:desert",
+          "title": "Go to the desert rivers for the heat"
+        },
+        {
+          "item": "aquaculture:bayad",
+          "title": "Land a bayad"
+        },
+        {
+          "item": "aquaculture:boulti",
+          "title": "Land a boulti"
+        },
+        {
+          "item": "aquaculture:capitaine",
+          "title": "Land a capitaine"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:iron_fillet_knife"
+        },
+        {
+          "skill": "fish",
+          "xp": 300
+        }
+      ],
+      "icon": "aquaculture:bayad"
+    },
+    {
+      "id": "reef_survey",
+      "title": "Colours of the Reef",
+      "after": [
+        "buoy_race"
+      ],
+      "text": [
+        "The society wants a living display. Bucket a clownfish, a seahorse and a moorish idol from a warm reef, and the society builds an aquarium around them in Reece."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:warm_ocean",
+          "title": "Dive to a warm reef"
+        },
+        {
+          "item": "rainbowreef:clownfish_bucket",
+          "title": "Bucket a clownfish for the aquarium"
+        },
+        {
+          "item": "rainbowreef:moorish_idol_bucket",
+          "title": "Bucket a moorish idol for the aquarium"
+        },
+        {
+          "item": "rainbowreef:raw_seahorse",
+          "title": "Catch a seahorse for the aquarium"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "rainbowreef:blue_puffer_lantern"
+        },
+        {
+          "skill": "fish",
+          "xp": 300
+        }
+      ],
+      "icon": "rainbowreef:clownfish_bucket"
+    },
+    {
+      "id": "outcast_fisherman",
+      "title": "The Fisherman Who Left",
+      "after": [
+        "reef_survey"
+      ],
+      "text": [
+        "Out at sea, an outcast fisherman lives on his little boat and knows the deep-water spots. Find him and match his catch of tuna, red grouper and halibut to earn a place in the deep-sea heat."
+      ],
+      "tasks": [
+        {
+          "structure": "structory:boat",
+          "title": "Find the outcast fisherman's boat at sea"
+        },
+        {
+          "item": "aquaculture:tuna",
+          "title": "Land a tuna to match his catch"
+        },
+        {
+          "item": "aquaculture:red_grouper",
+          "title": "Land a red grouper to match his catch"
+        },
+        {
+          "item": "aquaculture:atlantic_halibut",
+          "title": "Land a halibut to match his catch"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:leech",
+          "count": 16
+        },
+        {
+          "skill": "fish",
+          "xp": 330
+        }
+      ],
+      "icon": "aquaculture:tuna"
+    },
+    {
+      "id": "pillager_poachers",
+      "title": "Poachers Afloat",
+      "after": [
+        "outcast_fisherman"
+      ],
+      "text": [
+        "A pillager ship is dragging nets through the society's fishing grounds. Sail out, board it and clear its crew."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:pillager",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "towns_and_towers:pillager_outpost_ocean"
+            },
+            "wave": 4,
+            "name": "Net Poachers"
+          },
+          "title": "Board the poachers' ship and clear its crew"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:lockbox"
+        },
+        {
+          "skill": "fish",
+          "xp": 340
+        }
+      ],
+      "icon": "aquaculture:lockbox"
+    },
+    {
+      "id": "neptunes_bounty",
+      "title": "Neptune's Bounty",
+      "after": [
+        "outcast_fisherman"
+      ],
+      "text": [
+        "The outcast fisherman says the sea gives up treasure to the patient. Fish up Neptune's Bounty, open it and forge your first neptunium."
+      ],
+      "tasks": [
+        {
+          "item": "aquaculture:neptunes_bounty",
+          "title": "Fish up Neptune's Bounty"
+        },
+        {
+          "item": "aquaculture:neptunium_ingot",
+          "crafted": true,
+          "title": "Forge your first neptunium"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:neptunium_nugget",
+          "count": 8
+        },
+        {
+          "skill": "fish",
+          "xp": 370
+        }
+      ],
+      "icon": "aquaculture:neptunes_bounty"
+    },
+    {
+      "id": "salvage_logbook",
+      "title": "The Captain's Logbook",
+      "after": [
+        "pillager_poachers"
+      ],
+      "text": [
+        "The poachers' logbook names a wreck where they hid the society's old trophies. Find the shipwreck and salvage them."
+      ],
+      "tasks": [
+        {
+          "structure": "#shipwrecks",
+          "title": "Find the wreck named in the logbook"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "#shipwrecks"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Society's Old Trophies",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A trophy case, green with weed."
+          },
+          "title": "Salvage the society's old trophies"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:chest",
+          "count": 2
+        },
+        {
+          "skill": "fish",
+          "xp": 400
+        }
+      ],
+      "icon": "minecraft:chest"
     }
   ]
 }

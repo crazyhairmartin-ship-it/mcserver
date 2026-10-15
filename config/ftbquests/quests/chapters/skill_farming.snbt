@@ -347,7 +347,7 @@
 			]
 			title: "Rich Soil"
 			x: 6.0d
-			y: -1.5d
+			y: -2.25d
 		}
 		{
 			dependencies: ["5948A4CB146200DE"]
@@ -380,7 +380,7 @@
 			]
 			title: "Rice Paddies"
 			x: 7.5d
-			y: -0.75d
+			y: -5.25d
 		}
 		{
 			dependencies: ["023DFC889C4C6A08"]
@@ -417,7 +417,7 @@
 			]
 			title: "The Cheese Wheel"
 			x: 6.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["2D8D03D2E227F298"]
@@ -544,7 +544,7 @@
 			]
 			title: "The Festival Toast"
 			x: 6.0d
-			y: 1.5d
+			y: 0.75d
 		}
 		{
 			dependencies: ["236C1503B618CC84"]
@@ -583,7 +583,496 @@
 			]
 			title: "Shearing Day"
 			x: 7.5d
+			y: -3.75d
+		}
+		{
+			dependencies: [
+				"65EEBE3C01D56D40"
+				"2CF0262A21E6E0BC"
+			]
+			description: ["A wandering winemaker passes through the co-op's fields and wants to taste your wine. Trade him for cherry saplings and his advice on ageing."]
+			icon: "vinery:cherry_wine"
+			id: "18040CC674D44908"
+			rewards: [
+				{
+					count: 4
+					id: "23B2A0962F2E6961"
+					item: "minecraft:cherry_sapling"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "38839D59832594D6"
+					item: "vinery:apple_tree_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 250"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "38DB83F485D66A96"
+					silent: true
+					title: "+250 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "1F4239BA47E118CA"
+					item: "vinery:cherry_wine"
+					title: "Pour your wine for the winemaker to taste"
+					type: "item"
+				}
+				{
+					id: "5C3491BF512FD5FA"
+					stage: "fq.skill_farming.wandering_winemaker.enc1"
+					title: "Trade with the winemaker"
+					type: "gamestage"
+				}
+			]
+			title: "The Wandering Winemaker"
+			x: 7.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["18040CC674D44908"]
+			description: ["The co-op wants an orchard. Plant apple and cherry saplings, harvest a bag of apples and press apple juice."]
+			icon: "vinery:apple_bag"
+			id: "3598F5A5C3B377A7"
+			rewards: [
+				{
+					id: "241A9F39C786796D"
+					item: "vinery:apple_bag"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "7737CCF194587C9E"
+					item: "vinery:applesauce"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 280"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "24854AB51640B457"
+					silent: true
+					title: "+280 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "79378FA7F5B9FF73"
+					stage: "fq.skill_farming.orchard.build0"
+					title: "Plant the co-op's orchard"
+					type: "gamestage"
+				}
+				{
+					count: 8L
+					id: "4A7831D5A6C57249"
+					item: "minecraft:apple"
+					title: "Harvest apples from the orchard"
+					type: "item"
+				}
+				{
+					id: "51EE10A77D356ED1"
+					item: "vinery:apple_juice"
+					only_from_crafting: true
+					title: "Press apple juice for the co-op"
+					type: "item"
+				}
+			]
+			title: "The Orchard"
+			x: 9.0d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"5948A4CB146200DE"
+				"2CF0262A21E6E0BC"
+			]
+			description: ["Old Farmer Hobb's field has stood bare for years. Find out why, then restore it: lay rich soil, bone meal the rows and replant until it bears again. He gives you his old boots."]
+			icon: "artifacts:rooted_boots"
+			id: "0A292FEB23EF7A73"
+			rewards: [
+				{
+					id: "6F5EC34E28F38EF3"
+					item: "artifacts:rooted_boots"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 350"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "1A6B7617A9248C3C"
+					silent: true
+					title: "+350 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "57AEB7EDB6AFD119"
+					stage: "fq.skill_farming.field_wont_grow.enc0"
+					title: "Hear why Hobb's field stands bare"
+					type: "gamestage"
+				}
+				{
+					id: "74F38BC0D047A133"
+					stage: "fq.skill_farming.field_wont_grow.build1"
+					title: "Lay rich soil and replant the field"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "2B99C857466A602A"
+					item: "minecraft:bone_meal"
+					title: "Bone meal the rows until they bear"
+					type: "item"
+				}
+			]
+			title: "The Field That Won't Grow"
+			x: 7.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["2543E23B6C663557"]
+			description: ["The co-op needs a silo to dry barley and oats for the winter and for the brewers."]
+			icon: "farm_and_charm:silo_wood"
+			id: "48D82F0F11486600"
+			rewards: [
+				{
+					count: 16
+					id: "1D4DFB6E62B41E22"
+					item: "farm_and_charm:flour"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 300"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "410C655EAC199650"
+					silent: true
+					title: "+300 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "476B6D7FF6023B5C"
+					stage: "fq.skill_farming.silo.build0"
+					title: "Build a silo for the co-op"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 32L
+					id: "360F5B9B2DE94508"
+					item: "farm_and_charm:barley"
+					title: "Fill it with barley to dry for the brewers"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 32L
+					id: "292652AC43AE7E14"
+					item: "farm_and_charm:oat"
+					title: "Fill it with oats for the winter"
+					type: "item"
+				}
+			]
+			title: "The Silo"
+			x: 6.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["48D82F0F11486600"]
+			description: ["A farmer outpost far from the village is losing its crop. Deliver seed corn and a scarecrow, and defend the field through the night from the mobs trampling it."]
+			icon: "farm_and_charm:scarecrow"
+			id: "61C04E24F515A661"
+			rewards: [
+				{
+					id: "2B1F0AD7037D1819"
+					item: "farm_and_charm:chicken_nest"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "2D32A37D5394636D"
+					item: "minecraft:chicken_spawn_egg"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 330"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "4F367102261AD37D"
+					silent: true
+					title: "+330 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 8L
+					id: "59E88EFFC1068EB1"
+					item: "farm_and_charm:kernels"
+					title: "Bring seed corn for the outpost's field"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "692DFD66F2FC12D1"
+					item: "farm_and_charm:scarecrow"
+					title: "Bring a scarecrow for the field"
+					type: "item"
+				}
+				{
+					id: "3B613A20F4C903BB"
+					structure: "structory_towers:farmer_outpost"
+					title: "Reach the farmer outpost"
+					type: "structure"
+				}
+				{
+					id: "02A8C8B1F3D8990C"
+					stage: "fq.skill_farming.outpost_crows.timed3"
+					title: "Defend the field through the night"
+					type: "gamestage"
+				}
+			]
+			title: "Crows at the Outpost"
+			x: 7.5d
 			y: 0.75d
+		}
+		{
+			dependencies: ["236C1503B618CC84"]
+			description: ["The festival's livestock fair judges the best pairs. Breed cows, sheep, pigs, chickens and a water buffalo to show."]
+			icon: "farm_and_charm:feeding_trough"
+			id: "60E95E57B097D4C4"
+			rewards: [
+				{
+					id: "6CD28C4291AC9FD2"
+					item: "farm_and_charm:feeding_trough"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 330"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "156229DF7288DBFE"
+					silent: true
+					title: "+330 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5EFA42914519C7BE"
+					stage: "fq.skill_farming.livestock_fair.breed0"
+					title: "Breed a pair of cows for the fair"
+					type: "gamestage"
+				}
+				{
+					id: "7DD59424566FA244"
+					stage: "fq.skill_farming.livestock_fair.breed1"
+					title: "Breed a pair of sheep for the fair"
+					type: "gamestage"
+				}
+				{
+					id: "6CF67ADC2D247A45"
+					stage: "fq.skill_farming.livestock_fair.breed2"
+					title: "Breed a pair of pigs for the fair"
+					type: "gamestage"
+				}
+				{
+					id: "21B1B2DCE656B3FF"
+					stage: "fq.skill_farming.livestock_fair.breed3"
+					title: "Breed a pair of chickens for the fair"
+					type: "gamestage"
+				}
+				{
+					id: "5D7D108FFEADDBF4"
+					stage: "fq.skill_farming.livestock_fair.breed4"
+					title: "Breed a pair of water buffalo for the fair"
+					type: "gamestage"
+				}
+			]
+			title: "The Livestock Fair"
+			x: 7.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["60E95E57B097D4C4"]
+			description: ["The pumpkin contest: grow pumpkins in a patch or your own field and bring the co-op a full stack in one harvest."]
+			icon: "minecraft:pumpkin"
+			id: "1292C7281B851783"
+			rewards: [
+				{
+					count: 8
+					id: "15292D61D652CCB4"
+					item: "minecraft:pumpkin_pie"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 340"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "70FD3C69314916C6"
+					silent: true
+					title: "+340 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "7764DF47D4D403EF"
+					item: "minecraft:pumpkin"
+					title: "Bring the co-op a full stack of pumpkins"
+					type: "item"
+				}
+			]
+			title: "The Giant Pumpkin"
+			x: 9.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["65EEBE3C01D56D40"]
+			description: ["The festival needs mead. Keep a hive near the flower fields, harvest honey bottles and honeycomb with a campfire beneath, and ferment it."]
+			icon: "vinery:mead"
+			id: "30E23A4637DE2DEA"
+			rewards: [
+				{
+					id: "41F5B9F9D6F3F9C7"
+					item: "minecraft:beehive"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "71A7DAF82BEDAC61"
+					item: "vinery:mead"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 320"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "7E2159630C094F93"
+					silent: true
+					title: "+320 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3D5DD2F237AB0F23"
+					stage: "fq.skill_farming.mead.build0"
+					title: "Set a hive over a campfire near the flowers"
+					type: "gamestage"
+				}
+				{
+					count: 4L
+					id: "668444B53969249D"
+					item: "minecraft:honey_bottle"
+					title: "Harvest honey for the mead"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "17EE6434FD81950E"
+					item: "minecraft:honeycomb"
+					title: "Harvest honeycomb for the mead"
+					type: "item"
+				}
+				{
+					id: "3598D989412C9307"
+					item: "vinery:mead"
+					only_from_crafting: true
+					title: "Ferment mead for the festival"
+					type: "item"
+				}
+			]
+			title: "Bees and Mead"
+			x: 7.5d
+			y: 3.75d
+		}
+		{
+			dependencies: ["48D82F0F11486600"]
+			description: ["A snowy village's harvest failed and they won't see spring without help. Deliver bread, potato soup and barley soup, and seed for next year, before winter closes in."]
+			icon: "minecraft:bread"
+			id: "0D6355F6D3D055BC"
+			rewards: [
+				{
+					id: "2642EDA2CF9FFD78"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"A festival pledge, signed by every household.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Snowy Village's Pledge\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 400"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "2B3C7FF42D788DCD"
+					silent: true
+					title: "+400 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 64L
+					id: "10BDFA83BAFC7D50"
+					item: "minecraft:bread"
+					title: "Gather bread to feed the snowed-in village"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "3CD56C77C6F04166"
+					item: "farm_and_charm:potato_soup"
+					title: "Gather potato soup for the village"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "297E695B47D80B07"
+					item: "farm_and_charm:barley_soup"
+					title: "Gather barley soup for the village"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 32L
+					id: "72393E660DBCDA5D"
+					item: "minecraft:wheat_seeds"
+					title: "Gather seed for next year's fields"
+					type: "item"
+				}
+				{
+					id: "395986659A4AEEDD"
+					stage: "fq.skill_farming.hard_winter.timed4"
+					title: "Get the food to the snowy village before winter closes in"
+					type: "gamestage"
+				}
+			]
+			title: "The Hard Winter"
+			x: 7.5d
+			y: 5.25d
 		}
 	]
 	subtitle: ["Farming path"]

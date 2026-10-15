@@ -437,6 +437,414 @@
 			x: 12.0d
 			y: 0.0d
 		}
+		{
+			dependencies: ["049497D318092D53"]
+			description: ["Fish keep vanishing from the society's nets at a fishing hut. Feathers and tracks lead to a seagull flock nesting nearby."]
+			icon: "aquaculture:oak_fish_mount"
+			id: "3155C5F0F87C27B5"
+			rewards: [
+				{
+					id: "787FA0A202D062E9"
+					item: "aquaculture:oak_fish_mount"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 200"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "34095B36655FB9F9"
+					silent: true
+					title: "+200 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "11E0FF77C582CC60"
+					structure: "#fotf:groups/fishing_huts"
+					title: "Go to the fishing hut where the fish go missing"
+					type: "structure"
+				}
+				{
+					entity: "alexsmobs:seagull"
+					id: "07C7D40AD4FCA33C"
+					title: "Drive off the gulls stealing the society's fish"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "Net Thieves"
+			x: 13.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["049497D318092D53"]
+			description: ["Silas challenges you to a swim, no boats: out around the buoys of the harbour and back to the jetty before him. The race-master's flippers go to the winner."]
+			icon: "artifacts:flippers"
+			id: "1540DF57D9F87A94"
+			rewards: [
+				{
+					id: "7F3AF48B7DC31C44"
+					item: "artifacts:flippers"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 280"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "2D9224485C9545FC"
+					silent: true
+					title: "+280 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1483B67F535544F0"
+					stage: "fq.skill_fishing.buoy_race.enc0"
+					title: "Take up Silas's challenge"
+					type: "gamestage"
+				}
+				{
+					id: "36F4E37F067D2128"
+					stage: "fq.skill_fishing.buoy_race.timed1"
+					title: "Swim the harbour course before Silas"
+					type: "gamestage"
+				}
+			]
+			title: "Between the Buoys"
+			x: 13.5d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"1540DF57D9F87A94"
+				"2CF0262A21E6E0BC"
+			]
+			description: ["The jungle heat: land an arapaima, a tambaqui and a piranha from a jungle river, and the heat's marked fish, without being bitten to the bone."]
+			icon: "aquaculture:piranha"
+			id: "0EA1D1046A6918F1"
+			rewards: [
+				{
+					id: "057648BEB61AEC3C"
+					item: "aquaculture:diamond_hook"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 320"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "26DB967840881AE7"
+					silent: true
+					title: "+320 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:jungle"
+					id: "68E9588D98A9A38F"
+					title: "Go to a jungle river for the heat"
+					type: "biome"
+				}
+				{
+					id: "360DEBF49343F3A5"
+					item: "aquaculture:arapaima"
+					title: "Land an arapaima"
+					type: "item"
+				}
+				{
+					id: "5F6A5D9BDC838AA6"
+					item: "aquaculture:tambaqui"
+					title: "Land a tambaqui"
+					type: "item"
+				}
+				{
+					id: "4959EBD90AF9998A"
+					item: "aquaculture:piranha"
+					title: "Land a piranha"
+					type: "item"
+				}
+				{
+					id: "7203D3C7FC51F722"
+					item: "kubejs:quest_jungle_heat_4"
+					title: "Land the heat's marked fish"
+					type: "item"
+				}
+			]
+			title: "Teeth in the River"
+			x: 15.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1540DF57D9F87A94"]
+			description: ["A heat on the desert rivers: bring back the society's three 'river of sand' fish, the bayad, the boulti and the capitaine."]
+			icon: "aquaculture:bayad"
+			id: "301E194E57A6C6BE"
+			rewards: [
+				{
+					id: "02E6279C262BEC70"
+					item: "aquaculture:iron_fillet_knife"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 300"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "2228CB9ACC6244F9"
+					silent: true
+					title: "+300 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:desert"
+					id: "10502B08088CAA5C"
+					title: "Go to the desert rivers for the heat"
+					type: "biome"
+				}
+				{
+					id: "30E6C2A67E80329D"
+					item: "aquaculture:bayad"
+					title: "Land a bayad"
+					type: "item"
+				}
+				{
+					id: "2683A3EE07043B96"
+					item: "aquaculture:boulti"
+					title: "Land a boulti"
+					type: "item"
+				}
+				{
+					id: "64D8F76429DF8B14"
+					item: "aquaculture:capitaine"
+					title: "Land a capitaine"
+					type: "item"
+				}
+			]
+			title: "Oasis Heat"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1540DF57D9F87A94"]
+			description: ["The society wants a living display. Bucket a clownfish, a seahorse and a moorish idol from a warm reef, and the society builds an aquarium around them in Reece."]
+			icon: "rainbowreef:clownfish_bucket"
+			id: "7A1142C6C7D007BF"
+			rewards: [
+				{
+					id: "529CD5B66C3A4B16"
+					item: "rainbowreef:blue_puffer_lantern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 300"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "6F1A7BEBC2C16EAC"
+					silent: true
+					title: "+300 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:warm_ocean"
+					id: "462268433F4CAC83"
+					title: "Dive to a warm reef"
+					type: "biome"
+				}
+				{
+					id: "439FCA1F90367918"
+					item: "rainbowreef:clownfish_bucket"
+					title: "Bucket a clownfish for the aquarium"
+					type: "item"
+				}
+				{
+					id: "1CE6467B38BAD022"
+					item: "rainbowreef:moorish_idol_bucket"
+					title: "Bucket a moorish idol for the aquarium"
+					type: "item"
+				}
+				{
+					id: "51197CB14F173456"
+					item: "rainbowreef:raw_seahorse"
+					title: "Catch a seahorse for the aquarium"
+					type: "item"
+				}
+			]
+			title: "Colours of the Reef"
+			x: 15.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7A1142C6C7D007BF"]
+			description: ["Out at sea, an outcast fisherman lives on his little boat and knows the deep-water spots. Find him and match his catch of tuna, red grouper and halibut to earn a place in the deep-sea heat."]
+			icon: "aquaculture:tuna"
+			id: "704AE0D01E4CABC5"
+			rewards: [
+				{
+					count: 16
+					id: "3BBF62272A58537B"
+					item: "aquaculture:leech"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 330"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "4B1D6245425669F3"
+					silent: true
+					title: "+330 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "188CF0EF160AF0BE"
+					structure: "structory:boat"
+					title: "Find the outcast fisherman's boat at sea"
+					type: "structure"
+				}
+				{
+					id: "372658DBB0DA8D9D"
+					item: "aquaculture:tuna"
+					title: "Land a tuna to match his catch"
+					type: "item"
+				}
+				{
+					id: "0A978D9F35E388F7"
+					item: "aquaculture:red_grouper"
+					title: "Land a red grouper to match his catch"
+					type: "item"
+				}
+				{
+					id: "77EB904979774EAD"
+					item: "aquaculture:atlantic_halibut"
+					title: "Land a halibut to match his catch"
+					type: "item"
+				}
+			]
+			title: "The Fisherman Who Left"
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["704AE0D01E4CABC5"]
+			description: ["A pillager ship is dragging nets through the society's fishing grounds. Sail out, board it and clear its crew."]
+			icon: "aquaculture:lockbox"
+			id: "748E350957A5489F"
+			rewards: [
+				{
+					id: "73898FF926F588EA"
+					item: "aquaculture:lockbox"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 340"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "6E1356EB22A33616"
+					silent: true
+					title: "+340 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:pillager"
+					id: "4702FC8BBE76F2CD"
+					title: "Board the poachers' ship and clear its crew"
+					type: "kill"
+					value: 8L
+				}
+			]
+			title: "Poachers Afloat"
+			x: 18.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["704AE0D01E4CABC5"]
+			description: ["The outcast fisherman says the sea gives up treasure to the patient. Fish up Neptune's Bounty, open it and forge your first neptunium."]
+			icon: "aquaculture:neptunes_bounty"
+			id: "3F926CC6955310C7"
+			rewards: [
+				{
+					count: 8
+					id: "1542BEDB761FE43D"
+					item: "aquaculture:neptunium_nugget"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 370"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "406251DA10A89E7E"
+					silent: true
+					title: "+370 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "65F974C8457F7776"
+					item: "aquaculture:neptunes_bounty"
+					title: "Fish up Neptune's Bounty"
+					type: "item"
+				}
+				{
+					id: "31AB922D45EC1BA4"
+					item: "aquaculture:neptunium_ingot"
+					only_from_crafting: true
+					title: "Forge your first neptunium"
+					type: "item"
+				}
+			]
+			title: "Neptune's Bounty"
+			x: 18.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["748E350957A5489F"]
+			description: ["The poachers' logbook names a wreck where they hid the society's old trophies. Find the shipwreck and salvage them."]
+			icon: "minecraft:chest"
+			id: "3583B48ACE6A0EFA"
+			rewards: [
+				{
+					count: 2
+					id: "4665E3E11A51C65A"
+					item: "minecraft:chest"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 400"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "106DE698950BA767"
+					silent: true
+					title: "+400 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6B5A750BDD3F3F7D"
+					structure: "#fotf:groups/shipwrecks"
+					title: "Find the wreck named in the logbook"
+					type: "structure"
+				}
+				{
+					id: "1E605EAA8A7EA382"
+					item: "kubejs:quest_salvage_logbook_1"
+					title: "Salvage the society's old trophies"
+					type: "item"
+				}
+			]
+			title: "The Captain's Logbook"
+			x: 19.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Fishing path"]
 	title: "The Anglers' Society"

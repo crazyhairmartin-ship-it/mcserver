@@ -1,6 +1,7 @@
 """Chapter: skill_fishing, the Anglers' Society season: prologue and Act I (first release).
 Plan: src/plans/quests/skill_fishing.json. Competitions aren't timed: you fish until the prize quest item bites."""
 from common import chapter, quest, talk_char, item, reward_item, skill, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 
 def prize(name, chance=0.15, texture="minecraft:item/cod"):
@@ -90,4 +91,85 @@ Q = [
           rewards=[reward_item("artifacts:snorkel"), skill("fish", 200)]),
 ]
 
-chapter("skill_fishing", "The Anglers' Society", "Fishing path", "minecraft:fishing_rod", "skills", 2, Q)
+ACT2 = [
+    quest("net_thieves", "Net Thieves", icon="aquaculture:oak_fish_mount", after=["dropped_rod"],
+          text=["Fish keep vanishing from the society's nets at a fishing hut. Feathers and tracks lead to a seagull "
+                "flock nesting nearby."],
+          tasks=[{"structure": "#fishing_huts", "title": "Go to the fishing hut where the fish go missing"},
+                 fight("alexsmobs:seagull", 6, "#fishing_huts", "Net-Thief Gulls", "Drive off the gulls stealing the society's fish")],
+          rewards=[reward_item("aquaculture:oak_fish_mount"), skill("fish", 200)]),
+
+    quest("buoy_race", "Between the Buoys", icon="artifacts:flippers", after=["dropped_rod"],
+          signature="artifacts:flippers",
+          text=["Silas challenges you to a swim, no boats: out around the buoys of the harbour and back to the jetty "
+                "before him. The race-master's flippers go to the winner."],
+          tasks=[enc(["Race me! No boats! I'll be at the jetty before you're wet!"], character="silas",
+                     title="Take up Silas's challenge"),
+                 {"timed": {"seconds": 180, "goal": {"structure": "#fishing_huts", "label": "the far jetty", "away": 60},
+                            "lines": ["No boats. Around the buoys and back!"], "start": "Start the swim",
+                            "no": ["teleport", "mounts"]}, "title": "Swim the harbour course before Silas"}],
+          rewards=[reward_item("artifacts:flippers"), skill("fish", 280)]),
+
+    quest("jungle_heat", "Teeth in the River", icon="aquaculture:piranha", after=["buoy_race", "main_story:act2_start"],
+          text=["The jungle heat: land an arapaima, a tambaqui and a piranha from a jungle river, and the heat's "
+                "marked fish, without being bitten to the bone."],
+          tasks=[{"biome": "minecraft:jungle", "title": "Go to a jungle river for the heat"},
+                 item("aquaculture:arapaima", title="Land an arapaima"),
+                 item("aquaculture:tambaqui", title="Land a tambaqui"),
+                 item("aquaculture:piranha", title="Land a piranha"),
+                 {"drop": {"from": ["fishing"], "chance": 0.12,
+                           "item": {"name": "The Heat's Marked Fish", "texture": "minecraft:item/cod", "tooltip": "A prize catch"}},
+                  "consume": False, "title": "Land the heat's marked fish"}],
+          rewards=[reward_item("aquaculture:diamond_hook"), skill("fish", 320)]),
+
+    quest("desert_heat", "Oasis Heat", icon="aquaculture:bayad", after=["buoy_race"],
+          text=["A heat on the desert rivers: bring back the society's three 'river of sand' fish, the bayad, "
+                "the boulti and the capitaine."],
+          tasks=[{"biome": "minecraft:desert", "title": "Go to the desert rivers for the heat"},
+                 item("aquaculture:bayad", title="Land a bayad"),
+                 item("aquaculture:boulti", title="Land a boulti"),
+                 item("aquaculture:capitaine", title="Land a capitaine")],
+          rewards=[reward_item("aquaculture:iron_fillet_knife"), skill("fish", 300)]),
+
+    quest("reef_survey", "Colours of the Reef", icon="rainbowreef:clownfish_bucket", after=["buoy_race"],
+          text=["The society wants a living display. Bucket a clownfish, a seahorse and a moorish idol from a warm "
+                "reef, and the society builds an aquarium around them in Reece."],
+          tasks=[{"biome": "minecraft:warm_ocean", "title": "Dive to a warm reef"},
+                 item("rainbowreef:clownfish_bucket", title="Bucket a clownfish for the aquarium"),
+                 item("rainbowreef:moorish_idol_bucket", title="Bucket a moorish idol for the aquarium"),
+                 item("rainbowreef:raw_seahorse", title="Catch a seahorse for the aquarium")],
+          rewards=[reward_item("rainbowreef:blue_puffer_lantern"), skill("fish", 300)]),
+
+    quest("outcast_fisherman", "The Fisherman Who Left", icon="aquaculture:tuna", after=["reef_survey"],
+          text=["Out at sea, an outcast fisherman lives on his little boat and knows the deep-water spots. Find him "
+                "and match his catch of tuna, red grouper and halibut to earn a place in the deep-sea heat."],
+          tasks=[{"structure": "structory:boat", "title": "Find the outcast fisherman's boat at sea"},
+                 item("aquaculture:tuna", title="Land a tuna to match his catch"),
+                 item("aquaculture:red_grouper", title="Land a red grouper to match his catch"),
+                 item("aquaculture:atlantic_halibut", title="Land a halibut to match his catch")],
+          rewards=[reward_item("aquaculture:leech", 16), skill("fish", 330)]),
+
+    quest("pillager_poachers", "Poachers Afloat", icon="aquaculture:lockbox", after=["outcast_fisherman"],
+          text=["A pillager ship is dragging nets through the society's fishing grounds. Sail out, board it and clear "
+                "its crew."],
+          tasks=[fight("minecraft:pillager", 8, "towns_and_towers:pillager_outpost_ocean", "Net Poachers",
+                       "Board the poachers' ship and clear its crew", wave=4)],
+          rewards=[reward_item("aquaculture:lockbox"), skill("fish", 340)]),
+
+    quest("neptunes_bounty", "Neptune's Bounty", icon="aquaculture:neptunes_bounty", after=["outcast_fisherman"],
+          text=["The outcast fisherman says the sea gives up treasure to the patient. Fish up Neptune's Bounty, "
+                "open it and forge your first neptunium."],
+          tasks=[item("aquaculture:neptunes_bounty", title="Fish up Neptune's Bounty"),
+                 item("aquaculture:neptunium_ingot", crafted=True, title="Forge your first neptunium")],
+          rewards=[reward_item("aquaculture:neptunium_nugget", 8), skill("fish", 370)]),
+
+    quest("salvage_logbook", "The Captain's Logbook", icon="minecraft:chest", after=["pillager_poachers"],
+          text=["The poachers' logbook names a wreck where they hid the society's old trophies. Find the shipwreck "
+                "and salvage them."],
+          tasks=[{"structure": "#shipwrecks", "title": "Find the wreck named in the logbook"},
+                 search("#shipwrecks", 1, "the Society's Old Trophies", "A trophy case, green with weed.",
+                        title="Salvage the society's old trophies")],
+          rewards=[reward_item("minecraft:chest", 2), skill("fish", 400)]),
+]
+
+chapter("skill_fishing", "The Anglers' Society", "Fishing path", "minecraft:fishing_rod", "skills", 2, Q + ACT2)

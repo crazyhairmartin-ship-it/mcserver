@@ -385,7 +385,7 @@
 			]
 			title: "A Baker's Dozen"
 			x: 7.5d
-			y: -1.5d
+			y: -2.25d
 		}
 		{
 			dependencies: ["6DB6F5AE6A4A26EE"]
@@ -431,7 +431,7 @@
 			]
 			title: "The Wandering Baker"
 			x: 9.0d
-			y: -0.75d
+			y: -3.0d
 		}
 		{
 			dependencies: ["756907B81B1DAF98"]
@@ -481,7 +481,7 @@
 			]
 			title: "Morning Tea"
 			x: 7.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["756907B81B1DAF98"]
@@ -529,7 +529,7 @@
 			]
 			title: "The First Brew"
 			x: 7.5d
-			y: 1.5d
+			y: 0.75d
 		}
 		{
 			dependencies: [
@@ -588,6 +588,487 @@
 			]
 			title: "The Food Critic"
 			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: [
+				"2C68475D4929EDA2"
+				"2CF0262A21E6E0BC"
+			]
+			description: ["The brewers hold their festival night in a brewfest tent out in the world. Bring barley, oat and nettle beers and pretzels, keep the mugs full all night, and win the drinking-song contest."]
+			icon: "artifacts:novelty_drinking_hat"
+			id: "491A0F670C160811"
+			rewards: [
+				{
+					id: "5548C9826F015782"
+					item: "artifacts:novelty_drinking_hat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 300"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "243B5593E9A1BFDB"
+					silent: true
+					title: "+300 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "06AAAE2695769067"
+					structure: "brewery:brewfest_tent"
+					title: "Find the brewfest tent"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "551AFD504D2AC09E"
+					item: "brewery:beer_barley"
+					title: "Bring barley beer for the tent"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "4FA47EFE850FF4EB"
+					item: "brewery:beer_oat"
+					title: "Bring oat beer for the tent"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "06112C179E1F29AB"
+					item: "brewery:beer_nettle"
+					title: "Bring nettle beer for the tent"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "3AB25AC0FFCA6DBE"
+					item: "brewery:pretzel"
+					title: "Bring pretzels to keep the crowd fed"
+					type: "item"
+				}
+				{
+					id: "0BE172763E7AAE73"
+					stage: "fq.skill_cooking.brewfest_night.enc5"
+					title: "Win the brewmaster's drinking-song contest"
+					type: "gamestage"
+				}
+			]
+			title: "Brewfest Night"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["43B8EDF637747BB1"]
+			description: ["The village elder wants a proper dinner for a wedding party. Furnish a dining room with a table, chairs and a dinner bell, and serve lasagne and fillet steak to the guests."]
+			icon: "candlelight:dinner_bell"
+			id: "308F015D470DE740"
+			rewards: [
+				{
+					count: 6
+					id: "6D0974C1679548E6"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 280"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "435A8FB3F79A2EC6"
+					silent: true
+					title: "+280 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0A6C13F0BEA4074C"
+					structure: "#fotf:groups/villages"
+					title: "Go to the elder's dining hall"
+					type: "structure"
+				}
+				{
+					id: "32E71341AE2BFB56"
+					stage: "fq.skill_cooking.candlelit_dinner.build1"
+					title: "Furnish the dining room for the wedding party"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "6DCD8E7E60E4F35F"
+					item: "candlelight:lasagne"
+					title: "Serve lasagne to the guests"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "703450C9FBE3BF11"
+					item: "candlelight:fillet_steak"
+					title: "Serve fillet steak to the guests"
+					type: "item"
+				}
+			]
+			title: "A Candlelit Dinner"
+			x: 10.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["308F015D470DE740"]
+			description: ["The wedding wants every dish paired with its wine: salmon on white wine, beef with mushroom in wine and potatoes, and a glass of red with the cheese."]
+			icon: "vinery:red_wine"
+			id: "7E6BCEB6B9DC90A2"
+			rewards: [
+				{
+					id: "22E7585BE8DFEA4D"
+					item: "vinery:acacia_wine_rack_mid"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 300"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "3653869C61CE5685"
+					silent: true
+					title: "+300 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "1B7F3EB51F739310"
+					item: "candlelight:salmon_on_white_wine"
+					title: "Cook salmon on white wine"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "4EC253D4DDAEC852"
+					item: "vinery:chenet_wine"
+					title: "Pour the white wine for the salmon"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "54B4E78173475A9F"
+					item: "candlelight:beef_with_mushroom_in_wine_and_potatoes"
+					title: "Cook beef in wine with potatoes"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "719FB2B707871386"
+					item: "vinery:red_wine"
+					title: "Pour the red wine for the beef and cheese"
+					type: "item"
+				}
+			]
+			title: "Wine Pairing"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7E6BCEB6B9DC90A2"]
+			description: ["The tavern wants a cheese board from Meadow's cheeses: goat, sheep, buffalo and grain cheese, with cheese tart and fondue on the side."]
+			icon: "meadow:cheese_tart"
+			id: "2045EEC93A690443"
+			rewards: [
+				{
+					id: "6F30129C064CC32F"
+					item: "meadow:cheese_form"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 320"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "39C0813869A42D7A"
+					silent: true
+					title: "+320 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "2991B92449B3C9D4"
+					item: "meadow:piece_of_goat_cheese"
+					title: "Cut goat cheese for the board"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "1914CFD241C226CD"
+					item: "meadow:piece_of_sheep_cheese"
+					title: "Cut sheep cheese for the board"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "6A5717B932D173D9"
+					item: "meadow:piece_of_buffalo_cheese"
+					title: "Cut buffalo cheese for the board"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "54F2F7C487A8D603"
+					item: "meadow:piece_of_grain_cheese"
+					title: "Cut grain cheese for the board"
+					type: "item"
+				}
+				{
+					id: "70E2F0672710A90D"
+					item: "meadow:cheese_tart"
+					title: "Bake a cheese tart for the side"
+					type: "item"
+				}
+				{
+					id: "7B593E8A28D8DB5D"
+					item: "meadow:fondue"
+					title: "Make a fondue for the side"
+					type: "item"
+				}
+			]
+			title: "The Cheese Board"
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["45638EB22BB27EDF"]
+			description: ["Music night at the tavern needs snacks. Make buttery, cheesy and candied popcorn in tins, with grandma's cornbread for the band."]
+			icon: "cornexpansion:popcorn_tin"
+			id: "656BA6847636096A"
+			rewards: [
+				{
+					id: "77B629CCFD04F005"
+					item: "immersive_melodies:handpan"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 300"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "664262E9672D1DBE"
+					silent: true
+					title: "+300 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "45642787B8D13D32"
+					item: "cornexpansion:buttery_popcorn_tin"
+					title: "Make buttery popcorn in a tin"
+					type: "item"
+				}
+				{
+					id: "42C98B9CAD2AC8B2"
+					item: "cornexpansion:cheesy_popcorn_tin"
+					title: "Make cheesy popcorn in a tin"
+					type: "item"
+				}
+				{
+					id: "41C7F812BC53F757"
+					item: "cornexpansion:candied_popcorn_tin"
+					title: "Make candied popcorn in a tin"
+					type: "item"
+				}
+				{
+					id: "5DC65CC2FFA4A445"
+					item: "cornexpansion:grandmas_cornbread"
+					title: "Bake cornbread for the band"
+					type: "item"
+				}
+			]
+			title: "Popcorn Night"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["756907B81B1DAF98"]
+			description: ["A tavern two villages away has run out of stew mid-feast. Carry a shepherd's pie and eight bowls of beef stew there before the hour is up."]
+			icon: "farmersdelight:shepherds_pie_block"
+			id: "6E845338DB2850D1"
+			rewards: [
+				{
+					id: "08F58FFF1E14B5C3"
+					item: "camping:small_backpack"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 300"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "0057C8447C825255"
+					silent: true
+					title: "+300 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "66C1F213B3A7C7A8"
+					item: "farmersdelight:shepherds_pie_block"
+					title: "Take a shepherd's pie for the feast"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "1C6990122ED5BEB0"
+					item: "farmersdelight:beef_stew"
+					title: "Take eight bowls of beef stew"
+					type: "item"
+				}
+				{
+					id: "4C9F333674B6BEF7"
+					stage: "fq.skill_cooking.hot_delivery.timed2"
+					title: "Reach the tavern before the food goes cold"
+					type: "gamestage"
+				}
+			]
+			title: "Still Hot"
+			x: 7.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["6E845338DB2850D1"]
+			description: ["The greenwood pub in the deep forest is the last tavern on the network map. Bring its keeper a barrel of your best beer and find out why no one has heard from them."]
+			icon: "brewery:small_barrel"
+			id: "343DFDC69BF8784C"
+			rewards: [
+				{
+					id: "2A68319DA54720C6"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"The pub's secret.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Greenwood Ale Recipe\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 350"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "5C422CEFABAF04FD"
+					silent: true
+					title: "+350 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "111BD228C3777830"
+					item: "brewery:small_barrel"
+					title: "Bring a barrel of your best beer"
+					type: "item"
+				}
+				{
+					id: "173F6F3F09BE11FA"
+					structure: "dungeons_arise:greenwood_pub"
+					title: "Find the greenwood pub in the deep forest"
+					type: "structure"
+				}
+				{
+					id: "482140951AFF7A38"
+					item: "kubejs:quest_greenwood_pub_2"
+					title: "Search the pub for why it went silent"
+					type: "item"
+				}
+			]
+			title: "The Greenwood Pub"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"63A0B8BA72279DF4"
+				"343DFDC69BF8784C"
+			]
+			description: ["Lead a caravan of travellers between taverns and feed them every night on the road: three camps, three meals cooked on your camp grill."]
+			icon: "camping:grill"
+			id: "62212419358E2F5D"
+			rewards: [
+				{
+					id: "151ABD3237DC38B6"
+					item: "camping:large_backpack"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 400"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "51010D53FCDC3343"
+					silent: true
+					title: "+400 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5CD5DC7A4AD8FDE4"
+					structure: "mvs:campsite"
+					title: "Make camp for the first night"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "38ED59A980C59A0A"
+					item: "farmersdelight:mutton_chops"
+					title: "Feed the first camp roasted mutton chops"
+					type: "item"
+				}
+				{
+					id: "010AE42C149F9C1F"
+					structure: "mvs:fire_camp"
+					title: "Make camp for the second night"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "239D5E30D6FF2861"
+					item: "farmersdelight:fish_stew"
+					title: "Feed the second camp fish stew"
+					type: "item"
+				}
+				{
+					id: "02ABD07E16A47FF5"
+					structure: "structory:abandoned_camp"
+					title: "Make camp for the third night"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "2CFF9F217350D70C"
+					item: "farmersdelight:honey_glazed_ham"
+					title: "Feed the third camp honey-glazed ham"
+					type: "item"
+				}
+				{
+					id: "3CA51ACE0761F0F0"
+					stage: "fq.skill_cooking.campfire_feast.build6"
+					title: "Set your camp grill"
+					type: "gamestage"
+				}
+			]
+			title: "Feast Under the Stars"
+			x: 10.5d
 			y: 0.75d
 		}
 	]

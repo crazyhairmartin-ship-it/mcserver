@@ -113,6 +113,19 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - magic:lightning_in_a_bottle: needs a thunderstorm; written as lightning casts and bottles
 - magic:unseen_thief: needs failing on being seen by an illager; written as a hurt-free timed crossing
 - magic:translate_logbook: needs a cipher puzzle; written as talking to Orrin
+- skill_cooking:brewfest_night: needs keeping mugs full and winning a song contest; written as beers, pretzels and a brewmaster encounter
+- skill_cooking:candlelit_dinner: needs serving eight guests; written as a dining-room build and dishes consumed
+- skill_cooking:wine_pairing: needs matching each dish to its wine; written as the dishes and wines carried
+- skill_cooking:campfire_feast: needs leading a caravan between three camps; written as three camp structures, meals and a grill build
+- skill_farming:field_wont_grow: needs draining a waterlogged corner and sprinklers; written as a rich-soil build, replanting and bone meal
+- skill_farming:silo: needs drying crops over days; written as a silo build and crops consumed
+- skill_farming:outpost_crows: needs defending the field through a night; written as a timed hold with waves
+- skill_farming:livestock_fair: needs showing a best pair of each; written as breeding each kind
+- skill_farming:giant_pumpkin: needs one harvest; written as carrying a full stack
+- skill_farming:hard_winter: needs a deadline in in-game days; written as a timed run of 15 minutes
+- skill_fishing:buoy_race: needs a buoy course around the harbour; written as a timed swim to a far hut with no mounts
+- skill_fishing:jungle_heat: needs the heat to be in a river; written as a jungle biome and fish carried
+- skill_fishing:reef_survey: needs a living aquarium built; written as buckets and a raw seahorse
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

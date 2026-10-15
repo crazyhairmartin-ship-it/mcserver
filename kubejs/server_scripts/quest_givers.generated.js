@@ -4388,6 +4388,262 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "skill_farming:wandering_winemaker",
+    "stage": "fq.skill_farming.wandering_winemaker.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Good body. A touch young. Age it in the dark.",
+      "Take these saplings. Plant an orchard."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "18040CC674D44908",
+    "prev_tasks": [
+      "1F4239BA47E118CA"
+    ],
+    "name": "Wandering Winemaker",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_farming:orchard",
+    "stage": "fq.skill_farming.orchard.build0",
+    "type": "build",
+    "keys": [
+      "vinery:apple_tree_sapling",
+      "minecraft:cherry_sapling"
+    ],
+    "counts": [
+      2,
+      2
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "3598F5A5C3B377A7",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_farming:field_wont_grow",
+    "stage": "fq.skill_farming.field_wont_grow.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Nothing grows. Not for years. The water pools in that corner."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "0A292FEB23EF7A73",
+    "prev_tasks": [],
+    "name": "Old Farmer Hobb",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_farming:field_wont_grow",
+    "stage": "fq.skill_farming.field_wont_grow.build1",
+    "type": "build",
+    "keys": [
+      "farmersdelight:rich_soil",
+      "minecraft:wheat"
+    ],
+    "counts": [
+      12,
+      8
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "0A292FEB23EF7A73",
+    "prev_tasks": [
+      "57AEB7EDB6AFD119"
+    ]
+  },
+  {
+    "quest": "skill_farming:silo",
+    "stage": "fq.skill_farming.silo.build0",
+    "type": "build",
+    "keys": [
+      "farm_and_charm:silo_wood"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "48D82F0F11486600",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_farming:outpost_crows",
+    "stage": "fq.skill_farming.outpost_crows.timed3",
+    "type": "timed",
+    "seconds": 240,
+    "goal": {
+      "kind": "hold",
+      "radius": 20.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:zombie",
+        "count": 3,
+        "every": 30
+      }
+    ],
+    "lines": [
+      "Night falls. Defend the field."
+    ],
+    "start": "Defend the field",
+    "requires": [],
+    "quest_id": "61C04E24F515A661",
+    "prev_tasks": [
+      "59E88EFFC1068EB1",
+      "692DFD66F2FC12D1",
+      "3B613A20F4C903BB"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_farming:livestock_fair",
+    "stage": "fq.skill_farming.livestock_fair.breed0",
+    "type": "breed",
+    "entities": [
+      "minecraft:cow"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "60E95E57B097D4C4",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_farming:livestock_fair",
+    "stage": "fq.skill_farming.livestock_fair.breed1",
+    "type": "breed",
+    "entities": [
+      "minecraft:sheep"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "60E95E57B097D4C4",
+    "prev_tasks": [
+      "5EFA42914519C7BE"
+    ]
+  },
+  {
+    "quest": "skill_farming:livestock_fair",
+    "stage": "fq.skill_farming.livestock_fair.breed2",
+    "type": "breed",
+    "entities": [
+      "minecraft:pig"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "60E95E57B097D4C4",
+    "prev_tasks": [
+      "5EFA42914519C7BE",
+      "7DD59424566FA244"
+    ]
+  },
+  {
+    "quest": "skill_farming:livestock_fair",
+    "stage": "fq.skill_farming.livestock_fair.breed3",
+    "type": "breed",
+    "entities": [
+      "minecraft:chicken"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "60E95E57B097D4C4",
+    "prev_tasks": [
+      "5EFA42914519C7BE",
+      "7DD59424566FA244",
+      "6CF67ADC2D247A45"
+    ]
+  },
+  {
+    "quest": "skill_farming:livestock_fair",
+    "stage": "fq.skill_farming.livestock_fair.breed4",
+    "type": "breed",
+    "entities": [
+      "meadow:water_buffalo"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "60E95E57B097D4C4",
+    "prev_tasks": [
+      "5EFA42914519C7BE",
+      "7DD59424566FA244",
+      "6CF67ADC2D247A45",
+      "21B1B2DCE656B3FF"
+    ]
+  },
+  {
+    "quest": "skill_farming:mead",
+    "stage": "fq.skill_farming.mead.build0",
+    "type": "build",
+    "keys": [
+      "minecraft:beehive",
+      "minecraft:campfire"
+    ],
+    "counts": [
+      1,
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "30E23A4637DE2DEA",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_farming:hard_winter",
+    "stage": "fq.skill_farming.hard_winter.timed4",
+    "type": "timed",
+    "seconds": 900,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:village_snowy"
+      ],
+      "label": "the snowy village",
+      "away": 200
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Winter closes in. Get the food through."
+    ],
+    "start": "Set out",
+    "requires": [],
+    "quest_id": "0D6355F6D3D055BC",
+    "prev_tasks": [
+      "10BDFA83BAFC7D50",
+      "3CD56C77C6F04166",
+      "297E695B47D80B07",
+      "72393E660DBCDA5D"
+    ],
+    "name": ""
+  },
+  {
     "quest": "discovery_sky_and_underground:volcano_in_the_sky",
     "stage": "fq.discovery_sky_and_underground.volcano_in_the_sky.search1",
     "type": "search",
@@ -5041,6 +5297,152 @@ global.QUEST_GIVERS = [
     "requires": [],
     "quest_id": "049497D318092D53",
     "prev_tasks": []
+  },
+  {
+    "quest": "skill_fishing:net_thieves",
+    "stage": "fq.skill_fishing.net_thieves.spawn1",
+    "type": "spawn",
+    "entity": "alexsmobs:seagull",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "beachparty:beach_hut",
+        "dungeons_arise:fishing_hut"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Net-Thief Gulls",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "07C7D40AD4FCA33C",
+    "requires": [],
+    "quest_id": "3155C5F0F87C27B5",
+    "prev_tasks": [
+      "11E0FF77C582CC60"
+    ]
+  },
+  {
+    "quest": "skill_fishing:buoy_race",
+    "stage": "fq.skill_fishing.buoy_race.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Race me! No boats! I'll be at the jetty before you're wet!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1540DF57D9F87A94",
+    "prev_tasks": [],
+    "name": "Silas Pike",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "minecraft:fisherman"
+  },
+  {
+    "quest": "skill_fishing:buoy_race",
+    "stage": "fq.skill_fishing.buoy_race.timed1",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "beachparty:beach_hut",
+        "dungeons_arise:fishing_hut"
+      ],
+      "label": "the far jetty",
+      "away": 60
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "No boats. Around the buoys and back!"
+    ],
+    "start": "Start the swim",
+    "requires": [],
+    "quest_id": "1540DF57D9F87A94",
+    "prev_tasks": [
+      "1483B67F535544F0"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_fishing:jungle_heat",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "fishing"
+    ],
+    "chance": 0.12,
+    "item": "kubejs:quest_jungle_heat_4",
+    "requires": [],
+    "quest_id": "0EA1D1046A6918F1",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_fishing:pillager_poachers",
+    "stage": "fq.skill_fishing.pillager_poachers.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "towns_and_towers:pillager_outpost_ocean"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Net Poachers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "4702FC8BBE76F2CD",
+    "requires": [],
+    "quest_id": "748E350957A5489F",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_fishing:salvage_logbook",
+    "stage": "fq.skill_fishing.salvage_logbook.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:undead_pirate_ship",
+        "minecraft:shipwreck",
+        "minecraft:shipwreck_beached",
+        "mos:ship_wreck_dark_oak",
+        "mos:ship_wreck_oak",
+        "mos:ship_wreck_spruce",
+        "mos:sunken_ship",
+        "towns_and_towers:wreckage_ocean"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_salvage_logbook_1",
+    "found": "A trophy case, green with weed.",
+    "requires": [],
+    "quest_id": "3583B48ACE6A0EFA",
+    "prev_tasks": [
+      "6B5A750BDD3F3F7D"
+    ]
   },
   {
     "quest": "village_errands:water_from_three_wells",
@@ -6517,6 +6919,142 @@ global.QUEST_GIVERS = [
     "where": {},
     "entity": "minecraft:villager",
     "profession": ""
+  },
+  {
+    "quest": "skill_cooking:brewfest_night",
+    "stage": "fq.skill_cooking.brewfest_night.enc5",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "The mugs are full! Sing, friend! You win the song!",
+      "Wear this hat. It's ridiculous."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "491A0F670C160811",
+    "prev_tasks": [
+      "06AAAE2695769067",
+      "551AFD504D2AC09E",
+      "4FA47EFE850FF4EB",
+      "06112C179E1F29AB",
+      "3AB25AC0FFCA6DBE"
+    ],
+    "name": "Brewmaster",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_cooking:candlelit_dinner",
+    "stage": "fq.skill_cooking.candlelit_dinner.build1",
+    "type": "build",
+    "keys": [
+      "candlelight:oak_table",
+      "candlelight:oak_chair",
+      "candlelight:dinner_bell"
+    ],
+    "counts": [
+      1,
+      4,
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "308F015D470DE740",
+    "prev_tasks": [
+      "0A6C13F0BEA4074C"
+    ]
+  },
+  {
+    "quest": "skill_cooking:hot_delivery",
+    "stage": "fq.skill_cooking.hot_delivery.timed2",
+    "type": "timed",
+    "seconds": 480,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:greenwood_pub",
+        "nova_structures:tavern_acacia",
+        "nova_structures:tavern_birch",
+        "nova_structures:tavern_cherry",
+        "nova_structures:tavern_dark_oak",
+        "nova_structures:tavern_desert",
+        "nova_structures:tavern_jungle",
+        "nova_structures:tavern_mangrove",
+        "nova_structures:tavern_oak",
+        "nova_structures:tavern_snowy",
+        "nova_structures:tavern_spruce",
+        "nova_structures:tavern_swamp"
+      ],
+      "label": "the feasting tavern",
+      "away": 150
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "The feast is running dry. Hurry!"
+    ],
+    "start": "Carry the food",
+    "requires": [],
+    "quest_id": "6E845338DB2850D1",
+    "prev_tasks": [
+      "66C1F213B3A7C7A8",
+      "1C6990122ED5BEB0"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_cooking:greenwood_pub",
+    "stage": "fq.skill_cooking.greenwood_pub.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:greenwood_pub"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_greenwood_pub_2",
+    "found": "A stained recipe, tucked in a barrel.",
+    "requires": [],
+    "quest_id": "343DFDC69BF8784C",
+    "prev_tasks": [
+      "111BD228C3777830",
+      "173F6F3F09BE11FA"
+    ]
+  },
+  {
+    "quest": "skill_cooking:campfire_feast",
+    "stage": "fq.skill_cooking.campfire_feast.build6",
+    "type": "build",
+    "keys": [
+      "camping:grill"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "62212419358E2F5D",
+    "prev_tasks": [
+      "5CD5DC7A4AD8FDE4",
+      "38ED59A980C59A0A",
+      "010AE42C149F9C1F",
+      "239D5E30D6FF2861",
+      "02ABD07E16A47FF5",
+      "2CFF9F217350D70C"
+    ]
   },
   {
     "quest": "skill_foraging:field_journal",
