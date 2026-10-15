@@ -1,0 +1,17 @@
+{
+    "net.minecraft.client.gui.screens.inventory.InventoryScreen": {
+        "buttonHints": {
+            "SETTINGS": {
+                "horizontalOffset": 28,
+                "top": -21
+            },
+            "SORT": {
+                "horizontalOffset": 1
+            },
+            "SHOW_EDITOR": {
+                "horizontalOffset": 14,
+                "top": -6
+            }
+        }
+    }
+}
