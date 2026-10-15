@@ -1800,6 +1800,160 @@
       "discover": {
         "structure": "cataclysm:burning_arena"
       }
+    },
+    {
+      "id": "crimson_donjon",
+      "title": "The Crimson Donjon",
+      "after": [
+        "the_keep"
+      ],
+      "text": [
+        "Deep in a crimson forest stands a donjon, and near the bastions a piglin hamlet. Raid the donjon's tower, then trade at the hamlet with what you took."
+      ],
+      "tasks": [
+        {
+          "structure": "nova_structures:donjon",
+          "title": "Find the donjon deep in the crimson forest"
+        },
+        {
+          "kill": "minecraft:wither_skeleton",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "nova_structures:donjon"
+            },
+            "wave": 4,
+            "name": "Donjon Garrison"
+          },
+          "title": "Raid the donjon's tower"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:donjon"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Donjon's Plunder",
+              "texture": "minecraft:item/gold_ingot"
+            },
+            "found": "Gold and plunder from the donjon's keep."
+          },
+          "title": "Take the donjon's plunder to trade"
+        },
+        {
+          "structure": "nova_structures:hamlet",
+          "title": "Take the plunder to the piglin hamlet and trade"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_scrap"
+        },
+        {
+          "item": "spartanshields:iron_tower_shield"
+        },
+        {
+          "skill": "attack",
+          "xp": 650
+        }
+      ],
+      "icon": "spartanshields:iron_tower_shield"
+    },
+    {
+      "id": "monstrous_eye",
+      "title": "The Monstrous Eye",
+      "after": [
+        "the_soul_forge"
+      ],
+      "text": [
+        "The strongholds have woken. Craft the Monstrous Eye from netherite scrap and an eye of ender, and bring it to Vesna so she can confirm it points at the forge you found."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:netherite_scrap",
+          "count": 4,
+          "title": "Gather netherite scrap for the eye"
+        },
+        {
+          "item": "minecraft:ender_eye",
+          "title": "Gather an eye of ender for the eye"
+        },
+        {
+          "item": "cataclysm:monstrous_eye",
+          "crafted": true,
+          "title": "Craft the Monstrous Eye"
+        },
+        {
+          "talk": "character",
+          "character": "vesna",
+          "lines": [
+            "That points at the forge you found. Good.",
+            "The old fire is awake."
+          ],
+          "title": "Show Vesna the eye pointing at the forge"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_apple",
+          "count": 2
+        },
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 800
+        }
+      ],
+      "icon": "cataclysm:monstrous_eye"
+    },
+    {
+      "id": "flame_eye",
+      "title": "The Flame Eye",
+      "after": [
+        "arena_of_embers",
+        "monstrous_eye"
+      ],
+      "text": [
+        "Craft the Flame Eye and hand Vesna her journal back, filled in. She writes the last page herself: the arena is waiting, when the story is."
+      ],
+      "tasks": [
+        {
+          "item": "cataclysm:flame_eye",
+          "crafted": true,
+          "title": "Craft the Flame Eye"
+        },
+        {
+          "talk": "character",
+          "character": "vesna",
+          "lines": [
+            "My journal, filled in. I'll write the last page.",
+            "The arena waits for the story."
+          ],
+          "title": "Hand Vesna her journal back, filled in"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather_chestplate",
+          "name": "Vesna's Ashwalker Cloak",
+          "lore": [
+            "The last page is hers."
+          ],
+          "enchant": {
+            "minecraft:fire_protection": 4,
+            "minecraft:unbreaking": 3
+          }
+        },
+        {
+          "skill": "agility",
+          "xp": 850
+        }
+      ],
+      "icon": "cataclysm:flame_eye"
     }
   ]
 }

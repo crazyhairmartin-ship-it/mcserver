@@ -2326,6 +2326,468 @@
 			x: 58.5d
 			y: 0.0d
 		}
+		{
+			dependencies: ["400B66E61C527034"]
+			description: ["In the stronghold's library, a book left by the Field Guide's author warns that the Void's dragon is the last seal keeping the eight sleepers down."]
+			icon: "minecraft:enchanted_book"
+			id: "4BCAEC6E3D92B157"
+			rewards: [
+				{
+					id: "1513A232E05BF21C"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:protection"
+									lvl: 4s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"The Author's Gift\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 500"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "243106C569CE5983"
+					silent: true
+					title: "+500 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3246E12926308B50"
+					structure: "betterstrongholds:stronghold"
+					title: "Go down into the stronghold's library"
+					type: "structure"
+				}
+				{
+					id: "401D9EC6785A23C8"
+					item: "kubejs:quest_act4_start_1"
+					title: "Find the author's warning among the shelves"
+					type: "item"
+				}
+			]
+			title: "The Stronghold Library"
+			x: 60.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4BCAEC6E3D92B157"]
+			description: ["The spirits' last curse: climb to the Aurora Palace and free the Snow Queen's frozen court. The Twilight questline ends there."]
+			icon: "twilightforest:ice_bomb"
+			id: "0C3D5C6160B10B3E"
+			rewards: [
+				{
+					count: 8
+					id: "0319EA705D49B9E2"
+					item: "twilightforest:ice_bomb"
+					type: "item"
+				}
+				{
+					id: "04312382CAFF93F5"
+					item: "twilightforest:snow_queen_trophy"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 550"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "265E22FC99B45F7C"
+					silent: true
+					title: "+550 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "009A69D5E0489165"
+					structure: "twilightforest:aurora_palace"
+					title: "Climb to the Aurora Palace"
+					type: "structure"
+				}
+				{
+					entity: "twilightforest:snow_queen"
+					id: "71C53CE90FCB1B31"
+					title: "Free the frozen court by defeating the Snow Queen"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Twilight Calls (Part 3)"
+			x: 61.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["4BCAEC6E3D92B157"]
+			description: ["Find the portal room and fill every frame. Before you jump, a spirit voice begs you to come back."]
+			icon: "minecraft:end_portal_frame"
+			id: "1A34F71AE2CA1FE7"
+			rewards: [
+				{
+					count: 3
+					id: "746876F69A504DA0"
+					item: "minecraft:potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 500"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "41AA95A52067AC62"
+					silent: true
+					title: "+500 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 12L
+					id: "53BFBC4D05F44585"
+					item: "minecraft:ender_eye"
+					only_from_crafting: true
+					title: "Craft an eye for every empty frame"
+					type: "item"
+				}
+				{
+					id: "1DC8D95C78271E78"
+					stage: "fq.main_story.act4_portal_room.build1"
+					title: "Fill every frame in the portal room"
+					type: "gamestage"
+				}
+				{
+					id: "39D7124CB0247A2D"
+					stage: "fq.main_story.act4_portal_room.enc2"
+					title: "Hear the spirit voice before you jump"
+					type: "gamestage"
+				}
+			]
+			title: "Twelve Empty Eyes"
+			x: 61.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1A34F71AE2CA1FE7"]
+			description: ["On the rebuilt End island, destroy every End crystal on its towers within ten minutes of arriving."]
+			icon: "minecraft:end_crystal"
+			id: "34BDE17CD45FD07C"
+			rewards: [
+				{
+					count: 32
+					id: "26743D6E71EFADEF"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "02F59337E946D3F4"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 600"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "2DACE4EEDD426A0D"
+					silent: true
+					title: "+600 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:the_end"
+					id: "26846866AEA8EA57"
+					title: "Step through into the End"
+					type: "dimension"
+				}
+				{
+					id: "75CB1AFBA48E47C2"
+					stage: "fq.main_story.act4_crystals.timed1"
+					title: "Destroy every End crystal on the towers in ten minutes"
+					type: "gamestage"
+				}
+			]
+			title: "Towers of Light"
+			x: 63.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["34BDE17CD45FD07C"]
+			description: ["Defeat the Ender Dragon. The End questline opens with the gateway."]
+			icon: "minecraft:dragon_breath"
+			id: "2C39B0D46AFF30E6"
+			rewards: [
+				{
+					count: 4
+					id: "6A446C39BA053015"
+					item: "minecraft:dragon_breath"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 800"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "1B116A67C98E83D1"
+					silent: true
+					title: "+800 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.75d
+			tasks: [
+				{
+					entity: "minecraft:ender_dragon"
+					id: "1E06C375AE5A9EC2"
+					title: "Defeat the Ender Dragon above its island"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Ender Dragon"
+			x: 64.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2C39B0D46AFF30E6"]
+			description: ["Through the gateway, raid an End city for an elytra and shulker shells."]
+			icon: "minecraft:elytra"
+			id: "7D95BE422138D471"
+			rewards: [
+				{
+					count: 32
+					id: "02BB62D3949ACC57"
+					item: "minecraft:firework_rocket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 650"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "08CD321CF788F3A5"
+					silent: true
+					title: "+650 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "491707D614ABA05B"
+					structure: "minecraft:end_city"
+					title: "Cross the gateway and find an End city"
+					type: "structure"
+				}
+				{
+					count: 8L
+					id: "38687F935ABA183A"
+					item: "minecraft:shulker_shell"
+					title: "Take shulker shells from the city's guardians"
+					type: "item"
+				}
+				{
+					id: "5449791622F2A62E"
+					item: "minecraft:elytra"
+					title: "Find an elytra on a city ship"
+					type: "item"
+				}
+			]
+			title: "Wings at the Edge"
+			x: 66.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7D95BE422138D471"]
+			description: ["Find one of the End mega-ships drifting over the islands and read its captain's log about a ruined citadel."]
+			icon: "minecraft:chorus_fruit"
+			id: "1D659EF251AC4FFD"
+			rewards: [
+				{
+					count: 8
+					id: "7FE8B5BC015DE46E"
+					item: "minecraft:chorus_fruit"
+					type: "item"
+				}
+				{
+					id: "1F206FE4F3B462EC"
+					item: "cataclysm:void_shard"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 650"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "5CBCD93BB170C946"
+					silent: true
+					title: "+650 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "18C9D066AC82F736"
+					structure: "#fotf:groups/end_mega_ships"
+					title: "Find a mega-ship drifting over the End's islands"
+					type: "structure"
+				}
+				{
+					id: "11F2A3AB4F5D4320"
+					item: "kubejs:quest_act4_mega_ship_1"
+					title: "Read the captain's log"
+					type: "item"
+				}
+			]
+			title: "Ships Beyond the Void"
+			x: 67.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7D95BE422138D471"]
+			description: ["Optional: feed a Mysterious Worm to the void in the End and defeat the Void Worm that rises."]
+			icon: "alexsmobs:void_worm_beak"
+			id: "4293A2FDFC4D7EC5"
+			rewards: [
+				{
+					id: "5C2FC324A2B840A4"
+					item: "alexsmobs:void_worm_beak"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 700"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "5C3F6B83553BDB98"
+					silent: true
+					title: "+700 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5B6C35258308B516"
+					item: "alexsmobs:mysterious_worm"
+					title: "Bring a Mysterious Worm to feed the void"
+					type: "item"
+				}
+				{
+					entity: "alexsmobs:void_worm"
+					id: "2ABE4DA6727A9870"
+					title: "Defeat the Void Worm that rises"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Void Worm"
+			x: 67.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4BCAEC6E3D92B157"]
+			description: ["Optional: sneak through an ancient city and take its echo shards. Fight the Warden only if you must."]
+			icon: "minecraft:echo_shard"
+			id: "4406128185B80B2A"
+			rewards: [
+				{
+					id: "76083D0D6A0CDC52"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:swift_sneak"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Silent Step\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 600"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "767274F9E1135E07"
+					silent: true
+					title: "+600 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4CC078B553A7A090"
+					stage: "fq.main_story.act4_warden.timed0"
+					title: "Creep through the ancient city without waking the Warden"
+					type: "gamestage"
+				}
+				{
+					count: 4L
+					id: "71CB6669F0D188C6"
+					item: "minecraft:echo_shard"
+					title: "Take echo shards from the city"
+					type: "item"
+				}
+			]
+			title: "The Deep Dark Listener"
+			x: 61.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"2C39B0D46AFF30E6"
+				"7D95BE422138D471"
+			]
+			description: ["Back in Reece the ground shakes. The dragon was the Void's guard, and with it gone the eight sealed strongholds wake. A spirit messenger tells you the drain's source burns in the Nether."]
+			icon: "minecraft:netherite_scrap"
+			id: "2E8CA4F3F9117FF6"
+			rewards: [
+				{
+					count: 2
+					id: "737A6334A56AB035"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "7A356F6C61067C02"
+					silent: true
+					title: "+700 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "17D825023AB1DA2E"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Return to Reece as the ground shakes"
+					type: "location"
+				}
+				{
+					id: "58C24F210CC4AC6B"
+					stage: "fq.main_story.act4_finale.enc1"
+					title: "Hear the spirit messenger's news"
+					type: "gamestage"
+				}
+			]
+			title: "The Eight Wake"
+			x: 67.5d
+			y: 1.5d
+		}
 	]
 	subtitle: ["The main story"]
 	title: "The Silent Forest"

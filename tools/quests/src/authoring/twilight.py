@@ -319,4 +319,77 @@ ACT3 = [
           rewards=[reward_item("twilightforest:charm_of_life_2"), skill("agility", 500)]),
 ]
 
-chapter("twilight", "The Twilight Forest", "The spirits' realm", "twilightforest:twilight_oak_sapling", "realms", 0, ACT2 + ACT3)
+ACT4 = [
+    quest("call_of_snow", "The Cold Reaches", icon="minecraft:snowball", after=["main_story:act3_finale", "trophies_two"],
+          text=["The forest's snowy forest has opened. Cross it through blizzards, winter wolves and falling ice."],
+          tasks=[{"biome": "twilightforest:snowy_forest", "title": "Cross into the snowy forest"},
+                 enc(["*Pale eyes in the blizzard.*"], then="kill", entity="twilightforest:winter_wolf", name="Blizzard Wolf",
+                     title="Fight off the winter wolf that hunts the pass", where={"biomes": ["twilightforest:snowy_forest"]})],
+          rewards=[reward_item("minecraft:cooked_beef", 16), skill("defense", 550)]),
+
+    quest("yeti_cave", "Caves of the Yeti", icon="twilightforest:arctic_fur", after=["call_of_snow"],
+          text=["Find the yeti cave in the snowy forest and hunt yetis for arctic fur."],
+          tasks=[{"structure": "twilightforest:yeti_cave", "title": "Find the yeti cave"},
+                 fight("twilightforest:yeti", 4, "twilightforest:yeti_cave", "Cave Yetis", "Hunt the cave's yetis"),
+                 item("twilightforest:arctic_fur", 4, title="Take arctic fur from the yetis")],
+          rewards=[reward_item("twilightforest:arctic_fur", 4), skill("range", 550)]),
+
+    quest("alpha_yeti", "The Alpha Yeti", icon="twilightforest:alpha_yeti_trophy", shape="diamond", size=1.5, after=["yeti_cave"],
+          text=["The Alpha Yeti hurls ice and roars the ceiling down. Wait for it to tire, then strike."],
+          tasks=[boss("twilightforest:alpha_yeti", "twilightforest:yeti_cave", "The Alpha Yeti", "Defeat the Alpha Yeti in its cave")],
+          rewards=[reward_item("twilightforest:alpha_yeti_fur", 2), reward_item("twilightforest:ice_bomb", 8), skill("attack", 650)]),
+
+    quest("arctic_armor", "Armour of Fur", icon="twilightforest:arctic_chestplate", after=["yeti_cave"],
+          text=["Sew arctic fur into arctic armour that can be dyed and keeps the cold out."],
+          tasks=[item("twilightforest:arctic_helmet", crafted=True, title="Sew an arctic helmet"),
+                 item("twilightforest:arctic_chestplate", crafted=True, title="Sew an arctic chestplate"),
+                 item("twilightforest:arctic_leggings", crafted=True, title="Sew arctic leggings"),
+                 item("twilightforest:arctic_boots", crafted=True, title="Sew arctic boots")],
+          rewards=[reward_item("minecraft:red_dye", 4), reward_item("minecraft:blue_dye", 4), skill("craft", 550)]),
+
+    quest("aurora_palace", "The Aurora Palace", icon="minecraft:blue_ice", after=["alpha_yeti"],
+          text=["On the Glacier stands the Aurora Palace of ice. Climb its halls past snow guardians and ice cores "
+                "to the queen's chamber."],
+          tasks=[{"structure": "twilightforest:aurora_palace", "title": "Find the Aurora Palace on the Glacier"},
+                 fight("twilightforest:snow_guardian", 6, "twilightforest:aurora_palace", "Palace Guardians", "Fight past the palace's snow guardians")],
+          rewards=[reward_item("minecraft:glass", 16), skill("agility", 600)]),
+
+    quest("snow_queen", "The Snow Queen", icon="twilightforest:snow_queen_trophy", shape="diamond", size=1.5, after=["aurora_palace"],
+          text=["The Snow Queen summons ice shields and hammers you from above. Break her guard and bring her down."],
+          tasks=[boss("twilightforest:snow_queen", "twilightforest:aurora_palace", "The Snow Queen", "Break the Snow Queen's guard and bring her down")],
+          rewards=[reward_item("twilightforest:charm_of_keeping_3"), skill("magic", 700)]),
+
+    quest("troll_caves", "Caves of the Trolls", icon="minecraft:deepslate", after=["snow_queen"],
+          text=["The Highlands open at last. Search the troll caves under them for trollsteinn and the vault holding "
+                "the Lamp of Cinders."],
+          tasks=[{"structure": "twilightforest:troll_cave", "title": "Find the troll caves under the Highlands"},
+                 search("twilightforest:troll_cave", 1, "the Lamp of Cinders", "A lamp that burns without oil, in the troll vault.",
+                        texture="minecraft:item/lantern", title="Open the vault holding the Lamp of Cinders")],
+          rewards=[reward_item("twilightforest:uberous_soil", 8), skill("mining", 650)]),
+
+    quest("thornlands", "Burn the Thorns", icon="minecraft:fire_charge", after=["troll_caves"],
+          text=["The Lamp of Cinders burns away the thorns of the Thornlands. Carve a path to the Final Plateau."],
+          tasks=[{"biome": "twilightforest:thornlands", "title": "Burn a path through the Thornlands"},
+                 {"biome": "twilightforest:final_plateau", "title": "Carve the path on to the Final Plateau"}],
+          rewards=[reward_item("minecraft:golden_carrot", 16), skill("agility", 650)]),
+
+    quest("final_castle", "The Unfinished Castle", icon="minecraft:obsidian", after=["thornlands"],
+          text=["On the plateau stands the final castle, sealed behind force fields and still unfinished. Reach its "
+                "gate and see what waits for the realm next."],
+          tasks=[{"structure": "twilightforest:final_castle", "title": "Reach the final castle's gate"}],
+          rewards=[reward_item("minecraft:amethyst_shard", 8), skill("agility", 700)]),
+
+    quest("trophy_hall", "A Hall of Trophies", icon="twilightforest:snow_queen_trophy", after=["snow_queen", "trophies_two", "alpha_yeti"],
+          text=["Build a hall in your base and mount all eight trophies on pedestals: Naga, Lich, Minoshroom, Hydra, "
+                "Knight Phantom, Ur-Ghast, Alpha Yeti and Snow Queen."],
+          tasks=[item("twilightforest:alpha_yeti_trophy", title="Bring the Alpha Yeti's trophy"),
+                 item("twilightforest:snow_queen_trophy", title="Bring the Snow Queen's trophy"),
+                 {"build": {"blocks": {"twilightforest:naga_trophy": 1, "twilightforest:lich_trophy": 1, "twilightforest:minoshroom_trophy": 1,
+                                       "twilightforest:hydra_trophy": 1, "twilightforest:knight_phantom_trophy": 1,
+                                       "twilightforest:ur_ghast_trophy": 1, "twilightforest:alpha_yeti_trophy": 1,
+                                       "twilightforest:snow_queen_trophy": 1}, "radius": 12},
+                  "title": "Mount all eight trophies in a hall of your own"}],
+          rewards=[reward_item("twilightforest:quest_ram_banner_pattern"), skill("agility", 700)]),
+]
+
+chapter("twilight", "The Twilight Forest", "The spirits' realm", "twilightforest:twilight_oak_sapling", "realms", 0, ACT2 + ACT3 + ACT4)

@@ -2,6 +2,7 @@
 A frontier expedition into a hostile realm; Vesna Ashwalker's field notes tie it together. Act IV and V quests are
 appended in later tasks."""
 from common import chapter, quest, talk_char, item, reward_item, skill, enc, fight, boss, search, sample
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 NETHER = {"dimension": "minecraft:the_nether"}
 
@@ -368,4 +369,35 @@ ACT3 = [
           rewards=[reward_item("minecraft:blaze_rod", 8), skill("agility", 340)]),
 ]
 
-chapter("nether", "The Nether", "A frontier expedition", "minecraft:netherrack", "realms", 2, ACT3)
+ACT4 = [
+    quest("crimson_donjon", "The Crimson Donjon", icon="spartanshields:iron_tower_shield", after=["the_keep"],
+          text=["Deep in a crimson forest stands a donjon, and near the bastions a piglin hamlet. Raid the donjon's "
+                "tower, then trade at the hamlet with what you took."],
+          tasks=[{"structure": "nova_structures:donjon", "title": "Find the donjon deep in the crimson forest"},
+                 fight("minecraft:wither_skeleton", 8, "nova_structures:donjon", "Donjon Garrison", "Raid the donjon's tower"),
+                 search("nova_structures:donjon", 1, "the Donjon's Plunder", "Gold and plunder from the donjon's keep.",
+                        texture="minecraft:item/gold_ingot", title="Take the donjon's plunder to trade"),
+                 {"structure": "nova_structures:hamlet", "title": "Take the plunder to the piglin hamlet and trade"}],
+          rewards=[reward_item("minecraft:netherite_scrap"), reward_item("spartanshields:iron_tower_shield"), skill("attack", 650)]),
+
+    quest("monstrous_eye", "The Monstrous Eye", icon="cataclysm:monstrous_eye", after=["the_soul_forge"],
+          text=["The strongholds have woken. Craft the Monstrous Eye from netherite scrap and an eye of ender, and "
+                "bring it to Vesna so she can confirm it points at the forge you found."],
+          tasks=[item("minecraft:netherite_scrap", 4, title="Gather netherite scrap for the eye"),
+                 item("minecraft:ender_eye", title="Gather an eye of ender for the eye"),
+                 item("cataclysm:monstrous_eye", crafted=True, title="Craft the Monstrous Eye"),
+                 talk_char("vesna", ["That points at the forge you found. Good.", "The old fire is awake."],
+                           title="Show Vesna the eye pointing at the forge")],
+          rewards=[reward_item("minecraft:golden_apple", 2), reward_item("minecraft:magma_cream", 4), skill("craft", 800)]),
+
+    quest("flame_eye", "The Flame Eye", icon="cataclysm:flame_eye", after=["arena_of_embers", "monstrous_eye"],
+          text=["Craft the Flame Eye and hand Vesna her journal back, filled in. She writes the last page herself: "
+                "the arena is waiting, when the story is."],
+          tasks=[item("cataclysm:flame_eye", crafted=True, title="Craft the Flame Eye"),
+                 talk_char("vesna", ["My journal, filled in. I'll write the last page.", "The arena waits for the story."],
+                           title="Hand Vesna her journal back, filled in")],
+          rewards=[reward_item("minecraft:leather_chestplate", name="Vesna's Ashwalker Cloak", lore=["The last page is hers."],
+                               enchant={"minecraft:fire_protection": 4, "minecraft:unbreaking": 3}), skill("agility", 850)]),
+]
+
+chapter("nether", "The Nether", "A frontier expedition", "minecraft:netherrack", "realms", 2, ACT3 + ACT4)

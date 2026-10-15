@@ -466,7 +466,7 @@
 			]
 			title: "The Outstation Ledger"
 			x: 6.0d
-			y: -2.25d
+			y: -3.0d
 		}
 		{
 			dependencies: ["0FC11D29D4019B0B"]
@@ -608,7 +608,7 @@
 			]
 			title: "Strider Crossing"
 			x: 6.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["4F1237079F9DBE0F"]
@@ -711,7 +711,7 @@
 			]
 			title: "Four Watchtowers"
 			x: 6.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["77FE86EE23B8E4A1"]
@@ -808,7 +808,7 @@
 			]
 			title: "The Mega Fortress"
 			x: 9.0d
-			y: -3.75d
+			y: -4.5d
 		}
 		{
 			dependencies: ["37F49E3B5DAA915E"]
@@ -854,7 +854,7 @@
 			]
 			title: "Bridges of Ash"
 			x: 9.0d
-			y: -2.25d
+			y: -3.0d
 		}
 		{
 			dependencies: ["1C823DAC3182F71B"]
@@ -916,7 +916,7 @@
 			]
 			title: "The Giant's Skull"
 			x: 10.5d
-			y: -3.0d
+			y: -3.75d
 		}
 		{
 			dependencies: ["1FA0701247887E56"]
@@ -1032,7 +1032,7 @@
 			]
 			title: "The Ghost Train"
 			x: 10.5d
-			y: -1.5d
+			y: -2.25d
 		}
 		{
 			dependencies: ["69C2E033EA8501D0"]
@@ -1129,7 +1129,7 @@
 			]
 			title: "Under the Warped Dome"
 			x: 10.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["681149DC101DEA98"]
@@ -1227,7 +1227,7 @@
 			]
 			title: "Arena of Ash"
 			x: 10.5d
-			y: 1.5d
+			y: 0.75d
 		}
 		{
 			dependencies: ["3DCFC0B89256C1E3"]
@@ -1447,7 +1447,7 @@
 			]
 			title: "Mosquito Season"
 			x: 9.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["77FE86EE23B8E4A1"]
@@ -1585,7 +1585,7 @@
 			]
 			title: "Uncharted Regions"
 			x: 9.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["20591AB8CC19C7B2"]
@@ -1637,7 +1637,7 @@
 			]
 			title: "The Stranded Vintner"
 			x: 9.0d
-			y: 2.25d
+			y: 1.5d
 		}
 		{
 			dependencies: ["041699F477ECEA8A"]
@@ -1696,7 +1696,7 @@
 			]
 			title: "A Vineyard in Hell"
 			x: 10.5d
-			y: 3.0d
+			y: 2.25d
 		}
 		{
 			dependencies: ["2D2CB6B52DF2A1CC"]
@@ -1793,7 +1793,7 @@
 			]
 			title: "Deep Debris"
 			x: 6.0d
-			y: 2.25d
+			y: 1.5d
 		}
 		{
 			dependencies: ["1F6F8C2D1EE04D1C"]
@@ -2026,6 +2026,185 @@
 			]
 			title: "The Arena of Embers"
 			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2D9F51F0B7A09A8E"]
+			description: ["Deep in a crimson forest stands a donjon, and near the bastions a piglin hamlet. Raid the donjon's tower, then trade at the hamlet with what you took."]
+			icon: "spartanshields:iron_tower_shield"
+			id: "09DC50610EEE6EFA"
+			rewards: [
+				{
+					id: "7B5258726233A03E"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					id: "59EDB8BDB53F8025"
+					item: "spartanshields:iron_tower_shield"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 650"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "72BF846DA3845DC3"
+					silent: true
+					title: "+650 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7018192D513C141C"
+					structure: "nova_structures:donjon"
+					title: "Find the donjon deep in the crimson forest"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:wither_skeleton"
+					id: "022CE6DAED0CE9C9"
+					title: "Raid the donjon's tower"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "0B9BEE8E586EE92E"
+					item: "kubejs:quest_crimson_donjon_2"
+					title: "Take the donjon's plunder to trade"
+					type: "item"
+				}
+				{
+					id: "304A17DC381BC1E0"
+					structure: "nova_structures:hamlet"
+					title: "Take the plunder to the piglin hamlet and trade"
+					type: "structure"
+				}
+			]
+			title: "The Crimson Donjon"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6E8B3E8057914058"]
+			description: ["The strongholds have woken. Craft the Monstrous Eye from netherite scrap and an eye of ender, and bring it to Vesna so she can confirm it points at the forge you found."]
+			icon: "cataclysm:monstrous_eye"
+			id: "1BC74B4E60579640"
+			rewards: [
+				{
+					count: 2
+					id: "1BF70EE8AA40D41C"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "38AEC27EC17A2970"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 800"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "6235B32529BB061F"
+					silent: true
+					title: "+800 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "4E7603FEB04A5608"
+					item: "minecraft:netherite_scrap"
+					title: "Gather netherite scrap for the eye"
+					type: "item"
+				}
+				{
+					id: "5D79A0A848540310"
+					item: "minecraft:ender_eye"
+					title: "Gather an eye of ender for the eye"
+					type: "item"
+				}
+				{
+					id: "0C5EA8206BC6090C"
+					item: "cataclysm:monstrous_eye"
+					only_from_crafting: true
+					title: "Craft the Monstrous Eye"
+					type: "item"
+				}
+				{
+					id: "321050FA613257FE"
+					stage: "fq.nether.monstrous_eye.talk3"
+					title: "Show Vesna the eye pointing at the forge"
+					type: "gamestage"
+				}
+			]
+			title: "The Monstrous Eye"
+			x: 9.0d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"0C45CF71D832D927"
+				"1BC74B4E60579640"
+			]
+			description: ["Craft the Flame Eye and hand Vesna her journal back, filled in. She writes the last page herself: the arena is waiting, when the story is."]
+			icon: "cataclysm:flame_eye"
+			id: "283EC263303212C8"
+			rewards: [
+				{
+					id: "5C7370A8BDF273C7"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_chestplate"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:fire_protection"
+									lvl: 4s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The last page is hers.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Vesna's Ashwalker Cloak\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 850"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "510B75909EEEF498"
+					silent: true
+					title: "+850 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "64A7FCB5D623EB9B"
+					item: "cataclysm:flame_eye"
+					only_from_crafting: true
+					title: "Craft the Flame Eye"
+					type: "item"
+				}
+				{
+					id: "5C4C09F0F81BA991"
+					stage: "fq.nether.flame_eye.talk1"
+					title: "Hand Vesna her journal back, filled in"
+					type: "gamestage"
+				}
+			]
+			title: "The Flame Eye"
+			x: 10.5d
 			y: 3.75d
 		}
 	]

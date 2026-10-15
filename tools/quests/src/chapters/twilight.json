@@ -1699,6 +1699,404 @@
         }
       ],
       "icon": "twilightforest:charm_of_life_2"
+    },
+    {
+      "id": "call_of_snow",
+      "title": "The Cold Reaches",
+      "after": [
+        "main_story:act3_finale",
+        "trophies_two"
+      ],
+      "text": [
+        "The forest's snowy forest has opened. Cross it through blizzards, winter wolves and falling ice."
+      ],
+      "tasks": [
+        {
+          "biome": "twilightforest:snowy_forest",
+          "title": "Cross into the snowy forest"
+        },
+        {
+          "encounter": {
+            "entity": "twilightforest:winter_wolf",
+            "name": "Blizzard Wolf",
+            "where": {
+              "biomes": [
+                "twilightforest:snowy_forest"
+              ]
+            },
+            "then": "kill",
+            "lines": [
+              "*Pale eyes in the blizzard.*"
+            ]
+          },
+          "title": "Fight off the winter wolf that hunts the pass"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cooked_beef",
+          "count": 16
+        },
+        {
+          "skill": "defense",
+          "xp": 550
+        }
+      ],
+      "icon": "minecraft:snowball"
+    },
+    {
+      "id": "yeti_cave",
+      "title": "Caves of the Yeti",
+      "after": [
+        "call_of_snow"
+      ],
+      "text": [
+        "Find the yeti cave in the snowy forest and hunt yetis for arctic fur."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:yeti_cave",
+          "title": "Find the yeti cave"
+        },
+        {
+          "kill": "twilightforest:yeti",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:yeti_cave"
+            },
+            "wave": 4,
+            "name": "Cave Yetis"
+          },
+          "title": "Hunt the cave's yetis"
+        },
+        {
+          "item": "twilightforest:arctic_fur",
+          "count": 4,
+          "title": "Take arctic fur from the yetis"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:arctic_fur",
+          "count": 4
+        },
+        {
+          "skill": "range",
+          "xp": 550
+        }
+      ],
+      "icon": "twilightforest:arctic_fur"
+    },
+    {
+      "id": "alpha_yeti",
+      "title": "The Alpha Yeti",
+      "after": [
+        "yeti_cave"
+      ],
+      "text": [
+        "The Alpha Yeti hurls ice and roars the ceiling down. Wait for it to tire, then strike."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:alpha_yeti",
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:yeti_cave"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Alpha Yeti"
+          },
+          "title": "Defeat the Alpha Yeti in its cave"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:alpha_yeti_fur",
+          "count": 2
+        },
+        {
+          "item": "twilightforest:ice_bomb",
+          "count": 8
+        },
+        {
+          "skill": "attack",
+          "xp": 650
+        }
+      ],
+      "icon": "twilightforest:alpha_yeti_trophy",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "arctic_armor",
+      "title": "Armour of Fur",
+      "after": [
+        "yeti_cave"
+      ],
+      "text": [
+        "Sew arctic fur into arctic armour that can be dyed and keeps the cold out."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:arctic_helmet",
+          "crafted": true,
+          "title": "Sew an arctic helmet"
+        },
+        {
+          "item": "twilightforest:arctic_chestplate",
+          "crafted": true,
+          "title": "Sew an arctic chestplate"
+        },
+        {
+          "item": "twilightforest:arctic_leggings",
+          "crafted": true,
+          "title": "Sew arctic leggings"
+        },
+        {
+          "item": "twilightforest:arctic_boots",
+          "crafted": true,
+          "title": "Sew arctic boots"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:red_dye",
+          "count": 4
+        },
+        {
+          "item": "minecraft:blue_dye",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 550
+        }
+      ],
+      "icon": "twilightforest:arctic_chestplate"
+    },
+    {
+      "id": "aurora_palace",
+      "title": "The Aurora Palace",
+      "after": [
+        "alpha_yeti"
+      ],
+      "text": [
+        "On the Glacier stands the Aurora Palace of ice. Climb its halls past snow guardians and ice cores to the queen's chamber."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:aurora_palace",
+          "title": "Find the Aurora Palace on the Glacier"
+        },
+        {
+          "kill": "twilightforest:snow_guardian",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:aurora_palace"
+            },
+            "wave": 4,
+            "name": "Palace Guardians"
+          },
+          "title": "Fight past the palace's snow guardians"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:glass",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 600
+        }
+      ],
+      "icon": "minecraft:blue_ice"
+    },
+    {
+      "id": "snow_queen",
+      "title": "The Snow Queen",
+      "after": [
+        "aurora_palace"
+      ],
+      "text": [
+        "The Snow Queen summons ice shields and hammers you from above. Break her guard and bring her down."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:snow_queen",
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:aurora_palace"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Snow Queen"
+          },
+          "title": "Break the Snow Queen's guard and bring her down"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:charm_of_keeping_3"
+        },
+        {
+          "skill": "magic",
+          "xp": 700
+        }
+      ],
+      "icon": "twilightforest:snow_queen_trophy",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "troll_caves",
+      "title": "Caves of the Trolls",
+      "after": [
+        "snow_queen"
+      ],
+      "text": [
+        "The Highlands open at last. Search the troll caves under them for trollsteinn and the vault holding the Lamp of Cinders."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:troll_cave",
+          "title": "Find the troll caves under the Highlands"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "twilightforest:troll_cave"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Lamp of Cinders",
+              "texture": "minecraft:item/lantern"
+            },
+            "found": "A lamp that burns without oil, in the troll vault."
+          },
+          "title": "Open the vault holding the Lamp of Cinders"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:uberous_soil",
+          "count": 8
+        },
+        {
+          "skill": "mining",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:deepslate"
+    },
+    {
+      "id": "thornlands",
+      "title": "Burn the Thorns",
+      "after": [
+        "troll_caves"
+      ],
+      "text": [
+        "The Lamp of Cinders burns away the thorns of the Thornlands. Carve a path to the Final Plateau."
+      ],
+      "tasks": [
+        {
+          "biome": "twilightforest:thornlands",
+          "title": "Burn a path through the Thornlands"
+        },
+        {
+          "biome": "twilightforest:final_plateau",
+          "title": "Carve the path on to the Final Plateau"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:fire_charge"
+    },
+    {
+      "id": "final_castle",
+      "title": "The Unfinished Castle",
+      "after": [
+        "thornlands"
+      ],
+      "text": [
+        "On the plateau stands the final castle, sealed behind force fields and still unfinished. Reach its gate and see what waits for the realm next."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:final_castle",
+          "title": "Reach the final castle's gate"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:amethyst_shard",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:obsidian"
+    },
+    {
+      "id": "trophy_hall",
+      "title": "A Hall of Trophies",
+      "after": [
+        "snow_queen",
+        "trophies_two",
+        "alpha_yeti"
+      ],
+      "text": [
+        "Build a hall in your base and mount all eight trophies on pedestals: Naga, Lich, Minoshroom, Hydra, Knight Phantom, Ur-Ghast, Alpha Yeti and Snow Queen."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:alpha_yeti_trophy",
+          "title": "Bring the Alpha Yeti's trophy"
+        },
+        {
+          "item": "twilightforest:snow_queen_trophy",
+          "title": "Bring the Snow Queen's trophy"
+        },
+        {
+          "build": {
+            "blocks": {
+              "twilightforest:naga_trophy": 1,
+              "twilightforest:lich_trophy": 1,
+              "twilightforest:minoshroom_trophy": 1,
+              "twilightforest:hydra_trophy": 1,
+              "twilightforest:knight_phantom_trophy": 1,
+              "twilightforest:ur_ghast_trophy": 1,
+              "twilightforest:alpha_yeti_trophy": 1,
+              "twilightforest:snow_queen_trophy": 1
+            },
+            "radius": 12
+          },
+          "title": "Mount all eight trophies in a hall of your own"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:quest_ram_banner_pattern"
+        },
+        {
+          "skill": "agility",
+          "xp": 700
+        }
+      ],
+      "icon": "twilightforest:snow_queen_trophy"
     }
   ]
 }

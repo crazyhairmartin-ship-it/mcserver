@@ -3089,6 +3089,199 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "main_story:act4_start",
+    "stage": "fq.main_story.act4_start.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterstrongholds:stronghold"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_act4_start_1",
+    "found": "A book in the Field Guide author's own hand.",
+    "requires": [],
+    "quest_id": "4BCAEC6E3D92B157",
+    "prev_tasks": [
+      "3246E12926308B50"
+    ]
+  },
+  {
+    "quest": "main_story:act4_twilight_branch",
+    "stage": "fq.main_story.act4_twilight_branch.spawn1",
+    "type": "spawn",
+    "entity": "twilightforest:snow_queen",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:aurora_palace"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Snow Queen",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "71C53CE90FCB1B31",
+    "requires": [],
+    "quest_id": "0C3D5C6160B10B3E",
+    "prev_tasks": [
+      "009A69D5E0489165"
+    ]
+  },
+  {
+    "quest": "main_story:act4_portal_room",
+    "stage": "fq.main_story.act4_portal_room.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:end_portal_frame"
+    ],
+    "counts": [
+      12
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "1A34F71AE2CA1FE7",
+    "prev_tasks": [
+      "53BFBC4D05F44585"
+    ]
+  },
+  {
+    "quest": "main_story:act4_portal_room",
+    "stage": "fq.main_story.act4_portal_room.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Come back, please. Come back after."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1A34F71AE2CA1FE7",
+    "prev_tasks": [
+      "53BFBC4D05F44585",
+      "1DC8D95C78271E78"
+    ],
+    "name": "Spirit Voice",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:allay",
+    "profession": ""
+  },
+  {
+    "quest": "main_story:act4_crystals",
+    "stage": "fq.main_story.act4_crystals.timed1",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "kill",
+      "entity": "minecraft:end_crystal",
+      "count": 10
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "The crystals heal the dragon. Destroy every one in ten minutes!"
+    ],
+    "start": "Climb the towers",
+    "requires": [],
+    "quest_id": "34BDE17CD45FD07C",
+    "prev_tasks": [
+      "26846866AEA8EA57"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "main_story:act4_mega_ship",
+    "stage": "fq.main_story.act4_mega_ship.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mes:mega_ship",
+        "mes:mega_ship_basic",
+        "mes:mega_ship_crashed",
+        "mes:mega_ship_crashed_2",
+        "mes:mega_ship_crashed_deepslate",
+        "mes:mega_ship_deepslate",
+        "mes:mega_ship_deepslate_2",
+        "mes:mega_ship_deepslate_3"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_act4_mega_ship_1",
+    "found": "A log about a ruined citadel.",
+    "requires": [],
+    "quest_id": "1D659EF251AC4FFD",
+    "prev_tasks": [
+      "18C9D066AC82F736"
+    ]
+  },
+  {
+    "quest": "main_story:act4_warden",
+    "stage": "fq.main_story.act4_warden.timed0",
+    "type": "timed",
+    "seconds": 420,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:ancient_city"
+      ],
+      "label": "the city's heart",
+      "away": 60
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Quiet. If anything touches you, the Warden wakes."
+    ],
+    "start": "Creep in",
+    "requires": [],
+    "quest_id": "4406128185B80B2A",
+    "prev_tasks": [],
+    "name": ""
+  },
+  {
+    "quest": "main_story:act4_finale",
+    "stage": "fq.main_story.act4_finale.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "The eight wake. The drain's source burns in the Nether."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2E8CA4F3F9117FF6",
+    "prev_tasks": [
+      "17D825023AB1DA2E"
+    ],
+    "name": "Spirit Messenger",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:allay",
+    "profession": ""
+  },
+  {
     "quest": "milestones:easy_enchant",
     "stage": "fq.milestones.easy_enchant.build0",
     "type": "build",
@@ -5056,6 +5249,190 @@ global.QUEST_GIVERS = [
     "requires": [],
     "quest_id": "4C1D7942C52E0A32",
     "prev_tasks": []
+  },
+  {
+    "quest": "twilight:call_of_snow",
+    "stage": "fq.twilight.call_of_snow.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*Pale eyes in the blizzard.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "6CB38F45B4D5DAFC",
+    "prev_tasks": [
+      "1111EC6D0491CB9C"
+    ],
+    "name": "Blizzard Wolf",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": null,
+    "glow": false,
+    "where": {
+      "biomes": [
+        "twilightforest:snowy_forest"
+      ]
+    },
+    "entity": "twilightforest:winter_wolf",
+    "profession": ""
+  },
+  {
+    "quest": "twilight:yeti_cave",
+    "stage": "fq.twilight.yeti_cave.spawn1",
+    "type": "spawn",
+    "entity": "twilightforest:yeti",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:yeti_cave"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Cave Yetis",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5861518CAE8C5C8A",
+    "requires": [],
+    "quest_id": "354807C500F8963D",
+    "prev_tasks": [
+      "086371D1FBD42684"
+    ]
+  },
+  {
+    "quest": "twilight:alpha_yeti",
+    "stage": "fq.twilight.alpha_yeti.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:alpha_yeti",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:yeti_cave"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Alpha Yeti",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "52D0808D7517DAD2",
+    "requires": [],
+    "quest_id": "1748FB085B9AAFCA",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:aurora_palace",
+    "stage": "fq.twilight.aurora_palace.spawn1",
+    "type": "spawn",
+    "entity": "twilightforest:snow_guardian",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:aurora_palace"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Palace Guardians",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "04B5BC2124815FC4",
+    "requires": [],
+    "quest_id": "5D7ACCB1290B12E1",
+    "prev_tasks": [
+      "6A3DC8B8A3EA4FEE"
+    ]
+  },
+  {
+    "quest": "twilight:snow_queen",
+    "stage": "fq.twilight.snow_queen.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:snow_queen",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:aurora_palace"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Snow Queen",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "2B438E5FDEF5C868",
+    "requires": [],
+    "quest_id": "291F033D60454EA4",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:troll_caves",
+    "stage": "fq.twilight.troll_caves.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:troll_cave"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_troll_caves_1",
+    "found": "A lamp that burns without oil, in the troll vault.",
+    "requires": [],
+    "quest_id": "1BB9E6D208FE5BFE",
+    "prev_tasks": [
+      "3CFC95458AE33D4F"
+    ]
+  },
+  {
+    "quest": "twilight:trophy_hall",
+    "stage": "fq.twilight.trophy_hall.build2",
+    "type": "build",
+    "keys": [
+      "twilightforest:naga_trophy",
+      "twilightforest:lich_trophy",
+      "twilightforest:minoshroom_trophy",
+      "twilightforest:hydra_trophy",
+      "twilightforest:knight_phantom_trophy",
+      "twilightforest:ur_ghast_trophy",
+      "twilightforest:alpha_yeti_trophy",
+      "twilightforest:snow_queen_trophy"
+    ],
+    "counts": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "33570F4BE5B4DE89",
+    "prev_tasks": [
+      "711DB21C7C998327",
+      "341E673242FAB848"
+    ]
   },
   {
     "quest": "alexs_caves:rumours_below",
@@ -7925,6 +8302,82 @@ global.QUEST_GIVERS = [
       "0230CA0E5A38FEE4"
     ],
     "name": ""
+  },
+  {
+    "quest": "nether:crimson_donjon",
+    "stage": "fq.nether.crimson_donjon.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:wither_skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:donjon"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Donjon Garrison",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "022CE6DAED0CE9C9",
+    "requires": [],
+    "quest_id": "09DC50610EEE6EFA",
+    "prev_tasks": [
+      "7018192D513C141C"
+    ]
+  },
+  {
+    "quest": "nether:crimson_donjon",
+    "stage": "fq.nether.crimson_donjon.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:donjon"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_crimson_donjon_2",
+    "found": "Gold and plunder from the donjon's keep.",
+    "requires": [],
+    "quest_id": "09DC50610EEE6EFA",
+    "prev_tasks": [
+      "7018192D513C141C",
+      "022CE6DAED0CE9C9"
+    ]
+  },
+  {
+    "quest": "nether:monstrous_eye",
+    "stage": "fq.nether.monstrous_eye.talk3",
+    "type": "talk",
+    "lines": [
+      "That points at the forge you found. Good.",
+      "The old fire is awake."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "vesna",
+    "quest_id": "1BC74B4E60579640",
+    "open_task": ""
+  },
+  {
+    "quest": "nether:flame_eye",
+    "stage": "fq.nether.flame_eye.talk1",
+    "type": "talk",
+    "lines": [
+      "My journal, filled in. I'll write the last page.",
+      "The arena waits for the story."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "vesna",
+    "quest_id": "283EC263303212C8",
+    "open_task": ""
   },
   {
     "quest": "skill_fishing:sign_up",

@@ -243,6 +243,17 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_mining:ancient_debris: needs near lava level (Nether); written as being low in the Nether and debris mined
 - skill_mining:quartz_contract: needs selling through the guild; written as the materials carried
 - skill_mining:netherite_pick: needs upgrading at a smithing table; written as the pickaxe crafted
+- main_story:act4_portal_room: needs finding the portal room and filling frames; written as eyes crafted and a frame build
+- main_story:act4_crystals: needs the crystals to be on towers of a rebuilt island; written as a timed End-crystal kill
+- main_story:act4_dragon: needs the dragon brought in if absent (no structure to spawn at); written as a plain kill
+- main_story:act4_void_worm: needs feeding the void; written as carrying the worm and a plain kill
+- main_story:act4_warden: needs the Warden fight only if you must; written as a hurt-free crossing and echo shards
+- twilight:call_of_snow: needs blizzards and falling ice; written as a biome and a winter wolf encounter
+- twilight:thornlands: needs burning thorns with the lamp; written as crossing the Thornlands and the plateau
+- twilight:trophy_hall: needs pedestals; written as a build of all eight trophies
+- nether:crimson_donjon: needs trading at the hamlet with the plunder; written as visiting the hamlet
+- nether:monstrous_eye: needs Vesna to confirm where it points; written as a talk after crafting
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start
+- nether:monstrous_eye: restore after main_story:act5_start

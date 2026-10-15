@@ -1929,7 +1929,7 @@
 			]
 			title: "Weapons of Flame"
 			x: 34.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: [
@@ -1978,6 +1978,442 @@
 			]
 			title: "Six Trophies"
 			x: 33.0d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"400B66E61C527034"
+				"54D5B6FBA0DD0230"
+			]
+			description: ["The forest's snowy forest has opened. Cross it through blizzards, winter wolves and falling ice."]
+			icon: "minecraft:snowball"
+			id: "6CB38F45B4D5DAFC"
+			rewards: [
+				{
+					count: 16
+					id: "138D4C9D077323DE"
+					item: "minecraft:cooked_beef"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 550"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "336420BD8E6755C3"
+					silent: true
+					title: "+550 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "twilightforest:snowy_forest"
+					id: "1111EC6D0491CB9C"
+					title: "Cross into the snowy forest"
+					type: "biome"
+				}
+				{
+					id: "03ACD4728A8D8AD2"
+					stage: "fq.twilight.call_of_snow.enc1"
+					title: "Fight off the winter wolf that hunts the pass"
+					type: "gamestage"
+				}
+			]
+			title: "The Cold Reaches"
+			x: 34.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["6CB38F45B4D5DAFC"]
+			description: ["Find the yeti cave in the snowy forest and hunt yetis for arctic fur."]
+			icon: "twilightforest:arctic_fur"
+			id: "354807C500F8963D"
+			rewards: [
+				{
+					count: 4
+					id: "4C8F99DF5BB1684B"
+					item: "twilightforest:arctic_fur"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 550"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "541C4DE8AF7CF100"
+					silent: true
+					title: "+550 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "086371D1FBD42684"
+					structure: "twilightforest:yeti_cave"
+					title: "Find the yeti cave"
+					type: "structure"
+				}
+				{
+					entity: "twilightforest:yeti"
+					id: "5861518CAE8C5C8A"
+					title: "Hunt the cave's yetis"
+					type: "kill"
+					value: 4L
+				}
+				{
+					count: 4L
+					id: "07F8C9F39C3320F0"
+					item: "twilightforest:arctic_fur"
+					title: "Take arctic fur from the yetis"
+					type: "item"
+				}
+			]
+			title: "Caves of the Yeti"
+			x: 36.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["354807C500F8963D"]
+			description: ["The Alpha Yeti hurls ice and roars the ceiling down. Wait for it to tire, then strike."]
+			icon: "twilightforest:alpha_yeti_trophy"
+			id: "1748FB085B9AAFCA"
+			rewards: [
+				{
+					count: 2
+					id: "7A6295C62AC5F6A7"
+					item: "twilightforest:alpha_yeti_fur"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "0B27AAFB3A026FE5"
+					item: "twilightforest:ice_bomb"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 650"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "5340991207B0FABB"
+					silent: true
+					title: "+650 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "twilightforest:alpha_yeti"
+					id: "52D0808D7517DAD2"
+					title: "Defeat the Alpha Yeti in its cave"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Alpha Yeti"
+			x: 37.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["354807C500F8963D"]
+			description: ["Sew arctic fur into arctic armour that can be dyed and keeps the cold out."]
+			icon: "twilightforest:arctic_chestplate"
+			id: "39B43A5B4AB6079F"
+			rewards: [
+				{
+					count: 4
+					id: "56D78B0C0B09A397"
+					item: "minecraft:red_dye"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "3FF36B999B8B2C7D"
+					item: "minecraft:blue_dye"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 550"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "458753202F9B1ACF"
+					silent: true
+					title: "+550 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3E292B2F872DADB9"
+					item: "twilightforest:arctic_helmet"
+					only_from_crafting: true
+					title: "Sew an arctic helmet"
+					type: "item"
+				}
+				{
+					id: "1AAA2293981B87C4"
+					item: "twilightforest:arctic_chestplate"
+					only_from_crafting: true
+					title: "Sew an arctic chestplate"
+					type: "item"
+				}
+				{
+					id: "41F6B9CCA903F621"
+					item: "twilightforest:arctic_leggings"
+					only_from_crafting: true
+					title: "Sew arctic leggings"
+					type: "item"
+				}
+				{
+					id: "4190B2B3FF817CB7"
+					item: "twilightforest:arctic_boots"
+					only_from_crafting: true
+					title: "Sew arctic boots"
+					type: "item"
+				}
+			]
+			title: "Armour of Fur"
+			x: 37.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["1748FB085B9AAFCA"]
+			description: ["On the Glacier stands the Aurora Palace of ice. Climb its halls past snow guardians and ice cores to the queen's chamber."]
+			icon: "minecraft:blue_ice"
+			id: "5D7ACCB1290B12E1"
+			rewards: [
+				{
+					count: 16
+					id: "1FEB4DBA64C0A678"
+					item: "minecraft:glass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 600"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "3059DF7EEA2322C4"
+					silent: true
+					title: "+600 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6A3DC8B8A3EA4FEE"
+					structure: "twilightforest:aurora_palace"
+					title: "Find the Aurora Palace on the Glacier"
+					type: "structure"
+				}
+				{
+					entity: "twilightforest:snow_guardian"
+					id: "04B5BC2124815FC4"
+					title: "Fight past the palace's snow guardians"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "The Aurora Palace"
+			x: 39.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D7ACCB1290B12E1"]
+			description: ["The Snow Queen summons ice shields and hammers you from above. Break her guard and bring her down."]
+			icon: "twilightforest:snow_queen_trophy"
+			id: "291F033D60454EA4"
+			rewards: [
+				{
+					id: "564BE0F1598EA9C0"
+					item: "twilightforest:charm_of_keeping_3"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "7F2283D34C71C10F"
+					silent: true
+					title: "+700 Magic XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "twilightforest:snow_queen"
+					id: "2B438E5FDEF5C868"
+					title: "Break the Snow Queen's guard and bring her down"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Snow Queen"
+			x: 40.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["291F033D60454EA4"]
+			description: ["The Highlands open at last. Search the troll caves under them for trollsteinn and the vault holding the Lamp of Cinders."]
+			icon: "minecraft:deepslate"
+			id: "1BB9E6D208FE5BFE"
+			rewards: [
+				{
+					count: 8
+					id: "3B52883DC5B00A1B"
+					item: "twilightforest:uberous_soil"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 650"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "7850AF081569B129"
+					silent: true
+					title: "+650 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3CFC95458AE33D4F"
+					structure: "twilightforest:troll_cave"
+					title: "Find the troll caves under the Highlands"
+					type: "structure"
+				}
+				{
+					id: "7EAF5746FBFD1C9C"
+					item: "kubejs:quest_troll_caves_1"
+					title: "Open the vault holding the Lamp of Cinders"
+					type: "item"
+				}
+			]
+			title: "Caves of the Trolls"
+			x: 42.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["1BB9E6D208FE5BFE"]
+			description: ["The Lamp of Cinders burns away the thorns of the Thornlands. Carve a path to the Final Plateau."]
+			icon: "minecraft:fire_charge"
+			id: "1623FC953DA1371C"
+			rewards: [
+				{
+					count: 16
+					id: "69AC34954C25BF21"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 650"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "4BF642D8FB99C94A"
+					silent: true
+					title: "+650 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "twilightforest:thornlands"
+					id: "039C75C745C8255A"
+					title: "Burn a path through the Thornlands"
+					type: "biome"
+				}
+				{
+					biome: "twilightforest:final_plateau"
+					id: "61265F4143F57B22"
+					title: "Carve the path on to the Final Plateau"
+					type: "biome"
+				}
+			]
+			title: "Burn the Thorns"
+			x: 43.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1623FC953DA1371C"]
+			description: ["On the plateau stands the final castle, sealed behind force fields and still unfinished. Reach its gate and see what waits for the realm next."]
+			icon: "minecraft:obsidian"
+			id: "44A58FC3271850F1"
+			rewards: [
+				{
+					count: 8
+					id: "579E016AC28EBBAD"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "61856D4BA0C8E4A3"
+					silent: true
+					title: "+700 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1CEDEB62FA6F38F0"
+					structure: "twilightforest:final_castle"
+					title: "Reach the final castle's gate"
+					type: "structure"
+				}
+			]
+			title: "The Unfinished Castle"
+			x: 45.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"291F033D60454EA4"
+				"54D5B6FBA0DD0230"
+				"1748FB085B9AAFCA"
+			]
+			description: ["Build a hall in your base and mount all eight trophies on pedestals: Naga, Lich, Minoshroom, Hydra, Knight Phantom, Ur-Ghast, Alpha Yeti and Snow Queen."]
+			icon: "twilightforest:snow_queen_trophy"
+			id: "33570F4BE5B4DE89"
+			rewards: [
+				{
+					id: "7358362B6D3BC99B"
+					item: "twilightforest:quest_ram_banner_pattern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "19E0FB51DF83CDBD"
+					silent: true
+					title: "+700 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "711DB21C7C998327"
+					item: "twilightforest:alpha_yeti_trophy"
+					title: "Bring the Alpha Yeti's trophy"
+					type: "item"
+				}
+				{
+					id: "341E673242FAB848"
+					item: "twilightforest:snow_queen_trophy"
+					title: "Bring the Snow Queen's trophy"
+					type: "item"
+				}
+				{
+					id: "200D26E00FB4BF00"
+					stage: "fq.twilight.trophy_hall.build2"
+					title: "Mount all eight trophies in a hall of your own"
+					type: "gamestage"
+				}
+			]
+			title: "A Hall of Trophies"
+			x: 42.0d
 			y: 0.75d
 		}
 	]

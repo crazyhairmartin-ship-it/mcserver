@@ -471,5 +471,80 @@ ACT3 = [
           rewards=[reward_item("minecraft:ender_eye", 8), skill("agility", 500)]),
 ]
 
+ACT4 = [
+    quest("act4_start", "The Stronghold Library", icon="minecraft:enchanted_book", after=["act3_finale"],
+          text=["In the stronghold's library, a book left by the Field Guide's author warns that the Void's dragon is "
+                "the last seal keeping the eight sleepers down."],
+          tasks=[{"structure": "betterstrongholds:stronghold", "title": "Go down into the stronghold's library"},
+                 search("betterstrongholds:stronghold", 1, "the Author's Warning", "A book in the Field Guide author's own hand.",
+                        texture="minecraft:item/written_book", title="Find the author's warning among the shelves")],
+          rewards=[reward_item("minecraft:enchanted_book", name="The Author's Gift", enchant={"minecraft:protection": 4}), skill("magic", 500)]),
+
+    quest("act4_twilight_branch", "The Twilight Calls (Part 3)", icon="twilightforest:ice_bomb", after=["act4_start"],
+          text=["The spirits' last curse: climb to the Aurora Palace and free the Snow Queen's frozen court. The "
+                "Twilight questline ends there."],
+          tasks=[{"structure": "twilightforest:aurora_palace", "title": "Climb to the Aurora Palace"},
+                 boss("twilightforest:snow_queen", "twilightforest:aurora_palace", "The Snow Queen", "Free the frozen court by defeating the Snow Queen")],
+          rewards=[reward_item("twilightforest:ice_bomb", 8), reward_item("twilightforest:snow_queen_trophy"), skill("magic", 550)]),
+
+    quest("act4_portal_room", "Twelve Empty Eyes", icon="minecraft:end_portal_frame", after=["act4_start"],
+          text=["Find the portal room and fill every frame. Before you jump, a spirit voice begs you to come back."],
+          tasks=[item("minecraft:ender_eye", 12, crafted=True, title="Craft an eye for every empty frame"),
+                 {"build": {"blocks": {"minecraft:end_portal_frame": 12}, "radius": 12}, "unchecked": True, "title": "Fill every frame in the portal room"},
+                 enc(["Come back, please. Come back after."], entity="minecraft:allay", name="Spirit Voice",
+                     title="Hear the spirit voice before you jump")],
+          rewards=[reward_item("minecraft:potion", 3), skill("magic", 500)]),
+
+    quest("act4_crystals", "Towers of Light", icon="minecraft:end_crystal", after=["act4_portal_room"],
+          text=["On the rebuilt End island, destroy every End crystal on its towers within ten minutes of arriving."],
+          tasks=[{"dimension": "minecraft:the_end", "title": "Step through into the End"},
+                 {"timed": {"seconds": 600, "goal": {"kill": "minecraft:end_crystal", "count": 10},
+                            "lines": ["The crystals heal the dragon. Destroy every one in ten minutes!"], "start": "Climb the towers"},
+                  "title": "Destroy every End crystal on the towers in ten minutes"}],
+          rewards=[reward_item("minecraft:arrow", 32), reward_item("minecraft:ender_pearl", 8), skill("range", 600)]),
+
+    quest("act4_dragon", "The Ender Dragon", icon="minecraft:dragon_breath", shape="diamond", size=1.75, after=["act4_crystals"],
+          text=["Defeat the Ender Dragon. The End questline opens with the gateway."],
+          tasks=[{"kill": "minecraft:ender_dragon", "title": "Defeat the Ender Dragon above its island"}],
+          rewards=[reward_item("minecraft:dragon_breath", 4), skill("attack", 800)]),
+
+    quest("act4_end_cities", "Wings at the Edge", icon="minecraft:elytra", after=["act4_dragon"],
+          text=["Through the gateway, raid an End city for an elytra and shulker shells."],
+          tasks=[{"structure": "minecraft:end_city", "title": "Cross the gateway and find an End city"},
+                 item("minecraft:shulker_shell", 8, title="Take shulker shells from the city's guardians"),
+                 item("minecraft:elytra", title="Find an elytra on a city ship")],
+          rewards=[reward_item("minecraft:firework_rocket", 32), skill("agility", 650)]),
+
+    quest("act4_mega_ship", "Ships Beyond the Void", icon="minecraft:chorus_fruit", after=["act4_end_cities"],
+          text=["Find one of the End mega-ships drifting over the islands and read its captain's log about a ruined "
+                "citadel."],
+          tasks=[{"structure": "#end_mega_ships", "title": "Find a mega-ship drifting over the End's islands"},
+                 search("#end_mega_ships", 1, "the Captain's Log", "A log about a ruined citadel.", texture="minecraft:item/written_book",
+                        title="Read the captain's log")],
+          rewards=[reward_item("minecraft:chorus_fruit", 8), reward_item("cataclysm:void_shard"), skill("agility", 650)]),
+
+    quest("act4_void_worm", "The Void Worm", icon="alexsmobs:void_worm_beak", after=["act4_end_cities"],
+          text=["Optional: feed a Mysterious Worm to the void in the End and defeat the Void Worm that rises."],
+          tasks=[item("alexsmobs:mysterious_worm", title="Bring a Mysterious Worm to feed the void"),
+                 {"kill": "alexsmobs:void_worm", "title": "Defeat the Void Worm that rises"}],
+          rewards=[reward_item("alexsmobs:void_worm_beak"), skill("attack", 700)]),
+
+    quest("act4_warden", "The Deep Dark Listener", icon="minecraft:echo_shard", after=["act4_start"],
+          text=["Optional: sneak through an ancient city and take its echo shards. Fight the Warden only if you must."],
+          tasks=[{"timed": {"seconds": 420, "goal": {"structure": "minecraft:ancient_city", "label": "the city's heart", "away": 60},
+                            "lines": ["Quiet. If anything touches you, the Warden wakes."], "start": "Creep in", "no": ["hurt"]},
+                  "title": "Creep through the ancient city without waking the Warden"},
+                 item("minecraft:echo_shard", 4, title="Take echo shards from the city")],
+          rewards=[reward_item("minecraft:enchanted_book", name="Silent Step", enchant={"minecraft:swift_sneak": 3}), skill("agility", 600)]),
+
+    quest("act4_finale", "The Eight Wake", icon="minecraft:netherite_scrap", after=["act4_dragon", "act4_end_cities"],
+          text=["Back in Reece the ground shakes. The dragon was the Void's guard, and with it gone the eight sealed "
+                "strongholds wake. A spirit messenger tells you the drain's source burns in the Nether."],
+          tasks=[{"place": "reece", "title": "Return to Reece as the ground shakes"},
+                 enc(["The eight wake. The drain's source burns in the Nether."], entity="minecraft:allay", name="Spirit Messenger",
+                     title="Hear the spirit messenger's news")],
+          rewards=[reward_item("minecraft:netherite_scrap", 2), skill("agility", 700)]),
+]
+
 chapter("main_story", "The Silent Forest", "The main story", "minecraft:written_book", "story", 0,
-        PROLOGUE + ACT1 + ACT2 + ACT3)
+        PROLOGUE + ACT1 + ACT2 + ACT3 + ACT4)

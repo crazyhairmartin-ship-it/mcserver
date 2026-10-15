@@ -130,7 +130,7 @@ hash = "76ce6c19048e2df17aafde1581ba0681e374178c80797859cc38c109658826c1"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
-hash = "cd5d8cbee340ee5629f5b7ae842dbf46ff14b78462645a1aa605da73ebb5f802"
+hash = "888bab6333b7a2d676ce6de3a84caabbe17794964e282a8823f2d8b698abdac2"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/milestones.snbt"
@@ -138,7 +138,7 @@ hash = "352796488e48af48a7f195c1b1361d049bef181c53640bf3a8f792b8cc3d84dd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/nether.snbt"
-hash = "e0fa1e947748ed750bc4d44779d7ccf36b67fece19ef1be8a2c85d442342e8b5"
+hash = "fae368153d00a0cf963c3df68853c5c3201a28db8e24ccc133c40725fcdaae74"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/odd_jobs.snbt"
@@ -198,7 +198,7 @@ hash = "0710d554395be561c1607f4e6342fd414c740f622d2a93d7e1bbd7193a8929af"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/twilight.snbt"
-hash = "0daa09a36e9aabe3fe5ccb9155aa66c7d3483bfec13ef14886c6dcd90492dec2"
+hash = "e7da66f2591a07b040a8e89fd080e8471fe6935efb340220217c47ca098167de"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/village_errands.snbt"
@@ -2801,7 +2801,7 @@ hash = "77546c4cc0ec84840f5fd7ab0b845a72406755c619b84f89740a3f8047957af8"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "892825f7086117947be623dbc716a2b7680de7a67479e9026987c2f9278925ee"
+hash = "d37ad4442ff3915904f632ad9d6303b42a943ffdbdfee2d6c8833245431a9b0a"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2885,7 +2885,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "e55e8194813a26a9b3d5b13df23fae728767df660dd23724e06f50a90be20e4f"
+hash = "2a4c4b59d7826c3f6fc800e746535beccba945edca1e72c76ad7715d4deb3acc"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
