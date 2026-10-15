@@ -130,7 +130,7 @@ hash = "dbfcdb7ba8afeb802b92976c9ed3c7352af6eceeac75af59727f83a8624ffd66"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
-hash = "64142945d04a06715eb39d4b9bf668d96db66c05c9c14e59a17b5051027c0f18"
+hash = "cd5d8cbee340ee5629f5b7ae842dbf46ff14b78462645a1aa605da73ebb5f802"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/milestones.snbt"
@@ -186,7 +186,7 @@ hash = "6cde347a2e0d1d51de0190bdf5746a8799f1787fffb2e73269875a417d5e1736"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/small_favours.snbt"
-hash = "feea4868a07241f8534d26a3800f255606527856c6d795510b38ee49f429e2a3"
+hash = "bda9119ef91ee36470081a2b1da7100d0fc80b89327bb0ec72b0300b71a3b630"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/start.snbt"
@@ -2797,7 +2797,7 @@ hash = "77546c4cc0ec84840f5fd7ab0b845a72406755c619b84f89740a3f8047957af8"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "7ef9c9a36db920ce40f9becd3c889840d6043727ea4ea63379bf8a0b17e4cb3c"
+hash = "8bb1fa2d107718773bcbefd19c6dbca15132819789ffab3b705baf3893d9fd84"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2881,7 +2881,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "842b0177d5a78e1ab26ed877a4e04f86732916a89adc71ae53ad2998eb401076"
+hash = "bd26c7ab0797e764e694f2051854b8bba338fcac7ed149764e6a4bdcf321c1e7"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"

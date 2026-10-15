@@ -1,6 +1,7 @@
 """Chapter: main_story, Prologue and Act I (first release). Plan: src/plans/quests/main_story.json.
 Later acts are added to this file in later releases (append only: quest ids are permanent)."""
 from common import chapter, quest, talk_char, talk_org, talk_villager, item, reward_item, skill, give, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 PROLOGUE = [
     quest("prologue_silent_wood", "The Silent Wood", icon="minecraft:oak_sapling", after=["start:clerics_worry"],
@@ -355,5 +356,120 @@ ACT2 = [
                    skill("agility", 300)]),
 ]
 
+ACT3 = [
+    quest("act3_start", "The Burning Realm", icon="minecraft:netherrack", after=["act2_finale"],
+          text=["In the Nether, a lost Reece courier hides in a ruin. She saw the drain's threads running toward the "
+                "fortresses."],
+          tasks=[{"dimension": "minecraft:the_nether", "title": "Cross into the Nether"},
+                 {"structure": "#nether_outposts", "title": "Find the ruin where the lost courier hides"},
+                 enc(["Thank Notch, someone from Reece! The threads all run toward the fortresses.", "Take my map."],
+                     entity="minecraft:villager", name="Lost Courier", title="Find the lost Reece courier")],
+          rewards=[reward_item("minecraft:golden_chestplate"), reward_item("minecraft:map"), skill("agility", 300)]),
+
+    quest("act3_fortress", "Blaze and Bone", icon="minecraft:blaze_rod", after=["act3_start"],
+          text=["The drain's threads end at the fortresses. Raid a Nether fortress for blaze rods and nether wart "
+                "to brew what you will need."],
+          tasks=[{"structure": "betterfortresses:fortress", "title": "Find a Nether fortress"},
+                 fight("minecraft:blaze", 6, "betterfortresses:fortress", "Fortress Blazes", "Fight the fortress's blazes"),
+                 item("minecraft:blaze_rod", 12, title="Take blaze rods for brewing"),
+                 item("minecraft:nether_wart", 8, title="Take nether wart for brewing")],
+          rewards=[reward_item("minecraft:brewing_stand"), skill("attack", 350)]),
+
+    quest("act3_eyes", "Eyes That See", icon="minecraft:ender_eye", after=["act3_fortress"],
+          text=["The wardens' homes are hidden. Craft Eyes of Ender to find the way."],
+          tasks=[item("minecraft:ender_eye", 3, crafted=True, title="Craft Eyes of Ender to find the wardens' homes")],
+          rewards=[reward_item("minecraft:ender_pearl", 8), skill("magic", 300)]),
+
+    quest("act3_wildfire_scout", "The Citadel of Flame", icon="minecraft:fire_charge", after=["act3_fortress"],
+          text=["Find the Nether citadel and slip past its blazes to see the Wildfire on its throne."],
+          tasks=[{"structure": "friendsandfoes:citadel", "title": "Find the citadel of flame"},
+                 {"timed": {"seconds": 300, "goal": {"structure": "friendsandfoes:citadel", "label": "the Wildfire's throne room", "away": 40},
+                            "lines": ["Blazes watch the halls. If anything burns you, they've seen you."], "start": "Slip in",
+                            "no": ["hurt"]}, "title": "Slip past the blazes to the throne room unseen"}],
+          rewards=[reward_item("minecraft:magma_cream", 4), reward_item("minecraft:golden_carrot", 8), skill("agility", 320)]),
+
+    quest("act3_wildfire", "The Wildfire", icon="friendsandfoes:wildfire_crown_fragment", shape="diamond", size=1.5,
+          after=["act3_wildfire_scout"],
+          text=["Defeat the Wildfire by breaking its shields and dodging its fire waves."],
+          tasks=[boss("friendsandfoes:wildfire", "friendsandfoes:citadel", "The Wildfire", "Defeat the Wildfire on its throne")],
+          rewards=[reward_item("friendsandfoes:wildfire_crown_fragment"), skill("attack", 500)]),
+
+    quest("act3_debris", "Debris From Below", icon="minecraft:ancient_debris", after=["act3_start"],
+          text=["The deepest metal is buried deep in the Nether. Mine ancient debris, and watch your footing."],
+          tasks=[item("minecraft:ancient_debris", 8, title="Mine ancient debris deep in the Nether")],
+          rewards=[reward_item("minecraft:tnt", 8), skill("mining", 400)]),
+
+    quest("act3_netherite", "The Black Smith", icon="minecraft:netherite_upgrade_smithing_template", after=["act3_debris"],
+          text=["Netherite needs a template to be worked. Loot one from a bastion and upgrade your first netherite "
+                "piece."],
+          tasks=[{"structure": "minecraft:bastion_remnant", "title": "Find a bastion remnant"},
+                 item("minecraft:netherite_upgrade_smithing_template", title="Loot a netherite upgrade template"),
+                 item("minecraft:netherite_ingot", crafted=True, title="Smelt your first netherite ingot")],
+          rewards=[reward_item("minecraft:netherite_upgrade_smithing_template"), skill("craft", 450)]),
+
+    quest("act3_twilight_branch", "The Twilight Calls (Part 2)", icon="spartantwilight:fiery_battleaxe",
+          after=["act3_netherite", "act2_twilight_branch"],
+          text=["The spirits' second curse: defeat the Hydra in its fiery lair, and forge a Fiery weapon from its "
+                "blood. The Twilight questline continues."],
+          tasks=[boss("twilightforest:hydra", "twilightforest:hydra_lair", "The Hydra", "Defeat the Hydra in its fiery lair"),
+                 item("spartantwilight:fiery_battleaxe", crafted=True, title="Forge a Fiery weapon from its blood")],
+          rewards=[reward_item("twilightforest:fiery_ingot", 2), skill("attack", 550)]),
+
+    quest("act3_dead_king", "The Dead King's Crypt", icon="irons_spellbooks:furled_map", after=["act3_start"],
+          text=["Optional: the Arcane Order traces the drain to Iron's Catacombs and the Dead King. Reaching the "
+                "catacombs opens the magic questline's chain, which holds the fight."],
+          tasks=[talk_org("arcane", ["The drain runs to the catacombs. The Dead King sleeps there.", "Take this map."],
+                          title="Ask the Arcane Order where the drain leads"),
+                 {"structure": "irons_spellbooks:catacombs", "title": "Reach the catacombs the Order names"}],
+          rewards=[reward_item("irons_spellbooks:furled_map"), skill("magic", 350)]),
+
+    quest("act3_skulls", "Three Black Skulls", icon="minecraft:wither_skeleton_skull", after=["act3_wildfire", "act3_netherite"],
+          text=["The Wither needs three wither skeleton skulls. Hunt wither skeletons in fortresses. A fourth, cursed "
+                "one only drops while this quest is open."],
+          tasks=[fight("minecraft:wither_skeleton", 6, "betterfortresses:fortress", "Fortress Wither Skeletons",
+                       "Hunt wither skeletons in a fortress"),
+                 item("minecraft:wither_skeleton_skull", 3, title="Hold three wither skeleton skulls"),
+                 sample("a Cursed Skull", ["minecraft:wither_skeleton"], 0.3, texture="minecraft:item/wither_skeleton_skull",
+                        tooltip="Only drops while the quest is open")],
+          rewards=[reward_item("minecraft:enchanted_book", name="Hunter's Greed", enchant={"minecraft:looting": 3}),
+                   skill("attack", 450)]),
+
+    quest("act3_wither", "The Wither", icon="minecraft:nether_star", shape="diamond", size=1.5, after=["act3_skulls"],
+          text=["Summon the Wither far from Reece, in a pit you dig deep underground, and destroy it. The world's "
+                "wardens are being turned. This one was made to be."],
+          tasks=[item("minecraft:soul_sand", 4, title="Bring soul sand for the summoning"),
+                 {"build": {"blocks": {"minecraft:soul_sand": 4, "minecraft:wither_skeleton_skull": 3}, "radius": 8},
+                  "title": "Build the summoning in a pit far from Reece"},
+                 {"kill": "minecraft:wither", "title": "Destroy the Wither in its pit"}],
+          rewards=[reward_item("minecraft:nether_star"), skill("attack", 600)]),
+
+    quest("act3_beacon", "A Light for Reece", icon="minecraft:beacon", after=["act3_wither"],
+          text=["Build a beacon on a pyramid in Reece's square so the village has a light the drain can't reach."],
+          tasks=[{"place": "reece"},
+                 {"build": {"blocks": {"minecraft:beacon": 1, "minecraft:iron_block": 9}, "radius": 12},
+                  "title": "Raise a beacon on a pyramid in Reece's square"}],
+          rewards=[reward_item("minecraft:iron_block", 4), skill("defense", 450)]),
+
+    quest("act3_hullbreaker", "Something Below the Chasm", icon="alexscaves:diving_helmet", after=["act3_netherite"],
+          text=["Optional: a diver's logbook speaks of something huge circling a ruined submarine in the Abyssal "
+                "Chasm. Finding the trench opens the Alex's Caves chain, which holds the Hullbreaker fight."],
+          tasks=[{"structure": "alexscaves:ocean_trench", "title": "Find the trench the logbook names"},
+                 {"structure": "alexscaves:abyssal_ruins", "title": "Find the ruined submarine below"}],
+          rewards=[reward_item("minecraft:map"), skill("defense", 300)]),
+
+    quest("act3_tremorsaurus", "Something Big Hatches", icon="alexscaves:cooked_dinosaur_chop", after=["act3_netherite"],
+          text=["Optional: find a tremorsaurus egg near the primordial volcano and raise the hatchling, or fight a "
+                "wild tremorsaurus."],
+          tasks=[{"structure": "alexscaves:volcano", "title": "Search the volcano's slopes for an egg"},
+                 {"tame": "alexscaves:tremorsaurus", "title": "Raise the hatchling until it follows you"}],
+          rewards=[reward_item("alexscaves:cooked_dinosaur_chop", 8), skill("taming", 450)]),
+
+    quest("act3_finale", "Where the Eyes Fall", icon="minecraft:ender_eye", after=["act3_beacon", "act3_twilight_branch"],
+          text=["Throw Eyes of Ender across the land until they dive, then dig down into a stronghold."],
+          tasks=[item("minecraft:ender_eye", 6, title="Gather Eyes of Ender to throw"),
+                 {"structure": "betterstrongholds:stronghold", "title": "Follow the eyes down into a stronghold"}],
+          rewards=[reward_item("minecraft:ender_eye", 8), skill("agility", 500)]),
+]
+
 chapter("main_story", "The Silent Forest", "The main story", "minecraft:written_book", "story", 0,
-        PROLOGUE + ACT1 + ACT2)
+        PROLOGUE + ACT1 + ACT2 + ACT3)

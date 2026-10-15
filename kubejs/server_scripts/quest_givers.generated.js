@@ -2851,6 +2851,244 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "main_story:act3_start",
+    "stage": "fq.main_story.act3_start.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Thank Notch, someone from Reece! The threads all run toward the fortresses.",
+      "Take my map."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1D96E8F9421E2B6A",
+    "prev_tasks": [
+      "79652A7E1557A087",
+      "0015637F5BE9D33D"
+    ],
+    "name": "Lost Courier",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "main_story:act3_fortress",
+    "stage": "fq.main_story.act3_fortress.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:blaze",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterfortresses:fortress"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Fortress Blazes",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "18FCB5F3527E5223",
+    "requires": [],
+    "quest_id": "0FAAD276514BC8EA",
+    "prev_tasks": [
+      "7D99766119FFC416"
+    ]
+  },
+  {
+    "quest": "main_story:act3_wildfire_scout",
+    "stage": "fq.main_story.act3_wildfire_scout.timed1",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "friendsandfoes:citadel"
+      ],
+      "label": "the Wildfire's throne room",
+      "away": 40
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Blazes watch the halls. If anything burns you, they've seen you."
+    ],
+    "start": "Slip in",
+    "requires": [],
+    "quest_id": "377F793BBD91E522",
+    "prev_tasks": [
+      "3217A03D2BA7A553"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "main_story:act3_wildfire",
+    "stage": "fq.main_story.act3_wildfire.spawn0",
+    "type": "spawn",
+    "entity": "friendsandfoes:wildfire",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "friendsandfoes:citadel"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Wildfire",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "6CEE608B4AB61A85",
+    "requires": [],
+    "quest_id": "11C53A281D942511",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act3_twilight_branch",
+    "stage": "fq.main_story.act3_twilight_branch.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:hydra",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:hydra_lair"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Hydra",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "263B72403CEFD655",
+    "requires": [],
+    "quest_id": "7F8444B8C1408E55",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act3_dead_king",
+    "stage": "fq.main_story.act3_dead_king.talk0",
+    "type": "talk",
+    "lines": [
+      "The drain runs to the catacombs. The Dead King sleeps there.",
+      "Take this map."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "arcane",
+    "professions": [
+      "minecraft:librarian",
+      "irons_spellbooks:priest"
+    ],
+    "org_name": "Arcane Order",
+    "quest_id": "0A61C0DF41C6BA84",
+    "open_task": ""
+  },
+  {
+    "quest": "main_story:act3_skulls",
+    "stage": "fq.main_story.act3_skulls.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:wither_skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterfortresses:fortress"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Fortress Wither Skeletons",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "15D0F0F2A42FFDE0",
+    "requires": [],
+    "quest_id": "570D8930276196EA",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act3_skulls",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:wither_skeleton"
+    ],
+    "chance": 0.3,
+    "item": "kubejs:quest_act3_skulls_2",
+    "requires": [],
+    "quest_id": "570D8930276196EA",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "main_story:act3_wither",
+    "stage": "fq.main_story.act3_wither.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:soul_sand",
+      "minecraft:wither_skeleton_skull"
+    ],
+    "counts": [
+      4,
+      3
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "25E996717F8F0D5A",
+    "prev_tasks": [
+      "6795670770D21F8E"
+    ]
+  },
+  {
+    "quest": "main_story:act3_beacon",
+    "stage": "fq.main_story.act3_beacon.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:beacon",
+      "minecraft:iron_block"
+    ],
+    "counts": [
+      1,
+      9
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "794F91D391661508",
+    "prev_tasks": [
+      "081BF607DB0C6131"
+    ]
+  },
+  {
+    "quest": "main_story:act3_tremorsaurus",
+    "stage": "fq.main_story.act3_tremorsaurus.tame1",
+    "type": "tame",
+    "entities": [
+      "alexscaves:tremorsaurus"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "03263707597843D0",
+    "prev_tasks": [
+      "471CEC66B211917F"
+    ]
+  },
+  {
     "quest": "milestones:easy_enchant",
     "stage": "fq.milestones.easy_enchant.build0",
     "type": "build",
@@ -3798,6 +4036,108 @@ global.QUEST_GIVERS = [
     "where": {},
     "entity": "minecraft:drowned",
     "profession": ""
+  },
+  {
+    "quest": "small_favours:sf_permit",
+    "stage": "fq.small_favours.sf_permit.talk1",
+    "type": "talk",
+    "lines": [
+      "No permit, no barter. See the clerk.",
+      "Big tent. Probably."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "entity",
+    "entity": "minecraft:piglin",
+    "named": "",
+    "quest_id": "1ADBD5EC51C81283",
+    "open_task": ""
+  },
+  {
+    "quest": "small_favours:sf_dry_ink",
+    "stage": "fq.small_favours.sf_dry_ink.talk1",
+    "type": "talk",
+    "lines": [
+      "Glow ink? Finally. The chief demands it.",
+      "The stamp is cracked, though."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "entity",
+    "entity": "minecraft:piglin",
+    "named": "",
+    "quest_id": "23C1667494EC9233",
+    "open_task": ""
+  },
+  {
+    "quest": "small_favours:sf_cracked_stamp",
+    "stage": "fq.small_favours.sf_cracked_stamp.timed1",
+    "type": "timed",
+    "seconds": 60,
+    "goal": {
+      "kind": "hold",
+      "radius": 6.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:piglin_brute",
+        "count": 1,
+        "every": 20
+      }
+    ],
+    "lines": [
+      "The brute wants a wrestle. Stand your ground."
+    ],
+    "start": "Take the brute's challenge",
+    "requires": [],
+    "quest_id": "1C7CE26578606FB0",
+    "prev_tasks": [
+      "15F8F131595F18D8"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "small_favours:sf_sleeping_chief",
+    "stage": "fq.small_favours.sf_sleeping_chief.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "*The chief stirs, stamps a foot, and signs with a grunt.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "36C6F87EDBF57DE3",
+    "prev_tasks": [
+      "26445368E1AA2235"
+    ],
+    "name": "The Sleeping Chief",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:piglin",
+    "profession": ""
+  },
+  {
+    "quest": "small_favours:sf_permit_granted",
+    "stage": "fq.small_favours.sf_permit_granted.talk1",
+    "type": "talk",
+    "lines": [
+      "Signed. Stamped. Upside down is fine. Welcome."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "entity",
+    "entity": "minecraft:piglin",
+    "named": "",
+    "quest_id": "44AE8563E66ACA8A",
+    "open_task": ""
   },
   {
     "quest": "start:welcome",

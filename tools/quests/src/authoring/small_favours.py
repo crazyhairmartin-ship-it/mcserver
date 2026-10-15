@@ -1,6 +1,7 @@
 """Chapter: small_favours, One Small Favour-style chains. First release: the Reece chain (Bram's loaf).
 Plan: src/plans/quests/small_favours.json. Later chains are appended in later releases."""
 from common import chapter, quest, talk_char, item, reward_item, skill, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 REECE = [
     quest("sf_out_of_flour", "Just a Loaf", icon="bakery:crusty_bread", after=["start:welcome"],
@@ -101,5 +102,51 @@ LAKE = [
           rewards=[reward_item("smallships:oak_rowboat"), skill("fish", 200)]),
 ]
 
+NETHER = [
+    quest("sf_permit", "Paperwork", icon="minecraft:paper", after=["main_story:act3_start"],
+          text=["The piglin camp's gatekeeper won't let a stranger barter without a permit, stamped by the chief's clerk. "
+                "The clerk is in the big tent. Probably."],
+          tasks=[{"structure": "nova_structures:piglin_camp", "title": "Find the piglin camp's gate"},
+                 {"talk": "entity", "entity": "minecraft:piglin",
+                  "lines": ["No permit, no barter. See the clerk.", "Big tent. Probably."],
+                  "title": "Ask the gatekeeper how to trade"}],
+          rewards=[reward_item("minecraft:gold_nugget", 8), skill("agility", 100)]),
+
+    quest("sf_dry_ink", "The Ink Has Dried", icon="minecraft:glow_ink_sac", after=["sf_permit"],
+          text=["The clerk can't write a permit: his ink has dried in the heat. The chief's permits are always "
+                "written in glow ink, from glow squid in the Overworld."],
+          tasks=[item("minecraft:glow_ink_sac", 4, title="Bring glow ink from the Overworld's glow squid"),
+                 {"talk": "entity", "entity": "minecraft:piglin",
+                  "lines": ["Glow ink? Finally. The chief demands it.", "The stamp is cracked, though."],
+                  "title": "Give the clerk the glow ink"}],
+          rewards=[skill("fish", 100)]),
+
+    quest("sf_cracked_stamp", "The Cracked Stamp", icon="minecraft:gold_block", after=["sf_dry_ink"],
+          text=["The clerk's stamp is cracked. A brute at the camp's forge will cast a new one from a gold block, if "
+                "you survive his arm-wrestling swings for a minute."],
+          tasks=[item("minecraft:gold_block", consume=True, title="Bring a gold block for the new stamp"),
+                 {"timed": {"seconds": 60, "goal": {"hold": {"radius": 6}},
+                            "waves": [{"entity": "minecraft:piglin_brute", "count": 1, "every": 20}],
+                            "lines": ["The brute wants a wrestle. Stand your ground."], "start": "Take the brute's challenge"},
+                  "title": "Survive the brute's swings for a minute"}],
+          rewards=[skill("defense", 120)]),
+
+    quest("sf_sleeping_chief", "Signed by the Chief", icon="immersive_melodies:tiny_drum", after=["sf_cracked_stamp"],
+          text=["Stamped, but not signed. The chief is asleep, and waking him badly is how outsiders get eaten. "
+                "Piglins dance to a drum. Play one by his bed until he wakes in a good mood."],
+          tasks=[item("immersive_melodies:tiny_drum", crafted=True, title="Make a drum to wake the chief gently"),
+                 enc(["*The chief stirs, stamps a foot, and signs with a grunt.*"], entity="minecraft:piglin",
+                     name="The Sleeping Chief", title="Wake the chief with a drum by his bed")],
+          rewards=[reward_item("minecraft:gold_ingot", 8), skill("agility", 150)]),
+
+    quest("sf_permit_granted", "Permit Granted", icon="minecraft:item_frame", after=["sf_sleeping_chief"],
+          text=["Hand the signed, stamped permit to the gatekeeper. He reads it twice, upside down, and lets you in "
+                "to trade."],
+          tasks=[item("minecraft:paper", consume=True, title="Carry the signed, stamped permit to the gate"),
+                 {"talk": "entity", "entity": "minecraft:piglin",
+                  "lines": ["Signed. Stamped. Upside down is fine. Welcome."], "title": "Hand the permit to the gatekeeper"}],
+          rewards=[reward_item("minecraft:item_frame"), reward_item("minecraft:gold_nugget", 16), skill("agility", 200)]),
+]
+
 chapter("small_favours", "Small Favours", "One small favour leads to another", "bakery:crusty_bread", "side", 0,
-        REECE + LAKE)
+        REECE + LAKE + NETHER)

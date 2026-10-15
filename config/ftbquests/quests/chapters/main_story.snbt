@@ -1660,6 +1660,672 @@
 			x: 46.5d
 			y: 0.0d
 		}
+		{
+			dependencies: ["54C450BB48CA2E5F"]
+			description: ["In the Nether, a lost Reece courier hides in a ruin. She saw the drain's threads running toward the fortresses."]
+			icon: "minecraft:netherrack"
+			id: "1D96E8F9421E2B6A"
+			rewards: [
+				{
+					id: "0E659B7B5CAF4D68"
+					item: "minecraft:golden_chestplate"
+					type: "item"
+				}
+				{
+					id: "6777A6E72DC04B4E"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "2815209CB796D04E"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:the_nether"
+					id: "79652A7E1557A087"
+					title: "Cross into the Nether"
+					type: "dimension"
+				}
+				{
+					id: "0015637F5BE9D33D"
+					structure: "#fotf:groups/nether_outposts"
+					title: "Find the ruin where the lost courier hides"
+					type: "structure"
+				}
+				{
+					id: "14F54D16DD0F7EFB"
+					stage: "fq.main_story.act3_start.enc2"
+					title: "Find the lost Reece courier"
+					type: "gamestage"
+				}
+			]
+			title: "The Burning Realm"
+			x: 48.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1D96E8F9421E2B6A"]
+			description: ["The drain's threads end at the fortresses. Raid a Nether fortress for blaze rods and nether wart to brew what you will need."]
+			icon: "minecraft:blaze_rod"
+			id: "0FAAD276514BC8EA"
+			rewards: [
+				{
+					id: "27BD1562DAD49A1A"
+					item: "minecraft:brewing_stand"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 350"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "3FC38F24C12095E5"
+					silent: true
+					title: "+350 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7D99766119FFC416"
+					structure: "betterfortresses:fortress"
+					title: "Find a Nether fortress"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:blaze"
+					id: "18FCB5F3527E5223"
+					title: "Fight the fortress's blazes"
+					type: "kill"
+					value: 6L
+				}
+				{
+					count: 12L
+					id: "00D02E09A8BEE0D5"
+					item: "minecraft:blaze_rod"
+					title: "Take blaze rods for brewing"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "2DD52E8F8899B378"
+					item: "minecraft:nether_wart"
+					title: "Take nether wart for brewing"
+					type: "item"
+				}
+			]
+			title: "Blaze and Bone"
+			x: 49.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0FAAD276514BC8EA"]
+			description: ["The wardens' homes are hidden. Craft Eyes of Ender to find the way."]
+			icon: "minecraft:ender_eye"
+			id: "048529F29123FFA3"
+			rewards: [
+				{
+					count: 8
+					id: "0AB7EBF3C2910526"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 300"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "626F4E74E801C773"
+					silent: true
+					title: "+300 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "0E6EE19E40A4A995"
+					item: "minecraft:ender_eye"
+					only_from_crafting: true
+					title: "Craft Eyes of Ender to find the wardens' homes"
+					type: "item"
+				}
+			]
+			title: "Eyes That See"
+			x: 51.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["0FAAD276514BC8EA"]
+			description: ["Find the Nether citadel and slip past its blazes to see the Wildfire on its throne."]
+			icon: "minecraft:fire_charge"
+			id: "377F793BBD91E522"
+			rewards: [
+				{
+					count: 4
+					id: "339A994A2944A2DB"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "01E4C3DFFD016081"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 320"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "6E6C2A1D3E9D084E"
+					silent: true
+					title: "+320 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3217A03D2BA7A553"
+					structure: "friendsandfoes:citadel"
+					title: "Find the citadel of flame"
+					type: "structure"
+				}
+				{
+					id: "03D2719C13708D69"
+					stage: "fq.main_story.act3_wildfire_scout.timed1"
+					title: "Slip past the blazes to the throne room unseen"
+					type: "gamestage"
+				}
+			]
+			title: "The Citadel of Flame"
+			x: 51.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["377F793BBD91E522"]
+			description: ["Defeat the Wildfire by breaking its shields and dodging its fire waves."]
+			icon: "friendsandfoes:wildfire_crown_fragment"
+			id: "11C53A281D942511"
+			rewards: [
+				{
+					id: "3CEEBA2F0A476F20"
+					item: "friendsandfoes:wildfire_crown_fragment"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 500"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "12182A39F5882EDE"
+					silent: true
+					title: "+500 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "friendsandfoes:wildfire"
+					id: "6CEE608B4AB61A85"
+					title: "Defeat the Wildfire on its throne"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Wildfire"
+			x: 52.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["1D96E8F9421E2B6A"]
+			description: ["The deepest metal is buried deep in the Nether. Mine ancient debris, and watch your footing."]
+			icon: "minecraft:ancient_debris"
+			id: "154847538134F7B2"
+			rewards: [
+				{
+					count: 8
+					id: "0E42DDA513883B29"
+					item: "minecraft:tnt"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 400"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "2FAE1C187D7E8D64"
+					silent: true
+					title: "+400 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "1BF362C5AA97ECA5"
+					item: "minecraft:ancient_debris"
+					title: "Mine ancient debris deep in the Nether"
+					type: "item"
+				}
+			]
+			title: "Debris From Below"
+			x: 49.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["154847538134F7B2"]
+			description: ["Netherite needs a template to be worked. Loot one from a bastion and upgrade your first netherite piece."]
+			icon: "minecraft:netherite_upgrade_smithing_template"
+			id: "208DB8B8B71AE85C"
+			rewards: [
+				{
+					id: "47B5FB7E5732A4F3"
+					item: "minecraft:netherite_upgrade_smithing_template"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 450"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "1CC75A87D20B0972"
+					silent: true
+					title: "+450 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "39046B8F1A2EA45F"
+					structure: "minecraft:bastion_remnant"
+					title: "Find a bastion remnant"
+					type: "structure"
+				}
+				{
+					id: "079D36DCC0EF79D8"
+					item: "minecraft:netherite_upgrade_smithing_template"
+					title: "Loot a netherite upgrade template"
+					type: "item"
+				}
+				{
+					id: "759FF71095A66C7A"
+					item: "minecraft:netherite_ingot"
+					only_from_crafting: true
+					title: "Smelt your first netherite ingot"
+					type: "item"
+				}
+			]
+			title: "The Black Smith"
+			x: 51.0d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"208DB8B8B71AE85C"
+				"2E61B7DC6F2E334C"
+			]
+			description: ["The spirits' second curse: defeat the Hydra in its fiery lair, and forge a Fiery weapon from its blood. The Twilight questline continues."]
+			icon: "spartantwilight:fiery_battleaxe"
+			id: "7F8444B8C1408E55"
+			rewards: [
+				{
+					count: 2
+					id: "01300080C40134A7"
+					item: "twilightforest:fiery_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 550"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "7A250DFCEEAF9FE1"
+					silent: true
+					title: "+550 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:hydra"
+					id: "263B72403CEFD655"
+					title: "Defeat the Hydra in its fiery lair"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "16FF4E57ED2F4263"
+					item: "spartantwilight:fiery_battleaxe"
+					only_from_crafting: true
+					title: "Forge a Fiery weapon from its blood"
+					type: "item"
+				}
+			]
+			title: "The Twilight Calls (Part 2)"
+			x: 52.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["1D96E8F9421E2B6A"]
+			description: ["Optional: the Arcane Order traces the drain to Iron's Catacombs and the Dead King. Reaching the catacombs opens the magic questline's chain, which holds the fight."]
+			icon: "irons_spellbooks:furled_map"
+			id: "0A61C0DF41C6BA84"
+			rewards: [
+				{
+					id: "76EFCBE5C63C9C8D"
+					item: "irons_spellbooks:furled_map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 350"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "3BACF3B595EAF6E4"
+					silent: true
+					title: "+350 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7C2A0BB20230E772"
+					stage: "fq.main_story.act3_dead_king.talk0"
+					title: "Ask the Arcane Order where the drain leads"
+					type: "gamestage"
+				}
+				{
+					id: "4BD283D7E8055F9D"
+					structure: "irons_spellbooks:catacombs"
+					title: "Reach the catacombs the Order names"
+					type: "structure"
+				}
+			]
+			title: "The Dead King's Crypt"
+			x: 49.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"11C53A281D942511"
+				"208DB8B8B71AE85C"
+			]
+			description: ["The Wither needs three wither skeleton skulls. Hunt wither skeletons in fortresses. A fourth, cursed one only drops while this quest is open."]
+			icon: "minecraft:wither_skeleton_skull"
+			id: "570D8930276196EA"
+			rewards: [
+				{
+					id: "790A94AA514AA4E2"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:looting"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Hunter's Greed\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 450"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "41F19DEF8F1EB47D"
+					silent: true
+					title: "+450 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:wither_skeleton"
+					id: "15D0F0F2A42FFDE0"
+					title: "Hunt wither skeletons in a fortress"
+					type: "kill"
+					value: 6L
+				}
+				{
+					count: 3L
+					id: "4F71CF363B697EA1"
+					item: "minecraft:wither_skeleton_skull"
+					title: "Hold three wither skeleton skulls"
+					type: "item"
+				}
+				{
+					id: "701E89D0D57D58BE"
+					item: "kubejs:quest_act3_skulls_2"
+					title: "Take a Cursed Skull"
+					type: "item"
+				}
+			]
+			title: "Three Black Skulls"
+			x: 54.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["570D8930276196EA"]
+			description: ["Summon the Wither far from Reece, in a pit you dig deep underground, and destroy it. The world's wardens are being turned. This one was made to be."]
+			icon: "minecraft:nether_star"
+			id: "25E996717F8F0D5A"
+			rewards: [
+				{
+					id: "6B5DB176501B2EAC"
+					item: "minecraft:nether_star"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 600"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "34B11D4EBBE8BBC4"
+					silent: true
+					title: "+600 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					count: 4L
+					id: "6795670770D21F8E"
+					item: "minecraft:soul_sand"
+					title: "Bring soul sand for the summoning"
+					type: "item"
+				}
+				{
+					id: "2F172906B8F62DD3"
+					stage: "fq.main_story.act3_wither.build1"
+					title: "Build the summoning in a pit far from Reece"
+					type: "gamestage"
+				}
+				{
+					entity: "minecraft:wither"
+					id: "4CADEF34490502AF"
+					title: "Destroy the Wither in its pit"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Wither"
+			x: 55.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["25E996717F8F0D5A"]
+			description: ["Build a beacon on a pyramid in Reece's square so the village has a light the drain can't reach."]
+			icon: "minecraft:beacon"
+			id: "794F91D391661508"
+			rewards: [
+				{
+					count: 4
+					id: "74A1FD650B23CE8A"
+					item: "minecraft:iron_block"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 450"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "20B16A405B71DB06"
+					silent: true
+					title: "+450 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "081BF607DB0C6131"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "64BD9AFED992554D"
+					stage: "fq.main_story.act3_beacon.build1"
+					title: "Raise a beacon on a pyramid in Reece's square"
+					type: "gamestage"
+				}
+			]
+			title: "A Light for Reece"
+			x: 57.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["208DB8B8B71AE85C"]
+			description: ["Optional: a diver's logbook speaks of something huge circling a ruined submarine in the Abyssal Chasm. Finding the trench opens the Alex's Caves chain, which holds the Hullbreaker fight."]
+			icon: "alexscaves:diving_helmet"
+			id: "7D051E28EBAA21BC"
+			rewards: [
+				{
+					id: "4FC56F0D2B364ACE"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 300"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "0CD2654227A65932"
+					silent: true
+					title: "+300 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "68274763E97BD3F9"
+					structure: "alexscaves:ocean_trench"
+					title: "Find the trench the logbook names"
+					type: "structure"
+				}
+				{
+					id: "2FE4F3C8A71D88E5"
+					structure: "alexscaves:abyssal_ruins"
+					title: "Find the ruined submarine below"
+					type: "structure"
+				}
+			]
+			title: "Something Below the Chasm"
+			x: 52.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["208DB8B8B71AE85C"]
+			description: ["Optional: find a tremorsaurus egg near the primordial volcano and raise the hatchling, or fight a wild tremorsaurus."]
+			icon: "alexscaves:cooked_dinosaur_chop"
+			id: "03263707597843D0"
+			rewards: [
+				{
+					count: 8
+					id: "4411CE7E34DBB455"
+					item: "alexscaves:cooked_dinosaur_chop"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 450"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "381C57C4D57D77F0"
+					silent: true
+					title: "+450 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "471CEC66B211917F"
+					structure: "alexscaves:volcano"
+					title: "Search the volcano's slopes for an egg"
+					type: "structure"
+				}
+				{
+					id: "45666E3B9C5E6D2C"
+					stage: "fq.main_story.act3_tremorsaurus.tame1"
+					title: "Raise the hatchling until it follows you"
+					type: "gamestage"
+				}
+			]
+			title: "Something Big Hatches"
+			x: 52.5d
+			y: 2.25d
+		}
+		{
+			dependencies: [
+				"794F91D391661508"
+				"7F8444B8C1408E55"
+			]
+			description: ["Throw Eyes of Ender across the land until they dive, then dig down into a stronghold."]
+			icon: "minecraft:ender_eye"
+			id: "400B66E61C527034"
+			rewards: [
+				{
+					count: 8
+					id: "3AB96351B0B335DA"
+					item: "minecraft:ender_eye"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 500"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "6C7B76388A5A0219"
+					silent: true
+					title: "+500 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 6L
+					id: "22CCB7431315170C"
+					item: "minecraft:ender_eye"
+					title: "Gather Eyes of Ender to throw"
+					type: "item"
+				}
+				{
+					id: "739566D7E8EE9E15"
+					structure: "betterstrongholds:stronghold"
+					title: "Follow the eyes down into a stronghold"
+					type: "structure"
+				}
+			]
+			title: "Where the Eyes Fall"
+			x: 58.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["The main story"]
 	title: "The Silent Forest"

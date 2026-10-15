@@ -1500,6 +1500,585 @@
       "icon": "minecraft:obsidian",
       "shape": "diamond",
       "size": 1.75
+    },
+    {
+      "id": "act3_start",
+      "title": "The Burning Realm",
+      "after": [
+        "act2_finale"
+      ],
+      "text": [
+        "In the Nether, a lost Reece courier hides in a ruin. She saw the drain's threads running toward the fortresses."
+      ],
+      "tasks": [
+        {
+          "dimension": "minecraft:the_nether",
+          "title": "Cross into the Nether"
+        },
+        {
+          "structure": "#nether_outposts",
+          "title": "Find the ruin where the lost courier hides"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Lost Courier",
+            "then": "talk",
+            "lines": [
+              "Thank Notch, someone from Reece! The threads all run toward the fortresses.",
+              "Take my map."
+            ]
+          },
+          "title": "Find the lost Reece courier"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_chestplate"
+        },
+        {
+          "item": "minecraft:map"
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:netherrack"
+    },
+    {
+      "id": "act3_fortress",
+      "title": "Blaze and Bone",
+      "after": [
+        "act3_start"
+      ],
+      "text": [
+        "The drain's threads end at the fortresses. Raid a Nether fortress for blaze rods and nether wart to brew what you will need."
+      ],
+      "tasks": [
+        {
+          "structure": "betterfortresses:fortress",
+          "title": "Find a Nether fortress"
+        },
+        {
+          "kill": "minecraft:blaze",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "betterfortresses:fortress"
+            },
+            "wave": 4,
+            "name": "Fortress Blazes"
+          },
+          "title": "Fight the fortress's blazes"
+        },
+        {
+          "item": "minecraft:blaze_rod",
+          "count": 12,
+          "title": "Take blaze rods for brewing"
+        },
+        {
+          "item": "minecraft:nether_wart",
+          "count": 8,
+          "title": "Take nether wart for brewing"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:brewing_stand"
+        },
+        {
+          "skill": "attack",
+          "xp": 350
+        }
+      ],
+      "icon": "minecraft:blaze_rod"
+    },
+    {
+      "id": "act3_eyes",
+      "title": "Eyes That See",
+      "after": [
+        "act3_fortress"
+      ],
+      "text": [
+        "The wardens' homes are hidden. Craft Eyes of Ender to find the way."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:ender_eye",
+          "count": 3,
+          "crafted": true,
+          "title": "Craft Eyes of Ender to find the wardens' homes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 8
+        },
+        {
+          "skill": "magic",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:ender_eye"
+    },
+    {
+      "id": "act3_wildfire_scout",
+      "title": "The Citadel of Flame",
+      "after": [
+        "act3_fortress"
+      ],
+      "text": [
+        "Find the Nether citadel and slip past its blazes to see the Wildfire on its throne."
+      ],
+      "tasks": [
+        {
+          "structure": "friendsandfoes:citadel",
+          "title": "Find the citadel of flame"
+        },
+        {
+          "timed": {
+            "seconds": 300,
+            "goal": {
+              "structure": "friendsandfoes:citadel",
+              "label": "the Wildfire's throne room",
+              "away": 40
+            },
+            "lines": [
+              "Blazes watch the halls. If anything burns you, they've seen you."
+            ],
+            "start": "Slip in",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Slip past the blazes to the throne room unseen"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 320
+        }
+      ],
+      "icon": "minecraft:fire_charge"
+    },
+    {
+      "id": "act3_wildfire",
+      "title": "The Wildfire",
+      "after": [
+        "act3_wildfire_scout"
+      ],
+      "text": [
+        "Defeat the Wildfire by breaking its shields and dodging its fire waves."
+      ],
+      "tasks": [
+        {
+          "kill": "friendsandfoes:wildfire",
+          "spawn": {
+            "at": {
+              "structure": "friendsandfoes:citadel"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Wildfire"
+          },
+          "title": "Defeat the Wildfire on its throne"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "friendsandfoes:wildfire_crown_fragment"
+        },
+        {
+          "skill": "attack",
+          "xp": 500
+        }
+      ],
+      "icon": "friendsandfoes:wildfire_crown_fragment",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act3_debris",
+      "title": "Debris From Below",
+      "after": [
+        "act3_start"
+      ],
+      "text": [
+        "The deepest metal is buried deep in the Nether. Mine ancient debris, and watch your footing."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:ancient_debris",
+          "count": 8,
+          "title": "Mine ancient debris deep in the Nether"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:tnt",
+          "count": 8
+        },
+        {
+          "skill": "mining",
+          "xp": 400
+        }
+      ],
+      "icon": "minecraft:ancient_debris"
+    },
+    {
+      "id": "act3_netherite",
+      "title": "The Black Smith",
+      "after": [
+        "act3_debris"
+      ],
+      "text": [
+        "Netherite needs a template to be worked. Loot one from a bastion and upgrade your first netherite piece."
+      ],
+      "tasks": [
+        {
+          "structure": "minecraft:bastion_remnant",
+          "title": "Find a bastion remnant"
+        },
+        {
+          "item": "minecraft:netherite_upgrade_smithing_template",
+          "title": "Loot a netherite upgrade template"
+        },
+        {
+          "item": "minecraft:netherite_ingot",
+          "crafted": true,
+          "title": "Smelt your first netherite ingot"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_upgrade_smithing_template"
+        },
+        {
+          "skill": "craft",
+          "xp": 450
+        }
+      ],
+      "icon": "minecraft:netherite_upgrade_smithing_template"
+    },
+    {
+      "id": "act3_twilight_branch",
+      "title": "The Twilight Calls (Part 2)",
+      "after": [
+        "act3_netherite",
+        "act2_twilight_branch"
+      ],
+      "text": [
+        "The spirits' second curse: defeat the Hydra in its fiery lair, and forge a Fiery weapon from its blood. The Twilight questline continues."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:hydra",
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:hydra_lair"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Hydra"
+          },
+          "title": "Defeat the Hydra in its fiery lair"
+        },
+        {
+          "item": "spartantwilight:fiery_battleaxe",
+          "crafted": true,
+          "title": "Forge a Fiery weapon from its blood"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:fiery_ingot",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 550
+        }
+      ],
+      "icon": "spartantwilight:fiery_battleaxe"
+    },
+    {
+      "id": "act3_dead_king",
+      "title": "The Dead King's Crypt",
+      "after": [
+        "act3_start"
+      ],
+      "text": [
+        "Optional: the Arcane Order traces the drain to Iron's Catacombs and the Dead King. Reaching the catacombs opens the magic questline's chain, which holds the fight."
+      ],
+      "tasks": [
+        {
+          "talk": "org",
+          "org": "arcane",
+          "lines": [
+            "The drain runs to the catacombs. The Dead King sleeps there.",
+            "Take this map."
+          ],
+          "title": "Ask the Arcane Order where the drain leads"
+        },
+        {
+          "structure": "irons_spellbooks:catacombs",
+          "title": "Reach the catacombs the Order names"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:furled_map"
+        },
+        {
+          "skill": "magic",
+          "xp": 350
+        }
+      ],
+      "icon": "irons_spellbooks:furled_map"
+    },
+    {
+      "id": "act3_skulls",
+      "title": "Three Black Skulls",
+      "after": [
+        "act3_wildfire",
+        "act3_netherite"
+      ],
+      "text": [
+        "The Wither needs three wither skeleton skulls. Hunt wither skeletons in fortresses. A fourth, cursed one only drops while this quest is open."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:wither_skeleton",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "betterfortresses:fortress"
+            },
+            "wave": 4,
+            "name": "Fortress Wither Skeletons"
+          },
+          "title": "Hunt wither skeletons in a fortress"
+        },
+        {
+          "item": "minecraft:wither_skeleton_skull",
+          "count": 3,
+          "title": "Hold three wither skeleton skulls"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:wither_skeleton"
+            ],
+            "chance": 0.3,
+            "item": {
+              "name": "a Cursed Skull",
+              "texture": "minecraft:item/wither_skeleton_skull",
+              "tooltip": "Only drops while the quest is open"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take a Cursed Skull"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Hunter's Greed",
+          "enchant": {
+            "minecraft:looting": 3
+          }
+        },
+        {
+          "skill": "attack",
+          "xp": 450
+        }
+      ],
+      "icon": "minecraft:wither_skeleton_skull"
+    },
+    {
+      "id": "act3_wither",
+      "title": "The Wither",
+      "after": [
+        "act3_skulls"
+      ],
+      "text": [
+        "Summon the Wither far from Reece, in a pit you dig deep underground, and destroy it. The world's wardens are being turned. This one was made to be."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:soul_sand",
+          "count": 4,
+          "title": "Bring soul sand for the summoning"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:soul_sand": 4,
+              "minecraft:wither_skeleton_skull": 3
+            },
+            "radius": 8
+          },
+          "title": "Build the summoning in a pit far from Reece"
+        },
+        {
+          "kill": "minecraft:wither",
+          "title": "Destroy the Wither in its pit"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:nether_star"
+        },
+        {
+          "skill": "attack",
+          "xp": 600
+        }
+      ],
+      "icon": "minecraft:nether_star",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act3_beacon",
+      "title": "A Light for Reece",
+      "after": [
+        "act3_wither"
+      ],
+      "text": [
+        "Build a beacon on a pyramid in Reece's square so the village has a light the drain can't reach."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:beacon": 1,
+              "minecraft:iron_block": 9
+            },
+            "radius": 12
+          },
+          "title": "Raise a beacon on a pyramid in Reece's square"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_block",
+          "count": 4
+        },
+        {
+          "skill": "defense",
+          "xp": 450
+        }
+      ],
+      "icon": "minecraft:beacon"
+    },
+    {
+      "id": "act3_hullbreaker",
+      "title": "Something Below the Chasm",
+      "after": [
+        "act3_netherite"
+      ],
+      "text": [
+        "Optional: a diver's logbook speaks of something huge circling a ruined submarine in the Abyssal Chasm. Finding the trench opens the Alex's Caves chain, which holds the Hullbreaker fight."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:ocean_trench",
+          "title": "Find the trench the logbook names"
+        },
+        {
+          "structure": "alexscaves:abyssal_ruins",
+          "title": "Find the ruined submarine below"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:map"
+        },
+        {
+          "skill": "defense",
+          "xp": 300
+        }
+      ],
+      "icon": "alexscaves:diving_helmet"
+    },
+    {
+      "id": "act3_tremorsaurus",
+      "title": "Something Big Hatches",
+      "after": [
+        "act3_netherite"
+      ],
+      "text": [
+        "Optional: find a tremorsaurus egg near the primordial volcano and raise the hatchling, or fight a wild tremorsaurus."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:volcano",
+          "title": "Search the volcano's slopes for an egg"
+        },
+        {
+          "tame": "alexscaves:tremorsaurus",
+          "title": "Raise the hatchling until it follows you"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:cooked_dinosaur_chop",
+          "count": 8
+        },
+        {
+          "skill": "taming",
+          "xp": 450
+        }
+      ],
+      "icon": "alexscaves:cooked_dinosaur_chop"
+    },
+    {
+      "id": "act3_finale",
+      "title": "Where the Eyes Fall",
+      "after": [
+        "act3_beacon",
+        "act3_twilight_branch"
+      ],
+      "text": [
+        "Throw Eyes of Ender across the land until they dive, then dig down into a stronghold."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:ender_eye",
+          "count": 6,
+          "title": "Gather Eyes of Ender to throw"
+        },
+        {
+          "structure": "betterstrongholds:stronghold",
+          "title": "Follow the eyes down into a stronghold"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_eye",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 500
+        }
+      ],
+      "icon": "minecraft:ender_eye"
     }
   ]
 }

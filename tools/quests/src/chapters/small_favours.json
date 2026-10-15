@@ -473,6 +473,199 @@
       "icon": "smallships:oak_rowboat",
       "shape": "diamond",
       "size": 1.25
+    },
+    {
+      "id": "sf_permit",
+      "title": "Paperwork",
+      "after": [
+        "main_story:act3_start"
+      ],
+      "text": [
+        "The piglin camp's gatekeeper won't let a stranger barter without a permit, stamped by the chief's clerk. The clerk is in the big tent. Probably."
+      ],
+      "tasks": [
+        {
+          "structure": "nova_structures:piglin_camp",
+          "title": "Find the piglin camp's gate"
+        },
+        {
+          "talk": "entity",
+          "entity": "minecraft:piglin",
+          "lines": [
+            "No permit, no barter. See the clerk.",
+            "Big tent. Probably."
+          ],
+          "title": "Ask the gatekeeper how to trade"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_nugget",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:paper"
+    },
+    {
+      "id": "sf_dry_ink",
+      "title": "The Ink Has Dried",
+      "after": [
+        "sf_permit"
+      ],
+      "text": [
+        "The clerk can't write a permit: his ink has dried in the heat. The chief's permits are always written in glow ink, from glow squid in the Overworld."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:glow_ink_sac",
+          "count": 4,
+          "title": "Bring glow ink from the Overworld's glow squid"
+        },
+        {
+          "talk": "entity",
+          "entity": "minecraft:piglin",
+          "lines": [
+            "Glow ink? Finally. The chief demands it.",
+            "The stamp is cracked, though."
+          ],
+          "title": "Give the clerk the glow ink"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "fish",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:glow_ink_sac"
+    },
+    {
+      "id": "sf_cracked_stamp",
+      "title": "The Cracked Stamp",
+      "after": [
+        "sf_dry_ink"
+      ],
+      "text": [
+        "The clerk's stamp is cracked. A brute at the camp's forge will cast a new one from a gold block, if you survive his arm-wrestling swings for a minute."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:gold_block",
+          "consume": true,
+          "title": "Bring a gold block for the new stamp"
+        },
+        {
+          "timed": {
+            "seconds": 60,
+            "goal": {
+              "hold": {
+                "radius": 6
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:piglin_brute",
+                "count": 1,
+                "every": 20
+              }
+            ],
+            "lines": [
+              "The brute wants a wrestle. Stand your ground."
+            ],
+            "start": "Take the brute's challenge"
+          },
+          "title": "Survive the brute's swings for a minute"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "defense",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:gold_block"
+    },
+    {
+      "id": "sf_sleeping_chief",
+      "title": "Signed by the Chief",
+      "after": [
+        "sf_cracked_stamp"
+      ],
+      "text": [
+        "Stamped, but not signed. The chief is asleep, and waking him badly is how outsiders get eaten. Piglins dance to a drum. Play one by his bed until he wakes in a good mood."
+      ],
+      "tasks": [
+        {
+          "item": "immersive_melodies:tiny_drum",
+          "crafted": true,
+          "title": "Make a drum to wake the chief gently"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:piglin",
+            "name": "The Sleeping Chief",
+            "then": "talk",
+            "lines": [
+              "*The chief stirs, stamps a foot, and signs with a grunt.*"
+            ]
+          },
+          "title": "Wake the chief with a drum by his bed"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "immersive_melodies:tiny_drum"
+    },
+    {
+      "id": "sf_permit_granted",
+      "title": "Permit Granted",
+      "after": [
+        "sf_sleeping_chief"
+      ],
+      "text": [
+        "Hand the signed, stamped permit to the gatekeeper. He reads it twice, upside down, and lets you in to trade."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:paper",
+          "consume": true,
+          "title": "Carry the signed, stamped permit to the gate"
+        },
+        {
+          "talk": "entity",
+          "entity": "minecraft:piglin",
+          "lines": [
+            "Signed. Stamped. Upside down is fine. Welcome."
+          ],
+          "title": "Hand the permit to the gatekeeper"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:item_frame"
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:item_frame"
     }
   ]
 }

@@ -159,6 +159,17 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - alexs_caves:caniac: needs frostmint from the cavity; written as kills and a crafted spear
 - alexs_caves:gummy_bear: needs riding a candicorn; written as a tame and an observe
 - alexs_caves:confection_oven: needs baking specific sweets; written as using the oven
+- main_story:act3_eyes: needs the Mowzie's eye variants; written as plain Eyes of Ender (no Mowzie eye items exist)
+- main_story:act3_wildfire_scout: needs seeing the Wildfire unseen; written as a hurt-free timed crossing
+- main_story:act3_netherite: needs upgrading a piece at a smithing table; written as the template looted and an ingot smelted
+- main_story:act3_skulls: needs a cursed fourth skull that only drops during the quest; written as a quest drop
+- main_story:act3_wither: needs a pit dug underground far from Reece; written as a build of the summoning and a Wither kill
+- main_story:act3_hullbreaker: needs a diver's logbook; written as finding the trench and ruins
+- main_story:act3_tremorsaurus: needs finding the egg or a wild one; written as the volcano and a tame
+- small_favours:sf_permit: needs a gatekeeper and a clerk as distinct characters; written as talking to any piglin at the camp
+- small_favours:sf_cracked_stamp: needs the arm-wrestle; written as surviving a brute's waves for a minute
+- small_favours:sf_sleeping_chief: needs playing a drum by his bed; written as a crafted drum and a chief encounter
+- small_favours:sf_permit_granted: needs the actual stamped permit; written as paper consumed and a gatekeeper talk
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

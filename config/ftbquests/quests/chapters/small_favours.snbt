@@ -30,7 +30,7 @@
 			]
 			title: "Just a Loaf"
 			x: 0.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["3961E48F6276ED87"]
@@ -58,7 +58,7 @@
 			]
 			title: "Torn Sails"
 			x: 1.5d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["43BE52B6F054011C"]
@@ -93,7 +93,7 @@
 			]
 			title: "The Broken Shuttle"
 			x: 3.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["4CB27A0EAA885B6A"]
@@ -134,7 +134,7 @@
 			]
 			title: "Only the Old Birch Will Do"
 			x: 4.5d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["0C593D9BED4DC0BC"]
@@ -168,7 +168,7 @@
 			]
 			title: "Shuttle, Canvas, Sails"
 			x: 6.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["738A2B6847C7CC67"]
@@ -272,7 +272,7 @@
 			]
 			title: "The Ferryman's Fee"
 			x: 0.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["34F01726A509E958"]
@@ -300,7 +300,7 @@
 			]
 			title: "Out of Rope"
 			x: 1.5d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["412DD613ED71C1C5"]
@@ -334,7 +334,7 @@
 			]
 			title: "The Scarecrow's Hat"
 			x: 3.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["26F77219DACB7B52"]
@@ -388,7 +388,7 @@
 			]
 			title: "A Witch's Bargain"
 			x: 4.5d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["098979D1387FF972"]
@@ -440,7 +440,7 @@
 			]
 			title: "Hat, Flax, Rope"
 			x: 6.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["1A1E490CB4BEEE4A"]
@@ -500,6 +500,203 @@
 			title: "The Crossing"
 			x: 7.5d
 			y: 0.75d
+		}
+		{
+			dependencies: ["1D96E8F9421E2B6A"]
+			description: ["The piglin camp's gatekeeper won't let a stranger barter without a permit, stamped by the chief's clerk. The clerk is in the big tent. Probably."]
+			icon: "minecraft:paper"
+			id: "1ADBD5EC51C81283"
+			rewards: [
+				{
+					count: 8
+					id: "31E238372A900F38"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 100"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "2C19FCE97B4A544D"
+					silent: true
+					title: "+100 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "756E1B0A52FDCA99"
+					structure: "nova_structures:piglin_camp"
+					title: "Find the piglin camp's gate"
+					type: "structure"
+				}
+				{
+					id: "36F71BF09F5A18D0"
+					stage: "fq.small_favours.sf_permit.talk1"
+					title: "Ask the gatekeeper how to trade"
+					type: "gamestage"
+				}
+			]
+			title: "Paperwork"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1ADBD5EC51C81283"]
+			description: ["The clerk can't write a permit: his ink has dried in the heat. The chief's permits are always written in glow ink, from glow squid in the Overworld."]
+			icon: "minecraft:glow_ink_sac"
+			id: "23C1667494EC9233"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 100"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "179BE608C5A83F10"
+					silent: true
+					title: "+100 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "0B64D7EBE2C75468"
+					item: "minecraft:glow_ink_sac"
+					title: "Bring glow ink from the Overworld's glow squid"
+					type: "item"
+				}
+				{
+					id: "79D35A05EFC363E1"
+					stage: "fq.small_favours.sf_dry_ink.talk1"
+					title: "Give the clerk the glow ink"
+					type: "gamestage"
+				}
+			]
+			title: "The Ink Has Dried"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["23C1667494EC9233"]
+			description: ["The clerk's stamp is cracked. A brute at the camp's forge will cast a new one from a gold block, if you survive his arm-wrestling swings for a minute."]
+			icon: "minecraft:gold_block"
+			id: "1C7CE26578606FB0"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 120"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "2063185F878EBE1C"
+					silent: true
+					title: "+120 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "15F8F131595F18D8"
+					item: "minecraft:gold_block"
+					title: "Bring a gold block for the new stamp"
+					type: "item"
+				}
+				{
+					id: "7229640316B93E4E"
+					stage: "fq.small_favours.sf_cracked_stamp.timed1"
+					title: "Survive the brute's swings for a minute"
+					type: "gamestage"
+				}
+			]
+			title: "The Cracked Stamp"
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1C7CE26578606FB0"]
+			description: ["Stamped, but not signed. The chief is asleep, and waking him badly is how outsiders get eaten. Piglins dance to a drum. Play one by his bed until he wakes in a good mood."]
+			icon: "immersive_melodies:tiny_drum"
+			id: "36C6F87EDBF57DE3"
+			rewards: [
+				{
+					count: 8
+					id: "2F479D0304BA2DA1"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "375F5D6884F619C7"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "26445368E1AA2235"
+					item: "immersive_melodies:tiny_drum"
+					only_from_crafting: true
+					title: "Make a drum to wake the chief gently"
+					type: "item"
+				}
+				{
+					id: "62F451567E37D546"
+					stage: "fq.small_favours.sf_sleeping_chief.enc1"
+					title: "Wake the chief with a drum by his bed"
+					type: "gamestage"
+				}
+			]
+			title: "Signed by the Chief"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["36C6F87EDBF57DE3"]
+			description: ["Hand the signed, stamped permit to the gatekeeper. He reads it twice, upside down, and lets you in to trade."]
+			icon: "minecraft:item_frame"
+			id: "44AE8563E66ACA8A"
+			rewards: [
+				{
+					id: "17E2AE73658E7A8F"
+					item: "minecraft:item_frame"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "67F23E04213FBBF5"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 200"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "770F88F9993EADA5"
+					silent: true
+					title: "+200 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "616B679533ADD892"
+					item: "minecraft:paper"
+					title: "Carry the signed, stamped permit to the gate"
+					type: "item"
+				}
+				{
+					id: "6DDE7EE0DCC2F05F"
+					stage: "fq.small_favours.sf_permit_granted.talk1"
+					title: "Hand the permit to the gatekeeper"
+					type: "gamestage"
+				}
+			]
+			title: "Permit Granted"
+			x: 6.0d
+			y: 1.5d
 		}
 	]
 	subtitle: ["One small favour leads to another"]
