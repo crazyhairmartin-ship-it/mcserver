@@ -249,6 +249,7 @@ task first (T11, T18, T25, T28): other chapters link to its anchors. Counts are 
 | TR3 | - | 0 | Task TR for only: `skill_cooking`, `skill_farming`, `skill_fishing`, `skill_foraging`, `skill_mining` |
 | TR4 | - | 0 | Task TR for only: `discovery_land`, `discovery_sea`, `discovery_sky_and_underground`, `small_favours`, `odd_jobs`, `village_errands` |
 | TK | - | 0 | Real rewards beside keepsakes, every chapter (see "Task TK" below) |
+| TC | - | 0 | Courses and multi-stop legs for the stand-ins that need them (see "Task TC" below) |
 | T11 | 2 | 17 | `main_story` (act2, 17) |
 | T12 | 2 | 29 | `skill_attack` (act2, 7); `skill_defense` (act2, 8); `skill_range` (act2, 7); `skill_taming` (act2, 7) |
 | T13 | 2 | 33 | `skill_agility` (act2, 7); `skill_crafting` (act2, 10); `magic` (act2, 16) |
@@ -320,6 +321,27 @@ After each chapter: rebuild it, `python make_quests.py`, `python lint_quests.py 
 "vanilla gear reward" warnings. At the end: `python coverage.py --check`, then one commit per task
 (`Quests TR1: richer rewards in <chapters>`), pushed. Report, spoiler-free: how many quests' rewards changed per
 chapter, how many choice rewards and relics you added, and the commit hash.
+
+## Task TC: courses and legs
+
+The engine now has course challenges and multi-stop legs (README: the `"course"` and `"legs"` timed goals, `start_in`,
+and `no: ["ground"]`). Go through `src/plans/followups.md` "Engine needed" and find every line these can now do
+properly: rooftop runs and routes, buoy and boat courses, timed canyon or obstacle courses, glide or flight routes,
+"without touching the ground", lake or sea crossings past markers, "several villages in one day/trip", relays with
+stops, "a stop in every village". Rewrite those steps in place (keep each quest's id, story, rewards and the other
+tasks; replace the stand-in step with the course or legs step) and delete the line from followups.md.
+
+- Pick `on` to fit: `roofs` for rooftop runs (add `"start_in": {"structure": "#villages", "label": "a village"}`),
+  `water` for boats, buoys and swims, `ground` for runs and canyons, `air` for glides and flights (`no: ["ground"]`
+  for "without landing"; add `elytra` to `no` only when the quest is about another way of flying).
+- Time limits must be fair: about 8 seconds per checkpoint on foot or by boat, 6 in the air, more for long spreads.
+  `legs` between villages: 1200 seconds is one in-game day; use `away` of 300 or more so each stop is a new village.
+- Keep `no: ["teleport"]` on races and routes; never ban grappling hooks.
+- Dialogue you touch follows the short-dialogue rules.
+
+After each chapter: rebuild it, `python make_quests.py`, `python lint_quests.py <chapter>`. At the end
+`python coverage.py --check`, run `python make_quests.py` once more, and commit (`Quests TC: courses and legs`),
+pushed. Report, spoiler-free: how many lines cleared per chapter, how many remain in followups.md, and the hash.
 
 ## Task TK: real rewards beside keepsakes
 
