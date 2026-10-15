@@ -81,8 +81,7 @@ Q = [
                        "Fight past the foundry's guardians", wave=2),
                  sample("the Master Smith's Plans", ["minecraft:iron_golem"], 0.6, texture="minecraft:item/map"),
                  item("spartanshields:iron_tower_shield", crafted=True, title="Forge the shield the plans describe")],
-          rewards=[reward_item("minecraft:iron_block", 4), reward_item("spartanshields:iron_tower_shield"),
-                   skill("craft", 300)]),
+          rewards=[reward_item("cataclysm:black_steel_ingot", 2), reward_item("spartanshields:iron_tower_shield"), skill("craft", 300)]),
 
     quest("siege_of_keep_kayra", "The Siege of Keep Kayra", icon="spartanweaponry:diamond_longsword",
           discover={"structure": "dungeons_arise:keep_kayra"},
@@ -96,9 +95,7 @@ Q = [
                             "waves": [{"entity": "minecraft:vindicator", "count": 3, "every": 30}],
                             "lines": ["His last men are coming. Hold the throne room!"], "start": "Hold the throne room"},
                   "title": "Hold the throne room against his last wave"}],
-          rewards=[reward_item("spartanweaponry:diamond_longsword", name="Kayra's Edge",
-                               lore=["Taken from the mad lord's hand."], enchant={"minecraft:sharpness": 3}),
-                   reward_item("minecraft:white_banner", name="Banner of Keep Kayra"), skill("defense", 500)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:diamond_longsword", name="Kayra's Edge", lore=['Held the keep when the keep fell.'], enchant={'minecraft:sharpness': 3, 'minecraft:unbreaking': 2}), reward_item("spartanshields:diamond_tower_shield", name="Kayra's Gate", lore=['It has been battered by a siege.'], enchant={'minecraft:unbreaking': 2}), reward_item("irons_spellbooks:diamond_spell_book", name="Kayra's Archive", lore=['Rescued from the burning library.'])], "title": "Choose one"}, reward_item("minecraft:white_banner", name='Banner of Keep Kayra'), skill("defense", 500)]),
 
     quest("clockwork_hive", "The Clockwork Hive", icon="minecraft:redstone_block",
           discover={"structure": "dungeons_arise:mechanical_nest"},
@@ -110,8 +107,7 @@ Q = [
                         tooltip="The heart of the hive"),
                  talk_org("crafters", ["A mainspring from the hive itself? Remarkable.", "The guild will pay for the loan. I'll study it."],
                           title="Show the mainspring to a Crafters' guild mason")],
-          rewards=[reward_item("minecraft:redstone_block", 4), reward_item("minecraft:copper_block", 8),
-                   skill("craft", 300)]),
+          rewards=[reward_item("minecraft:redstone_block", 4), reward_item("irons_spellbooks:energized_core"), skill("craft", 300)]),
 
     quest("asylum_samples", "Samples from the Asylum", icon="herbalbrews:lavender_tea",
           discover={"structure": "dungeons_arise:plague_asylum"},
@@ -135,8 +131,7 @@ Q = [
                                       "texture": "minecraft:item/gold_nugget"},
                              "found": "With the fires lit, you notice a brass seal glinting at the bottom of the chest."},
                   "title": "Find the treasury seal"}],
-          rewards=[reward_item("minecraft:gold_block", 4), reward_item("minecraft:enchanted_golden_apple"),
-                   skill("attack", 500)]),
+          rewards=[{"choice": [reward_item("minecraft:enchanted_golden_apple"), reward_item("minecraft:enchanted_book", enchant={'minecraft:mending': 1}), reward_item("irons_spellbooks:gold_spell_book", name='The Shiraz Folio', lore=['Gilt-edged, and warm from the sun.'])], "title": "Choose one"}, reward_item("minecraft:gold_block", 4), skill("attack", 500)]),
 
     quest("thornborn_ascent", "The Thornborn Ascent", icon="minecraft:vine",
           discover={"structure": "dungeons_arise:thornborn_towers"},
@@ -145,9 +140,7 @@ Q = [
           tasks=[fight("minecraft:spider", 8, "dungeons_arise:thornborn_towers", "Thorn Guardians",
                        "Fight the thorns' guardians on the climb"),
                  item("minecraft:vine", 4, title="Cut a piece of the first thorn from the summit")],
-          rewards=[reward_item("minecraft:iron_axe", name="Thornbreaker", lore=["Cut from the Thornborn Towers."],
-                               enchant={"minecraft:sharpness": 3}), reward_item("minecraft:cherry_sapling", 4),
-                   skill("forage", 280)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:efficiency': 3, 'minecraft:unbreaking': 2}, name='Thornbreaker'), reward_item("minecraft:cherry_sapling", 4), skill("forage", 280)]),
 
     quest("the_infested_temple", "Swarming Stones", icon="minecraft:infested_stone",
           discover={"structure": "dungeons_arise:infested_temple"},
@@ -196,7 +189,7 @@ Q = [
                      entity="minecraft:villager", name="Trapped Miner",
                      to={"structure": "#villages", "label": "a village, out of the heat"},
                      title="Lead the trapped miners out of the fire")],
-          rewards=[reward_item("minecraft:magma_cream", 4), reward_item("minecraft:raw_gold", 8), skill("mining", 280)]),
+          rewards=[reward_item("irons_spellbooks:cinder_essence", 2), reward_item("minecraft:raw_gold", 8), skill("mining", 280)]),
 
     quest("empty_stands", "Empty Stands", icon="minecraft:iron_sword",
           discover={"structure": "dungeons_arise:coliseum"},
@@ -220,7 +213,7 @@ Q = [
                 "stores before they fled, and the last of them opens the study where their final letter waits."],
           tasks=[{"search": {"at": {"structure": "structory:old_manor"}, "count": 4,
                              "item": {"name": "Manor Key", "tooltip": "One of the family's four keys",
-                                      "texture": "minecraft:item/tripwire_hook"},
+                                      "texture": "minecraft:block/tripwire_hook"},
                              "found": "Wrapped in an old cloth, a heavy iron key."},
                   "title": "Find the family's four keys"}],
           rewards=[reward_item("supplementaries:key"), reward_item("supplementaries:safe"),
@@ -232,8 +225,7 @@ Q = [
                 "fires burned at its corners and the whole valley could see it. Bring fire back to the peak."],
           tasks=[{"build": {"blocks": {"minecraft:campfire": 4}, "radius": 12},
                   "title": "Set four fires burning at the temple"}],
-          rewards=[reward_item("grapplemod:grapplinghook"), reward_item("minecraft:golden_carrot", 8),
-                   skill("agility", 250)]),
+          rewards=[reward_item("grapplemod:grapplinghook"), reward_item("minecraft:enchanted_book", enchant={'minecraft:feather_falling': 3}), skill("agility", 250)]),
 
     quest("sacred_relic", "The Sacred Relic", icon="minecraft:lapis_block",
           discover={"structure": "structory_towers:sacred_relic_temple"},
@@ -265,8 +257,7 @@ Q = [
                   "title": "Climb the tower and ring the bell"},
                  enc(["Nobody's rung that bell in years!", "The builders found something under the foundations and left. Nobody says what."],
                      entity="minecraft:villager", name="Wandering Cleric", title="Meet the cleric who answers the bell")],
-          rewards=[reward_item("immersive_melodies:piano"), reward_item("minecraft:golden_apple", 2),
-                   skill("magic", 220)]),
+          rewards=[reward_item("immersive_melodies:piano"), reward_item("irons_spellbooks:holy_rune"), skill("magic", 220)]),
 
     quest("warped_in_the_overworld", "Wrong Side of the Portal", icon="minecraft:warped_planks",
           discover={"structure": "mvs:warped_house"},
@@ -284,7 +275,7 @@ Q = [
                 "it again, so the beam can be seen from miles away."],
           tasks=[item("minecraft:iron_block", 9, consume=True, title="Gather iron blocks to rebuild the pyramid"),
                  {"build": {"blocks": {"minecraft:iron_block": 9}, "radius": 8}, "title": "Rebuild the beacon's pyramid"}],
-          rewards=[reward_item("minecraft:iron_block", 4), skill("mining", 300)]),
+          rewards=[reward_item("minecraft:diamond", 3), skill("mining", 300)]),
 
     quest("desert_mimic", "Too Good to Be True", icon="artifacts:mimic_spawn_egg",
           discover={"structure": "towns_and_towers:mimic_desert"},
@@ -292,8 +283,7 @@ Q = [
                 "the real loot is under the sand where it sat."],
           tasks=[fight("artifacts:mimic", 1, "towns_and_towers:mimic_desert", "Hungry Chest",
                        "Beat the mimic guarding the loot", wave=1, ensure=True)],
-          rewards=[reward_item("minecraft:gold_ingot", 12), reward_item("minecraft:golden_horse_armor"),
-                   skill("attack", 220)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:looting': 2}), reward_item("minecraft:golden_horse_armor"), skill("attack", 220)]),
 
     quest("pharaohs_vault", "The Pharaoh's Vault", icon="minecraft:gold_block",
           discover={"structure": "betterdeserttemples:desert_temple"},
@@ -381,7 +371,7 @@ Q = [
           tasks=[fight("cataclysm:koboleton", 6, "cataclysm:desert_occupied_village", "Dune Scouts",
                        "Drive the scouts out of the village"),
                  sample("the Foreman's Notes", ["cataclysm:koboleton"], 0.5, texture="minecraft:item/paper")],
-          rewards=[reward_item("minecraft:gold_ingot", 12), skill("attack", 400)]),
+          rewards=[reward_item("cataclysm:ancient_metal_nugget", 8), skill("attack", 400)]),
 
     quest("return_to_the_ruins", "Back to the Ruins", icon="minecraft:writable_book",
           after=["frostbitten_ruins", "occupied_dunes", "main_story:act5_start"],
@@ -403,7 +393,7 @@ Q = [
                                       {"entity": "minecraft:skeleton", "count": 2, "every": 45}],
                             "lines": ["Something is hunting you through the trees. Hold until dawn."],
                             "start": "Stand until dawn"}, "title": "Survive the night in the ominous woods"}],
-          rewards=[reward_item("minecraft:shield"), reward_item("minecraft:torch", 32), skill("defense", 220)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:protection': 2}), reward_item("minecraft:torch", 32), skill("defense", 220)]),
 
     quest("biome_volcano", "The Mountain That Smokes", icon="minecraft:lava_bucket",
           discover={"biome": "biomesoplenty:volcano"},
@@ -412,7 +402,7 @@ Q = [
           tasks=[item("minecraft:lava_bucket", title="Scoop a bucket of lava from the crater"),
                  item("biomesoplenty:black_sand", 8, title="Take black sand from the slopes"),
                  item("minecraft:magma_block", 4, title="Chip magma from the crater's rim")],
-          rewards=[reward_item("minecraft:obsidian", 8), reward_item("minecraft:magma_cream", 4), skill("mining", 220)]),
+          rewards=[reward_item("minecraft:obsidian", 8), reward_item("irons_spellbooks:fire_rune"), skill("mining", 220)]),
 ]
 
 def search(at, count, name, found, texture="minecraft:item/paper", title=None):
@@ -481,7 +471,7 @@ ANY = [
           tasks=[{"structure": "structory:northern_ruin", "title": "Find a northern ruin"},
                  item("minecraft:paper", 2, consume=True, title="Lay paper over the runes"),
                  item("minecraft:charcoal", consume=True, title="Rub the runes onto it with charcoal")],
-          rewards=[reward_item("minecraft:chest"), reward_item("explorerscompass:explorerscompass"), skill("magic", 200)]),
+          rewards=[reward_item("irons_spellbooks:blank_rune", 4), reward_item("minecraft:chest"), reward_item("explorerscompass:explorerscompass"), skill("magic", 200)]),
 
     quest("engineers_plans", "The Engineer's Plans", icon="minecraft:sticky_piston",
           discover={"structure": "structory_towers:engineer_tower"},
@@ -502,8 +492,7 @@ ANY = [
                             "start": "Cross the dunes", "no": ["teleport", "mounts"]},
                   "title": "Cross the dunes before the water runs out"},
                  {"checkmark": "I added my name to the logbook"}],
-          rewards=[reward_item("minecraft:dried_kelp", 16), reward_item("minecraft:golden_carrot", 6),
-                   skill("agility", 200)]),
+          rewards=[reward_item("minecraft:dried_kelp", 16), reward_item("irons_spellbooks:invisibility_elixir"), skill("agility", 200)]),
 
     quest("gallows_hill", "Gallows Hill", icon="minecraft:oak_sign",
           discover={"structure": "mvs:gallows"},
@@ -552,7 +541,7 @@ ANY = [
           tasks=[{"checkmark": "I noted the carvings on the first obelisk"},
                  {"checkmark": "I noted the carvings on the second obelisk"},
                  {"checkmark": "I noted the carvings on the third obelisk, and the symbol they share"}],
-          rewards=[reward_item("minecraft:sandstone", 32), reward_item("minecraft:gold_ingot", 6), skill("magic", 200)]),
+          rewards=[reward_item("irons_spellbooks:ancient_knowledge_fragment"), reward_item("minecraft:gold_ingot", 6), skill("magic", 200)]),
 
     quest("shards_of_the_trail", "Shards of the Trail", icon="minecraft:decorated_pot",
           discover={"structure": "minecraft:trail_ruins"},
@@ -604,8 +593,8 @@ ANY = [
           text=["An alpine observation post has a list of animals to sight pinned to its sill. Photograph three "
                 "of them for the survey."],
           tasks=[{"photo": {"entity": "meadow:water_buffalo"}, "title": "Photograph a water buffalo"},
-                 {"photo": {"entity": "meadow:horned_sheep"}, "title": "Photograph a horned sheep"},
-                 {"photo": {"entity": "meadow:highland_cattle"}, "title": "Photograph a highland cow"}],
+                 {"photo": {"entity": "meadow:wooly_sheep"}, "title": "Photograph a woolly highland sheep"},
+                 {"photo": {"entity": "meadow:wooly_cow"}, "title": "Photograph a woolly highland cow"}],
           rewards=[reward_item("camerapture:camera"), reward_item("minecraft:spyglass"), skill("range", 200)]),
 
     quest("the_gardeners_cottage", "The Gardener's Cottage", icon="bloomingnature:bluebell",
@@ -648,8 +637,7 @@ ANY = [
                  {"structure": "#villages", "title": "Carry the news to the nearest village"},
                  talk_org("watch", ["A name tag. Oh, no. Not young Brin.", "We'll tell the family gently. His sword is yours."],
                           title="Tell the family through the Village Watch")],
-          rewards=[reward_item("minecraft:iron_sword", name="The Fallen Adventurer's Blade",
-                               lore=["Returned by the one who brought them home."]), skill("defense", 150)]),
+          rewards=[reward_item("spartanweaponry:iron_longsword", name="The Fallen Adventurer's Blade", lore=['Notched by a fight nobody saw.'], enchant={'minecraft:sharpness': 2}), skill("defense", 150)]),
 
     quest("biome_cherry_grove", "Petals on the Wind", icon="minecraft:pink_petals",
           discover={"biome": "minecraft:cherry_grove"},
@@ -706,7 +694,7 @@ ANY = [
           text=["A redwood forest, with trees taller than any tower. The Crafters' guild wants wood from one of the "
                 "giants, and a climb to the top is the only way to reach the good branches."],
           tasks=[item("biomesoplenty:redwood_log", 16, title="Bring down redwood logs from the giants")],
-          rewards=[reward_item("biomesoplenty:redwood_log", 16), reward_item("minecraft:iron_axe"), skill("forage", 150)]),
+          rewards=[reward_item("biomesoplenty:redwood_log", 16), reward_item("minecraft:enchanted_book", enchant={'minecraft:efficiency': 2}), skill("forage", 150)]),
 
     quest("biome_hot_springs", "Hot Springs", icon="comforts:hammock_red",
           discover={"biome": "biomesoplenty:hot_springs"},
@@ -790,7 +778,7 @@ ANY = [
           text=["The mountains here climb far higher than they should. Stand above the clouds on foot and look "
                 "down at the world."],
           tasks=[{"be": {"above_y": 192, "sky": True}, "title": "Stand above the clouds on foot"}],
-          rewards=[reward_item("minecraft:spyglass"), reward_item("minecraft:golden_carrot", 8), skill("agility", 150)]),
+          rewards=[reward_item("minecraft:spyglass"), reward_item("parcool:traceur_boots"), skill("agility", 150)]),
 
     quest("tectonic_canyon", "The Deep Valley", icon="aquaculture:worm",
           discover={"biome": "minecraft:river"},
@@ -849,7 +837,7 @@ ANY = [
                 "open it."],
           tasks=[{"structure": "#ruins", "title": "Find a ruin that might hold the safe"},
                  use("supplementaries:safe", None, "Open the safe with the strange key", holding="supplementaries:key")],
-          rewards=[reward_item("minecraft:gold_ingot", 10), reward_item("minecraft:diamond"), skill("mining", 150)]),
+          rewards=[reward_item("irons_spellbooks:arcane_essence", 2), reward_item("minecraft:diamond"), skill("mining", 150)]),
 
     quest("sniffer_egg", "An Ancient Egg", icon="minecraft:sniffer_egg",
           discover={"item": "minecraft:sniffer_egg"},

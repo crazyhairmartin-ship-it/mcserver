@@ -265,8 +265,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_block",
-          "count": 4
+          "item": "cataclysm:black_steel_ingot",
+          "count": 2
         },
         {
           "item": "spartanshields:iron_tower_shield"
@@ -338,14 +338,37 @@
       ],
       "rewards": [
         {
-          "item": "spartanweaponry:diamond_longsword",
-          "name": "Kayra's Edge",
-          "lore": [
-            "Taken from the mad lord's hand."
+          "choice": [
+            {
+              "item": "spartanweaponry:diamond_longsword",
+              "name": "Kayra's Edge",
+              "lore": [
+                "Held the keep when the keep fell."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 3,
+                "minecraft:unbreaking": 2
+              }
+            },
+            {
+              "item": "spartanshields:diamond_tower_shield",
+              "name": "Kayra's Gate",
+              "lore": [
+                "It has been battered by a siege."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 2
+              }
+            },
+            {
+              "item": "irons_spellbooks:diamond_spell_book",
+              "name": "Kayra's Archive",
+              "lore": [
+                "Rescued from the burning library."
+              ]
+            }
           ],
-          "enchant": {
-            "minecraft:sharpness": 3
-          }
+          "title": "Choose one"
         },
         {
           "item": "minecraft:white_banner",
@@ -412,8 +435,7 @@
           "count": 4
         },
         {
-          "item": "minecraft:copper_block",
-          "count": 8
+          "item": "irons_spellbooks:energized_core"
         },
         {
           "skill": "craft",
@@ -507,11 +529,29 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:gold_block",
-          "count": 4
+          "choice": [
+            {
+              "item": "minecraft:enchanted_golden_apple"
+            },
+            {
+              "item": "minecraft:enchanted_book",
+              "enchant": {
+                "minecraft:mending": 1
+              }
+            },
+            {
+              "item": "irons_spellbooks:gold_spell_book",
+              "name": "The Shiraz Folio",
+              "lore": [
+                "Gilt-edged, and warm from the sun."
+              ]
+            }
+          ],
+          "title": "Choose one"
         },
         {
-          "item": "minecraft:enchanted_golden_apple"
+          "item": "minecraft:gold_block",
+          "count": 4
         },
         {
           "skill": "attack",
@@ -550,14 +590,12 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_axe",
-          "name": "Thornbreaker",
-          "lore": [
-            "Cut from the Thornborn Towers."
-          ],
+          "item": "minecraft:enchanted_book",
           "enchant": {
-            "minecraft:sharpness": 3
-          }
+            "minecraft:efficiency": 3,
+            "minecraft:unbreaking": 2
+          },
+          "name": "Thornbreaker"
         },
         {
           "item": "minecraft:cherry_sapling",
@@ -762,8 +800,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
+          "item": "irons_spellbooks:cinder_essence",
+          "count": 2
         },
         {
           "item": "minecraft:raw_gold",
@@ -860,7 +898,7 @@
             "item": {
               "name": "Manor Key",
               "tooltip": "One of the family's four keys",
-              "texture": "minecraft:item/tripwire_hook"
+              "texture": "minecraft:block/tripwire_hook"
             },
             "found": "Wrapped in an old cloth, a heavy iron key."
           },
@@ -910,8 +948,10 @@
           "item": "grapplemod:grapplinghook"
         },
         {
-          "item": "minecraft:golden_carrot",
-          "count": 8
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:feather_falling": 3
+          }
         },
         {
           "skill": "agility",
@@ -1058,8 +1098,7 @@
           "item": "immersive_melodies:piano"
         },
         {
-          "item": "minecraft:golden_apple",
-          "count": 2
+          "item": "irons_spellbooks:holy_rune"
         },
         {
           "skill": "magic",
@@ -1137,8 +1176,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_block",
-          "count": 4
+          "item": "minecraft:diamond",
+          "count": 3
         },
         {
           "skill": "mining",
@@ -1173,8 +1212,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:gold_ingot",
-          "count": 12
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:looting": 2
+          }
         },
         {
           "item": "minecraft:golden_horse_armor"
@@ -1531,8 +1572,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:gold_ingot",
-          "count": 12
+          "item": "cataclysm:ancient_metal_nugget",
+          "count": 8
         },
         {
           "skill": "attack",
@@ -1628,7 +1669,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:shield"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:protection": 2
+          }
         },
         {
           "item": "minecraft:torch",
@@ -1672,8 +1716,7 @@
           "count": 8
         },
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
+          "item": "irons_spellbooks:fire_rune"
         },
         {
           "skill": "mining",
@@ -1886,6 +1929,10 @@
       ],
       "rewards": [
         {
+          "item": "irons_spellbooks:blank_rune",
+          "count": 4
+        },
+        {
           "item": "minecraft:chest"
         },
         {
@@ -1994,8 +2041,7 @@
           "count": 16
         },
         {
-          "item": "minecraft:golden_carrot",
-          "count": 6
+          "item": "irons_spellbooks:invisibility_elixir"
         },
         {
           "skill": "agility",
@@ -2210,8 +2256,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:sandstone",
-          "count": 32
+          "item": "irons_spellbooks:ancient_knowledge_fragment"
         },
         {
           "item": "minecraft:gold_ingot",
@@ -2442,15 +2487,15 @@
         },
         {
           "photo": {
-            "entity": "meadow:horned_sheep"
+            "entity": "meadow:wooly_sheep"
           },
-          "title": "Photograph a horned sheep"
+          "title": "Photograph a woolly highland sheep"
         },
         {
           "photo": {
-            "entity": "meadow:highland_cattle"
+            "entity": "meadow:wooly_cow"
           },
-          "title": "Photograph a highland cow"
+          "title": "Photograph a woolly highland cow"
         }
       ],
       "rewards": [
@@ -2637,11 +2682,14 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_sword",
+          "item": "spartanweaponry:iron_longsword",
           "name": "The Fallen Adventurer's Blade",
           "lore": [
-            "Returned by the one who brought them home."
-          ]
+            "Notched by a fight nobody saw."
+          ],
+          "enchant": {
+            "minecraft:sharpness": 2
+          }
         },
         {
           "skill": "defense",
@@ -2875,7 +2923,10 @@
           "count": 16
         },
         {
-          "item": "minecraft:iron_axe"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:efficiency": 2
+          }
         },
         {
           "skill": "forage",
@@ -3227,8 +3278,7 @@
           "item": "minecraft:spyglass"
         },
         {
-          "item": "minecraft:golden_carrot",
-          "count": 8
+          "item": "parcool:traceur_boots"
         },
         {
           "skill": "agility",
@@ -3472,8 +3522,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:gold_ingot",
-          "count": 10
+          "item": "irons_spellbooks:arcane_essence",
+          "count": 2
         },
         {
           "item": "minecraft:diamond"

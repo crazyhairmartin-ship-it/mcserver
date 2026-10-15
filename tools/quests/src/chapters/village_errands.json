@@ -255,7 +255,7 @@
           "build": {
             "blocks": {
               "another_furniture:oak_table": 1,
-              "another_furniture:red_awning": 1,
+              "supplementaries:awning_red": 1,
               "farmersdelight:wooden_basket": 2
             },
             "radius": 10
@@ -276,7 +276,7 @@
           "xp": 150
         }
       ],
-      "icon": "another_furniture:red_awning",
+      "icon": "supplementaries:awning_red",
       "giver": {
         "type": "org",
         "org": "growers",
@@ -1094,14 +1094,14 @@
           "item": "smallships:oak_cog"
         },
         {
-          "item": "minecraft:fishing_rod",
+          "item": "aquaculture:iron_fishing_rod",
           "name": "Storm-Tested",
           "lore": [
-            "Pulled from a wrecked boat."
+            "Has outlasted worse than weather."
           ],
           "enchant": {
             "minecraft:lure": 2,
-            "minecraft:luck_of_the_sea": 1
+            "minecraft:unbreaking": 2
           }
         },
         {

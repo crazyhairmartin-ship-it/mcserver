@@ -61,12 +61,12 @@ Q = [
           rewards=[reward_item("farm_and_charm:tomato_seeds", 8), reward_item("farm_and_charm:lettuce_seeds", 8),
                    skill("farm", 120)]),
 
-    quest("stall_of_your_own", "A Stall of Your Own", icon="another_furniture:red_awning",
+    quest("stall_of_your_own", "A Stall of Your Own", icon="supplementaries:awning_red",
           after=["the_travelling_market"],
           giver=errand("growers", ["The Co-op needs a market stall. Copy a roadside one.", "Put some produce on display."]),
           text=["The Growers' co-op wants a stall at the next market, built like the roadside ones, with produce on it."],
           tasks=[{"structure": "mvs:red_stall", "title": "Look over a roadside stall for ideas"},
-                 {"build": {"blocks": {"another_furniture:oak_table": 1, "another_furniture:red_awning": 1,
+                 {"build": {"blocks": {"another_furniture:oak_table": 1, "supplementaries:awning_red": 1,
                                        "farmersdelight:wooden_basket": 2}, "radius": 10},
                   "title": "Set up a market stall in the village"}],
           rewards=[reward_item("minecraft:bell"), reward_item("minecraft:emerald", 4), skill("farm", 150)]),
@@ -232,10 +232,7 @@ Q = [
                  enc(["Thank the tides! The mast went an hour ago. Take me home!"], then="escort",
                            entity="minecraft:villager", name="Stranded Fisherman",
                            to={"structure": "#villages", "label": "the harbour"}, title="Bring him back to harbour")],
-          rewards=[reward_item("smallships:oak_cog"),
-                   reward_item("minecraft:fishing_rod", name="Storm-Tested", lore=["Pulled from a wrecked boat."],
-                               enchant={"minecraft:lure": 2, "minecraft:luck_of_the_sea": 1}),
-                   skill("fish", 220)]),
+          rewards=[reward_item("smallships:oak_cog"), reward_item("aquaculture:iron_fishing_rod", name='Storm-Tested', lore=['Has outlasted worse than weather.'], enchant={'minecraft:lure': 2, 'minecraft:unbreaking': 2}), skill("fish", 220)]),
 
     # ---- Couriers ----
     quest("lost_cart", "The Lost Cart", icon="minecraft:chest",

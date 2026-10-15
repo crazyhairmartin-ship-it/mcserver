@@ -88,7 +88,7 @@ LAKE = [
                            title="Take the rope to Ada")],
           rewards=[reward_item("lilis_lucky_lures:fishing_net"), skill("craft", 120)]),
 
-    quest("sf_the_crossing", "The Crossing", icon="smallships:oak_rowboat", shape="diamond", size=1.25,
+    quest("sf_the_crossing", "The Crossing", icon="minecraft:oak_boat", shape="diamond", size=1.25,
           after=["sf_hat_flax_rope"],
           text=["Gil takes the net, keeps his word and rows you out to the island village. Halfway across, the "
                 "drowned come up around the boat."],
@@ -99,7 +99,7 @@ LAKE = [
                  encounter(["*Another drowned climbs out of the water.*"], then="kill",
                            entity="minecraft:drowned", name="Drowned", health=20),
                  {"structure": "#villages", "title": "Reach the island village"}],
-          rewards=[reward_item("smallships:oak_rowboat"), skill("fish", 200)]),
+          rewards=[reward_item("smallships:oak_drakkar"), skill("fish", 200)]),
 ]
 
 NETHER = [

@@ -463,14 +463,14 @@
       ],
       "rewards": [
         {
-          "item": "smallships:oak_rowboat"
+          "item": "smallships:oak_drakkar"
         },
         {
           "skill": "fish",
           "xp": 200
         }
       ],
-      "icon": "smallships:oak_rowboat",
+      "icon": "minecraft:oak_boat",
       "shape": "diamond",
       "size": 1.25
     },

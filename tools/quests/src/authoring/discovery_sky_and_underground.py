@@ -45,8 +45,7 @@ Q = [
                  {"structure": "mss:small_oak_house", "title": "Land on a small house island"},
                  {"structure": "mss:taiga", "title": "Land on a taiga forest island"},
                  {"structure": "mss:jungle", "title": "Land on a jungle island"}],
-          rewards=[reward_item("minecraft:leather_boots", name="Sky Hoppers", lore=["Five islands, no falls."],
-                               enchant={"minecraft:feather_falling": 3}), skill("agility", 200)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:feather_falling': 4}, name='Sky Hoppers'), skill("agility", 200)]),
 
     quest("volcano_in_the_sky", "Fire Overhead", icon="minecraft:magma_block",
           discover={"structure": "mss:volcano"},
@@ -55,7 +54,7 @@ Q = [
           tasks=[item("minecraft:magma_block", 4, title="Chip magma from the crater's core"),
                  search("mss:volcano", 2, "Core Ore Sample", "A lump of ore, still hot from the core.",
                         texture="minecraft:item/raw_gold", title="Search the volcano for ore samples")],
-          rewards=[reward_item("minecraft:obsidian", 8), reward_item("minecraft:magma_cream", 4), skill("mining", 220)]),
+          rewards=[reward_item("minecraft:obsidian", 8), reward_item("irons_spellbooks:cinder_essence", 2), skill("mining", 220)]),
 
     quest("castle_in_the_clouds", "Castle in the Clouds", icon="minecraft:white_banner",
           discover={"structure": "mss:castle_tower"},
@@ -63,10 +62,8 @@ Q = [
                 "from its highest tower."],
           tasks=[fight("minecraft:skeleton", 8, "mss:castle_tower", "Castle Garrison", "Storm the castle past its skeleton garrison"),
                  search("mss:castle_tower", 1, "the Castle Banner", "A torn banner, still bearing the castle's arms.",
-                        texture="minecraft:item/white_banner")],
-          rewards=[reward_item("minecraft:bow", name="Cloud-Piercer", lore=["Taken from a floating garrison."],
-                               enchant={"minecraft:power": 3, "minecraft:punch": 1}),
-                   reward_item("minecraft:white_banner"), skill("attack", 250)]),
+                        texture="alexsmobs:item/end_pirate_flag")],
+          rewards=[{"choice": [reward_item("spartanweaponry:iron_longbow", name='Cloud-Piercer', lore=['Its arrows start above the weather.'], enchant={'minecraft:power': 3}), reward_item("grapplemod:grapplinghook"), reward_item("icarus:white_light_wings", name='Castle Wings', lore=['Light as the weather up here.'])], "title": "Choose one"}, reward_item("minecraft:white_banner"), skill("attack", 250)]),
 
     quest("pyramid_aloft", "The Pyramid Aloft", icon="minecraft:sandstone",
           discover={"structure": "mss:desert_pyramid"},
@@ -109,9 +106,7 @@ Q = [
           tasks=[fight("minecraft:pillager", 8, "#airships", "Airship Crew", "Clear the airship's decks"),
                  search("#airships", 1, "the Captain's Hoard", "The captain's strongbox, heavy with plunder.",
                         texture="minecraft:item/gold_ingot")],
-          rewards=[reward_item("minecraft:crossbow", name="Deckclearer", lore=["Taken from an illager airship."],
-                               enchant={"minecraft:multishot": 1, "minecraft:quick_charge": 2}),
-                   reward_item("minecraft:firework_rocket", 16), skill("range", 300)]),
+          rewards=[reward_item("spartanweaponry:iron_heavy_crossbow", name='Deckclearer', lore=['Built to answer a boarding party.'], enchant={'minecraft:piercing': 2}), reward_item("minecraft:firework_rocket", 16), skill("range", 300)]),
 
     quest("the_drifting_blimp", "The Drifting Blimp", icon="immersive_aircraft:airship",
           discover={"structure": "dungeons_arise:small_blimp"},
@@ -169,7 +164,7 @@ Q = [
                  {"build": {"blocks": {"minecraft:redstone_lamp": 3}, "radius": 12}, "title": "Wire the lamps into the lock"},
                  search("nova_structures:bunker", 1, "Vault Hoard", "The vault door grinds open on a hoard.",
                         title="Open the vault")],
-          rewards=[reward_item("minecraft:redstone", 16), reward_item("minecraft:iron_ingot", 16), skill("craft", 200)]),
+          rewards=[reward_item("minecraft:redstone", 16), reward_item("irons_spellbooks:arcane_salvage", 4), skill("craft", 200)]),
 
     quest("underground_house", "A House Underground", icon="minecraft:iron_pickaxe",
           discover={"structure": "nova_structures:underground_house"},
@@ -179,7 +174,7 @@ Q = [
                         title="Read the diary pages left in the house"),
                  search("nova_structures:underground_house", 1, "Owner's Pickaxe", "A worn pickaxe, wrapped in cloth.",
                         texture="minecraft:item/iron_pickaxe", title="Find the owner's lost pickaxe")],
-          rewards=[reward_item("minecraft:torch", 32), reward_item("minecraft:iron_pickaxe"), skill("mining", 150)]),
+          rewards=[reward_item("minecraft:torch", 32), reward_item("minecraft:enchanted_book", enchant={'minecraft:efficiency': 2}), skill("mining", 150)]),
 
     quest("the_cave_tablet", "A Carved Tablet", icon="alexscaves:cave_tablet",
           discover={"item": "alexscaves:cave_tablet"},

@@ -68,14 +68,11 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:leather_boots",
-          "name": "Sky Hoppers",
-          "lore": [
-            "Five islands, no falls."
-          ],
+          "item": "minecraft:enchanted_book",
           "enchant": {
-            "minecraft:feather_falling": 3
-          }
+            "minecraft:feather_falling": 4
+          },
+          "name": "Sky Hoppers"
         },
         {
           "skill": "agility",
@@ -117,8 +114,8 @@
           "count": 8
         },
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
+          "item": "irons_spellbooks:cinder_essence",
+          "count": 2
         },
         {
           "skill": "mining",
@@ -157,7 +154,7 @@
             "count": 1,
             "item": {
               "name": "the Castle Banner",
-              "texture": "minecraft:item/white_banner"
+              "texture": "alexsmobs:item/end_pirate_flag"
             },
             "found": "A torn banner, still bearing the castle's arms."
           },
@@ -166,15 +163,29 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:bow",
-          "name": "Cloud-Piercer",
-          "lore": [
-            "Taken from a floating garrison."
+          "choice": [
+            {
+              "item": "spartanweaponry:iron_longbow",
+              "name": "Cloud-Piercer",
+              "lore": [
+                "Its arrows start above the weather."
+              ],
+              "enchant": {
+                "minecraft:power": 3
+              }
+            },
+            {
+              "item": "grapplemod:grapplinghook"
+            },
+            {
+              "item": "icarus:white_light_wings",
+              "name": "Castle Wings",
+              "lore": [
+                "Light as the weather up here."
+              ]
+            }
           ],
-          "enchant": {
-            "minecraft:power": 3,
-            "minecraft:punch": 1
-          }
+          "title": "Choose one"
         },
         {
           "item": "minecraft:white_banner"
@@ -381,14 +392,13 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:crossbow",
+          "item": "spartanweaponry:iron_heavy_crossbow",
           "name": "Deckclearer",
           "lore": [
-            "Taken from an illager airship."
+            "Built to answer a boarding party."
           ],
           "enchant": {
-            "minecraft:multishot": 1,
-            "minecraft:quick_charge": 2
+            "minecraft:piercing": 2
           }
         },
         {
@@ -657,8 +667,8 @@
           "count": 16
         },
         {
-          "item": "minecraft:iron_ingot",
-          "count": 16
+          "item": "irons_spellbooks:arcane_salvage",
+          "count": 4
         },
         {
           "skill": "craft",
@@ -712,7 +722,10 @@
           "count": 32
         },
         {
-          "item": "minecraft:iron_pickaxe"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:efficiency": 2
+          }
         },
         {
           "skill": "mining",
@@ -825,8 +838,8 @@
           "title": "Creep through the deep dark"
         },
         {
-          "item": "minecraft:sculk_sensor",
-          "title": "Take a sculk sensor without waking a shrieker"
+          "mine": "minecraft:sculk_sensor",
+          "title": "Cut a sculk sensor loose without waking a shrieker"
         }
       ],
       "rewards": [

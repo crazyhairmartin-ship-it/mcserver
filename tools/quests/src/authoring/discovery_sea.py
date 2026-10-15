@@ -46,7 +46,7 @@ Q = [
                  {"build": {"blocks": {"minecraft:sea_lantern": 4}, "radius": 12}, "title": "Set the lanterns in the tribune"},
                  search("mos:atlantis_tribune", 1, "Vault Hoard", "The vault swings open on a drowned hoard.",
                         title="Open the tribune's sealed vault")],
-          rewards=[reward_item("minecraft:prismarine", 32), reward_item("minecraft:trident"), skill("fish", 200)]),
+          rewards=[reward_item("minecraft:prismarine", 32), reward_item("minecraft:enchanted_book", enchant={'minecraft:impaling': 4}), skill("fish", 200)]),
 
     quest("the_conduit_arch", "The Conduit Arch", icon="minecraft:conduit",
           discover={"structure": "mos:conduit_arch"},
@@ -81,9 +81,7 @@ Q = [
                         tooltip="Show it to a cleric"),
                  talk_villager("minecraft:cleric", ["A priest's medallion. He went down with his flock.", "We'll say a prayer tonight."],
                                title="Show the medallion to a cleric")],
-          rewards=[reward_item("minecraft:trident"),
-                   reward_item("minecraft:enchanted_book", name="Sea Spear", enchant={"minecraft:impaling": 3}),
-                   skill("attack", 250)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:impaling': 3, 'minecraft:channeling': 1}, name='Sea Spear'), reward_item("minecraft:nautilus_shell", 2), skill("attack", 250)]),
 
     quest("typhon", "The Typhon", icon="minecraft:crossbow", after=["main_story:act2_finale"],
           discover={"structure": "dungeons_arise:typhon"},
@@ -94,9 +92,7 @@ Q = [
                             "waves": [{"entity": "minecraft:pillager", "count": 3, "every": 30}],
                             "lines": ["The crew's rallying on the bridge. Hold it!"], "start": "Hold the bridge"},
                   "title": "Hold the bridge until the crew breaks"}],
-          rewards=[reward_item("minecraft:crossbow", name="Typhon's Gun", lore=["Pried from a manned gun."],
-                               enchant={"minecraft:quick_charge": 2, "minecraft:piercing": 2}),
-                   reward_item("smallships:oak_cog"), skill("defense", 450)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:iron_heavy_crossbow", name="Typhon's Gun", lore=['Smells of powder and brine.'], enchant={'minecraft:quick_charge': 2}), reward_item("smallships:oak_cog"), reward_item("smallships:cannon", 2)], "title": "Choose one"}, skill("defense", 450)]),
 
     quest("golden_hind", "The Golden Hind", icon="minecraft:gold_block",
           discover={"structure": "dungeons_arise:ceryneian_hind"},
@@ -108,9 +104,7 @@ Q = [
                  sample("a Figurehead Piece", ["minecraft:drowned"], 0.4, count=2, texture="minecraft:item/gold_ingot",
                         tooltip="Part of the golden deer"),
                  {"build": {"blocks": {"minecraft:gold_block": 3}, "radius": 12}, "title": "Rebuild the figurehead on deck"}],
-          rewards=[reward_item("minecraft:gold_block", 4),
-                   reward_item("minecraft:enchanted_book", name="Depths Strider", enchant={"minecraft:depth_strider": 3}),
-                   skill("fish", 300)]),
+          rewards=[{"choice": [reward_item("minecraft:gold_block", 4), reward_item("minecraft:enchanted_book", enchant={'minecraft:depth_strider': 3}, name='Depths Strider'), reward_item("aquaculture:neptunium_ingot", 6)], "title": "Choose one"}, skill("fish", 300)]),
 
     quest("salvage_rights", "Salvage Rights", icon="smallships:oak_cog",
           discover={"structure": "towns_and_towers:wreckage_ocean"},
@@ -243,11 +237,11 @@ Q = [
                  item("minecraft:nautilus_shell", title="Find a shell washed up on the beach")],
           rewards=[reward_item("minecraft:sea_pickle", 4), skill("fish", 120)]),
 
-    quest("mangrove_maze", "The Mangrove Maze", icon="smallships:oak_rowboat",
+    quest("mangrove_maze", "The Mangrove Maze", icon="minecraft:oak_boat",
           discover={"biome": "minecraft:mangrove_swamp"},
           text=["A mangrove swamp, its roots forming a maze. The Couriers want to know if a boat can get through "
                 "without touching the bank."],
-          tasks=[item("smallships:oak_rowboat", crafted=True, title="Build a rowboat for the maze"),
+          tasks=[item("minecraft:oak_boat", crafted=True, title="Build a rowboat for the maze"),
                  {"be": {"biomes": ["minecraft:mangrove_swamp"], "in_water": True}, "title": "Row into the mangrove roots"},
                  item("minecraft:mangrove_propagule", 2, title="Gather propagules on the far side")],
           rewards=[reward_item("minecraft:mangrove_propagule", 4), reward_item("minecraft:mangrove_boat"),

@@ -86,7 +86,10 @@
           "count": 32
         },
         {
-          "item": "minecraft:trident"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:impaling": 4
+          }
         },
         {
           "skill": "fish",
@@ -257,14 +260,16 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:trident"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:impaling": 3,
+            "minecraft:channeling": 1
+          },
+          "name": "Sea Spear"
         },
         {
-          "item": "minecraft:enchanted_book",
-          "name": "Sea Spear",
-          "enchant": {
-            "minecraft:impaling": 3
-          }
+          "item": "minecraft:nautilus_shell",
+          "count": 2
         },
         {
           "skill": "attack",
@@ -323,18 +328,26 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:crossbow",
-          "name": "Typhon's Gun",
-          "lore": [
-            "Pried from a manned gun."
+          "choice": [
+            {
+              "item": "spartanweaponry:iron_heavy_crossbow",
+              "name": "Typhon's Gun",
+              "lore": [
+                "Smells of powder and brine."
+              ],
+              "enchant": {
+                "minecraft:quick_charge": 2
+              }
+            },
+            {
+              "item": "smallships:oak_cog"
+            },
+            {
+              "item": "smallships:cannon",
+              "count": 2
+            }
           ],
-          "enchant": {
-            "minecraft:quick_charge": 2,
-            "minecraft:piercing": 2
-          }
-        },
-        {
-          "item": "smallships:oak_cog"
+          "title": "Choose one"
         },
         {
           "skill": "defense",
@@ -407,15 +420,24 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:gold_block",
-          "count": 4
-        },
-        {
-          "item": "minecraft:enchanted_book",
-          "name": "Depths Strider",
-          "enchant": {
-            "minecraft:depth_strider": 3
-          }
+          "choice": [
+            {
+              "item": "minecraft:gold_block",
+              "count": 4
+            },
+            {
+              "item": "minecraft:enchanted_book",
+              "enchant": {
+                "minecraft:depth_strider": 3
+              },
+              "name": "Depths Strider"
+            },
+            {
+              "item": "aquaculture:neptunium_ingot",
+              "count": 6
+            }
+          ],
+          "title": "Choose one"
         },
         {
           "skill": "fish",
@@ -1048,7 +1070,7 @@
       ],
       "tasks": [
         {
-          "item": "smallships:oak_rowboat",
+          "item": "minecraft:oak_boat",
           "crafted": true,
           "title": "Build a rowboat for the maze"
         },
@@ -1080,7 +1102,7 @@
           "xp": 150
         }
       ],
-      "icon": "smallships:oak_rowboat",
+      "icon": "minecraft:oak_boat",
       "discover": {
         "biome": "minecraft:mangrove_swamp"
       }
