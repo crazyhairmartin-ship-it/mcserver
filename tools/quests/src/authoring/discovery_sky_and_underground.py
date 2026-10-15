@@ -40,11 +40,7 @@ Q = [
     quest("sky_hopper", "Sky Hopper", icon="minecraft:feather", after=["islands_in_the_sky"],
           text=["One island is a story. Five is a map. The Couriers want to know how the islands connect, so hop "
                 "between five different ones."],
-          tasks=[{"structure": "mss:small_tower", "title": "Land on a small tower island"},
-                 {"structure": "mss:spruce_huts", "title": "Land on the spruce huts island"},
-                 {"structure": "mss:small_oak_house", "title": "Land on a small house island"},
-                 {"structure": "mss:taiga", "title": "Land on a taiga forest island"},
-                 {"structure": "mss:jungle", "title": "Land on a jungle island"}],
+          tasks=[{"visits": "#moog_sky_islands", "count": 5, "apart": 100, "label": "island", "title": "Land on five different islands"}],
           rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:feather_falling': 4}, name='Sky Hoppers'), skill("agility", 200)]),
 
     quest("volcano_in_the_sky", "Fire Overhead", icon="minecraft:magma_block",

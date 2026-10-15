@@ -102,7 +102,7 @@ Q = [
           text=["Fern shows you how to enchant a collar tag: Health Boost and a creeper-sniffing Defusal, so your "
                 "wolf can guard the sanctuary."],
           tasks=[talk_char("fern", ["A collar tag is paper and string until someone believes in it.", "Health Boost, and Defusal so your wolf sniffs out creepers."]),
-                 item("domesticationinnovation:collar_tag", crafted=True),
+                 {"have": "domesticationinnovation:collar_tag", "enchant": {"domesticationinnovation:health_boost": 1, "domesticationinnovation:defusal": 1}, "title": "Enchant a collar tag"},
                  {"interact": "minecraft:wolf", "holding": "domesticationinnovation:collar_tag", "consume": True, "title": "Fit the enchanted tag to a wolf's collar"}],
           rewards=[reward_item("minecraft:enchanted_book", name="Hale and Hearty",
                                enchant={"domesticationinnovation:health_boost": 1}),
@@ -114,7 +114,8 @@ Q = [
           text=["A storm flooded the riverbank nests. Collect duck, tortoise and snail eggs before they're lost, "
                 "hatch them at the sanctuary and keep the young safe until they're grown."],
           tasks=[item("naturalist:duck_egg", 2), item("naturalist:tortoise_egg"), item("naturalist:snail_eggs"),
-                 {"place": "reece"}, {"checkmark": "The young have grown"}],
+                 {"place": "reece"}, {"born": "naturalist:duck", "title": "Hatch a duckling at the sanctuary"},
+                 {"raise": "naturalist:duck", "title": "Keep the duckling safe until it is grown"}],
           rewards=[reward_item("naturalist:bug_net"), skill("taming", 240)]),
 
     quest("dragonfly_rider", "Shimmering Wings", icon="crittersandcompanions:iron_dragonfly_armor",
@@ -265,7 +266,9 @@ ACT4 = [
     quest("end_ready_pets", "Pets for the Void", icon="domesticationinnovation:collar_tag", after=["poachers", "main_story:act4_start"],
           text=["Your companions want to follow you to the End. Enchant their collars so they come back safe."],
           tasks=[item("domesticationinnovation:collar_tag", crafted=True, title="Make a collar tag for the journey"),
-                 item("minecraft:enchanted_book", 3, title="Gather collar enchantments to keep pets safe in the void")],
+                 {"have": "minecraft:enchanted_book", "enchant": {"domesticationinnovation:void_cloud": 1}, "title": "Gather a Void Cloud enchantment"},
+                 {"have": "minecraft:enchanted_book", "enchant": {"domesticationinnovation:tethered_teleport": 1}, "title": "Gather a Tethered Teleport enchantment"},
+                 {"have": "minecraft:enchanted_book", "enchant": {"domesticationinnovation:fireproof": 1}, "title": "Gather a Fireproof enchantment"}],
           rewards=[reward_item("sophisticatedbackpacks:magnet_upgrade"), reward_item("minecraft:chorus_fruit", 16), skill("taming", 720)]),
 
     quest("pet_show", "Best in Show", icon="domesticationinnovation:pet_bed_red", after=["end_ready_pets", "falconry"],

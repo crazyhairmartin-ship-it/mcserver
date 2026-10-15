@@ -137,7 +137,7 @@ ACT2 = [
           text=["Among the Lich's treasures lie four sceptres. Claim one and use it in battle against the undead."],
           tasks=[search("twilightforest:lich_tower", 1, "a Lich's Sceptre", "A sceptre in the Lich's treasure.",
                         texture="minecraft:item/stick", title="Claim a sceptre from the Lich's treasures"),
-                 {"kill": "minecraft:zombie", "count": 6, "title": "Test the sceptre against the dead"}],
+                 {"killwith": "minecraft:zombie", "with": ["twilightforest:lifedrain_scepter", "twilightforest:zombie_scepter", "twilightforest:twilight_scepter", "twilightforest:fortification_scepter"], "count": 6, "title": "Test the sceptre against the dead"}],
           rewards=[reward_item("minecraft:ender_pearl", 8), reward_item("irons_spellbooks:arcane_essence", 4), skill("magic", 330)]),
 
     quest("cursed_swamp", "The Choking Swamp", icon="minecraft:vine", after=["lich"],
@@ -211,7 +211,7 @@ ACT3 = [
     quest("fire_swamp", "Through the Fire Swamp", icon="twilightforest:fiery_blood", after=["return_to_dusk"],
           text=["Fire jets and lava pools fill the Fire Swamp. Brew fire resistance and push through to the Hydra's "
                 "lair."],
-          tasks=[item("minecraft:potion", 2, consume=True, title="Brew fire resistance to cross the fire jets"),
+          tasks=[{"have": "minecraft:potion", "potion": "minecraft:fire_resistance", "count": 2, "consume": True, "title": "Brew fire resistance to cross the fire jets"},
                  {"be": {"biomes": ["twilightforest:fire_swamp"]}, "title": "Push through the Fire Swamp"}],
           rewards=[reward_item("irons_spellbooks:fireward_ring"), skill("magic", 300)]),
 

@@ -460,7 +460,7 @@
       ],
       "tasks": [
         {
-          "structure": "ctov:large/village_plains_fortified",
+          "structure": "#fortified_villages",
           "title": "Travel to a walled village"
         },
         {

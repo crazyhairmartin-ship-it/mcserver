@@ -27,8 +27,8 @@ Q = [
     quest("reroll_the_fates", "Reroll the Fates", icon="minecraft:enchanted_book", after=["an_honest_table"],
           text=["Orrin's test: produce a book with two enchantments he names, using the table's re-roll, without "
                 "wasting more than ten levels."],
-          tasks=[talk_char("orrin", ["Two enchantments on one book, wasting no more than ten levels.", "Fortune favours the frugal."]),
-                 item("minecraft:enchanted_book"), {"checkmark": "I made the book without wasting ten levels"}],
+          tasks=[talk_char("orrin", ["Unbreaking and Efficiency on one book, wasting no more than ten levels.", "Fortune favours the frugal."]),
+                 {"have": "minecraft:enchanted_book", "enchant": {"minecraft:unbreaking": 1, "minecraft:efficiency": 1}, "title": "Make a book with Unbreaking and Efficiency"}],
           rewards=[reward_item("minecraft:enchanted_book", name="A Careful Hand",
                                enchant={"minecraft:unbreaking": 3}), skill("magic", 120)]),
 
@@ -252,7 +252,7 @@ ACT2 = [
           tasks=[item("irons_spellbooks:invisibility_elixir", title="Take Pip's invisibility elixir"),
                  {"timed": {"seconds": 300, "goal": {"structure": "irons_spellbooks:evoker_fort", "label": "the logbook's vault", "away": 40},
                             "lines": ["Don't be seen. If anything hurts you, you start again."], "start": "Slip in",
-                            "no": ["hurt"]}, "title": "Cross the fort unseen"},
+                            "no": ["seen"]}, "title": "Cross the fort unseen"},
                  search("irons_spellbooks:evoker_fort", 1, "the Archevoker's Logbook", "A cipher-written logbook, untranslated.",
                         texture="minecraft:item/written_book", title="Take the logbook from the vault")],
           rewards=[reward_item("artifacts:scarf_of_invisibility"), reward_item("irons_spellbooks:archevoker_logbook_untranslated"),

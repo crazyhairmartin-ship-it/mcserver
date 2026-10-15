@@ -93,6 +93,7 @@ ACT4 = [
                 "crashed ships, so he can learn why the fleet fell."],
           tasks=[enc(["My logbook pages. Scattered through the other ships. Why did we fall?"], entity="minecraft:allay", name="The Captain's Ghost",
                      title="Hear the ghost captain on the bridge"),
+                 {"visits": "#end_mega_ships", "count": 2, "apart": 100, "label": "ship", "title": "Board two different mega ships"},
                  search("#end_mega_ships", 2, "a Logbook Page", "A page of the captain's log, brittle with age.", title="Collect logbook pages from the mega ships")],
           rewards=[reward_item("irons_spellbooks:cultist_chestplate", name="The Captain's Coat", lore=['Still smells of salt, and of void.']), skill("magic", 650)]),
 
@@ -134,7 +135,7 @@ ACT4 = [
                 "meeting its gaze, and answer the scribe's question to earn a page."],
           tasks=[visit("mes:manuscript_shrine", "Find the Enderman scribe's shrine"),
                  {"timed": {"seconds": 120, "goal": {"hold": {"radius": 8}}, "lines": ["Don't meet its gaze. Read."],
-                            "start": "Read the manuscripts", "no": ["hurt"]}, "title": "Read the shrine's texts without meeting the scribe's gaze"},
+                            "start": "Read the manuscripts", "no": ["seen"]}, "title": "Read the shrine's texts without meeting the scribe's gaze"},
                  search("mes:manuscript_shrine", 1, "an Eldritch Manuscript", "A page, handed over in silence.",
                         texture="minecraft:item/writable_book", title="Answer the scribe's question and take a page")],
           rewards=[reward_item("minecraft:writable_book", name="An Eldritch Manuscript"), reward_item("irons_spellbooks:eldritch_manuscript"), skill("magic", 700)]),
@@ -193,7 +194,8 @@ ACT4 = [
     quest("salvage_the_scraps", "Salvage the Scraps", icon="minecraft:iron_ingot", after=["beyond_the_gateway"],
           text=["Broken pillars, spikes and scrap heaps litter the islands. Sift three of them for the void's "
                 "leftovers."],
-          tasks=[search("mes:endscraps", 1, "a Void Leftover", "Something the void left behind.", title="Sift a scrap heap for the void's leftovers")],
+          tasks=[{"visits": "mes:endscraps", "count": 3, "apart": 60, "label": "scrap heap", "title": "Find three different scrap heaps"},
+                 search("mes:endscraps", 1, "a Void Leftover", "Something the void left behind.", title="Sift a scrap heap for the void's leftovers")],
           rewards=[reward_item("irons_spellbooks:arcane_salvage", 4), skill("craft", 300)]),
 
     quest("null_space", "Null Space", icon="minecraft:amethyst_block", after=["first_flight"],

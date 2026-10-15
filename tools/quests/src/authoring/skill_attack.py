@@ -154,7 +154,10 @@ ACT2 = [
                  item("spartanweaponry:iron_rapier", crafted=True, title="Forge a rapier"),
                  item("spartanweaponry:iron_warhammer", crafted=True, title="Forge a warhammer"),
                  item("spartanweaponry:iron_javelin", crafted=True, title="Forge a javelin"),
-                 {"kill": "minecraft:zombie", "count": 12, "title": "Put each weapon through its paces on the dead"}],
+                 {"killwith": "minecraft:zombie", "with": "spartanweaponry:iron_halberd", "count": 3, "title": "Make a kill with the halberd"},
+                 {"killwith": "minecraft:zombie", "with": "spartanweaponry:iron_rapier", "count": 3, "title": "Make a kill with the rapier"},
+                 {"killwith": "minecraft:zombie", "with": "spartanweaponry:iron_warhammer", "count": 3, "title": "Make a kill with the warhammer"},
+                 {"killwith": "minecraft:zombie", "with": ["spartanweaponry:iron_javelin", "spartanweaponry:javelin"], "count": 3, "title": "Make a kill with the javelin"}],
           rewards=[reward_item("spartanweaponry:diamond_halberd"), skill("attack", 380)]),
 
     quest("hunter_trail", "The Hunter's Trail", icon="minecraft:writable_book", after=["weapon_master"],

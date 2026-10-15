@@ -441,7 +441,7 @@
             ],
             "start": "Creep in",
             "no": [
-              "hurt"
+              "seen"
             ]
           },
           "title": "Creep in to the treasure room without the brutes noticing"
@@ -1169,7 +1169,12 @@
           "title": "Find a small shrine"
         },
         {
-          "item": "minecraft:gold_ingot",
+          "use": "minecraft:red_candle",
+          "count": 1,
+          "at": {
+            "structure": "mns:shrine"
+          },
+          "holding": "minecraft:gold_ingot",
           "consume": true,
           "title": "Leave a gold ingot at the shrine"
         },
@@ -1178,7 +1183,12 @@
           "title": "Find a smoking shrine"
         },
         {
-          "item": "minecraft:gold_ingot",
+          "use": "minecraft:soul_campfire",
+          "count": 1,
+          "at": {
+            "structure": "mns:smoking_shrine"
+          },
+          "holding": "minecraft:gold_ingot",
           "consume": true,
           "title": "Leave a gold ingot at the smoking shrine"
         }
@@ -1751,7 +1761,7 @@
             ],
             "start": "Creep close",
             "no": [
-              "hurt"
+              "seen"
             ]
           },
           "title": "Creep close enough to look, and leave unseen"
@@ -1796,7 +1806,7 @@
             ],
             "start": "Creep close",
             "no": [
-              "hurt"
+              "seen"
             ]
           },
           "title": "Creep to the sealed doors and listen"

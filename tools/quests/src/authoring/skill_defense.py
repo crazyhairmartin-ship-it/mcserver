@@ -101,7 +101,7 @@ ACT2 = [
     quest("fortified_village", "The Walled Town", icon="minecraft:iron_ingot", after=["pilgrim"],
           text=["Captain Hale wants plans for Reece's walls. Travel to a fortified village, bring its watch captain "
                 "iron, and copy how its walls are built."],
-          tasks=[{"structure": "ctov:large/village_plains_fortified", "title": "Travel to a walled village"},
+          tasks=[{"structure": "#fortified_villages", "title": "Travel to a walled village"},
                  item("minecraft:iron_ingot", 16, consume=True, title="Bring the watch captain iron for the favour"),
                  talk_org("watch", ["Hale sent you? For the wall plans? Iron's welcome.", "Copy ours. Walls like this hold."],
                           title="Ask the wall's captain for the plans"),

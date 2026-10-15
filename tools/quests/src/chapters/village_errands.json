@@ -13,8 +13,11 @@
       ],
       "tasks": [
         {
-          "structure": "#wells",
-          "title": "Find a well to draw water from"
+          "visits": "#wells",
+          "count": 3,
+          "apart": 150,
+          "label": "well",
+          "title": "Draw water at three different wells"
         },
         {
           "item": "minecraft:potion",
@@ -688,7 +691,7 @@
             ],
             "start": "Begin scouting",
             "no": [
-              "hurt"
+              "seen"
             ]
           },
           "title": "Creep up to the castle unseen"
@@ -777,7 +780,7 @@
       ],
       "tasks": [
         {
-          "structure": "ctov:medium/village_plains_fortified",
+          "structure": "#fortified_villages",
           "title": "Travel to a fortified village"
         },
         {

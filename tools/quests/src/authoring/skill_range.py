@@ -39,7 +39,9 @@ Q = [
           tasks=[item("spartanweaponry:iron_throwing_knife", crafted=True),
                  item("spartanweaponry:iron_tomahawk", crafted=True),
                  item("spartanweaponry:iron_javelin", crafted=True),
-                 {"kill": "minecraft:zombie", "count": 6, "title": "Make kills with your thrown steel"}],
+                 {"killwith": "minecraft:zombie", "with": ["spartanweaponry:iron_throwing_knife", "spartanweaponry:throwing_knife"], "count": 2, "title": "Kill with a thrown knife"},
+                 {"killwith": "minecraft:zombie", "with": ["spartanweaponry:iron_tomahawk", "spartanweaponry:tomahawk"], "count": 2, "title": "Kill with a thrown tomahawk"},
+                 {"killwith": "minecraft:zombie", "with": ["spartanweaponry:iron_javelin", "spartanweaponry:javelin"], "count": 2, "title": "Kill with a thrown javelin"}],
           rewards=[reward_item("spartanweaponry:copper_boomerang"), skill("range", 150)]),
 
     quest("firewatch", "The Lookout", icon="minecraft:spyglass", after=["boar_trouble"],

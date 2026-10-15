@@ -94,7 +94,7 @@ ACT3 = [
           text=["The ledger names a bastion's treasure room. Get in, lift the gilded blackstone and a banner from "
                 "the vault, and get out without the brutes ever turning on you."],
           tasks=[{"timed": {"seconds": 420, "goal": {"structure": "minecraft:bastion_remnant", "label": "the treasure room", "away": 40},
-                            "lines": ["Quiet feet. If a brute lands a blow, you're seen."], "start": "Creep in", "no": ["hurt"]},
+                            "lines": ["Quiet feet. If a brute lands a blow, you're seen."], "start": "Creep in", "no": ["seen"]},
                   "title": "Creep in to the treasure room without the brutes noticing"},
                  search("minecraft:bastion_remnant", 1, "the Vault's Gilded Haul", "Gilded blackstone and a snout banner.",
                         title="Lift the gilded haul from the vault")],
@@ -233,9 +233,9 @@ ACT3 = [
           text=["Small shrines dot the wastes, some still smoking. Leave a gold ingot at a shrine and at a smoking "
                 "shrine, and see what the realm gives back."],
           tasks=[visit("mns:shrine", "Find a small shrine"),
-                 item("minecraft:gold_ingot", consume=True, title="Leave a gold ingot at the shrine"),
+                 {"use": "minecraft:red_candle", "count": 1, "at": {"structure": "mns:shrine"}, "holding": "minecraft:gold_ingot", "consume": True, "title": "Leave a gold ingot at the shrine"},
                  visit("mns:smoking_shrine", "Find a smoking shrine"),
-                 item("minecraft:gold_ingot", consume=True, title="Leave a gold ingot at the smoking shrine")],
+                 {"use": "minecraft:soul_campfire", "count": 1, "at": {"structure": "mns:smoking_shrine"}, "holding": "minecraft:gold_ingot", "consume": True, "title": "Leave a gold ingot at the smoking shrine"}],
           rewards=[reward_item("minecraft:fire_charge", 8), reward_item("minecraft:quartz", 8), reward_item("minecraft:ghast_tear"),
                    skill("agility", 300)]),
 
@@ -354,7 +354,7 @@ ACT3 = [
           text=["An anvil the size of a hall, ringing in the soul sand valley. Look but don't knock: whatever works "
                 "the forge is not for now. Vesna will remember the way."],
           tasks=[{"timed": {"seconds": 240, "goal": {"structure": "cataclysm:soul_black_smith", "label": "the forge's edge", "away": 25},
-                            "lines": ["Look. Don't knock. Don't get hit."], "start": "Creep close", "no": ["hurt"]},
+                            "lines": ["Look. Don't knock. Don't get hit."], "start": "Creep close", "no": ["seen"]},
                   "title": "Creep close enough to look, and leave unseen"}],
           rewards=[reward_item("minecraft:soul_lantern", 4), skill("mining", 340)]),
 
@@ -363,7 +363,7 @@ ACT3 = [
           text=["In the deepest wastes, a sealed arena burns with blue fire. Listen at its doors. Even Vesna won't go "
                 "nearer."],
           tasks=[{"timed": {"seconds": 240, "goal": {"structure": "cataclysm:burning_arena", "label": "the sealed doors", "away": 25},
-                            "lines": ["Listen at the doors. Don't get hit."], "start": "Creep close", "no": ["hurt"]},
+                            "lines": ["Listen at the doors. Don't get hit."], "start": "Creep close", "no": ["seen"]},
                   "title": "Creep to the sealed doors and listen"}],
           rewards=[reward_item("minecraft:blaze_rod", 8), skill("agility", 340)]),
 ]

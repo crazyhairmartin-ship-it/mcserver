@@ -457,8 +457,12 @@
           ]
         },
         {
-          "item": "domesticationinnovation:collar_tag",
-          "crafted": true
+          "have": "domesticationinnovation:collar_tag",
+          "enchant": {
+            "domesticationinnovation:health_boost": 1,
+            "domesticationinnovation:defusal": 1
+          },
+          "title": "Enchant a collar tag"
         },
         {
           "interact": "minecraft:wolf",
@@ -513,7 +517,12 @@
           "place": "reece"
         },
         {
-          "checkmark": "The young have grown"
+          "born": "naturalist:duck",
+          "title": "Hatch a duckling at the sanctuary"
+        },
+        {
+          "raise": "naturalist:duck",
+          "title": "Keep the duckling safe until it is grown"
         }
       ],
       "rewards": [
@@ -1189,9 +1198,25 @@
           "title": "Make a collar tag for the journey"
         },
         {
-          "item": "minecraft:enchanted_book",
-          "count": 3,
-          "title": "Gather collar enchantments to keep pets safe in the void"
+          "have": "minecraft:enchanted_book",
+          "enchant": {
+            "domesticationinnovation:void_cloud": 1
+          },
+          "title": "Gather a Void Cloud enchantment"
+        },
+        {
+          "have": "minecraft:enchanted_book",
+          "enchant": {
+            "domesticationinnovation:tethered_teleport": 1
+          },
+          "title": "Gather a Tethered Teleport enchantment"
+        },
+        {
+          "have": "minecraft:enchanted_book",
+          "enchant": {
+            "domesticationinnovation:fireproof": 1
+          },
+          "title": "Gather a Fireproof enchantment"
         }
       ],
       "rewards": [

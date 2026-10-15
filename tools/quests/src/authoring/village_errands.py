@@ -22,7 +22,7 @@ Q = [
     quest("water_from_three_wells", "Water from Three Wells", icon="minecraft:potion",
           giver=errand("herbalists", ["Every well's water brews a different tea. I swear it.", "Bring me bottles from three wells."]),
           text=["A Herbalist swears every well's water makes a different tea, and wants proof from three wells."],
-          tasks=[{"structure": "#wells", "title": "Find a well to draw water from"},
+          tasks=[{"visits": "#wells", "count": 3, "apart": 150, "label": "well", "title": "Draw water at three different wells"},
                  item("minecraft:potion", 3, consume=True, title="Bring her three bottles of well water")],
           rewards=[reward_item("herbalbrews:green_tea_leaf", 8), skill("forage", 60)]),
 
@@ -153,7 +153,7 @@ Q = [
                 "without being seen."],
           tasks=[{"timed": {"seconds": 420, "goal": {"structure": "mvs:castle_ruins", "label": "the castle ruins"},
                             "lines": ["Stay low. If anything hurts you, they've seen you."],
-                            "start": "Begin scouting", "no": ["hurt"]}, "title": "Creep up to the castle unseen"},
+                            "start": "Begin scouting", "no": ["seen"]}, "title": "Creep up to the castle unseen"},
                  {"checkmark": "I counted their fires and left unseen"}],
           rewards=[reward_item("minecraft:spyglass"), skill("defense", 80)]),
 
@@ -171,7 +171,7 @@ Q = [
                                  "Visit one, talk to its guards and help hold the wall for a night."]),
           text=["The Village Watch's captain wants to learn from a fortified village, and the best lesson is to "
                 "help hold its wall."],
-          tasks=[{"structure": "ctov:medium/village_plains_fortified", "title": "Travel to a fortified village"},
+          tasks=[{"structure": "#fortified_villages", "title": "Travel to a fortified village"},
                  talk_org("watch", ["Visitor from the watch? Raiders come at dusk.", "You can stand with us tonight. Mind the gate."],
                           title="Talk to the wall's guards"),
                  {"timed": {"seconds": 300, "goal": {"hold": {"radius": 20}},

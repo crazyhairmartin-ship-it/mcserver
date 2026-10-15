@@ -349,7 +349,7 @@ ACT3 = [
                  item("alexscaves:hood_of_darkness", crafted=True, title="Craft the hood of darkness"),
                  item("alexscaves:cloak_of_darkness", crafted=True, title="Craft the cloak of darkness"),
                  {"timed": {"seconds": 90, "goal": {"hold": {"radius": 12}}, "lines": ["Stay in the dark. Be unseen."],
-                            "start": "Walk past the watcher", "no": ["hurt"]}, "title": "Pass a watcher without being seen"}],
+                            "start": "Walk past the watcher", "no": ["seen"]}, "title": "Pass a watcher without being seen"}],
           rewards=[reward_item("alexscaves:glow_ink_bomb", 4), skill("agility", 400)]),
 
     quest("beholder", "The Beholder", icon="alexscaves:beholder", after=["forsaken"],

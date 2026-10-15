@@ -196,7 +196,7 @@ ACT2 = [
           tasks=[{"structure": "minecraft:ancient_city", "title": "Find the ancient city the expedition found"},
                  {"timed": {"seconds": 300, "goal": {"structure": "minecraft:ancient_city", "label": "the portal frame", "away": 60},
                             "lines": ["Quiet. Anything that touches you wakes the city."], "start": "Creep in",
-                            "no": ["hurt"]}, "title": "Creep across the city without waking the Warden"},
+                            "no": ["seen"]}, "title": "Creep across the city without waking the Warden"},
                  search("minecraft:ancient_city", 1, "the Expedition Journal", "A water-stained journal, still legible.",
                         texture="minecraft:item/written_book", title="Take the journal from beside the portal frame")],
           rewards=[reward_item("minecraft:enchanted_book", name="Silent Step", enchant={"minecraft:swift_sneak": 3}),

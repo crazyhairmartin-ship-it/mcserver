@@ -732,7 +732,13 @@
           "title": "Claim a sceptre from the Lich's treasures"
         },
         {
-          "kill": "minecraft:zombie",
+          "killwith": "minecraft:zombie",
+          "with": [
+            "twilightforest:lifedrain_scepter",
+            "twilightforest:zombie_scepter",
+            "twilightforest:twilight_scepter",
+            "twilightforest:fortification_scepter"
+          ],
           "count": 6,
           "title": "Test the sceptre against the dead"
         }
@@ -1118,7 +1124,8 @@
       ],
       "tasks": [
         {
-          "item": "minecraft:potion",
+          "have": "minecraft:potion",
+          "potion": "minecraft:fire_resistance",
           "count": 2,
           "consume": true,
           "title": "Brew fire resistance to cross the fire jets"

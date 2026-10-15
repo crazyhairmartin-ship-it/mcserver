@@ -440,5 +440,19 @@
     "mvs:mud_brick_house_1",
     "mvs:small_swamp_house",
     "mvs:desert_house"
+  ],
+  "fortified_villages": [
+    "ctov:large/village_plains_fortified",
+    "ctov:large/village_mesa_fortified",
+    "ctov:large/village_swamp_fortified",
+    "ctov:large/village_taiga_fortified",
+    "ctov:medium/village_plains_fortified",
+    "ctov:medium/village_mesa_fortified",
+    "ctov:medium/village_swamp_fortified",
+    "ctov:medium/village_taiga_fortified",
+    "ctov:small/village_plains_fortified",
+    "ctov:small/village_mesa_fortified",
+    "ctov:small/village_swamp_fortified",
+    "ctov:small/village_taiga_fortified"
   ]
 }

@@ -119,15 +119,17 @@
           "talk": "character",
           "character": "orrin",
           "lines": [
-            "Two enchantments on one book, wasting no more than ten levels.",
+            "Unbreaking and Efficiency on one book, wasting no more than ten levels.",
             "Fortune favours the frugal."
           ]
         },
         {
-          "item": "minecraft:enchanted_book"
-        },
-        {
-          "checkmark": "I made the book without wasting ten levels"
+          "have": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:unbreaking": 1,
+            "minecraft:efficiency": 1
+          },
+          "title": "Make a book with Unbreaking and Efficiency"
         }
       ],
       "rewards": [
@@ -1144,7 +1146,7 @@
             ],
             "start": "Slip in",
             "no": [
-              "hurt"
+              "seen"
             ]
           },
           "title": "Cross the fort unseen"

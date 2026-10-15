@@ -441,6 +441,13 @@
           "title": "Hear the ghost captain on the bridge"
         },
         {
+          "visits": "#end_mega_ships",
+          "count": 2,
+          "apart": 100,
+          "label": "ship",
+          "title": "Board two different mega ships"
+        },
+        {
           "search": {
             "at": {
               "structure": "#end_mega_ships"
@@ -677,7 +684,7 @@
             ],
             "start": "Read the manuscripts",
             "no": [
-              "hurt"
+              "seen"
             ]
           },
           "title": "Read the shrine's texts without meeting the scribe's gaze"
@@ -983,6 +990,13 @@
         "Broken pillars, spikes and scrap heaps litter the islands. Sift three of them for the void's leftovers."
       ],
       "tasks": [
+        {
+          "visits": "mes:endscraps",
+          "count": 3,
+          "apart": 60,
+          "label": "scrap heap",
+          "title": "Find three different scrap heaps"
+        },
         {
           "search": {
             "at": {

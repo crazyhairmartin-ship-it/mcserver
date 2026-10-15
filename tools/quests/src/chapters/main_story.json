@@ -1168,14 +1168,23 @@
       ],
       "tasks": [
         {
-          "item": "minecraft:potion",
-          "count": 2,
+          "have": "minecraft:potion",
+          "potion": "minecraft:water_breathing",
           "consume": true,
-          "title": "Brew potions to breathe and see underwater"
+          "title": "Brew water breathing for the dive"
         },
         {
-          "item": "minecraft:diamond_helmet",
-          "title": "Bring a helmet to enchant for the depths"
+          "have": "minecraft:potion",
+          "potion": "minecraft:night_vision",
+          "consume": true,
+          "title": "Brew night vision for the dark water"
+        },
+        {
+          "have": "minecraft:diamond_helmet",
+          "enchant": {
+            "minecraft:respiration": 1
+          },
+          "title": "Enchant a helmet for the depths"
         },
         {
           "build": {
@@ -1729,7 +1738,7 @@
             ],
             "start": "Slip in",
             "no": [
-              "hurt"
+              "seen"
             ]
           },
           "title": "Slip past the blazes to the throne room unseen"
@@ -2526,7 +2535,7 @@
             ],
             "start": "Creep in",
             "no": [
-              "hurt"
+              "seen"
             ]
           },
           "title": "Creep through the ancient city without waking the Warden"

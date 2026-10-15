@@ -194,9 +194,31 @@
           "crafted": true
         },
         {
-          "kill": "minecraft:zombie",
-          "count": 6,
-          "title": "Make kills with your thrown steel"
+          "killwith": "minecraft:zombie",
+          "with": [
+            "spartanweaponry:iron_throwing_knife",
+            "spartanweaponry:throwing_knife"
+          ],
+          "count": 2,
+          "title": "Kill with a thrown knife"
+        },
+        {
+          "killwith": "minecraft:zombie",
+          "with": [
+            "spartanweaponry:iron_tomahawk",
+            "spartanweaponry:tomahawk"
+          ],
+          "count": 2,
+          "title": "Kill with a thrown tomahawk"
+        },
+        {
+          "killwith": "minecraft:zombie",
+          "with": [
+            "spartanweaponry:iron_javelin",
+            "spartanweaponry:javelin"
+          ],
+          "count": 2,
+          "title": "Kill with a thrown javelin"
         }
       ],
       "rewards": [
