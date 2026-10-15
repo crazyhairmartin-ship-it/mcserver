@@ -246,6 +246,7 @@ task first (T11, T18, T25, T28): other chapters link to its anchors. Counts are 
 | TR2 | - | 0 | Task TR for only: `skill_attack`, `skill_defense`, `skill_range`, `skill_taming`, `skill_agility`, `skill_crafting`, `magic` |
 | TR3 | - | 0 | Task TR for only: `skill_cooking`, `skill_farming`, `skill_fishing`, `skill_foraging`, `skill_mining` |
 | TR4 | - | 0 | Task TR for only: `discovery_land`, `discovery_sea`, `discovery_sky_and_underground`, `small_favours`, `odd_jobs`, `village_errands` |
+| TK | - | 0 | Real rewards beside keepsakes, every chapter (see "Task TK" below) |
 | T11 | 2 | 17 | `main_story` (act2, 17) |
 | T12 | 2 | 29 | `skill_attack` (act2, 7); `skill_defense` (act2, 8); `skill_range` (act2, 7); `skill_taming` (act2, 7) |
 | T13 | 2 | 33 | `skill_agility` (act2, 7); `skill_crafting` (act2, 10); `magic` (act2, 16) |
@@ -317,6 +318,18 @@ After each chapter: rebuild it, `python make_quests.py`, `python lint_quests.py 
 "vanilla gear reward" warnings. At the end: `python coverage.py --check`, then one commit per task
 (`Quests TR1: richer rewards in <chapters>`), pushed. Report, spoiler-free: how many quests' rewards changed per
 chapter, how many choice rewards and relics you added, and the commit hash.
+
+## Task TK: real rewards beside keepsakes
+
+`python lint_quests.py` lists every quest whose only item rewards are keepsakes ("only keepsake rewards": a named
+journal, banner, bone or bell, a spyglass, a map). Keep the keepsake (it's part of the story) and add one real
+reward beside it, by the rules in "Item rewards should feel like something": ingredients for something cool, a
+fitting enchanted book, or modded gear, matched to the quest's story and tier. Plain spyglasses and maps in later
+tiers may be swapped for the real reward instead. Vary the rewards; don't give every journal quest the same book.
+Change nothing else (ids, tasks, text, dialogue and skill XP stay as they are). Rebuild each chapter you touch, then
+`python make_quests.py` and `python lint_quests.py` until no "only keepsake rewards" warnings remain, and
+`python coverage.py --check`. One commit, `Quests TK: real rewards beside keepsakes`, pushed. Report, spoiler-free:
+how many quests changed per chapter, and the commit hash.
 
 ## Task TD: shorten the dialogue
 
