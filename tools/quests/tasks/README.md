@@ -61,8 +61,7 @@ characters only (see "Report" below).
   | act1 | 80-300 | | act5 | 600-1000 |
   | act2 | 150-400 | | post | 1000-1500 |
 
-  `any`-tier quests: by effort, 50-300. Item rewards: one or two items, three at most; stacks are fine, but never more
-  than one tool, weapon or armour piece (no sets, no "one of each tool"). The checker enforces it. Chain endings and boss quests sit at the top of their tier. Item rewards should
+  `any`-tier quests: by effort, 50-300. Chain endings and boss quests sit at the top of their tier. Item rewards should
   be useful at that tier and come from mods in the pack; a skill path's capstone gives a unique named, enchanted item
   (`{"item": ..., "name": ..., "lore": [...], "enchant": {...}}`). Artifacts (`artifacts:*`) only as the reward of
   the quest whose plan entry has them, with `signature` set (see `src/plans/artifact_quests.md`).

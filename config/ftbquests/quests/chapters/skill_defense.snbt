@@ -156,10 +156,20 @@
 					type: "item"
 				}
 				{
+					id: "40751535170B9017"
+					item: "minecraft:iron_leggings"
+					type: "item"
+				}
+				{
+					id: "4B40E31E9F93B870"
+					item: "minecraft:iron_boots"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 150"
 					elevate_perms: true
 					icon: "minecraft:shield"
-					id: "40751535170B9017"
+					id: "4073FB02D3017697"
 					silent: true
 					title: "+150 Defense XP"
 					type: "command"

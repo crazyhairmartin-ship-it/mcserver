@@ -133,6 +133,9 @@
           "item": "handcrafted:berry_jam_jar"
         },
         {
+          "item": "minecraft:iron_axe"
+        },
+        {
           "item": "minecraft:iron_pickaxe"
         },
         {
@@ -1401,7 +1404,7 @@
           "character": "odile",
           "lines": [
             "Master of the guild. About time.",
-            "The founder's pickaxe, reforged. Don't let it rust."
+            "The founder's tools, reforged. Don't let them rust."
           ],
           "title": "Be named Master of the Guild by Odile"
         }
@@ -1418,6 +1421,18 @@
             "minecraft:unbreaking": 3,
             "minecraft:mending": 1,
             "minecraft:fortune": 3
+          }
+        },
+        {
+          "item": "minecraft:netherite_axe",
+          "name": "The Founder's Axe",
+          "lore": [
+            "The founder's masterwork."
+          ],
+          "enchant": {
+            "minecraft:efficiency": 5,
+            "minecraft:unbreaking": 3,
+            "minecraft:mending": 1
           }
         },
         {

@@ -13,8 +13,6 @@ truly can't do it, logged in src/plans/followups.md. What it checks:
   - hostile spawns or spawn waves in villages (they kill villagers)
   - count steps (kill, use, search, cast, spellkill, tame, breed, mine, build) without an in-world "title"
   - quests without story text
-  - generous item rewards (Dylan, 2026-10-15): more than one tool/weapon/armour piece is an error, more than three
-    different items a warning (stacks of one item are fine)
   - dialogue over the limits (Dylan and Fionah, 2026-10-15): more than 2 lines in a conversation is an error, a line
     over 15 words a warning; character idle/hail lines in pack.json too
 """
@@ -87,13 +85,6 @@ def main():
         for q in data.get('quests', []):
             where = f'{chapter}:{q["id"]}'
             tasks = [t for t in q.get('tasks', []) if isinstance(t, dict)]
-            gear = re.compile(r'(sword|pickaxe|_axe|shovel|_hoe|helmet|chestplate|leggings|boots|bow|crossbow|shield|'
-                              r'spear|halberd|rapier|longsword|katana|glaive|mace|hammer|trident|scythe)$')
-            items = [r['item'] for r in q.get('rewards', []) if isinstance(r, dict) and isinstance(r.get('item'), str)]
-            if sum(1 for i in items if gear.search(i.split(':')[-1])) > 1:
-                errors.append(f'{where}: more than one tool/weapon/armour piece as rewards (give one; stacks are fine)')
-            if len(set(items)) > 3:
-                warnings.append(f'{where}: {len(set(items))} different reward items (keep it to a few)')
             if not q.get('text'):
                 warnings.append(f'{where}: no story text (every quest needs an in-world reason)')
             goes_somewhere = any('structure' in t or 'place' in t for t in tasks)

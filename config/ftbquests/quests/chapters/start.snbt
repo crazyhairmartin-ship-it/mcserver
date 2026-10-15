@@ -69,6 +69,11 @@
 				}
 				{
 					id: "3A5B51A224171518"
+					item: "minecraft:wooden_axe"
+					type: "item"
+				}
+				{
+					id: "71F3032A32D1B750"
 					item: "minecraft:lantern"
 					type: "item"
 				}
@@ -523,7 +528,22 @@
 			rewards: [
 				{
 					id: "067D276184857B2C"
+					item: "minecraft:leather_helmet"
+					type: "item"
+				}
+				{
+					id: "4DC0B7444E8BC51F"
 					item: "minecraft:leather_chestplate"
+					type: "item"
+				}
+				{
+					id: "3CDCA84C7238C7D2"
+					item: "minecraft:leather_leggings"
+					type: "item"
+				}
+				{
+					id: "74DD7638F109728C"
+					item: "minecraft:leather_boots"
 					type: "item"
 				}
 			]
@@ -740,6 +760,16 @@
 				{
 					id: "4A845D8206AC33ED"
 					item: "minecraft:shield"
+					type: "item"
+				}
+				{
+					id: "4DD5E9A9B44CAFE5"
+					item: "minecraft:book"
+					type: "item"
+				}
+				{
+					id: "46A67D39C959E110"
+					item: "minecraft:lead"
 					type: "item"
 				}
 			]

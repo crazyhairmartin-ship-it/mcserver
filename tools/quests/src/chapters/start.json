@@ -61,6 +61,9 @@
           "item": "minecraft:wooden_pickaxe"
         },
         {
+          "item": "minecraft:wooden_axe"
+        },
+        {
           "item": "minecraft:lantern"
         }
       ],
@@ -409,7 +412,16 @@
       ],
       "rewards": [
         {
+          "item": "minecraft:leather_helmet"
+        },
+        {
           "item": "minecraft:leather_chestplate"
+        },
+        {
+          "item": "minecraft:leather_leggings"
+        },
+        {
+          "item": "minecraft:leather_boots"
         }
       ],
       "icon": "minecraft:leather_chestplate"
@@ -623,6 +635,12 @@
         },
         {
           "item": "minecraft:shield"
+        },
+        {
+          "item": "minecraft:book"
+        },
+        {
+          "item": "minecraft:lead"
         }
       ],
       "icon": "minecraft:filled_map"

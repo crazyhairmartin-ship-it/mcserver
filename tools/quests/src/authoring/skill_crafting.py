@@ -31,7 +31,8 @@ Q = [
                             "radius": 10}, "title": "Furnish the cottage"},
                  encounter(["It feels like home again. Thank you, dear.", "Take my husband's tools. He'd want a joiner to have them."],
                            entity="minecraft:villager", name="The Widow")],
-          rewards=[reward_item("handcrafted:berry_jam_jar"), reward_item("minecraft:iron_pickaxe"), skill("craft", 130)]),
+          rewards=[reward_item("handcrafted:berry_jam_jar"), reward_item("minecraft:iron_axe"),
+                   reward_item("minecraft:iron_pickaxe"), skill("craft", 130)]),
 
     quest("sacks_and_jars", "A Place for Everything", icon="supplementaries:sack", after=["workshop_walls"],
           text=["The workshop floor is a mess of loose materials. Make sacks, jars and a safe and sort the guild's "
@@ -314,10 +315,12 @@ ACT5 = [
           after=["rebuild_after_cataclysm", "endless_pack", "winter_festival"],
           text=["Odile steps aside and names you master of the guild, handing over the founder's tools reforged for "
                 "you."],
-          tasks=[talk_char("odile", ["Master of the guild. About time.", "The founder's pickaxe, reforged. Don't let it rust."],
+          tasks=[talk_char("odile", ["Master of the guild. About time.", "The founder's tools, reforged. Don't let them rust."],
                            title="Be named Master of the Guild by Odile")],
           rewards=[reward_item("minecraft:netherite_pickaxe", name="The Founder's Pickaxe", lore=["The founder's masterwork."],
                                enchant={"minecraft:efficiency": 5, "minecraft:unbreaking": 3, "minecraft:mending": 1, "minecraft:fortune": 3}),
+                   reward_item("minecraft:netherite_axe", name="The Founder's Axe", lore=["The founder's masterwork."],
+                               enchant={"minecraft:efficiency": 5, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
                    skill("craft", 1000)]),
 ]
 

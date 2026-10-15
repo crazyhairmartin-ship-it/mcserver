@@ -13445,7 +13445,7 @@ global.QUEST_GIVERS = [
     "type": "talk",
     "lines": [
       "Master of the guild. About time.",
-      "The founder's pickaxe, reforged. Don't let it rust."
+      "The founder's tools, reforged. Don't let them rust."
     ],
     "requires": [],
     "name": "",
