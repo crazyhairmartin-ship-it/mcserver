@@ -1,6 +1,7 @@
 """Chapter: skill_crafting, the Crafters' Guild path: prologue and Act I (first release).
 Plan: src/plans/quests/skill_crafting.json. Master Joiner Odile Brask keeps the guild workshop in Reece."""
 from common import chapter, quest, talk_char, item, reward_item, skill, giver_org, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 Q = [
     quest("apprentice_papers", "Apprentice Papers", icon="handcrafted:oak_table",
@@ -117,4 +118,110 @@ Q = [
                    skill("craft", 280)]),
 ]
 
-chapter("skill_crafting", "The Crafters' Guild", "Crafting path", "minecraft:crafting_table", "skills", 5, Q)
+ACT2 = [
+    quest("rival_carpenter", "Two Rooms, One Judge", icon="handcrafted:oak_cupboard",
+          after=["engineers_blueprints", "tavern_refit"],
+          text=["A swaggering carpenter from a rival village turns up and challenges the guild. Each furnishes an "
+                "identical empty room, and the villagers vote on the better one."],
+          tasks=[enc(["Your guild's famous? My rooms are better. Prove otherwise."], entity="minecraft:villager",
+                     name="Rival Carpenter", title="Take up the rival carpenter's challenge"),
+                 {"structure": "#villages", "title": "Reach the village where the rooms are judged"},
+                 {"build": {"blocks": {"handcrafted:oak_table": 1, "handcrafted:oak_chair": 2, "handcrafted:oak_shelf": 1,
+                                       "handcrafted:oak_cupboard": 1, "minecraft:red_bed": 1}, "radius": 8},
+                  "title": "Furnish your room for the villagers' vote"}],
+          rewards=[reward_item("handcrafted:hammer"), reward_item("minecraft:iron_ingot", 8), skill("craft", 300)]),
+
+    quest("ruined_town", "Raise the Ruin", icon="minecraft:bell", after=["engineers_blueprints"],
+          text=["Refugees from a burned town want to go home. Find the ruined town, clear it, and rebuild houses and a "
+                "bridge with furniture so the first families can move back in."],
+          tasks=[{"structure": "nova_structures:ruin_town", "title": "Find the burned town"},
+                 search("nova_structures:ruin_town", 2, "a Family Deed", "A scorched deed to a plot, its seal intact.",
+                        title="Search the ruins for the families' deeds"),
+                 {"build": {"blocks": {"minecraft:oak_planks": 40, "#minecraft:doors": 3, "#minecraft:beds": 3,
+                                       "mcwbridges:oak_bridge_pier": 2}, "radius": 12},
+                  "title": "Rebuild houses and a bridge for the returning families"}],
+          rewards=[reward_item("minecraft:bell"), skill("craft", 320)]),
+
+    quest("guild_warehouse", "The Warehouse", icon="obscuras_storage:crafting_terminal",
+          after=["sacks_and_jars", "engineers_blueprints"],
+          text=["The founder's blueprints show a warehouse under the workshop. Dig it out and wire it with storage "
+                "cables, connectors and a crafting terminal."],
+          tasks=[item("obscuras_storage:inventory_cable", 8, crafted=True, title="Make cables for the warehouse"),
+                 item("obscuras_storage:inventory_connector", 2, crafted=True, title="Make connectors for the chests"),
+                 item("obscuras_storage:crafting_terminal", crafted=True, title="Make the terminal the founder drew"),
+                 {"place": "reece"},
+                 {"build": {"blocks": {"obscuras_storage:crafting_terminal": 1, "obscuras_storage:inventory_cable": 6},
+                            "radius": 12}, "title": "Wire the workshop's warehouse"}],
+          rewards=[reward_item("obscuras_storage:crafting_terminal"), skill("craft", 320)]),
+
+    quest("sorting_room", "The Sorting Room", icon="artifacts:universal_attractor", after=["guild_warehouse"],
+          signature="artifacts:universal_attractor",
+          text=["Odile commissions a sorting room where every delivery sorts itself: item filters and hoppers into the "
+                "right crates. When it works, she gives you her prototype attractor."],
+          tasks=[item("obscuras_storage:item_filter", 2, crafted=True, title="Make filters to sort the deliveries"),
+                 {"build": {"blocks": {"obscuras_storage:item_filter": 2, "minecraft:hopper": 4, "minecraft:barrel": 4},
+                            "radius": 10}, "title": "Build a room that sorts every delivery into its crate"}],
+          rewards=[reward_item("artifacts:universal_attractor"), skill("craft", 380)]),
+
+    quest("pack_upgrades", "Pockets Within Pockets", icon="sophisticatedbackpacks:advanced_refill_upgrade",
+          after=["joiners_pack"],
+          text=["Long jobs need a bigger pack. Upgrade your travelling pack with a magnet, pickup, auto-smelting and "
+                "compacting upgrades, so you can work without stopping."],
+          tasks=[item("sophisticatedbackpacks:magnet_upgrade", crafted=True, title="Fit a magnet to gather your work"),
+                 item("sophisticatedbackpacks:pickup_upgrade", crafted=True, title="Fit a pickup upgrade"),
+                 item("sophisticatedbackpacks:auto_smelting_upgrade", crafted=True, title="Fit auto-smelting for ore"),
+                 item("sophisticatedbackpacks:compacting_upgrade", crafted=True, title="Fit compacting to save space")],
+          rewards=[reward_item("sophisticatedbackpacks:advanced_refill_upgrade"), skill("craft", 300)]),
+
+    quest("instrument_maker", "Strings and Skins", icon="immersive_melodies:vielle", after=["village_square"],
+          text=["The village band lost its instruments in a fire. Make a lute, a flute, a tiny drum and a trumpet and "
+                "deliver one to each musician."],
+          tasks=[item("immersive_melodies:lute", crafted=True, title="Make a lute for the band"),
+                 item("immersive_melodies:flute", crafted=True, title="Make a flute for the band"),
+                 item("immersive_melodies:tiny_drum", crafted=True, title="Make a tiny drum for the band"),
+                 item("immersive_melodies:trumpet", crafted=True, title="Make a trumpet for the band"),
+                 {"structure": "#villages", "title": "Take the instruments to the band"},
+                 enc(["You made all four? Bless you. We play tonight!"], entity="minecraft:villager", name="Band Leader",
+                     title="Hand the instruments to the band's leader")],
+          rewards=[reward_item("immersive_melodies:vielle"), skill("craft", 320)]),
+
+    quest("village_concert", "The Concert", icon="supplementaries:bunting", after=["instrument_maker"],
+          text=["The band needs a stage in the square. Build one with buntings and seating, then join the band so "
+                "the gathered villagers can hear it play."],
+          tasks=[{"structure": "#villages", "title": "Go to the village square"},
+                 {"build": {"blocks": {"supplementaries:bunting": 4, "another_furniture:oak_bench": 4, "minecraft:oak_stairs": 6},
+                            "radius": 12}, "title": "Build a stage with buntings and seating"}],
+          rewards=[reward_item("minecraft:music_disc_cat"), reward_item("supplementaries:confetti_popper", 6),
+                   skill("craft", 340)]),
+
+    quest("guild_uniform", "Dressed for the Guild", icon="minecraft:leather_chestplate", after=["rival_carpenter"],
+          text=["A guild member should look the part even in armour. Make the guild's leather apron outfit to wear "
+                "over your gear when you report to Odile."],
+          tasks=[item("minecraft:leather_chestplate", crafted=True, title="Make the guild apron"),
+                 item("minecraft:leather_leggings", crafted=True, title="Make the guild leggings"),
+                 talk_char("odile", ["Leather over armour. Good. A guild member should look the part."],
+                           title="Report to Odile in your uniform")],
+          rewards=[reward_item("minecraft:leather_chestplate", name="Guild Apron", lore=["Dyed in the guild's colours."]),
+                   skill("craft", 300)]),
+
+    quest("gingerbread", "Ginger in the Snow", icon="snowyspirit:gingerbread", after=["village_concert"],
+          text=["Winter is coming and the children want a gingerbread house. Find wild ginger, grow it, bake "
+                "gingerbread and build the house in the square."],
+          tasks=[item("snowyspirit:ginger", 4, title="Find wild ginger to grow"),
+                 item("snowyspirit:gingerbread", 8, crafted=True, title="Bake gingerbread for the walls"),
+                 {"structure": "#villages", "title": "Go to the village square"},
+                 {"build": {"blocks": {"snowyspirit:gingerbread": 16, "snowyspirit:gingerbread_door": 1},
+                            "radius": 10}, "title": "Build the gingerbread house for the children"}],
+          rewards=[reward_item("snowyspirit:gingerbread_cookie", 8), reward_item("snowyspirit:candy_cane", 8),
+                   skill("craft", 320)]),
+
+    quest("sled_race", "Downhill", icon="snowyspirit:sled_oak", after=["gingerbread"],
+          text=["The snowy village holds a downhill race every winter. Build a sled and beat the local champion to "
+                "the bottom."],
+          tasks=[item("snowyspirit:sled_oak", crafted=True, title="Build a sled for the race"),
+                 {"structure": "ctov:medium/village_snowy_igloo", "title": "Go to the snowy village's hill"},
+                 {"advancement": "snowyspirit:adventure/ride_sled_fast", "title": "Beat the champion down the hill"}],
+          rewards=[reward_item("snowyspirit:candy_cane_block", 4), skill("craft", 360)]),
+]
+
+chapter("skill_crafting", "The Crafters' Guild", "Crafting path", "minecraft:crafting_table", "skills", 5, Q + ACT2)

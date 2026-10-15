@@ -643,6 +643,354 @@
         }
       ],
       "icon": "smallships:oak_cog"
+    },
+    {
+      "id": "water_run",
+      "title": "No Boats Allowed",
+      "after": [
+        "first_ferry"
+      ],
+      "text": [
+        "A bet in the beach village: cross the lake to the far pier without a boat, before the hourglass runs out. Sprint, swim and leap. The bet's winner keeps the strange shoes that run on water."
+      ],
+      "tasks": [
+        {
+          "structure": "ctov:medium/village_beach",
+          "title": "Take up the bet in the beach village"
+        },
+        {
+          "timed": {
+            "seconds": 240,
+            "goal": {
+              "structure": "#fishing_huts",
+              "label": "the far pier",
+              "away": 80
+            },
+            "lines": [
+              "No boats. The hourglass is running."
+            ],
+            "start": "Start the crossing",
+            "no": [
+              "teleport",
+              "mounts"
+            ]
+          },
+          "title": "Reach the far pier without a boat"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:aqua_dashers"
+        },
+        {
+          "skill": "agility",
+          "xp": 250
+        }
+      ],
+      "icon": "artifacts:aqua_dashers",
+      "signature": "artifacts:aqua_dashers"
+    },
+    {
+      "id": "mountain_post",
+      "title": "Powder Road",
+      "after": [
+        "night_post"
+      ],
+      "text": [
+        "An alpine village is snowed in and waiting for winter supplies. Carry the parcel over the powder snow to the mountain outpost before the storm closes the pass. The outpost's courier gives you their snowshoes."
+      ],
+      "tasks": [
+        {
+          "item": "endermail:package",
+          "consume": true,
+          "title": "Take the winter supplies parcel"
+        },
+        {
+          "timed": {
+            "seconds": 600,
+            "goal": {
+              "structure": "ctov:medium/village_mountain_alpine",
+              "label": "the mountain outpost",
+              "away": 150
+            },
+            "lines": [
+              "The storm is closing the pass. Go!"
+            ],
+            "start": "Start the climb",
+            "no": [
+              "teleport",
+              "mounts"
+            ]
+          },
+          "title": "Reach the snowed-in village before the pass closes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:snowshoes"
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "artifacts:snowshoes",
+      "signature": "artifacts:snowshoes"
+    },
+    {
+      "id": "monastery_climb",
+      "title": "Speed Climb",
+      "after": [
+        "ledge_rescue"
+      ],
+      "text": [
+        "A rival courier claims the peak below the monastery in record time. Get a grappling hook, wall-run boots, and beat their time."
+      ],
+      "tasks": [
+        {
+          "item": "grapplemod:grapplinghook",
+          "title": "Take your grappling hook for the climb"
+        },
+        {
+          "item": "parcool:traceur_boots",
+          "crafted": true,
+          "title": "Get wall-run boots"
+        },
+        {
+          "timed": {
+            "seconds": 420,
+            "goal": {
+              "structure": "mowziesmobs:monastery",
+              "label": "the monastery",
+              "away": 150
+            },
+            "lines": [
+              "The rival's record stands. Beat it."
+            ],
+            "start": "Start the race",
+            "no": [
+              "teleport",
+              "mounts"
+            ]
+          },
+          "title": "Race the rival courier up the peak"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:rope",
+          "count": 16
+        },
+        {
+          "item": "minecraft:string",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "grapplemod:grapplinghook"
+    },
+    {
+      "id": "brigg_charter",
+      "title": "The Lighthouse Run",
+      "after": [
+        "first_ferry"
+      ],
+      "text": [
+        "The lighthouse keeper's oil comes by sea. Build a brigg with cargo room and take a full load of lamp oil and letters up the coast."
+      ],
+      "tasks": [
+        {
+          "item": "smallships:oak_brigg",
+          "crafted": true,
+          "title": "Build a brigg with room for cargo"
+        },
+        {
+          "item": "minecraft:lantern",
+          "count": 8,
+          "consume": true,
+          "title": "Load lamp lanterns for the keeper"
+        },
+        {
+          "item": "fotfmail:letter",
+          "count": 4,
+          "consume": true,
+          "title": "Load the keeper's letters"
+        },
+        {
+          "structure": "#lighthouses",
+          "title": "Sail the cargo up the coast to the lighthouse"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "item": "smallships:cannon"
+        },
+        {
+          "skill": "agility",
+          "xp": 280
+        }
+      ],
+      "icon": "smallships:oak_brigg"
+    },
+    {
+      "id": "ships_at_sea",
+      "title": "Mail for the Fleet",
+      "after": [
+        "brigg_charter"
+      ],
+      "text": [
+        "An outcast fisherman lives on his little boat far out at sea, and his family ashore hasn't heard from him in months. Sail out, find a boat at sea and hand him their letters."
+      ],
+      "tasks": [
+        {
+          "item": "fotfmail:letter",
+          "count": 3,
+          "consume": true,
+          "title": "Take the family's letters"
+        },
+        {
+          "structure": "#ships_at_sea",
+          "title": "Find a boat out at sea"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Outcast Fisherman",
+            "then": "talk",
+            "lines": [
+              "Letters! From home! I'll write back at once.",
+              "Take my reply. Tell them I'm well."
+            ]
+          },
+          "title": "Hand the fisherman his letters"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:map"
+        },
+        {
+          "item": "fotfmail:letter",
+          "count": 2
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "fotfmail:letter"
+    },
+    {
+      "id": "first_flight",
+      "title": "Bamboo Wings",
+      "after": [
+        "monastery_climb"
+      ],
+      "text": [
+        "A firewatch tower deep in the woods needs post nobody can walk to in a day. Build an Immersive Aircraft bamboo hopper and fly the first airmail to its keeper."
+      ],
+      "tasks": [
+        {
+          "item": "immersive_aircraft:bamboo_hopper",
+          "crafted": true,
+          "title": "Build a bamboo hopper"
+        },
+        {
+          "item": "fotfmail:letter",
+          "consume": true,
+          "title": "Load the airmail for the keeper"
+        },
+        {
+          "timed": {
+            "seconds": 600,
+            "goal": {
+              "structure": "#firewatch_towers",
+              "label": "the firewatch tower",
+              "away": 150
+            },
+            "lines": [
+              "Fly the first airmail. The keeper's waiting."
+            ],
+            "start": "Take off",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Fly the post to the firewatch tower"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "immersive_aircraft:propeller"
+        },
+        {
+          "item": "minecraft:coal",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 320
+        }
+      ],
+      "icon": "immersive_aircraft:bamboo_hopper"
+    },
+    {
+      "id": "runaway_float",
+      "title": "The Float That Got Away",
+      "after": [
+        "first_flight"
+      ],
+      "text": [
+        "A child's pool float slipped its string and drifted up to an island floating in the sky. Get up there by hook, plane or pillar and bring it back. The child lets you keep it."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Crying Child",
+            "then": "talk",
+            "lines": [
+              "My flamingo! It floated away! It's up there!"
+            ]
+          },
+          "title": "Meet the child who lost their float"
+        },
+        {
+          "structure": "#moog_sky_islands",
+          "title": "Get up to the floating islands by any means"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mss:small_oak_house"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Child's Float",
+              "texture": "minecraft:item/pink_dye"
+            },
+            "found": "A pink float, snagged on a rooftop."
+          },
+          "title": "Search the islands for the child's float"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:helium_flamingo"
+        },
+        {
+          "skill": "agility",
+          "xp": 380
+        }
+      ],
+      "icon": "artifacts:helium_flamingo",
+      "signature": "artifacts:helium_flamingo"
     }
   ]
 }

@@ -98,6 +98,21 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_taming:fairy_meadow: needs catching fairies; written as observing each colour and carrying bottles
 - skill_taming:falconry: needs flying the eagle to bring back a rabbit; written as taming and crafting the glove and hood
 - skill_taming:elephant_caravan: needs the trader as well as the elephant; written as escorting the elephant
+- skill_agility:water_run: needs a lake crossing to a specific pier; written as a timed run to the nearest fishing hut with no mounts
+- skill_agility:monastery_climb: needs a motor upgrade for the hook (trimmed from the pack); written with the plain grappling hook and wall-run boots
+- skill_agility:runaway_float: needs a drifted float; written as a search of a floating house
+- skill_crafting:rival_carpenter: needs a villagers' vote; written as furnishing a room
+- skill_crafting:ruined_town: needs clearing and rebuilding a town; written as deeds searched for and a house and bridge build
+- skill_crafting:sorting_room: needs working filters feeding crates; written as a build of filters, hoppers and barrels
+- skill_crafting:village_concert: needs playing a melody for the villagers; written as a stage build
+- skill_crafting:guild_uniform: needs cosmetic slots; written as crafting leathers and reporting to Odile
+- skill_crafting:gingerbread: needs wild ginger grown on farmland; written as ginger carried and gingerbread baked
+- skill_crafting:sled_race: needs a champion's time; written as the ride-a-sled-fast advancement
+- magic:arcane_anvil: needs merging scrolls and adding an orb; written as using the anvil
+- magic:cryomancer: needs fire spells to be the only way he dies; written as a boss fight and fire casts
+- magic:lightning_in_a_bottle: needs a thunderstorm; written as lightning casts and bottles
+- magic:unseen_thief: needs failing on being seen by an illager; written as a hurt-free timed crossing
+- magic:translate_logbook: needs a cipher puzzle; written as talking to Orrin
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

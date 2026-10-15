@@ -6822,6 +6822,231 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_crafting:rival_carpenter",
+    "stage": "fq.skill_crafting.rival_carpenter.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Your guild's famous? My rooms are better. Prove otherwise."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7D749DDCC8E41ED8",
+    "prev_tasks": [],
+    "name": "Rival Carpenter",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_crafting:rival_carpenter",
+    "stage": "fq.skill_crafting.rival_carpenter.build2",
+    "type": "build",
+    "keys": [
+      "handcrafted:oak_table",
+      "handcrafted:oak_chair",
+      "handcrafted:oak_shelf",
+      "handcrafted:oak_cupboard",
+      "minecraft:red_bed"
+    ],
+    "counts": [
+      1,
+      2,
+      1,
+      1,
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "7D749DDCC8E41ED8",
+    "prev_tasks": [
+      "1FCCA3D0DCC2DD02",
+      "508C7B62555DB4F3"
+    ]
+  },
+  {
+    "quest": "skill_crafting:ruined_town",
+    "stage": "fq.skill_crafting.ruined_town.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:ruin_town"
+      ],
+      "label": "the destination"
+    },
+    "count": 2,
+    "item": "kubejs:quest_ruined_town_1",
+    "found": "A scorched deed to a plot, its seal intact.",
+    "requires": [],
+    "quest_id": "2847870C90887544",
+    "prev_tasks": [
+      "16DDAC80C4311A94"
+    ]
+  },
+  {
+    "quest": "skill_crafting:ruined_town",
+    "stage": "fq.skill_crafting.ruined_town.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:oak_planks",
+      "#minecraft:doors",
+      "#minecraft:beds",
+      "mcwbridges:oak_bridge_pier"
+    ],
+    "counts": [
+      40,
+      3,
+      3,
+      2
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "2847870C90887544",
+    "prev_tasks": [
+      "16DDAC80C4311A94",
+      "74C33512C919F8D0"
+    ]
+  },
+  {
+    "quest": "skill_crafting:guild_warehouse",
+    "stage": "fq.skill_crafting.guild_warehouse.build4",
+    "type": "build",
+    "keys": [
+      "obscuras_storage:crafting_terminal",
+      "obscuras_storage:inventory_cable"
+    ],
+    "counts": [
+      1,
+      6
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "71201033D00144CC",
+    "prev_tasks": [
+      "10AEA2C0C1FF1E22",
+      "57BF7F12C3342966",
+      "1B2A89970C9C028E",
+      "667D9C18CA23EB89"
+    ]
+  },
+  {
+    "quest": "skill_crafting:sorting_room",
+    "stage": "fq.skill_crafting.sorting_room.build1",
+    "type": "build",
+    "keys": [
+      "obscuras_storage:item_filter",
+      "minecraft:hopper",
+      "minecraft:barrel"
+    ],
+    "counts": [
+      2,
+      4,
+      4
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "2915087534960C16",
+    "prev_tasks": [
+      "3B348D9B040918A2"
+    ]
+  },
+  {
+    "quest": "skill_crafting:instrument_maker",
+    "stage": "fq.skill_crafting.instrument_maker.enc5",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "You made all four? Bless you. We play tonight!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "22176C573D0EF440",
+    "prev_tasks": [
+      "5462926A0F6A52A0",
+      "2108E8231961420A",
+      "133BC82ECDCB5C26",
+      "489969B301EDF5E8",
+      "2A70EC7C08E5E39F"
+    ],
+    "name": "Band Leader",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_crafting:village_concert",
+    "stage": "fq.skill_crafting.village_concert.build1",
+    "type": "build",
+    "keys": [
+      "supplementaries:bunting",
+      "another_furniture:oak_bench",
+      "minecraft:oak_stairs"
+    ],
+    "counts": [
+      4,
+      4,
+      6
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "27C05E87C55AAEB2",
+    "prev_tasks": [
+      "0EEC553DBBEB0B15"
+    ]
+  },
+  {
+    "quest": "skill_crafting:guild_uniform",
+    "stage": "fq.skill_crafting.guild_uniform.talk2",
+    "type": "talk",
+    "lines": [
+      "Leather over armour. Good. A guild member should look the part."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "odile",
+    "quest_id": "1CAEFEBB883E4FAA",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_crafting:gingerbread",
+    "stage": "fq.skill_crafting.gingerbread.build3",
+    "type": "build",
+    "keys": [
+      "snowyspirit:gingerbread",
+      "snowyspirit:gingerbread_door"
+    ],
+    "counts": [
+      16,
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "7CF4315F67878925",
+    "prev_tasks": [
+      "1F7F9E4F8D7D0A80",
+      "2A7131F46223E0A0",
+      "080FF413B5DA64F2"
+    ]
+  },
+  {
     "quest": "skill_attack:the_board",
     "stage": "fq.skill_attack.the_board.talk0",
     "type": "talk",
@@ -9134,6 +9359,209 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_agility:water_run",
+    "stage": "fq.skill_agility.water_run.timed1",
+    "type": "timed",
+    "seconds": 240,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "beachparty:beach_hut",
+        "dungeons_arise:fishing_hut"
+      ],
+      "label": "the far pier",
+      "away": 80
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "No boats. The hourglass is running."
+    ],
+    "start": "Start the crossing",
+    "requires": [],
+    "quest_id": "72613ECEC07BC45F",
+    "prev_tasks": [
+      "1428B6CE8F133160"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:mountain_post",
+    "stage": "fq.skill_agility.mountain_post.timed1",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "ctov:medium/village_mountain_alpine"
+      ],
+      "label": "the mountain outpost",
+      "away": 150
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "The storm is closing the pass. Go!"
+    ],
+    "start": "Start the climb",
+    "requires": [],
+    "quest_id": "713473066403DD24",
+    "prev_tasks": [
+      "645430D546FB8BDD"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:monastery_climb",
+    "stage": "fq.skill_agility.monastery_climb.timed2",
+    "type": "timed",
+    "seconds": 420,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "mowziesmobs:monastery"
+      ],
+      "label": "the monastery",
+      "away": 150
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "The rival's record stands. Beat it."
+    ],
+    "start": "Start the race",
+    "requires": [],
+    "quest_id": "18B50A48B1EFBBDA",
+    "prev_tasks": [
+      "6C683F6FE07BA880",
+      "4BE7683623729AFA"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:ships_at_sea",
+    "stage": "fq.skill_agility.ships_at_sea.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Letters! From home! I'll write back at once.",
+      "Take my reply. Tell them I'm well."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "000C51639004CD8D",
+    "prev_tasks": [
+      "7E255FD8A8A61450",
+      "03BC5B45BF843E8D"
+    ],
+    "name": "Outcast Fisherman",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_agility:first_flight",
+    "stage": "fq.skill_agility.first_flight.timed2",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:firewatch_tower_birch",
+        "nova_structures:firewatch_tower_cherry",
+        "nova_structures:firewatch_tower_dark_oak",
+        "nova_structures:firewatch_tower_forest",
+        "nova_structures:firewatch_tower_jungle",
+        "nova_structures:firewatch_tower_mangrove",
+        "nova_structures:firewatch_tower_savanna",
+        "nova_structures:firewatch_tower_swamp",
+        "nova_structures:firewatch_tower_taiga",
+        "structory:firetower",
+        "structory_towers:small_firetower"
+      ],
+      "label": "the firewatch tower",
+      "away": 150
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Fly the first airmail. The keeper's waiting."
+    ],
+    "start": "Take off",
+    "requires": [],
+    "quest_id": "65740190CEF18C11",
+    "prev_tasks": [
+      "4BD061908389083B",
+      "00A9DFF352B8A0AA"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:runaway_float",
+    "stage": "fq.skill_agility.runaway_float.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "My flamingo! It floated away! It's up there!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "0098B2EA179D5FE9",
+    "prev_tasks": [],
+    "name": "Crying Child",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_agility:runaway_float",
+    "stage": "fq.skill_agility.runaway_float.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mss:small_oak_house"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_runaway_float_2",
+    "found": "A pink float, snagged on a rooftop.",
+    "requires": [],
+    "quest_id": "0098B2EA179D5FE9",
+    "prev_tasks": [
+      "2B576493167F9102",
+      "04542BD61305EFF3"
+    ]
+  },
+  {
     "quest": "magic:the_order_calls",
     "stage": "fq.magic.the_order_calls",
     "type": "org",
@@ -9473,6 +9901,373 @@ global.QUEST_GIVERS = [
     "requires": [],
     "quest_id": "6CF10DAB4DA641F9",
     "prev_tasks": []
+  },
+  {
+    "quest": "magic:arcane_anvil",
+    "stage": "fq.magic.arcane_anvil.use1",
+    "type": "use",
+    "keys": [
+      "irons_spellbooks:arcane_anvil"
+    ],
+    "count": 1,
+    "at": null,
+    "within": 0,
+    "holding": "",
+    "consume": false,
+    "requires": [],
+    "quest_id": "1E29AA06F686A54A",
+    "prev_tasks": [
+      "5C02DB43F50DF15E"
+    ]
+  },
+  {
+    "quest": "magic:mountain_tower",
+    "stage": "fq.magic.mountain_tower.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "minecraft:frozen_peaks",
+        "minecraft:snowy_slopes",
+        "minecraft:jagged_peaks"
+      ]
+    },
+    "requires": [],
+    "quest_id": "0F32A38A426BE530",
+    "prev_tasks": []
+  },
+  {
+    "quest": "magic:cryomancer",
+    "stage": "fq.magic.cryomancer.spawn0",
+    "type": "spawn",
+    "entity": "irons_spellbooks:cryomancer",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:mountain_tower"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Cryomancer",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "6B74D3179AD600A2",
+    "requires": [],
+    "quest_id": "25290C2A81B2CE80",
+    "prev_tasks": []
+  },
+  {
+    "quest": "magic:cryomancer",
+    "stage": "fq.magic.cryomancer.cast1",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:fire",
+    "count": 5,
+    "requires": [],
+    "quest_id": "25290C2A81B2CE80",
+    "prev_tasks": [
+      "6B74D3179AD600A2"
+    ]
+  },
+  {
+    "quest": "magic:spider_den",
+    "stage": "fq.magic.spider_den.spawn0",
+    "type": "spawn",
+    "entity": "irons_spellbooks:ice_spider",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:ice_spider_den"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Den Brood",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "4F9467D1B2DC4742",
+    "requires": [],
+    "quest_id": "10F182C88A14E946",
+    "prev_tasks": []
+  },
+  {
+    "quest": "magic:spider_den",
+    "stage": "fq.magic.spider_den.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:ice_spider_den"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_spider_den_1",
+    "found": "An unbroken egg, cold as a stone.",
+    "requires": [],
+    "quest_id": "10F182C88A14E946",
+    "prev_tasks": [
+      "4F9467D1B2DC4742"
+    ]
+  },
+  {
+    "quest": "magic:spider_egg_feast",
+    "stage": "fq.magic.spider_egg_feast.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Cook an ice spider egg. Serve it to Orrin. Don't tell him."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "3ADECA46D5AC21A9",
+    "prev_tasks": [],
+    "name": "Pip",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "minecraft:librarian"
+  },
+  {
+    "quest": "magic:spider_egg_feast",
+    "stage": "fq.magic.spider_egg_feast.talk2",
+    "type": "talk",
+    "lines": [
+      "A cold delicacy? Splendid. Is that... egg? Delicious."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "orrin",
+    "quest_id": "3ADECA46D5AC21A9",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:impaled_icebreaker",
+    "stage": "fq.magic.impaled_icebreaker.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:impaled_icebreaker"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_impaled_icebreaker_0",
+    "found": "The captain's chest, iced shut.",
+    "requires": [],
+    "quest_id": "6E2E808F26D31F30",
+    "prev_tasks": [
+      "32A821B39AA6BF49"
+    ]
+  },
+  {
+    "quest": "magic:lightning_in_a_bottle",
+    "stage": "fq.magic.lightning_in_a_bottle.cast0",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:lightning",
+    "count": 5,
+    "requires": [],
+    "quest_id": "05DBBF7A615E89FC",
+    "prev_tasks": []
+  },
+  {
+    "quest": "magic:evoker_fort",
+    "stage": "fq.magic.evoker_fort.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "I came as soon as I could. What did you see?",
+      "Good. Remember it."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "04671B71A5B99184",
+    "prev_tasks": [
+      "0496F2CD8CC19FA0",
+      "1C733107045B6B16"
+    ],
+    "name": "Archmage Orrin Vael",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "minecraft:librarian"
+  },
+  {
+    "quest": "magic:unseen_thief",
+    "stage": "fq.magic.unseen_thief.timed1",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:evoker_fort"
+      ],
+      "label": "the logbook's vault",
+      "away": 40
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Don't be seen. If anything hurts you, you start again."
+    ],
+    "start": "Slip in",
+    "requires": [],
+    "quest_id": "356C2F26A2F950C8",
+    "prev_tasks": [
+      "4F7270C233A1C286"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "magic:unseen_thief",
+    "stage": "fq.magic.unseen_thief.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:evoker_fort"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_unseen_thief_2",
+    "found": "A cipher-written logbook, untranslated.",
+    "requires": [],
+    "quest_id": "356C2F26A2F950C8",
+    "prev_tasks": [
+      "4F7270C233A1C286",
+      "431FCA8E4768C622"
+    ]
+  },
+  {
+    "quest": "magic:translate_logbook",
+    "stage": "fq.magic.translate_logbook.talk1",
+    "type": "talk",
+    "lines": [
+      "A cipher, page by page. Hold the lamp.",
+      "It names the catacombs. The dead are being raised."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "orrin",
+    "quest_id": "40A6CB9EE0244838",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:archevoker",
+    "stage": "fq.magic.archevoker.spawn0",
+    "type": "spawn",
+    "entity": "irons_spellbooks:archevoker",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:evoker_fort"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Archevoker",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "23681F63D1611206",
+    "requires": [],
+    "quest_id": "67B61898A4CBBA4D",
+    "prev_tasks": []
+  },
+  {
+    "quest": "magic:five_schools",
+    "stage": "fq.magic.five_schools.cast0",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:fire",
+    "count": 1,
+    "requires": [],
+    "quest_id": "2C61980DB2BD18ED",
+    "prev_tasks": []
+  },
+  {
+    "quest": "magic:five_schools",
+    "stage": "fq.magic.five_schools.cast1",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:ice",
+    "count": 1,
+    "requires": [],
+    "quest_id": "2C61980DB2BD18ED",
+    "prev_tasks": [
+      "1F21DA5DEE7445AA"
+    ]
+  },
+  {
+    "quest": "magic:five_schools",
+    "stage": "fq.magic.five_schools.cast2",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:lightning",
+    "count": 1,
+    "requires": [],
+    "quest_id": "2C61980DB2BD18ED",
+    "prev_tasks": [
+      "1F21DA5DEE7445AA",
+      "1CFEFE9340578ABB"
+    ]
+  },
+  {
+    "quest": "magic:five_schools",
+    "stage": "fq.magic.five_schools.cast3",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:nature",
+    "count": 1,
+    "requires": [],
+    "quest_id": "2C61980DB2BD18ED",
+    "prev_tasks": [
+      "1F21DA5DEE7445AA",
+      "1CFEFE9340578ABB",
+      "0C93BEC8D385D3CA"
+    ]
+  },
+  {
+    "quest": "magic:five_schools",
+    "stage": "fq.magic.five_schools.cast4",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:holy",
+    "count": 1,
+    "requires": [],
+    "quest_id": "2C61980DB2BD18ED",
+    "prev_tasks": [
+      "1F21DA5DEE7445AA",
+      "1CFEFE9340578ABB",
+      "0C93BEC8D385D3CA",
+      "158696BDBE5EE488"
+    ]
   },
   {
     "quest": "skill_taming:stray_wolf",

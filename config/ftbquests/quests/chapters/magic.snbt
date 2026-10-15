@@ -388,7 +388,7 @@
 			]
 			title: "The Study"
 			x: 6.0d
-			y: -1.5d
+			y: -2.25d
 		}
 		{
 			dependencies: ["06999C12176240CD"]
@@ -427,7 +427,7 @@
 			]
 			title: "The Pyromancer's Tower"
 			x: 6.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["584ADBE4C6FEB091"]
@@ -465,7 +465,7 @@
 			]
 			title: "Trial by Fire"
 			x: 7.5d
-			y: -0.75d
+			y: -2.25d
 		}
 		{
 			dependencies: ["584ADBE4C6FEB091"]
@@ -513,7 +513,7 @@
 			]
 			title: "School of Fire"
 			x: 7.5d
-			y: 0.75d
+			y: -0.75d
 		}
 		{
 			dependencies: ["05EC86DA29A28F2C"]
@@ -722,7 +722,7 @@
 			]
 			title: "The Lost Apprentice"
 			x: 6.0d
-			y: 1.5d
+			y: 0.75d
 		}
 		{
 			dependencies: ["37D8CE7836BA8E4D"]
@@ -759,7 +759,749 @@
 			]
 			title: "A Hundred Sparks"
 			x: 9.0d
+			y: -3.75d
+		}
+		{
+			dependencies: [
+				"392FFF5F5EB2A584"
+				"2CF0262A21E6E0BC"
+			]
+			description: ["Orrin's long nights need better ink and a stronger brew. Mix uncommon and rare ink in an alchemist cauldron, and brew a casters' tea for him."]
+			icon: "irons_spellbooks:alchemist_cauldron"
+			id: "236138BED80930A5"
+			rewards: [
+				{
+					count: 2
+					id: "42E89BB400C7654F"
+					item: "irons_spellbooks:rare_ink"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 180"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "5437AD579FC0F14A"
+					silent: true
+					title: "+180 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7FD90E7F8868C611"
+					item: "irons_spellbooks:uncommon_ink"
+					only_from_crafting: true
+					title: "Mix uncommon ink for Orrin's scrolls"
+					type: "item"
+				}
+				{
+					id: "445D9E13C199A701"
+					item: "irons_spellbooks:rare_ink"
+					only_from_crafting: true
+					title: "Mix rare ink for his best work"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "6B5B765B006EFC06"
+					item: "herbalbrews:oolong_tea"
+					title: "Brew a casters' tea for his long nights"
+					type: "item"
+				}
+			]
+			title: "The Bubbling Cauldron"
+			x: 6.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["236138BED80930A5"]
+			description: ["Scrolls are weak alone and strong merged. Forge an arcane anvil, merge two scrolls into a stronger one, and add an upgrade orb to your armour."]
+			icon: "irons_spellbooks:arcane_anvil"
+			id: "1E29AA06F686A54A"
+			rewards: [
+				{
+					id: "2809F2C1D51ADA67"
+					item: "irons_spellbooks:evocation_upgrade_orb"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "6F1A650D14708115"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5C02DB43F50DF15E"
+					item: "irons_spellbooks:arcane_anvil"
+					only_from_crafting: true
+					title: "Forge an arcane anvil"
+					type: "item"
+				}
+				{
+					id: "1D6B1C18BB71C171"
+					stage: "fq.magic.arcane_anvil.use1"
+					title: "Merge two scrolls on the anvil"
+					type: "gamestage"
+				}
+			]
+			title: "The Arcane Anvil"
+			x: 7.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["1E29AA06F686A54A"]
+			description: ["A better spellbook needs mithril. Mine it deep in the deepslate, smelt it and weave mithril cloth for the binding."]
+			icon: "irons_spellbooks:mithril_ingot"
+			id: "3DD867330264BE65"
+			rewards: [
+				{
+					count: 2
+					id: "0164901890BE9805"
+					item: "irons_spellbooks:mithril_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 220"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "167A346D7D7D5428"
+					silent: true
+					title: "+220 Magic XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 150"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "5ECF3B7B7F62143E"
+					silent: true
+					title: "+150 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "3B693F800CA893E5"
+					item: "irons_spellbooks:mithril_scrap"
+					title: "Mine mithril deep in the deepslate"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "4E2C8CBA03B587F8"
+					item: "irons_spellbooks:mithril_ingot"
+					title: "Smelt the mithril"
+					type: "item"
+				}
+				{
+					id: "237507F85946FD78"
+					item: "irons_spellbooks:mithril_weave"
+					only_from_crafting: true
+					title: "Weave mithril cloth for a spellbook binding"
+					type: "item"
+				}
+			]
+			title: "The Mithril Vein"
+			x: 9.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["236138BED80930A5"]
+			description: ["High in the frozen peaks stands the Cryomancer's tower. Climb to it through the snow, with the cold biting at you."]
+			icon: "irons_spellbooks:frostward_ring"
+			id: "0F32A38A426BE530"
+			rewards: [
+				{
+					id: "6B51E1A11258E01E"
+					item: "irons_spellbooks:frostward_ring"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 220"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "3143943B6DBFC218"
+					silent: true
+					title: "+220 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "28E3625F278F4D94"
+					stage: "fq.magic.mountain_tower.be0"
+					title: "Climb into the frozen peaks"
+					type: "gamestage"
+				}
+				{
+					id: "3BC305B5E6A8CF8B"
+					structure: "irons_spellbooks:mountain_tower"
+					title: "Reach the Cryomancer's tower"
+					type: "structure"
+				}
+			]
+			title: "The Cryomancer's Tower"
+			x: 7.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["0F32A38A426BE530"]
+			description: ["The Cryomancer has gone cold in every way and attacks anyone who climbs his stairs. Melt him with fire."]
+			icon: "irons_spellbooks:cryomancer_chestplate"
+			id: "25290C2A81B2CE80"
+			rewards: [
+				{
+					id: "791B1FACB760367C"
+					item: "irons_spellbooks:cryomancer_chestplate"
+					type: "item"
+				}
+				{
+					id: "5BBED2EF08067C45"
+					item: "irons_spellbooks:scroll_ice"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 300"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "763B62F2CD08280F"
+					silent: true
+					title: "+300 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "irons_spellbooks:cryomancer"
+					id: "6B74D3179AD600A2"
+					title: "Defeat the Cryomancer at the top of his stairs"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "537A9BE643AB2E2B"
+					stage: "fq.magic.cryomancer.cast1"
+					title: "Melt his ice with fire spells"
+					type: "gamestage"
+				}
+			]
+			title: "Thaw the Cryomancer"
+			x: 9.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["0F32A38A426BE530"]
+			description: ["The tower's frost leaves materials behind. Collect frozen bones and permafrost shards, craft an ice rune, and bind an ice spellbook."]
+			icon: "irons_spellbooks:ice_rune"
+			id: "11BF40329C8B15FD"
+			rewards: [
+				{
+					id: "522B215119CB83A6"
+					item: "irons_spellbooks:ice_staff"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 260"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "42CF313ACAC3692F"
+					silent: true
+					title: "+260 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "3A210B951B959154"
+					item: "irons_spellbooks:frozen_bone"
+					title: "Collect frozen bones from the peaks"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "0A7A565C310970C2"
+					item: "irons_spellbooks:permafrost_shard"
+					title: "Collect permafrost shards"
+					type: "item"
+				}
+				{
+					id: "4AE40E42493B96F5"
+					item: "irons_spellbooks:ice_rune"
+					only_from_crafting: true
+					title: "Craft an ice rune"
+					type: "item"
+				}
+				{
+					id: "0B03E076F2EA661F"
+					item: "irons_spellbooks:ice_spell_book"
+					only_from_crafting: true
+					title: "Bind an ice spellbook"
+					type: "item"
+				}
+			]
+			title: "School of Ice"
+			x: 9.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["11BF40329C8B15FD"]
+			description: ["A furled map points to the Ice Spider den. Kill its brood and take one unbroken ice spider egg."]
+			icon: "irons_spellbooks:ice_spider_egg"
+			id: "10F182C88A14E946"
+			rewards: [
+				{
+					count: 3
+					id: "410D6FC48D39D93D"
+					item: "irons_spellbooks:ice_venom_vial"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 280"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "340849A00B0E0186"
+					silent: true
+					title: "+280 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "irons_spellbooks:ice_spider"
+					id: "4F9467D1B2DC4742"
+					title: "Kill the den's brood"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "329F20CE994E7307"
+					item: "kubejs:quest_spider_den_1"
+					title: "Search the den for an unbroken egg"
+					type: "item"
+				}
+			]
+			title: "The Ice Spider Den"
+			x: 10.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["10F182C88A14E946"]
+			description: ["Pip dares you to cook an ice spider egg and serve it to Orrin without telling him what it is."]
+			icon: "irons_spellbooks:cooked_ice_spider_egg"
+			id: "3ADECA46D5AC21A9"
+			rewards: [
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 240"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "324190C07C6BB759"
+					silent: true
+					title: "+240 Magic XP"
+					type: "command"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 150"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "0A1363EEECD3947E"
+					silent: true
+					title: "+150 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "709A7F88ACA16EEC"
+					stage: "fq.magic.spider_egg_feast.enc0"
+					title: "Take Pip's dare"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					id: "732C7E6F8FC15E40"
+					item: "irons_spellbooks:cooked_ice_spider_egg"
+					title: "Cook an ice spider egg"
+					type: "item"
+				}
+				{
+					id: "67BE1EB8CD52DC40"
+					stage: "fq.magic.spider_egg_feast.talk2"
+					title: "Serve the dish to Orrin"
+					type: "gamestage"
+				}
+			]
+			title: "A Cold Delicacy"
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["11BF40329C8B15FD"]
+			description: ["A ship is skewered on an iceberg, its crew frozen solid. Climb aboard and bring the captain's sea chest back intact."]
+			icon: "irons_spellbooks:music_disc_whispers_of_ice"
+			id: "6E2E808F26D31F30"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "0FBA477FF256825A"
+					item: "irons_spellbooks:music_disc_whispers_of_ice"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 260"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "400FC0BF28BF4BF5"
+					silent: true
+					title: "+260 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "32A821B39AA6BF49"
+					structure: "irons_spellbooks:impaled_icebreaker"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "792232691398F018"
+					item: "kubejs:quest_impaled_icebreaker_0"
+					title: "Climb aboard and open the captain's chest"
+					type: "item"
+				}
+			]
+			title: "The Impaled Icebreaker"
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1E29AA06F686A54A"]
+			description: ["Storms hold more than rain. Catch three bottles of lightning while one rages, and craft a lightning rune from them."]
+			icon: "irons_spellbooks:lightning_bottle"
+			id: "05DBBF7A615E89FC"
+			rewards: [
+				{
+					id: "7DA1298E5F3CB739"
+					item: "irons_spellbooks:electromancer_helmet"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 260"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "5F27324008BC76C1"
+					silent: true
+					title: "+260 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3E489D0EAE08E99A"
+					stage: "fq.magic.lightning_in_a_bottle.cast0"
+					title: "Call the storm down with lightning spells"
+					type: "gamestage"
+				}
+				{
+					count: 3L
+					id: "3AC8B6D1707F1700"
+					item: "irons_spellbooks:lightning_bottle"
+					title: "Catch three bottles of lightning"
+					type: "item"
+				}
+				{
+					id: "16BCF5F6D2281254"
+					item: "irons_spellbooks:lightning_rune"
+					only_from_crafting: true
+					title: "Craft a lightning rune"
+					type: "item"
+				}
+			]
+			title: "Lightning in a Bottle"
+			x: 9.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["1E29AA06F686A54A"]
+			description: ["Orrin's stolen tome, the Archevoker's logbook, is kept in the Evoker Fort. Scout it and learn the guards' rotations."]
+			icon: "minecraft:spyglass"
+			id: "04671B71A5B99184"
+			rewards: [
+				{
+					id: "2E20663882564D45"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 250"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "4E5A3A6DD1A493A8"
+					silent: true
+					title: "+250 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0496F2CD8CC19FA0"
+					structure: "irons_spellbooks:evoker_fort"
+					title: "Scout the Evoker Fort"
+					type: "structure"
+				}
+				{
+					id: "1C733107045B6B16"
+					observe_type: "entity_type"
+					timer: 60L
+					title: "Watch the guards' rotation from cover"
+					to_observe: "minecraft:evoker"
+					type: "observation"
+				}
+				{
+					id: "00F40E0A6C16BB20"
+					stage: "fq.magic.evoker_fort.enc2"
+					title: "Report what you saw to Orrin"
+					type: "gamestage"
+				}
+			]
+			title: "The Evoker Fort"
+			x: 9.0d
+			y: 3.75d
+		}
+		{
+			dependencies: ["04671B71A5B99184"]
+			description: ["Get into the fort and take the logbook without any illager seeing you. Caught once, you start again. Pip lends her trick for the first try, and the scarf she borrowed from Orrin once you're out."]
+			icon: "artifacts:scarf_of_invisibility"
+			id: "356C2F26A2F950C8"
+			rewards: [
+				{
+					id: "364151E741CDC4A0"
+					item: "artifacts:scarf_of_invisibility"
+					type: "item"
+				}
+				{
+					id: "199D5B7B41E705AF"
+					item: "irons_spellbooks:archevoker_logbook_untranslated"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 300"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "7E38459427EC7EAF"
+					silent: true
+					title: "+300 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4F7270C233A1C286"
+					item: "irons_spellbooks:invisibility_elixir"
+					title: "Take Pip's invisibility elixir"
+					type: "item"
+				}
+				{
+					id: "431FCA8E4768C622"
+					stage: "fq.magic.unseen_thief.timed1"
+					title: "Cross the fort unseen"
+					type: "gamestage"
+				}
+				{
+					id: "0DC5A24CF818B4E4"
+					item: "kubejs:quest_unseen_thief_2"
+					title: "Take the logbook from the vault"
+					type: "item"
+				}
+			]
+			title: "The Unseen Thief"
+			x: 10.5d
 			y: 0.0d
+		}
+		{
+			dependencies: ["356C2F26A2F950C8"]
+			description: ["The Archevoker's logbook is written in a cipher. Translate it with Orrin's help, page by page. It names the catacombs where the dead are being raised."]
+			icon: "irons_spellbooks:archevoker_logbook_translated"
+			id: "40A6CB9EE0244838"
+			rewards: [
+				{
+					id: "1131885E503FAA91"
+					item: "irons_spellbooks:archevoker_logbook_translated"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 300"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "69AE40A9B05008AA"
+					silent: true
+					title: "+300 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3AA28D1C97961D85"
+					item: "irons_spellbooks:archevoker_logbook_untranslated"
+					title: "Bring the untranslated logbook"
+					type: "item"
+				}
+				{
+					id: "648E63C902808AC5"
+					stage: "fq.magic.translate_logbook.talk1"
+					title: "Translate the cipher with Orrin"
+					type: "gamestage"
+				}
+			]
+			title: "In the Illagers' Hand"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["04671B71A5B99184"]
+			description: ["The Archevoker summons fangs and vexes in the fort's great hall. Defeat him, if you want his robes."]
+			icon: "irons_spellbooks:archevoker_spawn_egg"
+			id: "67B61898A4CBBA4D"
+			rewards: [
+				{
+					id: "02F98365D311FAA8"
+					item: "irons_spellbooks:evoker_spell_book"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 380"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "44B2637C56CA7B74"
+					silent: true
+					title: "+380 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "irons_spellbooks:archevoker"
+					id: "23681F63D1611206"
+					title: "Defeat the Archevoker in the great hall"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Archevoker"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"05DBBF7A615E89FC"
+				"11BF40329C8B15FD"
+			]
+			description: ["Orrin will not call you a mage until you can show him five schools. Cast each once in front of him: fire, ice, lightning, nature and holy."]
+			icon: "irons_spellbooks:affinity_ring"
+			id: "2C61980DB2BD18ED"
+			rewards: [
+				{
+					id: "79ECCEE5A31DF4CC"
+					item: "irons_spellbooks:affinity_ring"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 320"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "3BFB5B7062C79E90"
+					silent: true
+					title: "+320 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1F21DA5DEE7445AA"
+					stage: "fq.magic.five_schools.cast0"
+					title: "Cast a fire spell for Orrin"
+					type: "gamestage"
+				}
+				{
+					id: "1CFEFE9340578ABB"
+					stage: "fq.magic.five_schools.cast1"
+					title: "Cast an ice spell for Orrin"
+					type: "gamestage"
+				}
+				{
+					id: "0C93BEC8D385D3CA"
+					stage: "fq.magic.five_schools.cast2"
+					title: "Cast a lightning spell for Orrin"
+					type: "gamestage"
+				}
+				{
+					id: "158696BDBE5EE488"
+					stage: "fq.magic.five_schools.cast3"
+					title: "Cast a nature spell for Orrin"
+					type: "gamestage"
+				}
+				{
+					id: "106B3B64D93C97B8"
+					stage: "fq.magic.five_schools.cast4"
+					title: "Cast a holy spell for Orrin"
+					type: "gamestage"
+				}
+			]
+			title: "Five Schools"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"2C61980DB2BD18ED"
+				"3DD867330264BE65"
+			]
+			description: ["Five schools need a bigger book. Bind a gold spellbook and add a spell-slot upgrade so it holds every school you know."]
+			icon: "irons_spellbooks:gold_spell_book"
+			id: "09135267C326D560"
+			rewards: [
+				{
+					count: 2
+					id: "1B85A6F26132799E"
+					item: "irons_spellbooks:epic_ink"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 400"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "0A7C31105A93A8D9"
+					silent: true
+					title: "+400 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6DC980B69F23F015"
+					item: "irons_spellbooks:gold_spell_book"
+					only_from_crafting: true
+					title: "Bind a gold spellbook"
+					type: "item"
+				}
+				{
+					id: "2E755B2481698D41"
+					item: "irons_spellbooks:arcane_rune"
+					title: "Make the rune that adds a spell slot"
+					type: "item"
+				}
+			]
+			title: "Room for More"
+			x: 12.0d
+			y: 1.5d
 		}
 	]
 	subtitle: ["Magic path"]

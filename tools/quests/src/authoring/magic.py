@@ -2,6 +2,7 @@
 Plan: src/plans/quests/magic.json. Archmage Orrin Vael runs the Order from Reece's library tower; Pip is his runaway
 apprentice and Sister Agathe hunts the undead."""
 from common import chapter, quest, talk_char, item, reward_item, skill, giver_org, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 Q = [
     quest("the_order_calls", "The Order Calls", icon="minecraft:book", after=["main_story:act1_start"],
@@ -149,4 +150,146 @@ Q = [
           rewards=[reward_item("irons_spellbooks:mana_upgrade_orb"), skill("magic", 280)]),
 ]
 
-chapter("magic", "The Arcane Order", "Magic path", "irons_spellbooks:iron_spell_book", "skills", 10, Q)
+ACT2 = [
+    quest("alchemist_cauldron", "The Bubbling Cauldron", icon="irons_spellbooks:alchemist_cauldron",
+          after=["the_poisoned_traveller", "main_story:act2_start"],
+          text=["Orrin's long nights need better ink and a stronger brew. Mix uncommon and rare ink in an alchemist "
+                "cauldron, and brew a casters' tea for him."],
+          tasks=[item("irons_spellbooks:uncommon_ink", crafted=True, title="Mix uncommon ink for Orrin's scrolls"),
+                 item("irons_spellbooks:rare_ink", crafted=True, title="Mix rare ink for his best work"),
+                 item("herbalbrews:oolong_tea", consume=True, title="Brew a casters' tea for his long nights")],
+          rewards=[reward_item("irons_spellbooks:rare_ink", 2), skill("magic", 180)]),
+
+    quest("arcane_anvil", "The Arcane Anvil", icon="irons_spellbooks:arcane_anvil", after=["alchemist_cauldron"],
+          text=["Scrolls are weak alone and strong merged. Forge an arcane anvil, merge two scrolls into a stronger "
+                "one, and add an upgrade orb to your armour."],
+          tasks=[item("irons_spellbooks:arcane_anvil", crafted=True, title="Forge an arcane anvil"),
+                 {"use": "irons_spellbooks:arcane_anvil", "count": 1, "title": "Merge two scrolls on the anvil"}],
+          rewards=[reward_item("irons_spellbooks:evocation_upgrade_orb"), skill("magic", 200)]),
+
+    quest("mithril_vein", "The Mithril Vein", icon="irons_spellbooks:mithril_ingot", after=["arcane_anvil"],
+          text=["A better spellbook needs mithril. Mine it deep in the deepslate, smelt it and weave mithril cloth "
+                "for the binding."],
+          tasks=[item("irons_spellbooks:mithril_scrap", 4, title="Mine mithril deep in the deepslate"),
+                 item("irons_spellbooks:mithril_ingot", 2, title="Smelt the mithril"),
+                 item("irons_spellbooks:mithril_weave", crafted=True, title="Weave mithril cloth for a spellbook binding")],
+          rewards=[reward_item("irons_spellbooks:mithril_ingot", 2), skill("magic", 220), skill("mining", 150)]),
+
+    quest("mountain_tower", "The Cryomancer's Tower", icon="irons_spellbooks:frostward_ring",
+          after=["alchemist_cauldron"],
+          text=["High in the frozen peaks stands the Cryomancer's tower. Climb to it through the snow, with the cold "
+                "biting at you."],
+          tasks=[{"be": {"biomes": ["minecraft:frozen_peaks", "minecraft:snowy_slopes", "minecraft:jagged_peaks"]},
+                  "title": "Climb into the frozen peaks"},
+                 {"structure": "irons_spellbooks:mountain_tower", "title": "Reach the Cryomancer's tower"}],
+          rewards=[reward_item("irons_spellbooks:frostward_ring"), skill("magic", 220)]),
+
+    quest("cryomancer", "Thaw the Cryomancer", icon="irons_spellbooks:cryomancer_chestplate", after=["mountain_tower"],
+          text=["The Cryomancer has gone cold in every way and attacks anyone who climbs his stairs. Melt him with "
+                "fire."],
+          tasks=[boss("irons_spellbooks:cryomancer", "irons_spellbooks:mountain_tower", "The Cryomancer",
+                      "Defeat the Cryomancer at the top of his stairs"),
+                 {"cast": {"school": "irons_spellbooks:fire"}, "count": 5, "title": "Melt his ice with fire spells"}],
+          rewards=[reward_item("irons_spellbooks:cryomancer_chestplate"), reward_item("irons_spellbooks:scroll_ice"),
+                   skill("magic", 300)]),
+
+    quest("school_of_ice", "School of Ice", icon="irons_spellbooks:ice_rune", after=["mountain_tower"],
+          text=["The tower's frost leaves materials behind. Collect frozen bones and permafrost shards, craft an ice "
+                "rune, and bind an ice spellbook."],
+          tasks=[item("irons_spellbooks:frozen_bone", 4, title="Collect frozen bones from the peaks"),
+                 item("irons_spellbooks:permafrost_shard", 4, title="Collect permafrost shards"),
+                 item("irons_spellbooks:ice_rune", crafted=True, title="Craft an ice rune"),
+                 item("irons_spellbooks:ice_spell_book", crafted=True, title="Bind an ice spellbook")],
+          rewards=[reward_item("irons_spellbooks:ice_staff"), skill("magic", 260)]),
+
+    quest("spider_den", "The Ice Spider Den", icon="irons_spellbooks:ice_spider_egg", after=["school_of_ice"],
+          text=["A furled map points to the Ice Spider den. Kill its brood and take one unbroken ice spider egg."],
+          tasks=[fight("irons_spellbooks:ice_spider", 8, "irons_spellbooks:ice_spider_den", "Den Brood",
+                       "Kill the den's brood"),
+                 search("irons_spellbooks:ice_spider_den", 1, "an Unbroken Ice Spider Egg", "An unbroken egg, cold as a stone.",
+                        texture="minecraft:item/egg", title="Search the den for an unbroken egg")],
+          rewards=[reward_item("irons_spellbooks:ice_venom_vial", 3), skill("magic", 280)]),
+
+    quest("spider_egg_feast", "A Cold Delicacy", icon="irons_spellbooks:cooked_ice_spider_egg", after=["spider_den"],
+          text=["Pip dares you to cook an ice spider egg and serve it to Orrin without telling him what it is."],
+          tasks=[enc(["Cook an ice spider egg. Serve it to Orrin. Don't tell him."], character="pip",
+                     title="Take Pip's dare"),
+                 item("irons_spellbooks:cooked_ice_spider_egg", consume=True, title="Cook an ice spider egg"),
+                 talk_char("orrin", ["A cold delicacy? Splendid. Is that... egg? Delicious."],
+                           title="Serve the dish to Orrin")],
+          rewards=[skill("magic", 240), skill("cook", 150)]),
+
+    quest("impaled_icebreaker", "The Impaled Icebreaker", icon="irons_spellbooks:music_disc_whispers_of_ice",
+          after=["school_of_ice"], discover={"structure": "irons_spellbooks:impaled_icebreaker"},
+          text=["A ship is skewered on an iceberg, its crew frozen solid. Climb aboard and bring the captain's sea "
+                "chest back intact."],
+          tasks=[search("irons_spellbooks:impaled_icebreaker", 1, "the Captain's Sea Chest", "The captain's chest, iced shut.",
+                        texture="minecraft:item/chest_minecart", title="Climb aboard and open the captain's chest")],
+          rewards=[reward_item("irons_spellbooks:music_disc_whispers_of_ice"), skill("magic", 260)]),
+
+    quest("lightning_in_a_bottle", "Lightning in a Bottle", icon="irons_spellbooks:lightning_bottle",
+          after=["arcane_anvil"],
+          text=["Storms hold more than rain. Catch three bottles of lightning while one rages, and craft a "
+                "lightning rune from them."],
+          tasks=[{"cast": {"school": "irons_spellbooks:lightning"}, "count": 5, "title": "Call the storm down with lightning spells"},
+                 item("irons_spellbooks:lightning_bottle", 3, title="Catch three bottles of lightning"),
+                 item("irons_spellbooks:lightning_rune", crafted=True, title="Craft a lightning rune")],
+          rewards=[reward_item("irons_spellbooks:electromancer_helmet"), skill("magic", 260)]),
+
+    quest("evoker_fort", "The Evoker Fort", icon="minecraft:spyglass", after=["arcane_anvil"],
+          text=["Orrin's stolen tome, the Archevoker's logbook, is kept in the Evoker Fort. Scout it and learn the "
+                "guards' rotations."],
+          tasks=[{"structure": "irons_spellbooks:evoker_fort", "title": "Scout the Evoker Fort"},
+                 {"observe": "minecraft:evoker", "ticks": 60, "title": "Watch the guards' rotation from cover"},
+                 enc(["I came as soon as I could. What did you see?", "Good. Remember it."], character="orrin",
+                     title="Report what you saw to Orrin")],
+          rewards=[reward_item("minecraft:spyglass"), skill("magic", 250)]),
+
+    quest("unseen_thief", "The Unseen Thief", icon="artifacts:scarf_of_invisibility", after=["evoker_fort"],
+          signature="artifacts:scarf_of_invisibility",
+          text=["Get into the fort and take the logbook without any illager seeing you. Caught once, you start again. "
+                "Pip lends her trick for the first try, and the scarf she borrowed from Orrin once you're out."],
+          tasks=[item("irons_spellbooks:invisibility_elixir", title="Take Pip's invisibility elixir"),
+                 {"timed": {"seconds": 300, "goal": {"structure": "irons_spellbooks:evoker_fort", "label": "the logbook's vault", "away": 40},
+                            "lines": ["Don't be seen. If anything hurts you, you start again."], "start": "Slip in",
+                            "no": ["hurt"]}, "title": "Cross the fort unseen"},
+                 search("irons_spellbooks:evoker_fort", 1, "the Archevoker's Logbook", "A cipher-written logbook, untranslated.",
+                        texture="minecraft:item/written_book", title="Take the logbook from the vault")],
+          rewards=[reward_item("artifacts:scarf_of_invisibility"), reward_item("irons_spellbooks:archevoker_logbook_untranslated"),
+                   skill("magic", 300)]),
+
+    quest("translate_logbook", "In the Illagers' Hand", icon="irons_spellbooks:archevoker_logbook_translated",
+          after=["unseen_thief"],
+          text=["The Archevoker's logbook is written in a cipher. Translate it with Orrin's help, page by page. It "
+                "names the catacombs where the dead are being raised."],
+          tasks=[item("irons_spellbooks:archevoker_logbook_untranslated", title="Bring the untranslated logbook"),
+                 talk_char("orrin", ["A cipher, page by page. Hold the lamp.", "It names the catacombs. The dead are being raised."],
+                           title="Translate the cipher with Orrin")],
+          rewards=[reward_item("irons_spellbooks:archevoker_logbook_translated"), skill("magic", 300)]),
+
+    quest("archevoker", "The Archevoker", icon="irons_spellbooks:archevoker_spawn_egg", after=["evoker_fort"],
+          text=["The Archevoker summons fangs and vexes in the fort's great hall. Defeat him, if you want his robes."],
+          tasks=[boss("irons_spellbooks:archevoker", "irons_spellbooks:evoker_fort", "The Archevoker",
+                      "Defeat the Archevoker in the great hall")],
+          rewards=[reward_item("irons_spellbooks:evoker_spell_book"), skill("magic", 380)]),
+
+    quest("five_schools", "Five Schools", icon="irons_spellbooks:affinity_ring",
+          after=["lightning_in_a_bottle", "school_of_ice"],
+          text=["Orrin will not call you a mage until you can show him five schools. Cast each once in front of "
+                "him: fire, ice, lightning, nature and holy."],
+          tasks=[{"cast": {"school": "irons_spellbooks:fire"}, "count": 1, "title": "Cast a fire spell for Orrin"},
+                 {"cast": {"school": "irons_spellbooks:ice"}, "count": 1, "title": "Cast an ice spell for Orrin"},
+                 {"cast": {"school": "irons_spellbooks:lightning"}, "count": 1, "title": "Cast a lightning spell for Orrin"},
+                 {"cast": {"school": "irons_spellbooks:nature"}, "count": 1, "title": "Cast a nature spell for Orrin"},
+                 {"cast": {"school": "irons_spellbooks:holy"}, "count": 1, "title": "Cast a holy spell for Orrin"}],
+          rewards=[reward_item("irons_spellbooks:affinity_ring"), skill("magic", 320)]),
+
+    quest("spell_slot", "Room for More", icon="irons_spellbooks:gold_spell_book", after=["five_schools", "mithril_vein"],
+          text=["Five schools need a bigger book. Bind a gold spellbook and add a spell-slot upgrade so it holds "
+                "every school you know."],
+          tasks=[item("irons_spellbooks:gold_spell_book", crafted=True, title="Bind a gold spellbook"),
+                 item("irons_spellbooks:arcane_rune", title="Make the rune that adds a spell slot")],
+          rewards=[reward_item("irons_spellbooks:epic_ink", 2), skill("magic", 400)]),
+]
+
+chapter("magic", "The Arcane Order", "Magic path", "irons_spellbooks:iron_spell_book", "skills", 10, Q + ACT2)

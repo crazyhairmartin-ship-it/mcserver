@@ -646,6 +646,678 @@
         }
       ],
       "icon": "irons_spellbooks:mana_upgrade_orb"
+    },
+    {
+      "id": "alchemist_cauldron",
+      "title": "The Bubbling Cauldron",
+      "after": [
+        "the_poisoned_traveller",
+        "main_story:act2_start"
+      ],
+      "text": [
+        "Orrin's long nights need better ink and a stronger brew. Mix uncommon and rare ink in an alchemist cauldron, and brew a casters' tea for him."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:uncommon_ink",
+          "crafted": true,
+          "title": "Mix uncommon ink for Orrin's scrolls"
+        },
+        {
+          "item": "irons_spellbooks:rare_ink",
+          "crafted": true,
+          "title": "Mix rare ink for his best work"
+        },
+        {
+          "item": "herbalbrews:oolong_tea",
+          "consume": true,
+          "title": "Brew a casters' tea for his long nights"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:rare_ink",
+          "count": 2
+        },
+        {
+          "skill": "magic",
+          "xp": 180
+        }
+      ],
+      "icon": "irons_spellbooks:alchemist_cauldron"
+    },
+    {
+      "id": "arcane_anvil",
+      "title": "The Arcane Anvil",
+      "after": [
+        "alchemist_cauldron"
+      ],
+      "text": [
+        "Scrolls are weak alone and strong merged. Forge an arcane anvil, merge two scrolls into a stronger one, and add an upgrade orb to your armour."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:arcane_anvil",
+          "crafted": true,
+          "title": "Forge an arcane anvil"
+        },
+        {
+          "use": "irons_spellbooks:arcane_anvil",
+          "count": 1,
+          "title": "Merge two scrolls on the anvil"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:evocation_upgrade_orb"
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "irons_spellbooks:arcane_anvil"
+    },
+    {
+      "id": "mithril_vein",
+      "title": "The Mithril Vein",
+      "after": [
+        "arcane_anvil"
+      ],
+      "text": [
+        "A better spellbook needs mithril. Mine it deep in the deepslate, smelt it and weave mithril cloth for the binding."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:mithril_scrap",
+          "count": 4,
+          "title": "Mine mithril deep in the deepslate"
+        },
+        {
+          "item": "irons_spellbooks:mithril_ingot",
+          "count": 2,
+          "title": "Smelt the mithril"
+        },
+        {
+          "item": "irons_spellbooks:mithril_weave",
+          "crafted": true,
+          "title": "Weave mithril cloth for a spellbook binding"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:mithril_ingot",
+          "count": 2
+        },
+        {
+          "skill": "magic",
+          "xp": 220
+        },
+        {
+          "skill": "mining",
+          "xp": 150
+        }
+      ],
+      "icon": "irons_spellbooks:mithril_ingot"
+    },
+    {
+      "id": "mountain_tower",
+      "title": "The Cryomancer's Tower",
+      "after": [
+        "alchemist_cauldron"
+      ],
+      "text": [
+        "High in the frozen peaks stands the Cryomancer's tower. Climb to it through the snow, with the cold biting at you."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "biomes": [
+              "minecraft:frozen_peaks",
+              "minecraft:snowy_slopes",
+              "minecraft:jagged_peaks"
+            ]
+          },
+          "title": "Climb into the frozen peaks"
+        },
+        {
+          "structure": "irons_spellbooks:mountain_tower",
+          "title": "Reach the Cryomancer's tower"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:frostward_ring"
+        },
+        {
+          "skill": "magic",
+          "xp": 220
+        }
+      ],
+      "icon": "irons_spellbooks:frostward_ring"
+    },
+    {
+      "id": "cryomancer",
+      "title": "Thaw the Cryomancer",
+      "after": [
+        "mountain_tower"
+      ],
+      "text": [
+        "The Cryomancer has gone cold in every way and attacks anyone who climbs his stairs. Melt him with fire."
+      ],
+      "tasks": [
+        {
+          "kill": "irons_spellbooks:cryomancer",
+          "spawn": {
+            "at": {
+              "structure": "irons_spellbooks:mountain_tower"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Cryomancer"
+          },
+          "title": "Defeat the Cryomancer at the top of his stairs"
+        },
+        {
+          "cast": {
+            "school": "irons_spellbooks:fire"
+          },
+          "count": 5,
+          "title": "Melt his ice with fire spells"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:cryomancer_chestplate"
+        },
+        {
+          "item": "irons_spellbooks:scroll_ice"
+        },
+        {
+          "skill": "magic",
+          "xp": 300
+        }
+      ],
+      "icon": "irons_spellbooks:cryomancer_chestplate"
+    },
+    {
+      "id": "school_of_ice",
+      "title": "School of Ice",
+      "after": [
+        "mountain_tower"
+      ],
+      "text": [
+        "The tower's frost leaves materials behind. Collect frozen bones and permafrost shards, craft an ice rune, and bind an ice spellbook."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:frozen_bone",
+          "count": 4,
+          "title": "Collect frozen bones from the peaks"
+        },
+        {
+          "item": "irons_spellbooks:permafrost_shard",
+          "count": 4,
+          "title": "Collect permafrost shards"
+        },
+        {
+          "item": "irons_spellbooks:ice_rune",
+          "crafted": true,
+          "title": "Craft an ice rune"
+        },
+        {
+          "item": "irons_spellbooks:ice_spell_book",
+          "crafted": true,
+          "title": "Bind an ice spellbook"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:ice_staff"
+        },
+        {
+          "skill": "magic",
+          "xp": 260
+        }
+      ],
+      "icon": "irons_spellbooks:ice_rune"
+    },
+    {
+      "id": "spider_den",
+      "title": "The Ice Spider Den",
+      "after": [
+        "school_of_ice"
+      ],
+      "text": [
+        "A furled map points to the Ice Spider den. Kill its brood and take one unbroken ice spider egg."
+      ],
+      "tasks": [
+        {
+          "kill": "irons_spellbooks:ice_spider",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "irons_spellbooks:ice_spider_den"
+            },
+            "wave": 4,
+            "name": "Den Brood"
+          },
+          "title": "Kill the den's brood"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "irons_spellbooks:ice_spider_den"
+            },
+            "count": 1,
+            "item": {
+              "name": "an Unbroken Ice Spider Egg",
+              "texture": "minecraft:item/egg"
+            },
+            "found": "An unbroken egg, cold as a stone."
+          },
+          "title": "Search the den for an unbroken egg"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:ice_venom_vial",
+          "count": 3
+        },
+        {
+          "skill": "magic",
+          "xp": 280
+        }
+      ],
+      "icon": "irons_spellbooks:ice_spider_egg"
+    },
+    {
+      "id": "spider_egg_feast",
+      "title": "A Cold Delicacy",
+      "after": [
+        "spider_den"
+      ],
+      "text": [
+        "Pip dares you to cook an ice spider egg and serve it to Orrin without telling him what it is."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "character": "pip",
+            "then": "talk",
+            "lines": [
+              "Cook an ice spider egg. Serve it to Orrin. Don't tell him."
+            ]
+          },
+          "title": "Take Pip's dare"
+        },
+        {
+          "item": "irons_spellbooks:cooked_ice_spider_egg",
+          "consume": true,
+          "title": "Cook an ice spider egg"
+        },
+        {
+          "talk": "character",
+          "character": "orrin",
+          "lines": [
+            "A cold delicacy? Splendid. Is that... egg? Delicious."
+          ],
+          "title": "Serve the dish to Orrin"
+        }
+      ],
+      "rewards": [
+        {
+          "skill": "magic",
+          "xp": 240
+        },
+        {
+          "skill": "cook",
+          "xp": 150
+        }
+      ],
+      "icon": "irons_spellbooks:cooked_ice_spider_egg"
+    },
+    {
+      "id": "impaled_icebreaker",
+      "title": "The Impaled Icebreaker",
+      "after": [
+        "school_of_ice"
+      ],
+      "text": [
+        "A ship is skewered on an iceberg, its crew frozen solid. Climb aboard and bring the captain's sea chest back intact."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "irons_spellbooks:impaled_icebreaker"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Captain's Sea Chest",
+              "texture": "minecraft:item/chest_minecart"
+            },
+            "found": "The captain's chest, iced shut."
+          },
+          "title": "Climb aboard and open the captain's chest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:music_disc_whispers_of_ice"
+        },
+        {
+          "skill": "magic",
+          "xp": 260
+        }
+      ],
+      "icon": "irons_spellbooks:music_disc_whispers_of_ice",
+      "discover": {
+        "structure": "irons_spellbooks:impaled_icebreaker"
+      }
+    },
+    {
+      "id": "lightning_in_a_bottle",
+      "title": "Lightning in a Bottle",
+      "after": [
+        "arcane_anvil"
+      ],
+      "text": [
+        "Storms hold more than rain. Catch three bottles of lightning while one rages, and craft a lightning rune from them."
+      ],
+      "tasks": [
+        {
+          "cast": {
+            "school": "irons_spellbooks:lightning"
+          },
+          "count": 5,
+          "title": "Call the storm down with lightning spells"
+        },
+        {
+          "item": "irons_spellbooks:lightning_bottle",
+          "count": 3,
+          "title": "Catch three bottles of lightning"
+        },
+        {
+          "item": "irons_spellbooks:lightning_rune",
+          "crafted": true,
+          "title": "Craft a lightning rune"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:electromancer_helmet"
+        },
+        {
+          "skill": "magic",
+          "xp": 260
+        }
+      ],
+      "icon": "irons_spellbooks:lightning_bottle"
+    },
+    {
+      "id": "evoker_fort",
+      "title": "The Evoker Fort",
+      "after": [
+        "arcane_anvil"
+      ],
+      "text": [
+        "Orrin's stolen tome, the Archevoker's logbook, is kept in the Evoker Fort. Scout it and learn the guards' rotations."
+      ],
+      "tasks": [
+        {
+          "structure": "irons_spellbooks:evoker_fort",
+          "title": "Scout the Evoker Fort"
+        },
+        {
+          "observe": "minecraft:evoker",
+          "ticks": 60,
+          "title": "Watch the guards' rotation from cover"
+        },
+        {
+          "encounter": {
+            "character": "orrin",
+            "then": "talk",
+            "lines": [
+              "I came as soon as I could. What did you see?",
+              "Good. Remember it."
+            ]
+          },
+          "title": "Report what you saw to Orrin"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "skill": "magic",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:spyglass"
+    },
+    {
+      "id": "unseen_thief",
+      "title": "The Unseen Thief",
+      "after": [
+        "evoker_fort"
+      ],
+      "text": [
+        "Get into the fort and take the logbook without any illager seeing you. Caught once, you start again. Pip lends her trick for the first try, and the scarf she borrowed from Orrin once you're out."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:invisibility_elixir",
+          "title": "Take Pip's invisibility elixir"
+        },
+        {
+          "timed": {
+            "seconds": 300,
+            "goal": {
+              "structure": "irons_spellbooks:evoker_fort",
+              "label": "the logbook's vault",
+              "away": 40
+            },
+            "lines": [
+              "Don't be seen. If anything hurts you, you start again."
+            ],
+            "start": "Slip in",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Cross the fort unseen"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "irons_spellbooks:evoker_fort"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Archevoker's Logbook",
+              "texture": "minecraft:item/written_book"
+            },
+            "found": "A cipher-written logbook, untranslated."
+          },
+          "title": "Take the logbook from the vault"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:scarf_of_invisibility"
+        },
+        {
+          "item": "irons_spellbooks:archevoker_logbook_untranslated"
+        },
+        {
+          "skill": "magic",
+          "xp": 300
+        }
+      ],
+      "icon": "artifacts:scarf_of_invisibility",
+      "signature": "artifacts:scarf_of_invisibility"
+    },
+    {
+      "id": "translate_logbook",
+      "title": "In the Illagers' Hand",
+      "after": [
+        "unseen_thief"
+      ],
+      "text": [
+        "The Archevoker's logbook is written in a cipher. Translate it with Orrin's help, page by page. It names the catacombs where the dead are being raised."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:archevoker_logbook_untranslated",
+          "title": "Bring the untranslated logbook"
+        },
+        {
+          "talk": "character",
+          "character": "orrin",
+          "lines": [
+            "A cipher, page by page. Hold the lamp.",
+            "It names the catacombs. The dead are being raised."
+          ],
+          "title": "Translate the cipher with Orrin"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:archevoker_logbook_translated"
+        },
+        {
+          "skill": "magic",
+          "xp": 300
+        }
+      ],
+      "icon": "irons_spellbooks:archevoker_logbook_translated"
+    },
+    {
+      "id": "archevoker",
+      "title": "The Archevoker",
+      "after": [
+        "evoker_fort"
+      ],
+      "text": [
+        "The Archevoker summons fangs and vexes in the fort's great hall. Defeat him, if you want his robes."
+      ],
+      "tasks": [
+        {
+          "kill": "irons_spellbooks:archevoker",
+          "spawn": {
+            "at": {
+              "structure": "irons_spellbooks:evoker_fort"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Archevoker"
+          },
+          "title": "Defeat the Archevoker in the great hall"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:evoker_spell_book"
+        },
+        {
+          "skill": "magic",
+          "xp": 380
+        }
+      ],
+      "icon": "irons_spellbooks:archevoker_spawn_egg"
+    },
+    {
+      "id": "five_schools",
+      "title": "Five Schools",
+      "after": [
+        "lightning_in_a_bottle",
+        "school_of_ice"
+      ],
+      "text": [
+        "Orrin will not call you a mage until you can show him five schools. Cast each once in front of him: fire, ice, lightning, nature and holy."
+      ],
+      "tasks": [
+        {
+          "cast": {
+            "school": "irons_spellbooks:fire"
+          },
+          "count": 1,
+          "title": "Cast a fire spell for Orrin"
+        },
+        {
+          "cast": {
+            "school": "irons_spellbooks:ice"
+          },
+          "count": 1,
+          "title": "Cast an ice spell for Orrin"
+        },
+        {
+          "cast": {
+            "school": "irons_spellbooks:lightning"
+          },
+          "count": 1,
+          "title": "Cast a lightning spell for Orrin"
+        },
+        {
+          "cast": {
+            "school": "irons_spellbooks:nature"
+          },
+          "count": 1,
+          "title": "Cast a nature spell for Orrin"
+        },
+        {
+          "cast": {
+            "school": "irons_spellbooks:holy"
+          },
+          "count": 1,
+          "title": "Cast a holy spell for Orrin"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:affinity_ring"
+        },
+        {
+          "skill": "magic",
+          "xp": 320
+        }
+      ],
+      "icon": "irons_spellbooks:affinity_ring"
+    },
+    {
+      "id": "spell_slot",
+      "title": "Room for More",
+      "after": [
+        "five_schools",
+        "mithril_vein"
+      ],
+      "text": [
+        "Five schools need a bigger book. Bind a gold spellbook and add a spell-slot upgrade so it holds every school you know."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:gold_spell_book",
+          "crafted": true,
+          "title": "Bind a gold spellbook"
+        },
+        {
+          "item": "irons_spellbooks:arcane_rune",
+          "title": "Make the rune that adds a spell slot"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:epic_ink",
+          "count": 2
+        },
+        {
+          "skill": "magic",
+          "xp": 400
+        }
+      ],
+      "icon": "irons_spellbooks:gold_spell_book"
     }
   ]
 }

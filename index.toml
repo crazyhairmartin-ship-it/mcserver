@@ -122,7 +122,7 @@ hash = "d6f8e8374e80412b6fb35c760a61753c2725fc2d309d4e8e4ffedd3ba1abafb4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/magic.snbt"
-hash = "da7d5a92e71f7165ca9d3c5114e3d0d3a3caa435ed75e3276f5669ed59f607ad"
+hash = "f93dc5d95c5ad2e4627b728bffbfbcc2c5346e0102f42d9a2240ec50a003a590"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
@@ -138,7 +138,7 @@ hash = "dcd5c4c81eacb36f402b3c53ad47fdaa9854417b9926ea4586fe540d60c6e92d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_agility.snbt"
-hash = "24bcd3c992ae1f857fa731f9f3021df62a4ddc9b94f2de8cc604cdbdbd264cbf"
+hash = "4dc02ecfbb5415068df48211dd29eb324f6da72b44741109a1b8122b0209627f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_attack.snbt"
@@ -150,7 +150,7 @@ hash = "91da909b3dfb19f6b9a304a5c95cc02caebe2648c5c38abb00ea92aa92688b86"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_crafting.snbt"
-hash = "4a0a9c437137dc083fdc727fe70d8081ec3e84bdeeb3d3566ec38b52e1558231"
+hash = "3c912874faf649de5e0ec7db2fd8daedc742de7b448b58a0813b6a16a8708334"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_defense.snbt"
@@ -2789,7 +2789,7 @@ hash = "77546c4cc0ec84840f5fd7ab0b845a72406755c619b84f89740a3f8047957af8"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "7be26ed8744e44c9435db977a91c94ba1df43849960be6278060c77556eca802"
+hash = "30951c14c5b38a29e5883c6a69242c114626875921c2c88da5e519aab15376ce"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2873,7 +2873,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "ac54678dbb42fc23b52a4479e0d1189c273bc9bb8ca48fc7d5d5151f08b53d71"
+hash = "eab39d870a0f43cb94ddae082718ef872e8d62381d3544e47265e1ca64965dcf"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"

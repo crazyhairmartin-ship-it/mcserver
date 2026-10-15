@@ -380,7 +380,7 @@
 			]
 			title: "Before the Light Goes"
 			x: 6.0d
-			y: -0.75d
+			y: -2.25d
 		}
 		{
 			dependencies: ["14CDB73AE5122F0E"]
@@ -464,7 +464,7 @@
 			]
 			title: "The Night Post"
 			x: 7.5d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["1A3C75E1E67C28EC"]
@@ -510,7 +510,7 @@
 			]
 			title: "Line from the Tower"
 			x: 6.0d
-			y: 0.75d
+			y: -0.75d
 		}
 		{
 			dependencies: ["11E0EAF37FC40DD0"]
@@ -556,7 +556,7 @@
 			]
 			title: "Hook and Swing"
 			x: 7.5d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["5F3C835BAD1D8EEA"]
@@ -595,7 +595,7 @@
 			]
 			title: "Stuck on the Ledge"
 			x: 9.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["0302FE0BC6665E28"]
@@ -656,6 +656,350 @@
 			title: "Across the Bay"
 			x: 4.5d
 			y: 0.75d
+		}
+		{
+			dependencies: ["0A62ED1B9A79ED78"]
+			description: ["A bet in the beach village: cross the lake to the far pier without a boat, before the hourglass runs out. Sprint, swim and leap. The bet's winner keeps the strange shoes that run on water."]
+			icon: "artifacts:aqua_dashers"
+			id: "72613ECEC07BC45F"
+			rewards: [
+				{
+					id: "12B96CCC0EE68B45"
+					item: "artifacts:aqua_dashers"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 250"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "23E601BB8577A5BF"
+					silent: true
+					title: "+250 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1428B6CE8F133160"
+					structure: "ctov:medium/village_beach"
+					title: "Take up the bet in the beach village"
+					type: "structure"
+				}
+				{
+					id: "638291A6183B2653"
+					stage: "fq.skill_agility.water_run.timed1"
+					title: "Reach the far pier without a boat"
+					type: "gamestage"
+				}
+			]
+			title: "No Boats Allowed"
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["198B82ABB2125C01"]
+			description: ["An alpine village is snowed in and waiting for winter supplies. Carry the parcel over the powder snow to the mountain outpost before the storm closes the pass. The outpost's courier gives you their snowshoes."]
+			icon: "artifacts:snowshoes"
+			id: "713473066403DD24"
+			rewards: [
+				{
+					id: "04E5FA4A379C06DC"
+					item: "artifacts:snowshoes"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "268A6133ED9E6C07"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "645430D546FB8BDD"
+					item: "endermail:package"
+					title: "Take the winter supplies parcel"
+					type: "item"
+				}
+				{
+					id: "19837647214BDFDD"
+					stage: "fq.skill_agility.mountain_post.timed1"
+					title: "Reach the snowed-in village before the pass closes"
+					type: "gamestage"
+				}
+			]
+			title: "Powder Road"
+			x: 9.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["22D48084AF1569B5"]
+			description: ["A rival courier claims the peak below the monastery in record time. Get a grappling hook, wall-run boots, and beat their time."]
+			icon: "grapplemod:grapplinghook"
+			id: "18B50A48B1EFBBDA"
+			rewards: [
+				{
+					count: 16
+					id: "6FEEAEB9E942F73A"
+					item: "supplementaries:rope"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "4B43D52BBBF361EA"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "04C28C5DB7600724"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6C683F6FE07BA880"
+					item: "grapplemod:grapplinghook"
+					title: "Take your grappling hook for the climb"
+					type: "item"
+				}
+				{
+					id: "4BE7683623729AFA"
+					item: "parcool:traceur_boots"
+					only_from_crafting: true
+					title: "Get wall-run boots"
+					type: "item"
+				}
+				{
+					id: "4893FBB04F337A93"
+					stage: "fq.skill_agility.monastery_climb.timed2"
+					title: "Race the rival courier up the peak"
+					type: "gamestage"
+				}
+			]
+			title: "Speed Climb"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0A62ED1B9A79ED78"]
+			description: ["The lighthouse keeper's oil comes by sea. Build a brigg with cargo room and take a full load of lamp oil and letters up the coast."]
+			icon: "smallships:oak_brigg"
+			id: "276E62575160A95C"
+			rewards: [
+				{
+					id: "61E7CAEAFCA630E4"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					id: "707DF2DAFDD2F816"
+					item: "smallships:cannon"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 280"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "54DED007951375FB"
+					silent: true
+					title: "+280 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7D9FC7421C3D25F5"
+					item: "smallships:oak_brigg"
+					only_from_crafting: true
+					title: "Build a brigg with room for cargo"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "55AB0A54BD769165"
+					item: "minecraft:lantern"
+					title: "Load lamp lanterns for the keeper"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "0BF8CC5A5664E974"
+					item: "fotfmail:letter"
+					title: "Load the keeper's letters"
+					type: "item"
+				}
+				{
+					id: "6E4AC0C96B0720D4"
+					structure: "#fotf:groups/lighthouses"
+					title: "Sail the cargo up the coast to the lighthouse"
+					type: "structure"
+				}
+			]
+			title: "The Lighthouse Run"
+			x: 6.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["276E62575160A95C"]
+			description: ["An outcast fisherman lives on his little boat far out at sea, and his family ashore hasn't heard from him in months. Sail out, find a boat at sea and hand him their letters."]
+			icon: "fotfmail:letter"
+			id: "000C51639004CD8D"
+			rewards: [
+				{
+					id: "74E144D20403EBA4"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "4033D38DDD947DFF"
+					item: "fotfmail:letter"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "4A5D74F48801E78B"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 3L
+					id: "7E255FD8A8A61450"
+					item: "fotfmail:letter"
+					title: "Take the family's letters"
+					type: "item"
+				}
+				{
+					id: "03BC5B45BF843E8D"
+					structure: "#fotf:groups/ships_at_sea"
+					title: "Find a boat out at sea"
+					type: "structure"
+				}
+				{
+					id: "20383D32FCD68E56"
+					stage: "fq.skill_agility.ships_at_sea.enc2"
+					title: "Hand the fisherman his letters"
+					type: "gamestage"
+				}
+			]
+			title: "Mail for the Fleet"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["18B50A48B1EFBBDA"]
+			description: ["A firewatch tower deep in the woods needs post nobody can walk to in a day. Build an Immersive Aircraft bamboo hopper and fly the first airmail to its keeper."]
+			icon: "immersive_aircraft:bamboo_hopper"
+			id: "65740190CEF18C11"
+			rewards: [
+				{
+					id: "5E020A631CD6A925"
+					item: "immersive_aircraft:propeller"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "1C6AE52B8E162DED"
+					item: "minecraft:coal"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 320"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "322CB9B381FE4F66"
+					silent: true
+					title: "+320 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4BD061908389083B"
+					item: "immersive_aircraft:bamboo_hopper"
+					only_from_crafting: true
+					title: "Build a bamboo hopper"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "00A9DFF352B8A0AA"
+					item: "fotfmail:letter"
+					title: "Load the airmail for the keeper"
+					type: "item"
+				}
+				{
+					id: "3824E6D765978587"
+					stage: "fq.skill_agility.first_flight.timed2"
+					title: "Fly the post to the firewatch tower"
+					type: "gamestage"
+				}
+			]
+			title: "Bamboo Wings"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65740190CEF18C11"]
+			description: ["A child's pool float slipped its string and drifted up to an island floating in the sky. Get up there by hook, plane or pillar and bring it back. The child lets you keep it."]
+			icon: "artifacts:helium_flamingo"
+			id: "0098B2EA179D5FE9"
+			rewards: [
+				{
+					id: "3D8E95DD71DF23C5"
+					item: "artifacts:helium_flamingo"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 380"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "6DF0EB26ED210B27"
+					silent: true
+					title: "+380 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2B576493167F9102"
+					stage: "fq.skill_agility.runaway_float.enc0"
+					title: "Meet the child who lost their float"
+					type: "gamestage"
+				}
+				{
+					id: "04542BD61305EFF3"
+					structure: "#fotf:groups/moog_sky_islands"
+					title: "Get up to the floating islands by any means"
+					type: "structure"
+				}
+				{
+					id: "63125AF0B95F0C09"
+					item: "kubejs:quest_runaway_float_2"
+					title: "Search the islands for the child's float"
+					type: "item"
+				}
+			]
+			title: "The Float That Got Away"
+			x: 13.5d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Agility path"]

@@ -2,6 +2,7 @@
 Plan: src/plans/quests/skill_agility.json. Postmistress Juniper Quill runs the post office in Reece; Ender Mail carriers
 take the everyday post, the Couriers take what the endermen can't or won't."""
 from common import chapter, quest, talk_char, talk_villager, item, reward_item, skill, giver_org, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 NO_SHORTCUTS = ["teleport", "mounts"]
 
@@ -144,4 +145,77 @@ Q = [
                    skill("agility", 240)]),
 ]
 
-chapter("skill_agility", "The Couriers", "Agility path", "minecraft:leather_boots", "skills", 9, Q)
+ACT2 = [
+    quest("water_run", "No Boats Allowed", icon="artifacts:aqua_dashers", after=["first_ferry"],
+          signature="artifacts:aqua_dashers",
+          text=["A bet in the beach village: cross the lake to the far pier without a boat, before the hourglass runs "
+                "out. Sprint, swim and leap. The bet's winner keeps the strange shoes that run on water."],
+          tasks=[{"structure": "ctov:medium/village_beach", "title": "Take up the bet in the beach village"},
+                 {"timed": {"seconds": 240, "goal": {"structure": "#fishing_huts", "label": "the far pier", "away": 80},
+                            "lines": ["No boats. The hourglass is running."], "start": "Start the crossing",
+                            "no": ["teleport", "mounts"]}, "title": "Reach the far pier without a boat"}],
+          rewards=[reward_item("artifacts:aqua_dashers"), skill("agility", 250)]),
+
+    quest("mountain_post", "Powder Road", icon="artifacts:snowshoes", after=["night_post"],
+          signature="artifacts:snowshoes",
+          text=["An alpine village is snowed in and waiting for winter supplies. Carry the parcel over the powder "
+                "snow to the mountain outpost before the storm closes the pass. The outpost's courier gives you "
+                "their snowshoes."],
+          tasks=[item("endermail:package", consume=True, title="Take the winter supplies parcel"),
+                 {"timed": {"seconds": 600, "goal": {"structure": "ctov:medium/village_mountain_alpine",
+                                                       "label": "the mountain outpost", "away": 150},
+                            "lines": ["The storm is closing the pass. Go!"], "start": "Start the climb",
+                            "no": ["teleport", "mounts"]}, "title": "Reach the snowed-in village before the pass closes"}],
+          rewards=[reward_item("artifacts:snowshoes"), skill("agility", 300)]),
+
+    quest("monastery_climb", "Speed Climb", icon="grapplemod:grapplinghook", after=["ledge_rescue"],
+          text=["A rival courier claims the peak below the monastery in record time. Get a grappling hook, "
+                "wall-run boots, and beat their time."],
+          tasks=[item("grapplemod:grapplinghook", title="Take your grappling hook for the climb"),
+                 item("parcool:traceur_boots", crafted=True, title="Get wall-run boots"),
+                 {"timed": {"seconds": 420, "goal": {"structure": "mowziesmobs:monastery", "label": "the monastery", "away": 150},
+                            "lines": ["The rival's record stands. Beat it."], "start": "Start the race",
+                            "no": ["teleport", "mounts"]}, "title": "Race the rival courier up the peak"}],
+          rewards=[reward_item("supplementaries:rope", 16), reward_item("minecraft:string", 16), skill("agility", 300)]),
+
+    quest("brigg_charter", "The Lighthouse Run", icon="smallships:oak_brigg", after=["first_ferry"],
+          text=["The lighthouse keeper's oil comes by sea. Build a brigg with cargo room and take a full load of lamp "
+                "oil and letters up the coast."],
+          tasks=[item("smallships:oak_brigg", crafted=True, title="Build a brigg with room for cargo"),
+                 item("minecraft:lantern", 8, consume=True, title="Load lamp lanterns for the keeper"),
+                 item("fotfmail:letter", 4, consume=True, title="Load the keeper's letters"),
+                 {"structure": "#lighthouses", "title": "Sail the cargo up the coast to the lighthouse"}],
+          rewards=[reward_item("minecraft:spyglass"), reward_item("smallships:cannon"), skill("agility", 280)]),
+
+    quest("ships_at_sea", "Mail for the Fleet", icon="fotfmail:letter", after=["brigg_charter"],
+          text=["An outcast fisherman lives on his little boat far out at sea, and his family ashore hasn't heard from "
+                "him in months. Sail out, find a boat at sea and hand him their letters."],
+          tasks=[item("fotfmail:letter", 3, consume=True, title="Take the family's letters"),
+                 {"structure": "#ships_at_sea", "title": "Find a boat out at sea"},
+                 enc(["Letters! From home! I'll write back at once.", "Take my reply. Tell them I'm well."],
+                     entity="minecraft:villager", name="Outcast Fisherman", title="Hand the fisherman his letters")],
+          rewards=[reward_item("minecraft:map"), reward_item("fotfmail:letter", 2), skill("agility", 300)]),
+
+    quest("first_flight", "Bamboo Wings", icon="immersive_aircraft:bamboo_hopper", after=["monastery_climb"],
+          text=["A firewatch tower deep in the woods needs post nobody can walk to in a day. Build an Immersive "
+                "Aircraft bamboo hopper and fly the first airmail to its keeper."],
+          tasks=[item("immersive_aircraft:bamboo_hopper", crafted=True, title="Build a bamboo hopper"),
+                 item("fotfmail:letter", consume=True, title="Load the airmail for the keeper"),
+                 {"timed": {"seconds": 600, "goal": {"structure": "#firewatch_towers", "label": "the firewatch tower", "away": 150},
+                            "lines": ["Fly the first airmail. The keeper's waiting."], "start": "Take off",
+                            "no": ["teleport"]}, "title": "Fly the post to the firewatch tower"}],
+          rewards=[reward_item("immersive_aircraft:propeller"), reward_item("minecraft:coal", 16), skill("agility", 320)]),
+
+    quest("runaway_float", "The Float That Got Away", icon="artifacts:helium_flamingo", after=["first_flight"],
+          signature="artifacts:helium_flamingo",
+          text=["A child's pool float slipped its string and drifted up to an island floating in the sky. Get up there "
+                "by hook, plane or pillar and bring it back. The child lets you keep it."],
+          tasks=[enc(["My flamingo! It floated away! It's up there!"], entity="minecraft:villager", name="Crying Child",
+                     title="Meet the child who lost their float"),
+                 {"structure": "#moog_sky_islands", "title": "Get up to the floating islands by any means"},
+                 search("mss:small_oak_house", 1, "the Child's Float", "A pink float, snagged on a rooftop.",
+                        texture="minecraft:item/pink_dye", title="Search the islands for the child's float")],
+          rewards=[reward_item("artifacts:helium_flamingo"), skill("agility", 380)]),
+]
+
+chapter("skill_agility", "The Couriers", "Agility path", "minecraft:leather_boots", "skills", 9, Q + ACT2)

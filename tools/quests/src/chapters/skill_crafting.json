@@ -514,6 +514,478 @@
         }
       ],
       "icon": "furniture:blueprints"
+    },
+    {
+      "id": "rival_carpenter",
+      "title": "Two Rooms, One Judge",
+      "after": [
+        "engineers_blueprints",
+        "tavern_refit"
+      ],
+      "text": [
+        "A swaggering carpenter from a rival village turns up and challenges the guild. Each furnishes an identical empty room, and the villagers vote on the better one."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Rival Carpenter",
+            "then": "talk",
+            "lines": [
+              "Your guild's famous? My rooms are better. Prove otherwise."
+            ]
+          },
+          "title": "Take up the rival carpenter's challenge"
+        },
+        {
+          "structure": "#villages",
+          "title": "Reach the village where the rooms are judged"
+        },
+        {
+          "build": {
+            "blocks": {
+              "handcrafted:oak_table": 1,
+              "handcrafted:oak_chair": 2,
+              "handcrafted:oak_shelf": 1,
+              "handcrafted:oak_cupboard": 1,
+              "minecraft:red_bed": 1
+            },
+            "radius": 8
+          },
+          "title": "Furnish your room for the villagers' vote"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "handcrafted:hammer"
+        },
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 8
+        },
+        {
+          "skill": "craft",
+          "xp": 300
+        }
+      ],
+      "icon": "handcrafted:oak_cupboard"
+    },
+    {
+      "id": "ruined_town",
+      "title": "Raise the Ruin",
+      "after": [
+        "engineers_blueprints"
+      ],
+      "text": [
+        "Refugees from a burned town want to go home. Find the ruined town, clear it, and rebuild houses and a bridge with furniture so the first families can move back in."
+      ],
+      "tasks": [
+        {
+          "structure": "nova_structures:ruin_town",
+          "title": "Find the burned town"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:ruin_town"
+            },
+            "count": 2,
+            "item": {
+              "name": "a Family Deed",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A scorched deed to a plot, its seal intact."
+          },
+          "title": "Search the ruins for the families' deeds"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:oak_planks": 40,
+              "#minecraft:doors": 3,
+              "#minecraft:beds": 3,
+              "mcwbridges:oak_bridge_pier": 2
+            },
+            "radius": 12
+          },
+          "title": "Rebuild houses and a bridge for the returning families"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bell"
+        },
+        {
+          "skill": "craft",
+          "xp": 320
+        }
+      ],
+      "icon": "minecraft:bell"
+    },
+    {
+      "id": "guild_warehouse",
+      "title": "The Warehouse",
+      "after": [
+        "sacks_and_jars",
+        "engineers_blueprints"
+      ],
+      "text": [
+        "The founder's blueprints show a warehouse under the workshop. Dig it out and wire it with storage cables, connectors and a crafting terminal."
+      ],
+      "tasks": [
+        {
+          "item": "obscuras_storage:inventory_cable",
+          "count": 8,
+          "crafted": true,
+          "title": "Make cables for the warehouse"
+        },
+        {
+          "item": "obscuras_storage:inventory_connector",
+          "count": 2,
+          "crafted": true,
+          "title": "Make connectors for the chests"
+        },
+        {
+          "item": "obscuras_storage:crafting_terminal",
+          "crafted": true,
+          "title": "Make the terminal the founder drew"
+        },
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "obscuras_storage:crafting_terminal": 1,
+              "obscuras_storage:inventory_cable": 6
+            },
+            "radius": 12
+          },
+          "title": "Wire the workshop's warehouse"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "obscuras_storage:crafting_terminal"
+        },
+        {
+          "skill": "craft",
+          "xp": 320
+        }
+      ],
+      "icon": "obscuras_storage:crafting_terminal"
+    },
+    {
+      "id": "sorting_room",
+      "title": "The Sorting Room",
+      "after": [
+        "guild_warehouse"
+      ],
+      "text": [
+        "Odile commissions a sorting room where every delivery sorts itself: item filters and hoppers into the right crates. When it works, she gives you her prototype attractor."
+      ],
+      "tasks": [
+        {
+          "item": "obscuras_storage:item_filter",
+          "count": 2,
+          "crafted": true,
+          "title": "Make filters to sort the deliveries"
+        },
+        {
+          "build": {
+            "blocks": {
+              "obscuras_storage:item_filter": 2,
+              "minecraft:hopper": 4,
+              "minecraft:barrel": 4
+            },
+            "radius": 10
+          },
+          "title": "Build a room that sorts every delivery into its crate"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:universal_attractor"
+        },
+        {
+          "skill": "craft",
+          "xp": 380
+        }
+      ],
+      "icon": "artifacts:universal_attractor",
+      "signature": "artifacts:universal_attractor"
+    },
+    {
+      "id": "pack_upgrades",
+      "title": "Pockets Within Pockets",
+      "after": [
+        "joiners_pack"
+      ],
+      "text": [
+        "Long jobs need a bigger pack. Upgrade your travelling pack with a magnet, pickup, auto-smelting and compacting upgrades, so you can work without stopping."
+      ],
+      "tasks": [
+        {
+          "item": "sophisticatedbackpacks:magnet_upgrade",
+          "crafted": true,
+          "title": "Fit a magnet to gather your work"
+        },
+        {
+          "item": "sophisticatedbackpacks:pickup_upgrade",
+          "crafted": true,
+          "title": "Fit a pickup upgrade"
+        },
+        {
+          "item": "sophisticatedbackpacks:auto_smelting_upgrade",
+          "crafted": true,
+          "title": "Fit auto-smelting for ore"
+        },
+        {
+          "item": "sophisticatedbackpacks:compacting_upgrade",
+          "crafted": true,
+          "title": "Fit compacting to save space"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "sophisticatedbackpacks:advanced_refill_upgrade"
+        },
+        {
+          "skill": "craft",
+          "xp": 300
+        }
+      ],
+      "icon": "sophisticatedbackpacks:advanced_refill_upgrade"
+    },
+    {
+      "id": "instrument_maker",
+      "title": "Strings and Skins",
+      "after": [
+        "village_square"
+      ],
+      "text": [
+        "The village band lost its instruments in a fire. Make a lute, a flute, a tiny drum and a trumpet and deliver one to each musician."
+      ],
+      "tasks": [
+        {
+          "item": "immersive_melodies:lute",
+          "crafted": true,
+          "title": "Make a lute for the band"
+        },
+        {
+          "item": "immersive_melodies:flute",
+          "crafted": true,
+          "title": "Make a flute for the band"
+        },
+        {
+          "item": "immersive_melodies:tiny_drum",
+          "crafted": true,
+          "title": "Make a tiny drum for the band"
+        },
+        {
+          "item": "immersive_melodies:trumpet",
+          "crafted": true,
+          "title": "Make a trumpet for the band"
+        },
+        {
+          "structure": "#villages",
+          "title": "Take the instruments to the band"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Band Leader",
+            "then": "talk",
+            "lines": [
+              "You made all four? Bless you. We play tonight!"
+            ]
+          },
+          "title": "Hand the instruments to the band's leader"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "immersive_melodies:vielle"
+        },
+        {
+          "skill": "craft",
+          "xp": 320
+        }
+      ],
+      "icon": "immersive_melodies:vielle"
+    },
+    {
+      "id": "village_concert",
+      "title": "The Concert",
+      "after": [
+        "instrument_maker"
+      ],
+      "text": [
+        "The band needs a stage in the square. Build one with buntings and seating, then join the band so the gathered villagers can hear it play."
+      ],
+      "tasks": [
+        {
+          "structure": "#villages",
+          "title": "Go to the village square"
+        },
+        {
+          "build": {
+            "blocks": {
+              "supplementaries:bunting": 4,
+              "another_furniture:oak_bench": 4,
+              "minecraft:oak_stairs": 6
+            },
+            "radius": 12
+          },
+          "title": "Build a stage with buntings and seating"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:music_disc_cat"
+        },
+        {
+          "item": "supplementaries:confetti_popper",
+          "count": 6
+        },
+        {
+          "skill": "craft",
+          "xp": 340
+        }
+      ],
+      "icon": "supplementaries:bunting"
+    },
+    {
+      "id": "guild_uniform",
+      "title": "Dressed for the Guild",
+      "after": [
+        "rival_carpenter"
+      ],
+      "text": [
+        "A guild member should look the part even in armour. Make the guild's leather apron outfit to wear over your gear when you report to Odile."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:leather_chestplate",
+          "crafted": true,
+          "title": "Make the guild apron"
+        },
+        {
+          "item": "minecraft:leather_leggings",
+          "crafted": true,
+          "title": "Make the guild leggings"
+        },
+        {
+          "talk": "character",
+          "character": "odile",
+          "lines": [
+            "Leather over armour. Good. A guild member should look the part."
+          ],
+          "title": "Report to Odile in your uniform"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather_chestplate",
+          "name": "Guild Apron",
+          "lore": [
+            "Dyed in the guild's colours."
+          ]
+        },
+        {
+          "skill": "craft",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:leather_chestplate"
+    },
+    {
+      "id": "gingerbread",
+      "title": "Ginger in the Snow",
+      "after": [
+        "village_concert"
+      ],
+      "text": [
+        "Winter is coming and the children want a gingerbread house. Find wild ginger, grow it, bake gingerbread and build the house in the square."
+      ],
+      "tasks": [
+        {
+          "item": "snowyspirit:ginger",
+          "count": 4,
+          "title": "Find wild ginger to grow"
+        },
+        {
+          "item": "snowyspirit:gingerbread",
+          "count": 8,
+          "crafted": true,
+          "title": "Bake gingerbread for the walls"
+        },
+        {
+          "structure": "#villages",
+          "title": "Go to the village square"
+        },
+        {
+          "build": {
+            "blocks": {
+              "snowyspirit:gingerbread": 16,
+              "snowyspirit:gingerbread_door": 1
+            },
+            "radius": 10
+          },
+          "title": "Build the gingerbread house for the children"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "snowyspirit:gingerbread_cookie",
+          "count": 8
+        },
+        {
+          "item": "snowyspirit:candy_cane",
+          "count": 8
+        },
+        {
+          "skill": "craft",
+          "xp": 320
+        }
+      ],
+      "icon": "snowyspirit:gingerbread"
+    },
+    {
+      "id": "sled_race",
+      "title": "Downhill",
+      "after": [
+        "gingerbread"
+      ],
+      "text": [
+        "The snowy village holds a downhill race every winter. Build a sled and beat the local champion to the bottom."
+      ],
+      "tasks": [
+        {
+          "item": "snowyspirit:sled_oak",
+          "crafted": true,
+          "title": "Build a sled for the race"
+        },
+        {
+          "structure": "ctov:medium/village_snowy_igloo",
+          "title": "Go to the snowy village's hill"
+        },
+        {
+          "advancement": "snowyspirit:adventure/ride_sled_fast",
+          "title": "Beat the champion down the hill"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "snowyspirit:candy_cane_block",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 360
+        }
+      ],
+      "icon": "snowyspirit:sled_oak"
     }
   ]
 }

@@ -323,7 +323,7 @@
 			]
 			title: "Light the Square"
 			x: 4.5d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["538A2DAE487CFF18"]
@@ -374,7 +374,7 @@
 			]
 			title: "Last Orders"
 			x: 4.5d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["3D982BEAFBC96859"]
@@ -469,7 +469,7 @@
 			]
 			title: "The Washed-Out Bridge"
 			x: 7.5d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["7B85D1AA88F82F19"]
@@ -560,7 +560,7 @@
 			]
 			title: "Fresh Paint"
 			x: 7.5d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["1476629AEB8CE6D4"]
@@ -608,7 +608,548 @@
 			]
 			title: "The Engineer's Blueprints"
 			x: 9.0d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"08A0E2C9723F44FE"
+				"24AC67E0D4BEBB19"
+			]
+			description: ["A swaggering carpenter from a rival village turns up and challenges the guild. Each furnishes an identical empty room, and the villagers vote on the better one."]
+			icon: "handcrafted:oak_cupboard"
+			id: "7D749DDCC8E41ED8"
+			rewards: [
+				{
+					id: "36F58110137B886A"
+					item: "handcrafted:hammer"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "10977C6410EEBC12"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 300"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "36306AEF40B9E7DC"
+					silent: true
+					title: "+300 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1FCCA3D0DCC2DD02"
+					stage: "fq.skill_crafting.rival_carpenter.enc0"
+					title: "Take up the rival carpenter's challenge"
+					type: "gamestage"
+				}
+				{
+					id: "508C7B62555DB4F3"
+					structure: "#fotf:groups/villages"
+					title: "Reach the village where the rooms are judged"
+					type: "structure"
+				}
+				{
+					id: "577EBE56AE267692"
+					stage: "fq.skill_crafting.rival_carpenter.build2"
+					title: "Furnish your room for the villagers' vote"
+					type: "gamestage"
+				}
+			]
+			title: "Two Rooms, One Judge"
+			x: 10.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["08A0E2C9723F44FE"]
+			description: ["Refugees from a burned town want to go home. Find the ruined town, clear it, and rebuild houses and a bridge with furniture so the first families can move back in."]
+			icon: "minecraft:bell"
+			id: "2847870C90887544"
+			rewards: [
+				{
+					id: "5794F82251A9D73F"
+					item: "minecraft:bell"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 320"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "4E982BC01CBAE7EC"
+					silent: true
+					title: "+320 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "16DDAC80C4311A94"
+					structure: "nova_structures:ruin_town"
+					title: "Find the burned town"
+					type: "structure"
+				}
+				{
+					count: 2L
+					id: "74C33512C919F8D0"
+					item: "kubejs:quest_ruined_town_1"
+					title: "Search the ruins for the families' deeds"
+					type: "item"
+				}
+				{
+					id: "195E9948D79023EC"
+					stage: "fq.skill_crafting.ruined_town.build2"
+					title: "Rebuild houses and a bridge for the returning families"
+					type: "gamestage"
+				}
+			]
+			title: "Raise the Ruin"
+			x: 10.5d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"023405AECC5593A5"
+				"08A0E2C9723F44FE"
+			]
+			description: ["The founder's blueprints show a warehouse under the workshop. Dig it out and wire it with storage cables, connectors and a crafting terminal."]
+			icon: "obscuras_storage:crafting_terminal"
+			id: "71201033D00144CC"
+			rewards: [
+				{
+					id: "417D8D5E072EAB14"
+					item: "obscuras_storage:crafting_terminal"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 320"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "769704516C5A29C5"
+					silent: true
+					title: "+320 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "10AEA2C0C1FF1E22"
+					item: "obscuras_storage:inventory_cable"
+					only_from_crafting: true
+					title: "Make cables for the warehouse"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "57BF7F12C3342966"
+					item: "obscuras_storage:inventory_connector"
+					only_from_crafting: true
+					title: "Make connectors for the chests"
+					type: "item"
+				}
+				{
+					id: "1B2A89970C9C028E"
+					item: "obscuras_storage:crafting_terminal"
+					only_from_crafting: true
+					title: "Make the terminal the founder drew"
+					type: "item"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "667D9C18CA23EB89"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "531748A7A0402E41"
+					stage: "fq.skill_crafting.guild_warehouse.build4"
+					title: "Wire the workshop's warehouse"
+					type: "gamestage"
+				}
+			]
+			title: "The Warehouse"
+			x: 10.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["71201033D00144CC"]
+			description: ["Odile commissions a sorting room where every delivery sorts itself: item filters and hoppers into the right crates. When it works, she gives you her prototype attractor."]
+			icon: "artifacts:universal_attractor"
+			id: "2915087534960C16"
+			rewards: [
+				{
+					id: "340A9DF942B68D39"
+					item: "artifacts:universal_attractor"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 380"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "271DF91E33CC9C56"
+					silent: true
+					title: "+380 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "3B348D9B040918A2"
+					item: "obscuras_storage:item_filter"
+					only_from_crafting: true
+					title: "Make filters to sort the deliveries"
+					type: "item"
+				}
+				{
+					id: "41B67FB22D3525DC"
+					stage: "fq.skill_crafting.sorting_room.build1"
+					title: "Build a room that sorts every delivery into its crate"
+					type: "gamestage"
+				}
+			]
+			title: "The Sorting Room"
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["5C4B9AE89F3BFA27"]
+			description: ["Long jobs need a bigger pack. Upgrade your travelling pack with a magnet, pickup, auto-smelting and compacting upgrades, so you can work without stopping."]
+			icon: "sophisticatedbackpacks:advanced_refill_upgrade"
+			id: "583CF5EA44ABACA3"
+			rewards: [
+				{
+					id: "749B52F00FF5AF96"
+					item: "sophisticatedbackpacks:advanced_refill_upgrade"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 300"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "5057E65C74D39D1E"
+					silent: true
+					title: "+300 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4F243ECDCC37F3A6"
+					item: "sophisticatedbackpacks:magnet_upgrade"
+					only_from_crafting: true
+					title: "Fit a magnet to gather your work"
+					type: "item"
+				}
+				{
+					id: "3E6116FF92C171DA"
+					item: "sophisticatedbackpacks:pickup_upgrade"
+					only_from_crafting: true
+					title: "Fit a pickup upgrade"
+					type: "item"
+				}
+				{
+					id: "35EE6E0E22CEB17E"
+					item: "sophisticatedbackpacks:auto_smelting_upgrade"
+					only_from_crafting: true
+					title: "Fit auto-smelting for ore"
+					type: "item"
+				}
+				{
+					id: "77E65F54F575DCE6"
+					item: "sophisticatedbackpacks:compacting_upgrade"
+					only_from_crafting: true
+					title: "Fit compacting to save space"
+					type: "item"
+				}
+			]
+			title: "Pockets Within Pockets"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["54AF1AAD5BD9EF61"]
+			description: ["The village band lost its instruments in a fire. Make a lute, a flute, a tiny drum and a trumpet and deliver one to each musician."]
+			icon: "immersive_melodies:vielle"
+			id: "22176C573D0EF440"
+			rewards: [
+				{
+					id: "25FD0D212AE88D7B"
+					item: "immersive_melodies:vielle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 320"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "3DD3451253142398"
+					silent: true
+					title: "+320 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5462926A0F6A52A0"
+					item: "immersive_melodies:lute"
+					only_from_crafting: true
+					title: "Make a lute for the band"
+					type: "item"
+				}
+				{
+					id: "2108E8231961420A"
+					item: "immersive_melodies:flute"
+					only_from_crafting: true
+					title: "Make a flute for the band"
+					type: "item"
+				}
+				{
+					id: "133BC82ECDCB5C26"
+					item: "immersive_melodies:tiny_drum"
+					only_from_crafting: true
+					title: "Make a tiny drum for the band"
+					type: "item"
+				}
+				{
+					id: "489969B301EDF5E8"
+					item: "immersive_melodies:trumpet"
+					only_from_crafting: true
+					title: "Make a trumpet for the band"
+					type: "item"
+				}
+				{
+					id: "2A70EC7C08E5E39F"
+					structure: "#fotf:groups/villages"
+					title: "Take the instruments to the band"
+					type: "structure"
+				}
+				{
+					id: "76EF8474FFADD209"
+					stage: "fq.skill_crafting.instrument_maker.enc5"
+					title: "Hand the instruments to the band's leader"
+					type: "gamestage"
+				}
+			]
+			title: "Strings and Skins"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["22176C573D0EF440"]
+			description: ["The band needs a stage in the square. Build one with buntings and seating, then join the band so the gathered villagers can hear it play."]
+			icon: "supplementaries:bunting"
+			id: "27C05E87C55AAEB2"
+			rewards: [
+				{
+					id: "020B10E73278F540"
+					item: "minecraft:music_disc_cat"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "153ECFA6629AC9BC"
+					item: "supplementaries:confetti_popper"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 340"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "4DBA9DE0E3051356"
+					silent: true
+					title: "+340 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0EEC553DBBEB0B15"
+					structure: "#fotf:groups/villages"
+					title: "Go to the village square"
+					type: "structure"
+				}
+				{
+					id: "5340E4B7DBD25408"
+					stage: "fq.skill_crafting.village_concert.build1"
+					title: "Build a stage with buntings and seating"
+					type: "gamestage"
+				}
+			]
+			title: "The Concert"
+			x: 9.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["7D749DDCC8E41ED8"]
+			description: ["A guild member should look the part even in armour. Make the guild's leather apron outfit to wear over your gear when you report to Odile."]
+			icon: "minecraft:leather_chestplate"
+			id: "1CAEFEBB883E4FAA"
+			rewards: [
+				{
+					id: "011E6657331092AD"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_chestplate"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Dyed in the guild's colours.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Guild Apron\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 300"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "71F95CF722D4E251"
+					silent: true
+					title: "+300 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1864388B155FE718"
+					item: "minecraft:leather_chestplate"
+					only_from_crafting: true
+					title: "Make the guild apron"
+					type: "item"
+				}
+				{
+					id: "165547E998C4485A"
+					item: "minecraft:leather_leggings"
+					only_from_crafting: true
+					title: "Make the guild leggings"
+					type: "item"
+				}
+				{
+					id: "0E3C3BC7EF955C5B"
+					stage: "fq.skill_crafting.guild_uniform.talk2"
+					title: "Report to Odile in your uniform"
+					type: "gamestage"
+				}
+			]
+			title: "Dressed for the Guild"
+			x: 12.0d
 			y: 0.0d
+		}
+		{
+			dependencies: ["27C05E87C55AAEB2"]
+			description: ["Winter is coming and the children want a gingerbread house. Find wild ginger, grow it, bake gingerbread and build the house in the square."]
+			icon: "snowyspirit:gingerbread"
+			id: "7CF4315F67878925"
+			rewards: [
+				{
+					count: 8
+					id: "184FBA9073DF0CBF"
+					item: "snowyspirit:gingerbread_cookie"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "04A77FD56401C19C"
+					item: "snowyspirit:candy_cane"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 320"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "7EB2756D8964DC6E"
+					silent: true
+					title: "+320 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "1F7F9E4F8D7D0A80"
+					item: "snowyspirit:ginger"
+					title: "Find wild ginger to grow"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "2A7131F46223E0A0"
+					item: "snowyspirit:gingerbread"
+					only_from_crafting: true
+					title: "Bake gingerbread for the walls"
+					type: "item"
+				}
+				{
+					id: "080FF413B5DA64F2"
+					structure: "#fotf:groups/villages"
+					title: "Go to the village square"
+					type: "structure"
+				}
+				{
+					id: "6F6993E1D339B50D"
+					stage: "fq.skill_crafting.gingerbread.build3"
+					title: "Build the gingerbread house for the children"
+					type: "gamestage"
+				}
+			]
+			title: "Ginger in the Snow"
+			x: 10.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["7CF4315F67878925"]
+			description: ["The snowy village holds a downhill race every winter. Build a sled and beat the local champion to the bottom."]
+			icon: "snowyspirit:sled_oak"
+			id: "593AA868E8686119"
+			rewards: [
+				{
+					count: 4
+					id: "5CDAD642643A3E9E"
+					item: "snowyspirit:candy_cane_block"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 360"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "0BEA1A58E6DCC466"
+					silent: true
+					title: "+360 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4D0D7443221D66C1"
+					item: "snowyspirit:sled_oak"
+					only_from_crafting: true
+					title: "Build a sled for the race"
+					type: "item"
+				}
+				{
+					id: "24D1EAAF9C499A0F"
+					structure: "ctov:medium/village_snowy_igloo"
+					title: "Go to the snowy village's hill"
+					type: "structure"
+				}
+				{
+					advancement: "snowyspirit:adventure/ride_sled_fast"
+					criterion: ""
+					id: "70A430C8EF208239"
+					title: "Beat the champion down the hill"
+					type: "advancement"
+				}
+			]
+			title: "Downhill"
+			x: 12.0d
+			y: 1.5d
 		}
 	]
 	subtitle: ["Crafting path"]
