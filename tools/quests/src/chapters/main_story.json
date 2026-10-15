@@ -3563,15 +3563,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:diamond_sword",
-          "name": "The Forest's Thanks",
-          "lore": [
-            "The end of the story."
-          ],
-          "enchant": {
-            "minecraft:sharpness": 5,
-            "minecraft:unbreaking": 3
-          }
+          "choice": "forest_relics",
+          "title": "Choose one of the Forest's Relics"
         },
         {
           "skill": "agility",

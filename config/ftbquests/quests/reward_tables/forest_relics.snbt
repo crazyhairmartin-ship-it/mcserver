@@ -1,0 +1,119 @@
+{
+	icon: "minecraft:oak_sapling"
+	id: "1838B310BD9441E9"
+	loot_size: 1
+	order_index: 0
+	rewards: [
+		{
+			id: "59BD847FE84591A8"
+			item: {
+				Count: 1b
+				id: "cataclysm:the_incinerator"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:looting"
+							lvl: 3s
+						}
+						{
+							id: "minecraft:fire_aspect"
+							lvl: 2s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: [
+							"{\"text\": \"Ignis's own fire, quenched in the forest's spring.\", \"color\": \"gray\", \"italic\": true}"
+							"{\"text\": \"The end of the story.\", \"color\": \"gray\", \"italic\": true}"
+						]
+						Name: "{\"text\": \"Wren's Thornblade\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "245288334D1944B6"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:druidic_spell_book"
+				tag: {
+					display: {
+						Lore: [
+							"{\"text\": \"Every page smells of rain and moss.\", \"color\": \"gray\", \"italic\": true}"
+							"{\"text\": \"The end of the story.\", \"color\": \"gray\", \"italic\": true}"
+						]
+						Name: "{\"text\": \"The Greenheart Codex\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "0F2BB8E01B93F8F1"
+			item: {
+				Count: 1b
+				id: "twilightforest:triple_bow"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:power"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:infinity"
+							lvl: 1s
+						}
+						{
+							id: "minecraft:flame"
+							lvl: 1s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: [
+							"{\"text\": \"Three arrows, like three fireflies at dusk.\", \"color\": \"gray\", \"italic\": true}"
+							"{\"text\": \"The end of the story.\", \"color\": \"gray\", \"italic\": true}"
+						]
+						Name: "{\"text\": \"The Firefly Bow\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "352F63216D394BAA"
+			item: {
+				Count: 1b
+				id: "minecraft:netherite_pickaxe"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:efficiency"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:fortune"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: [
+							"{\"text\": \"It digs like a root finds water.\", \"color\": \"gray\", \"italic\": true}"
+							"{\"text\": \"The end of the story.\", \"color\": \"gray\", \"italic\": true}"
+						]
+						Name: "{\"text\": \"The Old Root\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "The Forest's Relics"
+	use_title: true
+}

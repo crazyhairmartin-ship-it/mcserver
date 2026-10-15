@@ -13,6 +13,8 @@ truly can't do it, logged in src/plans/followups.md. What it checks:
   - hostile spawns or spawn waves in villages (they kill villagers)
   - count steps (kill, use, search, cast, spellkill, tame, breed, mine, build) without an in-world "title"
   - quests without story text
+  - vanilla weapon, armour or tool rewards past the start/prologue tiers, unless unbreakable relics (Dylan,
+    2026-10-15: they lack flavour next to books, modded gear and ingredients)
   - dialogue over the limits (Dylan and Fionah, 2026-10-15): more than 2 lines in a conversation is an error, a line
     over 15 words a warning; character idle/hail lines in pack.json too
 """
@@ -24,6 +26,9 @@ import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, 'src')
+# vanilla weapons, armour and tools: flavourless as rewards past the first tiers (Dylan, 2026-10-15)
+VANILLA_GEAR = re.compile(r'_(sword|pickaxe|axe|shovel|hoe|helmet|chestplate|leggings|boots)$|:(bow|crossbow|shield|'
+                          r'trident|fishing_rod)$')
 LIFETIME_ADV = ('husbandry/tame_an_animal', 'husbandry/breed_an_animal', 'story/enchant_item', 'adventure/kill_a_mob',
                 'husbandry/fishy_business', 'story/mine_stone', 'story/smelt_iron')
 DISTANCE_STATS = ('walk_one_cm', 'sprint_one_cm', 'swim_one_cm', 'boat_one_cm', 'horse_one_cm', 'aviate_one_cm')
@@ -82,9 +87,21 @@ def main():
             continue
         data = json.load(open(path, encoding='utf-8'))
         milestones = chapter == 'milestones'
+        tiers = {}
+        plan_path = os.path.join(HERE, 'src', 'plans', 'quests', chapter + '.json')
+        if os.path.exists(plan_path):
+            tiers = {e['id']: e.get('tier') for e in json.load(open(plan_path, encoding='utf-8')).get('quests', [])}
         for q in data.get('quests', []):
             where = f'{chapter}:{q["id"]}'
             tasks = [t for t in q.get('tasks', []) if isinstance(t, dict)]
+            if chapter != 'start' and tiers.get(q['id']) not in ('start', 'prologue'):
+                rewards = [r for r in q.get('rewards', []) if isinstance(r, dict)]
+                for r in rewards + [o for r in rewards if isinstance(r.get('choice'), list) for o in r['choice']]:
+                    i = r.get('item')
+                    if isinstance(i, str) and i.startswith('minecraft:') and VANILLA_GEAR.search(i) \
+                            and not r.get('unbreakable'):
+                        warnings.append(f'{where}: vanilla gear reward {i} (prefer ingredients, an enchanted book or '
+                                        'modded gear; see "Item rewards" in tasks/README.md)')
             if not q.get('text'):
                 warnings.append(f'{where}: no story text (every quest needs an in-world reason)')
             goes_somewhere = any('structure' in t or 'place' in t for t in tasks)

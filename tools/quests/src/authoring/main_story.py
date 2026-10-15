@@ -729,8 +729,7 @@ ACT5 = [
           tasks=[{"biome": "minecraft:forest", "title": "Walk back into the forest at dusk"},
                  talk_char("wren", ["The fairies are back. The fireflies too. Notch be thanked.", "Come. Reece has a festival for you."],
                            title="Join Sister Wren's festival in your honour")],
-          rewards=[reward_item("minecraft:diamond_sword", name="The Forest's Thanks", lore=["The end of the story."],
-                               enchant={"minecraft:sharpness": 5, "minecraft:unbreaking": 3}), skill("agility", 1000)]),
+          rewards=[{"choice": "forest_relics", "title": "Choose one of the Forest's Relics"}, skill("agility", 1000)]),
 ]
 
 chapter("main_story", "The Silent Forest", "The main story", "minecraft:written_book", "story", 0,

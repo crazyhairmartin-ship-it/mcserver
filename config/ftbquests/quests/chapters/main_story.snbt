@@ -3923,27 +3923,9 @@
 			rewards: [
 				{
 					id: "009A58545F4867F8"
-					item: {
-						Count: 1b
-						id: "minecraft:diamond_sword"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:sharpness"
-									lvl: 5s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The end of the story.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"The Forest's Thanks\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 1745341740087525865L
+					title: "Choose one of the Forest's Relics"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 1000"

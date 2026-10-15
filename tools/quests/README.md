@@ -160,6 +160,8 @@ boss's drop or its advancement, so beating the boss early doesn't tick the quest
 | `{"skill": "farm", "xp": 150}` | Pufferfish skill XP in that tree: `mining forage farm fish cook craft attack range defense agility magic taming` |
 | `{"xp": 100}` / `{"levels": 3}` | Vanilla XP points / levels |
 | `{"table": "village_favours"}` | One random roll from `src/reward_tables/village_favours.json` |
+| `{"choice": [{"item": ...}, {"item": ...}], "title": "Choose one"}` | The player picks one of 2-4 options (each with the usual item fields: count, name, lore, enchant, unbreakable). The generator makes the table |
+| `{"choice": "forest_relics"}` | The player picks one item from that table in `src/reward_tables/` |
 | `{"command": "/say hi {p}", "title": "A surprise"}` | Runs a command as the server (`{p}` is the player) |
 | `{"stage": "my_stage"}` | Adds a stage |
 

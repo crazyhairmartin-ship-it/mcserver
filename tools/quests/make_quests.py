@@ -273,6 +273,26 @@ def item_value(r, reg, where, problems):
     return {'id': item, 'Count': B(1), 'tag': tag}
 
 
+def table_entries(name, rewards, reg, where, problems):
+    """Reward table entries from [{"item": ..., "count", "weight", plus name/lore/enchant/unbreakable}]."""
+    entries = []
+    for n, e in enumerate(rewards):
+        if not isinstance(e, dict) or 'item' not in e:
+            problems.error(where, f'reward {n + 1} in the table needs an "item"')
+            continue
+        if isinstance(e.get('item'), str) and e['item'].split(':')[0] in SIGNATURE_MODS \
+                and e['item'] not in SIGNATURE_EXEMPT:
+            problems.warn(where, f'{e["item"]} in a reward table: artifacts should come from the quest built '
+                                 'around them')
+        entry = {'id': fid('table', name, str(n)), 'type': 'item', 'item': item_value(e, reg, where, problems)}
+        if e.get('count', 1) != 1:
+            entry['count'] = e['count']
+        if e.get('weight', 1) != 1:
+            entry['weight'] = float(e['weight'])
+        entries.append(entry)
+    return entries
+
+
 def build_reward(r, ids, ctx, where, problems):
     if not isinstance(r, dict):
         problems.error(where, f'a reward must be an object, got {r!r}')
@@ -307,6 +327,25 @@ def build_reward(r, ids, ctx, where, problems):
             problems.error(where, f'unknown reward table {r["table"]!r} (tools/quests/src/reward_tables/)')
             return None
         reward.update(type='random', table_id=L(int(ctx['tables'][r['table']], 16)))
+    elif 'choice' in r and isinstance(r['choice'], list):
+        # the player picks one of these: the generator makes a reward table for the quest
+        name = 'choice_' + '_'.join(ids).lower()
+        entries = table_entries(name, r['choice'], reg, where, problems)
+        if len(entries) < 2:
+            problems.error(where, 'a choice reward needs at least two options')
+            return None
+        tid = fid('table', name)
+        ctx['tables'][name] = tid
+        ctx['tables_out'][name] = {'id': tid, 'title': r.get('title', 'Choose one'), 'icon': 'minecraft:chest',
+                                   'loot_size': 1, 'order_index': len(ctx['tables_out']), 'use_title': True,
+                                   'rewards': entries}
+        reward.update(type='choice', table_id=L(int(tid, 16)))
+    elif 'choice' in r:
+        # the player picks one reward from a table in src/reward_tables (e.g. the main story's relics)
+        if r['choice'] not in ctx['tables']:
+            problems.error(where, f'unknown reward table {r["choice"]!r} (tools/quests/src/reward_tables/)')
+            return None
+        reward.update(type='choice', table_id=L(int(ctx['tables'][r['choice']], 16)))
     elif 'command' in r:
         reward.update(type='command', command=r['command'], elevate_perms=True, silent=r.get('silent', True))
         if 'title' not in r:
@@ -314,7 +353,8 @@ def build_reward(r, ids, ctx, where, problems):
     elif 'stage' in r:
         reward.update(type='gamestage', stage=r['stage'])
     else:
-        problems.error(where, f'unknown reward {json.dumps(r)}; use item, skill, xp, levels, table, command or stage')
+        problems.error(where, f'unknown reward {json.dumps(r)}; use item, skill, xp, levels, table, choice, command '
+                              'or stage')
         return None
     if r.get('auto'):
         reward['auto'] = 'invisible' if r['auto'] == 'invisible' else 'enabled'
@@ -1110,6 +1150,7 @@ def main():
 
     # reward tables
     tables_out = {}
+    ctx['tables_out'] = tables_out   # choice rewards listed in a quest add their tables here
     tdir = os.path.join(SRC, 'reward_tables')
     for i, f in enumerate(sorted(os.listdir(tdir)) if os.path.isdir(tdir) else []):
         if not f.endswith('.json'):
@@ -1121,21 +1162,7 @@ def main():
             continue
         tid = fid('table', name)
         ctx['tables'][name] = tid
-        entries = []
-        for n, e in enumerate(t.get('rewards', [])):
-            if 'item' not in e:
-                problems.error(where, f'reward {n + 1} needs an "item"')
-                continue
-            if isinstance(e.get('item'), str) and e['item'].split(':')[0] in SIGNATURE_MODS \
-                    and e['item'] not in SIGNATURE_EXEMPT:
-                problems.warn(where, f'{e["item"]} in a random table: artifacts should come from the quest built '
-                                     'around them')
-            entry = {'id': fid('table', name, str(n)), 'type': 'item', 'item': item_value(e, reg, where, problems)}
-            if e.get('count', 1) != 1:
-                entry['count'] = e['count']
-            if e.get('weight', 1) != 1:
-                entry['weight'] = float(e['weight'])
-            entries.append(entry)
+        entries = table_entries(name, t.get('rewards', []), reg, where, problems)
         if not entries:
             problems.error(where, 'a reward table needs "rewards": [{"item": ..., "weight": ...}]')
         tables_out[name] = {'id': tid, 'title': t.get('title', name), 'icon': t.get('icon', 'minecraft:chest'),

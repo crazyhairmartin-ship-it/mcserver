@@ -1,0 +1,18 @@
+{
+  "title": "The Forest's Relics",
+  "icon": "minecraft:oak_sapling",
+  "_about": "The main story's last reward (main_story:epilogue, a choice reward): each player picks one. Dylan, 2026-10-15: finishing the story should be epic, with unbreakable gear rather than a diamond sword.",
+  "rewards": [
+    {"item": "cataclysm:the_incinerator", "name": "Wren's Thornblade", "unbreakable": true,
+     "lore": ["Ignis's own fire, quenched in the forest's spring.", "The end of the story."],
+     "enchant": {"minecraft:sharpness": 5, "minecraft:looting": 3, "minecraft:fire_aspect": 2}},
+    {"item": "irons_spellbooks:druidic_spell_book", "name": "The Greenheart Codex",
+     "lore": ["Every page smells of rain and moss.", "The end of the story."]},
+    {"item": "twilightforest:triple_bow", "name": "The Firefly Bow", "unbreakable": true,
+     "lore": ["Three arrows, like three fireflies at dusk.", "The end of the story."],
+     "enchant": {"minecraft:power": 5, "minecraft:infinity": 1, "minecraft:flame": 1}},
+    {"item": "minecraft:netherite_pickaxe", "name": "The Old Root", "unbreakable": true,
+     "lore": ["It digs like a root finds water.", "The end of the story."],
+     "enchant": {"minecraft:efficiency": 5, "minecraft:fortune": 3}}
+  ]
+}

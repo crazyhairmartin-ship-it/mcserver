@@ -61,10 +61,26 @@ characters only (see "Report" below).
   | act1 | 80-300 | | act5 | 600-1000 |
   | act2 | 150-400 | | post | 1000-1500 |
 
-  `any`-tier quests: by effort, 50-300. Chain endings and boss quests sit at the top of their tier. Item rewards should
-  be useful at that tier and come from mods in the pack; a skill path's capstone gives a unique named, enchanted item
-  (`{"item": ..., "name": ..., "lore": [...], "enchant": {...}}`). Artifacts (`artifacts:*`) only as the reward of
-  the quest whose plan entry has them, with `signature` set (see `src/plans/artifact_quests.md`).
+  `any`-tier quests: by effort, 50-300. Chain endings and boss quests sit at the top of their tier. Artifacts
+  (`artifacts:*`) only as the reward of the quest whose plan entry has them, with `signature` set (see
+  `src/plans/artifact_quests.md`).
+
+- **Item rewards should feel like something** (Dylan, 2026-10-15). A few items or pieces of gear per quest is fine.
+  - **Prefer, in order:** ingredients for something cool (Ars source gems, Iron's arcane essence, upgrade orbs and
+    runes, Cataclysm ingots and smithing templates, Tinkers' alloys, rare mob drops); enchanted books (one strong or
+    themed enchantment, e.g. `{"item": "minecraft:enchanted_book", "enchant": {"minecraft:mending": 1}}`); modded
+    weapons, armour and tools (Spartan Weaponry, Spartan Shields, Iron's, Cataclysm, Twilight, Aquaculture).
+    Giving what someone needs to craft the cool thing beats giving the cool thing.
+  - **Avoid** plain or enchanted vanilla weapons, armour and tools (iron sword, leather boots, diamond pickaxe): they
+    have no flavour. The checker warns on them. Fine as a starter in the `start`/`prologue` tiers.
+  - **Choice rewards** where players' styles differ (a fighter, a mage, a builder): `{"choice": [{"item": ...},
+    {"item": ...}], "title": "Choose one"}`, two to four options, each with the usual item fields. Each player picks
+    one. Good for chain endings and boss quests.
+  - **Capstones and finales** (a skill path's last quest, a chapter's final boss) give a unique relic: named,
+    `"unbreakable": true`, enchanted, with lore, on a modded base where one fits
+    (`{"item": ..., "name": ..., "lore": [...], "enchant": {...}, "unbreakable": true}`), or a choice of relics.
+    The main story's finale (`main_story:epilogue`, table `forest_relics`) is the model.
+  - Keepsakes (a named banner, a journal) are fine alongside a real reward, never instead of one.
 
 ### Design rules (the owner's, non-negotiable)
 
@@ -226,6 +242,10 @@ task first (T11, T18, T25, T28): other chapters link to its anchors. Counts are 
 | TF2 | - | 0 | Task TF for only: `main_story`, `milestones`, `nether`, `skill_agility`, `skill_attack`, `skill_cooking` |
 | TF3 | - | 0 | Task TF for only: `skill_crafting`, `skill_defense`, `skill_farming`, `skill_fishing`, `skill_foraging`, `skill_mining`, `skill_range` |
 | TF4 | - | 0 | Task TF for only: `skill_taming`, `small_favours`, `twilight`, `village_errands` |
+| TR1 | - | 0 | Task TR for only: `main_story`, `milestones`, `start`, `alexs_caves`, `twilight`, `nether`, `end` |
+| TR2 | - | 0 | Task TR for only: `skill_attack`, `skill_defense`, `skill_range`, `skill_taming`, `skill_agility`, `skill_crafting`, `magic` |
+| TR3 | - | 0 | Task TR for only: `skill_cooking`, `skill_farming`, `skill_fishing`, `skill_foraging`, `skill_mining` |
+| TR4 | - | 0 | Task TR for only: `discovery_land`, `discovery_sea`, `discovery_sky_and_underground`, `small_favours`, `odd_jobs`, `village_errands` |
 | T11 | 2 | 17 | `main_story` (act2, 17) |
 | T12 | 2 | 29 | `skill_attack` (act2, 7); `skill_defense` (act2, 8); `skill_range` (act2, 7); `skill_taming` (act2, 7) |
 | T13 | 2 | 33 | `skill_agility` (act2, 7); `skill_crafting` (act2, 10); `magic` (act2, 16) |
@@ -271,6 +291,32 @@ After each chapter: rebuild it, `python make_quests.py`, `python lint_quests.py 
 `python coverage.py --check`, one puzzle check (`python tools/quests/verify_puzzles.py`), and commit per chapter group
 (`Quests TF: stand-ins upgraded in <chapters>`). Report how many lines you cleared and how many remain, and the most
 common remaining needs (so the engine can grow next).
+
+## Task TR: richer rewards
+
+Dylan wants rewards with more flavour (see "Item rewards should feel like something" in the brief). Go through every
+quest in your chapters and improve the item rewards where they're flat. Skill XP stays exactly as it is, and so do
+ids, tasks, text and dialogue.
+
+- **Replace** vanilla weapons, armour and tools past the first tiers (the checker lists them as "vanilla gear
+  reward") and other flat rewards (a stack of iron, a vanilla tool, plain bread at act3) with ingredients for something
+  cool, an enchanted book that suits the quest, or modded gear, all fitting the quest's story and tier. A quest about
+  a smith gives a smith's things; a quest about a mage gives arcane things.
+- **Keep** what already fits: themed modded items, artifacts with their signature, shop deals, keepsakes beside a
+  real reward. Don't touch a reward just to touch it.
+- **Choice rewards:** give chain endings and boss quests a `choice` of 2-4 options suited to different players
+  (fighter, mage, builder or farmer) where it fits. Aim for a few per chapter, not every quest.
+- **Capstones** (each skill path's last quest, each realm chapter's final boss): a unique unbreakable named relic on a
+  modded base where one fits, or a choice of relics. Don't change `main_story:epilogue` (already done).
+- Every item must exist in `registry.json` and not be in its `trimmed` list. Don't give the same reward item in
+  every quest of a chapter: vary them.
+- Match the tier: act1 gets iron-level things and early ingredients; act4 and up get endgame materials (Cataclysm
+  ingots, legendary ink, netherite).
+
+After each chapter: rebuild it, `python make_quests.py`, `python lint_quests.py <chapter>` until there are no
+"vanilla gear reward" warnings. At the end: `python coverage.py --check`, then one commit per task
+(`Quests TR1: richer rewards in <chapters>`), pushed. Report, spoiler-free: how many quests' rewards changed per
+chapter, how many choice rewards and relics you added, and the commit hash.
 
 ## Task TD: shorten the dialogue
 

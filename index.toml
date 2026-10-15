@@ -134,7 +134,7 @@ hash = "c9163e454da4831944c2f9501c01900cc648456cc22560e9d156979edecb08dc"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
-hash = "aff29e2a1c7f149ee3cb65e8b721b432f0d962cbbb2c7f9300d5d73634ac176a"
+hash = "ad579d48288a6805c6342b5e8ddfe7cd38b88dc08e4094e09643da750b154f3e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/milestones.snbt"
@@ -213,12 +213,16 @@ file = "config/ftbquests/quests/data.snbt"
 hash = "cb806a97ee78be8a0531a5d513b82d507a8cc29091fbaebed6a84430833f670e"
 
 [[files]]
+file = "config/ftbquests/quests/reward_tables/forest_relics.snbt"
+hash = "df08aed2de25efa11bf894b93b1e26017cdac3db4aaf6cf4ad911b91ec9c5612"
+
+[[files]]
 file = "config/ftbquests/quests/reward_tables/starter_supplies.snbt"
-hash = "1b05e3edfa72bd9784a2cce483b00abc1156652394606808d92727883c9e85c8"
+hash = "4e5ab46138b513c45955c9c5ad8452e10315e51904e60513204fe66df9fe786e"
 
 [[files]]
 file = "config/ftbquests/quests/reward_tables/village_favours.snbt"
-hash = "f2a3d9158941d2a262eb6627772162968f4485786fae39c8ea7a3e02fbfd8c4d"
+hash = "ca439171f4e1be2b6f39446a5fad30303babd18e315612aaaea272b56d3c8113"
 
 [[files]]
 file = "config/gravestone-client.toml"
