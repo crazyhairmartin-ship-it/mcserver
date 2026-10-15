@@ -470,6 +470,338 @@
         }
       ],
       "icon": "spartanweaponry:iron_heavy_crossbow"
+    },
+    {
+      "id": "superstition",
+      "title": "Tobiah's Hat",
+      "after": [
+        "silent_camp",
+        "heavy_crossbow"
+      ],
+      "text": [
+        "Old Tobiah never hunted without his lucky hat, and only passes it to someone who brings him trophies from three different beasts. Luck, he says, follows the hat."
+      ],
+      "tasks": [
+        {
+          "item": "alexsmobs:moose_antler",
+          "title": "Bring a moose's antler"
+        },
+        {
+          "item": "alexsmobs:crocodile_scute",
+          "title": "Bring a crocodile's scute"
+        },
+        {
+          "item": "alexsmobs:gazelle_horn",
+          "title": "Bring a gazelle's horn"
+        },
+        {
+          "talk": "character",
+          "character": "tobiah",
+          "lines": [
+            "Three beasts, three trophies. The hat is yours.",
+            "Left foot first. Always."
+          ],
+          "title": "Show Tobiah your three trophies"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:superstitious_hat"
+        },
+        {
+          "skill": "range",
+          "xp": 300
+        }
+      ],
+      "icon": "artifacts:superstitious_hat",
+      "signature": "artifacts:superstitious_hat"
+    },
+    {
+      "id": "savanna_hunt",
+      "title": "The Long Grass",
+      "after": [
+        "superstition",
+        "main_story:act2_start"
+      ],
+      "text": [
+        "In the savanna the hunter becomes the hunted. Track a lion pride and a rhino for the lodge, and take their hides without being charged."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:savanna",
+          "title": "Reach the savanna's long grass"
+        },
+        {
+          "kill": "naturalist:lion",
+          "count": 2,
+          "title": "Bring down two lions of the pride for the lodge"
+        },
+        {
+          "kill": "naturalist:rhino",
+          "title": "Bring down a rhino for the lodge"
+        },
+        {
+          "item": "naturalist:fur",
+          "count": 2,
+          "title": "Take their hides for the lodge wall"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spectral_arrow",
+          "count": 32
+        },
+        {
+          "item": "minecraft:arrow",
+          "count": 64
+        },
+        {
+          "skill": "range",
+          "xp": 320
+        }
+      ],
+      "icon": "naturalist:lion_spawn_egg"
+    },
+    {
+      "id": "tiger_stalk",
+      "title": "Stripes in the Shade",
+      "after": [
+        "superstition"
+      ],
+      "text": [
+        "A tiger has been stalking a jungle village. Sneak through the undergrowth without being spotted and take it before it takes you."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:jungle",
+          "title": "Creep into the jungle around the village"
+        },
+        {
+          "encounter": {
+            "entity": "alexsmobs:tiger",
+            "name": "The Village Tiger",
+            "where": {
+              "biomes": [
+                "minecraft:jungle",
+                "minecraft:bamboo_jungle"
+              ]
+            },
+            "then": "kill",
+            "lines": [
+              "*A low growl in the undergrowth.*"
+            ]
+          },
+          "title": "Take the tiger before it takes you"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:arrow",
+          "count": 32
+        },
+        {
+          "item": "minecraft:gunpowder",
+          "count": 16
+        },
+        {
+          "skill": "range",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:bow"
+    },
+    {
+      "id": "anaconda",
+      "title": "Coils in the Swamp",
+      "after": [
+        "superstition"
+      ],
+      "text": [
+        "A villager's boat was dragged under by an anaconda. Hunt it in the swamp and bring back its shed skin for the lodge."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:swamp",
+          "title": "Go to the swamp where the boat was lost"
+        },
+        {
+          "encounter": {
+            "entity": "alexsmobs:anaconda",
+            "name": "The Boat-Taker",
+            "where": {
+              "biomes": [
+                "minecraft:swamp",
+                "minecraft:mangrove_swamp"
+              ]
+            },
+            "then": "kill",
+            "lines": [
+              "*The water ripples. Something huge coils.*"
+            ]
+          },
+          "title": "Hunt the anaconda that sank the boat"
+        },
+        {
+          "item": "alexsmobs:shed_snake_skin",
+          "title": "Bring back its shed skin for the lodge"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexsmobs:shed_snake_skin"
+        },
+        {
+          "skill": "range",
+          "xp": 320
+        }
+      ],
+      "icon": "alexsmobs:shed_snake_skin"
+    },
+    {
+      "id": "snow_leopard",
+      "title": "Ghost of the Peaks",
+      "after": [
+        "savanna_hunt"
+      ],
+      "text": [
+        "High in the snowy peaks, find the tracks of a snow leopard and a froststalker. The lodge wants the froststalker's horn."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:frozen_peaks",
+          "title": "Climb to the snowy peaks to follow the tracks"
+        },
+        {
+          "encounter": {
+            "entity": "alexsmobs:froststalker",
+            "name": "The Froststalker",
+            "where": {
+              "biomes": [
+                "minecraft:frozen_peaks",
+                "minecraft:snowy_slopes",
+                "minecraft:jagged_peaks"
+              ]
+            },
+            "then": "kill",
+            "lines": [
+              "*Ice cracks. Something pale watches.*"
+            ]
+          },
+          "title": "Bring down the froststalker for its horn"
+        },
+        {
+          "item": "alexsmobs:froststalker_horn",
+          "title": "Take its horn for the lodge"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexsmobs:froststalker_helmet"
+        },
+        {
+          "skill": "range",
+          "xp": 360
+        }
+      ],
+      "icon": "alexsmobs:froststalker_horn"
+    },
+    {
+      "id": "long_shot",
+      "title": "The Long Shot",
+      "after": [
+        "snow_leopard"
+      ],
+      "text": [
+        "Tobiah bets you can't hit a target from fifty blocks across a ravine. Prove him wrong with a longbow."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "tobiah",
+          "lines": [
+            "Fifty blocks. Across a ravine. Bet you miss.",
+            "Wind's from the west. Mind it."
+          ],
+          "title": "Take Tobiah's bet"
+        },
+        {
+          "item": "spartanweaponry:iron_longbow",
+          "crafted": true,
+          "title": "Make the longbow for the shot"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:target": 1
+            },
+            "radius": 12
+          },
+          "title": "Set up a target across the gap"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:arrow",
+          "count": 64
+        },
+        {
+          "item": "minecraft:spectral_arrow",
+          "count": 16
+        },
+        {
+          "skill": "range",
+          "xp": 380
+        }
+      ],
+      "icon": "spartanweaponry:iron_longbow"
+    },
+    {
+      "id": "rival_lodge",
+      "title": "The Rival Lodge",
+      "after": [
+        "long_shot",
+        "tiger_stalk"
+      ],
+      "text": [
+        "A rival lodge from a far village claims the best hunters. The contest at a logging camp: most game taken with bow and thrown weapons in one day."
+      ],
+      "tasks": [
+        {
+          "structure": "meadow:logging_camp",
+          "title": "Reach the logging camp where the contest is held"
+        },
+        {
+          "timed": {
+            "seconds": 600,
+            "goal": {
+              "kill": "naturalist:deer",
+              "count": 6
+            },
+            "waves": [
+              {
+                "entity": "naturalist:deer",
+                "count": 4,
+                "every": 60
+              }
+            ],
+            "lines": [
+              "Most game wins the day. Bow and thrown weapons only."
+            ],
+            "start": "Begin the contest"
+          },
+          "title": "Take more game than the rival lodge"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanweaponry:diamond_longbow"
+        },
+        {
+          "skill": "range",
+          "xp": 400
+        }
+      ],
+      "icon": "spartanweaponry:diamond_longbow"
     }
   ]
 }

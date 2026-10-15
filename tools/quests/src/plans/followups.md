@@ -83,6 +83,21 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - main_story:act2_monument_prep: needs specific potions and a Respiration-enchanted helmet; written as potions, a helmet and an enchanting table
 - main_story:act2_sealed_doors: needs both rune copies carried as items; written as talking to the Arcane Order
 - main_story:act2_sculptor: needs the pillar trial climb; written as the boss fight at the Monastery
+- skill_attack:arena_ladder: needs three rising bouts without leaving the sand; written as three spawned fights
+- skill_attack:cliff_nest: needs knocking occupants off the edge; written as a spawned fight and a search
+- skill_attack:weapon_master: needs a kill with each weapon; written as crafting all four and twelve zombie kills
+- skill_attack:hunter_trail: needs a compass page and the journal's haunts; written as three fallen adventurers observed
+- skill_defense:illusioner: needs picking the real one among copies; written as the illusioner boss fight
+- skill_defense:fortified_village: needs any fortified village; written as the plains fortified village
+- skill_defense:build_walls: needs two iron golems posted at the gate; written as a wall build and iron and pumpkins consumed
+- skill_defense:lightning_tower: needs a thunderstorm and strikes; written as a build and a timed hold
+- skill_range:savanna_hunt: needs hunting without being charged; written as lion and rhino kills and hides
+- skill_range:tiger_stalk: needs stealth through undergrowth; written as a jungle encounter kill
+- skill_range:long_shot: needs a 50-block shot across a ravine; written as a longbow and a target built
+- skill_range:rival_lodge: needs a rival lodge's tally; written as a timed deer hunt
+- skill_taming:fairy_meadow: needs catching fairies; written as observing each colour and carrying bottles
+- skill_taming:falconry: needs flying the eagle to bring back a rabbit; written as taming and crafting the glove and hood
+- skill_taming:elephant_caravan: needs the trader as well as the elephant; written as escorting the elephant
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

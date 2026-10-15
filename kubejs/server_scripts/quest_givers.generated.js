@@ -7161,6 +7161,259 @@ global.QUEST_GIVERS = [
     "profession": ""
   },
   {
+    "quest": "skill_attack:bandit_towers",
+    "stage": "fq.skill_attack.bandit_towers.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:bandit_towers"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Tower Bandits",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5A1EDB232C066F5A",
+    "requires": [],
+    "quest_id": "79C8DF979D6DB6ED",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_attack:bandit_towers",
+    "stage": "fq.skill_attack.bandit_towers.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:bandit_towers"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_bandit_towers_1",
+    "found": "A bandit banner, torn from a tower wall.",
+    "requires": [],
+    "quest_id": "79C8DF979D6DB6ED",
+    "prev_tasks": [
+      "5A1EDB232C066F5A"
+    ]
+  },
+  {
+    "quest": "skill_attack:skelewag",
+    "stage": "fq.skill_attack.skelewag.spawn1",
+    "type": "spawn",
+    "entity": "alexsmobs:skelewag",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:undead_pirate_ship",
+        "minecraft:shipwreck",
+        "minecraft:shipwreck_beached",
+        "mos:ship_wreck_dark_oak",
+        "mos:ship_wreck_oak",
+        "mos:ship_wreck_spruce",
+        "mos:sunken_ship",
+        "towns_and_towers:wreckage_ocean"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Skelewag",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "6D499D7FA1372327",
+    "requires": [],
+    "quest_id": "4081E827F3993938",
+    "prev_tasks": [
+      "50F5268F6CDD2F85"
+    ]
+  },
+  {
+    "quest": "skill_attack:witch_hunt",
+    "stage": "fq.skill_attack.witch_hunt.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:witch",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterwitchhuts:witch_hut",
+        "bloomingnature:swamp_hut",
+        "irons_spellbooks:mangrove_hut",
+        "nova_structures:mangrove_witch_hut"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Cattle Witch",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "6C47ADE91875469B",
+    "requires": [],
+    "quest_id": "7891F31795D49BE1",
+    "prev_tasks": [
+      "63B22DCC67467EBD"
+    ]
+  },
+  {
+    "quest": "skill_attack:witch_hunt",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:witch"
+    ],
+    "chance": 0.7,
+    "item": "kubejs:quest_witch_hunt_2",
+    "requires": [],
+    "quest_id": "7891F31795D49BE1",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_attack:arena_ladder",
+    "stage": "fq.skill_attack.arena_ladder.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:coliseum",
+        "mss:arena"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Arena Challengers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "2707F55B79D10F13",
+    "requires": [],
+    "quest_id": "75B6A620059115D4",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_attack:arena_ladder",
+    "stage": "fq.skill_attack.arena_ladder.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:vindicator",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:coliseum",
+        "mss:arena"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Arena Champions",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5C8CD210D4EB48C9",
+    "requires": [],
+    "quest_id": "75B6A620059115D4",
+    "prev_tasks": [
+      "2707F55B79D10F13"
+    ]
+  },
+  {
+    "quest": "skill_attack:arena_ladder",
+    "stage": "fq.skill_attack.arena_ladder.spawn2",
+    "type": "spawn",
+    "entity": "minecraft:ravager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:coliseum",
+        "mss:arena"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Arena Beast",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "136673375D11752B",
+    "requires": [],
+    "quest_id": "75B6A620059115D4",
+    "prev_tasks": [
+      "2707F55B79D10F13",
+      "5C8CD210D4EB48C9"
+    ]
+  },
+  {
+    "quest": "skill_attack:cliff_nest",
+    "stage": "fq.skill_attack.cliff_nest.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:vex",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:aviary"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Aviary Nesters",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "281674808279AEA0",
+    "requires": [],
+    "quest_id": "72137117F9CF645C",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_attack:cliff_nest",
+    "stage": "fq.skill_attack.cliff_nest.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:aviary"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_cliff_nest_1",
+    "found": "A spring-loaded trinket, left at the top.",
+    "requires": [],
+    "quest_id": "72137117F9CF645C",
+    "prev_tasks": [
+      "281674808279AEA0"
+    ]
+  },
+  {
+    "quest": "skill_attack:weapon_master",
+    "stage": "fq.skill_attack.weapon_master.talk0",
+    "type": "talk",
+    "lines": [
+      "Four weapons, four lessons. A hunter who knows one is a hunter who dies.",
+      "Make them. Use them. Then I'll believe you."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "corvin",
+    "quest_id": "3D5FF4AABFF1C57F",
+    "open_task": ""
+  },
+  {
     "quest": "skill_range:lodge_oath",
     "stage": "fq.skill_range.lodge_oath.talk2",
     "type": "talk",
@@ -7498,6 +7751,195 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "skill_range:superstition",
+    "stage": "fq.skill_range.superstition.talk3",
+    "type": "talk",
+    "lines": [
+      "Three beasts, three trophies. The hat is yours.",
+      "Left foot first. Always."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "tobiah",
+    "quest_id": "65990468D7341307",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_range:tiger_stalk",
+    "stage": "fq.skill_range.tiger_stalk.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*A low growl in the undergrowth.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2940EAD89A494955",
+    "prev_tasks": [
+      "72499C498FDB19E9"
+    ],
+    "name": "The Village Tiger",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": null,
+    "glow": false,
+    "where": {
+      "biomes": [
+        "minecraft:jungle",
+        "minecraft:bamboo_jungle"
+      ]
+    },
+    "entity": "alexsmobs:tiger",
+    "profession": ""
+  },
+  {
+    "quest": "skill_range:anaconda",
+    "stage": "fq.skill_range.anaconda.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*The water ripples. Something huge coils.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "22F7D2D29D7BE360",
+    "prev_tasks": [
+      "10C8401162D0C72B"
+    ],
+    "name": "The Boat-Taker",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": null,
+    "glow": false,
+    "where": {
+      "biomes": [
+        "minecraft:swamp",
+        "minecraft:mangrove_swamp"
+      ]
+    },
+    "entity": "alexsmobs:anaconda",
+    "profession": ""
+  },
+  {
+    "quest": "skill_range:snow_leopard",
+    "stage": "fq.skill_range.snow_leopard.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*Ice cracks. Something pale watches.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "3800558BAD381AA3",
+    "prev_tasks": [
+      "2B837ECD05BE5624"
+    ],
+    "name": "The Froststalker",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": null,
+    "glow": false,
+    "where": {
+      "biomes": [
+        "minecraft:frozen_peaks",
+        "minecraft:snowy_slopes",
+        "minecraft:jagged_peaks"
+      ]
+    },
+    "entity": "alexsmobs:froststalker",
+    "profession": ""
+  },
+  {
+    "quest": "skill_range:long_shot",
+    "stage": "fq.skill_range.long_shot.talk0",
+    "type": "talk",
+    "lines": [
+      "Fifty blocks. Across a ravine. Bet you miss.",
+      "Wind's from the west. Mind it."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "tobiah",
+    "quest_id": "2056C26430CA579E",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_range:long_shot",
+    "stage": "fq.skill_range.long_shot.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:target"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "2056C26430CA579E",
+    "prev_tasks": [
+      "6292763E281791E7",
+      "14245E37B0ACD658"
+    ]
+  },
+  {
+    "quest": "skill_range:rival_lodge",
+    "stage": "fq.skill_range.rival_lodge.timed1",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "kill",
+      "entity": "naturalist:deer",
+      "count": 6
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "naturalist:deer",
+        "count": 4,
+        "every": 60
+      }
+    ],
+    "lines": [
+      "Most game wins the day. Bow and thrown weapons only."
+    ],
+    "start": "Begin the contest",
+    "requires": [],
+    "quest_id": "2AC3DEBA9E4445DF",
+    "prev_tasks": [
+      "563331D3BA5988D9"
+    ],
+    "name": ""
+  },
+  {
     "quest": "skill_defense:enlist",
     "stage": "fq.skill_defense.enlist.talk1",
     "type": "talk",
@@ -7764,6 +8206,303 @@ global.QUEST_GIVERS = [
     "prev_tasks": [
       "566A90ECBCDD1AE6"
     ]
+  },
+  {
+    "quest": "skill_defense:pilgrim",
+    "stage": "fq.skill_defense.pilgrim.enc0",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "I walk to the chapel. Bandits or no.",
+      "Stay close, and I'll pray for you."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "0D2728F6635D8903",
+    "prev_tasks": [],
+    "name": "Old Priest",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "meadow:chapel"
+      ],
+      "label": "the chapel"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_defense:illusioner",
+    "stage": "fq.skill_defense.illusioner.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:illusioner",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "friendsandfoes:illusioner_training_grounds"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Illusioner",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "022B2B95DB8841B4",
+    "requires": [],
+    "quest_id": "5CE1744BEF454B38",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_defense:fortified_village",
+    "stage": "fq.skill_defense.fortified_village.talk2",
+    "type": "talk",
+    "lines": [
+      "Hale sent you? For the wall plans? Iron's welcome.",
+      "Copy ours. Walls like this hold."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "watch",
+    "professions": [
+      "guardvillagers:guard"
+    ],
+    "org_name": "Village Watch",
+    "quest_id": "30EF06AB64C1EB3C",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_defense:fortified_village",
+    "stage": "fq.skill_defense.fortified_village.search3",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_plains_fortified"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_fortified_village_3",
+    "found": "Rolled plans of the wall, in a captain's chest.",
+    "requires": [],
+    "quest_id": "30EF06AB64C1EB3C",
+    "prev_tasks": [
+      "7FA46619BC6D505F",
+      "71FF800E83041DD8",
+      "2E041A2BDEC771DC"
+    ]
+  },
+  {
+    "quest": "skill_defense:build_walls",
+    "stage": "fq.skill_defense.build_walls.build1",
+    "type": "build",
+    "keys": [
+      "#minecraft:walls",
+      "minecraft:stone_bricks",
+      "#minecraft:fence_gates"
+    ],
+    "counts": [
+      8,
+      24,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "3FEDF6CA94B40354",
+    "prev_tasks": [
+      "3CAB1371D8EA674E"
+    ]
+  },
+  {
+    "quest": "skill_defense:stray_fort",
+    "stage": "fq.skill_defense.stray_fort.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:stray",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:stray_fort"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Fort Strays",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "6551AF576C063C46",
+    "requires": [],
+    "quest_id": "117ED8E52E667AD9",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_defense:stray_fort",
+    "stage": "fq.skill_defense.stray_fort.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:stray_fort"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_stray_fort_1",
+    "found": "A frosted banner, nailed up in the hall.",
+    "requires": [],
+    "quest_id": "117ED8E52E667AD9",
+    "prev_tasks": [
+      "6551AF576C063C46"
+    ]
+  },
+  {
+    "quest": "skill_defense:thorn_shrine",
+    "stage": "fq.skill_defense.thorn_shrine.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:spider",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:thornborn_towers"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Thorn Nest",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5AA7B29B8C292079",
+    "requires": [],
+    "quest_id": "66EDCD740D044E8C",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_defense:thorn_shrine",
+    "stage": "fq.skill_defense.thorn_shrine.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:thornborn_towers"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_thorn_shrine_1",
+    "found": "An offering on the altar, wound in thorns.",
+    "requires": [],
+    "quest_id": "66EDCD740D044E8C",
+    "prev_tasks": [
+      "5AA7B29B8C292079"
+    ]
+  },
+  {
+    "quest": "skill_defense:lightning_tower",
+    "stage": "fq.skill_defense.lightning_tower.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Bzzt. I steady the ladder. You fit the rods."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "196FD0DCAAB3FDBB",
+    "prev_tasks": [
+      "209F5C3D09443B89"
+    ],
+    "name": "Tower Copper Golem",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "friendsandfoes:copper_golem",
+    "profession": ""
+  },
+  {
+    "quest": "skill_defense:lightning_tower",
+    "stage": "fq.skill_defense.lightning_tower.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:lightning_rod"
+    ],
+    "counts": [
+      2
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "196FD0DCAAB3FDBB",
+    "prev_tasks": [
+      "209F5C3D09443B89",
+      "49F398DEF6B15894"
+    ]
+  },
+  {
+    "quest": "skill_defense:lightning_tower",
+    "stage": "fq.skill_defense.lightning_tower.timed3",
+    "type": "timed",
+    "seconds": 90,
+    "goal": {
+      "kind": "hold",
+      "radius": 10.0
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "Bolts are striking. Stay on the tower!"
+    ],
+    "start": "Brave the storm",
+    "requires": [],
+    "quest_id": "196FD0DCAAB3FDBB",
+    "prev_tasks": [
+      "209F5C3D09443B89",
+      "49F398DEF6B15894",
+      "20EC4FC1DE920D3B"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_defense:sea_raiders",
+    "stage": "fq.skill_defense.sea_raiders.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "towns_and_towers:pillager_outpost_ocean"
+      ],
+      "label": "the destination"
+    },
+    "wave": 5,
+    "name": "Sea Raiders",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "3CF2C76DAE41444F",
+    "requires": [],
+    "quest_id": "0EAA884E5B0B71AB",
+    "prev_tasks": []
   },
   {
     "quest": "skill_agility:sign_the_roster",
@@ -9014,6 +9753,276 @@ global.QUEST_GIVERS = [
     "prev_tasks": [
       "338227AE155431B2",
       "5E9E3F6846C0FC32"
+    ]
+  },
+  {
+    "quest": "skill_taming:fairy_meadow",
+    "stage": "fq.skill_taming.fairy_meadow.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Take your jars and go. I never wanted fairies. I wanted light."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "42D03C61127A7393",
+    "prev_tasks": [],
+    "name": "Greedy Collector",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_taming:monkey_business",
+    "stage": "fq.skill_taming.monkey_business.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "*A flash of fur, and a stall is bare.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "494FC827FD995F41",
+    "prev_tasks": [],
+    "name": "Market Thief",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "alexsmobs:capuchin_monkey",
+    "profession": ""
+  },
+  {
+    "quest": "skill_taming:monkey_business",
+    "stage": "fq.skill_taming.monkey_business.tame1",
+    "type": "tame",
+    "entities": [
+      "alexsmobs:capuchin_monkey"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "494FC827FD995F41",
+    "prev_tasks": [
+      "0CF84908C4F81376"
+    ]
+  },
+  {
+    "quest": "skill_taming:monkey_business",
+    "stage": "fq.skill_taming.monkey_business.tame2",
+    "type": "tame",
+    "entities": [
+      "alexsmobs:raccoon"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "494FC827FD995F41",
+    "prev_tasks": [
+      "0CF84908C4F81376",
+      "3A2A04D7D4BC6EC2"
+    ]
+  },
+  {
+    "quest": "skill_taming:monkey_business",
+    "stage": "fq.skill_taming.monkey_business.tame3",
+    "type": "tame",
+    "entities": [
+      "alexsmobs:crow"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "494FC827FD995F41",
+    "prev_tasks": [
+      "0CF84908C4F81376",
+      "3A2A04D7D4BC6EC2",
+      "14FEEDE6645DCF3F"
+    ]
+  },
+  {
+    "quest": "skill_taming:falconry",
+    "stage": "fq.skill_taming.falconry.tame0",
+    "type": "tame",
+    "entities": [
+      "alexsmobs:bald_eagle"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "4B2F17FA273E5290",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_taming:elephant_caravan",
+    "stage": "fq.skill_taming.elephant_caravan.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "She is slow now. Give her time, and she will walk to rest."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "54FF67D5229A7EED",
+    "prev_tasks": [
+      "276C44BA4B88831D"
+    ],
+    "name": "Retiring Elephant",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "alexsmobs:elephant",
+    "profession": "",
+    "to": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_taming:horse_roundup",
+    "stage": "fq.skill_taming.horse_roundup.enc0",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "*A frightened whinny across the plain.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2F19D3842A47C155",
+    "prev_tasks": [],
+    "name": "Scattered Horse",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:horse",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "mvs:horse_pen"
+      ],
+      "label": "the horse pen"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_taming:horse_roundup",
+    "stage": "fq.skill_taming.horse_roundup.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "*Another whinny, further off.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2F19D3842A47C155",
+    "prev_tasks": [
+      "2D4344E6D54D1FE9"
+    ],
+    "name": "Scattered Horse",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:horse",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "mvs:horse_pen"
+      ],
+      "label": "the horse pen"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_taming:horse_roundup",
+    "stage": "fq.skill_taming.horse_roundup.enc2",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "*The last horse, shaking, hides in the trees.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2F19D3842A47C155",
+    "prev_tasks": [
+      "2D4344E6D54D1FE9",
+      "7AFA0956B00EC520"
+    ],
+    "name": "Scattered Horse",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:horse",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "mvs:horse_pen"
+      ],
+      "label": "the horse pen"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_taming:unicorn_tracks",
+    "stage": "fq.skill_taming.unicorn_tracks.tame1",
+    "type": "tame",
+    "entities": [
+      "ultimate_unicorn_mod:unicorn"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "08FFD670D22C479D",
+    "prev_tasks": [
+      "23D228146D658C2B"
     ]
   }
 ]

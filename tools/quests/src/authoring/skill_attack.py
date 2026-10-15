@@ -1,6 +1,7 @@
 """Chapter: skill_attack, the Bounty Office path: prologue and Act I (first release).
 Plan: src/plans/quests/skill_attack.json. Corvin Ash runs the office from Reece; contracts, a dead hunter's journal."""
 from common import chapter, quest, talk_char, item, reward_item, skill, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 Q = [
     quest("the_board", "Wanted", icon="bountiful:bountyboard",
@@ -96,4 +97,75 @@ Q = [
           rewards=[reward_item("artifacts:feral_claws"), skill("attack", 300)]),
 ]
 
-chapter("skill_attack", "The Bounty Office", "Attack path", "minecraft:iron_sword", "skills", 6, Q)
+ACT2 = [
+    quest("bandit_towers", "Bandit Country", icon="bountiful:bounty-uncommon",
+          after=["graveyard_shift", "main_story:act2_start"],
+          text=["An uncommon bounty: illager bandits have built towers over a trade road. Take them down and claim "
+                "their banner as proof."],
+          tasks=[fight("minecraft:pillager", 8, "dungeons_arise:bandit_towers", "Tower Bandits",
+                       "Take the bandits down for the trade road's merchants"),
+                 search("dungeons_arise:bandit_towers", 1, "Bandit Banner", "A bandit banner, torn from a tower wall.",
+                        texture="minecraft:item/white_banner", title="Claim a banner as proof for the bounty")],
+          rewards=[reward_item("bountiful:bounty-uncommon"), skill("attack", 250)]),
+
+    quest("skelewag", "Wanted: the Skelewag", icon="alexsmobs:skelewag_sword", after=["feral_bounty"],
+          text=["Sailors want a skelewag dead, a skeletal pirate fish that rams boats over shipwrecks. Hunt it in "
+                "the water and take its sword as proof."],
+          tasks=[{"structure": "#shipwrecks", "title": "Find the wreck the skelewag rams boats over"},
+                 fight("alexsmobs:skelewag", 1, "#shipwrecks", "The Skelewag", "Kill the skelewag that sinks the sailors' boats",
+                       wave=1),
+                 item("alexsmobs:skelewag_sword", title="Take its sword as proof")],
+          rewards=[reward_item("alexsmobs:skelewag_sword"), skill("attack", 280)]),
+
+    quest("witch_hunt", "Witch Hunt", icon="minecraft:witch_spawn_egg", after=["bandit_towers"],
+          text=["A village blames a witch for its sick cattle. Track her to her swamp hut, defeat her and bring "
+                "back her hat as proof."],
+          tasks=[{"structure": "#witch_huts", "title": "Track the witch to her hut"},
+                 fight("minecraft:witch", 1, "#witch_huts", "The Cattle Witch", "Defeat the witch blamed for the sick cattle",
+                       wave=1),
+                 sample("the Witch's Hat", ["minecraft:witch"], 0.7, texture="minecraft:item/leather_helmet",
+                        tooltip="Proof for the village")],
+          rewards=[reward_item("minecraft:splash_potion", 3), skill("attack", 280)]),
+
+    quest("arena_ladder", "The Arena Ladder", icon="artifacts:power_glove", after=["bandit_towers"],
+          signature="artifacts:power_glove",
+          text=["An arena's master runs a ladder: win three fights in a row against rising waves, without leaving "
+                "the sand. The champion's power glove goes to whoever finishes."],
+          tasks=[fight("minecraft:skeleton", 6, "#arenas", "Arena Challengers", "Win the first bout on the sand"),
+                 fight("minecraft:vindicator", 4, "#arenas", "Arena Champions", "Win the second bout against tougher fighters"),
+                 fight("minecraft:ravager", 1, "#arenas", "The Arena Beast", "Win the final bout against the beast", wave=1)],
+          rewards=[reward_item("artifacts:power_glove"), skill("attack", 350)]),
+
+    quest("cliff_nest", "Knock Them Down", icon="artifacts:pocket_piston", after=["skelewag"],
+          signature="artifacts:pocket_piston",
+          text=["Something nests high in an aviary, swooping on anyone below. Climb up and clear it the quick way: "
+                "knock its occupants off the edge. A piston-spring trinket waits at the top."],
+          tasks=[fight("minecraft:vex", 6, "dungeons_arise:aviary", "Aviary Nesters", "Clear the nesters off the aviary's tiers"),
+                 search("dungeons_arise:aviary", 1, "the Aviary Trinket", "A spring-loaded trinket, left at the top.",
+                        texture="minecraft:item/piston", title="Search the top for the piston-spring trinket")],
+          rewards=[reward_item("artifacts:pocket_piston"), skill("attack", 300)]),
+
+    quest("weapon_master", "Master of Arms", icon="spartanweaponry:diamond_halberd", after=["arena_ladder"],
+          text=["Ash says a hunter should master more than one weapon. Make a halberd, a rapier, a warhammer and a "
+                "javelin, then put them through their paces on the dead."],
+          tasks=[talk_char("corvin", ["Four weapons, four lessons. A hunter who knows one is a hunter who dies.",
+                                      "Make them. Use them. Then I'll believe you."],
+                           title="Hear Ash's drill"),
+                 item("spartanweaponry:iron_halberd", crafted=True, title="Forge a halberd"),
+                 item("spartanweaponry:iron_rapier", crafted=True, title="Forge a rapier"),
+                 item("spartanweaponry:iron_warhammer", crafted=True, title="Forge a warhammer"),
+                 item("spartanweaponry:iron_javelin", crafted=True, title="Forge a javelin"),
+                 {"kill": "minecraft:zombie", "count": 12, "title": "Put each weapon through its paces on the dead"}],
+          rewards=[reward_item("spartanweaponry:diamond_halberd"), skill("attack", 380)]),
+
+    quest("hunter_trail", "The Hunter's Trail", icon="minecraft:writable_book", after=["weapon_master"],
+          text=["The dead hunter's journal names three more of their old haunts. Find other fallen adventurers along "
+                "the trail, and piece together who they were hunting."],
+          tasks=[{"observe": "realmrpg_skeletons:explorer_skeleton", "ticks": 20, "title": "Find the explorer's remains"},
+                 {"observe": "realmrpg_skeletons:slain_skeleton", "ticks": 20, "title": "Find the slain hunter's remains"},
+                 {"observe": "realmrpg_skeletons:shot_skeleton", "ticks": 20, "title": "Find the hunter shot down on the trail"}],
+          rewards=[reward_item("minecraft:writable_book", name="A Hunter's Compass Page",
+                               lore=["Torn from a dead hunter's journal."]), skill("attack", 400)]),
+]
+
+chapter("skill_attack", "The Bounty Office", "Attack path", "minecraft:iron_sword", "skills", 6, Q + ACT2)

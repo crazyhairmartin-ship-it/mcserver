@@ -1,6 +1,7 @@
 """Chapter: skill_taming, the Sanctuary Keepers path: prologue and Act I (first release).
 Plan: src/plans/quests/skill_taming.json. Keeper Fern Thistlewood runs the sanctuary at the edge of Reece."""
 from common import chapter, quest, talk_char, item, reward_item, skill, giver_org, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 Q = [
     quest("stray_wolf", "The Stray", icon="minecraft:bone",
@@ -126,4 +127,74 @@ Q = [
           rewards=[reward_item("crittersandcompanions:dragonfly_wing", 4), skill("taming", 220)]),
 ]
 
-chapter("skill_taming", "The Sanctuary", "Taming path", "minecraft:bone", "skills", 11, Q)
+ACT2 = [
+    quest("fairy_meadow", "Lights in the Meadow", icon="fays_fairies:fairy_bottle", after=["butterfly_house"],
+          text=["Fairies caught by a greedy collector are wilting in jars in his shed. Free them, and catch a blue, a "
+                "pink and a gold fairy of your own to release into the sanctuary garden."],
+          tasks=[enc(["Take your jars and go. I never wanted fairies. I wanted light."],
+                     entity="minecraft:villager", name="Greedy Collector", title="Face the collector in his shed"),
+                 item("fays_fairies:fairy_bottle", 3, title="Recover the wilting fairies' bottles"),
+                 {"observe": "fays_fairies:blue_fairy", "ticks": 20, "title": "Find a blue fairy to catch"},
+                 {"observe": "fays_fairies:pink_fairy", "ticks": 20, "title": "Find a pink fairy to catch"},
+                 {"observe": "fays_fairies:gold_fairy", "ticks": 20, "title": "Find a gold fairy to catch"}],
+          rewards=[reward_item("fays_fairies:fairy_bottle"), skill("taming", 250)]),
+
+    quest("monkey_business", "Monkey Business", icon="alexsmobs:banana", after=["pet_enchanting"],
+          text=["A capuchin monkey, a raccoon and a crow have been stealing from the market. Catch them, tame them "
+                "and turn the thieves into the sanctuary's most popular residents."],
+          tasks=[enc(["*A flash of fur, and a stall is bare.*"], entity="alexsmobs:capuchin_monkey", name="Market Thief",
+                     title="Spot the thief at the market"),
+                 {"tame": "alexsmobs:capuchin_monkey", "title": "Tame the capuchin that robs the stalls"},
+                 {"tame": "alexsmobs:raccoon", "title": "Tame the raccoon that raids the bins"},
+                 {"tame": "alexsmobs:crow", "title": "Tame the crow that steals shiny things"}],
+          rewards=[reward_item("alexsmobs:banana", 16), skill("taming", 270)]),
+
+    quest("falconry", "The Falconer's Glove", icon="alexsmobs:falconry_hood", after=["monkey_business"],
+          text=["The sanctuary has pests, and a falcon is the clean answer. Tame a bald eagle, hood it and fly it from "
+                "a falconry glove."],
+          tasks=[{"tame": "alexsmobs:bald_eagle", "title": "Tame a bald eagle"},
+                 item("alexsmobs:falconry_glove", crafted=True, title="Make a falconry glove to fly it from"),
+                 item("alexsmobs:falconry_hood", crafted=True, title="Make a hood to calm it")],
+          rewards=[reward_item("alexsmobs:falconry_hood"), skill("taming", 300)]),
+
+    quest("elephant_caravan", "The Elephant Caravan", icon="naturalist:elephant_spawn_egg", after=["monkey_business"],
+          text=["An old trader's elephant is too old to work. Escort the trader's elephant from the savanna to the "
+                "sanctuary, where it can retire, at its slow pace."],
+          tasks=[{"structure": "ctov:large/village_savanna", "title": "Find the old trader in the savanna village"},
+                 enc(["She is slow now. Give her time, and she will walk to rest."], then="escort",
+                     entity="alexsmobs:elephant", name="Retiring Elephant", to={"place": "reece"},
+                     title="Lead the old elephant to the sanctuary")],
+          rewards=[reward_item("minecraft:emerald", 8), reward_item("minecraft:wheat", 32), skill("taming", 330)]),
+
+    quest("horse_roundup", "Round Them Up", icon="artifacts:cowboy_hat", after=["lame_horse"],
+          signature="artifacts:cowboy_hat",
+          text=["Lightning spooked the sanctuary's horses and they scattered across the plain. Ride out and lead every "
+                "one back to the horse pen. The old wrangler gives you his hat."],
+          tasks=[enc(["*A frightened whinny across the plain.*"], then="escort", entity="minecraft:horse",
+                     name="Scattered Horse", to={"structure": "mvs:horse_pen", "label": "the horse pen"},
+                     title="Lead the first scattered horse back to the pen"),
+                 enc(["*Another whinny, further off.*"], then="escort", entity="minecraft:horse",
+                     name="Scattered Horse", to={"structure": "mvs:horse_pen", "label": "the horse pen"},
+                     title="Lead the second scattered horse back"),
+                 enc(["*The last horse, shaking, hides in the trees.*"], then="escort", entity="minecraft:horse",
+                     name="Scattered Horse", to={"structure": "mvs:horse_pen", "label": "the horse pen"},
+                     title="Lead the last scattered horse back")],
+          rewards=[reward_item("artifacts:cowboy_hat"), skill("taming", 300)]),
+
+    quest("horse_gear", "Barding", icon="ultimate_unicorn_mod:iron_horse_helm", after=["horse_roundup"],
+          text=["The sanctuary's horses were spooked, and armour will help. Make proper barding: a horse helm and "
+                "armour, and test a foal's bloodline with the DNA tester."],
+          tasks=[item("ultimate_unicorn_mod:iron_horse_helm", crafted=True, title="Forge a horse helm"),
+                 item("ultimate_unicorn_mod:iron_horse_armor", crafted=True, title="Forge horse armour"),
+                 item("ultimate_unicorn_mod:dna_tester", crafted=True, title="Build a DNA tester for the foals")],
+          rewards=[reward_item("ultimate_unicorn_mod:diamond_slotted_horse_helm"), skill("taming", 320)]),
+
+    quest("unicorn_tracks", "Silver Hoofprints", icon="ultimate_unicorn_mod:unicorn_horn", after=["horse_gear"],
+          text=["A shepherd swears she saw a white horse with a horn at dawn. Follow the tracks, gain the unicorn's "
+                "trust and bring it to the sanctuary."],
+          tasks=[{"observe": "ultimate_unicorn_mod:unicorn", "ticks": 40, "title": "Follow the silver tracks to the unicorn"},
+                 {"tame": "ultimate_unicorn_mod:unicorn", "title": "Win the unicorn's trust"}],
+          rewards=[reward_item("ultimate_unicorn_mod:talisman"), skill("taming", 400)]),
+]
+
+chapter("skill_taming", "The Sanctuary", "Taming path", "minecraft:bone", "skills", 11, Q + ACT2)

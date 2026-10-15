@@ -365,6 +365,386 @@
         }
       ],
       "icon": "friendsandfoes:totem_of_freezing"
+    },
+    {
+      "id": "pilgrim",
+      "title": "The Pilgrim's Road",
+      "after": [
+        "first_raid"
+      ],
+      "text": [
+        "An old priest appears on the road, set on reaching a distant chapel through bandit country. Keep him alive all the way. At the altar he gives you the necklace he prayed with."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Old Priest",
+            "to": {
+              "structure": "meadow:chapel",
+              "label": "the chapel"
+            },
+            "then": "escort",
+            "lines": [
+              "I walk to the chapel. Bandits or no.",
+              "Stay close, and I'll pray for you."
+            ]
+          },
+          "title": "Escort the old priest to the chapel"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:cross_necklace"
+        },
+        {
+          "skill": "defense",
+          "xp": 300
+        }
+      ],
+      "icon": "artifacts:cross_necklace",
+      "signature": "artifacts:cross_necklace"
+    },
+    {
+      "id": "illusioner",
+      "title": "Which One Is Real?",
+      "after": [
+        "iceologer",
+        "main_story:act2_start"
+      ],
+      "text": [
+        "At the illusioner's training grounds, a dozen copies attack at once. Find the real illusioner and break the spell."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:illusioner",
+          "spawn": {
+            "at": {
+              "structure": "friendsandfoes:illusioner_training_grounds"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Illusioner"
+          },
+          "title": "Find the real illusioner among the copies and break the spell"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "friendsandfoes:totem_of_illusion"
+        },
+        {
+          "skill": "defense",
+          "xp": 280
+        }
+      ],
+      "icon": "friendsandfoes:totem_of_illusion"
+    },
+    {
+      "id": "fortified_village",
+      "title": "The Walled Town",
+      "after": [
+        "pilgrim"
+      ],
+      "text": [
+        "Captain Hale wants plans for Reece's walls. Travel to a fortified village, bring its watch captain iron, and copy how its walls are built."
+      ],
+      "tasks": [
+        {
+          "structure": "ctov:large/village_plains_fortified",
+          "title": "Travel to a walled village"
+        },
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 16,
+          "consume": true,
+          "title": "Bring the watch captain iron for the favour"
+        },
+        {
+          "talk": "org",
+          "org": "watch",
+          "lines": [
+            "Hale sent you? For the wall plans? Iron's welcome.",
+            "Copy ours. Walls like this hold."
+          ],
+          "title": "Ask the wall's captain for the plans"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "ctov:large/village_plains_fortified"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Wall Plans",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "Rolled plans of the wall, in a captain's chest."
+          },
+          "title": "Copy the wall's plans"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "The Wall Plans",
+          "lore": [
+            "How the walls are built."
+          ]
+        },
+        {
+          "skill": "defense",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:iron_ingot"
+    },
+    {
+      "id": "build_walls",
+      "title": "Walls for Reece",
+      "after": [
+        "fortified_village"
+      ],
+      "text": [
+        "Raise a stone wall and a gatehouse on Reece's open side from the plans, and raise two iron golems to stand at the gate."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "#minecraft:walls": 8,
+              "minecraft:stone_bricks": 24,
+              "#minecraft:fence_gates": 1
+            },
+            "radius": 12
+          },
+          "title": "Raise a wall and gatehouse on Reece's open side"
+        },
+        {
+          "item": "minecraft:iron_block",
+          "count": 8,
+          "consume": true,
+          "title": "Bring iron to raise the gate's golems"
+        },
+        {
+          "item": "minecraft:carved_pumpkin",
+          "count": 2,
+          "consume": true,
+          "title": "Bring pumpkins to crown the golems"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanshields:diamond_basic_shield"
+        },
+        {
+          "skill": "defense",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:stone_bricks"
+    },
+    {
+      "id": "stray_fort",
+      "title": "The Stray Fort",
+      "after": [
+        "illusioner"
+      ],
+      "text": [
+        "Strays from a fort in the snow keep shooting at travellers. Storm the stray fort and take its banner."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:stray",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "nova_structures:stray_fort"
+            },
+            "wave": 4,
+            "name": "Fort Strays"
+          },
+          "title": "Storm the fort and drive off the strays"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:stray_fort"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Stray Fort Banner",
+              "texture": "minecraft:item/white_banner"
+            },
+            "found": "A frosted banner, nailed up in the hall."
+          },
+          "title": "Take down the fort's banner"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:tipped_arrow",
+          "count": 16
+        },
+        {
+          "skill": "defense",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:stray_spawn_egg"
+    },
+    {
+      "id": "thorn_shrine",
+      "title": "The Thornborn Towers",
+      "after": [
+        "stray_fort"
+      ],
+      "text": [
+        "A shrine choked by thorns has become a nest. Fight through the Thornborn Towers and clear what lives inside. A pendant of thorns lies on the altar."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:spider",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:thornborn_towers"
+            },
+            "wave": 4,
+            "name": "Thorn Nest"
+          },
+          "title": "Clear the nest from the thorned shrine"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "dungeons_arise:thornborn_towers"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Shrine Offering",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "An offering on the altar, wound in thorns."
+          },
+          "title": "Search the altar for what the thorns guard"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:thorn_pendant"
+        },
+        {
+          "skill": "defense",
+          "xp": 340
+        }
+      ],
+      "icon": "artifacts:thorn_pendant",
+      "signature": "artifacts:thorn_pendant"
+    },
+    {
+      "id": "lightning_tower",
+      "title": "Struck Again",
+      "after": [
+        "build_walls"
+      ],
+      "text": [
+        "The engineers' tower that draws lightning away from a village has burnt out. Replace its copper lightning rods while bolts keep striking, with a copper golem's help."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:lightning_rod",
+          "count": 2,
+          "title": "Bring copper lightning rods to replace the burnt ones"
+        },
+        {
+          "encounter": {
+            "entity": "friendsandfoes:copper_golem",
+            "name": "Tower Copper Golem",
+            "then": "talk",
+            "lines": [
+              "Bzzt. I steady the ladder. You fit the rods."
+            ]
+          },
+          "title": "Meet the copper golem that helps at the tower"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:lightning_rod": 2
+            },
+            "radius": 10
+          },
+          "title": "Fit the new rods at the top"
+        },
+        {
+          "timed": {
+            "seconds": 90,
+            "goal": {
+              "hold": {
+                "radius": 10
+              }
+            },
+            "lines": [
+              "Bolts are striking. Stay on the tower!"
+            ],
+            "start": "Brave the storm"
+          },
+          "title": "Stay on the tower while bolts keep striking"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:shock_pendant"
+        },
+        {
+          "skill": "defense",
+          "xp": 350
+        }
+      ],
+      "icon": "artifacts:shock_pendant",
+      "signature": "artifacts:shock_pendant"
+    },
+    {
+      "id": "sea_raiders",
+      "title": "Raiders from the Sea",
+      "after": [
+        "thorn_shrine"
+      ],
+      "text": [
+        "Coastal villages are raided from the water. Sail out and take the pillager ship that launches the raids."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:pillager",
+          "count": 10,
+          "spawn": {
+            "at": {
+              "structure": "towns_and_towers:pillager_outpost_ocean"
+            },
+            "wave": 5,
+            "name": "Sea Raiders"
+          },
+          "title": "Take the raiders' ship at sea"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:white_banner",
+          "name": "Ominous Banner",
+          "lore": [
+            "Taken from the raiders' ship."
+          ]
+        },
+        {
+          "skill": "defense",
+          "xp": 400
+        }
+      ],
+      "icon": "minecraft:white_banner"
     }
   ]
 }

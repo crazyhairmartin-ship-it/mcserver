@@ -1,6 +1,7 @@
 """Chapter: skill_range, the Hunters' Lodge path: prologue and Act I (first release).
 Plan: src/plans/quests/skill_range.json. Huntmistress Orla Vance and Old Tobiah keep the lodge on the hill west of Reece."""
 from common import chapter, quest, talk_char, talk_org, item, reward_item, skill, encounter
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 Q = [
     quest("lodge_oath", "Bow and Oath", icon="minecraft:bow",
@@ -98,4 +99,73 @@ Q = [
           rewards=[reward_item("spartanweaponry:bolt", 32), skill("range", 280)]),
 ]
 
-chapter("skill_range", "The Hunters' Lodge", "Range path", "minecraft:bow", "skills", 7, Q)
+ACT2 = [
+    quest("superstition", "Tobiah's Hat", icon="artifacts:superstitious_hat", after=["silent_camp", "heavy_crossbow"],
+          signature="artifacts:superstitious_hat",
+          text=["Old Tobiah never hunted without his lucky hat, and only passes it to someone who brings him "
+                "trophies from three different beasts. Luck, he says, follows the hat."],
+          tasks=[item("alexsmobs:moose_antler", title="Bring a moose's antler"),
+                 item("alexsmobs:crocodile_scute", title="Bring a crocodile's scute"),
+                 item("alexsmobs:gazelle_horn", title="Bring a gazelle's horn"),
+                 talk_char("tobiah", ["Three beasts, three trophies. The hat is yours.", "Left foot first. Always."],
+                           title="Show Tobiah your three trophies")],
+          rewards=[reward_item("artifacts:superstitious_hat"), skill("range", 300)]),
+
+    quest("savanna_hunt", "The Long Grass", icon="naturalist:lion_spawn_egg",
+          after=["superstition", "main_story:act2_start"],
+          text=["In the savanna the hunter becomes the hunted. Track a lion pride and a rhino for the lodge, and take "
+                "their hides without being charged."],
+          tasks=[{"biome": "minecraft:savanna", "title": "Reach the savanna's long grass"},
+                 {"kill": "naturalist:lion", "count": 2, "title": "Bring down two lions of the pride for the lodge"},
+                 {"kill": "naturalist:rhino", "title": "Bring down a rhino for the lodge"},
+                 item("naturalist:fur", 2, title="Take their hides for the lodge wall")],
+          rewards=[reward_item("minecraft:spectral_arrow", 32), reward_item("minecraft:arrow", 64), skill("range", 320)]),
+
+    quest("tiger_stalk", "Stripes in the Shade", icon="minecraft:bow", after=["superstition"],
+          text=["A tiger has been stalking a jungle village. Sneak through the undergrowth without being spotted and "
+                "take it before it takes you."],
+          tasks=[{"biome": "minecraft:jungle", "title": "Creep into the jungle around the village"},
+                 enc(["*A low growl in the undergrowth.*"], then="kill", entity="alexsmobs:tiger", name="The Village Tiger",
+                     title="Take the tiger before it takes you", where={"biomes": ["minecraft:jungle", "minecraft:bamboo_jungle"]})],
+          rewards=[reward_item("minecraft:arrow", 32), reward_item("minecraft:gunpowder", 16), skill("range", 340)]),
+
+    quest("anaconda", "Coils in the Swamp", icon="alexsmobs:shed_snake_skin", after=["superstition"],
+          text=["A villager's boat was dragged under by an anaconda. Hunt it in the swamp and bring back its shed "
+                "skin for the lodge."],
+          tasks=[{"biome": "minecraft:swamp", "title": "Go to the swamp where the boat was lost"},
+                 enc(["*The water ripples. Something huge coils.*"], then="kill", entity="alexsmobs:anaconda",
+                     name="The Boat-Taker", title="Hunt the anaconda that sank the boat",
+                     where={"biomes": ["minecraft:swamp", "minecraft:mangrove_swamp"]}),
+                 item("alexsmobs:shed_snake_skin", title="Bring back its shed skin for the lodge")],
+          rewards=[reward_item("alexsmobs:shed_snake_skin"), skill("range", 320)]),
+
+    quest("snow_leopard", "Ghost of the Peaks", icon="alexsmobs:froststalker_horn", after=["savanna_hunt"],
+          text=["High in the snowy peaks, find the tracks of a snow leopard and a froststalker. The lodge wants the "
+                "froststalker's horn."],
+          tasks=[{"biome": "minecraft:frozen_peaks", "title": "Climb to the snowy peaks to follow the tracks"},
+                 enc(["*Ice cracks. Something pale watches.*"], then="kill", entity="alexsmobs:froststalker",
+                     name="The Froststalker", title="Bring down the froststalker for its horn",
+                     where={"biomes": ["minecraft:frozen_peaks", "minecraft:snowy_slopes", "minecraft:jagged_peaks"]}),
+                 item("alexsmobs:froststalker_horn", title="Take its horn for the lodge")],
+          rewards=[reward_item("alexsmobs:froststalker_helmet"), skill("range", 360)]),
+
+    quest("long_shot", "The Long Shot", icon="spartanweaponry:iron_longbow", after=["snow_leopard"],
+          text=["Tobiah bets you can't hit a target from fifty blocks across a ravine. Prove him wrong with a longbow."],
+          tasks=[talk_char("tobiah", ["Fifty blocks. Across a ravine. Bet you miss.", "Wind's from the west. Mind it."],
+                           title="Take Tobiah's bet"),
+                 item("spartanweaponry:iron_longbow", crafted=True, title="Make the longbow for the shot"),
+                 {"build": {"blocks": {"minecraft:target": 1}, "radius": 12}, "title": "Set up a target across the gap"}],
+          rewards=[reward_item("minecraft:arrow", 64), reward_item("minecraft:spectral_arrow", 16), skill("range", 380)]),
+
+    quest("rival_lodge", "The Rival Lodge", icon="spartanweaponry:diamond_longbow", after=["long_shot", "tiger_stalk"],
+          text=["A rival lodge from a far village claims the best hunters. The contest at a logging camp: most game "
+                "taken with bow and thrown weapons in one day."],
+          tasks=[{"structure": "meadow:logging_camp", "title": "Reach the logging camp where the contest is held"},
+                 {"timed": {"seconds": 600, "goal": {"kill": "naturalist:deer", "count": 6},
+                            "waves": [{"entity": "naturalist:deer", "count": 4, "every": 60}],
+                            "lines": ["Most game wins the day. Bow and thrown weapons only."],
+                            "start": "Begin the contest"}, "title": "Take more game than the rival lodge"}],
+          rewards=[reward_item("spartanweaponry:diamond_longbow"), skill("range", 400)]),
+]
+
+chapter("skill_range", "The Hunters' Lodge", "Range path", "minecraft:bow", "skills", 7, Q + ACT2)

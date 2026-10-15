@@ -228,7 +228,7 @@
 			]
 			title: "Kits at the Hut"
 			x: 3.0d
-			y: -3.0d
+			y: -3.75d
 		}
 		{
 			dependencies: ["1A6788BE27A0CD4A"]
@@ -351,7 +351,7 @@
 			]
 			title: "Wings in a Bottle"
 			x: 3.0d
-			y: -1.5d
+			y: -2.25d
 		}
 		{
 			dependencies: ["13AA793F6D1BC16D"]
@@ -405,7 +405,7 @@
 			]
 			title: "The Cats of the Ruin"
 			x: 4.5d
-			y: -1.5d
+			y: -3.0d
 		}
 		{
 			dependencies: ["1A6788BE27A0CD4A"]
@@ -510,7 +510,7 @@
 			]
 			title: "The Butterfly House"
 			x: 4.5d
-			y: 0.0d
+			y: -1.5d
 		}
 		{
 			dependencies: ["15EC4037069981A0"]
@@ -563,7 +563,7 @@
 			]
 			title: "The Koi Pond"
 			x: 3.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3FC330D6BE47EDE0"]
@@ -640,7 +640,7 @@
 			]
 			title: "A Collar Worth Wearing"
 			x: 3.0d
-			y: 1.5d
+			y: 0.75d
 		}
 		{
 			dependencies: ["74D054A89C57852A"]
@@ -697,7 +697,7 @@
 			]
 			title: "Eggs to Hatch"
 			x: 4.5d
-			y: 1.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["0ED09A00977BAAB9"]
@@ -745,7 +745,350 @@
 			]
 			title: "Shimmering Wings"
 			x: 3.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["624E8EFB92BDAE88"]
+			description: ["Fairies caught by a greedy collector are wilting in jars in his shed. Free them, and catch a blue, a pink and a gold fairy of your own to release into the sanctuary garden."]
+			icon: "fays_fairies:fairy_bottle"
+			id: "42D03C61127A7393"
+			rewards: [
+				{
+					id: "7C50481773362C14"
+					item: "fays_fairies:fairy_bottle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 250"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "6072AC3351319403"
+					silent: true
+					title: "+250 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6D597AA7C0488DBE"
+					stage: "fq.skill_taming.fairy_meadow.enc0"
+					title: "Face the collector in his shed"
+					type: "gamestage"
+				}
+				{
+					count: 3L
+					id: "4E0A167A6B811D60"
+					item: "fays_fairies:fairy_bottle"
+					title: "Recover the wilting fairies' bottles"
+					type: "item"
+				}
+				{
+					id: "23DD4432C4A4951A"
+					observe_type: "entity_type"
+					timer: 20L
+					title: "Find a blue fairy to catch"
+					to_observe: "fays_fairies:blue_fairy"
+					type: "observation"
+				}
+				{
+					id: "714CB3637D0A7D47"
+					observe_type: "entity_type"
+					timer: 20L
+					title: "Find a pink fairy to catch"
+					to_observe: "fays_fairies:pink_fairy"
+					type: "observation"
+				}
+				{
+					id: "2244582B09543DFC"
+					observe_type: "entity_type"
+					timer: 20L
+					title: "Find a gold fairy to catch"
+					to_observe: "fays_fairies:gold_fairy"
+					type: "observation"
+				}
+			]
+			title: "Lights in the Meadow"
+			x: 6.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3E29F1CF1159CD62"]
+			description: ["A capuchin monkey, a raccoon and a crow have been stealing from the market. Catch them, tame them and turn the thieves into the sanctuary's most popular residents."]
+			icon: "alexsmobs:banana"
+			id: "494FC827FD995F41"
+			rewards: [
+				{
+					count: 16
+					id: "37101A1175899FBD"
+					item: "alexsmobs:banana"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 270"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "718BB2DB3A7FE829"
+					silent: true
+					title: "+270 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0CF84908C4F81376"
+					stage: "fq.skill_taming.monkey_business.enc0"
+					title: "Spot the thief at the market"
+					type: "gamestage"
+				}
+				{
+					id: "3A2A04D7D4BC6EC2"
+					stage: "fq.skill_taming.monkey_business.tame1"
+					title: "Tame the capuchin that robs the stalls"
+					type: "gamestage"
+				}
+				{
+					id: "14FEEDE6645DCF3F"
+					stage: "fq.skill_taming.monkey_business.tame2"
+					title: "Tame the raccoon that raids the bins"
+					type: "gamestage"
+				}
+				{
+					id: "27A5247709588B85"
+					stage: "fq.skill_taming.monkey_business.tame3"
+					title: "Tame the crow that steals shiny things"
+					type: "gamestage"
+				}
+			]
+			title: "Monkey Business"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["494FC827FD995F41"]
+			description: ["The sanctuary has pests, and a falcon is the clean answer. Tame a bald eagle, hood it and fly it from a falconry glove."]
+			icon: "alexsmobs:falconry_hood"
+			id: "4B2F17FA273E5290"
+			rewards: [
+				{
+					id: "5CD3014285E212AA"
+					item: "alexsmobs:falconry_hood"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 300"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "46A8DEA4209E0708"
+					silent: true
+					title: "+300 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2D90C784F752E7BE"
+					stage: "fq.skill_taming.falconry.tame0"
+					title: "Tame a bald eagle"
+					type: "gamestage"
+				}
+				{
+					id: "211E6C7876940C60"
+					item: "alexsmobs:falconry_glove"
+					only_from_crafting: true
+					title: "Make a falconry glove to fly it from"
+					type: "item"
+				}
+				{
+					id: "50F847AD5779DACB"
+					item: "alexsmobs:falconry_hood"
+					only_from_crafting: true
+					title: "Make a hood to calm it"
+					type: "item"
+				}
+			]
+			title: "The Falconer's Glove"
+			x: 6.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["494FC827FD995F41"]
+			description: ["An old trader's elephant is too old to work. Escort the trader's elephant from the savanna to the sanctuary, where it can retire, at its slow pace."]
+			icon: "naturalist:elephant_spawn_egg"
+			id: "54FF67D5229A7EED"
+			rewards: [
+				{
+					count: 8
+					id: "5CE8E6325611B258"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "02630A07C65E3A6C"
+					item: "minecraft:wheat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 330"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "6473C5628272C4F5"
+					silent: true
+					title: "+330 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "276C44BA4B88831D"
+					structure: "ctov:large/village_savanna"
+					title: "Find the old trader in the savanna village"
+					type: "structure"
+				}
+				{
+					id: "4DC425F2D7F457A5"
+					stage: "fq.skill_taming.elephant_caravan.enc1"
+					title: "Lead the old elephant to the sanctuary"
+					type: "gamestage"
+				}
+			]
+			title: "The Elephant Caravan"
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["480DD6F8670C1468"]
+			description: ["Lightning spooked the sanctuary's horses and they scattered across the plain. Ride out and lead every one back to the horse pen. The old wrangler gives you his hat."]
+			icon: "artifacts:cowboy_hat"
+			id: "2F19D3842A47C155"
+			rewards: [
+				{
+					id: "3EFF24A783699C7D"
+					item: "artifacts:cowboy_hat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 300"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "013501AEEE1F245C"
+					silent: true
+					title: "+300 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2D4344E6D54D1FE9"
+					stage: "fq.skill_taming.horse_roundup.enc0"
+					title: "Lead the first scattered horse back to the pen"
+					type: "gamestage"
+				}
+				{
+					id: "7AFA0956B00EC520"
+					stage: "fq.skill_taming.horse_roundup.enc1"
+					title: "Lead the second scattered horse back"
+					type: "gamestage"
+				}
+				{
+					id: "69E486D9F45591FF"
+					stage: "fq.skill_taming.horse_roundup.enc2"
+					title: "Lead the last scattered horse back"
+					type: "gamestage"
+				}
+			]
+			title: "Round Them Up"
+			x: 3.0d
+			y: 3.75d
+		}
+		{
+			dependencies: ["2F19D3842A47C155"]
+			description: ["The sanctuary's horses were spooked, and armour will help. Make proper barding: a horse helm and armour, and test a foal's bloodline with the DNA tester."]
+			icon: "ultimate_unicorn_mod:iron_horse_helm"
+			id: "5DFF9704B9891005"
+			rewards: [
+				{
+					id: "3262B5751BA707C5"
+					item: "ultimate_unicorn_mod:diamond_slotted_horse_helm"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 320"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "711ED278640F9D68"
+					silent: true
+					title: "+320 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "499BFE2FFCDB453C"
+					item: "ultimate_unicorn_mod:iron_horse_helm"
+					only_from_crafting: true
+					title: "Forge a horse helm"
+					type: "item"
+				}
+				{
+					id: "1F681B47E0E962A7"
+					item: "ultimate_unicorn_mod:iron_horse_armor"
+					only_from_crafting: true
+					title: "Forge horse armour"
+					type: "item"
+				}
+				{
+					id: "64619C87D0786C6C"
+					item: "ultimate_unicorn_mod:dna_tester"
+					only_from_crafting: true
+					title: "Build a DNA tester for the foals"
+					type: "item"
+				}
+			]
+			title: "Barding"
+			x: 4.5d
 			y: 3.0d
+		}
+		{
+			dependencies: ["5DFF9704B9891005"]
+			description: ["A shepherd swears she saw a white horse with a horn at dawn. Follow the tracks, gain the unicorn's trust and bring it to the sanctuary."]
+			icon: "ultimate_unicorn_mod:unicorn_horn"
+			id: "08FFD670D22C479D"
+			rewards: [
+				{
+					id: "34B819FA09DAD0F5"
+					item: "ultimate_unicorn_mod:talisman"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 400"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "59C7EE30D519E80B"
+					silent: true
+					title: "+400 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "23D228146D658C2B"
+					observe_type: "entity_type"
+					timer: 40L
+					title: "Follow the silver tracks to the unicorn"
+					to_observe: "ultimate_unicorn_mod:unicorn"
+					type: "observation"
+				}
+				{
+					id: "13A206E2AC69C43B"
+					stage: "fq.skill_taming.unicorn_tracks.tame1"
+					title: "Win the unicorn's trust"
+					type: "gamestage"
+				}
+			]
+			title: "Silver Hoofprints"
+			x: 6.0d
+			y: 2.25d
 		}
 	]
 	subtitle: ["Taming path"]

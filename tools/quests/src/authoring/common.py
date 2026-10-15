@@ -94,3 +94,39 @@ def encounter(lines=None, then="talk", **spec):
     if lines:
         e["lines"] = list(lines)
     return {"encounter": e}
+
+
+def enc(lines, title=None, **spec):
+    """An encounter step with an in-world title."""
+    t = encounter(lines, **spec)
+    if title:
+        t["title"] = title
+    return t
+
+
+def fight(entity, count, at, name, title, wave=4, **extra):
+    """A kill step whose enemies come to the fight when the player is at the place (a structure id or #group)."""
+    spawn = {"at": {"structure": at}, "wave": wave, "name": name}
+    spawn.update(extra)
+    return {"kill": entity, "count": count, "spawn": spawn, "title": title}
+
+
+def boss(entity, at, name, title, **extra):
+    """A boss kill: one is brought in when none is there."""
+    spawn = {"at": {"structure": at}, "wave": 1, "ensure": True, "name": name}
+    spawn.update(extra)
+    return {"kill": entity, "spawn": spawn, "title": title}
+
+
+def search(at, count, name, found, texture="minecraft:item/paper", title=None):
+    """Opening containers at the place turns up the quest item."""
+    return {"search": {"at": {"structure": at}, "count": count,
+                       "item": {"name": name, "texture": texture}, "found": found},
+            "title": title or ("Search for " + name)}
+
+
+def sample(name, from_mobs, chance, count=1, texture="minecraft:item/paper", tooltip="Needed for the job"):
+    """A quest item dropped by those mobs while the quest is open."""
+    return {"drop": {"from": from_mobs, "chance": chance,
+                     "item": {"name": name, "texture": texture, "tooltip": tooltip}},
+            "count": count, "consume": False, "title": "Take " + name}

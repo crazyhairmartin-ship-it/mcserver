@@ -500,6 +500,355 @@
 			x: 6.0d
 			y: 1.5d
 		}
+		{
+			dependencies: [
+				"67F3C28CA78A2583"
+				"7D98A4C062669C93"
+			]
+			description: ["Old Tobiah never hunted without his lucky hat, and only passes it to someone who brings him trophies from three different beasts. Luck, he says, follows the hat."]
+			icon: "artifacts:superstitious_hat"
+			id: "65990468D7341307"
+			rewards: [
+				{
+					id: "10D421F9176BE3CA"
+					item: "artifacts:superstitious_hat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 300"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "5DA360CF0EDB0BAB"
+					silent: true
+					title: "+300 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5AFCDFF3B92A5F1B"
+					item: "alexsmobs:moose_antler"
+					title: "Bring a moose's antler"
+					type: "item"
+				}
+				{
+					id: "7AFBF1C17C5CD69C"
+					item: "alexsmobs:crocodile_scute"
+					title: "Bring a crocodile's scute"
+					type: "item"
+				}
+				{
+					id: "041C612E8B9E100B"
+					item: "alexsmobs:gazelle_horn"
+					title: "Bring a gazelle's horn"
+					type: "item"
+				}
+				{
+					id: "6BB338A0A5DAAB6F"
+					stage: "fq.skill_range.superstition.talk3"
+					title: "Show Tobiah your three trophies"
+					type: "gamestage"
+				}
+			]
+			title: "Tobiah's Hat"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"65990468D7341307"
+				"2CF0262A21E6E0BC"
+			]
+			description: ["In the savanna the hunter becomes the hunted. Track a lion pride and a rhino for the lodge, and take their hides without being charged."]
+			icon: "naturalist:lion_spawn_egg"
+			id: "27747DDF099CB9AE"
+			rewards: [
+				{
+					count: 32
+					id: "40D4356AF49743C5"
+					item: "minecraft:spectral_arrow"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "6D9957B9039DCE65"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 320"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "3AEF6A136358D18E"
+					silent: true
+					title: "+320 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:savanna"
+					id: "7FDB46B919477A62"
+					title: "Reach the savanna's long grass"
+					type: "biome"
+				}
+				{
+					entity: "naturalist:lion"
+					id: "5F91AA31DB14ADCE"
+					title: "Bring down two lions of the pride for the lodge"
+					type: "kill"
+					value: 2L
+				}
+				{
+					entity: "naturalist:rhino"
+					id: "2CA143E540D79AAE"
+					title: "Bring down a rhino for the lodge"
+					type: "kill"
+					value: 1L
+				}
+				{
+					count: 2L
+					id: "20FF0FA31C025552"
+					item: "naturalist:fur"
+					title: "Take their hides for the lodge wall"
+					type: "item"
+				}
+			]
+			title: "The Long Grass"
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["65990468D7341307"]
+			description: ["A tiger has been stalking a jungle village. Sneak through the undergrowth without being spotted and take it before it takes you."]
+			icon: "minecraft:bow"
+			id: "2940EAD89A494955"
+			rewards: [
+				{
+					count: 32
+					id: "5422CD5936ECE123"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "5E0C4ADEE98E5D0A"
+					item: "minecraft:gunpowder"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 340"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "584C6DA214668846"
+					silent: true
+					title: "+340 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:jungle"
+					id: "72499C498FDB19E9"
+					title: "Creep into the jungle around the village"
+					type: "biome"
+				}
+				{
+					id: "1D57084489984724"
+					stage: "fq.skill_range.tiger_stalk.enc1"
+					title: "Take the tiger before it takes you"
+					type: "gamestage"
+				}
+			]
+			title: "Stripes in the Shade"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65990468D7341307"]
+			description: ["A villager's boat was dragged under by an anaconda. Hunt it in the swamp and bring back its shed skin for the lodge."]
+			icon: "alexsmobs:shed_snake_skin"
+			id: "22F7D2D29D7BE360"
+			rewards: [
+				{
+					id: "058DE53B176A5E2C"
+					item: "alexsmobs:shed_snake_skin"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 320"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "3AAAF71BB12693A2"
+					silent: true
+					title: "+320 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:swamp"
+					id: "10C8401162D0C72B"
+					title: "Go to the swamp where the boat was lost"
+					type: "biome"
+				}
+				{
+					id: "7EF9E18E3429EC99"
+					stage: "fq.skill_range.anaconda.enc1"
+					title: "Hunt the anaconda that sank the boat"
+					type: "gamestage"
+				}
+				{
+					id: "26EAFCE2F09F3DAA"
+					item: "alexsmobs:shed_snake_skin"
+					title: "Bring back its shed skin for the lodge"
+					type: "item"
+				}
+			]
+			title: "Coils in the Swamp"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["27747DDF099CB9AE"]
+			description: ["High in the snowy peaks, find the tracks of a snow leopard and a froststalker. The lodge wants the froststalker's horn."]
+			icon: "alexsmobs:froststalker_horn"
+			id: "3800558BAD381AA3"
+			rewards: [
+				{
+					id: "0995E4119C3E8A0D"
+					item: "alexsmobs:froststalker_helmet"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 360"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "0D2F9FC692534838"
+					silent: true
+					title: "+360 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:frozen_peaks"
+					id: "2B837ECD05BE5624"
+					title: "Climb to the snowy peaks to follow the tracks"
+					type: "biome"
+				}
+				{
+					id: "123DF39161D977A1"
+					stage: "fq.skill_range.snow_leopard.enc1"
+					title: "Bring down the froststalker for its horn"
+					type: "gamestage"
+				}
+				{
+					id: "107739F29403ECC3"
+					item: "alexsmobs:froststalker_horn"
+					title: "Take its horn for the lodge"
+					type: "item"
+				}
+			]
+			title: "Ghost of the Peaks"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3800558BAD381AA3"]
+			description: ["Tobiah bets you can't hit a target from fifty blocks across a ravine. Prove him wrong with a longbow."]
+			icon: "spartanweaponry:iron_longbow"
+			id: "2056C26430CA579E"
+			rewards: [
+				{
+					count: 64
+					id: "57BD6FC49F694EF7"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "717661BA8AF21B36"
+					item: "minecraft:spectral_arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 380"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "50314452DC6B4717"
+					silent: true
+					title: "+380 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6292763E281791E7"
+					stage: "fq.skill_range.long_shot.talk0"
+					title: "Take Tobiah's bet"
+					type: "gamestage"
+				}
+				{
+					id: "14245E37B0ACD658"
+					item: "spartanweaponry:iron_longbow"
+					only_from_crafting: true
+					title: "Make the longbow for the shot"
+					type: "item"
+				}
+				{
+					id: "2FA66013BB820476"
+					stage: "fq.skill_range.long_shot.build2"
+					title: "Set up a target across the gap"
+					type: "gamestage"
+				}
+			]
+			title: "The Long Shot"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2056C26430CA579E"
+				"2940EAD89A494955"
+			]
+			description: ["A rival lodge from a far village claims the best hunters. The contest at a logging camp: most game taken with bow and thrown weapons in one day."]
+			icon: "spartanweaponry:diamond_longbow"
+			id: "2AC3DEBA9E4445DF"
+			rewards: [
+				{
+					id: "560864B202662BDC"
+					item: "spartanweaponry:diamond_longbow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 400"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "1100DEC15EDA96A9"
+					silent: true
+					title: "+400 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "563331D3BA5988D9"
+					structure: "meadow:logging_camp"
+					title: "Reach the logging camp where the contest is held"
+					type: "structure"
+				}
+				{
+					id: "0014243D23751FCC"
+					stage: "fq.skill_range.rival_lodge.timed1"
+					title: "Take more game than the rival lodge"
+					type: "gamestage"
+				}
+			]
+			title: "The Rival Lodge"
+			x: 13.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Range path"]
 	title: "The Hunters' Lodge"

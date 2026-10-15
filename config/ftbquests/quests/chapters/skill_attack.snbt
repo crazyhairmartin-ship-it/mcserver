@@ -508,6 +508,358 @@
 			]
 			title: "The Mauler"
 			x: 10.5d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"133EBE77FE89381D"
+				"2CF0262A21E6E0BC"
+			]
+			description: ["An uncommon bounty: illager bandits have built towers over a trade road. Take them down and claim their banner as proof."]
+			icon: "bountiful:bounty-uncommon"
+			id: "79C8DF979D6DB6ED"
+			rewards: [
+				{
+					id: "68F42BF40254FBC0"
+					item: "bountiful:bounty-uncommon"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 250"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "10E31BDA522BB5D5"
+					silent: true
+					title: "+250 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:pillager"
+					id: "5A1EDB232C066F5A"
+					title: "Take the bandits down for the trade road's merchants"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "5806BE3429F92C1B"
+					item: "kubejs:quest_bandit_towers_1"
+					title: "Claim a banner as proof for the bounty"
+					type: "item"
+				}
+			]
+			title: "Bandit Country"
+			x: 10.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["4B642E1F9001341A"]
+			description: ["Sailors want a skelewag dead, a skeletal pirate fish that rams boats over shipwrecks. Hunt it in the water and take its sword as proof."]
+			icon: "alexsmobs:skelewag_sword"
+			id: "4081E827F3993938"
+			rewards: [
+				{
+					id: "771877F42916E673"
+					item: "alexsmobs:skelewag_sword"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 280"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0BD695A53FC4FCDB"
+					silent: true
+					title: "+280 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "50F5268F6CDD2F85"
+					structure: "#fotf:groups/shipwrecks"
+					title: "Find the wreck the skelewag rams boats over"
+					type: "structure"
+				}
+				{
+					entity: "alexsmobs:skelewag"
+					id: "6D499D7FA1372327"
+					title: "Kill the skelewag that sinks the sailors' boats"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "5C61174D47CA24F9"
+					item: "alexsmobs:skelewag_sword"
+					title: "Take its sword as proof"
+					type: "item"
+				}
+			]
+			title: "Wanted: the Skelewag"
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["79C8DF979D6DB6ED"]
+			description: ["A village blames a witch for its sick cattle. Track her to her swamp hut, defeat her and bring back her hat as proof."]
+			icon: "minecraft:witch_spawn_egg"
+			id: "7891F31795D49BE1"
+			rewards: [
+				{
+					count: 3
+					id: "760B697D90A216EE"
+					item: "minecraft:splash_potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 280"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "35CCF0E467932BDA"
+					silent: true
+					title: "+280 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "63B22DCC67467EBD"
+					structure: "#fotf:groups/witch_huts"
+					title: "Track the witch to her hut"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:witch"
+					id: "6C47ADE91875469B"
+					title: "Defeat the witch blamed for the sick cattle"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "7823B18A3FCCA9C1"
+					item: "kubejs:quest_witch_hunt_2"
+					title: "Take the Witch's Hat"
+					type: "item"
+				}
+			]
+			title: "Witch Hunt"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["79C8DF979D6DB6ED"]
+			description: ["An arena's master runs a ladder: win three fights in a row against rising waves, without leaving the sand. The champion's power glove goes to whoever finishes."]
+			icon: "artifacts:power_glove"
+			id: "75B6A620059115D4"
+			rewards: [
+				{
+					id: "45E8F4AEA69D952F"
+					item: "artifacts:power_glove"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 350"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0A3B878BFB409256"
+					silent: true
+					title: "+350 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:skeleton"
+					id: "2707F55B79D10F13"
+					title: "Win the first bout on the sand"
+					type: "kill"
+					value: 6L
+				}
+				{
+					entity: "minecraft:vindicator"
+					id: "5C8CD210D4EB48C9"
+					title: "Win the second bout against tougher fighters"
+					type: "kill"
+					value: 4L
+				}
+				{
+					entity: "minecraft:ravager"
+					id: "136673375D11752B"
+					title: "Win the final bout against the beast"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Arena Ladder"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["4081E827F3993938"]
+			description: ["Something nests high in an aviary, swooping on anyone below. Climb up and clear it the quick way: knock its occupants off the edge. A piston-spring trinket waits at the top."]
+			icon: "artifacts:pocket_piston"
+			id: "72137117F9CF645C"
+			rewards: [
+				{
+					id: "490E376D109CADE0"
+					item: "artifacts:pocket_piston"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 300"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0117D46F701287C0"
+					silent: true
+					title: "+300 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:vex"
+					id: "281674808279AEA0"
+					title: "Clear the nesters off the aviary's tiers"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "1D7623B409C2524E"
+					item: "kubejs:quest_cliff_nest_1"
+					title: "Search the top for the piston-spring trinket"
+					type: "item"
+				}
+			]
+			title: "Knock Them Down"
+			x: 13.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["75B6A620059115D4"]
+			description: ["Ash says a hunter should master more than one weapon. Make a halberd, a rapier, a warhammer and a javelin, then put them through their paces on the dead."]
+			icon: "spartanweaponry:diamond_halberd"
+			id: "3D5FF4AABFF1C57F"
+			rewards: [
+				{
+					id: "22DEE7F0FA45CDF8"
+					item: "spartanweaponry:diamond_halberd"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 380"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "2017B671830DF4F0"
+					silent: true
+					title: "+380 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1A8F575B316C277A"
+					stage: "fq.skill_attack.weapon_master.talk0"
+					title: "Hear Ash's drill"
+					type: "gamestage"
+				}
+				{
+					id: "160ECDD2CCABB82D"
+					item: "spartanweaponry:iron_halberd"
+					only_from_crafting: true
+					title: "Forge a halberd"
+					type: "item"
+				}
+				{
+					id: "636A18EA1108B6EF"
+					item: "spartanweaponry:iron_rapier"
+					only_from_crafting: true
+					title: "Forge a rapier"
+					type: "item"
+				}
+				{
+					id: "5EF23089634C86B0"
+					item: "spartanweaponry:iron_warhammer"
+					only_from_crafting: true
+					title: "Forge a warhammer"
+					type: "item"
+				}
+				{
+					id: "023F2C8BD2265DCC"
+					item: "spartanweaponry:iron_javelin"
+					only_from_crafting: true
+					title: "Forge a javelin"
+					type: "item"
+				}
+				{
+					entity: "minecraft:zombie"
+					id: "1207ABC3EDC7ED70"
+					title: "Put each weapon through its paces on the dead"
+					type: "kill"
+					value: 12L
+				}
+			]
+			title: "Master of Arms"
+			x: 13.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3D5FF4AABFF1C57F"]
+			description: ["The dead hunter's journal names three more of their old haunts. Find other fallen adventurers along the trail, and piece together who they were hunting."]
+			icon: "minecraft:writable_book"
+			id: "5375A64047A9BD30"
+			rewards: [
+				{
+					id: "56BEF4834C2437A6"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Torn from a dead hunter's journal.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"A Hunter's Compass Page\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 400"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "23AA84FFF5C50801"
+					silent: true
+					title: "+400 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2D86463E984A469D"
+					observe_type: "block"
+					timer: 20L
+					title: "Find the explorer's remains"
+					to_observe: "realmrpg_skeletons:explorer_skeleton"
+					type: "observation"
+				}
+				{
+					id: "33BF54973AA44438"
+					observe_type: "block"
+					timer: 20L
+					title: "Find the slain hunter's remains"
+					to_observe: "realmrpg_skeletons:slain_skeleton"
+					type: "observation"
+				}
+				{
+					id: "3E07BBEA1916E9F9"
+					observe_type: "block"
+					timer: 20L
+					title: "Find the hunter shot down on the trail"
+					to_observe: "realmrpg_skeletons:shot_skeleton"
+					type: "observation"
+				}
+			]
+			title: "The Hunter's Trail"
+			x: 15.0d
 			y: 0.0d
 		}
 	]

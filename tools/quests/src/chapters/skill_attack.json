@@ -464,6 +464,357 @@
       ],
       "icon": "artifacts:feral_claws",
       "signature": "artifacts:feral_claws"
+    },
+    {
+      "id": "bandit_towers",
+      "title": "Bandit Country",
+      "after": [
+        "graveyard_shift",
+        "main_story:act2_start"
+      ],
+      "text": [
+        "An uncommon bounty: illager bandits have built towers over a trade road. Take them down and claim their banner as proof."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:pillager",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:bandit_towers"
+            },
+            "wave": 4,
+            "name": "Tower Bandits"
+          },
+          "title": "Take the bandits down for the trade road's merchants"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "dungeons_arise:bandit_towers"
+            },
+            "count": 1,
+            "item": {
+              "name": "Bandit Banner",
+              "texture": "minecraft:item/white_banner"
+            },
+            "found": "A bandit banner, torn from a tower wall."
+          },
+          "title": "Claim a banner as proof for the bounty"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "bountiful:bounty-uncommon"
+        },
+        {
+          "skill": "attack",
+          "xp": 250
+        }
+      ],
+      "icon": "bountiful:bounty-uncommon"
+    },
+    {
+      "id": "skelewag",
+      "title": "Wanted: the Skelewag",
+      "after": [
+        "feral_bounty"
+      ],
+      "text": [
+        "Sailors want a skelewag dead, a skeletal pirate fish that rams boats over shipwrecks. Hunt it in the water and take its sword as proof."
+      ],
+      "tasks": [
+        {
+          "structure": "#shipwrecks",
+          "title": "Find the wreck the skelewag rams boats over"
+        },
+        {
+          "kill": "alexsmobs:skelewag",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "#shipwrecks"
+            },
+            "wave": 1,
+            "name": "The Skelewag"
+          },
+          "title": "Kill the skelewag that sinks the sailors' boats"
+        },
+        {
+          "item": "alexsmobs:skelewag_sword",
+          "title": "Take its sword as proof"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexsmobs:skelewag_sword"
+        },
+        {
+          "skill": "attack",
+          "xp": 280
+        }
+      ],
+      "icon": "alexsmobs:skelewag_sword"
+    },
+    {
+      "id": "witch_hunt",
+      "title": "Witch Hunt",
+      "after": [
+        "bandit_towers"
+      ],
+      "text": [
+        "A village blames a witch for its sick cattle. Track her to her swamp hut, defeat her and bring back her hat as proof."
+      ],
+      "tasks": [
+        {
+          "structure": "#witch_huts",
+          "title": "Track the witch to her hut"
+        },
+        {
+          "kill": "minecraft:witch",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "#witch_huts"
+            },
+            "wave": 1,
+            "name": "The Cattle Witch"
+          },
+          "title": "Defeat the witch blamed for the sick cattle"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:witch"
+            ],
+            "chance": 0.7,
+            "item": {
+              "name": "the Witch's Hat",
+              "texture": "minecraft:item/leather_helmet",
+              "tooltip": "Proof for the village"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take the Witch's Hat"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:splash_potion",
+          "count": 3
+        },
+        {
+          "skill": "attack",
+          "xp": 280
+        }
+      ],
+      "icon": "minecraft:witch_spawn_egg"
+    },
+    {
+      "id": "arena_ladder",
+      "title": "The Arena Ladder",
+      "after": [
+        "bandit_towers"
+      ],
+      "text": [
+        "An arena's master runs a ladder: win three fights in a row against rising waves, without leaving the sand. The champion's power glove goes to whoever finishes."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:skeleton",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "#arenas"
+            },
+            "wave": 4,
+            "name": "Arena Challengers"
+          },
+          "title": "Win the first bout on the sand"
+        },
+        {
+          "kill": "minecraft:vindicator",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "#arenas"
+            },
+            "wave": 4,
+            "name": "Arena Champions"
+          },
+          "title": "Win the second bout against tougher fighters"
+        },
+        {
+          "kill": "minecraft:ravager",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "#arenas"
+            },
+            "wave": 1,
+            "name": "The Arena Beast"
+          },
+          "title": "Win the final bout against the beast"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:power_glove"
+        },
+        {
+          "skill": "attack",
+          "xp": 350
+        }
+      ],
+      "icon": "artifacts:power_glove",
+      "signature": "artifacts:power_glove"
+    },
+    {
+      "id": "cliff_nest",
+      "title": "Knock Them Down",
+      "after": [
+        "skelewag"
+      ],
+      "text": [
+        "Something nests high in an aviary, swooping on anyone below. Climb up and clear it the quick way: knock its occupants off the edge. A piston-spring trinket waits at the top."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:vex",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:aviary"
+            },
+            "wave": 4,
+            "name": "Aviary Nesters"
+          },
+          "title": "Clear the nesters off the aviary's tiers"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "dungeons_arise:aviary"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Aviary Trinket",
+              "texture": "minecraft:item/piston"
+            },
+            "found": "A spring-loaded trinket, left at the top."
+          },
+          "title": "Search the top for the piston-spring trinket"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:pocket_piston"
+        },
+        {
+          "skill": "attack",
+          "xp": 300
+        }
+      ],
+      "icon": "artifacts:pocket_piston",
+      "signature": "artifacts:pocket_piston"
+    },
+    {
+      "id": "weapon_master",
+      "title": "Master of Arms",
+      "after": [
+        "arena_ladder"
+      ],
+      "text": [
+        "Ash says a hunter should master more than one weapon. Make a halberd, a rapier, a warhammer and a javelin, then put them through their paces on the dead."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "corvin",
+          "lines": [
+            "Four weapons, four lessons. A hunter who knows one is a hunter who dies.",
+            "Make them. Use them. Then I'll believe you."
+          ],
+          "title": "Hear Ash's drill"
+        },
+        {
+          "item": "spartanweaponry:iron_halberd",
+          "crafted": true,
+          "title": "Forge a halberd"
+        },
+        {
+          "item": "spartanweaponry:iron_rapier",
+          "crafted": true,
+          "title": "Forge a rapier"
+        },
+        {
+          "item": "spartanweaponry:iron_warhammer",
+          "crafted": true,
+          "title": "Forge a warhammer"
+        },
+        {
+          "item": "spartanweaponry:iron_javelin",
+          "crafted": true,
+          "title": "Forge a javelin"
+        },
+        {
+          "kill": "minecraft:zombie",
+          "count": 12,
+          "title": "Put each weapon through its paces on the dead"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanweaponry:diamond_halberd"
+        },
+        {
+          "skill": "attack",
+          "xp": 380
+        }
+      ],
+      "icon": "spartanweaponry:diamond_halberd"
+    },
+    {
+      "id": "hunter_trail",
+      "title": "The Hunter's Trail",
+      "after": [
+        "weapon_master"
+      ],
+      "text": [
+        "The dead hunter's journal names three more of their old haunts. Find other fallen adventurers along the trail, and piece together who they were hunting."
+      ],
+      "tasks": [
+        {
+          "observe": "realmrpg_skeletons:explorer_skeleton",
+          "ticks": 20,
+          "title": "Find the explorer's remains"
+        },
+        {
+          "observe": "realmrpg_skeletons:slain_skeleton",
+          "ticks": 20,
+          "title": "Find the slain hunter's remains"
+        },
+        {
+          "observe": "realmrpg_skeletons:shot_skeleton",
+          "ticks": 20,
+          "title": "Find the hunter shot down on the trail"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "A Hunter's Compass Page",
+          "lore": [
+            "Torn from a dead hunter's journal."
+          ]
+        },
+        {
+          "skill": "attack",
+          "xp": 400
+        }
+      ],
+      "icon": "minecraft:writable_book"
     }
   ]
 }

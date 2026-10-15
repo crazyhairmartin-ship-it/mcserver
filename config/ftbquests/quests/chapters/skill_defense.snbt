@@ -376,6 +376,372 @@
 			]
 			title: "The Cold Caster"
 			x: 9.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["5AF168685597D93F"]
+			description: ["An old priest appears on the road, set on reaching a distant chapel through bandit country. Keep him alive all the way. At the altar he gives you the necklace he prayed with."]
+			icon: "artifacts:cross_necklace"
+			id: "0D2728F6635D8903"
+			rewards: [
+				{
+					id: "2111575ECBEC4925"
+					item: "artifacts:cross_necklace"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 300"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "4CF559DD978B36B3"
+					silent: true
+					title: "+300 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "47A437E70D8D25A9"
+					stage: "fq.skill_defense.pilgrim.enc0"
+					title: "Escort the old priest to the chapel"
+					type: "gamestage"
+				}
+			]
+			title: "The Pilgrim's Road"
+			x: 9.0d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"17D6AACC39DA1FF4"
+				"2CF0262A21E6E0BC"
+			]
+			description: ["At the illusioner's training grounds, a dozen copies attack at once. Find the real illusioner and break the spell."]
+			icon: "friendsandfoes:totem_of_illusion"
+			id: "5CE1744BEF454B38"
+			rewards: [
+				{
+					id: "2BFB04ED2C7DF915"
+					item: "friendsandfoes:totem_of_illusion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 280"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "1144EAF19370A9EC"
+					silent: true
+					title: "+280 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:illusioner"
+					id: "022B2B95DB8841B4"
+					title: "Find the real illusioner among the copies and break the spell"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Which One Is Real?"
+			x: 10.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["0D2728F6635D8903"]
+			description: ["Captain Hale wants plans for Reece's walls. Travel to a fortified village, bring its watch captain iron, and copy how its walls are built."]
+			icon: "minecraft:iron_ingot"
+			id: "30EF06AB64C1EB3C"
+			rewards: [
+				{
+					id: "483B01134DED504B"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"How the walls are built.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Wall Plans\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 300"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "74F59806A0F5D855"
+					silent: true
+					title: "+300 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7FA46619BC6D505F"
+					structure: "ctov:large/village_plains_fortified"
+					title: "Travel to a walled village"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "71FF800E83041DD8"
+					item: "minecraft:iron_ingot"
+					title: "Bring the watch captain iron for the favour"
+					type: "item"
+				}
+				{
+					id: "2E041A2BDEC771DC"
+					stage: "fq.skill_defense.fortified_village.talk2"
+					title: "Ask the wall's captain for the plans"
+					type: "gamestage"
+				}
+				{
+					id: "659977A8CF091291"
+					item: "kubejs:quest_fortified_village_3"
+					title: "Copy the wall's plans"
+					type: "item"
+				}
+			]
+			title: "The Walled Town"
+			x: 10.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["30EF06AB64C1EB3C"]
+			description: ["Raise a stone wall and a gatehouse on Reece's open side from the plans, and raise two iron golems to stand at the gate."]
+			icon: "minecraft:stone_bricks"
+			id: "3FEDF6CA94B40354"
+			rewards: [
+				{
+					id: "61E4F2DFA4B92151"
+					item: "spartanshields:diamond_basic_shield"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 340"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "42A9708541F47E6C"
+					silent: true
+					title: "+340 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "3CAB1371D8EA674E"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "7ACBADA68938ED31"
+					stage: "fq.skill_defense.build_walls.build1"
+					title: "Raise a wall and gatehouse on Reece's open side"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "0D42EEC45D3C46B2"
+					item: "minecraft:iron_block"
+					title: "Bring iron to raise the gate's golems"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "015757FEE4D9477A"
+					item: "minecraft:carved_pumpkin"
+					title: "Bring pumpkins to crown the golems"
+					type: "item"
+				}
+			]
+			title: "Walls for Reece"
+			x: 12.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["5CE1744BEF454B38"]
+			description: ["Strays from a fort in the snow keep shooting at travellers. Storm the stray fort and take its banner."]
+			icon: "minecraft:stray_spawn_egg"
+			id: "117ED8E52E667AD9"
+			rewards: [
+				{
+					count: 16
+					id: "175CE56CF4FFB1CB"
+					item: "minecraft:tipped_arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 300"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "7BF89FBA3C54327C"
+					silent: true
+					title: "+300 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:stray"
+					id: "6551AF576C063C46"
+					title: "Storm the fort and drive off the strays"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "24796119BF80F3DD"
+					item: "kubejs:quest_stray_fort_1"
+					title: "Take down the fort's banner"
+					type: "item"
+				}
+			]
+			title: "The Stray Fort"
+			x: 12.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["117ED8E52E667AD9"]
+			description: ["A shrine choked by thorns has become a nest. Fight through the Thornborn Towers and clear what lives inside. A pendant of thorns lies on the altar."]
+			icon: "artifacts:thorn_pendant"
+			id: "66EDCD740D044E8C"
+			rewards: [
+				{
+					id: "7214F0C8294B1963"
+					item: "artifacts:thorn_pendant"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 340"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "351E715F89D7F30C"
+					silent: true
+					title: "+340 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:spider"
+					id: "5AA7B29B8C292079"
+					title: "Clear the nest from the thorned shrine"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "25C7F827C7F3A613"
+					item: "kubejs:quest_thorn_shrine_1"
+					title: "Search the altar for what the thorns guard"
+					type: "item"
+				}
+			]
+			title: "The Thornborn Towers"
+			x: 13.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3FEDF6CA94B40354"]
+			description: ["The engineers' tower that draws lightning away from a village has burnt out. Replace its copper lightning rods while bolts keep striking, with a copper golem's help."]
+			icon: "artifacts:shock_pendant"
+			id: "196FD0DCAAB3FDBB"
+			rewards: [
+				{
+					id: "2331C989497F0917"
+					item: "artifacts:shock_pendant"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 350"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "251955AEE3C6741E"
+					silent: true
+					title: "+350 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "209F5C3D09443B89"
+					item: "minecraft:lightning_rod"
+					title: "Bring copper lightning rods to replace the burnt ones"
+					type: "item"
+				}
+				{
+					id: "49F398DEF6B15894"
+					stage: "fq.skill_defense.lightning_tower.enc1"
+					title: "Meet the copper golem that helps at the tower"
+					type: "gamestage"
+				}
+				{
+					id: "20EC4FC1DE920D3B"
+					stage: "fq.skill_defense.lightning_tower.build2"
+					title: "Fit the new rods at the top"
+					type: "gamestage"
+				}
+				{
+					id: "2582C1393B4AAFD4"
+					stage: "fq.skill_defense.lightning_tower.timed3"
+					title: "Stay on the tower while bolts keep striking"
+					type: "gamestage"
+				}
+			]
+			title: "Struck Again"
+			x: 13.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["66EDCD740D044E8C"]
+			description: ["Coastal villages are raided from the water. Sail out and take the pillager ship that launches the raids."]
+			icon: "minecraft:white_banner"
+			id: "0EAA884E5B0B71AB"
+			rewards: [
+				{
+					id: "68E1A726B217761C"
+					item: {
+						Count: 1b
+						id: "minecraft:white_banner"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Taken from the raiders' ship.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Ominous Banner\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 400"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "01C029C54EC13988"
+					silent: true
+					title: "+400 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:pillager"
+					id: "3CF2C76DAE41444F"
+					title: "Take the raiders' ship at sea"
+					type: "kill"
+					value: 10L
+				}
+			]
+			title: "Raiders from the Sea"
+			x: 15.0d
 			y: 0.0d
 		}
 	]
