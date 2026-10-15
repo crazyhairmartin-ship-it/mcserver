@@ -41,11 +41,11 @@ Q = [
     quest("the_tribune_of_atlantis", "The Tribune of Atlantis", icon="minecraft:sea_lantern",
           discover={"structure": "mos:atlantis_tribune"},
           text=["A tribune of white stone stands on the deep sea floor beside drowned Atlantean ruins. Its sockets are "
-                "empty. Light them with sea lanterns, and the ruins' sealed vault should open."],
+                "empty. Light them with sea lanterns, and the vault sealed beneath it should open."],
           tasks=[item("minecraft:sea_lantern", 4, consume=True, title="Bring four sea lanterns down to the tribune"),
                  {"build": {"blocks": {"minecraft:sea_lantern": 4}, "radius": 12}, "title": "Set the lanterns in the tribune"},
-                 search("mos:ruins_atlantis", 1, "Vault Hoard", "The vault swings open on a drowned hoard.",
-                        title="Open the ruins' sealed vault")],
+                 search("mos:atlantis_tribune", 1, "Vault Hoard", "The vault swings open on a drowned hoard.",
+                        title="Open the tribune's sealed vault")],
           rewards=[reward_item("minecraft:prismarine", 32), reward_item("minecraft:trident"), skill("fish", 200)]),
 
     quest("the_conduit_arch", "The Conduit Arch", icon="minecraft:conduit",
@@ -66,10 +66,10 @@ Q = [
 
     quest("wreck_diver", "Wreck Diver", icon="minecraft:oak_boat",
           discover={"structure": "#shipwrecks"},
-          text=["Every wreck has a captain's chest, and every captain kept a log. Loot three wrecks and piece "
-                "together their last voyage."],
-          tasks=[search("#shipwrecks", 3, "Captain's Log", "A waterlogged log, its last page still legible.",
-                        title="Find logbooks in three different wrecks")],
+          text=["Every wreck has a captain's chest, and every captain kept a log. Search the wrecks for the pages of "
+                "their logs and piece together their last voyage."],
+          tasks=[search("#shipwrecks", 2, "Captain's Log", "A waterlogged log, its last page still legible.",
+                        title="Find two pages of the captain's logs")],
           rewards=[reward_item("minecraft:map"), reward_item("minecraft:emerald", 6), skill("fish", 150)]),
 
     quest("drowned_temple", "Drowned Halls", icon="minecraft:trident",

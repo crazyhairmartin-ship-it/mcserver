@@ -62,7 +62,7 @@
 			y: -15.75d
 		}
 		{
-			description: ["A tribune of white stone stands on the deep sea floor beside drowned Atlantean ruins. Its sockets are empty. Light them with sea lanterns, and the ruins' sealed vault should open."]
+			description: ["A tribune of white stone stands on the deep sea floor beside drowned Atlantean ruins. Its sockets are empty. Light them with sea lanterns, and the vault sealed beneath it should open."]
 			icon: "minecraft:sea_lantern"
 			id: "4AA7F75C09FFF5FF"
 			invisible: true
@@ -113,7 +113,7 @@
 				{
 					id: "7AE49E07A2798C3B"
 					item: "kubejs:quest_the_tribune_of_atlantis_2"
-					title: "Open the ruins' sealed vault"
+					title: "Open the tribune's sealed vault"
 					type: "item"
 				}
 			]
@@ -223,7 +223,7 @@
 			y: -11.25d
 		}
 		{
-			description: ["Every wreck has a captain's chest, and every captain kept a log. Loot three wrecks and piece together their last voyage."]
+			description: ["Every wreck has a captain's chest, and every captain kept a log. Search the wrecks for the pages of their logs and piece together their last voyage."]
 			icon: "minecraft:oak_boat"
 			id: "08D9729E0D271B90"
 			invisible: true
@@ -258,10 +258,10 @@
 					type: "structure"
 				}
 				{
-					count: 3L
+					count: 2L
 					id: "5149C58EB6F932F1"
 					item: "kubejs:quest_wreck_diver_0"
-					title: "Find logbooks in three different wrecks"
+					title: "Find two pages of the captain's logs"
 					type: "item"
 				}
 			]

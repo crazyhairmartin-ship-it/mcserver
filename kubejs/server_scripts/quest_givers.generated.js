@@ -3305,7 +3305,7 @@ global.QUEST_GIVERS = [
     "at": {
       "kind": "structure",
       "structures": [
-        "mos:ruins_atlantis"
+        "mos:atlantis_tribune"
       ],
       "label": "the destination"
     },
@@ -3356,7 +3356,7 @@ global.QUEST_GIVERS = [
       ],
       "label": "the destination"
     },
-    "count": 3,
+    "count": 2,
     "item": "kubejs:quest_wreck_diver_0",
     "found": "A waterlogged log, its last page still legible.",
     "requires": [],

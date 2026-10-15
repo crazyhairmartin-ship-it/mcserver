@@ -3,8 +3,9 @@
 The quest plan (`src/plans/quests/`, 878 quests) is written into the book in tasks small enough for one session.
 Each task turns a slice of the plan into finished quests: chapter files, dialogue, rewards, checked and committed.
 
-**For Dylan:** start a session (Sonnet is fine), and say: `Do quest task T01 from tools/quests/tasks/README.md`.
-Do them in order, one at a time (they all touch the same generated files). Everything below this line is for the
+**For Dylan:** start a session (Sonnet is fine), and say: `Do quest tasks T11 to T14 from tools/quests/tasks/README.md`
+(a session can do several tasks in a row, one commit each). Do them in order, one session at a time (they all touch the
+same generated files). An Opus session reviews and deploys each wave when it's done. Everything below this line is for the
 model doing the task. Reading the task table is spoiler-free; the plan files and `src/plans/followups.md` are not.
 
 ---
@@ -136,11 +137,33 @@ python coverage.py --check               # the plan still lines up
 ```
 
 Fix every error. Warnings about artifacts given without a signature must be fixed too. Re-run until both pass. Then
-look at your diff once more against the design rules above.
+run the quest checker on the chapters you touched, and fix what it finds:
+
+```
+python lint_quests.py <chapter> [<chapter> ...]
+```
+
+Errors must be fixed. Warnings must be fixed, or (only when no task in the README can do it) logged in
+`src/plans/followups.md` and mentioned in your report. Then look at your diff once more against the design rules above.
+
+**Puzzle check** (if your slice has `use` or `search` steps at structures): first make sure nobody is on the live
+server (`docker exec server-mc-1 rcon-cli list` must say 0 players; starting the test server can disconnect players,
+so if anyone is on, skip this and say so in your report). Then from `pack/`:
+
+```
+cd ../server-test && PACK_REF=$(git -C ../pack rev-parse HEAD) docker compose up -d && cd ../pack
+# wait until `docker logs fotf-test 2>&1 | grep "Done ("` shows a line (a few minutes)
+python tools/quests/verify_puzzles.py 3
+cd ../server-test && docker compose stop && cd ../pack
+```
+
+It generates three copies of each puzzle's structure and writes `tools/quests/src/plans/puzzle_check.md`. Any step
+marked SHORT or NOT FOUND must change: lower the count to what every copy had, switch to `search`, or have the player
+bring and place the block first (a `build` step before the `use`). Re-run until every step is OK.
 
 ### Commit
 
-From the repo root (`pack/`): `packwiz refresh`, then commit everything (authoring files, `src/chapters/`,
+One commit per task. From the repo root (`pack/`): `packwiz refresh`, then commit everything (authoring files, `src/chapters/`,
 `config/ftbquests/`, the generated KubeJS files, `pack.json`, `followups.md`, this README's progress table) with a
 message like `Quests T07: discovery_land, 35 quests`, and push to `main`. Don't deploy to the live server and don't
 restart anything; Dylan or an Opus session does that.
@@ -152,7 +175,11 @@ Fill in your task's row in the progress table below, then tell Dylan, spoiler-fr
 - which kinds (counts by plan `types`, e.g. "6 exploration, 4 crafting, 2 timed");
 - new characters (name, where they appear in general terms like "an encounter in the Nether", personality line);
 - how many follow-ups you logged (engine needed / links to restore), without saying which quests;
+- the quest checker's final counts, and whether the puzzle check ran (and passed) or was skipped;
 - the commit hash.
+
+When a session does several tasks, finish and commit each one (checker, puzzle check, progress row) before starting
+the next, and give one combined report at the end.
 
 ---
 

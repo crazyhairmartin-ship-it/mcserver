@@ -47,7 +47,7 @@
       "id": "the_tribune_of_atlantis",
       "title": "The Tribune of Atlantis",
       "text": [
-        "A tribune of white stone stands on the deep sea floor beside drowned Atlantean ruins. Its sockets are empty. Light them with sea lanterns, and the ruins' sealed vault should open."
+        "A tribune of white stone stands on the deep sea floor beside drowned Atlantean ruins. Its sockets are empty. Light them with sea lanterns, and the vault sealed beneath it should open."
       ],
       "tasks": [
         {
@@ -68,7 +68,7 @@
         {
           "search": {
             "at": {
-              "structure": "mos:ruins_atlantis"
+              "structure": "mos:atlantis_tribune"
             },
             "count": 1,
             "item": {
@@ -77,7 +77,7 @@
             },
             "found": "The vault swings open on a drowned hoard."
           },
-          "title": "Open the ruins' sealed vault"
+          "title": "Open the tribune's sealed vault"
         }
       ],
       "rewards": [
@@ -174,7 +174,7 @@
       "id": "wreck_diver",
       "title": "Wreck Diver",
       "text": [
-        "Every wreck has a captain's chest, and every captain kept a log. Loot three wrecks and piece together their last voyage."
+        "Every wreck has a captain's chest, and every captain kept a log. Search the wrecks for the pages of their logs and piece together their last voyage."
       ],
       "tasks": [
         {
@@ -182,14 +182,14 @@
             "at": {
               "structure": "#shipwrecks"
             },
-            "count": 3,
+            "count": 2,
             "item": {
               "name": "Captain's Log",
               "texture": "minecraft:item/paper"
             },
             "found": "A waterlogged log, its last page still legible."
           },
-          "title": "Find logbooks in three different wrecks"
+          "title": "Find two pages of the captain's logs"
         }
       ],
       "rewards": [
