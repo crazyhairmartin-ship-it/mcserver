@@ -2813,7 +2813,7 @@ hash = "252cdfadf0ecf10514482f05692dfd858ac99f3c853d59ef8e76dc8f902e08cf"
 
 [[files]]
 file = "kubejs/server_scripts/quest_npcs.js"
-hash = "e2c39aa08f7fde2f533879e8846454cc98934daa53805a613c90f86373303b72"
+hash = "fca223226c5c572dd532144c9b44902dfb768895e68e4bd39564d4fea8f13c9a"
 
 [[files]]
 file = "kubejs/server_scripts/quest_photos.js"
@@ -2882,6 +2882,10 @@ hash = "68f8a25be434c5c617ec21c9d0c675da8bfa07bf2e6a7a00852aabbd6a0b8f14"
 [[files]]
 file = "kubejs/startup_scripts/quest_casting.js"
 hash = "8a743d15ab49c06a21aa2e7f6b28469a4b4f8e4aa986ee3d2d748bf71961c21a"
+
+[[files]]
+file = "kubejs/startup_scripts/quest_events.js"
+hash = "54bf1e4ad9ef67157d6873e5dc3cdb99a4ad9e3aa351effac53b08ca3f837013"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_fishing.js"

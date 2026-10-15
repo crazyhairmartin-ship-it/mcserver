@@ -221,6 +221,7 @@ task first (T11, T18, T25, T28): other chapters link to its anchors. Counts are 
 | T09 | 1 | 22 | `discovery_sea` (all, 22) |
 | T10 | 1 | 23 | `discovery_sky_and_underground` (all, 23) |
 | TD | 2 | 0 | **Do this first.** Rewrite all existing dialogue short (see "Task TD" below) |
+| TF | - | 0 | Upgrade the logged stand-ins to real tasks (see "Task TF" below) |
 | T11 | 2 | 17 | `main_story` (act2, 17) |
 | T12 | 2 | 29 | `skill_attack` (act2, 7); `skill_defense` (act2, 8); `skill_range` (act2, 7); `skill_taming` (act2, 7) |
 | T13 | 2 | 33 | `skill_agility` (act2, 7); `skill_crafting` (act2, 10); `magic` (act2, 16) |
@@ -242,6 +243,26 @@ task first (T11, T18, T25, T28): other chapters link to its anchors. Counts are 
 | T29 | 5 | 31 | act5 and post of every skill path: `skill_attack` 3, `skill_defense` 3, `skill_range` 3, `skill_taming` 2, `skill_agility` 2, `skill_crafting` 2, `magic` 5, `skill_cooking` 2, `skill_farming` 3, `skill_fishing` 2, `skill_foraging` 2, `skill_mining` 2 |
 
 Total 759 (with the 119 already written, the plan's 878).
+
+## Task TF: upgrade the stand-ins
+
+`src/plans/followups.md` lists ~300 quests written with a stand-in because the engine couldn't do something at the
+time. Many can now be done properly: the README's task list has grown a lot since they were written (`use`, `search`,
+`mine`, `build`, `tame`, `breed`, `cast`, `spellkill`, `photo`, `waystones`, `skill_level`, `stats`, `be` with
+weather/time/riding, `biomes`, `make`, `trade`, `sleep`, `interact`, `spawn`, timed `structure`/`hold`/`away` goals,
+escorts). Go through every line under "Engine needed", chapter by chapter:
+
+- Open the quest. If one or more README tasks can now do what the line says the quest needs, faithfully, rewrite
+  those steps (keep the quest's id, story and rewards; replacing a stand-in task in place is fine) and delete the
+  line from followups.md.
+- If nothing can, leave the line. Don't force a weak substitute just to clear a line.
+- Puzzles still follow "Build on what's really there" (check `src/structure_contents.json`).
+- Dialogue you touch follows the short-dialogue rules.
+
+After each chapter: rebuild it, `python make_quests.py`, `python lint_quests.py <chapter>`. At the end:
+`python coverage.py --check`, one puzzle check (`python tools/quests/verify_puzzles.py`), and commit per chapter group
+(`Quests TF: stand-ins upgraded in <chapters>`). Report how many lines you cleared and how many remain, and the most
+common remaining needs (so the engine can grow next).
 
 ## Task TD: shorten the dialogue
 

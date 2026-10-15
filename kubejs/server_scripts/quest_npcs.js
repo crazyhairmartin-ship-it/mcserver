@@ -65,7 +65,7 @@ ServerEvents.commandRegistry(event => {
       target.tags.forEach(t => { if (String(t).indexOf('fq.') == 0) tags.push(String(t)) })
       tags.forEach(t => target.removeTag(t))
       let data = target.persistentData
-      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill', 'fqSpawn', 'fqMine', 'fqUse', 'fqSearch', 'fqBiomes'].forEach(k => data.remove(k))
+      ;['fqOffers', 'fqDropped', 'fqEnc', 'fqTimed', 'fqTimedPrompt', 'fqBuild', 'fqPhotos', 'fqTame', 'fqBreed', 'fqWaystones', 'fqAmbient', 'fqCast', 'fqSpellKill', 'fqSpawn', 'fqMine', 'fqUse', 'fqSearch', 'fqBiomes', 'fqMade', 'fqTrade', 'fqSlept', 'fqInteract'].forEach(k => data.remove(k))
       server.runCommandSilent('kill @e[tag=fq_owner.' + target.uuid + ']')
       ctx.source.sendSystemMessage(Text.green('Reset ' + target.username + "'s quests (" + tags.length + ' quest tags).'))
       return 1
@@ -787,9 +787,15 @@ function npcBeFits(player, w) {
   if (!npcConditionsMet(player, w)) return false
   if (w.in_water && !player.inWater) return false
   if (w.sky && !player.block.canSeeSky) return false
-  if (w.night) {
-    let t = Number(player.level.dayTime) % 24000
-    if (t < 13000 || t > 23000) return false
+  let t = Number(player.level.dayTime) % 24000
+  if (w.night && (t < 13000 || t > 23000)) return false
+  if (w.time && (t < w.time[0] || t > w.time[1])) return false
+  if (w.raining && !player.level.raining) return false
+  if (w.thundering && !player.level.thundering) return false
+  if (w.riding) {
+    let want = Array.isArray(w.riding) ? w.riding : [w.riding]
+    let vehicle = player.vehicle
+    if (!vehicle || want.indexOf(String(vehicle.type)) < 0) return false
   }
   return true
 }
@@ -901,6 +907,77 @@ BlockEvents.rightClicked(event => {
     player.server.runCommandSilent('give ' + player.username + ' ' + s.item + ' 1')
     player.tell(Text.italic(s.found || 'You find something you were looking for.').gray())
     player.setStatusMessage(Text.gray(found.allKeys.size() + ' / ' + s.count))
+  })
+})
+
+// ---- make, trade, sleep and interact tasks ----
+// Counted from game events (startup_scripts/quest_events.js for the Forge ones) while the step is open.
+
+function npcCountUp(player, entry, key, by) {
+  let counts = npcData(player, key)
+  let n = counts.getInt(entry.stage) + (by || 1)
+  if (n >= entry.count) {
+    counts.remove(entry.stage)
+    questAddStage(player, entry.stage)
+    player.setStatusMessage(Text.yellow('Quest updated.'))
+  } else {
+    counts.putInt(entry.stage, n)
+    if (entry.count > 1) player.setStatusMessage(Text.gray(n + ' / ' + entry.count))
+  }
+}
+
+global.fqOnMade = (player, item, how) => {
+  if (!player || player.level.clientSide) return
+  npcEntries('make').forEach(m => {
+    if (player.tags.contains(m.stage) || (m.how != 'any' && m.how != how)
+      || (m.items.length && m.items.indexOf(item.id) < 0) || !questOpen(player, m)) return
+    npcCountUp(player, m, 'fqMade', Math.max(1, item.count))
+  })
+}
+
+global.fqOnTrade = (player, trader, result) => {
+  if (!player || player.level.clientSide) return
+  let type = String(trader.type)
+  let profession = ''
+  try { profession = String(trader.nbt.getCompound('VillagerData').getString('profession')) } catch (e) { profession = '' }
+  npcEntries('trade').forEach(t => {
+    if (player.tags.contains(t.stage) || (t.item && t.item != result.id) || !questOpen(player, t)) return
+    if (t.who != 'any' && t.who != type && t.who != profession) return
+    npcCountUp(player, t, 'fqTrade', 1)
+  })
+}
+
+global.fqOnSlept = player => {
+  if (!player || player.level.clientSide) return
+  npcEntries('sleep').forEach(s => {
+    if (player.tags.contains(s.stage) || !questOpen(player, s)) return
+    npcCountUp(player, s, 'fqSlept', 1)
+  })
+}
+
+ItemEvents.entityInteracted(event => {
+  let { player, target } = event
+  if (String(event.hand) != 'MAIN_HAND' || player.level.clientSide || target.tags.contains('fq_npc')
+    || target.tags.contains('fq_enc')) return
+  let type = String(target.type)
+  let held = String(player.mainHandItem.id)
+  npcEntries('interact').forEach(i => {
+    if (player.tags.contains(i.stage) || (i.entities.length && i.entities.indexOf(type) < 0)
+      || (i.holding && held != i.holding) || !questOpen(player, i)) return
+    let all = npcData(player, 'fqInteract')
+    let done = all.contains(i.stage) ? all.getCompound(i.stage) : new $NpcCompoundTag()
+    let id = String(target.uuid)
+    if (done.contains(id)) return
+    done.putBoolean(id, true)
+    all.put(i.stage, done)
+    if (i.holding && i.consume) player.mainHandItem.shrink(1)
+    if (done.allKeys.size() >= i.count) {
+      all.remove(i.stage)
+      questAddStage(player, i.stage)
+      player.setStatusMessage(Text.yellow('Quest updated.'))
+    } else {
+      player.setStatusMessage(Text.gray(done.allKeys.size() + ' / ' + i.count))
+    }
   })
 })
 

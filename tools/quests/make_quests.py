@@ -883,7 +883,9 @@ def build_search(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems)
 def build_be(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     """A "be" task: the player stands somewhere that matches every condition given (checked every 5 seconds):
     {"be": {"biomes": [...], "dimension": id, "above_y": 192, "below_y": 0, "in_water": true, "sky": true,
-    "night": true}} ("sky": open sky above them; "night": after dusk, before dawn)."""
+    "night": true, "raining": true, "thundering": true, "time": [12000, 13000], "riding": "minecraft:horse"}}
+    ("sky": open sky above them; "night": after dusk, before dawn; "time": day-time ticks from, to, e.g. sunset
+    12000-13000, sunrise 23000-24000; "riding": on that mob, or a list)."""
     spec = t['be']
     if not isinstance(spec, dict) or not spec:
         problems.error(where, '"be" needs conditions: biomes, dimension, above_y, below_y, in_water, sky')
@@ -892,7 +894,11 @@ def build_be(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
         ctx['registry'].check('biomes', b, where, t.get('unchecked', False))
     if spec.get('dimension'):
         ctx['registry'].check('dimensions', spec['dimension'], where)
-    cond = {k: spec[k] for k in ('biomes', 'dimension', 'above_y', 'below_y', 'in_water', 'sky', 'night') if k in spec}
+    cond = {k: spec[k] for k in ('biomes', 'dimension', 'above_y', 'below_y', 'in_water', 'sky', 'night', 'raining',
+                                 'thundering', 'time', 'riding') if k in spec}
+    if 'riding' in spec:
+        for r in (spec['riding'] if isinstance(spec['riding'], list) else [spec['riding']]):
+            ctx['registry'].check('entities', r, where, t.get('unchecked', False))
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.be{n}', 'type': 'be', 'where': cond,
              'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
@@ -911,6 +917,51 @@ def build_biomes(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems)
              'prev_tasks': list(prev_tasks)}
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
             'title': t.get('title', f'Visit {count} different biomes')}
+    return task, entry
+
+
+def ids_list(value):
+    return [] if value in (None, 'any') else (value if isinstance(value, list) else [value])
+
+
+def build_event_task(t, kind, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
+    """Tasks counted from game events while the step is open:
+    make:     {"make": "minecraft:cake" (or list), "count": 3, "how": "craft"|"smelt"|"brew"|"any"}  items made
+    trade:    {"trade": "any" | villager profession | mob id, "item": result id (optional), "count": 2}  trades done
+    sleep:    {"sleep": 1}  nights slept through (waking in the morning)
+    interact: {"interact": mob id (or list), "holding": item id, "consume": true, "count": 2}  right-click that many
+              different mobs of that kind holding the item (give a collar, feed, saddle, name...)"""
+    reg = ctx['registry']
+    entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.{kind}{n}', 'type': kind,
+             'count': int(t.get('count', 1)), 'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
+    if kind == 'make':
+        items = ids_list(t['make'])
+        for i in items:
+            reg.check('items', i, where, t.get('unchecked', False))
+        how = t.get('how', 'any')
+        if how not in ('craft', 'smelt', 'brew', 'any'):
+            problems.error(where, '"how" must be craft, smelt, brew or any')
+        entry.update(items=items, how=how)
+        default = 'Make it'
+    elif kind == 'trade':
+        entry.update(who=t['trade'], item=t.get('item', ''))
+        if t.get('item'):
+            reg.check('items', t['item'], where, t.get('unchecked', False))
+        default = 'Make a trade'
+    elif kind == 'sleep':
+        entry['count'] = int(t['sleep'])
+        default = 'Sleep through the night'
+    else:
+        mobs = ids_list(t['interact'])
+        for m in mobs:
+            reg.check('entities', m, where, t.get('unchecked', False))
+        holding = t.get('holding', '')
+        if holding:
+            reg.check('items', holding, where, t.get('unchecked', False))
+        entry.update(entities=mobs, holding=holding, consume=bool(t.get('consume', False)))
+        default = 'Do it'
+    task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
+            'title': t.get('title', default)}
     return task, entry
 
 
@@ -1214,6 +1265,12 @@ def main():
                 elif isinstance(t, dict) and 'cast' in t:
                     task, entry = build_cast(t, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx, twhere,
                                              problems)
+                    if entry:
+                        givers.append(entry)
+                elif isinstance(t, dict) and any(k in t for k in ('make', 'trade', 'sleep', 'interact')):
+                    kind = next(k for k in ('make', 'trade', 'sleep', 'interact') if k in t)
+                    task, entry = build_event_task(t, kind, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx,
+                                                   twhere, problems)
                     if entry:
                         givers.append(entry)
                 elif isinstance(t, dict) and ('be' in t or (isinstance(t.get('biomes'), int))):
