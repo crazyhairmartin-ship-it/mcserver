@@ -550,7 +550,10 @@ def build_encounter(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, proble
 
 
 # shortcuts a timed challenge can switch off (kubejs/server_scripts/quest_npcs.js)
-TIMED_BANS = ('teleport', 'mounts', 'elytra', 'pearls', 'hurt')  # never grappling hooks: Dylan wants them allowed
+TIMED_BANS = ('teleport', 'mounts', 'elytra', 'pearls', 'hurt', 'ground')  # never grappling hooks: Dylan wants them allowed
+# where a course's checkpoints go, and their usual spacing and size
+COURSE_DEFAULTS = {'water': {'spread': [20, 45], 'radius': 5}, 'ground': {'spread': [15, 35], 'radius': 4},
+                   'roofs': {'spread': [6, 16], 'radius': 2.5}, 'air': {'spread': [30, 70], 'radius': 7}}
 
 
 def build_timed(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
@@ -587,8 +590,37 @@ def build_timed(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
         if not dest:
             return None, None
         out_goal = dict(dest)
+    elif 'course' in goal:
+        c = goal['course'] if isinstance(goal['course'], dict) else {}
+        on = c.get('on', 'ground')
+        if on not in COURSE_DEFAULTS:
+            problems.error(where, f'course "on" must be one of {", ".join(COURSE_DEFAULTS)}')
+            return None, None
+        d = COURSE_DEFAULTS[on]
+        spread = c.get('spread', d['spread'])
+        height = c.get('height', [6, 20])
+        count = int(c.get('checkpoints', 5))
+        if not (isinstance(spread, list) and len(spread) == 2 and 2 <= spread[0] <= spread[1] <= 200):
+            problems.error(where, 'course "spread" must be [min, max] blocks between checkpoints, 2-200')
+            return None, None
+        if not 2 <= count <= 20:
+            problems.error(where, 'course "checkpoints" must be 2-20')
+        out_goal = {'kind': 'course', 'on': on, 'count': count, 'spread': [int(spread[0]), int(spread[1])],
+                    'radius': float(c.get('radius', d['radius'])), 'loop': bool(c.get('loop', False)),
+                    'height': [int(height[0]), int(height[1])]}
+    elif 'legs' in goal:
+        legs = []
+        for n2, leg in enumerate(goal['legs'] if isinstance(goal['legs'], list) else []):
+            dest = build_destination(leg, ctx['registry'], f'{where} > leg {n2 + 1}', problems)
+            if dest:
+                dest['away'] = int(leg.get('away', 0))
+                legs.append(dest)
+        if len(legs) < 2:
+            problems.error(where, '"legs" needs at least two stops')
+            return None, None
+        out_goal = {'kind': 'legs', 'legs': legs}
     else:
-        problems.error(where, 'timed goal must be "kill", "stat", "place", "structure" or "hold"')
+        problems.error(where, 'timed goal must be "kill", "stat", "place", "structure", "hold", "course" or "legs"')
         return None, None
     if 'away' in goal:
         if out_goal.get('kind') not in ('place', 'structure'):
@@ -607,8 +639,11 @@ def build_timed(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     for b in banned:
         if b not in TIMED_BANS:
             problems.error(where, f'timed "no": unknown shortcut {b!r} (one of {", ".join(TIMED_BANS)})')
+    start_in = None
+    if 'start_in' in spec:
+        start_in = build_destination(spec['start_in'], ctx['registry'], where + ' > start_in', problems)
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.timed{n}', 'type': 'timed',
-             'seconds': seconds, 'goal': out_goal, 'no': [b for b in banned if b in TIMED_BANS], 'waves': waves, 'lines': spec.get('lines', []), 'start': spec.get('start', 'Start'),
+             'seconds': seconds, 'goal': out_goal, 'start_in': start_in, 'no': [b for b in banned if b in TIMED_BANS], 'waves': waves, 'lines': spec.get('lines', []), 'start': spec.get('start', 'Start'),
              'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks), 'name': spec.get('name', '')}
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
             'title': t.get('title', f'Challenge ({seconds // 60}:{seconds % 60:02d})')}

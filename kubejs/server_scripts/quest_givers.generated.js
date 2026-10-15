@@ -383,6 +383,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 16.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -574,6 +575,7 @@ global.QUEST_GIVERS = [
       "entity": "minecraft:silverfish",
       "count": 15
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -1078,6 +1080,7 @@ global.QUEST_GIVERS = [
       ],
       "label": "the treasure room"
     },
+    "start_in": null,
     "no": [
       "teleport",
       "pearls"
@@ -1278,6 +1281,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 30.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -1606,6 +1610,7 @@ global.QUEST_GIVERS = [
       "label": "the next oasis",
       "away": 150
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -2872,6 +2877,7 @@ global.QUEST_GIVERS = [
       "label": "the Monastery",
       "away": 150
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -2993,6 +2999,7 @@ global.QUEST_GIVERS = [
       "label": "the Wildfire's throne room",
       "away": 40
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -3264,6 +3271,7 @@ global.QUEST_GIVERS = [
       "entity": "minecraft:end_crystal",
       "count": 10
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -3317,6 +3325,7 @@ global.QUEST_GIVERS = [
       "label": "the city's heart",
       "away": 60
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -3479,6 +3488,7 @@ global.QUEST_GIVERS = [
       "label": "the Harbinger's chamber",
       "away": 40
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -4351,6 +4361,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 10.0
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -4549,6 +4560,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 12.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -4583,6 +4595,7 @@ global.QUEST_GIVERS = [
       "label": "the portal frame",
       "away": 60
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -5208,6 +5221,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 6.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -5685,6 +5699,7 @@ global.QUEST_GIVERS = [
       "entity": "twilightforest:hedge_spider",
       "count": 6
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -6607,6 +6622,7 @@ global.QUEST_GIVERS = [
       "label": "the city's heart",
       "away": 50
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -6666,6 +6682,7 @@ global.QUEST_GIVERS = [
       "label": "the far side",
       "away": 40
     },
+    "start_in": null,
     "no": [
       "hurt",
       "teleport"
@@ -6983,6 +7000,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 12.0
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -7242,6 +7260,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 14.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -7403,6 +7422,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 12.0
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -7866,6 +7886,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 20.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -8003,6 +8024,7 @@ global.QUEST_GIVERS = [
       "label": "the snowy village",
       "away": 200
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -8379,6 +8401,7 @@ global.QUEST_GIVERS = [
       "label": "the far side of the city",
       "away": 60
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -8631,6 +8654,7 @@ global.QUEST_GIVERS = [
       "entity": "minecraft:spider",
       "count": 10
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -8674,6 +8698,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 150.0
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -8855,6 +8880,7 @@ global.QUEST_GIVERS = [
       "label": "the treasure room",
       "away": 40
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -8934,6 +8960,7 @@ global.QUEST_GIVERS = [
       "label": "the far shore",
       "away": 200
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -9201,6 +9228,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 20.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -9417,6 +9445,7 @@ global.QUEST_GIVERS = [
       "label": "the forge's edge",
       "away": 25
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -9445,6 +9474,7 @@ global.QUEST_GIVERS = [
       "label": "the sealed doors",
       "away": 25
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -9561,6 +9591,7 @@ global.QUEST_GIVERS = [
       "stat": "minecraft:fish_caught",
       "count": 5
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -9756,6 +9787,7 @@ global.QUEST_GIVERS = [
       "label": "the far jetty",
       "away": 60
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -10648,6 +10680,7 @@ global.QUEST_GIVERS = [
       ],
       "label": "the castle ruins"
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -10760,6 +10793,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 20.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -10989,6 +11023,7 @@ global.QUEST_GIVERS = [
       "label": "the stricken boat",
       "away": 100
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -11176,6 +11211,7 @@ global.QUEST_GIVERS = [
       ],
       "label": "the sky village"
     },
+    "start_in": null,
     "no": [
       "teleport",
       "elytra"
@@ -11580,6 +11616,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 12.0
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -11606,6 +11643,7 @@ global.QUEST_GIVERS = [
       "label": "an End city",
       "away": 400
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -11660,6 +11698,7 @@ global.QUEST_GIVERS = [
       "label": "a far End city",
       "away": 800
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -11818,6 +11857,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 14.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -11869,6 +11909,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 8.0
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -11967,6 +12008,7 @@ global.QUEST_GIVERS = [
       "label": "the spire's top",
       "away": 30
     },
+    "start_in": null,
     "no": [
       "elytra",
       "teleport"
@@ -12012,6 +12054,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 10.0
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -12394,6 +12437,7 @@ global.QUEST_GIVERS = [
       "label": "the feasting tavern",
       "away": 150
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -12479,6 +12523,7 @@ global.QUEST_GIVERS = [
       "label": "the expedition's camp",
       "away": 150
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -12739,6 +12784,7 @@ global.QUEST_GIVERS = [
       },
       "label": "Reece"
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -13019,6 +13065,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 24.0
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -13549,6 +13596,7 @@ global.QUEST_GIVERS = [
       "stat": "minecraft:damage_dealt",
       "count": 600
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -14734,6 +14782,7 @@ global.QUEST_GIVERS = [
       "entity": "naturalist:deer",
       "count": 1
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -15027,6 +15076,7 @@ global.QUEST_GIVERS = [
       "entity": "naturalist:deer",
       "count": 6
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -15332,6 +15382,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 20.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -15403,6 +15454,7 @@ global.QUEST_GIVERS = [
       "stat": "minecraft:damage_blocked_by_shield",
       "count": 500
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -15488,6 +15540,7 @@ global.QUEST_GIVERS = [
       ],
       "label": "the outpost"
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -15511,6 +15564,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 20.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -15850,6 +15904,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 10.0
     },
+    "start_in": null,
     "no": [],
     "waves": [],
     "lines": [
@@ -16023,6 +16078,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 6.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -16179,6 +16235,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 20.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -16217,6 +16274,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 20.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {
@@ -16439,6 +16497,7 @@ global.QUEST_GIVERS = [
       "label": "the next village",
       "away": 150
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -16466,6 +16525,7 @@ global.QUEST_GIVERS = [
       "stat": "minecraft:jump",
       "count": 25
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -16622,6 +16682,7 @@ global.QUEST_GIVERS = [
       "label": "the village across the bridge",
       "away": 100
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -16646,6 +16707,7 @@ global.QUEST_GIVERS = [
       "stat": "minecraft:jump",
       "count": 50
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts",
@@ -16744,6 +16806,7 @@ global.QUEST_GIVERS = [
       "label": "the next village",
       "away": 200
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -16814,6 +16877,7 @@ global.QUEST_GIVERS = [
       "stat": "minecraft:sprint_one_cm",
       "count": 20000
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -16950,6 +17014,7 @@ global.QUEST_GIVERS = [
       "label": "the far pier",
       "away": 80
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -16979,6 +17044,7 @@ global.QUEST_GIVERS = [
       "label": "the mountain outpost",
       "away": 150
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -17008,6 +17074,7 @@ global.QUEST_GIVERS = [
       "label": "the monastery",
       "away": 150
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -17077,6 +17144,7 @@ global.QUEST_GIVERS = [
       "label": "the firewatch tower",
       "away": 150
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -17313,6 +17381,7 @@ global.QUEST_GIVERS = [
       "label": "the course's end",
       "away": 200
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -17435,6 +17504,7 @@ global.QUEST_GIVERS = [
       "label": "the third village",
       "away": 300
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -17473,6 +17543,7 @@ global.QUEST_GIVERS = [
       },
       "label": "Reece"
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -17621,6 +17692,7 @@ global.QUEST_GIVERS = [
       "label": "the village beyond the mountains",
       "away": 400
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -17739,6 +17811,7 @@ global.QUEST_GIVERS = [
       "label": "the circuit's last village",
       "away": 800
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -17835,6 +17908,7 @@ global.QUEST_GIVERS = [
       "label": "the first leg's village",
       "away": 200
     },
+    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -17864,6 +17938,7 @@ global.QUEST_GIVERS = [
       "label": "the bay's far village",
       "away": 200
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -17893,6 +17968,7 @@ global.QUEST_GIVERS = [
       "label": "the sky village",
       "away": 200
     },
+    "start_in": null,
     "no": [
       "teleport"
     ],
@@ -18519,6 +18595,7 @@ global.QUEST_GIVERS = [
       "label": "the logbook's vault",
       "away": 40
     },
+    "start_in": null,
     "no": [
       "hurt"
     ],
@@ -19659,6 +19736,7 @@ global.QUEST_GIVERS = [
       "kind": "hold",
       "radius": 20.0
     },
+    "start_in": null,
     "no": [],
     "waves": [
       {

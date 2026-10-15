@@ -25,8 +25,17 @@ function npcData(player, key) {
 }
 
 function npcEntries(type) {
-  return (global.QUEST_GIVERS || []).filter(g => g.type == type)
+  let all = (global.QUEST_GIVERS || []).filter(g => g.type == type)
+  return type == 'timed' ? all.concat(NPC_TEST_COURSES) : all
 }
+
+// /questcourse <on> (ops): a practice course from where you stand, not tied to any quest (for trying courses out)
+const NPC_TEST_COURSES = ['water', 'ground', 'roofs', 'air'].map(on => ({
+  stage: 'fq.test.course.' + on, type: 'timed', test: true, seconds: on == 'air' ? 240 : 180, name: '', lines: [],
+  start: 'Start', requires: [], prev_tasks: [], waves: [], no: on == 'air' ? ['ground'] : [], start_in: null,
+  goal: { kind: 'course', on: on, count: 5, loop: on == 'water',
+    spread: { water: [20, 45], ground: [15, 35], roofs: [6, 16], air: [30, 70] }[on],
+    radius: { water: 5, ground: 4, roofs: 2.5, air: 7 }[on], height: [6, 20] } }))
 
 function npcEntryByStage(stage) {
   return (global.QUEST_GIVERS || []).find(g => g.stage == stage)
@@ -126,6 +135,13 @@ ServerEvents.commandRegistry(event => {
       let msg = ids.length ? ids.map(k => k + ' (' + chars[k].name + ')').join(', ') : 'No characters yet.'
       ctx.source.sendSystemMessage(Text.of(msg))
       return 1
+    })))
+  event.register(Commands.literal('questcourse')
+    .requires(src => src.hasPermission(2))
+    .then(Commands.argument('on', Arguments.STRING.create(event)).executes(ctx => {
+      let player = ctx.source.player
+      if (!player) return 0
+      return npcStartChallenge(player, 'fq.test.course.' + Arguments.STRING.getResult(ctx, 'on')) ? 1 : 0
     })))
   event.register(Commands.literal('quest')
     .then(Commands.literal('challenge').then(Commands.argument('stage', Arguments.STRING.create(event))
@@ -320,13 +336,186 @@ function npcAtDestination(entity, dest) {
   return npcInStructure(entity.level, entity.x, entity.y, entity.z, dest.structures)
 }
 
+// ---- courses (goal "course": checkpoints laid out from where the player starts; goal "legs": stops in turn) ----
+// A course's checkpoints are generated on Start: on water (buoys), the ground, village roofs or in the air, each one
+// "spread" blocks on from the last, roughly onwards. Each shows as a big floating number with a particle ring; the
+// action bar points to the next. They're passed when the player's path since the last check comes within "radius"
+// (so a fast glide can't skip one). "loop": the last checkpoint is back at the start.
+
+const NPC_COURSE_WHERE = { water: 'Start this course on open water.', roofs: 'Start this course up on the roofs of a village.',
+  ground: 'There\'s no room for the course here. Try more open ground.', air: 'There\'s no room for the course here. Try somewhere more open.' }
+const NPC_ROOF_BLOCK =/stairs|slab|planks|shingle|tile|thatch|wool|terracotta|bricks|_log|_wood|roof/
+
+// the top of the column at (x, z) near height y: {y: first air above, id: the block below it}, or null
+function npcColumnTop(level, x, y, z, up, down) {
+  for (let dy = up; dy >= -down; dy--) {
+    let below = String(level.getBlock(x, y + dy - 1, z).id)
+    if (below.endsWith('air')) continue
+    if (!String(level.getBlock(x, y + dy, z).id).endsWith('air')) return null
+    return { y: y + dy, id: below }
+  }
+  return null
+}
+
+function npcCourseSpot(level, on, fromX, fromY, fromZ, heading, spread, height) {
+  for (let attempt = 0; attempt < 40; attempt++) {
+    let angle = heading == null ? Math.random() * 6.283185307179586 : heading + (Math.random() - 0.5) * 1.6
+    let dist = spread[0] + Math.random() * (spread[1] - spread[0])
+    let x = Math.floor(fromX + Math.cos(angle) * dist)
+    let z = Math.floor(fromZ + Math.sin(angle) * dist)
+    let top = npcColumnTop(level, x, Math.floor(fromY), z, on == 'air' ? 60 : 24, on == 'air' ? 60 : 24)
+    if (!top) continue
+    let water = top.id == 'minecraft:water'
+    if (on == 'water' && !water) continue
+    if (on == 'ground' && (water || top.id == 'minecraft:lava' || top.id.indexOf('leaves') >= 0)) continue
+    if (on == 'roofs' && (water || !NPC_ROOF_BLOCK.test(top.id) || top.y < fromY - 6)) continue
+    let y = top.y
+    if (on == 'air') y += height[0] + Math.floor(Math.random() * (height[1] - height[0] + 1))
+    return { x: x + 0.5, y: y + 0.5, z: z + 0.5, heading: angle }
+  }
+  return null
+}
+
+function npcLayCourse(player, goal) {
+  let level = player.level
+  let cps = []
+  let from = { x: player.x, y: player.y, z: player.z, heading: null }
+  let count = goal.loop ? goal.count - 1 : goal.count
+  for (let i = 0; i < count; i++) {
+    let spot = npcCourseSpot(level, goal.on, from.x, from.y, from.z, from.heading, goal.spread, goal.height)
+    if (!spot) return null
+    cps.push([spot.x, spot.y, spot.z])
+    from = spot
+  }
+  if (goal.loop) cps.push([player.x, player.y + 0.5, player.z])
+  return cps
+}
+
+function npcCourseMarkers(player, cps, index) {
+  let tag = 'fq_course.' + player.uuid
+  player.server.runCommandSilent('kill @e[type=minecraft:text_display,tag=' + tag + ']')
+  // the next checkpoint and the one after it, so the route ahead is visible
+  for (let i = index; i < Math.min(cps.length, index + 2); i++) {
+    let c = cps[i]
+    let text = JSON.stringify({ text: String(i + 1), color: i == index ? 'gold' : 'gray', bold: true })
+    player.server.runCommandSilent('execute in ' + player.level.dimension + ' run summon minecraft:text_display '
+      + c[0] + ' ' + (c[1] + 1.5) + ' ' + c[2] + " {text:'" + text + "',billboard:\"center\",see_through:1b,"
+      + 'background:0,brightness:{sky:15,block:15},Tags:["fq_course","' + tag + '"],'
+      + 'transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],'
+      + 'scale:[6f,6f,6f]}}')
+  }
+}
+
+function npcSound(player, sound, pitch) {
+  player.server.runCommandSilent('execute as ' + player.uuid + ' at @s run playsound ' + sound + ' player @s ~ ~ ~ 1 ' + pitch)
+}
+
+function npcClearCourse(player) {
+  player.server.runCommandSilent('kill @e[type=minecraft:text_display,tag=fq_course.' + player.uuid + ']')
+}
+
+// did the path from (ax, ay, az) to the player come within r of checkpoint c?
+function npcPassed(player, ax, ay, az, c, r, flat) {
+  let bx = player.x - ax, by = player.y - ay, bz = player.z - az
+  let len2 = bx * bx + by * by + bz * bz
+  let t = len2 > 0 ? ((c[0] - ax) * bx + (c[1] - ay) * by + (c[2] - az) * bz) / len2 : 0
+  t = Math.max(0, Math.min(1, t))
+  let dx = ax + bx * t - c[0], dy = ay + by * t - c[1], dz = az + bz * t - c[2]
+  // on water and ground the height matters less (bobbing boats, slopes)
+  if (flat) dy = Math.max(0, Math.abs(dy) - 3)
+  return dx * dx + dy * dy + dz * dz <= r * r
+}
+
+// an arrow pointing to (x, z) relative to where the player faces
+function npcPointer(player, x, z) {
+  let bearing = Math.atan2(-(x - player.x), z - player.z) * 57.29577951308232
+  let yaw = typeof player.getYRot == 'function' ? player.getYRot() : player.yaw
+  let rel = ((bearing - yaw) % 360 + 540) % 360 - 180
+  let arrows = ['↑', '↗', '→', '↘', '↓', '↙', '←', '↖']
+  return arrows[Math.round(((rel + 360) % 360) / 45) % 8]
+}
+
+function npcTickCourse(player, ch, rec) {
+  let goal = ch.goal
+  if (goal.kind == 'course') {
+    let cps = JSON.parse(rec.getString('cps'))
+    let i = rec.getInt('cp')
+    let flat = goal.on == 'water' || goal.on == 'ground' || goal.on == 'roofs'
+    while (i < cps.length && npcPassed(player, rec.getDouble('px'), rec.getDouble('py'), rec.getDouble('pz'), cps[i],
+      goal.radius, flat)) {
+      i++
+      npcSound(player, 'minecraft:entity.experience_orb.pickup', 1.4)
+      if (i < cps.length) npcCourseMarkers(player, cps, i)
+    }
+    rec.putInt('cp', i)
+    if (i < cps.length) {
+      let c = cps[i]
+      player.server.runCommandSilent('execute in ' + player.level.dimension + ' run particle minecraft:end_rod '
+        + c[0] + ' ' + c[1] + ' ' + c[2] + ' ' + goal.radius / 2 + ' ' + goal.radius / 2 + ' ' + goal.radius / 2
+        + ' 0 24 force ' + player.username)
+    }
+  } else if (goal.kind == 'legs') {
+    let i = rec.getInt('leg')
+    if (i < goal.legs.length) {
+      let leg = goal.legs[i]
+      let dx = player.x - rec.getDouble('lx'), dz = player.z - rec.getDouble('lz')
+      if ((!leg.away || dx * dx + dz * dz >= leg.away * leg.away) && npcAtDestination(player, leg)) {
+        rec.putInt('leg', i + 1)
+        rec.putDouble('lx', player.x)
+        rec.putDouble('lz', player.z)
+        npcSound(player, 'minecraft:entity.player.levelup', 1.2)
+        player.tell(Text.yellow('Reached ' + leg.label + ' (' + (i + 1) + ' / ' + goal.legs.length + ')'))
+      }
+    }
+  }
+  rec.putDouble('px', player.x)
+  rec.putDouble('py', player.y)
+  rec.putDouble('pz', player.z)
+}
+
+function npcCourseLabel(player, ch, rec) {
+  let goal = ch.goal
+  if (goal.kind == 'legs') {
+    let leg = goal.legs[Math.min(rec.getInt('leg'), goal.legs.length - 1)]
+    return 'Reach ' + leg.label + ' (' + (rec.getInt('leg') + 1) + ' / ' + goal.legs.length + ')'
+  }
+  let cps = JSON.parse(rec.getString('cps'))
+  let i = Math.min(rec.getInt('cp'), cps.length - 1)
+  let c = cps[i]
+  let dist = Math.round(Math.sqrt((c[0] - player.x) * (c[0] - player.x) + (c[2] - player.z) * (c[2] - player.z)))
+  return 'Checkpoint ' + (i + 1) + ' / ' + cps.length + '  ' + npcPointer(player, c[0], c[2]) + ' ' + dist + 'm'
+}
+
 function npcStartChallenge(player, stage) {
   let ch = npcEntries('timed').find(g => g.stage == stage)
   if (!ch || player.tags.contains(stage) || !questOpen(player, ch)) {
     player.tell(Text.gray('There\'s no challenge to start right now.'))
     return false
   }
+  if (ch.start_in && !npcAtDestination(player, ch.start_in)) {
+    player.tell(Text.gray('Start this one from ' + ch.start_in.label + '.'))
+    return false
+  }
+  let cps = null
+  if (ch.goal.kind == 'course') {
+    cps = npcLayCourse(player, ch.goal)
+    if (!cps) {
+      player.tell(Text.gray(NPC_COURSE_WHERE[ch.goal.on] || 'There\'s no room for the course here. Try somewhere else.'))
+      return false
+    }
+  }
   let rec = new $NpcCompoundTag()
+  if (cps) {
+    rec.putString('cps', JSON.stringify(cps))
+    rec.putInt('cp', 0)
+    npcCourseMarkers(player, cps, 0)
+  }
+  rec.putInt('leg', 0)
+  rec.putDouble('lx', player.x)
+  rec.putDouble('lz', player.z)
+  rec.putDouble('px', player.x)
+  rec.putDouble('py', player.y)
+  rec.putDouble('pz', player.z)
   rec.putLong('start', Date.now())
   rec.putLong('until', Date.now() + ch.seconds * 1000)
   rec.putInt('count', 0)
@@ -348,6 +537,8 @@ function npcChallengeProgress(player, ch, rec) {
   if (goal.kind == 'kill') return [rec.getInt('count'), goal.count]
   if (goal.kind == 'stat') return [npcStatValue(player, goal.stat) - rec.getInt('base'), goal.count]
   if (goal.kind == 'hold') return [0, 1]   // done when the time runs out (npcTickChallenges)
+  if (goal.kind == 'course') return [rec.getInt('cp'), JSON.parse(rec.getString('cps')).length]
+  if (goal.kind == 'legs') return [rec.getInt('leg'), goal.legs.length]
   // "away": the destination only counts this far from where the timer started (the next village, not this one)
   let far = !goal.away || npcHoldDistance(player, rec) >= goal.away
   return [far && npcAtDestination(player, goal) ? 1 : 0, 1]
@@ -384,7 +575,10 @@ function npcClearWaves(player) {
 function npcFinishChallenge(player, ch, won) {
   npcData(player, 'fqTimed').remove(ch.stage)
   npcClearWaves(player)
-  if (won) {
+  npcClearCourse(player)
+  if (won && ch.test) {
+    player.setStatusMessage(Text.green('Practice course complete!'))
+  } else if (won) {
     questAddStage(player, ch.stage)
     player.setStatusMessage(Text.green('Challenge complete!'))
     player.setStatusMessage(Text.yellow('Challenge complete! Quest updated.'))
@@ -404,6 +598,7 @@ function npcTickChallenges(player) {
       if (running.contains(ch.stage)) running.remove(ch.stage)
       return
     }
+    if (ch.test && !running.contains(ch.stage)) return
     if (running.contains(ch.stage)) {
       let rec = running.getCompound(ch.stage)
       let broken = npcBrokenBan(player, ch, rec)
@@ -412,6 +607,7 @@ function npcTickChallenges(player) {
         npcFailChallenge(player, ch, broken)
         return
       }
+      if (ch.goal.kind == 'course' || ch.goal.kind == 'legs') npcTickCourse(player, ch, rec)
       let progress = npcChallengeProgress(player, ch, rec)
       let left = Math.ceil((rec.getLong('until') - now) / 1000)
       if (progress[0] >= progress[1]) {
@@ -421,13 +617,14 @@ function npcTickChallenges(player) {
       } else {
         npcSpawnWaves(player, ch, rec)
         let label = ch.goal.kind == 'hold' ? 'Hold on'
+          : (ch.goal.kind == 'course' || ch.goal.kind == 'legs') ? npcCourseLabel(player, ch, rec)
           : (ch.goal.kind == 'place' || ch.goal.kind == 'structure') ? 'Reach ' + ch.goal.label
           : progress[0] + ' / ' + progress[1]
         player.setStatusMessage(Text.of([Text.gold(left + 's  '), Text.white(label)]))
       }
       return
     }
-    if (now - prompted.getLong(ch.stage) < NPC_CHALLENGE_PROMPT_MS || !questOpen(player, ch)) return
+    if (ch.test || now - prompted.getLong(ch.stage) < NPC_CHALLENGE_PROMPT_MS || !questOpen(player, ch)) return
     prompted.putLong(ch.stage, now)
     player.tell(Text.of([Text.gold('A challenge is ready. '),
       Text.green('[' + ch.start + ']').clickRunCommand('/quest challenge ' + ch.stage).hover('Start the timer')]))
@@ -1035,7 +1232,8 @@ function npcTickWaystones(player) {
 // challenge. pearls: ender pearls can't be thrown. Grappling hooks are always allowed.
 
 const NPC_BAN_WORDS = { teleport: 'teleporting', mounts: 'riding', elytra: 'gliding', pearls: 'ender pearls',
-  hurt: 'getting hit' }
+  hurt: 'getting hit', ground: 'touching the ground' }
+const NPC_GROUND_GRACE_MS = 4000   // "no ground": time to take off after Start
 const NPC_TELEPORT_ITEMS = ['waystones:warp_scroll', 'waystones:bound_scroll', 'waystones:return_scroll',
   'waystones:warp_stone', 'minecraft:chorus_fruit']
 const NPC_TELEPORT_DISTANCE = 64
@@ -1076,6 +1274,11 @@ function npcBrokenBan(player, ch, rec) {
     && server.runCommandSilent('execute as ' + player.uuid + ' if entity @s[nbt={FallFlying:1b}]') > 0) {
     return 'No gliding in this challenge.'
   }
+  if (no.indexOf('ground') >= 0 && Date.now() - rec.getLong('start') > NPC_GROUND_GRACE_MS) {
+    // standing on land (water and riding a flying mount don't count); grappling and rooftops are fine mid-air
+    let grounded = typeof player.onGround == 'function' ? player.onGround() : player.onGround
+    if (grounded && !player.isInWater() && !player.isPassenger()) return 'You touched the ground.'
+  }
   if (no.indexOf('teleport') >= 0) {
     let dx = player.x - rec.getDouble('x'), dy = player.y - rec.getDouble('y'), dz = player.z - rec.getDouble('z')
     if (rec.getString('dim') != String(player.level.dimension)
@@ -1090,6 +1293,7 @@ function npcBrokenBan(player, ch, rec) {
 function npcFailChallenge(player, ch, why) {
   npcData(player, 'fqTimed').remove(ch.stage)
   npcClearWaves(player)
+  npcClearCourse(player)
   player.setStatusMessage(Text.red('Challenge failed'))
   player.tell(Text.of([Text.red(why + ' '),
     Text.green('[Try again]').clickRunCommand('/quest challenge ' + ch.stage).hover('Restart the challenge')]))
@@ -1138,6 +1342,8 @@ PlayerEvents.tick(event => {
   if (player.tickCount % 100 == 50) npcTickTames(player)
   if (player.tickCount % 100 == 75) npcTickWaystones(player)
   if (player.tickCount % 100 == 25) npcTickMilestones(player)
+  if (player.tickCount % 600 == 300 && !npcEntries('timed').some(ch => (ch.goal.kind == 'course')
+    && npcData(player, 'fqTimed').contains(ch.stage))) npcClearCourse(player)
 })
 
 EntityEvents.death(event => {
