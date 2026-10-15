@@ -55,8 +55,7 @@ Q = [
                 "read it, and you can see how it ends."],
           tasks=[{"checkmark": "I read the contract"}],
           rewards=[reward_item("minecraft:writable_book", name="The Hunter's Journal",
-                               lore=["A dead hunter's notes. The last page is unfinished."]),
-                   skill("attack", 150)]),
+                               lore=["A dead hunter's notes. The last page is unfinished."]), reward_item("minecraft:enchanted_book", enchant={'minecraft:smite': 3}), skill("attack", 150)]),
 
     quest("dungeon_sweep", "Clearing the Cellar", icon="minecraft:spawner", after=["fallen_adventurer"],
           text=["The journal points to a dungeon below a village. Go down and clear it."],
@@ -165,7 +164,7 @@ ACT2 = [
                  {"observe": "realmrpg_skeletons:slain_skeleton", "ticks": 20, "title": "Find the slain hunter's remains"},
                  {"observe": "realmrpg_skeletons:shot_skeleton", "ticks": 20, "title": "Find the hunter shot down on the trail"}],
           rewards=[reward_item("minecraft:writable_book", name="A Hunter's Compass Page",
-                               lore=["Torn from a dead hunter's journal."]), skill("attack", 400)]),
+                               lore=["Torn from a dead hunter's journal."]), reward_item("minecraft:enchanted_book", enchant={'minecraft:looting': 2}), skill("attack", 400)]),
 ]
 
 ACT3 = [

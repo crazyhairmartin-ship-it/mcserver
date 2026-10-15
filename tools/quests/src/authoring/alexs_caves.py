@@ -25,7 +25,7 @@ ACT2 = [
           discover={"biome": "alexscaves:primordial_caves"},
           text=["Under the forest roof lies a land of ferns and cycads: the Primordial Caves, home of the dinosaurs."],
           tasks=[{"be": {"biomes": ["alexscaves:primordial_caves"], "below_y": 60}, "title": "Walk under the forest roof into the lost world"}],
-          rewards=[reward_item("minecraft:spyglass"), skill("agility", 150)]),
+          rewards=[reward_item("minecraft:spyglass"), reward_item("alexscaves:amber", 4), skill("agility", 150)]),
 
     quest("cave_paintings", "Painted Walls", icon="alexscaves:cave_painting_relicheirus", after=["primordial_caves"],
           text=["The cave people left paintings on the primordial walls: hunts, friendships, and a mystery told across "
@@ -192,7 +192,7 @@ ACT2 = [
           tasks=[enc(["*Your sight swims. Something watches through your eyes.*"], then="kill", entity="alexscaves:watcher",
                      name="The Watcher", title="Kill the watcher before it switches your view",
                      where={"biomes": ["alexscaves:forlorn_hollows"]})],
-          rewards=[reward_item("minecraft:spyglass"), skill("attack", 300)]),
+          rewards=[reward_item("minecraft:spyglass"), reward_item("alexscaves:dark_tatters", 4), skill("attack", 300)]),
 
     quest("forsaken", "The Forsaken", icon="alexscaves:pure_darkness", after=["forlorn_bridge"],
           text=["Underzealots perform a ritual to summon the Forsaken, a towering blind beast. Fight it as it "

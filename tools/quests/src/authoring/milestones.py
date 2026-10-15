@@ -129,8 +129,7 @@ Q = [
           text=["A hundred dawns is a long time to stay alive. Maren stitches a banner for those who reach it, with "
                 "their name along the hem."],
           tasks=[{"stat": "minecraft:play_time", "count": 100 * DAY, "title": "Survive a hundred in-game days"}],
-          rewards=[reward_item("minecraft:white_banner", name="A Hundred Dawns", lore=["Stitched by Elder Maren."]),
-                   skill("defense", 300)]),
+          rewards=[reward_item("minecraft:white_banner", name="A Hundred Dawns", lore=["Stitched by Elder Maren."]), reward_item("minecraft:enchanted_book", enchant={'minecraft:unbreaking': 3}), skill("defense", 300)]),
 
     quest("mine_1000", "Thousand Stones", icon="minecraft:cobblestone", after=["first_iron"],
           text=["Dagna Holt says a miner who hasn't shifted a thousand stones hasn't earned the title. The Field "

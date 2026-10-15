@@ -515,6 +515,10 @@
           ]
         },
         {
+          "item": "minecraft:redstone_block",
+          "count": 2
+        },
+        {
           "skill": "craft",
           "xp": 280
         }
@@ -620,6 +624,10 @@
       "rewards": [
         {
           "item": "minecraft:bell"
+        },
+        {
+          "item": "minecraft:stone_bricks",
+          "count": 64
         },
         {
           "skill": "craft",
@@ -1303,6 +1311,10 @@
           "name": "The Guild Banner"
         },
         {
+          "item": "minecraft:emerald",
+          "count": 12
+        },
+        {
           "skill": "craft",
           "xp": 740
         }
@@ -1379,6 +1391,10 @@
         {
           "item": "minecraft:bell",
           "name": "The Survivors' Heirloom"
+        },
+        {
+          "item": "minecraft:iron_block",
+          "count": 4
         },
         {
           "skill": "craft",

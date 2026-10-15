@@ -1600,6 +1600,12 @@
           "name": "The Relay Pennant"
         },
         {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:feather_falling": 3
+          }
+        },
+        {
           "skill": "agility",
           "xp": 900
         }

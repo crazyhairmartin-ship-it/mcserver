@@ -53,7 +53,7 @@ Q = [
                                       "texture": "minecraft:item/map"},
                              "found": "The watcher's old trail map, three game trails inked on it."},
                   "title": "Take the watcher's trail map from the tower"}],
-          rewards=[reward_item("minecraft:spyglass"), skill("range", 150)]),
+          rewards=[reward_item("minecraft:spyglass"), reward_item("minecraft:arrow", 32), skill("range", 150)]),
 
     quest("longbow", "The Longbow", icon="spartanweaponry:iron_longbow", after=["firewatch"],
           text=["From the tower, the watcher points out a deer far below. Craft a longbow and drop it with one "
@@ -228,7 +228,7 @@ ACT4 = [
                  enc(["*A thunder of hooves.*"], then="kill", entity="naturalist:rhino", name="Old Ironhide", health=120, glow=True,
                      title="Take down Old Ironhide", where={"biomes": ["minecraft:savanna", "minecraft:plains"]}),
                  sample("Ironhide's Horn", ["naturalist:rhino"], 0.7, texture="minecraft:item/bone", tooltip="For the lodge wall")],
-          rewards=[reward_item("minecraft:bone", name="Ironhide's Horn", lore=["From the first legend."]), skill("range", 780)]),
+          rewards=[reward_item("minecraft:bone", name="Ironhide's Horn", lore=["From the first legend."]), reward_item("minecraft:enchanted_book", enchant={'minecraft:power': 3}), skill("range", 780)]),
 
     quest("grey_widow", "The Grey Widow", icon="alexsmobs:tarantula_hawk_wing", after=["ironhide"],
           text=["Second legend: a tarantula hawk that hunts travellers in the desert, faster in the air than any "

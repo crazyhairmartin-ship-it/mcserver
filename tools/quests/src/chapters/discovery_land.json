@@ -1525,6 +1525,12 @@
           ]
         },
         {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:frost_walker": 2
+          }
+        },
+        {
           "skill": "magic",
           "xp": 200
         }
@@ -1624,6 +1630,9 @@
           "lore": [
             "The inscriptions point toward the strongholds."
           ]
+        },
+        {
+          "item": "irons_spellbooks:ancient_knowledge_fragment"
         },
         {
           "skill": "magic",

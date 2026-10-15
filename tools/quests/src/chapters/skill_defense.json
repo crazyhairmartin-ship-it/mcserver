@@ -218,6 +218,9 @@
           ]
         },
         {
+          "item": "spartanshields:iron_tower_shield"
+        },
+        {
           "skill": "defense",
           "xp": 200
         }
@@ -257,6 +260,12 @@
       "rewards": [
         {
           "item": "minecraft:spyglass"
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:protection": 1
+          }
         },
         {
           "skill": "defense",
@@ -491,6 +500,10 @@
           "lore": [
             "How the walls are built."
           ]
+        },
+        {
+          "item": "minecraft:iron_block",
+          "count": 4
         },
         {
           "skill": "defense",
@@ -744,6 +757,12 @@
           "lore": [
             "Taken from the raiders' ship."
           ]
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:respiration": 2
+          }
         },
         {
           "skill": "defense",
@@ -1219,6 +1238,10 @@
       "rewards": [
         {
           "item": "minecraft:bell"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 10
         },
         {
           "skill": "defense",

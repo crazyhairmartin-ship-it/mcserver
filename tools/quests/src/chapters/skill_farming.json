@@ -877,6 +877,10 @@
           ]
         },
         {
+          "item": "minecraft:hay_block",
+          "count": 8
+        },
+        {
           "skill": "farm",
           "xp": 400
         }
@@ -1095,6 +1099,10 @@
         {
           "item": "minecraft:white_banner",
           "name": "The Festival Banner"
+        },
+        {
+          "item": "minecraft:cake",
+          "count": 2
         },
         {
           "skill": "farm",

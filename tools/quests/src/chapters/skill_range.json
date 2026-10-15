@@ -259,6 +259,10 @@
           "item": "minecraft:spyglass"
         },
         {
+          "item": "minecraft:arrow",
+          "count": 32
+        },
+        {
           "skill": "range",
           "xp": 150
         }
@@ -1114,6 +1118,12 @@
           "lore": [
             "From the first legend."
           ]
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:power": 3
+          }
         },
         {
           "skill": "range",

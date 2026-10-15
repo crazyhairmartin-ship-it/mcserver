@@ -246,6 +246,10 @@
           "item": "minecraft:map"
         },
         {
+          "item": "minecraft:emerald",
+          "count": 8
+        },
+        {
           "skill": "cook",
           "xp": 150
         }
@@ -799,6 +803,10 @@
           "lore": [
             "The pub's secret."
           ]
+        },
+        {
+          "item": "brewery:hops_seeds",
+          "count": 8
         },
         {
           "skill": "cook",

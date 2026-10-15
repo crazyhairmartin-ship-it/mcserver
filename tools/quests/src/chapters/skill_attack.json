@@ -255,6 +255,12 @@
           ]
         },
         {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:smite": 3
+          }
+        },
+        {
           "skill": "attack",
           "xp": 150
         }
@@ -813,6 +819,12 @@
           "lore": [
             "Torn from a dead hunter's journal."
           ]
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:looting": 2
+          }
         },
         {
           "skill": "attack",

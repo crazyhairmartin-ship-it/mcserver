@@ -47,7 +47,7 @@ Q = [
           tasks=[{"structure": "#taverns", "title": "Find a tavern"},
                  talk_org("tavern", ["From Reece? Bess's lot? Any friend of hers.",
                                      "Here's our house recipe. Don't tell her I gave it up so easily."])],
-          rewards=[reward_item("minecraft:map"), skill("cook", 150)]),
+          rewards=[reward_item("minecraft:map"), reward_item("minecraft:emerald", 8), skill("cook", 150)]),
 
     quest("bakers_dozen", "A Baker's Dozen", icon="bakery:baker_station", after=["tavern_road"],
           text=["The tavern needs breakfast. Build a baker station and bake for the morning crowd."],
@@ -153,8 +153,7 @@ ACT2 = [
                  {"structure": "dungeons_arise:greenwood_pub", "title": "Find the greenwood pub in the deep forest"},
                  search("dungeons_arise:greenwood_pub", 1, "the Pub's Secret Ale Recipe", "A stained recipe, tucked in a barrel.",
                         title="Search the pub for why it went silent")],
-          rewards=[reward_item("minecraft:writable_book", name="The Greenwood Ale Recipe", lore=["The pub's secret."]),
-                   skill("cook", 350)]),
+          rewards=[reward_item("minecraft:writable_book", name="The Greenwood Ale Recipe", lore=["The pub's secret."]), reward_item("brewery:hops_seeds", 8), skill("cook", 350)]),
 
     quest("campfire_feast", "Feast Under the Stars", icon="camping:grill", after=["campfire_supper", "greenwood_pub"],
           text=["Lead a caravan of travellers between taverns and feed them every night on the road: three camps, "

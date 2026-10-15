@@ -171,7 +171,7 @@ ACT2 = [
                             "lines": ["Winter closes in. Get the food through."], "start": "Set out", "no": ["teleport"]},
                   "title": "Get the food to the snowy village before winter closes in"}],
           rewards=[reward_item("minecraft:writable_book", name="The Snowy Village's Pledge",
-                               lore=["A festival pledge, signed by every household."]), skill("farm", 400)]),
+                               lore=["A festival pledge, signed by every household."]), reward_item("minecraft:hay_block", 8), skill("farm", 400)]),
 ]
 
 ACT3 = [
@@ -225,7 +225,7 @@ ACT5 = [
                  {"build": {"blocks": {"handcrafted:oak_table": 4, "supplementaries:bunting": 6, "minecraft:hay_block": 8, "minecraft:oak_stairs": 8,
                                        "minecraft:oak_planks": 40}, "radius": 12},
                   "title": "Build the festival grounds, stage and barn-roofed prize table"}],
-          rewards=[reward_item("minecraft:white_banner", name="The Festival Banner"), skill("farm", 850)]),
+          rewards=[reward_item("minecraft:white_banner", name="The Festival Banner"), reward_item("minecraft:cake", 2), skill("farm", 850)]),
 
     quest("harvest_festival", "The Harvest Festival", icon="minecraft:wheat", after=["festival_grounds"],
           text=["Festival night: bring the feast's produce, the wine and the cheese, and the co-op's leader opens "

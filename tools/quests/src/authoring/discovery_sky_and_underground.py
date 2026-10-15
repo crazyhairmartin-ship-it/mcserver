@@ -181,7 +181,7 @@ Q = [
           text=["A tablet carved with a place far below. A cartographer in some village will know what it's worth."],
           tasks=[talk_villager("minecraft:cartographer", ["A cave deeper than any I've charted. Magnets, acid, strange light.", "Here, a map. Keep the tablet."],
                                title="Show the tablet to a cartographer")],
-          rewards=[reward_item("minecraft:map"), skill("mining", 200)]),
+          rewards=[reward_item("minecraft:map"), reward_item("minecraft:amethyst_shard", 8), skill("mining", 200)]),
 
     quest("glittering_nest", "The Glittering Nest", icon="minecraft:amethyst_block",
           discover={"structure": "cataclysm:amethyst_nest"},

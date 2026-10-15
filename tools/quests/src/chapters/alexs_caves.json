@@ -98,6 +98,10 @@
           "item": "minecraft:spyglass"
         },
         {
+          "item": "alexscaves:amber",
+          "count": 4
+        },
+        {
           "skill": "agility",
           "xp": 150
         }
@@ -958,6 +962,10 @@
       "rewards": [
         {
           "item": "minecraft:spyglass"
+        },
+        {
+          "item": "alexscaves:dark_tatters",
+          "count": 4
         },
         {
           "skill": "attack",

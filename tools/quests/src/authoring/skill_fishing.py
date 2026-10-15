@@ -169,7 +169,7 @@ ACT2 = [
           tasks=[{"structure": "#shipwrecks", "title": "Find the wreck named in the logbook"},
                  search("#shipwrecks", 1, "the Society's Old Trophies", "A trophy case, green with weed.",
                         title="Salvage the society's old trophies")],
-          rewards=[reward_item("minecraft:chest", 2), skill("fish", 400)]),
+          rewards=[reward_item("minecraft:chest", 2), reward_item("aquaculture:neptunium_nugget", 6), skill("fish", 400)]),
 ]
 
 ACT3 = [

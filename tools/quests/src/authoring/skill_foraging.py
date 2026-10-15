@@ -128,7 +128,7 @@ ACT2 = [
                      entity="minecraft:villager", name="Lost Botanist", title="Pull the botanist out of the mud",
                      where={"biomes": ["biomesoplenty:bog", "biomesoplenty:muskeg"]})],
           rewards=[reward_item("minecraft:writable_book", name="The Botanist's Field Journal",
-                               lore=["Full of rare sketches."]), skill("forage", 280)]),
+                               lore=["Full of rare sketches."]), reward_item("minecraft:glow_berries", 16), skill("forage", 280)]),
 
     quest("glowing_grotto", "The Glowing Grotto", icon="biomesoplenty:glowshroom", after=["lost_botanist"],
           text=["The botanist's journal points underground. Find a glowing grotto and collect glowshrooms, "
@@ -181,8 +181,7 @@ ACT2 = [
                  {"build": {"blocks": {"minecraft:glass": 24, "meadow:wooden_flower_pot_big": 2, "bloomingnature:flower_pot_big": 2,
                                        "regions_unexplored:blue_snowbelle": 1, "biomesoplenty:glowshroom": 1}, "radius": 12},
                   "title": "Build the herbarium with a living specimen of every pressed plant"}],
-          rewards=[reward_item("minecraft:writable_book", name="The Herbarium's Key", lore=["A seat on the Herbalists' council."]),
-                   skill("forage", 400)]),
+          rewards=[reward_item("minecraft:writable_book", name="The Herbarium's Key", lore=["A seat on the Herbalists' council."]), reward_item("minecraft:flowering_azalea", 4), skill("forage", 400)]),
 ]
 
 ACT3 = [
@@ -246,7 +245,7 @@ ACT5 = [
                  item("regions_unexplored:blue_snowbelle", title="Press a blue snowbelle"),
                  talk_char("rue", ["Pressed from all three dimensions? Oh, I'm so... oh. Oh my.", "I'll have it copied for every village. Sorry. Thank you."],
                            title="Hand the field journal to the Head Herbalist")],
-          rewards=[reward_item("minecraft:writable_book", name="The Complete Almanac", lore=["Bound in leather with your name on it."]), skill("forage", 850)]),
+          rewards=[reward_item("minecraft:writable_book", name="The Complete Almanac", lore=["Bound in leather with your name on it."]), reward_item("minecraft:moss_block", 16), skill("forage", 850)]),
 
     quest("greenwarden", "Greenwarden", icon="minecraft:netherite_axe", after=["almanac"],
           text=["The Head Herbalist names you Greenwarden of the wild lands and gives you the axe the order uses "

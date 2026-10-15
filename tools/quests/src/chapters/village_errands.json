@@ -917,6 +917,16 @@
           "count": 4
         },
         {
+          "item": "minecraft:emerald",
+          "count": 6
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:unbreaking": 2
+          }
+        },
+        {
           "skill": "magic",
           "xp": 100
         }

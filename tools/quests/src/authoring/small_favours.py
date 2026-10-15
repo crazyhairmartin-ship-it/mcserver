@@ -76,7 +76,7 @@ LAKE = [
                   "lines": ["Tea in a copper kettle. You know the old ways. Take the hat.", "Now go away before I put the kettle back on."],
                   "title": "Trade the tea to the witch"}],
           rewards=[reward_item("minecraft:carved_pumpkin", name="The Scarecrow's Hat",
-                               lore=["A faded hat, slightly chewed by a cat."]), skill("magic", 100)]),
+                               lore=["A faded hat, slightly chewed by a cat."]), reward_item("minecraft:pumpkin_pie", 4), skill("magic", 100)]),
 
     quest("sf_hat_flax_rope", "Hat, Flax, Rope", icon="supplementaries:flax", after=["sf_witch_bargain"],
           text=["Return the hat to its scarecrow, and Tamsin gives you a sheaf of flax. Twist it into rope and "

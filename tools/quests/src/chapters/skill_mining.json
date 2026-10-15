@@ -399,6 +399,12 @@
           "item": "minecraft:compass"
         },
         {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:efficiency": 2
+          }
+        },
+        {
           "skill": "mining",
           "xp": 250
         }
@@ -905,6 +911,10 @@
           "item": "minecraft:spyglass"
         },
         {
+          "item": "minecraft:raw_gold",
+          "count": 8
+        },
+        {
           "skill": "mining",
           "xp": 300
         }
@@ -952,6 +962,10 @@
           "lore": [
             "The caves' own questline goes deeper."
           ]
+        },
+        {
+          "item": "minecraft:amethyst_shard",
+          "count": 8
         },
         {
           "skill": "mining",
@@ -1325,6 +1339,10 @@
           "lore": [
             "Named for you."
           ]
+        },
+        {
+          "item": "minecraft:candle",
+          "count": 6
         },
         {
           "skill": "mining",

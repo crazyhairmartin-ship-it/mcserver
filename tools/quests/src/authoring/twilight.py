@@ -196,8 +196,7 @@ ACT2 = [
           tasks=[item("twilightforest:naga_trophy", title="Gather the Naga's trophy"),
                  item("twilightforest:lich_trophy", title="Gather the Lich's trophy"),
                  item("twilightforest:minoshroom_trophy", title="Gather the Minoshroom's trophy")],
-          rewards=[reward_item("minecraft:chest", name="Ironwood Supply Chest", lore=["The spirits' thanks."]),
-                   skill("agility", 350)]),
+          rewards=[reward_item("minecraft:chest", name="Ironwood Supply Chest", lore=["The spirits' thanks."]), reward_item("twilightforest:ironwood_ingot", 4), skill("agility", 350)]),
 ]
 
 ACT3 = [

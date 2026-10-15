@@ -362,7 +362,7 @@ Q = [
                 "large sleeps far below. Note it, copy the writing, and leave it alone for now."],
           tasks=[{"checkmark": "I copied the ruins' writing and left whatever sleeps below"}],
           rewards=[reward_item("minecraft:writable_book", name="Page of the Old Ruins' Writing",
-                               lore=["Copied in the snow, in a shaking hand."]), skill("magic", 200)]),
+                               lore=["Copied in the snow, in a shaking hand."]), reward_item("minecraft:enchanted_book", enchant={'minecraft:frost_walker': 2}), skill("magic", 200)]),
 
     quest("occupied_dunes", "Occupied Dunes", icon="minecraft:gold_ingot",
           discover={"structure": "cataclysm:desert_occupied_village"},
@@ -382,7 +382,7 @@ Q = [
                  enc(["The old writing, now readable. It names what is buried here."], entity="minecraft:allay", name="Spirit of the Ruins",
                      title="Have the inscriptions read to you, naming what is buried here")],
           rewards=[reward_item("minecraft:writable_book", name="Names of the Buried",
-                               lore=["The inscriptions point toward the strongholds."]), skill("magic", 700)]),
+                               lore=["The inscriptions point toward the strongholds."]), reward_item("irons_spellbooks:ancient_knowledge_fragment"), skill("magic", 700)]),
 
     quest("biome_ominous_woods", "The Ominous Woods", icon="minecraft:dark_oak_log",
           discover={"biome": "biomesoplenty:ominous_woods"},

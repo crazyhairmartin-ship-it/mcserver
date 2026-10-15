@@ -645,6 +645,10 @@
           ]
         },
         {
+          "item": "minecraft:glow_berries",
+          "count": 16
+        },
+        {
           "skill": "forage",
           "xp": 280
         }
@@ -890,6 +894,10 @@
           "lore": [
             "A seat on the Herbalists' council."
           ]
+        },
+        {
+          "item": "minecraft:flowering_azalea",
+          "count": 4
         },
         {
           "skill": "forage",
@@ -1153,6 +1161,10 @@
           "lore": [
             "Bound in leather with your name on it."
           ]
+        },
+        {
+          "item": "minecraft:moss_block",
+          "count": 16
         },
         {
           "skill": "forage",

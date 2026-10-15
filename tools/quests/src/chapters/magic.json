@@ -46,6 +46,10 @@
           ]
         },
         {
+          "item": "irons_spellbooks:common_ink",
+          "count": 4
+        },
+        {
           "skill": "magic",
           "xp": 80
         }
@@ -1103,6 +1107,10 @@
           "item": "minecraft:spyglass"
         },
         {
+          "item": "irons_spellbooks:uncommon_ink",
+          "count": 3
+        },
+        {
           "skill": "magic",
           "xp": 250
         }
@@ -1911,6 +1919,10 @@
           "lore": [
             "Who the Flamebearer was."
           ]
+        },
+        {
+          "item": "irons_spellbooks:rare_ink",
+          "count": 3
         },
         {
           "skill": "magic",

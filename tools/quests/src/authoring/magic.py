@@ -13,8 +13,7 @@ Q = [
                  item("minecraft:ink_sac", consume=True),
                  talk_char("orrin", ["Ten books and a quill! Marvellous! Where are my spectacles?", "Ah. On my head. Welcome, apprentice."])],
           rewards=[reward_item("minecraft:book", name="Guide to the Schools",
-                               lore=["Eight schools. Orrin has underlined the dangerous ones."]),
-                   skill("magic", 80)]),
+                               lore=["Eight schools. Orrin has underlined the dangerous ones."]), reward_item("irons_spellbooks:common_ink", 4), skill("magic", 80)]),
 
     quest("an_honest_table", "An Honest Table", icon="minecraft:enchanting_table", after=["the_order_calls"],
           text=["Orrin despises guesswork. Build an enchanting table ringed by fifteen bookshelves, and enchant your "
@@ -244,7 +243,7 @@ ACT2 = [
                  {"observe": "minecraft:evoker", "ticks": 60, "title": "Watch the guards' rotation from cover"},
                  enc(["I came as soon as I could. What did you see?", "Good. Remember it."], character="orrin",
                      title="Report what you saw to Orrin")],
-          rewards=[reward_item("minecraft:spyglass"), skill("magic", 250)]),
+          rewards=[reward_item("minecraft:spyglass"), reward_item("irons_spellbooks:uncommon_ink", 3), skill("magic", 250)]),
 
     quest("unseen_thief", "The Unseen Thief", icon="artifacts:scarf_of_invisibility", after=["evoker_fort"],
           signature="artifacts:scarf_of_invisibility",
@@ -415,7 +414,7 @@ ACT5 = [
                  talk_char("orrin", ["The shards and the inscriptions. Together at last."], title="Gather Orrin in the library tower"),
                  talk_char("agathe", ["The Flamebearer's echo still burns. We know why."], title="Gather Agathe in the library tower"),
                  talk_char("pip", ["I knew it! I borrowed the right book!"], title="Gather Pip in the library tower")],
-          rewards=[reward_item("minecraft:writable_book", name="The Statue's Design", lore=["Who the Flamebearer was."]), skill("magic", 900)]),
+          rewards=[reward_item("minecraft:writable_book", name="The Statue's Design", lore=["Who the Flamebearer was."]), reward_item("irons_spellbooks:rare_ink", 3), skill("magic", 900)]),
 
     quest("tyros_statue", "The Statue of Tyros", icon="irons_spellbooks:tyros_statue", after=["flamebearers_trail"],
           text=["Craft the Tyros Statue from pyrium and raise it on an altar far from Reece, the summoning place "

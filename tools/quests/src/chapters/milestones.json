@@ -606,6 +606,12 @@
           ]
         },
         {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:unbreaking": 3
+          }
+        },
+        {
           "skill": "defense",
           "xp": 300
         }

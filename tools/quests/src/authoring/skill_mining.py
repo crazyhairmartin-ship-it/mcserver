@@ -74,7 +74,7 @@ Q = [
           text=["Fill in the guild's depth chart: what lies at every level of the world."],
           tasks=[item("minecraft:redstone", 16), item("minecraft:lapis_lazuli", 16), item("minecraft:raw_gold", 8),
                  item("minecraft:pointed_dripstone", 4)],
-          rewards=[reward_item("minecraft:compass"), skill("mining", 250)]),
+          rewards=[reward_item("minecraft:compass"), reward_item("minecraft:enchanted_book", enchant={'minecraft:efficiency': 2}), skill("mining", 250)]),
 
     quest("underminer", "The Underminer", icon="minecraft:iron_pickaxe", after=["depth_chart"],
           text=["Miners talk of a ghostly figure that digs beside you in the deep and then vanishes. Find the "
@@ -177,7 +177,7 @@ ACT2 = [
                  item("minecraft:copper_ingot", 8, title="Bring copper for the lens fittings"),
                  item("minecraft:spyglass", crafted=True, title="Craft the surveyor a spyglass"),
                  item("minecraft:tinted_glass", 2, crafted=True, title="Craft tinted glass for her lamp")],
-          rewards=[reward_item("minecraft:spyglass"), skill("mining", 300)]),
+          rewards=[reward_item("minecraft:spyglass"), reward_item("minecraft:raw_gold", 8), skill("mining", 300)]),
 
     quest("strange_minerals", "Strange Minerals", icon="alexscaves:amber", after=["surveyors_glass"],
           text=["Rumours of strange stone deep under the world. Dig samples of amber from the Primordial Caves, guano "
@@ -187,8 +187,7 @@ ACT2 = [
                  {"structure": "alexscaves:forlorn_canyon", "title": "Find the Forlorn Hollows"},
                  item("alexscaves:guano_block", 4, title="Dig guano samples"),
                  item("alexscaves:abyssmarine", 4, title="Dig abyssmarine samples from the abyss")],
-          rewards=[reward_item("minecraft:writable_book", name="A Note on the Caves", lore=["The caves' own questline goes deeper."]),
-                   skill("mining", 350)]),
+          rewards=[reward_item("minecraft:writable_book", name="A Note on the Caves", lore=["The caves' own questline goes deeper."]), reward_item("minecraft:amethyst_shard", 8), skill("mining", 350)]),
 
     quest("lost_journal", "The Lost Expedition's Journal", icon="minecraft:written_book", after=["cave_in"],
           text=["A guild expedition went too deep and found an ancient city. One survivor made it out without the "
@@ -264,7 +263,7 @@ ACT4 = [
           tasks=[{"place": "reece"},
                  {"build": {"blocks": {"minecraft:polished_deepslate": 16, "minecraft:obsidian": 8, "minecraft:lantern": 4, "minecraft:oak_sign": 4},
                             "radius": 12}, "title": "Raise the memorial at the guildhall"}],
-          rewards=[reward_item("minecraft:oak_sign", name="The Memorial Plaque", lore=["Named for you."]), skill("mining", 800)]),
+          rewards=[reward_item("minecraft:oak_sign", name="The Memorial Plaque", lore=["Named for you."]), reward_item("minecraft:candle", 6), skill("mining", 800)]),
 ]
 
 ACT5 = [

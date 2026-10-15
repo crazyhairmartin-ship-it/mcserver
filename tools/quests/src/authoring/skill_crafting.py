@@ -113,8 +113,7 @@ Q = [
           tasks=[{"structure": "structory_towers:engineer_tower", "title": "Find the engineer's tower"},
                  item("furniture:blueprints", title="Find the blueprints")],
           rewards=[reward_item("minecraft:writable_book", name="The Founder's Journal",
-                               lore=["Notes from the guild's founder, in a careful hand."]),
-                   skill("craft", 280)]),
+                               lore=["Notes from the guild's founder, in a careful hand."]), reward_item("minecraft:redstone_block", 2), skill("craft", 280)]),
 ]
 
 ACT2 = [
@@ -139,7 +138,7 @@ ACT2 = [
                  {"build": {"blocks": {"minecraft:oak_planks": 40, "#minecraft:doors": 3, "#minecraft:beds": 3,
                                        "mcwbridges:oak_bridge_pier": 2}, "radius": 12},
                   "title": "Rebuild houses and a bridge for the returning families"}],
-          rewards=[reward_item("minecraft:bell"), skill("craft", 320)]),
+          rewards=[reward_item("minecraft:bell"), reward_item("minecraft:stone_bricks", 64), skill("craft", 320)]),
 
     quest("guild_warehouse", "The Warehouse", icon="obscuras_storage:crafting_terminal",
           after=["sacks_and_jars", "engineers_blueprints"],
@@ -289,7 +288,7 @@ ACT4 = [
                  {"build": {"blocks": {"handcrafted:oak_table": 2, "another_furniture:oak_bench": 4, "furniture:oak_bench": 2,
                                        "supplementaries:bunting": 4, "obscuras_storage:crafting_terminal": 1, "handcrafted:bear_trophy": 1},
                             "radius": 12}, "title": "Raise the guild hall, furnished in all three traditions"}],
-          rewards=[reward_item("minecraft:white_banner", name="The Guild Banner"), skill("craft", 740)]),
+          rewards=[reward_item("minecraft:white_banner", name="The Guild Banner"), reward_item("minecraft:emerald", 12), skill("craft", 740)]),
 
     quest("endless_pack", "A Pack That Never Wears Out", icon="sophisticatedbackpacks:netherite_backpack", after=["pack_upgrades"],
           text=["Finish your masterwork backpack: netherite tier with an everlasting upgrade and an inception "
@@ -307,7 +306,7 @@ ACT5 = [
           tasks=[{"structure": "cataclysm:desert_occupied_village", "title": "Lead the guild to the freed desert village"},
                  {"build": {"blocks": {"minecraft:sandstone": 40, "#minecraft:doors": 3, "#minecraft:beds": 3, "handcrafted:oak_table": 2, "handcrafted:oak_chair": 4},
                             "radius": 12}, "title": "Repair its houses and furnish them for the survivors"}],
-          rewards=[reward_item("minecraft:bell", name="The Survivors' Heirloom"), skill("craft", 850)]),
+          rewards=[reward_item("minecraft:bell", name="The Survivors' Heirloom"), reward_item("minecraft:iron_block", 4), skill("craft", 850)]),
 
     quest("crafting_capstone", "Master of the Guild", icon="minecraft:netherite_pickaxe",
           after=["rebuild_after_cataclysm", "endless_pack", "winter_festival"],

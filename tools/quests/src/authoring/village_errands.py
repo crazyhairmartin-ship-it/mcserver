@@ -198,7 +198,7 @@ Q = [
                  item("minecraft:charcoal", 4, title="Bring charcoal to take rubbings"),
                  {"structure": "mvs:statue_ruins", "title": "Rub the carvings on a fallen statue"},
                  {"structure": "mvs:log_ruin", "title": "Rub the carvings on a log ruin"}],
-          rewards=[reward_item("minecraft:book", 4), skill("magic", 100)]),
+          rewards=[reward_item("minecraft:book", 4), reward_item("minecraft:emerald", 6), reward_item("minecraft:enchanted_book", enchant={'minecraft:unbreaking': 2}), skill("magic", 100)]),
 
     # ---- Anglers' society ----
     quest("outcast_fisherman", "The Outcast Fisherman", icon="aquaculture:worm",

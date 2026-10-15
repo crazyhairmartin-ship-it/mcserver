@@ -98,7 +98,7 @@ ACT1 = [
           text=["Follow the scrape marks to a Wrought Chamber and look at its sealed door. The armour inside is "
                 "breathing."],
           tasks=[{"structure": "mowziesmobs:wrought_chamber", "title": "Find a Wrought Chamber"}],
-          rewards=[reward_item("minecraft:spyglass")]),
+          rewards=[reward_item("minecraft:spyglass"), reward_item("mowziesmobs:glowing_jelly", 2)]),
 
     quest("act1_wroughtnaut", "The Ferrous Wroughtnaut", icon="minecraft:iron_axe", shape="diamond", size=1.5,
           after=["act1_wrought_scout", "act1_iron_kit"],
@@ -314,8 +314,7 @@ ACT2 = [
           tasks=[talk_org("arcane", ["Two copies of the same seal. Eight sleepers, then.",
                                      "None can be broken yet. Keep these runes safe."],
                           title="Show the rune copies to the Arcane Order")],
-          rewards=[reward_item("minecraft:writable_book", name="Runed Tablet", lore=["The Door of Seal, copied twice."]),
-                   skill("magic", 300)]),
+          rewards=[reward_item("minecraft:writable_book", name="Runed Tablet", lore=["The Door of Seal, copied twice."]), reward_item("irons_spellbooks:arcane_essence", 4), skill("magic", 300)]),
 
     quest("act2_scout_steel", "Steel From the Sleepers", icon="spartancataclysm:ancient_metal_greatsword",
           after=["act2_sealed_doors"],

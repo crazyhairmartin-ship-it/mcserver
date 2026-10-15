@@ -436,6 +436,10 @@
       "rewards": [
         {
           "item": "minecraft:spyglass"
+        },
+        {
+          "item": "mowziesmobs:glowing_jelly",
+          "count": 2
         }
       ],
       "icon": "minecraft:iron_door"
@@ -1381,6 +1385,10 @@
           "lore": [
             "The Door of Seal, copied twice."
           ]
+        },
+        {
+          "item": "irons_spellbooks:arcane_essence",
+          "count": 4
         },
         {
           "skill": "magic",

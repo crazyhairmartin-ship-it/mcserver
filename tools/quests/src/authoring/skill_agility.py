@@ -338,7 +338,7 @@ ACT5 = [
                  {"timed": {"seconds": 900, "goal": {"structure": "skyvillages:skyvillage", "label": "the sky village", "away": 200},
                             "lines": ["Last leg, by air!"], "start": "Fly the last leg", "no": ["teleport"]},
                   "title": "Fly the last leg to the sky village"}],
-          rewards=[reward_item("minecraft:white_banner", name="The Relay Pennant"), skill("agility", 900)]),
+          rewards=[reward_item("minecraft:white_banner", name="The Relay Pennant"), reward_item("minecraft:enchanted_book", enchant={'minecraft:feather_falling': 3}), skill("agility", 900)]),
 
     quest("courier_capstone", "Seven Leagues", icon="minecraft:netherite_boots", after=["grand_relay", "sharestone_network"],
           text=["Juniper hands you the post office keys and the Couriers' oldest treasure, reforged for you."],

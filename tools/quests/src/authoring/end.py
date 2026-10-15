@@ -86,7 +86,7 @@ ACT4 = [
                 "and reach its bridge."],
           tasks=[visit("#end_mega_ships", "Find a crashed mega ship and reach its bridge"),
                  search("mes:mega_ship", 1, "the Ship's Loot", "The bridge locker, still sealed.", title="Open the bridge locker")],
-          rewards=[reward_item("minecraft:spyglass", name="Captain's Spyglass"), skill("agility", 650)]),
+          rewards=[reward_item("minecraft:spyglass", name="Captain's Spyglass"), reward_item("minecraft:shulker_shell", 2), skill("agility", 650)]),
 
     quest("ships_ghost", "The Ship's Ghost", icon="minecraft:written_book", after=["the_wrecked_fleet"],
           text=["The wreck's captain lingers on the bridge and wants his logbook pages, scattered through the other "
@@ -127,7 +127,7 @@ ACT4 = [
           tasks=[visit("mes:enderwatch_tower", "Climb an Enderwatch tower"),
                  item("camerapture:camera", title="Bring a camera to mark what you see"),
                  {"photo": {"structure": "minecraft:end_city"}, "title": "Photograph an End city from the tower's top"}],
-          rewards=[reward_item("minecraft:map"), reward_item("minecraft:spyglass"), skill("agility", 650)]),
+          rewards=[reward_item("minecraft:map"), reward_item("minecraft:spyglass"), reward_item("minecraft:ender_pearl", 6), skill("agility", 650)]),
 
     quest("manuscript_shrine", "The Manuscript Shrine", icon="minecraft:lectern", after=["enderwatch"],
           text=["An Enderman keeps a shrine of manuscripts and won't be looked at. Read the shrine's texts without "
@@ -137,7 +137,7 @@ ACT4 = [
                             "start": "Read the manuscripts", "no": ["hurt"]}, "title": "Read the shrine's texts without meeting the scribe's gaze"},
                  search("mes:manuscript_shrine", 1, "an Eldritch Manuscript", "A page, handed over in silence.",
                         texture="minecraft:item/writable_book", title="Answer the scribe's question and take a page")],
-          rewards=[reward_item("minecraft:writable_book", name="An Eldritch Manuscript"), skill("magic", 700)]),
+          rewards=[reward_item("minecraft:writable_book", name="An Eldritch Manuscript"), reward_item("irons_spellbooks:eldritch_manuscript"), skill("magic", 700)]),
 
     quest("mythic_garden", "The Mythic Garden", icon="minecraft:flowering_azalea", after=["enderwatch"],
           text=["A walled garden of impossible plants grows on a far island. Bring back cuttings from the Mythic "
@@ -171,7 +171,7 @@ ACT4 = [
           text=["A black monolith hums on a barren island. Align it with the astronomer's reading and the star that "
                 "fell starts to make sense."],
           tasks=[search("mes:monolith", 1, "a Lore Page", "A page, fixed to the stone with wax.", title="Read the monolith's inscriptions")],
-          rewards=[reward_item("minecraft:writable_book", name="A Page of the Monolith"), skill("magic", 700)]),
+          rewards=[reward_item("minecraft:writable_book", name="A Page of the Monolith"), reward_item("irons_spellbooks:arcane_essence", 3), skill("magic", 700)]),
 
     quest("quiet_meadows", "Quiet Meadows", icon="minecraft:chorus_flower", after=["chorus_garden"],
           text=["Find a placid prairie and an enderskog in the outer End, peaceful places where nothing tries to kill "
@@ -209,7 +209,7 @@ ACT4 = [
           text=["In the shadowlands lie the bones of a dragon far older than the one you killed. Count its ribs: "
                 "Ilse thinks there were many dragons once."],
           tasks=[item("minecraft:bone_block", 4, title="Take bone from the old dragon")],
-          rewards=[reward_item("minecraft:bone", name="An Elder Dragon's Bone", lore=["Older than the one you killed."]), skill("magic", 700)]),
+          rewards=[reward_item("minecraft:bone", name="An Elder Dragon's Bone", lore=["Older than the one you killed."]), reward_item("minecraft:dragon_breath", 3), skill("magic", 700)]),
 
     quest("strange_shores", "Strange Shores", icon="naturescompass:naturescompass", after=["null_space"],
           text=["Some islands are overgrown or rotten. Stand in the End wilds, the End reef and the End corruption."],

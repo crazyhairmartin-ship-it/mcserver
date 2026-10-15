@@ -47,8 +47,7 @@ Q = [
                             "lines": ["Shield up. Let them hit it, not you.", "Fifteen minutes. Hold it."],
                             "start": "Raise the shield"}, "title": "Block 50 hearts of damage"}],
           rewards=[reward_item("minecraft:white_banner", name="Iron Wall Banner",
-                               lore=["The mark of those who held the line."]),
-                   skill("defense", 200)]),
+                               lore=["The mark of those who held the line."]), reward_item("spartanshields:iron_tower_shield"), skill("defense", 200)]),
 
     quest("scout_outpost", "Eyes on the Outpost", icon="minecraft:spyglass",
           after=["arm_a_guard", "main_story:act1_start"],
@@ -58,7 +57,7 @@ Q = [
                             "lines": ["Stay low. Don't take a scratch, or you've been seen.",
                                       "Reach the outpost and count the crossbows."],
                             "start": "Begin the scouting", "no": ["hurt"]}, "title": "Reach the outpost unseen"}],
-          rewards=[reward_item("minecraft:spyglass"), skill("defense", 220)]),
+          rewards=[reward_item("minecraft:spyglass"), reward_item("minecraft:enchanted_book", enchant={'minecraft:protection': 1}), skill("defense", 220)]),
 
     quest("first_raid", "At the Gate", icon="artifacts:crystal_heart", after=["scout_outpost", "tower_shield"],
           signature="artifacts:crystal_heart",
@@ -108,8 +107,7 @@ ACT2 = [
                           title="Ask the wall's captain for the plans"),
                  search("ctov:large/village_plains_fortified", 1, "the Wall Plans", "Rolled plans of the wall, in a captain's chest.",
                         title="Copy the wall's plans")],
-          rewards=[reward_item("minecraft:writable_book", name="The Wall Plans", lore=["How the walls are built."]),
-                   skill("defense", 300)]),
+          rewards=[reward_item("minecraft:writable_book", name="The Wall Plans", lore=["How the walls are built."]), reward_item("minecraft:iron_block", 4), skill("defense", 300)]),
 
     quest("build_walls", "Walls for Reece", icon="minecraft:stone_bricks", after=["fortified_village"],
           text=["Raise a stone wall and a gatehouse on Reece's open side from the plans, and raise two iron golems "
@@ -156,8 +154,7 @@ ACT2 = [
                 "raids."],
           tasks=[fight("minecraft:pillager", 10, "towns_and_towers:pillager_outpost_ocean", "Sea Raiders",
                        "Take the raiders' ship at sea", wave=5)],
-          rewards=[reward_item("minecraft:white_banner", name="Ominous Banner", lore=["Taken from the raiders' ship."]),
-                   skill("defense", 400)]),
+          rewards=[reward_item("minecraft:white_banner", name="Ominous Banner", lore=["Taken from the raiders' ship."]), reward_item("minecraft:enchanted_book", enchant={'minecraft:respiration': 2}), skill("defense", 400)]),
 ]
 
 ACT3 = [
@@ -254,7 +251,7 @@ ACT5 = [
           tasks=[{"structure": "cataclysm:abandoned_village", "title": "Walk the abandoned village the monsters left"},
                  item("minecraft:bell", title="Take its broken watch bell"),
                  {"place": "reece", "title": "Bring the bell to Reece as a reminder"}],
-          rewards=[reward_item("minecraft:bell"), skill("defense", 900)]),
+          rewards=[reward_item("minecraft:bell"), reward_item("minecraft:emerald", 10), skill("defense", 900)]),
 
     quest("bulwark", "Captain of the Watch", icon="spartanshields:netherite_tower_shield", after=["abandoned_village"],
           text=["Hale hangs up his sword and names you Captain of the Watch, handing over the shield that has stood "
