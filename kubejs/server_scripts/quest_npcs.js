@@ -394,23 +394,16 @@ function npcLayCourse(player, goal) {
 function npcCourseMarkers(player, cps, index) {
   let tag = 'fq_course.' + player.uuid
   npcClearCourse(player)
-  // the next checkpoint (gold) and the one after it (grey): a glowing block, whose outline shows through anything,
-  // with its number floating above
+  // the next checkpoint (gold) and the one after it (grey), as big floating numbers. Not see-through: see-through
+  // text renders behind clouds (Dylan preferred the numbers to glowing blocks, 2026-10-15)
   for (let i = index; i < Math.min(cps.length, index + 2); i++) {
     let c = cps[i]
-    let next = i == index
-    let at = 'execute in ' + player.level.dimension + ' run summon '
-    let tags = 'Tags:["fq_course","' + tag + '"]'
-    player.server.runCommandSilent(at + 'minecraft:block_display ' + c[0] + ' ' + c[1] + ' ' + c[2]
-      + ' {block_state:{Name:"' + (next ? 'minecraft:gold_block' : 'minecraft:light_gray_concrete') + '"},'
-      + 'Glowing:1b,glow_color_override:' + (next ? 16755200 : 11184810) + ',brightness:{sky:15,block:15},' + tags + ','
-      + 'transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.75f,-0.75f,-0.75f],'
-      + 'scale:[1.5f,1.5f,1.5f]}}')
-    let text = JSON.stringify({ text: String(i + 1), color: next ? 'gold' : 'gray', bold: true })
-    player.server.runCommandSilent(at + 'minecraft:text_display ' + c[0] + ' ' + (c[1] + 2) + ' ' + c[2]
-      + " {text:'" + text + "',billboard:\"center\",background:0,brightness:{sky:15,block:15}," + tags + ','
+    let text = JSON.stringify({ text: String(i + 1), color: i == index ? 'gold' : 'gray', bold: true })
+    player.server.runCommandSilent('execute in ' + player.level.dimension + ' run summon minecraft:text_display '
+      + c[0] + ' ' + (c[1] + 1.5) + ' ' + c[2] + " {text:'" + text + "',billboard:\"center\",shadow:1b,background:0,"
+      + 'brightness:{sky:15,block:15},Tags:["fq_course","' + tag + '"],'
       + 'transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],'
-      + 'scale:[5f,5f,5f]}}')
+      + 'scale:[6f,6f,6f]}}')
   }
 }
 
