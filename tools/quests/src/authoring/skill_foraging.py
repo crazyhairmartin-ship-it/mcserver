@@ -185,4 +185,34 @@ ACT2 = [
                    skill("forage", 400)]),
 ]
 
-chapter("skill_foraging", "The Herbalists", "Foraging path", "minecraft:oak_sapling", "skills", 4, Q + ACT2)
+ACT3 = [
+    quest("nether_botany", "Nether Botany", icon="biomesoplenty:burning_blossom", after=["main_story:act3_start", "herbarium"],
+          text=["Even the Nether grows things. Collect crimson and warped fungi, a burning blossom and a hellbark "
+                "sapling, and carry them home without burning."],
+          tasks=[{"dimension": "minecraft:the_nether", "title": "Go down into the Nether to forage"},
+                 item("minecraft:crimson_fungus", title="Gather crimson fungus"),
+                 item("minecraft:warped_fungus", title="Gather warped fungus"),
+                 item("biomesoplenty:burning_blossom", title="Pick a burning blossom"),
+                 item("biomesoplenty:hellbark_sapling", title="Take a hellbark sapling")],
+          rewards=[reward_item("minecraft:magma_cream", 4), skill("forage", 400)]),
+
+    quest("dying_grove", "The Dying Grove", icon="biomesoplenty:flowering_oak_sapling", after=["nether_botany"],
+          text=["The Herbalists' sacred grove near Reece is withering into dead forest. Clear the dead logs, cure the "
+                "soil with herbal infusions and bone meal, and replant it until leaves grow back."],
+          tasks=[{"place": "reece"},
+                 item("herbalbrews:herbal_infusion", 2, consume=True, title="Cure the soil with herbal infusions"),
+                 item("minecraft:bone_meal", 16, consume=True, title="Feed the soil with bone meal"),
+                 {"build": {"blocks": {"minecraft:oak_sapling": 2, "minecraft:birch_sapling": 2, "minecraft:spruce_sapling": 2}, "radius": 12},
+                  "title": "Replant the grove until leaves grow back"}],
+          rewards=[reward_item("biomesoplenty:flowering_oak_sapling"), skill("forage", 430)]),
+
+    quest("mystic_trees", "The Three Impossible Trees", icon="biomesoplenty:magic_sapling", after=["dying_grove"],
+          text=["An old page lists trees no one has grown in Reece: a magic sapling from a mystic grove, a rainbow "
+                "birch sapling, and a golden larch sapling."],
+          tasks=[item("biomesoplenty:magic_sapling", title="Find a magic sapling in a mystic grove"),
+                 item("biomesoplenty:rainbow_birch_sapling", title="Find a rainbow birch sapling"),
+                 item("regions_unexplored:golden_larch_sapling", title="Find a golden larch sapling")],
+          rewards=[reward_item("biomesoplenty:magic_sapling", 2), skill("forage", 460)]),
+]
+
+chapter("skill_foraging", "The Herbalists", "Foraging path", "minecraft:oak_sapling", "skills", 4, Q + ACT2 + ACT3)

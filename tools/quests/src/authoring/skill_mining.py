@@ -205,4 +205,39 @@ ACT2 = [
                    reward_item("minecraft:map"), skill("mining", 400)]),
 ]
 
-chapter("skill_mining", "The Miners' Guild", "Mining path", "minecraft:iron_pickaxe", "skills", 0, Q + ACT2)
+ACT3 = [
+    quest("forge_cold", "The Cold Forge", icon="artifacts:pickaxe_heater", after=["main_story:act3_start", "cave_in"],
+          signature="artifacts:pickaxe_heater",
+          text=["The guild's deep forge below Y -50 has gone cold and no one can smelt down there. Carry coal blocks, "
+                "blaze powder and magma blocks down to relight it. The smith fits your pick with a heater in thanks."],
+          tasks=[item("minecraft:coal_block", 8, consume=True, title="Carry coal blocks down to the forge"),
+                 item("minecraft:blaze_powder", 16, consume=True, title="Carry blaze powder to relight it"),
+                 item("minecraft:magma_block", 4, consume=True, title="Carry magma blocks to heat it"),
+                 {"be": {"below_y": -50}, "title": "Go down below Y -50 to the cold forge"}],
+          rewards=[reward_item("artifacts:pickaxe_heater"), skill("mining", 400)]),
+
+    quest("ancient_debris", "Ancient Debris", icon="minecraft:ancient_debris", after=["main_story:act3_start", "deepslate_descent"],
+          text=["The guild has never had netherite. Find and mine ancient debris near Nether lava level, blasting "
+                "or digging."],
+          tasks=[{"be": {"below_y": 30, "dimension": "minecraft:the_nether"}, "title": "Go down near the Nether's lava level"},
+                 item("minecraft:ancient_debris", 8, title="Mine eight ancient debris, blasting or digging")],
+          rewards=[reward_item("minecraft:netherite_upgrade_smithing_template"), skill("mining", 420)]),
+
+    quest("quartz_contract", "The Quartz Contract", icon="minecraft:quartz", after=["ancient_debris"],
+          text=["A guild contract for the Nether: quartz, gold nuggets from nether gold ore and gilded blackstone, "
+                "mined in one trip and sold through the guild."],
+          tasks=[item("minecraft:quartz", 64, title="Mine nether quartz for the contract"),
+                 item("minecraft:gold_nugget", 32, title="Mine nether gold ore for nuggets"),
+                 item("minecraft:gilded_blackstone", 16, title="Take gilded blackstone from a bastion")],
+          rewards=[reward_item("minecraft:emerald", 16), skill("mining", 450)]),
+
+    quest("netherite_pick", "Netherite Pick", icon="minecraft:netherite_pickaxe", after=["ancient_debris"],
+          text=["Smelt your debris to scrap, alloy an ingot, and upgrade your diamond pickaxe at a smithing table: "
+                "the first netherite pick the guild has seen."],
+          tasks=[item("minecraft:netherite_scrap", 4, title="Smelt your debris to netherite scrap"),
+                 item("minecraft:netherite_ingot", crafted=True, title="Alloy a netherite ingot"),
+                 item("minecraft:netherite_pickaxe", crafted=True, title="Upgrade your diamond pickaxe at a smithing table")],
+          rewards=[reward_item("minecraft:netherite_ingot"), skill("mining", 500)]),
+]
+
+chapter("skill_mining", "The Miners' Guild", "Mining path", "minecraft:iron_pickaxe", "skills", 0, Q + ACT2 + ACT3)

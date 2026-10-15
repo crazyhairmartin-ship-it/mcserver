@@ -226,6 +226,23 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - magic:phylactery_shards: needs shards hidden in vaults (catacomb contents unknown); written as shards carried
 - magic:crimson_enchanter: needs enchanting at the crimson table; written as a book and levels
 - magic:citadel_map: needs buying or finding both maps; written as a cartographer talk and the maps carried
+- skill_cooking:whiskey: needs aging for a long time; written as the aged whiskeys carried
+- skill_cooking:nether_kitchen: needs cooking nether salad; written as wine, steak and potatoes on a timed run to a Nether outpost
+- skill_cooking:cook_off: needs three judges and a rival tavern's tally; written as the three dishes consumed at a tavern
+- skill_cooking:herbal_cure: needs nursing through the night; written as brews, a stew and an encounter
+- skill_farming:nether_grapes: needs finding the seeds in the Nether; written as seeds carried and a vine pot build
+- skill_farming:eiswein: needs real eiswein (no item); written as taiga seeds, cherry wine and a big bottle
+- skill_fishing:night_heat: needs fishing only at night; written as the hook, jellyfish and a heat-token drop
+- skill_fishing:ruin_waters: needs fishing above the ruin while drowned cut the line; written as a rod, a drowned fight and a fish carried
+- skill_fishing:sunken_hind: needs walking the sea floor for the purse; written as a drowned fight and a cabin search
+- skill_fishing:trophy_wall: needs mounting actual catches; written as three fish mounts placed
+- skill_fishing:silas_adrift: needs finding him on a raft in a storm; written as the raft structure and an escort
+- skill_foraging:nether_botany: needs carrying plants home without burning; written as the plants carried from the Nether
+- skill_foraging:dying_grove: needs clearing dead logs and curing soil; written as infusions, bone meal and replanting
+- skill_mining:forge_cold: needs relighting a forge; written as the fuel consumed and being below Y -50
+- skill_mining:ancient_debris: needs near lava level (Nether); written as being low in the Nether and debris mined
+- skill_mining:quartz_contract: needs selling through the guild; written as the materials carried
+- skill_mining:netherite_pick: needs upgrading at a smithing table; written as the pickaxe crafted
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

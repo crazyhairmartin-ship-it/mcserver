@@ -710,7 +710,7 @@
 			]
 			title: "The Shift Meal"
 			x: 15.0d
-			y: -2.25d
+			y: -3.0d
 		}
 		{
 			dependencies: ["739C140F0C6E44B6"]
@@ -755,7 +755,7 @@
 			]
 			title: "Cave-In"
 			x: 16.5d
-			y: -0.75d
+			y: -2.25d
 		}
 		{
 			dependencies: ["5CDB7382CC2A6634"]
@@ -815,7 +815,7 @@
 			]
 			title: "Three Famous Seams"
 			x: 15.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["7166D95771DCA79E"]
@@ -940,7 +940,7 @@
 			]
 			title: "Fire Below"
 			x: 15.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["5CDB7382CC2A6634"]
@@ -996,7 +996,7 @@
 			]
 			title: "The Surveyor's Glass"
 			x: 15.0d
-			y: 2.25d
+			y: 1.5d
 		}
 		{
 			dependencies: ["5D61DF4218EBD0A9"]
@@ -1065,7 +1065,7 @@
 			]
 			title: "Strange Minerals"
 			x: 16.5d
-			y: 0.75d
+			y: -0.75d
 		}
 		{
 			dependencies: ["62CE6B2F631204F6"]
@@ -1129,7 +1129,207 @@
 			]
 			title: "The Lost Expedition's Journal"
 			x: 18.0d
-			y: 0.0d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"1D96E8F9421E2B6A"
+				"62CE6B2F631204F6"
+			]
+			description: ["The guild's deep forge below Y -50 has gone cold and no one can smelt down there. Carry coal blocks, blaze powder and magma blocks down to relight it. The smith fits your pick with a heater in thanks."]
+			icon: "artifacts:pickaxe_heater"
+			id: "42EC23A1BBCA1612"
+			rewards: [
+				{
+					id: "1ED06DF797A51E33"
+					item: "artifacts:pickaxe_heater"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 400"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "4DB75FF8F53CC947"
+					silent: true
+					title: "+400 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 8L
+					id: "3AC3A47AA924E4AF"
+					item: "minecraft:coal_block"
+					title: "Carry coal blocks down to the forge"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "764BBC07329F3EAB"
+					item: "minecraft:blaze_powder"
+					title: "Carry blaze powder to relight it"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "4F38B6EEE0E25331"
+					item: "minecraft:magma_block"
+					title: "Carry magma blocks to heat it"
+					type: "item"
+				}
+				{
+					id: "4256BA0305FF1073"
+					stage: "fq.skill_mining.forge_cold.be3"
+					title: "Go down below Y -50 to the cold forge"
+					type: "gamestage"
+				}
+			]
+			title: "The Cold Forge"
+			x: 18.0d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"1D96E8F9421E2B6A"
+				"5CDB7382CC2A6634"
+			]
+			description: ["The guild has never had netherite. Find and mine ancient debris near Nether lava level, blasting or digging."]
+			icon: "minecraft:ancient_debris"
+			id: "4F3520872735FF6A"
+			rewards: [
+				{
+					id: "0AC5E9C73178B05E"
+					item: "minecraft:netherite_upgrade_smithing_template"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 420"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "3535E8A8E43DD6D2"
+					silent: true
+					title: "+420 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "39A0CFE8651F7158"
+					stage: "fq.skill_mining.ancient_debris.be0"
+					title: "Go down near the Nether's lava level"
+					type: "gamestage"
+				}
+				{
+					count: 8L
+					id: "2D5ABC60FF373844"
+					item: "minecraft:ancient_debris"
+					title: "Mine eight ancient debris, blasting or digging"
+					type: "item"
+				}
+			]
+			title: "Ancient Debris"
+			x: 15.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["4F3520872735FF6A"]
+			description: ["A guild contract for the Nether: quartz, gold nuggets from nether gold ore and gilded blackstone, mined in one trip and sold through the guild."]
+			icon: "minecraft:quartz"
+			id: "7FBFAC19E541E388"
+			rewards: [
+				{
+					count: 16
+					id: "5C79F54D9856754E"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 450"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "1E7E931BFCC36E92"
+					silent: true
+					title: "+450 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 64L
+					id: "0BF3E89405BFB34E"
+					item: "minecraft:quartz"
+					title: "Mine nether quartz for the contract"
+					type: "item"
+				}
+				{
+					count: 32L
+					id: "4E7C709DA9DCE100"
+					item: "minecraft:gold_nugget"
+					title: "Mine nether gold ore for nuggets"
+					type: "item"
+				}
+				{
+					count: 16L
+					id: "3BB85B7CF348664E"
+					item: "minecraft:gilded_blackstone"
+					title: "Take gilded blackstone from a bastion"
+					type: "item"
+				}
+			]
+			title: "The Quartz Contract"
+			x: 16.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["4F3520872735FF6A"]
+			description: ["Smelt your debris to scrap, alloy an ingot, and upgrade your diamond pickaxe at a smithing table: the first netherite pick the guild has seen."]
+			icon: "minecraft:netherite_pickaxe"
+			id: "2EEE2CA1829AA4BD"
+			rewards: [
+				{
+					id: "2BC7B0FF101CD31C"
+					item: "minecraft:netherite_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 500"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "6BDBF949198FC96C"
+					silent: true
+					title: "+500 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "13BE6DFB0BFDC996"
+					item: "minecraft:netherite_scrap"
+					title: "Smelt your debris to netherite scrap"
+					type: "item"
+				}
+				{
+					id: "57B4C0676E320F62"
+					item: "minecraft:netherite_ingot"
+					only_from_crafting: true
+					title: "Alloy a netherite ingot"
+					type: "item"
+				}
+				{
+					id: "5001AD709AD3023D"
+					item: "minecraft:netherite_pickaxe"
+					only_from_crafting: true
+					title: "Upgrade your diamond pickaxe at a smithing table"
+					type: "item"
+				}
+			]
+			title: "Netherite Pick"
+			x: 16.5d
+			y: 2.25d
 		}
 	]
 	subtitle: ["Mining path"]

@@ -174,4 +174,25 @@ ACT2 = [
                                lore=["A festival pledge, signed by every household."]), skill("farm", 400)]),
 ]
 
-chapter("skill_farming", "The Growers' Co-op", "Farming path", "minecraft:wheat", "skills", 1, Q + ACT2)
+ACT3 = [
+    quest("nether_grapes", "Grapes in the Nether", icon="nethervinery:crimson_grape_seeds", after=["main_story:act3_start", "wandering_winemaker"],
+          text=["The winemaker swears grapes grow in the Nether. Find crimson and warped grape seeds and grow them, "
+                "then visit the old nether wart plantation for its wart."],
+          tasks=[item("nethervinery:crimson_grape_seeds", 2, title="Find crimson grape seeds"),
+                 item("nethervinery:warped_grape_seeds", 2, title="Find warped grape seeds"),
+                 {"build": {"blocks": {"nethervinery:crimson_grapevine_pot": 1, "nethervinery:warped_grapevine_pot": 1}, "radius": 10},
+                  "title": "Grow the Nether grapes"},
+                 {"structure": "mns:nether_wart_farm", "title": "Visit the old nether wart plantation for its wart"}],
+          rewards=[reward_item("nethervinery:crimson_fermentation_barrel"), skill("farm", 400)]),
+
+    quest("eiswein", "Ice Wine", icon="vinery:red_wine", after=["nether_grapes"],
+          text=["Make the rarest wine for the festival's top table. Grow taiga grapes in the cold, and age eiswein "
+                "and a cherry wine in the cellar."],
+          tasks=[{"biome": "minecraft:snowy_taiga", "title": "Go to the cold where taiga grapes ripen"},
+                 item("vinery:taiga_grape_seeds_white", 2, title="Take taiga grape seeds"),
+                 item("vinery:cherry_wine", consume=True, title="Age a cherry wine in the cellar"),
+                 item("vinery:big_bottle", title="Age the eiswein in a big bottle")],
+          rewards=[reward_item("vinery:big_bottle"), skill("farm", 430)]),
+]
+
+chapter("skill_farming", "The Growers' Co-op", "Farming path", "minecraft:wheat", "skills", 1, Q + ACT2 + ACT3)

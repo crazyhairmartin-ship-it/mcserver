@@ -45,7 +45,7 @@
 			]
 			title: "Entry Form"
 			x: 0.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["3D40B5D6E6756BA4"]
@@ -843,6 +843,334 @@
 			]
 			title: "The Captain's Logbook"
 			x: 19.5d
+			y: -0.75d
+		}
+		{
+			description: ["A message in a bottle comes up on your line: a drowned angler's note about a stash on a nearby beach. Follow it and dig up the lockbox."]
+			icon: "aquaculture:message_in_a_bottle"
+			id: "415F95605B7F92CF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "28E330DB109A9327"
+					item: "aquaculture:lockbox"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 250"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "209F9565BFBCDE61"
+					silent: true
+					title: "+250 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6DBE138F4EC86466"
+					item: "aquaculture:message_in_a_bottle"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					id: "0BE2006EFBE2B916"
+					structure: "beachparty:excavated_treasure"
+					title: "Follow the note to the beach"
+					type: "structure"
+				}
+				{
+					id: "178FF796C5F56EF0"
+					item: "kubejs:quest_message_in_a_bottle_1"
+					title: "Dig up the lockbox the note names"
+					type: "item"
+				}
+			]
+			title: "Message in a Bottle"
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"3F926CC6955310C7"
+				"1D96E8F9421E2B6A"
+			]
+			description: ["A heat held only at night. Fit a glowstone hook and fish after dark for jellyfish, then for the glowing heat token that only bites under the stars."]
+			icon: "aquaculture:glowstone_hook"
+			id: "75C79A9A83CED2C9"
+			rewards: [
+				{
+					id: "4BB69C86BAD508E5"
+					item: "aquaculture:glowstone_hook"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 450"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "7523154B2F3ACE65"
+					silent: true
+					title: "+450 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0D7C9E902175CDDD"
+					item: "aquaculture:glowstone_hook"
+					title: "Fit a glowstone hook"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "2ED3C4592673BA3B"
+					item: "aquaculture:jellyfish"
+					title: "Fish after dark for jellyfish"
+					type: "item"
+				}
+				{
+					id: "3DCB8AE10AAFEC5B"
+					item: "kubejs:quest_night_heat_2"
+					title: "Land the glowing heat token"
+					type: "item"
+				}
+			]
+			title: "The Lantern Heat"
+			x: 19.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["75C79A9A83CED2C9"]
+			description: ["Forge a neptunium rod and fish above a sunken ruin where the best fish gather, while drowned rise from the ruin to cut your line."]
+			icon: "aquaculture:neptunium_fishing_rod"
+			id: "240A172EAC69A9A0"
+			rewards: [
+				{
+					id: "7F193A801A3F90CD"
+					item: "aquaculture:neptunium_fillet_knife"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 470"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "268444335105E3A0"
+					silent: true
+					title: "+470 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "099268D4BE99FFC4"
+					item: "aquaculture:neptunium_fishing_rod"
+					only_from_crafting: true
+					title: "Forge a neptunium rod"
+					type: "item"
+				}
+				{
+					id: "17A5ED884A7061DF"
+					structure: "#fotf:groups/sunken_ruins"
+					title: "Find a sunken ruin where the best fish gather"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:drowned"
+					id: "6250A627C4807DC4"
+					title: "Beat off the drowned that cut your line"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "3AA26C9F87F63F6A"
+					item: "aquaculture:atlantic_herring"
+					title: "Land a fish from the ruin waters"
+					type: "item"
+				}
+			]
+			title: "Waters Over the Ruins"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3583B48ACE6A0EFA"
+				"240A172EAC69A9A0"
+			]
+			description: ["The Ceryneian Hind sank with the society's championship purse aboard, and everything worth having lies on the sea floor around it. Clear the wreck, find the diver's charm in the captain's cabin and recover the purse."]
+			icon: "artifacts:charm_of_sinking"
+			id: "0D159C70911B41FA"
+			rewards: [
+				{
+					id: "4D202DE0F82B53CC"
+					item: "artifacts:charm_of_sinking"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 500"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "09C9CD1B321C51E0"
+					silent: true
+					title: "+500 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:drowned"
+					id: "0A41ABE05118A6E6"
+					title: "Clear the wreck of its drowned"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "4129C0F9A3BD0E2D"
+					item: "kubejs:quest_sunken_hind_1"
+					title: "Find the diver's charm and purse in the captain's cabin"
+					type: "item"
+				}
+			]
+			title: "The Sunken Hind"
+			x: 22.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["0D159C70911B41FA"]
+			description: ["Fishermen whisper of an undead pirate ship that drifts where the championship will be held. Find it and put its crew to rest."]
+			icon: "minecraft:spyglass"
+			id: "5E3CDE31E4F639F8"
+			rewards: [
+				{
+					id: "25F258C3CA8B9AD2"
+					item: {
+						Count: 1b
+						id: "minecraft:spyglass"
+						tag: {
+							display: {
+								Name: "{\"text\": \"The Pirate's Spyglass\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 12
+					id: "6181A5496ED3C6EE"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 480"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "0F42F3FD4B77C58E"
+					silent: true
+					title: "+480 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:skeleton"
+					id: "16DC573267D1F2CA"
+					title: "Put the undead pirate crew to rest"
+					type: "kill"
+					value: 8L
+				}
+			]
+			title: "Ghosts on the Fishing Grounds"
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["240A172EAC69A9A0"]
+			description: ["The society hall in Reece has an empty wall. Mount three of your best catches on fish mounts."]
+			icon: "aquaculture:oak_fish_mount"
+			id: "7D255442BFA172C8"
+			rewards: [
+				{
+					id: "57B27EC5663BD864"
+					item: "aquaculture:oak_fish_mount"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 460"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "02EDDBCD609A14D5"
+					silent: true
+					title: "+460 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "14D43169321867FB"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "160D1D43198020B0"
+					stage: "fq.skill_fishing.trophy_wall.build1"
+					title: "Mount three of your best catches on the society hall's wall"
+					type: "gamestage"
+				}
+			]
+			title: "The Trophy Wall"
+			x: 22.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["5E3CDE31E4F639F8"]
+			description: ["Silas went out in a storm to practise in secret and never came back. Find him clinging to a wanderer's raft far out at sea and bring him home."]
+			icon: "minecraft:fishing_rod"
+			id: "1810AFFE25F96EDC"
+			rewards: [
+				{
+					id: "510CE95F80AABEA6"
+					item: {
+						Count: 1b
+						id: "aquaculture:light_hook"
+						tag: {
+							display: {
+								Name: "{\"text\": \"Silas's Lucky Lure\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 500"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "5A3EF4FD7EC6B3A5"
+					silent: true
+					title: "+500 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6B23084D663B9509"
+					structure: "mos:wanderer_raft"
+					title: "Search the open sea for a wanderer's raft"
+					type: "structure"
+				}
+				{
+					id: "71B763C9524C523A"
+					stage: "fq.skill_fishing.silas_adrift.enc1"
+					title: "Bring Silas home"
+					type: "gamestage"
+				}
+			]
+			title: "Silas Adrift"
+			x: 25.5d
 			y: 0.0d
 		}
 	]

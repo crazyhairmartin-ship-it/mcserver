@@ -169,4 +169,46 @@ ACT2 = [
           rewards=[reward_item("camping:large_backpack"), skill("cook", 400)]),
 ]
 
-chapter("skill_cooking", "The Tavern Keepers", "Cooking path", "farmersdelight:cooking_pot", "skills", 3, Q + ACT2)
+ACT3 = [
+    quest("whiskey", "The Long Wait", icon="brewery:whiskey_highland_hearth", after=["main_story:act3_start", "brewfest_night"],
+          text=["The bar wants a whiskey worth the name. Upgrade to a copper brewing station and age a Highland "
+                "Hearth or a Smokey Reverie long enough to be worth pouring."],
+          tasks=[item("brewery:copper_brewingstation", crafted=True, title="Upgrade to a copper brewing station"),
+                 item("brewery:whiskey_highland_hearth", title="Age a Highland Hearth whiskey"),
+                 item("brewery:whiskey_smokey_reverie", title="Age a Smokey Reverie whiskey")],
+          rewards=[reward_item("brewery:small_barrel"), skill("cook", 400)]),
+
+    quest("nether_kitchen", "The Nether Kitchen", icon="candlelight:fillet_steak", after=["main_story:act3_start", "hot_delivery"],
+          text=["An expedition camped near a Nether fortress is living on mushrooms. Cook glowing wine, steak and "
+                "potatoes for them, and get it there through the fire."],
+          tasks=[item("vinery:glowing_wine", consume=True, title="Brew glowing wine for the expedition"),
+                 item("candlelight:fillet_steak", 4, consume=True, title="Cook steak for the camp"),
+                 item("minecraft:baked_potato", 8, consume=True, title="Bake potatoes to go with it"),
+                 {"timed": {"seconds": 420, "goal": {"structure": "#nether_outposts", "label": "the expedition's camp", "away": 150},
+                            "lines": ["Hot food for a cold camp. Through the fire!"], "start": "Carry the meal", "no": ["teleport"]},
+                  "title": "Carry the meal through the fire to the expedition"}],
+          rewards=[reward_item("minecraft:netherite_upgrade_smithing_template"), skill("cook", 420)]),
+
+    quest("cook_off", "The Cook-Off", icon="artifacts:eternal_steak", after=["wine_pairing", "greenwood_pub"],
+          signature="artifacts:eternal_steak",
+          text=["The rival tavern down the road claims its steak never runs out. Challenge them to a cook-off: "
+                "three judges, three rounds, fillet steak, beef wellington and pork ribs. Win, and their legendary "
+                "steak is yours."],
+          tasks=[{"structure": "#taverns", "title": "Go to the rival tavern and take up the challenge"},
+                 item("candlelight:fillet_steak", consume=True, title="Round one: cook fillet steak for the judges"),
+                 item("candlelight:beef_wellington", consume=True, title="Round two: cook beef wellington for the judges"),
+                 item("candlelight:pork_ribs", consume=True, title="Round three: cook pork ribs for the judges")],
+          rewards=[reward_item("artifacts:eternal_steak"), skill("cook", 480)]),
+
+    quest("herbal_cure", "A Cup for the Sick", icon="herbalbrews:hibiscus_tea", after=["tea_time", "cook_off"],
+          text=["A traveller staggers into the tavern feverish. Brew a herbal infusion and hibiscus tea, and nurse "
+                "him through the night with chicken soup."],
+          tasks=[item("herbalbrews:herbal_infusion", consume=True, title="Brew a herbal infusion for his fever"),
+                 item("herbalbrews:hibiscus_tea", consume=True, title="Brew hibiscus tea to cool him"),
+                 item("minecraft:rabbit_stew", consume=True, title="Make a hearty stew to nurse him through the night"),
+                 enc(["Better... much better. Take my top hat. I'll not need it."], entity="minecraft:villager", name="Feverish Traveller",
+                     title="Nurse the feverish traveller through the night")],
+          rewards=[reward_item("herbalbrews:flask"), reward_item("minecraft:leather_helmet", name="The Traveller's Top Hat"), skill("cook", 440)]),
+]
+
+chapter("skill_cooking", "The Tavern Keepers", "Cooking path", "farmersdelight:cooking_pot", "skills", 3, Q + ACT2 + ACT3)

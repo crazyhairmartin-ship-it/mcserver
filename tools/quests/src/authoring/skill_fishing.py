@@ -172,4 +172,65 @@ ACT2 = [
           rewards=[reward_item("minecraft:chest", 2), skill("fish", 400)]),
 ]
 
-chapter("skill_fishing", "The Anglers' Society", "Fishing path", "minecraft:fishing_rod", "skills", 2, Q + ACT2)
+ACT3 = [
+    quest("message_in_a_bottle", "Message in a Bottle", icon="aquaculture:message_in_a_bottle",
+          discover={"item": "aquaculture:message_in_a_bottle"},
+          text=["A message in a bottle comes up on your line: a drowned angler's note about a stash on a nearby "
+                "beach. Follow it and dig up the lockbox."],
+          tasks=[{"structure": "beachparty:excavated_treasure", "title": "Follow the note to the beach"},
+                 search("beachparty:excavated_treasure", 1, "the Angler's Lockbox", "A lockbox, half-buried in sand.",
+                        texture="minecraft:item/chest_minecart", title="Dig up the lockbox the note names")],
+          rewards=[reward_item("aquaculture:lockbox"), skill("fish", 250)]),
+
+    quest("night_heat", "The Lantern Heat", icon="aquaculture:glowstone_hook", after=["neptunes_bounty", "main_story:act3_start"],
+          text=["A heat held only at night. Fit a glowstone hook and fish after dark for jellyfish, then for the "
+                "glowing heat token that only bites under the stars."],
+          tasks=[item("aquaculture:glowstone_hook", title="Fit a glowstone hook"),
+                 item("aquaculture:jellyfish", 2, title="Fish after dark for jellyfish"),
+                 {"drop": {"from": ["fishing"], "chance": 0.12,
+                           "item": {"name": "The Heat Token", "texture": "minecraft:item/glowstone_dust", "tooltip": "Only bites under the stars"}},
+                  "consume": False, "title": "Land the glowing heat token"}],
+          rewards=[reward_item("aquaculture:glowstone_hook"), skill("fish", 450)]),
+
+    quest("ruin_waters", "Waters Over the Ruins", icon="aquaculture:neptunium_fishing_rod", after=["night_heat"],
+          text=["Forge a neptunium rod and fish above a sunken ruin where the best fish gather, while drowned rise "
+                "from the ruin to cut your line."],
+          tasks=[item("aquaculture:neptunium_fishing_rod", crafted=True, title="Forge a neptunium rod"),
+                 {"structure": "#sunken_ruins", "title": "Find a sunken ruin where the best fish gather"},
+                 fight("minecraft:drowned", 6, "#sunken_ruins", "Line-Cutters", "Beat off the drowned that cut your line"),
+                 item("aquaculture:atlantic_herring", title="Land a fish from the ruin waters")],
+          rewards=[reward_item("aquaculture:neptunium_fillet_knife"), skill("fish", 470)]),
+
+    quest("sunken_hind", "The Sunken Hind", icon="artifacts:charm_of_sinking", after=["salvage_logbook", "ruin_waters"],
+          signature="artifacts:charm_of_sinking",
+          text=["The Ceryneian Hind sank with the society's championship purse aboard, and everything worth having "
+                "lies on the sea floor around it. Clear the wreck, find the diver's charm in the captain's cabin "
+                "and recover the purse."],
+          tasks=[fight("minecraft:drowned", 6, "dungeons_arise:ceryneian_hind", "Wreck Drowned", "Clear the wreck of its drowned"),
+                 search("dungeons_arise:ceryneian_hind", 1, "the Diver's Charm and Purse", "A charm and a heavy purse in the captain's cabin.",
+                        texture="minecraft:item/gold_ingot", title="Find the diver's charm and purse in the captain's cabin")],
+          rewards=[reward_item("artifacts:charm_of_sinking"), skill("fish", 500)]),
+
+    quest("ghost_ship", "Ghosts on the Fishing Grounds", icon="minecraft:spyglass", after=["sunken_hind"],
+          text=["Fishermen whisper of an undead pirate ship that drifts where the championship will be held. Find "
+                "it and put its crew to rest."],
+          tasks=[fight("minecraft:skeleton", 8, "dungeons_arise:undead_pirate_ship", "Ghost Crew", "Put the undead pirate crew to rest", wave=4)],
+          rewards=[reward_item("minecraft:spyglass", name="The Pirate's Spyglass"), reward_item("minecraft:gold_ingot", 12), skill("fish", 480)]),
+
+    quest("trophy_wall", "The Trophy Wall", icon="aquaculture:oak_fish_mount", after=["ruin_waters"],
+          text=["The society hall in Reece has an empty wall. Mount three of your best catches on fish mounts."],
+          tasks=[{"place": "reece"},
+                 {"build": {"blocks": {"aquaculture:oak_fish_mount": 1, "aquaculture:spruce_fish_mount": 1, "aquaculture:birch_fish_mount": 1},
+                            "radius": 12}, "title": "Mount three of your best catches on the society hall's wall"}],
+          rewards=[reward_item("aquaculture:oak_fish_mount"), skill("fish", 460)]),
+
+    quest("silas_adrift", "Silas Adrift", icon="minecraft:fishing_rod", after=["ghost_ship"],
+          text=["Silas went out in a storm to practise in secret and never came back. Find him clinging to a "
+                "wanderer's raft far out at sea and bring him home."],
+          tasks=[{"structure": "mos:wanderer_raft", "title": "Search the open sea for a wanderer's raft"},
+                 enc(["I'm not lost! I'm... resting. Thank the tide you came."], then="escort", entity="minecraft:villager",
+                     name="Silas Pike", to={"place": "reece"}, title="Bring Silas home")],
+          rewards=[reward_item("aquaculture:light_hook", name="Silas's Lucky Lure"), skill("fish", 500)]),
+]
+
+chapter("skill_fishing", "The Anglers' Society", "Fishing path", "minecraft:fishing_rod", "skills", 2, Q + ACT2 + ACT3)

@@ -1017,6 +1017,164 @@
         }
       ],
       "icon": "minecraft:written_book"
+    },
+    {
+      "id": "forge_cold",
+      "title": "The Cold Forge",
+      "after": [
+        "main_story:act3_start",
+        "cave_in"
+      ],
+      "text": [
+        "The guild's deep forge below Y -50 has gone cold and no one can smelt down there. Carry coal blocks, blaze powder and magma blocks down to relight it. The smith fits your pick with a heater in thanks."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:coal_block",
+          "count": 8,
+          "consume": true,
+          "title": "Carry coal blocks down to the forge"
+        },
+        {
+          "item": "minecraft:blaze_powder",
+          "count": 16,
+          "consume": true,
+          "title": "Carry blaze powder to relight it"
+        },
+        {
+          "item": "minecraft:magma_block",
+          "count": 4,
+          "consume": true,
+          "title": "Carry magma blocks to heat it"
+        },
+        {
+          "be": {
+            "below_y": -50
+          },
+          "title": "Go down below Y -50 to the cold forge"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:pickaxe_heater"
+        },
+        {
+          "skill": "mining",
+          "xp": 400
+        }
+      ],
+      "icon": "artifacts:pickaxe_heater",
+      "signature": "artifacts:pickaxe_heater"
+    },
+    {
+      "id": "ancient_debris",
+      "title": "Ancient Debris",
+      "after": [
+        "main_story:act3_start",
+        "deepslate_descent"
+      ],
+      "text": [
+        "The guild has never had netherite. Find and mine ancient debris near Nether lava level, blasting or digging."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "below_y": 30,
+            "dimension": "minecraft:the_nether"
+          },
+          "title": "Go down near the Nether's lava level"
+        },
+        {
+          "item": "minecraft:ancient_debris",
+          "count": 8,
+          "title": "Mine eight ancient debris, blasting or digging"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_upgrade_smithing_template"
+        },
+        {
+          "skill": "mining",
+          "xp": 420
+        }
+      ],
+      "icon": "minecraft:ancient_debris"
+    },
+    {
+      "id": "quartz_contract",
+      "title": "The Quartz Contract",
+      "after": [
+        "ancient_debris"
+      ],
+      "text": [
+        "A guild contract for the Nether: quartz, gold nuggets from nether gold ore and gilded blackstone, mined in one trip and sold through the guild."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:quartz",
+          "count": 64,
+          "title": "Mine nether quartz for the contract"
+        },
+        {
+          "item": "minecraft:gold_nugget",
+          "count": 32,
+          "title": "Mine nether gold ore for nuggets"
+        },
+        {
+          "item": "minecraft:gilded_blackstone",
+          "count": 16,
+          "title": "Take gilded blackstone from a bastion"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 16
+        },
+        {
+          "skill": "mining",
+          "xp": 450
+        }
+      ],
+      "icon": "minecraft:quartz"
+    },
+    {
+      "id": "netherite_pick",
+      "title": "Netherite Pick",
+      "after": [
+        "ancient_debris"
+      ],
+      "text": [
+        "Smelt your debris to scrap, alloy an ingot, and upgrade your diamond pickaxe at a smithing table: the first netherite pick the guild has seen."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:netherite_scrap",
+          "count": 4,
+          "title": "Smelt your debris to netherite scrap"
+        },
+        {
+          "item": "minecraft:netherite_ingot",
+          "crafted": true,
+          "title": "Alloy a netherite ingot"
+        },
+        {
+          "item": "minecraft:netherite_pickaxe",
+          "crafted": true,
+          "title": "Upgrade your diamond pickaxe at a smithing table"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_ingot"
+        },
+        {
+          "skill": "mining",
+          "xp": 500
+        }
+      ],
+      "icon": "minecraft:netherite_pickaxe"
     }
   ]
 }

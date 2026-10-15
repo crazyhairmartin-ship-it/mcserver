@@ -3730,6 +3730,33 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_mining:forge_cold",
+    "stage": "fq.skill_mining.forge_cold.be3",
+    "type": "be",
+    "where": {
+      "below_y": -50
+    },
+    "requires": [],
+    "quest_id": "42EC23A1BBCA1612",
+    "prev_tasks": [
+      "3AC3A47AA924E4AF",
+      "764BBC07329F3EAB",
+      "4F38B6EEE0E25331"
+    ]
+  },
+  {
+    "quest": "skill_mining:ancient_debris",
+    "stage": "fq.skill_mining.ancient_debris.be0",
+    "type": "be",
+    "where": {
+      "dimension": "minecraft:the_nether",
+      "below_y": 30
+    },
+    "requires": [],
+    "quest_id": "4F3520872735FF6A",
+    "prev_tasks": []
+  },
+  {
     "quest": "small_favours:sf_out_of_flour",
     "stage": "fq.small_favours.sf_out_of_flour.talk0",
     "type": "talk",
@@ -6585,6 +6612,26 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "skill_farming:nether_grapes",
+    "stage": "fq.skill_farming.nether_grapes.build2",
+    "type": "build",
+    "keys": [
+      "nethervinery:crimson_grapevine_pot",
+      "nethervinery:warped_grapevine_pot"
+    ],
+    "counts": [
+      1,
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "2D41279951A90A8F",
+    "prev_tasks": [
+      "0A0B1A417051557C",
+      "7A66C14843ED46AB"
+    ]
+  },
+  {
     "quest": "discovery_sky_and_underground:volcano_in_the_sky",
     "stage": "fq.discovery_sky_and_underground.volcano_in_the_sky.search1",
     "type": "search",
@@ -8179,6 +8226,206 @@ global.QUEST_GIVERS = [
     "prev_tasks": [
       "6B5A750BDD3F3F7D"
     ]
+  },
+  {
+    "quest": "skill_fishing:message_in_a_bottle",
+    "stage": "fq.skill_fishing.message_in_a_bottle.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "beachparty:excavated_treasure"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_message_in_a_bottle_1",
+    "found": "A lockbox, half-buried in sand.",
+    "requires": [],
+    "quest_id": "415F95605B7F92CF",
+    "prev_tasks": [
+      "6DBE138F4EC86466",
+      "0BE2006EFBE2B916"
+    ]
+  },
+  {
+    "quest": "skill_fishing:night_heat",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "fishing"
+    ],
+    "chance": 0.12,
+    "item": "kubejs:quest_night_heat_2",
+    "requires": [],
+    "quest_id": "75C79A9A83CED2C9",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_fishing:ruin_waters",
+    "stage": "fq.skill_fishing.ruin_waters.spawn2",
+    "type": "spawn",
+    "entity": "minecraft:drowned",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:ocean_ruin_cold",
+        "minecraft:ocean_ruin_warm",
+        "mos:ruins_atlantis",
+        "mos:small_ocean_temple",
+        "mos:underwater_garden",
+        "mos:underwater_shrine",
+        "nova_structures:conduit_ruin"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Line-Cutters",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "6250A627C4807DC4",
+    "requires": [],
+    "quest_id": "240A172EAC69A9A0",
+    "prev_tasks": [
+      "099268D4BE99FFC4",
+      "17A5ED884A7061DF"
+    ]
+  },
+  {
+    "quest": "skill_fishing:sunken_hind",
+    "stage": "fq.skill_fishing.sunken_hind.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:drowned",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:ceryneian_hind"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Wreck Drowned",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "0A41ABE05118A6E6",
+    "requires": [],
+    "quest_id": "0D159C70911B41FA",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_fishing:sunken_hind",
+    "stage": "fq.skill_fishing.sunken_hind.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:ceryneian_hind"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_sunken_hind_1",
+    "found": "A charm and a heavy purse in the captain's cabin.",
+    "requires": [],
+    "quest_id": "0D159C70911B41FA",
+    "prev_tasks": [
+      "0A41ABE05118A6E6"
+    ]
+  },
+  {
+    "quest": "skill_fishing:ghost_ship",
+    "stage": "fq.skill_fishing.ghost_ship.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:undead_pirate_ship"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Ghost Crew",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "16DC573267D1F2CA",
+    "requires": [],
+    "quest_id": "5E3CDE31E4F639F8",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_fishing:trophy_wall",
+    "stage": "fq.skill_fishing.trophy_wall.build1",
+    "type": "build",
+    "keys": [
+      "aquaculture:oak_fish_mount",
+      "aquaculture:spruce_fish_mount",
+      "aquaculture:birch_fish_mount"
+    ],
+    "counts": [
+      1,
+      1,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "7D255442BFA172C8",
+    "prev_tasks": [
+      "14D43169321867FB"
+    ]
+  },
+  {
+    "quest": "skill_fishing:silas_adrift",
+    "stage": "fq.skill_fishing.silas_adrift.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "I'm not lost! I'm... resting. Thank the tide you came."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1810AFFE25F96EDC",
+    "prev_tasks": [
+      "6B23084D663B9509"
+    ],
+    "name": "Silas Pike",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "",
+    "to": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "thanks": []
   },
   {
     "quest": "village_errands:water_from_three_wells",
@@ -9793,6 +10040,78 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_cooking:nether_kitchen",
+    "stage": "fq.skill_cooking.nether_kitchen.timed3",
+    "type": "timed",
+    "seconds": 420,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "betterfortresses:fortress",
+        "mns:mega_fortress",
+        "mns:nether_tower",
+        "nova_structures:nether_keep",
+        "nova_structures:nether_skeleton_tower_basalt",
+        "nova_structures:nether_skeleton_tower_crimson",
+        "nova_structures:nether_skeleton_tower_soul",
+        "nova_structures:nether_skeleton_tower_warped",
+        "nova_structures:piglin_camp",
+        "nova_structures:skeleton_camp_crimson",
+        "nova_structures:skeleton_camp_soul",
+        "nova_structures:skeleton_camp_warped",
+        "nova_structures:skeleton_camp_waste",
+        "structory_towers:nether/fortress_tower"
+      ],
+      "label": "the expedition's camp",
+      "away": 150
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Hot food for a cold camp. Through the fire!"
+    ],
+    "start": "Carry the meal",
+    "requires": [],
+    "quest_id": "571079ACDB8EA4AC",
+    "prev_tasks": [
+      "410FE057E5E4276A",
+      "6FE7619068ACEB60",
+      "44FE18F77208DE92"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_cooking:herbal_cure",
+    "stage": "fq.skill_cooking.herbal_cure.enc3",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Better... much better. Take my top hat. I'll not need it."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "6C118A52ED77AEC3",
+    "prev_tasks": [
+      "5B9F9038D920C93F",
+      "4A81CD7D22E45EA8",
+      "09E7D86B774BE02B"
+    ],
+    "name": "Feverish Traveller",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
     "quest": "skill_foraging:field_journal",
     "stage": "fq.skill_foraging.field_journal",
     "type": "org",
@@ -10047,6 +10366,29 @@ global.QUEST_GIVERS = [
     "quest_id": "5D3BB92ECCA88EED",
     "prev_tasks": [
       "3CA307DA43456771"
+    ]
+  },
+  {
+    "quest": "skill_foraging:dying_grove",
+    "stage": "fq.skill_foraging.dying_grove.build3",
+    "type": "build",
+    "keys": [
+      "minecraft:oak_sapling",
+      "minecraft:birch_sapling",
+      "minecraft:spruce_sapling"
+    ],
+    "counts": [
+      2,
+      2,
+      2
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "16A4B4796DA2246C",
+    "prev_tasks": [
+      "45EBA8932662F3C9",
+      "1A93A4BCD799E60A",
+      "4FB8E10D2CC2C37C"
     ]
   },
   {

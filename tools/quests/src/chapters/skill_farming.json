@@ -879,6 +879,93 @@
         }
       ],
       "icon": "minecraft:bread"
+    },
+    {
+      "id": "nether_grapes",
+      "title": "Grapes in the Nether",
+      "after": [
+        "main_story:act3_start",
+        "wandering_winemaker"
+      ],
+      "text": [
+        "The winemaker swears grapes grow in the Nether. Find crimson and warped grape seeds and grow them, then visit the old nether wart plantation for its wart."
+      ],
+      "tasks": [
+        {
+          "item": "nethervinery:crimson_grape_seeds",
+          "count": 2,
+          "title": "Find crimson grape seeds"
+        },
+        {
+          "item": "nethervinery:warped_grape_seeds",
+          "count": 2,
+          "title": "Find warped grape seeds"
+        },
+        {
+          "build": {
+            "blocks": {
+              "nethervinery:crimson_grapevine_pot": 1,
+              "nethervinery:warped_grapevine_pot": 1
+            },
+            "radius": 10
+          },
+          "title": "Grow the Nether grapes"
+        },
+        {
+          "structure": "mns:nether_wart_farm",
+          "title": "Visit the old nether wart plantation for its wart"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "nethervinery:crimson_fermentation_barrel"
+        },
+        {
+          "skill": "farm",
+          "xp": 400
+        }
+      ],
+      "icon": "nethervinery:crimson_grape_seeds"
+    },
+    {
+      "id": "eiswein",
+      "title": "Ice Wine",
+      "after": [
+        "nether_grapes"
+      ],
+      "text": [
+        "Make the rarest wine for the festival's top table. Grow taiga grapes in the cold, and age eiswein and a cherry wine in the cellar."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:snowy_taiga",
+          "title": "Go to the cold where taiga grapes ripen"
+        },
+        {
+          "item": "vinery:taiga_grape_seeds_white",
+          "count": 2,
+          "title": "Take taiga grape seeds"
+        },
+        {
+          "item": "vinery:cherry_wine",
+          "consume": true,
+          "title": "Age a cherry wine in the cellar"
+        },
+        {
+          "item": "vinery:big_bottle",
+          "title": "Age the eiswein in a big bottle"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "vinery:big_bottle"
+        },
+        {
+          "skill": "farm",
+          "xp": 430
+        }
+      ],
+      "icon": "vinery:red_wine"
     }
   ]
 }

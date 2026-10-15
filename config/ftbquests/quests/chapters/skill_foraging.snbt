@@ -1108,6 +1108,171 @@
 			x: 12.0d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"1D96E8F9421E2B6A"
+				"5D3BB92ECCA88EED"
+			]
+			description: ["Even the Nether grows things. Collect crimson and warped fungi, a burning blossom and a hellbark sapling, and carry them home without burning."]
+			icon: "biomesoplenty:burning_blossom"
+			id: "4F7AE152C5288E19"
+			rewards: [
+				{
+					count: 4
+					id: "1C7F62ADE113C00F"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 400"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "0102402651300445"
+					silent: true
+					title: "+400 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:the_nether"
+					id: "2CA7453B587897A4"
+					title: "Go down into the Nether to forage"
+					type: "dimension"
+				}
+				{
+					id: "4135D33046CD4AFB"
+					item: "minecraft:crimson_fungus"
+					title: "Gather crimson fungus"
+					type: "item"
+				}
+				{
+					id: "2D0BEAB696CE9529"
+					item: "minecraft:warped_fungus"
+					title: "Gather warped fungus"
+					type: "item"
+				}
+				{
+					id: "31287E67E79DA67F"
+					item: "biomesoplenty:burning_blossom"
+					title: "Pick a burning blossom"
+					type: "item"
+				}
+				{
+					id: "417D3905362EDAB0"
+					item: "biomesoplenty:hellbark_sapling"
+					title: "Take a hellbark sapling"
+					type: "item"
+				}
+			]
+			title: "Nether Botany"
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4F7AE152C5288E19"]
+			description: ["The Herbalists' sacred grove near Reece is withering into dead forest. Clear the dead logs, cure the soil with herbal infusions and bone meal, and replant it until leaves grow back."]
+			icon: "biomesoplenty:flowering_oak_sapling"
+			id: "16A4B4796DA2246C"
+			rewards: [
+				{
+					id: "141FBB48E67E6297"
+					item: "biomesoplenty:flowering_oak_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 430"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "7F986D5E24A5262D"
+					silent: true
+					title: "+430 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "45EBA8932662F3C9"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "1A93A4BCD799E60A"
+					item: "herbalbrews:herbal_infusion"
+					title: "Cure the soil with herbal infusions"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 16L
+					id: "4FB8E10D2CC2C37C"
+					item: "minecraft:bone_meal"
+					title: "Feed the soil with bone meal"
+					type: "item"
+				}
+				{
+					id: "77D5C7E58EE43B9F"
+					stage: "fq.skill_foraging.dying_grove.build3"
+					title: "Replant the grove until leaves grow back"
+					type: "gamestage"
+				}
+			]
+			title: "The Dying Grove"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["16A4B4796DA2246C"]
+			description: ["An old page lists trees no one has grown in Reece: a magic sapling from a mystic grove, a rainbow birch sapling, and a golden larch sapling."]
+			icon: "biomesoplenty:magic_sapling"
+			id: "424553AA628A1851"
+			rewards: [
+				{
+					count: 2
+					id: "45C6117BA5EA60FA"
+					item: "biomesoplenty:magic_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 460"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "2DE2F7225F128CC5"
+					silent: true
+					title: "+460 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7BB80B565F2C7201"
+					item: "biomesoplenty:magic_sapling"
+					title: "Find a magic sapling in a mystic grove"
+					type: "item"
+				}
+				{
+					id: "41C3E10C51CF184E"
+					item: "biomesoplenty:rainbow_birch_sapling"
+					title: "Find a rainbow birch sapling"
+					type: "item"
+				}
+				{
+					id: "157A3EA2F2163983"
+					item: "regions_unexplored:golden_larch_sapling"
+					title: "Find a golden larch sapling"
+					type: "item"
+				}
+			]
+			title: "The Three Impossible Trees"
+			x: 16.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Foraging path"]
 	title: "The Herbalists"

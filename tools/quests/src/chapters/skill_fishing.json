@@ -766,6 +766,306 @@
         }
       ],
       "icon": "minecraft:chest"
+    },
+    {
+      "id": "message_in_a_bottle",
+      "title": "Message in a Bottle",
+      "text": [
+        "A message in a bottle comes up on your line: a drowned angler's note about a stash on a nearby beach. Follow it and dig up the lockbox."
+      ],
+      "tasks": [
+        {
+          "structure": "beachparty:excavated_treasure",
+          "title": "Follow the note to the beach"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "beachparty:excavated_treasure"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Angler's Lockbox",
+              "texture": "minecraft:item/chest_minecart"
+            },
+            "found": "A lockbox, half-buried in sand."
+          },
+          "title": "Dig up the lockbox the note names"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:lockbox"
+        },
+        {
+          "skill": "fish",
+          "xp": 250
+        }
+      ],
+      "icon": "aquaculture:message_in_a_bottle",
+      "discover": {
+        "item": "aquaculture:message_in_a_bottle"
+      }
+    },
+    {
+      "id": "night_heat",
+      "title": "The Lantern Heat",
+      "after": [
+        "neptunes_bounty",
+        "main_story:act3_start"
+      ],
+      "text": [
+        "A heat held only at night. Fit a glowstone hook and fish after dark for jellyfish, then for the glowing heat token that only bites under the stars."
+      ],
+      "tasks": [
+        {
+          "item": "aquaculture:glowstone_hook",
+          "title": "Fit a glowstone hook"
+        },
+        {
+          "item": "aquaculture:jellyfish",
+          "count": 2,
+          "title": "Fish after dark for jellyfish"
+        },
+        {
+          "drop": {
+            "from": [
+              "fishing"
+            ],
+            "chance": 0.12,
+            "item": {
+              "name": "The Heat Token",
+              "texture": "minecraft:item/glowstone_dust",
+              "tooltip": "Only bites under the stars"
+            }
+          },
+          "consume": false,
+          "title": "Land the glowing heat token"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:glowstone_hook"
+        },
+        {
+          "skill": "fish",
+          "xp": 450
+        }
+      ],
+      "icon": "aquaculture:glowstone_hook"
+    },
+    {
+      "id": "ruin_waters",
+      "title": "Waters Over the Ruins",
+      "after": [
+        "night_heat"
+      ],
+      "text": [
+        "Forge a neptunium rod and fish above a sunken ruin where the best fish gather, while drowned rise from the ruin to cut your line."
+      ],
+      "tasks": [
+        {
+          "item": "aquaculture:neptunium_fishing_rod",
+          "crafted": true,
+          "title": "Forge a neptunium rod"
+        },
+        {
+          "structure": "#sunken_ruins",
+          "title": "Find a sunken ruin where the best fish gather"
+        },
+        {
+          "kill": "minecraft:drowned",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "#sunken_ruins"
+            },
+            "wave": 4,
+            "name": "Line-Cutters"
+          },
+          "title": "Beat off the drowned that cut your line"
+        },
+        {
+          "item": "aquaculture:atlantic_herring",
+          "title": "Land a fish from the ruin waters"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:neptunium_fillet_knife"
+        },
+        {
+          "skill": "fish",
+          "xp": 470
+        }
+      ],
+      "icon": "aquaculture:neptunium_fishing_rod"
+    },
+    {
+      "id": "sunken_hind",
+      "title": "The Sunken Hind",
+      "after": [
+        "salvage_logbook",
+        "ruin_waters"
+      ],
+      "text": [
+        "The Ceryneian Hind sank with the society's championship purse aboard, and everything worth having lies on the sea floor around it. Clear the wreck, find the diver's charm in the captain's cabin and recover the purse."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:drowned",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:ceryneian_hind"
+            },
+            "wave": 4,
+            "name": "Wreck Drowned"
+          },
+          "title": "Clear the wreck of its drowned"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "dungeons_arise:ceryneian_hind"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Diver's Charm and Purse",
+              "texture": "minecraft:item/gold_ingot"
+            },
+            "found": "A charm and a heavy purse in the captain's cabin."
+          },
+          "title": "Find the diver's charm and purse in the captain's cabin"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:charm_of_sinking"
+        },
+        {
+          "skill": "fish",
+          "xp": 500
+        }
+      ],
+      "icon": "artifacts:charm_of_sinking",
+      "signature": "artifacts:charm_of_sinking"
+    },
+    {
+      "id": "ghost_ship",
+      "title": "Ghosts on the Fishing Grounds",
+      "after": [
+        "sunken_hind"
+      ],
+      "text": [
+        "Fishermen whisper of an undead pirate ship that drifts where the championship will be held. Find it and put its crew to rest."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:skeleton",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:undead_pirate_ship"
+            },
+            "wave": 4,
+            "name": "Ghost Crew"
+          },
+          "title": "Put the undead pirate crew to rest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass",
+          "name": "The Pirate's Spyglass"
+        },
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 12
+        },
+        {
+          "skill": "fish",
+          "xp": 480
+        }
+      ],
+      "icon": "minecraft:spyglass"
+    },
+    {
+      "id": "trophy_wall",
+      "title": "The Trophy Wall",
+      "after": [
+        "ruin_waters"
+      ],
+      "text": [
+        "The society hall in Reece has an empty wall. Mount three of your best catches on fish mounts."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "aquaculture:oak_fish_mount": 1,
+              "aquaculture:spruce_fish_mount": 1,
+              "aquaculture:birch_fish_mount": 1
+            },
+            "radius": 12
+          },
+          "title": "Mount three of your best catches on the society hall's wall"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:oak_fish_mount"
+        },
+        {
+          "skill": "fish",
+          "xp": 460
+        }
+      ],
+      "icon": "aquaculture:oak_fish_mount"
+    },
+    {
+      "id": "silas_adrift",
+      "title": "Silas Adrift",
+      "after": [
+        "ghost_ship"
+      ],
+      "text": [
+        "Silas went out in a storm to practise in secret and never came back. Find him clinging to a wanderer's raft far out at sea and bring him home."
+      ],
+      "tasks": [
+        {
+          "structure": "mos:wanderer_raft",
+          "title": "Search the open sea for a wanderer's raft"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Silas Pike",
+            "to": {
+              "place": "reece"
+            },
+            "then": "escort",
+            "lines": [
+              "I'm not lost! I'm... resting. Thank the tide you came."
+            ]
+          },
+          "title": "Bring Silas home"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:light_hook",
+          "name": "Silas's Lucky Lure"
+        },
+        {
+          "skill": "fish",
+          "xp": 500
+        }
+      ],
+      "icon": "minecraft:fishing_rod"
     }
   ]
 }

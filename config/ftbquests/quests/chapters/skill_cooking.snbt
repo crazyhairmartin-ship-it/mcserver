@@ -431,7 +431,7 @@
 			]
 			title: "The Wandering Baker"
 			x: 9.0d
-			y: -3.0d
+			y: -3.75d
 		}
 		{
 			dependencies: ["756907B81B1DAF98"]
@@ -588,7 +588,7 @@
 			]
 			title: "The Food Critic"
 			x: 9.0d
-			y: -1.5d
+			y: -2.25d
 		}
 		{
 			dependencies: [
@@ -659,7 +659,7 @@
 			]
 			title: "Brewfest Night"
 			x: 9.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["43B8EDF637747BB1"]
@@ -715,7 +715,7 @@
 			]
 			title: "A Candlelit Dinner"
 			x: 10.5d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["308F015D470DE740"]
@@ -837,7 +837,7 @@
 			]
 			title: "The Cheese Board"
 			x: 13.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["45638EB22BB27EDF"]
@@ -888,7 +888,7 @@
 			]
 			title: "Popcorn Night"
 			x: 9.0d
-			y: 1.5d
+			y: 0.75d
 		}
 		{
 			dependencies: ["756907B81B1DAF98"]
@@ -991,7 +991,7 @@
 			]
 			title: "The Greenwood Pub"
 			x: 9.0d
-			y: 3.0d
+			y: 2.25d
 		}
 		{
 			dependencies: [
@@ -1069,7 +1069,242 @@
 			]
 			title: "Feast Under the Stars"
 			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1D96E8F9421E2B6A"
+				"491A0F670C160811"
+			]
+			description: ["The bar wants a whiskey worth the name. Upgrade to a copper brewing station and age a Highland Hearth or a Smokey Reverie long enough to be worth pouring."]
+			icon: "brewery:whiskey_highland_hearth"
+			id: "0FF22298E16E6EF3"
+			rewards: [
+				{
+					id: "16FD5E19D8CFFBF2"
+					item: "brewery:small_barrel"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 400"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "781CDC18730E0928"
+					silent: true
+					title: "+400 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "78F47C1220EC90D4"
+					item: "brewery:copper_brewingstation"
+					only_from_crafting: true
+					title: "Upgrade to a copper brewing station"
+					type: "item"
+				}
+				{
+					id: "22BF5E24DC8E6AD4"
+					item: "brewery:whiskey_highland_hearth"
+					title: "Age a Highland Hearth whiskey"
+					type: "item"
+				}
+				{
+					id: "1990CDAA79CAA33E"
+					item: "brewery:whiskey_smokey_reverie"
+					title: "Age a Smokey Reverie whiskey"
+					type: "item"
+				}
+			]
+			title: "The Long Wait"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"1D96E8F9421E2B6A"
+				"6E845338DB2850D1"
+			]
+			description: ["An expedition camped near a Nether fortress is living on mushrooms. Cook glowing wine, steak and potatoes for them, and get it there through the fire."]
+			icon: "candlelight:fillet_steak"
+			id: "571079ACDB8EA4AC"
+			rewards: [
+				{
+					id: "0330640C4C580220"
+					item: "minecraft:netherite_upgrade_smithing_template"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 420"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "5770EC4C68C61B50"
+					silent: true
+					title: "+420 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "410FE057E5E4276A"
+					item: "vinery:glowing_wine"
+					title: "Brew glowing wine for the expedition"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "6FE7619068ACEB60"
+					item: "candlelight:fillet_steak"
+					title: "Cook steak for the camp"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "44FE18F77208DE92"
+					item: "minecraft:baked_potato"
+					title: "Bake potatoes to go with it"
+					type: "item"
+				}
+				{
+					id: "2D7E9B50083C4A15"
+					stage: "fq.skill_cooking.nether_kitchen.timed3"
+					title: "Carry the meal through the fire to the expedition"
+					type: "gamestage"
+				}
+			]
+			title: "The Nether Kitchen"
+			x: 9.0d
+			y: 3.75d
+		}
+		{
+			dependencies: [
+				"7E6BCEB6B9DC90A2"
+				"343DFDC69BF8784C"
+			]
+			description: ["The rival tavern down the road claims its steak never runs out. Challenge them to a cook-off: three judges, three rounds, fillet steak, beef wellington and pork ribs. Win, and their legendary steak is yours."]
+			icon: "artifacts:eternal_steak"
+			id: "514CC04A75B1D874"
+			rewards: [
+				{
+					id: "5A7AE8D9F0BCD999"
+					item: "artifacts:eternal_steak"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 480"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "5EB920CA813D2BC5"
+					silent: true
+					title: "+480 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "151775E76C061C19"
+					structure: "#fotf:groups/taverns"
+					title: "Go to the rival tavern and take up the challenge"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "384DA2302D33BD84"
+					item: "candlelight:fillet_steak"
+					title: "Round one: cook fillet steak for the judges"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "1DC99EFC4F973FA3"
+					item: "candlelight:beef_wellington"
+					title: "Round two: cook beef wellington for the judges"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "4B2501D3AB67B6B3"
+					item: "candlelight:pork_ribs"
+					title: "Round three: cook pork ribs for the judges"
+					type: "item"
+				}
+			]
+			title: "The Cook-Off"
+			x: 13.5d
 			y: 0.75d
+		}
+		{
+			dependencies: [
+				"45638EB22BB27EDF"
+				"514CC04A75B1D874"
+			]
+			description: ["A traveller staggers into the tavern feverish. Brew a herbal infusion and hibiscus tea, and nurse him through the night with chicken soup."]
+			icon: "herbalbrews:hibiscus_tea"
+			id: "6C118A52ED77AEC3"
+			rewards: [
+				{
+					id: "20CDEA6233E26828"
+					item: "herbalbrews:flask"
+					type: "item"
+				}
+				{
+					id: "2AB5ACFBA3C22A5B"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_helmet"
+						tag: {
+							display: {
+								Name: "{\"text\": \"The Traveller's Top Hat\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 440"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "0C879D236CABBF87"
+					silent: true
+					title: "+440 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "5B9F9038D920C93F"
+					item: "herbalbrews:herbal_infusion"
+					title: "Brew a herbal infusion for his fever"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "4A81CD7D22E45EA8"
+					item: "herbalbrews:hibiscus_tea"
+					title: "Brew hibiscus tea to cool him"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "09E7D86B774BE02B"
+					item: "minecraft:rabbit_stew"
+					title: "Make a hearty stew to nurse him through the night"
+					type: "item"
+				}
+				{
+					id: "03CF570EC86944ED"
+					stage: "fq.skill_cooking.herbal_cure.enc3"
+					title: "Nurse the feverish traveller through the night"
+					type: "gamestage"
+				}
+			]
+			title: "A Cup for the Sick"
+			x: 15.0d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Cooking path"]

@@ -686,7 +686,7 @@
 			]
 			title: "The Orchard"
 			x: 9.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -938,7 +938,7 @@
 			]
 			title: "The Giant Pumpkin"
 			x: 9.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["65EEBE3C01D56D40"]
@@ -1073,6 +1073,115 @@
 			title: "The Hard Winter"
 			x: 7.5d
 			y: 5.25d
+		}
+		{
+			dependencies: [
+				"1D96E8F9421E2B6A"
+				"18040CC674D44908"
+			]
+			description: ["The winemaker swears grapes grow in the Nether. Find crimson and warped grape seeds and grow them, then visit the old nether wart plantation for its wart."]
+			icon: "nethervinery:crimson_grape_seeds"
+			id: "2D41279951A90A8F"
+			rewards: [
+				{
+					id: "2548BEAB2A344510"
+					item: "nethervinery:crimson_fermentation_barrel"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 400"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "218CE95C632BD815"
+					silent: true
+					title: "+400 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "0A0B1A417051557C"
+					item: "nethervinery:crimson_grape_seeds"
+					title: "Find crimson grape seeds"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "7A66C14843ED46AB"
+					item: "nethervinery:warped_grape_seeds"
+					title: "Find warped grape seeds"
+					type: "item"
+				}
+				{
+					id: "6DFD1B054D6DF289"
+					stage: "fq.skill_farming.nether_grapes.build2"
+					title: "Grow the Nether grapes"
+					type: "gamestage"
+				}
+				{
+					id: "0004C4102488898A"
+					structure: "mns:nether_wart_farm"
+					title: "Visit the old nether wart plantation for its wart"
+					type: "structure"
+				}
+			]
+			title: "Grapes in the Nether"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2D41279951A90A8F"]
+			description: ["Make the rarest wine for the festival's top table. Grow taiga grapes in the cold, and age eiswein and a cherry wine in the cellar."]
+			icon: "vinery:red_wine"
+			id: "2B065B951D5A99D5"
+			rewards: [
+				{
+					id: "27449865D6B71A02"
+					item: "vinery:big_bottle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 430"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "418A794C3E7C69A9"
+					silent: true
+					title: "+430 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:snowy_taiga"
+					id: "6309CE28175EC88B"
+					title: "Go to the cold where taiga grapes ripen"
+					type: "biome"
+				}
+				{
+					count: 2L
+					id: "1D908539DF3080DB"
+					item: "vinery:taiga_grape_seeds_white"
+					title: "Take taiga grape seeds"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "70D0A33EFDAF70E5"
+					item: "vinery:cherry_wine"
+					title: "Age a cherry wine in the cellar"
+					type: "item"
+				}
+				{
+					id: "0FA6AAA4D6F23992"
+					item: "vinery:big_bottle"
+					title: "Age the eiswein in a big bottle"
+					type: "item"
+				}
+			]
+			title: "Ice Wine"
+			x: 10.5d
+			y: 0.0d
 		}
 	]
 	subtitle: ["Farming path"]
