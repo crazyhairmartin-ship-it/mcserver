@@ -1034,7 +1034,7 @@ def ids_list(value):
     return [] if value in (None, 'any') else (value if isinstance(value, list) else [value])
 
 
-EVENT_TASKS = ('make', 'trade', 'sleep', 'interact', 'have', 'visits', 'killwith')
+EVENT_TASKS = ('make', 'trade', 'sleep', 'interact', 'have', 'visits', 'killwith', 'born', 'raise')
 
 
 def build_event_task(t, kind, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
@@ -1049,7 +1049,11 @@ def build_event_task(t, kind, chapter, qid, n, quest_id, prev_tasks, ctx, where,
     visits:   {"visits": structure id / "#group" / list, "count": 3, "apart": 150, "label": "a well"}  being inside
               that many different ones (each at least "apart" blocks from the others)
     killwith: {"killwith": mob id / list / "any", "with": item id / "#tag" / list, "count": 6}  kills where the
-              weapon in hand, or the thrown thing that hit, matches (a thrown spear's entity id counts too)"""
+              weapon in hand, or the thrown thing that hit, matches (a thrown spear's entity id counts too)
+    born:     {"born": mob id / list, "count": 1, "radius": 16}  that many new babies of that kind appear near the
+              player while the step is open (an egg hatching, a birth from breeding)
+    raise:    {"raise": mob id / list, "count": 1, "radius": 16}  that many babies of that kind, seen near the player
+              while the step is open, grow into adults"""
     reg = ctx['registry']
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.{kind}{n}', 'type': kind,
              'count': int(t.get('count', 1)), 'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
@@ -1087,6 +1091,17 @@ def build_event_task(t, kind, chapter, qid, n, quest_id, prev_tasks, ctx, where,
             problems.error(where, '"apart" must be at least 32 blocks (one structure can be big)')
         entry.update(structures=structures, apart=apart, label=t.get('label', 'one'))
         default = f'Visit {entry["count"]} different places'
+    elif kind in ('born', 'raise'):
+        mobs = ids_list(t[kind])
+        if not mobs:
+            problems.error(where, f'"{kind}" needs a mob id or a list')
+        for m in mobs:
+            reg.check('entities', m, where, t.get('unchecked', False))
+        radius = int(t.get('radius', 16))
+        if not 4 <= radius <= 32:
+            problems.error(where, '"radius" must be 4-32')
+        entry.update(entities=mobs, radius=radius)
+        default = 'Hatch one' if kind == 'born' else 'Raise one'
     elif kind == 'killwith':
         mobs = [] if t['killwith'] == 'any' else ids_list(t['killwith'])
         for m in mobs:

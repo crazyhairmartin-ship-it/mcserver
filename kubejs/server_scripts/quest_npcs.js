@@ -1101,6 +1101,55 @@ function npcCountKillWith(player, entity, source) {
   })
 }
 
+// ---- born and raise (one growth stage each) ----
+// born: a baby of the kind appears near the player while the step is open (just born or hatched: under a minute old).
+// raise: a baby of the kind that the player was near while the step was open is now an adult.
+const NPC_NEWBORN_AGE = -22800   // babies start at -24000 and count up to 0 (adult); this is their first minute
+
+function npcAge(m) {
+  try { return m.getAge() } catch (e) { return m.tickCount < 1200 ? -24000 : 0 }   // not an AgeableMob
+}
+
+function npcTickGrowth(player) {
+  let born = npcEntries('born'), raise = npcEntries('raise')
+  if (!born.length && !raise.length) return
+  let open = born.concat(raise).filter(g => !player.tags.contains(g.stage) && questOpen(player, g))
+  if (!open.length) return
+  let box = new $NpcAABB(player.x - 32, player.y - 12, player.z - 32, player.x + 32, player.y + 12, player.z + 32)
+  let mobs = []
+  player.level.getEntitiesOfClass($NpcMob, box).forEach(m => mobs.push(m))
+  let data = npcData(player, 'fqGrowth')
+  open.forEach(g => {
+    let rec = data.contains(g.stage) ? JSON.parse(data.getString(g.stage)) : { n: 0, ids: [] }
+    let changed = false
+    mobs.forEach(m => {
+      if (g.entities.indexOf(String(m.type)) < 0) return
+      let dx = m.x - player.x, dz = m.z - player.z
+      if (dx * dx + dz * dz > g.radius * g.radius) return
+      let id = String(m.uuid), baby = m.isBaby()
+      if (g.type == 'born') {
+        if (baby && npcAge(m) <= NPC_NEWBORN_AGE && rec.ids.indexOf(id) < 0) {
+          rec.ids.push(id); rec.n++; changed = true
+        }
+      } else if (baby && rec.ids.indexOf(id) < 0) {
+        rec.ids.push(id); changed = true          // watching this one now
+        if (rec.ids.length > 30) rec.ids.shift()
+      } else if (!baby && rec.ids.indexOf(id) >= 0) {
+        rec.ids.splice(rec.ids.indexOf(id), 1); rec.n++; changed = true   // it grew up
+      }
+    })
+    if (!changed) return
+    if (rec.n >= g.count) {
+      data.remove(g.stage)
+      questAddStage(player, g.stage)
+      player.setStatusMessage(Text.yellow('Quest updated.'))
+    } else {
+      data.putString(g.stage, JSON.stringify(rec))
+      if (rec.n > 0) player.setStatusMessage(Text.gray(rec.n + ' / ' + g.count))
+    }
+  })
+}
+
 function npcTickPlaces(player) {
   npcEntries('be').forEach(b => {
     if (player.tags.contains(b.stage) || !npcBeFits(player, b.where) || !questOpen(player, b)) return
@@ -1461,6 +1510,7 @@ PlayerEvents.tick(event => {
   if (player.tickCount % 100 == 25) npcTickMilestones(player)
   if (player.tickCount % 100 == 40) npcTickHave(player)
   if (player.tickCount % 100 == 60) npcTickVisits(player)
+  if (player.tickCount % 100 == 80) npcTickGrowth(player)
   if (player.tickCount % 600 == 300 && !npcEntries('timed').some(ch => (ch.goal.kind == 'course')
     && npcData(player, 'fqTimed').contains(ch.stage))) npcClearCourse(player)
 })

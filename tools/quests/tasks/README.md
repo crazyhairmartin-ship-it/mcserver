@@ -328,7 +328,9 @@ chapter, how many choice rewards and relics you added, and the commit hash.
 The engine has new tasks (README): `have` (carrying an item with details: enchantments, a specific potion),
 `visits` (being inside N *different* structures of a kind), `killwith` (kills with a given weapon or thrown
 weapon), timed `no: ["seen"]` (no mob may notice you: stricter stealth than `hurt`), and the existing `use` with
-`holding` + `consume` (put an item on a block: offerings on an altar, cargo back in a wagon, a fish on a mount).
+`holding` + `consume` (put an item on a block: offerings on an altar, cargo back in a wagon, a fish on a mount). Also `born` (a baby
+of a kind is born or hatches near the player) and `raise` (a baby seen near the player grows up): one growth stage per
+step, for hatching, raising young and similar lines.
 Go through `src/plans/followups.md` "Engine needed" and rewrite every stand-in these can now do properly, in place
 (keep ids, story, rewards and the other tasks), deleting each line you clear. Examples of fits: "a book with two named
 enchantments", "brewing fire resistance specifically", "three different wells", "logbook pages in several different
