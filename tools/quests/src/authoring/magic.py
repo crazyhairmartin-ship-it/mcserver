@@ -68,7 +68,7 @@ Q = [
           tasks=[{"build": {"blocks": {"irons_spellbooks:wisewood_bookshelf": 4, "irons_spellbooks:brazier": 1,
                                        "supplementaries:pedestal": 1, "handcrafted:oak_shelf": 1}, "radius": 8},
                   "title": "Build a study"}],
-          rewards=[reward_item("irons_spellbooks:wisewood_planks", 32), reward_item("minecraft:book", 8),
+          rewards=[reward_item("irons_spellbooks:wisewood_bookshelf", 4), reward_item("minecraft:book", 8),
                    skill("magic", 150)]),
 
     quest("pyromancer_tower", "The Pyromancer's Tower", icon="irons_spellbooks:pyromancer_spawn_egg",
@@ -78,7 +78,7 @@ Q = [
           tasks=[{"structure": "irons_spellbooks:pyromancer_tower", "title": "Find the Pyromancer Tower"},
                  {"talk": "entity", "entity": "irons_spellbooks:pyromancer",
                   "lines": ["Orrin sent you? Politely? Hm. I teach those who can take a fireball."]}],
-          rewards=[reward_item("irons_spellbooks:scroll_fire"), skill("magic", 160)]),
+          rewards=[reward_item("irons_spellbooks:fire_rune", 2), skill("magic", 160)]),
 
     quest("pyromancers_duel", "Trial by Fire", icon="irons_spellbooks:pyromancer_helmet",
           after=["pyromancer_tower"],
@@ -92,7 +92,7 @@ Q = [
           text=["The pyromancer will teach you, once you've earned it. The dead keep clawing out of the old graves "
                 "around her tower, and only fire lays them to rest for good.",
                 "Craft a fire rune, scribe a fire spell, and cleanse twenty of the restless dead with flame."],
-          tasks=[item("irons_spellbooks:fire_rune", crafted=True), item("irons_spellbooks:scroll_fire"),
+          tasks=[item("irons_spellbooks:fire_rune", crafted=True), item("irons_spellbooks:scroll", title="Scribe a fire spell onto a scroll"),
                  {"spellkill": ["minecraft:zombie", "minecraft:husk", "minecraft:skeleton", "minecraft:stray",
                                 "minecraft:zombie_villager", "minecraft:drowned"], "school": "fire", "count": 20,
                   "title": "Lay twenty of the dead to rest with fire"}],
@@ -190,7 +190,7 @@ ACT2 = [
           tasks=[boss("irons_spellbooks:cryomancer", "irons_spellbooks:mountain_tower", "The Cryomancer",
                       "Defeat the Cryomancer at the top of his stairs"),
                  {"cast": {"school": "irons_spellbooks:fire"}, "count": 5, "title": "Melt his ice with fire spells"}],
-          rewards=[reward_item("irons_spellbooks:cryomancer_chestplate"), reward_item("irons_spellbooks:scroll_ice"),
+          rewards=[reward_item("irons_spellbooks:cryomancer_chestplate"), reward_item("irons_spellbooks:ice_rune", 2),
                    skill("magic", 300)]),
 
     quest("school_of_ice", "School of Ice", icon="irons_spellbooks:ice_rune", after=["mountain_tower"],
@@ -315,7 +315,7 @@ ACT3 = [
                 "one of them carries."],
           tasks=[fight("irons_spellbooks:necromancer", 3, "irons_spellbooks:catacombs", "Catacomb Necromancers", "Hunt the necromancers raising the dead", wave=3),
                  item("irons_spellbooks:bone_key", title="Take the bone key one of them carries")],
-          rewards=[reward_item("irons_spellbooks:scroll_blood"), skill("magic", 440)]),
+          rewards=[reward_item("irons_spellbooks:blood_rune", 2), skill("magic", 440)]),
 
     quest("phylactery_shards", "Shards of the Phylactery", icon="irons_spellbooks:dead_king_phylactery_shard", after=["necromancers"],
           text=["The bone key opens the catacombs' vaults, where pieces of a phylactery are hidden. Gather the "
@@ -353,13 +353,13 @@ ACT3 = [
                  item("irons_spellbooks:furled_map_ancient", title="Find or buy the ancient battleground's map")],
           rewards=[reward_item("irons_spellbooks:netherward_tincture", 2), skill("magic", 440)]),
 
-    quest("nether_citadel", "The Nether Citadel", icon="irons_spellbooks:fire_cloth", after=["citadel_map", "main_story:act2_finale"],
+    quest("nether_citadel", "The Nether Citadel", icon="irons_spellbooks:magic_cloth", after=["citadel_map", "main_story:act2_finale"],
           text=["Reach Iron's Nether citadel among the bastions, find the cinderous vault and read the inscriptions "
                 "about the Flamebearer."],
           tasks=[{"structure": "irons_spellbooks:citadel", "title": "Reach the Nether citadel among the bastions"},
                  search("irons_spellbooks:citadel", 1, "the Flamebearer Inscriptions", "Inscriptions about the Flamebearer, in the cinderous vault.",
                         title="Read the inscriptions in the cinderous vault")],
-          rewards=[reward_item("irons_spellbooks:fire_cloth", 4), skill("magic", 500)]),
+          rewards=[reward_item("irons_spellbooks:magic_cloth", 4), skill("magic", 500)]),
 ]
 
 ACT4 = [
@@ -382,7 +382,7 @@ ACT4 = [
           text=["Forge pyrium ingots from cinder essence and netherite, the metal the Flamebearer's followers "
                 "worked."],
           tasks=[item("irons_spellbooks:pyrium_ingot", 2, crafted=True, title="Forge pyrium ingots from cinder essence and netherite")],
-          rewards=[reward_item("irons_spellbooks:pyrium_staff_haft"), skill("magic", 740)]),
+          rewards=[reward_item("irons_spellbooks:pyrium_ingot", 4), skill("magic", 740)]),
 
     quest("netherite_mage", "Robes of Netherite", icon="irons_spellbooks:netherite_mage_chestplate", after=["pyrium"],
           text=["Upgrade your mage armour into a full netherite mage set."],
@@ -392,13 +392,13 @@ ACT4 = [
                  item("irons_spellbooks:netherite_mage_boots", title="Upgrade netherite mage boots")],
           rewards=[reward_item("irons_spellbooks:netherite_spell_book"), skill("magic", 780)]),
 
-    quest("eldritch_pages", "Eldritch Pages", icon="irons_spellbooks:scroll_eldritch", after=["pyrium", "main_story:act4_start"],
+    quest("eldritch_pages", "Eldritch Pages", icon="irons_spellbooks:epic_ink", after=["pyrium", "main_story:act4_start"],
           text=["Orrin says the void holds a school older than fire. Recover an eldritch manuscript from the End and "
                 "learn one eldritch spell from it."],
           tasks=[{"structure": "mes:manuscript_shrine", "title": "Find the manuscript shrine in the End"},
                  item("irons_spellbooks:eldritch_manuscript", title="Recover an eldritch manuscript"),
                  {"cast": {"school": "irons_spellbooks:eldritch"}, "count": 1, "title": "Cast an eldritch spell learned from it"}],
-          rewards=[reward_item("irons_spellbooks:scroll_eldritch"), skill("magic", 800)]),
+          rewards=[reward_item("irons_spellbooks:epic_ink", 2), skill("magic", 800)]),
 ]
 
 ACT5 = [
@@ -440,8 +440,7 @@ ACT5 = [
                  {"cast": {"school": "irons_spellbooks:holy"}, "count": 1, "title": "Cast a holy page"},
                  {"cast": {"school": "irons_spellbooks:eldritch"}, "count": 1, "title": "Cast an eldritch page"},
                  talk_char("orrin", ["My life's work, finished. The next Archmage."], title="Be named the Order's next Archmage by Orrin")],
-          rewards=[reward_item("irons_spellbooks:legendary_spell_book", name="The Flamebearer's Codex", lore=["Orrin's life's work, finished."]),
-                   skill("magic", 1300)]),
+          rewards=[{"choice": [reward_item("irons_spellbooks:legendary_spell_book", name="The Flamebearer's Codex", lore=['Every school has a page in it.']), reward_item("irons_spellbooks:pyrium_staff", name="The Flamebearer's Staff", lore=["It remembers the flame's first word."], enchant={'minecraft:unbreaking': 3}, unbreakable=True), reward_item("irons_spellbooks:mana_upgrade_orb", 3)], "title": "Choose one"}, skill("magic", 1300)]),
 ]
 
 chapter("magic", "The Arcane Order", "Magic path", "irons_spellbooks:iron_spell_book", "skills", 10, Q + ACT2 + ACT3 + ACT4 + ACT5)

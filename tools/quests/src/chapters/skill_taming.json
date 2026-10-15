@@ -33,8 +33,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:bone",
-          "count": 16
+          "item": "domesticationinnovation:collar_tag"
         },
         {
           "skill": "taming",
@@ -823,9 +822,9 @@
       ],
       "tasks": [
         {
-          "item": "ultimate_unicorn_mod:iron_horse_helm",
+          "item": "ultimate_unicorn_mod:leather_horse_armor",
           "crafted": true,
-          "title": "Forge a horse helm"
+          "title": "Stitch padded leather barding"
         },
         {
           "item": "ultimate_unicorn_mod:iron_horse_armor",
@@ -840,14 +839,14 @@
       ],
       "rewards": [
         {
-          "item": "ultimate_unicorn_mod:diamond_slotted_horse_helm"
+          "item": "ultimate_unicorn_mod:diamond_horse_armor"
         },
         {
           "skill": "taming",
           "xp": 320
         }
       ],
-      "icon": "ultimate_unicorn_mod:iron_horse_helm"
+      "icon": "ultimate_unicorn_mod:iron_horse_armor"
     },
     {
       "id": "unicorn_tracks",
@@ -871,14 +870,14 @@
       ],
       "rewards": [
         {
-          "item": "ultimate_unicorn_mod:talisman"
+          "item": "ultimate_unicorn_mod:golden_horse_armor"
         },
         {
           "skill": "taming",
           "xp": 400
         }
       ],
-      "icon": "ultimate_unicorn_mod:unicorn_horn"
+      "icon": "ultimate_unicorn_mod:unicorn_spawn_egg"
     },
     {
       "id": "familiar_bond",
@@ -907,7 +906,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:cat_spawn_egg"
+          "item": "bookoffamiliars:familiar_book"
         },
         {
           "skill": "taming",
@@ -927,8 +926,8 @@
       ],
       "tasks": [
         {
-          "item": "ultimate_unicorn_mod:pegasus_feather",
-          "title": "Collect a drifting pegasus feather"
+          "item": "minecraft:feather",
+          "title": "Pick up a feather drifting over the sanctuary"
         },
         {
           "biome": "minecraft:jagged_peaks",
@@ -945,15 +944,15 @@
       ],
       "rewards": [
         {
-          "item": "ultimate_unicorn_mod:pegasus_feather",
-          "count": 4
+          "item": "minecraft:golden_carrot",
+          "count": 16
         },
         {
           "skill": "taming",
           "xp": 480
         }
       ],
-      "icon": "ultimate_unicorn_mod:pegasus_feather"
+      "icon": "ultimate_unicorn_mod:pegasus_spawn_egg"
     },
     {
       "id": "hippocamp",
@@ -1011,14 +1010,15 @@
       ],
       "rewards": [
         {
-          "item": "ultimate_unicorn_mod:nightmare_hoof"
+          "item": "minecraft:netherite_scrap",
+          "count": 2
         },
         {
           "skill": "taming",
           "xp": 520
         }
       ],
-      "icon": "ultimate_unicorn_mod:nightmare_hoof"
+      "icon": "ultimate_unicorn_mod:nightmare_spawn_egg"
     },
     {
       "id": "stolen_pet",
@@ -1114,7 +1114,7 @@
             "count": 1,
             "item": {
               "name": "the Cage Key",
-              "texture": "minecraft:item/tripwire_hook"
+              "texture": "minecraft:block/tripwire_hook"
             },
             "found": "A key on the poachers' ring."
           },
@@ -1163,7 +1163,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:diamond_horse_armor"
+          "item": "ultimate_unicorn_mod:diamond_horse_armor"
         },
         {
           "skill": "taming",
@@ -1351,12 +1351,11 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:bone",
-          "count": 16
+          "item": "domesticationinnovation:magnet"
         },
         {
-          "item": "minecraft:wheat",
-          "count": 32
+          "item": "minecraft:emerald",
+          "count": 8
         },
         {
           "skill": "taming",
@@ -1390,15 +1389,35 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:saddle",
-          "name": "The Thistlewood Saddle",
-          "lore": [
-            "The sanctuary's oldest gift."
+          "choice": [
+            {
+              "item": "minecraft:saddle",
+              "name": "The Thistlewood Saddle",
+              "lore": [
+                "It never slips, whatever you ride."
+              ]
+            },
+            {
+              "item": "domesticationinnovation:deflection_shield",
+              "name": "Thistlewood Guard",
+              "lore": [
+                "The herd stood behind it."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "ultimate_unicorn_mod:diamond_horse_armor",
+              "name": "Thistlewood Barding",
+              "lore": [
+                "Fits anything with four legs and a heart."
+              ],
+              "unbreakable": true
+            }
           ],
-          "enchant": {
-            "minecraft:unbreaking": 3,
-            "minecraft:mending": 1
-          }
+          "title": "Choose one"
         },
         {
           "skill": "taming",

@@ -11,7 +11,7 @@ Q = [
           tasks=[{"tame": "minecraft:wolf", "title": "Tame the wolf"},
                  item("domesticationinnovation:collar_tag"), {"place": "reece"},
                  talk_char("fern", ["Thin as a rake. Come in. You waited, most people shout.", "There's more to do here, if you'd help."])],
-          rewards=[reward_item("minecraft:bone", 16), skill("taming", 50)]),
+          rewards=[reward_item("domesticationinnovation:collar_tag"), skill("taming", 50)]),
 
     quest("first_pens", "Pens and Pet Beds", icon="domesticationinnovation:pet_bed_brown", after=["stray_wolf"],
           text=["The sanctuary is a single fence. Build proper pens and pet beds so rescued animals have a place "
@@ -181,20 +181,20 @@ ACT2 = [
                      title="Lead the last scattered horse back")],
           rewards=[reward_item("artifacts:cowboy_hat"), skill("taming", 300)]),
 
-    quest("horse_gear", "Barding", icon="ultimate_unicorn_mod:iron_horse_helm", after=["horse_roundup"],
+    quest("horse_gear", "Barding", icon="ultimate_unicorn_mod:iron_horse_armor", after=["horse_roundup"],
           text=["The sanctuary's horses were spooked, and armour will help. Make proper barding: a horse helm and "
                 "armour, and test a foal's bloodline with the DNA tester."],
-          tasks=[item("ultimate_unicorn_mod:iron_horse_helm", crafted=True, title="Forge a horse helm"),
+          tasks=[item("ultimate_unicorn_mod:leather_horse_armor", crafted=True, title="Stitch padded leather barding"),
                  item("ultimate_unicorn_mod:iron_horse_armor", crafted=True, title="Forge horse armour"),
                  item("ultimate_unicorn_mod:dna_tester", crafted=True, title="Build a DNA tester for the foals")],
-          rewards=[reward_item("ultimate_unicorn_mod:diamond_slotted_horse_helm"), skill("taming", 320)]),
+          rewards=[reward_item("ultimate_unicorn_mod:diamond_horse_armor"), skill("taming", 320)]),
 
-    quest("unicorn_tracks", "Silver Hoofprints", icon="ultimate_unicorn_mod:unicorn_horn", after=["horse_gear"],
+    quest("unicorn_tracks", "Silver Hoofprints", icon="ultimate_unicorn_mod:unicorn_spawn_egg", after=["horse_gear"],
           text=["A shepherd swears she saw a white horse with a horn at dawn. Follow the tracks, gain the unicorn's "
                 "trust and bring it to the sanctuary."],
           tasks=[{"observe": "ultimate_unicorn_mod:unicorn", "ticks": 40, "title": "Follow the silver tracks to the unicorn"},
                  {"tame": "ultimate_unicorn_mod:unicorn", "title": "Win the unicorn's trust"}],
-          rewards=[reward_item("ultimate_unicorn_mod:talisman"), skill("taming", 400)]),
+          rewards=[reward_item("ultimate_unicorn_mod:golden_horse_armor"), skill("taming", 400)]),
 ]
 
 ACT3 = [
@@ -204,16 +204,16 @@ ACT3 = [
           tasks=[item("bookoffamiliars:familiar_book", title="Take the hedge witch's Book of Familiars"),
                  {"cast": "any", "count": 3, "title": "Read the book's bonding words aloud"},
                  {"tame": "minecraft:cat", "title": "Bond a familiar of your own"}],
-          rewards=[reward_item("minecraft:cat_spawn_egg"), skill("taming", 450)]),
+          rewards=[reward_item("bookoffamiliars:familiar_book"), skill("taming", 450)]),
 
-    quest("pegasus", "Wings Over the Paddock", icon="ultimate_unicorn_mod:pegasus_feather", after=["unicorn_tracks"],
+    quest("pegasus", "Wings Over the Paddock", icon="ultimate_unicorn_mod:pegasus_spawn_egg", after=["unicorn_tracks"],
           text=["Pegasus feathers keep drifting down onto the sanctuary. Find the winged horse in the mountains, "
                 "tame it and fly it home."],
-          tasks=[item("ultimate_unicorn_mod:pegasus_feather", title="Collect a drifting pegasus feather"),
+          tasks=[item("minecraft:feather", title="Pick up a feather drifting over the sanctuary"),
                  {"biome": "minecraft:jagged_peaks", "title": "Climb into the mountains where the feathers fall from"},
                  {"tame": "ultimate_unicorn_mod:pegasus", "title": "Win the winged horse's trust"},
                  {"place": "reece", "title": "Fly it home to the sanctuary"}],
-          rewards=[reward_item("ultimate_unicorn_mod:pegasus_feather", 4), skill("taming", 480)]),
+          rewards=[reward_item("minecraft:golden_carrot", 16), skill("taming", 480)]),
 
     quest("hippocamp", "Horse of the Sea", icon="ultimate_unicorn_mod:hippocamp_spawn_egg", after=["pegasus"],
           text=["Fishermen speak of a horse with a fish's tail playing in their wake. Sail out past the boats at "
@@ -223,12 +223,12 @@ ACT3 = [
           rewards=[reward_item("ultimate_unicorn_mod:leather_horse_armor", name="Hippocamp Saddle Blanket", lore=["Dyed sea-blue."]),
                    skill("taming", 500)]),
 
-    quest("nightmare", "The Nightmare", icon="ultimate_unicorn_mod:nightmare_hoof", after=["pegasus", "main_story:act3_start"],
+    quest("nightmare", "The Nightmare", icon="ultimate_unicorn_mod:nightmare_spawn_egg", after=["pegasus", "main_story:act3_start"],
           text=["In the Nether, piglins have chained a burning nightmare horse in their camp. Free it and calm it "
                 "until it lets you ride."],
           tasks=[{"structure": "nova_structures:piglin_camp", "title": "Find the camp where the nightmare is chained"},
                  {"tame": "ultimate_unicorn_mod:nightmare", "title": "Free and calm the burning nightmare"}],
-          rewards=[reward_item("ultimate_unicorn_mod:nightmare_hoof"), skill("taming", 520)]),
+          rewards=[reward_item("minecraft:netherite_scrap", 2), skill("taming", 520)]),
 
     quest("stolen_pet", "Wherever You Are", icon="domesticationinnovation:wayward_lantern", after=["pet_enchanting"],
           text=["A child's dog was stolen by a passing illager band. Make a wayward lantern from the dog's deed of "
@@ -249,7 +249,7 @@ ACT3 = [
                   "title": "Defend the sanctuary through the poachers' night raid"},
                  {"structure": "dungeons_arise:illager_campsite", "title": "Follow the poachers back to their campsite"},
                  search("dungeons_arise:illager_campsite", 1, "the Cage Key", "A key on the poachers' ring.",
-                        texture="minecraft:item/tripwire_hook", title="Take the key and free the caged animals")],
+                        texture="minecraft:block/tripwire_hook", title="Take the key and free the caged animals")],
           rewards=[reward_item("minecraft:enchanted_book", name="Herding", enchant={"minecraft:unbreaking": 3}), skill("taming", 550)]),
 ]
 
@@ -260,7 +260,7 @@ ACT4 = [
           tasks=[{"tame": "ultimate_unicorn_mod:kirin", "title": "Win a kirin's trust"},
                  {"tame": "ultimate_unicorn_mod:destrier", "title": "Win a destrier's trust"},
                  {"tame": "ultimate_unicorn_mod:reindeer", "title": "Win a reindeer's trust"}],
-          rewards=[reward_item("minecraft:diamond_horse_armor"), skill("taming", 700)]),
+          rewards=[reward_item("ultimate_unicorn_mod:diamond_horse_armor"), skill("taming", 700)]),
 
     quest("end_ready_pets", "Pets for the Void", icon="domesticationinnovation:collar_tag", after=["poachers", "main_story:act4_start"],
           text=["Your companions want to follow you to the End. Enchant their collars so they come back safe."],
@@ -296,15 +296,14 @@ ACT5 = [
                      to={"place": "reece"}, title="Lead the lost kit to the sanctuary"),
                  enc(["*A singed wolf pup, limping.*"], then="escort", entity="minecraft:wolf", name="Singed Pup",
                      to={"place": "reece"}, title="Lead the singed pup to the sanctuary")],
-          rewards=[reward_item("minecraft:bone", 16), reward_item("minecraft:wheat", 32), skill("taming", 850)]),
+          rewards=[reward_item("domesticationinnovation:magnet"), reward_item("minecraft:emerald", 8), skill("taming", 850)]),
 
     quest("taming_capstone", "Keeper of the Sanctuary", icon="minecraft:saddle",
           after=["after_the_storm", "pet_show", "butterfly_atlas", "familiar_bond"],
           text=["Fern names you Keeper and gives you the sanctuary's oldest gift, stitched for you."],
           tasks=[talk_char("fern", ["Keeper of the Sanctuary. The animals chose you.", "The oldest gift. Stitched for you."],
                            title="Be named Keeper of the Sanctuary by Fern")],
-          rewards=[reward_item("minecraft:saddle", name="The Thistlewood Saddle", lore=["The sanctuary's oldest gift."],
-                               enchant={"minecraft:unbreaking": 3, "minecraft:mending": 1}), skill("taming", 1000)]),
+          rewards=[{"choice": [reward_item("minecraft:saddle", name='The Thistlewood Saddle', lore=['It never slips, whatever you ride.']), reward_item("domesticationinnovation:deflection_shield", name='Thistlewood Guard', lore=['The herd stood behind it.'], enchant={'minecraft:unbreaking': 3}, unbreakable=True), reward_item("ultimate_unicorn_mod:diamond_horse_armor", name='Thistlewood Barding', lore=['Fits anything with four legs and a heart.'], unbreakable=True)], "title": "Choose one"}, skill("taming", 1000)]),
 ]
 
 chapter("skill_taming", "The Sanctuary", "Taming path", "minecraft:bone", "skills", 11, Q + ACT2 + ACT3 + ACT4 + ACT5)

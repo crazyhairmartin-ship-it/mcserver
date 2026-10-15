@@ -37,8 +37,7 @@ Q = [
                 "second with a crossbow and armour."],
           tasks=[{"advancement": "minecraft:adventure/recruit_guard", "title": "Make a villager a guard"},
                  item("minecraft:crossbow", crafted=True), item("minecraft:iron_chestplate")],
-          rewards=[reward_item("minecraft:iron_helmet"), reward_item("minecraft:iron_leggings"),
-                   reward_item("minecraft:iron_boots"), skill("defense", 150)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:protection': 2}), reward_item("spartanshields:iron_basic_shield"), skill("defense", 150)]),
 
     quest("tower_shield", "Behind the Wall of Iron", icon="spartanshields:iron_tower_shield",
           after=["arm_a_guard"],
@@ -126,7 +125,7 @@ ACT2 = [
           text=["Strays from a fort in the snow keep shooting at travellers. Storm the stray fort and take its banner."],
           tasks=[fight("minecraft:stray", 8, "nova_structures:stray_fort", "Fort Strays", "Storm the fort and drive off the strays"),
                  search("nova_structures:stray_fort", 1, "the Stray Fort Banner", "A frosted banner, nailed up in the hall.",
-                        texture="minecraft:item/white_banner", title="Take down the fort's banner")],
+                        texture="alexsmobs:item/end_pirate_flag", title="Take down the fort's banner")],
           rewards=[reward_item("minecraft:tipped_arrow", 16), skill("defense", 300)]),
 
     quest("thorn_shrine", "The Thornborn Towers", icon="artifacts:thorn_pendant", after=["stray_fort"],
@@ -215,7 +214,7 @@ ACT3 = [
                                       {"entity": "minecraft:ravager", "count": 1, "every": 90}],
                             "lines": ["The largest raid yet. Hold the wall!"], "start": "Hold the wall"},
                   "title": "Hold the wall through every wave with the guards"}],
-          rewards=[reward_item("minecraft:emerald", 24), skill("defense", 600)]),
+          rewards=[reward_item("minecraft:emerald", 12), reward_item("irons_spellbooks:greater_healing_potion", 3), skill("defense", 600)]),
 ]
 
 ACT4 = [
@@ -262,8 +261,7 @@ ACT5 = [
                 "at Reece's gate since it was founded."],
           tasks=[talk_char("hale", ["Captain of the Watch. Don't let it go to your head.", "The gate's shield is yours. ...Tell Marta I said hello."],
                            title="Take the captaincy and the gate's shield from Hale")],
-          rewards=[reward_item("spartanshields:netherite_tower_shield", name="The Bulwark of Reece", lore=["Stood at the gate since it was founded."],
-                               enchant={"minecraft:unbreaking": 3, "minecraft:mending": 1}), skill("defense", 1000)]),
+          rewards=[{"choice": [reward_item("spartanshields:netherite_tower_shield", name='The Bulwark of Reece', lore=['Nothing passed it. Nothing will.'], enchant={'minecraft:unbreaking': 3, 'minecraft:mending': 1}, unbreakable=True), reward_item("spartanweaponry:netherite_halberd", name="Reece's Gatekeeper", lore=['Long enough to hold a gate.'], enchant={'minecraft:sharpness': 5, 'minecraft:knockback': 2}, unbreakable=True), reward_item("irons_spellbooks:emerald_stoneplate_ring", name="The Watch's Ward", lore=['Worn by the last to leave the wall.'])], "title": "Choose one"}, skill("defense", 1000)]),
 ]
 
 chapter("skill_defense", "The Village Watch", "Defense path", "minecraft:shield", "skills", 8, Q + ACT2 + ACT3 + ACT4 + ACT5)

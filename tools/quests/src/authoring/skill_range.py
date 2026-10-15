@@ -24,7 +24,7 @@ Q = [
           text=["At the lodge's range, put ten arrows into target blocks at longer and longer distances."],
           tasks=[item("minecraft:target", 3, crafted=True, title="Make three target blocks"),
                  {"checkmark": "I put ten arrows into the targets"}],
-          rewards=[reward_item("minecraft:arrow", 32), reward_item("minecraft:iron_ingot", 4), skill("range", 80)]),
+          rewards=[reward_item("minecraft:arrow", 32), reward_item("minecraft:enchanted_book", enchant={'minecraft:power': 1}), skill("range", 80)]),
 
     quest("boar_trouble", "Tusks in the Turnips", icon="naturalist:bushmeat", after=["first_tracks"],
           text=["Wild boars are tearing up a village's fields. Hunt down the sounder before it ruins the harvest, "
@@ -211,7 +211,7 @@ ACT4 = [
           text=["The hunts ahead need reach. Forge a netherite longbow and a huge quiver of arrows."],
           tasks=[item("spartanweaponry:netherite_longbow", crafted=True, title="Forge a netherite longbow"),
                  item("minecraft:arrow", 64, title="Fill a quiver for the hunts to come")],
-          rewards=[reward_item("minecraft:spectral_arrow", 32), skill("range", 700)]),
+          rewards=[reward_item("minecraft:spectral_arrow", 32), reward_item("minecraft:enchanted_book", enchant={'minecraft:infinity': 1}), skill("range", 700)]),
 
     quest("void_swarm", "Swarm Out of the Void", icon="alexsmobs:ender_residue", after=["netherite_longbow"],
           text=["In the End, enderiophage swarms drift between the islands. Thin them out with arrows and keep your "
@@ -264,9 +264,7 @@ ACT5 = [
           text=["With every legend on the wall and a thousand kills at range, Vance names you Huntmaster and gives "
                 "you the lodge's own bow."],
           tasks=[talk_char("orla", ["Every legend on the wall. Huntmaster.", "Take the lodge's own bow."], title="Be named Huntmaster by Orla")],
-          rewards=[reward_item("spartanweaponry:netherite_longbow", name="Vance's Whisper", lore=["The lodge's own bow."],
-                               enchant={"minecraft:power": 5, "minecraft:infinity": 1, "minecraft:unbreaking": 3, "minecraft:flame": 1}),
-                   skill("range", 1000)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:netherite_longbow", name="Vance's Whisper", lore=['You never hear it leave the string.'], enchant={'minecraft:power': 5, 'minecraft:infinity': 1, 'minecraft:flame': 1}, unbreakable=True), reward_item("spartanweaponry:netherite_heavy_crossbow", name="Vance's Thunder", lore=['One bolt, one answer.'], enchant={'minecraft:piercing': 4, 'minecraft:quick_charge': 3}, unbreakable=True), reward_item("spartanweaponry:netherite_dagger", name="Vance's Last Token", lore=['Kept for when the arrows run out.'], enchant={'minecraft:sharpness': 5, 'minecraft:looting': 3}, unbreakable=True)], "title": "Choose one"}, skill("range", 1000)]),
 ]
 
 chapter("skill_range", "The Hunters' Lodge", "Range path", "minecraft:bow", "skills", 7, Q + ACT2 + ACT3 + ACT4 + ACT5)

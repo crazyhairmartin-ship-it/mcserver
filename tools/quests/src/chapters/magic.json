@@ -298,8 +298,8 @@
       ],
       "rewards": [
         {
-          "item": "irons_spellbooks:wisewood_planks",
-          "count": 32
+          "item": "irons_spellbooks:wisewood_bookshelf",
+          "count": 4
         },
         {
           "item": "minecraft:book",
@@ -336,7 +336,8 @@
       ],
       "rewards": [
         {
-          "item": "irons_spellbooks:scroll_fire"
+          "item": "irons_spellbooks:fire_rune",
+          "count": 2
         },
         {
           "skill": "magic",
@@ -398,7 +399,8 @@
           "crafted": true
         },
         {
-          "item": "irons_spellbooks:scroll_fire"
+          "item": "irons_spellbooks:scroll",
+          "title": "Scribe a fire spell onto a scroll"
         },
         {
           "spellkill": [
@@ -500,7 +502,10 @@
           }
         },
         {
-          "checkmark": "I brewed a cure for each ailment"
+          "make": "minecraft:potion",
+          "how": "brew",
+          "count": 2,
+          "title": "Brew a cure for each ailment"
         }
       ],
       "rewards": [
@@ -831,7 +836,8 @@
           "item": "irons_spellbooks:cryomancer_chestplate"
         },
         {
-          "item": "irons_spellbooks:scroll_ice"
+          "item": "irons_spellbooks:ice_rune",
+          "count": 2
         },
         {
           "skill": "magic",
@@ -1427,7 +1433,8 @@
       ],
       "rewards": [
         {
-          "item": "irons_spellbooks:scroll_blood"
+          "item": "irons_spellbooks:blood_rune",
+          "count": 2
         },
         {
           "skill": "magic",
@@ -1642,7 +1649,7 @@
       ],
       "rewards": [
         {
-          "item": "irons_spellbooks:fire_cloth",
+          "item": "irons_spellbooks:magic_cloth",
           "count": 4
         },
         {
@@ -1650,7 +1657,7 @@
           "xp": 500
         }
       ],
-      "icon": "irons_spellbooks:fire_cloth"
+      "icon": "irons_spellbooks:magic_cloth"
     },
     {
       "id": "ancient_battleground",
@@ -1736,7 +1743,8 @@
       ],
       "rewards": [
         {
-          "item": "irons_spellbooks:pyrium_staff_haft"
+          "item": "irons_spellbooks:pyrium_ingot",
+          "count": 4
         },
         {
           "skill": "magic",
@@ -1812,14 +1820,15 @@
       ],
       "rewards": [
         {
-          "item": "irons_spellbooks:scroll_eldritch"
+          "item": "irons_spellbooks:epic_ink",
+          "count": 2
         },
         {
           "skill": "magic",
           "xp": 800
         }
       ],
-      "icon": "irons_spellbooks:scroll_eldritch"
+      "icon": "irons_spellbooks:epic_ink"
     },
     {
       "id": "legendary_ink",
@@ -2031,11 +2040,31 @@
       ],
       "rewards": [
         {
-          "item": "irons_spellbooks:legendary_spell_book",
-          "name": "The Flamebearer's Codex",
-          "lore": [
-            "Orrin's life's work, finished."
-          ]
+          "choice": [
+            {
+              "item": "irons_spellbooks:legendary_spell_book",
+              "name": "The Flamebearer's Codex",
+              "lore": [
+                "Every school has a page in it."
+              ]
+            },
+            {
+              "item": "irons_spellbooks:pyrium_staff",
+              "name": "The Flamebearer's Staff",
+              "lore": [
+                "It remembers the flame's first word."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "irons_spellbooks:mana_upgrade_orb",
+              "count": 3
+            }
+          ],
+          "title": "Choose one"
         },
         {
           "skill": "magic",

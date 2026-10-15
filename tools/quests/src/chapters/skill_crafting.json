@@ -350,7 +350,7 @@
             "blocks": {
               "another_furniture:oak_bench": 2,
               "another_furniture:oak_flower_box": 2,
-              "another_furniture:red_awning": 2,
+              "supplementaries:awning_red": 2,
               "another_furniture:red_lamp": 2
             },
             "radius": 12
@@ -892,11 +892,11 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:leather_chestplate",
-          "name": "Guild Apron",
-          "lore": [
-            "Dyed in the guild's colours."
-          ]
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:unbreaking": 3
+          },
+          "name": "Guild Apron"
         },
         {
           "skill": "craft",
@@ -1411,29 +1411,45 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:netherite_pickaxe",
-          "name": "The Founder's Pickaxe",
-          "lore": [
-            "The founder's masterwork."
+          "choice": [
+            {
+              "item": "minecraft:netherite_pickaxe",
+              "name": "The Founder's Pickaxe",
+              "lore": [
+                "It builds as well as it breaks."
+              ],
+              "enchant": {
+                "minecraft:efficiency": 5,
+                "minecraft:fortune": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "minecraft:netherite_axe",
+              "name": "The Founder's Axe",
+              "lore": [
+                "First frame, first fence, first hall."
+              ],
+              "enchant": {
+                "minecraft:efficiency": 5,
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "spartanweaponry:netherite_battle_hammer",
+              "name": "The Founder's Hammer",
+              "lore": [
+                "Struck the guild's first nail."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 4,
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            }
           ],
-          "enchant": {
-            "minecraft:efficiency": 5,
-            "minecraft:unbreaking": 3,
-            "minecraft:mending": 1,
-            "minecraft:fortune": 3
-          }
-        },
-        {
-          "item": "minecraft:netherite_axe",
-          "name": "The Founder's Axe",
-          "lore": [
-            "The founder's masterwork."
-          ],
-          "enchant": {
-            "minecraft:efficiency": 5,
-            "minecraft:unbreaking": 3,
-            "minecraft:mending": 1
-          }
+          "title": "Choose one"
         },
         {
           "skill": "craft",

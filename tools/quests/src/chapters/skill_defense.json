@@ -164,13 +164,13 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_helmet"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:protection": 2
+          }
         },
         {
-          "item": "minecraft:iron_leggings"
-        },
-        {
-          "item": "minecraft:iron_boots"
+          "item": "spartanshields:iron_basic_shield"
         },
         {
           "skill": "defense",
@@ -577,7 +577,7 @@
             "count": 1,
             "item": {
               "name": "the Stray Fort Banner",
-              "texture": "minecraft:item/white_banner"
+              "texture": "alexsmobs:item/end_pirate_flag"
             },
             "found": "A frosted banner, nailed up in the hall."
           },
@@ -1029,7 +1029,11 @@
       "rewards": [
         {
           "item": "minecraft:emerald",
-          "count": 24
+          "count": 12
+        },
+        {
+          "item": "irons_spellbooks:greater_healing_potion",
+          "count": 3
         },
         {
           "skill": "defense",
@@ -1245,15 +1249,40 @@
       ],
       "rewards": [
         {
-          "item": "spartanshields:netherite_tower_shield",
-          "name": "The Bulwark of Reece",
-          "lore": [
-            "Stood at the gate since it was founded."
+          "choice": [
+            {
+              "item": "spartanshields:netherite_tower_shield",
+              "name": "The Bulwark of Reece",
+              "lore": [
+                "Nothing passed it. Nothing will."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 3,
+                "minecraft:mending": 1
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "spartanweaponry:netherite_halberd",
+              "name": "Reece's Gatekeeper",
+              "lore": [
+                "Long enough to hold a gate."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 5,
+                "minecraft:knockback": 2
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "irons_spellbooks:emerald_stoneplate_ring",
+              "name": "The Watch's Ward",
+              "lore": [
+                "Worn by the last to leave the wall."
+              ]
+            }
           ],
-          "enchant": {
-            "minecraft:unbreaking": 3,
-            "minecraft:mending": 1
-          }
+          "title": "Choose one"
         },
         {
           "skill": "defense",

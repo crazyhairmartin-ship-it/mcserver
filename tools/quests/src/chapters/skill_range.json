@@ -118,8 +118,10 @@
           "count": 32
         },
         {
-          "item": "minecraft:iron_ingot",
-          "count": 4
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:power": 1
+          }
         },
         {
           "skill": "range",
@@ -1006,6 +1008,12 @@
           "count": 32
         },
         {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:infinity": 1
+          }
+        },
+        {
           "skill": "range",
           "xp": 700
         }
@@ -1282,17 +1290,46 @@
       ],
       "rewards": [
         {
-          "item": "spartanweaponry:netherite_longbow",
-          "name": "Vance's Whisper",
-          "lore": [
-            "The lodge's own bow."
+          "choice": [
+            {
+              "item": "spartanweaponry:netherite_longbow",
+              "name": "Vance's Whisper",
+              "lore": [
+                "You never hear it leave the string."
+              ],
+              "enchant": {
+                "minecraft:power": 5,
+                "minecraft:infinity": 1,
+                "minecraft:flame": 1
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "spartanweaponry:netherite_heavy_crossbow",
+              "name": "Vance's Thunder",
+              "lore": [
+                "One bolt, one answer."
+              ],
+              "enchant": {
+                "minecraft:piercing": 4,
+                "minecraft:quick_charge": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "spartanweaponry:netherite_dagger",
+              "name": "Vance's Last Token",
+              "lore": [
+                "Kept for when the arrows run out."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 5,
+                "minecraft:looting": 3
+              },
+              "unbreakable": true
+            }
           ],
-          "enchant": {
-            "minecraft:power": 5,
-            "minecraft:infinity": 1,
-            "minecraft:unbreaking": 3,
-            "minecraft:flame": 1
-          }
+          "title": "Choose one"
         },
         {
           "skill": "range",

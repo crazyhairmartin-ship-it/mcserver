@@ -76,7 +76,7 @@ Q = [
                 "boxes, awnings and lamps."],
           tasks=[{"structure": "#villages", "title": "Reach the square"},
                  {"build": {"blocks": {"another_furniture:oak_bench": 2, "another_furniture:oak_flower_box": 2,
-                                       "another_furniture:red_awning": 2, "another_furniture:red_lamp": 2},
+                                       "supplementaries:awning_red": 2, "another_furniture:red_lamp": 2},
                             "radius": 12}, "title": "Furnish the square"}],
           rewards=[reward_item("minecraft:poppy", 6), reward_item("minecraft:dandelion", 6),
                    skill("craft", 190)]),
@@ -89,8 +89,7 @@ Q = [
                  {"build": {"blocks": {"mcwbridges:oak_bridge_pier": 2, "mcwbridges:oak_log_bridge_middle": 4,
                                        "mcwbridges:bridge_lantern": 2}, "radius": 12},
                   "title": "Rebuild the bridge"}],
-          rewards=[reward_item("minecraft:stone_bricks", 64), reward_item("minecraft:wheat", 32),
-                   skill("craft", 210)]),
+          rewards=[reward_item("minecraft:stone_bricks", 64), reward_item("minecraft:wheat", 32), skill("craft", 210)]),
 
     quest("joiners_pack", "The Travelling Joiner", icon="sophisticatedbackpacks:backpack", after=["road_comforts"],
           text=["Odile gives you her old backpack pattern. Make a Sophisticated Backpack and fit it with a crafting "
@@ -201,8 +200,7 @@ ACT2 = [
                  item("minecraft:leather_leggings", crafted=True, title="Make the guild leggings"),
                  talk_char("odile", ["Leather over armour. Good. A guild member should look the part."],
                            title="Report to Odile in your uniform")],
-          rewards=[reward_item("minecraft:leather_chestplate", name="Guild Apron", lore=["Dyed in the guild's colours."]),
-                   skill("craft", 300)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:unbreaking': 3}, name='Guild Apron'), skill("craft", 300)]),
 
     quest("gingerbread", "Ginger in the Snow", icon="snowyspirit:gingerbread", after=["village_concert"],
           text=["Winter is coming and the children want a gingerbread house. Find wild ginger, grow it, bake "
@@ -317,11 +315,7 @@ ACT5 = [
                 "you."],
           tasks=[talk_char("odile", ["Master of the guild. About time.", "The founder's tools, reforged. Don't let them rust."],
                            title="Be named Master of the Guild by Odile")],
-          rewards=[reward_item("minecraft:netherite_pickaxe", name="The Founder's Pickaxe", lore=["The founder's masterwork."],
-                               enchant={"minecraft:efficiency": 5, "minecraft:unbreaking": 3, "minecraft:mending": 1, "minecraft:fortune": 3}),
-                   reward_item("minecraft:netherite_axe", name="The Founder's Axe", lore=["The founder's masterwork."],
-                               enchant={"minecraft:efficiency": 5, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
-                   skill("craft", 1000)]),
+          rewards=[{"choice": [reward_item("minecraft:netherite_pickaxe", name="The Founder's Pickaxe", lore=['It builds as well as it breaks.'], enchant={'minecraft:efficiency': 5, 'minecraft:fortune': 3}, unbreakable=True), reward_item("minecraft:netherite_axe", name="The Founder's Axe", lore=['First frame, first fence, first hall.'], enchant={'minecraft:efficiency': 5, 'minecraft:unbreaking': 3}, unbreakable=True), reward_item("spartanweaponry:netherite_battle_hammer", name="The Founder's Hammer", lore=["Struck the guild's first nail."], enchant={'minecraft:sharpness': 4, 'minecraft:unbreaking': 3}, unbreakable=True)], "title": "Choose one"}, skill("craft", 1000)]),
 ]
 
 chapter("skill_crafting", "The Crafters' Guild", "Crafting path", "minecraft:crafting_table", "skills", 5, Q + ACT2 + ACT3 + ACT4 + ACT5)

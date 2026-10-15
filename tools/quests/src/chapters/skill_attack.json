@@ -31,7 +31,7 @@
       ],
       "rewards": [
         {
-          "item": "bountiful:bounty-common"
+          "item": "bountiful:decree"
         },
         {
           "skill": "attack",
@@ -72,8 +72,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_ingot",
-          "count": 4
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:sharpness": 2
+          }
         },
         {
           "skill": "attack",
@@ -304,12 +306,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_ingot",
-          "count": 8
-        },
-        {
-          "item": "minecraft:gold_ingot",
-          "count": 4
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:smite": 3
+          }
         },
         {
           "item": "minecraft:emerald",
@@ -500,7 +500,7 @@
             "count": 1,
             "item": {
               "name": "Bandit Banner",
-              "texture": "minecraft:item/white_banner"
+              "texture": "alexsmobs:item/end_pirate_flag"
             },
             "found": "A bandit banner, torn from a tower wall."
           },
@@ -509,14 +509,15 @@
       ],
       "rewards": [
         {
-          "item": "bountiful:bounty-uncommon"
+          "item": "minecraft:emerald",
+          "count": 12
         },
         {
           "skill": "attack",
           "xp": 250
         }
       ],
-      "icon": "bountiful:bounty-uncommon"
+      "icon": "bountiful:bounty"
     },
     {
       "id": "skelewag",
@@ -605,8 +606,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:splash_potion",
-          "count": 3
+          "item": "irons_spellbooks:greater_healing_potion",
+          "count": 2
         },
         {
           "skill": "attack",
@@ -704,7 +705,7 @@
             "count": 1,
             "item": {
               "name": "the Aviary Trinket",
-              "texture": "minecraft:item/piston"
+              "texture": "minecraft:block/piston_side"
             },
             "found": "A spring-loaded trinket, left at the top."
           },
@@ -855,14 +856,17 @@
       ],
       "rewards": [
         {
-          "item": "bountiful:bounty-epic"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:looting": 3
+          }
         },
         {
           "skill": "attack",
           "xp": 450
         }
       ],
-      "icon": "bountiful:bounty-epic"
+      "icon": "bountiful:bounty"
     },
     {
       "id": "brute_force",
@@ -889,7 +893,10 @@
       ],
       "rewards": [
         {
-          "item": "bountiful:bounty-rare"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:sharpness": 4
+          }
         },
         {
           "skill": "attack",
@@ -1069,7 +1076,41 @@
       ],
       "rewards": [
         {
-          "item": "spartanweaponry:netherite_longsword"
+          "choice": [
+            {
+              "item": "spartanweaponry:netherite_longsword",
+              "name": "Champion's Blade",
+              "lore": [
+                "Won on the sand, not given."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 4,
+                "minecraft:unbreaking": 3
+              }
+            },
+            {
+              "item": "spartanshields:netherite_basic_shield",
+              "name": "Champion's Shield",
+              "lore": [
+                "The crowd chanted behind it."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 3
+              }
+            },
+            {
+              "item": "spartanweaponry:netherite_battle_hammer",
+              "name": "Champion's Hammer",
+              "lore": [
+                "Ended the last round in one."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 4,
+                "minecraft:unbreaking": 3
+              }
+            }
+          ],
+          "title": "Choose one"
         },
         {
           "skill": "attack",
@@ -1107,15 +1148,21 @@
       ],
       "rewards": [
         {
-          "item": "bountiful:bounty-epic",
-          "count": 2
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:smite": 5
+          }
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 24
         },
         {
           "skill": "attack",
           "xp": 740
         }
       ],
-      "icon": "bountiful:bounty-epic"
+      "icon": "bountiful:bounty"
     },
     {
       "id": "void_contract",
@@ -1305,17 +1352,46 @@
       ],
       "rewards": [
         {
-          "item": "spartanweaponry:netherite_longsword",
-          "name": "Ash's Verdict",
-          "lore": [
-            "The last contract."
+          "choice": [
+            {
+              "item": "spartanweaponry:netherite_longsword",
+              "name": "Ash's Verdict",
+              "lore": [
+                "Every contract, signed."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 5,
+                "minecraft:looting": 3,
+                "minecraft:fire_aspect": 2
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "spartanweaponry:netherite_battleaxe",
+              "name": "Ash's Reckoning",
+              "lore": [
+                "For the debts nobody else would collect."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 5,
+                "minecraft:looting": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "spartanweaponry:netherite_katana",
+              "name": "Ash's Quiet Work",
+              "lore": [
+                "Quick enough that you hear it afterwards."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 5,
+                "minecraft:sweeping": 3
+              },
+              "unbreakable": true
+            }
           ],
-          "enchant": {
-            "minecraft:sharpness": 5,
-            "minecraft:looting": 3,
-            "minecraft:unbreaking": 3,
-            "minecraft:mending": 1
-          }
+          "title": "Choose one"
         },
         {
           "skill": "attack",

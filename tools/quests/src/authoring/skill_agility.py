@@ -7,12 +7,12 @@ from common import enc, fight, boss, search, sample, talk_org, talk_villager, ta
 NO_SHORTCUTS = ["teleport", "mounts"]
 
 Q = [
-    quest("sign_the_roster", "Sign the Roster", icon="fotfmail:letter_signed",
+    quest("sign_the_roster", "Sign the Roster", icon="fotfmail:letter",
           giver=giver_org("couriers", ["Runners wanted! Somebody has to carry the awkward jobs.", "Sign on with Postmistress Quill in Reece."], "I'll sign on"),
           text=["A cartographer has pinned a Couriers' notice: runners wanted. Sign on at the Reece post office and "
                 "carry your first signed letter to a cartographer in another village."],
           tasks=[talk_char("juniper", ["New runner? Name, signature, go. We take what the carriers won't.", "Sign this letter. Take it to the next village's cartographer. Don't dawdle."]),
-                 item("fotfmail:letter_signed", consume=True, title="Sign a letter for delivery"),
+                 item("fotfmail:letter", consume=True, title="Sign a letter for delivery"),
                  talk_villager("minecraft:cartographer", ["A letter from Quill? About time. You'll do, runner."],
                                title="Hand it to a cartographer in another village")],
           rewards=[reward_item("minecraft:bundle", name="Courier's Satchel"), reward_item("fotfmail:letter", 8),
@@ -22,7 +22,7 @@ Q = [
           signature="artifacts:running_shoes",
           text=["Juniper's runner has twisted an ankle, and the morning post must reach the next village before the "
                 "noon bell. Make the run on the clock, and the runner will give you their shoes for good."],
-          tasks=[item("fotfmail:letter_signed", title="Take the morning post"),
+          tasks=[item("fotfmail:letter", title="Take the morning post"),
                  {"timed": {"seconds": 240, "goal": {"structure": "#villages", "label": "the next village", "away": 150},
                             "lines": ["The noon bell rings in a few minutes. Run!", "No short cuts, no mounts."],
                             "start": "Start the run", "no": NO_SHORTCUTS}, "title": "Reach the next village by noon"}],
@@ -96,7 +96,7 @@ Q = [
           signature="artifacts:panic_necklace",
           text=["An urgent letter must go out after dark across open country. Monsters ambush the road, so take "
                 "the hits and keep running. Stopping to fight loses the deadline."],
-          tasks=[item("fotfmail:letter_signed", title="Take the urgent letter"),
+          tasks=[item("fotfmail:letter", title="Take the urgent letter"),
                  {"timed": {"seconds": 300, "goal": {"structure": "#villages", "label": "the next village", "away": 200},
                             "waves": [{"entity": "minecraft:zombie", "count": 2, "every": 25},
                                       {"entity": "minecraft:skeleton", "count": 1, "every": 40}],
@@ -133,12 +133,12 @@ Q = [
                            then="escort", to={"structure": "#villages", "label": "the nearest village"},
                            thanks=["We made it. You're better at this than me.",
                                    "Take the satchel. The letters inside are yours to finish now."])],
-          rewards=[reward_item("fotfmail:letter", 4), reward_item("minecraft:golden_apple"), skill("agility", 220)]),
+          rewards=[reward_item("fotfmail:letter", 4), reward_item("irons_spellbooks:greater_healing_potion", 2), skill("agility", 220)]),
 
     quest("first_ferry", "Across the Bay", icon="smallships:oak_cog", after=["post_office"],
           text=["A beach village's post piles up across the water. Build a rowboat, then a cog, and ferry three "
                 "crates of mail over the bay."],
-          tasks=[item("smallships:oak_rowboat", crafted=True), item("smallships:oak_cog", crafted=True),
+          tasks=[item("minecraft:oak_boat", crafted=True, title="Build a rowboat"), item("smallships:oak_cog", crafted=True),
                  item("endermail:package", 3, consume=True, title="Load three crates of mail"),
                  {"structure": "ctov:medium/village_beach", "title": "Reach the beach village"}],
           rewards=[reward_item("minecraft:white_wool", 4), reward_item("minecraft:string", 8),
@@ -320,7 +320,7 @@ ACT4 = [
                  {"timed": {"seconds": 1200, "goal": {"structure": "#villages", "label": "the circuit's last village", "away": 800},
                             "lines": ["The full circuit, no landing."], "start": "Start the circuit", "no": ["teleport", "mounts"]},
                   "title": "Fly the courier circuit without landing"}],
-          rewards=[reward_item("minecraft:firework_rocket", 32), skill("agility", 760)]),
+          rewards=[reward_item("minecraft:firework_rocket", 16), reward_item("minecraft:enchanted_book", enchant={'minecraft:feather_falling': 4}), skill("agility", 760)]),
 ]
 
 ACT5 = [
@@ -344,9 +344,7 @@ ACT5 = [
           text=["Juniper hands you the post office keys and the Couriers' oldest treasure, reforged for you."],
           tasks=[talk_char("juniper", ["The post office keys. And the oldest treasure.", "Run well. Stamp everything."],
                            title="Take the post office keys and the oldest treasure from Juniper")],
-          rewards=[reward_item("minecraft:netherite_boots", name="Juniper's Seven-League Boots", lore=["The Couriers' oldest treasure."],
-                               enchant={"minecraft:feather_falling": 4, "minecraft:depth_strider": 3, "minecraft:soul_speed": 3,
-                                        "minecraft:unbreaking": 3, "minecraft:mending": 1}), skill("agility", 1000)]),
+          rewards=[{"choice": [reward_item("irons_spellbooks:speed_boots", name="Juniper's Seven-League Boots", lore=['Every road is shorter in them.'], enchant={'minecraft:feather_falling': 4, 'minecraft:depth_strider': 3, 'minecraft:soul_speed': 3}, unbreakable=True), reward_item("icarus:white_feathered_wings", name="The Couriers' Pinions", lore=['Juniper carried the post on these.'], enchant={'minecraft:unbreaking': 3}, unbreakable=True), reward_item("grapplemod:grapplinghook", name="Juniper's Line", lore=['Always finds a hold.'], enchant={'minecraft:unbreaking': 3}, unbreakable=True)], "title": "Choose one"}, skill("agility", 1000)]),
 ]
 
 chapter("skill_agility", "The Couriers", "Agility path", "minecraft:leather_boots", "skills", 9, Q + ACT2 + ACT3 + ACT4 + ACT5)

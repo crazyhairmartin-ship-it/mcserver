@@ -10,7 +10,7 @@ Q = [
           tasks=[talk_char("corvin", ["You want work. Find a bounty board and take a contract.", "Don't take one you can't finish. I've buried hunters who did."]),
                  {"structure": "#villages", "title": "Find a village's bounty board"},
                  item("bountiful:bounty", title="Take a contract from the board")],
-          rewards=[reward_item("bountiful:bounty-common"), skill("attack", 50)]),
+          rewards=[reward_item("bountiful:decree"), skill("attack", 50)]),
 
     quest("dummy_drills", "Drills on the Dummy", icon="dummmmmmy:target_dummy", after=["the_board"],
           text=["No hunter goes out untrained. Make a target dummy, then hit it hard and fast for a minute."],
@@ -18,7 +18,7 @@ Q = [
                  {"timed": {"seconds": 60, "goal": {"stat": "minecraft:damage_dealt", "count": 600},
                             "lines": ["Sixty seconds. Hit the dummy.", "Combos, not flailing. Go."],
                             "start": "Start the drill"}, "title": "Deal the damage in a minute"}],
-          rewards=[reward_item("minecraft:iron_ingot", 4), skill("attack", 80)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:sharpness': 2}), skill("attack", 80)]),
 
     quest("first_contract", "Night Shift", icon="minecraft:zombie_head", after=["dummy_drills"],
           text=["The first proper contract: the outskirts of a village crawl with zombies of every odd variety. Put "
@@ -64,8 +64,7 @@ Q = [
                  {"kill": "minecraft:zombie", "count": 8, "title": "Clear the dead out of the cellar", "spawn": {"at": {"structure": "#yungs_dungeons"}}},
                  {"mine": "minecraft:spawner", "title": "Break the dungeon's spawner so it stays clear"},
                  {"kill": "minecraft:skeleton", "count": 8, "title": "Clear the bones out of the cellar", "spawn": {"at": {"structure": "#yungs_dungeons"}}}],
-          rewards=[reward_item("minecraft:iron_ingot", 8), reward_item("minecraft:gold_ingot", 4),
-                   reward_item("minecraft:emerald", 4), skill("attack", 200)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:smite': 3}), reward_item("minecraft:emerald", 4), skill("attack", 200)]),
 
     quest("spider_queen", "Silk and Venom", icon="minecraft:spider_eye", after=["dungeon_sweep"],
           text=["A spider dungeon has been sending its brood into the fields. Clear it, and cut the poison sac "
@@ -99,15 +98,15 @@ Q = [
 ]
 
 ACT2 = [
-    quest("bandit_towers", "Bandit Country", icon="bountiful:bounty-uncommon",
+    quest("bandit_towers", "Bandit Country", icon="bountiful:bounty",
           after=["graveyard_shift", "main_story:act2_start"],
           text=["An uncommon bounty: illager bandits have built towers over a trade road. Take them down and claim "
                 "their banner as proof."],
           tasks=[fight("minecraft:pillager", 8, "dungeons_arise:bandit_towers", "Tower Bandits",
                        "Take the bandits down for the trade road's merchants"),
                  search("dungeons_arise:bandit_towers", 1, "Bandit Banner", "A bandit banner, torn from a tower wall.",
-                        texture="minecraft:item/white_banner", title="Claim a banner as proof for the bounty")],
-          rewards=[reward_item("bountiful:bounty-uncommon"), skill("attack", 250)]),
+                        texture="alexsmobs:item/end_pirate_flag", title="Claim a banner as proof for the bounty")],
+          rewards=[reward_item("minecraft:emerald", 12), skill("attack", 250)]),
 
     quest("skelewag", "Wanted: the Skelewag", icon="alexsmobs:skelewag_sword", after=["feral_bounty"],
           text=["Sailors want a skelewag dead, a skeletal pirate fish that rams boats over shipwrecks. Hunt it in "
@@ -126,7 +125,7 @@ ACT2 = [
                        wave=1),
                  sample("the Witch's Hat", ["minecraft:witch"], 0.7, texture="minecraft:item/leather_helmet",
                         tooltip="Proof for the village")],
-          rewards=[reward_item("minecraft:splash_potion", 3), skill("attack", 280)]),
+          rewards=[reward_item("irons_spellbooks:greater_healing_potion", 2), skill("attack", 280)]),
 
     quest("arena_ladder", "The Arena Ladder", icon="artifacts:power_glove", after=["bandit_towers"],
           signature="artifacts:power_glove",
@@ -143,7 +142,7 @@ ACT2 = [
                 "knock its occupants off the edge. A piston-spring trinket waits at the top."],
           tasks=[fight("minecraft:vex", 6, "dungeons_arise:aviary", "Aviary Nesters", "Clear the nesters off the aviary's tiers"),
                  search("dungeons_arise:aviary", 1, "the Aviary Trinket", "A spring-loaded trinket, left at the top.",
-                        texture="minecraft:item/piston", title="Search the top for the piston-spring trinket")],
+                        texture="minecraft:block/piston_side", title="Search the top for the piston-spring trinket")],
           rewards=[reward_item("artifacts:pocket_piston"), skill("attack", 300)]),
 
     quest("weapon_master", "Master of Arms", icon="spartanweaponry:diamond_halberd", after=["arena_ladder"],
@@ -170,20 +169,20 @@ ACT2 = [
 ]
 
 ACT3 = [
-    quest("fortress_contract", "Epic Contract: the Fortress", icon="bountiful:bounty-epic",
+    quest("fortress_contract", "Epic Contract: the Fortress", icon="bountiful:bounty",
           after=["hunter_trail", "main_story:act3_start"],
           text=["An epic bounty from the board: wither skeletons have overrun a Nether fortress. Kill twenty and "
                 "bring three skulls as proof."],
           tasks=[{"structure": "betterfortresses:fortress", "title": "Find the overrun Nether fortress"},
                  fight("minecraft:wither_skeleton", 20, "betterfortresses:fortress", "Overrunning Skeletons", "Cull the fortress's wither skeletons", wave=5),
                  item("minecraft:wither_skeleton_skull", 3, title="Bring three skulls as proof")],
-          rewards=[reward_item("bountiful:bounty-epic"), skill("attack", 450)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={"minecraft:looting": 3}), skill("attack", 450)]),
 
     quest("brute_force", "Brute Force", icon="minecraft:piglin_brute_spawn_egg", after=["fortress_contract"],
           text=["Piglin brutes guard a bastion's treasure room. A rare bounty wants five of them dead, without golden "
                 "armour to hide behind."],
           tasks=[fight("minecraft:piglin_brute", 5, "minecraft:bastion_remnant", "Treasure-Room Brutes", "Put down five brutes guarding the treasure room")],
-          rewards=[reward_item("bountiful:bounty-rare"), skill("attack", 480)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={"minecraft:sharpness": 4}), skill("attack", 480)]),
 
     quest("fire_bounty", "The Burning Revenant", icon="artifacts:fire_gauntlet", after=["fortress_contract"],
           signature="artifacts:fire_gauntlet",
@@ -220,14 +219,14 @@ ACT4 = [
           tasks=[{"structure": "dungeons_arise:coliseum", "title": "Enter the great coliseum"},
                  fight("minecraft:vindicator", 10, "dungeons_arise:coliseum", "Coliseum Champions", "Win the early rounds of the ladder", wave=5),
                  fight("minecraft:ravager", 2, "dungeons_arise:coliseum", "Coliseum Beasts", "Win the beast round at the top", wave=1)],
-          rewards=[reward_item("spartanweaponry:netherite_longsword"), skill("attack", 700)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:netherite_longsword", name="Champion's Blade", lore=['Won on the sand, not given.'], enchant={'minecraft:sharpness': 4, 'minecraft:unbreaking': 3}), reward_item("spartanshields:netherite_basic_shield", name="Champion's Shield", lore=['The crowd chanted behind it.'], enchant={'minecraft:unbreaking': 3}), reward_item("spartanweaponry:netherite_battle_hammer", name="Champion's Hammer", lore=['Ended the last round in one.'], enchant={'minecraft:sharpness': 4, 'minecraft:unbreaking': 3})], "title": "Choose one"}, skill("attack", 700)]),
 
-    quest("plague_asylum", "The Plague Asylum", icon="bountiful:bounty-epic", after=["coliseum"],
+    quest("plague_asylum", "The Plague Asylum", icon="bountiful:bounty", after=["coliseum"],
           text=["Nobody who goes into the plague asylum comes out. A legendary bounty is posted on whatever lives "
                 "there. Clear it."],
           tasks=[{"structure": "dungeons_arise:plague_asylum", "title": "Enter the plague asylum"},
                  fight("minecraft:zombie_villager", 12, "dungeons_arise:plague_asylum", "Asylum Sick", "Clear what lives in the asylum", wave=6)],
-          rewards=[reward_item("bountiful:bounty-epic", 2), skill("attack", 740)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={"minecraft:smite": 5}), reward_item("minecraft:emerald", 24), skill("attack", 740)]),
 
     quest("void_contract", "Contract in the Void", icon="minecraft:shulker_shell", after=["plague_asylum"],
           text=["Even the End gets bounties. Clear an End city's towers of shulkers and endermen for a client who "
@@ -258,9 +257,7 @@ ACT5 = [
                 "hands over his blade and the office with it."],
           tasks=[talk_char("corvin", ["The last contract. My name, retired.", "Take the blade, and the office. Hunt well."],
                            title="Take Ash's last contract and his blade")],
-          rewards=[reward_item("spartanweaponry:netherite_longsword", name="Ash's Verdict", lore=["The last contract."],
-                               enchant={"minecraft:sharpness": 5, "minecraft:looting": 3, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
-                   skill("attack", 1000)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:netherite_longsword", name="Ash's Verdict", lore=['Every contract, signed.'], enchant={'minecraft:sharpness': 5, 'minecraft:looting': 3, 'minecraft:fire_aspect': 2}, unbreakable=True), reward_item("spartanweaponry:netherite_battleaxe", name="Ash's Reckoning", lore=['For the debts nobody else would collect.'], enchant={'minecraft:sharpness': 5, 'minecraft:looting': 3}, unbreakable=True), reward_item("spartanweaponry:netherite_katana", name="Ash's Quiet Work", lore=['Quick enough that you hear it afterwards.'], enchant={'minecraft:sharpness': 5, 'minecraft:sweeping': 3}, unbreakable=True)], "title": "Choose one"}, skill("attack", 1000)]),
 ]
 
 chapter("skill_attack", "The Bounty Office", "Attack path", "minecraft:iron_sword", "skills", 6, Q + ACT2 + ACT3 + ACT4 + ACT5)

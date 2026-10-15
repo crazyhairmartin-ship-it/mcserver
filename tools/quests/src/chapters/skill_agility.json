@@ -21,7 +21,7 @@
           ]
         },
         {
-          "item": "fotfmail:letter_signed",
+          "item": "fotfmail:letter",
           "consume": true,
           "title": "Sign a letter for delivery"
         },
@@ -48,7 +48,7 @@
           "xp": 60
         }
       ],
-      "icon": "fotfmail:letter_signed",
+      "icon": "fotfmail:letter",
       "giver": {
         "type": "org",
         "org": "couriers",
@@ -70,7 +70,7 @@
       ],
       "tasks": [
         {
-          "item": "fotfmail:letter_signed",
+          "item": "fotfmail:letter",
           "title": "Take the morning post"
         },
         {
@@ -408,7 +408,7 @@
       ],
       "tasks": [
         {
-          "item": "fotfmail:letter_signed",
+          "item": "fotfmail:letter",
           "title": "Take the urgent letter"
         },
         {
@@ -591,7 +591,8 @@
           "count": 4
         },
         {
-          "item": "minecraft:golden_apple"
+          "item": "irons_spellbooks:greater_healing_potion",
+          "count": 2
         },
         {
           "skill": "agility",
@@ -611,8 +612,9 @@
       ],
       "tasks": [
         {
-          "item": "smallships:oak_rowboat",
-          "crafted": true
+          "item": "minecraft:oak_boat",
+          "crafted": true,
+          "title": "Build a rowboat"
         },
         {
           "item": "smallships:oak_cog",
@@ -1503,7 +1505,13 @@
       "rewards": [
         {
           "item": "minecraft:firework_rocket",
-          "count": 32
+          "count": 16
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:feather_falling": 4
+          }
         },
         {
           "skill": "agility",
@@ -1621,18 +1629,44 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:netherite_boots",
-          "name": "Juniper's Seven-League Boots",
-          "lore": [
-            "The Couriers' oldest treasure."
+          "choice": [
+            {
+              "item": "irons_spellbooks:speed_boots",
+              "name": "Juniper's Seven-League Boots",
+              "lore": [
+                "Every road is shorter in them."
+              ],
+              "enchant": {
+                "minecraft:feather_falling": 4,
+                "minecraft:depth_strider": 3,
+                "minecraft:soul_speed": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "icarus:white_feathered_wings",
+              "name": "The Couriers' Pinions",
+              "lore": [
+                "Juniper carried the post on these."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "grapplemod:grapplinghook",
+              "name": "Juniper's Line",
+              "lore": [
+                "Always finds a hold."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            }
           ],
-          "enchant": {
-            "minecraft:feather_falling": 4,
-            "minecraft:depth_strider": 3,
-            "minecraft:soul_speed": 3,
-            "minecraft:unbreaking": 3,
-            "minecraft:mending": 1
-          }
+          "title": "Choose one"
         },
         {
           "skill": "agility",
