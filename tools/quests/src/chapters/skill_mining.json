@@ -105,7 +105,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_pickaxe"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:efficiency": 2
+          }
         },
         {
           "skill": "mining",
@@ -278,8 +281,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:cooked_beef",
-          "count": 16
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:fortune": 2
+          }
         },
         {
           "skill": "mining",
@@ -499,14 +504,12 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:diamond_pickaxe",
-          "name": "The Foreman's Pick",
-          "lore": [
-            "From the rescued crew's foreman."
-          ],
+          "item": "minecraft:enchanted_book",
           "enchant": {
-            "minecraft:efficiency": 3
-          }
+            "minecraft:efficiency": 4,
+            "minecraft:unbreaking": 3
+          },
+          "name": "The Foreman's Pick"
         },
         {
           "skill": "mining",
@@ -847,6 +850,10 @@
       ],
       "rewards": [
         {
+          "item": "irons_spellbooks:cinder_essence",
+          "count": 2
+        },
+        {
           "item": "minecraft:magma_cream",
           "count": 6
         },
@@ -1112,13 +1119,13 @@
       ],
       "tasks": [
         {
-          "item": "minecraft:quartz",
-          "count": 64,
+          "mine": "minecraft:nether_quartz_ore",
+          "count": 24,
           "title": "Mine nether quartz for the contract"
         },
         {
-          "item": "minecraft:gold_nugget",
-          "count": 32,
+          "mine": "minecraft:nether_gold_ore",
+          "count": 12,
           "title": "Mine nether gold ore for nuggets"
         },
         {
@@ -1129,8 +1136,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:emerald",
-          "count": 16
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:fortune": 3
+          }
         },
         {
           "skill": "mining",
@@ -1200,8 +1209,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:deepslate_tiles",
-          "count": 64
+          "item": "minecraft:diamond",
+          "count": 4
         },
         {
           "skill": "mining",
@@ -1405,17 +1414,42 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:netherite_pickaxe",
-          "name": "Lifeline",
-          "lore": [
-            "The guild's oldest pick, reforged."
+          "choice": [
+            {
+              "item": "minecraft:netherite_pickaxe",
+              "name": "Lifeline",
+              "lore": [
+                "It always finds the way back up."
+              ],
+              "enchant": {
+                "minecraft:efficiency": 5,
+                "minecraft:fortune": 3,
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "spartanweaponry:netherite_battle_hammer",
+              "name": "Lifeline's Hammer",
+              "lore": [
+                "Breaks stone, props beams."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 4,
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "alexscaves:galena_gauntlet",
+              "name": "Guildmaster's Gauntlet",
+              "lore": [
+                "Hums near ore."
+              ],
+              "unbreakable": true
+            }
           ],
-          "enchant": {
-            "minecraft:efficiency": 5,
-            "minecraft:fortune": 3,
-            "minecraft:unbreaking": 3,
-            "minecraft:mending": 1
-          }
+          "title": "Choose one"
         },
         {
           "skill": "mining",

@@ -59,7 +59,7 @@ Q = [
           text=["Catalogue the wildflowers of the temperate lands, one of each pressed in your journal."],
           tasks=[item("bloomingnature:bluebell"), item("regions_unexplored:blue_lupine"), item("bloomingnature:gladiolus"),
                  item("bloomingnature:white_orchid")],
-          rewards=[reward_item("meadow:big_flower_pot"), skill("forage", 150)]),
+          rewards=[reward_item("meadow:wooden_flower_pot_big"), skill("forage", 150)]),
 
     quest("wandering_gardener", "The Wandering Gardener", icon="bloomingnature:chestnut_sapling",
           after=["bloom_catalogue"],
@@ -194,7 +194,7 @@ ACT3 = [
                  item("minecraft:warped_fungus", title="Gather warped fungus"),
                  item("biomesoplenty:burning_blossom", title="Pick a burning blossom"),
                  item("biomesoplenty:hellbark_sapling", title="Take a hellbark sapling")],
-          rewards=[reward_item("minecraft:magma_cream", 4), skill("forage", 400)]),
+          rewards=[reward_item("irons_spellbooks:nature_rune"), skill("forage", 400)]),
 
     quest("dying_grove", "The Dying Grove", icon="biomesoplenty:flowering_oak_sapling", after=["nether_botany"],
           text=["The Herbalists' sacred grove near Reece is withering into dead forest. Clear the dead logs, cure the "
@@ -253,9 +253,7 @@ ACT5 = [
                 "only on dead wood."],
           tasks=[talk_char("rue", ["Greenwarden of the wild lands. I worry you'll do it wonderfully.", "The axe is only for dead wood. Please."],
                            title="Be named Greenwarden by Mother Rue")],
-          rewards=[reward_item("minecraft:netherite_axe", name="Greenwarden", lore=["Only for dead wood."], unbreakable=True,
-                               enchant={"minecraft:efficiency": 5, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
-                   skill("forage", 1000)]),
+          rewards=[{"choice": [reward_item("minecraft:netherite_axe", name='Greenwarden', lore=['It fells only what is ready to fall.'], enchant={'minecraft:efficiency': 5, 'minecraft:unbreaking': 3}, unbreakable=True), reward_item("irons_spellbooks:druidic_spell_book", name="Greenwarden's Grimoire", lore=['Smells of rain and old roots.']), reward_item("spartanweaponry:netherite_quarterstaff", name="Greenwarden's Staff", lore=['A branch that never rots.'], enchant={'minecraft:sharpness': 4, 'minecraft:unbreaking': 3}, unbreakable=True)], "title": "Choose one"}, skill("forage", 1000)]),
 ]
 
 chapter("skill_foraging", "The Herbalists", "Foraging path", "minecraft:oak_sapling", "skills", 4, Q + ACT2 + ACT3 + ACT4 + ACT5)

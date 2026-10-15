@@ -182,16 +182,16 @@ ACT3 = [
                         texture="minecraft:item/chest_minecart", title="Dig up the lockbox the note names")],
           rewards=[reward_item("aquaculture:lockbox"), skill("fish", 250)]),
 
-    quest("night_heat", "The Lantern Heat", icon="aquaculture:glowstone_hook", after=["neptunes_bounty", "main_story:act3_start"],
+    quest("night_heat", "The Lantern Heat", icon="aquaculture:redstone_hook", after=["neptunes_bounty", "main_story:act3_start"],
           text=["A heat held only at night. Fit a glowstone hook and fish after dark for jellyfish, then for the "
                 "glowing heat token that only bites under the stars."],
-          tasks=[item("aquaculture:glowstone_hook", title="Fit a glowstone hook"),
+          tasks=[item("aquaculture:redstone_hook", title="Fit a redstone hook"),
                  {"be": {"night": True}, "title": "Wait for night to fall over the water"},
                  item("aquaculture:jellyfish", 2, title="Fish after dark for jellyfish"),
                  {"drop": {"from": ["fishing"], "chance": 0.12,
                            "item": {"name": "The Heat Token", "texture": "minecraft:item/glowstone_dust", "tooltip": "Only bites under the stars"}},
                   "consume": False, "title": "Land the glowing heat token"}],
-          rewards=[reward_item("aquaculture:glowstone_hook"), skill("fish", 450)]),
+          rewards=[reward_item("aquaculture:light_hook"), skill("fish", 450)]),
 
     quest("ruin_waters", "Waters Over the Ruins", icon="aquaculture:neptunium_fishing_rod", after=["night_heat"],
           text=["Forge a neptunium rod and fish above a sunken ruin where the best fish gather, while drowned rise "
@@ -216,7 +216,7 @@ ACT3 = [
           text=["Fishermen whisper of an undead pirate ship that drifts where the championship will be held. Find "
                 "it and put its crew to rest."],
           tasks=[fight("minecraft:skeleton", 8, "dungeons_arise:undead_pirate_ship", "Ghost Crew", "Put the undead pirate crew to rest", wave=4)],
-          rewards=[reward_item("minecraft:spyglass", name="The Pirate's Spyglass"), reward_item("minecraft:gold_ingot", 12), skill("fish", 480)]),
+          rewards=[reward_item("minecraft:spyglass", name="The Pirate's Spyglass"), reward_item("minecraft:gold_ingot", 12), reward_item("aquaculture:neptunium_ingot", 4), skill("fish", 480)]),
 
     quest("trophy_wall", "The Trophy Wall", icon="aquaculture:oak_fish_mount", after=["ruin_waters"],
           text=["The society hall in Reece has an empty wall. Mount three of your best catches on fish mounts."],
@@ -252,7 +252,7 @@ ACT4 = [
                            "item": {"name": "Old Whiskers", "texture": "minecraft:item/cod", "tooltip": "A catfish as big as a boat"}},
                   "consume": False, "title": "Lure Old Whiskers up from the deep"},
                  item("aquaculture:catfish_bucket", title="Land him alive in a bucket")],
-          rewards=[reward_item("aquaculture:obsidian_hook"), skill("fish", 700)]),
+          rewards=[reward_item("aquaculture:heavy_hook"), skill("fish", 700)]),
 
     quest("semi_final", "The Lighthouse Semi-Final", icon="minecraft:lantern", after=["almanac", "old_whiskers"],
           text=["The semi-final at a lighthouse, against Silas and the champions of two other villages: the first to "
@@ -287,9 +287,7 @@ ACT5 = [
                   "consume": False, "title": "Land a deepling's catch nobody has landed"},
                  talk_char("halloway", ["A deepling's catch. Nobody's ever landed one.", "The society's own rod is yours."],
                            title="Show the Commodore your impossible catch")],
-          rewards=[reward_item("aquaculture:neptunium_fishing_rod", name="Tidecaller", lore=["The society's own rod."],
-                               enchant={"minecraft:luck_of_the_sea": 3, "minecraft:lure": 3, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
-                   skill("fish", 1000)]),
+          rewards=[{"choice": [reward_item("aquaculture:neptunium_fishing_rod", name='Tidecaller', lore=['The sea answers when it casts.'], enchant={'minecraft:lure': 3, 'minecraft:luck_of_the_sea': 3, 'minecraft:unbreaking': 3}, unbreakable=True), reward_item("aquaculture:neptunium_sword", name="Tidecaller's Edge", lore=['Salt on the blade, always.'], enchant={'minecraft:sharpness': 5, 'minecraft:looting': 3}, unbreakable=True), reward_item("aquaculture:neptunium_bow", name="Tidecaller's Reach", lore=['Its arrows run true underwater.'], enchant={'minecraft:power': 5, 'minecraft:infinity': 1}, unbreakable=True)], "title": "Choose one"}, skill("fish", 1000)]),
 ]
 
 chapter("skill_fishing", "The Anglers' Society", "Fishing path", "minecraft:fishing_rod", "skills", 2, Q + ACT2 + ACT3 + ACT4 + ACT5)

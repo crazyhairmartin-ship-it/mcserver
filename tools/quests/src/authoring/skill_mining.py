@@ -22,7 +22,7 @@ Q = [
           tasks=[encounter(["I thought nobody was coming!", "The whole roof just... went. Thank you. I'll follow you "
                                                             "out."],
                            entity="minecraft:villager", name="Trapped Apprentice", where={"below_y": 50})],
-          rewards=[reward_item("minecraft:iron_pickaxe"), skill("mining", 100)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:efficiency': 2}), skill("mining", 100)]),
 
     quest("shoring_up", "Shoring Up", icon="minecraft:scaffolding", after=["canary_call"],
           text=["After the scare the guild drills its crews in safety: ladders, scaffolding, and plenty of light."],
@@ -55,7 +55,7 @@ Q = [
     quest("vein_breaker", "Vein Breaker", icon="minecraft:iron_ore", after=["iron_seam"],
           text=["The guild's best miners break a whole vein in one swing. Hold the Ultimine key and try it."],
           tasks=[item("minecraft:coal", 64), item("minecraft:raw_iron", 32)],
-          rewards=[reward_item("minecraft:cooked_beef", 16), skill("mining", 150)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:fortune': 2}), skill("mining", 150)]),
 
     quest("alpine_prospect", "Alpine Prospect", icon="meadow:alpine_iron_ore", after=["vein_breaker"],
           text=["A prospector's letter speaks of ore in the high peaks. Climb the tallest mountains and mine alpine "
@@ -98,8 +98,7 @@ ACT2 = [
                  enc(["My lamp died. Please, the lift!"], then="escort", entity="minecraft:villager",
                      name="Survey Foreman", to={"structure": "#mining_camps", "label": "the camp"},
                      title="Lead the foreman out")],
-          rewards=[reward_item("minecraft:diamond_pickaxe", name="The Foreman's Pick", lore=["From the rescued crew's foreman."],
-                               enchant={"minecraft:efficiency": 3}), skill("mining", 250)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:efficiency': 4, 'minecraft:unbreaking': 3}, name="The Foreman's Pick"), skill("mining", 250)]),
 
     quest("deepslate_descent", "Into the Deepslate", icon="minecraft:deepslate_diamond_ore", after=["lost_crew"],
           text=["The guild's next shaft goes below Y -32. Mine down into the deepslate for diamond ore and cobbled "
@@ -169,7 +168,7 @@ ACT2 = [
                             "waves": [{"entity": "minecraft:blaze", "count": 2, "every": 45}],
                             "lines": ["The seams are spitting fire. Hold the gallery!"], "start": "Hold the gallery"},
                   "title": "Hold the gallery until the miners are out"}],
-          rewards=[reward_item("minecraft:magma_cream", 6), reward_item("minecraft:raw_gold", 8), skill("mining", 350)]),
+          rewards=[reward_item("irons_spellbooks:cinder_essence", 2), reward_item("minecraft:magma_cream", 6), reward_item("minecraft:raw_gold", 8), skill("mining", 350)]),
 
     quest("surveyors_glass", "The Surveyor's Glass", icon="minecraft:spyglass", after=["deepslate_descent"],
           text=["The guild surveyor wants to read the deep rock. Crack open an amethyst geode, bring amethyst shards "
@@ -229,7 +228,7 @@ ACT3 = [
           tasks=[{"mine": "minecraft:nether_quartz_ore", "count": 24, "title": "Mine nether quartz for the contract"},
                  {"mine": "minecraft:nether_gold_ore", "count": 12, "title": "Mine nether gold ore for nuggets"},
                  item("minecraft:gilded_blackstone", 16, title="Take gilded blackstone from a bastion")],
-          rewards=[reward_item("minecraft:emerald", 16), skill("mining", 450)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:fortune': 3}), skill("mining", 450)]),
 
     quest("netherite_pick", "Netherite Pick", icon="minecraft:netherite_pickaxe", after=["ancient_debris"],
           text=["Smelt your debris to scrap, alloy an ingot, and upgrade your diamond pickaxe at a smithing table: "
@@ -245,7 +244,7 @@ ACT4 = [
           text=["For the memorial and the guild's new deep doors: obsidian and crying obsidian, cut cleanly."],
           tasks=[item("minecraft:obsidian", 64, title="Cut obsidian for the guild's deep doors"),
                  item("minecraft:crying_obsidian", 16, title="Cut crying obsidian for the memorial")],
-          rewards=[reward_item("minecraft:deepslate_tiles", 64), skill("mining", 700)]),
+          rewards=[reward_item("minecraft:diamond", 4), skill("mining", 700)]),
 
     quest("great_collapse", "The Great Collapse", icon="minecraft:diamond_block", after=["main_story:act4_start", "forge_cold", "lost_journal"],
           text=["The deepest rescue: the old mine under Reece gives way at Y -58 with seven miners below. Reach "
@@ -283,9 +282,7 @@ ACT5 = [
                 "reforged."],
           tasks=[talk_char("dagna", ["Master of Rescues, aye. The oldest pick, reforged.", "Dinnae lose it, lass."],
                            title="Be named Master of Rescues by Dagna")],
-          rewards=[reward_item("minecraft:netherite_pickaxe", name="Lifeline", lore=["The guild's oldest pick, reforged."],
-                               enchant={"minecraft:efficiency": 5, "minecraft:fortune": 3, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
-                   skill("mining", 1000)]),
+          rewards=[{"choice": [reward_item("minecraft:netherite_pickaxe", name='Lifeline', lore=['It always finds the way back up.'], enchant={'minecraft:efficiency': 5, 'minecraft:fortune': 3, 'minecraft:unbreaking': 3}, unbreakable=True), reward_item("spartanweaponry:netherite_battle_hammer", name="Lifeline's Hammer", lore=['Breaks stone, props beams.'], enchant={'minecraft:sharpness': 4, 'minecraft:unbreaking': 3}, unbreakable=True), reward_item("alexscaves:galena_gauntlet", name="Guildmaster's Gauntlet", lore=['Hums near ore.'], unbreakable=True)], "title": "Choose one"}, skill("mining", 1000)]),
 ]
 
 chapter("skill_mining", "The Miners' Guild", "Mining path", "minecraft:iron_pickaxe", "skills", 0, Q + ACT2 + ACT3 + ACT4 + ACT5)

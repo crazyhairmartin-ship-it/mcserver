@@ -28,7 +28,7 @@ Q = [
                                                     "Just give me something to sow."]),
                  item("minecraft:carrot", 16, consume=True), item("minecraft:potato", 16, consume=True),
                  item("minecraft:beetroot_seeds", 16, consume=True)],
-          rewards=[reward_item("minecraft:iron_hoe"), skill("farm", 100)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:efficiency': 3}), skill("farm", 100)]),
 
     quest("spring_planting", "Spring Planting", icon="farm_and_charm:strawberry", after=["scarecrow", "wild_seeds"],
           text=["The festival is announced for the autumn, and the co-op's spring planting begins."],
@@ -102,7 +102,7 @@ ACT2 = [
                   "title": "Plant the co-op's orchard"},
                  item("minecraft:apple", 8, title="Harvest apples from the orchard"),
                  item("vinery:apple_juice", crafted=True, title="Press apple juice for the co-op")],
-          rewards=[reward_item("vinery:apple_bag"), reward_item("vinery:applesauce", 4), skill("farm", 280)]),
+          rewards=[reward_item("vinery:apple_bag"), reward_item("vinery:apple_juice", 4), skill("farm", 280)]),
 
     quest("field_wont_grow", "The Field That Won't Grow", icon="artifacts:rooted_boots",
           after=["rich_soil", "main_story:act2_start"], signature="artifacts:rooted_boots",
@@ -191,8 +191,8 @@ ACT3 = [
           tasks=[{"biome": "minecraft:snowy_taiga", "title": "Go to the cold where taiga grapes ripen"},
                  item("vinery:taiga_grape_seeds_white", 2, title="Take taiga grape seeds"),
                  item("vinery:cherry_wine", consume=True, title="Age a cherry wine in the cellar"),
-                 item("vinery:big_bottle", title="Age the eiswein in a big bottle")],
-          rewards=[reward_item("vinery:big_bottle"), skill("farm", 430)]),
+                 item("vinery:eiswein", title="Age a bottle of eiswein")],
+          rewards=[reward_item("vinery:eiswein", 2), reward_item("vinery:wine_bottle", 16), skill("farm", 430)]),
 ]
 
 ACT4 = [
@@ -234,14 +234,12 @@ ACT5 = [
                  item("vinery:red_wine", 2, consume=True, title="Bring the festival's wine"),
                  item("meadow:piece_of_cheese", 4, consume=True, title="Bring the festival's cheese"),
                  talk_char("marta", ["The Harvest Festival! Everyone you fed is here! Have a crown!"], title="Open the Harvest Festival with Marta")],
-          rewards=[reward_item("minecraft:leather_helmet", name="The Festival Crown", lore=["A straw hat for a harvest queen."]), skill("farm", 950)]),
+          rewards=[reward_item("irons_spellbooks:gold_crown", name='The Festival Crown', lore=['Woven with the last of the wheat.']), skill("farm", 950)]),
 
     quest("harvest_moon", "Harvest Moon", icon="minecraft:netherite_hoe", after=["harvest_festival"],
           text=["The co-op's leader names you Master Grower and gives you the hoe that cut the first sheaf."],
           tasks=[talk_char("marta", ["Master Grower! The hoe that cut the first sheaf. Oh, I'm crying!"], title="Be named Master Grower by Marta")],
-          rewards=[reward_item("minecraft:netherite_hoe", name="Harvest Moon", lore=["It cut the first sheaf."],
-                               enchant={"minecraft:fortune": 3, "minecraft:efficiency": 5, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
-                   skill("farm", 1000)]),
+          rewards=[{"choice": [reward_item("minecraft:netherite_hoe", name='Harvest Moon', lore=['It tills under moonlight.'], enchant={'minecraft:efficiency': 5, 'minecraft:fortune': 3}, unbreakable=True), reward_item("spartanweaponry:netherite_scythe", name='Harvest Moon Scythe', lore=['One sweep takes the whole field.'], enchant={'minecraft:sharpness': 5, 'minecraft:looting': 3}, unbreakable=True), reward_item("minecraft:enchanted_book", enchant={'minecraft:mending': 1}, name='Harvest Moon')], "title": "Choose one"}, skill("farm", 1000)]),
 ]
 
 chapter("skill_farming", "The Growers' Co-op", "Farming path", "minecraft:wheat", "skills", 1, Q + ACT2 + ACT3 + ACT4 + ACT5)

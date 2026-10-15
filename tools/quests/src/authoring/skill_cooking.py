@@ -58,7 +58,7 @@ Q = [
 
     quest("wandering_baker", "The Wandering Baker", icon="bakery:chocolate_gateau", after=["bakers_dozen"],
           text=["A cart that smells of cinnamon is coming up the road."],
-          tasks=[encounter(["Jam! Do you have jam? I'll trade you anything.", "Take my gateau recipe. There's a bakery out west you should see."], entity="bakery:wandering_baker", name="The Wandering Baker"),
+          tasks=[encounter(["Jam! Do you have jam? I'll trade you anything.", "Take my gateau recipe. There's a bakery out west you should see."], entity="minecraft:wandering_trader", name="The Wandering Baker"),
                  item("bakery:strawberry_jam", 2, consume=True)],
           rewards=[reward_item("bakery:chocolate_jam", 2), reward_item("bakery:cake_stand"), skill("cook", 150)]),
 
@@ -146,10 +146,10 @@ ACT2 = [
                   "title": "Reach the tavern before the food goes cold"}],
           rewards=[reward_item("camping:small_backpack"), skill("cook", 300)]),
 
-    quest("greenwood_pub", "The Greenwood Pub", icon="brewery:small_barrel", after=["hot_delivery"],
+    quest("greenwood_pub", "The Greenwood Pub", icon="brewery:beer_mug", after=["hot_delivery"],
           text=["The greenwood pub in the deep forest is the last tavern on the network map. Bring its keeper a "
                 "barrel of your best beer and find out why no one has heard from them."],
-          tasks=[item("brewery:small_barrel", consume=True, title="Bring a barrel of your best beer"),
+          tasks=[item("brewery:beer_mug", consume=True, title="Bring a mug of your best beer"),
                  {"structure": "dungeons_arise:greenwood_pub", "title": "Find the greenwood pub in the deep forest"},
                  search("dungeons_arise:greenwood_pub", 1, "the Pub's Secret Ale Recipe", "A stained recipe, tucked in a barrel.",
                         title="Search the pub for why it went silent")],
@@ -176,7 +176,7 @@ ACT3 = [
           tasks=[item("brewery:copper_brewingstation", crafted=True, title="Upgrade to a copper brewing station"),
                  item("brewery:whiskey_highland_hearth", title="Age a Highland Hearth whiskey"),
                  item("brewery:whiskey_smokey_reverie", title="Age a Smokey Reverie whiskey")],
-          rewards=[reward_item("brewery:small_barrel"), skill("cook", 400)]),
+          rewards=[reward_item("brewery:barrel_main"), skill("cook", 400)]),
 
     quest("nether_kitchen", "The Nether Kitchen", icon="candlelight:fillet_steak", after=["main_story:act3_start", "hot_delivery"],
           text=["An expedition camped near a Nether fortress is living on mushrooms. Cook glowing wine, steak and "
@@ -208,7 +208,7 @@ ACT3 = [
                  item("minecraft:rabbit_stew", consume=True, title="Make a hearty stew to nurse him through the night"),
                  enc(["Better... much better. Take my top hat. I'll not need it."], entity="minecraft:villager", name="Feverish Traveller",
                      title="Nurse the feverish traveller through the night")],
-          rewards=[reward_item("herbalbrews:flask"), reward_item("minecraft:leather_helmet", name="The Traveller's Top Hat"), skill("cook", 440)]),
+          rewards=[reward_item("herbalbrews:flask"), reward_item("candlelight:cooking_hat", name="The Traveller's Top Hat", lore=['Left behind by a grateful guest.']), skill("cook", 440)]),
 ]
 
 ACT4 = [
@@ -259,9 +259,7 @@ ACT5 = [
                 "down."],
           tasks=[talk_char("bess", ["Head of the Table. You've earned it.", "Take the knife. Don't cut yourself, love."],
                            title="Be named Head of the Table by Bess")],
-          rewards=[reward_item("spartanweaponry:netherite_dagger", name="The Last Course", lore=["Passed down from mentor to mentor."],
-                               enchant={"minecraft:sharpness": 5, "minecraft:looting": 3, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
-                   skill("cook", 1000)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:netherite_dagger", name='The Last Course', lore=['Carves the roast and settles the argument.'], enchant={'minecraft:sharpness': 5, 'minecraft:looting': 3}, unbreakable=True), reward_item("farmersdelight:netherite_knife", name="The Chef's Last Word", lore=['Never needs a second cut.'], enchant={'minecraft:sharpness': 4, 'minecraft:unbreaking': 3}, unbreakable=True), reward_item("candlelight:chefs_jacket", name="The Grand Chef's Jacket", lore=['Spotless, whatever the night.'], unbreakable=True)], "title": "Choose one"}, skill("cook", 1000)]),
 ]
 
 chapter("skill_cooking", "The Tavern Keepers", "Cooking path", "farmersdelight:cooking_pot", "skills", 3, Q + ACT2 + ACT3 + ACT4 + ACT5)

@@ -315,7 +315,7 @@
       "tasks": [
         {
           "encounter": {
-            "entity": "bakery:wandering_baker",
+            "entity": "minecraft:wandering_trader",
             "name": "The Wandering Baker",
             "then": "talk",
             "lines": [
@@ -769,9 +769,9 @@
       ],
       "tasks": [
         {
-          "item": "brewery:small_barrel",
+          "item": "brewery:beer_mug",
           "consume": true,
-          "title": "Bring a barrel of your best beer"
+          "title": "Bring a mug of your best beer"
         },
         {
           "structure": "dungeons_arise:greenwood_pub",
@@ -805,7 +805,7 @@
           "xp": 350
         }
       ],
-      "icon": "brewery:small_barrel"
+      "icon": "brewery:beer_mug"
     },
     {
       "id": "campfire_feast",
@@ -896,7 +896,7 @@
       ],
       "rewards": [
         {
-          "item": "brewery:small_barrel"
+          "item": "brewery:barrel_main"
         },
         {
           "skill": "cook",
@@ -1049,8 +1049,11 @@
           "item": "herbalbrews:flask"
         },
         {
-          "item": "minecraft:leather_helmet",
-          "name": "The Traveller's Top Hat"
+          "item": "candlelight:cooking_hat",
+          "name": "The Traveller's Top Hat",
+          "lore": [
+            "Left behind by a grateful guest."
+          ]
         },
         {
           "skill": "cook",
@@ -1271,17 +1274,41 @@
       ],
       "rewards": [
         {
-          "item": "spartanweaponry:netherite_dagger",
-          "name": "The Last Course",
-          "lore": [
-            "Passed down from mentor to mentor."
+          "choice": [
+            {
+              "item": "spartanweaponry:netherite_dagger",
+              "name": "The Last Course",
+              "lore": [
+                "Carves the roast and settles the argument."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 5,
+                "minecraft:looting": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "farmersdelight:netherite_knife",
+              "name": "The Chef's Last Word",
+              "lore": [
+                "Never needs a second cut."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 4,
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "candlelight:chefs_jacket",
+              "name": "The Grand Chef's Jacket",
+              "lore": [
+                "Spotless, whatever the night."
+              ],
+              "unbreakable": true
+            }
           ],
-          "enchant": {
-            "minecraft:sharpness": 5,
-            "minecraft:looting": 3,
-            "minecraft:unbreaking": 3,
-            "minecraft:mending": 1
-          }
+          "title": "Choose one"
         },
         {
           "skill": "cook",

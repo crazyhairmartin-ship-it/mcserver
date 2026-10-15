@@ -290,7 +290,7 @@
       ],
       "rewards": [
         {
-          "item": "meadow:big_flower_pot"
+          "item": "meadow:wooden_flower_pot_big"
         },
         {
           "skill": "forage",
@@ -932,8 +932,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
+          "item": "irons_spellbooks:nature_rune"
         },
         {
           "skill": "forage",
@@ -1184,17 +1183,40 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:netherite_axe",
-          "name": "Greenwarden",
-          "lore": [
-            "Only for dead wood."
+          "choice": [
+            {
+              "item": "minecraft:netherite_axe",
+              "name": "Greenwarden",
+              "lore": [
+                "It fells only what is ready to fall."
+              ],
+              "enchant": {
+                "minecraft:efficiency": 5,
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "irons_spellbooks:druidic_spell_book",
+              "name": "Greenwarden's Grimoire",
+              "lore": [
+                "Smells of rain and old roots."
+              ]
+            },
+            {
+              "item": "spartanweaponry:netherite_quarterstaff",
+              "name": "Greenwarden's Staff",
+              "lore": [
+                "A branch that never rots."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 4,
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            }
           ],
-          "unbreakable": true,
-          "enchant": {
-            "minecraft:efficiency": 5,
-            "minecraft:unbreaking": 3,
-            "minecraft:mending": 1
-          }
+          "title": "Choose one"
         },
         {
           "skill": "forage",
