@@ -21,6 +21,17 @@
    "containers": 1
   }
  },
+ "beachparty:excavated_treasure": {
+  "copies": 3,
+  "lines": [
+   "fotfverify beachparty:excavated_treasure copy 1 at -960,-608 pieces=2 containers=1",
+   "fotfverify beachparty:excavated_treasure copy 2 at 3776,2480 pieces=2 containers=1",
+   "fotfverify beachparty:excavated_treasure copy 3 at -5168,2448 pieces=2 containers=1"
+  ],
+  "mins": {
+   "containers": 1
+  }
+ },
  "beachparty:ritual_circle": {
   "copies": 3,
   "lines": [],
@@ -158,6 +169,17 @@
    "containers": 9
   }
  },
+ "dungeons_arise:illager_campsite": {
+  "copies": 3,
+  "lines": [
+   "fotfverify dungeons_arise:illager_campsite copy 1 at -1904,992 pieces=48 containers=8",
+   "fotfverify dungeons_arise:illager_campsite copy 2 at 7680,1952 pieces=78 containers=13",
+   "fotfverify dungeons_arise:illager_campsite copy 3 at 1104,10624 pieces=66 containers=12"
+  ],
+  "mins": {
+   "containers": 8
+  }
+ },
  "dungeons_arise:lighthouse": {
   "copies": 3,
   "lines": [
@@ -204,6 +226,17 @@
   "lines": [],
   "mins": {
    "containers": 28
+  }
+ },
+ "irons_spellbooks:citadel": {
+  "copies": 3,
+  "lines": [
+   "fotfverify irons_spellbooks:citadel copy 1 at 208,80 pieces=68 containers=30",
+   "fotfverify irons_spellbooks:citadel copy 2 at 1728,256 pieces=81 containers=38",
+   "fotfverify irons_spellbooks:citadel copy 3 at -4704,80 pieces=104 containers=50"
+  ],
+  "mins": {
+   "containers": 30
   }
  },
  "irons_spellbooks:evoker_fort": {
@@ -536,6 +569,17 @@
    "containers": 55
   }
  },
+ "nova_structures:undead_crypt": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:undead_crypt copy 1 at -608,576 pieces=176 containers=250",
+   "fotfverify nova_structures:undead_crypt copy 2 at 2656,2192 pieces=197 containers=321",
+   "fotfverify nova_structures:undead_crypt copy 3 at -4064,2032 pieces=189 containers=308"
+  ],
+  "mins": {
+   "containers": 250
+  }
+ },
  "nova_structures:underground_house": {
   "copies": 3,
   "lines": [
@@ -545,6 +589,17 @@
   ],
   "mins": {
    "containers": 6
+  }
+ },
+ "skyvillages:skyvillage": {
+  "copies": 3,
+  "lines": [
+   "fotfverify skyvillages:skyvillage copy 1 at 64,16 pieces=49 containers=13",
+   "fotfverify skyvillages:skyvillage copy 2 at 3376,32 pieces=44 containers=13",
+   "fotfverify skyvillages:skyvillage copy 3 at -4432,16 pieces=41 containers=13"
+  ],
+  "mins": {
+   "containers": 13
   }
  },
  "structory:old_manor": {
