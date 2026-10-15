@@ -1,0 +1,1388 @@
+{
+  "title": "The Underworld",
+  "subtitle": "Four strange worlds under the stone",
+  "icon": "alexscaves:cave_map",
+  "group": "realms",
+  "order": 1,
+  "quests": [
+    {
+      "id": "rumours_below",
+      "title": "Rumours from Below",
+      "after": [
+        "main_story:act2_start"
+      ],
+      "text": [
+        "A village cartographer speaks of whole worlds under the stone, and sells cave maps. Buy one and let it search out the nearest cave biome."
+      ],
+      "tasks": [
+        {
+          "talk": "villager",
+          "profession": "minecraft:cartographer",
+          "lines": [
+            "Whole worlds under the stone. I sell maps to them.",
+            "Take one. Mind the dark."
+          ],
+          "title": "Ask a cartographer about the worlds below"
+        },
+        {
+          "item": "alexscaves:cave_map",
+          "title": "Buy a cave map to search out the nearest cave biome"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:emerald",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 100
+        }
+      ],
+      "icon": "alexscaves:cave_map"
+    },
+    {
+      "id": "cave_book",
+      "title": "The Spelunker's Notes",
+      "after": [
+        "rumours_below"
+      ],
+      "text": [
+        "Every cave biome is its own world. Craft a Cave Book to keep notes on each, and a Cave Codex as your journal of the underworld."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:cave_book",
+          "crafted": true,
+          "title": "Craft a Cave Book to keep notes in"
+        },
+        {
+          "item": "alexscaves:cave_codex",
+          "crafted": true,
+          "title": "Craft a Cave Codex as your journal"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:cave_codex"
+        },
+        {
+          "skill": "craft",
+          "xp": 150
+        }
+      ],
+      "icon": "alexscaves:cave_codex"
+    },
+    {
+      "id": "primordial_caves",
+      "title": "Lost World",
+      "after": [
+        "rumours_below"
+      ],
+      "text": [
+        "Under the forest roof lies a land of ferns and cycads: the Primordial Caves, home of the dinosaurs."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "biomes": [
+              "alexscaves:primordial_caves"
+            ],
+            "below_y": 60
+          },
+          "title": "Walk under the forest roof into the lost world"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:spyglass",
+      "discover": {
+        "biome": "alexscaves:primordial_caves"
+      }
+    },
+    {
+      "id": "cave_paintings",
+      "title": "Painted Walls",
+      "after": [
+        "primordial_caves"
+      ],
+      "text": [
+        "The cave people left paintings on the primordial walls: hunts, friendships, and a mystery told across panels. Collect the panels and hang them to see what they show."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:cave_painting_ambersol",
+          "title": "Find the amber-sun panel"
+        },
+        {
+          "item": "alexscaves:cave_painting_relicheirus",
+          "title": "Find the relicheirus panel"
+        },
+        {
+          "item": "alexscaves:cave_painting_relicheirus_slash",
+          "title": "Find the slashing panel"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:painting": 3
+            },
+            "radius": 8
+          },
+          "unchecked": true,
+          "title": "Hang the panels to read the mystery"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:dinosaur_pottery_sherd"
+        },
+        {
+          "skill": "agility",
+          "xp": 180
+        }
+      ],
+      "icon": "alexscaves:cave_painting_relicheirus"
+    },
+    {
+      "id": "ancient_groves",
+      "title": "Ancient Groves",
+      "after": [
+        "primordial_caves"
+      ],
+      "text": [
+        "The ancient trees will not last forever. Gather pine nuts and a tree star, then grow a pewen sapling and an ancient sapling of your own."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:pine_nuts",
+          "count": 4,
+          "title": "Gather pine nuts from a pewen"
+        },
+        {
+          "item": "alexscaves:tree_star",
+          "title": "Gather a tree star from an ancient tree"
+        },
+        {
+          "item": "alexscaves:pewen_sapling",
+          "title": "Take a pewen sapling"
+        },
+        {
+          "item": "alexscaves:ancient_sapling",
+          "title": "Take an ancient sapling"
+        },
+        {
+          "build": {
+            "blocks": {
+              "alexscaves:pewen_sapling": 1,
+              "alexscaves:ancient_sapling": 1
+            },
+            "radius": 12
+          },
+          "title": "Plant them where they can grow on"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:pewen_planks",
+          "count": 16
+        },
+        {
+          "skill": "forage",
+          "xp": 200
+        }
+      ],
+      "icon": "alexscaves:pewen_sapling"
+    },
+    {
+      "id": "dino_bowl",
+      "title": "The Dinosaur Bowl",
+      "after": [
+        "primordial_caves"
+      ],
+      "text": [
+        "Look down into a dino bowl and watch grottoceratops herds and relicheirus graze among the tar. The Field Guide wants pictures."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:dino_bowl",
+          "title": "Find a dino bowl"
+        },
+        {
+          "item": "camerapture:camera",
+          "title": "Bring a camera for the Field Guide"
+        },
+        {
+          "photo": {
+            "entity": "alexscaves:grottoceratops"
+          },
+          "title": "Photograph a grottoceratops"
+        },
+        {
+          "photo": {
+            "entity": "alexscaves:relicheirus"
+          },
+          "title": "Photograph a relicheirus"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:cooked_dinosaur_chop",
+          "count": 4
+        },
+        {
+          "skill": "taming",
+          "xp": 200
+        }
+      ],
+      "icon": "camerapture:camera"
+    },
+    {
+      "id": "relicheirus_egg",
+      "title": "Claws Like Scythes",
+      "after": [
+        "dino_bowl"
+      ],
+      "text": [
+        "Find a relicheirus egg in the bowl, set it down somewhere safe until it hatches, and raise the hatchling so it learns to trust you."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:relicheirus_egg",
+          "title": "Find a relicheirus egg in the bowl"
+        },
+        {
+          "tame": "alexscaves:relicheirus",
+          "title": "Raise the hatchling until it trusts you"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:pine_nuts",
+          "count": 16
+        },
+        {
+          "skill": "taming",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:relicheirus_egg"
+    },
+    {
+      "id": "dino_chop",
+      "title": "Primordial Supper",
+      "after": [
+        "dino_bowl"
+      ],
+      "text": [
+        "The cave people ate well. Hunt a grottoceratops for dinosaur chops and cook them into hearty meals."
+      ],
+      "tasks": [
+        {
+          "kill": "alexscaves:grottoceratops",
+          "count": 2,
+          "spawn": {
+            "at": {
+              "structure": "alexscaves:dino_bowl"
+            },
+            "wave": 2,
+            "name": "Bowl Grottoceratops"
+          },
+          "title": "Hunt grottoceratops for their chops"
+        },
+        {
+          "item": "alexscaves:dinosaur_chop",
+          "count": 4,
+          "title": "Take dinosaur chops"
+        },
+        {
+          "item": "alexscaves:cooked_dinosaur_chop",
+          "count": 4,
+          "crafted": true,
+          "title": "Cook the chops into hearty meals"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:dinosaur_nugget",
+          "count": 8
+        },
+        {
+          "skill": "cook",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:cooked_dinosaur_chop"
+    },
+    {
+      "id": "primordial_garb",
+      "title": "Dressed for the Hunt",
+      "after": [
+        "dino_chop"
+      ],
+      "text": [
+        "The hunt is hard on cloth. Gather tough hide and craft the full primordial outfit: helmet, tunic and pants, the cave people's own."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:tough_hide",
+          "count": 6,
+          "title": "Hunt for tough hide"
+        },
+        {
+          "item": "alexscaves:primordial_helmet",
+          "crafted": true,
+          "title": "Craft the primordial helmet"
+        },
+        {
+          "item": "alexscaves:primordial_tunic",
+          "crafted": true,
+          "title": "Craft the primordial tunic"
+        },
+        {
+          "item": "alexscaves:primordial_pants",
+          "crafted": true,
+          "title": "Craft the primordial pants"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:cooked_dinosaur_chop",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 280
+        }
+      ],
+      "icon": "alexscaves:primordial_tunic"
+    },
+    {
+      "id": "subterranodon",
+      "title": "Wings Over the Cave",
+      "after": [
+        "dino_bowl"
+      ],
+      "text": [
+        "The cavern is wide, and the herds are far. Tame a subterranodon and ride it across."
+      ],
+      "tasks": [
+        {
+          "tame": "alexscaves:subterranodon",
+          "title": "Win a subterranodon's trust and ride it across the cavern"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:saddle"
+        },
+        {
+          "skill": "taming",
+          "xp": 280
+        }
+      ],
+      "icon": "minecraft:saddle"
+    },
+    {
+      "id": "stolen_egg",
+      "title": "The Stolen Egg",
+      "after": [
+        "dino_bowl"
+      ],
+      "text": [
+        "Vallumraptors have taken an atlatitan egg. Take it back from their pack and carry it safely to hatch."
+      ],
+      "tasks": [
+        {
+          "kill": "alexscaves:vallumraptor",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "alexscaves:dino_bowl"
+            },
+            "wave": 4,
+            "name": "Egg-Thief Raptors"
+          },
+          "title": "Drive off the raptor pack"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "alexscaves:dino_bowl"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Atlatitan Egg",
+              "texture": "minecraft:item/egg"
+            },
+            "found": "The stolen egg, warm in the raptors' nest."
+          },
+          "title": "Take the atlatitan egg back from their nest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:primitive_club"
+        },
+        {
+          "skill": "taming",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:egg"
+    },
+    {
+      "id": "amber",
+      "title": "Trapped in Amber",
+      "after": [
+        "primordial_caves"
+      ],
+      "text": [
+        "Old things sleep inside amber. Search the cave walls for amber and an amber curiosity, relics sealed in resin."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:amber",
+          "count": 4,
+          "title": "Mine amber from the cave walls"
+        },
+        {
+          "item": "alexscaves:amber_curiosity",
+          "title": "Find an amber curiosity sealed in resin"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:amber",
+          "count": 8
+        },
+        {
+          "skill": "mining",
+          "xp": 200
+        }
+      ],
+      "icon": "alexscaves:amber"
+    },
+    {
+      "id": "volcano",
+      "title": "The Volcano",
+      "after": [
+        "primordial_caves"
+      ],
+      "text": [
+        "The primordial volcano is a mountain of magma and tephra, guarded by the Tremorsaurus. Find it."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:volcano",
+          "title": "Find the primordial volcano"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 220
+        }
+      ],
+      "icon": "minecraft:magma_block"
+    },
+    {
+      "id": "tremorsaurus",
+      "title": "The Tremorsaurus",
+      "after": [
+        "volcano"
+      ],
+      "text": [
+        "The Tremorsaurus shakes the volcano's ground. Take it down and claim a heavy bone from the giant."
+      ],
+      "tasks": [
+        {
+          "kill": "alexscaves:tremorsaurus",
+          "spawn": {
+            "at": {
+              "structure": "alexscaves:volcano"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Tremorsaurus"
+          },
+          "title": "Take down the volcano's Tremorsaurus"
+        },
+        {
+          "item": "alexscaves:heavy_bone",
+          "title": "Claim a heavy bone from the giant"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:heavy_bone",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 350
+        }
+      ],
+      "icon": "alexscaves:heavy_bone"
+    },
+    {
+      "id": "diving_gear",
+      "title": "Down to the Depths",
+      "after": [
+        "rumours_below"
+      ],
+      "text": [
+        "The drowned chasm is deeper than any breath. Craft a diving helmet, suit and boots."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:diving_helmet",
+          "crafted": true,
+          "title": "Craft a diving helmet"
+        },
+        {
+          "item": "alexscaves:diving_chestplate",
+          "crafted": true,
+          "title": "Craft a diving suit"
+        },
+        {
+          "item": "alexscaves:diving_leggings",
+          "crafted": true,
+          "title": "Craft diving leggings"
+        },
+        {
+          "item": "alexscaves:diving_boots",
+          "crafted": true,
+          "title": "Craft diving boots"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:depth_charge",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:diving_helmet"
+    },
+    {
+      "id": "abyssal_chasm",
+      "title": "Into the Abyss",
+      "after": [
+        "diving_gear"
+      ],
+      "text": [
+        "Under the ocean floor lies the Abyssal Chasm, where lanternfish and tripodfish swim in the dark."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "biomes": [
+              "alexscaves:abyssal_chasm"
+            ],
+            "in_water": true
+          },
+          "title": "Swim down into the chasm's dark"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:bioluminescent_torch",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:bioluminescent_torch",
+      "discover": {
+        "biome": "alexscaves:abyssal_chasm"
+      }
+    },
+    {
+      "id": "sea_pig",
+      "title": "The Sea Pig",
+      "after": [
+        "abyssal_chasm"
+      ],
+      "text": [
+        "Sea pigs graze the chasm floor. Scoop one up, and gather marine snow and tube worms from around the glowing vents."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:bucket",
+          "title": "Bring a bucket to scoop a sea pig"
+        },
+        {
+          "item": "alexscaves:marine_snow",
+          "count": 4,
+          "title": "Gather marine snow from the chasm floor"
+        },
+        {
+          "item": "alexscaves:tube_worm",
+          "count": 4,
+          "title": "Gather tube worms from around the vents"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:bioluminescent_torch",
+          "count": 16
+        },
+        {
+          "skill": "fish",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:marine_snow"
+    },
+    {
+      "id": "abyssal_ruins",
+      "title": "Ruins of the Deep Ones",
+      "after": [
+        "abyssal_chasm"
+      ],
+      "text": [
+        "The deep ones' city lies below, guarded by mine guardians. Sneak in without stirring them."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:abyssal_ruins",
+          "title": "Find the deep ones' city"
+        },
+        {
+          "timed": {
+            "seconds": 300,
+            "goal": {
+              "structure": "alexscaves:abyssal_ruins",
+              "label": "the city's heart",
+              "away": 50
+            },
+            "lines": [
+              "Quiet. If anything touches you, the guardians wake."
+            ],
+            "start": "Creep in",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Creep through the ruins without stirring the guardians"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "crittersandcompanions:pearl",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "crittersandcompanions:pearl"
+    },
+    {
+      "id": "sushi",
+      "title": "Deep Sea Sushi",
+      "after": [
+        "abyssal_chasm"
+      ],
+      "text": [
+        "The deep ones' catch is a delicacy. Catch lanternfish, tripodfish and mussels and roll them into deep sea sushi."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:lanternfish",
+          "count": 2,
+          "title": "Catch lanternfish"
+        },
+        {
+          "item": "alexscaves:tripodfish",
+          "count": 2,
+          "title": "Catch tripodfish"
+        },
+        {
+          "item": "alexscaves:mussel",
+          "count": 2,
+          "title": "Gather mussels"
+        },
+        {
+          "item": "alexscaves:deep_sea_sushi_roll",
+          "crafted": true,
+          "title": "Roll deep sea sushi"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:deep_sea_sushi_roll",
+          "count": 4
+        },
+        {
+          "skill": "fish",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:deep_sea_sushi_roll"
+    },
+    {
+      "id": "forlorn_hollows",
+      "title": "Where Light Dies",
+      "after": [
+        "rumours_below"
+      ],
+      "text": [
+        "Descend into the Forlorn Hollows, a moonless world of watchers, gloomoths and corrodents."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "biomes": [
+              "alexscaves:forlorn_hollows"
+            ],
+            "below_y": 40
+          },
+          "title": "Descend into the moonless hollows"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:torch",
+          "count": 32
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:torch",
+      "discover": {
+        "biome": "alexscaves:forlorn_hollows"
+      }
+    },
+    {
+      "id": "vesper_hunt",
+      "title": "Wings in the Dark",
+      "after": [
+        "forlorn_hollows"
+      ],
+      "text": [
+        "Vespers hang from the hollow's ceiling and dive at anything with a light. Take their wings and cook vesper stew over a fire down there."
+      ],
+      "tasks": [
+        {
+          "kill": "alexscaves:vesper",
+          "count": 3,
+          "title": "Bring down the vespers that dive at your light"
+        },
+        {
+          "item": "alexscaves:vesper_wing",
+          "count": 3,
+          "title": "Take their wings"
+        },
+        {
+          "item": "alexscaves:vesper_stew",
+          "crafted": true,
+          "title": "Cook vesper stew over a fire in the dark"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 8
+        },
+        {
+          "skill": "cook",
+          "xp": 280
+        }
+      ],
+      "icon": "alexscaves:vesper_stew"
+    },
+    {
+      "id": "corrodent",
+      "title": "Teeth in the Stone",
+      "after": [
+        "forlorn_hollows"
+      ],
+      "text": [
+        "Corrodents tunnel through the guanostone faster than you can dig. Corner one in the open and take its teeth."
+      ],
+      "tasks": [
+        {
+          "kill": "alexscaves:corrodent",
+          "title": "Corner a corrodent in the open"
+        },
+        {
+          "drop": {
+            "from": [
+              "alexscaves:corrodent"
+            ],
+            "chance": 0.6,
+            "item": {
+              "name": "a Corrodent's Teeth",
+              "texture": "minecraft:item/bone",
+              "tooltip": "Chewed through stone"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take a Corrodent's Teeth"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:guanostone_bricks",
+          "count": 16
+        },
+        {
+          "skill": "mining",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:guanostone_bricks"
+    },
+    {
+      "id": "forlorn_canyon",
+      "title": "The Forlorn Canyon",
+      "after": [
+        "forlorn_hollows"
+      ],
+      "text": [
+        "Guano-stained cliffs hang over a deep canyon. Find the forlorn canyon."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:forlorn_canyon",
+          "title": "Find the forlorn canyon and its guano-stained cliffs"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:guanostone"
+    },
+    {
+      "id": "forlorn_bridge",
+      "title": "Cross the Bridge",
+      "after": [
+        "forlorn_canyon"
+      ],
+      "text": [
+        "A forlorn bridge crosses the void, and underzealots hunt in the dark. Cross without being touched."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:forlorn_bridge",
+          "title": "Find a bridge over the void"
+        },
+        {
+          "timed": {
+            "seconds": 240,
+            "goal": {
+              "structure": "alexscaves:forlorn_bridge",
+              "label": "the far side",
+              "away": 40
+            },
+            "lines": [
+              "The underzealots hunt in the dark. Don't be touched."
+            ],
+            "start": "Cross the bridge",
+            "no": [
+              "hurt",
+              "teleport"
+            ]
+          },
+          "title": "Cross the bridge without being touched"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:dark_tatters",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 320
+        }
+      ],
+      "icon": "alexscaves:dark_tatters"
+    },
+    {
+      "id": "watcher",
+      "title": "The Watcher",
+      "after": [
+        "forlorn_hollows"
+      ],
+      "text": [
+        "Watchers take your eyes. Kill one before it can switch your view."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "alexscaves:watcher",
+            "name": "The Watcher",
+            "where": {
+              "biomes": [
+                "alexscaves:forlorn_hollows"
+              ]
+            },
+            "then": "kill",
+            "lines": [
+              "*Your sight swims. Something watches through your eyes.*"
+            ]
+          },
+          "title": "Kill the watcher before it switches your view"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "skill": "attack",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:spyglass"
+    },
+    {
+      "id": "forsaken",
+      "title": "The Forsaken",
+      "after": [
+        "forlorn_bridge"
+      ],
+      "text": [
+        "Underzealots perform a ritual to summon the Forsaken, a towering blind beast. Fight it as it emerges."
+      ],
+      "tasks": [
+        {
+          "kill": "alexscaves:forsaken",
+          "spawn": {
+            "at": {
+              "structure": "alexscaves:forlorn_canyon"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Forsaken"
+          },
+          "title": "Fight the Forsaken as it emerges from the ritual"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_apple",
+          "count": 3
+        },
+        {
+          "skill": "attack",
+          "xp": 400
+        }
+      ],
+      "icon": "alexscaves:pure_darkness"
+    },
+    {
+      "id": "dreadbow",
+      "title": "The Dreadbow",
+      "after": [
+        "forsaken"
+      ],
+      "text": [
+        "Pure darkness and dark tatters make cruel weapons. Craft a dreadbow and a desolate dagger."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:pure_darkness",
+          "count": 4,
+          "title": "Gather pure darkness"
+        },
+        {
+          "item": "alexscaves:dark_tatters",
+          "count": 4,
+          "title": "Gather dark tatters"
+        },
+        {
+          "item": "alexscaves:dreadbow",
+          "crafted": true,
+          "title": "Craft a dreadbow"
+        },
+        {
+          "item": "alexscaves:desolate_dagger",
+          "crafted": true,
+          "title": "Craft a desolate dagger"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:arrow",
+          "count": 32
+        },
+        {
+          "skill": "range",
+          "xp": 350
+        }
+      ],
+      "icon": "alexscaves:dreadbow"
+    },
+    {
+      "id": "candy_cavity",
+      "title": "Sugar Rush",
+      "after": [
+        "rumours_below"
+      ],
+      "text": [
+        "A cave full of sweets: the Candy Cavity, with its frosting hills and soda lakes."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "biomes": [
+              "alexscaves:candy_cavity"
+            ],
+            "below_y": 50
+          },
+          "title": "Wander into the frosting hills"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:candy_cane",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "alexscaves:candy_cane",
+      "discover": {
+        "biome": "alexscaves:candy_cavity"
+      }
+    },
+    {
+      "id": "sweetish_fish",
+      "title": "Soda Lake Fishing",
+      "after": [
+        "candy_cavity"
+      ],
+      "text": [
+        "The soda lakes teem with sweetish fish in every colour. Fish them up."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:sweetish_fish_blue",
+          "title": "Fish up a blue sweetish fish"
+        },
+        {
+          "item": "alexscaves:sweetish_fish_green",
+          "title": "Fish up a green sweetish fish"
+        },
+        {
+          "item": "alexscaves:sweetish_fish_pink",
+          "title": "Fish up a pink sweetish fish"
+        },
+        {
+          "item": "alexscaves:sweetish_fish_red",
+          "title": "Fish up a red sweetish fish"
+        },
+        {
+          "item": "alexscaves:sweetish_fish_yellow",
+          "title": "Fish up a yellow sweetish fish"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:purple_soda_bucket"
+        },
+        {
+          "skill": "fish",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:sweetish_fish_blue"
+    },
+    {
+      "id": "caniac",
+      "title": "Brittle Brawl",
+      "after": [
+        "candy_cavity"
+      ],
+      "text": [
+        "Caniacs and gumbeepers guard the frosting hills. Beat a few, then craft a frostmint spear from what you find in the cavity."
+      ],
+      "tasks": [
+        {
+          "kill": "alexscaves:caniac",
+          "count": 4,
+          "title": "Beat the caniacs that guard the frosting hills"
+        },
+        {
+          "kill": "alexscaves:gumbeeper",
+          "count": 2,
+          "title": "Beat the gumbeepers that raise the alarm"
+        },
+        {
+          "item": "alexscaves:frostmint_spear",
+          "crafted": true,
+          "title": "Craft a frostmint spear"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:sharpened_candy_cane",
+          "count": 8
+        },
+        {
+          "skill": "attack",
+          "xp": 300
+        }
+      ],
+      "icon": "alexscaves:frostmint_spear"
+    },
+    {
+      "id": "gingerbread_town",
+      "title": "Gingerbread Town",
+      "after": [
+        "candy_cavity"
+      ],
+      "text": [
+        "Visit a gingerbread town and its gingerbread men. They have a trade to offer."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:gingerbread_town",
+          "title": "Find the gingerbread town"
+        },
+        {
+          "talk": "entity",
+          "entity": "alexscaves:gingerbread_man",
+          "lines": [
+            "Crumbly greetings! Mind the walls, they're edible.",
+            "Take our armour. We bake plenty."
+          ],
+          "title": "Trade with the gingerbread men"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:gingerbread_chestplate"
+        },
+        {
+          "skill": "cook",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:gingerbread_chestplate"
+    },
+    {
+      "id": "licowitch",
+      "title": "The Licowitch Tower",
+      "after": [
+        "candy_cavity"
+      ],
+      "text": [
+        "A licowitch tower rises over the candy hills. Climb it and defeat the licowitch at its top."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:licowitch_tower",
+          "title": "Find the licowitch tower"
+        },
+        {
+          "kill": "alexscaves:licowitch",
+          "spawn": {
+            "at": {
+              "structure": "alexscaves:licowitch_tower"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Licowitch"
+          },
+          "title": "Defeat the licowitch at the top"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:sugar_staff"
+        },
+        {
+          "skill": "magic",
+          "xp": 300
+        }
+      ],
+      "icon": "alexscaves:sugar_staff"
+    },
+    {
+      "id": "sweet_landmarks",
+      "title": "A Tour of Sweets",
+      "after": [
+        "candy_cavity"
+      ],
+      "text": [
+        "The cavity has sweet wonders. Visit a cake cave, a soda bottle and a donut arch, and collect a treat from each."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:cake_cave",
+          "title": "Visit a cake cave"
+        },
+        {
+          "item": "alexscaves:cake_layer",
+          "title": "Take a layer of cake from the cave"
+        },
+        {
+          "structure": "alexscaves:soda_bottle",
+          "title": "Visit a soda bottle"
+        },
+        {
+          "item": "alexscaves:purple_soda_bottle",
+          "title": "Take a bottle of purple soda"
+        },
+        {
+          "structure": "alexscaves:donut_arch",
+          "title": "Visit a donut arch"
+        },
+        {
+          "item": "alexscaves:sprinkles",
+          "title": "Take sprinkles from the arch"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:caramel_apple",
+          "count": 4
+        },
+        {
+          "skill": "cook",
+          "xp": 260
+        }
+      ],
+      "icon": "alexscaves:cake_layer"
+    },
+    {
+      "id": "confection_oven",
+      "title": "The Confection Oven",
+      "after": [
+        "sweet_landmarks"
+      ],
+      "text": [
+        "Sweets bake best in a proper oven. Craft a confection oven and bake sweets in it."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:confection_oven",
+          "crafted": true,
+          "title": "Craft a confection oven"
+        },
+        {
+          "use": "alexscaves:confection_oven",
+          "count": 1,
+          "title": "Bake sweets in the oven"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:lollipop_bunch",
+          "count": 2
+        },
+        {
+          "skill": "cook",
+          "xp": 280
+        }
+      ],
+      "icon": "alexscaves:confection_oven"
+    },
+    {
+      "id": "sundae",
+      "title": "The Grand Sundae",
+      "after": [
+        "confection_oven"
+      ],
+      "text": [
+        "The cavity's finest dessert: vanilla, chocolate and sweetberry ice cream in a sundae with sprinkles."
+      ],
+      "tasks": [
+        {
+          "item": "alexscaves:vanilla_ice_cream",
+          "title": "Make vanilla ice cream"
+        },
+        {
+          "item": "alexscaves:chocolate_ice_cream",
+          "title": "Make chocolate ice cream"
+        },
+        {
+          "item": "alexscaves:sweetberry_ice_cream",
+          "title": "Make sweetberry ice cream"
+        },
+        {
+          "item": "alexscaves:sundae",
+          "crafted": true,
+          "title": "Build the grand sundae with sprinkles"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:sundae",
+          "count": 2
+        },
+        {
+          "skill": "cook",
+          "xp": 300
+        }
+      ],
+      "icon": "alexscaves:sundae"
+    },
+    {
+      "id": "gummy_bear",
+      "title": "Gummy Friends",
+      "after": [
+        "candy_cavity"
+      ],
+      "text": [
+        "The candy hills have their own friendly beasts. Befriend a gummy bear and ride a candicorn."
+      ],
+      "tasks": [
+        {
+          "tame": "alexscaves:gummy_bear",
+          "title": "Feed a gummy bear until it follows you"
+        },
+        {
+          "observe": "alexscaves:candicorn",
+          "ticks": 40,
+          "title": "Find a candicorn to ride"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:gelatin_pink",
+          "count": 4
+        },
+        {
+          "skill": "taming",
+          "xp": 300
+        }
+      ],
+      "icon": "alexscaves:gelatin_pink"
+    }
+  ]
+}

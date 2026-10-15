@@ -1,0 +1,1632 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "alexs_caves"
+	group: "4B9B0BA0827F5A44"
+	icon: "alexscaves:cave_map"
+	id: "2F990D9D4C6EA8F1"
+	order_index: 7
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["2CF0262A21E6E0BC"]
+			description: ["A village cartographer speaks of whole worlds under the stone, and sells cave maps. Buy one and let it search out the nearest cave biome."]
+			icon: "alexscaves:cave_map"
+			id: "498189A948BBD6D5"
+			rewards: [
+				{
+					count: 8
+					id: "132C80C2BEB7AD28"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 100"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "35738995989DF3E6"
+					silent: true
+					title: "+100 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6EBDCF88BA649E09"
+					stage: "fq.alexs_caves.rumours_below.talk0"
+					title: "Ask a cartographer about the worlds below"
+					type: "gamestage"
+				}
+				{
+					id: "21635638EDFA5C20"
+					item: "alexscaves:cave_map"
+					title: "Buy a cave map to search out the nearest cave biome"
+					type: "item"
+				}
+			]
+			title: "Rumours from Below"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["498189A948BBD6D5"]
+			description: ["Every cave biome is its own world. Craft a Cave Book to keep notes on each, and a Cave Codex as your journal of the underworld."]
+			icon: "alexscaves:cave_codex"
+			id: "65B1C93D1BF822C6"
+			rewards: [
+				{
+					id: "5433E5CA3247F522"
+					item: "alexscaves:cave_codex"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 150"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "4CB3D3B90EFCC077"
+					silent: true
+					title: "+150 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3F83524FE133C5C7"
+					item: "alexscaves:cave_book"
+					only_from_crafting: true
+					title: "Craft a Cave Book to keep notes in"
+					type: "item"
+				}
+				{
+					id: "46FF74A0076B2353"
+					item: "alexscaves:cave_codex"
+					only_from_crafting: true
+					title: "Craft a Cave Codex as your journal"
+					type: "item"
+				}
+			]
+			title: "The Spelunker's Notes"
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["498189A948BBD6D5"]
+			description: ["Under the forest roof lies a land of ferns and cycads: the Primordial Caves, home of the dinosaurs."]
+			icon: "minecraft:spyglass"
+			id: "1FC08F2C4317DEF2"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "32EC9F78B2ACFFA1"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "4627382DAF293C00"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:primordial_caves"
+					id: "464143EBAE27951C"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "37A2F729BC091CA1"
+					stage: "fq.alexs_caves.primordial_caves.be0"
+					title: "Walk under the forest roof into the lost world"
+					type: "gamestage"
+				}
+			]
+			title: "Lost World"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1FC08F2C4317DEF2"]
+			description: ["The cave people left paintings on the primordial walls: hunts, friendships, and a mystery told across panels. Collect the panels and hang them to see what they show."]
+			icon: "alexscaves:cave_painting_relicheirus"
+			id: "0835BD5589EA08BA"
+			rewards: [
+				{
+					id: "27577183A5798739"
+					item: "alexscaves:dinosaur_pottery_sherd"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 180"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "5F4446A3DF37EAD8"
+					silent: true
+					title: "+180 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "75BE4BDDDB3E9B8D"
+					item: "alexscaves:cave_painting_ambersol"
+					title: "Find the amber-sun panel"
+					type: "item"
+				}
+				{
+					id: "6E423A481C63E918"
+					item: "alexscaves:cave_painting_relicheirus"
+					title: "Find the relicheirus panel"
+					type: "item"
+				}
+				{
+					id: "79DBE593DF7D9F83"
+					item: "alexscaves:cave_painting_relicheirus_slash"
+					title: "Find the slashing panel"
+					type: "item"
+				}
+				{
+					id: "7E0CF4298F4FDDC2"
+					stage: "fq.alexs_caves.cave_paintings.build3"
+					title: "Hang the panels to read the mystery"
+					type: "gamestage"
+				}
+			]
+			title: "Painted Walls"
+			x: 3.0d
+			y: -11.25d
+		}
+		{
+			dependencies: ["1FC08F2C4317DEF2"]
+			description: ["The ancient trees will not last forever. Gather pine nuts and a tree star, then grow a pewen sapling and an ancient sapling of your own."]
+			icon: "alexscaves:pewen_sapling"
+			id: "61A6313FE45302FF"
+			rewards: [
+				{
+					count: 16
+					id: "43AFB95C16AB74D0"
+					item: "alexscaves:pewen_planks"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 200"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "498895360AAD96F2"
+					silent: true
+					title: "+200 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "3605CF6C68953D65"
+					item: "alexscaves:pine_nuts"
+					title: "Gather pine nuts from a pewen"
+					type: "item"
+				}
+				{
+					id: "0712C2C5318798B8"
+					item: "alexscaves:tree_star"
+					title: "Gather a tree star from an ancient tree"
+					type: "item"
+				}
+				{
+					id: "3910D967FA1B3A09"
+					item: "alexscaves:pewen_sapling"
+					title: "Take a pewen sapling"
+					type: "item"
+				}
+				{
+					id: "371E21F57720CD0F"
+					item: "alexscaves:ancient_sapling"
+					title: "Take an ancient sapling"
+					type: "item"
+				}
+				{
+					id: "3741D8AFC5AC7F27"
+					stage: "fq.alexs_caves.ancient_groves.build4"
+					title: "Plant them where they can grow on"
+					type: "gamestage"
+				}
+			]
+			title: "Ancient Groves"
+			x: 3.0d
+			y: -9.75d
+		}
+		{
+			dependencies: ["1FC08F2C4317DEF2"]
+			description: ["Look down into a dino bowl and watch grottoceratops herds and relicheirus graze among the tar. The Field Guide wants pictures."]
+			icon: "camerapture:camera"
+			id: "05164F19938BC6CA"
+			rewards: [
+				{
+					count: 4
+					id: "729A1DDD6939E5BD"
+					item: "alexscaves:cooked_dinosaur_chop"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 200"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "6E05AD995F53832C"
+					silent: true
+					title: "+200 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "337FDEC4A66D8885"
+					structure: "alexscaves:dino_bowl"
+					title: "Find a dino bowl"
+					type: "structure"
+				}
+				{
+					id: "164B46CE1B927876"
+					item: "camerapture:camera"
+					title: "Bring a camera for the Field Guide"
+					type: "item"
+				}
+				{
+					id: "3E8C58E9AADC96C0"
+					stage: "fq.alexs_caves.dino_bowl.photo2"
+					title: "Photograph a grottoceratops"
+					type: "gamestage"
+				}
+				{
+					id: "6A75F02596915792"
+					stage: "fq.alexs_caves.dino_bowl.photo3"
+					title: "Photograph a relicheirus"
+					type: "gamestage"
+				}
+			]
+			title: "The Dinosaur Bowl"
+			x: 3.0d
+			y: -8.25d
+		}
+		{
+			dependencies: ["05164F19938BC6CA"]
+			description: ["Find a relicheirus egg in the bowl, set it down somewhere safe until it hatches, and raise the hatchling so it learns to trust you."]
+			icon: "alexscaves:relicheirus_egg"
+			id: "446C2444ADF26B5E"
+			rewards: [
+				{
+					count: 16
+					id: "40BCC2C227EB7BA5"
+					item: "alexscaves:pine_nuts"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 250"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "5307BABED1D398DA"
+					silent: true
+					title: "+250 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "115C827C576FD6D8"
+					item: "alexscaves:relicheirus_egg"
+					title: "Find a relicheirus egg in the bowl"
+					type: "item"
+				}
+				{
+					id: "049A29EE92080859"
+					stage: "fq.alexs_caves.relicheirus_egg.tame1"
+					title: "Raise the hatchling until it trusts you"
+					type: "gamestage"
+				}
+			]
+			title: "Claws Like Scythes"
+			x: 4.5d
+			y: -6.75d
+		}
+		{
+			dependencies: ["05164F19938BC6CA"]
+			description: ["The cave people ate well. Hunt a grottoceratops for dinosaur chops and cook them into hearty meals."]
+			icon: "alexscaves:cooked_dinosaur_chop"
+			id: "04D16C1A3313B799"
+			rewards: [
+				{
+					count: 8
+					id: "78A3B2CE87A098E6"
+					item: "alexscaves:dinosaur_nugget"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 250"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "24B3EC376790DAEC"
+					silent: true
+					title: "+250 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexscaves:grottoceratops"
+					id: "5F2015BBA8953FC6"
+					title: "Hunt grottoceratops for their chops"
+					type: "kill"
+					value: 2L
+				}
+				{
+					count: 4L
+					id: "5416FAD0F94703E2"
+					item: "alexscaves:dinosaur_chop"
+					title: "Take dinosaur chops"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1CE741411AF94E18"
+					item: "alexscaves:cooked_dinosaur_chop"
+					only_from_crafting: true
+					title: "Cook the chops into hearty meals"
+					type: "item"
+				}
+			]
+			title: "Primordial Supper"
+			x: 4.5d
+			y: -5.25d
+		}
+		{
+			dependencies: ["04D16C1A3313B799"]
+			description: ["The hunt is hard on cloth. Gather tough hide and craft the full primordial outfit: helmet, tunic and pants, the cave people's own."]
+			icon: "alexscaves:primordial_tunic"
+			id: "165304B552687BB8"
+			rewards: [
+				{
+					count: 4
+					id: "316797125343B3C7"
+					item: "alexscaves:cooked_dinosaur_chop"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 280"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "7A70C35B6F6407F6"
+					silent: true
+					title: "+280 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 6L
+					id: "3084DFC304D294E6"
+					item: "alexscaves:tough_hide"
+					title: "Hunt for tough hide"
+					type: "item"
+				}
+				{
+					id: "12A61B7E0C226A36"
+					item: "alexscaves:primordial_helmet"
+					only_from_crafting: true
+					title: "Craft the primordial helmet"
+					type: "item"
+				}
+				{
+					id: "006BA7F978210DF0"
+					item: "alexscaves:primordial_tunic"
+					only_from_crafting: true
+					title: "Craft the primordial tunic"
+					type: "item"
+				}
+				{
+					id: "116B5E5DCC261DCA"
+					item: "alexscaves:primordial_pants"
+					only_from_crafting: true
+					title: "Craft the primordial pants"
+					type: "item"
+				}
+			]
+			title: "Dressed for the Hunt"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["05164F19938BC6CA"]
+			description: ["The cavern is wide, and the herds are far. Tame a subterranodon and ride it across."]
+			icon: "minecraft:saddle"
+			id: "4280357689A07C27"
+			rewards: [
+				{
+					id: "3D86FC7E18BCE4DF"
+					item: "minecraft:saddle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 280"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "17299569E9E41CD5"
+					silent: true
+					title: "+280 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3998B447A550BAFA"
+					stage: "fq.alexs_caves.subterranodon.tame0"
+					title: "Win a subterranodon's trust and ride it across the cavern"
+					type: "gamestage"
+				}
+			]
+			title: "Wings Over the Cave"
+			x: 4.5d
+			y: -3.75d
+		}
+		{
+			dependencies: ["05164F19938BC6CA"]
+			description: ["Vallumraptors have taken an atlatitan egg. Take it back from their pack and carry it safely to hatch."]
+			icon: "minecraft:egg"
+			id: "633ECDFDFE7D16DF"
+			rewards: [
+				{
+					id: "569D4C6983D3D6C7"
+					item: "alexscaves:primitive_club"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 300"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "092F51A8F334639D"
+					silent: true
+					title: "+300 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexscaves:vallumraptor"
+					id: "6BB0C9A215BE2DA1"
+					title: "Drive off the raptor pack"
+					type: "kill"
+					value: 4L
+				}
+				{
+					id: "3C76E00A5CF91293"
+					item: "kubejs:quest_stolen_egg_1"
+					title: "Take the atlatitan egg back from their nest"
+					type: "item"
+				}
+			]
+			title: "The Stolen Egg"
+			x: 4.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["1FC08F2C4317DEF2"]
+			description: ["Old things sleep inside amber. Search the cave walls for amber and an amber curiosity, relics sealed in resin."]
+			icon: "alexscaves:amber"
+			id: "0687D5B70968797E"
+			rewards: [
+				{
+					count: 8
+					id: "320EDBBB163378D0"
+					item: "alexscaves:amber"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 200"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "0FCE53F4F347686B"
+					silent: true
+					title: "+200 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "7FBFF39BC96B8CF9"
+					item: "alexscaves:amber"
+					title: "Mine amber from the cave walls"
+					type: "item"
+				}
+				{
+					id: "59FEF8FDAA6D0958"
+					item: "alexscaves:amber_curiosity"
+					title: "Find an amber curiosity sealed in resin"
+					type: "item"
+				}
+			]
+			title: "Trapped in Amber"
+			x: 3.0d
+			y: -6.75d
+		}
+		{
+			dependencies: ["1FC08F2C4317DEF2"]
+			description: ["The primordial volcano is a mountain of magma and tephra, guarded by the Tremorsaurus. Find it."]
+			icon: "minecraft:magma_block"
+			id: "242099BD464C1CC3"
+			rewards: [
+				{
+					count: 4
+					id: "56FE4C22C832037E"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 220"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "7EBA570D884FAC78"
+					silent: true
+					title: "+220 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4A4604C42F117BEE"
+					structure: "alexscaves:volcano"
+					title: "Find the primordial volcano"
+					type: "structure"
+				}
+			]
+			title: "The Volcano"
+			x: 3.0d
+			y: -5.25d
+		}
+		{
+			dependencies: ["242099BD464C1CC3"]
+			description: ["The Tremorsaurus shakes the volcano's ground. Take it down and claim a heavy bone from the giant."]
+			icon: "alexscaves:heavy_bone"
+			id: "219DF8B34104E0E2"
+			rewards: [
+				{
+					count: 4
+					id: "298DA948921BD21B"
+					item: "alexscaves:heavy_bone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 350"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "1EFD2C752C7057C6"
+					silent: true
+					title: "+350 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexscaves:tremorsaurus"
+					id: "775F8383C91091CD"
+					title: "Take down the volcano's Tremorsaurus"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "08CFB2C15F8C0D47"
+					item: "alexscaves:heavy_bone"
+					title: "Claim a heavy bone from the giant"
+					type: "item"
+				}
+			]
+			title: "The Tremorsaurus"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["498189A948BBD6D5"]
+			description: ["The drowned chasm is deeper than any breath. Craft a diving helmet, suit and boots."]
+			icon: "alexscaves:diving_helmet"
+			id: "74E1F0946F0EF7DB"
+			rewards: [
+				{
+					count: 4
+					id: "2877D3F4B2EE7896"
+					item: "alexscaves:depth_charge"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 250"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "7E870078C05DB1BC"
+					silent: true
+					title: "+250 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "18E49CBEB6CB61ED"
+					item: "alexscaves:diving_helmet"
+					only_from_crafting: true
+					title: "Craft a diving helmet"
+					type: "item"
+				}
+				{
+					id: "691D586EF3EDCF56"
+					item: "alexscaves:diving_chestplate"
+					only_from_crafting: true
+					title: "Craft a diving suit"
+					type: "item"
+				}
+				{
+					id: "0855FC8668A5F3B4"
+					item: "alexscaves:diving_leggings"
+					only_from_crafting: true
+					title: "Craft diving leggings"
+					type: "item"
+				}
+				{
+					id: "002617D0DCA41ADA"
+					item: "alexscaves:diving_boots"
+					only_from_crafting: true
+					title: "Craft diving boots"
+					type: "item"
+				}
+			]
+			title: "Down to the Depths"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["74E1F0946F0EF7DB"]
+			description: ["Under the ocean floor lies the Abyssal Chasm, where lanternfish and tripodfish swim in the dark."]
+			icon: "alexscaves:bioluminescent_torch"
+			id: "6BCDC3D280E5556F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "19C6935EE29E756D"
+					item: "alexscaves:bioluminescent_torch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 250"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "043C8ECAC5AE834C"
+					silent: true
+					title: "+250 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:abyssal_chasm"
+					id: "33DF796AF18A8F0B"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "6B7EA1FE04847D87"
+					stage: "fq.alexs_caves.abyssal_chasm.be0"
+					title: "Swim down into the chasm's dark"
+					type: "gamestage"
+				}
+			]
+			title: "Into the Abyss"
+			x: 3.0d
+			y: -3.75d
+		}
+		{
+			dependencies: ["6BCDC3D280E5556F"]
+			description: ["Sea pigs graze the chasm floor. Scoop one up, and gather marine snow and tube worms from around the glowing vents."]
+			icon: "alexscaves:marine_snow"
+			id: "38F90AB2A5BE1F83"
+			rewards: [
+				{
+					count: 16
+					id: "57C3000041542BBA"
+					item: "alexscaves:bioluminescent_torch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 250"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "097A4666FFE881F7"
+					silent: true
+					title: "+250 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7A2B1926F13E4AB1"
+					item: "minecraft:bucket"
+					title: "Bring a bucket to scoop a sea pig"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "2A0B9B6982644C14"
+					item: "alexscaves:marine_snow"
+					title: "Gather marine snow from the chasm floor"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "0F82E15AFE2BFDF9"
+					item: "alexscaves:tube_worm"
+					title: "Gather tube worms from around the vents"
+					type: "item"
+				}
+			]
+			title: "The Sea Pig"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["6BCDC3D280E5556F"]
+			description: ["The deep ones' city lies below, guarded by mine guardians. Sneak in without stirring them."]
+			icon: "crittersandcompanions:pearl"
+			id: "3E399695B73FCF9E"
+			rewards: [
+				{
+					count: 4
+					id: "047A6845F85722C7"
+					item: "crittersandcompanions:pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "745393DD41610998"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5EAE2364E85D21C5"
+					structure: "alexscaves:abyssal_ruins"
+					title: "Find the deep ones' city"
+					type: "structure"
+				}
+				{
+					id: "133C0EFD36BB6F00"
+					stage: "fq.alexs_caves.abyssal_ruins.timed1"
+					title: "Creep through the ruins without stirring the guardians"
+					type: "gamestage"
+				}
+			]
+			title: "Ruins of the Deep Ones"
+			x: 4.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["6BCDC3D280E5556F"]
+			description: ["The deep ones' catch is a delicacy. Catch lanternfish, tripodfish and mussels and roll them into deep sea sushi."]
+			icon: "alexscaves:deep_sea_sushi_roll"
+			id: "4307DE38C9D2F512"
+			rewards: [
+				{
+					count: 4
+					id: "394FB802708B3C86"
+					item: "alexscaves:deep_sea_sushi_roll"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 250"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "1AD6D7102264264D"
+					silent: true
+					title: "+250 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "13F4F29F6A1604B6"
+					item: "alexscaves:lanternfish"
+					title: "Catch lanternfish"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1D553F10D292F1F9"
+					item: "alexscaves:tripodfish"
+					title: "Catch tripodfish"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1123C54EB6EAF367"
+					item: "alexscaves:mussel"
+					title: "Gather mussels"
+					type: "item"
+				}
+				{
+					id: "1E36ADC463920BE6"
+					item: "alexscaves:deep_sea_sushi_roll"
+					only_from_crafting: true
+					title: "Roll deep sea sushi"
+					type: "item"
+				}
+			]
+			title: "Deep Sea Sushi"
+			x: 4.5d
+			y: 3.75d
+		}
+		{
+			dependencies: ["498189A948BBD6D5"]
+			description: ["Descend into the Forlorn Hollows, a moonless world of watchers, gloomoths and corrodents."]
+			icon: "minecraft:torch"
+			id: "6FC84C9A4427EDDD"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 32
+					id: "4B658412C0D57380"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "054C6D439A803AA7"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:forlorn_hollows"
+					id: "6305DEA19D5E7792"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "4F224C2A4D407F8B"
+					stage: "fq.alexs_caves.forlorn_hollows.be0"
+					title: "Descend into the moonless hollows"
+					type: "gamestage"
+				}
+			]
+			title: "Where Light Dies"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["6FC84C9A4427EDDD"]
+			description: ["Vespers hang from the hollow's ceiling and dive at anything with a light. Take their wings and cook vesper stew over a fire down there."]
+			icon: "alexscaves:vesper_stew"
+			id: "0EE3A5C4E82591FA"
+			rewards: [
+				{
+					count: 8
+					id: "2A37D718684612C8"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 280"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "71D8B71F9756DB3D"
+					silent: true
+					title: "+280 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexscaves:vesper"
+					id: "1D2AD9FD53C60ED4"
+					title: "Bring down the vespers that dive at your light"
+					type: "kill"
+					value: 3L
+				}
+				{
+					count: 3L
+					id: "5116E6F20237D491"
+					item: "alexscaves:vesper_wing"
+					title: "Take their wings"
+					type: "item"
+				}
+				{
+					id: "59E9C3355BEE033D"
+					item: "alexscaves:vesper_stew"
+					only_from_crafting: true
+					title: "Cook vesper stew over a fire in the dark"
+					type: "item"
+				}
+			]
+			title: "Wings in the Dark"
+			x: 3.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["6FC84C9A4427EDDD"]
+			description: ["Corrodents tunnel through the guanostone faster than you can dig. Corner one in the open and take its teeth."]
+			icon: "alexscaves:guanostone_bricks"
+			id: "651D29799BE21531"
+			rewards: [
+				{
+					count: 16
+					id: "720803EECA51A0E8"
+					item: "alexscaves:guanostone_bricks"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 250"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "58DA38400C39052F"
+					silent: true
+					title: "+250 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexscaves:corrodent"
+					id: "4EB6FF04FDF42C62"
+					title: "Corner a corrodent in the open"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "5A591FA61281941F"
+					item: "kubejs:quest_corrodent_1"
+					title: "Take a Corrodent's Teeth"
+					type: "item"
+				}
+			]
+			title: "Teeth in the Stone"
+			x: 3.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["6FC84C9A4427EDDD"]
+			description: ["Guano-stained cliffs hang over a deep canyon. Find the forlorn canyon."]
+			icon: "alexscaves:guanostone"
+			id: "50A37ACE46A8D84F"
+			rewards: [
+				{
+					count: 8
+					id: "7867D517FA86A3E9"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 250"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "1BC4F43873C7329B"
+					silent: true
+					title: "+250 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "499852480E3AA1FF"
+					structure: "alexscaves:forlorn_canyon"
+					title: "Find the forlorn canyon and its guano-stained cliffs"
+					type: "structure"
+				}
+			]
+			title: "The Forlorn Canyon"
+			x: 3.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["50A37ACE46A8D84F"]
+			description: ["A forlorn bridge crosses the void, and underzealots hunt in the dark. Cross without being touched."]
+			icon: "alexscaves:dark_tatters"
+			id: "110248A5873CF2BE"
+			rewards: [
+				{
+					count: 4
+					id: "4A384A4D2EE849AE"
+					item: "alexscaves:dark_tatters"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 320"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "24EBE8769E4B08BF"
+					silent: true
+					title: "+320 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5AC5EE6E5DBE226C"
+					structure: "alexscaves:forlorn_bridge"
+					title: "Find a bridge over the void"
+					type: "structure"
+				}
+				{
+					id: "47803008ADF6BEB7"
+					stage: "fq.alexs_caves.forlorn_bridge.timed1"
+					title: "Cross the bridge without being touched"
+					type: "gamestage"
+				}
+			]
+			title: "Cross the Bridge"
+			x: 4.5d
+			y: 5.25d
+		}
+		{
+			dependencies: ["6FC84C9A4427EDDD"]
+			description: ["Watchers take your eyes. Kill one before it can switch your view."]
+			icon: "minecraft:spyglass"
+			id: "55215AE6243F7D0E"
+			rewards: [
+				{
+					id: "6B7C8B5F976874E7"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 300"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "63EE0FA0369DBBA3"
+					silent: true
+					title: "+300 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "706EC6FA4A2826C4"
+					stage: "fq.alexs_caves.watcher.enc0"
+					title: "Kill the watcher before it switches your view"
+					type: "gamestage"
+				}
+			]
+			title: "The Watcher"
+			x: 3.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["110248A5873CF2BE"]
+			description: ["Underzealots perform a ritual to summon the Forsaken, a towering blind beast. Fight it as it emerges."]
+			icon: "alexscaves:pure_darkness"
+			id: "72111BA2231D5F6F"
+			rewards: [
+				{
+					count: 3
+					id: "084839647AAED9DA"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 400"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "7B0B475CE99A274B"
+					silent: true
+					title: "+400 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexscaves:forsaken"
+					id: "299BE835E5A678E9"
+					title: "Fight the Forsaken as it emerges from the ritual"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Forsaken"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["72111BA2231D5F6F"]
+			description: ["Pure darkness and dark tatters make cruel weapons. Craft a dreadbow and a desolate dagger."]
+			icon: "alexscaves:dreadbow"
+			id: "77F5A1B169CB1326"
+			rewards: [
+				{
+					count: 32
+					id: "459A3FAABCA95A3E"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 350"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "1C0D9FF88670319A"
+					silent: true
+					title: "+350 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "56438EA3DE1424F1"
+					item: "alexscaves:pure_darkness"
+					title: "Gather pure darkness"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "0FF680E341C33C64"
+					item: "alexscaves:dark_tatters"
+					title: "Gather dark tatters"
+					type: "item"
+				}
+				{
+					id: "708E0F16AE1E7EAA"
+					item: "alexscaves:dreadbow"
+					only_from_crafting: true
+					title: "Craft a dreadbow"
+					type: "item"
+				}
+				{
+					id: "35508FC56DA2DA5F"
+					item: "alexscaves:desolate_dagger"
+					only_from_crafting: true
+					title: "Craft a desolate dagger"
+					type: "item"
+				}
+			]
+			title: "The Dreadbow"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["498189A948BBD6D5"]
+			description: ["A cave full of sweets: the Candy Cavity, with its frosting hills and soda lakes."]
+			icon: "alexscaves:candy_cane"
+			id: "2708FB6BFA238099"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "7DAD590B5E83A26A"
+					item: "alexscaves:candy_cane"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "52AF83F19B8C6730"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "alexscaves:candy_cavity"
+					id: "4D8BC50CE50234CF"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "57CCF8DCD6D1BDA7"
+					stage: "fq.alexs_caves.candy_cavity.be0"
+					title: "Wander into the frosting hills"
+					type: "gamestage"
+				}
+			]
+			title: "Sugar Rush"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2708FB6BFA238099"]
+			description: ["The soda lakes teem with sweetish fish in every colour. Fish them up."]
+			icon: "alexscaves:sweetish_fish_blue"
+			id: "333BB4CB203B353C"
+			rewards: [
+				{
+					id: "1DF59ADAACDF5E5D"
+					item: "alexscaves:purple_soda_bucket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 250"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "6EAE6C189FB054D4"
+					silent: true
+					title: "+250 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "35F1DAD75E87CD33"
+					item: "alexscaves:sweetish_fish_blue"
+					title: "Fish up a blue sweetish fish"
+					type: "item"
+				}
+				{
+					id: "6BF6DAF0371E0D33"
+					item: "alexscaves:sweetish_fish_green"
+					title: "Fish up a green sweetish fish"
+					type: "item"
+				}
+				{
+					id: "2FA9E376F2276641"
+					item: "alexscaves:sweetish_fish_pink"
+					title: "Fish up a pink sweetish fish"
+					type: "item"
+				}
+				{
+					id: "053ED0CA49CB5B74"
+					item: "alexscaves:sweetish_fish_red"
+					title: "Fish up a red sweetish fish"
+					type: "item"
+				}
+				{
+					id: "3F118EF970322862"
+					item: "alexscaves:sweetish_fish_yellow"
+					title: "Fish up a yellow sweetish fish"
+					type: "item"
+				}
+			]
+			title: "Soda Lake Fishing"
+			x: 3.0d
+			y: 3.75d
+		}
+		{
+			dependencies: ["2708FB6BFA238099"]
+			description: ["Caniacs and gumbeepers guard the frosting hills. Beat a few, then craft a frostmint spear from what you find in the cavity."]
+			icon: "alexscaves:frostmint_spear"
+			id: "4793593D94368BB1"
+			rewards: [
+				{
+					count: 8
+					id: "7F631B9C146112A0"
+					item: "alexscaves:sharpened_candy_cane"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 300"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "0CCFF11C91686003"
+					silent: true
+					title: "+300 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexscaves:caniac"
+					id: "0305BD29DF7818C3"
+					title: "Beat the caniacs that guard the frosting hills"
+					type: "kill"
+					value: 4L
+				}
+				{
+					entity: "alexscaves:gumbeeper"
+					id: "2CF61B1CDC851784"
+					title: "Beat the gumbeepers that raise the alarm"
+					type: "kill"
+					value: 2L
+				}
+				{
+					id: "6378AE7C47EAD713"
+					item: "alexscaves:frostmint_spear"
+					only_from_crafting: true
+					title: "Craft a frostmint spear"
+					type: "item"
+				}
+			]
+			title: "Brittle Brawl"
+			x: 3.0d
+			y: 5.25d
+		}
+		{
+			dependencies: ["2708FB6BFA238099"]
+			description: ["Visit a gingerbread town and its gingerbread men. They have a trade to offer."]
+			icon: "alexscaves:gingerbread_chestplate"
+			id: "28F01ED6D80B85EE"
+			rewards: [
+				{
+					id: "41EEE726EEEF0AE3"
+					item: "alexscaves:gingerbread_chestplate"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 250"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "1025575E6708BEF8"
+					silent: true
+					title: "+250 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "72C50F037BE04FED"
+					structure: "alexscaves:gingerbread_town"
+					title: "Find the gingerbread town"
+					type: "structure"
+				}
+				{
+					id: "2276195337FAF652"
+					stage: "fq.alexs_caves.gingerbread_town.talk1"
+					title: "Trade with the gingerbread men"
+					type: "gamestage"
+				}
+			]
+			title: "Gingerbread Town"
+			x: 3.0d
+			y: 6.75d
+		}
+		{
+			dependencies: ["2708FB6BFA238099"]
+			description: ["A licowitch tower rises over the candy hills. Climb it and defeat the licowitch at its top."]
+			icon: "alexscaves:sugar_staff"
+			id: "335442170EA2BD97"
+			rewards: [
+				{
+					id: "194735B8A12AB2C2"
+					item: "alexscaves:sugar_staff"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 300"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "27893ED90C8FC90A"
+					silent: true
+					title: "+300 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7B9B5FD46FAD0401"
+					structure: "alexscaves:licowitch_tower"
+					title: "Find the licowitch tower"
+					type: "structure"
+				}
+				{
+					entity: "alexscaves:licowitch"
+					id: "6B8177D8445AD717"
+					title: "Defeat the licowitch at the top"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Licowitch Tower"
+			x: 3.0d
+			y: 8.25d
+		}
+		{
+			dependencies: ["2708FB6BFA238099"]
+			description: ["The cavity has sweet wonders. Visit a cake cave, a soda bottle and a donut arch, and collect a treat from each."]
+			icon: "alexscaves:cake_layer"
+			id: "76366B88A8304BF6"
+			rewards: [
+				{
+					count: 4
+					id: "75BA0A9DC3F230A9"
+					item: "alexscaves:caramel_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 260"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "3891DE26E1AF2E34"
+					silent: true
+					title: "+260 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5DD52932D245EBFB"
+					structure: "alexscaves:cake_cave"
+					title: "Visit a cake cave"
+					type: "structure"
+				}
+				{
+					id: "4DD384D90E553408"
+					item: "alexscaves:cake_layer"
+					title: "Take a layer of cake from the cave"
+					type: "item"
+				}
+				{
+					id: "236CE6E6ECF41933"
+					structure: "alexscaves:soda_bottle"
+					title: "Visit a soda bottle"
+					type: "structure"
+				}
+				{
+					id: "15A34EBB894F1E9D"
+					item: "alexscaves:purple_soda_bottle"
+					title: "Take a bottle of purple soda"
+					type: "item"
+				}
+				{
+					id: "0E39F883453B0B83"
+					structure: "alexscaves:donut_arch"
+					title: "Visit a donut arch"
+					type: "structure"
+				}
+				{
+					id: "57891E141E3133FA"
+					item: "alexscaves:sprinkles"
+					title: "Take sprinkles from the arch"
+					type: "item"
+				}
+			]
+			title: "A Tour of Sweets"
+			x: 3.0d
+			y: 9.75d
+		}
+		{
+			dependencies: ["76366B88A8304BF6"]
+			description: ["Sweets bake best in a proper oven. Craft a confection oven and bake sweets in it."]
+			icon: "alexscaves:confection_oven"
+			id: "29C7837D57112C44"
+			rewards: [
+				{
+					count: 2
+					id: "3EDA1F1E67B13334"
+					item: "alexscaves:lollipop_bunch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 280"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "166730E39B1ADA08"
+					silent: true
+					title: "+280 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "60374D3B4600869B"
+					item: "alexscaves:confection_oven"
+					only_from_crafting: true
+					title: "Craft a confection oven"
+					type: "item"
+				}
+				{
+					id: "5F1C0EF40C179E7E"
+					stage: "fq.alexs_caves.confection_oven.use1"
+					title: "Bake sweets in the oven"
+					type: "gamestage"
+				}
+			]
+			title: "The Confection Oven"
+			x: 4.5d
+			y: 6.75d
+		}
+		{
+			dependencies: ["29C7837D57112C44"]
+			description: ["The cavity's finest dessert: vanilla, chocolate and sweetberry ice cream in a sundae with sprinkles."]
+			icon: "alexscaves:sundae"
+			id: "7B055B872B2F91F8"
+			rewards: [
+				{
+					count: 2
+					id: "0C2B4B98C0556E23"
+					item: "alexscaves:sundae"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 300"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "2E4FF6A1780CBE70"
+					silent: true
+					title: "+300 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "63CE083AE357C3D5"
+					item: "alexscaves:vanilla_ice_cream"
+					title: "Make vanilla ice cream"
+					type: "item"
+				}
+				{
+					id: "47F5B7BFC666E03B"
+					item: "alexscaves:chocolate_ice_cream"
+					title: "Make chocolate ice cream"
+					type: "item"
+				}
+				{
+					id: "6BF9598692567D0F"
+					item: "alexscaves:sweetberry_ice_cream"
+					title: "Make sweetberry ice cream"
+					type: "item"
+				}
+				{
+					id: "56DCE146A9DB01C8"
+					item: "alexscaves:sundae"
+					only_from_crafting: true
+					title: "Build the grand sundae with sprinkles"
+					type: "item"
+				}
+			]
+			title: "The Grand Sundae"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["2708FB6BFA238099"]
+			description: ["The candy hills have their own friendly beasts. Befriend a gummy bear and ride a candicorn."]
+			icon: "alexscaves:gelatin_pink"
+			id: "29740B61A9A75C97"
+			rewards: [
+				{
+					count: 4
+					id: "4DB47A68568EDD64"
+					item: "alexscaves:gelatin_pink"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 300"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "1DCBB3DD7B387CDB"
+					silent: true
+					title: "+300 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4449278E8432072F"
+					stage: "fq.alexs_caves.gummy_bear.tame0"
+					title: "Feed a gummy bear until it follows you"
+					type: "gamestage"
+				}
+				{
+					id: "2C9FFE053C2A1B28"
+					observe_type: "entity_type"
+					timer: 40L
+					title: "Find a candicorn to ride"
+					to_observe: "alexscaves:candicorn"
+					type: "observation"
+				}
+			]
+			title: "Gummy Friends"
+			x: 3.0d
+			y: 11.25d
+		}
+	]
+	subtitle: ["Four strange worlds under the stone"]
+	title: "The Underworld"
+}

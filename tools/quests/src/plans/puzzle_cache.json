@@ -1,4 +1,15 @@
 {
+ "alexscaves:dino_bowl": {
+  "copies": 3,
+  "lines": [
+   "fotfverify alexscaves:dino_bowl copy 1 at -3520,768 pieces=1183 containers=7",
+   "fotfverify alexscaves:dino_bowl copy 2 at -3584,656 pieces=847 containers=10",
+   "fotfverify alexscaves:dino_bowl copy 3 at 3344,9296 pieces=1183 containers=4"
+  ],
+  "mins": {
+   "containers": 4
+  }
+ },
  "beachparty:ritual_circle": {
   "copies": 3,
   "lines": [],
@@ -26,6 +37,27 @@
   "lines": [],
   "mins": {
    "minecraft:water_cauldron": 1
+  }
+ },
+ "cataclysm:cursed_pyramid": {
+  "copies": 1,
+  "lines": [
+   "fotfverify cataclysm:cursed_pyramid copy 1 at -20112,11712 pieces=10 containers=106",
+   "fotfverify cataclysm:cursed_pyramid copy at -19056,11824 no start"
+  ],
+  "mins": {
+   "containers": 106
+  }
+ },
+ "cataclysm:frosted_prison": {
+  "copies": 3,
+  "lines": [
+   "fotfverify cataclysm:frosted_prison copy 1 at -3648,6480 pieces=97 containers=123",
+   "fotfverify cataclysm:frosted_prison copy 2 at 8080,1696 pieces=97 containers=114",
+   "fotfverify cataclysm:frosted_prison copy 3 at 5344,6608 pieces=97 containers=117"
+  ],
+  "mins": {
+   "containers": 114
   }
  },
  "dungeons_arise:abandoned_temple": {

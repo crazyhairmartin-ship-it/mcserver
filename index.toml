@@ -109,20 +109,24 @@ file = "config/ftbquests/quests/chapter_groups.snbt"
 hash = "62ba0917b9a55387719b7a2e3d82ac58ae0546149ec510281c9d66a2add08318"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/alexs_caves.snbt"
+hash = "3f6e81b3bba908ad56a379f421a241ef2d2776ab80b78754973fa51abd22bfcf"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/discovery_land.snbt"
 hash = "fbf559181d47d8d83c81cbd1245a278a75b3281dc01acea9b39b05ecea0ac075"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/discovery_sea.snbt"
-hash = "596ed68e129e17a7419752003e8cc5cc552077755879d8fcde954b10bd4feddf"
+hash = "594147e2adeff159bc6efbac84ec1eca6224ce3bdc6c43469417e99cc019eca8"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/discovery_sky_and_underground.snbt"
-hash = "2caaf00844ab5a6b3de0b187e5c7bb09450684b8af19b43d12847892cd1e8016"
+hash = "e65d1394b7ec8520714452623845c00119672f8c388415ff8a53b40d0c0f8033"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/magic.snbt"
-hash = "54a28de4e80214e1724b699431faf55b6da62f45912928e7e7dba1dbc982eb44"
+hash = "dbfcdb7ba8afeb802b92976c9ed3c7352af6eceeac75af59727f83a8624ffd66"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
@@ -134,39 +138,39 @@ hash = "352796488e48af48a7f195c1b1361d049bef181c53640bf3a8f792b8cc3d84dd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/odd_jobs.snbt"
-hash = "4a1bb660c971c73a545039cd9de20ba61052c6e2451548cea7377041b7fff421"
+hash = "1bf32ac07401f6ee3d8bf7e93414533c2b8ed98fff4c56ed00f2314829feb8c6"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_agility.snbt"
-hash = "12177623aa61578810b75efe425004341d1a67080cc84f36a6e88bc19e208e7c"
+hash = "17104a09af2dda3826675c368c38440299a5529fc8b2ee710efa1d268c350e3b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_attack.snbt"
-hash = "7bcf67abd6507cb9a03047a0e2cfae963a8e35d9a416e6bad560c7f9781e57cb"
+hash = "a7db3cdf4ad9b72f7df43d10ba93c7950d44d96ca1190ffeac60c906c1ec1e97"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_cooking.snbt"
-hash = "7d726ca76f533135b9b68cbdea6a68b8a72f8773047c5bc55880110933d90926"
+hash = "aa2544db023d6fb24bdeaa32bffca5acdc4a3270ef70f5e4f44c47df02128fe4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_crafting.snbt"
-hash = "fcf790eaa96187b32e582e47e2317d3274eed7849dee1eac13cc31ac93094679"
+hash = "a468217c506698ea10905a7c88d9bd5f99b1160ab20a5b8a35e91cdea6271197"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_defense.snbt"
-hash = "e41516a611b806556c5590ebad3bd7450dd10b22cf06549ff90b52ae9fa8b317"
+hash = "e15382772b4749006617f9c4a391baead70a651324f08b6b3c26ed71eac5eae5"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_farming.snbt"
-hash = "75a6440d243917907023b3da99ee166195ddc0e586656c6c4a200e385cb090ee"
+hash = "e4873b31e35acfbfaa5d53085aec21242efb7030793856d7f8dcf769c8c425d2"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_fishing.snbt"
-hash = "76191b946730a404cdadc17fdcfe9eaa39929cdf012c354d06a492fe9824da1f"
+hash = "0a679ded8c0c7e02fcbf003804d43969cd8f6cf09a35c44ca3770af5a63cebc4"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_foraging.snbt"
-hash = "681ed673d0e6f6311982e4dedd37cc4a412c7ec19ea951a27ed907665aed87c0"
+hash = "3ce575c2b41e6e842241acb2cce40c8f8b8d46012d8fdc30717ff088039c71ca"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_mining.snbt"
@@ -174,11 +178,11 @@ hash = "6225181cf427a9e17b63aca7bcf4e5d00bc541853af5c80517da37bcb0de8ed5"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_range.snbt"
-hash = "46d5d8b870666982d271d7c6e3a06509ba857dcc861eda47ad5ac17973635a93"
+hash = "8dad5e293398bbb263252bead5a637241fa46c29b47b01f4175fa00f7f723be5"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_taming.snbt"
-hash = "4fb98c5fd4156661b500e218c51703b01c01756a587a212c344ba5a352b0d6e3"
+hash = "6cde347a2e0d1d51de0190bdf5746a8799f1787fffb2e73269875a417d5e1736"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/small_favours.snbt"
@@ -194,7 +198,7 @@ hash = "97833f2c037452bf4c1548b5107f0ac96bd2474aa7cc4e423be517243db835df"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/village_errands.snbt"
-hash = "1160ca3d0bbd3e5f614d472a12139293e8b4bb41bcf6c202b544664224a06409"
+hash = "b67d4f68f9115512f97b76d1c8c0f03cbf499bfb7e4a5f3a530ed78df49ecdba"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -2793,7 +2797,7 @@ hash = "77546c4cc0ec84840f5fd7ab0b845a72406755c619b84f89740a3f8047957af8"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "dfbb12e2f699eb260adb58e097f267eff3487c9f2e465e0bfd30e14d7443c654"
+hash = "be42020360581036675efb1dd7857e9c8b71e8b351c4ef250b500f553e42db38"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2877,7 +2881,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "eee129feda28b77957c4ea88747beeb9c4946512e350b175346b733a8210cb38"
+hash = "39849bc91be483141f2b2b09c9d7ca13e9203c35f9a33862e698329f3eac7311"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"

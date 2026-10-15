@@ -147,6 +147,18 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - twilight:minotaurs: needs a Minotaur axe from them; written as a quest drop
 - twilight:meef: needs raw meef hunted; written as cooked stroganoff carried
 - twilight:uncrafting: needs breaking down an enchanted item; written as using the table
+- alexs_caves:cave_paintings: needs hanging nine panels in order; written as three panels carried and a painting build
+- alexs_caves:dino_bowl: needs watching herds; written as two photos with a camera carried
+- alexs_caves:relicheirus_egg: needs hatching the egg first; written as carrying the egg and a tame
+- alexs_caves:stolen_egg: needs carrying the atlatitan egg to hatch; written as a raid and a search
+- alexs_caves:sea_pig: needs scooping a sea pig into a bucket; written as an empty bucket carried
+- alexs_caves:abyssal_ruins: needs not stirring the mine guardians; written as a hurt-free timed crossing
+- alexs_caves:corrodent: needs cornering one in the open; written as a kill and a quest drop
+- alexs_caves:watcher: needs killing before the view switches; written as an encounter kill
+- alexs_caves:forsaken: needs the underzealots' ritual first; written as a boss fight at the canyon
+- alexs_caves:caniac: needs frostmint from the cavity; written as kills and a crafted spear
+- alexs_caves:gummy_bear: needs riding a candicorn; written as a tame and an observe
+- alexs_caves:confection_oven: needs baking specific sweets; written as using the oven
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

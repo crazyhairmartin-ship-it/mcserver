@@ -4503,6 +4503,474 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "alexs_caves:rumours_below",
+    "stage": "fq.alexs_caves.rumours_below.talk0",
+    "type": "talk",
+    "lines": [
+      "Whole worlds under the stone. I sell maps to them.",
+      "Take one. Mind the dark."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "villager",
+    "profession": "minecraft:cartographer",
+    "quest_id": "498189A948BBD6D5",
+    "open_task": ""
+  },
+  {
+    "quest": "alexs_caves:primordial_caves",
+    "stage": "fq.alexs_caves.primordial_caves.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "alexscaves:primordial_caves"
+      ],
+      "below_y": 60
+    },
+    "requires": [],
+    "quest_id": "1FC08F2C4317DEF2",
+    "prev_tasks": [
+      "464143EBAE27951C"
+    ]
+  },
+  {
+    "quest": "alexs_caves:cave_paintings",
+    "stage": "fq.alexs_caves.cave_paintings.build3",
+    "type": "build",
+    "keys": [
+      "minecraft:painting"
+    ],
+    "counts": [
+      3
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "0835BD5589EA08BA",
+    "prev_tasks": [
+      "75BE4BDDDB3E9B8D",
+      "6E423A481C63E918",
+      "79DBE593DF7D9F83"
+    ]
+  },
+  {
+    "quest": "alexs_caves:ancient_groves",
+    "stage": "fq.alexs_caves.ancient_groves.build4",
+    "type": "build",
+    "keys": [
+      "alexscaves:pewen_sapling",
+      "alexscaves:ancient_sapling"
+    ],
+    "counts": [
+      1,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "61A6313FE45302FF",
+    "prev_tasks": [
+      "3605CF6C68953D65",
+      "0712C2C5318798B8",
+      "3910D967FA1B3A09",
+      "371E21F57720CD0F"
+    ]
+  },
+  {
+    "quest": "alexs_caves:dino_bowl",
+    "stage": "fq.alexs_caves.dino_bowl.photo2",
+    "type": "photo",
+    "target": {
+      "kind": "entity",
+      "entity": "alexscaves:grottoceratops",
+      "distance": 24.0
+    },
+    "requires": [],
+    "quest_id": "05164F19938BC6CA",
+    "prev_tasks": [
+      "337FDEC4A66D8885",
+      "164B46CE1B927876"
+    ]
+  },
+  {
+    "quest": "alexs_caves:dino_bowl",
+    "stage": "fq.alexs_caves.dino_bowl.photo3",
+    "type": "photo",
+    "target": {
+      "kind": "entity",
+      "entity": "alexscaves:relicheirus",
+      "distance": 24.0
+    },
+    "requires": [],
+    "quest_id": "05164F19938BC6CA",
+    "prev_tasks": [
+      "337FDEC4A66D8885",
+      "164B46CE1B927876",
+      "3E8C58E9AADC96C0"
+    ]
+  },
+  {
+    "quest": "alexs_caves:relicheirus_egg",
+    "stage": "fq.alexs_caves.relicheirus_egg.tame1",
+    "type": "tame",
+    "entities": [
+      "alexscaves:relicheirus"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "446C2444ADF26B5E",
+    "prev_tasks": [
+      "115C827C576FD6D8"
+    ]
+  },
+  {
+    "quest": "alexs_caves:dino_chop",
+    "stage": "fq.alexs_caves.dino_chop.spawn0",
+    "type": "spawn",
+    "entity": "alexscaves:grottoceratops",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:dino_bowl"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Bowl Grottoceratops",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5F2015BBA8953FC6",
+    "requires": [],
+    "quest_id": "04D16C1A3313B799",
+    "prev_tasks": []
+  },
+  {
+    "quest": "alexs_caves:subterranodon",
+    "stage": "fq.alexs_caves.subterranodon.tame0",
+    "type": "tame",
+    "entities": [
+      "alexscaves:subterranodon"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "4280357689A07C27",
+    "prev_tasks": []
+  },
+  {
+    "quest": "alexs_caves:stolen_egg",
+    "stage": "fq.alexs_caves.stolen_egg.spawn0",
+    "type": "spawn",
+    "entity": "alexscaves:vallumraptor",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:dino_bowl"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Egg-Thief Raptors",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "6BB0C9A215BE2DA1",
+    "requires": [],
+    "quest_id": "633ECDFDFE7D16DF",
+    "prev_tasks": []
+  },
+  {
+    "quest": "alexs_caves:stolen_egg",
+    "stage": "fq.alexs_caves.stolen_egg.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:dino_bowl"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_stolen_egg_1",
+    "found": "The stolen egg, warm in the raptors' nest.",
+    "requires": [],
+    "quest_id": "633ECDFDFE7D16DF",
+    "prev_tasks": [
+      "6BB0C9A215BE2DA1"
+    ]
+  },
+  {
+    "quest": "alexs_caves:tremorsaurus",
+    "stage": "fq.alexs_caves.tremorsaurus.spawn0",
+    "type": "spawn",
+    "entity": "alexscaves:tremorsaurus",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:volcano"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Tremorsaurus",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "775F8383C91091CD",
+    "requires": [],
+    "quest_id": "219DF8B34104E0E2",
+    "prev_tasks": []
+  },
+  {
+    "quest": "alexs_caves:abyssal_chasm",
+    "stage": "fq.alexs_caves.abyssal_chasm.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "alexscaves:abyssal_chasm"
+      ],
+      "in_water": true
+    },
+    "requires": [],
+    "quest_id": "6BCDC3D280E5556F",
+    "prev_tasks": [
+      "33DF796AF18A8F0B"
+    ]
+  },
+  {
+    "quest": "alexs_caves:abyssal_ruins",
+    "stage": "fq.alexs_caves.abyssal_ruins.timed1",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:abyssal_ruins"
+      ],
+      "label": "the city's heart",
+      "away": 50
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Quiet. If anything touches you, the guardians wake."
+    ],
+    "start": "Creep in",
+    "requires": [],
+    "quest_id": "3E399695B73FCF9E",
+    "prev_tasks": [
+      "5EAE2364E85D21C5"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "alexs_caves:forlorn_hollows",
+    "stage": "fq.alexs_caves.forlorn_hollows.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "alexscaves:forlorn_hollows"
+      ],
+      "below_y": 40
+    },
+    "requires": [],
+    "quest_id": "6FC84C9A4427EDDD",
+    "prev_tasks": [
+      "6305DEA19D5E7792"
+    ]
+  },
+  {
+    "quest": "alexs_caves:corrodent",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "alexscaves:corrodent"
+    ],
+    "chance": 0.6,
+    "item": "kubejs:quest_corrodent_1",
+    "requires": [],
+    "quest_id": "651D29799BE21531",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "alexs_caves:forlorn_bridge",
+    "stage": "fq.alexs_caves.forlorn_bridge.timed1",
+    "type": "timed",
+    "seconds": 240,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:forlorn_bridge"
+      ],
+      "label": "the far side",
+      "away": 40
+    },
+    "no": [
+      "hurt",
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "The underzealots hunt in the dark. Don't be touched."
+    ],
+    "start": "Cross the bridge",
+    "requires": [],
+    "quest_id": "110248A5873CF2BE",
+    "prev_tasks": [
+      "5AC5EE6E5DBE226C"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "alexs_caves:watcher",
+    "stage": "fq.alexs_caves.watcher.enc0",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*Your sight swims. Something watches through your eyes.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "55215AE6243F7D0E",
+    "prev_tasks": [],
+    "name": "The Watcher",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": null,
+    "glow": false,
+    "where": {
+      "biomes": [
+        "alexscaves:forlorn_hollows"
+      ]
+    },
+    "entity": "alexscaves:watcher",
+    "profession": ""
+  },
+  {
+    "quest": "alexs_caves:forsaken",
+    "stage": "fq.alexs_caves.forsaken.spawn0",
+    "type": "spawn",
+    "entity": "alexscaves:forsaken",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:forlorn_canyon"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Forsaken",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "299BE835E5A678E9",
+    "requires": [],
+    "quest_id": "72111BA2231D5F6F",
+    "prev_tasks": []
+  },
+  {
+    "quest": "alexs_caves:candy_cavity",
+    "stage": "fq.alexs_caves.candy_cavity.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "alexscaves:candy_cavity"
+      ],
+      "below_y": 50
+    },
+    "requires": [],
+    "quest_id": "2708FB6BFA238099",
+    "prev_tasks": [
+      "4D8BC50CE50234CF"
+    ]
+  },
+  {
+    "quest": "alexs_caves:gingerbread_town",
+    "stage": "fq.alexs_caves.gingerbread_town.talk1",
+    "type": "talk",
+    "lines": [
+      "Crumbly greetings! Mind the walls, they're edible.",
+      "Take our armour. We bake plenty."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "entity",
+    "entity": "alexscaves:gingerbread_man",
+    "named": "",
+    "quest_id": "28F01ED6D80B85EE",
+    "open_task": ""
+  },
+  {
+    "quest": "alexs_caves:licowitch",
+    "stage": "fq.alexs_caves.licowitch.spawn1",
+    "type": "spawn",
+    "entity": "alexscaves:licowitch",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "alexscaves:licowitch_tower"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Licowitch",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "6B8177D8445AD717",
+    "requires": [],
+    "quest_id": "335442170EA2BD97",
+    "prev_tasks": [
+      "7B9B5FD46FAD0401"
+    ]
+  },
+  {
+    "quest": "alexs_caves:confection_oven",
+    "stage": "fq.alexs_caves.confection_oven.use1",
+    "type": "use",
+    "keys": [
+      "alexscaves:confection_oven"
+    ],
+    "count": 1,
+    "at": null,
+    "within": 0,
+    "holding": "",
+    "consume": false,
+    "requires": [],
+    "quest_id": "29C7837D57112C44",
+    "prev_tasks": [
+      "60374D3B4600869B"
+    ]
+  },
+  {
+    "quest": "alexs_caves:gummy_bear",
+    "stage": "fq.alexs_caves.gummy_bear.tame0",
+    "type": "tame",
+    "entities": [
+      "alexscaves:gummy_bear"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "29740B61A9A75C97",
+    "prev_tasks": []
+  },
+  {
     "quest": "discovery_sea:bones_of_the_deep",
     "stage": "fq.discovery_sea.bones_of_the_deep.be0",
     "type": "be",
