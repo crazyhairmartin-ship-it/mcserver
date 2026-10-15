@@ -1,0 +1,1049 @@
+{
+  "title": "Above and Below",
+  "subtitle": "Vertigo and darkness",
+  "icon": "minecraft:feather",
+  "group": "explore",
+  "order": 2,
+  "quests": [
+    {
+      "id": "islands_in_the_sky",
+      "title": "Islands in the Sky",
+      "text": [
+        "Through the spyglass you can see them: islands hanging in the sky, small huts and whole forests among the clouds. The Couriers would give a lot to know how to reach one."
+      ],
+      "tasks": [
+        {
+          "structure": "#moog_sky_islands",
+          "title": "Get up to a floating island by any means"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "grapplemod:grapplinghook"
+        },
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "grapplemod:grapplinghook",
+      "discover": {
+        "item": "minecraft:spyglass"
+      }
+    },
+    {
+      "id": "sky_hopper",
+      "title": "Sky Hopper",
+      "after": [
+        "islands_in_the_sky"
+      ],
+      "text": [
+        "One island is a story. Five is a map. The Couriers want to know how the islands connect, so hop between five different ones."
+      ],
+      "tasks": [
+        {
+          "structure": "mss:small_tower",
+          "title": "Land on a small tower island"
+        },
+        {
+          "structure": "mss:spruce_huts",
+          "title": "Land on the spruce huts island"
+        },
+        {
+          "structure": "mss:small_oak_house",
+          "title": "Land on a small house island"
+        },
+        {
+          "structure": "mss:taiga",
+          "title": "Land on a taiga forest island"
+        },
+        {
+          "structure": "mss:jungle",
+          "title": "Land on a jungle island"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather_boots",
+          "name": "Sky Hoppers",
+          "lore": [
+            "Five islands, no falls."
+          ],
+          "enchant": {
+            "minecraft:feather_falling": 3
+          }
+        },
+        {
+          "skill": "agility",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:feather"
+    },
+    {
+      "id": "volcano_in_the_sky",
+      "title": "Fire Overhead",
+      "text": [
+        "A volcano floats in the sky, dripping lava over its edge. The Miners' Guild wants magma and ore from its core, if you can reach it without falling through."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:magma_block",
+          "count": 4,
+          "title": "Chip magma from the crater's core"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mss:volcano"
+            },
+            "count": 2,
+            "item": {
+              "name": "Core Ore Sample",
+              "texture": "minecraft:item/raw_gold"
+            },
+            "found": "A lump of ore, still hot from the core."
+          },
+          "title": "Search the volcano for ore samples"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:obsidian",
+          "count": 8
+        },
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "skill": "mining",
+          "xp": 220
+        }
+      ],
+      "icon": "minecraft:magma_block",
+      "discover": {
+        "structure": "mss:volcano"
+      }
+    },
+    {
+      "id": "castle_in_the_clouds",
+      "title": "Castle in the Clouds",
+      "text": [
+        "A ruined castle and towers float above the land, held by skeletons. Storm it, and take the banner from its highest tower."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:skeleton",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "mss:castle_tower"
+            },
+            "wave": 4,
+            "name": "Castle Garrison"
+          },
+          "title": "Storm the castle past its skeleton garrison"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mss:castle_tower"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Castle Banner",
+              "texture": "minecraft:item/white_banner"
+            },
+            "found": "A torn banner, still bearing the castle's arms."
+          },
+          "title": "Search for the Castle Banner"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bow",
+          "name": "Cloud-Piercer",
+          "lore": [
+            "Taken from a floating garrison."
+          ],
+          "enchant": {
+            "minecraft:power": 3,
+            "minecraft:punch": 1
+          }
+        },
+        {
+          "item": "minecraft:white_banner"
+        },
+        {
+          "skill": "attack",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:white_banner",
+      "discover": {
+        "structure": "mss:castle_tower"
+      }
+    },
+    {
+      "id": "pyramid_aloft",
+      "title": "The Pyramid Aloft",
+      "text": [
+        "A desert pyramid floats over the dunes, its sand somehow holding. Its tomb is sealed by a ritual of lights. Kindle its candles and the chests unseal."
+      ],
+      "tasks": [
+        {
+          "use": "minecraft:light_gray_candle",
+          "count": 1,
+          "at": {
+            "structure": "mss:desert_pyramid"
+          },
+          "holding": "minecraft:flint_and_steel",
+          "consume": false,
+          "title": "Kindle the tomb's candles"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mss:desert_pyramid"
+            },
+            "count": 1,
+            "item": {
+              "name": "Tomb Hoard",
+              "texture": "minecraft:item/gold_ingot"
+            },
+            "found": "The tomb's seal gives, and the hoard glints."
+          },
+          "title": "Search for Tomb Hoard"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 10
+        },
+        {
+          "item": "minecraft:sandstone",
+          "count": 32
+        },
+        {
+          "skill": "mining",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:sandstone",
+      "discover": {
+        "structure": "mss:desert_pyramid"
+      }
+    },
+    {
+      "id": "sky_garden",
+      "title": "The Sky Garden",
+      "text": [
+        "Forests float in the sky, jungle, taiga and mangrove among them. The Herbalists want saplings from three sky forests, planted at home."
+      ],
+      "tasks": [
+        {
+          "structure": "mss:taiga",
+          "title": "Visit a floating taiga"
+        },
+        {
+          "structure": "mss:mangrove",
+          "title": "Visit a floating mangrove"
+        },
+        {
+          "item": "minecraft:jungle_sapling",
+          "title": "Take a jungle sapling"
+        },
+        {
+          "item": "minecraft:spruce_sapling",
+          "title": "Take a spruce sapling"
+        },
+        {
+          "item": "minecraft:mangrove_propagule",
+          "title": "Take a mangrove propagule"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:jungle_sapling": 1,
+              "minecraft:spruce_sapling": 1,
+              "minecraft:mangrove_propagule": 1
+            },
+            "radius": 12
+          },
+          "title": "Plant the saplings at home"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone_meal",
+          "count": 16
+        },
+        {
+          "skill": "forage",
+          "xp": 180
+        }
+      ],
+      "icon": "minecraft:jungle_sapling",
+      "discover": {
+        "structure": "mss:jungle"
+      }
+    },
+    {
+      "id": "sky_hermit",
+      "title": "The Sky Hermit",
+      "text": [
+        "Small houses float in the sky, and one still has a hermit who never comes down. He's out of supplies. Bring him some from the ground."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:bread",
+          "count": 8,
+          "consume": true,
+          "title": "Bring bread up from the ground"
+        },
+        {
+          "item": "minecraft:cooked_beef",
+          "count": 4,
+          "consume": true,
+          "title": "Bring meat up from the ground"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Sky Hermit",
+            "then": "talk",
+            "lines": [
+              "Food! Real food! I've been living on cloud berries for a year.",
+              "I came up here to escape someone. I forget who. It's very peaceful.",
+              "Take this feather. It's the lightest thing I own."
+            ]
+          },
+          "title": "Hand over the supplies and hear his story"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:feather",
+          "count": 8
+        },
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:bread",
+      "discover": {
+        "structure": "mss:spruce_huts"
+      }
+    },
+    {
+      "id": "airship_boarding",
+      "title": "Boarding Party",
+      "text": [
+        "An airship drifts overhead, crewed by illagers. Get aboard, clear the decks and take the captain's chest before it sails away."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:pillager",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "#airships"
+            },
+            "wave": 4,
+            "name": "Airship Crew"
+          },
+          "title": "Clear the airship's decks"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "#airships"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Captain's Hoard",
+              "texture": "minecraft:item/gold_ingot"
+            },
+            "found": "The captain's strongbox, heavy with plunder."
+          },
+          "title": "Search for the Captain's Hoard"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:crossbow",
+          "name": "Deckclearer",
+          "lore": [
+            "Taken from an illager airship."
+          ],
+          "enchant": {
+            "minecraft:multishot": 1,
+            "minecraft:quick_charge": 2
+          }
+        },
+        {
+          "item": "minecraft:firework_rocket",
+          "count": 16
+        },
+        {
+          "skill": "range",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:crossbow",
+      "discover": {
+        "structure": "#airships"
+      }
+    },
+    {
+      "id": "the_drifting_blimp",
+      "title": "The Drifting Blimp",
+      "text": [
+        "A small blimp floats unmanned above the hills. Climb aboard, read the pilot's engine notes and use them to build your own aircraft."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "dungeons_arise:small_blimp"
+            },
+            "count": 1,
+            "item": {
+              "name": "Pilot's Engine Notes",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "Engine notes, oil-stained and annotated."
+          },
+          "title": "Search the blimp for the pilot's notes"
+        },
+        {
+          "item": "immersive_aircraft:engine",
+          "crafted": true,
+          "title": "Build an engine from the pilot's notes"
+        },
+        {
+          "item": "immersive_aircraft:airship",
+          "crafted": true,
+          "title": "Build your own airship"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "immersive_aircraft:propeller",
+          "count": 2
+        },
+        {
+          "item": "immersive_aircraft:hull",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 220
+        }
+      ],
+      "icon": "immersive_aircraft:airship",
+      "discover": {
+        "structure": "dungeons_arise:small_blimp"
+      }
+    },
+    {
+      "id": "highest_point",
+      "title": "The Highest Point",
+      "after": [
+        "islands_in_the_sky"
+      ],
+      "text": [
+        "The Couriers keep a record of those who have stood at the very top of the world. Icarus wings, an aircraft or a pillar of dirt all count."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "above_y": 300
+          },
+          "title": "Climb to the build limit and look down"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:firework_rocket",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:firework_rocket"
+    },
+    {
+      "id": "the_ancient_city",
+      "title": "The Silent City",
+      "text": [
+        "You've found an ancient city in the deep dark. Cross it to the great portal frame on the far side without waking the Warden, sneaking past every shrieker."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 300,
+            "goal": {
+              "structure": "minecraft:ancient_city",
+              "label": "the far side of the city",
+              "away": 60
+            },
+            "lines": [
+              "Quiet. If anything touches you, the city knows you're here."
+            ],
+            "start": "Begin the crossing",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Cross the city without being touched"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Silent Step",
+          "enchant": {
+            "minecraft:swift_sneak": 3
+          }
+        },
+        {
+          "item": "minecraft:echo_shard",
+          "count": 4
+        },
+        {
+          "skill": "magic",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:sculk_shrieker",
+      "discover": {
+        "structure": "minecraft:ancient_city"
+      }
+    },
+    {
+      "id": "echo_shards",
+      "title": "Echoes",
+      "text": [
+        "An echo shard hums when you hold it. Gather eight, and a recovery compass will point you back to wherever you last fell."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:echo_shard",
+          "count": 8,
+          "title": "Gather eight echo shards from the city's chests"
+        },
+        {
+          "item": "minecraft:recovery_compass",
+          "crafted": true,
+          "title": "Craft a recovery compass"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:recovery_compass"
+        },
+        {
+          "skill": "magic",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:recovery_compass",
+      "discover": {
+        "item": "minecraft:echo_shard"
+      }
+    },
+    {
+      "id": "disc_fragments",
+      "title": "Fragments of a Song",
+      "after": [
+        "the_ancient_city"
+      ],
+      "text": [
+        "A disc fragment hums with a half-remembered tune. Nine of them make a whole disc. Assemble it, then play it somewhere quiet."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:disc_fragment_5",
+          "count": 9,
+          "title": "Gather nine disc fragments from the city"
+        },
+        {
+          "item": "minecraft:music_disc_5",
+          "crafted": true,
+          "title": "Assemble the strange disc"
+        },
+        {
+          "use": "minecraft:jukebox",
+          "count": 1,
+          "holding": "minecraft:music_disc_5",
+          "consume": false,
+          "title": "Play the disc in a jukebox somewhere quiet"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:jukebox"
+        },
+        {
+          "item": "minecraft:sculk",
+          "count": 8
+        },
+        {
+          "skill": "magic",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:music_disc_5",
+      "discover": {
+        "item": "minecraft:disc_fragment_5"
+      }
+    },
+    {
+      "id": "the_bunker",
+      "title": "The Bunker",
+      "text": [
+        "A sealed bunker lies under the hills, its vault door on a power lock. The bunker's fuses are scattered through its storerooms. Gather them, wire in lamps and open the vault."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:bunker"
+            },
+            "count": 3,
+            "item": {
+              "name": "Bunker Fuse",
+              "texture": "minecraft:item/redstone"
+            },
+            "found": "A fuse, still wrapped in oiled cloth."
+          },
+          "title": "Search the storerooms for the bunker's fuses"
+        },
+        {
+          "item": "minecraft:redstone_lamp",
+          "count": 3,
+          "title": "Bring lamps to wire into the lock"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:redstone_lamp": 3
+            },
+            "radius": 12
+          },
+          "title": "Wire the lamps into the lock"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:bunker"
+            },
+            "count": 1,
+            "item": {
+              "name": "Vault Hoard",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "The vault door grinds open on a hoard."
+          },
+          "title": "Open the vault"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:redstone",
+          "count": 16
+        },
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 16
+        },
+        {
+          "skill": "craft",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:redstone",
+      "discover": {
+        "structure": "nova_structures:bunker"
+      }
+    },
+    {
+      "id": "underground_house",
+      "title": "A House Underground",
+      "text": [
+        "A house buried under the ground, lit and furnished, with nobody in it. Its owner's diary says who dug it, and where he left his pickaxe."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:underground_house"
+            },
+            "count": 2,
+            "item": {
+              "name": "Owner's Diary Page",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A diary page, dated years back."
+          },
+          "title": "Read the diary pages left in the house"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:underground_house"
+            },
+            "count": 1,
+            "item": {
+              "name": "Owner's Pickaxe",
+              "texture": "minecraft:item/iron_pickaxe"
+            },
+            "found": "A worn pickaxe, wrapped in cloth."
+          },
+          "title": "Find the owner's lost pickaxe"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:torch",
+          "count": 32
+        },
+        {
+          "item": "minecraft:iron_pickaxe"
+        },
+        {
+          "skill": "mining",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:iron_pickaxe",
+      "discover": {
+        "structure": "nova_structures:underground_house"
+      }
+    },
+    {
+      "id": "the_cave_tablet",
+      "title": "A Carved Tablet",
+      "text": [
+        "A tablet carved with a place far below. A cartographer in some village will know what it's worth."
+      ],
+      "tasks": [
+        {
+          "talk": "villager",
+          "profession": "minecraft:cartographer",
+          "lines": [
+            "This tablet shows a cave deeper than any I've charted.",
+            "Magnets, acid, strange light... I'd keep it close.",
+            "Here, a map. The tablet is yours."
+          ],
+          "title": "Show the tablet to a cartographer"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:map"
+        },
+        {
+          "skill": "mining",
+          "xp": 200
+        }
+      ],
+      "icon": "alexscaves:cave_tablet",
+      "discover": {
+        "item": "alexscaves:cave_tablet"
+      }
+    },
+    {
+      "id": "glittering_nest",
+      "title": "The Glittering Nest",
+      "text": [
+        "An amethyst nest grows in a lush cave, guarded by amethyst crabs. One of them carries a perfect geode heart."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:amethyst_crab",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:amethyst_nest"
+            },
+            "wave": 2,
+            "name": "Nest Crabs"
+          },
+          "title": "Hunt the nest's crabs"
+        },
+        {
+          "drop": {
+            "from": [
+              "cataclysm:amethyst_crab"
+            ],
+            "chance": 0.5,
+            "item": {
+              "name": "a Perfect Geode Heart",
+              "texture": "minecraft:item/amethyst_shard",
+              "tooltip": "The heart of the nest"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take a Perfect Geode Heart"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:amethyst_block",
+          "count": 8
+        },
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "skill": "mining",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:amethyst_block",
+      "discover": {
+        "structure": "cataclysm:amethyst_nest"
+      }
+    },
+    {
+      "id": "biome_deep_dark",
+      "title": "Into the Deep Dark",
+      "text": [
+        "The deep dark: silence, sculk and something listening. The Arcane Order want a sculk sensor from it, taken without setting off a shrieker."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "biomes": [
+              "minecraft:deep_dark"
+            ]
+          },
+          "title": "Creep through the deep dark"
+        },
+        {
+          "item": "minecraft:sculk_sensor",
+          "title": "Take a sculk sensor without waking a shrieker"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:sculk",
+          "count": 8
+        },
+        {
+          "skill": "mining",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:sculk_sensor",
+      "discover": {
+        "biome": "minecraft:deep_dark"
+      }
+    },
+    {
+      "id": "biome_lush_caves",
+      "title": "Lush Caves",
+      "text": [
+        "Lush caves hang with glow berries and hold axolotls in their pools. The Sanctuary keepers would love both."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:glow_berries",
+          "count": 4,
+          "title": "Pick glow berries from the vines"
+        },
+        {
+          "item": "minecraft:axolotl_bucket",
+          "title": "Catch an axolotl in a bucket"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:axolotl_bucket"
+        },
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:glow_berries",
+      "discover": {
+        "biome": "minecraft:lush_caves"
+      }
+    },
+    {
+      "id": "biome_dripstone",
+      "title": "Teeth of Stone",
+      "text": [
+        "Dripstone caves, a forest of stone teeth. The Miners' Guild wants pointed dripstone, and a cauldron filled drip by drip beneath a stalactite."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:pointed_dripstone",
+          "count": 4,
+          "title": "Collect pointed dripstone"
+        },
+        {
+          "item": "minecraft:cauldron",
+          "crafted": true,
+          "title": "Make a cauldron to catch the drips"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:cauldron": 1
+            },
+            "radius": 12
+          },
+          "title": "Set the cauldron under a dripstone to fill"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cauldron"
+        },
+        {
+          "skill": "mining",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:pointed_dripstone",
+      "discover": {
+        "biome": "minecraft:dripstone_caves"
+      }
+    },
+    {
+      "id": "biome_redstone_caves",
+      "title": "Red Veins",
+      "text": [
+        "Redstone grows from the walls of these caves like crystal. The Crafters' guild wants a harvest."
+      ],
+      "tasks": [
+        {
+          "item": "regions_unexplored:redstone_bud",
+          "count": 4,
+          "title": "Mine redstone buds from the walls"
+        },
+        {
+          "item": "regions_unexplored:pointed_redstone",
+          "count": 4,
+          "title": "Mine pointed redstone"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:redstone",
+          "count": 32
+        },
+        {
+          "skill": "mining",
+          "xp": 150
+        }
+      ],
+      "icon": "regions_unexplored:redstone_bud",
+      "discover": {
+        "biome": "regions_unexplored:redstone_caves"
+      }
+    },
+    {
+      "id": "biome_prismachasm",
+      "title": "The Prismachasm",
+      "text": [
+        "A chasm of prismatic glass and glowing moss. The Crafters' guild would pay well for its shining crystals."
+      ],
+      "tasks": [
+        {
+          "item": "regions_unexplored:prismaglass",
+          "count": 4,
+          "title": "Bring back prismatic glass"
+        },
+        {
+          "item": "regions_unexplored:prismoss",
+          "count": 4,
+          "title": "Bring back prismoss"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "regions_unexplored:prismoss",
+          "count": 8
+        },
+        {
+          "skill": "mining",
+          "xp": 150
+        }
+      ],
+      "icon": "regions_unexplored:prismaglass",
+      "discover": {
+        "biome": "regions_unexplored:prismachasm"
+      }
+    },
+    {
+      "id": "biome_spider_nest",
+      "title": "Webs Everywhere",
+      "text": [
+        "You've stumbled into a spider nest, webs thick as curtains. Get out the other side before the nest closes around you."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 180,
+            "goal": {
+              "kill": "minecraft:spider",
+              "count": 10
+            },
+            "waves": [
+              {
+                "entity": "minecraft:spider",
+                "count": 3,
+                "every": 15
+              }
+            ],
+            "lines": [
+              "The webs are closing in. Cut your way out!"
+            ],
+            "start": "Fight your way out"
+          },
+          "title": "Cut your way through the nest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:string",
+          "count": 16
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Spider's Bane",
+          "enchant": {
+            "minecraft:bane_of_arthropods": 3
+          }
+        },
+        {
+          "skill": "attack",
+          "xp": 220
+        }
+      ],
+      "icon": "minecraft:cobweb",
+      "discover": {
+        "biome": "biomesoplenty:spider_nest"
+      }
+    }
+  ]
+}

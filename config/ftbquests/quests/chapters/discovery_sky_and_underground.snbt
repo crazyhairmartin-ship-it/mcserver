@@ -1,0 +1,1300 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "discovery_sky_and_underground"
+	group: "76581968F62E459A"
+	icon: "minecraft:feather"
+	id: "22B5AB812E72345A"
+	order_index: 9
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Through the spyglass you can see them: islands hanging in the sky, small huts and whole forests among the clouds. The Couriers would give a lot to know how to reach one."]
+			icon: "grapplemod:grapplinghook"
+			id: "251505A6DE1A957B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "67BD9FDD17F408C5"
+					item: "grapplemod:grapplinghook"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "4B0DFC2DB60C2618"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "4262D2F759C72871"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5931CC27613CE4F3"
+					item: "minecraft:spyglass"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					id: "296709000406D0F6"
+					structure: "#fotf:groups/moog_sky_islands"
+					title: "Get up to a floating island by any means"
+					type: "structure"
+				}
+			]
+			title: "Islands in the Sky"
+			x: 0.0d
+			y: -14.25d
+		}
+		{
+			dependencies: ["251505A6DE1A957B"]
+			description: ["One island is a story. Five is a map. The Couriers want to know how the islands connect, so hop between five different ones."]
+			icon: "minecraft:feather"
+			id: "64B419A29206B9EC"
+			rewards: [
+				{
+					id: "2D00459FC1BE16B5"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_boots"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 3s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Five islands, no falls.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Sky Hoppers\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 200"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "3EC8528A3085D1B1"
+					silent: true
+					title: "+200 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "186764E21AC19D07"
+					structure: "mss:small_tower"
+					title: "Land on a small tower island"
+					type: "structure"
+				}
+				{
+					id: "2215DA68CF20ED9E"
+					structure: "mss:spruce_huts"
+					title: "Land on the spruce huts island"
+					type: "structure"
+				}
+				{
+					id: "2E8C0A32A7C5F58C"
+					structure: "mss:small_oak_house"
+					title: "Land on a small house island"
+					type: "structure"
+				}
+				{
+					id: "52F16B51421DD8F7"
+					structure: "mss:taiga"
+					title: "Land on a taiga forest island"
+					type: "structure"
+				}
+				{
+					id: "6CC24CD6E3C78AB6"
+					structure: "mss:jungle"
+					title: "Land on a jungle island"
+					type: "structure"
+				}
+			]
+			title: "Sky Hopper"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			description: ["A volcano floats in the sky, dripping lava over its edge. The Miners' Guild wants magma and ore from its core, if you can reach it without falling through."]
+			icon: "minecraft:magma_block"
+			id: "70B8F84B7845E16D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "741F19B5C74779F2"
+					item: "minecraft:obsidian"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "54B8CDDD32515E55"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 220"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "3546559D4E9034E3"
+					silent: true
+					title: "+220 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "15A469D535358608"
+					structure: "mss:volcano"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 4L
+					id: "6566ADA40C4D04C2"
+					item: "minecraft:magma_block"
+					title: "Chip magma from the crater's core"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "693A60F05A10C7F7"
+					item: "kubejs:quest_volcano_in_the_sky_1"
+					title: "Search the volcano for ore samples"
+					type: "item"
+				}
+			]
+			title: "Fire Overhead"
+			x: 0.0d
+			y: -12.75d
+		}
+		{
+			description: ["A ruined castle and towers float above the land, held by skeletons. Storm it, and take the banner from its highest tower."]
+			icon: "minecraft:white_banner"
+			id: "6FECFB9FCE175AB8"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "675C169BD7682335"
+					item: {
+						Count: 1b
+						id: "minecraft:bow"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:power"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:punch"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Taken from a floating garrison.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Cloud-Piercer\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "5749647A86F1BF7A"
+					item: "minecraft:white_banner"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 250"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "584BA1485FDBBC10"
+					silent: true
+					title: "+250 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "02801CCECEF060C2"
+					structure: "mss:castle_tower"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:skeleton"
+					id: "63AAD6A8332EE87C"
+					title: "Storm the castle past its skeleton garrison"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "1E0528037B9FFA0B"
+					item: "kubejs:quest_castle_in_the_clouds_1"
+					title: "Search for the Castle Banner"
+					type: "item"
+				}
+			]
+			title: "Castle in the Clouds"
+			x: 0.0d
+			y: -11.25d
+		}
+		{
+			description: ["A desert pyramid floats over the dunes, its sand somehow holding. Its tomb is sealed by a ritual of lights. Kindle its candles and the chests unseal."]
+			icon: "minecraft:sandstone"
+			id: "179E2119894F6A47"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 10
+					id: "73862EA43F105DDE"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "00367F109EEEB57A"
+					item: "minecraft:sandstone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 200"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "4B58D9F6227F54D6"
+					silent: true
+					title: "+200 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1E45144A268822D8"
+					structure: "mss:desert_pyramid"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "458AF108652A23DA"
+					stage: "fq.discovery_sky_and_underground.pyramid_aloft.use0"
+					title: "Kindle the tomb's candles"
+					type: "gamestage"
+				}
+				{
+					id: "7A92AF50D36293A8"
+					item: "kubejs:quest_pyramid_aloft_1"
+					title: "Search for Tomb Hoard"
+					type: "item"
+				}
+			]
+			title: "The Pyramid Aloft"
+			x: 0.0d
+			y: -9.75d
+		}
+		{
+			description: ["Forests float in the sky, jungle, taiga and mangrove among them. The Herbalists want saplings from three sky forests, planted at home."]
+			icon: "minecraft:jungle_sapling"
+			id: "0C6F94AAA757D909"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "1A430969AC4EB5C6"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 180"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "5DC682CA83EA26E0"
+					silent: true
+					title: "+180 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "76A45A98D9D62AEE"
+					structure: "mss:jungle"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "4D1EBC57E71DB236"
+					structure: "mss:taiga"
+					title: "Visit a floating taiga"
+					type: "structure"
+				}
+				{
+					id: "41C5796DAC1B604F"
+					structure: "mss:mangrove"
+					title: "Visit a floating mangrove"
+					type: "structure"
+				}
+				{
+					id: "654C24463460B6BD"
+					item: "minecraft:jungle_sapling"
+					title: "Take a jungle sapling"
+					type: "item"
+				}
+				{
+					id: "65FD4C49EB628F3E"
+					item: "minecraft:spruce_sapling"
+					title: "Take a spruce sapling"
+					type: "item"
+				}
+				{
+					id: "1063CE69F8153DB6"
+					item: "minecraft:mangrove_propagule"
+					title: "Take a mangrove propagule"
+					type: "item"
+				}
+				{
+					id: "0751076925BADEB1"
+					stage: "fq.discovery_sky_and_underground.sky_garden.build5"
+					title: "Plant the saplings at home"
+					type: "gamestage"
+				}
+			]
+			title: "The Sky Garden"
+			x: 0.0d
+			y: -8.25d
+		}
+		{
+			description: ["Small houses float in the sky, and one still has a hermit who never comes down. He's out of supplies. Bring him some from the ground."]
+			icon: "minecraft:bread"
+			id: "6F70664EDD0425B7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "657DF973D9DC260D"
+					item: "minecraft:feather"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "253B05A728FE0F04"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "6A427EA6E82E9103"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "31C7435FF70C36F1"
+					structure: "mss:spruce_huts"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 8L
+					id: "38E780E17EBA0CEB"
+					item: "minecraft:bread"
+					title: "Bring bread up from the ground"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "2E1D510499D353DB"
+					item: "minecraft:cooked_beef"
+					title: "Bring meat up from the ground"
+					type: "item"
+				}
+				{
+					id: "55EE484030AAFFC8"
+					stage: "fq.discovery_sky_and_underground.sky_hermit.enc2"
+					title: "Hand over the supplies and hear his story"
+					type: "gamestage"
+				}
+			]
+			title: "The Sky Hermit"
+			x: 0.0d
+			y: -6.75d
+		}
+		{
+			description: ["An airship drifts overhead, crewed by illagers. Get aboard, clear the decks and take the captain's chest before it sails away."]
+			icon: "minecraft:crossbow"
+			id: "1BC9F3A81174469A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "4599CC73FFF61EF0"
+					item: {
+						Count: 1b
+						id: "minecraft:crossbow"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:multishot"
+									lvl: 1s
+								}
+								{
+									id: "minecraft:quick_charge"
+									lvl: 2s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Taken from an illager airship.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Deckclearer\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "2F6A4A3FECAAED81"
+					item: "minecraft:firework_rocket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 300"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "4C26535F52ED512C"
+					silent: true
+					title: "+300 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7E0A4190DD8FFDA1"
+					structure: "#fotf:groups/airships"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:pillager"
+					id: "21B0216A6E4D5AD0"
+					title: "Clear the airship's decks"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "1558E08F6E9CDAA6"
+					item: "kubejs:quest_airship_boarding_1"
+					title: "Search for the Captain's Hoard"
+					type: "item"
+				}
+			]
+			title: "Boarding Party"
+			x: 0.0d
+			y: -5.25d
+		}
+		{
+			description: ["A small blimp floats unmanned above the hills. Climb aboard, read the pilot's engine notes and use them to build your own aircraft."]
+			icon: "immersive_aircraft:airship"
+			id: "49DBB6F82798AC78"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "23017D650FB6A787"
+					item: "immersive_aircraft:propeller"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "6054C4369D92FBB5"
+					item: "immersive_aircraft:hull"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 220"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "7C5D56213C5A61C7"
+					silent: true
+					title: "+220 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "32BF748E824999B2"
+					structure: "dungeons_arise:small_blimp"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "7553D2CE401D9253"
+					item: "kubejs:quest_the_drifting_blimp_0"
+					title: "Search the blimp for the pilot's notes"
+					type: "item"
+				}
+				{
+					id: "5C81BBFCFD60B68E"
+					item: "immersive_aircraft:engine"
+					only_from_crafting: true
+					title: "Build an engine from the pilot's notes"
+					type: "item"
+				}
+				{
+					id: "4F1F5FD0F55362EC"
+					item: "immersive_aircraft:airship"
+					only_from_crafting: true
+					title: "Build your own airship"
+					type: "item"
+				}
+			]
+			title: "The Drifting Blimp"
+			x: 0.0d
+			y: -3.75d
+		}
+		{
+			dependencies: ["251505A6DE1A957B"]
+			description: ["The Couriers keep a record of those who have stood at the very top of the world. Icarus wings, an aircraft or a pillar of dirt all count."]
+			icon: "minecraft:firework_rocket"
+			id: "29685AEE0278A1F5"
+			rewards: [
+				{
+					count: 16
+					id: "4851D4F14F61C957"
+					item: "minecraft:firework_rocket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "4DEAA25ABD7D0741"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6380A1E7EA12A4D0"
+					stage: "fq.discovery_sky_and_underground.highest_point.be0"
+					title: "Climb to the build limit and look down"
+					type: "gamestage"
+				}
+			]
+			title: "The Highest Point"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			description: ["You've found an ancient city in the deep dark. Cross it to the great portal frame on the far side without waking the Warden, sneaking past every shrieker."]
+			icon: "minecraft:sculk_shrieker"
+			id: "786C0F39B6B37D19"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "07481869F44C1C23"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:swift_sneak"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Silent Step\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "60DE9EC6184FE3BA"
+					item: "minecraft:echo_shard"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 300"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "00561D084BF7EA0E"
+					silent: true
+					title: "+300 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6EDDA71209A5EF38"
+					structure: "minecraft:ancient_city"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "5415B8D64CD879A3"
+					stage: "fq.discovery_sky_and_underground.the_ancient_city.timed0"
+					title: "Cross the city without being touched"
+					type: "gamestage"
+				}
+			]
+			title: "The Silent City"
+			x: 0.0d
+			y: -2.25d
+		}
+		{
+			description: ["An echo shard hums when you hold it. Gather eight, and a recovery compass will point you back to wherever you last fell."]
+			icon: "minecraft:recovery_compass"
+			id: "6A139B41E4347C2D"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "07312F0945CCF5BD"
+					item: "minecraft:recovery_compass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 250"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "441F25A15246FC22"
+					silent: true
+					title: "+250 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "343CD65CB3D2BF1C"
+					item: "minecraft:echo_shard"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					count: 8L
+					id: "45B67F85A952D591"
+					item: "minecraft:echo_shard"
+					title: "Gather eight echo shards from the city's chests"
+					type: "item"
+				}
+				{
+					id: "6D50A211C2455A29"
+					item: "minecraft:recovery_compass"
+					only_from_crafting: true
+					title: "Craft a recovery compass"
+					type: "item"
+				}
+			]
+			title: "Echoes"
+			x: 0.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["786C0F39B6B37D19"]
+			description: ["A disc fragment hums with a half-remembered tune. Nine of them make a whole disc. Assemble it, then play it somewhere quiet."]
+			icon: "minecraft:music_disc_5"
+			id: "112A7136B0CA5C84"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "64E0FF681116E326"
+					item: "minecraft:jukebox"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "72A16E64B43D5F94"
+					item: "minecraft:sculk"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 250"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "4B74ECE521D839D2"
+					silent: true
+					title: "+250 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "142ABAD03396AC9C"
+					item: "minecraft:disc_fragment_5"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					count: 9L
+					id: "724A8F054F4CF27A"
+					item: "minecraft:disc_fragment_5"
+					title: "Gather nine disc fragments from the city"
+					type: "item"
+				}
+				{
+					id: "1D3EB10906D70025"
+					item: "minecraft:music_disc_5"
+					only_from_crafting: true
+					title: "Assemble the strange disc"
+					type: "item"
+				}
+				{
+					id: "78F8CB4050DBB787"
+					stage: "fq.discovery_sky_and_underground.disc_fragments.use2"
+					title: "Play the disc in a jukebox somewhere quiet"
+					type: "gamestage"
+				}
+			]
+			title: "Fragments of a Song"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			description: ["A sealed bunker lies under the hills, its vault door on a power lock. The bunker's fuses are scattered through its storerooms. Gather them, wire in lamps and open the vault."]
+			icon: "minecraft:redstone"
+			id: "3FABC1A1BCD613BA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "61BC98F5B3A335DC"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "4E0509E391041211"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 200"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "20945A71D7DFE54E"
+					silent: true
+					title: "+200 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3894E2BBC9E4440C"
+					structure: "nova_structures:bunker"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 3L
+					id: "2AA4C880FCD8F4DC"
+					item: "kubejs:quest_the_bunker_0"
+					title: "Search the storerooms for the bunker's fuses"
+					type: "item"
+				}
+				{
+					count: 3L
+					id: "7DA76235E7A99D82"
+					item: "minecraft:redstone_lamp"
+					title: "Bring lamps to wire into the lock"
+					type: "item"
+				}
+				{
+					id: "544588D49ECFF77F"
+					stage: "fq.discovery_sky_and_underground.the_bunker.build2"
+					title: "Wire the lamps into the lock"
+					type: "gamestage"
+				}
+				{
+					id: "0948ABD1F694B3A4"
+					item: "kubejs:quest_the_bunker_3"
+					title: "Open the vault"
+					type: "item"
+				}
+			]
+			title: "The Bunker"
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			description: ["A house buried under the ground, lit and furnished, with nobody in it. Its owner's diary says who dug it, and where he left his pickaxe."]
+			icon: "minecraft:iron_pickaxe"
+			id: "461F796A642FD259"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 32
+					id: "2CE2A2B61703F388"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					id: "73F77617B4EB3A99"
+					item: "minecraft:iron_pickaxe"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 150"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "649B4E85BF4DB003"
+					silent: true
+					title: "+150 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "784BACD03A3FB587"
+					structure: "nova_structures:underground_house"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 2L
+					id: "695EC9138A595801"
+					item: "kubejs:quest_underground_house_0"
+					title: "Read the diary pages left in the house"
+					type: "item"
+				}
+				{
+					id: "211AF22F6E85DED9"
+					item: "kubejs:quest_underground_house_1"
+					title: "Find the owner's lost pickaxe"
+					type: "item"
+				}
+			]
+			title: "A House Underground"
+			x: 0.0d
+			y: 2.25d
+		}
+		{
+			description: ["A tablet carved with a place far below. A cartographer in some village will know what it's worth."]
+			icon: "alexscaves:cave_tablet"
+			id: "729865C928534C64"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "4BAFB492CBCF43A7"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 200"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "6FA81DA08E9B2D08"
+					silent: true
+					title: "+200 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "23EBBD88A6875615"
+					item: "alexscaves:cave_tablet"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					id: "462058A62711C7FA"
+					stage: "fq.discovery_sky_and_underground.the_cave_tablet.talk0"
+					title: "Show the tablet to a cartographer"
+					type: "gamestage"
+				}
+			]
+			title: "A Carved Tablet"
+			x: 0.0d
+			y: 3.75d
+		}
+		{
+			description: ["An amethyst nest grows in a lush cave, guarded by amethyst crabs. One of them carries a perfect geode heart."]
+			icon: "minecraft:amethyst_block"
+			id: "6CE26B2DC5879235"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "53E326D92F4D2F3B"
+					item: "minecraft:amethyst_block"
+					type: "item"
+				}
+				{
+					id: "46DC0561B16AF29F"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 300"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "5F0D710CE0E12176"
+					silent: true
+					title: "+300 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "171227B5476D3332"
+					structure: "cataclysm:amethyst_nest"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:amethyst_crab"
+					id: "06389A4DB1B160DA"
+					title: "Hunt the nest's crabs"
+					type: "kill"
+					value: 4L
+				}
+				{
+					id: "33DC12598ECA7863"
+					item: "kubejs:quest_glittering_nest_1"
+					title: "Take a Perfect Geode Heart"
+					type: "item"
+				}
+			]
+			title: "The Glittering Nest"
+			x: 0.0d
+			y: 5.25d
+		}
+		{
+			description: ["The deep dark: silence, sculk and something listening. The Arcane Order want a sculk sensor from it, taken without setting off a shrieker."]
+			icon: "minecraft:sculk_sensor"
+			id: "71E599C87169B0A6"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "5376A920F4FA8848"
+					item: "minecraft:sculk"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 300"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "0AC024C80F5D12D9"
+					silent: true
+					title: "+300 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:deep_dark"
+					id: "6290D959BA7B52E3"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "376C65CD5C1B7634"
+					stage: "fq.discovery_sky_and_underground.biome_deep_dark.be0"
+					title: "Creep through the deep dark"
+					type: "gamestage"
+				}
+				{
+					id: "5EE91DA8A6200FDF"
+					item: "minecraft:sculk_sensor"
+					title: "Take a sculk sensor without waking a shrieker"
+					type: "item"
+				}
+			]
+			title: "Into the Deep Dark"
+			x: 0.0d
+			y: 6.75d
+		}
+		{
+			description: ["Lush caves hang with glow berries and hold axolotls in their pools. The Sanctuary keepers would love both."]
+			icon: "minecraft:glow_berries"
+			id: "7CE0C131400F520B"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "5F2327CAEE4D79A6"
+					item: "minecraft:axolotl_bucket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "06DF46FA7B324275"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:lush_caves"
+					id: "53937491096E7850"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "7417594E5419D122"
+					item: "minecraft:glow_berries"
+					title: "Pick glow berries from the vines"
+					type: "item"
+				}
+				{
+					id: "0860A98C268002BB"
+					item: "minecraft:axolotl_bucket"
+					title: "Catch an axolotl in a bucket"
+					type: "item"
+				}
+			]
+			title: "Lush Caves"
+			x: 0.0d
+			y: 8.25d
+		}
+		{
+			description: ["Dripstone caves, a forest of stone teeth. The Miners' Guild wants pointed dripstone, and a cauldron filled drip by drip beneath a stalactite."]
+			icon: "minecraft:pointed_dripstone"
+			id: "001EA95FF3EACA04"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "4E3A5CEDA9DD3CE4"
+					item: "minecraft:cauldron"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 150"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "0C28BD64A4940D92"
+					silent: true
+					title: "+150 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:dripstone_caves"
+					id: "4F6E39657C993099"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "3008BC4B89584488"
+					item: "minecraft:pointed_dripstone"
+					title: "Collect pointed dripstone"
+					type: "item"
+				}
+				{
+					id: "3AAA1005EC0B95EB"
+					item: "minecraft:cauldron"
+					only_from_crafting: true
+					title: "Make a cauldron to catch the drips"
+					type: "item"
+				}
+				{
+					id: "6399ACE5F1FD3FA5"
+					stage: "fq.discovery_sky_and_underground.biome_dripstone.build2"
+					title: "Set the cauldron under a dripstone to fill"
+					type: "gamestage"
+				}
+			]
+			title: "Teeth of Stone"
+			x: 0.0d
+			y: 9.75d
+		}
+		{
+			description: ["Redstone grows from the walls of these caves like crystal. The Crafters' guild wants a harvest."]
+			icon: "regions_unexplored:redstone_bud"
+			id: "7E547C64D7B3946E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 32
+					id: "721C1E69D676C743"
+					item: "minecraft:redstone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 150"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "2A9ACAE55766DDFA"
+					silent: true
+					title: "+150 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:redstone_caves"
+					id: "53CFD04E5250F94C"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "72CAB9879B5A9DAC"
+					item: "regions_unexplored:redstone_bud"
+					title: "Mine redstone buds from the walls"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6CBE523763DB228E"
+					item: "regions_unexplored:pointed_redstone"
+					title: "Mine pointed redstone"
+					type: "item"
+				}
+			]
+			title: "Red Veins"
+			x: 0.0d
+			y: 11.25d
+		}
+		{
+			description: ["A chasm of prismatic glass and glowing moss. The Crafters' guild would pay well for its shining crystals."]
+			icon: "regions_unexplored:prismaglass"
+			id: "385F3509617D99E1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "4AF2E6C1B9FCD1F1"
+					item: "regions_unexplored:prismoss"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 150"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "22C5CED1B21D094C"
+					silent: true
+					title: "+150 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:prismachasm"
+					id: "5CFB361F05672EC4"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "24F44BCF4E06024E"
+					item: "regions_unexplored:prismaglass"
+					title: "Bring back prismatic glass"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "6B4E701AF011673F"
+					item: "regions_unexplored:prismoss"
+					title: "Bring back prismoss"
+					type: "item"
+				}
+			]
+			title: "The Prismachasm"
+			x: 0.0d
+			y: 12.75d
+		}
+		{
+			description: ["You've stumbled into a spider nest, webs thick as curtains. Get out the other side before the nest closes around you."]
+			icon: "minecraft:cobweb"
+			id: "3A5076AA91AEE524"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "399AE519D089AFB2"
+					item: "minecraft:string"
+					type: "item"
+				}
+				{
+					id: "4A764F62EFAB410A"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:bane_of_arthropods"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Spider's Bane\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 220"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "5CED8FE12285273C"
+					silent: true
+					title: "+220 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:spider_nest"
+					id: "0B4C89BEACD21477"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "01E1E8228CDBCB64"
+					stage: "fq.discovery_sky_and_underground.biome_spider_nest.timed0"
+					title: "Cut your way through the nest"
+					type: "gamestage"
+				}
+			]
+			title: "Webs Everywhere"
+			x: 0.0d
+			y: 14.25d
+		}
+	]
+	subtitle: ["Vertigo and darkness"]
+	title: "Above and Below"
+}

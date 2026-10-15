@@ -3922,6 +3922,528 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "discovery_sky_and_underground:volcano_in_the_sky",
+    "stage": "fq.discovery_sky_and_underground.volcano_in_the_sky.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mss:volcano"
+      ],
+      "label": "the destination"
+    },
+    "count": 2,
+    "item": "kubejs:quest_volcano_in_the_sky_1",
+    "found": "A lump of ore, still hot from the core.",
+    "requires": [],
+    "quest_id": "70B8F84B7845E16D",
+    "prev_tasks": [
+      "15A469D535358608",
+      "6566ADA40C4D04C2"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:castle_in_the_clouds",
+    "stage": "fq.discovery_sky_and_underground.castle_in_the_clouds.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mss:castle_tower"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Castle Garrison",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "63AAD6A8332EE87C",
+    "requires": [],
+    "quest_id": "6FECFB9FCE175AB8",
+    "prev_tasks": [
+      "02801CCECEF060C2"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:castle_in_the_clouds",
+    "stage": "fq.discovery_sky_and_underground.castle_in_the_clouds.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mss:castle_tower"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_castle_in_the_clouds_1",
+    "found": "A torn banner, still bearing the castle's arms.",
+    "requires": [],
+    "quest_id": "6FECFB9FCE175AB8",
+    "prev_tasks": [
+      "02801CCECEF060C2",
+      "63AAD6A8332EE87C"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:pyramid_aloft",
+    "stage": "fq.discovery_sky_and_underground.pyramid_aloft.use0",
+    "type": "use",
+    "keys": [
+      "minecraft:light_gray_candle"
+    ],
+    "count": 1,
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mss:desert_pyramid"
+      ],
+      "label": "the destination"
+    },
+    "within": 0,
+    "holding": "minecraft:flint_and_steel",
+    "consume": false,
+    "requires": [],
+    "quest_id": "179E2119894F6A47",
+    "prev_tasks": [
+      "1E45144A268822D8"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:pyramid_aloft",
+    "stage": "fq.discovery_sky_and_underground.pyramid_aloft.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mss:desert_pyramid"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_pyramid_aloft_1",
+    "found": "The tomb's seal gives, and the hoard glints.",
+    "requires": [],
+    "quest_id": "179E2119894F6A47",
+    "prev_tasks": [
+      "1E45144A268822D8",
+      "458AF108652A23DA"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:sky_garden",
+    "stage": "fq.discovery_sky_and_underground.sky_garden.build5",
+    "type": "build",
+    "keys": [
+      "minecraft:jungle_sapling",
+      "minecraft:spruce_sapling",
+      "minecraft:mangrove_propagule"
+    ],
+    "counts": [
+      1,
+      1,
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "0C6F94AAA757D909",
+    "prev_tasks": [
+      "76A45A98D9D62AEE",
+      "4D1EBC57E71DB236",
+      "41C5796DAC1B604F",
+      "654C24463460B6BD",
+      "65FD4C49EB628F3E",
+      "1063CE69F8153DB6"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:sky_hermit",
+    "stage": "fq.discovery_sky_and_underground.sky_hermit.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Food! Real food! I've been living on cloud berries for a year.",
+      "I came up here to escape someone. I forget who. It's very peaceful.",
+      "Take this feather. It's the lightest thing I own."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "6F70664EDD0425B7",
+    "prev_tasks": [
+      "31C7435FF70C36F1",
+      "38E780E17EBA0CEB",
+      "2E1D510499D353DB"
+    ],
+    "name": "Sky Hermit",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "discovery_sky_and_underground:airship_boarding",
+    "stage": "fq.discovery_sky_and_underground.airship_boarding.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:heavenly_challenger",
+        "dungeons_arise:heavenly_conqueror",
+        "dungeons_arise:heavenly_rider",
+        "dungeons_arise:small_blimp"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Airship Crew",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "21B0216A6E4D5AD0",
+    "requires": [],
+    "quest_id": "1BC9F3A81174469A",
+    "prev_tasks": [
+      "7E0A4190DD8FFDA1"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:airship_boarding",
+    "stage": "fq.discovery_sky_and_underground.airship_boarding.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:heavenly_challenger",
+        "dungeons_arise:heavenly_conqueror",
+        "dungeons_arise:heavenly_rider",
+        "dungeons_arise:small_blimp"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_airship_boarding_1",
+    "found": "The captain's strongbox, heavy with plunder.",
+    "requires": [],
+    "quest_id": "1BC9F3A81174469A",
+    "prev_tasks": [
+      "7E0A4190DD8FFDA1",
+      "21B0216A6E4D5AD0"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:the_drifting_blimp",
+    "stage": "fq.discovery_sky_and_underground.the_drifting_blimp.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:small_blimp"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_the_drifting_blimp_0",
+    "found": "Engine notes, oil-stained and annotated.",
+    "requires": [],
+    "quest_id": "49DBB6F82798AC78",
+    "prev_tasks": [
+      "32BF748E824999B2"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:highest_point",
+    "stage": "fq.discovery_sky_and_underground.highest_point.be0",
+    "type": "be",
+    "where": {
+      "above_y": 300
+    },
+    "requires": [],
+    "quest_id": "29685AEE0278A1F5",
+    "prev_tasks": []
+  },
+  {
+    "quest": "discovery_sky_and_underground:the_ancient_city",
+    "stage": "fq.discovery_sky_and_underground.the_ancient_city.timed0",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:ancient_city"
+      ],
+      "label": "the far side of the city",
+      "away": 60
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Quiet. If anything touches you, the city knows you're here."
+    ],
+    "start": "Begin the crossing",
+    "requires": [],
+    "quest_id": "786C0F39B6B37D19",
+    "prev_tasks": [
+      "6EDDA71209A5EF38"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "discovery_sky_and_underground:disc_fragments",
+    "stage": "fq.discovery_sky_and_underground.disc_fragments.use2",
+    "type": "use",
+    "keys": [
+      "minecraft:jukebox"
+    ],
+    "count": 1,
+    "at": null,
+    "within": 0,
+    "holding": "minecraft:music_disc_5",
+    "consume": false,
+    "requires": [],
+    "quest_id": "112A7136B0CA5C84",
+    "prev_tasks": [
+      "142ABAD03396AC9C",
+      "724A8F054F4CF27A",
+      "1D3EB10906D70025"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:the_bunker",
+    "stage": "fq.discovery_sky_and_underground.the_bunker.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:bunker"
+      ],
+      "label": "the destination"
+    },
+    "count": 3,
+    "item": "kubejs:quest_the_bunker_0",
+    "found": "A fuse, still wrapped in oiled cloth.",
+    "requires": [],
+    "quest_id": "3FABC1A1BCD613BA",
+    "prev_tasks": [
+      "3894E2BBC9E4440C"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:the_bunker",
+    "stage": "fq.discovery_sky_and_underground.the_bunker.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:redstone_lamp"
+    ],
+    "counts": [
+      3
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "3FABC1A1BCD613BA",
+    "prev_tasks": [
+      "3894E2BBC9E4440C",
+      "2AA4C880FCD8F4DC",
+      "7DA76235E7A99D82"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:the_bunker",
+    "stage": "fq.discovery_sky_and_underground.the_bunker.search3",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:bunker"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_the_bunker_3",
+    "found": "The vault door grinds open on a hoard.",
+    "requires": [],
+    "quest_id": "3FABC1A1BCD613BA",
+    "prev_tasks": [
+      "3894E2BBC9E4440C",
+      "2AA4C880FCD8F4DC",
+      "7DA76235E7A99D82",
+      "544588D49ECFF77F"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:underground_house",
+    "stage": "fq.discovery_sky_and_underground.underground_house.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:underground_house"
+      ],
+      "label": "the destination"
+    },
+    "count": 2,
+    "item": "kubejs:quest_underground_house_0",
+    "found": "A diary page, dated years back.",
+    "requires": [],
+    "quest_id": "461F796A642FD259",
+    "prev_tasks": [
+      "784BACD03A3FB587"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:underground_house",
+    "stage": "fq.discovery_sky_and_underground.underground_house.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:underground_house"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_underground_house_1",
+    "found": "A worn pickaxe, wrapped in cloth.",
+    "requires": [],
+    "quest_id": "461F796A642FD259",
+    "prev_tasks": [
+      "784BACD03A3FB587",
+      "695EC9138A595801"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:the_cave_tablet",
+    "stage": "fq.discovery_sky_and_underground.the_cave_tablet.talk0",
+    "type": "talk",
+    "lines": [
+      "This tablet shows a cave deeper than any I've charted.",
+      "Magnets, acid, strange light... I'd keep it close.",
+      "Here, a map. The tablet is yours."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "villager",
+    "profession": "minecraft:cartographer",
+    "quest_id": "729865C928534C64",
+    "open_task": "23EBBD88A6875615"
+  },
+  {
+    "quest": "discovery_sky_and_underground:glittering_nest",
+    "stage": "fq.discovery_sky_and_underground.glittering_nest.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:amethyst_crab",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:amethyst_nest"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Nest Crabs",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "06389A4DB1B160DA",
+    "requires": [],
+    "quest_id": "6CE26B2DC5879235",
+    "prev_tasks": [
+      "171227B5476D3332"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:glittering_nest",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "cataclysm:amethyst_crab"
+    ],
+    "chance": 0.5,
+    "item": "kubejs:quest_glittering_nest_1",
+    "requires": [],
+    "quest_id": "6CE26B2DC5879235",
+    "open_task": "171227B5476D3332",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "discovery_sky_and_underground:biome_deep_dark",
+    "stage": "fq.discovery_sky_and_underground.biome_deep_dark.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "minecraft:deep_dark"
+      ]
+    },
+    "requires": [],
+    "quest_id": "71E599C87169B0A6",
+    "prev_tasks": [
+      "6290D959BA7B52E3"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:biome_dripstone",
+    "stage": "fq.discovery_sky_and_underground.biome_dripstone.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:cauldron"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "001EA95FF3EACA04",
+    "prev_tasks": [
+      "4F6E39657C993099",
+      "3008BC4B89584488",
+      "3AAA1005EC0B95EB"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:biome_spider_nest",
+    "stage": "fq.discovery_sky_and_underground.biome_spider_nest.timed0",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "kill",
+      "entity": "minecraft:spider",
+      "count": 10
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:spider",
+        "count": 3,
+        "every": 15
+      }
+    ],
+    "lines": [
+      "The webs are closing in. Cut your way out!"
+    ],
+    "start": "Fight your way out",
+    "requires": [],
+    "quest_id": "3A5076AA91AEE524",
+    "prev_tasks": [
+      "0B4C89BEACD21477"
+    ],
+    "name": ""
+  },
+  {
     "quest": "skill_fishing:sign_up",
     "stage": "fq.skill_fishing.sign_up.talk0",
     "type": "talk",

@@ -73,6 +73,13 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - discovery_sea:tropic_islands: needs resting in a hammock between palms; written as a hammock build
 - discovery_sea:dune_beach: needs seashells and sea stars (no ids); written as dune grass and a nautilus shell
 - discovery_sea:mangrove_maze: needs a boat route through the roots; written as a rowboat and being in the water
+- discovery_sky_and_underground:islands_in_the_sky: needs discovering a floating island by sighting it; written as a discover on carrying a spyglass
+- discovery_sky_and_underground:sky_hopper: needs any five different islands; written as five specific island structures
+- discovery_sky_and_underground:pyramid_aloft: needs a tomb lock puzzle; written as kindling the candles and a search
+- discovery_sky_and_underground:the_bunker: needs a lever-order lock; written as fuses searched for, lamps wired in and a vault search
+- discovery_sky_and_underground:biome_deep_dark: needs collecting a sensor without a shrieker going off; written as being in the biome and carrying a sensor
+- discovery_sky_and_underground:biome_dripstone: needs a cauldron filled by dripping; written as placing a cauldron
+- discovery_sky_and_underground:echo_shards: needs dying on purpose and following the compass back; written as shards and a compass crafted
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

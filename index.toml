@@ -117,8 +117,12 @@ file = "config/ftbquests/quests/chapters/discovery_sea.snbt"
 hash = "196b06dcdea190f2173c3919b4aedbc78fd503434c61101749cf584648ff9597"
 
 [[files]]
+file = "config/ftbquests/quests/chapters/discovery_sky_and_underground.snbt"
+hash = "5f65e056feb6fb19bc03725075f2c40964353b98e4f87be936f87300e2b81db3"
+
+[[files]]
 file = "config/ftbquests/quests/chapters/magic.snbt"
-hash = "4cdda5c314b9c68c6dbb64621f89602af036fa11b05e4b22fdc57e0a25ce0944"
+hash = "52baba165c552d38f534e1c47817efa533340857714f14b2a525f94fbcbf57da"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
@@ -134,23 +138,23 @@ hash = "dcd5c4c81eacb36f402b3c53ad47fdaa9854417b9926ea4586fe540d60c6e92d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_agility.snbt"
-hash = "47136847265f04a2262ce174aafa98fc3750f24326c34b6cf9d084006feedbfc"
+hash = "7d3567cfeaa05b57ba3bd2fcaad9d79c1b12ffdbbb06cd2e41bd94db7cadbb51"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_attack.snbt"
-hash = "1ab0958e97c0ad28c4482d574789a7055dd278ec6e9bdf978f5ac388c6018e79"
+hash = "0ede7363ea68563ffea5d4288e8b3829e85c7086f165fba0a874263c6a9224d9"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_cooking.snbt"
-hash = "6c662633489bae1743638516821ccd79c0caf407082261a6f4ffc558777a6f44"
+hash = "91da909b3dfb19f6b9a304a5c95cc02caebe2648c5c38abb00ea92aa92688b86"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_crafting.snbt"
-hash = "15bf06aafb25dcc4961c79311ba82eef5a6e0c1eda0b71db58a8b97639f9ccac"
+hash = "4a0a9c437137dc083fdc727fe70d8081ec3e84bdeeb3d3566ec38b52e1558231"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_defense.snbt"
-hash = "b78ba69d0fb7a4c8231d312323e2740c72f694ee45e3176152d1c42637748b2e"
+hash = "d7aa5101ddcfd871da76b222ab7d1cd62f5aae1ff1b492b38ce2a38c038b2e6d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_farming.snbt"
@@ -158,11 +162,11 @@ hash = "abdf5ce20da305c220f9bfa296afdbb1367cd33d022efc71157b5d225ed7b283"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_fishing.snbt"
-hash = "b41a0de161b2a100ef969e335d75187d1d2cfe767894d57812648da7a94df357"
+hash = "f06092719ac5d3ebb5e33d6ca876f90c13b822321b2a6dcac9ae5aa512844ff3"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_foraging.snbt"
-hash = "20d9d483843117496dda97d874ff468268ee92cdfe123a0632180bff29bd7927"
+hash = "c9af0fcf3c9c154e0fb428b35da9d834b9922fba46324395abc7459b969be102"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_mining.snbt"
@@ -170,11 +174,11 @@ hash = "1fb03b0867edb37e1a5b36875bcdd147cef8cac53a712cc5cb6c144a8f698c65"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_range.snbt"
-hash = "11316f7637d28f71a496df613a9fd7aaeade1191b37be89aac481412d0b3edb8"
+hash = "4362f3705e80b1d4f3ed650c53266b07c42ca01e1d364684169680859f8f6c41"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_taming.snbt"
-hash = "a94e791c812676246bd08b5a02a9b43b773a5c109a967cff9ba674a7ed104886"
+hash = "2e6f817c4822d7d8b4aadb6d51814079dc8813d1b885612c9317e258f352de1d"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/small_favours.snbt"
@@ -186,7 +190,7 @@ hash = "5c108c21dffbd834fc795572e6802781bdf0ba1729118e955acba0636f46e0ba"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/village_errands.snbt"
-hash = "61f91f9b9a893bae2ed40c74022b16619df80baf625d4a740fb54a7e72c655c6"
+hash = "60dcfa2a4c2fde5d797b82fff147ed00cc943992f1f58c2418455e590319d747"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -2785,7 +2789,7 @@ hash = "81238517f42d04aa513d472ee44c4eb212593671c2e57aa3273f67d942e11863"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "526ccfe3f14323135893b95b1c286cdb2df6235efc89eec736ebb0c03af08573"
+hash = "6867c97f2486cd66af14cd2109671426ea6fddc5c230ba013ff376875ede2d78"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2869,7 +2873,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "ca190e8181624718d9844487b90d3a31b81302ddd996474b926c36f688c92aae"
+hash = "6df1d312ed75a1728e8015081e7348e4b92f7a0f393da3a30888d2cfbc5a68f7"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"
