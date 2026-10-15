@@ -3267,6 +3267,628 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "discovery_sea:bones_of_the_deep",
+    "stage": "fq.discovery_sea.bones_of_the_deep.be0",
+    "type": "be",
+    "where": {
+      "below_y": 45,
+      "in_water": true
+    },
+    "requires": [],
+    "quest_id": "40D1ED74B27B2948",
+    "prev_tasks": [
+      "15F98A76F9BB7C95"
+    ]
+  },
+  {
+    "quest": "discovery_sea:the_tribune_of_atlantis",
+    "stage": "fq.discovery_sea.the_tribune_of_atlantis.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:sea_lantern"
+    ],
+    "counts": [
+      4
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "4AA7F75C09FFF5FF",
+    "prev_tasks": [
+      "4D56D6AABA46D597",
+      "1DE51DAFBFBDC53E"
+    ]
+  },
+  {
+    "quest": "discovery_sea:the_tribune_of_atlantis",
+    "stage": "fq.discovery_sea.the_tribune_of_atlantis.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mos:ruins_atlantis"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_the_tribune_of_atlantis_2",
+    "found": "The vault swings open on a drowned hoard.",
+    "requires": [],
+    "quest_id": "4AA7F75C09FFF5FF",
+    "prev_tasks": [
+      "4D56D6AABA46D597",
+      "1DE51DAFBFBDC53E",
+      "0F42860426BDF89D"
+    ]
+  },
+  {
+    "quest": "discovery_sea:the_conduit_arch",
+    "stage": "fq.discovery_sea.the_conduit_arch.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:conduit"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 6,
+    "requires": [],
+    "quest_id": "5CDDB9FC4CB7C09C",
+    "prev_tasks": [
+      "48CC2452BD45C28D",
+      "3601273A2EF19997"
+    ]
+  },
+  {
+    "quest": "discovery_sea:wreck_diver",
+    "stage": "fq.discovery_sea.wreck_diver.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:undead_pirate_ship",
+        "minecraft:shipwreck",
+        "minecraft:shipwreck_beached",
+        "mos:ship_wreck_dark_oak",
+        "mos:ship_wreck_oak",
+        "mos:ship_wreck_spruce",
+        "mos:sunken_ship",
+        "towns_and_towers:wreckage_ocean"
+      ],
+      "label": "the destination"
+    },
+    "count": 3,
+    "item": "kubejs:quest_wreck_diver_0",
+    "found": "A waterlogged log, its last page still legible.",
+    "requires": [],
+    "quest_id": "08D9729E0D271B90",
+    "prev_tasks": [
+      "35B75848A46FC49D"
+    ]
+  },
+  {
+    "quest": "discovery_sea:drowned_temple",
+    "stage": "fq.discovery_sea.drowned_temple.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:drowned",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:ocean_ruin_cold",
+        "minecraft:ocean_ruin_warm",
+        "mos:ruins_atlantis",
+        "mos:small_ocean_temple",
+        "mos:underwater_garden",
+        "mos:underwater_shrine",
+        "nova_structures:conduit_ruin"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Ruin Drowned",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "2A1E6CC6CA5BCDC6",
+    "requires": [],
+    "quest_id": "750DC8C43FD89024",
+    "prev_tasks": [
+      "0C5C74A4E257F102"
+    ]
+  },
+  {
+    "quest": "discovery_sea:drowned_temple",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:drowned"
+    ],
+    "chance": 0.5,
+    "item": "kubejs:quest_drowned_temple_1",
+    "requires": [],
+    "quest_id": "750DC8C43FD89024",
+    "open_task": "0C5C74A4E257F102",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "discovery_sea:drowned_temple",
+    "stage": "fq.discovery_sea.drowned_temple.talk2",
+    "type": "talk",
+    "lines": [
+      "A priest's medallion? From a drowned?",
+      "He must have gone down with his flock. Poor soul.",
+      "We'll say a prayer for him tonight."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "villager",
+    "profession": "minecraft:cleric",
+    "quest_id": "750DC8C43FD89024",
+    "open_task": "0C5C74A4E257F102"
+  },
+  {
+    "quest": "discovery_sea:typhon",
+    "stage": "fq.discovery_sea.typhon.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:typhon"
+      ],
+      "label": "the destination"
+    },
+    "wave": 5,
+    "name": "Typhon Crew",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "52D0DB868043F18B",
+    "requires": [],
+    "quest_id": "451F4B388C6B4C11",
+    "prev_tasks": [
+      "6F1527A7579D3294"
+    ]
+  },
+  {
+    "quest": "discovery_sea:typhon",
+    "stage": "fq.discovery_sea.typhon.timed1",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "hold",
+      "radius": 14.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:pillager",
+        "count": 3,
+        "every": 30
+      }
+    ],
+    "lines": [
+      "The crew's rallying on the bridge. Hold it!"
+    ],
+    "start": "Hold the bridge",
+    "requires": [],
+    "quest_id": "451F4B388C6B4C11",
+    "prev_tasks": [
+      "6F1527A7579D3294",
+      "52D0DB868043F18B"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "discovery_sea:golden_hind",
+    "stage": "fq.discovery_sea.golden_hind.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:drowned",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:ceryneian_hind"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Hold Drowned",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "672370D5F65352E1",
+    "requires": [],
+    "quest_id": "3D9314D6458D7FFB",
+    "prev_tasks": [
+      "70CE8F887B9D9221"
+    ]
+  },
+  {
+    "quest": "discovery_sea:golden_hind",
+    "stage": "fq.discovery_sea.golden_hind.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:ceryneian_hind"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_golden_hind_1",
+    "found": "A curve of gold, shaped like an antler.",
+    "requires": [],
+    "quest_id": "3D9314D6458D7FFB",
+    "prev_tasks": [
+      "70CE8F887B9D9221",
+      "672370D5F65352E1"
+    ]
+  },
+  {
+    "quest": "discovery_sea:golden_hind",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:drowned"
+    ],
+    "chance": 0.4,
+    "item": "kubejs:quest_golden_hind_2",
+    "requires": [],
+    "quest_id": "3D9314D6458D7FFB",
+    "open_task": "70CE8F887B9D9221",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "discovery_sea:golden_hind",
+    "stage": "fq.discovery_sea.golden_hind.build3",
+    "type": "build",
+    "keys": [
+      "minecraft:gold_block"
+    ],
+    "counts": [
+      3
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "3D9314D6458D7FFB",
+    "prev_tasks": [
+      "70CE8F887B9D9221",
+      "672370D5F65352E1",
+      "60827D744D1C2DC3",
+      "595911646910076B"
+    ]
+  },
+  {
+    "quest": "discovery_sea:drowned_keeper",
+    "stage": "fq.discovery_sea.drowned_keeper.enc0",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "Grrr... the light... I must tend the light..."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "1AA005909DE8E5F7",
+    "prev_tasks": [
+      "43120F72697A4D8A"
+    ],
+    "name": "The Drowned Keeper",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": 30,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:drowned",
+    "profession": ""
+  },
+  {
+    "quest": "discovery_sea:drowned_keeper",
+    "stage": "fq.discovery_sea.drowned_keeper.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:sea_lantern"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "1AA005909DE8E5F7",
+    "prev_tasks": [
+      "43120F72697A4D8A",
+      "6FBB0659D03C7460",
+      "4DC56ECFB571E3DC"
+    ]
+  },
+  {
+    "quest": "discovery_sea:last_orders",
+    "stage": "fq.discovery_sea.last_orders.timed4",
+    "type": "timed",
+    "seconds": 150,
+    "goal": {
+      "kind": "hold",
+      "radius": 12.0
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "The customers are queuing. Keep them served!"
+    ],
+    "start": "Serve the rush",
+    "requires": [],
+    "quest_id": "596E1D011C51F968",
+    "prev_tasks": [
+      "430DF09BDBA615AC",
+      "0188D2F8DDD7AEE5",
+      "69B09E1FC968692A",
+      "346F7D9CEA33CC3C",
+      "6853ACA53C4C8CB8"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "discovery_sea:the_ritual_circle",
+    "stage": "fq.discovery_sea.the_ritual_circle.build0",
+    "type": "build",
+    "keys": [
+      "beachparty:radio"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "0C5942478587FF04",
+    "prev_tasks": [
+      "45530687C1D70EFE"
+    ]
+  },
+  {
+    "quest": "discovery_sea:the_ritual_circle",
+    "stage": "fq.discovery_sea.the_ritual_circle.use1",
+    "type": "use",
+    "keys": [
+      "beachparty:radio"
+    ],
+    "count": 1,
+    "at": null,
+    "within": 0,
+    "holding": "beachparty:music_disc_beachparty",
+    "consume": false,
+    "requires": [],
+    "quest_id": "0C5942478587FF04",
+    "prev_tasks": [
+      "45530687C1D70EFE",
+      "7B91E36F11AA8EA8"
+    ]
+  },
+  {
+    "quest": "discovery_sea:the_ritual_circle",
+    "stage": "fq.discovery_sea.the_ritual_circle.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "beachparty:ritual_circle"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_the_ritual_circle_2",
+    "found": "The sea gives a pearl-white shell back.",
+    "requires": [],
+    "quest_id": "0C5942478587FF04",
+    "prev_tasks": [
+      "45530687C1D70EFE",
+      "7B91E36F11AA8EA8",
+      "3D2DB44BADF6D4CD"
+    ]
+  },
+  {
+    "quest": "discovery_sea:the_faithful_hound",
+    "stage": "fq.discovery_sea.the_faithful_hound.tame0",
+    "type": "tame",
+    "entities": [
+      "minecraft:wolf"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "12BF562B1FE5DE50",
+    "prev_tasks": [
+      "24C20989E44BCA67"
+    ]
+  },
+  {
+    "quest": "discovery_sea:the_faithful_hound",
+    "stage": "fq.discovery_sea.the_faithful_hound.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mos:prismarine_dog_statue"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_the_faithful_hound_1",
+    "found": "A collar, green with age, in the statue's chest.",
+    "requires": [],
+    "quest_id": "12BF562B1FE5DE50",
+    "prev_tasks": [
+      "24C20989E44BCA67",
+      "2D96FAEA6896B5B9"
+    ]
+  },
+  {
+    "quest": "discovery_sea:underwater_garden",
+    "stage": "fq.discovery_sea.underwater_garden.build5",
+    "type": "build",
+    "keys": [
+      "minecraft:sea_pickle",
+      "minecraft:kelp"
+    ],
+    "counts": [
+      2,
+      4
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "4FDD4359BE4165AC",
+    "prev_tasks": [
+      "34FE2F84D572B1F8",
+      "18E72F4FB3A58E41",
+      "4D957B3CC422E3C6",
+      "05F464FD8E0DCE13",
+      "7D906E9EA05D8AF0",
+      "02F0620893F54C18"
+    ]
+  },
+  {
+    "quest": "discovery_sea:drowned_village",
+    "stage": "fq.discovery_sea.drowned_village.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mos:ruined_church"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_drowned_village_0",
+    "found": "An iron clapper, green with age.",
+    "requires": [],
+    "quest_id": "4EF5B48DC5CD8CE7",
+    "prev_tasks": [
+      "334C2374E2D20E91"
+    ]
+  },
+  {
+    "quest": "discovery_sea:drowned_village",
+    "stage": "fq.discovery_sea.drowned_village.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mos:ruined_castle"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_drowned_village_1",
+    "found": "A crest in cracked stone, shaped like a boat.",
+    "requires": [],
+    "quest_id": "4EF5B48DC5CD8CE7",
+    "prev_tasks": [
+      "334C2374E2D20E91",
+      "780AB022BBAFB04E"
+    ]
+  },
+  {
+    "quest": "discovery_sea:beach_discs",
+    "stage": "fq.discovery_sea.beach_discs.use5",
+    "type": "use",
+    "keys": [
+      "beachparty:radio"
+    ],
+    "count": 1,
+    "at": null,
+    "within": 0,
+    "holding": "",
+    "consume": false,
+    "requires": [],
+    "quest_id": "31F64D7D9A5EE310",
+    "prev_tasks": [
+      "1F7095BF5F0F45A7",
+      "4D5498E06E8E00AC",
+      "76ECF9DFBDAD52DD",
+      "27433B5BC1441097",
+      "531B7AA2E17870B1",
+      "2126F0A7F14AC92E"
+    ]
+  },
+  {
+    "quest": "discovery_sea:frozen_ocean",
+    "stage": "fq.discovery_sea.frozen_ocean.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "minecraft:deep_frozen_ocean"
+      ],
+      "in_water": false
+    },
+    "requires": [],
+    "quest_id": "01F4A8C907C25F0A",
+    "prev_tasks": [
+      "66ADB3701DA9B4A1"
+    ]
+  },
+  {
+    "quest": "discovery_sea:tropic_islands",
+    "stage": "fq.discovery_sea.tropic_islands.build2",
+    "type": "build",
+    "keys": [
+      "comforts:hammock_red"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "7DA46E85F94AA94C",
+    "prev_tasks": [
+      "2B723D8EDD3350B3",
+      "315C0D9BBCE8F233",
+      "4973317D292DB164"
+    ]
+  },
+  {
+    "quest": "discovery_sea:rocky_reef",
+    "stage": "fq.discovery_sea.rocky_reef.be0",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "regions_unexplored:rocky_reef"
+      ],
+      "in_water": true
+    },
+    "requires": [],
+    "quest_id": "29402CF5344C1BB7",
+    "prev_tasks": [
+      "3938234E4A7C6539"
+    ]
+  },
+  {
+    "quest": "discovery_sea:mangrove_maze",
+    "stage": "fq.discovery_sea.mangrove_maze.be1",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "minecraft:mangrove_swamp"
+      ],
+      "in_water": true
+    },
+    "requires": [],
+    "quest_id": "5BD426F02B08B543",
+    "prev_tasks": [
+      "4B97465CF652D47B",
+      "570B3E5443A11EC8"
+    ]
+  },
+  {
     "quest": "skill_farming:coop_share",
     "stage": "fq.skill_farming.coop_share",
     "type": "org",

@@ -62,6 +62,18 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - discovery_land:antique_ink: needs inking a map and following it; written as a map and a checkmark
 - discovery_land:the_strange_key: needs the safe found in a ruin; written as a safe opened with the key anywhere
 - discovery_land:sniffer_egg: needs hatching and raising a sniffer; written as observing a sniffer and an ancient seed
+- discovery_sea:bones_of_the_deep: needs a bone taken from the skeleton; written as diving then carrying bone blocks
+- discovery_sea:x_marks_the_spot: needs the map's own X; written as discovering on any filled map, then the buried-treasure structure
+- discovery_sea:typhon: needs boarding from a boat; written as a fight and a timed hold
+- discovery_sea:last_orders: needs serving customers one at a time; written as four cocktails and a timed hold
+- discovery_sea:the_ritual_circle: needs shells on each stone at sunset; written as a radio, a disc and a search of the circle
+- discovery_sea:the_faithful_hound: needs giving a wolf the collar; written as a tame, a search and a checkmark
+- discovery_sea:drowned_village: needs learning the village's name; written as two searches and a checkmark
+- discovery_sea:beach_discs: needs every Beachparty disc played; written as four discs carried and a radio use
+- discovery_sea:tropic_islands: needs resting in a hammock between palms; written as a hammock build
+- discovery_sea:dune_beach: needs seashells and sea stars (no ids); written as dune grass and a nautilus shell
+- discovery_sea:mangrove_maze: needs a boat route through the roots; written as a rowboat and being in the water
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start
+- discovery_sea:typhon: restore after main_story:act2_finale

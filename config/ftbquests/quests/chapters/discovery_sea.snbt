@@ -1,0 +1,1317 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "discovery_sea"
+	group: "76581968F62E459A"
+	icon: "minecraft:nautilus_shell"
+	id: "41D58016D0E74DBB"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["A dragon's skeleton lies on the sea floor, its ribs rising like a reef. The Anglers' Society swear it was a sea serpent, and want proof: one of its bones."]
+			icon: "minecraft:bone_block"
+			id: "40D1ED74B27B2948"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "1D31A6E0B21AC690"
+					item: "minecraft:bone_block"
+					type: "item"
+				}
+				{
+					id: "61362D2DB0B18271"
+					item: "minecraft:nautilus_shell"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "4BF5B674760F3C31"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "15F98A76F9BB7C95"
+					structure: "#fotf:groups/sea_dragon_bones"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "4F26C1602DACFA7A"
+					stage: "fq.discovery_sea.bones_of_the_deep.be0"
+					title: "Dive down to the skeleton's skull"
+					type: "gamestage"
+				}
+				{
+					count: 2L
+					id: "4EBDBDDA9E0AB27E"
+					item: "minecraft:bone_block"
+					title: "Take bone from the skeleton as proof"
+					type: "item"
+				}
+			]
+			title: "Bones of the Deep"
+			x: 0.0d
+			y: -15.75d
+		}
+		{
+			description: ["A tribune of white stone stands on the deep sea floor beside drowned Atlantean ruins. Its sockets are empty. Light them with sea lanterns, and the ruins' sealed vault should open."]
+			icon: "minecraft:sea_lantern"
+			id: "4AA7F75C09FFF5FF"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 32
+					id: "42FCF644A7E3C768"
+					item: "minecraft:prismarine"
+					type: "item"
+				}
+				{
+					id: "381114C38CFD1A4C"
+					item: "minecraft:trident"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 200"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "5801A20353C3D987"
+					silent: true
+					title: "+200 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4D56D6AABA46D597"
+					structure: "mos:atlantis_tribune"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "1DE51DAFBFBDC53E"
+					item: "minecraft:sea_lantern"
+					title: "Bring four sea lanterns down to the tribune"
+					type: "item"
+				}
+				{
+					id: "0F42860426BDF89D"
+					stage: "fq.discovery_sea.the_tribune_of_atlantis.build1"
+					title: "Set the lanterns in the tribune"
+					type: "gamestage"
+				}
+				{
+					id: "7AE49E07A2798C3B"
+					item: "kubejs:quest_the_tribune_of_atlantis_2"
+					title: "Open the ruins' sealed vault"
+					type: "item"
+				}
+			]
+			title: "The Tribune of Atlantis"
+			x: 0.0d
+			y: -14.25d
+		}
+		{
+			description: ["An arch of prismarine stands on the sea floor with an empty socket. A conduit set in it should light the waters around."]
+			icon: "minecraft:conduit"
+			id: "5CDDB9FC4CB7C09C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "62C4A11466E40BDB"
+					item: "minecraft:nautilus_shell"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "2BC01B64285B5137"
+					item: "minecraft:prismarine"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 300"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "017B45A664131E90"
+					silent: true
+					title: "+300 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "48CC2452BD45C28D"
+					structure: "mos:conduit_arch"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "3601273A2EF19997"
+					item: "minecraft:conduit"
+					only_from_crafting: true
+					title: "Craft a conduit from a heart of the sea and nautilus shells"
+					type: "item"
+				}
+				{
+					id: "0546840E685108DC"
+					stage: "fq.discovery_sea.the_conduit_arch.build1"
+					title: "Set the conduit in the arch"
+					type: "gamestage"
+				}
+			]
+			title: "The Conduit Arch"
+			x: 0.0d
+			y: -12.75d
+		}
+		{
+			description: ["A map you found marks a spot on the coast with an X. Dig where it points and bring home what a pirate buried."]
+			icon: "minecraft:filled_map"
+			id: "0E2D7796607B4B6F"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 12
+					id: "7B7229EA45DC3B4F"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 200"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "75B1AF78A0E781AE"
+					silent: true
+					title: "+200 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1EF3971DF1C1C67C"
+					item: "minecraft:filled_map"
+					title: "Discovered"
+					type: "item"
+				}
+				{
+					id: "264DBAB1F329C456"
+					structure: "mos:buried_treasure"
+					title: "Follow the map to the X"
+					type: "structure"
+				}
+				{
+					id: "7739A26D9DF8DB86"
+					item: "minecraft:heart_of_the_sea"
+					title: "Dig out the chest and take the heart of the sea"
+					type: "item"
+				}
+			]
+			title: "X Marks the Spot"
+			x: 0.0d
+			y: -11.25d
+		}
+		{
+			description: ["Every wreck has a captain's chest, and every captain kept a log. Loot three wrecks and piece together their last voyage."]
+			icon: "minecraft:oak_boat"
+			id: "08D9729E0D271B90"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "52118726F65FF5E5"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "0609A425790C3ABD"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "40A121DF30CFAB2F"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "35B75848A46FC49D"
+					structure: "#fotf:groups/shipwrecks"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 3L
+					id: "5149C58EB6F932F1"
+					item: "kubejs:quest_wreck_diver_0"
+					title: "Find logbooks in three different wrecks"
+					type: "item"
+				}
+			]
+			title: "Wreck Diver"
+			x: 0.0d
+			y: -9.75d
+		}
+		{
+			description: ["Sunken ruins are thick with drowned. One of them wears a medallion, and a cleric on shore would like to know whose."]
+			icon: "minecraft:trident"
+			id: "750DC8C43FD89024"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "667D8CC9CE57B23E"
+					item: "minecraft:trident"
+					type: "item"
+				}
+				{
+					id: "598F3B9FED5F4A61"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:impaling"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Sea Spear\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 250"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "701F49E9E0D3DED6"
+					silent: true
+					title: "+250 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0C5C74A4E257F102"
+					structure: "#fotf:groups/sunken_ruins"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:drowned"
+					id: "2A1E6CC6CA5BCDC6"
+					title: "Clear the drowned from around the ruins"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "60EA20868C21034F"
+					item: "kubejs:quest_drowned_temple_1"
+					title: "Take the Drowned Priest's Medallion"
+					type: "item"
+				}
+				{
+					id: "716648A0F39002AA"
+					stage: "fq.discovery_sea.drowned_temple.talk2"
+					title: "Show the medallion to a cleric"
+					type: "gamestage"
+				}
+			]
+			title: "Drowned Halls"
+			x: 0.0d
+			y: -8.25d
+		}
+		{
+			description: ["The sea fortress Typhon rises from the ocean, its guns still manned. Board her, fight up the decks and hold her bridge until her crew breaks."]
+			icon: "minecraft:crossbow"
+			id: "451F4B388C6B4C11"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "6C1EDFAB9C0BE9C0"
+					item: {
+						Count: 1b
+						id: "minecraft:crossbow"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:quick_charge"
+									lvl: 2s
+								}
+								{
+									id: "minecraft:piercing"
+									lvl: 2s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Pried from a manned gun.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Typhon's Gun\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "462B6A9268ECC15F"
+					item: "smallships:oak_cog"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 450"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "1D640B87AD1E1495"
+					silent: true
+					title: "+450 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6F1527A7579D3294"
+					structure: "dungeons_arise:typhon"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:pillager"
+					id: "52D0DB868043F18B"
+					title: "Fight up the decks"
+					type: "kill"
+					value: 10L
+				}
+				{
+					id: "154AE1467423548E"
+					stage: "fq.discovery_sea.typhon.timed1"
+					title: "Hold the bridge until the crew breaks"
+					type: "gamestage"
+				}
+			]
+			title: "The Typhon"
+			x: 0.0d
+			y: -6.75d
+		}
+		{
+			description: ["The sunken ship Ceryneian Hind carried a golden figurehead of a deer. Its three pieces are scattered through the flooded holds."]
+			icon: "minecraft:gold_block"
+			id: "3D9314D6458D7FFB"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "30E96ABE7C72BB40"
+					item: "minecraft:gold_block"
+					type: "item"
+				}
+				{
+					id: "61C5B8F17F28A00F"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:depth_strider"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Depths Strider\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 300"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "78EAF9F326F28C34"
+					silent: true
+					title: "+300 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "70CE8F887B9D9221"
+					structure: "dungeons_arise:ceryneian_hind"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:drowned"
+					id: "672370D5F65352E1"
+					title: "Clear the drowned from the flooded holds"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "60827D744D1C2DC3"
+					item: "kubejs:quest_golden_hind_1"
+					title: "Search for Figurehead Piece"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "595911646910076B"
+					item: "kubejs:quest_golden_hind_2"
+					title: "Take a Figurehead Piece"
+					type: "item"
+				}
+				{
+					id: "25E32F26C0676B61"
+					stage: "fq.discovery_sea.golden_hind.build3"
+					title: "Rebuild the figurehead on deck"
+					type: "gamestage"
+				}
+			]
+			title: "The Golden Hind"
+			x: 0.0d
+			y: -5.25d
+		}
+		{
+			description: ["Sunken wreckage lies in the shallows, still good timber. Salvage planks, rope and cloth from it and build your own cog."]
+			icon: "smallships:oak_cog"
+			id: "0E221FF2D0CC5146"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "7AFFEB930BF9C3D7"
+					item: "supplementaries:rope"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 200"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "44472D9150C0ECDE"
+					silent: true
+					title: "+200 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2B6385033A8082B6"
+					structure: "towns_and_towers:wreckage_ocean"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 16L
+					id: "224D277C5C2BEC99"
+					item: "minecraft:oak_planks"
+					title: "Salvage planks from the wreckage"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "760CF0655F267307"
+					item: "supplementaries:rope"
+					title: "Salvage rope from the wreckage"
+					type: "item"
+				}
+				{
+					count: 6L
+					id: "54FE813769FED545"
+					item: "minecraft:white_wool"
+					title: "Salvage sailcloth"
+					type: "item"
+				}
+				{
+					id: "15B516E8069778B8"
+					item: "smallships:oak_cog"
+					only_from_crafting: true
+					title: "Build your own cog"
+					type: "item"
+				}
+			]
+			title: "Salvage Rights"
+			x: 0.0d
+			y: -3.75d
+		}
+		{
+			description: ["An ocean tower's light has gone out, and its keeper walks the shallows as a drowned. Put him to rest and relight the lamp at the top."]
+			icon: "minecraft:sea_lantern"
+			id: "1AA005909DE8E5F7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "15A0235D7726DAF1"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "141F84A618CEDBAC"
+					item: "minecraft:glowstone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "052C849A210489F6"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "43120F72697A4D8A"
+					structure: "mvs:ocean_tower"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "6FBB0659D03C7460"
+					stage: "fq.discovery_sea.drowned_keeper.enc0"
+					title: "Put the drowned keeper to rest"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					id: "4DC56ECFB571E3DC"
+					item: "minecraft:sea_lantern"
+					title: "Bring a lantern for the tower's lamp"
+					type: "item"
+				}
+				{
+					id: "391CCA3EA1736F02"
+					stage: "fq.discovery_sea.drowned_keeper.build2"
+					title: "Relight the lamp at the top"
+					type: "gamestage"
+				}
+			]
+			title: "The Drowned Keeper"
+			x: 0.0d
+			y: -2.25d
+		}
+		{
+			description: ["The beach bar's bartender is swamped, and his customers are thirsty and impatient. Mix four cocktails and serve them before the customers give up."]
+			icon: "artifacts:plastic_drinking_hat"
+			id: "596E1D011C51F968"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "2396653D28D277F7"
+					item: "artifacts:plastic_drinking_hat"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "7106C1D47DCADD00"
+					item: "beachparty:coconut_cocktail"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 220"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "7DFBBB2E5A66C86D"
+					silent: true
+					title: "+220 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "430DF09BDBA615AC"
+					structure: "mvs:beach_bar"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "0188D2F8DDD7AEE5"
+					item: "beachparty:coconut_cocktail"
+					title: "Mix a coconut cocktail"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "69B09E1FC968692A"
+					item: "beachparty:honey_cocktail"
+					title: "Mix a honey cocktail"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "346F7D9CEA33CC3C"
+					item: "beachparty:melon_cocktail"
+					title: "Mix a melon cocktail"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "6853ACA53C4C8CB8"
+					item: "beachparty:pumpkin_cocktail"
+					title: "Mix a pumpkin cocktail"
+					type: "item"
+				}
+				{
+					id: "7377F15495C4C5E2"
+					stage: "fq.discovery_sea.last_orders.timed4"
+					title: "Serve the beach rush before they give up"
+					type: "gamestage"
+				}
+			]
+			title: "Last Orders at the Beach Bar"
+			x: 0.0d
+			y: -0.75d
+		}
+		{
+			description: ["A circle of torches and shells on the beach. The old fishers say that if you place a seashell on each stone at sunset and play a beach disc on a radio, the sea gives something back."]
+			icon: "beachparty:radio"
+			id: "0C5942478587FF04"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "061F5956D8FF8212"
+					item: "beachparty:music_disc_pridelands"
+					type: "item"
+				}
+				{
+					id: "4B47339963D0A236"
+					item: "beachparty:beach_hat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 150"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "713DA1E8355CB3C4"
+					silent: true
+					title: "+150 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "45530687C1D70EFE"
+					structure: "beachparty:ritual_circle"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "7B91E36F11AA8EA8"
+					stage: "fq.discovery_sea.the_ritual_circle.build0"
+					title: "Set a radio in the circle"
+					type: "gamestage"
+				}
+				{
+					id: "3D2DB44BADF6D4CD"
+					stage: "fq.discovery_sea.the_ritual_circle.use1"
+					title: "Play a beach disc on the radio"
+					type: "gamestage"
+				}
+				{
+					id: "45B9A63B92FB35EC"
+					item: "kubejs:quest_the_ritual_circle_2"
+					title: "Search for The Sea's Gift"
+					type: "item"
+				}
+			]
+			title: "The Ritual Circle"
+			x: 0.0d
+			y: 0.75d
+		}
+		{
+			description: ["A prismarine statue of a dog still waits for its master on the sea floor. Tame a wolf, bring it to the statue and give it the statue's collar."]
+			icon: "domesticationinnovation:collar_tag"
+			id: "12BF562B1FE5DE50"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "07A139A3887FC9FE"
+					item: "domesticationinnovation:collar_tag"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 150"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "06AC176310FC4A64"
+					silent: true
+					title: "+150 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "24C20989E44BCA67"
+					structure: "mos:prismarine_dog_statue"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "2D96FAEA6896B5B9"
+					stage: "fq.discovery_sea.the_faithful_hound.tame0"
+					title: "Tame a wolf to keep the statue company"
+					type: "gamestage"
+				}
+				{
+					id: "5A941596519E24A0"
+					item: "kubejs:quest_the_faithful_hound_1"
+					title: "Search for the Statue's Collar"
+					type: "item"
+				}
+				{
+					id: "324BFEB550BDCCE5"
+					title: "I gave the wolf the statue's collar"
+					type: "checkmark"
+				}
+			]
+			title: "The Faithful Hound"
+			x: 0.0d
+			y: 2.25d
+		}
+		{
+			description: ["A garden of coral and kelp grows inside sunken walls. Gather five kinds of coral, then plant a reef of your own."]
+			icon: "minecraft:brain_coral"
+			id: "4FDD4359BE4165AC"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "5B1FFC9CC9DC9CCE"
+					item: "minecraft:sea_pickle"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "6B011533A1DD55E3"
+					item: "minecraft:tube_coral"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "0D8804582BFAAEFF"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "34FE2F84D572B1F8"
+					structure: "mos:underwater_garden"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "18E72F4FB3A58E41"
+					item: "minecraft:tube_coral"
+					title: "Gather tube coral"
+					type: "item"
+				}
+				{
+					id: "4D957B3CC422E3C6"
+					item: "minecraft:brain_coral"
+					title: "Gather brain coral"
+					type: "item"
+				}
+				{
+					id: "05F464FD8E0DCE13"
+					item: "minecraft:bubble_coral"
+					title: "Gather bubble coral"
+					type: "item"
+				}
+				{
+					id: "7D906E9EA05D8AF0"
+					item: "minecraft:fire_coral"
+					title: "Gather fire coral"
+					type: "item"
+				}
+				{
+					id: "02F0620893F54C18"
+					item: "minecraft:horn_coral"
+					title: "Gather horn coral"
+					type: "item"
+				}
+				{
+					id: "7F3B6DB54F069CB6"
+					stage: "fq.discovery_sea.underwater_garden.build5"
+					title: "Plant a reef of your own"
+					type: "gamestage"
+				}
+			]
+			title: "The Underwater Garden"
+			x: 0.0d
+			y: 3.75d
+		}
+		{
+			description: ["A castle, a church and houses lie under the waves where a village once stood. Its church bell and the castle's crest would tell you its name."]
+			icon: "minecraft:bell"
+			id: "4EF5B48DC5CD8CE7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "744039D79FAE4F2C"
+					item: "minecraft:bell"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "5DFF1B7D7BA3198C"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "30A7F5FFD29070F6"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "334C2374E2D20E91"
+					structure: "mos:ruined_church"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "780AB022BBAFB04E"
+					item: "kubejs:quest_drowned_village_0"
+					title: "Search for Church Bell Clapper"
+					type: "item"
+				}
+				{
+					id: "21EB40B1E5AD523C"
+					item: "kubejs:quest_drowned_village_1"
+					title: "Search for Castle Crest"
+					type: "item"
+				}
+				{
+					id: "52DBB8A40109254C"
+					title: "I learned the drowned village's name"
+					type: "checkmark"
+				}
+			]
+			title: "The Drowned Village"
+			x: 0.0d
+			y: 5.25d
+		}
+		{
+			description: ["An overgrown disc on the beach is the first of a set. Collect the others and play them on a radio."]
+			icon: "beachparty:radio"
+			id: "31F64D7D9A5EE310"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "12AD5D01D988B3A8"
+					item: "beachparty:radio"
+					type: "item"
+				}
+				{
+					id: "46FDD86A6EA5F415"
+					item: "beachparty:palm_bar"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "21D5F6E987447E17"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1F7095BF5F0F45A7"
+					structure: "beachparty:excavated_treasure"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "4D5498E06E8E00AC"
+					item: "beachparty:overgrown_disc"
+					title: "Find the overgrown disc"
+					type: "item"
+				}
+				{
+					id: "76ECF9DFBDAD52DD"
+					item: "beachparty:music_disc_beachparty"
+					title: "Collect the Beachparty disc"
+					type: "item"
+				}
+				{
+					id: "27433B5BC1441097"
+					item: "beachparty:music_disc_caribbean_beach"
+					title: "Collect the Caribbean Beach disc"
+					type: "item"
+				}
+				{
+					id: "531B7AA2E17870B1"
+					item: "beachparty:music_disc_vocalista"
+					title: "Collect the Vocalista disc"
+					type: "item"
+				}
+				{
+					id: "2126F0A7F14AC92E"
+					item: "beachparty:music_disc_wild_veins"
+					title: "Collect the Wild Veins disc"
+					type: "item"
+				}
+				{
+					id: "4C6E6D97B0F51D5E"
+					stage: "fq.discovery_sea.beach_discs.use5"
+					title: "Play them on a radio"
+					type: "gamestage"
+				}
+			]
+			title: "Songs of the Beach"
+			x: 0.0d
+			y: 6.75d
+		}
+		{
+			description: ["A warm ocean, full of colour. The Anglers' Society want reef fish in buckets to stock a tank."]
+			icon: "minecraft:tropical_fish_bucket"
+			id: "2D84B1ED5BD9099C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 2
+					id: "71F1CD56C1378A22"
+					item: "minecraft:bucket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 120"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "555522F55A47C90A"
+					silent: true
+					title: "+120 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:warm_ocean"
+					id: "008F32192B68923F"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 3L
+					id: "1DA6AB2AD79C4C4B"
+					item: "minecraft:tropical_fish_bucket"
+					title: "Catch three reef fish in buckets"
+					type: "item"
+				}
+			]
+			title: "The Coral Reef"
+			x: 0.0d
+			y: 8.25d
+		}
+		{
+			description: ["A deep frozen ocean of icebergs and polar bears. Cross it, and fish through a hole in the ice, as the old Anglers do."]
+			icon: "minecraft:blue_ice"
+			id: "01F4A8C907C25F0A"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "425CF1AF6608C9AE"
+					item: "minecraft:blue_ice"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 150"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "58E7B8BEEBEFFA5C"
+					silent: true
+					title: "+150 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:deep_frozen_ocean"
+					id: "66ADB3701DA9B4A1"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "08F30CE147478E3F"
+					stage: "fq.discovery_sea.frozen_ocean.be0"
+					title: "Cross the ice"
+					type: "gamestage"
+				}
+				{
+					count: 2L
+					id: "56380EA01630C17C"
+					item: "minecraft:cod"
+					title: "Fish through a hole in the ice"
+					type: "item"
+				}
+			]
+			title: "The Frozen Sea"
+			x: 0.0d
+			y: 9.75d
+		}
+		{
+			description: ["A tropical island with palms and sand. The Crafters' guild would love a coconut, and a hammock strung between two palms is the best way to rest."]
+			icon: "beachparty:coconut"
+			id: "7DA46E85F94AA94C"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "3CFCCD5760D2C9E4"
+					item: "beachparty:coconut"
+					type: "item"
+				}
+				{
+					id: "739900C7E03B5F09"
+					item: "comforts:hammock_green"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 120"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "5B6419CF5BF3A94D"
+					silent: true
+					title: "+120 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:tropics"
+					id: "2B723D8EDD3350B3"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "315C0D9BBCE8F233"
+					item: "beachparty:coconut"
+					title: "Crack open a coconut"
+					type: "item"
+				}
+				{
+					id: "4973317D292DB164"
+					item: "comforts:hammock_red"
+					only_from_crafting: true
+					title: "Make a hammock to rest in"
+					type: "item"
+				}
+				{
+					id: "6F9237A56180BA5B"
+					stage: "fq.discovery_sea.tropic_islands.build2"
+					title: "Hang it between palms"
+					type: "gamestage"
+				}
+			]
+			title: "Island Life"
+			x: 0.0d
+			y: 11.25d
+		}
+		{
+			description: ["A rocky reef, with glowing plants clinging to the stones. The Herbalists would pay for hyacinth flowers from it."]
+			icon: "regions_unexplored:hyacinth_flowers"
+			id: "29402CF5344C1BB7"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "01C5EB58E12A6568"
+					item: "regions_unexplored:hyacinth_flowers"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 120"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "74FF2939DB244DBB"
+					silent: true
+					title: "+120 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:rocky_reef"
+					id: "3938234E4A7C6539"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "47118CE5DAC57900"
+					stage: "fq.discovery_sea.rocky_reef.be0"
+					title: "Dive among the reef's stones"
+					type: "gamestage"
+				}
+				{
+					count: 4L
+					id: "0CFA35CCFCA545C8"
+					item: "regions_unexplored:hyacinth_flowers"
+					title: "Bring back glowing hyacinth flowers"
+					type: "item"
+				}
+			]
+			title: "The Rocky Reef"
+			x: 0.0d
+			y: 12.75d
+		}
+		{
+			description: ["The dune beach has seashells and sea stars along the tide line. The Anglers collect them for their trophy cases."]
+			icon: "minecraft:sand"
+			id: "6298C215262A1140"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "5A87C570143573E0"
+					item: "minecraft:sea_pickle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 120"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "6F577F9AD1D75316"
+					silent: true
+					title: "+120 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:dune_beach"
+					id: "000488886CB39B9A"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					count: 4L
+					id: "4EA84815819C6604"
+					item: "biomesoplenty:dune_grass"
+					title: "Gather dune grass from the tide line"
+					type: "item"
+				}
+				{
+					id: "10C6B9D74743DCE9"
+					item: "minecraft:nautilus_shell"
+					title: "Find a shell washed up on the beach"
+					type: "item"
+				}
+			]
+			title: "The Dunes"
+			x: 0.0d
+			y: 14.25d
+		}
+		{
+			description: ["A mangrove swamp, its roots forming a maze. The Couriers want to know if a boat can get through without touching the bank."]
+			icon: "smallships:oak_rowboat"
+			id: "5BD426F02B08B543"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "3FFEBD0E8CD6EBB9"
+					item: "minecraft:mangrove_propagule"
+					type: "item"
+				}
+				{
+					id: "0AD73FF9CC9EFCA7"
+					item: "minecraft:mangrove_boat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "0D9CF5A82C39700C"
+					silent: true
+					title: "+150 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:mangrove_swamp"
+					id: "4B97465CF652D47B"
+					title: "Discovered"
+					type: "biome"
+				}
+				{
+					id: "570B3E5443A11EC8"
+					item: "smallships:oak_rowboat"
+					only_from_crafting: true
+					title: "Build a rowboat for the maze"
+					type: "item"
+				}
+				{
+					id: "329CC2D9FA16C134"
+					stage: "fq.discovery_sea.mangrove_maze.be1"
+					title: "Row into the mangrove roots"
+					type: "gamestage"
+				}
+				{
+					count: 2L
+					id: "6AEEA6AC5657655A"
+					item: "minecraft:mangrove_propagule"
+					title: "Gather propagules on the far side"
+					type: "item"
+				}
+			]
+			title: "The Mangrove Maze"
+			x: 0.0d
+			y: 15.75d
+		}
+	]
+	subtitle: ["Salt, wrecks and drowned things"]
+	title: "Out at Sea"
+}

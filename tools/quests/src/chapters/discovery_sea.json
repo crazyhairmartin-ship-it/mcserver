@@ -1,0 +1,1071 @@
+{
+  "title": "Out at Sea",
+  "subtitle": "Salt, wrecks and drowned things",
+  "icon": "minecraft:nautilus_shell",
+  "group": "explore",
+  "order": 1,
+  "quests": [
+    {
+      "id": "bones_of_the_deep",
+      "title": "Bones of the Deep",
+      "text": [
+        "A dragon's skeleton lies on the sea floor, its ribs rising like a reef. The Anglers' Society swear it was a sea serpent, and want proof: one of its bones."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "in_water": true,
+            "below_y": 45
+          },
+          "title": "Dive down to the skeleton's skull"
+        },
+        {
+          "item": "minecraft:bone_block",
+          "count": 2,
+          "title": "Take bone from the skeleton as proof"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone_block",
+          "count": 8
+        },
+        {
+          "item": "minecraft:nautilus_shell"
+        },
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:bone_block",
+      "discover": {
+        "structure": "#sea_dragon_bones"
+      }
+    },
+    {
+      "id": "the_tribune_of_atlantis",
+      "title": "The Tribune of Atlantis",
+      "text": [
+        "A tribune of white stone stands on the deep sea floor beside drowned Atlantean ruins. Its sockets are empty. Light them with sea lanterns, and the ruins' sealed vault should open."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:sea_lantern",
+          "count": 4,
+          "consume": true,
+          "title": "Bring four sea lanterns down to the tribune"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:sea_lantern": 4
+            },
+            "radius": 12
+          },
+          "title": "Set the lanterns in the tribune"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mos:ruins_atlantis"
+            },
+            "count": 1,
+            "item": {
+              "name": "Vault Hoard",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "The vault swings open on a drowned hoard."
+          },
+          "title": "Open the ruins' sealed vault"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:prismarine",
+          "count": 32
+        },
+        {
+          "item": "minecraft:trident"
+        },
+        {
+          "skill": "fish",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:sea_lantern",
+      "discover": {
+        "structure": "mos:atlantis_tribune"
+      }
+    },
+    {
+      "id": "the_conduit_arch",
+      "title": "The Conduit Arch",
+      "text": [
+        "An arch of prismarine stands on the sea floor with an empty socket. A conduit set in it should light the waters around."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:conduit",
+          "crafted": true,
+          "title": "Craft a conduit from a heart of the sea and nautilus shells"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:conduit": 1
+            },
+            "radius": 6
+          },
+          "title": "Set the conduit in the arch"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:nautilus_shell",
+          "count": 2
+        },
+        {
+          "item": "minecraft:prismarine",
+          "count": 16
+        },
+        {
+          "skill": "fish",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:conduit",
+      "discover": {
+        "structure": "mos:conduit_arch"
+      }
+    },
+    {
+      "id": "x_marks_the_spot",
+      "title": "X Marks the Spot",
+      "text": [
+        "A map you found marks a spot on the coast with an X. Dig where it points and bring home what a pirate buried."
+      ],
+      "tasks": [
+        {
+          "structure": "mos:buried_treasure",
+          "title": "Follow the map to the X"
+        },
+        {
+          "item": "minecraft:heart_of_the_sea",
+          "title": "Dig out the chest and take the heart of the sea"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 12
+        },
+        {
+          "skill": "fish",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:filled_map",
+      "discover": {
+        "item": "minecraft:filled_map"
+      }
+    },
+    {
+      "id": "wreck_diver",
+      "title": "Wreck Diver",
+      "text": [
+        "Every wreck has a captain's chest, and every captain kept a log. Loot three wrecks and piece together their last voyage."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "#shipwrecks"
+            },
+            "count": 3,
+            "item": {
+              "name": "Captain's Log",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A waterlogged log, its last page still legible."
+          },
+          "title": "Find logbooks in three different wrecks"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:map"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 6
+        },
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:oak_boat",
+      "discover": {
+        "structure": "#shipwrecks"
+      }
+    },
+    {
+      "id": "drowned_temple",
+      "title": "Drowned Halls",
+      "text": [
+        "Sunken ruins are thick with drowned. One of them wears a medallion, and a cleric on shore would like to know whose."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:drowned",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "#sunken_ruins"
+            },
+            "wave": 4,
+            "name": "Ruin Drowned"
+          },
+          "title": "Clear the drowned from around the ruins"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:drowned"
+            ],
+            "chance": 0.5,
+            "item": {
+              "name": "the Drowned Priest's Medallion",
+              "texture": "minecraft:item/gold_nugget",
+              "tooltip": "Show it to a cleric"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take the Drowned Priest's Medallion"
+        },
+        {
+          "talk": "villager",
+          "profession": "minecraft:cleric",
+          "lines": [
+            "A priest's medallion? From a drowned?",
+            "He must have gone down with his flock. Poor soul.",
+            "We'll say a prayer for him tonight."
+          ],
+          "title": "Show the medallion to a cleric"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:trident"
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Sea Spear",
+          "enchant": {
+            "minecraft:impaling": 3
+          }
+        },
+        {
+          "skill": "attack",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:trident",
+      "discover": {
+        "structure": "#sunken_ruins"
+      }
+    },
+    {
+      "id": "typhon",
+      "title": "The Typhon",
+      "text": [
+        "The sea fortress Typhon rises from the ocean, its guns still manned. Board her, fight up the decks and hold her bridge until her crew breaks."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:pillager",
+          "count": 10,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:typhon"
+            },
+            "wave": 5,
+            "name": "Typhon Crew"
+          },
+          "title": "Fight up the decks"
+        },
+        {
+          "timed": {
+            "seconds": 180,
+            "goal": {
+              "hold": {
+                "radius": 14
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:pillager",
+                "count": 3,
+                "every": 30
+              }
+            ],
+            "lines": [
+              "The crew's rallying on the bridge. Hold it!"
+            ],
+            "start": "Hold the bridge"
+          },
+          "title": "Hold the bridge until the crew breaks"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:crossbow",
+          "name": "Typhon's Gun",
+          "lore": [
+            "Pried from a manned gun."
+          ],
+          "enchant": {
+            "minecraft:quick_charge": 2,
+            "minecraft:piercing": 2
+          }
+        },
+        {
+          "item": "smallships:oak_cog"
+        },
+        {
+          "skill": "defense",
+          "xp": 450
+        }
+      ],
+      "icon": "minecraft:crossbow",
+      "discover": {
+        "structure": "dungeons_arise:typhon"
+      }
+    },
+    {
+      "id": "golden_hind",
+      "title": "The Golden Hind",
+      "text": [
+        "The sunken ship Ceryneian Hind carried a golden figurehead of a deer. Its three pieces are scattered through the flooded holds."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:drowned",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:ceryneian_hind"
+            },
+            "wave": 4,
+            "name": "Hold Drowned"
+          },
+          "title": "Clear the drowned from the flooded holds"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "dungeons_arise:ceryneian_hind"
+            },
+            "count": 1,
+            "item": {
+              "name": "Figurehead Piece",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A curve of gold, shaped like an antler."
+          },
+          "title": "Search for Figurehead Piece"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:drowned"
+            ],
+            "chance": 0.4,
+            "item": {
+              "name": "a Figurehead Piece",
+              "texture": "minecraft:item/gold_ingot",
+              "tooltip": "Part of the golden deer"
+            }
+          },
+          "count": 2,
+          "consume": false,
+          "title": "Take a Figurehead Piece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:gold_block": 3
+            },
+            "radius": 12
+          },
+          "title": "Rebuild the figurehead on deck"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_block",
+          "count": 4
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Depths Strider",
+          "enchant": {
+            "minecraft:depth_strider": 3
+          }
+        },
+        {
+          "skill": "fish",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:gold_block",
+      "discover": {
+        "structure": "dungeons_arise:ceryneian_hind"
+      }
+    },
+    {
+      "id": "salvage_rights",
+      "title": "Salvage Rights",
+      "text": [
+        "Sunken wreckage lies in the shallows, still good timber. Salvage planks, rope and cloth from it and build your own cog."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:oak_planks",
+          "count": 16,
+          "title": "Salvage planks from the wreckage"
+        },
+        {
+          "item": "supplementaries:rope",
+          "count": 4,
+          "title": "Salvage rope from the wreckage"
+        },
+        {
+          "item": "minecraft:white_wool",
+          "count": 6,
+          "title": "Salvage sailcloth"
+        },
+        {
+          "item": "smallships:oak_cog",
+          "crafted": true,
+          "title": "Build your own cog"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "supplementaries:rope",
+          "count": 16
+        },
+        {
+          "skill": "craft",
+          "xp": 200
+        }
+      ],
+      "icon": "smallships:oak_cog",
+      "discover": {
+        "structure": "towns_and_towers:wreckage_ocean"
+      }
+    },
+    {
+      "id": "drowned_keeper",
+      "title": "The Drowned Keeper",
+      "text": [
+        "An ocean tower's light has gone out, and its keeper walks the shallows as a drowned. Put him to rest and relight the lamp at the top."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:drowned",
+            "name": "The Drowned Keeper",
+            "health": 30,
+            "then": "kill",
+            "lines": [
+              "Grrr... the light... I must tend the light..."
+            ]
+          },
+          "title": "Put the drowned keeper to rest"
+        },
+        {
+          "item": "minecraft:sea_lantern",
+          "consume": true,
+          "title": "Bring a lantern for the tower's lamp"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:sea_lantern": 1
+            },
+            "radius": 12
+          },
+          "title": "Relight the lamp at the top"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:lantern",
+          "count": 2
+        },
+        {
+          "item": "minecraft:glowstone",
+          "count": 4
+        },
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:sea_lantern",
+      "discover": {
+        "structure": "mvs:ocean_tower"
+      }
+    },
+    {
+      "id": "last_orders",
+      "title": "Last Orders at the Beach Bar",
+      "text": [
+        "The beach bar's bartender is swamped, and his customers are thirsty and impatient. Mix four cocktails and serve them before the customers give up."
+      ],
+      "tasks": [
+        {
+          "item": "beachparty:coconut_cocktail",
+          "consume": true,
+          "title": "Mix a coconut cocktail"
+        },
+        {
+          "item": "beachparty:honey_cocktail",
+          "consume": true,
+          "title": "Mix a honey cocktail"
+        },
+        {
+          "item": "beachparty:melon_cocktail",
+          "consume": true,
+          "title": "Mix a melon cocktail"
+        },
+        {
+          "item": "beachparty:pumpkin_cocktail",
+          "consume": true,
+          "title": "Mix a pumpkin cocktail"
+        },
+        {
+          "timed": {
+            "seconds": 150,
+            "goal": {
+              "hold": {
+                "radius": 12
+              }
+            },
+            "lines": [
+              "The customers are queuing. Keep them served!"
+            ],
+            "start": "Serve the rush"
+          },
+          "title": "Serve the beach rush before they give up"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "artifacts:plastic_drinking_hat"
+        },
+        {
+          "item": "beachparty:coconut_cocktail",
+          "count": 3
+        },
+        {
+          "skill": "cook",
+          "xp": 220
+        }
+      ],
+      "icon": "artifacts:plastic_drinking_hat",
+      "signature": "artifacts:plastic_drinking_hat",
+      "discover": {
+        "structure": "mvs:beach_bar"
+      }
+    },
+    {
+      "id": "the_ritual_circle",
+      "title": "The Ritual Circle",
+      "text": [
+        "A circle of torches and shells on the beach. The old fishers say that if you place a seashell on each stone at sunset and play a beach disc on a radio, the sea gives something back."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "beachparty:radio": 1
+            },
+            "radius": 8
+          },
+          "title": "Set a radio in the circle"
+        },
+        {
+          "use": "beachparty:radio",
+          "count": 1,
+          "holding": "beachparty:music_disc_beachparty",
+          "title": "Play a beach disc on the radio"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "beachparty:ritual_circle"
+            },
+            "count": 1,
+            "item": {
+              "name": "The Sea's Gift",
+              "texture": "minecraft:item/nautilus_shell"
+            },
+            "found": "The sea gives a pearl-white shell back."
+          },
+          "title": "Search for The Sea's Gift"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "beachparty:music_disc_pridelands"
+        },
+        {
+          "item": "beachparty:beach_hat"
+        },
+        {
+          "skill": "magic",
+          "xp": 150
+        }
+      ],
+      "icon": "beachparty:radio",
+      "discover": {
+        "structure": "beachparty:ritual_circle"
+      }
+    },
+    {
+      "id": "the_faithful_hound",
+      "title": "The Faithful Hound",
+      "text": [
+        "A prismarine statue of a dog still waits for its master on the sea floor. Tame a wolf, bring it to the statue and give it the statue's collar."
+      ],
+      "tasks": [
+        {
+          "tame": "minecraft:wolf",
+          "title": "Tame a wolf to keep the statue company"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mos:prismarine_dog_statue"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Statue's Collar",
+              "texture": "minecraft:item/lead"
+            },
+            "found": "A collar, green with age, in the statue's chest."
+          },
+          "title": "Search for the Statue's Collar"
+        },
+        {
+          "checkmark": "I gave the wolf the statue's collar"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "domesticationinnovation:collar_tag"
+        },
+        {
+          "skill": "taming",
+          "xp": 150
+        }
+      ],
+      "icon": "domesticationinnovation:collar_tag",
+      "discover": {
+        "structure": "mos:prismarine_dog_statue"
+      }
+    },
+    {
+      "id": "underwater_garden",
+      "title": "The Underwater Garden",
+      "text": [
+        "A garden of coral and kelp grows inside sunken walls. Gather five kinds of coral, then plant a reef of your own."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:tube_coral",
+          "title": "Gather tube coral"
+        },
+        {
+          "item": "minecraft:brain_coral",
+          "title": "Gather brain coral"
+        },
+        {
+          "item": "minecraft:bubble_coral",
+          "title": "Gather bubble coral"
+        },
+        {
+          "item": "minecraft:fire_coral",
+          "title": "Gather fire coral"
+        },
+        {
+          "item": "minecraft:horn_coral",
+          "title": "Gather horn coral"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:sea_pickle": 2,
+              "minecraft:kelp": 4
+            },
+            "radius": 10
+          },
+          "title": "Plant a reef of your own"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:sea_pickle",
+          "count": 4
+        },
+        {
+          "item": "minecraft:tube_coral",
+          "count": 4
+        },
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:brain_coral",
+      "discover": {
+        "structure": "mos:underwater_garden"
+      }
+    },
+    {
+      "id": "drowned_village",
+      "title": "The Drowned Village",
+      "text": [
+        "A castle, a church and houses lie under the waves where a village once stood. Its church bell and the castle's crest would tell you its name."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "mos:ruined_church"
+            },
+            "count": 1,
+            "item": {
+              "name": "Church Bell Clapper",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "An iron clapper, green with age."
+          },
+          "title": "Search for Church Bell Clapper"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mos:ruined_castle"
+            },
+            "count": 1,
+            "item": {
+              "name": "Castle Crest",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A crest in cracked stone, shaped like a boat."
+          },
+          "title": "Search for Castle Crest"
+        },
+        {
+          "checkmark": "I learned the drowned village's name"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bell"
+        },
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 8
+        },
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:bell",
+      "discover": {
+        "structure": "mos:ruined_church"
+      }
+    },
+    {
+      "id": "beach_discs",
+      "title": "Songs of the Beach",
+      "text": [
+        "An overgrown disc on the beach is the first of a set. Collect the others and play them on a radio."
+      ],
+      "tasks": [
+        {
+          "item": "beachparty:overgrown_disc",
+          "title": "Find the overgrown disc"
+        },
+        {
+          "item": "beachparty:music_disc_beachparty",
+          "title": "Collect the Beachparty disc"
+        },
+        {
+          "item": "beachparty:music_disc_caribbean_beach",
+          "title": "Collect the Caribbean Beach disc"
+        },
+        {
+          "item": "beachparty:music_disc_vocalista",
+          "title": "Collect the Vocalista disc"
+        },
+        {
+          "item": "beachparty:music_disc_wild_veins",
+          "title": "Collect the Wild Veins disc"
+        },
+        {
+          "use": "beachparty:radio",
+          "count": 1,
+          "title": "Play them on a radio"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "beachparty:radio"
+        },
+        {
+          "item": "beachparty:palm_bar"
+        },
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "beachparty:radio",
+      "discover": {
+        "structure": "beachparty:excavated_treasure"
+      }
+    },
+    {
+      "id": "coral_reef",
+      "title": "The Coral Reef",
+      "text": [
+        "A warm ocean, full of colour. The Anglers' Society want reef fish in buckets to stock a tank."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:tropical_fish_bucket",
+          "count": 3,
+          "title": "Catch three reef fish in buckets"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bucket",
+          "count": 2
+        },
+        {
+          "skill": "fish",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:tropical_fish_bucket",
+      "discover": {
+        "biome": "minecraft:warm_ocean"
+      }
+    },
+    {
+      "id": "frozen_ocean",
+      "title": "The Frozen Sea",
+      "text": [
+        "A deep frozen ocean of icebergs and polar bears. Cross it, and fish through a hole in the ice, as the old Anglers do."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "biomes": [
+              "minecraft:deep_frozen_ocean"
+            ],
+            "in_water": false
+          },
+          "title": "Cross the ice"
+        },
+        {
+          "item": "minecraft:cod",
+          "count": 2,
+          "title": "Fish through a hole in the ice"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:blue_ice",
+          "count": 4
+        },
+        {
+          "skill": "fish",
+          "xp": 150
+        }
+      ],
+      "icon": "minecraft:blue_ice",
+      "discover": {
+        "biome": "minecraft:deep_frozen_ocean"
+      }
+    },
+    {
+      "id": "tropic_islands",
+      "title": "Island Life",
+      "text": [
+        "A tropical island with palms and sand. The Crafters' guild would love a coconut, and a hammock strung between two palms is the best way to rest."
+      ],
+      "tasks": [
+        {
+          "item": "beachparty:coconut",
+          "title": "Crack open a coconut"
+        },
+        {
+          "item": "comforts:hammock_red",
+          "crafted": true,
+          "title": "Make a hammock to rest in"
+        },
+        {
+          "build": {
+            "blocks": {
+              "comforts:hammock_red": 1
+            },
+            "radius": 10
+          },
+          "title": "Hang it between palms"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "beachparty:coconut",
+          "count": 4
+        },
+        {
+          "item": "comforts:hammock_green"
+        },
+        {
+          "skill": "forage",
+          "xp": 120
+        }
+      ],
+      "icon": "beachparty:coconut",
+      "discover": {
+        "biome": "biomesoplenty:tropics"
+      }
+    },
+    {
+      "id": "rocky_reef",
+      "title": "The Rocky Reef",
+      "text": [
+        "A rocky reef, with glowing plants clinging to the stones. The Herbalists would pay for hyacinth flowers from it."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "biomes": [
+              "regions_unexplored:rocky_reef"
+            ],
+            "in_water": true
+          },
+          "title": "Dive among the reef's stones"
+        },
+        {
+          "item": "regions_unexplored:hyacinth_flowers",
+          "count": 4,
+          "title": "Bring back glowing hyacinth flowers"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "regions_unexplored:hyacinth_flowers",
+          "count": 4
+        },
+        {
+          "skill": "fish",
+          "xp": 120
+        }
+      ],
+      "icon": "regions_unexplored:hyacinth_flowers",
+      "discover": {
+        "biome": "regions_unexplored:rocky_reef"
+      }
+    },
+    {
+      "id": "dune_beach",
+      "title": "The Dunes",
+      "text": [
+        "The dune beach has seashells and sea stars along the tide line. The Anglers collect them for their trophy cases."
+      ],
+      "tasks": [
+        {
+          "item": "biomesoplenty:dune_grass",
+          "count": 4,
+          "title": "Gather dune grass from the tide line"
+        },
+        {
+          "item": "minecraft:nautilus_shell",
+          "title": "Find a shell washed up on the beach"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:sea_pickle",
+          "count": 4
+        },
+        {
+          "skill": "fish",
+          "xp": 120
+        }
+      ],
+      "icon": "minecraft:sand",
+      "discover": {
+        "biome": "biomesoplenty:dune_beach"
+      }
+    },
+    {
+      "id": "mangrove_maze",
+      "title": "The Mangrove Maze",
+      "text": [
+        "A mangrove swamp, its roots forming a maze. The Couriers want to know if a boat can get through without touching the bank."
+      ],
+      "tasks": [
+        {
+          "item": "smallships:oak_rowboat",
+          "crafted": true,
+          "title": "Build a rowboat for the maze"
+        },
+        {
+          "be": {
+            "biomes": [
+              "minecraft:mangrove_swamp"
+            ],
+            "in_water": true
+          },
+          "title": "Row into the mangrove roots"
+        },
+        {
+          "item": "minecraft:mangrove_propagule",
+          "count": 2,
+          "title": "Gather propagules on the far side"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:mangrove_propagule",
+          "count": 4
+        },
+        {
+          "item": "minecraft:mangrove_boat"
+        },
+        {
+          "skill": "agility",
+          "xp": 150
+        }
+      ],
+      "icon": "smallships:oak_rowboat",
+      "discover": {
+        "biome": "minecraft:mangrove_swamp"
+      }
+    }
+  ]
+}
