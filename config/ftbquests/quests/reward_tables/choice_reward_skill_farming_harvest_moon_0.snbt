@@ -1,0 +1,79 @@
+{
+	icon: "minecraft:chest"
+	id: "0F3BB4E869B858A7"
+	loot_size: 1
+	order_index: 15
+	rewards: [
+		{
+			id: "2E599C72FA00AB27"
+			item: {
+				Count: 1b
+				id: "minecraft:netherite_hoe"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:efficiency"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:fortune"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"It tills under moonlight.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Harvest Moon\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "734F0620F5B3CA24"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_scythe"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:looting"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"One sweep takes the whole field.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Harvest Moon Scythe\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "3972296BAD76A648"
+			item: {
+				Count: 1b
+				id: "minecraft:enchanted_book"
+				tag: {
+					StoredEnchantments: [
+						{
+							id: "minecraft:mending"
+							lvl: 1s
+						}
+					]
+					display: {
+						Name: "{\"text\": \"Harvest Moon\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

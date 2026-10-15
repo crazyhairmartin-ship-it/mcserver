@@ -1849,7 +1849,7 @@ global.QUEST_GIVERS = [
     "type": "photo",
     "target": {
       "kind": "entity",
-      "entity": "meadow:horned_sheep",
+      "entity": "meadow:wooly_sheep",
       "distance": 24.0
     },
     "requires": [],
@@ -1865,7 +1865,7 @@ global.QUEST_GIVERS = [
     "type": "photo",
     "target": {
       "kind": "entity",
-      "entity": "meadow:highland_cattle",
+      "entity": "meadow:wooly_cow",
       "distance": 24.0
     },
     "requires": [],
@@ -4647,6 +4647,32 @@ global.QUEST_GIVERS = [
     "prev_tasks": []
   },
   {
+    "quest": "skill_mining:quartz_contract",
+    "stage": "fq.skill_mining.quartz_contract.mine0",
+    "type": "mine",
+    "keys": [
+      "minecraft:nether_quartz_ore"
+    ],
+    "count": 24,
+    "requires": [],
+    "quest_id": "7FBFAC19E541E388",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_mining:quartz_contract",
+    "stage": "fq.skill_mining.quartz_contract.mine1",
+    "type": "mine",
+    "keys": [
+      "minecraft:nether_gold_ore"
+    ],
+    "count": 12,
+    "requires": [],
+    "quest_id": "7FBFAC19E541E388",
+    "prev_tasks": [
+      "0BF3E89405BFB34E"
+    ]
+  },
+  {
     "quest": "skill_mining:great_collapse",
     "stage": "fq.skill_mining.great_collapse.be0",
     "type": "be",
@@ -6975,6 +7001,22 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "alexs_caves:gum_worm",
+    "stage": "fq.alexs_caves.gum_worm.interact1",
+    "type": "interact",
+    "count": 1,
+    "requires": [],
+    "quest_id": "4719FE669758E907",
+    "prev_tasks": [
+      "26B6264A3A0BB751"
+    ],
+    "entities": [
+      "alexscaves:gum_worm"
+    ],
+    "holding": "alexscaves:candy_cane_hook",
+    "consume": false
+  },
+  {
     "quest": "alexs_caves:crucible",
     "stage": "fq.alexs_caves.crucible.build1",
     "type": "build",
@@ -8001,6 +8043,19 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "skill_farming:market_stall",
+    "stage": "fq.skill_farming.market_stall.trade1",
+    "type": "trade",
+    "count": 8,
+    "requires": [],
+    "quest_id": "7392BE863EF12BB2",
+    "prev_tasks": [
+      "454D426A1B4C1D11"
+    ],
+    "who": "any",
+    "item": "minecraft:emerald"
+  },
+  {
+    "quest": "skill_farming:market_stall",
     "stage": "fq.skill_farming.market_stall.enc2",
     "type": "encounter",
     "then": "talk",
@@ -8530,6 +8585,21 @@ global.QUEST_GIVERS = [
     "quest_id": "71E599C87169B0A6",
     "prev_tasks": [
       "6290D959BA7B52E3"
+    ]
+  },
+  {
+    "quest": "discovery_sky_and_underground:biome_deep_dark",
+    "stage": "fq.discovery_sky_and_underground.biome_deep_dark.mine1",
+    "type": "mine",
+    "keys": [
+      "minecraft:sculk_sensor"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "71E599C87169B0A6",
+    "prev_tasks": [
+      "6290D959BA7B52E3",
+      "376C65CD5C1B7634"
     ]
   },
   {
@@ -10267,7 +10337,7 @@ global.QUEST_GIVERS = [
     "type": "build",
     "keys": [
       "another_furniture:oak_table",
-      "another_furniture:red_awning",
+      "supplementaries:awning_red",
       "farmersdelight:wooden_basket"
     ],
     "counts": [
@@ -12218,7 +12288,7 @@ global.QUEST_GIVERS = [
     "health": null,
     "glow": false,
     "where": {},
-    "entity": "bakery:wandering_baker",
+    "entity": "minecraft:wandering_trader",
     "profession": ""
   },
   {
@@ -12996,7 +13066,7 @@ global.QUEST_GIVERS = [
     "keys": [
       "another_furniture:oak_bench",
       "another_furniture:oak_flower_box",
-      "another_furniture:red_awning",
+      "supplementaries:awning_red",
       "another_furniture:red_lamp"
     ],
     "counts": [
@@ -18110,6 +18180,22 @@ global.QUEST_GIVERS = [
     },
     "entity": "minecraft:villager",
     "profession": ""
+  },
+  {
+    "quest": "magic:the_poisoned_traveller",
+    "stage": "fq.magic.the_poisoned_traveller.make2",
+    "type": "make",
+    "count": 2,
+    "requires": [],
+    "quest_id": "392FFF5F5EB2A584",
+    "prev_tasks": [
+      "08CB07793A8AE544",
+      "5F162006BCEECA39"
+    ],
+    "items": [
+      "minecraft:potion"
+    ],
+    "how": "brew"
   },
   {
     "quest": "magic:witch_ingredients",

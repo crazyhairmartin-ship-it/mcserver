@@ -1,0 +1,75 @@
+{
+	icon: "minecraft:chest"
+	id: "0EC80D817863B26C"
+	loot_size: 1
+	order_index: 20
+	rewards: [
+		{
+			id: "2960EE882D53E19C"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_dagger"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:looting"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Carves the roast and settles the argument.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Last Course\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "18B7B2B8A6029222"
+			item: {
+				Count: 1b
+				id: "farmersdelight:netherite_knife"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 4s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Never needs a second cut.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Chef's Last Word\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "285EF75608E71C9B"
+			item: {
+				Count: 1b
+				id: "candlelight:chefs_jacket"
+				tag: {
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Spotless, whatever the night.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Grand Chef's Jacket\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

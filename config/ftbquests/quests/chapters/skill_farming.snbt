@@ -157,7 +157,18 @@
 			rewards: [
 				{
 					id: "250DCE96A0A7636D"
-					item: "minecraft:iron_hoe"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 3s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -649,7 +660,7 @@
 				{
 					count: 4
 					id: "7737CCF194587C9E"
-					item: "vinery:applesauce"
+					item: "vinery:apple_juice"
 					type: "item"
 				}
 				{
@@ -1136,15 +1147,22 @@
 			id: "2B065B951D5A99D5"
 			rewards: [
 				{
+					count: 2
 					id: "27449865D6B71A02"
-					item: "vinery:big_bottle"
+					item: "vinery:eiswein"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "418A794C3E7C69A9"
+					item: "vinery:wine_bottle"
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:farm 430"
 					elevate_perms: true
 					icon: "minecraft:iron_hoe"
-					id: "418A794C3E7C69A9"
+					id: "241CCDE41AD14B10"
 					silent: true
 					title: "+430 Farming XP"
 					type: "command"
@@ -1173,8 +1191,8 @@
 				}
 				{
 					id: "0FA6AAA4D6F23992"
-					item: "vinery:big_bottle"
-					title: "Age the eiswein in a big bottle"
+					item: "vinery:eiswein"
+					title: "Age a bottle of eiswein"
 					type: "item"
 				}
 			]
@@ -1272,11 +1290,10 @@
 					type: "structure"
 				}
 				{
-					count: 24L
 					id: "18212379777B1A84"
-					item: "minecraft:emerald"
-					title: "Sell your best produce for emeralds"
-					type: "item"
+					stage: "fq.skill_farming.market_stall.trade1"
+					title: "Sell your best produce to villagers for emeralds"
+					type: "gamestage"
 				}
 				{
 					id: "6089AE7A9845A407"
@@ -1352,10 +1369,10 @@
 					id: "0F72F91A650D84B0"
 					item: {
 						Count: 1b
-						id: "minecraft:leather_helmet"
+						id: "irons_spellbooks:gold_crown"
 						tag: {
 							display: {
-								Lore: ["{\"text\": \"A straw hat for a harvest queen.\", \"color\": \"gray\", \"italic\": true}"]
+								Lore: ["{\"text\": \"Woven with the last of the wheat.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"The Festival Crown\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -1416,35 +1433,9 @@
 			rewards: [
 				{
 					id: "1BB7EDDE30EEC494"
-					item: {
-						Count: 1b
-						id: "minecraft:netherite_hoe"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:fortune"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:efficiency"
-									lvl: 5s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"It cut the first sheaf.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Harvest Moon\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 1097669844493949095L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:farm 1000"

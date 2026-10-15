@@ -1,0 +1,74 @@
+{
+	icon: "minecraft:chest"
+	id: "574FE5BD274E4358"
+	loot_size: 1
+	order_index: 26
+	rewards: [
+		{
+			id: "287AB6199DC4EAAA"
+			item: {
+				Count: 1b
+				id: "spartanshields:netherite_tower_shield"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+						{
+							id: "minecraft:mending"
+							lvl: 1s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Nothing passed it. Nothing will.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Bulwark of Reece\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "02174DBDEE08B83B"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_halberd"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:knockback"
+							lvl: 2s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Long enough to hold a gate.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Reece's Gatekeeper\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "54C3C580EB765A7D"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:emerald_stoneplate_ring"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"Worn by the last to leave the wall.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Watch's Ward\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

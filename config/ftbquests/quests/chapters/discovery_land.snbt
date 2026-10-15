@@ -238,9 +238,9 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 4
+					count: 2
 					id: "40C8666E4A9B2F16"
-					item: "minecraft:iron_block"
+					item: "cataclysm:black_steel_ingot"
 					type: "item"
 				}
 				{
@@ -299,23 +299,9 @@
 			rewards: [
 				{
 					id: "13E85074B55A7674"
-					item: {
-						Count: 1b
-						id: "spartanweaponry:diamond_longsword"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:sharpness"
-									lvl: 3s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"Taken from the mad lord's hand.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Kayra's Edge\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 8133373006558553107L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					id: "454DB2B4EC7C7835"
@@ -386,9 +372,8 @@
 					type: "item"
 				}
 				{
-					count: 8
 					id: "12299A531B1752A1"
-					item: "minecraft:copper_block"
+					item: "irons_spellbooks:energized_core"
 					type: "item"
 				}
 				{
@@ -494,14 +479,15 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 4
 					id: "64B7AFFB3A3BD0AB"
-					item: "minecraft:gold_block"
-					type: "item"
+					table_id: 1749695571662751323L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
+					count: 4
 					id: "48A2B0D05B3FE2C7"
-					item: "minecraft:enchanted_golden_apple"
+					item: "minecraft:gold_block"
 					type: "item"
 				}
 				{
@@ -549,16 +535,19 @@
 					id: "1CA12E2266515BE4"
 					item: {
 						Count: 1b
-						id: "minecraft:iron_axe"
+						id: "minecraft:enchanted_book"
 						tag: {
-							Enchantments: [
+							StoredEnchantments: [
 								{
-									id: "minecraft:sharpness"
+									id: "minecraft:efficiency"
 									lvl: 3s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 2s
 								}
 							]
 							display: {
-								Lore: ["{\"text\": \"Cut from the Thornborn Towers.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"Thornbreaker\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -835,9 +824,9 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 4
+					count: 2
 					id: "0A990E3BBEAA977A"
-					item: "minecraft:magma_cream"
+					item: "irons_spellbooks:cinder_essence"
 					type: "item"
 				}
 				{
@@ -1030,9 +1019,19 @@
 					type: "item"
 				}
 				{
-					count: 8
 					id: "781A75499F7C8D7C"
-					item: "minecraft:golden_carrot"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 3s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1187,9 +1186,8 @@
 					type: "item"
 				}
 				{
-					count: 2
 					id: "73DF47A9CEE3C0FF"
-					item: "minecraft:golden_apple"
+					item: "irons_spellbooks:holy_rune"
 					type: "item"
 				}
 				{
@@ -1288,9 +1286,9 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 4
+					count: 3
 					id: "6D5FD7B393A27DA1"
-					item: "minecraft:iron_block"
+					item: "minecraft:diamond"
 					type: "item"
 				}
 				{
@@ -1337,9 +1335,19 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 12
 					id: "5AB139556F02D30C"
-					item: "minecraft:gold_ingot"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:looting"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1775,9 +1783,9 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 12
+					count: 8
 					id: "5DD0BC12FCF5CE87"
-					item: "minecraft:gold_ingot"
+					item: "cataclysm:ancient_metal_nugget"
 					type: "item"
 				}
 				{
@@ -1882,7 +1890,18 @@
 			rewards: [
 				{
 					id: "4ED67B5E5537D323"
-					item: "minecraft:shield"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:protection"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1933,9 +1952,8 @@
 					type: "item"
 				}
 				{
-					count: 4
 					id: "697702584B9EF854"
-					item: "minecraft:magma_cream"
+					item: "irons_spellbooks:fire_rune"
 					type: "item"
 				}
 				{
@@ -2177,12 +2195,18 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
+					count: 4
 					id: "7B0818AB7716FF80"
-					item: "minecraft:chest"
+					item: "irons_spellbooks:blank_rune"
 					type: "item"
 				}
 				{
 					id: "4796037379DF30E7"
+					item: "minecraft:chest"
+					type: "item"
+				}
+				{
+					id: "4188BC7DB71CFAA0"
 					item: "explorerscompass:explorerscompass"
 					type: "item"
 				}
@@ -2190,7 +2214,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "4188BC7DB71CFAA0"
+					id: "14395359AC957617"
 					silent: true
 					title: "+200 Magic XP"
 					type: "command"
@@ -2304,9 +2328,8 @@
 					type: "item"
 				}
 				{
-					count: 6
 					id: "33DBA837E3C0189B"
-					item: "minecraft:golden_carrot"
+					item: "irons_spellbooks:invisibility_elixir"
 					type: "item"
 				}
 				{
@@ -2557,9 +2580,8 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 32
 					id: "50D19EE441A136F2"
-					item: "minecraft:sandstone"
+					item: "irons_spellbooks:ancient_knowledge_fragment"
 					type: "item"
 				}
 				{
@@ -2926,13 +2948,13 @@
 				{
 					id: "026A4D26531C9E3E"
 					stage: "fq.discovery_land.the_observation_post.photo1"
-					title: "Photograph a horned sheep"
+					title: "Photograph a woolly highland sheep"
 					type: "gamestage"
 				}
 				{
 					id: "5D785E1FD6E5A51B"
 					stage: "fq.discovery_land.the_observation_post.photo2"
-					title: "Photograph a highland cow"
+					title: "Photograph a woolly highland cow"
 					type: "gamestage"
 				}
 			]
@@ -3138,10 +3160,16 @@
 					id: "508975D88AB2F517"
 					item: {
 						Count: 1b
-						id: "minecraft:iron_sword"
+						id: "spartanweaponry:iron_longsword"
 						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 2s
+								}
+							]
 							display: {
-								Lore: ["{\"text\": \"Returned by the one who brought them home.\", \"color\": \"gray\", \"italic\": true}"]
+								Lore: ["{\"text\": \"Notched by a fight nobody saw.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"The Fallen Adventurer's Blade\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -3497,7 +3525,18 @@
 				}
 				{
 					id: "108EC403E74313C3"
-					item: "minecraft:iron_axe"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -4007,9 +4046,8 @@
 					type: "item"
 				}
 				{
-					count: 8
 					id: "17769961D5F16282"
-					item: "minecraft:golden_carrot"
+					item: "parcool:traceur_boots"
 					type: "item"
 				}
 				{
@@ -4350,9 +4388,9 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 10
+					count: 2
 					id: "43B3E44F0C18B50F"
-					item: "minecraft:gold_ingot"
+					item: "irons_spellbooks:arcane_essence"
 					type: "item"
 				}
 				{

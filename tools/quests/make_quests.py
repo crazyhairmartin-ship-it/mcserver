@@ -32,7 +32,7 @@ NAME = re.compile(r'^[a-z0-9_]+$')
 SIGNATURE_MODS = {'artifacts'}                          # items that each get one quest designed around them
 SIGNATURE_EXEMPT = {'artifacts:mimic_spawn_egg'}
 SINGULAR = {'items': 'item', 'entities': 'mob', 'enchantments': 'enchantment', 'biomes': 'biome', 'structures': 'structure',
-            'advancements': 'advancement', 'dimensions': 'dimension'}
+            'advancements': 'advancement', 'dimensions': 'dimension', 'textures': 'texture'}
 SHAPES = {'circle', 'square', 'rsquare', 'diamond', 'pentagon', 'hexagon', 'octagon', 'heart', 'gear'}
 
 
@@ -895,7 +895,7 @@ def build_use(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
 def build_search(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     """A "search" task: open the containers (chests, barrels, pots, Lootr chests...) inside "at" and the quest's item
     turns up in "count" different ones, straight into the player's pack. {"search": {"at": {"structure": id},
-    "count": 4, "item": {"name": "Portrait Key", "texture": "minecraft:item/tripwire_hook"},
+    "count": 4, "item": {"name": "Portrait Key", "texture": "minecraft:block/tripwire_hook"},
     "found": "Behind a loose board you find a key."}}. The items are the step: carrying "count" of them completes it."""
     spec = t['search']
     if not isinstance(spec, dict) or 'at' not in spec or not isinstance(spec.get('item'), dict):
@@ -1056,6 +1056,9 @@ def quest_item_id(g, chapter, qid, ctx, where, problems):
         problems.error(where, f'quest item id {key!r} may only use a-z, 0-9 and _')
         return None
     item = f'kubejs:{key}'
+    if 'texture' in spec:
+        # block items and banners have no item/<name> texture: a wrong path shows pink and black in game
+        ctx['registry'].check('textures', spec['texture'], where)
     ctx['quest_items'][item] = {'id': key, 'name': spec['name'], 'texture': spec.get('texture', 'minecraft:item/paper'),
                                 'tooltip': spec.get('tooltip', 'Right-click to read'), 'glow': spec.get('glow', True)}
     ctx['registry'].extra_items.add(item)

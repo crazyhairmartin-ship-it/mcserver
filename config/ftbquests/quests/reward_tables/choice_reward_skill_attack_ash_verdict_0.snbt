@@ -1,0 +1,89 @@
+{
+	icon: "minecraft:chest"
+	id: "37CF97E166D10956"
+	loot_size: 1
+	order_index: 24
+	rewards: [
+		{
+			id: "63354893EEC2C504"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_longsword"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:looting"
+							lvl: 3s
+						}
+						{
+							id: "minecraft:fire_aspect"
+							lvl: 2s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Every contract, signed.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Ash's Verdict\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "6DC446D1B38AE3DC"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_battleaxe"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:looting"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"For the debts nobody else would collect.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Ash's Reckoning\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "30556E2C44729A1F"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_katana"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:sweeping"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Quick enough that you hear it afterwards.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Ash's Quiet Work\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

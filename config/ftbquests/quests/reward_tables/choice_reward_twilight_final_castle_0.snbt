@@ -1,0 +1,81 @@
+{
+	icon: "minecraft:chest"
+	id: "7576523E45D62B87"
+	loot_size: 1
+	order_index: 11
+	rewards: [
+		{
+			id: "26C3EEB1BAE91F6C"
+			item: {
+				Count: 1b
+				id: "spartantwilight:fiery_greatsword"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:fire_aspect"
+							lvl: 2s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Forged where the last tower fell.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Castle-Cleaver\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "3666FF9753EFE061"
+			item: {
+				Count: 1b
+				id: "twilightforest:ender_bow"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:power"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Its arrows keep their own counsel.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Dusk Bow\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "262549910A3FE194"
+			item: {
+				Count: 1b
+				id: "twilightforest:fortification_scepter"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"It makes a fortress of whoever holds it.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Warden's Sceptre\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

@@ -1,0 +1,74 @@
+{
+	icon: "minecraft:chest"
+	id: "149EACAADEF73458"
+	loot_size: 1
+	order_index: 21
+	rewards: [
+		{
+			id: "2093D5DF05B2B78F"
+			item: {
+				Count: 1b
+				id: "minecraft:netherite_axe"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:efficiency"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"It fells only what is ready to fall.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Greenwarden\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "575054226E1F9401"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:druidic_spell_book"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"Smells of rain and old roots.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Greenwarden's Grimoire\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "6DA7A458F89CF8A0"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_quarterstaff"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 4s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"A branch that never rots.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Greenwarden's Staff\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

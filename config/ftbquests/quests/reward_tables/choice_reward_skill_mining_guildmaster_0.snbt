@@ -1,0 +1,79 @@
+{
+	icon: "minecraft:chest"
+	id: "1015F623D7007BF6"
+	loot_size: 1
+	order_index: 10
+	rewards: [
+		{
+			id: "678B2C53E62C21E7"
+			item: {
+				Count: 1b
+				id: "minecraft:netherite_pickaxe"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:efficiency"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:fortune"
+							lvl: 3s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"It always finds the way back up.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Lifeline\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "0701576291AB495B"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_battle_hammer"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 4s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Breaks stone, props beams.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Lifeline's Hammer\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "658A4257DD747BA2"
+			item: {
+				Count: 1b
+				id: "alexscaves:galena_gauntlet"
+				tag: {
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Hums near ore.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Guildmaster's Gauntlet\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

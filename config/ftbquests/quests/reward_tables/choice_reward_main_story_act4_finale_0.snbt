@@ -1,0 +1,60 @@
+{
+	icon: "minecraft:chest"
+	id: "6F0663EDA9CB2538"
+	loot_size: 1
+	order_index: 8
+	rewards: [
+		{
+			id: "748FBB9DA5AD2D17"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_greatsword"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:looting"
+							lvl: 3s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"Quenched in the End.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Dragon's Reply\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			count: 3
+			id: "0BA3E6DA0BE4F31A"
+			item: "irons_spellbooks:legendary_ink"
+			type: "item"
+		}
+		{
+			id: "285621A09F3F33FE"
+			item: {
+				Count: 1b
+				id: "spartanshields:netherite_tower_shield"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"The End found nothing past it.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Last Wall\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

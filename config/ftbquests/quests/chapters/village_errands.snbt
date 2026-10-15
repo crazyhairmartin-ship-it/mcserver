@@ -292,7 +292,7 @@
 		{
 			dependencies: ["5F1A80228546C8A0"]
 			description: ["The Growers' co-op wants a stall at the next market, built like the roadside ones, with produce on it."]
-			icon: "another_furniture:red_awning"
+			icon: "supplementaries:awning_red"
 			id: "1142F96773755924"
 			invisible: true
 			invisible_until_tasks: 1
@@ -1179,7 +1179,7 @@
 					id: "47275B2CD7D958BE"
 					item: {
 						Count: 1b
-						id: "minecraft:fishing_rod"
+						id: "aquaculture:iron_fishing_rod"
 						tag: {
 							Enchantments: [
 								{
@@ -1187,12 +1187,12 @@
 									lvl: 2s
 								}
 								{
-									id: "minecraft:luck_of_the_sea"
-									lvl: 1s
+									id: "minecraft:unbreaking"
+									lvl: 2s
 								}
 							]
 							display: {
-								Lore: ["{\"text\": \"Pulled from a wrecked boat.\", \"color\": \"gray\", \"italic\": true}"]
+								Lore: ["{\"text\": \"Has outlasted worse than weather.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"Storm-Tested\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}

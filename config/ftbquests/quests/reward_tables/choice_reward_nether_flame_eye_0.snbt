@@ -1,0 +1,70 @@
+{
+	icon: "minecraft:chest"
+	id: "7DF9C13F2945ADA5"
+	loot_size: 1
+	order_index: 17
+	rewards: [
+		{
+			id: "7899B55948DBB33E"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_halberd"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:fire_aspect"
+							lvl: 2s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"She kept it burning all the way home.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Vesna's Ember\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "3D486D11F2516D89"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:blaze_spell_book"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"Warm to the touch, even in the cold.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Vesna's Cinderbook\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "2F26815AF5CD168C"
+			item: {
+				Count: 1b
+				id: "spartanshields:netherite_basic_shield"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Scorched, never broken.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Ashwalker's Wall\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

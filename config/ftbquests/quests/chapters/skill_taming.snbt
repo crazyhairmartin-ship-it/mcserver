@@ -16,9 +16,8 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 16
 					id: "1AA6237B07FA74D9"
-					item: "minecraft:bone"
+					item: "domesticationinnovation:collar_tag"
 					type: "item"
 				}
 				{
@@ -1005,12 +1004,12 @@
 		{
 			dependencies: ["2F19D3842A47C155"]
 			description: ["The sanctuary's horses were spooked, and armour will help. Make proper barding: a horse helm and armour, and test a foal's bloodline with the DNA tester."]
-			icon: "ultimate_unicorn_mod:iron_horse_helm"
+			icon: "ultimate_unicorn_mod:iron_horse_armor"
 			id: "5DFF9704B9891005"
 			rewards: [
 				{
 					id: "3262B5751BA707C5"
-					item: "ultimate_unicorn_mod:diamond_slotted_horse_helm"
+					item: "ultimate_unicorn_mod:diamond_horse_armor"
 					type: "item"
 				}
 				{
@@ -1026,9 +1025,9 @@
 			tasks: [
 				{
 					id: "499BFE2FFCDB453C"
-					item: "ultimate_unicorn_mod:iron_horse_helm"
+					item: "ultimate_unicorn_mod:leather_horse_armor"
 					only_from_crafting: true
-					title: "Forge a horse helm"
+					title: "Stitch padded leather barding"
 					type: "item"
 				}
 				{
@@ -1053,12 +1052,12 @@
 		{
 			dependencies: ["5DFF9704B9891005"]
 			description: ["A shepherd swears she saw a white horse with a horn at dawn. Follow the tracks, gain the unicorn's trust and bring it to the sanctuary."]
-			icon: "ultimate_unicorn_mod:unicorn_horn"
+			icon: "ultimate_unicorn_mod:unicorn_spawn_egg"
 			id: "08FFD670D22C479D"
 			rewards: [
 				{
 					id: "34B819FA09DAD0F5"
-					item: "ultimate_unicorn_mod:talisman"
+					item: "ultimate_unicorn_mod:golden_horse_armor"
 					type: "item"
 				}
 				{
@@ -1102,7 +1101,7 @@
 			rewards: [
 				{
 					id: "54A8DB1F6B2788CF"
-					item: "minecraft:cat_spawn_egg"
+					item: "bookoffamiliars:familiar_book"
 					type: "item"
 				}
 				{
@@ -1142,13 +1141,13 @@
 		{
 			dependencies: ["08FFD670D22C479D"]
 			description: ["Pegasus feathers keep drifting down onto the sanctuary. Find the winged horse in the mountains, tame it and fly it home."]
-			icon: "ultimate_unicorn_mod:pegasus_feather"
+			icon: "ultimate_unicorn_mod:pegasus_spawn_egg"
 			id: "2959DC3595BD089D"
 			rewards: [
 				{
-					count: 4
+					count: 16
 					id: "1988711E1B57E7DE"
-					item: "ultimate_unicorn_mod:pegasus_feather"
+					item: "minecraft:golden_carrot"
 					type: "item"
 				}
 				{
@@ -1164,8 +1163,8 @@
 			tasks: [
 				{
 					id: "5601B85883CC9143"
-					item: "ultimate_unicorn_mod:pegasus_feather"
-					title: "Collect a drifting pegasus feather"
+					item: "minecraft:feather"
+					title: "Pick up a feather drifting over the sanctuary"
 					type: "item"
 				}
 				{
@@ -1248,12 +1247,13 @@
 				"1D96E8F9421E2B6A"
 			]
 			description: ["In the Nether, piglins have chained a burning nightmare horse in their camp. Free it and calm it until it lets you ride."]
-			icon: "ultimate_unicorn_mod:nightmare_hoof"
+			icon: "ultimate_unicorn_mod:nightmare_spawn_egg"
 			id: "1285CEE70F49F108"
 			rewards: [
 				{
+					count: 2
 					id: "2A54C7041D25F699"
-					item: "ultimate_unicorn_mod:nightmare_hoof"
+					item: "minecraft:netherite_scrap"
 					type: "item"
 				}
 				{
@@ -1410,7 +1410,7 @@
 			rewards: [
 				{
 					id: "4DDB979513BA8675"
-					item: "minecraft:diamond_horse_armor"
+					item: "ultimate_unicorn_mod:diamond_horse_armor"
 					type: "item"
 				}
 				{
@@ -1607,15 +1607,14 @@
 			id: "76F76A36D1C232D0"
 			rewards: [
 				{
-					count: 16
 					id: "051FDE6365265505"
-					item: "minecraft:bone"
+					item: "domesticationinnovation:magnet"
 					type: "item"
 				}
 				{
-					count: 32
+					count: 8
 					id: "39ECD26DE069A4CB"
-					item: "minecraft:wheat"
+					item: "minecraft:emerald"
 					type: "item"
 				}
 				{
@@ -1665,27 +1664,9 @@
 			rewards: [
 				{
 					id: "201365FF97D789E6"
-					item: {
-						Count: 1b
-						id: "minecraft:saddle"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The sanctuary's oldest gift.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"The Thistlewood Saddle\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 8676385400324630272L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:taming 1000"

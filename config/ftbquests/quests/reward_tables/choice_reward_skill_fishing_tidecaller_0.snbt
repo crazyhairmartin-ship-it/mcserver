@@ -1,0 +1,89 @@
+{
+	icon: "minecraft:chest"
+	id: "55E48A8CDEC0C76B"
+	loot_size: 1
+	order_index: 18
+	rewards: [
+		{
+			id: "7CA2326AE27E8527"
+			item: {
+				Count: 1b
+				id: "aquaculture:neptunium_fishing_rod"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:lure"
+							lvl: 3s
+						}
+						{
+							id: "minecraft:luck_of_the_sea"
+							lvl: 3s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"The sea answers when it casts.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Tidecaller\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "64A61381EAAEA753"
+			item: {
+				Count: 1b
+				id: "aquaculture:neptunium_sword"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:looting"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Salt on the blade, always.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Tidecaller's Edge\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "5841F6677DACB8F5"
+			item: {
+				Count: 1b
+				id: "aquaculture:neptunium_bow"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:power"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:infinity"
+							lvl: 1s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Its arrows run true underwater.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Tidecaller's Reach\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

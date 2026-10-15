@@ -1,0 +1,85 @@
+{
+	icon: "minecraft:chest"
+	id: "37FBEE36A2900894"
+	loot_size: 1
+	order_index: 22
+	rewards: [
+		{
+			id: "116051B36A50F44F"
+			item: {
+				Count: 1b
+				id: "minecraft:netherite_pickaxe"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:efficiency"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:fortune"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"It builds as well as it breaks.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Founder's Pickaxe\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "722116A1FD402A7E"
+			item: {
+				Count: 1b
+				id: "minecraft:netherite_axe"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:efficiency"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"First frame, first fence, first hall.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Founder's Axe\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "41A530A3CA264AD1"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_battle_hammer"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 4s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Struck the guild's first nail.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Founder's Hammer\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

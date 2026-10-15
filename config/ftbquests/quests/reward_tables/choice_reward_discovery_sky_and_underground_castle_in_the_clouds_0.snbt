@@ -1,0 +1,49 @@
+{
+	icon: "minecraft:chest"
+	id: "10ECF6C4EA22B627"
+	loot_size: 1
+	order_index: 16
+	rewards: [
+		{
+			id: "3351AD26BE664869"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:iron_longbow"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:power"
+							lvl: 3s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"Its arrows start above the weather.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Cloud-Piercer\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "6BD035093F9AAF7D"
+			item: "grapplemod:grapplinghook"
+			type: "item"
+		}
+		{
+			id: "072E861E9C6D88A0"
+			item: {
+				Count: 1b
+				id: "icarus:white_light_wings"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"Light as the weather up here.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Castle Wings\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

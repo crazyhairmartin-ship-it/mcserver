@@ -10,7 +10,7 @@
 	quests: [
 		{
 			description: ["A cartographer has pinned a Couriers' notice: runners wanted. Sign on at the Reece post office and carry your first signed letter to a cartographer in another village."]
-			icon: "fotfmail:letter_signed"
+			icon: "fotfmail:letter"
 			id: "67CC933617723768"
 			invisible: true
 			invisible_until_tasks: 1
@@ -60,7 +60,7 @@
 				{
 					consume_items: true
 					id: "3CA6094A6E6C0ADD"
-					item: "fotfmail:letter_signed"
+					item: "fotfmail:letter"
 					title: "Sign a letter for delivery"
 					type: "item"
 				}
@@ -99,7 +99,7 @@
 			tasks: [
 				{
 					id: "6DE91D8377724E99"
-					item: "fotfmail:letter_signed"
+					item: "fotfmail:letter"
 					title: "Take the morning post"
 					type: "item"
 				}
@@ -445,7 +445,7 @@
 			tasks: [
 				{
 					id: "19D7E5E10DCDF361"
-					item: "fotfmail:letter_signed"
+					item: "fotfmail:letter"
 					title: "Take the urgent letter"
 					type: "item"
 				}
@@ -571,8 +571,9 @@
 					type: "item"
 				}
 				{
+					count: 2
 					id: "4DF0F3428E3AF2EE"
-					item: "minecraft:golden_apple"
+					item: "irons_spellbooks:greater_healing_potion"
 					type: "item"
 				}
 				{
@@ -628,8 +629,9 @@
 			tasks: [
 				{
 					id: "7FB65E345C449393"
-					item: "smallships:oak_rowboat"
+					item: "minecraft:oak_boat"
 					only_from_crafting: true
+					title: "Build a rowboat"
 					type: "item"
 				}
 				{
@@ -1496,16 +1498,32 @@
 			id: "70B7E5DEEAB4027F"
 			rewards: [
 				{
-					count: 32
+					count: 16
 					id: "56E227A64B8E5DC6"
 					item: "minecraft:firework_rocket"
+					type: "item"
+				}
+				{
+					id: "26C1A70925755860"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 4s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 760"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "26C1A70925755860"
+					id: "091074D4E2625C5D"
 					silent: true
 					title: "+760 Agility XP"
 					type: "command"
@@ -1605,39 +1623,9 @@
 			rewards: [
 				{
 					id: "7105F04DF1A05A63"
-					item: {
-						Count: 1b
-						id: "minecraft:netherite_boots"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:feather_falling"
-									lvl: 4s
-								}
-								{
-									id: "minecraft:depth_strider"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:soul_speed"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The Couriers' oldest treasure.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Juniper's Seven-League Boots\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 7735659403362615418L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 1000"

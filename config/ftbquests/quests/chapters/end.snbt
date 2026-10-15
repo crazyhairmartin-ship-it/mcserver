@@ -300,9 +300,19 @@
 					type: "item"
 				}
 				{
-					count: 16
 					id: "61E31B08C8C4D20D"
-					item: "minecraft:firework_rocket"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -459,10 +469,10 @@
 					id: "50663DB73028EC49"
 					item: {
 						Count: 1b
-						id: "minecraft:leather_chestplate"
+						id: "irons_spellbooks:cultist_chestplate"
 						tag: {
 							display: {
-								Lore: ["{\"text\": \"Worn on the bridge of a fallen fleet.\", \"color\": \"gray\", \"italic\": true}"]
+								Lore: ["{\"text\": \"Still smells of salt, and of void.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"The Captain's Coat\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -599,9 +609,8 @@
 			id: "598C314A13D6D80C"
 			rewards: [
 				{
-					count: 8
 					id: "0618EFCD8D0EBB14"
-					item: "minecraft:ender_pearl"
+					item: "irons_spellbooks:ender_upgrade_orb"
 					type: "item"
 				}
 				{
@@ -790,9 +799,9 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 8
+					count: 2
 					id: "12EED3A8808322B8"
-					item: "minecraft:amethyst_shard"
+					item: "irons_spellbooks:arcane_ingot"
 					type: "item"
 				}
 				{
@@ -938,9 +947,9 @@
 			id: "4B679923056D4A04"
 			rewards: [
 				{
-					count: 16
+					count: 2
 					id: "7A2E606BACC32A95"
-					item: "minecraft:bread"
+					item: "irons_spellbooks:oakskin_elixir"
 					type: "item"
 				}
 				{
@@ -1031,20 +1040,14 @@
 				{
 					count: 4
 					id: "43F58E703F8BB47C"
-					item: "minecraft:ender_pearl"
-					type: "item"
-				}
-				{
-					count: 8
-					id: "324C7B19455D68A9"
-					item: "minecraft:iron_ingot"
+					item: "irons_spellbooks:arcane_salvage"
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:craft 300"
 					elevate_perms: true
 					icon: "minecraft:crafting_table"
-					id: "77586AE73A5EFF9C"
+					id: "324C7B19455D68A9"
 					silent: true
 					title: "+300 Crafting XP"
 					type: "command"
@@ -1211,8 +1214,14 @@
 			id: "3B39537C377D127B"
 			rewards: [
 				{
-					count: 8
+					count: 2
 					id: "1526D0803E5B7898"
+					item: "minecraft:end_crystal"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "32FD9657A3BC25F7"
 					item: "minecraft:ender_pearl"
 					type: "item"
 				}
@@ -1220,7 +1229,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "32FD9657A3BC25F7"
+					id: "5A33C15B7176A6E8"
 					silent: true
 					title: "+700 Agility XP"
 					type: "command"
@@ -1251,16 +1260,32 @@
 			id: "67A2A6B48DC4DDEC"
 			rewards: [
 				{
-					count: 4
+					count: 2
 					id: "75B87BE8F4B8785C"
 					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "6A64BC7C8C5D1EE0"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 4s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:attack 700"
 					elevate_perms: true
 					icon: "minecraft:iron_sword"
-					id: "6A64BC7C8C5D1EE0"
+					id: "6635F90AACD44854"
 					silent: true
 					title: "+700 Attack XP"
 					type: "command"
@@ -1292,9 +1317,8 @@
 			id: "3FC0620523C5CE6F"
 			rewards: [
 				{
-					count: 2
 					id: "4661821F44581EBE"
-					item: "minecraft:golden_apple"
+					item: "cataclysm:void_shard"
 					type: "item"
 				}
 				{
@@ -1399,23 +1423,9 @@
 			rewards: [
 				{
 					id: "49F12460FC517E8A"
-					item: {
-						Count: 1b
-						id: "minecraft:leather_boots"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:feather_falling"
-									lvl: 4s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The void forgives nothing.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Ilse's Voidwalker Boots\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 3533472265033477563L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 900"

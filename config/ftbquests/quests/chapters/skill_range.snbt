@@ -126,9 +126,19 @@
 					type: "item"
 				}
 				{
-					count: 4
 					id: "38860A0F14AD45DD"
-					item: "minecraft:iron_ingot"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:power"
+									lvl: 1s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1064,10 +1074,26 @@
 					type: "item"
 				}
 				{
+					id: "5254F6A9ED5A10E6"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:infinity"
+									lvl: 1s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:range 700"
 					elevate_perms: true
 					icon: "minecraft:bow"
-					id: "5254F6A9ED5A10E6"
+					id: "000EE5CAE054B629"
 					silent: true
 					title: "+700 Range XP"
 					type: "command"
@@ -1348,35 +1374,9 @@
 			rewards: [
 				{
 					id: "4DC88895DE295935"
-					item: {
-						Count: 1b
-						id: "spartanweaponry:netherite_longbow"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:power"
-									lvl: 5s
-								}
-								{
-									id: "minecraft:infinity"
-									lvl: 1s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:flame"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The lodge's own bow.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Vance's Whisper\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 8042244499331762945L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:range 1000"

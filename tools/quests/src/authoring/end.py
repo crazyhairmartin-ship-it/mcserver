@@ -144,7 +144,7 @@ ACT4 = [
                 "Garden and the Enderbloom Grove."],
           tasks=[visit("mes:mythic_garden", "Find the walled garden of impossible plants"),
                  visit("mes:enderbloom_grove", "Find the Enderbloom Grove"),
-                 search("mes:mythic_garden", 1, "a Mythic Cutting", "A cutting that glows faintly.", texture="minecraft:item/oak_sapling",
+                 search("mes:mythic_garden", 1, "a Mythic Cutting", "A cutting that glows faintly.", texture="minecraft:block/oak_sapling",
                         title="Take a cutting from the garden")],
           rewards=[reward_item("minecraft:flowering_azalea", 4), skill("forage", 650)]),
 

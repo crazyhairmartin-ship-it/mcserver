@@ -1,0 +1,71 @@
+{
+	icon: "minecraft:chest"
+	id: "1E8BBB3BF1BA0696"
+	loot_size: 1
+	order_index: 5
+	rewards: [
+		{
+			id: "19223A1F17DA39B9"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:iron_longsword"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 2s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 2s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"Hammered in the first dungeon's shadow.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Wrought Edge\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "4B8834A09C5B259F"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:iron_spell_book"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"For those who would rather cast.\", \"color\": \"gray\", \"italic\": true}"]
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "008010467D0265B7"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:iron_longbow"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:power"
+							lvl: 2s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 2s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"Light in the hand, long in the reach.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Greenwood Bow\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

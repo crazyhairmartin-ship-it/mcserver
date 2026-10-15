@@ -215,7 +215,7 @@ ACT3 = [
                  item("minecraft:lightning_rod", 2, title="Bring new lightning rods"),
                  {"build": {"blocks": {"minecraft:lightning_rod": 2}, "radius": 12}, "title": "Replace the oxidised rods at the top"},
                  search("mns:copper_tower", 1, "the Vault's Contents", "The vault door swings open.", title="Open the vault at the base")],
-          rewards=[reward_item("minecraft:copper_block", 8), reward_item("friendsandfoes:copper_golem_head"), skill("craft", 340)]),
+          rewards=[reward_item("minecraft:copper_block", 8), reward_item("minecraft:lightning_rod", 2), skill("craft", 340)]),
 
     quest("arena_of_ash", "Arena of Ash", icon="minecraft:blaze_powder", after=["mega_fortress"],
           text=["In one of the Nether arenas, survive three waves of blazes, wither skeletons and magma cubes for "

@@ -64,16 +64,15 @@
 					id: "2D00459FC1BE16B5"
 					item: {
 						Count: 1b
-						id: "minecraft:leather_boots"
+						id: "minecraft:enchanted_book"
 						tag: {
-							Enchantments: [
+							StoredEnchantments: [
 								{
 									id: "minecraft:feather_falling"
-									lvl: 3s
+									lvl: 4s
 								}
 							]
 							display: {
-								Lore: ["{\"text\": \"Five islands, no falls.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"Sky Hoppers\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -140,9 +139,9 @@
 					type: "item"
 				}
 				{
-					count: 4
+					count: 2
 					id: "54B8CDDD32515E55"
-					item: "minecraft:magma_cream"
+					item: "irons_spellbooks:cinder_essence"
 					type: "item"
 				}
 				{
@@ -190,27 +189,9 @@
 			rewards: [
 				{
 					id: "675C169BD7682335"
-					item: {
-						Count: 1b
-						id: "minecraft:bow"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:power"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:punch"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"Taken from a floating garrison.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Cloud-Piercer\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 1219620924712728103L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					id: "5749647A86F1BF7A"
@@ -450,20 +431,16 @@
 					id: "4599CC73FFF61EF0"
 					item: {
 						Count: 1b
-						id: "minecraft:crossbow"
+						id: "spartanweaponry:iron_heavy_crossbow"
 						tag: {
 							Enchantments: [
 								{
-									id: "minecraft:multishot"
-									lvl: 1s
-								}
-								{
-									id: "minecraft:quick_charge"
+									id: "minecraft:piercing"
 									lvl: 2s
 								}
 							]
 							display: {
-								Lore: ["{\"text\": \"Taken from an illager airship.\", \"color\": \"gray\", \"italic\": true}"]
+								Lore: ["{\"text\": \"Built to answer a boarding party.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"Deckclearer\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -789,9 +766,9 @@
 					type: "item"
 				}
 				{
-					count: 16
+					count: 4
 					id: "4E0509E391041211"
-					item: "minecraft:iron_ingot"
+					item: "irons_spellbooks:arcane_salvage"
 					type: "item"
 				}
 				{
@@ -857,7 +834,18 @@
 				}
 				{
 					id: "73F77617B4EB3A99"
-					item: "minecraft:iron_pickaxe"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1026,9 +1014,9 @@
 				}
 				{
 					id: "5EE91DA8A6200FDF"
-					item: "minecraft:sculk_sensor"
-					title: "Take a sculk sensor without waking a shrieker"
-					type: "item"
+					stage: "fq.discovery_sky_and_underground.biome_deep_dark.mine1"
+					title: "Cut a sculk sensor loose without waking a shrieker"
+					type: "gamestage"
 				}
 			]
 			title: "Into the Deep Dark"

@@ -1,0 +1,61 @@
+{
+	icon: "minecraft:chest"
+	id: "5CD5EA83C2C437C0"
+	loot_size: 1
+	order_index: 12
+	rewards: [
+		{
+			id: "079E435522CDF7E5"
+			item: "alexscaves:conversion_crucible"
+			type: "item"
+		}
+		{
+			id: "770DDF2E3F7684F7"
+			item: {
+				Count: 1b
+				id: "alexscaves:dreadbow"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:power"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:infinity"
+							lvl: 1s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"It drew from every cave at once.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Four-World Bow\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "51436E525CF3456A"
+			item: {
+				Count: 1b
+				id: "alexscaves:galena_gauntlet"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Humming with every cave's charge.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Four-World Gauntlet\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

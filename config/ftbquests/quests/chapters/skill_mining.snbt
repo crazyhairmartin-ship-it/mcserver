@@ -110,7 +110,18 @@
 			rewards: [
 				{
 					id: "7EDCC0998CCBC7A3"
-					item: "minecraft:iron_pickaxe"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -318,9 +329,19 @@
 			id: "0D6646EA07D76186"
 			rewards: [
 				{
-					count: 16
 					id: "7FE63E1EB6C1FD06"
-					item: "minecraft:cooked_beef"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:fortune"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -549,16 +570,19 @@
 					id: "71671EE62874AF57"
 					item: {
 						Count: 1b
-						id: "minecraft:diamond_pickaxe"
+						id: "minecraft:enchanted_book"
 						tag: {
-							Enchantments: [
+							StoredEnchantments: [
 								{
 									id: "minecraft:efficiency"
+									lvl: 4s
+								}
+								{
+									id: "minecraft:unbreaking"
 									lvl: 3s
 								}
 							]
 							display: {
-								Lore: ["{\"text\": \"From the rescued crew's foreman.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"The Foreman's Pick\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -888,14 +912,20 @@
 			id: "1CA591D4C280CE67"
 			rewards: [
 				{
-					count: 6
+					count: 2
 					id: "6D69673A641BA24A"
+					item: "irons_spellbooks:cinder_essence"
+					type: "item"
+				}
+				{
+					count: 6
+					id: "0B8ECF7692508917"
 					item: "minecraft:magma_cream"
 					type: "item"
 				}
 				{
 					count: 8
-					id: "0B8ECF7692508917"
+					id: "0E3728990AB72EC2"
 					item: "minecraft:raw_gold"
 					type: "item"
 				}
@@ -903,7 +933,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:mining 350"
 					elevate_perms: true
 					icon: "minecraft:iron_pickaxe"
-					id: "0E3728990AB72EC2"
+					id: "00790025F0196C72"
 					silent: true
 					title: "+350 Mining XP"
 					type: "command"
@@ -1241,9 +1271,19 @@
 			id: "7FBFAC19E541E388"
 			rewards: [
 				{
-					count: 16
 					id: "5C79F54D9856754E"
-					item: "minecraft:emerald"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:fortune"
+									lvl: 3s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1258,18 +1298,16 @@
 			]
 			tasks: [
 				{
-					count: 64L
 					id: "0BF3E89405BFB34E"
-					item: "minecraft:quartz"
+					stage: "fq.skill_mining.quartz_contract.mine0"
 					title: "Mine nether quartz for the contract"
-					type: "item"
+					type: "gamestage"
 				}
 				{
-					count: 32L
 					id: "4E7C709DA9DCE100"
-					item: "minecraft:gold_nugget"
+					stage: "fq.skill_mining.quartz_contract.mine1"
 					title: "Mine nether gold ore for nuggets"
-					type: "item"
+					type: "gamestage"
 				}
 				{
 					count: 16L
@@ -1341,9 +1379,9 @@
 			id: "3C3B936D408940C9"
 			rewards: [
 				{
-					count: 64
+					count: 4
 					id: "041C8CF28135D6DA"
-					item: "minecraft:deepslate_tiles"
+					item: "minecraft:diamond"
 					type: "item"
 				}
 				{
@@ -1577,35 +1615,9 @@
 			rewards: [
 				{
 					id: "644786470041D9DC"
-					item: {
-						Count: 1b
-						id: "minecraft:netherite_pickaxe"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:efficiency"
-									lvl: 5s
-								}
-								{
-									id: "minecraft:fortune"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The guild's oldest pick, reforged.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Lifeline\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 1159103112909192182L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:mining 1000"

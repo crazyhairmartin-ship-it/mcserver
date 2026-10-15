@@ -445,12 +445,12 @@
 		{
 			dependencies: ["1A1E490CB4BEEE4A"]
 			description: ["Gil takes the net, keeps his word and rows you out to the island village. Halfway across, the drowned come up around the boat."]
-			icon: "smallships:oak_rowboat"
+			icon: "minecraft:oak_boat"
 			id: "391769AB938D3B91"
 			rewards: [
 				{
 					id: "53526A725B765E76"
-					item: "smallships:oak_rowboat"
+					item: "smallships:oak_drakkar"
 					type: "item"
 				}
 				{

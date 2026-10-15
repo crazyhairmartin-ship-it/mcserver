@@ -75,7 +75,18 @@
 				}
 				{
 					id: "381114C38CFD1A4C"
-					item: "minecraft:trident"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:impaling"
+									lvl: 4s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -277,11 +288,6 @@
 			rewards: [
 				{
 					id: "667D8CC9CE57B23E"
-					item: "minecraft:trident"
-					type: "item"
-				}
-				{
-					id: "598F3B9FED5F4A61"
 					item: {
 						Count: 1b
 						id: "minecraft:enchanted_book"
@@ -291,12 +297,22 @@
 									id: "minecraft:impaling"
 									lvl: 3s
 								}
+								{
+									id: "minecraft:channeling"
+									lvl: 1s
+								}
 							]
 							display: {
 								Name: "{\"text\": \"Sea Spear\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
 					}
+					type: "item"
+				}
+				{
+					count: 2
+					id: "598F3B9FED5F4A61"
+					item: "minecraft:nautilus_shell"
 					type: "item"
 				}
 				{
@@ -350,38 +366,15 @@
 			rewards: [
 				{
 					id: "6C1EDFAB9C0BE9C0"
-					item: {
-						Count: 1b
-						id: "minecraft:crossbow"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:quick_charge"
-									lvl: 2s
-								}
-								{
-									id: "minecraft:piercing"
-									lvl: 2s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"Pried from a manned gun.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Typhon's Gun\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "462B6A9268ECC15F"
-					item: "smallships:oak_cog"
-					type: "item"
+					table_id: 2643526848724204705L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 450"
 					elevate_perms: true
 					icon: "minecraft:shield"
-					id: "1D640B87AD1E1495"
+					id: "462B6A9268ECC15F"
 					silent: true
 					title: "+450 Defense XP"
 					type: "command"
@@ -420,35 +413,16 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 4
 					id: "30E96ABE7C72BB40"
-					item: "minecraft:gold_block"
-					type: "item"
-				}
-				{
-					id: "61C5B8F17F28A00F"
-					item: {
-						Count: 1b
-						id: "minecraft:enchanted_book"
-						tag: {
-							StoredEnchantments: [
-								{
-									id: "minecraft:depth_strider"
-									lvl: 3s
-								}
-							]
-							display: {
-								Name: "{\"text\": \"Depths Strider\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 3843707172951864379L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:fish 300"
 					elevate_perms: true
 					icon: "minecraft:fishing_rod"
-					id: "78EAF9F326F28C34"
+					id: "61C5B8F17F28A00F"
 					silent: true
 					title: "+300 Fishing XP"
 					type: "command"
@@ -1266,7 +1240,7 @@
 		}
 		{
 			description: ["A mangrove swamp, its roots forming a maze. The Couriers want to know if a boat can get through without touching the bank."]
-			icon: "smallships:oak_rowboat"
+			icon: "minecraft:oak_boat"
 			id: "5BD426F02B08B543"
 			invisible: true
 			invisible_until_tasks: 1
@@ -1301,7 +1275,7 @@
 				}
 				{
 					id: "570B3E5443A11EC8"
-					item: "smallships:oak_rowboat"
+					item: "minecraft:oak_boat"
 					only_from_crafting: true
 					title: "Build a rowboat for the maze"
 					type: "item"

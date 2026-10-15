@@ -15,13 +15,29 @@
 			id: "3DCFC0B89256C1E3"
 			rewards: [
 				{
-					count: 4
 					id: "2710091C785FCAF2"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:fire_protection"
+									lvl: 2s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "2568A57B360A58F2"
 					item: "minecraft:magma_cream"
 					type: "item"
 				}
 				{
-					id: "2568A57B360A58F2"
+					id: "78555DE8F89B3E85"
 					item: {
 						Count: 1b
 						id: "minecraft:writable_book"
@@ -38,7 +54,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "78555DE8F89B3E85"
+					id: "3AD88BE6DCBD31E1"
 					silent: true
 					title: "+300 Agility XP"
 					type: "command"
@@ -161,7 +177,7 @@
 				}
 				{
 					id: "22E65F7C4BCE44FF"
-					item: "minecraft:shield"
+					item: "spartanshields:golden_basic_shield"
 					type: "item"
 				}
 				{
@@ -322,9 +338,19 @@
 			id: "63EDA87ABB31C6B2"
 			rewards: [
 				{
-					count: 8
 					id: "6640FC3E1F844D96"
-					item: "minecraft:golden_carrot"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:looting"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -571,9 +597,19 @@
 					type: "item"
 				}
 				{
-					count: 4
 					id: "2E3BE6C08745DA31"
-					item: "minecraft:magma_cream"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:soul_speed"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -623,8 +659,9 @@
 					type: "item"
 				}
 				{
+					count: 2
 					id: "78B5225D80CADD51"
-					item: "minecraft:golden_apple"
+					item: "cataclysm:black_steel_ingot"
 					type: "item"
 				}
 				{
@@ -817,9 +854,9 @@
 			id: "1C823DAC3182F71B"
 			rewards: [
 				{
-					count: 8
+					count: 4
 					id: "6FA974D2B6D47BD3"
-					item: "minecraft:magma_cream"
+					item: "irons_spellbooks:cinder_essence"
 					type: "item"
 				}
 				{
@@ -1144,8 +1181,9 @@
 					type: "item"
 				}
 				{
+					count: 2
 					id: "051A365B602F56EC"
-					item: "friendsandfoes:copper_golem_head"
+					item: "minecraft:lightning_rod"
 					type: "item"
 				}
 				{
@@ -1196,9 +1234,19 @@
 			id: "1F6F8C2D1EE04D1C"
 			rewards: [
 				{
-					count: 2
 					id: "406B30B9B97F5DDB"
-					item: "minecraft:golden_apple"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:fire_aspect"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1804,22 +1852,15 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 4
 					id: "5A8A67633B6D4BFB"
-					item: "minecraft:magma_cream"
-					type: "item"
-				}
-				{
-					count: 16
-					id: "34CD939690802735"
-					item: "minecraft:snowball"
+					item: "irons_spellbooks:fire_upgrade_orb"
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 340"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "7AA06C08F2CF8812"
+					id: "34CD939690802735"
 					silent: true
 					title: "+340 Agility XP"
 					type: "command"
@@ -1854,9 +1895,19 @@
 			invisible_until_tasks: 1
 			rewards: [
 				{
-					count: 16
 					id: "7DAE1749F3A186CF"
-					item: "minecraft:quartz"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:smite"
+									lvl: 4s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -2103,20 +2154,14 @@
 				{
 					count: 2
 					id: "1BF70EE8AA40D41C"
-					item: "minecraft:golden_apple"
-					type: "item"
-				}
-				{
-					count: 4
-					id: "38AEC27EC17A2970"
-					item: "minecraft:magma_cream"
+					item: "cataclysm:burning_ashes"
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:craft 800"
 					elevate_perms: true
 					icon: "minecraft:crafting_table"
-					id: "6235B32529BB061F"
+					id: "38AEC27EC17A2970"
 					silent: true
 					title: "+800 Crafting XP"
 					type: "command"
@@ -2165,27 +2210,9 @@
 			rewards: [
 				{
 					id: "5C7370A8BDF273C7"
-					item: {
-						Count: 1b
-						id: "minecraft:leather_chestplate"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:fire_protection"
-									lvl: 4s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The last page is hers.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Vesna's Ashwalker Cloak\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 9077499000961478053L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 850"

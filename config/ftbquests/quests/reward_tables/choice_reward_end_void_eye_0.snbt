@@ -1,0 +1,74 @@
+{
+	icon: "minecraft:chest"
+	id: "31096A4DCD03EDBB"
+	loot_size: 1
+	order_index: 19
+	rewards: [
+		{
+			id: "48A46B22E015933B"
+			item: {
+				Count: 1b
+				id: "cataclysm:cursium_boots"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:feather_falling"
+							lvl: 4s
+						}
+						{
+							id: "minecraft:soul_speed"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"The void gave way beneath them.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Ilse's Voidwalker Boots\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "351776D8EBEF78C3"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_rapier"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:looting"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Sketches the air, then cuts it.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Void's Quill\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "41772C06090F2A89"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:legendary_spell_book"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"Every page was written in the dark.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Ilse's Folio\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

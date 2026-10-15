@@ -1058,7 +1058,8 @@
       ],
       "rewards": [
         {
-          "item": "mowziesmobs:frostmaw_plushie"
+          "item": "irons_spellbooks:ice_rune",
+          "count": 2
         },
         {
           "skill": "magic",
@@ -1951,7 +1952,7 @@
             "chance": 0.3,
             "item": {
               "name": "a Cursed Skull",
-              "texture": "minecraft:item/wither_skeleton_skull",
+              "texture": "minecraft:item/skull_pottery_sherd",
               "tooltip": "Only drops while the quest is open"
             }
           },

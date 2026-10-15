@@ -1,0 +1,41 @@
+{
+	icon: "minecraft:chest"
+	id: "24AFB1A9B469FCA1"
+	loot_size: 1
+	order_index: 13
+	rewards: [
+		{
+			id: "6CEB506E83902712"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:iron_heavy_crossbow"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:quick_charge"
+							lvl: 2s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"Smells of powder and brine.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Typhon's Gun\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "120DBE23E0A3B593"
+			item: "smallships:oak_cog"
+			type: "item"
+		}
+		{
+			count: 2
+			id: "1814343E98B11AAE"
+			item: "smallships:cannon"
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

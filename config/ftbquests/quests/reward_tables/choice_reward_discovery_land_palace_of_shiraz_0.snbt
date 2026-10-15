@@ -1,0 +1,45 @@
+{
+	icon: "minecraft:chest"
+	id: "18482ADA2608465B"
+	loot_size: 1
+	order_index: 4
+	rewards: [
+		{
+			id: "0338598F59C4B62A"
+			item: "minecraft:enchanted_golden_apple"
+			type: "item"
+		}
+		{
+			id: "5CE4BBFF69F8BE82"
+			item: {
+				Count: 1b
+				id: "minecraft:enchanted_book"
+				tag: {
+					StoredEnchantments: [
+						{
+							id: "minecraft:mending"
+							lvl: 1s
+						}
+					]
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "71B5A45F68F1D64B"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:gold_spell_book"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"Gilt-edged, and warm from the sun.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Shiraz Folio\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

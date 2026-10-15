@@ -152,24 +152,30 @@
 			rewards: [
 				{
 					id: "199A047EB4ADE3C2"
-					item: "minecraft:iron_helmet"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:protection"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
 					id: "40751535170B9017"
-					item: "minecraft:iron_leggings"
-					type: "item"
-				}
-				{
-					id: "4B40E31E9F93B870"
-					item: "minecraft:iron_boots"
+					item: "spartanshields:iron_basic_shield"
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 150"
 					elevate_perms: true
 					icon: "minecraft:shield"
-					id: "4073FB02D3017697"
+					id: "4B40E31E9F93B870"
 					silent: true
 					title: "+150 Defense XP"
 					type: "command"
@@ -961,16 +967,22 @@
 			id: "575CA3D7FE794BA2"
 			rewards: [
 				{
-					count: 24
+					count: 12
 					id: "475B9FDD23F34BA5"
 					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					count: 3
+					id: "33B6FD5CC80351E9"
+					item: "irons_spellbooks:greater_healing_potion"
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 600"
 					elevate_perms: true
 					icon: "minecraft:shield"
-					id: "33B6FD5CC80351E9"
+					id: "1F0CF9EA81E91929"
 					silent: true
 					title: "+600 Defense XP"
 					type: "command"
@@ -1202,27 +1214,9 @@
 			rewards: [
 				{
 					id: "36467F6414E1D903"
-					item: {
-						Count: 1b
-						id: "spartanshields:netherite_tower_shield"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"Stood at the gate since it was founded.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"The Bulwark of Reece\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 6291499805030892376L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 1000"

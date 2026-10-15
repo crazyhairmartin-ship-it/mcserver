@@ -357,9 +357,9 @@
 			id: "6EC2430CF00C3E91"
 			rewards: [
 				{
-					count: 32
+					count: 4
 					id: "0F69594E83DA4F6E"
-					item: "irons_spellbooks:wisewood_planks"
+					item: "irons_spellbooks:wisewood_bookshelf"
 					type: "item"
 				}
 				{
@@ -397,8 +397,9 @@
 			id: "584ADBE4C6FEB091"
 			rewards: [
 				{
+					count: 2
 					id: "0B42478F9E87F82E"
-					item: "irons_spellbooks:scroll_fire"
+					item: "irons_spellbooks:fire_rune"
 					type: "item"
 				}
 				{
@@ -501,7 +502,8 @@
 				}
 				{
 					id: "642238B7573A4ED3"
-					item: "irons_spellbooks:scroll_fire"
+					item: "irons_spellbooks:scroll"
+					title: "Scribe a fire spell onto a scroll"
 					type: "item"
 				}
 				{
@@ -603,8 +605,9 @@
 				}
 				{
 					id: "7967E76C446DC0A1"
-					title: "I brewed a cure for each ailment"
-					type: "checkmark"
+					stage: "fq.magic.the_poisoned_traveller.make2"
+					title: "Brew a cure for each ailment"
+					type: "gamestage"
 				}
 			]
 			title: "The Poisoned Traveller"
@@ -962,8 +965,9 @@
 					type: "item"
 				}
 				{
+					count: 2
 					id: "5BBED2EF08067C45"
-					item: "irons_spellbooks:scroll_ice"
+					item: "irons_spellbooks:ice_rune"
 					type: "item"
 				}
 				{
@@ -1598,8 +1602,9 @@
 			id: "0319230C8626F358"
 			rewards: [
 				{
+					count: 2
 					id: "5740A990E4B9ACE6"
-					item: "irons_spellbooks:scroll_blood"
+					item: "irons_spellbooks:blood_rune"
 					type: "item"
 				}
 				{
@@ -1856,13 +1861,13 @@
 				"54C450BB48CA2E5F"
 			]
 			description: ["Reach Iron's Nether citadel among the bastions, find the cinderous vault and read the inscriptions about the Flamebearer."]
-			icon: "irons_spellbooks:fire_cloth"
+			icon: "irons_spellbooks:magic_cloth"
 			id: "41DBE986C41A932C"
 			rewards: [
 				{
 					count: 4
 					id: "583D2556CAF32D95"
-					item: "irons_spellbooks:fire_cloth"
+					item: "irons_spellbooks:magic_cloth"
 					type: "item"
 				}
 				{
@@ -1974,8 +1979,9 @@
 			id: "1CBC1EBBC2A59B12"
 			rewards: [
 				{
+					count: 4
 					id: "04D60FBD16A7F461"
-					item: "irons_spellbooks:pyrium_staff_haft"
+					item: "irons_spellbooks:pyrium_ingot"
 					type: "item"
 				}
 				{
@@ -2059,12 +2065,13 @@
 				"4BCAEC6E3D92B157"
 			]
 			description: ["Orrin says the void holds a school older than fire. Recover an eldritch manuscript from the End and learn one eldritch spell from it."]
-			icon: "irons_spellbooks:scroll_eldritch"
+			icon: "irons_spellbooks:epic_ink"
 			id: "152C29866CE2995E"
 			rewards: [
 				{
+					count: 2
 					id: "0B54B3B94EBD69FB"
-					item: "irons_spellbooks:scroll_eldritch"
+					item: "irons_spellbooks:epic_ink"
 					type: "item"
 				}
 				{
@@ -2297,17 +2304,9 @@
 			rewards: [
 				{
 					id: "7508EB694687E2E9"
-					item: {
-						Count: 1b
-						id: "irons_spellbooks:legendary_spell_book"
-						tag: {
-							display: {
-								Lore: ["{\"text\": \"Orrin's life's work, finished.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"The Flamebearer's Codex\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 5145608492311278408L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 1300"

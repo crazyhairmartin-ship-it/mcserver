@@ -1,0 +1,60 @@
+{
+	icon: "minecraft:chest"
+	id: "7868B68D58BC2700"
+	loot_size: 1
+	order_index: 29
+	rewards: [
+		{
+			id: "1A2AAA26C4A75102"
+			item: {
+				Count: 1b
+				id: "minecraft:saddle"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"It never slips, whatever you ride.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Thistlewood Saddle\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "6E2F12EDA90A5A1B"
+			item: {
+				Count: 1b
+				id: "domesticationinnovation:deflection_shield"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"The herd stood behind it.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Thistlewood Guard\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "54434FFB94321412"
+			item: {
+				Count: 1b
+				id: "ultimate_unicorn_mod:diamond_horse_armor"
+				tag: {
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Fits anything with four legs and a heart.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Thistlewood Barding\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

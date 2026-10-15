@@ -108,7 +108,7 @@
 		}
 		{
 			description: ["Build a cake tower three tiers high, and don't eat any of it."]
-			icon: "bakery:cake_tower"
+			icon: "bakery:strawberry_cake"
 			id: "1DFADBE4619780D0"
 			rewards: [
 				{
@@ -120,7 +120,7 @@
 			tasks: [
 				{
 					id: "4AF68CD365034CA3"
-					item: "bakery:cake_tower"
+					item: "bakery:strawberry_cake"
 					type: "item"
 				}
 			]

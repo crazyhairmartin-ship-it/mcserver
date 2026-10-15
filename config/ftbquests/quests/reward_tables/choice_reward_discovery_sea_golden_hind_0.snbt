@@ -1,0 +1,41 @@
+{
+	icon: "minecraft:chest"
+	id: "3557974F186AB43B"
+	loot_size: 1
+	order_index: 14
+	rewards: [
+		{
+			count: 4
+			id: "19D3A5AF11967319"
+			item: "minecraft:gold_block"
+			type: "item"
+		}
+		{
+			id: "403C0B7B0D722217"
+			item: {
+				Count: 1b
+				id: "minecraft:enchanted_book"
+				tag: {
+					StoredEnchantments: [
+						{
+							id: "minecraft:depth_strider"
+							lvl: 3s
+						}
+					]
+					display: {
+						Name: "{\"text\": \"Depths Strider\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			count: 6
+			id: "4CC7A10C30253C8D"
+			item: "aquaculture:neptunium_ingot"
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

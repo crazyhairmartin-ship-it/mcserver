@@ -1,0 +1,78 @@
+{
+	icon: "minecraft:chest"
+	id: "5E76A7F8EFD7B329"
+	loot_size: 1
+	order_index: 23
+	rewards: [
+		{
+			id: "7208F9EFC2DA7AC9"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_longsword"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 4s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"Won on the sand, not given.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Champion's Blade\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "54FCDC1815DB16F3"
+			item: {
+				Count: 1b
+				id: "spartanshields:netherite_basic_shield"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"The crowd chanted behind it.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Champion's Shield\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "78D7E29136C07488"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_battle_hammer"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 4s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"Ended the last round in one.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Champion's Hammer\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

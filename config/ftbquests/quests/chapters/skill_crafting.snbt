@@ -998,10 +998,15 @@
 					id: "011E6657331092AD"
 					item: {
 						Count: 1b
-						id: "minecraft:leather_chestplate"
+						id: "minecraft:enchanted_book"
 						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+							]
 							display: {
-								Lore: ["{\"text\": \"Dyed in the guild's colours.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"Guild Apron\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -1649,69 +1654,15 @@
 			rewards: [
 				{
 					id: "07BE3F1DD7EA0BF3"
-					item: {
-						Count: 1b
-						id: "minecraft:netherite_pickaxe"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:efficiency"
-									lvl: 5s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-								{
-									id: "minecraft:fortune"
-									lvl: 3s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The founder's masterwork.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"The Founder's Pickaxe\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
-				}
-				{
-					id: "59329E5344A5D5EA"
-					item: {
-						Count: 1b
-						id: "minecraft:netherite_axe"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:efficiency"
-									lvl: 5s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The founder's masterwork.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"The Founder's Axe\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 4034079809663404180L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:craft 1000"
 					elevate_perms: true
 					icon: "minecraft:crafting_table"
-					id: "11515CB28459B70E"
+					id: "59329E5344A5D5EA"
 					silent: true
 					title: "+1000 Crafting XP"
 					type: "command"

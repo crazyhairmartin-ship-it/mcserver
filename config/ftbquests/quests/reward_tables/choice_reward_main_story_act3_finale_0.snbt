@@ -1,0 +1,61 @@
+{
+	icon: "minecraft:chest"
+	id: "22A860049D4049EC"
+	loot_size: 1
+	order_index: 7
+	rewards: [
+		{
+			id: "5E2C45C6D56141AB"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_battleaxe"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 4s
+						}
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"Heavy enough to answer a Wither.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Warden's Reply\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "1AC74E3F65F5058F"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:netherite_spell_book"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"It remembers every spell you cast.\", \"color\": \"gray\", \"italic\": true}"]
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "657031C7EB7B4864"
+			item: {
+				Count: 1b
+				id: "spartanshields:netherite_tower_shield"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"Blackened by three fires.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Ward of Ash\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

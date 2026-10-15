@@ -293,7 +293,7 @@
 			rewards: [
 				{
 					id: "035D0C80D18006FB"
-					item: "minecraft:iron_chestplate"
+					item: "spartanshields:iron_basic_shield"
 					type: "item"
 				}
 			]
@@ -430,10 +430,26 @@
 					type: "item"
 				}
 				{
+					id: "235326729CDC7128"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 2s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:mining 80"
 					elevate_perms: true
 					icon: "minecraft:iron_pickaxe"
-					id: "235326729CDC7128"
+					id: "04F425555908AE9E"
 					silent: true
 					title: "+80 Mining XP"
 					type: "command"
@@ -527,8 +543,13 @@
 			id: "2B39666FF280C4A5"
 			rewards: [
 				{
-					count: 2
 					id: "17A3FD39BA26EAA4"
+					item: "mowziesmobs:wrought_helmet"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "4E34909A1A7DE73E"
 					item: "minecraft:golden_apple"
 					type: "item"
 				}
@@ -536,7 +557,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:attack 200"
 					elevate_perms: true
 					icon: "minecraft:iron_sword"
-					id: "4E34909A1A7DE73E"
+					id: "44A190DAC004F949"
 					silent: true
 					title: "+200 Attack XP"
 					type: "command"
@@ -619,7 +640,7 @@
 			rewards: [
 				{
 					id: "2EE53C25EF3604FD"
-					item: "minecraft:crossbow"
+					item: "spartanweaponry:iron_heavy_crossbow"
 					type: "item"
 				}
 				{
@@ -656,7 +677,7 @@
 			rewards: [
 				{
 					id: "0A2AD72C1B4E0B6B"
-					item: "minecraft:leather_chestplate"
+					item: "irons_spellbooks:ice_rune"
 					type: "item"
 				}
 				{
@@ -697,7 +718,7 @@
 					id: "08F8E73F3C25CD9B"
 					item: {
 						Count: 1b
-						id: "minecraft:bow"
+						id: "spartanweaponry:iron_longbow"
 						tag: {
 							Enchantments: [
 								{
@@ -706,6 +727,7 @@
 								}
 							]
 							display: {
+								Lore: ["{\"text\": \"Its arrows seem to come from nowhere.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"Trickster's Bow\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -816,8 +838,12 @@
 			id: "59C4414FBC2456AA"
 			rewards: [
 				{
-					count: 3
 					id: "2DFE373AC10F0C81"
+					item: "mowziesmobs:umvuthana_mask_fury"
+					type: "item"
+				}
+				{
+					id: "18A4453E45682FFF"
 					item: "minecraft:diamond"
 					type: "item"
 				}
@@ -825,7 +851,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:attack 250"
 					elevate_perms: true
 					icon: "minecraft:iron_sword"
-					id: "18A4453E45682FFF"
+					id: "7361071F8E0B27E2"
 					silent: true
 					title: "+250 Attack XP"
 					type: "command"
@@ -861,8 +887,9 @@
 			rewards: [
 				{
 					id: "11BE50BE5A717FBB"
-					item: "minecraft:diamond"
-					type: "item"
+					table_id: 2201058709033584278L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 150"
@@ -990,16 +1017,15 @@
 					id: "7C13769C6F6ADD92"
 					item: {
 						Count: 1b
-						id: "minecraft:leather_boots"
+						id: "minecraft:enchanted_book"
 						tag: {
-							Enchantments: [
+							StoredEnchantments: [
 								{
 									id: "minecraft:frost_walker"
-									lvl: 1s
+									lvl: 2s
 								}
 							]
 							display: {
-								Lore: ["{\"text\": \"Frost-resistant boots.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"Winterwalkers\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -1081,9 +1107,8 @@
 			id: "69E2AB2FBC514710"
 			rewards: [
 				{
-					count: 3
 					id: "6EF966B05712E22A"
-					item: "minecraft:golden_apple"
+					item: "irons_spellbooks:ice_upgrade_orb"
 					type: "item"
 				}
 				{
@@ -1118,8 +1143,9 @@
 			id: "750C5064ACDCE7E1"
 			rewards: [
 				{
+					count: 2
 					id: "21C12CA5EA945299"
-					item: "mowziesmobs:frostmaw_plushie"
+					item: "irons_spellbooks:ice_rune"
 					type: "item"
 				}
 				{
@@ -1206,16 +1232,19 @@
 					id: "621E9519F6ED2364"
 					item: {
 						Count: 1b
-						id: "minecraft:iron_pickaxe"
+						id: "minecraft:enchanted_book"
 						tag: {
-							Enchantments: [
+							StoredEnchantments: [
 								{
 									id: "minecraft:efficiency"
 									lvl: 3s
 								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 2s
+								}
 							]
 							display: {
-								Lore: ["{\"text\": \"For the Forlorn Hollows.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"Hollow Delver\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -1278,7 +1307,22 @@
 				}
 				{
 					id: "7958628BCB9FB4A3"
-					item: "minecraft:turtle_helmet"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:respiration"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:aqua_affinity"
+									lvl: 1s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1501,8 +1545,9 @@
 			id: "53BDB02F9759E411"
 			rewards: [
 				{
+					count: 4
 					id: "2BED2FDD16F11748"
-					item: "minecraft:grindstone"
+					item: "cataclysm:black_steel_ingot"
 					type: "item"
 				}
 				{
@@ -1571,8 +1616,13 @@
 			id: "1CE4D0BF214CF309"
 			rewards: [
 				{
-					count: 5
 					id: "20B5AD3F4708DFB2"
+					item: "mowziesmobs:geomancer_beads"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "16862C8200D562DC"
 					item: "minecraft:diamond"
 					type: "item"
 				}
@@ -1580,7 +1630,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:agility 400"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "16862C8200D562DC"
+					id: "4E46EF4161055A27"
 					silent: true
 					title: "+400 Agility XP"
 					type: "command"
@@ -1612,22 +1662,16 @@
 			id: "54C450BB48CA2E5F"
 			rewards: [
 				{
-					count: 4
 					id: "40E0C8DC9C09A37B"
-					item: "minecraft:magma_cream"
-					type: "item"
-				}
-				{
-					count: 8
-					id: "26901A6D24C47088"
-					item: "minecraft:golden_carrot"
-					type: "item"
+					table_id: 9062533118916660967L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "2FF974CC3AABED4A"
+					id: "26901A6D24C47088"
 					silent: true
 					title: "+300 Agility XP"
 					type: "command"
@@ -1668,7 +1712,18 @@
 			rewards: [
 				{
 					id: "0E659B7B5CAF4D68"
-					item: "minecraft:golden_chestplate"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:fire_protection"
+									lvl: 3s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1807,22 +1862,15 @@
 			id: "377F793BBD91E522"
 			rewards: [
 				{
-					count: 4
 					id: "339A994A2944A2DB"
-					item: "minecraft:magma_cream"
-					type: "item"
-				}
-				{
-					count: 8
-					id: "01E4C3DFFD016081"
-					item: "minecraft:golden_carrot"
+					item: "irons_spellbooks:fireward_ring"
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 320"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "6E6C2A1D3E9D084E"
+					id: "01E4C3DFFD016081"
 					silent: true
 					title: "+320 Agility XP"
 					type: "command"
@@ -1889,8 +1937,13 @@
 			id: "154847538134F7B2"
 			rewards: [
 				{
-					count: 8
 					id: "0E42DDA513883B29"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "2FAE1C187D7E8D64"
 					item: "minecraft:tnt"
 					type: "item"
 				}
@@ -1898,7 +1951,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:mining 400"
 					elevate_perms: true
 					icon: "minecraft:iron_pickaxe"
-					id: "2FAE1C187D7E8D64"
+					id: "325832B3D1A25FA1"
 					silent: true
 					title: "+400 Mining XP"
 					type: "command"
@@ -2167,9 +2220,8 @@
 			id: "794F91D391661508"
 			rewards: [
 				{
-					count: 4
 					id: "74A1FD650B23CE8A"
-					item: "minecraft:iron_block"
+					item: "minecraft:diamond_block"
 					type: "item"
 				}
 				{
@@ -2211,7 +2263,7 @@
 			rewards: [
 				{
 					id: "4FC56F0D2B364ACE"
-					item: "minecraft:map"
+					item: "alexscaves:diving_helmet"
 					type: "item"
 				}
 				{
@@ -2249,8 +2301,13 @@
 			id: "03263707597843D0"
 			rewards: [
 				{
-					count: 8
 					id: "4411CE7E34DBB455"
+					item: "alexscaves:limestone_spear"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "381C57C4D57D77F0"
 					item: "alexscaves:cooked_dinosaur_chop"
 					type: "item"
 				}
@@ -2258,7 +2315,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:taming 450"
 					elevate_perms: true
 					icon: "minecraft:lead"
-					id: "381C57C4D57D77F0"
+					id: "5A128445591753AE"
 					silent: true
 					title: "+450 Taming XP"
 					type: "command"
@@ -2292,10 +2349,10 @@
 			id: "400B66E61C527034"
 			rewards: [
 				{
-					count: 8
 					id: "3AB96351B0B335DA"
-					item: "minecraft:ender_eye"
-					type: "item"
+					table_id: 2497351566311311852L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 500"
@@ -2480,15 +2537,14 @@
 			id: "34BDE17CD45FD07C"
 			rewards: [
 				{
-					count: 32
+					count: 8
 					id: "26743D6E71EFADEF"
-					item: "minecraft:arrow"
+					item: "minecraft:ender_pearl"
 					type: "item"
 				}
 				{
-					count: 8
 					id: "02F59337E946D3F4"
-					item: "minecraft:ender_pearl"
+					item: "irons_spellbooks:ender_rune"
 					type: "item"
 				}
 				{
@@ -2752,10 +2808,10 @@
 			id: "2E8CA4F3F9117FF6"
 			rewards: [
 				{
-					count: 2
 					id: "737A6334A56AB035"
-					item: "minecraft:netherite_scrap"
-					type: "item"
+					table_id: 8000191660477326648L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
@@ -2835,9 +2891,9 @@
 			id: "016D76CC361021EE"
 			rewards: [
 				{
-					count: 4
+					count: 2
 					id: "1BEA27803E7D9268"
-					item: "minecraft:magma_cream"
+					item: "cataclysm:blazing_bone"
 					type: "item"
 				}
 				{
@@ -3038,9 +3094,9 @@
 			id: "0CA514DC8C0212FA"
 			rewards: [
 				{
-					count: 32
+					count: 2
 					id: "43F7A7BC994FF565"
-					item: "minecraft:torch"
+					item: "cataclysm:ancient_metal_ingot"
 					type: "item"
 				}
 				{
@@ -3280,9 +3336,9 @@
 			id: "7384C72FBC9EA838"
 			rewards: [
 				{
-					count: 16
+					count: 12
 					id: "2983D4BB11BC9AB0"
-					item: "minecraft:golden_carrot"
+					item: "cataclysm:ancient_metal_nugget"
 					type: "item"
 				}
 				{
@@ -3714,9 +3770,9 @@
 			id: "3F2E8D9381E077EC"
 			rewards: [
 				{
-					count: 8
+					count: 4
 					id: "40D30DDCBFB5E0EE"
-					item: "minecraft:magma_cream"
+					item: "cataclysm:blazing_bone"
 					type: "item"
 				}
 				{

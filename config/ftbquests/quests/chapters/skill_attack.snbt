@@ -15,7 +15,7 @@
 			rewards: [
 				{
 					id: "7D043E00A1DC8494"
-					item: "bountiful:bounty-common"
+					item: "bountiful:decree"
 					type: "item"
 				}
 				{
@@ -59,9 +59,19 @@
 			id: "05ED0897B80BC017"
 			rewards: [
 				{
-					count: 4
 					id: "3C7BE72D34725D07"
-					item: "minecraft:iron_ingot"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -301,20 +311,24 @@
 			id: "2188906CAFC0AE48"
 			rewards: [
 				{
-					count: 8
 					id: "2F84EE81D7D7D74A"
-					item: "minecraft:iron_ingot"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:smite"
+									lvl: 3s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
 					count: 4
 					id: "6CFC65B7287869B8"
-					item: "minecraft:gold_ingot"
-					type: "item"
-				}
-				{
-					count: 4
-					id: "47426C08CE483CDC"
 					item: "minecraft:emerald"
 					type: "item"
 				}
@@ -322,7 +336,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:attack 200"
 					elevate_perms: true
 					icon: "minecraft:iron_sword"
-					id: "31B7BCB27ACEDFE2"
+					id: "47426C08CE483CDC"
 					silent: true
 					title: "+200 Attack XP"
 					type: "command"
@@ -522,12 +536,13 @@
 				"2CF0262A21E6E0BC"
 			]
 			description: ["An uncommon bounty: illager bandits have built towers over a trade road. Take them down and claim their banner as proof."]
-			icon: "bountiful:bounty-uncommon"
+			icon: "bountiful:bounty"
 			id: "79C8DF979D6DB6ED"
 			rewards: [
 				{
+					count: 12
 					id: "68F42BF40254FBC0"
-					item: "bountiful:bounty-uncommon"
+					item: "minecraft:emerald"
 					type: "item"
 				}
 				{
@@ -612,9 +627,9 @@
 			id: "7891F31795D49BE1"
 			rewards: [
 				{
-					count: 3
+					count: 2
 					id: "760B697D90A216EE"
-					item: "minecraft:splash_potion"
+					item: "irons_spellbooks:greater_healing_potion"
 					type: "item"
 				}
 				{
@@ -874,12 +889,23 @@
 				"1D96E8F9421E2B6A"
 			]
 			description: ["An epic bounty from the board: wither skeletons have overrun a Nether fortress. Kill twenty and bring three skulls as proof."]
-			icon: "bountiful:bounty-epic"
+			icon: "bountiful:bounty"
 			id: "6DF5E1B5753C127E"
 			rewards: [
 				{
 					id: "0F31A0051F54F595"
-					item: "bountiful:bounty-epic"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:looting"
+									lvl: 3s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -926,7 +952,18 @@
 			rewards: [
 				{
 					id: "58F18384F41A576A"
-					item: "bountiful:bounty-rare"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 4s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1092,8 +1129,9 @@
 			rewards: [
 				{
 					id: "3D87681169566BCB"
-					item: "spartanweaponry:netherite_longsword"
-					type: "item"
+					table_id: 6806812574434702121L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:attack 700"
@@ -1134,20 +1172,36 @@
 		{
 			dependencies: ["7A14EE14A9014E48"]
 			description: ["Nobody who goes into the plague asylum comes out. A legendary bounty is posted on whatever lives there. Clear it."]
-			icon: "bountiful:bounty-epic"
+			icon: "bountiful:bounty"
 			id: "0B4EBBFD7E292729"
 			rewards: [
 				{
-					count: 2
 					id: "6171BDF4CE9D63D4"
-					item: "bountiful:bounty-epic"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:smite"
+									lvl: 5s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 24
+					id: "3FF215AD051F1E4C"
+					item: "minecraft:emerald"
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:attack 740"
 					elevate_perms: true
 					icon: "minecraft:iron_sword"
-					id: "3FF215AD051F1E4C"
+					id: "5C0BEF743DEE1429"
 					silent: true
 					title: "+740 Attack XP"
 					type: "command"
@@ -1327,35 +1381,9 @@
 			rewards: [
 				{
 					id: "61995D2D71B885F5"
-					item: {
-						Count: 1b
-						id: "spartanweaponry:netherite_longsword"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:sharpness"
-									lvl: 5s
-								}
-								{
-									id: "minecraft:looting"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The last contract.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Ash's Verdict\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 4021599986613553494L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:attack 1000"

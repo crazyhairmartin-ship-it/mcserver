@@ -1,0 +1,89 @@
+{
+	icon: "minecraft:chest"
+	id: "6F9BCAC333824B01"
+	loot_size: 1
+	order_index: 25
+	rewards: [
+		{
+			id: "432A0C4F5EA82746"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_longbow"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:power"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:infinity"
+							lvl: 1s
+						}
+						{
+							id: "minecraft:flame"
+							lvl: 1s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"You never hear it leave the string.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Vance's Whisper\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "3CDB4F5AA896DFFA"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_heavy_crossbow"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:piercing"
+							lvl: 4s
+						}
+						{
+							id: "minecraft:quick_charge"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"One bolt, one answer.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Vance's Thunder\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "2E6FB90C6D9D9431"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:netherite_dagger"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 5s
+						}
+						{
+							id: "minecraft:looting"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Kept for when the arrows run out.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Vance's Last Token\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

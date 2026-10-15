@@ -248,7 +248,7 @@ ACT2 = [
           tasks=[item("mowziesmobs:ice_crystal", title="Pick up the Ice Crystal Frostmaw left behind"),
                  enc(["The veins match the drain. It comes from deep underground.", "Find a way below, child."],
                      character="wren", title="Hear Sister Wren's news")],
-          rewards=[reward_item("mowziesmobs:frostmaw_plushie"), skill("magic", 200)]),
+          rewards=[reward_item("irons_spellbooks:ice_rune", 2), skill("magic", 200)]),
 
     quest("act2_cave_map", "A Map of the Underworld", icon="alexscaves:cave_map", after=["act2_ice_crystal"],
           text=["A cartographer sells the way below: an Alex's Caves cave map. Follow it to your first cave biome. "
@@ -424,7 +424,7 @@ ACT3 = [
           tasks=[fight("minecraft:wither_skeleton", 6, "betterfortresses:fortress", "Fortress Wither Skeletons",
                        "Hunt wither skeletons in a fortress"),
                  item("minecraft:wither_skeleton_skull", 3, title="Hold three wither skeleton skulls"),
-                 sample("a Cursed Skull", ["minecraft:wither_skeleton"], 0.3, texture="minecraft:item/wither_skeleton_skull",
+                 sample("a Cursed Skull", ["minecraft:wither_skeleton"], 0.3, texture="minecraft:item/skull_pottery_sherd",
                         tooltip="Only drops while the quest is open")],
           rewards=[reward_item("minecraft:enchanted_book", name="Hunter's Greed", enchant={"minecraft:looting": 3}),
                    skill("attack", 450)]),

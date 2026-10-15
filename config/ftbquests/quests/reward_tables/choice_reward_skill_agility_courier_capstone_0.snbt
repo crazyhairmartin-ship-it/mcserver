@@ -1,0 +1,81 @@
+{
+	icon: "minecraft:chest"
+	id: "6B5A953DF8D6C07A"
+	loot_size: 1
+	order_index: 27
+	rewards: [
+		{
+			id: "10EFA2967CEA4C23"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:speed_boots"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:feather_falling"
+							lvl: 4s
+						}
+						{
+							id: "minecraft:depth_strider"
+							lvl: 3s
+						}
+						{
+							id: "minecraft:soul_speed"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Every road is shorter in them.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Juniper's Seven-League Boots\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "5DF266C39DB6C55B"
+			item: {
+				Count: 1b
+				id: "icarus:white_feathered_wings"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Juniper carried the post on these.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Couriers' Pinions\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "0CB6699F0FF1F68D"
+			item: {
+				Count: 1b
+				id: "grapplemod:grapplinghook"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"Always finds a hold.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"Juniper's Line\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

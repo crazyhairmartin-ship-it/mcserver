@@ -1,0 +1,61 @@
+{
+	icon: "minecraft:chest"
+	id: "7DC495DB363D8EE7"
+	loot_size: 1
+	order_index: 6
+	rewards: [
+		{
+			id: "3E6D74BEAA6110D1"
+			item: {
+				Count: 1b
+				id: "spartanweaponry:diamond_longsword"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:sharpness"
+							lvl: 3s
+						}
+						{
+							id: "minecraft:looting"
+							lvl: 2s
+						}
+					]
+					display: {
+						Lore: ["{\"text\": \"Sworn over the Sculptor's last stone.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Second Vow\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "3A7F5012EB5F60C7"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:gold_spell_book"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"Gilded and humming.\", \"color\": \"gray\", \"italic\": true}"]
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "3F6111FD09B48FDB"
+			item: {
+				Count: 1b
+				id: "spartanshields:diamond_tower_shield"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"Nothing gets past it.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Second Wall\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

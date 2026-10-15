@@ -941,7 +941,7 @@
 		{
 			dependencies: ["6E845338DB2850D1"]
 			description: ["The greenwood pub in the deep forest is the last tavern on the network map. Bring its keeper a barrel of your best beer and find out why no one has heard from them."]
-			icon: "brewery:small_barrel"
+			icon: "brewery:beer_mug"
 			id: "343DFDC69BF8784C"
 			rewards: [
 				{
@@ -972,8 +972,8 @@
 				{
 					consume_items: true
 					id: "111BD228C3777830"
-					item: "brewery:small_barrel"
-					title: "Bring a barrel of your best beer"
+					item: "brewery:beer_mug"
+					title: "Bring a mug of your best beer"
 					type: "item"
 				}
 				{
@@ -1082,7 +1082,7 @@
 			rewards: [
 				{
 					id: "16FD5E19D8CFFBF2"
-					item: "brewery:small_barrel"
+					item: "brewery:barrel_main"
 					type: "item"
 				}
 				{
@@ -1254,9 +1254,10 @@
 					id: "2AB5ACFBA3C22A5B"
 					item: {
 						Count: 1b
-						id: "minecraft:leather_helmet"
+						id: "candlelight:cooking_hat"
 						tag: {
 							display: {
+								Lore: ["{\"text\": \"Left behind by a grateful guest.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"The Traveller's Top Hat\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -1573,35 +1574,9 @@
 			rewards: [
 				{
 					id: "3D58D05592C72395"
-					item: {
-						Count: 1b
-						id: "spartanweaponry:netherite_dagger"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:sharpness"
-									lvl: 5s
-								}
-								{
-									id: "minecraft:looting"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"Passed down from mentor to mentor.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"The Last Course\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 1065116161594864236L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:cook 1000"

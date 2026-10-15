@@ -897,12 +897,12 @@
 				"1D96E8F9421E2B6A"
 			]
 			description: ["A heat held only at night. Fit a glowstone hook and fish after dark for jellyfish, then for the glowing heat token that only bites under the stars."]
-			icon: "aquaculture:glowstone_hook"
+			icon: "aquaculture:redstone_hook"
 			id: "75C79A9A83CED2C9"
 			rewards: [
 				{
 					id: "4BB69C86BAD508E5"
-					item: "aquaculture:glowstone_hook"
+					item: "aquaculture:light_hook"
 					type: "item"
 				}
 				{
@@ -918,8 +918,8 @@
 			tasks: [
 				{
 					id: "0D7C9E902175CDDD"
-					item: "aquaculture:glowstone_hook"
-					title: "Fit a glowstone hook"
+					item: "aquaculture:redstone_hook"
+					title: "Fit a redstone hook"
 					type: "item"
 				}
 				{
@@ -1068,10 +1068,16 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "0F42F3FD4B77C58E"
+					item: "aquaculture:neptunium_ingot"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:fish 480"
 					elevate_perms: true
 					icon: "minecraft:fishing_rod"
-					id: "0F42F3FD4B77C58E"
+					id: "1F6A1003BF934FD7"
 					silent: true
 					title: "+480 Fishing XP"
 					type: "command"
@@ -1265,7 +1271,7 @@
 			rewards: [
 				{
 					id: "65036E992411BBAB"
-					item: "aquaculture:obsidian_hook"
+					item: "aquaculture:heavy_hook"
 					type: "item"
 				}
 				{
@@ -1415,35 +1421,9 @@
 			rewards: [
 				{
 					id: "4FD6C33A27E210F4"
-					item: {
-						Count: 1b
-						id: "aquaculture:neptunium_fishing_rod"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:luck_of_the_sea"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:lure"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The society's own rod.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Tidecaller\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 6189224125551134571L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:fish 1000"

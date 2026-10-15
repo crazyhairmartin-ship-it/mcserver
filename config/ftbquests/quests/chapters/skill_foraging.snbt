@@ -339,7 +339,7 @@
 			rewards: [
 				{
 					id: "5DA8CF93177C78C7"
-					item: "meadow:big_flower_pot"
+					item: "meadow:wooden_flower_pot_big"
 					type: "item"
 				}
 				{
@@ -1118,9 +1118,8 @@
 			id: "4F7AE152C5288E19"
 			rewards: [
 				{
-					count: 4
 					id: "1C7F62ADE113C00F"
-					item: "minecraft:magma_cream"
+					item: "irons_spellbooks:nature_rune"
 					type: "item"
 				}
 				{
@@ -1466,32 +1465,9 @@
 			rewards: [
 				{
 					id: "6D8E28FAA2AC12EC"
-					item: {
-						Count: 1b
-						id: "minecraft:netherite_axe"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:efficiency"
-									lvl: 5s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							Unbreakable: 1b
-							display: {
-								Lore: ["{\"text\": \"Only for dead wood.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"Greenwarden\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
+					table_id: 1485814776964002904L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:forage 1000"

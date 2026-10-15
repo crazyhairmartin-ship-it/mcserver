@@ -1,0 +1,51 @@
+{
+	icon: "minecraft:chest"
+	id: "4768DFA941727348"
+	loot_size: 1
+	order_index: 28
+	rewards: [
+		{
+			id: "0E0CC78D0D3335B3"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:legendary_spell_book"
+				tag: {
+					display: {
+						Lore: ["{\"text\": \"Every school has a page in it.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Flamebearer's Codex\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			id: "4DD6A416A1BC5D85"
+			item: {
+				Count: 1b
+				id: "irons_spellbooks:pyrium_staff"
+				tag: {
+					Enchantments: [
+						{
+							id: "minecraft:unbreaking"
+							lvl: 3s
+						}
+					]
+					Unbreakable: 1b
+					display: {
+						Lore: ["{\"text\": \"It remembers the flame's first word.\", \"color\": \"gray\", \"italic\": true}"]
+						Name: "{\"text\": \"The Flamebearer's Staff\", \"color\": \"gold\", \"italic\": false}"
+					}
+				}
+			}
+			type: "item"
+		}
+		{
+			count: 3
+			id: "238BA3C66F678A06"
+			item: "irons_spellbooks:mana_upgrade_orb"
+			type: "item"
+		}
+	]
+	title: "Choose one"
+	use_title: true
+}

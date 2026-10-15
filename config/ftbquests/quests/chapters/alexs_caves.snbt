@@ -559,9 +559,9 @@
 			id: "242099BD464C1CC3"
 			rewards: [
 				{
-					count: 4
+					count: 2
 					id: "56FE4C22C832037E"
-					item: "minecraft:magma_cream"
+					item: "alexscaves:charred_remnant"
 					type: "item"
 				}
 				{
@@ -732,9 +732,9 @@
 			id: "38F90AB2A5BE1F83"
 			rewards: [
 				{
-					count: 16
+					count: 4
 					id: "57C3000041542BBA"
-					item: "alexscaves:bioluminescent_torch"
+					item: "alexscaves:cooked_radgill"
 					type: "item"
 				}
 				{
@@ -918,9 +918,9 @@
 			id: "0EE3A5C4E82591FA"
 			rewards: [
 				{
-					count: 8
+					count: 4
 					id: "2A37D718684612C8"
-					item: "minecraft:golden_carrot"
+					item: "alexscaves:darkened_apple"
 					type: "item"
 				}
 				{
@@ -1008,9 +1008,8 @@
 			id: "50A37ACE46A8D84F"
 			rewards: [
 				{
-					count: 8
 					id: "7867D517FA86A3E9"
-					item: "minecraft:golden_carrot"
+					item: "alexscaves:gazing_pearl"
 					type: "item"
 				}
 				{
@@ -1115,9 +1114,8 @@
 			id: "72111BA2231D5F6F"
 			rewards: [
 				{
-					count: 3
 					id: "084839647AAED9DA"
-					item: "minecraft:golden_apple"
+					item: "alexscaves:desolate_dagger"
 					type: "item"
 				}
 				{
@@ -1763,9 +1761,19 @@
 			id: "6015FED89C6C57FC"
 			rewards: [
 				{
-					count: 2
 					id: "062A69B91A086417"
-					item: "minecraft:golden_apple"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1804,9 +1812,9 @@
 			id: "0720C76EBA6006F1"
 			rewards: [
 				{
-					count: 64
+					count: 16
 					id: "4F362CA6AF3B4F7C"
-					item: "minecraft:copper_ingot"
+					item: "alexscaves:scrap_metal"
 					type: "item"
 				}
 				{
@@ -1970,9 +1978,9 @@
 			id: "6CF5C1251809287C"
 			rewards: [
 				{
-					count: 2
+					count: 8
 					id: "219C05E456622B34"
-					item: "minecraft:golden_apple"
+					item: "alexscaves:depth_glass"
 					type: "item"
 				}
 				{
@@ -2007,9 +2015,9 @@
 			id: "28BEFA30449395F3"
 			rewards: [
 				{
-					count: 16
+					count: 4
 					id: "3B984A52C676B587"
-					item: "minecraft:string"
+					item: "alexscaves:glow_ink_bomb"
 					type: "item"
 				}
 				{
@@ -2062,9 +2070,8 @@
 			id: "5C5B3888608BE1A7"
 			rewards: [
 				{
-					count: 8
 					id: "7C8754AF23AE25EA"
-					item: "minecraft:amethyst_shard"
+					item: "alexscaves:radiant_essence"
 					type: "item"
 				}
 				{
@@ -2121,11 +2128,9 @@
 				}
 				{
 					id: "762607A827D8599D"
-					observe_type: "entity_type"
-					timer: 40L
-					title: "Hook a gum worm and ride it"
-					to_observe: "alexscaves:gum_worm"
-					type: "observation"
+					stage: "fq.alexs_caves.gum_worm.interact1"
+					title: "Hook a gum worm with the candy cane hook"
+					type: "gamestage"
 				}
 			]
 			title: "The Gum Worm"
@@ -2145,8 +2150,9 @@
 			rewards: [
 				{
 					id: "2ACC8A7F284F1B2E"
-					item: "alexscaves:conversion_crucible"
-					type: "item"
+					table_id: 6689510673157994432L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 420"

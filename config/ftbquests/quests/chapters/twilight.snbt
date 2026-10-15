@@ -108,9 +108,19 @@
 			id: "50C04F24FA169681"
 			rewards: [
 				{
-					count: 16
 					id: "63DFB2EFC28C8129"
-					item: "minecraft:arrow"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:power"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -369,14 +379,20 @@
 			id: "3002526E88C933DB"
 			rewards: [
 				{
-					count: 2
+					count: 4
 					id: "091118A9E9750B0A"
-					item: "minecraft:golden_apple"
+					item: "twilightforest:naga_scale"
 					type: "item"
 				}
 				{
 					count: 2
 					id: "6D2784A5AA064188"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "73B0F0D934F639A2"
 					item: "irons_spellbooks:greater_healing_potion"
 					type: "item"
 				}
@@ -384,7 +400,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:attack 300"
 					elevate_perms: true
 					icon: "minecraft:iron_sword"
-					id: "73B0F0D934F639A2"
+					id: "0CDEC33AFFA2F3E6"
 					silent: true
 					title: "+300 Attack XP"
 					type: "command"
@@ -826,10 +842,16 @@
 					type: "item"
 				}
 				{
+					count: 2
+					id: "50585776CF262590"
+					item: "irons_spellbooks:rare_ink"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 350"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "50585776CF262590"
+					id: "1E35104FA02C2277"
 					silent: true
 					title: "+350 Magic XP"
 					type: "command"
@@ -863,9 +885,9 @@
 					type: "item"
 				}
 				{
-					count: 16
+					count: 4
 					id: "26FEBDE765DCDDCC"
-					item: "minecraft:rotten_flesh"
+					item: "irons_spellbooks:arcane_essence"
 					type: "item"
 				}
 				{
@@ -904,9 +926,9 @@
 			id: "6819FD0DB48482D1"
 			rewards: [
 				{
-					count: 16
+					count: 2
 					id: "0DD7622222CD3BDC"
-					item: "minecraft:cooked_beef"
+					item: "irons_spellbooks:greater_healing_potion"
 					type: "item"
 				}
 				{
@@ -1035,7 +1057,7 @@
 			rewards: [
 				{
 					id: "4CB984D2BAB19E22"
-					item: "minecraft:shield"
+					item: "spartanshields:iron_tower_shield"
 					type: "item"
 				}
 				{
@@ -1253,9 +1275,8 @@
 			id: "47D0059CACD6B964"
 			rewards: [
 				{
-					count: 4
 					id: "354C62A1F81E9A2D"
-					item: "minecraft:magma_cream"
+					item: "irons_spellbooks:fire_rune"
 					type: "item"
 				}
 				{
@@ -1293,9 +1314,8 @@
 			id: "77DB75B8DC8ECF55"
 			rewards: [
 				{
-					count: 4
 					id: "3B3D81831FC7A6CB"
-					item: "minecraft:magma_cream"
+					item: "irons_spellbooks:fireward_ring"
 					type: "item"
 				}
 				{
@@ -1335,9 +1355,19 @@
 			id: "113A673073318547"
 			rewards: [
 				{
-					count: 2
 					id: "3B5E0C4427991339"
-					item: "minecraft:golden_apple"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:fire_protection"
+									lvl: 3s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -1455,9 +1485,9 @@
 			id: "7DB8ADE6AD52F040"
 			rewards: [
 				{
-					count: 8
+					count: 4
 					id: "60EF96C9BB77BCEA"
-					item: "minecraft:golden_carrot"
+					item: "irons_spellbooks:uncommon_ink"
 					type: "item"
 				}
 				{
@@ -1536,9 +1566,9 @@
 			id: "181B9FFBB5CF63B3"
 			rewards: [
 				{
-					count: 2
+					count: 4
 					id: "42E856BDFE97A4C7"
-					item: "minecraft:lantern"
+					item: "twilightforest:armor_shard"
 					type: "item"
 				}
 				{
@@ -1622,7 +1652,7 @@
 				{
 					count: 2
 					id: "09C564DC946230FE"
-					item: "minecraft:golden_apple"
+					item: "twilightforest:armor_shard_cluster"
 					type: "item"
 				}
 				{
@@ -1863,7 +1893,7 @@
 				{
 					count: 4
 					id: "363D967954A3B78E"
-					item: "minecraft:magma_cream"
+					item: "twilightforest:fiery_ingot"
 					type: "item"
 				}
 				{
@@ -1990,9 +2020,8 @@
 			id: "6CB38F45B4D5DAFC"
 			rewards: [
 				{
-					count: 16
 					id: "138D4C9D077323DE"
-					item: "minecraft:cooked_beef"
+					item: "irons_spellbooks:frostward_ring"
 					type: "item"
 				}
 				{
@@ -2123,20 +2152,14 @@
 				{
 					count: 4
 					id: "56D78B0C0B09A397"
-					item: "minecraft:red_dye"
-					type: "item"
-				}
-				{
-					count: 4
-					id: "3FF36B999B8B2C7D"
-					item: "minecraft:blue_dye"
+					item: "twilightforest:ice_bomb"
 					type: "item"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:craft 550"
 					elevate_perms: true
 					icon: "minecraft:crafting_table"
-					id: "458753202F9B1ACF"
+					id: "3FF36B999B8B2C7D"
 					silent: true
 					title: "+550 Crafting XP"
 					type: "command"
@@ -2183,9 +2206,8 @@
 			id: "5D7ACCB1290B12E1"
 			rewards: [
 				{
-					count: 16
 					id: "1FEB4DBA64C0A678"
-					item: "minecraft:glass"
+					item: "irons_spellbooks:cooldown_rune"
 					type: "item"
 				}
 				{
@@ -2300,9 +2322,19 @@
 			id: "1623FC953DA1371C"
 			rewards: [
 				{
-					count: 16
 					id: "69AC34954C25BF21"
-					item: "minecraft:golden_carrot"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:thorns"
+									lvl: 3s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -2340,10 +2372,10 @@
 			id: "44A58FC3271850F1"
 			rewards: [
 				{
-					count: 8
 					id: "579E016AC28EBBAD"
-					item: "minecraft:amethyst_shard"
-					type: "item"
+					table_id: 8464042977102539655L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 700"

@@ -51,16 +51,15 @@
 					id: "64EC4BFBF73B3E08"
 					item: {
 						Count: 1b
-						id: "minecraft:iron_pickaxe"
+						id: "minecraft:enchanted_book"
 						tag: {
-							Enchantments: [
+							StoredEnchantments: [
 								{
-									id: "minecraft:unbreaking"
-									lvl: 2s
+									id: "minecraft:efficiency"
+									lvl: 3s
 								}
 							]
 							display: {
-								Lore: ["{\"text\": \"For the first diamond.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"Deep Digger\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -96,9 +95,8 @@
 			id: "5C38220D6536E865"
 			rewards: [
 				{
-					count: 3
 					id: "4F200D97F0A5B37D"
-					item: "minecraft:golden_apple"
+					item: "spartanshields:diamond_basic_shield"
 					type: "item"
 				}
 				{
@@ -183,8 +181,9 @@
 			rewards: [
 				{
 					id: "1CB5699885EE51A0"
-					item: "minecraft:enchanted_golden_apple"
-					type: "item"
+					table_id: 4815440681650355709L
+					title: "Choose one"
+					type: "choice"
 				}
 				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 700"
@@ -425,7 +424,18 @@
 			rewards: [
 				{
 					id: "1867786E85F79989"
-					item: "minecraft:leather_boots"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 2s
+								}
+							]
+						}
+					}
 					type: "item"
 				}
 				{
@@ -493,16 +503,19 @@
 					id: "6AB66A0E8D2E6A67"
 					item: {
 						Count: 1b
-						id: "minecraft:leather_boots"
+						id: "minecraft:enchanted_book"
 						tag: {
-							Enchantments: [
+							StoredEnchantments: [
 								{
 									id: "minecraft:feather_falling"
+									lvl: 4s
+								}
+								{
+									id: "minecraft:depth_strider"
 									lvl: 3s
 								}
 							]
 							display: {
-								Lore: ["{\"text\": \"A hundred kilometres.\", \"color\": \"gray\", \"italic\": true}"]
 								Name: "{\"text\": \"Well-Worn Boots\", \"color\": \"gold\", \"italic\": false}"
 							}
 						}
@@ -807,7 +820,26 @@
 			rewards: [
 				{
 					id: "6EFEBA3A1C1B1105"
-					item: "spartanweaponry:iron_longsword"
+					item: {
+						Count: 1b
+						id: "spartanweaponry:iron_katana"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 2s
+								}
+								{
+									id: "minecraft:looting"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Every nick is a story.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Five Hundred Notches\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
 					type: "item"
 				}
 				{
