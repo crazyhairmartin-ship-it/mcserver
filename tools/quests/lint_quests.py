@@ -163,6 +163,15 @@ def main():
                 for line in c.get(kind, []):
                     if len(line.split()) > 15:
                         warnings.append(f'character {cid} {kind}: a {len(line.split())}-word line (keep under 15 words)')
+    # FTB reads "&" as a colour code: a plain one (not &0-9a-f/k-o/r) shows as "Invalid formatting!" in the book
+    bad_amp = re.compile(r'&(?![0-9a-fk-orA-FK-OR])')
+    for g in load('pack.json').get('groups', []):
+        if bad_amp.search(g.get('title', '')):
+            errors.append(f'group {g.get("id")}: "&" in its title (write "and")')
+    for path in sorted(glob.glob(os.path.join(SRC, 'chapters', '*.json'))):
+        text = open(path, encoding='utf-8').read()
+        if bad_amp.search(text):
+            errors.append(f'{os.path.basename(path)}: a plain "&" somewhere (FTB reads it as a colour code; write "and")')
     for e in errors:
         print('error: ' + e)
     for wn in warnings:
