@@ -212,7 +212,10 @@
           "title": "Find a camp"
         },
         {
-          "checkmark": "I handed out the bedding"
+          "interact": "minecraft:villager",
+          "holding": "comforts:sleeping_bag_blue",
+          "consume": true,
+          "title": "Hand a sleeping bag to a traveller at the camp"
         }
       ],
       "rewards": [
@@ -466,7 +469,10 @@
           "count": 4
         },
         {
-          "checkmark": "I repainted the signs and hung the right wares"
+          "use": "#minecraft:signs",
+          "count": 4,
+          "holding": "amendments:dye_bottle",
+          "title": "Repaint the faded shop signs with your dye"
         }
       ],
       "rewards": [

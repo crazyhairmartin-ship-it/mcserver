@@ -593,6 +593,15 @@
       ],
       "tasks": [
         {
+          "be": {
+            "time": [
+              12000,
+              13000
+            ]
+          },
+          "title": "Wait for sunset"
+        },
+        {
           "build": {
             "blocks": {
               "beachparty:radio": 1

@@ -1658,7 +1658,11 @@
             "wave": 4,
             "name": "Dungeon Skeletons"
           },
-          "title": "Clear the dungeon's spawner of its skeletons"
+          "title": "Clear the dungeon's skeletons"
+        },
+        {
+          "mine": "minecraft:spawner",
+          "title": "Break the dungeon's spawner so it floods no more"
         }
       ],
       "rewards": [

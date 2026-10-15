@@ -750,9 +750,9 @@
 			tasks: [
 				{
 					id: "7A2B1926F13E4AB1"
-					item: "minecraft:bucket"
-					title: "Bring a bucket to scoop a sea pig"
-					type: "item"
+					stage: "fq.alexs_caves.sea_pig.interact0"
+					title: "Scoop a sea pig into a bucket"
+					type: "gamestage"
 				}
 				{
 					count: 4L
@@ -1609,17 +1609,15 @@
 			tasks: [
 				{
 					id: "4449278E8432072F"
-					stage: "fq.alexs_caves.gummy_bear.tame0"
-					title: "Feed a gummy bear until it follows you"
+					stage: "fq.alexs_caves.gummy_bear.interact0"
+					title: "Feed a gummy bear until it befriends you"
 					type: "gamestage"
 				}
 				{
 					id: "2C9FFE053C2A1B28"
-					observe_type: "entity_type"
-					timer: 40L
-					title: "Find a candicorn to ride"
-					to_observe: "alexscaves:candicorn"
-					type: "observation"
+					stage: "fq.alexs_caves.gummy_bear.be1"
+					title: "Ride a candicorn"
+					type: "gamestage"
 				}
 			]
 			title: "Gummy Friends"

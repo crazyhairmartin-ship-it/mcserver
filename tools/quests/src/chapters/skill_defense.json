@@ -681,6 +681,12 @@
           "title": "Fit the new rods at the top"
         },
         {
+          "be": {
+            "thundering": true
+          },
+          "title": "Wait for a thunderstorm to break over the tower"
+        },
+        {
           "timed": {
             "seconds": 90,
             "goal": {

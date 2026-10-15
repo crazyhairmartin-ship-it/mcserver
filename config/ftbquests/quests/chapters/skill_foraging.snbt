@@ -1201,9 +1201,15 @@
 					type: "location"
 				}
 				{
+					id: "1A93A4BCD799E60A"
+					stage: "fq.skill_foraging.dying_grove.mine1"
+					title: "Clear the dead logs from the withering grove"
+					type: "gamestage"
+				}
+				{
 					consume_items: true
 					count: 2L
-					id: "1A93A4BCD799E60A"
+					id: "4FB8E10D2CC2C37C"
 					item: "herbalbrews:herbal_infusion"
 					title: "Cure the soil with herbal infusions"
 					type: "item"
@@ -1211,14 +1217,14 @@
 				{
 					consume_items: true
 					count: 16L
-					id: "4FB8E10D2CC2C37C"
+					id: "77D5C7E58EE43B9F"
 					item: "minecraft:bone_meal"
 					title: "Feed the soil with bone meal"
 					type: "item"
 				}
 				{
-					id: "77D5C7E58EE43B9F"
-					stage: "fq.skill_foraging.dying_grove.build3"
+					id: "3D7E5A0A6B6B76CF"
+					stage: "fq.skill_foraging.dying_grove.build4"
 					title: "Replant the grove until leaves grow back"
 					type: "gamestage"
 				}

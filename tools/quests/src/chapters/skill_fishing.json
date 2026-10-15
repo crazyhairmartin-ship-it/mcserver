@@ -823,6 +823,12 @@
           "title": "Fit a glowstone hook"
         },
         {
+          "be": {
+            "night": true
+          },
+          "title": "Wait for night to fall over the water"
+        },
+        {
           "item": "aquaculture:jellyfish",
           "count": 2,
           "title": "Fish after dark for jellyfish"

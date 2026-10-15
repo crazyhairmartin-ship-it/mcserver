@@ -8,7 +8,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_attack:dummy_drills: needs damage dealt to a target dummy (and a Better Combat combo); written as a timed minecraft:damage_dealt stat
 - skill_attack:weapon_of_choice: needs a choice of any one of five iron Spartan weapons; written as the iron longsword
 - skill_attack:fallen_adventurer: needs discovery of any fallen adventurer; written as observing a hunted_skeleton
-- skill_attack:dungeon_sweep: needs spawner-breaking tasks; written as zombie and skeleton kills
 - skill_defense:tower_shield: needs a count of blocked hits; written as a timed minecraft:damage_blocked_by_shield stat (Opus: lifetime stats completed instantly). Verify Spartan shields feed it
 - skill_range:target_practice: needs arrows landed on target blocks inside a time limit; written as crafting targets and a checkmark
 - skill_range:throwing_steel: needs a kill with each thrown weapon; written as crafting all three and six zombie kills
@@ -24,9 +23,7 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_agility:tower_zipline: needs a rigged ParCool zipline; written as a build of two iron zipline hooks
 - skill_agility:first_grapple: needs a timed canyon course; written as a timed sprint
 - skill_crafting:sacks_and_jars: needs sorting stock into containers; written as crafting them
-- skill_crafting:road_comforts: needs handing out bedding; written as crafting and a checkmark
 - skill_crafting:megatorch: needs a night with no spawns in the ring; written as a build and a timed hold
-- skill_crafting:painted_signs: needs repainting signs and hanging wares; written as dye bottles, signs and a checkmark
 - magic:reroll_the_fates: needs a check for a book with two named enchantments; written as carrying an enchanted book and a checkmark
 - magic:pyromancers_duel: needs a spells-only duel that ends in a yield; written as a kill encounter
 - magic:the_poisoned_traveller: needs a timed brewing puzzle with a sequence of cures; written as an encounter and a checkmark
@@ -41,11 +38,9 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - village_errands:statue_rubbings: needs taking rubbings from carvings; written as paper, charcoal and visiting both ruins
 - village_errands:fortified_village: needs any fortified village; written as the plains fortified village
 - village_errands:the_abandoned_camp: needs clue searching and tracks; written as a checkmark and an encounter
-- village_errands:runaway_horse: needs riding a horse home and stabling it; written as tame plus a checkmark
 - village_errands:map_the_region: needs copying a master map; written as crafting a map
 - milestones:enchant_30: needs enchanting an item at level 30; written as reaching level 30
 - milestones:fly_10km: needs elytra or aircraft flight; written as the aviate stat (aircraft may not count)
-- discovery_land:asylum_samples: needs brewing a cure from the notes; written as quest drops and a checkmark
 - discovery_land:witch_villa_tea_party: needs stealing the recipe book and brewing the potion; written as a checkmark and a splash potion
 - discovery_land:beacon_gone_dark: needs finding the beacon's missing blocks; written as rebuilding the iron pyramid
 - discovery_land:the_bridge_builder: needs discovering a Yung's bridge (no structure id); written as a discover on walking 2 km
@@ -90,7 +85,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_defense:illusioner: needs picking the real one among copies; written as the illusioner boss fight
 - skill_defense:fortified_village: needs any fortified village; written as the plains fortified village
 - skill_defense:build_walls: needs two iron golems posted at the gate; written as a wall build and iron and pumpkins consumed
-- skill_defense:lightning_tower: needs a thunderstorm and strikes; written as a build and a timed hold
 - skill_range:savanna_hunt: needs hunting without being charged; written as lion and rhino kills and hides
 - skill_range:tiger_stalk: needs stealth through undergrowth; written as a jungle encounter kill
 - skill_range:long_shot: needs a 50-block shot across a ravine; written as a longbow and a target built
@@ -110,7 +104,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_crafting:sled_race: needs a champion's time; written as the ride-a-sled-fast advancement
 - magic:arcane_anvil: needs merging scrolls and adding an orb; written as using the anvil
 - magic:cryomancer: needs fire spells to be the only way he dies; written as a boss fight and fire casts
-- magic:lightning_in_a_bottle: needs a thunderstorm; written as lightning casts and bottles
 - magic:unseen_thief: needs failing on being seen by an illager; written as a hurt-free timed crossing
 - magic:translate_logbook: needs a cipher puzzle; written as talking to Orrin
 - skill_cooking:brewfest_night: needs keeping mugs full and winning a song contest; written as beers, pretzels and a brewmaster encounter
@@ -121,7 +114,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_farming:silo: needs drying crops over days; written as a silo build and crops consumed
 - skill_farming:outpost_crows: needs defending the field through a night; written as a timed hold with waves
 - skill_farming:livestock_fair: needs showing a best pair of each; written as breeding each kind
-- skill_farming:giant_pumpkin: needs one harvest; written as carrying a full stack
 - skill_farming:hard_winter: needs a deadline in in-game days; written as a timed run of 15 minutes
 - skill_fishing:buoy_race: needs a buoy course around the harbour; written as a timed swim to a far hut with no mounts
 - skill_fishing:jungle_heat: needs the heat to be in a river; written as a jungle biome and fish carried
@@ -151,13 +143,11 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - alexs_caves:dino_bowl: needs watching herds; written as two photos with a camera carried
 - alexs_caves:relicheirus_egg: needs hatching the egg first; written as carrying the egg and a tame
 - alexs_caves:stolen_egg: needs carrying the atlatitan egg to hatch; written as a raid and a search
-- alexs_caves:sea_pig: needs scooping a sea pig into a bucket; written as an empty bucket carried
 - alexs_caves:abyssal_ruins: needs not stirring the mine guardians; written as a hurt-free timed crossing
 - alexs_caves:corrodent: needs cornering one in the open; written as a kill and a quest drop
 - alexs_caves:watcher: needs killing before the view switches; written as an encounter kill
 - alexs_caves:forsaken: needs the underzealots' ritual first; written as a boss fight at the canyon
 - alexs_caves:caniac: needs frostmint from the cavity; written as kills and a crafted spear
-- alexs_caves:gummy_bear: needs riding a candicorn; written as a tame and an observe
 - alexs_caves:confection_oven: needs baking specific sweets; written as using the oven
 - main_story:act3_eyes: needs the Mowzie's eye variants; written as plain Eyes of Ender (no Mowzie eye items exist)
 - main_story:act3_wildfire_scout: needs seeing the Wildfire unseen; written as a hurt-free timed crossing
@@ -232,13 +222,11 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_cooking:herbal_cure: needs nursing through the night; written as brews, a stew and an encounter
 - skill_farming:nether_grapes: needs finding the seeds in the Nether; written as seeds carried and a vine pot build
 - skill_farming:eiswein: needs real eiswein (no item); written as taiga seeds, cherry wine and a big bottle
-- skill_fishing:night_heat: needs fishing only at night; written as the hook, jellyfish and a heat-token drop
 - skill_fishing:ruin_waters: needs fishing above the ruin while drowned cut the line; written as a rod, a drowned fight and a fish carried
 - skill_fishing:sunken_hind: needs walking the sea floor for the purse; written as a drowned fight and a cabin search
 - skill_fishing:trophy_wall: needs mounting actual catches; written as three fish mounts placed
 - skill_fishing:silas_adrift: needs finding him on a raft in a storm; written as the raft structure and an escort
 - skill_foraging:nether_botany: needs carrying plants home without burning; written as the plants carried from the Nether
-- skill_foraging:dying_grove: needs clearing dead logs and curing soil; written as infusions, bone meal and replanting
 - skill_mining:forge_cold: needs relighting a forge; written as the fuel consumed and being below Y -50
 - skill_mining:ancient_debris: needs near lava level (Nether); written as being low in the Nether and debris mined
 - skill_mining:quartz_contract: needs selling through the guild; written as the materials carried
@@ -264,7 +252,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - end:manuscript_shrine: needs reading texts without meeting the gaze; written as a hurt-free hold and a search
 - end:spire_climb: needs a reading at the top; written as a timed climb to the spire's top
 - end:quiet_meadows: needs resting a minute in each; written as one timed hold and visits
-- end:void_wildlife: needs feeding an endergrade until it follows; written as a tame
 - end:salvage_the_scraps: needs sifting three different structures; written as a search of one scrap heap
 - end:null_space: needs flying over the biomes; written as standing in each
 - end:the_sealed_citadel: needs noting the Ender Golems; written as observing one

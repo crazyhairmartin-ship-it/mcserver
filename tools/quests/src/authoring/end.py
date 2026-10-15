@@ -187,7 +187,7 @@ ACT4 = [
           text=["Ilse wants proof there's life here: bucket a cosmic cod, feed an endergrade chorus until it follows "
                 "you, and bring back ender residue from an enderiophage."],
           tasks=[item("alexsmobs:cosmic_cod_bucket", title="Bucket a cosmic cod"),
-                 {"tame": "alexsmobs:endergrade", "title": "Feed an endergrade chorus until it follows you"},
+                 {"interact": "alexsmobs:endergrade", "holding": "minecraft:chorus_fruit", "consume": True, "title": "Feed an endergrade chorus fruit until it follows you"},
                  item("alexsmobs:ender_residue", title="Bring back ender residue from an enderiophage")],
           rewards=[reward_item("alexsmobs:cosmic_cod_bucket"), skill("taming", 700)]),
 

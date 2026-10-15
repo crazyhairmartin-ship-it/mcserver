@@ -62,6 +62,7 @@ Q = [
           text=["The journal points to a dungeon below a village. Go down and clear it."],
           tasks=[{"structure": "#yungs_dungeons", "title": "Find the dungeon"},
                  {"kill": "minecraft:zombie", "count": 8, "title": "Clear the dead out of the cellar", "spawn": {"at": {"structure": "#yungs_dungeons"}}},
+                 {"mine": "minecraft:spawner", "title": "Break the dungeon's spawner so it stays clear"},
                  {"kill": "minecraft:skeleton", "count": 8, "title": "Clear the bones out of the cellar", "spawn": {"at": {"structure": "#yungs_dungeons"}}}],
           rewards=[reward_item("minecraft:iron_ingot", 8), reward_item("minecraft:gold_ingot", 4),
                    reward_item("minecraft:emerald", 4), skill("attack", 200)]),

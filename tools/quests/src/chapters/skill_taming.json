@@ -462,7 +462,10 @@
           "crafted": true
         },
         {
-          "checkmark": "I enchanted a collar tag"
+          "interact": "minecraft:wolf",
+          "holding": "domesticationinnovation:collar_tag",
+          "consume": true,
+          "title": "Fit the enchanted tag to a wolf's collar"
         }
       ],
       "rewards": [

@@ -625,8 +625,9 @@
       ],
       "tasks": [
         {
-          "item": "minecraft:bucket",
-          "title": "Bring a bucket to scoop a sea pig"
+          "interact": "alexscaves:sea_pig",
+          "holding": "minecraft:bucket",
+          "title": "Scoop a sea pig into a bucket"
         },
         {
           "item": "alexscaves:marine_snow",
@@ -1363,13 +1364,16 @@
       ],
       "tasks": [
         {
-          "tame": "alexscaves:gummy_bear",
-          "title": "Feed a gummy bear until it follows you"
+          "interact": "alexscaves:gummy_bear",
+          "holding": "alexscaves:gelatin_pink",
+          "consume": true,
+          "title": "Feed a gummy bear until it befriends you"
         },
         {
-          "observe": "alexscaves:candicorn",
-          "ticks": 40,
-          "title": "Find a candicorn to ride"
+          "be": {
+            "riding": "alexscaves:candicorn"
+          },
+          "title": "Ride a candicorn"
         }
       ],
       "rewards": [

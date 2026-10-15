@@ -449,7 +449,9 @@
           "title": "Take an Asylum Sample"
         },
         {
-          "checkmark": "I brewed the cure from the apothecary's notes"
+          "make": "minecraft:potion",
+          "how": "brew",
+          "title": "Brew a cure from the apothecary's notes"
         }
       ],
       "rewards": [

@@ -309,3 +309,4 @@ rewards and quest text stay exactly as they are. Rebuild every chapter, then run
 | T27 | yes | 38 | 19 engine, 0 links | `Quests T27` in git log |
 | T28 | yes | 27 | 7 engine, 0 links (3 restored) | `Quests T28` in git log |
 | T29 | yes | 31 | 15 engine, 0 links | `Quests T29` in git log |
+| TF | partial | 0 | 13 lines cleared, 281 remain | `Quests TF` in git log |

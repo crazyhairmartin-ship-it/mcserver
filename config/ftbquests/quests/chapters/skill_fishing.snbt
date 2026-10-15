@@ -923,15 +923,21 @@
 					type: "item"
 				}
 				{
-					count: 2L
 					id: "2ED3C4592673BA3B"
+					stage: "fq.skill_fishing.night_heat.be1"
+					title: "Wait for night to fall over the water"
+					type: "gamestage"
+				}
+				{
+					count: 2L
+					id: "3DCB8AE10AAFEC5B"
 					item: "aquaculture:jellyfish"
 					title: "Fish after dark for jellyfish"
 					type: "item"
 				}
 				{
-					id: "3DCB8AE10AAFEC5B"
-					item: "kubejs:quest_night_heat_2"
+					id: "0ED82F52A1B22181"
+					item: "kubejs:quest_night_heat_3"
 					title: "Land the glowing heat token"
 					type: "item"
 				}

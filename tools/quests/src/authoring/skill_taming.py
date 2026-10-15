@@ -103,7 +103,7 @@ Q = [
                 "wolf can guard the sanctuary."],
           tasks=[talk_char("fern", ["A collar tag is paper and string until someone believes in it.", "Health Boost, and Defusal so your wolf sniffs out creepers."]),
                  item("domesticationinnovation:collar_tag", crafted=True),
-                 {"checkmark": "I enchanted a collar tag"}],
+                 {"interact": "minecraft:wolf", "holding": "domesticationinnovation:collar_tag", "consume": True, "title": "Fit the enchanted tag to a wolf's collar"}],
           rewards=[reward_item("minecraft:enchanted_book", name="Hale and Hearty",
                                enchant={"domesticationinnovation:health_boost": 1}),
                    reward_item("minecraft:enchanted_book", name="Nose for Trouble",

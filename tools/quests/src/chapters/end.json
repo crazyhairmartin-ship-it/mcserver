@@ -936,8 +936,10 @@
           "title": "Bucket a cosmic cod"
         },
         {
-          "tame": "alexsmobs:endergrade",
-          "title": "Feed an endergrade chorus until it follows you"
+          "interact": "alexsmobs:endergrade",
+          "holding": "minecraft:chorus_fruit",
+          "consume": true,
+          "title": "Feed an endergrade chorus fruit until it follows you"
         },
         {
           "item": "alexsmobs:ender_residue",

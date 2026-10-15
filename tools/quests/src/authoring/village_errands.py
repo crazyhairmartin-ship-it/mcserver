@@ -320,7 +320,8 @@ Q = [
           text=["A Sanctuary keeper's horse ran off to a wild horse pen, and she is frightened rather than bad."],
           tasks=[{"structure": "mvs:horse_pen", "title": "Find the wild horse pen"},
                  {"tame": "minecraft:horse", "title": "Win the horse's trust and tame her"},
-                 {"checkmark": "I rode her back and stabled her"}],
+                 {"be": {"riding": "minecraft:horse"}, "title": "Ride her home"},
+                 {"place": "reece", "title": "Stable her at the sanctuary"}],
           rewards=[reward_item("minecraft:saddle"), reward_item("minecraft:golden_carrot", 6), skill("taming", 120)]),
 
     quest("fox_in_the_hut", "The Fox in the Hut", icon="minecraft:sweet_berries",

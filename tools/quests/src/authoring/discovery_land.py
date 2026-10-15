@@ -119,7 +119,7 @@ Q = [
                 "from its apothecary, and a cure brewed from the notes."],
           tasks=[sample("an Asylum Sample", ["minecraft:zombie_villager"], 0.4, count=3,
                         texture="minecraft:item/glass_bottle", tooltip="Taken from the apothecary's wards"),
-                 {"checkmark": "I brewed the cure from the apothecary's notes"}],
+                 {"make": "minecraft:potion", "how": "brew", "title": "Brew a cure from the apothecary's notes"}],
           rewards=[reward_item("herbalbrews:lavender_tea", 2), reward_item("irons_spellbooks:greater_healing_potion", 2),
                    skill("forage", 300)]),
 

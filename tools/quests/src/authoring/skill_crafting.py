@@ -46,7 +46,7 @@ Q = [
                 "and hand them out at the guild camp."],
           tasks=[item("comforts:rope_and_nail", 2, crafted=True), item("comforts:sleeping_bag_blue", crafted=True),
                  item("comforts:hammock_red", crafted=True), {"structure": "#camps", "title": "Find a camp"},
-                 {"checkmark": "I handed out the bedding"}],
+                 {"interact": "minecraft:villager", "holding": "comforts:sleeping_bag_blue", "consume": True, "title": "Hand a sleeping bag to a traveller at the camp"}],
           rewards=[reward_item("comforts:hammock_green"), skill("craft", 100)]),
 
     quest("megatorch", "Light the Square", icon="torchmaster:megatorch", after=["widows_cottage"],
@@ -104,7 +104,7 @@ Q = [
                 "signs and hang the right wares on each shopfront."],
           tasks=[{"structure": "#villages", "title": "Reach the faded shopfronts"},
                  item("amendments:dye_bottle", 4, crafted=True), item("minecraft:oak_sign", 4),
-                 {"checkmark": "I repainted the signs and hung the right wares"}],
+                 {"use": "#minecraft:signs", "count": 4, "holding": "amendments:dye_bottle", "title": "Repaint the faded shop signs with your dye"}],
           rewards=[reward_item("amendments:dye_bottle", 8), skill("craft", 210)]),
 
     quest("engineers_blueprints", "The Engineer's Blueprints", icon="furniture:blueprints",

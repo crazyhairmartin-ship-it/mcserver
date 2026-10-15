@@ -726,19 +726,25 @@
 				}
 				{
 					id: "7B91E36F11AA8EA8"
-					stage: "fq.discovery_sea.the_ritual_circle.build0"
-					title: "Set a radio in the circle"
+					stage: "fq.discovery_sea.the_ritual_circle.be0"
+					title: "Wait for sunset"
 					type: "gamestage"
 				}
 				{
 					id: "3D2DB44BADF6D4CD"
-					stage: "fq.discovery_sea.the_ritual_circle.use1"
-					title: "Play a beach disc on the radio"
+					stage: "fq.discovery_sea.the_ritual_circle.build1"
+					title: "Set a radio in the circle"
 					type: "gamestage"
 				}
 				{
 					id: "45B9A63B92FB35EC"
-					item: "kubejs:quest_the_ritual_circle_2"
+					stage: "fq.discovery_sea.the_ritual_circle.use2"
+					title: "Play a beach disc on the radio"
+					type: "gamestage"
+				}
+				{
+					id: "394B008A19B4752C"
+					item: "kubejs:quest_the_ritual_circle_3"
 					title: "Search for The Sea's Gift"
 					type: "item"
 				}

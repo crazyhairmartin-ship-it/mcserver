@@ -479,6 +479,22 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "discovery_land:asylum_samples",
+    "stage": "fq.discovery_land.asylum_samples.make1",
+    "type": "make",
+    "count": 1,
+    "requires": [],
+    "quest_id": "0F01DBD6A27ADF95",
+    "prev_tasks": [
+      "74659C7DE9C36967",
+      "179C68834FC6B108"
+    ],
+    "items": [
+      "minecraft:potion"
+    ],
+    "how": "brew"
+  },
+  {
     "quest": "discovery_land:palace_of_shiraz",
     "stage": "fq.discovery_land.palace_of_shiraz.use0",
     "type": "use",
@@ -6507,6 +6523,20 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "alexs_caves:sea_pig",
+    "stage": "fq.alexs_caves.sea_pig.interact0",
+    "type": "interact",
+    "count": 1,
+    "requires": [],
+    "quest_id": "38F90AB2A5BE1F83",
+    "prev_tasks": [],
+    "entities": [
+      "alexscaves:sea_pig"
+    ],
+    "holding": "minecraft:bucket",
+    "consume": false
+  },
+  {
     "quest": "alexs_caves:abyssal_ruins",
     "stage": "fq.alexs_caves.abyssal_ruins.timed1",
     "type": "timed",
@@ -6728,15 +6758,30 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "alexs_caves:gummy_bear",
-    "stage": "fq.alexs_caves.gummy_bear.tame0",
-    "type": "tame",
-    "entities": [
-      "alexscaves:gummy_bear"
-    ],
+    "stage": "fq.alexs_caves.gummy_bear.interact0",
+    "type": "interact",
     "count": 1,
     "requires": [],
     "quest_id": "29740B61A9A75C97",
-    "prev_tasks": []
+    "prev_tasks": [],
+    "entities": [
+      "alexscaves:gummy_bear"
+    ],
+    "holding": "alexscaves:gelatin_pink",
+    "consume": true
+  },
+  {
+    "quest": "alexs_caves:gummy_bear",
+    "stage": "fq.alexs_caves.gummy_bear.be1",
+    "type": "be",
+    "where": {
+      "riding": "alexscaves:candicorn"
+    },
+    "requires": [],
+    "quest_id": "29740B61A9A75C97",
+    "prev_tasks": [
+      "4449278E8432072F"
+    ]
   },
   {
     "quest": "alexs_caves:miners_cabin",
@@ -7288,7 +7333,23 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "discovery_sea:the_ritual_circle",
-    "stage": "fq.discovery_sea.the_ritual_circle.build0",
+    "stage": "fq.discovery_sea.the_ritual_circle.be0",
+    "type": "be",
+    "where": {
+      "time": [
+        12000,
+        13000
+      ]
+    },
+    "requires": [],
+    "quest_id": "0C5942478587FF04",
+    "prev_tasks": [
+      "45530687C1D70EFE"
+    ]
+  },
+  {
+    "quest": "discovery_sea:the_ritual_circle",
+    "stage": "fq.discovery_sea.the_ritual_circle.build1",
     "type": "build",
     "keys": [
       "beachparty:radio"
@@ -7300,12 +7361,13 @@ global.QUEST_GIVERS = [
     "requires": [],
     "quest_id": "0C5942478587FF04",
     "prev_tasks": [
-      "45530687C1D70EFE"
+      "45530687C1D70EFE",
+      "7B91E36F11AA8EA8"
     ]
   },
   {
     "quest": "discovery_sea:the_ritual_circle",
-    "stage": "fq.discovery_sea.the_ritual_circle.use1",
+    "stage": "fq.discovery_sea.the_ritual_circle.use2",
     "type": "use",
     "keys": [
       "beachparty:radio"
@@ -7319,12 +7381,13 @@ global.QUEST_GIVERS = [
     "quest_id": "0C5942478587FF04",
     "prev_tasks": [
       "45530687C1D70EFE",
-      "7B91E36F11AA8EA8"
+      "7B91E36F11AA8EA8",
+      "3D2DB44BADF6D4CD"
     ]
   },
   {
     "quest": "discovery_sea:the_ritual_circle",
-    "stage": "fq.discovery_sea.the_ritual_circle.search2",
+    "stage": "fq.discovery_sea.the_ritual_circle.search3",
     "type": "search",
     "at": {
       "kind": "structure",
@@ -7334,14 +7397,15 @@ global.QUEST_GIVERS = [
       "label": "the destination"
     },
     "count": 1,
-    "item": "kubejs:quest_the_ritual_circle_2",
+    "item": "kubejs:quest_the_ritual_circle_3",
     "found": "The sea gives a pearl-white shell back.",
     "requires": [],
     "quest_id": "0C5942478587FF04",
     "prev_tasks": [
       "45530687C1D70EFE",
       "7B91E36F11AA8EA8",
-      "3D2DB44BADF6D4CD"
+      "3D2DB44BADF6D4CD",
+      "45B9A63B92FB35EC"
     ]
   },
   {
@@ -7775,6 +7839,18 @@ global.QUEST_GIVERS = [
       "6CF67ADC2D247A45",
       "21B1B2DCE656B3FF"
     ]
+  },
+  {
+    "quest": "skill_farming:giant_pumpkin",
+    "stage": "fq.skill_farming.giant_pumpkin.mine0",
+    "type": "mine",
+    "keys": [
+      "minecraft:pumpkin"
+    ],
+    "count": 64,
+    "requires": [],
+    "quest_id": "1292C7281B851783",
+    "prev_tasks": []
   },
   {
     "quest": "skill_farming:mead",
@@ -9165,6 +9241,21 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "nether:nether_dungeons",
+    "stage": "fq.nether.nether_dungeons.mine1",
+    "type": "mine",
+    "keys": [
+      "minecraft:spawner"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "6A5A8986D1F449EA",
+    "prev_tasks": [
+      "64BC914FEA2A65B3",
+      "448EED97B0AA9CDE"
+    ]
+  },
+  {
     "quest": "nether:the_soul_forge",
     "stage": "fq.nether.the_soul_forge.timed0",
     "type": "timed",
@@ -9620,13 +9711,26 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "skill_fishing:night_heat",
+    "stage": "fq.skill_fishing.night_heat.be1",
+    "type": "be",
+    "where": {
+      "night": true
+    },
+    "requires": [],
+    "quest_id": "75C79A9A83CED2C9",
+    "prev_tasks": [
+      "0D7C9E902175CDDD"
+    ]
+  },
+  {
+    "quest": "skill_fishing:night_heat",
     "stage": "",
     "type": "task_drop",
     "from": [
       "fishing"
     ],
     "chance": 0.12,
-    "item": "kubejs:quest_night_heat_2",
+    "item": "kubejs:quest_night_heat_3",
     "requires": [],
     "quest_id": "75C79A9A83CED2C9",
     "open_task": "",
@@ -11171,6 +11275,21 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "village_errands:runaway_horse",
+    "stage": "fq.village_errands.runaway_horse.be2",
+    "type": "be",
+    "where": {
+      "riding": "minecraft:horse"
+    },
+    "requires": [],
+    "quest_id": "3507498A584392C5",
+    "prev_tasks": [
+      "12DD603193F91E8A",
+      "723401333CD2B28D",
+      "7B01403AC34CF515"
+    ]
+  },
+  {
     "quest": "village_errands:fox_in_the_hut",
     "stage": "fq.village_errands.fox_in_the_hut",
     "type": "org",
@@ -11759,17 +11878,19 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "end:void_wildlife",
-    "stage": "fq.end.void_wildlife.tame1",
-    "type": "tame",
-    "entities": [
-      "alexsmobs:endergrade"
-    ],
+    "stage": "fq.end.void_wildlife.interact1",
+    "type": "interact",
     "count": 1,
     "requires": [],
     "quest_id": "04670EAA359EA5D8",
     "prev_tasks": [
       "4B2227B42210F1DE"
-    ]
+    ],
+    "entities": [
+      "alexsmobs:endergrade"
+    ],
+    "holding": "minecraft:chorus_fruit",
+    "consume": true
   },
   {
     "quest": "end:salvage_the_scraps",
@@ -12529,7 +12650,21 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "skill_foraging:dying_grove",
-    "stage": "fq.skill_foraging.dying_grove.build3",
+    "stage": "fq.skill_foraging.dying_grove.mine1",
+    "type": "mine",
+    "keys": [
+      "biomesoplenty:dead_log"
+    ],
+    "count": 8,
+    "requires": [],
+    "quest_id": "16A4B4796DA2246C",
+    "prev_tasks": [
+      "45EBA8932662F3C9"
+    ]
+  },
+  {
+    "quest": "skill_foraging:dying_grove",
+    "stage": "fq.skill_foraging.dying_grove.build4",
     "type": "build",
     "keys": [
       "minecraft:oak_sapling",
@@ -12547,7 +12682,8 @@ global.QUEST_GIVERS = [
     "prev_tasks": [
       "45EBA8932662F3C9",
       "1A93A4BCD799E60A",
-      "4FB8E10D2CC2C37C"
+      "4FB8E10D2CC2C37C",
+      "77D5C7E58EE43B9F"
     ]
   },
   {
@@ -12689,6 +12825,25 @@ global.QUEST_GIVERS = [
     "profession": ""
   },
   {
+    "quest": "skill_crafting:road_comforts",
+    "stage": "fq.skill_crafting.road_comforts.interact4",
+    "type": "interact",
+    "count": 1,
+    "requires": [],
+    "quest_id": "7B85D1AA88F82F19",
+    "prev_tasks": [
+      "49F95830E3962BC3",
+      "7FBE2B4FFF772728",
+      "4F97C1771CA41ADB",
+      "25D63F48052AAECC"
+    ],
+    "entities": [
+      "minecraft:villager"
+    ],
+    "holding": "comforts:sleeping_bag_blue",
+    "consume": true
+  },
+  {
     "quest": "skill_crafting:megatorch",
     "stage": "fq.skill_crafting.megatorch.build2",
     "type": "build",
@@ -12797,6 +12952,26 @@ global.QUEST_GIVERS = [
     "quest_id": "1476629AEB8CE6D4",
     "prev_tasks": [
       "7DAB9B3C709788E9"
+    ]
+  },
+  {
+    "quest": "skill_crafting:painted_signs",
+    "stage": "fq.skill_crafting.painted_signs.use3",
+    "type": "use",
+    "keys": [
+      "#minecraft:signs"
+    ],
+    "count": 4,
+    "at": null,
+    "within": 0,
+    "holding": "amendments:dye_bottle",
+    "consume": false,
+    "requires": [],
+    "quest_id": "6A49DF986BF2B870",
+    "prev_tasks": [
+      "3DDAB2B87086B4AE",
+      "17CA3373F4F24E4A",
+      "581C01DE1A00D655"
     ]
   },
   {
@@ -13378,7 +13553,22 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "skill_attack:dungeon_sweep",
-    "stage": "fq.skill_attack.dungeon_sweep.spawn2",
+    "stage": "fq.skill_attack.dungeon_sweep.mine2",
+    "type": "mine",
+    "keys": [
+      "minecraft:spawner"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "2188906CAFC0AE48",
+    "prev_tasks": [
+      "2DFE2C54C6B0C607",
+      "6B2EEF1E81639088"
+    ]
+  },
+  {
+    "quest": "skill_attack:dungeon_sweep",
+    "stage": "fq.skill_attack.dungeon_sweep.spawn3",
     "type": "spawn",
     "entity": "minecraft:skeleton",
     "at": {
@@ -13398,12 +13588,13 @@ global.QUEST_GIVERS = [
     "glow": false,
     "ensure": false,
     "boost": null,
-    "task_id": "33215AC9C3142999",
+    "task_id": "3B4DFA2EF6616804",
     "requires": [],
     "quest_id": "2188906CAFC0AE48",
     "prev_tasks": [
       "2DFE2C54C6B0C607",
-      "6B2EEF1E81639088"
+      "6B2EEF1E81639088",
+      "33215AC9C3142999"
     ]
   },
   {
@@ -15488,7 +15679,22 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "skill_defense:lightning_tower",
-    "stage": "fq.skill_defense.lightning_tower.timed3",
+    "stage": "fq.skill_defense.lightning_tower.be3",
+    "type": "be",
+    "where": {
+      "thundering": true
+    },
+    "requires": [],
+    "quest_id": "196FD0DCAAB3FDBB",
+    "prev_tasks": [
+      "209F5C3D09443B89",
+      "49F398DEF6B15894",
+      "20EC4FC1DE920D3B"
+    ]
+  },
+  {
+    "quest": "skill_defense:lightning_tower",
+    "stage": "fq.skill_defense.lightning_tower.timed4",
     "type": "timed",
     "seconds": 90,
     "goal": {
@@ -15506,7 +15712,8 @@ global.QUEST_GIVERS = [
     "prev_tasks": [
       "209F5C3D09443B89",
       "49F398DEF6B15894",
-      "20EC4FC1DE920D3B"
+      "20EC4FC1DE920D3B",
+      "2582C1393B4AAFD4"
     ],
     "name": ""
   },
@@ -18083,14 +18290,27 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "magic:lightning_in_a_bottle",
-    "stage": "fq.magic.lightning_in_a_bottle.cast0",
+    "stage": "fq.magic.lightning_in_a_bottle.be0",
+    "type": "be",
+    "where": {
+      "thundering": true
+    },
+    "requires": [],
+    "quest_id": "05DBBF7A615E89FC",
+    "prev_tasks": []
+  },
+  {
+    "quest": "magic:lightning_in_a_bottle",
+    "stage": "fq.magic.lightning_in_a_bottle.cast1",
     "type": "cast",
     "spell": "",
     "school": "irons_spellbooks:lightning",
     "count": 5,
     "requires": [],
     "quest_id": "05DBBF7A615E89FC",
-    "prev_tasks": []
+    "prev_tasks": [
+      "3E489D0EAE08E99A"
+    ]
   },
   {
     "quest": "magic:evoker_fort",
@@ -18844,6 +19064,23 @@ global.QUEST_GIVERS = [
     "character": "fern",
     "quest_id": "3E29F1CF1159CD62",
     "open_task": ""
+  },
+  {
+    "quest": "skill_taming:pet_enchanting",
+    "stage": "fq.skill_taming.pet_enchanting.interact2",
+    "type": "interact",
+    "count": 1,
+    "requires": [],
+    "quest_id": "3E29F1CF1159CD62",
+    "prev_tasks": [
+      "7907E1774C8E9680",
+      "210C6C87B0C6D58D"
+    ],
+    "entities": [
+      "minecraft:wolf"
+    ],
+    "holding": "domesticationinnovation:collar_tag",
+    "consume": true
   },
   {
     "quest": "skill_taming:dragonfly_rider",

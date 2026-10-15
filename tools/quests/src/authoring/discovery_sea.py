@@ -151,7 +151,8 @@ Q = [
           discover={"structure": "beachparty:ritual_circle"},
           text=["A circle of torches and shells on the beach. The old fishers say that if you place a seashell on "
                 "each stone at sunset and play a beach disc on a radio, the sea gives something back."],
-          tasks=[{"build": {"blocks": {"beachparty:radio": 1}, "radius": 8}, "title": "Set a radio in the circle"},
+          tasks=[{"be": {"time": [12000, 13000]}, "title": "Wait for sunset"},
+                 {"build": {"blocks": {"beachparty:radio": 1}, "radius": 8}, "title": "Set a radio in the circle"},
                  {"use": "beachparty:radio", "count": 1, "holding": "beachparty:music_disc_beachparty",
                   "title": "Play a beach disc on the radio"},
                  search("beachparty:ritual_circle", 1, "The Sea's Gift", "The sea gives a pearl-white shell back.",

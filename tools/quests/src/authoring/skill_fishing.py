@@ -186,6 +186,7 @@ ACT3 = [
           text=["A heat held only at night. Fit a glowstone hook and fish after dark for jellyfish, then for the "
                 "glowing heat token that only bites under the stars."],
           tasks=[item("aquaculture:glowstone_hook", title="Fit a glowstone hook"),
+                 {"be": {"night": True}, "title": "Wait for night to fall over the water"},
                  item("aquaculture:jellyfish", 2, title="Fish after dark for jellyfish"),
                  {"drop": {"from": ["fishing"], "chance": 0.12,
                            "item": {"name": "The Heat Token", "texture": "minecraft:item/glowstone_dust", "tooltip": "Only bites under the stars"}},

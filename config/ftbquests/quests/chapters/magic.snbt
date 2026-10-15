@@ -1206,19 +1206,25 @@
 			tasks: [
 				{
 					id: "3E489D0EAE08E99A"
-					stage: "fq.magic.lightning_in_a_bottle.cast0"
+					stage: "fq.magic.lightning_in_a_bottle.be0"
+					title: "Wait for a thunderstorm to break"
+					type: "gamestage"
+				}
+				{
+					id: "3AC8B6D1707F1700"
+					stage: "fq.magic.lightning_in_a_bottle.cast1"
 					title: "Call the storm down with lightning spells"
 					type: "gamestage"
 				}
 				{
 					count: 3L
-					id: "3AC8B6D1707F1700"
+					id: "16BCF5F6D2281254"
 					item: "irons_spellbooks:lightning_bottle"
 					title: "Catch three bottles of lightning"
 					type: "item"
 				}
 				{
-					id: "16BCF5F6D2281254"
+					id: "5B8DFDE693AF3CB6"
 					item: "irons_spellbooks:lightning_rune"
 					only_from_crafting: true
 					title: "Craft a lightning rune"

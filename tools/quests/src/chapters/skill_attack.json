@@ -288,6 +288,10 @@
           }
         },
         {
+          "mine": "minecraft:spawner",
+          "title": "Break the dungeon's spawner so it stays clear"
+        },
+        {
           "kill": "minecraft:skeleton",
           "count": 8,
           "title": "Clear the bones out of the cellar",

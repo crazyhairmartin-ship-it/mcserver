@@ -1708,8 +1708,18 @@
 				}
 				{
 					id: "11D2B2942DECF8DC"
-					title: "I rode her back and stabled her"
-					type: "checkmark"
+					stage: "fq.village_errands.runaway_horse.be2"
+					title: "Ride her home"
+					type: "gamestage"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "54C85D3D205B376D"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Stable her at the sanctuary"
+					type: "location"
 				}
 			]
 			title: "The Runaway Horse"

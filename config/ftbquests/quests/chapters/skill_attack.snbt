@@ -343,8 +343,14 @@
 					value: 8L
 				}
 				{
-					entity: "minecraft:skeleton"
 					id: "33215AC9C3142999"
+					stage: "fq.skill_attack.dungeon_sweep.mine2"
+					title: "Break the dungeon's spawner so it stays clear"
+					type: "gamestage"
+				}
+				{
+					entity: "minecraft:skeleton"
+					id: "3B4DFA2EF6616804"
 					title: "Clear the bones out of the cellar"
 					type: "kill"
 					value: 8L

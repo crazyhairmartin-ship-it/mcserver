@@ -265,8 +265,9 @@
 				}
 				{
 					id: "18D132B644414AA6"
-					title: "I handed out the bedding"
-					type: "checkmark"
+					stage: "fq.skill_crafting.road_comforts.interact4"
+					title: "Hand a sleeping bag to a traveller at the camp"
+					type: "gamestage"
 				}
 			]
 			title: "Sleeping Rough, Sleeping Well"
@@ -554,8 +555,9 @@
 				}
 				{
 					id: "18EEDA75F7A4AC0A"
-					title: "I repainted the signs and hung the right wares"
-					type: "checkmark"
+					stage: "fq.skill_crafting.painted_signs.use3"
+					title: "Repaint the faded shop signs with your dye"
+					type: "gamestage"
 				}
 			]
 			title: "Fresh Paint"

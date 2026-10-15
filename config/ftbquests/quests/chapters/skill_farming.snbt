@@ -929,11 +929,10 @@
 			]
 			tasks: [
 				{
-					count: 64L
 					id: "7764DF47D4D403EF"
-					item: "minecraft:pumpkin"
-					title: "Bring the co-op a full stack of pumpkins"
-					type: "item"
+					stage: "fq.skill_farming.giant_pumpkin.mine0"
+					title: "Harvest a full stack of pumpkins in one go for the co-op"
+					type: "gamestage"
 				}
 			]
 			title: "The Giant Pumpkin"

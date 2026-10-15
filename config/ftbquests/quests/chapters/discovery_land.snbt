@@ -477,8 +477,9 @@
 				}
 				{
 					id: "35D07E52A3C469BE"
-					title: "I brewed the cure from the apothecary's notes"
-					type: "checkmark"
+					stage: "fq.discovery_land.asylum_samples.make1"
+					title: "Brew a cure from the apothecary's notes"
+					type: "gamestage"
 				}
 			]
 			title: "Samples from the Asylum"

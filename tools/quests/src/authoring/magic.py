@@ -231,7 +231,8 @@ ACT2 = [
           after=["arcane_anvil"],
           text=["Storms hold more than rain. Catch three bottles of lightning while one rages, and craft a "
                 "lightning rune from them."],
-          tasks=[{"cast": {"school": "irons_spellbooks:lightning"}, "count": 5, "title": "Call the storm down with lightning spells"},
+          tasks=[{"be": {"thundering": True}, "title": "Wait for a thunderstorm to break"},
+                 {"cast": {"school": "irons_spellbooks:lightning"}, "count": 5, "title": "Call the storm down with lightning spells"},
                  item("irons_spellbooks:lightning_bottle", 3, title="Catch three bottles of lightning"),
                  item("irons_spellbooks:lightning_rune", crafted=True, title="Craft a lightning rune")],
           rewards=[reward_item("irons_spellbooks:electromancer_helmet"), skill("magic", 260)]),

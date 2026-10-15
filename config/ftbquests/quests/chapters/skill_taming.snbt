@@ -634,8 +634,9 @@
 				}
 				{
 					id: "2B778FB8A95F93CE"
-					title: "I enchanted a collar tag"
-					type: "checkmark"
+					stage: "fq.skill_taming.pet_enchanting.interact2"
+					title: "Fit the enchanted tag to a wolf's collar"
+					type: "gamestage"
 				}
 			]
 			title: "A Collar Worth Wearing"

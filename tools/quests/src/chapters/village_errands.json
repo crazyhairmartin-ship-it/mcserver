@@ -1515,7 +1515,14 @@
           "title": "Win the horse's trust and tame her"
         },
         {
-          "checkmark": "I rode her back and stabled her"
+          "be": {
+            "riding": "minecraft:horse"
+          },
+          "title": "Ride her home"
+        },
+        {
+          "place": "reece",
+          "title": "Stable her at the sanctuary"
         }
       ],
       "rewards": [

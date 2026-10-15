@@ -744,9 +744,9 @@
       ],
       "tasks": [
         {
-          "item": "minecraft:pumpkin",
+          "mine": "minecraft:pumpkin",
           "count": 64,
-          "title": "Bring the co-op a full stack of pumpkins"
+          "title": "Harvest a full stack of pumpkins in one go for the co-op"
         }
       ],
       "rewards": [

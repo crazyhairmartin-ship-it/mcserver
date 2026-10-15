@@ -1879,9 +1879,15 @@
 				{
 					entity: "minecraft:wither_skeleton"
 					id: "448EED97B0AA9CDE"
-					title: "Clear the dungeon's spawner of its skeletons"
+					title: "Clear the dungeon's skeletons"
 					type: "kill"
 					value: 6L
+				}
+				{
+					id: "3A55B7FE84420D7B"
+					stage: "fq.nether.nether_dungeons.mine1"
+					title: "Break the dungeon's spawner so it floods no more"
+					type: "gamestage"
 				}
 			]
 			title: "Small Places, Sharp Teeth"

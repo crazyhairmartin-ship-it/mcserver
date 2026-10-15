@@ -692,7 +692,13 @@
 				}
 				{
 					id: "2582C1393B4AAFD4"
-					stage: "fq.skill_defense.lightning_tower.timed3"
+					stage: "fq.skill_defense.lightning_tower.be3"
+					title: "Wait for a thunderstorm to break over the tower"
+					type: "gamestage"
+				}
+				{
+					id: "1BA957294474E1F4"
+					stage: "fq.skill_defense.lightning_tower.timed4"
 					title: "Stay on the tower while bolts keep striking"
 					type: "gamestage"
 				}

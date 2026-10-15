@@ -956,6 +956,11 @@
           "place": "reece"
         },
         {
+          "mine": "biomesoplenty:dead_log",
+          "count": 8,
+          "title": "Clear the dead logs from the withering grove"
+        },
+        {
           "item": "herbalbrews:herbal_infusion",
           "count": 2,
           "consume": true,

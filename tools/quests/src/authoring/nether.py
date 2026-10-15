@@ -339,7 +339,8 @@ ACT3 = [
           discover={"structure": "betterdungeons:small_nether_dungeon"},
           text=["You've stumbled on a small Nether dungeon. Clear its spawner before it floods the passage."],
           tasks=[fight("minecraft:wither_skeleton", 6, "betterdungeons:small_nether_dungeon", "Dungeon Skeletons",
-                       "Clear the dungeon's spawner of its skeletons")],
+                       "Clear the dungeon's skeletons"),
+                 {"mine": "minecraft:spawner", "title": "Break the dungeon's spawner so it floods no more"}],
           rewards=[reward_item("minecraft:quartz", 16), skill("attack", 250)]),
 
     quest("devils_rest", "The Devil's Rest", icon="minecraft:ghast_tear", after=["through_the_flames"],

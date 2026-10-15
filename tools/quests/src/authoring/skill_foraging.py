@@ -200,6 +200,7 @@ ACT3 = [
           text=["The Herbalists' sacred grove near Reece is withering into dead forest. Clear the dead logs, cure the "
                 "soil with herbal infusions and bone meal, and replant it until leaves grow back."],
           tasks=[{"place": "reece"},
+                 {"mine": "biomesoplenty:dead_log", "count": 8, "title": "Clear the dead logs from the withering grove"},
                  item("herbalbrews:herbal_infusion", 2, consume=True, title="Cure the soil with herbal infusions"),
                  item("minecraft:bone_meal", 16, consume=True, title="Feed the soil with bone meal"),
                  {"build": {"blocks": {"minecraft:oak_sapling": 2, "minecraft:birch_sapling": 2, "minecraft:spruce_sapling": 2}, "radius": 12},

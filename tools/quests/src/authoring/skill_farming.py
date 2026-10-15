@@ -147,7 +147,7 @@ ACT2 = [
     quest("giant_pumpkin", "The Giant Pumpkin", icon="minecraft:pumpkin", after=["livestock_fair"],
           text=["The pumpkin contest: grow pumpkins in a patch or your own field and bring the co-op a full stack in "
                 "one harvest."],
-          tasks=[item("minecraft:pumpkin", 64, title="Bring the co-op a full stack of pumpkins")],
+          tasks=[{"mine": "minecraft:pumpkin", "count": 64, "title": "Harvest a full stack of pumpkins in one go for the co-op"}],
           rewards=[reward_item("minecraft:pumpkin_pie", 8), skill("farm", 340)]),
 
     quest("mead", "Bees and Mead", icon="vinery:mead", after=["wine_press"],

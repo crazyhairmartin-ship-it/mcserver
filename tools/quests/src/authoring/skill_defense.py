@@ -146,6 +146,7 @@ ACT2 = [
                  enc(["Bzzt. I steady the ladder. You fit the rods."], entity="friendsandfoes:copper_golem",
                      name="Tower Copper Golem", title="Meet the copper golem that helps at the tower"),
                  {"build": {"blocks": {"minecraft:lightning_rod": 2}, "radius": 10}, "title": "Fit the new rods at the top"},
+                 {"be": {"thundering": True}, "title": "Wait for a thunderstorm to break over the tower"},
                  {"timed": {"seconds": 90, "goal": {"hold": {"radius": 10}},
                             "lines": ["Bolts are striking. Stay on the tower!"], "start": "Brave the storm"},
                   "title": "Stay on the tower while bolts keep striking"}],

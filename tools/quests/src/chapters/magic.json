@@ -1027,6 +1027,12 @@
       ],
       "tasks": [
         {
+          "be": {
+            "thundering": true
+          },
+          "title": "Wait for a thunderstorm to break"
+        },
+        {
           "cast": {
             "school": "irons_spellbooks:lightning"
           },

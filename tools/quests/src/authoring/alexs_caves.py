@@ -130,7 +130,7 @@ ACT2 = [
     quest("sea_pig", "The Sea Pig", icon="alexscaves:marine_snow", after=["abyssal_chasm"],
           text=["Sea pigs graze the chasm floor. Scoop one up, and gather marine snow and tube worms from around the "
                 "glowing vents."],
-          tasks=[item("minecraft:bucket", title="Bring a bucket to scoop a sea pig"),
+          tasks=[{"interact": "alexscaves:sea_pig", "holding": "minecraft:bucket", "title": "Scoop a sea pig into a bucket"},
                  item("alexscaves:marine_snow", 4, title="Gather marine snow from the chasm floor"),
                  item("alexscaves:tube_worm", 4, title="Gather tube worms from around the vents")],
           rewards=[reward_item("alexscaves:bioluminescent_torch", 16), skill("fish", 250)]),
@@ -273,8 +273,8 @@ ACT2 = [
 
     quest("gummy_bear", "Gummy Friends", icon="alexscaves:gelatin_pink", after=["candy_cavity"],
           text=["The candy hills have their own friendly beasts. Befriend a gummy bear and ride a candicorn."],
-          tasks=[{"tame": "alexscaves:gummy_bear", "title": "Feed a gummy bear until it follows you"},
-                 {"observe": "alexscaves:candicorn", "ticks": 40, "title": "Find a candicorn to ride"}],
+          tasks=[{"interact": "alexscaves:gummy_bear", "holding": "alexscaves:gelatin_pink", "consume": True, "title": "Feed a gummy bear until it befriends you"},
+                 {"be": {"riding": "alexscaves:candicorn"}, "title": "Ride a candicorn"}],
           rewards=[reward_item("alexscaves:gelatin_pink", 4), skill("taming", 300)]),
 ]
 
