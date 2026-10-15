@@ -136,6 +136,17 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_mining:spore_shaft: needs keeping miners from the caps; written as four escorts to the camp
 - skill_mining:strange_minerals: needs guanostone and abyssmarine (guano block used); written as dug samples at two cave structures
 - skill_mining:lost_journal: needs waking no Warden; written as a hurt-free timed crossing and a search
+- twilight:raven_feather: needs sneaking up on ravens; written as a forest biome and raven feathers carried
+- twilight:hollow_hill: needs raiding its chests (hollow hills have unknown contents); written as the hill structure and steeleaf carried
+- twilight:quest_grove: needs the ram's reward; written as sixteen wool colours consumed
+- twilight:mushroom_tower: needs climbing the caps and stems (tower contents unknown); written as a search at the tower
+- twilight:hedge_maze: needs reaching the centre and escaping in ten minutes; written as a timed spider fight then a search
+- twilight:scepters: needs a choice of four sceptres used in battle; written as a search and zombie kills
+- twilight:cursed_swamp: needs mosquitoes and hunger; written as a swamp biome and a swarm encounter
+- twilight:labyrinth: needs the Mazebreaker Pickaxe or Ore Magnet in a vault; written as a search of a trapped vault
+- twilight:minotaurs: needs a Minotaur axe from them; written as a quest drop
+- twilight:meef: needs raw meef hunted; written as cooked stroganoff carried
+- twilight:uncrafting: needs breaking down an enchanted item; written as using the table
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

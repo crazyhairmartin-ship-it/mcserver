@@ -1,0 +1,1249 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "twilight"
+	group: "4B9B0BA0827F5A44"
+	icon: "twilightforest:twilight_oak_sapling"
+	id: "375AE59F12D2E91D"
+	order_index: 6
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["3365AF8ACD0C3DDB"]
+			description: ["The pool you ringed with flowers is shimmering. Step in and wake in the Twilight Forest, the spirits' own realm, under its endless dusk."]
+			icon: "twilightforest:twilight_oak_sapling"
+			id: "261C2312B292845A"
+			rewards: [
+				{
+					count: 16
+					id: "421C94AACEF44DD5"
+					item: "minecraft:torch"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "4462855DC3EAFF1F"
+					item: "minecraft:bread"
+					type: "item"
+				}
+				{
+					id: "23BF5273E2DE7033"
+					item: "twilightforest:twilight_oak_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 60"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "250F66D2983DDEED"
+					silent: true
+					title: "+60 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "twilightforest:twilight_forest"
+					id: "02807BFCA94275BC"
+					title: "Step through the shimmering pool into the Twilight Forest"
+					type: "dimension"
+				}
+			]
+			title: "Through the Pool"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["261C2312B292845A"]
+			description: ["The dusk never lifts, and a camp needs light. Walk into a Firefly Forest and catch fireflies and cicadas in jars to light your first camp."]
+			icon: "twilightforest:firefly_jar"
+			id: "72A6CBFE27B7F327"
+			rewards: [
+				{
+					count: 2
+					id: "7BFBD2484840347E"
+					item: "twilightforest:firefly_jar"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 150"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "47F49BB94676D76A"
+					silent: true
+					title: "+150 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "twilightforest:firefly_forest"
+					id: "7459F18C6C402E4E"
+					title: "Walk into a Firefly Forest"
+					type: "biome"
+				}
+				{
+					count: 2L
+					id: "55492186ADF8F8CC"
+					item: "twilightforest:firefly_jar"
+					title: "Catch fireflies in jars to light your camp"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "49BF3E3160C19B8E"
+					item: "twilightforest:cicada_jar"
+					title: "Catch cicadas in jars to light your camp"
+					type: "item"
+				}
+			]
+			title: "Lanterns of the Dusk"
+			x: 1.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["261C2312B292845A"]
+			description: ["Forest ravens take flight at the slightest noise. Sneak up and take a raven feather, the key ingredient of the realm's maps."]
+			icon: "twilightforest:raven_feather"
+			id: "50C04F24FA169681"
+			rewards: [
+				{
+					count: 16
+					id: "63DFB2EFC28C8129"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 150"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "27A59E8DCFE32174"
+					silent: true
+					title: "+150 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "twilightforest:forest"
+					id: "27B2DA4A46E575E8"
+					title: "Find the quiet forest where ravens roost"
+					type: "biome"
+				}
+				{
+					count: 2L
+					id: "3CBF8D4E2C3C000B"
+					item: "twilightforest:raven_feather"
+					title: "Take raven feathers without startling the flock"
+					type: "item"
+				}
+			]
+			title: "The Wary Raven"
+			x: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"50C04F24FA169681"
+				"72A6CBFE27B7F327"
+			]
+			description: ["The forest hides its own roads. Bind a raven feather, torchberries and glowstone into a Magic Map Focus, then a Magic Map that charts biomes and marks every landmark around the portal."]
+			icon: "twilightforest:magic_map"
+			id: "3F0AF89D5FF4173A"
+			rewards: [
+				{
+					id: "68146194B3F0BEB1"
+					item: "twilightforest:magic_map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 180"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "09C839F190759062"
+					silent: true
+					title: "+180 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "5ACBAAC377F6A271"
+					item: "twilightforest:torchberries"
+					title: "Pick torchberries for the focus"
+					type: "item"
+				}
+				{
+					id: "7282CE1E9C974518"
+					item: "twilightforest:magic_map_focus"
+					only_from_crafting: true
+					title: "Bind a Magic Map Focus"
+					type: "item"
+				}
+				{
+					id: "35329F10C3B6679B"
+					item: "twilightforest:magic_map"
+					only_from_crafting: true
+					title: "Craft a Magic Map that draws itself"
+					type: "item"
+				}
+			]
+			title: "A Map That Draws Itself"
+			x: 3.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3F0AF89D5FF4173A"]
+			description: ["The map shows which lands are still veiled by curses. Set foot in the Enchanted Forest, the Mushroom Forest, the Spooky Forest and the Oak Savannah to chart them."]
+			icon: "twilightforest:twilight_oak_sapling"
+			id: "0920B7316B49CF99"
+			rewards: [
+				{
+					id: "7FCB9F8788CD4837"
+					item: "twilightforest:charm_of_life_1"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 200"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "7495A82D12899415"
+					silent: true
+					title: "+200 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "twilightforest:enchanted_forest"
+					id: "684E082BBA444558"
+					title: "Chart the Enchanted Forest"
+					type: "biome"
+				}
+				{
+					biome: "twilightforest:mushroom_forest"
+					id: "6B71AF26F9D328DE"
+					title: "Chart the Mushroom Forest"
+					type: "biome"
+				}
+				{
+					biome: "twilightforest:spooky_forest"
+					id: "018C500BE4903D3D"
+					title: "Chart the Spooky Forest"
+					type: "biome"
+				}
+				{
+					biome: "twilightforest:oak_savannah"
+					id: "5317EEA383F2F732"
+					title: "Chart the Oak Savannah"
+					type: "biome"
+				}
+			]
+			title: "Atlas of the Twilight"
+			x: 4.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3F0AF89D5FF4173A"]
+			description: ["A grassy mound hides a cavern full of ores, spider spawners and redcaps. Break in, raid its chests and come out with steeleaf."]
+			icon: "twilightforest:steeleaf_ingot"
+			id: "466B2490C10E8087"
+			rewards: [
+				{
+					count: 2
+					id: "5E4BAA02FBA18B5D"
+					item: "twilightforest:steeleaf_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 200"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "0B13F7ADD177D5D2"
+					silent: true
+					title: "+200 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "06EA25420C50CCA5"
+					structure: "#fotf:groups/hollow_hills"
+					title: "Break into a hollow hill"
+					type: "structure"
+				}
+				{
+					count: 2L
+					id: "5E77B199687E4C11"
+					item: "twilightforest:steeleaf_ingot"
+					title: "Raid the hill's chests for steeleaf"
+					type: "item"
+				}
+			]
+			title: "Inside the Hollow Hill"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["466B2490C10E8087"]
+			description: ["Steeleaf is the realm's first native metal, and gear that grows enchantments of its own. Forge a steeleaf pickaxe or chestplate."]
+			icon: "twilightforest:steeleaf_pickaxe"
+			id: "6A50BAAC87EA4C60"
+			rewards: [
+				{
+					count: 2
+					id: "6F6230AD0934A74E"
+					item: "twilightforest:steeleaf_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 220"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "59C76BD06719E188"
+					silent: true
+					title: "+220 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "62015424A46CFA0D"
+					item: "twilightforest:steeleaf_pickaxe"
+					only_from_crafting: true
+					title: "Forge steeleaf gear"
+					type: "item"
+				}
+			]
+			title: "Leaf-Steel"
+			x: 6.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3F0AF89D5FF4173A"]
+			description: ["The magic map shows a walled courtyard of nagastone. Find it and scout its broken pillars before the guardian wakes."]
+			icon: "twilightforest:etched_nagastone"
+			id: "4FE143F2F7B62347"
+			rewards: [
+				{
+					count: 8
+					id: "3FFE48C30D3C1DD5"
+					item: "minecraft:cooked_beef"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 160"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "30C4763710891787"
+					silent: true
+					title: "+160 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2DB44FCB84CD7079"
+					structure: "twilightforest:naga_courtyard"
+					title: "Find the Naga Courtyard on the map"
+					type: "structure"
+				}
+				{
+					id: "4A6F76E445581E65"
+					observe_type: "entity_type"
+					timer: 20L
+					title: "Watch the Naga coil among its pillars"
+					to_observe: "twilightforest:naga"
+					type: "observation"
+				}
+			]
+			title: "The Serpent's Court"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["4FE143F2F7B62347"]
+			description: ["The Naga charges in loops through the courtyard. Dodge its rushes and strike its segments until it falls, lifting the first curse."]
+			icon: "mowziesmobs:naga_fang"
+			id: "3002526E88C933DB"
+			rewards: [
+				{
+					count: 2
+					id: "091118A9E9750B0A"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "6D2784A5AA064188"
+					item: "irons_spellbooks:greater_healing_potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 300"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "73B0F0D934F639A2"
+					silent: true
+					title: "+300 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "twilightforest:naga"
+					id: "7C665592672DA11E"
+					title: "Defeat the Naga to lift the first curse"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Coils of the Naga"
+			x: 6.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3002526E88C933DB"]
+			description: ["The Naga's scales make armour that shrugs off knockback. Turn them into a chestplate and leggings."]
+			icon: "twilightforest:naga_chestplate"
+			id: "0864CAD7F92785B9"
+			rewards: [
+				{
+					id: "54088BCAFF2AD75F"
+					item: "twilightforest:naga_banner_pattern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 250"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "18076DDAC0B640E1"
+					silent: true
+					title: "+250 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "70EA70D25818E0EF"
+					item: "twilightforest:naga_chestplate"
+					only_from_crafting: true
+					title: "Forge a Naga Scale chestplate"
+					type: "item"
+				}
+				{
+					id: "2B979E94ECDC2C72"
+					item: "twilightforest:naga_leggings"
+					only_from_crafting: true
+					title: "Forge Naga Scale leggings"
+					type: "item"
+				}
+			]
+			title: "Scales of the Serpent"
+			x: 7.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["3F0AF89D5FF4173A"]
+			description: ["In a ring of stone in the Quest Grove grazes the Questing Ram, who wants wool of all sixteen colours. Feed it one of each and see what it leaves behind."]
+			icon: "twilightforest:quest_ram_banner_pattern"
+			id: "11D56E042648F201"
+			rewards: [
+				{
+					id: "1DC97D7A9E57AF12"
+					item: "twilightforest:quest_ram_banner_pattern"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "6A0B505329F182B7"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 250"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "14CA4845DB06A0CE"
+					silent: true
+					title: "+250 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5912E82B8E7CD28C"
+					structure: "twilightforest:quest_grove"
+					title: "Find the Questing Ram in its grove"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "5D3595B2CEC559BD"
+					item: "minecraft:white_wool"
+					title: "Feed the ram white wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "59AA0D9DCC945ECD"
+					item: "minecraft:orange_wool"
+					title: "Feed the ram orange wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "0B4D64464D2E7117"
+					item: "minecraft:magenta_wool"
+					title: "Feed the ram magenta wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "0995D60668546615"
+					item: "minecraft:light_blue_wool"
+					title: "Feed the ram light blue wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "1CB59704581F8759"
+					item: "minecraft:yellow_wool"
+					title: "Feed the ram yellow wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "261F74742D88077F"
+					item: "minecraft:lime_wool"
+					title: "Feed the ram lime wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "5C9056201995044B"
+					item: "minecraft:pink_wool"
+					title: "Feed the ram pink wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "18C3FD6EAD7B0FB2"
+					item: "minecraft:gray_wool"
+					title: "Feed the ram gray wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "017DF2405D97C99D"
+					item: "minecraft:light_gray_wool"
+					title: "Feed the ram light gray wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "4C1434B8E7297062"
+					item: "minecraft:cyan_wool"
+					title: "Feed the ram cyan wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "266EE50AA9FB4ED0"
+					item: "minecraft:purple_wool"
+					title: "Feed the ram purple wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "7B475FE150284644"
+					item: "minecraft:blue_wool"
+					title: "Feed the ram blue wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "34D21F8D636014CE"
+					item: "minecraft:brown_wool"
+					title: "Feed the ram brown wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "6D179F1E1E9E2A11"
+					item: "minecraft:green_wool"
+					title: "Feed the ram green wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "32D6BBED7CA4945E"
+					item: "minecraft:red_wool"
+					title: "Feed the ram red wool"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "047481C5B79C0263"
+					item: "minecraft:black_wool"
+					title: "Feed the ram black wool"
+					type: "item"
+				}
+			]
+			title: "The Questing Ram"
+			x: 4.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["466B2490C10E8087"]
+			description: ["Ironwood grows from the forest floor. Dig liveroot, craft it with iron and gold into raw ironwood, and smelt ironwood ingots."]
+			icon: "twilightforest:ironwood_ingot"
+			id: "63916A373E995B62"
+			rewards: [
+				{
+					count: 4
+					id: "4DD6E1B07BC09A84"
+					item: "twilightforest:ironwood_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 220"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "7AA4EEEEB7BC34E2"
+					silent: true
+					title: "+220 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "4BBE6DC9FA7C91D3"
+					item: "twilightforest:liveroot"
+					title: "Dig liveroot from the forest floor"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "07066899AFB3C607"
+					item: "twilightforest:raw_ironwood"
+					only_from_crafting: true
+					title: "Craft raw ironwood with iron and gold"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "21C0964D1DA2D71A"
+					item: "twilightforest:ironwood_ingot"
+					title: "Smelt ironwood ingots"
+					type: "item"
+				}
+			]
+			title: "Living Iron"
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["63916A373E995B62"]
+			description: ["A Spartan smith's pattern takes ironwood well. Craft an ironwood weapon: a glaive, katana or halberd."]
+			icon: "spartantwilight:ironwood_glaive"
+			id: "607775754EC3BA55"
+			rewards: [
+				{
+					count: 4
+					id: "397ACA385FB58364"
+					item: "twilightforest:ironwood_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 260"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "1DE31E498868AC7B"
+					silent: true
+					title: "+260 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "64F7252E4D6B4AFD"
+					item: "spartantwilight:ironwood_glaive"
+					only_from_crafting: true
+					title: "Forge an ironwood glaive"
+					type: "item"
+				}
+			]
+			title: "Ironwood Arsenal"
+			x: 7.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["0920B7316B49CF99"]
+			description: ["A giant mushroom tower rises in the Mushroom Forest. Find the way up through its caps and stems to the loot at the top."]
+			icon: "minecraft:red_mushroom_block"
+			id: "2450BA6C33B4AC45"
+			rewards: [
+				{
+					count: 4
+					id: "6CDE28BC3CFFFF72"
+					item: "twilightforest:torchberries"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 230"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "20099D5F37CD500D"
+					silent: true
+					title: "+230 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5C9574E9363CE217"
+					structure: "twilightforest:mushroom_tower"
+					title: "Find the giant mushroom tower"
+					type: "structure"
+				}
+				{
+					id: "5308A6C7DDC0D547"
+					item: "kubejs:quest_mushroom_tower_1"
+					title: "Climb the caps and stems to the loot at the top"
+					type: "item"
+				}
+			]
+			title: "The Glowing Spire"
+			x: 6.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["3002526E88C933DB"]
+			description: ["Hedge spiders lurk in the Hedge Maze's walls. Reach the chests at its centre and get back out within ten minutes, before the spiders swarm."]
+			icon: "minecraft:oak_leaves"
+			id: "3782A9007B2ADBC1"
+			rewards: [
+				{
+					id: "7DABBDFE1C3B0D78"
+					item: "twilightforest:crumble_horn"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 250"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "60865C7CD7702FD5"
+					silent: true
+					title: "+250 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0A8B03704AFA7954"
+					structure: "twilightforest:hedge_maze"
+					title: "Enter the Hedge Maze"
+					type: "structure"
+				}
+				{
+					id: "3D72BE7262131A6D"
+					stage: "fq.twilight.hedge_maze.timed1"
+					title: "Fight through the hedge spiders before the swarm closes in"
+					type: "gamestage"
+				}
+				{
+					id: "23F11F49CC1D9485"
+					item: "kubejs:quest_hedge_maze_2"
+					title: "Open the chests at the maze's centre"
+					type: "item"
+				}
+			]
+			title: "Thorns in the Hedge"
+			x: 7.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["3002526E88C933DB"]
+			description: ["With the Naga gone the Lich Tower opens. Climb its winding stairs and painting rooms, past skeleton druids and the tower's spawners."]
+			icon: "twilightforest:lich_banner_pattern"
+			id: "335737785A09E59F"
+			rewards: [
+				{
+					count: 4
+					id: "0EFAAB3A6274BFBD"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 250"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "779C87426675DA95"
+					silent: true
+					title: "+250 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7FD01FF17A96D566"
+					structure: "twilightforest:lich_tower"
+					title: "Find the Lich Tower"
+					type: "structure"
+				}
+				{
+					entity: "twilightforest:skeleton_druid"
+					id: "515DAD76FC02954F"
+					title: "Fight past the tower's skeleton druids"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "The Lich's Spire"
+			x: 7.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["335737785A09E59F"]
+			description: ["The Lich hides behind spinning shields and clones. Break the shields with ranged blows, ignore the copies, and end it at the tower's crown."]
+			icon: "twilightforest:lich_trophy"
+			id: "528B3E77711E941F"
+			rewards: [
+				{
+					id: "198BF402BC6B79F4"
+					item: "twilightforest:charm_of_keeping_1"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "153BC314D8BDA01D"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 350"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "50585776CF262590"
+					silent: true
+					title: "+350 Magic XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "twilightforest:lich"
+					id: "506424B61BEE6763"
+					title: "Defeat the Lich at the tower's crown"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Shields of the Lich"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["528B3E77711E941F"]
+			description: ["Among the Lich's treasures lie four sceptres. Claim one and use it in battle against the undead."]
+			icon: "twilightforest:lifedrain_scepter"
+			id: "0744B5BB2B4CB7DB"
+			rewards: [
+				{
+					count: 8
+					id: "727EE51699AA4027"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "26FEBDE765DCDDCC"
+					item: "minecraft:rotten_flesh"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 330"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "222808852C00CBA1"
+					silent: true
+					title: "+330 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "35A7DD3D95A99A0E"
+					item: "kubejs:quest_scepters_0"
+					title: "Claim a sceptre from the Lich's treasures"
+					type: "item"
+				}
+				{
+					entity: "minecraft:zombie"
+					id: "3A49549487AB23C7"
+					title: "Test the sceptre against the dead"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "The Lich's Sceptres"
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["528B3E77711E941F"]
+			description: ["The Lich's fall clears the fog over the Swamp, but mosquito swarms and hunger still haunt it. Cross it in search of the labyrinth."]
+			icon: "minecraft:vine"
+			id: "6819FD0DB48482D1"
+			rewards: [
+				{
+					count: 16
+					id: "0DD7622222CD3BDC"
+					item: "minecraft:cooked_beef"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 260"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "1ED7008939622AED"
+					silent: true
+					title: "+260 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "twilightforest:swamp"
+					id: "2098B45412A3B2D7"
+					title: "Cross the clearing swamp"
+					type: "biome"
+				}
+				{
+					id: "212EE76105873CEB"
+					stage: "fq.twilight.cursed_swamp.enc1"
+					title: "Beat off the swarm that haunts the swamp"
+					type: "gamestage"
+				}
+			]
+			title: "The Choking Swamp"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6819FD0DB48482D1"
+				"3F0AF89D5FF4173A"
+			]
+			description: ["The labyrinth lies underground. Upgrade your Magic Map Focus into a Maze Map Focus and craft a Maze Map that traces corridors below."]
+			icon: "twilightforest:maze_map"
+			id: "333F3C785352DCD5"
+			rewards: [
+				{
+					id: "6A4537560FA29609"
+					item: "twilightforest:maze_map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 280"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "18B6068DE855407C"
+					silent: true
+					title: "+280 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "02C98D4E88B69B17"
+					item: "twilightforest:maze_map_focus"
+					only_from_crafting: true
+					title: "Upgrade your focus to trace corridors"
+					type: "item"
+				}
+				{
+					id: "704314E4F769E45B"
+					item: "twilightforest:maze_map"
+					only_from_crafting: true
+					title: "Craft a Maze Map"
+					type: "item"
+				}
+			]
+			title: "Map of the Maze"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["333F3C785352DCD5"]
+			description: ["Below the swamp sprawls the Labyrinth, with maze slimes and trapped vaults. Map it and find the Mazebreaker Pickaxe or Ore Magnet in its vaults."]
+			icon: "twilightforest:mazebreaker_pickaxe"
+			id: "3E36F63D918A1B72"
+			rewards: [
+				{
+					id: "578727A8082EADEF"
+					item: "twilightforest:maze_map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 330"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "28E9D1FE51E2A521"
+					silent: true
+					title: "+330 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2E61CA50F55973E9"
+					structure: "twilightforest:labyrinth"
+					title: "Find the entrance to the labyrinth"
+					type: "structure"
+				}
+				{
+					entity: "twilightforest:maze_slime"
+					id: "323BCC8B4370998E"
+					title: "Clear the maze slimes from the halls"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "642F3982AE123B67"
+					item: "kubejs:quest_labyrinth_2"
+					title: "Open a trapped vault"
+					type: "item"
+				}
+			]
+			title: "Halls of the Labyrinth"
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3E36F63D918A1B72"]
+			description: ["Minotaurs pace the labyrinth halls. Bring down five and take a Minotaur axe from them."]
+			icon: "twilightforest:diamond_minotaur_axe"
+			id: "5D7F732841F32F31"
+			rewards: [
+				{
+					id: "4CB984D2BAB19E22"
+					item: "minecraft:shield"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 340"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "1EADE17E9D5F0DAB"
+					silent: true
+					title: "+340 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:minotaur"
+					id: "5D90A548921C7C6C"
+					title: "Bring down the labyrinth's minotaurs"
+					type: "kill"
+					value: 5L
+				}
+				{
+					id: "464A3B8C3751857D"
+					item: "kubejs:quest_minotaurs_1"
+					title: "Take a Minotaur Axe"
+					type: "item"
+				}
+			]
+			title: "Horns in the Dark"
+			x: 15.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["3E36F63D918A1B72"]
+			description: ["At the labyrinth's heart waits the Minoshroom, charging with its diamond axe. Bait its charge into walls and finish it."]
+			icon: "twilightforest:minoshroom_trophy"
+			id: "5E07EC07F8EBD70B"
+			rewards: [
+				{
+					id: "0DE05190728B33E9"
+					item: "twilightforest:diamond_minotaur_axe"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "13ECD5F4EEDEA51A"
+					item: "irons_spellbooks:greater_healing_potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 400"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "052642B1DBF8E75C"
+					silent: true
+					title: "+400 Attack XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "twilightforest:minoshroom"
+					id: "5961D7BE874CC60F"
+					title: "Defeat the Minoshroom at the labyrinth's heart"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Minoshroom"
+			x: 15.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["5E07EC07F8EBD70B"]
+			description: ["The Minoshroom's meef stroganoff is a Twilight classic. Taste it, then hunt raw meef from minotaurs and cook enough for your next trip."]
+			icon: "twilightforest:meef_stroganoff"
+			id: "5C21FEDAB8DCB7B6"
+			rewards: [
+				{
+					count: 4
+					id: "5BF949B19EE5B87A"
+					item: "twilightforest:meef_stroganoff"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 300"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "3F436DEBD6B4DD7E"
+					silent: true
+					title: "+300 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "4A2047325279EF79"
+					item: "twilightforest:meef_stroganoff"
+					title: "Cook meef stroganoff for the road"
+					type: "item"
+				}
+			]
+			title: "Meef Stroganoff"
+			x: 16.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["528B3E77711E941F"]
+			description: ["Old gear can be unmade. Build an Uncrafting Table and break down an old enchanted item into its parts."]
+			icon: "twilightforest:uncrafting_table"
+			id: "40D228147AE39E3C"
+			rewards: [
+				{
+					count: 8
+					id: "27F9808B08370125"
+					item: "minecraft:experience_bottle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 280"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "1456013631FE3333"
+					silent: true
+					title: "+280 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "294456F22B106A0C"
+					item: "twilightforest:uncrafting_table"
+					only_from_crafting: true
+					title: "Build an Uncrafting Table"
+					type: "item"
+				}
+				{
+					id: "2702C4ECF3EAC15C"
+					stage: "fq.twilight.uncrafting.use1"
+					title: "Break down an old enchanted item into its parts"
+					type: "gamestage"
+				}
+			]
+			title: "Unmaking Things"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"3002526E88C933DB"
+				"528B3E77711E941F"
+				"5E07EC07F8EBD70B"
+			]
+			description: ["The first part of the spirits' realm is free. Gather the Naga, Lich and Minoshroom trophies as proof."]
+			icon: "twilightforest:naga_trophy"
+			id: "5CE377C7E76FA26B"
+			rewards: [
+				{
+					id: "3E98A33F6CEC4C68"
+					item: {
+						Count: 1b
+						id: "minecraft:chest"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"The spirits' thanks.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Ironwood Supply Chest\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 350"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "55AB51908116D08A"
+					silent: true
+					title: "+350 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0A2C0A75D0251E41"
+					item: "twilightforest:naga_trophy"
+					title: "Gather the Naga's trophy"
+					type: "item"
+				}
+				{
+					id: "145C9CC884FBE3F1"
+					item: "twilightforest:lich_trophy"
+					title: "Gather the Lich's trophy"
+					type: "item"
+				}
+				{
+					id: "15A35204642AF948"
+					item: "twilightforest:minoshroom_trophy"
+					title: "Gather the Minoshroom's trophy"
+					type: "item"
+				}
+			]
+			title: "Three Trophies"
+			x: 16.5d
+			y: 0.75d
+		}
+	]
+	subtitle: ["The spirits' realm"]
+	title: "The Twilight Forest"
+}

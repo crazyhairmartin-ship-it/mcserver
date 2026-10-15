@@ -1,0 +1,1076 @@
+{
+  "title": "The Twilight Forest",
+  "subtitle": "The spirits' realm",
+  "icon": "twilightforest:twilight_oak_sapling",
+  "group": "realms",
+  "order": 0,
+  "quests": [
+    {
+      "id": "through_the_pool",
+      "title": "Through the Pool",
+      "after": [
+        "main_story:act1_finale"
+      ],
+      "text": [
+        "The pool you ringed with flowers is shimmering. Step in and wake in the Twilight Forest, the spirits' own realm, under its endless dusk."
+      ],
+      "tasks": [
+        {
+          "dimension": "twilightforest:twilight_forest",
+          "title": "Step through the shimmering pool into the Twilight Forest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:torch",
+          "count": 16
+        },
+        {
+          "item": "minecraft:bread",
+          "count": 8
+        },
+        {
+          "item": "twilightforest:twilight_oak_sapling"
+        },
+        {
+          "skill": "agility",
+          "xp": 60
+        }
+      ],
+      "icon": "twilightforest:twilight_oak_sapling"
+    },
+    {
+      "id": "fireflies_and_cicadas",
+      "title": "Lanterns of the Dusk",
+      "after": [
+        "through_the_pool"
+      ],
+      "text": [
+        "The dusk never lifts, and a camp needs light. Walk into a Firefly Forest and catch fireflies and cicadas in jars to light your first camp."
+      ],
+      "tasks": [
+        {
+          "biome": "twilightforest:firefly_forest",
+          "title": "Walk into a Firefly Forest"
+        },
+        {
+          "item": "twilightforest:firefly_jar",
+          "count": 2,
+          "title": "Catch fireflies in jars to light your camp"
+        },
+        {
+          "item": "twilightforest:cicada_jar",
+          "count": 2,
+          "title": "Catch cicadas in jars to light your camp"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:firefly_jar",
+          "count": 2
+        },
+        {
+          "skill": "forage",
+          "xp": 150
+        }
+      ],
+      "icon": "twilightforest:firefly_jar"
+    },
+    {
+      "id": "raven_feather",
+      "title": "The Wary Raven",
+      "after": [
+        "through_the_pool"
+      ],
+      "text": [
+        "Forest ravens take flight at the slightest noise. Sneak up and take a raven feather, the key ingredient of the realm's maps."
+      ],
+      "tasks": [
+        {
+          "biome": "twilightforest:forest",
+          "title": "Find the quiet forest where ravens roost"
+        },
+        {
+          "item": "twilightforest:raven_feather",
+          "count": 2,
+          "title": "Take raven feathers without startling the flock"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:arrow",
+          "count": 16
+        },
+        {
+          "skill": "range",
+          "xp": 150
+        }
+      ],
+      "icon": "twilightforest:raven_feather"
+    },
+    {
+      "id": "magic_map",
+      "title": "A Map That Draws Itself",
+      "after": [
+        "raven_feather",
+        "fireflies_and_cicadas"
+      ],
+      "text": [
+        "The forest hides its own roads. Bind a raven feather, torchberries and glowstone into a Magic Map Focus, then a Magic Map that charts biomes and marks every landmark around the portal."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:torchberries",
+          "count": 2,
+          "title": "Pick torchberries for the focus"
+        },
+        {
+          "item": "twilightforest:magic_map_focus",
+          "crafted": true,
+          "title": "Bind a Magic Map Focus"
+        },
+        {
+          "item": "twilightforest:magic_map",
+          "crafted": true,
+          "title": "Craft a Magic Map that draws itself"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:magic_map"
+        },
+        {
+          "skill": "craft",
+          "xp": 180
+        }
+      ],
+      "icon": "twilightforest:magic_map"
+    },
+    {
+      "id": "twilight_biomes",
+      "title": "Atlas of the Twilight",
+      "after": [
+        "magic_map"
+      ],
+      "text": [
+        "The map shows which lands are still veiled by curses. Set foot in the Enchanted Forest, the Mushroom Forest, the Spooky Forest and the Oak Savannah to chart them."
+      ],
+      "tasks": [
+        {
+          "biome": "twilightforest:enchanted_forest",
+          "title": "Chart the Enchanted Forest"
+        },
+        {
+          "biome": "twilightforest:mushroom_forest",
+          "title": "Chart the Mushroom Forest"
+        },
+        {
+          "biome": "twilightforest:spooky_forest",
+          "title": "Chart the Spooky Forest"
+        },
+        {
+          "biome": "twilightforest:oak_savannah",
+          "title": "Chart the Oak Savannah"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:charm_of_life_1"
+        },
+        {
+          "skill": "agility",
+          "xp": 200
+        }
+      ],
+      "icon": "twilightforest:twilight_oak_sapling"
+    },
+    {
+      "id": "hollow_hill",
+      "title": "Inside the Hollow Hill",
+      "after": [
+        "magic_map"
+      ],
+      "text": [
+        "A grassy mound hides a cavern full of ores, spider spawners and redcaps. Break in, raid its chests and come out with steeleaf."
+      ],
+      "tasks": [
+        {
+          "structure": "#hollow_hills",
+          "title": "Break into a hollow hill"
+        },
+        {
+          "item": "twilightforest:steeleaf_ingot",
+          "count": 2,
+          "title": "Raid the hill's chests for steeleaf"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:steeleaf_ingot",
+          "count": 2
+        },
+        {
+          "skill": "mining",
+          "xp": 200
+        }
+      ],
+      "icon": "twilightforest:steeleaf_ingot"
+    },
+    {
+      "id": "steeleaf_kit",
+      "title": "Leaf-Steel",
+      "after": [
+        "hollow_hill"
+      ],
+      "text": [
+        "Steeleaf is the realm's first native metal, and gear that grows enchantments of its own. Forge a steeleaf pickaxe or chestplate."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:steeleaf_pickaxe",
+          "crafted": true,
+          "title": "Forge steeleaf gear"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:steeleaf_ingot",
+          "count": 2
+        },
+        {
+          "skill": "craft",
+          "xp": 220
+        }
+      ],
+      "icon": "twilightforest:steeleaf_pickaxe"
+    },
+    {
+      "id": "naga_courtyard",
+      "title": "The Serpent's Court",
+      "after": [
+        "magic_map"
+      ],
+      "text": [
+        "The magic map shows a walled courtyard of nagastone. Find it and scout its broken pillars before the guardian wakes."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:naga_courtyard",
+          "title": "Find the Naga Courtyard on the map"
+        },
+        {
+          "observe": "twilightforest:naga",
+          "ticks": 20,
+          "title": "Watch the Naga coil among its pillars"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cooked_beef",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 160
+        }
+      ],
+      "icon": "twilightforest:etched_nagastone"
+    },
+    {
+      "id": "naga",
+      "title": "Coils of the Naga",
+      "after": [
+        "naga_courtyard"
+      ],
+      "text": [
+        "The Naga charges in loops through the courtyard. Dodge its rushes and strike its segments until it falls, lifting the first curse."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:naga",
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:naga_courtyard"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Naga"
+          },
+          "title": "Defeat the Naga to lift the first curse"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_apple",
+          "count": 2
+        },
+        {
+          "item": "irons_spellbooks:greater_healing_potion",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 300
+        }
+      ],
+      "icon": "mowziesmobs:naga_fang",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "naga_armor",
+      "title": "Scales of the Serpent",
+      "after": [
+        "naga"
+      ],
+      "text": [
+        "The Naga's scales make armour that shrugs off knockback. Turn them into a chestplate and leggings."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:naga_chestplate",
+          "crafted": true,
+          "title": "Forge a Naga Scale chestplate"
+        },
+        {
+          "item": "twilightforest:naga_leggings",
+          "crafted": true,
+          "title": "Forge Naga Scale leggings"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:naga_banner_pattern"
+        },
+        {
+          "skill": "defense",
+          "xp": 250
+        }
+      ],
+      "icon": "twilightforest:naga_chestplate"
+    },
+    {
+      "id": "quest_grove",
+      "title": "The Questing Ram",
+      "after": [
+        "magic_map"
+      ],
+      "text": [
+        "In a ring of stone in the Quest Grove grazes the Questing Ram, who wants wool of all sixteen colours. Feed it one of each and see what it leaves behind."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:quest_grove",
+          "title": "Find the Questing Ram in its grove"
+        },
+        {
+          "item": "minecraft:white_wool",
+          "consume": true,
+          "title": "Feed the ram white wool"
+        },
+        {
+          "item": "minecraft:orange_wool",
+          "consume": true,
+          "title": "Feed the ram orange wool"
+        },
+        {
+          "item": "minecraft:magenta_wool",
+          "consume": true,
+          "title": "Feed the ram magenta wool"
+        },
+        {
+          "item": "minecraft:light_blue_wool",
+          "consume": true,
+          "title": "Feed the ram light blue wool"
+        },
+        {
+          "item": "minecraft:yellow_wool",
+          "consume": true,
+          "title": "Feed the ram yellow wool"
+        },
+        {
+          "item": "minecraft:lime_wool",
+          "consume": true,
+          "title": "Feed the ram lime wool"
+        },
+        {
+          "item": "minecraft:pink_wool",
+          "consume": true,
+          "title": "Feed the ram pink wool"
+        },
+        {
+          "item": "minecraft:gray_wool",
+          "consume": true,
+          "title": "Feed the ram gray wool"
+        },
+        {
+          "item": "minecraft:light_gray_wool",
+          "consume": true,
+          "title": "Feed the ram light gray wool"
+        },
+        {
+          "item": "minecraft:cyan_wool",
+          "consume": true,
+          "title": "Feed the ram cyan wool"
+        },
+        {
+          "item": "minecraft:purple_wool",
+          "consume": true,
+          "title": "Feed the ram purple wool"
+        },
+        {
+          "item": "minecraft:blue_wool",
+          "consume": true,
+          "title": "Feed the ram blue wool"
+        },
+        {
+          "item": "minecraft:brown_wool",
+          "consume": true,
+          "title": "Feed the ram brown wool"
+        },
+        {
+          "item": "minecraft:green_wool",
+          "consume": true,
+          "title": "Feed the ram green wool"
+        },
+        {
+          "item": "minecraft:red_wool",
+          "consume": true,
+          "title": "Feed the ram red wool"
+        },
+        {
+          "item": "minecraft:black_wool",
+          "consume": true,
+          "title": "Feed the ram black wool"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:quest_ram_banner_pattern"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 8
+        },
+        {
+          "skill": "farm",
+          "xp": 250
+        }
+      ],
+      "icon": "twilightforest:quest_ram_banner_pattern"
+    },
+    {
+      "id": "ironwood",
+      "title": "Living Iron",
+      "after": [
+        "hollow_hill"
+      ],
+      "text": [
+        "Ironwood grows from the forest floor. Dig liveroot, craft it with iron and gold into raw ironwood, and smelt ironwood ingots."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:liveroot",
+          "count": 4,
+          "title": "Dig liveroot from the forest floor"
+        },
+        {
+          "item": "twilightforest:raw_ironwood",
+          "count": 2,
+          "crafted": true,
+          "title": "Craft raw ironwood with iron and gold"
+        },
+        {
+          "item": "twilightforest:ironwood_ingot",
+          "count": 2,
+          "title": "Smelt ironwood ingots"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:ironwood_ingot",
+          "count": 4
+        },
+        {
+          "skill": "mining",
+          "xp": 220
+        }
+      ],
+      "icon": "twilightforest:ironwood_ingot"
+    },
+    {
+      "id": "spartan_ironwood",
+      "title": "Ironwood Arsenal",
+      "after": [
+        "ironwood"
+      ],
+      "text": [
+        "A Spartan smith's pattern takes ironwood well. Craft an ironwood weapon: a glaive, katana or halberd."
+      ],
+      "tasks": [
+        {
+          "item": "spartantwilight:ironwood_glaive",
+          "crafted": true,
+          "title": "Forge an ironwood glaive"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:ironwood_ingot",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 260
+        }
+      ],
+      "icon": "spartantwilight:ironwood_glaive"
+    },
+    {
+      "id": "mushroom_tower",
+      "title": "The Glowing Spire",
+      "after": [
+        "twilight_biomes"
+      ],
+      "text": [
+        "A giant mushroom tower rises in the Mushroom Forest. Find the way up through its caps and stems to the loot at the top."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:mushroom_tower",
+          "title": "Find the giant mushroom tower"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "twilightforest:mushroom_tower"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Tower's Hoard",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A glow of loot at the tower's top."
+          },
+          "title": "Climb the caps and stems to the loot at the top"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:torchberries",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 230
+        }
+      ],
+      "icon": "minecraft:red_mushroom_block"
+    },
+    {
+      "id": "hedge_maze",
+      "title": "Thorns in the Hedge",
+      "after": [
+        "naga"
+      ],
+      "text": [
+        "Hedge spiders lurk in the Hedge Maze's walls. Reach the chests at its centre and get back out within ten minutes, before the spiders swarm."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:hedge_maze",
+          "title": "Enter the Hedge Maze"
+        },
+        {
+          "timed": {
+            "seconds": 600,
+            "goal": {
+              "kill": "twilightforest:hedge_spider",
+              "count": 6
+            },
+            "waves": [
+              {
+                "entity": "twilightforest:hedge_spider",
+                "count": 3,
+                "every": 40
+              }
+            ],
+            "lines": [
+              "The walls are crawling. Reach the centre quickly."
+            ],
+            "start": "Run the maze"
+          },
+          "title": "Fight through the hedge spiders before the swarm closes in"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "twilightforest:hedge_maze"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Centre Chests' Prize",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A chest at the maze's heart."
+          },
+          "title": "Open the chests at the maze's centre"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:crumble_horn"
+        },
+        {
+          "skill": "agility",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:oak_leaves"
+    },
+    {
+      "id": "lich_tower",
+      "title": "The Lich's Spire",
+      "after": [
+        "naga"
+      ],
+      "text": [
+        "With the Naga gone the Lich Tower opens. Climb its winding stairs and painting rooms, past skeleton druids and the tower's spawners."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:lich_tower",
+          "title": "Find the Lich Tower"
+        },
+        {
+          "kill": "twilightforest:skeleton_druid",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:lich_tower"
+            },
+            "wave": 4,
+            "name": "Tower Druids"
+          },
+          "title": "Fight past the tower's skeleton druids"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 250
+        }
+      ],
+      "icon": "twilightforest:lich_banner_pattern"
+    },
+    {
+      "id": "lich",
+      "title": "Shields of the Lich",
+      "after": [
+        "lich_tower"
+      ],
+      "text": [
+        "The Lich hides behind spinning shields and clones. Break the shields with ranged blows, ignore the copies, and end it at the tower's crown."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:lich",
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:lich_tower"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Lich"
+          },
+          "title": "Defeat the Lich at the tower's crown"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:charm_of_keeping_1"
+        },
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 8
+        },
+        {
+          "skill": "magic",
+          "xp": 350
+        }
+      ],
+      "icon": "twilightforest:lich_trophy",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "scepters",
+      "title": "The Lich's Sceptres",
+      "after": [
+        "lich"
+      ],
+      "text": [
+        "Among the Lich's treasures lie four sceptres. Claim one and use it in battle against the undead."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "twilightforest:lich_tower"
+            },
+            "count": 1,
+            "item": {
+              "name": "a Lich's Sceptre",
+              "texture": "minecraft:item/stick"
+            },
+            "found": "A sceptre in the Lich's treasure."
+          },
+          "title": "Claim a sceptre from the Lich's treasures"
+        },
+        {
+          "kill": "minecraft:zombie",
+          "count": 6,
+          "title": "Test the sceptre against the dead"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 8
+        },
+        {
+          "item": "minecraft:rotten_flesh",
+          "count": 16
+        },
+        {
+          "skill": "magic",
+          "xp": 330
+        }
+      ],
+      "icon": "twilightforest:lifedrain_scepter"
+    },
+    {
+      "id": "cursed_swamp",
+      "title": "The Choking Swamp",
+      "after": [
+        "lich"
+      ],
+      "text": [
+        "The Lich's fall clears the fog over the Swamp, but mosquito swarms and hunger still haunt it. Cross it in search of the labyrinth."
+      ],
+      "tasks": [
+        {
+          "biome": "twilightforest:swamp",
+          "title": "Cross the clearing swamp"
+        },
+        {
+          "encounter": {
+            "entity": "twilightforest:swarm_spider",
+            "name": "Swamp Swarm",
+            "where": {
+              "biomes": [
+                "twilightforest:swamp"
+              ]
+            },
+            "then": "kill",
+            "lines": [
+              "*A buzzing cloud descends.*"
+            ]
+          },
+          "title": "Beat off the swarm that haunts the swamp"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:cooked_beef",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 260
+        }
+      ],
+      "icon": "minecraft:vine"
+    },
+    {
+      "id": "maze_map",
+      "title": "Map of the Maze",
+      "after": [
+        "cursed_swamp",
+        "magic_map"
+      ],
+      "text": [
+        "The labyrinth lies underground. Upgrade your Magic Map Focus into a Maze Map Focus and craft a Maze Map that traces corridors below."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:maze_map_focus",
+          "crafted": true,
+          "title": "Upgrade your focus to trace corridors"
+        },
+        {
+          "item": "twilightforest:maze_map",
+          "crafted": true,
+          "title": "Craft a Maze Map"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:maze_map"
+        },
+        {
+          "skill": "craft",
+          "xp": 280
+        }
+      ],
+      "icon": "twilightforest:maze_map"
+    },
+    {
+      "id": "labyrinth",
+      "title": "Halls of the Labyrinth",
+      "after": [
+        "maze_map"
+      ],
+      "text": [
+        "Below the swamp sprawls the Labyrinth, with maze slimes and trapped vaults. Map it and find the Mazebreaker Pickaxe or Ore Magnet in its vaults."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:labyrinth",
+          "title": "Find the entrance to the labyrinth"
+        },
+        {
+          "kill": "twilightforest:maze_slime",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:labyrinth"
+            },
+            "wave": 4,
+            "name": "Maze Slimes"
+          },
+          "title": "Clear the maze slimes from the halls"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "twilightforest:labyrinth"
+            },
+            "count": 1,
+            "item": {
+              "name": "a Vault Treasure",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A trapped vault gives up its prize."
+          },
+          "title": "Open a trapped vault"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:maze_map"
+        },
+        {
+          "skill": "mining",
+          "xp": 330
+        }
+      ],
+      "icon": "twilightforest:mazebreaker_pickaxe"
+    },
+    {
+      "id": "minotaurs",
+      "title": "Horns in the Dark",
+      "after": [
+        "labyrinth"
+      ],
+      "text": [
+        "Minotaurs pace the labyrinth halls. Bring down five and take a Minotaur axe from them."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:minotaur",
+          "count": 5,
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:labyrinth"
+            },
+            "wave": 4,
+            "name": "Labyrinth Minotaurs"
+          },
+          "title": "Bring down the labyrinth's minotaurs"
+        },
+        {
+          "drop": {
+            "from": [
+              "twilightforest:minotaur"
+            ],
+            "chance": 0.5,
+            "item": {
+              "name": "a Minotaur Axe",
+              "texture": "minecraft:item/iron_axe",
+              "tooltip": "Taken from a minotaur"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take a Minotaur Axe"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:shield"
+        },
+        {
+          "skill": "attack",
+          "xp": 340
+        }
+      ],
+      "icon": "twilightforest:diamond_minotaur_axe"
+    },
+    {
+      "id": "minoshroom",
+      "title": "The Minoshroom",
+      "after": [
+        "labyrinth"
+      ],
+      "text": [
+        "At the labyrinth's heart waits the Minoshroom, charging with its diamond axe. Bait its charge into walls and finish it."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:minoshroom",
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:labyrinth"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Minoshroom"
+          },
+          "title": "Defeat the Minoshroom at the labyrinth's heart"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:diamond_minotaur_axe"
+        },
+        {
+          "item": "irons_spellbooks:greater_healing_potion",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 400
+        }
+      ],
+      "icon": "twilightforest:minoshroom_trophy",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "meef",
+      "title": "Meef Stroganoff",
+      "after": [
+        "minoshroom"
+      ],
+      "text": [
+        "The Minoshroom's meef stroganoff is a Twilight classic. Taste it, then hunt raw meef from minotaurs and cook enough for your next trip."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:meef_stroganoff",
+          "count": 4,
+          "title": "Cook meef stroganoff for the road"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:meef_stroganoff",
+          "count": 4
+        },
+        {
+          "skill": "cook",
+          "xp": 300
+        }
+      ],
+      "icon": "twilightforest:meef_stroganoff"
+    },
+    {
+      "id": "uncrafting",
+      "title": "Unmaking Things",
+      "after": [
+        "lich"
+      ],
+      "text": [
+        "Old gear can be unmade. Build an Uncrafting Table and break down an old enchanted item into its parts."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:uncrafting_table",
+          "crafted": true,
+          "title": "Build an Uncrafting Table"
+        },
+        {
+          "use": "twilightforest:uncrafting_table",
+          "count": 1,
+          "title": "Break down an old enchanted item into its parts"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:experience_bottle",
+          "count": 8
+        },
+        {
+          "skill": "craft",
+          "xp": 280
+        }
+      ],
+      "icon": "twilightforest:uncrafting_table"
+    },
+    {
+      "id": "trophies_one",
+      "title": "Three Trophies",
+      "after": [
+        "naga",
+        "lich",
+        "minoshroom"
+      ],
+      "text": [
+        "The first part of the spirits' realm is free. Gather the Naga, Lich and Minoshroom trophies as proof."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:naga_trophy",
+          "title": "Gather the Naga's trophy"
+        },
+        {
+          "item": "twilightforest:lich_trophy",
+          "title": "Gather the Lich's trophy"
+        },
+        {
+          "item": "twilightforest:minoshroom_trophy",
+          "title": "Gather the Minoshroom's trophy"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:chest",
+          "name": "Ironwood Supply Chest",
+          "lore": [
+            "The spirits' thanks."
+          ]
+        },
+        {
+          "skill": "agility",
+          "xp": 350
+        }
+      ],
+      "icon": "twilightforest:naga_trophy"
+    }
+  ]
+}

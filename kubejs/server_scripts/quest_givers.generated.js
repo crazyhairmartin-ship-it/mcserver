@@ -4183,6 +4183,326 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "twilight:naga",
+    "stage": "fq.twilight.naga.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:naga",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:naga_courtyard"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Naga",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "7C665592672DA11E",
+    "requires": [],
+    "quest_id": "3002526E88C933DB",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:mushroom_tower",
+    "stage": "fq.twilight.mushroom_tower.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:mushroom_tower"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_mushroom_tower_1",
+    "found": "A glow of loot at the tower's top.",
+    "requires": [],
+    "quest_id": "2450BA6C33B4AC45",
+    "prev_tasks": [
+      "5C9574E9363CE217"
+    ]
+  },
+  {
+    "quest": "twilight:hedge_maze",
+    "stage": "fq.twilight.hedge_maze.timed1",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "kill",
+      "entity": "twilightforest:hedge_spider",
+      "count": 6
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "twilightforest:hedge_spider",
+        "count": 3,
+        "every": 40
+      }
+    ],
+    "lines": [
+      "The walls are crawling. Reach the centre quickly."
+    ],
+    "start": "Run the maze",
+    "requires": [],
+    "quest_id": "3782A9007B2ADBC1",
+    "prev_tasks": [
+      "0A8B03704AFA7954"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "twilight:hedge_maze",
+    "stage": "fq.twilight.hedge_maze.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:hedge_maze"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_hedge_maze_2",
+    "found": "A chest at the maze's heart.",
+    "requires": [],
+    "quest_id": "3782A9007B2ADBC1",
+    "prev_tasks": [
+      "0A8B03704AFA7954",
+      "3D72BE7262131A6D"
+    ]
+  },
+  {
+    "quest": "twilight:lich_tower",
+    "stage": "fq.twilight.lich_tower.spawn1",
+    "type": "spawn",
+    "entity": "twilightforest:skeleton_druid",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:lich_tower"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Tower Druids",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "515DAD76FC02954F",
+    "requires": [],
+    "quest_id": "335737785A09E59F",
+    "prev_tasks": [
+      "7FD01FF17A96D566"
+    ]
+  },
+  {
+    "quest": "twilight:lich",
+    "stage": "fq.twilight.lich.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:lich",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:lich_tower"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Lich",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "506424B61BEE6763",
+    "requires": [],
+    "quest_id": "528B3E77711E941F",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:scepters",
+    "stage": "fq.twilight.scepters.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:lich_tower"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_scepters_0",
+    "found": "A sceptre in the Lich's treasure.",
+    "requires": [],
+    "quest_id": "0744B5BB2B4CB7DB",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:cursed_swamp",
+    "stage": "fq.twilight.cursed_swamp.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*A buzzing cloud descends.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "6819FD0DB48482D1",
+    "prev_tasks": [
+      "2098B45412A3B2D7"
+    ],
+    "name": "Swamp Swarm",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": null,
+    "glow": false,
+    "where": {
+      "biomes": [
+        "twilightforest:swamp"
+      ]
+    },
+    "entity": "twilightforest:swarm_spider",
+    "profession": ""
+  },
+  {
+    "quest": "twilight:labyrinth",
+    "stage": "fq.twilight.labyrinth.spawn1",
+    "type": "spawn",
+    "entity": "twilightforest:maze_slime",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:labyrinth"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Maze Slimes",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "323BCC8B4370998E",
+    "requires": [],
+    "quest_id": "3E36F63D918A1B72",
+    "prev_tasks": [
+      "2E61CA50F55973E9"
+    ]
+  },
+  {
+    "quest": "twilight:labyrinth",
+    "stage": "fq.twilight.labyrinth.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:labyrinth"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_labyrinth_2",
+    "found": "A trapped vault gives up its prize.",
+    "requires": [],
+    "quest_id": "3E36F63D918A1B72",
+    "prev_tasks": [
+      "2E61CA50F55973E9",
+      "323BCC8B4370998E"
+    ]
+  },
+  {
+    "quest": "twilight:minotaurs",
+    "stage": "fq.twilight.minotaurs.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:minotaur",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:labyrinth"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Labyrinth Minotaurs",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5D90A548921C7C6C",
+    "requires": [],
+    "quest_id": "5D7F732841F32F31",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:minotaurs",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "twilightforest:minotaur"
+    ],
+    "chance": 0.5,
+    "item": "kubejs:quest_minotaurs_1",
+    "requires": [],
+    "quest_id": "5D7F732841F32F31",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "twilight:minoshroom",
+    "stage": "fq.twilight.minoshroom.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:minoshroom",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:labyrinth"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Minoshroom",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "5961D7BE874CC60F",
+    "requires": [],
+    "quest_id": "5E07EC07F8EBD70B",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:uncrafting",
+    "stage": "fq.twilight.uncrafting.use1",
+    "type": "use",
+    "keys": [
+      "twilightforest:uncrafting_table"
+    ],
+    "count": 1,
+    "at": null,
+    "within": 0,
+    "holding": "",
+    "consume": false,
+    "requires": [],
+    "quest_id": "40D228147AE39E3C",
+    "prev_tasks": [
+      "294456F22B106A0C"
+    ]
+  },
+  {
     "quest": "discovery_sea:bones_of_the_deep",
     "stage": "fq.discovery_sea.bones_of_the_deep.be0",
     "type": "be",
