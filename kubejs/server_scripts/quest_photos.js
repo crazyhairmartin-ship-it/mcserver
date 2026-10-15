@@ -44,6 +44,6 @@ PlayerEvents.inventoryChanged(event => {
   npcEntries('photo').forEach(ph => {
     if (player.tags.contains(ph.stage) || !questOpen(player, ph) || !photoSubjectFits(player, ph.target)) return
     questAddStage(player, ph.stage)
-    player.tell(Text.yellow('That\'s the shot. Quest updated.'))
+    player.setStatusMessage(Text.yellow('That\'s the shot. Quest updated.'))
   })
 })

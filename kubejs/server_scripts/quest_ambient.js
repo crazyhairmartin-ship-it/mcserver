@@ -1,18 +1,17 @@
 // Quest givers you can spot, and characters who speak up.
 // Markers: every 2 seconds, quest characters and villagers within 16 blocks that have something for you show a small
 // burst of particles above their heads, sent to you alone: green for a step of a quest you're on, gold for a new quest.
-// Chatter: walk within 5 blocks of a quest character and now and then they speak first: a hail when they have
-// something for you (pack.json "hail" lines, or a default), otherwise one of their idle lines. At most one line every
-// 45 seconds per player, and each character at most once every 5 minutes, so a busy village doesn't flood chat.
+// Call-outs: walk within 5 blocks of a quest character who has something for you and now and then they call out
+// (pack.json "hail" lines, or a default). Never idle chatter. At most one call-out every 10 minutes per player, and
+// each character at most once an hour, so chat stays quiet (Dylan and Fionah, 2026-10-15).
 
 let $AmbientAABB = Java.loadClass('net.minecraft.world.phys.AABB')
 const AMBIENT_MARK_RANGE = 16
 const AMBIENT_TALK_RANGE = 5
-const AMBIENT_TALK_GAP_MS = 45 * 1000
-const AMBIENT_CHARACTER_GAP_MS = 5 * 60 * 1000
+const AMBIENT_TALK_GAP_MS = 10 * 60 * 1000
+const AMBIENT_CHARACTER_GAP_MS = 60 * 60 * 1000
 const AMBIENT_TALK_CHANCE = 0.5
-const AMBIENT_HAILS = ['You there! Have you got a moment?', 'Oh, good, it\'s you. I was hoping you\'d come by.',
-  'A word, if you would?']
+const AMBIENT_HAILS = ['A word?', 'Got a moment?']
 
 // 'talk' (a step of a quest you're on), 'offer' (a new quest) or '' for this villager or character
 function ambientStatus(player, target) {
@@ -35,19 +34,12 @@ function ambientSpeak(player, target, status, now) {
   let id = questCharacterId(target)
   if (now - gaps.getLong(id) < AMBIENT_CHARACTER_GAP_MS || Math.random() > AMBIENT_TALK_CHANCE) return
   let info = (global.QUEST_CHARACTERS || {})[id] || {}
-  let line
-  if (status) {
-    let hails = info.hail && info.hail.length ? info.hail : AMBIENT_HAILS
-    line = hails[Math.floor(Math.random() * hails.length)]
-  } else {
-    let idle = info.idle || []
-    if (!idle.length) return
-    line = idle[Math.floor(Math.random() * idle.length)]
-  }
+  if (!status) return   // only when they have something for you
+  let hails = info.hail && info.hail.length ? info.hail : AMBIENT_HAILS
+  let line = hails[Math.floor(Math.random() * hails.length)]
   gaps.putLong('_last', now)
   gaps.putLong(id, now)
   questSay(player, String(target.displayName.string), [line])
-  if (status) player.tell(Text.gray('(Right-click ' + (info.name || 'them') + ' to talk.)'))
 }
 
 PlayerEvents.tick(event => {

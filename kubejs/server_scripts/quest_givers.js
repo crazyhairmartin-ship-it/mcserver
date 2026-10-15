@@ -172,7 +172,7 @@ ItemEvents.entityInteracted(event => {
   if (talk) {
     questSay(player, questSpeaker(talk, target), talk.lines)
     questAddStage(player, talk.stage)
-    player.tell(Text.yellow('Quest updated.'))
+    player.setStatusMessage(Text.yellow('Quest updated.'))
     event.cancel()
     return
   }

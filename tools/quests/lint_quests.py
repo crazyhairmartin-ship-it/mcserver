@@ -13,6 +13,8 @@ truly can't do it, logged in src/plans/followups.md. What it checks:
   - hostile spawns or spawn waves in villages (they kill villagers)
   - count steps (kill, use, search, cast, spellkill, tame, breed, mine, build) without an in-world "title"
   - quests without story text
+  - dialogue over the limits (Dylan and Fionah, 2026-10-15): more than 2 lines in a conversation is an error, a line
+    over 15 words a warning; character idle/hail lines in pack.json too
 """
 import glob
 import json
@@ -85,6 +87,23 @@ def main():
             if not q.get('text'):
                 warnings.append(f'{where}: no story text (every quest needs an in-world reason)')
             goes_somewhere = any('structure' in t or 'place' in t for t in tasks)
+            convo = []
+            if isinstance(q.get('giver'), dict) and q['giver'].get('lines'):
+                convo.append(('giver', q['giver']['lines']))
+            for n2, t in enumerate(tasks, 1):
+                if t.get('lines'):
+                    convo.append((f'task {n2}', t['lines']))
+                for k in ('encounter', 'timed'):
+                    if isinstance(t.get(k), dict):
+                        for kk in ('lines', 'thanks'):
+                            if t[k].get(kk):
+                                convo.append((f'task {n2} {kk}', t[k][kk]))
+            for label, lines in convo:
+                if len(lines) > 2:
+                    errors.append(f'{where} {label}: {len(lines)} lines of dialogue (at most 2 short ones)')
+                for line in lines:
+                    if len(line.split()) > 15:
+                        warnings.append(f'{where} {label}: a {len(line.split())}-word line (keep lines under 15 words)')
             for n, t in enumerate(tasks, 1):
                 w = f'{where} task {n}'
                 if 'checkmark' in t:
@@ -126,6 +145,14 @@ def main():
                         share = container_pieces(sid)
                         if share is not None and share[0] == 0:
                             errors.append(f'{w}: {sid} has no containers to search (src/structure_contents.json)')
+    if not wanted or 'characters' in wanted:
+        for cid, c in load('pack.json').get('characters', {}).items():
+            if cid.startswith('_'):
+                continue
+            for kind in ('idle', 'hail'):
+                for line in c.get(kind, []):
+                    if len(line.split()) > 15:
+                        warnings.append(f'character {cid} {kind}: a {len(line.split())}-word line (keep under 15 words)')
     for e in errors:
         print('error: ' + e)
     for wn in warnings:

@@ -46,8 +46,11 @@ characters only (see "Report" below).
 - **Text**: a short `text` (1 to 3 sentences) setting the scene, plainly written, British spelling (armour, colour).
   Every task and quest title readable at a glance.
 - **Where characters are**: a character with a `home` in pack.json lives there, not in Reece; send players there and describe it that way.
-- **Dialogue**: 3 to 6 lines per talk step or giver, in the character's voice; organisation representatives
-  (`talk_org`, `giver_org`) are ordinary villagers of that organisation, so give them plain, friendly lines.
+- **Dialogue: short and plain** (Dylan and Fionah found the early quests too wordy). 1 line per talk step, giver,
+  encounter or thanks, 2 at most; each line under 15 words. Say what matters (what's wrong, what they want) and stop.
+  Personality comes through word choice, not length: Dagna's "Aye", Maren's "dearie", one Bram exclamation, not a
+  speech. No filler, no repeating the quest text, no jokes stacked on jokes. Organisation representatives
+  (`talk_org`, `giver_org`) are ordinary villagers: plain, friendly, brief. The quest checker enforces the limits.
 - **Rewards**: every skill-path quest gives that skill's XP (trees: `mining forage farm fish cook craft attack range
   defense agility magic taming`); other chapters give the XP of the skill the quest exercises. Scale by tier:
 
@@ -122,7 +125,7 @@ that already exists.
 
 The Reece cast is in `pack.json`; use them, never rename them. If your slice needs a character who isn't there (an
 encounter-only stranger, a quest-specific villager), add them to `characters` with `name`, `entity`/`profession`,
-`personality` (one or two sentences), 4 to 6 `idle` lines and 2 `hail` lines (what they call out when they have something for the player), and list them in your report so Dylan can adjust names
+`personality` (one or two sentences), 4 `idle` lines and 2 `hail` lines (what they call out when they have something for the player), each under 12 words, and list them in your report so Dylan can adjust names
 and personalities. Characters who live in Reece need placing in game: say so in the report (Dylan places them with
 `/questnpc place <id>`).
 
@@ -217,6 +220,7 @@ task first (T11, T18, T25, T28): other chapters link to its anchors. Counts are 
 | T08 | 1 | 46 | `discovery_land` (any, 46) |
 | T09 | 1 | 22 | `discovery_sea` (all, 22) |
 | T10 | 1 | 23 | `discovery_sky_and_underground` (all, 23) |
+| TD | 2 | 0 | **Do this first.** Rewrite all existing dialogue short (see "Task TD" below) |
 | T11 | 2 | 17 | `main_story` (act2, 17) |
 | T12 | 2 | 29 | `skill_attack` (act2, 7); `skill_defense` (act2, 8); `skill_range` (act2, 7); `skill_taming` (act2, 7) |
 | T13 | 2 | 33 | `skill_agility` (act2, 7); `skill_crafting` (act2, 10); `magic` (act2, 16) |
@@ -238,6 +242,17 @@ task first (T11, T18, T25, T28): other chapters link to its anchors. Counts are 
 | T29 | 5 | 31 | act5 and post of every skill path: `skill_attack` 3, `skill_defense` 3, `skill_range` 3, `skill_taming` 2, `skill_agility` 2, `skill_crafting` 2, `magic` 5, `skill_cooking` 2, `skill_farming` 3, `skill_fishing` 2, `skill_foraging` 2, `skill_mining` 2 |
 
 Total 759 (with the 119 already written, the plan's 878).
+
+## Task TD: shorten the dialogue
+
+Dylan and Fionah found the dialogue too much. Rewrite every line of dialogue already written to the rules above (1
+line, 2 at most, each under 15 words), across every authoring file in `src/authoring/` (giver lines, talk lines,
+encounter lines and thanks, timed-challenge lines) and every character's `idle` (keep 4) and `hail` (keep 2) lines in
+`src/pack.json` (under 12 words each). Keep each character's voice and what each line has to say (the instruction,
+the clue, the twist); cut everything else. Don't change anything that isn't a dialogue line: ids, tasks, task order,
+rewards and quest text stay exactly as they are. Rebuild every chapter, then run `python make_quests.py`,
+`python coverage.py --check` and `python lint_quests.py` until there are no dialogue errors or warnings. One commit:
+`Quests TD: dialogue shortened`.
 
 ## Progress
 

@@ -288,7 +288,7 @@ ItemEvents.entityInteracted(event => {
   if (enc.then != 'talk' || player.tags.contains(enc.stage)) return
   questSay(player, enc.name, enc.lines)
   questAddStage(player, enc.stage)
-  player.tell(Text.yellow('Quest updated.'))
+  player.setStatusMessage(Text.yellow('Quest updated.'))
   event.server.scheduleInTicks(100, () => { if (target.isAlive()) target.discard() })
 })
 
@@ -387,7 +387,7 @@ function npcFinishChallenge(player, ch, won) {
   if (won) {
     questAddStage(player, ch.stage)
     player.setStatusMessage(Text.green('Challenge complete!'))
-    player.tell(Text.yellow('Challenge complete! Quest updated.'))
+    player.setStatusMessage(Text.yellow('Challenge complete! Quest updated.'))
   } else {
     player.setStatusMessage(Text.red('Out of time!'))
     player.tell(Text.of([Text.red('Out of time. '),
@@ -453,7 +453,7 @@ function npcTickEscorts(player) {
     if (enc.to && npcAtDestination(entity, enc.to)) {
       if (enc.thanks && enc.thanks.length) questSay(player, enc.name, enc.thanks)
       questAddStage(player, enc.stage)
-      player.tell(Text.yellow('Quest updated.'))
+      player.setStatusMessage(Text.yellow('Quest updated.'))
       player.server.scheduleInTicks(100, () => { if (entity.isAlive()) entity.discard() })
       state.remove(enc.stage)
       return
@@ -539,7 +539,7 @@ function npcTickBuilds(player) {
     }
     all.remove(b.stage)
     questAddStage(player, b.stage)
-    player.tell(Text.yellow('That looks right. Quest updated.'))
+    player.setStatusMessage(Text.yellow('That looks right. Quest updated.'))
   })
 }
 
@@ -587,7 +587,7 @@ function npcTickTames(player) {
     if (count >= t.count) {
       all.remove(t.stage)
       questAddStage(player, t.stage)
-      player.tell(Text.yellow('Tamed. Quest updated.'))
+      player.setStatusMessage(Text.yellow('Tamed. Quest updated.'))
     }
   })
 }
@@ -602,7 +602,7 @@ global.fqOnBred = (player, child) => {
     if (n >= b.count) {
       counts.remove(b.stage)
       questAddStage(player, b.stage)
-      player.tell(Text.yellow('Bred. Quest updated.'))
+      player.setStatusMessage(Text.yellow('Bred. Quest updated.'))
     } else {
       counts.putInt(b.stage, n)
     }
@@ -710,7 +710,7 @@ function npcCountSpellKill(player, entity, source) {
     if (n >= k.count) {
       counts.remove(k.stage)
       questAddStage(player, k.stage)
-      player.tell(Text.yellow('Quest updated.'))
+      player.setStatusMessage(Text.yellow('Quest updated.'))
     } else {
       counts.putInt(k.stage, n)
       player.setStatusMessage(Text.gray(n + ' / ' + k.count))
@@ -731,7 +731,7 @@ global.fqOnCast = (player, spellId, school) => {
     if (n >= c.count) {
       counts.remove(c.stage)
       questAddStage(player, c.stage)
-      player.tell(Text.yellow('Quest updated.'))
+      player.setStatusMessage(Text.yellow('Quest updated.'))
     } else {
       counts.putInt(c.stage, n)
       if (c.count >= 10 && n % Math.max(1, Math.floor(c.count / 10)) == 0) player.setStatusMessage(Text.gray('Spells cast: ' + n + ' / ' + c.count))
@@ -763,7 +763,7 @@ BlockEvents.broken(event => {
     if (n >= m.count) {
       counts.remove(m.stage)
       questAddStage(player, m.stage)
-      player.tell(Text.yellow('Quest updated.'))
+      player.setStatusMessage(Text.yellow('Quest updated.'))
     } else {
       counts.putInt(m.stage, n)
       if (m.count >= 50 && n % Math.floor(m.count / 10) == 0) player.setStatusMessage(Text.gray(n + ' / ' + m.count))
@@ -798,7 +798,7 @@ function npcTickPlaces(player) {
   npcEntries('be').forEach(b => {
     if (player.tags.contains(b.stage) || !npcBeFits(player, b.where) || !questOpen(player, b)) return
     questAddStage(player, b.stage)
-    player.tell(Text.yellow('Quest updated.'))
+    player.setStatusMessage(Text.yellow('Quest updated.'))
   })
   let seen = null
   npcEntries('biomes').forEach(b => {
@@ -814,7 +814,7 @@ function npcTickPlaces(player) {
     if (n >= b.count) {
       seen.remove(b.stage)
       questAddStage(player, b.stage)
-      player.tell(Text.yellow('Quest updated.'))
+      player.setStatusMessage(Text.yellow('Quest updated.'))
     } else {
       player.setStatusMessage(Text.gray('New biome: ' + here.split(':')[1].replace(/_/g, ' ') + ' (' + n + ' / ' + b.count + ')'))
     }
@@ -834,7 +834,7 @@ function npcTickMilestones(player) {
     if (player.tags.contains(k.stage) || !questOpen(player, k) || npcSkillLevel(player, k.tree) < k.level) return
     if (k.spent && !npcSpentPoints(player)) return
     questAddStage(player, k.stage)
-    player.tell(Text.yellow('Milestone reached. Quest updated.'))
+    player.setStatusMessage(Text.yellow('Milestone reached. Quest updated.'))
   })
   npcEntries('stats').forEach(k => {
     if (player.tags.contains(k.stage) || !questOpen(player, k)) return
@@ -842,7 +842,7 @@ function npcTickMilestones(player) {
     k.stats.forEach(st => { sum += npcStatValue(player, st) })
     if (sum < k.count) return
     questAddStage(player, k.stage)
-    player.tell(Text.yellow('Milestone reached. Quest updated.'))
+    player.setStatusMessage(Text.yellow('Milestone reached. Quest updated.'))
   })
 }
 
@@ -885,7 +885,7 @@ BlockEvents.rightClicked(event => {
     if (n >= u.count) {
       all.remove(u.stage)
       questAddStage(player, u.stage)
-      player.tell(Text.yellow('Quest updated.'))
+      player.setStatusMessage(Text.yellow('Quest updated.'))
     } else if (u.count > 1) {
       player.setStatusMessage(Text.gray(n + ' / ' + u.count + (u.within ? ' (quick!)' : '')))
     }
@@ -936,7 +936,7 @@ function npcTickWaystones(player) {
     if (t.total) {
       if (now >= t.count) {
         questAddStage(player, t.stage)
-        player.tell(Text.yellow('Milestone reached. Quest updated.'))
+        player.setStatusMessage(Text.yellow('Milestone reached. Quest updated.'))
       }
       return
     }
@@ -947,7 +947,7 @@ function npcTickWaystones(player) {
     if (now - bases.getInt(t.stage) >= t.count) {
       bases.remove(t.stage)
       questAddStage(player, t.stage)
-      player.tell(Text.yellow('Route marked. Quest updated.'))
+      player.setStatusMessage(Text.yellow('Route marked. Quest updated.'))
     }
   })
 }
@@ -1074,7 +1074,7 @@ EntityEvents.death(event => {
       event.server.players.forEach(p => { if (entity.tags.contains('fq_owner.' + String(p.uuid))) owner = p })
       if (owner && !owner.tags.contains(enc.stage)) {
         questAddStage(owner, enc.stage)
-        owner.tell(Text.yellow(enc.name + ' is defeated. Quest updated.'))
+        owner.setStatusMessage(Text.yellow(enc.name + ' is defeated. Quest updated.'))
       }
     }
   }
