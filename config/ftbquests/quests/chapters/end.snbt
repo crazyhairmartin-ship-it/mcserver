@@ -1,0 +1,1465 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "end"
+	group: "4B9B0BA0827F5A44"
+	icon: "minecraft:end_stone"
+	id: "70F8433DAB661C8E"
+	order_index: 15
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["4BCAEC6E3D92B157"]
+			description: ["Ilse begs for one thing before you jump: notes on the central island. Walk the rebuilt End island, count its towers and sketch the ruined arches before the dragon notices you."]
+			icon: "minecraft:end_stone"
+			id: "72CF627E790AC4F7"
+			rewards: [
+				{
+					count: 2
+					id: "3DB7A449368F6E67"
+					item: "minecraft:potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 600"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "506DCC3BDDE28B92"
+					silent: true
+					title: "+600 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "34D08E35D857EA84"
+					stage: "fq.end.the_island_of_stone.talk0"
+					title: "Take Ilse's request for notes on the central island"
+					type: "gamestage"
+				}
+				{
+					dimension: "minecraft:the_end"
+					id: "57C94A9812FC4C3D"
+					title: "Walk the central island, counting its towers"
+					type: "dimension"
+				}
+			]
+			title: "The Island of Stone"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["72CF627E790AC4F7"]
+			description: ["The void forgives nothing. Build a walled platform with a shelter, a waystone and an ender chest at the island's edge, out of the dragon's flight path."]
+			icon: "minecraft:ender_chest"
+			id: "383D6D66E9BBD8F8"
+			rewards: [
+				{
+					id: "527F1B43C1F64904"
+					item: "minecraft:ender_chest"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "67B2DCAFB876180F"
+					item: "waystones:warp_scroll"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 600"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "6D5E777DC2949665"
+					silent: true
+					title: "+600 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "140B5ADFC906CB2A"
+					stage: "fq.end.safe_landing.build0"
+					title: "Build a walled platform with an ender chest and a waystone out of the dragon's path"
+					type: "gamestage"
+				}
+				{
+					id: "0A9BC98CE56D6144"
+					stage: "fq.end.safe_landing.waystones1"
+					title: "Light the waystone"
+					type: "gamestage"
+				}
+			]
+			title: "A Safe Landing"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["383D6D66E9BBD8F8"]
+			description: ["Ilse wants the dragon's breath for her ink. While the breath cloud hangs, fill bottles in under a minute, then brew a lingering potion."]
+			icon: "minecraft:dragon_breath"
+			id: "4776383B6A2E3ABD"
+			rewards: [
+				{
+					count: 8
+					id: "52F2CAE03C03CB79"
+					item: "minecraft:glass_bottle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 600"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "2616B0E273AACD82"
+					silent: true
+					title: "+600 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 5L
+					id: "39A666548839A603"
+					item: "minecraft:glass_bottle"
+					title: "Bring bottles to catch the dragon's breath"
+					type: "item"
+				}
+				{
+					id: "41E98A4F7959E706"
+					stage: "fq.end.breath_in_a_bottle.timed1"
+					title: "Fill the bottles while the cloud hangs"
+					type: "gamestage"
+				}
+				{
+					count: 5L
+					id: "46B07D00AEA0172F"
+					item: "minecraft:dragon_breath"
+					title: "Hold five bottles of dragon's breath"
+					type: "item"
+				}
+				{
+					id: "600CEC5F38E791AF"
+					item: "minecraft:lingering_potion"
+					only_from_crafting: true
+					title: "Brew a lingering potion for Ilse's ink"
+					type: "item"
+				}
+			]
+			title: "Breath in a Bottle"
+			x: 3.0d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"383D6D66E9BBD8F8"
+				"2E8CA4F3F9117FF6"
+			]
+			description: ["With the dragon gone, the gateway portals open. Throw a pearl through one and reach the outer islands, then walk a good way across them."]
+			icon: "minecraft:ender_pearl"
+			id: "22A3FE4C161BEAF1"
+			rewards: [
+				{
+					count: 8
+					id: "481656D9517DB0C6"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 650"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "2A2FC777D8C35B59"
+					silent: true
+					title: "+650 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "68831879FCAD9155"
+					item: "minecraft:ender_pearl"
+					title: "Throw a pearl through a gateway portal"
+					type: "item"
+				}
+				{
+					biome: "minecraft:end_midlands"
+					id: "3511FBD34D472DD8"
+					title: "Reach the outer islands"
+					type: "biome"
+				}
+				{
+					id: "1A2E7B17B51C9B52"
+					stage: "fq.end.beyond_the_gateway.timed2"
+					title: "Walk a long way across the outer islands"
+					type: "gamestage"
+				}
+			]
+			title: "Beyond the Gateway"
+			x: 3.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["22A3FE4C161BEAF1"]
+			description: ["Find an End city and climb it to the top, clearing the shulkers that guard each floor."]
+			icon: "minecraft:purpur_block"
+			id: "4958728C79989271"
+			rewards: [
+				{
+					count: 32
+					id: "4919392112865B30"
+					item: "minecraft:purpur_block"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 650"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "2EB5FFB2CF4420A0"
+					silent: true
+					title: "+650 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "42DF2341DE27A05B"
+					structure: "minecraft:end_city"
+					title: "Find an End city"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:shulker"
+					id: "596C846C989791F9"
+					title: "Clear the shulkers guarding each floor"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "The Purple Towers"
+			x: 4.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["4958728C79989271"]
+			description: ["Collect twelve shulker shells and craft two shulker boxes. Keep the rest, because some eyes need them later."]
+			icon: "minecraft:shulker_shell"
+			id: "4066EC4F0D09CFC5"
+			rewards: [
+				{
+					count: 4
+					id: "5F45043C56A9C096"
+					item: "minecraft:purple_dye"
+					type: "item"
+				}
+				{
+					id: "2597277375582714"
+					item: "sophisticatedbackpacks:stack_upgrade_tier_1"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 650"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "1EB02FEBD6F48AB1"
+					silent: true
+					title: "+650 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 12L
+					id: "05184C310FBBD202"
+					item: "minecraft:shulker_shell"
+					title: "Collect twelve shulker shells"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1AF3382AA27EF6C0"
+					item: "minecraft:shulker_box"
+					only_from_crafting: true
+					title: "Craft two shulker boxes"
+					type: "item"
+				}
+			]
+			title: "Shells for Boxes"
+			x: 6.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["4958728C79989271"]
+			description: ["An End ship hangs off a city's edge with wings in its hold. Take the elytra and wear it in your elytra slot, so your chestplate stays on."]
+			icon: "minecraft:elytra"
+			id: "4DE4D1D9C73B6825"
+			rewards: [
+				{
+					count: 4
+					id: "66FF2C51D61FD830"
+					item: "minecraft:phantom_membrane"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "61E31B08C8C4D20D"
+					item: "minecraft:firework_rocket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "420EB044BF312EE1"
+					silent: true
+					title: "+700 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2464C8E45259A70B"
+					item: "minecraft:elytra"
+					title: "Take the elytra from the ship's hold"
+					type: "item"
+				}
+			]
+			title: "The Wings on the Wall"
+			x: 6.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4DE4D1D9C73B6825"]
+			description: ["Fly with the elytra. Ilse asks for a sketch from the highest point you reach."]
+			icon: "minecraft:firework_rocket"
+			id: "7EB27C0BFFD267EB"
+			rewards: [
+				{
+					count: 32
+					id: "4C4CF0069717A437"
+					item: "minecraft:firework_rocket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "2834092D4B7BF558"
+					silent: true
+					title: "+700 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "491EC8C32EEC160C"
+					stage: "fq.end.first_flight.timed0"
+					title: "Fly far across the islands and sketch from the highest point"
+					type: "gamestage"
+				}
+			]
+			title: "First Flight"
+			x: 7.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["22A3FE4C161BEAF1"]
+			description: ["Harvest chorus fruit, replant flowers on end stone at your landing, and build a purpur lookout from popped chorus."]
+			icon: "minecraft:chorus_fruit"
+			id: "2520121540437B07"
+			rewards: [
+				{
+					count: 8
+					id: "4A7E46CF1C324EC6"
+					item: "minecraft:end_rod"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 600"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "242E00BC80538D28"
+					silent: true
+					title: "+600 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 8L
+					id: "251BEB1999294342"
+					item: "minecraft:chorus_fruit"
+					title: "Harvest chorus fruit"
+					type: "item"
+				}
+				{
+					id: "112E25A672E662D5"
+					stage: "fq.end.chorus_garden.build1"
+					title: "Replant flowers and raise a purpur lookout at your landing"
+					type: "gamestage"
+				}
+			]
+			title: "The Chorus Garden"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["4DE4D1D9C73B6825"]
+			description: ["Huge ships, far bigger than any End ship, lie crashed across the islands. Find one of the mega ships and reach its bridge."]
+			icon: "minecraft:spyglass"
+			id: "04C1865389FB7016"
+			rewards: [
+				{
+					id: "65F6D39B03DD9CDF"
+					item: {
+						Count: 1b
+						id: "minecraft:spyglass"
+						tag: {
+							display: {
+								Name: "{\"text\": \"Captain's Spyglass\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 650"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "1AB6B830F35139B1"
+					silent: true
+					title: "+650 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "489C9F196B557955"
+					structure: "#fotf:groups/end_mega_ships"
+					title: "Find a crashed mega ship and reach its bridge"
+					type: "structure"
+				}
+				{
+					id: "06B0240CD74FF023"
+					item: "kubejs:quest_the_wrecked_fleet_1"
+					title: "Open the bridge locker"
+					type: "item"
+				}
+			]
+			title: "The Wrecked Fleet"
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["04C1865389FB7016"]
+			description: ["The wreck's captain lingers on the bridge and wants his logbook pages, scattered through the other crashed ships, so he can learn why the fleet fell."]
+			icon: "minecraft:written_book"
+			id: "73A18C5D3FFB9388"
+			rewards: [
+				{
+					id: "50663DB73028EC49"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_chestplate"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Worn on the bridge of a fallen fleet.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Captain's Coat\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 650"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "2A9C0DFE3ED01002"
+					silent: true
+					title: "+650 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "73BC0F115E3DB2F4"
+					stage: "fq.end.ships_ghost.enc0"
+					title: "Hear the ghost captain on the bridge"
+					type: "gamestage"
+				}
+				{
+					count: 3L
+					id: "48B61D4A0AD26FCC"
+					item: "kubejs:quest_ships_ghost_1"
+					title: "Collect the logbook pages from other mega ships"
+					type: "item"
+				}
+			]
+			title: "The Ship's Ghost"
+			x: 9.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["73A18C5D3FFB9388"]
+			description: ["The logbook names the fleet's flagship, the Starlight Voyager. Find it intact and bring its navigation star back to the ghost to let him rest."]
+			icon: "minecraft:compass"
+			id: "34E8E7340CC42BFA"
+			rewards: [
+				{
+					count: 4
+					id: "1246EBB919037098"
+					item: "minecraft:shulker_shell"
+					type: "item"
+				}
+				{
+					id: "7538A559B5D46589"
+					item: {
+						Count: 1b
+						id: "minecraft:compass"
+						tag: {
+							display: {
+								Name: "{\"text\": \"Navigator's Compass\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "3A4061B12C3B0BE9"
+					silent: true
+					title: "+700 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2E91C38AF43A6E16"
+					structure: "mes:starlight_voyager"
+					title: "Find the flagship intact"
+					type: "structure"
+				}
+				{
+					id: "2A64F51E9EBD0A2B"
+					item: "kubejs:quest_starlight_voyager_1"
+					title: "Take the navigation star from the flagship"
+					type: "item"
+				}
+			]
+			title: "The Starlight Voyager"
+			x: 10.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4958728C79989271"]
+			description: ["A citadel that phantoms nest in, even here. Fight up its spires and clear the nests."]
+			icon: "minecraft:phantom_membrane"
+			id: "19CDDA2E0A8BC547"
+			rewards: [
+				{
+					count: 8
+					id: "0860DC4023E5CDF7"
+					item: "minecraft:phantom_membrane"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 650"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "7353423030019783"
+					silent: true
+					title: "+650 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1B029543774C350C"
+					structure: "mes:phantom_citadel"
+					title: "Find the phantom-haunted citadel"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:phantom"
+					id: "0A1A315D48F97179"
+					title: "Fight up the spires and clear the phantoms' nests"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "The Phantom Citadel"
+			x: 6.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["19CDDA2E0A8BC547"]
+			description: ["Hold the Enderkeep courtyard against waves of endermen and endermites for four minutes while its gate mechanism winds open."]
+			icon: "minecraft:ender_pearl"
+			id: "598C314A13D6D80C"
+			rewards: [
+				{
+					count: 8
+					id: "0618EFCD8D0EBB14"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 700"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "3B9036E1E624787C"
+					silent: true
+					title: "+700 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7067CBA9CFA1CCF6"
+					structure: "mes:enderkeep_courtyard"
+					title: "Reach the Enderkeep courtyard"
+					type: "structure"
+				}
+				{
+					id: "47D34FCB1AC03816"
+					stage: "fq.end.enderkeep_siege.timed1"
+					title: "Hold the courtyard until the gate winds open"
+					type: "gamestage"
+				}
+			]
+			title: "The Enderkeep Courtyard"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["22A3FE4C161BEAF1"]
+			description: ["Climb an Enderwatch tower and, from the top, spot three more of the End's structures for Ilse's map."]
+			icon: "camerapture:camera"
+			id: "5D0792DC3B5D99E1"
+			rewards: [
+				{
+					id: "0066A4BD3ADA707D"
+					item: "minecraft:map"
+					type: "item"
+				}
+				{
+					id: "4DE5E321C6393151"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 650"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "7F91B21776817973"
+					silent: true
+					title: "+650 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "35C0F6EED5A143FD"
+					structure: "mes:enderwatch_tower"
+					title: "Climb an Enderwatch tower"
+					type: "structure"
+				}
+				{
+					id: "437EC09125D8F122"
+					item: "camerapture:camera"
+					title: "Bring a camera to mark what you see"
+					type: "item"
+				}
+				{
+					id: "1533DC7F08FA4094"
+					stage: "fq.end.enderwatch.photo2"
+					title: "Photograph an End city from the tower's top"
+					type: "gamestage"
+				}
+			]
+			title: "The Enderwatch"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["5D0792DC3B5D99E1"]
+			description: ["An Enderman keeps a shrine of manuscripts and won't be looked at. Read the shrine's texts without meeting its gaze, and answer the scribe's question to earn a page."]
+			icon: "minecraft:lectern"
+			id: "6F9E20738EAADBCB"
+			rewards: [
+				{
+					id: "5E5DF3AA1BE8AFC5"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Name: "{\"text\": \"An Eldritch Manuscript\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "6E6B5F4D6C22F790"
+					silent: true
+					title: "+700 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0D63233ECF2BFAC0"
+					structure: "mes:manuscript_shrine"
+					title: "Find the Enderman scribe's shrine"
+					type: "structure"
+				}
+				{
+					id: "1BCC7705CB1EBAB0"
+					stage: "fq.end.manuscript_shrine.timed1"
+					title: "Read the shrine's texts without meeting the scribe's gaze"
+					type: "gamestage"
+				}
+				{
+					id: "601B8CDA25F626E2"
+					item: "kubejs:quest_manuscript_shrine_2"
+					title: "Answer the scribe's question and take a page"
+					type: "item"
+				}
+			]
+			title: "The Manuscript Shrine"
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D0792DC3B5D99E1"]
+			description: ["A walled garden of impossible plants grows on a far island. Bring back cuttings from the Mythic Garden and the Enderbloom Grove."]
+			icon: "minecraft:flowering_azalea"
+			id: "305164A3BB96426B"
+			rewards: [
+				{
+					count: 4
+					id: "350DA2CD5291AC77"
+					item: "minecraft:flowering_azalea"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 650"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "4C46A9D4F42A1BAD"
+					silent: true
+					title: "+650 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "33463388AE15550A"
+					structure: "mes:mythic_garden"
+					title: "Find the walled garden of impossible plants"
+					type: "structure"
+				}
+				{
+					id: "115D0628332AC9AC"
+					structure: "mes:enderbloom_grove"
+					title: "Find the Enderbloom Grove"
+					type: "structure"
+				}
+				{
+					id: "1E17EE25D74308BB"
+					item: "kubejs:quest_mythic_garden_2"
+					title: "Take a cutting from the garden"
+					type: "item"
+				}
+			]
+			title: "The Mythic Garden"
+			x: 6.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["5D0792DC3B5D99E1"]
+			description: ["A meteorite has struck an island, and a stranded astronomer camps in a hideaway nearby. Hear what fell."]
+			icon: "minecraft:amethyst_shard"
+			id: "654AB75A196E70F1"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "12EED3A8808322B8"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 650"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "2214C40FEC9A51FF"
+					silent: true
+					title: "+650 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "61DA3E160CAD221B"
+					structure: "mes:astral_meteorite"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "1907BB6C5021CF5D"
+					structure: "mes:astral_hideaway"
+					title: "Find the astronomer's hideaway nearby"
+					type: "structure"
+				}
+				{
+					id: "3D80F8DE3AB94C0B"
+					stage: "fq.end.fallen_star.enc1"
+					title: "Hear what the stranded astronomer saw fall"
+					type: "gamestage"
+				}
+			]
+			title: "The Fallen Star"
+			x: 6.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["654AB75A196E70F1"]
+			description: ["The astronomer needs a reading from the top of the Ender Spire before the next star-fall. Climb it in under three minutes, no elytra."]
+			icon: "minecraft:purpur_pillar"
+			id: "65069FEC77D024F3"
+			rewards: [
+				{
+					id: "4323B20912C839D6"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 4s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Light Landing\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "756E75C14BD8EAE7"
+					silent: true
+					title: "+700 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "279B39F9A0F97A16"
+					structure: "mes:ender_spire"
+					title: "Find the Ender Spire"
+					type: "structure"
+				}
+				{
+					id: "0F3E8800C56A4B9D"
+					stage: "fq.end.spire_climb.timed1"
+					title: "Climb the spire in under three minutes"
+					type: "gamestage"
+				}
+			]
+			title: "The Ender Spire"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["65069FEC77D024F3"]
+			description: ["A black monolith hums on a barren island. Align it with the astronomer's reading and the star that fell starts to make sense."]
+			icon: "minecraft:obsidian"
+			id: "7C69B01B86C1158E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "08C504EBCA032CCB"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Name: "{\"text\": \"A Page of the Monolith\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "60830C934813697D"
+					silent: true
+					title: "+700 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4B7A1C4080CF688B"
+					structure: "mes:monolith"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "0BF49D3629EF22FE"
+					item: "kubejs:quest_the_monolith_0"
+					title: "Read the monolith's inscriptions"
+					type: "item"
+				}
+			]
+			title: "The Monolith"
+			x: 9.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["2520121540437B07"]
+			description: ["Find a placid prairie and an enderskog in the outer End, peaceful places where nothing tries to kill you, and rest there a full minute each."]
+			icon: "minecraft:chorus_flower"
+			id: "4B679923056D4A04"
+			rewards: [
+				{
+					count: 16
+					id: "7A2E606BACC32A95"
+					item: "minecraft:bread"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 650"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "36F7FC79912F05BF"
+					silent: true
+					title: "+650 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0FF8214F8EC12755"
+					structure: "mes:placid_prairie"
+					title: "Find a placid prairie"
+					type: "structure"
+				}
+				{
+					id: "0E5BCB448D2DEEC2"
+					stage: "fq.end.quiet_meadows.timed1"
+					title: "Rest a full minute in the prairie"
+					type: "gamestage"
+				}
+				{
+					id: "58BD16F8C60510D5"
+					structure: "mes:enderskog"
+					title: "Find an enderskog"
+					type: "structure"
+				}
+			]
+			title: "Quiet Meadows"
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4B679923056D4A04"]
+			description: ["Ilse wants proof there's life here: bucket a cosmic cod, feed an endergrade chorus until it follows you, and bring back ender residue from an enderiophage."]
+			icon: "alexsmobs:cosmic_cod_bucket"
+			id: "04670EAA359EA5D8"
+			rewards: [
+				{
+					id: "6F207141E502E71E"
+					item: "alexsmobs:cosmic_cod_bucket"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 700"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "41B56E02E600E723"
+					silent: true
+					title: "+700 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4B2227B42210F1DE"
+					item: "alexsmobs:cosmic_cod_bucket"
+					title: "Bucket a cosmic cod"
+					type: "item"
+				}
+				{
+					id: "70A7819C1B592F5B"
+					stage: "fq.end.void_wildlife.tame1"
+					title: "Feed an endergrade chorus until it follows you"
+					type: "gamestage"
+				}
+				{
+					id: "1653F512A316B04D"
+					item: "alexsmobs:ender_residue"
+					title: "Bring back ender residue from an enderiophage"
+					type: "item"
+				}
+			]
+			title: "Void Wildlife"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["22A3FE4C161BEAF1"]
+			description: ["Broken pillars, spikes and scrap heaps litter the islands. Sift three of them for the void's leftovers."]
+			icon: "minecraft:iron_ingot"
+			id: "5E7C41F7910D5F11"
+			rewards: [
+				{
+					count: 4
+					id: "43F58E703F8BB47C"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "324C7B19455D68A9"
+					item: "minecraft:iron_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 300"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "77586AE73A5EFF9C"
+					silent: true
+					title: "+300 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "5D9B18E3B0277F84"
+					item: "kubejs:quest_salvage_the_scraps_0"
+					title: "Sift three scrap heaps for the void's leftovers"
+					type: "item"
+				}
+			]
+			title: "Salvage the Scraps"
+			x: 4.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["7EB27C0BFFD267EB"]
+			description: ["Beyond the cities the End gets stranger. Fly over the crystal peaks, the shadowlands and the void barrens."]
+			icon: "minecraft:amethyst_block"
+			id: "27A2DC90321C38D9"
+			rewards: [
+				{
+					count: 8
+					id: "794CE899073107D3"
+					item: "minecraft:amethyst_block"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "379D341CEF73C02C"
+					silent: true
+					title: "+700 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "nullscape:crystal_peaks"
+					id: "14980A8387CE482D"
+					title: "Fly over the crystal peaks"
+					type: "biome"
+				}
+				{
+					biome: "nullscape:shadowlands"
+					id: "11EED8834D5F1DFF"
+					title: "Fly over the shadowlands"
+					type: "biome"
+				}
+				{
+					biome: "nullscape:void_barrens"
+					id: "761F8B79D7571EDC"
+					title: "Fly over the void barrens"
+					type: "biome"
+				}
+			]
+			title: "Null Space"
+			x: 9.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["27A2DC90321C38D9"]
+			description: ["In the shadowlands lie the bones of a dragon far older than the one you killed. Count its ribs: Ilse thinks there were many dragons once."]
+			icon: "minecraft:bone_block"
+			id: "5BA5C9D336B977AA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "3A88027D9C8907C6"
+					item: {
+						Count: 1b
+						id: "minecraft:bone"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Older than the one you killed.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"An Elder Dragon's Bone\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "5C176114E364A225"
+					silent: true
+					title: "+700 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "186EE49471465D60"
+					structure: "nullscape:dragon_skeleton"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 4L
+					id: "432270CCC0C16F36"
+					item: "minecraft:bone_block"
+					title: "Take bone from the old dragon"
+					type: "item"
+				}
+			]
+			title: "Bones in the Dark"
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["27A2DC90321C38D9"]
+			description: ["Some islands are overgrown or rotten. Stand in the End wilds, the End reef and the End corruption."]
+			icon: "naturescompass:naturescompass"
+			id: "69FBFD89C86FAB86"
+			rewards: [
+				{
+					id: "588D10FE359852F3"
+					item: "naturescompass:naturescompass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 700"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "4CC50E6F06DE9AC6"
+					silent: true
+					title: "+700 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "biomesoplenty:end_wilds"
+					id: "262C6A045667DE96"
+					title: "Stand in the End wilds"
+					type: "biome"
+				}
+				{
+					biome: "biomesoplenty:end_reef"
+					id: "71C6CD730D558660"
+					title: "Stand in the End reef"
+					type: "biome"
+				}
+				{
+					biome: "biomesoplenty:end_corruption"
+					id: "1D9AD36107930215"
+					title: "Stand in the End corruption"
+					type: "biome"
+				}
+			]
+			title: "Strange Shores"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7EB27C0BFFD267EB"]
+			description: ["A tower stands alone on an outer island. Climb it and bring Ilse the star map kept at its top."]
+			icon: "minecraft:ender_chest"
+			id: "3B39537C377D127B"
+			rewards: [
+				{
+					count: 8
+					id: "1526D0803E5B7898"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "32FD9657A3BC25F7"
+					silent: true
+					title: "+700 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7C921F1412366794"
+					structure: "structory_towers:end/end_tower"
+					title: "Find the lonely tower on the outer island"
+					type: "structure"
+				}
+				{
+					id: "438584FA6A817003"
+					item: "kubejs:quest_the_end_tower_1"
+					title: "Take the star map from the tower's top"
+					type: "item"
+				}
+			]
+			title: "The Lonely Tower"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7EB27C0BFFD267EB"]
+			description: ["A colossal bird-cage of a dungeon floats in the End. Clear the aviary and its keepers."]
+			icon: "minecraft:bow"
+			id: "67A2A6B48DC4DDEC"
+			rewards: [
+				{
+					count: 4
+					id: "75B87BE8F4B8785C"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 700"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "6A64BC7C8C5D1EE0"
+					silent: true
+					title: "+700 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "784223D4258FF08A"
+					structure: "dungeons_arise:aviary"
+					title: "Find the floating aviary"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:vex"
+					id: "49BA48CFAB0075E0"
+					title: "Clear the aviary and its keepers"
+					type: "kill"
+					value: 8L
+				}
+			]
+			title: "The Aviary"
+			x: 9.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["27A2DC90321C38D9"]
+			description: ["In the highlands stands a ruined citadel with a door that will not open while its guardian sleeps. Find the Ruined Citadel and note its Ender Golems. This one is for later."]
+			icon: "minecraft:golden_apple"
+			id: "3FC0620523C5CE6F"
+			rewards: [
+				{
+					count: 2
+					id: "4661821F44581EBE"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 700"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "38FCC6EE252D6766"
+					silent: true
+					title: "+700 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2BC78343B8FE2694"
+					structure: "cataclysm:ruined_citadel"
+					title: "Find the ruined citadel in the highlands"
+					type: "structure"
+				}
+				{
+					id: "015885EF42C91DB0"
+					observe_type: "entity_type"
+					timer: 40L
+					title: "Note the Ender Golems at its door"
+					to_observe: "cataclysm:ender_golem"
+					type: "observation"
+				}
+			]
+			title: "The Sealed Citadel"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["67A2A6B48DC4DDEC"]
+			description: ["An airship drifts through the void, crewed by illagers who think the End is empty. Board one and take its captain's chest."]
+			icon: "minecraft:crossbow"
+			id: "437E78DB04C98114"
+			rewards: [
+				{
+					id: "68D795EB295AF5CF"
+					item: {
+						Count: 1b
+						id: "minecraft:white_banner"
+						tag: {
+							display: {
+								Name: "{\"text\": \"The Sky Pirates' Banner\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 16
+					id: "132EE207B86F2EC2"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 850"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "6FF0264F23B8A0B2"
+					silent: true
+					title: "+850 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0899C71BFB86066C"
+					structure: "#fotf:groups/airships"
+					title: "Find an airship drifting through the void"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:pillager"
+					id: "70235E7444B82DD9"
+					title: "Board it and fight the crew"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "139D2FE5FE9FD212"
+					item: "kubejs:quest_sky_pirates_2"
+					title: "Take the captain's chest"
+					type: "item"
+				}
+			]
+			title: "Sky Pirates"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: [
+				"3FC0620523C5CE6F"
+				"4066EC4F0D09CFC5"
+			]
+			description: ["The guardian woke with the others. Craft the Void Eye from shulker shells and an eye of ender, and give Ilse the finished chart of the End."]
+			icon: "cataclysm:void_eye"
+			id: "1B3DDE1C696DB910"
+			rewards: [
+				{
+					id: "49F12460FC517E8A"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_boots"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 4s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The void forgives nothing.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Ilse's Voidwalker Boots\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 900"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "5DAEFA1177F142AE"
+					silent: true
+					title: "+900 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 4L
+					id: "7F9FDC36E96A6D62"
+					item: "minecraft:shulker_shell"
+					title: "Gather shulker shells for the eye"
+					type: "item"
+				}
+				{
+					id: "4FA14BC3EC7C341C"
+					item: "minecraft:ender_eye"
+					title: "Gather an eye of ender for the eye"
+					type: "item"
+				}
+				{
+					id: "153C6C85D6CBC778"
+					item: "cataclysm:void_eye"
+					only_from_crafting: true
+					title: "Craft the Void Eye"
+					type: "item"
+				}
+				{
+					id: "311661B5BDC8DD9E"
+					stage: "fq.end.void_eye.talk3"
+					title: "Give Ilse the finished chart of the End"
+					type: "gamestage"
+				}
+			]
+			title: "The Void Eye"
+			x: 12.0d
+			y: 0.0d
+		}
+	]
+	subtitle: ["Cold, quiet wonder"]
+	title: "The End"
+}

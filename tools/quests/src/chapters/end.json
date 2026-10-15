@@ -1,0 +1,1325 @@
+{
+  "title": "The End",
+  "subtitle": "Cold, quiet wonder",
+  "icon": "minecraft:end_stone",
+  "group": "realms",
+  "order": 3,
+  "quests": [
+    {
+      "id": "the_island_of_stone",
+      "title": "The Island of Stone",
+      "after": [
+        "main_story:act4_start"
+      ],
+      "text": [
+        "Ilse begs for one thing before you jump: notes on the central island. Walk the rebuilt End island, count its towers and sketch the ruined arches before the dragon notices you."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "ilse",
+          "lines": [
+            "One thing before you jump. Notes on the island. Count the towers.",
+            "Sketch the arches. Quickly."
+          ],
+          "title": "Take Ilse's request for notes on the central island"
+        },
+        {
+          "dimension": "minecraft:the_end",
+          "title": "Walk the central island, counting its towers"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:potion",
+          "count": 2
+        },
+        {
+          "skill": "agility",
+          "xp": 600
+        }
+      ],
+      "icon": "minecraft:end_stone"
+    },
+    {
+      "id": "safe_landing",
+      "title": "A Safe Landing",
+      "after": [
+        "the_island_of_stone"
+      ],
+      "text": [
+        "The void forgives nothing. Build a walled platform with a shelter, a waystone and an ender chest at the island's edge, out of the dragon's flight path."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "minecraft:obsidian": 12,
+              "minecraft:ender_chest": 1,
+              "waystones:waystone": 1
+            },
+            "radius": 10
+          },
+          "title": "Build a walled platform with an ender chest and a waystone out of the dragon's path"
+        },
+        {
+          "waystones": 1,
+          "title": "Light the waystone"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_chest"
+        },
+        {
+          "item": "waystones:warp_scroll",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 600
+        }
+      ],
+      "icon": "minecraft:ender_chest"
+    },
+    {
+      "id": "breath_in_a_bottle",
+      "title": "Breath in a Bottle",
+      "after": [
+        "safe_landing"
+      ],
+      "text": [
+        "Ilse wants the dragon's breath for her ink. While the breath cloud hangs, fill bottles in under a minute, then brew a lingering potion."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:glass_bottle",
+          "count": 5,
+          "title": "Bring bottles to catch the dragon's breath"
+        },
+        {
+          "timed": {
+            "seconds": 60,
+            "goal": {
+              "hold": {
+                "radius": 12
+              }
+            },
+            "lines": [
+              "The breath cloud hangs. Fill the bottles!"
+            ],
+            "start": "Catch the breath"
+          },
+          "title": "Fill the bottles while the cloud hangs"
+        },
+        {
+          "item": "minecraft:dragon_breath",
+          "count": 5,
+          "title": "Hold five bottles of dragon's breath"
+        },
+        {
+          "item": "minecraft:lingering_potion",
+          "crafted": true,
+          "title": "Brew a lingering potion for Ilse's ink"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:glass_bottle",
+          "count": 8
+        },
+        {
+          "skill": "magic",
+          "xp": 600
+        }
+      ],
+      "icon": "minecraft:dragon_breath"
+    },
+    {
+      "id": "beyond_the_gateway",
+      "title": "Beyond the Gateway",
+      "after": [
+        "safe_landing",
+        "main_story:act4_finale"
+      ],
+      "text": [
+        "With the dragon gone, the gateway portals open. Throw a pearl through one and reach the outer islands, then walk a good way across them."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:ender_pearl",
+          "consume": true,
+          "title": "Throw a pearl through a gateway portal"
+        },
+        {
+          "biome": "minecraft:end_midlands",
+          "title": "Reach the outer islands"
+        },
+        {
+          "timed": {
+            "seconds": 600,
+            "goal": {
+              "structure": "minecraft:end_city",
+              "label": "an End city",
+              "away": 400
+            },
+            "lines": [
+              "The outer islands stretch on. Walk them."
+            ],
+            "start": "Set out",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Walk a long way across the outer islands"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:ender_pearl"
+    },
+    {
+      "id": "purple_towers",
+      "title": "The Purple Towers",
+      "after": [
+        "beyond_the_gateway"
+      ],
+      "text": [
+        "Find an End city and climb it to the top, clearing the shulkers that guard each floor."
+      ],
+      "tasks": [
+        {
+          "structure": "minecraft:end_city",
+          "title": "Find an End city"
+        },
+        {
+          "kill": "minecraft:shulker",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "minecraft:end_city"
+            },
+            "wave": 3,
+            "name": "City Shulkers"
+          },
+          "title": "Clear the shulkers guarding each floor"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:purpur_block",
+          "count": 32
+        },
+        {
+          "skill": "defense",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:purpur_block"
+    },
+    {
+      "id": "shells_for_boxes",
+      "title": "Shells for Boxes",
+      "after": [
+        "purple_towers"
+      ],
+      "text": [
+        "Collect twelve shulker shells and craft two shulker boxes. Keep the rest, because some eyes need them later."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:shulker_shell",
+          "count": 12,
+          "title": "Collect twelve shulker shells"
+        },
+        {
+          "item": "minecraft:shulker_box",
+          "count": 2,
+          "crafted": true,
+          "title": "Craft two shulker boxes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:purple_dye",
+          "count": 4
+        },
+        {
+          "item": "sophisticatedbackpacks:stack_upgrade_tier_1"
+        },
+        {
+          "skill": "craft",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:shulker_shell"
+    },
+    {
+      "id": "the_wings",
+      "title": "The Wings on the Wall",
+      "after": [
+        "purple_towers"
+      ],
+      "text": [
+        "An End ship hangs off a city's edge with wings in its hold. Take the elytra and wear it in your elytra slot, so your chestplate stays on."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:elytra",
+          "title": "Take the elytra from the ship's hold"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:phantom_membrane",
+          "count": 4
+        },
+        {
+          "item": "minecraft:firework_rocket",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:elytra"
+    },
+    {
+      "id": "first_flight",
+      "title": "First Flight",
+      "after": [
+        "the_wings"
+      ],
+      "text": [
+        "Fly with the elytra. Ilse asks for a sketch from the highest point you reach."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 900,
+            "goal": {
+              "structure": "minecraft:end_city",
+              "label": "a far End city",
+              "away": 800
+            },
+            "lines": [
+              "Fly far. Sketch from the highest point."
+            ],
+            "start": "Take off",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Fly far across the islands and sketch from the highest point"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:firework_rocket",
+          "count": 32
+        },
+        {
+          "skill": "agility",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:firework_rocket"
+    },
+    {
+      "id": "chorus_garden",
+      "title": "The Chorus Garden",
+      "after": [
+        "beyond_the_gateway"
+      ],
+      "text": [
+        "Harvest chorus fruit, replant flowers on end stone at your landing, and build a purpur lookout from popped chorus."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:chorus_fruit",
+          "count": 8,
+          "title": "Harvest chorus fruit"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:chorus_flower": 2,
+              "minecraft:purpur_block": 16
+            },
+            "radius": 10
+          },
+          "title": "Replant flowers and raise a purpur lookout at your landing"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:end_rod",
+          "count": 8
+        },
+        {
+          "skill": "forage",
+          "xp": 600
+        }
+      ],
+      "icon": "minecraft:chorus_fruit"
+    },
+    {
+      "id": "the_wrecked_fleet",
+      "title": "The Wrecked Fleet",
+      "after": [
+        "the_wings"
+      ],
+      "text": [
+        "Huge ships, far bigger than any End ship, lie crashed across the islands. Find one of the mega ships and reach its bridge."
+      ],
+      "tasks": [
+        {
+          "structure": "#end_mega_ships",
+          "title": "Find a crashed mega ship and reach its bridge"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mes:mega_ship"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Ship's Loot",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "The bridge locker, still sealed."
+          },
+          "title": "Open the bridge locker"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:spyglass",
+          "name": "Captain's Spyglass"
+        },
+        {
+          "skill": "agility",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:spyglass"
+    },
+    {
+      "id": "ships_ghost",
+      "title": "The Ship's Ghost",
+      "after": [
+        "the_wrecked_fleet"
+      ],
+      "text": [
+        "The wreck's captain lingers on the bridge and wants his logbook pages, scattered through the other crashed ships, so he can learn why the fleet fell."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:allay",
+            "name": "The Captain's Ghost",
+            "then": "talk",
+            "lines": [
+              "My logbook pages. Scattered through the other ships. Why did we fall?"
+            ]
+          },
+          "title": "Hear the ghost captain on the bridge"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "#end_mega_ships"
+            },
+            "count": 3,
+            "item": {
+              "name": "a Logbook Page",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A page of the captain's log, brittle with age."
+          },
+          "title": "Collect the logbook pages from other mega ships"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather_chestplate",
+          "name": "The Captain's Coat",
+          "lore": [
+            "Worn on the bridge of a fallen fleet."
+          ]
+        },
+        {
+          "skill": "magic",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:written_book"
+    },
+    {
+      "id": "starlight_voyager",
+      "title": "The Starlight Voyager",
+      "after": [
+        "ships_ghost"
+      ],
+      "text": [
+        "The logbook names the fleet's flagship, the Starlight Voyager. Find it intact and bring its navigation star back to the ghost to let him rest."
+      ],
+      "tasks": [
+        {
+          "structure": "mes:starlight_voyager",
+          "title": "Find the flagship intact"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mes:starlight_voyager"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Navigation Star",
+              "texture": "minecraft:item/nether_star"
+            },
+            "found": "The flagship's navigation star, still bright."
+          },
+          "title": "Take the navigation star from the flagship"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:shulker_shell",
+          "count": 4
+        },
+        {
+          "item": "minecraft:compass",
+          "name": "Navigator's Compass"
+        },
+        {
+          "skill": "magic",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:compass"
+    },
+    {
+      "id": "phantom_citadel",
+      "title": "The Phantom Citadel",
+      "after": [
+        "purple_towers"
+      ],
+      "text": [
+        "A citadel that phantoms nest in, even here. Fight up its spires and clear the nests."
+      ],
+      "tasks": [
+        {
+          "structure": "mes:phantom_citadel",
+          "title": "Find the phantom-haunted citadel"
+        },
+        {
+          "kill": "minecraft:phantom",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "mes:phantom_citadel"
+            },
+            "wave": 4,
+            "name": "Citadel Phantoms"
+          },
+          "title": "Fight up the spires and clear the phantoms' nests"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:phantom_membrane",
+          "count": 8
+        },
+        {
+          "skill": "attack",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:phantom_membrane"
+    },
+    {
+      "id": "enderkeep_siege",
+      "title": "The Enderkeep Courtyard",
+      "after": [
+        "phantom_citadel"
+      ],
+      "text": [
+        "Hold the Enderkeep courtyard against waves of endermen and endermites for four minutes while its gate mechanism winds open."
+      ],
+      "tasks": [
+        {
+          "structure": "mes:enderkeep_courtyard",
+          "title": "Reach the Enderkeep courtyard"
+        },
+        {
+          "timed": {
+            "seconds": 240,
+            "goal": {
+              "hold": {
+                "radius": 14
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:enderman",
+                "count": 2,
+                "every": 30
+              },
+              {
+                "entity": "minecraft:endermite",
+                "count": 4,
+                "every": 30
+              }
+            ],
+            "lines": [
+              "The gate is winding open. Hold the courtyard!"
+            ],
+            "start": "Hold the courtyard"
+          },
+          "title": "Hold the courtyard until the gate winds open"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 8
+        },
+        {
+          "skill": "defense",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:ender_pearl"
+    },
+    {
+      "id": "enderwatch",
+      "title": "The Enderwatch",
+      "after": [
+        "beyond_the_gateway"
+      ],
+      "text": [
+        "Climb an Enderwatch tower and, from the top, spot three more of the End's structures for Ilse's map."
+      ],
+      "tasks": [
+        {
+          "structure": "mes:enderwatch_tower",
+          "title": "Climb an Enderwatch tower"
+        },
+        {
+          "item": "camerapture:camera",
+          "title": "Bring a camera to mark what you see"
+        },
+        {
+          "photo": {
+            "structure": "minecraft:end_city"
+          },
+          "title": "Photograph an End city from the tower's top"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:map"
+        },
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "skill": "agility",
+          "xp": 650
+        }
+      ],
+      "icon": "camerapture:camera"
+    },
+    {
+      "id": "manuscript_shrine",
+      "title": "The Manuscript Shrine",
+      "after": [
+        "enderwatch"
+      ],
+      "text": [
+        "An Enderman keeps a shrine of manuscripts and won't be looked at. Read the shrine's texts without meeting its gaze, and answer the scribe's question to earn a page."
+      ],
+      "tasks": [
+        {
+          "structure": "mes:manuscript_shrine",
+          "title": "Find the Enderman scribe's shrine"
+        },
+        {
+          "timed": {
+            "seconds": 120,
+            "goal": {
+              "hold": {
+                "radius": 8
+              }
+            },
+            "lines": [
+              "Don't meet its gaze. Read."
+            ],
+            "start": "Read the manuscripts",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Read the shrine's texts without meeting the scribe's gaze"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mes:manuscript_shrine"
+            },
+            "count": 1,
+            "item": {
+              "name": "an Eldritch Manuscript",
+              "texture": "minecraft:item/writable_book"
+            },
+            "found": "A page, handed over in silence."
+          },
+          "title": "Answer the scribe's question and take a page"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "An Eldritch Manuscript"
+        },
+        {
+          "skill": "magic",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:lectern"
+    },
+    {
+      "id": "mythic_garden",
+      "title": "The Mythic Garden",
+      "after": [
+        "enderwatch"
+      ],
+      "text": [
+        "A walled garden of impossible plants grows on a far island. Bring back cuttings from the Mythic Garden and the Enderbloom Grove."
+      ],
+      "tasks": [
+        {
+          "structure": "mes:mythic_garden",
+          "title": "Find the walled garden of impossible plants"
+        },
+        {
+          "structure": "mes:enderbloom_grove",
+          "title": "Find the Enderbloom Grove"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mes:mythic_garden"
+            },
+            "count": 1,
+            "item": {
+              "name": "a Mythic Cutting",
+              "texture": "minecraft:item/oak_sapling"
+            },
+            "found": "A cutting that glows faintly."
+          },
+          "title": "Take a cutting from the garden"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:flowering_azalea",
+          "count": 4
+        },
+        {
+          "skill": "forage",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:flowering_azalea"
+    },
+    {
+      "id": "fallen_star",
+      "title": "The Fallen Star",
+      "after": [
+        "enderwatch"
+      ],
+      "text": [
+        "A meteorite has struck an island, and a stranded astronomer camps in a hideaway nearby. Hear what fell."
+      ],
+      "tasks": [
+        {
+          "structure": "mes:astral_hideaway",
+          "title": "Find the astronomer's hideaway nearby"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Stranded Astronomer",
+            "then": "talk",
+            "lines": [
+              "It fell at dusk. I felt it hum. Take a fragment."
+            ]
+          },
+          "title": "Hear what the stranded astronomer saw fall"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:amethyst_shard",
+          "count": 8
+        },
+        {
+          "skill": "magic",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:amethyst_shard",
+      "discover": {
+        "structure": "mes:astral_meteorite"
+      }
+    },
+    {
+      "id": "spire_climb",
+      "title": "The Ender Spire",
+      "after": [
+        "fallen_star"
+      ],
+      "text": [
+        "The astronomer needs a reading from the top of the Ender Spire before the next star-fall. Climb it in under three minutes, no elytra."
+      ],
+      "tasks": [
+        {
+          "structure": "mes:ender_spire",
+          "title": "Find the Ender Spire"
+        },
+        {
+          "timed": {
+            "seconds": 180,
+            "goal": {
+              "structure": "mes:ender_spire",
+              "label": "the spire's top",
+              "away": 30
+            },
+            "lines": [
+              "Three minutes. No wings."
+            ],
+            "start": "Climb",
+            "no": [
+              "elytra",
+              "teleport"
+            ]
+          },
+          "title": "Climb the spire in under three minutes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Light Landing",
+          "enchant": {
+            "minecraft:feather_falling": 4
+          }
+        },
+        {
+          "skill": "agility",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:purpur_pillar"
+    },
+    {
+      "id": "the_monolith",
+      "title": "The Monolith",
+      "after": [
+        "spire_climb"
+      ],
+      "text": [
+        "A black monolith hums on a barren island. Align it with the astronomer's reading and the star that fell starts to make sense."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "mes:monolith"
+            },
+            "count": 1,
+            "item": {
+              "name": "a Lore Page",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A page, fixed to the stone with wax."
+          },
+          "title": "Read the monolith's inscriptions"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "A Page of the Monolith"
+        },
+        {
+          "skill": "magic",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:obsidian",
+      "discover": {
+        "structure": "mes:monolith"
+      }
+    },
+    {
+      "id": "quiet_meadows",
+      "title": "Quiet Meadows",
+      "after": [
+        "chorus_garden"
+      ],
+      "text": [
+        "Find a placid prairie and an enderskog in the outer End, peaceful places where nothing tries to kill you, and rest there a full minute each."
+      ],
+      "tasks": [
+        {
+          "structure": "mes:placid_prairie",
+          "title": "Find a placid prairie"
+        },
+        {
+          "timed": {
+            "seconds": 70,
+            "goal": {
+              "hold": {
+                "radius": 10
+              }
+            },
+            "lines": [
+              "Rest. Nothing will hurt you here."
+            ],
+            "start": "Rest a minute"
+          },
+          "title": "Rest a full minute in the prairie"
+        },
+        {
+          "structure": "mes:enderskog",
+          "title": "Find an enderskog"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bread",
+          "count": 16
+        },
+        {
+          "skill": "forage",
+          "xp": 650
+        }
+      ],
+      "icon": "minecraft:chorus_flower"
+    },
+    {
+      "id": "void_wildlife",
+      "title": "Void Wildlife",
+      "after": [
+        "quiet_meadows"
+      ],
+      "text": [
+        "Ilse wants proof there's life here: bucket a cosmic cod, feed an endergrade chorus until it follows you, and bring back ender residue from an enderiophage."
+      ],
+      "tasks": [
+        {
+          "item": "alexsmobs:cosmic_cod_bucket",
+          "title": "Bucket a cosmic cod"
+        },
+        {
+          "tame": "alexsmobs:endergrade",
+          "title": "Feed an endergrade chorus until it follows you"
+        },
+        {
+          "item": "alexsmobs:ender_residue",
+          "title": "Bring back ender residue from an enderiophage"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexsmobs:cosmic_cod_bucket"
+        },
+        {
+          "skill": "taming",
+          "xp": 700
+        }
+      ],
+      "icon": "alexsmobs:cosmic_cod_bucket"
+    },
+    {
+      "id": "salvage_the_scraps",
+      "title": "Salvage the Scraps",
+      "after": [
+        "beyond_the_gateway"
+      ],
+      "text": [
+        "Broken pillars, spikes and scrap heaps litter the islands. Sift three of them for the void's leftovers."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "mes:endscraps"
+            },
+            "count": 3,
+            "item": {
+              "name": "a Void Leftover",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "Something the void left behind."
+          },
+          "title": "Sift three scrap heaps for the void's leftovers"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 4
+        },
+        {
+          "item": "minecraft:iron_ingot",
+          "count": 8
+        },
+        {
+          "skill": "craft",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:iron_ingot"
+    },
+    {
+      "id": "null_space",
+      "title": "Null Space",
+      "after": [
+        "first_flight"
+      ],
+      "text": [
+        "Beyond the cities the End gets stranger. Fly over the crystal peaks, the shadowlands and the void barrens."
+      ],
+      "tasks": [
+        {
+          "biome": "nullscape:crystal_peaks",
+          "title": "Fly over the crystal peaks"
+        },
+        {
+          "biome": "nullscape:shadowlands",
+          "title": "Fly over the shadowlands"
+        },
+        {
+          "biome": "nullscape:void_barrens",
+          "title": "Fly over the void barrens"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:amethyst_block",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:amethyst_block"
+    },
+    {
+      "id": "bones_in_the_dark",
+      "title": "Bones in the Dark",
+      "after": [
+        "null_space"
+      ],
+      "text": [
+        "In the shadowlands lie the bones of a dragon far older than the one you killed. Count its ribs: Ilse thinks there were many dragons once."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:bone_block",
+          "count": 4,
+          "title": "Take bone from the old dragon"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone",
+          "name": "An Elder Dragon's Bone",
+          "lore": [
+            "Older than the one you killed."
+          ]
+        },
+        {
+          "skill": "magic",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:bone_block",
+      "discover": {
+        "structure": "nullscape:dragon_skeleton"
+      }
+    },
+    {
+      "id": "strange_shores",
+      "title": "Strange Shores",
+      "after": [
+        "null_space"
+      ],
+      "text": [
+        "Some islands are overgrown or rotten. Stand in the End wilds, the End reef and the End corruption."
+      ],
+      "tasks": [
+        {
+          "biome": "biomesoplenty:end_wilds",
+          "title": "Stand in the End wilds"
+        },
+        {
+          "biome": "biomesoplenty:end_reef",
+          "title": "Stand in the End reef"
+        },
+        {
+          "biome": "biomesoplenty:end_corruption",
+          "title": "Stand in the End corruption"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "naturescompass:naturescompass"
+        },
+        {
+          "skill": "forage",
+          "xp": 700
+        }
+      ],
+      "icon": "naturescompass:naturescompass"
+    },
+    {
+      "id": "the_end_tower",
+      "title": "The Lonely Tower",
+      "after": [
+        "first_flight"
+      ],
+      "text": [
+        "A tower stands alone on an outer island. Climb it and bring Ilse the star map kept at its top."
+      ],
+      "tasks": [
+        {
+          "structure": "structory_towers:end/end_tower",
+          "title": "Find the lonely tower on the outer island"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "structory_towers:end/end_tower"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Star Map",
+              "texture": "minecraft:item/map"
+            },
+            "found": "A star map, kept in the tower's top chest."
+          },
+          "title": "Take the star map from the tower's top"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:ender_chest"
+    },
+    {
+      "id": "the_aviary",
+      "title": "The Aviary",
+      "after": [
+        "first_flight"
+      ],
+      "text": [
+        "A colossal bird-cage of a dungeon floats in the End. Clear the aviary and its keepers."
+      ],
+      "tasks": [
+        {
+          "structure": "dungeons_arise:aviary",
+          "title": "Find the floating aviary"
+        },
+        {
+          "kill": "minecraft:vex",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "dungeons_arise:aviary"
+            },
+            "wave": 4,
+            "name": "Aviary Keepers"
+          },
+          "title": "Clear the aviary and its keepers"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:diamond",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:bow"
+    },
+    {
+      "id": "the_sealed_citadel",
+      "title": "The Sealed Citadel",
+      "after": [
+        "null_space"
+      ],
+      "text": [
+        "In the highlands stands a ruined citadel with a door that will not open while its guardian sleeps. Find the Ruined Citadel and note its Ender Golems. This one is for later."
+      ],
+      "tasks": [
+        {
+          "structure": "cataclysm:ruined_citadel",
+          "title": "Find the ruined citadel in the highlands"
+        },
+        {
+          "observe": "cataclysm:ender_golem",
+          "ticks": 40,
+          "title": "Note the Ender Golems at its door"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_apple",
+          "count": 2
+        },
+        {
+          "skill": "agility",
+          "xp": 700
+        }
+      ],
+      "icon": "minecraft:golden_apple"
+    },
+    {
+      "id": "sky_pirates",
+      "title": "Sky Pirates",
+      "after": [
+        "the_aviary"
+      ],
+      "text": [
+        "An airship drifts through the void, crewed by illagers who think the End is empty. Board one and take its captain's chest."
+      ],
+      "tasks": [
+        {
+          "structure": "#airships",
+          "title": "Find an airship drifting through the void"
+        },
+        {
+          "kill": "minecraft:pillager",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "#airships"
+            },
+            "wave": 4,
+            "name": "Sky Pirate Crew"
+          },
+          "title": "Board it and fight the crew"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "#airships"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Captain's Chest",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "The captain's chest, bound in brass."
+          },
+          "title": "Take the captain's chest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:white_banner",
+          "name": "The Sky Pirates' Banner"
+        },
+        {
+          "item": "minecraft:emerald",
+          "count": 16
+        },
+        {
+          "skill": "attack",
+          "xp": 850
+        }
+      ],
+      "icon": "minecraft:crossbow"
+    },
+    {
+      "id": "void_eye",
+      "title": "The Void Eye",
+      "after": [
+        "the_sealed_citadel",
+        "shells_for_boxes"
+      ],
+      "text": [
+        "The guardian woke with the others. Craft the Void Eye from shulker shells and an eye of ender, and give Ilse the finished chart of the End."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:shulker_shell",
+          "count": 4,
+          "title": "Gather shulker shells for the eye"
+        },
+        {
+          "item": "minecraft:ender_eye",
+          "title": "Gather an eye of ender for the eye"
+        },
+        {
+          "item": "cataclysm:void_eye",
+          "crafted": true,
+          "title": "Craft the Void Eye"
+        },
+        {
+          "talk": "character",
+          "character": "ilse",
+          "lines": [
+            "The finished chart. At last. Thank you.",
+            "Take my boots. The void forgives nothing."
+          ],
+          "title": "Give Ilse the finished chart of the End"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather_boots",
+          "name": "Ilse's Voidwalker Boots",
+          "lore": [
+            "The void forgives nothing."
+          ],
+          "enchant": {
+            "minecraft:feather_falling": 4
+          }
+        },
+        {
+          "skill": "agility",
+          "xp": 900
+        }
+      ],
+      "icon": "cataclysm:void_eye"
+    }
+  ]
+}

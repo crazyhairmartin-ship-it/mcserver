@@ -253,7 +253,23 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - twilight:trophy_hall: needs pedestals; written as a build of all eight trophies
 - nether:crimson_donjon: needs trading at the hamlet with the plunder; written as visiting the hamlet
 - nether:monstrous_eye: needs Vesna to confirm where it points; written as a talk after crafting
+- end:the_island_of_stone: needs counting towers and sketching arches; written as talking to Ilse and reaching the End
+- end:safe_landing: needs a bed-free shelter out of the dragon's path; written as an obsidian platform with an ender chest and a waystone
+- end:breath_in_a_bottle: needs the dragon's breath cloud; written as a timed hold, bottles and a lingering potion
+- end:beyond_the_gateway: needs a thousand blocks walked across the outer islands; written as a timed run from the gateway
+- end:first_flight: needs five kilometres with the elytra; written as a timed flight to a far End city
+- end:the_wings: needs the ship's hold and an elytra slot; written as the elytra carried
+- end:chorus_garden: needs flowers replanted on end stone; written as a chorus flower and purpur build
+- end:ships_ghost: needs logbook pages in several different ships; written as a search of mega ships for three pages
+- end:manuscript_shrine: needs reading texts without meeting the gaze; written as a hurt-free hold and a search
+- end:spire_climb: needs a reading at the top; written as a timed climb to the spire's top
+- end:quiet_meadows: needs resting a minute in each; written as one timed hold and visits
+- end:void_wildlife: needs feeding an endergrade until it follows; written as a tame
+- end:salvage_the_scraps: needs sifting three different structures; written as a search of three scrap heaps
+- end:null_space: needs flying over the biomes; written as standing in each
+- end:the_sealed_citadel: needs noting the Ender Golems; written as observing one
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start
 - nether:monstrous_eye: restore after main_story:act5_start
+- end:void_eye: restore after main_story:act5_start

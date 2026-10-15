@@ -10211,6 +10211,651 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "end:the_island_of_stone",
+    "stage": "fq.end.the_island_of_stone.talk0",
+    "type": "talk",
+    "lines": [
+      "One thing before you jump. Notes on the island. Count the towers.",
+      "Sketch the arches. Quickly."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "ilse",
+    "quest_id": "72CF627E790AC4F7",
+    "open_task": ""
+  },
+  {
+    "quest": "end:safe_landing",
+    "stage": "fq.end.safe_landing.build0",
+    "type": "build",
+    "keys": [
+      "minecraft:obsidian",
+      "minecraft:ender_chest",
+      "waystones:waystone"
+    ],
+    "counts": [
+      12,
+      1,
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "383D6D66E9BBD8F8",
+    "prev_tasks": []
+  },
+  {
+    "quest": "end:safe_landing",
+    "stage": "fq.end.safe_landing.waystones1",
+    "type": "waystones",
+    "count": 1,
+    "wild": false,
+    "total": false,
+    "requires": [],
+    "quest_id": "383D6D66E9BBD8F8",
+    "prev_tasks": [
+      "140B5ADFC906CB2A"
+    ]
+  },
+  {
+    "quest": "end:breath_in_a_bottle",
+    "stage": "fq.end.breath_in_a_bottle.timed1",
+    "type": "timed",
+    "seconds": 60,
+    "goal": {
+      "kind": "hold",
+      "radius": 12.0
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "The breath cloud hangs. Fill the bottles!"
+    ],
+    "start": "Catch the breath",
+    "requires": [],
+    "quest_id": "4776383B6A2E3ABD",
+    "prev_tasks": [
+      "39A666548839A603"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "end:beyond_the_gateway",
+    "stage": "fq.end.beyond_the_gateway.timed2",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:end_city"
+      ],
+      "label": "an End city",
+      "away": 400
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "The outer islands stretch on. Walk them."
+    ],
+    "start": "Set out",
+    "requires": [],
+    "quest_id": "22A3FE4C161BEAF1",
+    "prev_tasks": [
+      "68831879FCAD9155",
+      "3511FBD34D472DD8"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "end:purple_towers",
+    "stage": "fq.end.purple_towers.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:shulker",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:end_city"
+      ],
+      "label": "the destination"
+    },
+    "wave": 3,
+    "name": "City Shulkers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "596C846C989791F9",
+    "requires": [],
+    "quest_id": "4958728C79989271",
+    "prev_tasks": [
+      "42DF2341DE27A05B"
+    ]
+  },
+  {
+    "quest": "end:first_flight",
+    "stage": "fq.end.first_flight.timed0",
+    "type": "timed",
+    "seconds": 900,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:end_city"
+      ],
+      "label": "a far End city",
+      "away": 800
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Fly far. Sketch from the highest point."
+    ],
+    "start": "Take off",
+    "requires": [],
+    "quest_id": "7EB27C0BFFD267EB",
+    "prev_tasks": [],
+    "name": ""
+  },
+  {
+    "quest": "end:chorus_garden",
+    "stage": "fq.end.chorus_garden.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:chorus_flower",
+      "minecraft:purpur_block"
+    ],
+    "counts": [
+      2,
+      16
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "2520121540437B07",
+    "prev_tasks": [
+      "251BEB1999294342"
+    ]
+  },
+  {
+    "quest": "end:the_wrecked_fleet",
+    "stage": "fq.end.the_wrecked_fleet.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mes:mega_ship"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_the_wrecked_fleet_1",
+    "found": "The bridge locker, still sealed.",
+    "requires": [],
+    "quest_id": "04C1865389FB7016",
+    "prev_tasks": [
+      "489C9F196B557955"
+    ]
+  },
+  {
+    "quest": "end:ships_ghost",
+    "stage": "fq.end.ships_ghost.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "My logbook pages. Scattered through the other ships. Why did we fall?"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "73A18C5D3FFB9388",
+    "prev_tasks": [],
+    "name": "The Captain's Ghost",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:allay",
+    "profession": ""
+  },
+  {
+    "quest": "end:ships_ghost",
+    "stage": "fq.end.ships_ghost.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mes:mega_ship",
+        "mes:mega_ship_basic",
+        "mes:mega_ship_crashed",
+        "mes:mega_ship_crashed_2",
+        "mes:mega_ship_crashed_deepslate",
+        "mes:mega_ship_deepslate",
+        "mes:mega_ship_deepslate_2",
+        "mes:mega_ship_deepslate_3"
+      ],
+      "label": "the destination"
+    },
+    "count": 3,
+    "item": "kubejs:quest_ships_ghost_1",
+    "found": "A page of the captain's log, brittle with age.",
+    "requires": [],
+    "quest_id": "73A18C5D3FFB9388",
+    "prev_tasks": [
+      "73BC0F115E3DB2F4"
+    ]
+  },
+  {
+    "quest": "end:starlight_voyager",
+    "stage": "fq.end.starlight_voyager.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mes:starlight_voyager"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_starlight_voyager_1",
+    "found": "The flagship's navigation star, still bright.",
+    "requires": [],
+    "quest_id": "34E8E7340CC42BFA",
+    "prev_tasks": [
+      "2E91C38AF43A6E16"
+    ]
+  },
+  {
+    "quest": "end:phantom_citadel",
+    "stage": "fq.end.phantom_citadel.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:phantom",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mes:phantom_citadel"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Citadel Phantoms",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "0A1A315D48F97179",
+    "requires": [],
+    "quest_id": "19CDDA2E0A8BC547",
+    "prev_tasks": [
+      "1B029543774C350C"
+    ]
+  },
+  {
+    "quest": "end:enderkeep_siege",
+    "stage": "fq.end.enderkeep_siege.timed1",
+    "type": "timed",
+    "seconds": 240,
+    "goal": {
+      "kind": "hold",
+      "radius": 14.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:enderman",
+        "count": 2,
+        "every": 30
+      },
+      {
+        "entity": "minecraft:endermite",
+        "count": 4,
+        "every": 30
+      }
+    ],
+    "lines": [
+      "The gate is winding open. Hold the courtyard!"
+    ],
+    "start": "Hold the courtyard",
+    "requires": [],
+    "quest_id": "598C314A13D6D80C",
+    "prev_tasks": [
+      "7067CBA9CFA1CCF6"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "end:enderwatch",
+    "stage": "fq.end.enderwatch.photo2",
+    "type": "photo",
+    "target": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:end_city"
+      ],
+      "label": "the destination"
+    },
+    "requires": [],
+    "quest_id": "5D0792DC3B5D99E1",
+    "prev_tasks": [
+      "35C0F6EED5A143FD",
+      "437EC09125D8F122"
+    ]
+  },
+  {
+    "quest": "end:manuscript_shrine",
+    "stage": "fq.end.manuscript_shrine.timed1",
+    "type": "timed",
+    "seconds": 120,
+    "goal": {
+      "kind": "hold",
+      "radius": 8.0
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Don't meet its gaze. Read."
+    ],
+    "start": "Read the manuscripts",
+    "requires": [],
+    "quest_id": "6F9E20738EAADBCB",
+    "prev_tasks": [
+      "0D63233ECF2BFAC0"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "end:manuscript_shrine",
+    "stage": "fq.end.manuscript_shrine.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mes:manuscript_shrine"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_manuscript_shrine_2",
+    "found": "A page, handed over in silence.",
+    "requires": [],
+    "quest_id": "6F9E20738EAADBCB",
+    "prev_tasks": [
+      "0D63233ECF2BFAC0",
+      "1BCC7705CB1EBAB0"
+    ]
+  },
+  {
+    "quest": "end:mythic_garden",
+    "stage": "fq.end.mythic_garden.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mes:mythic_garden"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_mythic_garden_2",
+    "found": "A cutting that glows faintly.",
+    "requires": [],
+    "quest_id": "305164A3BB96426B",
+    "prev_tasks": [
+      "33463388AE15550A",
+      "115D0628332AC9AC"
+    ]
+  },
+  {
+    "quest": "end:fallen_star",
+    "stage": "fq.end.fallen_star.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "It fell at dusk. I felt it hum. Take a fragment."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "654AB75A196E70F1",
+    "prev_tasks": [
+      "61DA3E160CAD221B",
+      "1907BB6C5021CF5D"
+    ],
+    "name": "Stranded Astronomer",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "end:spire_climb",
+    "stage": "fq.end.spire_climb.timed1",
+    "type": "timed",
+    "seconds": 180,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "mes:ender_spire"
+      ],
+      "label": "the spire's top",
+      "away": 30
+    },
+    "no": [
+      "elytra",
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Three minutes. No wings."
+    ],
+    "start": "Climb",
+    "requires": [],
+    "quest_id": "65069FEC77D024F3",
+    "prev_tasks": [
+      "279B39F9A0F97A16"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "end:the_monolith",
+    "stage": "fq.end.the_monolith.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mes:monolith"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_the_monolith_0",
+    "found": "A page, fixed to the stone with wax.",
+    "requires": [],
+    "quest_id": "7C69B01B86C1158E",
+    "prev_tasks": [
+      "4B7A1C4080CF688B"
+    ]
+  },
+  {
+    "quest": "end:quiet_meadows",
+    "stage": "fq.end.quiet_meadows.timed1",
+    "type": "timed",
+    "seconds": 70,
+    "goal": {
+      "kind": "hold",
+      "radius": 10.0
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "Rest. Nothing will hurt you here."
+    ],
+    "start": "Rest a minute",
+    "requires": [],
+    "quest_id": "4B679923056D4A04",
+    "prev_tasks": [
+      "0FF8214F8EC12755"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "end:void_wildlife",
+    "stage": "fq.end.void_wildlife.tame1",
+    "type": "tame",
+    "entities": [
+      "alexsmobs:endergrade"
+    ],
+    "count": 1,
+    "requires": [],
+    "quest_id": "04670EAA359EA5D8",
+    "prev_tasks": [
+      "4B2227B42210F1DE"
+    ]
+  },
+  {
+    "quest": "end:salvage_the_scraps",
+    "stage": "fq.end.salvage_the_scraps.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mes:endscraps"
+      ],
+      "label": "the destination"
+    },
+    "count": 3,
+    "item": "kubejs:quest_salvage_the_scraps_0",
+    "found": "Something the void left behind.",
+    "requires": [],
+    "quest_id": "5E7C41F7910D5F11",
+    "prev_tasks": []
+  },
+  {
+    "quest": "end:the_end_tower",
+    "stage": "fq.end.the_end_tower.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "structory_towers:end/end_tower"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_the_end_tower_1",
+    "found": "A star map, kept in the tower's top chest.",
+    "requires": [],
+    "quest_id": "3B39537C377D127B",
+    "prev_tasks": [
+      "7C921F1412366794"
+    ]
+  },
+  {
+    "quest": "end:the_aviary",
+    "stage": "fq.end.the_aviary.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:vex",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:aviary"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Aviary Keepers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "49BA48CFAB0075E0",
+    "requires": [],
+    "quest_id": "67A2A6B48DC4DDEC",
+    "prev_tasks": [
+      "784223D4258FF08A"
+    ]
+  },
+  {
+    "quest": "end:sky_pirates",
+    "stage": "fq.end.sky_pirates.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:heavenly_challenger",
+        "dungeons_arise:heavenly_conqueror",
+        "dungeons_arise:heavenly_rider",
+        "dungeons_arise:small_blimp"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Sky Pirate Crew",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "70235E7444B82DD9",
+    "requires": [],
+    "quest_id": "437E78DB04C98114",
+    "prev_tasks": [
+      "0899C71BFB86066C"
+    ]
+  },
+  {
+    "quest": "end:sky_pirates",
+    "stage": "fq.end.sky_pirates.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:heavenly_challenger",
+        "dungeons_arise:heavenly_conqueror",
+        "dungeons_arise:heavenly_rider",
+        "dungeons_arise:small_blimp"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_sky_pirates_2",
+    "found": "The captain's chest, bound in brass.",
+    "requires": [],
+    "quest_id": "437E78DB04C98114",
+    "prev_tasks": [
+      "0899C71BFB86066C",
+      "70235E7444B82DD9"
+    ]
+  },
+  {
+    "quest": "end:void_eye",
+    "stage": "fq.end.void_eye.talk3",
+    "type": "talk",
+    "lines": [
+      "The finished chart. At last. Thank you.",
+      "Take my boots. The void forgives nothing."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "ilse",
+    "quest_id": "1B3DDE1C696DB910",
+    "open_task": ""
+  },
+  {
     "quest": "skill_cooking:first_order",
     "stage": "fq.skill_cooking.first_order.talk0",
     "type": "talk",
