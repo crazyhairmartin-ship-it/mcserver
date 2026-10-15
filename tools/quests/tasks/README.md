@@ -181,7 +181,9 @@ Re-run until every step is OK, then commit the fixes (and `puzzle_cache.json`) w
 
 ### Commit
 
-One commit per task. From the repo root (`pack/`): `packwiz refresh`, then commit everything (authoring files, `src/chapters/`,
+One commit per task. Run `python tools/quests/make_quests.py` once more right before committing (the book in
+`config/ftbquests/` must match your last edit; two passes committed a stale book), then from the repo root (`pack/`):
+`packwiz refresh`, and commit everything (authoring files, `src/chapters/`,
 `config/ftbquests/`, the generated KubeJS files, `pack.json`, `followups.md`, this README's progress table) with a
 message like `Quests T07: discovery_land, 35 quests`, and push to `main`. Don't deploy to the live server and don't
 restart anything; Dylan or an Opus session does that.

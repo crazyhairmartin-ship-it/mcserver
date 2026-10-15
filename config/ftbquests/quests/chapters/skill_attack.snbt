@@ -276,10 +276,26 @@
 					type: "item"
 				}
 				{
+					id: "303B85FA1D6B83E7"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:smite"
+									lvl: 3s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:attack 150"
 					elevate_perms: true
 					icon: "minecraft:iron_sword"
-					id: "303B85FA1D6B83E7"
+					id: "43B31B38D5AC0562"
 					silent: true
 					title: "+150 Attack XP"
 					type: "command"
@@ -844,10 +860,26 @@
 					type: "item"
 				}
 				{
+					id: "23AA84FFF5C50801"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:looting"
+									lvl: 2s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:attack 400"
 					elevate_perms: true
 					icon: "minecraft:iron_sword"
-					id: "23AA84FFF5C50801"
+					id: "73C0A79D1C883DB8"
 					silent: true
 					title: "+400 Attack XP"
 					type: "command"

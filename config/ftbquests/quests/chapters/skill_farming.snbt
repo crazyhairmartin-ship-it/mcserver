@@ -1031,10 +1031,16 @@
 					type: "item"
 				}
 				{
+					count: 8
+					id: "2B3C7FF42D788DCD"
+					item: "minecraft:hay_block"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:farm 400"
 					elevate_perms: true
 					icon: "minecraft:iron_hoe"
-					id: "2B3C7FF42D788DCD"
+					id: "3E5FEA4757840A9E"
 					silent: true
 					title: "+400 Farming XP"
 					type: "command"
@@ -1329,10 +1335,16 @@
 					type: "item"
 				}
 				{
+					count: 2
+					id: "26CE345F078B40EE"
+					item: "minecraft:cake"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:farm 850"
 					elevate_perms: true
 					icon: "minecraft:iron_hoe"
-					id: "26CE345F078B40EE"
+					id: "12A96D1D368D5435"
 					silent: true
 					title: "+850 Farming XP"
 					type: "command"

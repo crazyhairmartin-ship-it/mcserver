@@ -432,10 +432,16 @@
 					type: "item"
 				}
 				{
+					count: 2
+					id: "1AB6B830F35139B1"
+					item: "minecraft:shulker_shell"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 650"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "1AB6B830F35139B1"
+					id: "5F1A4E0A6180A280"
 					silent: true
 					title: "+650 Agility XP"
 					type: "command"
@@ -658,10 +664,16 @@
 					type: "item"
 				}
 				{
+					count: 6
+					id: "7F91B21776817973"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 650"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "7F91B21776817973"
+					id: "12CCFE9F90A31853"
 					silent: true
 					title: "+650 Agility XP"
 					type: "command"
@@ -711,10 +723,15 @@
 					type: "item"
 				}
 				{
+					id: "6E6B5F4D6C22F790"
+					item: "irons_spellbooks:eldritch_manuscript"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "6E6B5F4D6C22F790"
+					id: "19173FCBAA68E3BE"
 					silent: true
 					title: "+700 Magic XP"
 					type: "command"
@@ -913,10 +930,16 @@
 					type: "item"
 				}
 				{
+					count: 3
+					id: "60830C934813697D"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "60830C934813697D"
+					id: "7D3416BE93B93DC1"
 					silent: true
 					title: "+700 Magic XP"
 					type: "command"
@@ -1134,10 +1157,16 @@
 					type: "item"
 				}
 				{
+					count: 3
+					id: "5C176114E364A225"
+					item: "minecraft:dragon_breath"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "5C176114E364A225"
+					id: "7D8A0B3AAA777CF5"
 					silent: true
 					title: "+700 Magic XP"
 					type: "command"

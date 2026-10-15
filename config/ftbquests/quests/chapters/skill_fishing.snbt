@@ -818,10 +818,16 @@
 					type: "item"
 				}
 				{
+					count: 6
+					id: "106DE698950BA767"
+					item: "aquaculture:neptunium_nugget"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:fish 400"
 					elevate_perms: true
 					icon: "minecraft:fishing_rod"
-					id: "106DE698950BA767"
+					id: "25B65659559A4195"
 					silent: true
 					title: "+400 Fishing XP"
 					type: "command"

@@ -585,10 +585,16 @@
 					type: "item"
 				}
 				{
+					count: 2
+					id: "4F2D3F601BF323CA"
+					item: "minecraft:redstone_block"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:craft 280"
 					elevate_perms: true
 					icon: "minecraft:crafting_table"
-					id: "4F2D3F601BF323CA"
+					id: "4AAB461DC290F154"
 					silent: true
 					title: "+280 Crafting XP"
 					type: "command"
@@ -678,10 +684,16 @@
 					type: "item"
 				}
 				{
+					count: 64
+					id: "4E982BC01CBAE7EC"
+					item: "minecraft:stone_bricks"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:craft 320"
 					elevate_perms: true
 					icon: "minecraft:crafting_table"
-					id: "4E982BC01CBAE7EC"
+					id: "6C1CC55B79530202"
 					silent: true
 					title: "+320 Crafting XP"
 					type: "command"
@@ -1514,10 +1526,16 @@
 					type: "item"
 				}
 				{
+					count: 12
+					id: "09FABAD44EDB4C03"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:craft 740"
 					elevate_perms: true
 					icon: "minecraft:crafting_table"
-					id: "09FABAD44EDB4C03"
+					id: "278FF2C4E7BB25FD"
 					silent: true
 					title: "+740 Crafting XP"
 					type: "command"
@@ -1615,10 +1633,16 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "19A8F46B596680BC"
+					item: "minecraft:iron_block"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:craft 850"
 					elevate_perms: true
 					icon: "minecraft:crafting_table"
-					id: "19A8F46B596680BC"
+					id: "1FEC31F443D94626"
 					silent: true
 					title: "+850 Crafting XP"
 					type: "command"

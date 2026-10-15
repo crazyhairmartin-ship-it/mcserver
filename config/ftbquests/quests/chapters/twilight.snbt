@@ -1232,10 +1232,16 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "55AB51908116D08A"
+					item: "twilightforest:ironwood_ingot"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 350"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "55AB51908116D08A"
+					id: "19387FC0810E8C82"
 					silent: true
 					title: "+350 Agility XP"
 					type: "command"

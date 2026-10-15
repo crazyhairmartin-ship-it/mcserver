@@ -357,10 +357,16 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "6A78AA45723C9F63"
+					item: "minecraft:pumpkin_pie"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 100"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "6A78AA45723C9F63"
+					id: "10F965E68D45242E"
 					silent: true
 					title: "+100 Magic XP"
 					type: "command"

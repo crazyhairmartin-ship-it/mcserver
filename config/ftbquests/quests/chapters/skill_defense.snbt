@@ -226,10 +226,15 @@
 					type: "item"
 				}
 				{
+					id: "1075E4B1BE2DBB85"
+					item: "spartanshields:iron_tower_shield"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 200"
 					elevate_perms: true
 					icon: "minecraft:shield"
-					id: "1075E4B1BE2DBB85"
+					id: "5232641B8E2FC931"
 					silent: true
 					title: "+200 Defense XP"
 					type: "command"
@@ -268,10 +273,26 @@
 					type: "item"
 				}
 				{
+					id: "67F03408FF866198"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:protection"
+									lvl: 1s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 220"
 					elevate_perms: true
 					icon: "minecraft:shield"
-					id: "67F03408FF866198"
+					id: "092D662CB0B3C884"
 					silent: true
 					title: "+220 Defense XP"
 					type: "command"
@@ -475,10 +496,16 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "74F59806A0F5D855"
+					item: "minecraft:iron_block"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 300"
 					elevate_perms: true
 					icon: "minecraft:shield"
-					id: "74F59806A0F5D855"
+					id: "0102231110579BA2"
 					silent: true
 					title: "+300 Defense XP"
 					type: "command"
@@ -734,10 +761,26 @@
 					type: "item"
 				}
 				{
+					id: "01C029C54EC13988"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:respiration"
+									lvl: 2s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 400"
 					elevate_perms: true
 					icon: "minecraft:shield"
-					id: "01C029C54EC13988"
+					id: "2FFF5C0039A663B5"
 					silent: true
 					title: "+400 Defense XP"
 					type: "command"
@@ -1170,10 +1213,16 @@
 					type: "item"
 				}
 				{
+					count: 10
+					id: "72717EE6F84BD909"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 900"
 					elevate_perms: true
 					icon: "minecraft:shield"
-					id: "72717EE6F84BD909"
+					id: "078DFBD089D16718"
 					silent: true
 					title: "+900 Defense XP"
 					type: "command"

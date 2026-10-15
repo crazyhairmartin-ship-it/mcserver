@@ -482,10 +482,26 @@
 					type: "item"
 				}
 				{
+					id: "78672CD50A627E4D"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 2s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:mining 250"
 					elevate_perms: true
 					icon: "minecraft:iron_pickaxe"
-					id: "78672CD50A627E4D"
+					id: "64B73669E266C7E6"
 					silent: true
 					title: "+250 Mining XP"
 					type: "command"
@@ -984,10 +1000,16 @@
 					type: "item"
 				}
 				{
+					count: 8
+					id: "2E4AD24971C95DDA"
+					item: "minecraft:raw_gold"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:mining 300"
 					elevate_perms: true
 					icon: "minecraft:iron_pickaxe"
-					id: "2E4AD24971C95DDA"
+					id: "4F76BD305EDEF059"
 					silent: true
 					title: "+300 Mining XP"
 					type: "command"
@@ -1049,10 +1071,16 @@
 					type: "item"
 				}
 				{
+					count: 8
+					id: "7054A42D5DB89B65"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:mining 350"
 					elevate_perms: true
 					icon: "minecraft:iron_pickaxe"
-					id: "7054A42D5DB89B65"
+					id: "7C094F1BEE4A1266"
 					silent: true
 					title: "+350 Mining XP"
 					type: "command"
@@ -1493,10 +1521,16 @@
 					type: "item"
 				}
 				{
+					count: 6
+					id: "23B2B848BF2D494A"
+					item: "minecraft:candle"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:mining 800"
 					elevate_perms: true
 					icon: "minecraft:iron_pickaxe"
-					id: "23B2B848BF2D494A"
+					id: "58F348FC0CD646E0"
 					silent: true
 					title: "+800 Mining XP"
 					type: "command"

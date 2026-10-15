@@ -281,10 +281,16 @@
 					type: "item"
 				}
 				{
+					count: 32
+					id: "462F9A24E47792BA"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:range 150"
 					elevate_perms: true
 					icon: "minecraft:bow"
-					id: "462F9A24E47792BA"
+					id: "616B97205A07DDFD"
 					silent: true
 					title: "+150 Range XP"
 					type: "command"
@@ -1188,10 +1194,26 @@
 					type: "item"
 				}
 				{
+					id: "0B6DDE443EC51E7B"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:power"
+									lvl: 3s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:range 780"
 					elevate_perms: true
 					icon: "minecraft:bow"
-					id: "0B6DDE443EC51E7B"
+					id: "592EA3A0F187457A"
 					silent: true
 					title: "+780 Range XP"
 					type: "command"

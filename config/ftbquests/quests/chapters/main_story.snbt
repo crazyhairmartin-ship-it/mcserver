@@ -520,6 +520,12 @@
 					item: "minecraft:spyglass"
 					type: "item"
 				}
+				{
+					count: 2
+					id: "42C3BEF4570F3678"
+					item: "mowziesmobs:glowing_jelly"
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -1517,10 +1523,16 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "158F7BD591538F74"
+					item: "irons_spellbooks:arcane_essence"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 300"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "158F7BD591538F74"
+					id: "25C19A3FAF5A94D5"
 					silent: true
 					title: "+300 Magic XP"
 					type: "command"

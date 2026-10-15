@@ -31,10 +31,16 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "7064E806D405D259"
+					item: "irons_spellbooks:common_ink"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 80"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "7064E806D405D259"
+					id: "3A6DEEB8B3D612B2"
 					silent: true
 					title: "+80 Magic XP"
 					type: "command"
@@ -1251,10 +1257,16 @@
 					type: "item"
 				}
 				{
+					count: 3
+					id: "4E5A3A6DD1A493A8"
+					item: "irons_spellbooks:uncommon_ink"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 250"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "4E5A3A6DD1A493A8"
+					id: "3B28EFF50C93DADE"
 					silent: true
 					title: "+250 Magic XP"
 					type: "command"
@@ -2176,10 +2188,16 @@
 					type: "item"
 				}
 				{
+					count: 3
+					id: "0E5E71BDF32DF2F5"
+					item: "irons_spellbooks:rare_ink"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 900"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "0E5E71BDF32DF2F5"
+					id: "17969ED28D7128AE"
 					silent: true
 					title: "+900 Magic XP"
 					type: "command"

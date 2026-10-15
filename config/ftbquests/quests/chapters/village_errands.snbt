@@ -997,10 +997,32 @@
 					type: "item"
 				}
 				{
+					count: 6
+					id: "4BAE86900AF5D715"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					id: "5DBB41E8271B9317"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:unbreaking"
+									lvl: 2s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 100"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "4BAE86900AF5D715"
+					id: "3584447B6B14A124"
 					silent: true
 					title: "+100 Magic XP"
 					type: "command"

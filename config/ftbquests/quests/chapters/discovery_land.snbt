@@ -1749,10 +1749,26 @@
 					type: "item"
 				}
 				{
+					id: "6BAAE771B7231DD2"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:frost_walker"
+									lvl: 2s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "6BAAE771B7231DD2"
+					id: "08CD678F0411A580"
 					silent: true
 					title: "+200 Magic XP"
 					type: "command"
@@ -1848,10 +1864,15 @@
 					type: "item"
 				}
 				{
+					id: "2A1C609F85F57756"
+					item: "irons_spellbooks:ancient_knowledge_fragment"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:magic 700"
 					elevate_perms: true
 					icon: "minecraft:enchanted_book"
-					id: "2A1C609F85F57756"
+					id: "13C7AE73FA95EB35"
 					silent: true
 					title: "+700 Magic XP"
 					type: "command"

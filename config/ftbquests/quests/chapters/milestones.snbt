@@ -743,10 +743,26 @@
 					type: "item"
 				}
 				{
+					id: "26FA382645DD3FD1"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:defense 300"
 					elevate_perms: true
 					icon: "minecraft:shield"
-					id: "26FA382645DD3FD1"
+					id: "3EA5A72F0E5490EE"
 					silent: true
 					title: "+300 Defense XP"
 					type: "command"

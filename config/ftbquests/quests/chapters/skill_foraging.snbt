@@ -778,10 +778,16 @@
 					type: "item"
 				}
 				{
+					count: 16
+					id: "600180D43B51146E"
+					item: "minecraft:glow_berries"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:forage 280"
 					elevate_perms: true
 					icon: "minecraft:iron_axe"
-					id: "600180D43B51146E"
+					id: "19645D4EF7A299B0"
 					silent: true
 					title: "+280 Foraging XP"
 					type: "command"
@@ -1078,10 +1084,16 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "279C41BE2AB49290"
+					item: "minecraft:flowering_azalea"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:forage 400"
 					elevate_perms: true
 					icon: "minecraft:iron_axe"
-					id: "279C41BE2AB49290"
+					id: "005A8D1EEB4EEA52"
 					silent: true
 					title: "+400 Foraging XP"
 					type: "command"
@@ -1406,10 +1418,16 @@
 					type: "item"
 				}
 				{
+					count: 16
+					id: "13DBAD4F72577BFC"
+					item: "minecraft:moss_block"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:forage 850"
 					elevate_perms: true
 					icon: "minecraft:iron_axe"
-					id: "13DBAD4F72577BFC"
+					id: "4854C2C688841005"
 					silent: true
 					title: "+850 Foraging XP"
 					type: "command"

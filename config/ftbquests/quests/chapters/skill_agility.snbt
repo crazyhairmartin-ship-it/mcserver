@@ -1572,10 +1572,26 @@
 					type: "item"
 				}
 				{
+					id: "109B43C74167008C"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 3s
+								}
+							]
+						}
+					}
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 900"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "109B43C74167008C"
+					id: "28A6A6D3DCD897EF"
 					silent: true
 					title: "+900 Agility XP"
 					type: "command"

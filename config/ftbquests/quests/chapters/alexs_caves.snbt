@@ -103,10 +103,16 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "4627382DAF293C00"
+					item: "alexscaves:amber"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:agility 150"
 					elevate_perms: true
 					icon: "minecraft:feather"
-					id: "4627382DAF293C00"
+					id: "302494398881EC4F"
 					silent: true
 					title: "+150 Agility XP"
 					type: "command"
@@ -1086,10 +1092,16 @@
 					type: "item"
 				}
 				{
+					count: 4
+					id: "63EE0FA0369DBBA3"
+					item: "alexscaves:dark_tatters"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:attack 300"
 					elevate_perms: true
 					icon: "minecraft:iron_sword"
-					id: "63EE0FA0369DBBA3"
+					id: "7187E6C9C15F8B37"
 					silent: true
 					title: "+300 Attack XP"
 					type: "command"

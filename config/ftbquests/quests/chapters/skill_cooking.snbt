@@ -288,10 +288,16 @@
 					type: "item"
 				}
 				{
+					count: 8
+					id: "361E432174456210"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:cook 150"
 					elevate_perms: true
 					icon: "farmersdelight:cooking_pot"
-					id: "361E432174456210"
+					id: "64944EE2DD50A32F"
 					silent: true
 					title: "+150 Cooking XP"
 					type: "command"
@@ -959,10 +965,16 @@
 					type: "item"
 				}
 				{
+					count: 8
+					id: "5C422CEFABAF04FD"
+					item: "brewery:hops_seeds"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:cook 350"
 					elevate_perms: true
 					icon: "farmersdelight:cooking_pot"
-					id: "5C422CEFABAF04FD"
+					id: "4A9E46B97513A8CA"
 					silent: true
 					title: "+350 Cooking XP"
 					type: "command"

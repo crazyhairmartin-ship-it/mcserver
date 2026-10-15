@@ -896,10 +896,16 @@
 					type: "item"
 				}
 				{
+					count: 8
+					id: "6FA81DA08E9B2D08"
+					item: "minecraft:amethyst_shard"
+					type: "item"
+				}
+				{
 					command: "/puffish_skills experience add {p} puffish_skills:mining 200"
 					elevate_perms: true
 					icon: "minecraft:iron_pickaxe"
-					id: "6FA81DA08E9B2D08"
+					id: "468D3FF732A5DB89"
 					silent: true
 					title: "+200 Mining XP"
 					type: "command"
