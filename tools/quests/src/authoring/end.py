@@ -64,7 +64,7 @@ ACT4 = [
           text=["An End ship hangs off a city's edge with wings in its hold. Take the elytra and wear it in your "
                 "elytra slot, so your chestplate stays on."],
           tasks=[item("minecraft:elytra", title="Take the elytra from the ship's hold")],
-          rewards=[reward_item("minecraft:phantom_membrane", 4), reward_item("minecraft:firework_rocket", 16), skill("agility", 700)]),
+          rewards=[reward_item("minecraft:phantom_membrane", 4), reward_item("minecraft:enchanted_book", enchant={'minecraft:unbreaking': 3}), skill("agility", 700)]),
 
     quest("first_flight", "First Flight", icon="minecraft:firework_rocket", after=["the_wings"],
           text=["Fly with the elytra. Ilse asks for a sketch from the highest point you reach."],
@@ -94,8 +94,7 @@ ACT4 = [
           tasks=[enc(["My logbook pages. Scattered through the other ships. Why did we fall?"], entity="minecraft:allay", name="The Captain's Ghost",
                      title="Hear the ghost captain on the bridge"),
                  search("#end_mega_ships", 2, "a Logbook Page", "A page of the captain's log, brittle with age.", title="Collect logbook pages from the mega ships")],
-          rewards=[reward_item("minecraft:leather_chestplate", name="The Captain's Coat", lore=["Worn on the bridge of a fallen fleet."]),
-                   skill("magic", 650)]),
+          rewards=[reward_item("irons_spellbooks:cultist_chestplate", name="The Captain's Coat", lore=['Still smells of salt, and of void.']), skill("magic", 650)]),
 
     quest("starlight_voyager", "The Starlight Voyager", icon="minecraft:compass", after=["ships_ghost"],
           text=["The logbook names the fleet's flagship, the Starlight Voyager. Find it intact and bring its "
@@ -120,7 +119,7 @@ ACT4 = [
                                       {"entity": "minecraft:endermite", "count": 4, "every": 30}],
                             "lines": ["The gate is winding open. Hold the courtyard!"], "start": "Hold the courtyard"},
                   "title": "Hold the courtyard until the gate winds open"}],
-          rewards=[reward_item("minecraft:ender_pearl", 8), skill("defense", 700)]),
+          rewards=[reward_item("irons_spellbooks:ender_upgrade_orb"), skill("defense", 700)]),
 
     quest("enderwatch", "The Enderwatch", icon="camerapture:camera", after=["beyond_the_gateway"],
           text=["Climb an Enderwatch tower and, from the top, spot three more of the End's structures for Ilse's "
@@ -156,7 +155,7 @@ ACT4 = [
           tasks=[visit("mes:astral_hideaway", "Find the astronomer's hideaway nearby"),
                  enc(["It fell at dusk. I felt it hum. Take a fragment."], entity="minecraft:villager", name="Stranded Astronomer",
                      title="Hear what the stranded astronomer saw fall")],
-          rewards=[reward_item("minecraft:amethyst_shard", 8), skill("magic", 650)]),
+          rewards=[reward_item("irons_spellbooks:arcane_ingot", 2), skill("magic", 650)]),
 
     quest("spire_climb", "The Ender Spire", icon="minecraft:purpur_pillar", after=["fallen_star"],
           text=["The astronomer needs a reading from the top of the Ender Spire before the next star-fall. Climb it "
@@ -181,7 +180,7 @@ ACT4 = [
                  {"timed": {"seconds": 70, "goal": {"hold": {"radius": 10}}, "lines": ["Rest. Nothing will hurt you here."],
                             "start": "Rest a minute"}, "title": "Rest a full minute in the prairie"},
                  visit("mes:enderskog", "Find an enderskog")],
-          rewards=[reward_item("minecraft:bread", 16), skill("forage", 650)]),
+          rewards=[reward_item("irons_spellbooks:oakskin_elixir", 2), skill("forage", 650)]),
 
     quest("void_wildlife", "Void Wildlife", icon="alexsmobs:cosmic_cod_bucket", after=["quiet_meadows"],
           text=["Ilse wants proof there's life here: bucket a cosmic cod, feed an endergrade chorus until it follows "
@@ -195,7 +194,7 @@ ACT4 = [
           text=["Broken pillars, spikes and scrap heaps litter the islands. Sift three of them for the void's "
                 "leftovers."],
           tasks=[search("mes:endscraps", 1, "a Void Leftover", "Something the void left behind.", title="Sift a scrap heap for the void's leftovers")],
-          rewards=[reward_item("minecraft:ender_pearl", 4), reward_item("minecraft:iron_ingot", 8), skill("craft", 300)]),
+          rewards=[reward_item("irons_spellbooks:arcane_salvage", 4), skill("craft", 300)]),
 
     quest("null_space", "Null Space", icon="minecraft:amethyst_block", after=["first_flight"],
           text=["Beyond the cities the End gets stranger. Fly over the crystal peaks, the shadowlands and the void "
@@ -224,20 +223,20 @@ ACT4 = [
           tasks=[visit("structory_towers:end/end_tower", "Find the lonely tower on the outer island"),
                  search("structory_towers:end/end_tower", 1, "the Star Map", "A star map, kept in the tower's top chest.",
                         texture="minecraft:item/map", title="Take the star map from the tower's top")],
-          rewards=[reward_item("minecraft:ender_pearl", 8), skill("agility", 700)]),
+          rewards=[reward_item("minecraft:end_crystal", 2), reward_item("minecraft:ender_pearl", 4), skill("agility", 700)]),
 
     quest("the_aviary", "The Aviary", icon="minecraft:bow", after=["first_flight"],
           text=["A colossal bird-cage of a dungeon floats in the End. Clear the aviary and its keepers."],
           tasks=[visit("dungeons_arise:aviary", "Find the floating aviary"),
                  fight("minecraft:vex", 8, "dungeons_arise:aviary", "Aviary Keepers", "Clear the aviary and its keepers", wave=4)],
-          rewards=[reward_item("minecraft:diamond", 4), skill("attack", 700)]),
+          rewards=[reward_item("minecraft:diamond", 2), reward_item("minecraft:enchanted_book", enchant={'minecraft:feather_falling': 4}), skill("attack", 700)]),
 
     quest("the_sealed_citadel", "The Sealed Citadel", icon="minecraft:golden_apple", after=["null_space"],
           text=["In the highlands stands a ruined citadel with a door that will not open while its guardian sleeps. "
                 "Find the Ruined Citadel and note its Ender Golems. This one is for later."],
           tasks=[visit("cataclysm:ruined_citadel", "Find the ruined citadel in the highlands"),
                  {"observe": "cataclysm:ender_golem", "ticks": 40, "title": "Note the Ender Golems at its door"}],
-          rewards=[reward_item("minecraft:golden_apple", 2), skill("agility", 700)]),
+          rewards=[reward_item("cataclysm:void_shard"), skill("agility", 700)]),
 ]
 
 ACT5 = [
@@ -257,8 +256,7 @@ ACT5 = [
                  item("cataclysm:void_eye", crafted=True, title="Craft the Void Eye"),
                  talk_char("ilse", ["The finished chart. At last. Thank you.", "Take my boots. The void forgives nothing."],
                            title="Give Ilse the finished chart of the End")],
-          rewards=[reward_item("minecraft:leather_boots", name="Ilse's Voidwalker Boots", lore=["The void forgives nothing."],
-                               enchant={"minecraft:feather_falling": 4}), skill("agility", 900)]),
+          rewards=[{"choice": [reward_item("cataclysm:cursium_boots", name="Ilse's Voidwalker Boots", lore=['The void gave way beneath them.'], enchant={'minecraft:feather_falling': 4, 'minecraft:soul_speed': 3}, unbreakable=True), reward_item("spartanweaponry:netherite_rapier", name="The Void's Quill", lore=['Sketches the air, then cuts it.'], enchant={'minecraft:sharpness': 5, 'minecraft:looting': 3}, unbreakable=True), reward_item("irons_spellbooks:legendary_spell_book", name="Ilse's Folio", lore=['Every page was written in the dark.'])], "title": "Choose one"}, skill("agility", 900)]),
 ]
 
 chapter("end", "The End", "Cold, quiet wonder", "minecraft:end_stone", "realms", 3, ACT4 + ACT5)

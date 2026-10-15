@@ -105,7 +105,7 @@ ACT2 = [
     quest("volcano", "The Volcano", icon="minecraft:magma_block", after=["primordial_caves"],
           text=["The primordial volcano is a mountain of magma and tephra, guarded by the Tremorsaurus. Find it."],
           tasks=[{"structure": "alexscaves:volcano", "title": "Find the primordial volcano"}],
-          rewards=[reward_item("minecraft:magma_cream", 4), skill("agility", 220)]),
+          rewards=[reward_item("alexscaves:charred_remnant", 2), skill("agility", 220)]),
 
     quest("tremorsaurus", "The Tremorsaurus", icon="alexscaves:heavy_bone", after=["volcano"],
           text=["The Tremorsaurus shakes the volcano's ground. Take it down and claim a heavy bone from the giant."],
@@ -133,7 +133,7 @@ ACT2 = [
           tasks=[{"interact": "alexscaves:sea_pig", "holding": "minecraft:bucket", "title": "Scoop a sea pig into a bucket"},
                  item("alexscaves:marine_snow", 4, title="Gather marine snow from the chasm floor"),
                  item("alexscaves:tube_worm", 4, title="Gather tube worms from around the vents")],
-          rewards=[reward_item("alexscaves:bioluminescent_torch", 16), skill("fish", 250)]),
+          rewards=[reward_item("alexscaves:cooked_radgill", 4), skill("fish", 250)]),
 
     quest("abyssal_ruins", "Ruins of the Deep Ones", icon="crittersandcompanions:pearl", after=["abyssal_chasm"],
           text=["The deep ones' city lies below, guarded by mine guardians. Sneak in without stirring them."],
@@ -164,7 +164,7 @@ ACT2 = [
           tasks=[{"kill": "alexscaves:vesper", "count": 3, "title": "Bring down the vespers that dive at your light"},
                  item("alexscaves:vesper_wing", 3, title="Take their wings"),
                  item("alexscaves:vesper_stew", crafted=True, title="Cook vesper stew over a fire in the dark")],
-          rewards=[reward_item("minecraft:golden_carrot", 8), skill("cook", 280)]),
+          rewards=[reward_item("alexscaves:darkened_apple", 4), skill("cook", 280)]),
 
     quest("corrodent", "Teeth in the Stone", icon="alexscaves:guanostone_bricks", after=["forlorn_hollows"],
           text=["Corrodents tunnel through the guanostone faster than you can dig. Corner one in the open and take "
@@ -177,7 +177,7 @@ ACT2 = [
     quest("forlorn_canyon", "The Forlorn Canyon", icon="alexscaves:guanostone", after=["forlorn_hollows"],
           text=["Guano-stained cliffs hang over a deep canyon. Find the forlorn canyon."],
           tasks=[{"structure": "alexscaves:forlorn_canyon", "title": "Find the forlorn canyon and its guano-stained cliffs"}],
-          rewards=[reward_item("minecraft:golden_carrot", 8), skill("agility", 250)]),
+          rewards=[reward_item("alexscaves:gazing_pearl"), skill("agility", 250)]),
 
     quest("forlorn_bridge", "Cross the Bridge", icon="alexscaves:dark_tatters", after=["forlorn_canyon"],
           text=["A forlorn bridge crosses the void, and underzealots hunt in the dark. Cross without being touched."],
@@ -198,7 +198,7 @@ ACT2 = [
           text=["Underzealots perform a ritual to summon the Forsaken, a towering blind beast. Fight it as it "
                 "emerges."],
           tasks=[boss("alexscaves:forsaken", "alexscaves:forlorn_canyon", "The Forsaken", "Fight the Forsaken as it emerges from the ritual")],
-          rewards=[reward_item("minecraft:golden_apple", 3), skill("attack", 400)]),
+          rewards=[reward_item("alexscaves:desolate_dagger"), skill("attack", 400)]),
 
     quest("dreadbow", "The Dreadbow", icon="alexscaves:dreadbow", after=["forsaken"],
           text=["Pure darkness and dark tatters make cruel weapons. Craft a dreadbow and a desolate dagger."],
@@ -306,13 +306,13 @@ ACT3 = [
           text=["The underworld's final weapon is made from the tectonic shard. Craft the Extinction Spear."],
           tasks=[item("alexscaves:tectonic_shard", title="Carry the tectonic shard"),
                  item("alexscaves:extinction_spear", crafted=True, title="Craft the Extinction Spear")],
-          rewards=[reward_item("minecraft:golden_apple", 2), skill("craft", 700)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:unbreaking': 3}), skill("craft", 700)]),
 
     quest("submarine", "The Submarine", icon="alexscaves:submarine", after=["abyssal_chasm"],
           text=["The trench's floor is too deep to swim. Build a submarine and pilot it to the bottom."],
           tasks=[item("alexscaves:submarine", crafted=True, title="Build a submarine"),
                  {"structure": "alexscaves:ocean_trench", "title": "Pilot it down to the trench's floor"}],
-          rewards=[reward_item("minecraft:copper_ingot", 64), skill("craft", 400)]),
+          rewards=[reward_item("alexscaves:scrap_metal", 16), skill("craft", 400)]),
 
     quest("mine_guardian", "Anchored", icon="alexscaves:depth_charge", after=["abyssal_ruins"],
           text=["Mine guardians are living sea mines chained to anchors in the ruins. Take one down from a distance "
@@ -340,7 +340,7 @@ ACT3 = [
           text=["The Hullbreaker, a giant bony angler that rams submarines, hunts the trench's floor. Bring it down "
                 "from your sub or on foot."],
           tasks=[boss("alexscaves:hullbreaker", "alexscaves:ocean_trench", "The Hullbreaker", "Bring down the Hullbreaker on the trench's floor")],
-          rewards=[reward_item("minecraft:golden_apple", 2), skill("fish", 500)]),
+          rewards=[reward_item("alexscaves:depth_glass", 8), skill("fish", 500)]),
 
     quest("cloak_of_darkness", "One With the Dark", icon="alexscaves:dark_tatters", after=["forlorn_bridge"],
           text=["Spin shadow silk from what the hollows leave behind and craft the hood and cloak of darkness, then "
@@ -350,12 +350,12 @@ ACT3 = [
                  item("alexscaves:cloak_of_darkness", crafted=True, title="Craft the cloak of darkness"),
                  {"timed": {"seconds": 90, "goal": {"hold": {"radius": 12}}, "lines": ["Stay in the dark. Be unseen."],
                             "start": "Walk past the watcher", "no": ["hurt"]}, "title": "Pass a watcher without being seen"}],
-          rewards=[reward_item("minecraft:string", 16), skill("agility", 400)]),
+          rewards=[reward_item("alexscaves:glow_ink_bomb", 4), skill("agility", 400)]),
 
     quest("beholder", "The Beholder", icon="alexscaves:beholder", after=["forsaken"],
           text=["The Forsaken's death leaves occult gems. Build a beholder and use it to watch far places."],
           tasks=[item("alexscaves:beholder", crafted=True, title="Build a beholder to watch far places")],
-          rewards=[reward_item("minecraft:amethyst_shard", 8), skill("magic", 420)]),
+          rewards=[reward_item("alexscaves:radiant_essence"), skill("magic", 420)]),
 
     quest("gum_worm", "The Gum Worm", icon="alexscaves:candy_cane_hook", after=["candy_cavity"],
           text=["The Candy Cavity's gum worms are rideable, if you can hook one. Hook a gum worm with a candy cane "
@@ -370,7 +370,7 @@ ACT3 = [
                  {"biome": "alexscaves:abyssal_chasm", "title": "Record the Abyssal Chasm"},
                  {"biome": "alexscaves:forlorn_hollows", "title": "Record the Forlorn Hollows"},
                  {"biome": "alexscaves:candy_cavity", "title": "Record the Candy Cavity"}],
-          rewards=[reward_item("alexscaves:conversion_crucible"), skill("agility", 420)]),
+          rewards=[{"choice": [reward_item("alexscaves:conversion_crucible"), reward_item("alexscaves:dreadbow", name='Four-World Bow', lore=['It drew from every cave at once.'], enchant={'minecraft:power': 5, 'minecraft:infinity': 1}, unbreakable=True), reward_item("alexscaves:galena_gauntlet", name='Four-World Gauntlet', lore=["Humming with every cave's charge."], enchant={'minecraft:unbreaking': 3}, unbreakable=True)], "title": "Choose one"}, skill("agility", 420)]),
 
     quest("crucible", "The Conversion Crucible", icon="alexscaves:conversion_crucible", after=["four_worlds"],
           text=["A conversion crucible can turn an area into a cave biome. Set one up and make your own corner of "

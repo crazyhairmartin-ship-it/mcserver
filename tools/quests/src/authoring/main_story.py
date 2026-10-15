@@ -60,7 +60,7 @@ ACT1 = [
           text=["Both journal pages together tell of guardians: the wardens, who hold the old places shut.",
                 "Sister Wren has read them twice."],
           tasks=[talk_char("wren", ["The wardens hold the old places shut, and something is draining them.", "The first sleeps in iron under the hills. Take this blessed armour."])],
-          rewards=[reward_item("minecraft:iron_chestplate")]),
+          rewards=[reward_item("spartanshields:iron_basic_shield")]),
 
     quest("act1_iron_kit", "Iron and Edge", icon="spartanweaponry:iron_longsword", after=["act1_start"],
           text=["Arm yourself for what's ahead: a proper weapon, a shield and full iron armour.",
@@ -84,7 +84,7 @@ ACT1 = [
           text=["Miners in an old mineshaft heard metal footsteps below them. Explore it, mine 16 iron, and look for "
                 "scrape marks leading down."],
           tasks=[{"structure": "#mines", "title": "Explore a mineshaft"}, item("minecraft:raw_iron", 16)],
-          rewards=[reward_item("minecraft:lantern"), skill("mining", 80)]),
+          rewards=[reward_item("minecraft:lantern"), reward_item("minecraft:enchanted_book", enchant={'minecraft:efficiency': 2}), skill("mining", 80)]),
 
     quest("act1_wrought_practice", "Strike From Behind", icon="dummmmmmy:target_dummy",
           after=["act1_temple", "act1_mineshaft"],
@@ -106,7 +106,7 @@ ACT1 = [
                 "taught you."],
           tasks=[{"kill": "mowziesmobs:ferrous_wroughtnaut", "title": "Put the iron giant back to sleep",
                   "spawn": {"at": {"structure": "mowziesmobs:wrought_chamber"}, "wave": 1, "ensure": True}}],
-          rewards=[reward_item("minecraft:golden_apple", 2), skill("attack", 200)]),
+          rewards=[reward_item("mowziesmobs:wrought_helmet"), reward_item("minecraft:golden_apple", 2), skill("attack", 200)]),
 
     quest("act1_wrought_report", "Rust on the Seal", icon="minecraft:iron_nugget", after=["act1_wroughtnaut"],
           text=["Take what you learned back to Sister Wren."],
@@ -124,7 +124,7 @@ ACT1 = [
           tasks=[{"structure": "#illager_hideouts", "title": "Find the outpost"},
                  {"kill": "minecraft:pillager", "count": 6, "title": "Clear the outpost off the trade road",
                   "spawn": {"at": {"structure": "#illager_hideouts"}, "wave": 3}}],
-          rewards=[reward_item("minecraft:crossbow"), reward_item("minecraft:arrow", 32)]),
+          rewards=[reward_item("spartanweaponry:iron_heavy_crossbow"), reward_item("minecraft:arrow", 32)]),
 
     quest("act1_iceologer", "Frost on the Wind", icon="minecraft:packed_ice", after=["act1_outpost"],
           text=["A frightened trader comes looking for help: something froze his caravan in the snowy taiga."],
@@ -133,15 +133,14 @@ ACT1 = [
                  {"encounter": {"entity": "friendsandfoes:iceologer", "name": "The Iceologer", "then": "kill",
                                 "glow": True, "where": {"biomes": ["minecraft:snowy_taiga", "minecraft:taiga",
                                                                    "minecraft:grove", "minecraft:snowy_plains"]}}}],
-          rewards=[reward_item("minecraft:leather_chestplate"), skill("attack", 120)]),
+          rewards=[reward_item("irons_spellbooks:ice_rune"), skill("attack", 120)]),
 
     quest("act1_illusioner", "Four of Him", icon="minecraft:bow", after=["act1_iceologer"],
           text=["An Illusioner haunts the woods. Find the real one among its copies and defeat it."],
           tasks=[{"encounter": {"entity": "minecraft:illusioner", "name": "The Trickster", "then": "kill",
                                 "where": {"biomes": ["minecraft:forest", "minecraft:dark_forest",
                                                      "minecraft:birch_forest"]}}}],
-          rewards=[{"item": "minecraft:bow", "name": "Trickster's Bow", "enchant": {"minecraft:power": 2}},
-                   skill("range", 120)]),
+          rewards=[reward_item("spartanweaponry:iron_longbow", name="Trickster's Bow", lore=['Its arrows seem to come from nowhere.'], enchant={'minecraft:power': 2}), skill("range", 120)]),
 
     quest("act1_raid", "The Long Night", icon="minecraft:totem_of_undying", after=["act1_illusioner"],
           text=["Captain Hale has a plan: draw the raiders out on your terms. Carry the Bad Omen into a village and "
@@ -163,14 +162,14 @@ ACT1 = [
                 "spell lands."],
           tasks=[{"kill": "mowziesmobs:umvuthi", "title": "Break the circle of masks",
                   "spawn": {"at": {"structure": "mowziesmobs:umvuthana_grove"}, "wave": 1, "ensure": True}}],
-          rewards=[reward_item("minecraft:diamond", 3), skill("attack", 250)]),
+          rewards=[reward_item("mowziesmobs:umvuthana_mask_fury"), reward_item("minecraft:diamond"), skill("attack", 250)]),
 
     quest("act1_finale", "A Door in the Flowers", icon="minecraft:diamond", shape="diamond", size=1.75,
           after=["act1_umvuthi", "act1_wroughtnaut"],
           text=["With two wardens freed, Sister Wren remembers the spirits' own realm.",
                 "Dig a pool, ring it with flowers and drop a diamond in. The way into the Twilight Forest opens."],
           tasks=[{"dimension": "twilightforest:twilight_forest", "title": "Enter the Twilight Forest"}],
-          rewards=[reward_item("minecraft:diamond"), skill("magic", 150)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:iron_longsword", name='Wrought Edge', lore=["Hammered in the first dungeon's shadow."], enchant={'minecraft:sharpness': 2, 'minecraft:unbreaking': 2}), reward_item("irons_spellbooks:iron_spell_book", lore=['For those who would rather cast.']), reward_item("spartanweaponry:iron_longbow", name='Greenwood Bow', lore=['Light in the hand, long in the reach.'], enchant={'minecraft:power': 2, 'minecraft:unbreaking': 2})], "title": "Choose one"}, skill("magic", 150)]),
 ]
 
 
@@ -227,8 +226,7 @@ ACT2 = [
           tasks=[talk_villager("minecraft:shepherd", ["A white beast took my flock. Tracks like pits in the snow.",
                                                       "The spirits call it Frostmaw. Find it before winter does."],
                                title="Hear the shepherd's loss")],
-          rewards=[reward_item("minecraft:leather_boots", name="Winterwalkers", lore=["Frost-resistant boots."],
-                               enchant={"minecraft:frost_walker": 1}), skill("defense", 160)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:frost_walker': 2}, name='Winterwalkers'), skill("defense", 160)]),
 
     quest("act2_frostmaw_trail", "Tracks in the Snow", icon="minecraft:campfire", after=["act2_frostmaw_tale"],
           text=["Follow broken ice and frozen carcasses across the snow to where Frostmaw sleeps, and leave a ring "
@@ -242,7 +240,7 @@ ACT2 = [
           after=["act2_frostmaw_trail"],
           text=["Wake Frostmaw and defeat it without letting its ice breath freeze you to the ground."],
           tasks=[boss("mowziesmobs:frostmaw", "mowziesmobs:frostmaw_spawn", "Frostmaw", "Defeat Frostmaw at its den")],
-          rewards=[reward_item("minecraft:golden_apple", 3), skill("defense", 400)]),
+          rewards=[reward_item("irons_spellbooks:ice_upgrade_orb"), skill("defense", 400)]),
 
     quest("act2_ice_crystal", "The Cold Heart", icon="mowziesmobs:ice_crystal", after=["act2_frostmaw"],
           text=["Frostmaw leaves an Ice Crystal behind, flecked with dark veins. As you pick it up, Sister Wren "
@@ -269,8 +267,7 @@ ACT2 = [
                  {"structure": "alexscaves:forlorn_canyon", "title": "Find the Forlorn Hollows"},
                  item("alexscaves:amber", 4, title="Gather amber humming with the pulse"),
                  item("alexscaves:pure_darkness", 4, title="Gather pure darkness humming with the pulse")],
-          rewards=[reward_item("minecraft:iron_pickaxe", name="Hollow Delver", lore=["For the Forlorn Hollows."],
-                               enchant={"minecraft:efficiency": 3}), skill("mining", 300)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:efficiency': 3, 'minecraft:unbreaking': 2}, name='Hollow Delver'), skill("mining", 300)]),
 
     quest("act2_monument_prep", "Breath of the Deep", icon="minecraft:turtle_helmet", after=["act2_ice_crystal"],
           text=["An ocean monument holds a warden, and you will need to breathe. Brew water breathing and night "
@@ -279,8 +276,7 @@ ACT2 = [
                  item("minecraft:diamond_helmet", title="Bring a helmet to enchant for the depths"),
                  {"build": {"blocks": {"minecraft:enchanting_table": 1}, "radius": 8},
                   "title": "Set an enchanting table to prepare the helmet"}],
-          rewards=[reward_item("minecraft:prismarine_shard", 16), reward_item("minecraft:turtle_helmet"),
-                   skill("magic", 250)]),
+          rewards=[reward_item("minecraft:prismarine_shard", 16), reward_item("minecraft:enchanted_book", enchant={'minecraft:respiration': 3, 'minecraft:aqua_affinity': 1}), skill("magic", 250)]),
 
     quest("act2_elder_guardian", "The Elder of the Sea", icon="minecraft:heart_of_the_sea",
           after=["act2_monument_prep"],
@@ -327,7 +323,7 @@ ACT2 = [
                 "the Ancient Metal or Black Steel you took."],
           tasks=[item("spartancataclysm:ancient_metal_greatsword", crafted=True,
                       title="Forge a weapon from the guardians' metal")],
-          rewards=[reward_item("minecraft:grindstone"), skill("attack", 380)]),
+          rewards=[reward_item("cataclysm:black_steel_ingot", 4), skill("attack", 380)]),
 
     quest("act2_monastery_climb", "The Peak Above the Clouds", icon="grapplemod:grapplinghook",
           after=["act2_elder_guardian", "act2_scout_steel"],
@@ -343,7 +339,7 @@ ACT2 = [
           text=["Climb the Sculptor's pillar trial while it reshapes the stone beneath you, then defeat it."],
           tasks=[boss("mowziesmobs:sculptor", "mowziesmobs:monastery", "The Sculptor",
                       "Defeat the Sculptor in its trial")],
-          rewards=[reward_item("minecraft:diamond", 5), skill("agility", 400)]),
+          rewards=[reward_item("mowziesmobs:geomancer_beads"), reward_item("minecraft:diamond", 2), skill("agility", 400)]),
 
     quest("act2_finale", "The Red Glow", icon="minecraft:obsidian", shape="diamond", size=1.75,
           after=["act2_sculptor", "act2_frostmaw", "act2_twilight_branch"],
@@ -352,8 +348,7 @@ ACT2 = [
           tasks=[item("minecraft:obsidian", 10, title="Gather obsidian for the portal frame"),
                  {"build": {"blocks": {"minecraft:obsidian": 10}, "radius": 8}, "title": "Raise the portal frame"},
                  {"dimension": "minecraft:the_nether", "title": "Step into the Nether"}],
-          rewards=[reward_item("minecraft:magma_cream", 4), reward_item("minecraft:golden_carrot", 8),
-                   skill("agility", 300)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:diamond_longsword", name='The Second Vow', lore=["Sworn over the Sculptor's last stone."], enchant={'minecraft:sharpness': 3, 'minecraft:looting': 2}), reward_item("irons_spellbooks:gold_spell_book", lore=['Gilded and humming.']), reward_item("spartanshields:diamond_tower_shield", name='The Second Wall', lore=['Nothing gets past it.'])], "title": "Choose one"}, skill("agility", 300)]),
 ]
 
 ACT3 = [
@@ -364,7 +359,7 @@ ACT3 = [
                  {"structure": "#nether_outposts", "title": "Find the ruin where the lost courier hides"},
                  enc(["Thank Notch, someone from Reece! The threads all run toward the fortresses.", "Take my map."],
                      entity="minecraft:villager", name="Lost Courier", title="Find the lost Reece courier")],
-          rewards=[reward_item("minecraft:golden_chestplate"), reward_item("minecraft:map"), skill("agility", 300)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:fire_protection': 3}), reward_item("minecraft:map"), skill("agility", 300)]),
 
     quest("act3_fortress", "Blaze and Bone", icon="minecraft:blaze_rod", after=["act3_start"],
           text=["The drain's threads end at the fortresses. Raid a Nether fortress for blaze rods and nether wart "
@@ -386,7 +381,7 @@ ACT3 = [
                  {"timed": {"seconds": 300, "goal": {"structure": "friendsandfoes:citadel", "label": "the Wildfire's throne room", "away": 40},
                             "lines": ["Blazes watch the halls. If anything burns you, they've seen you."], "start": "Slip in",
                             "no": ["hurt"]}, "title": "Slip past the blazes to the throne room unseen"}],
-          rewards=[reward_item("minecraft:magma_cream", 4), reward_item("minecraft:golden_carrot", 8), skill("agility", 320)]),
+          rewards=[reward_item("irons_spellbooks:fireward_ring"), skill("agility", 320)]),
 
     quest("act3_wildfire", "The Wildfire", icon="friendsandfoes:wildfire_crown_fragment", shape="diamond", size=1.5,
           after=["act3_wildfire_scout"],
@@ -397,7 +392,7 @@ ACT3 = [
     quest("act3_debris", "Debris From Below", icon="minecraft:ancient_debris", after=["act3_start"],
           text=["The deepest metal is buried deep in the Nether. Mine ancient debris, and watch your footing."],
           tasks=[item("minecraft:ancient_debris", 8, title="Mine ancient debris deep in the Nether")],
-          rewards=[reward_item("minecraft:tnt", 8), skill("mining", 400)]),
+          rewards=[reward_item("minecraft:netherite_scrap"), reward_item("minecraft:tnt", 8), skill("mining", 400)]),
 
     quest("act3_netherite", "The Black Smith", icon="minecraft:netherite_upgrade_smithing_template", after=["act3_debris"],
           text=["Netherite needs a template to be worked. Loot one from a bastion and upgrade your first netherite "
@@ -448,27 +443,27 @@ ACT3 = [
           tasks=[{"place": "reece"},
                  {"build": {"blocks": {"minecraft:beacon": 1, "minecraft:iron_block": 9}, "radius": 12},
                   "title": "Raise a beacon on a pyramid in Reece's square"}],
-          rewards=[reward_item("minecraft:iron_block", 4), skill("defense", 450)]),
+          rewards=[reward_item("minecraft:diamond_block"), skill("defense", 450)]),
 
     quest("act3_hullbreaker", "Something Below the Chasm", icon="alexscaves:diving_helmet", after=["act3_netherite"],
           text=["Optional: a diver's logbook speaks of something huge circling a ruined submarine in the Abyssal "
                 "Chasm. Finding the trench opens the Alex's Caves chain, which holds the Hullbreaker fight."],
           tasks=[{"structure": "alexscaves:ocean_trench", "title": "Find the trench the logbook names"},
                  {"structure": "alexscaves:abyssal_ruins", "title": "Find the ruined submarine below"}],
-          rewards=[reward_item("minecraft:map"), skill("defense", 300)]),
+          rewards=[reward_item("alexscaves:diving_helmet"), skill("defense", 300)]),
 
     quest("act3_tremorsaurus", "Something Big Hatches", icon="alexscaves:cooked_dinosaur_chop", after=["act3_netherite"],
           text=["Optional: find a tremorsaurus egg near the primordial volcano and raise the hatchling, or fight a "
                 "wild tremorsaurus."],
           tasks=[{"structure": "alexscaves:volcano", "title": "Search the volcano's slopes for an egg"},
                  {"tame": "alexscaves:tremorsaurus", "title": "Raise the hatchling until it follows you"}],
-          rewards=[reward_item("alexscaves:cooked_dinosaur_chop", 8), skill("taming", 450)]),
+          rewards=[reward_item("alexscaves:limestone_spear"), reward_item("alexscaves:cooked_dinosaur_chop", 8), skill("taming", 450)]),
 
     quest("act3_finale", "Where the Eyes Fall", icon="minecraft:ender_eye", after=["act3_beacon", "act3_twilight_branch"],
           text=["Throw Eyes of Ender across the land until they dive, then dig down into a stronghold."],
           tasks=[item("minecraft:ender_eye", 6, title="Gather Eyes of Ender to throw"),
                  {"structure": "betterstrongholds:stronghold", "title": "Follow the eyes down into a stronghold"}],
-          rewards=[reward_item("minecraft:ender_eye", 8), skill("agility", 500)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:netherite_battleaxe", name="Warden's Reply", lore=['Heavy enough to answer a Wither.'], enchant={'minecraft:sharpness': 4, 'minecraft:unbreaking': 3}), reward_item("irons_spellbooks:netherite_spell_book", lore=['It remembers every spell you cast.']), reward_item("spartanshields:netherite_tower_shield", name='Ward of Ash', lore=['Blackened by three fires.'])], "title": "Choose one"}, skill("agility", 500)]),
 ]
 
 ACT4 = [
@@ -501,7 +496,7 @@ ACT4 = [
                  {"timed": {"seconds": 600, "goal": {"kill": "minecraft:end_crystal", "count": 10},
                             "lines": ["The crystals heal the dragon. Destroy every one in ten minutes!"], "start": "Climb the towers"},
                   "title": "Destroy every End crystal on the towers in ten minutes"}],
-          rewards=[reward_item("minecraft:arrow", 32), reward_item("minecraft:ender_pearl", 8), skill("range", 600)]),
+          rewards=[reward_item("minecraft:ender_pearl", 8), reward_item("irons_spellbooks:ender_rune"), skill("range", 600)]),
 
     quest("act4_dragon", "The Ender Dragon", icon="minecraft:dragon_breath", shape="diamond", size=1.75, after=["act4_crystals"],
           text=["Defeat the Ender Dragon. The End questline opens with the gateway."],
@@ -543,7 +538,7 @@ ACT4 = [
           tasks=[{"place": "reece", "title": "Return to Reece as the ground shakes"},
                  enc(["The eight wake. The drain's source burns in the Nether."], entity="minecraft:allay", name="Spirit Messenger",
                      title="Hear the spirit messenger's news")],
-          rewards=[reward_item("minecraft:netherite_scrap", 2), skill("agility", 700)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:netherite_greatsword", name="Dragon's Reply", lore=['Quenched in the End.'], enchant={'minecraft:sharpness': 5, 'minecraft:looting': 3}), reward_item("irons_spellbooks:legendary_ink", 3), reward_item("spartanshields:netherite_tower_shield", name='The Last Wall', lore=['The End found nothing past it.'], enchant={'minecraft:unbreaking': 3})], "title": "Choose one"}, skill("agility", 700)]),
 ]
 
 ACT5 = [
@@ -559,7 +554,7 @@ ACT5 = [
           text=["Craft a Monstrous Eye from netherite scrap and follow it through the Nether to the Soul Black Smith."],
           tasks=[item("cataclysm:monstrous_eye", crafted=True, title="Craft a Monstrous Eye"),
                  {"structure": "cataclysm:soul_black_smith", "title": "Follow the eye through the Nether to the Soul Black Smith"}],
-          rewards=[reward_item("minecraft:magma_cream", 4), skill("craft", 800)]),
+          rewards=[reward_item("cataclysm:blazing_bone", 2), skill("craft", 800)]),
 
     quest("act5_monstrosity", "The Netherite Monstrosity", icon="minecraft:netherite_block",
           shape="diamond", size=1.5, after=["act5_monstrous_eye"],
@@ -588,7 +583,7 @@ ACT5 = [
           text=["Craft a Mech Eye and follow it down to the Ancient Factory buried deep underground."],
           tasks=[item("cataclysm:mech_eye", crafted=True, title="Craft a Mech Eye"),
                  {"structure": "cataclysm:ancient_factory", "title": "Follow the eye down to the buried Ancient Factory"}],
-          rewards=[reward_item("minecraft:torch", 32), skill("mining", 850)]),
+          rewards=[reward_item("cataclysm:ancient_metal_ingot", 2), skill("mining", 850)]),
 
     quest("act5_factory_power", "Cold Furnaces", icon="minecraft:blast_furnace", after=["act5_mech_eye"],
           text=["The factory's furnaces are dead. Bring lava power cells to restart its machines and reach the "
@@ -627,7 +622,7 @@ ACT5 = [
           text=["Craft a Desert Eye and return to the Cursed Pyramid you scouted in Act II. Its seal now answers."],
           tasks=[item("cataclysm:desert_eye", crafted=True, title="Craft a Desert Eye"),
                  {"structure": "cataclysm:cursed_pyramid", "title": "Return to the Cursed Pyramid whose seal now answers"}],
-          rewards=[reward_item("minecraft:golden_carrot", 16), skill("craft", 850)]),
+          rewards=[reward_item("cataclysm:ancient_metal_nugget", 12), skill("craft", 850)]),
 
     quest("act5_wadjets", "The Serpent Guard", icon="spartancataclysm:ancient_metal_greatsword", after=["act5_desert_eye"],
           text=["Defeat the Wadjets and Kobolediators of the inner pyramid and arm yourself with an Ancient Metal "
@@ -698,7 +693,7 @@ ACT5 = [
                 "drain, glowing with every warden's stolen strength."],
           tasks=[item("cataclysm:flame_eye", crafted=True, title="Craft the Flame Eye"),
                  {"structure": "cataclysm:burning_arena", "title": "Follow the eye into the nether wastes to the Burning Arena"}],
-          rewards=[reward_item("minecraft:magma_cream", 8), skill("craft", 900)]),
+          rewards=[reward_item("cataclysm:blazing_bone", 4), skill("craft", 900)]),
 
     quest("act5_last_preparations", "All of Reece Behind You", icon="minecraft:cake", after=["act5_maledictus"],
           text=["Every organisation sends something for the last fight: food from the Tavern keepers, potions from "

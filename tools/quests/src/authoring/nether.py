@@ -21,9 +21,7 @@ ACT3 = [
                  {"timed": {"seconds": 600, "goal": {"hold": {"radius": 150}},
                             "lines": ["Ten minutes. Don't sleep. Don't wander far."], "start": "Survive ten minutes"},
                   "title": "Survive your first ten minutes in the Nether"}],
-          rewards=[reward_item("minecraft:magma_cream", 4),
-                   reward_item("minecraft:writable_book", name="Vesna's Field Journal", lore=["Never sleep down there."]),
-                   skill("agility", 300)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:fire_protection': 2}), reward_item("minecraft:magma_cream", 4), reward_item("minecraft:writable_book", name="Vesna's Field Journal", lore=["Never sleep down there."]), skill("agility", 300)]),
 
     quest("forward_camp", "Forward Camp", icon="waystones:waystone", after=["through_the_flames"],
           text=["Wall in your portal with blast-proof stone, and add a chest, a crafting table and a lit waystone so "
@@ -44,7 +42,7 @@ ACT3 = [
                 "spawners, without dying to the fireballs."],
           tasks=[fight("minecraft:blaze", 8, "betterfortresses:fortress", "Spawner Blazes", "Fight the fortress's blazes for their rods"),
                  item("minecraft:blaze_rod", 16, title="Bring back blaze rods for the eyes")],
-          rewards=[reward_item("minecraft:ender_pearl", 4), reward_item("minecraft:shield"), skill("attack", 340)]),
+          rewards=[reward_item("minecraft:ender_pearl", 4), reward_item("spartanshields:golden_basic_shield"), skill("attack", 340)]),
 
     quest("skulls_on_the_wall", "Skulls on the Wall", icon="minecraft:wither_skeleton_skull", after=["the_long_halls"],
           text=["Wither skeletons patrol the fortress bridges. Vesna wants three of their skulls for something she "
@@ -72,7 +70,7 @@ ACT3 = [
                  item("minecraft:ender_pearl", title="Barter for an ender pearl"),
                  item("minecraft:obsidian", 2, title="Barter for obsidian"),
                  item("minecraft:string", 4, title="Barter for string")],
-          rewards=[reward_item("minecraft:golden_carrot", 8), skill("agility", 300)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:looting': 2}), skill("agility", 300)]),
 
     quest("lost_trader", "The Lost Trader", icon="minecraft:gold_ingot", after=["golden_manners"],
           text=["A piglin with a merchant's pack has strayed from his camp and the hoglins are closing in. Keep him "
@@ -119,7 +117,7 @@ ACT3 = [
                  {"timed": {"seconds": 240, "goal": {"structure": "#nether_outposts", "label": "the far shore", "away": 200},
                             "lines": ["Four minutes across the lava. Ride!"], "start": "Cross the lava ocean",
                             "no": ["teleport"]}, "title": "Cross the lava ocean on a strider in four minutes"}],
-          rewards=[reward_item("minecraft:netherite_scrap"), reward_item("minecraft:magma_cream", 4), skill("agility", 380)]),
+          rewards=[reward_item("minecraft:netherite_scrap"), reward_item("minecraft:enchanted_book", enchant={'minecraft:soul_speed': 2}), skill("agility", 380)]),
 
     quest("the_keep", "The Keep at the Edge", icon="minecraft:gold_block", after=["the_long_halls"],
           text=["A Nether keep sits near the fortress roads, held by blaze-guarded skeletons. Clear its walls and "
@@ -127,7 +125,7 @@ ACT3 = [
           tasks=[fight("minecraft:wither_skeleton", 5, "nova_structures:nether_keep", "Keep Garrison", "Clear the keep's walls of its garrison"),
                  search("nova_structures:nether_keep", 1, "the Keep's Chest", "The keep's strongbox, heavy with gold.",
                         title="Claim the keep's chest")],
-          rewards=[reward_item("minecraft:diamond", 3), reward_item("minecraft:golden_apple"), skill("attack", 360)]),
+          rewards=[reward_item("minecraft:diamond", 3), reward_item("cataclysm:black_steel_ingot", 2), skill("attack", 360)]),
 
     quest("four_watchtowers", "Four Watchtowers", icon="minecraft:bone_block", after=["the_keep"],
           text=["Skeleton towers and camps watch over every biome. Reach a tower or camp in the crimson forest, the "
@@ -161,7 +159,7 @@ ACT3 = [
           tasks=[visit("mns:bridge_1", "Cross the first lava-lake bridge"),
                  visit("mns:bridge_2", "Cross the second lava-lake bridge"),
                  visit("mns:bridge_3", "Cross the third lava-lake bridge")],
-          rewards=[reward_item("minecraft:magma_cream", 8), skill("agility", 340)]),
+          rewards=[reward_item("irons_spellbooks:cinder_essence", 4), skill("agility", 340)]),
 
     quest("giant_skull", "The Giant's Skull", icon="minecraft:bone", after=["bridges_of_ash"],
           discover={"structure": "mns:giant_skull"},
@@ -229,7 +227,7 @@ ACT3 = [
                                       {"entity": "minecraft:magma_cube", "count": 2, "every": 50}],
                             "lines": ["Three waves. Five minutes. Don't leave the sand."], "start": "Fight the arena"},
                   "title": "Survive the arena's waves for five minutes"}],
-          rewards=[reward_item("minecraft:golden_apple", 2), skill("attack", 480)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:fire_aspect': 2}), skill("attack", 480)]),
 
     quest("shrine_offerings", "Offerings at the Shrines", icon="minecraft:red_candle", after=["through_the_flames"],
           text=["Small shrines dot the wastes, some still smoking. Leave a gold ingot at a shrine and at a smoking "
@@ -333,7 +331,7 @@ ACT3 = [
           text=["Fire that walks, and shields that circle it: a citadel in the wastes is held by something Vesna only "
                 "calls 'the crowned flame'. Look at it from a safe distance."],
           tasks=[{"observe": "friendsandfoes:wildfire", "ticks": 40, "title": "Watch the crowned flame from a safe distance"}],
-          rewards=[reward_item("minecraft:magma_cream", 4), reward_item("minecraft:snowball", 16), skill("agility", 340)]),
+          rewards=[reward_item("irons_spellbooks:fire_upgrade_orb"), skill("agility", 340)]),
 
     quest("nether_dungeons", "Small Places, Sharp Teeth", icon="minecraft:spawner", after=["through_the_flames"],
           discover={"structure": "betterdungeons:small_nether_dungeon"},
@@ -341,7 +339,7 @@ ACT3 = [
           tasks=[fight("minecraft:wither_skeleton", 6, "betterdungeons:small_nether_dungeon", "Dungeon Skeletons",
                        "Clear the dungeon's skeletons"),
                  {"mine": "minecraft:spawner", "title": "Break the dungeon's spawner so it floods no more"}],
-          rewards=[reward_item("minecraft:quartz", 16), skill("attack", 250)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:smite': 4}), skill("attack", 250)]),
 
     quest("devils_rest", "The Devil's Rest", icon="minecraft:ghast_tear", after=["through_the_flames"],
           discover={"structure": "mvs:nether_devil"},
@@ -389,7 +387,7 @@ ACT4 = [
                  item("cataclysm:monstrous_eye", crafted=True, title="Craft the Monstrous Eye"),
                  talk_char("vesna", ["That points at the forge you found. Good.", "The old fire is awake."],
                            title="Show Vesna the eye pointing at the forge")],
-          rewards=[reward_item("minecraft:golden_apple", 2), reward_item("minecraft:magma_cream", 4), skill("craft", 800)]),
+          rewards=[reward_item("cataclysm:burning_ashes", 2), skill("craft", 800)]),
 
     quest("flame_eye", "The Flame Eye", icon="cataclysm:flame_eye", after=["arena_of_embers", "monstrous_eye"],
           text=["Craft the Flame Eye and hand Vesna her journal back, filled in. She writes the last page herself: "
@@ -397,8 +395,7 @@ ACT4 = [
           tasks=[item("cataclysm:flame_eye", crafted=True, title="Craft the Flame Eye"),
                  talk_char("vesna", ["My journal, filled in. I'll write the last page.", "The arena waits for the story."],
                            title="Hand Vesna her journal back, filled in")],
-          rewards=[reward_item("minecraft:leather_chestplate", name="Vesna's Ashwalker Cloak", lore=["The last page is hers."],
-                               enchant={"minecraft:fire_protection": 4, "minecraft:unbreaking": 3}), skill("agility", 850)]),
+          rewards=[{"choice": [reward_item("spartanweaponry:netherite_halberd", name="Vesna's Ember", lore=['She kept it burning all the way home.'], enchant={'minecraft:sharpness': 5, 'minecraft:fire_aspect': 2}, unbreakable=True), reward_item("irons_spellbooks:blaze_spell_book", name="Vesna's Cinderbook", lore=['Warm to the touch, even in the cold.']), reward_item("spartanshields:netherite_basic_shield", name="Ashwalker's Wall", lore=['Scorched, never broken.'], enchant={'minecraft:unbreaking': 3}, unbreakable=True)], "title": "Choose one"}, skill("agility", 850)]),
 ]
 
 chapter("nether", "The Nether", "A frontier expedition", "minecraft:netherrack", "realms", 2, ACT3 + ACT4)

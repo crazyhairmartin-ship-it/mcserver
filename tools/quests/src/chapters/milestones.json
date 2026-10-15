@@ -48,14 +48,11 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_pickaxe",
-          "name": "Deep Digger",
-          "lore": [
-            "For the first diamond."
-          ],
+          "item": "minecraft:enchanted_book",
           "enchant": {
-            "minecraft:unbreaking": 2
-          }
+            "minecraft:efficiency": 3
+          },
+          "name": "Deep Digger"
         },
         {
           "skill": "mining",
@@ -93,8 +90,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_apple",
-          "count": 3
+          "item": "spartanshields:diamond_basic_shield"
         },
         {
           "skill": "defense",
@@ -159,7 +155,22 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:enchanted_golden_apple"
+          "choice": [
+            {
+              "item": "minecraft:enchanted_book",
+              "enchant": {
+                "minecraft:mending": 1
+              }
+            },
+            {
+              "item": "minecraft:enchanted_golden_apple"
+            },
+            {
+              "item": "minecraft:netherite_upgrade_smithing_template",
+              "count": 2
+            }
+          ],
+          "title": "Choose one"
         },
         {
           "skill": "defense",
@@ -342,7 +353,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:leather_boots"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:feather_falling": 2
+          }
         },
         {
           "skill": "agility",
@@ -412,14 +426,12 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:leather_boots",
-          "name": "Well-Worn Boots",
-          "lore": [
-            "A hundred kilometres."
-          ],
+          "item": "minecraft:enchanted_book",
           "enchant": {
-            "minecraft:feather_falling": 3
-          }
+            "minecraft:feather_falling": 4,
+            "minecraft:depth_strider": 3
+          },
+          "name": "Well-Worn Boots"
         },
         {
           "skill": "agility",
@@ -649,7 +661,15 @@
       ],
       "rewards": [
         {
-          "item": "spartanweaponry:iron_longsword"
+          "item": "spartanweaponry:iron_katana",
+          "name": "Five Hundred Notches",
+          "lore": [
+            "Every nick is a story."
+          ],
+          "enchant": {
+            "minecraft:sharpness": 2,
+            "minecraft:looting": 1
+          }
         },
         {
           "skill": "attack",

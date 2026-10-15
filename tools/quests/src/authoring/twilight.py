@@ -28,7 +28,7 @@ ACT2 = [
                 "ingredient of the realm's maps."],
           tasks=[{"biome": "twilightforest:forest", "title": "Find the quiet forest where ravens roost"},
                  item("twilightforest:raven_feather", 2, title="Take raven feathers without startling the flock")],
-          rewards=[reward_item("minecraft:arrow", 16), skill("range", 150)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:power': 2}), skill("range", 150)]),
 
     quest("magic_map", "A Map That Draws Itself", icon="twilightforest:magic_map", after=["raven_feather", "fireflies_and_cicadas"],
           text=["The forest hides its own roads. Bind a raven feather, torchberries and glowstone into a Magic Map "
@@ -71,8 +71,7 @@ ACT2 = [
           text=["The Naga charges in loops through the courtyard. Dodge its rushes and strike its segments until it "
                 "falls, lifting the first curse."],
           tasks=[boss("twilightforest:naga", "twilightforest:naga_courtyard", "The Naga", "Defeat the Naga to lift the first curse")],
-          rewards=[reward_item("minecraft:golden_apple", 2), reward_item("irons_spellbooks:greater_healing_potion", 2),
-                   skill("attack", 300)]),
+          rewards=[reward_item("twilightforest:naga_scale", 4), reward_item("minecraft:golden_apple", 2), reward_item("irons_spellbooks:greater_healing_potion", 2), skill("attack", 300)]),
 
     quest("naga_armor", "Scales of the Serpent", icon="twilightforest:naga_chestplate", after=["naga"],
           text=["The Naga's scales make armour that shrugs off knockback. Turn them into a chestplate and leggings."],
@@ -132,14 +131,14 @@ ACT2 = [
           text=["The Lich hides behind spinning shields and clones. Break the shields with ranged blows, ignore the "
                 "copies, and end it at the tower's crown."],
           tasks=[boss("twilightforest:lich", "twilightforest:lich_tower", "The Lich", "Defeat the Lich at the tower's crown")],
-          rewards=[reward_item("twilightforest:charm_of_keeping_1"), reward_item("minecraft:golden_carrot", 8), skill("magic", 350)]),
+          rewards=[reward_item("twilightforest:charm_of_keeping_1"), reward_item("minecraft:golden_carrot", 8), reward_item("irons_spellbooks:rare_ink", 2), skill("magic", 350)]),
 
     quest("scepters", "The Lich's Sceptres", icon="twilightforest:lifedrain_scepter", after=["lich"],
           text=["Among the Lich's treasures lie four sceptres. Claim one and use it in battle against the undead."],
           tasks=[search("twilightforest:lich_tower", 1, "a Lich's Sceptre", "A sceptre in the Lich's treasure.",
                         texture="minecraft:item/stick", title="Claim a sceptre from the Lich's treasures"),
                  {"kill": "minecraft:zombie", "count": 6, "title": "Test the sceptre against the dead"}],
-          rewards=[reward_item("minecraft:ender_pearl", 8), reward_item("minecraft:rotten_flesh", 16), skill("magic", 330)]),
+          rewards=[reward_item("minecraft:ender_pearl", 8), reward_item("irons_spellbooks:arcane_essence", 4), skill("magic", 330)]),
 
     quest("cursed_swamp", "The Choking Swamp", icon="minecraft:vine", after=["lich"],
           text=["The Lich's fall clears the fog over the Swamp, but mosquito swarms and hunger still haunt it. Cross "
@@ -147,7 +146,7 @@ ACT2 = [
           tasks=[{"biome": "twilightforest:swamp", "title": "Cross the clearing swamp"},
                  enc(["*A buzzing cloud descends.*"], then="kill", entity="twilightforest:swarm_spider", name="Swamp Swarm",
                      title="Beat off the swarm that haunts the swamp", where={"biomes": ["twilightforest:swamp"]})],
-          rewards=[reward_item("minecraft:cooked_beef", 16), skill("agility", 260)]),
+          rewards=[reward_item("irons_spellbooks:greater_healing_potion", 2), skill("agility", 260)]),
 
     quest("maze_map", "Map of the Maze", icon="twilightforest:maze_map", after=["cursed_swamp", "magic_map"],
           text=["The labyrinth lies underground. Upgrade your Magic Map Focus into a Maze Map Focus and craft a Maze "
@@ -169,7 +168,7 @@ ACT2 = [
           text=["Minotaurs pace the labyrinth halls. Bring down five and take a Minotaur axe from them."],
           tasks=[fight("twilightforest:minotaur", 5, "twilightforest:labyrinth", "Labyrinth Minotaurs", "Bring down the labyrinth's minotaurs"),
                  sample("a Minotaur Axe", ["twilightforest:minotaur"], 0.5, texture="minecraft:item/iron_axe", tooltip="Taken from a minotaur")],
-          rewards=[reward_item("minecraft:shield"), skill("attack", 340)]),
+          rewards=[reward_item("spartanshields:iron_tower_shield"), skill("attack", 340)]),
 
     quest("minoshroom", "The Minoshroom", icon="twilightforest:minoshroom_trophy", shape="diamond", size=1.5, after=["labyrinth"],
           text=["At the labyrinth's heart waits the Minoshroom, charging with its diamond axe. Bait its charge into "
@@ -208,19 +207,19 @@ ACT3 = [
                 "Forest has begun to stir."],
           tasks=[{"dimension": "twilightforest:twilight_forest", "title": "Return to the Twilight Forest"},
                  {"biome": "twilightforest:fire_swamp", "title": "Find the Fire Swamp the clearing smoke reveals"}],
-          rewards=[reward_item("minecraft:magma_cream", 4), skill("agility", 300)]),
+          rewards=[reward_item("irons_spellbooks:fire_rune"), skill("agility", 300)]),
 
     quest("fire_swamp", "Through the Fire Swamp", icon="twilightforest:fiery_blood", after=["return_to_dusk"],
           text=["Fire jets and lava pools fill the Fire Swamp. Brew fire resistance and push through to the Hydra's "
                 "lair."],
           tasks=[item("minecraft:potion", 2, consume=True, title="Brew fire resistance to cross the fire jets"),
                  {"be": {"biomes": ["twilightforest:fire_swamp"]}, "title": "Push through the Fire Swamp"}],
-          rewards=[reward_item("minecraft:magma_cream", 4), skill("magic", 300)]),
+          rewards=[reward_item("irons_spellbooks:fireward_ring"), skill("magic", 300)]),
 
     quest("hydra_lair", "The Hydra's Lair", icon="twilightforest:hydra_trophy", after=["fire_swamp"],
           text=["Find the lair cut into the swamp's hill, and the Hydra waiting inside."],
           tasks=[{"structure": "twilightforest:hydra_lair", "title": "Find the lair cut into the swamp's hill"}],
-          rewards=[reward_item("minecraft:golden_apple", 2), skill("agility", 300)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:fire_protection': 3}), skill("agility", 300)]),
 
     quest("hydra", "Three Heads Burning", icon="twilightforest:hydra_chop", shape="diamond", size=1.5, after=["hydra_lair"],
           text=["The Hydra spits fire and mortars. Strike its heads when they open, before they regrow, until the "
@@ -240,7 +239,7 @@ ACT3 = [
           tasks=[{"biome": "twilightforest:dark_forest", "title": "Walk into the Dark Forest"},
                  enc(["*Eyes glint between the trunks.*"], then="kill", entity="twilightforest:hostile_wolf", name="Dark Pack Leader",
                      title="Fight off what hunts in the dark", where={"biomes": ["twilightforest:dark_forest"]})],
-          rewards=[reward_item("minecraft:golden_carrot", 8), skill("defense", 400)]),
+          rewards=[reward_item("irons_spellbooks:uncommon_ink", 4), skill("defense", 400)]),
 
     quest("magic_trees", "Seeds of Wonder", icon="twilightforest:darkwood_sapling", after=["dark_forest"],
           text=["Rare saplings of the Tree of Time, Tree of Transformation, Miner's Tree and Sorting Tree hide in "
@@ -253,7 +252,7 @@ ACT3 = [
           text=["Beneath the Dark Forest lies the Knight Stronghold. Find the trapdoor in, past goblin knights and "
                 "helmet crabs."],
           tasks=[{"structure": "twilightforest:knight_stronghold", "title": "Find the trapdoor into the Knight Stronghold"}],
-          rewards=[reward_item("minecraft:lantern", 2), skill("agility", 320)]),
+          rewards=[reward_item("twilightforest:armor_shard", 4), skill("agility", 320)]),
 
     quest("knightmetal", "Shards of Armour", icon="twilightforest:armor_shard", after=["knight_stronghold"],
           text=["Collect armour shards from goblin knights and the stronghold's chests and press them into "
@@ -268,7 +267,7 @@ ACT3 = [
           text=["In the stronghold's throne room six Knight Phantoms rise one after another. Outlast them all."],
           tasks=[fight("twilightforest:knight_phantom", 6, "twilightforest:knight_stronghold", "Phantom Knights",
                        "Outlast all six Knight Phantoms in the throne room", wave=1)],
-          rewards=[reward_item("minecraft:golden_apple", 2), skill("defense", 500)]),
+          rewards=[reward_item("twilightforest:armor_shard_cluster", 2), skill("defense", 500)]),
 
     quest("block_and_chain", "Block and Chain", icon="twilightforest:block_and_chain", after=["knightmetal"],
           text=["The phantoms' metal was made for heavy weapons. Craft a Block and Chain or a Knightmetal Shield."],
@@ -304,7 +303,7 @@ ACT3 = [
           text=["With fiery tears and blood, finish a full suit of fiery armour or a fiery sword and pickaxe."],
           tasks=[item("twilightforest:fiery_sword", crafted=True, title="Forge a fiery sword"),
                  item("twilightforest:fiery_pickaxe", crafted=True, title="Forge a fiery pickaxe")],
-          rewards=[reward_item("minecraft:magma_cream", 4), skill("craft", 450)]),
+          rewards=[reward_item("twilightforest:fiery_ingot", 4), skill("craft", 450)]),
 
     quest("spartan_fiery", "Weapons of Flame", icon="spartantwilight:fiery_greatsword", after=["fiery_gear"],
           text=["Forge a fiery Spartan weapon, a greatsword, scythe or heavy crossbow that sets enemies alight."],
@@ -325,7 +324,7 @@ ACT4 = [
           tasks=[{"biome": "twilightforest:snowy_forest", "title": "Cross into the snowy forest"},
                  enc(["*Pale eyes in the blizzard.*"], then="kill", entity="twilightforest:winter_wolf", name="Blizzard Wolf",
                      title="Fight off the winter wolf that hunts the pass", where={"biomes": ["twilightforest:snowy_forest"]})],
-          rewards=[reward_item("minecraft:cooked_beef", 16), skill("defense", 550)]),
+          rewards=[reward_item("irons_spellbooks:frostward_ring"), skill("defense", 550)]),
 
     quest("yeti_cave", "Caves of the Yeti", icon="twilightforest:arctic_fur", after=["call_of_snow"],
           text=["Find the yeti cave in the snowy forest and hunt yetis for arctic fur."],
@@ -345,14 +344,14 @@ ACT4 = [
                  item("twilightforest:arctic_chestplate", crafted=True, title="Sew an arctic chestplate"),
                  item("twilightforest:arctic_leggings", crafted=True, title="Sew arctic leggings"),
                  item("twilightforest:arctic_boots", crafted=True, title="Sew arctic boots")],
-          rewards=[reward_item("minecraft:red_dye", 4), reward_item("minecraft:blue_dye", 4), skill("craft", 550)]),
+          rewards=[reward_item("twilightforest:ice_bomb", 4), skill("craft", 550)]),
 
     quest("aurora_palace", "The Aurora Palace", icon="minecraft:blue_ice", after=["alpha_yeti"],
           text=["On the Glacier stands the Aurora Palace of ice. Climb its halls past snow guardians and ice cores "
                 "to the queen's chamber."],
           tasks=[{"structure": "twilightforest:aurora_palace", "title": "Find the Aurora Palace on the Glacier"},
                  fight("twilightforest:snow_guardian", 6, "twilightforest:aurora_palace", "Palace Guardians", "Fight past the palace's snow guardians")],
-          rewards=[reward_item("minecraft:glass", 16), skill("agility", 600)]),
+          rewards=[reward_item("irons_spellbooks:cooldown_rune"), skill("agility", 600)]),
 
     quest("snow_queen", "The Snow Queen", icon="twilightforest:snow_queen_trophy", shape="diamond", size=1.5, after=["aurora_palace"],
           text=["The Snow Queen summons ice shields and hammers you from above. Break her guard and bring her down."],
@@ -371,13 +370,13 @@ ACT4 = [
           text=["The Lamp of Cinders burns away the thorns of the Thornlands. Carve a path to the Final Plateau."],
           tasks=[{"biome": "twilightforest:thornlands", "title": "Burn a path through the Thornlands"},
                  {"biome": "twilightforest:final_plateau", "title": "Carve the path on to the Final Plateau"}],
-          rewards=[reward_item("minecraft:golden_carrot", 16), skill("agility", 650)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:thorns': 3}), skill("agility", 650)]),
 
     quest("final_castle", "The Unfinished Castle", icon="minecraft:obsidian", after=["thornlands"],
           text=["On the plateau stands the final castle, sealed behind force fields and still unfinished. Reach its "
                 "gate and see what waits for the realm next."],
           tasks=[{"structure": "twilightforest:final_castle", "title": "Reach the final castle's gate"}],
-          rewards=[reward_item("minecraft:amethyst_shard", 8), skill("agility", 700)]),
+          rewards=[{"choice": [reward_item("spartantwilight:fiery_greatsword", name='Castle-Cleaver', lore=['Forged where the last tower fell.'], enchant={'minecraft:sharpness': 5, 'minecraft:fire_aspect': 2}, unbreakable=True), reward_item("twilightforest:ender_bow", name='The Dusk Bow', lore=['Its arrows keep their own counsel.'], enchant={'minecraft:power': 5, 'minecraft:unbreaking': 3}, unbreakable=True), reward_item("twilightforest:fortification_scepter", name="Warden's Sceptre", lore=['It makes a fortress of whoever holds it.'], enchant={'minecraft:unbreaking': 3}, unbreakable=True)], "title": "Choose one"}, skill("agility", 700)]),
 
     quest("trophy_hall", "A Hall of Trophies", icon="twilightforest:snow_queen_trophy", after=["snow_queen", "trophies_two", "alpha_yeti"],
           text=["Build a hall in your base and mount all eight trophies on pedestals: Naga, Lich, Minoshroom, Hydra, "

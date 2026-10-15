@@ -19,8 +19,7 @@ Q = [
           text=["A page in the Field Guide, in Maren's neatest hand: the day you pull up your first diamond is "
                 "worth remembering. Dig deep, and watch for lava."],
           tasks=[item("minecraft:diamond", title="Mine your first diamond")],
-          rewards=[reward_item("minecraft:iron_pickaxe", name="Deep Digger", lore=["For the first diamond."],
-                               enchant={"minecraft:unbreaking": 2}), skill("mining", 120)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:efficiency': 3}, name='Deep Digger'), skill("mining", 120)]),
 
     quest("diamond_kit", "Shining Kit", icon="minecraft:diamond_chestplate", after=["first_diamond"],
           text=["The Field Guide reminds you that one diamond tool does not make an adventurer. Armour that turns "
@@ -29,7 +28,7 @@ Q = [
                  item("minecraft:diamond_chestplate", title="Forge a diamond chestplate"),
                  item("minecraft:diamond_leggings", title="Forge diamond leggings"),
                  item("minecraft:diamond_boots", title="Forge diamond boots")],
-          rewards=[reward_item("minecraft:golden_apple", 3), skill("defense", 250)]),
+          rewards=[reward_item("spartanshields:diamond_basic_shield"), skill("defense", 250)]),
 
     quest("first_netherite", "Netherite", icon="minecraft:netherite_ingot", after=["diamond_kit"],
           text=["The Field Guide has a smudged page about the Nether's rarest metal, the only thing that outlasts "
@@ -44,7 +43,7 @@ Q = [
                  item("minecraft:netherite_chestplate", title="Forge a netherite chestplate"),
                  item("minecraft:netherite_leggings", title="Forge netherite leggings"),
                  item("minecraft:netherite_boots", title="Forge netherite boots")],
-          rewards=[reward_item("minecraft:enchanted_golden_apple"), skill("defense", 700)]),
+          rewards=[{"choice": [reward_item("minecraft:enchanted_book", enchant={'minecraft:mending': 1}), reward_item("minecraft:enchanted_golden_apple"), reward_item("minecraft:netherite_upgrade_smithing_template", 2)], "title": "Choose one"}, skill("defense", 700)]),
 
     quest("easy_enchant", "Easy Magic", icon="minecraft:enchanting_table", after=["first_diamond"],
           text=["Maren swears that with Easy Magic an enchanting table forgives you: it keeps your lapis and books "
@@ -83,7 +82,7 @@ Q = [
           text=["Maren says the best way to learn the land is to walk it. A kilometre on foot gets you out of the "
                 "village and into the wild."],
           tasks=[{"stats": ON_FOOT, "count": 1 * KM, "title": "Travel one kilometre on foot"}],
-          rewards=[reward_item("minecraft:leather_boots"), skill("agility", 20)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:feather_falling': 2}), skill("agility", 20)]),
 
     quest("walk_10km", "The Long Walk", icon="minecraft:leather_boots", after=["walk_1km"],
           text=["The Couriers say a runner who hasn't walked ten kilometres isn't a runner. The Field Guide agrees."],
@@ -94,8 +93,7 @@ Q = [
           text=["A hundred kilometres is a long way to go on foot. Maren has pasted a page about it into the Guide, "
                 "with a note: new boots."],
           tasks=[{"stats": ON_FOOT, "count": 100 * KM, "title": "Travel a hundred kilometres on foot"}],
-          rewards=[reward_item("minecraft:leather_boots", name="Well-Worn Boots", lore=["A hundred kilometres."],
-                               enchant={"minecraft:feather_falling": 3}), skill("agility", 300)]),
+          rewards=[reward_item("minecraft:enchanted_book", enchant={'minecraft:feather_falling': 4, 'minecraft:depth_strider': 3}, name='Well-Worn Boots'), skill("agility", 300)]),
 
     quest("sail_5km", "Sea Legs", icon="minecraft:oak_boat", after=["walk_1km"],
           text=["Gil the Ferryman says anyone can row across a pond, but five kilometres by boat makes a sailor. "
@@ -145,7 +143,7 @@ Q = [
           text=["Corvin Ash keeps a tally of the monsters killed in Reece's name, and the five hundredth earns a "
                 "page in the Field Guide."],
           tasks=[{"stat": "minecraft:mob_kills", "count": 500, "title": "Defeat five hundred monsters"}],
-          rewards=[reward_item("spartanweaponry:iron_longsword"), skill("attack", 250)]),
+          rewards=[reward_item("spartanweaponry:iron_katana", name='Five Hundred Notches', lore=['Every nick is a story.'], enchant={'minecraft:sharpness': 2, 'minecraft:looting': 1}), skill("attack", 250)]),
 
     quest("waystones_10", "Every Road Home", icon="waystones:waystone", after=["start:waystone_reece"],
           text=["Waystones are the Couriers' trade secret, and ten of them is a whole network. The Field Guide says "

@@ -487,8 +487,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
+          "item": "alexscaves:charred_remnant",
+          "count": 2
         },
         {
           "skill": "agility",
@@ -642,8 +642,8 @@
       ],
       "rewards": [
         {
-          "item": "alexscaves:bioluminescent_torch",
-          "count": 16
+          "item": "alexscaves:cooked_radgill",
+          "count": 4
         },
         {
           "skill": "fish",
@@ -803,8 +803,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_carrot",
-          "count": 8
+          "item": "alexscaves:darkened_apple",
+          "count": 4
         },
         {
           "skill": "cook",
@@ -873,8 +873,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_carrot",
-          "count": 8
+          "item": "alexscaves:gazing_pearl"
         },
         {
           "skill": "agility",
@@ -992,8 +991,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_apple",
-          "count": 3
+          "item": "alexscaves:desolate_dagger"
         },
         {
           "skill": "attack",
@@ -1523,8 +1521,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_apple",
-          "count": 2
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:unbreaking": 3
+          }
         },
         {
           "skill": "craft",
@@ -1555,8 +1555,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:copper_ingot",
-          "count": 64
+          "item": "alexscaves:scrap_metal",
+          "count": 16
         },
         {
           "skill": "craft",
@@ -1705,8 +1705,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_apple",
-          "count": 2
+          "item": "alexscaves:depth_glass",
+          "count": 8
         },
         {
           "skill": "fish",
@@ -1763,8 +1763,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:string",
-          "count": 16
+          "item": "alexscaves:glow_ink_bomb",
+          "count": 4
         },
         {
           "skill": "agility",
@@ -1791,8 +1791,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:amethyst_shard",
-          "count": 8
+          "item": "alexscaves:radiant_essence"
         },
         {
           "skill": "magic",
@@ -1817,9 +1816,9 @@
           "title": "Craft a candy cane hook"
         },
         {
-          "observe": "alexscaves:gum_worm",
-          "ticks": 40,
-          "title": "Hook a gum worm and ride it"
+          "interact": "alexscaves:gum_worm",
+          "holding": "alexscaves:candy_cane_hook",
+          "title": "Hook a gum worm with the candy cane hook"
         }
       ],
       "rewards": [
@@ -1865,7 +1864,35 @@
       ],
       "rewards": [
         {
-          "item": "alexscaves:conversion_crucible"
+          "choice": [
+            {
+              "item": "alexscaves:conversion_crucible"
+            },
+            {
+              "item": "alexscaves:dreadbow",
+              "name": "Four-World Bow",
+              "lore": [
+                "It drew from every cave at once."
+              ],
+              "enchant": {
+                "minecraft:power": 5,
+                "minecraft:infinity": 1
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "alexscaves:galena_gauntlet",
+              "name": "Four-World Gauntlet",
+              "lore": [
+                "Humming with every cave's charge."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            }
+          ],
+          "title": "Choose one"
         },
         {
           "skill": "agility",

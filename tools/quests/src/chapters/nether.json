@@ -46,6 +46,12 @@
       ],
       "rewards": [
         {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:fire_protection": 2
+          }
+        },
+        {
           "item": "minecraft:magma_cream",
           "count": 4
         },
@@ -166,7 +172,7 @@
           "count": 4
         },
         {
-          "item": "minecraft:shield"
+          "item": "spartanshields:golden_basic_shield"
         },
         {
           "skill": "attack",
@@ -304,8 +310,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_carrot",
-          "count": 8
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:looting": 2
+          }
         },
         {
           "skill": "agility",
@@ -552,8 +560,10 @@
           "item": "minecraft:netherite_scrap"
         },
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:soul_speed": 2
+          }
         },
         {
           "skill": "agility",
@@ -605,7 +615,8 @@
           "count": 3
         },
         {
-          "item": "minecraft:golden_apple"
+          "item": "cataclysm:black_steel_ingot",
+          "count": 2
         },
         {
           "skill": "attack",
@@ -773,8 +784,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 8
+          "item": "irons_spellbooks:cinder_essence",
+          "count": 4
         },
         {
           "skill": "agility",
@@ -1130,8 +1141,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_apple",
-          "count": 2
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:fire_aspect": 2
+          }
         },
         {
           "skill": "attack",
@@ -1621,12 +1634,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
-        },
-        {
-          "item": "minecraft:snowball",
-          "count": 16
+          "item": "irons_spellbooks:fire_upgrade_orb"
         },
         {
           "skill": "agility",
@@ -1667,8 +1675,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:quartz",
-          "count": 16
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:smite": 4
+          }
         },
         {
           "skill": "attack",
@@ -1901,12 +1911,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_apple",
+          "item": "cataclysm:burning_ashes",
           "count": 2
-        },
-        {
-          "item": "minecraft:magma_cream",
-          "count": 4
         },
         {
           "skill": "craft",
@@ -1943,15 +1949,39 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:leather_chestplate",
-          "name": "Vesna's Ashwalker Cloak",
-          "lore": [
-            "The last page is hers."
+          "choice": [
+            {
+              "item": "spartanweaponry:netherite_halberd",
+              "name": "Vesna's Ember",
+              "lore": [
+                "She kept it burning all the way home."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 5,
+                "minecraft:fire_aspect": 2
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "irons_spellbooks:blaze_spell_book",
+              "name": "Vesna's Cinderbook",
+              "lore": [
+                "Warm to the touch, even in the cold."
+              ]
+            },
+            {
+              "item": "spartanshields:netherite_basic_shield",
+              "name": "Ashwalker's Wall",
+              "lore": [
+                "Scorched, never broken."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            }
           ],
-          "enchant": {
-            "minecraft:fire_protection": 4,
-            "minecraft:unbreaking": 3
-          }
+          "title": "Choose one"
         },
         {
           "skill": "agility",

@@ -283,8 +283,10 @@
           "count": 4
         },
         {
-          "item": "minecraft:firework_rocket",
-          "count": 16
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:unbreaking": 3
+          }
         },
         {
           "skill": "agility",
@@ -451,10 +453,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:leather_chestplate",
+          "item": "irons_spellbooks:cultist_chestplate",
           "name": "The Captain's Coat",
           "lore": [
-            "Worn on the bridge of a fallen fleet."
+            "Still smells of salt, and of void."
           ]
         },
         {
@@ -592,8 +594,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:ender_pearl",
-          "count": 8
+          "item": "irons_spellbooks:ender_upgrade_orb"
         },
         {
           "skill": "defense",
@@ -773,8 +774,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:amethyst_shard",
-          "count": 8
+          "item": "irons_spellbooks:arcane_ingot",
+          "count": 2
         },
         {
           "skill": "magic",
@@ -911,8 +912,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:bread",
-          "count": 16
+          "item": "irons_spellbooks:oakskin_elixir",
+          "count": 2
         },
         {
           "skill": "forage",
@@ -984,12 +985,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:ender_pearl",
+          "item": "irons_spellbooks:arcane_salvage",
           "count": 4
-        },
-        {
-          "item": "minecraft:iron_ingot",
-          "count": 8
         },
         {
           "skill": "craft",
@@ -1132,8 +1129,12 @@
       ],
       "rewards": [
         {
+          "item": "minecraft:end_crystal",
+          "count": 2
+        },
+        {
           "item": "minecraft:ender_pearl",
-          "count": 8
+          "count": 4
         },
         {
           "skill": "agility",
@@ -1172,7 +1173,13 @@
       "rewards": [
         {
           "item": "minecraft:diamond",
-          "count": 4
+          "count": 2
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:feather_falling": 4
+          }
         },
         {
           "skill": "attack",
@@ -1203,8 +1210,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_apple",
-          "count": 2
+          "item": "cataclysm:void_shard"
         },
         {
           "skill": "agility",
@@ -1308,14 +1314,40 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:leather_boots",
-          "name": "Ilse's Voidwalker Boots",
-          "lore": [
-            "The void forgives nothing."
+          "choice": [
+            {
+              "item": "cataclysm:cursium_boots",
+              "name": "Ilse's Voidwalker Boots",
+              "lore": [
+                "The void gave way beneath them."
+              ],
+              "enchant": {
+                "minecraft:feather_falling": 4,
+                "minecraft:soul_speed": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "spartanweaponry:netherite_rapier",
+              "name": "The Void's Quill",
+              "lore": [
+                "Sketches the air, then cuts it."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 5,
+                "minecraft:looting": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "irons_spellbooks:legendary_spell_book",
+              "name": "Ilse's Folio",
+              "lore": [
+                "Every page was written in the dark."
+              ]
+            }
           ],
-          "enchant": {
-            "minecraft:feather_falling": 4
-          }
+          "title": "Choose one"
         },
         {
           "skill": "agility",

@@ -261,7 +261,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_chestplate"
+          "item": "spartanshields:iron_basic_shield"
         }
       ],
       "icon": "minecraft:written_book",
@@ -375,6 +375,12 @@
           "item": "minecraft:lantern"
         },
         {
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:efficiency": 2
+          }
+        },
+        {
           "skill": "mining",
           "xp": 80
         }
@@ -458,6 +464,9 @@
         }
       ],
       "rewards": [
+        {
+          "item": "mowziesmobs:wrought_helmet"
+        },
         {
           "item": "minecraft:golden_apple",
           "count": 2
@@ -558,7 +567,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:crossbow"
+          "item": "spartanweaponry:iron_heavy_crossbow"
         },
         {
           "item": "minecraft:arrow",
@@ -607,7 +616,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:leather_chestplate"
+          "item": "irons_spellbooks:ice_rune"
         },
         {
           "skill": "attack",
@@ -643,8 +652,11 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:bow",
+          "item": "spartanweaponry:iron_longbow",
           "name": "Trickster's Bow",
+          "lore": [
+            "Its arrows seem to come from nowhere."
+          ],
           "enchant": {
             "minecraft:power": 2
           }
@@ -741,8 +753,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:diamond",
-          "count": 3
+          "item": "mowziesmobs:umvuthana_mask_fury"
+        },
+        {
+          "item": "minecraft:diamond"
         },
         {
           "skill": "attack",
@@ -772,7 +786,37 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:diamond"
+          "choice": [
+            {
+              "item": "spartanweaponry:iron_longsword",
+              "name": "Wrought Edge",
+              "lore": [
+                "Hammered in the first dungeon's shadow."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 2,
+                "minecraft:unbreaking": 2
+              }
+            },
+            {
+              "item": "irons_spellbooks:iron_spell_book",
+              "lore": [
+                "For those who would rather cast."
+              ]
+            },
+            {
+              "item": "spartanweaponry:iron_longbow",
+              "name": "Greenwood Bow",
+              "lore": [
+                "Light in the hand, long in the reach."
+              ],
+              "enchant": {
+                "minecraft:power": 2,
+                "minecraft:unbreaking": 2
+              }
+            }
+          ],
+          "title": "Choose one"
         },
         {
           "skill": "magic",
@@ -897,14 +941,11 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:leather_boots",
-          "name": "Winterwalkers",
-          "lore": [
-            "Frost-resistant boots."
-          ],
+          "item": "minecraft:enchanted_book",
           "enchant": {
-            "minecraft:frost_walker": 1
-          }
+            "minecraft:frost_walker": 2
+          },
+          "name": "Winterwalkers"
         },
         {
           "skill": "defense",
@@ -978,8 +1019,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_apple",
-          "count": 3
+          "item": "irons_spellbooks:ice_upgrade_orb"
         },
         {
           "skill": "defense",
@@ -1098,14 +1138,12 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_pickaxe",
-          "name": "Hollow Delver",
-          "lore": [
-            "For the Forlorn Hollows."
-          ],
+          "item": "minecraft:enchanted_book",
           "enchant": {
-            "minecraft:efficiency": 3
-          }
+            "minecraft:efficiency": 3,
+            "minecraft:unbreaking": 2
+          },
+          "name": "Hollow Delver"
         },
         {
           "skill": "mining",
@@ -1150,7 +1188,11 @@
           "count": 16
         },
         {
-          "item": "minecraft:turtle_helmet"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:respiration": 3,
+            "minecraft:aqua_affinity": 1
+          }
         },
         {
           "skill": "magic",
@@ -1364,7 +1406,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:grindstone"
+          "item": "cataclysm:black_steel_ingot",
+          "count": 4
         },
         {
           "skill": "attack",
@@ -1440,8 +1483,11 @@
       ],
       "rewards": [
         {
+          "item": "mowziesmobs:geomancer_beads"
+        },
+        {
           "item": "minecraft:diamond",
-          "count": 5
+          "count": 2
         },
         {
           "skill": "agility",
@@ -1485,12 +1531,33 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
-        },
-        {
-          "item": "minecraft:golden_carrot",
-          "count": 8
+          "choice": [
+            {
+              "item": "spartanweaponry:diamond_longsword",
+              "name": "The Second Vow",
+              "lore": [
+                "Sworn over the Sculptor's last stone."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 3,
+                "minecraft:looting": 2
+              }
+            },
+            {
+              "item": "irons_spellbooks:gold_spell_book",
+              "lore": [
+                "Gilded and humming."
+              ]
+            },
+            {
+              "item": "spartanshields:diamond_tower_shield",
+              "name": "The Second Wall",
+              "lore": [
+                "Nothing gets past it."
+              ]
+            }
+          ],
+          "title": "Choose one"
         },
         {
           "skill": "agility",
@@ -1534,7 +1601,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_chestplate"
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:fire_protection": 3
+          }
         },
         {
           "item": "minecraft:map"
@@ -1658,12 +1728,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
-        },
-        {
-          "item": "minecraft:golden_carrot",
-          "count": 8
+          "item": "irons_spellbooks:fireward_ring"
         },
         {
           "skill": "agility",
@@ -1725,6 +1790,9 @@
         }
       ],
       "rewards": [
+        {
+          "item": "minecraft:netherite_scrap"
+        },
         {
           "item": "minecraft:tnt",
           "count": 8
@@ -1976,8 +2044,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:iron_block",
-          "count": 4
+          "item": "minecraft:diamond_block"
         },
         {
           "skill": "defense",
@@ -2007,7 +2074,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:map"
+          "item": "alexscaves:diving_helmet"
         },
         {
           "skill": "defense",
@@ -2036,6 +2103,9 @@
         }
       ],
       "rewards": [
+        {
+          "item": "alexscaves:limestone_spear"
+        },
         {
           "item": "alexscaves:cooked_dinosaur_chop",
           "count": 8
@@ -2070,8 +2140,33 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:ender_eye",
-          "count": 8
+          "choice": [
+            {
+              "item": "spartanweaponry:netherite_battleaxe",
+              "name": "Warden's Reply",
+              "lore": [
+                "Heavy enough to answer a Wither."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 4,
+                "minecraft:unbreaking": 3
+              }
+            },
+            {
+              "item": "irons_spellbooks:netherite_spell_book",
+              "lore": [
+                "It remembers every spell you cast."
+              ]
+            },
+            {
+              "item": "spartanshields:netherite_tower_shield",
+              "name": "Ward of Ash",
+              "lore": [
+                "Blackened by three fires."
+              ]
+            }
+          ],
+          "title": "Choose one"
         },
         {
           "skill": "agility",
@@ -2247,12 +2342,11 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:arrow",
-          "count": 32
-        },
-        {
           "item": "minecraft:ender_pearl",
           "count": 8
+        },
+        {
+          "item": "irons_spellbooks:ender_rune"
         },
         {
           "skill": "range",
@@ -2478,8 +2572,34 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:netherite_scrap",
-          "count": 2
+          "choice": [
+            {
+              "item": "spartanweaponry:netherite_greatsword",
+              "name": "Dragon's Reply",
+              "lore": [
+                "Quenched in the End."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 5,
+                "minecraft:looting": 3
+              }
+            },
+            {
+              "item": "irons_spellbooks:legendary_ink",
+              "count": 3
+            },
+            {
+              "item": "spartanshields:netherite_tower_shield",
+              "name": "The Last Wall",
+              "lore": [
+                "The End found nothing past it."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 3
+              }
+            }
+          ],
+          "title": "Choose one"
         },
         {
           "skill": "agility",
@@ -2546,8 +2666,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
+          "item": "cataclysm:blazing_bone",
+          "count": 2
         },
         {
           "skill": "craft",
@@ -2734,8 +2854,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:torch",
-          "count": 32
+          "item": "cataclysm:ancient_metal_ingot",
+          "count": 2
         },
         {
           "skill": "mining",
@@ -2966,8 +3086,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_carrot",
-          "count": 16
+          "item": "cataclysm:ancient_metal_nugget",
+          "count": 12
         },
         {
           "skill": "craft",
@@ -3374,8 +3494,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 8
+          "item": "cataclysm:blazing_bone",
+          "count": 4
         },
         {
           "skill": "craft",

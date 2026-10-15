@@ -98,8 +98,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:arrow",
-          "count": 16
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:power": 2
+          }
         },
         {
           "skill": "range",
@@ -300,6 +302,10 @@
         }
       ],
       "rewards": [
+        {
+          "item": "twilightforest:naga_scale",
+          "count": 4
+        },
         {
           "item": "minecraft:golden_apple",
           "count": 2
@@ -689,6 +695,10 @@
           "count": 8
         },
         {
+          "item": "irons_spellbooks:rare_ink",
+          "count": 2
+        },
+        {
           "skill": "magic",
           "xp": 350
         }
@@ -733,8 +743,8 @@
           "count": 8
         },
         {
-          "item": "minecraft:rotten_flesh",
-          "count": 16
+          "item": "irons_spellbooks:arcane_essence",
+          "count": 4
         },
         {
           "skill": "magic",
@@ -776,8 +786,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:cooked_beef",
-          "count": 16
+          "item": "irons_spellbooks:greater_healing_potion",
+          "count": 2
         },
         {
           "skill": "agility",
@@ -912,7 +922,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:shield"
+          "item": "spartanshields:iron_tower_shield"
         },
         {
           "skill": "attack",
@@ -1084,8 +1094,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
+          "item": "irons_spellbooks:fire_rune"
         },
         {
           "skill": "agility",
@@ -1121,8 +1130,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
-          "count": 4
+          "item": "irons_spellbooks:fireward_ring"
         },
         {
           "skill": "magic",
@@ -1148,8 +1156,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_apple",
-          "count": 2
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:fire_protection": 3
+          }
         },
         {
           "skill": "agility",
@@ -1266,8 +1276,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_carrot",
-          "count": 8
+          "item": "irons_spellbooks:uncommon_ink",
+          "count": 4
         },
         {
           "skill": "defense",
@@ -1330,8 +1340,8 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:lantern",
-          "count": 2
+          "item": "twilightforest:armor_shard",
+          "count": 4
         },
         {
           "skill": "agility",
@@ -1411,7 +1421,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_apple",
+          "item": "twilightforest:armor_shard_cluster",
           "count": 2
         },
         {
@@ -1626,7 +1636,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:magma_cream",
+          "item": "twilightforest:fiery_ingot",
           "count": 4
         },
         {
@@ -1734,8 +1744,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:cooked_beef",
-          "count": 16
+          "item": "irons_spellbooks:frostward_ring"
         },
         {
           "skill": "defense",
@@ -1862,11 +1871,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:red_dye",
-          "count": 4
-        },
-        {
-          "item": "minecraft:blue_dye",
+          "item": "twilightforest:ice_bomb",
           "count": 4
         },
         {
@@ -1905,8 +1910,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:glass",
-          "count": 16
+          "item": "irons_spellbooks:cooldown_rune"
         },
         {
           "skill": "agility",
@@ -2013,8 +2017,10 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:golden_carrot",
-          "count": 16
+          "item": "minecraft:enchanted_book",
+          "enchant": {
+            "minecraft:thorns": 3
+          }
         },
         {
           "skill": "agility",
@@ -2040,8 +2046,44 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:amethyst_shard",
-          "count": 8
+          "choice": [
+            {
+              "item": "spartantwilight:fiery_greatsword",
+              "name": "Castle-Cleaver",
+              "lore": [
+                "Forged where the last tower fell."
+              ],
+              "enchant": {
+                "minecraft:sharpness": 5,
+                "minecraft:fire_aspect": 2
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "twilightforest:ender_bow",
+              "name": "The Dusk Bow",
+              "lore": [
+                "Its arrows keep their own counsel."
+              ],
+              "enchant": {
+                "minecraft:power": 5,
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            },
+            {
+              "item": "twilightforest:fortification_scepter",
+              "name": "Warden's Sceptre",
+              "lore": [
+                "It makes a fortress of whoever holds it."
+              ],
+              "enchant": {
+                "minecraft:unbreaking": 3
+              },
+              "unbreakable": true
+            }
+          ],
+          "title": "Choose one"
         },
         {
           "skill": "agility",
