@@ -195,9 +195,9 @@ ACT3 = [
     quest("nether_houses", "Who Lives Here?", icon="furniture:oak_bench", after=["ghost_train"],
           text=["Small houses stand in the Nether, furnished and empty. Search two of them and piece together, from "
                 "the notes left inside, what happened to the family."],
-          tasks=[search("mns:medium_house", 1, "a Family Note", "A note, left on a table in a hurry.", title="Search the first empty house"),
-                 search("mns:medium_house_2", 1, "a Second Family Note", "A second note, torn and burnt at the edge.",
-                        title="Search the second empty house")],
+          tasks=[visit("mns:medium_house_2", "Find the second empty house, its table still set"),
+                 search("mns:medium_house", 2, "a Family Note", "A note, left on a table in a hurry.",
+                        title="Search the first empty house for the notes the family left")],
           rewards=[reward_item("furniture:oak_bench", 2), skill("craft", 320)]),
 
     quest("warped_dome", "Under the Warped Dome", icon="minecraft:shroomlight", after=["bridges_of_ash"],

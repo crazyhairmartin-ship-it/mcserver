@@ -7568,7 +7568,7 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "nether:nether_houses",
-    "stage": "fq.nether.nether_houses.search0",
+    "stage": "fq.nether.nether_houses.search1",
     "type": "search",
     "at": {
       "kind": "structure",
@@ -7577,27 +7577,9 @@ global.QUEST_GIVERS = [
       ],
       "label": "the destination"
     },
-    "count": 1,
-    "item": "kubejs:quest_nether_houses_0",
-    "found": "A note, left on a table in a hurry.",
-    "requires": [],
-    "quest_id": "3B4D0358521EB9A6",
-    "prev_tasks": []
-  },
-  {
-    "quest": "nether:nether_houses",
-    "stage": "fq.nether.nether_houses.search1",
-    "type": "search",
-    "at": {
-      "kind": "structure",
-      "structures": [
-        "mns:medium_house_2"
-      ],
-      "label": "the destination"
-    },
-    "count": 1,
+    "count": 2,
     "item": "kubejs:quest_nether_houses_1",
-    "found": "A second note, torn and burnt at the edge.",
+    "found": "A note, left on a table in a hurry.",
     "requires": [],
     "quest_id": "3B4D0358521EB9A6",
     "prev_tasks": [

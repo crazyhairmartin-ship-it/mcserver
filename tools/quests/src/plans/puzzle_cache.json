@@ -10,6 +10,17 @@
    "containers": 4
   }
  },
+ "alexscaves:underground_cabin": {
+  "copies": 3,
+  "lines": [
+   "fotfverify alexscaves:underground_cabin copy 1 at 96,96 pieces=1 containers=1",
+   "fotfverify alexscaves:underground_cabin copy 2 at 4048,0 pieces=1 containers=1",
+   "fotfverify alexscaves:underground_cabin copy 3 at -3968,48 pieces=1 containers=1"
+  ],
+  "mins": {
+   "containers": 1
+  }
+ },
  "beachparty:ritual_circle": {
   "copies": 3,
   "lines": [],
@@ -238,6 +249,17 @@
    "containers": 22
   }
  },
+ "minecraft:bastion_remnant": {
+  "copies": 3,
+  "lines": [
+   "fotfverify minecraft:bastion_remnant copy 1 at 224,288 pieces=96 containers=12",
+   "fotfverify minecraft:bastion_remnant copy 2 at 4016,272 pieces=165 containers=7",
+   "fotfverify minecraft:bastion_remnant copy 3 at -4032,144 pieces=84 containers=11"
+  ],
+  "mins": {
+   "containers": 7
+  }
+ },
  "minecraft:shipwreck": {
   "copies": 3,
   "lines": [],
@@ -250,6 +272,61 @@
   "lines": [],
   "mins": {
    "containers": 2
+  }
+ },
+ "mns:copper_tower": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mns:copper_tower copy 1 at 16,112 pieces=1 containers=4",
+   "fotfverify mns:copper_tower copy 2 at 4320,32 pieces=1 containers=4",
+   "fotfverify mns:copper_tower copy 3 at -5024,752 pieces=1 containers=4"
+  ],
+  "mins": {
+   "containers": 4
+  }
+ },
+ "mns:giant_skull": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mns:giant_skull copy 1 at -1328,1568 pieces=1 containers=2",
+   "fotfverify mns:giant_skull copy 2 at 1600,-1392 pieces=1 containers=2",
+   "fotfverify mns:giant_skull copy 3 at -5664,128 pieces=1 containers=2"
+  ],
+  "mins": {
+   "containers": 2
+  }
+ },
+ "mns:medium_house": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mns:medium_house copy 1 at 48,144 pieces=1 containers=3",
+   "fotfverify mns:medium_house copy 2 at 3552,32 pieces=1 containers=4",
+   "fotfverify mns:medium_house copy 3 at -4400,32 pieces=1 containers=2"
+  ],
+  "mins": {
+   "containers": 2
+  }
+ },
+ "mns:medium_house_2": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mns:medium_house_2 copy 1 at 192,64 pieces=1 containers=0",
+   "fotfverify mns:medium_house_2 copy 2 at 3552,32 pieces=1 containers=4",
+   "fotfverify mns:medium_house_2 copy 3 at -4528,176 pieces=1 containers=4"
+  ],
+  "mins": {
+   "containers": 0
+  }
+ },
+ "mns:mega_fortress": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mns:mega_fortress copy 1 at 928,672 pieces=338 containers=336",
+   "fotfverify mns:mega_fortress copy 2 at 3664,368 pieces=345 containers=271",
+   "fotfverify mns:mega_fortress copy 3 at -5376,448 pieces=245 containers=233"
+  ],
+  "mins": {
+   "containers": 233
   }
  },
  "mos:atlantis_tribune": {
@@ -402,6 +479,39 @@
   ],
   "mins": {
    "containers": 1
+  }
+ },
+ "nova_structures:nether_keep": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:nether_keep copy 1 at 2016,1712 pieces=4533 containers=34",
+   "fotfverify nova_structures:nether_keep copy 2 at -5024,-944 pieces=5172 containers=49",
+   "fotfverify nova_structures:nether_keep copy 3 at 64,3104 pieces=4528 containers=39"
+  ],
+  "mins": {
+   "containers": 34
+  }
+ },
+ "nova_structures:nether_port": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:nether_port copy 1 at -1136,-992 pieces=36 containers=51",
+   "fotfverify nova_structures:nether_port copy 2 at 3328,336 pieces=50 containers=80",
+   "fotfverify nova_structures:nether_port copy 3 at -2416,-1296 pieces=55 containers=91"
+  ],
+  "mins": {
+   "containers": 51
+  }
+ },
+ "nova_structures:piglin_outstation": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:piglin_outstation copy 1 at 448,384 pieces=5168 containers=26",
+   "fotfverify nova_structures:piglin_outstation copy 2 at 1744,624 pieces=5090 containers=23",
+   "fotfverify nova_structures:piglin_outstation copy 3 at -3632,-1136 pieces=5151 containers=25"
+  ],
+  "mins": {
+   "containers": 23
   }
  },
  "nova_structures:ruin_town": {

@@ -1059,14 +1059,15 @@
 			tasks: [
 				{
 					id: "215853A51BB95292"
-					item: "kubejs:quest_nether_houses_0"
-					title: "Search the first empty house"
-					type: "item"
+					structure: "mns:medium_house_2"
+					title: "Find the second empty house, its table still set"
+					type: "structure"
 				}
 				{
+					count: 2L
 					id: "10C9DBA69B949FBC"
 					item: "kubejs:quest_nether_houses_1"
-					title: "Search the second empty house"
+					title: "Search the first empty house for the notes the family left"
 					type: "item"
 				}
 			]

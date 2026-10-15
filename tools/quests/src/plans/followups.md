@@ -175,6 +175,7 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - nether:golden_manners: needs bartering with piglins; written as the barter results carried
 - nether:bastion_quiet: needs not being turned on by the brutes; written as a hurt-free timed crossing and a vault search
 - nether:strider_crossing: needs crossing 300 blocks of lava; written as a timed run to the far shore
+- nether:nether_houses: needs two different houses searched; written as visiting one and searching the other for two notes
 - nether:giants_sword: needs the sword to be climbed (no containers); written as a quest drop from magma cubes
 - nether:ghost_train: needs cargo placed back in the wagons; written as scattered cargo as quest drops
 - nether:warped_dome: needs catching a toad; written as observing one

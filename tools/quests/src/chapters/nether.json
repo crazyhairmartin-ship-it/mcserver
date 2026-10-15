@@ -951,32 +951,22 @@
       ],
       "tasks": [
         {
+          "structure": "mns:medium_house_2",
+          "title": "Find the second empty house, its table still set"
+        },
+        {
           "search": {
             "at": {
               "structure": "mns:medium_house"
             },
-            "count": 1,
+            "count": 2,
             "item": {
               "name": "a Family Note",
               "texture": "minecraft:item/paper"
             },
             "found": "A note, left on a table in a hurry."
           },
-          "title": "Search the first empty house"
-        },
-        {
-          "search": {
-            "at": {
-              "structure": "mns:medium_house_2"
-            },
-            "count": 1,
-            "item": {
-              "name": "a Second Family Note",
-              "texture": "minecraft:item/paper"
-            },
-            "found": "A second note, torn and burnt at the edge."
-          },
-          "title": "Search the second empty house"
+          "title": "Search the first empty house for the notes the family left"
         }
       ],
       "rewards": [
