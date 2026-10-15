@@ -602,6 +602,16 @@ function npcTickChallenges(player) {
   let prompted = npcData(player, 'fqTimedPrompt')
   let now = Date.now()
   npcEntries('timed').forEach(ch => {
+    try {
+      npcTickChallenge(player, ch, running, prompted, now)
+    } catch (e) {
+      console.error('quest_npcs: challenge ' + ch.stage + ' failed: ' + e)
+    }
+  })
+}
+
+function npcTickChallenge(player, ch, running, prompted, now) {
+  {
     if (player.tags.contains(ch.stage)) {
       if (running.contains(ch.stage)) running.remove(ch.stage)
       return
@@ -636,7 +646,7 @@ function npcTickChallenges(player) {
     prompted.putLong(ch.stage, now)
     player.tell(Text.of([Text.gold('A challenge is ready. '),
       Text.green('[' + ch.start + ']').clickRunCommand('/quest challenge ' + ch.stage).hover('Start the timer')]))
-  })
+  }
 }
 
 // ---- escorts (encounter "then": "escort") ----
@@ -1507,19 +1517,23 @@ EntityEvents.hurt('minecraft:player', event => {
 
 PlayerEvents.tick(event => {
   let player = event.player
-  if (player.level.clientSide || player.tickCount % 20 != 0) return
+  if (player.level.clientSide) return
+  // the server's tick counter: an entity's tickCount field reads as undefined from scripts here, which switched
+  // every check below off until 2026-10-15
+  let tick = player.server.tickCount
+  if (tick % 20 != 0) return
   npcTickChallenges(player)
   npcTickEscorts(player)
-  if (player.tickCount % 40 == 0) npcTickEncounters(player)
-  if (player.tickCount % 40 == 10) npcTickSpawns(player)
-  if (player.tickCount % 100 == 0) npcTickBuilds(player)
-  if (player.tickCount % 100 == 50) npcTickTames(player)
-  if (player.tickCount % 100 == 75) npcTickWaystones(player)
-  if (player.tickCount % 100 == 25) npcTickMilestones(player)
-  if (player.tickCount % 100 == 40) npcTickHave(player)
-  if (player.tickCount % 100 == 60) npcTickVisits(player)
-  if (player.tickCount % 100 == 80) npcTickGrowth(player)
-  if (player.tickCount % 600 == 300 && !npcEntries('timed').some(ch => (ch.goal.kind == 'course')
+  if (tick % 40 == 0) npcTickEncounters(player)
+  if (tick % 40 == 10) npcTickSpawns(player)
+  if (tick % 100 == 0) npcTickBuilds(player)
+  if (tick % 100 == 50) npcTickTames(player)
+  if (tick % 100 == 75) npcTickWaystones(player)
+  if (tick % 100 == 25) npcTickMilestones(player)
+  if (tick % 100 == 40) npcTickHave(player)
+  if (tick % 100 == 60) npcTickVisits(player)
+  if (tick % 100 == 80) npcTickGrowth(player)
+  if (tick % 600 == 300 && !npcEntries('timed').some(ch => (ch.goal.kind == 'course')
     && npcData(player, 'fqTimed').contains(ch.stage))) npcClearCourse(player)
 })
 

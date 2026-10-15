@@ -44,7 +44,7 @@ function ambientSpeak(player, target, status, now) {
 
 PlayerEvents.tick(event => {
   let player = event.player
-  if (player.level.clientSide || player.tickCount % 40 != 20 || player.spectator) return
+  if (player.level.clientSide || player.server.tickCount % 40 != 20 || player.spectator) return
   let r = AMBIENT_MARK_RANGE
   let box = new $AmbientAABB(player.x - r, player.y - r, player.z - r, player.x + r, player.y + r, player.z + r)
   let now = Date.now()
