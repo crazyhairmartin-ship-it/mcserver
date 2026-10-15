@@ -226,8 +226,8 @@ ACT3 = [
     quest("quartz_contract", "The Quartz Contract", icon="minecraft:quartz", after=["ancient_debris"],
           text=["A guild contract for the Nether: quartz, gold nuggets from nether gold ore and gilded blackstone, "
                 "mined in one trip and sold through the guild."],
-          tasks=[item("minecraft:quartz", 64, title="Mine nether quartz for the contract"),
-                 item("minecraft:gold_nugget", 32, title="Mine nether gold ore for nuggets"),
+          tasks=[{"mine": "minecraft:nether_quartz_ore", "count": 24, "title": "Mine nether quartz for the contract"},
+                 {"mine": "minecraft:nether_gold_ore", "count": 12, "title": "Mine nether gold ore for nuggets"},
                  item("minecraft:gilded_blackstone", 16, title="Take gilded blackstone from a bastion")],
           rewards=[reward_item("minecraft:emerald", 16), skill("mining", 450)]),
 

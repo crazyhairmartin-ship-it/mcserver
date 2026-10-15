@@ -211,7 +211,7 @@ ACT4 = [
           text=["Festival market day: run the co-op's stall against the other villages' farmers, selling your best "
                 "produce to villagers for emeralds. Outsell them all and win the market master's hat."],
           tasks=[{"structure": "#moog_stalls_and_carts", "title": "Find the market stalls"},
-                 item("minecraft:emerald", 24, title="Sell your best produce for emeralds"),
+                 {"trade": "any", "item": "minecraft:emerald", "count": 8, "title": "Sell your best produce to villagers for emeralds"},
                  enc(["Best stall at the fair. Take the hat."], entity="minecraft:villager", name="Market Master",
                      title="Be named the market master's champion")],
           rewards=[reward_item("artifacts:villager_hat"), skill("farm", 720)]),
