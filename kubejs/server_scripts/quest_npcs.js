@@ -997,6 +997,110 @@ function npcBeFits(player, w) {
   return true
 }
 
+// ---- have, visits, killwith ----
+
+function npcStackEnchants(stack) {
+  let out = {}
+  let tag = stack.nbt
+  if (!tag) return out
+  ;['Enchantments', 'StoredEnchantments'].forEach(key => {
+    let list = tag.getList(key, 10)
+    for (let i = 0; i < list.size(); i++) {
+      let e = list.getCompound(i)
+      let id = String(e.getString('id'))
+      out[id] = Math.max(out[id] || 0, e.getInt('lvl'))
+    }
+  })
+  return out
+}
+
+// does the stack fit a "have" step: the item, every enchantment at least at its level, the potion (any strength)
+function npcStackFits(stack, h) {
+  if (stack.empty || String(stack.id) != h.item) return false
+  let have = npcStackEnchants(stack)
+  if (Object.keys(h.enchant || {}).some(e => (have[e] || 0) < h.enchant[e])) return false
+  if (h.potion) {
+    let p = stack.nbt ? String(stack.nbt.getString('Potion')) : ''
+    if (p.replace(':long_', ':').replace(':strong_', ':') != h.potion) return false
+  }
+  return true
+}
+
+function npcTickHave(player) {
+  let inv = player.inventory
+  npcEntries('have').forEach(h => {
+    if (player.tags.contains(h.stage) || !questOpen(player, h)) return
+    let slots = [], n = 0
+    for (let i = 0; i < inv.containerSize; i++) {
+      let stack = inv.getItem(i)
+      if (npcStackFits(stack, h)) { slots.push(i); n += stack.count }
+    }
+    if (n < h.count) return
+    if (h.consume) {
+      let left = h.count
+      slots.forEach(i => {
+        let stack = inv.getItem(i)
+        let take = Math.min(left, stack.count)
+        stack.shrink(take)
+        left -= take
+      })
+    }
+    questAddStage(player, h.stage)
+    player.setStatusMessage(Text.yellow('Quest updated.'))
+  })
+}
+
+function npcTickVisits(player) {
+  let seen = null
+  npcEntries('visits').forEach(v => {
+    if (player.tags.contains(v.stage) || !questOpen(player, v)
+      || !npcInStructure(player.level, player.x, player.y, player.z, v.structures)) return
+    if (!seen) seen = npcData(player, 'fqVisits')
+    let spots = seen.contains(v.stage) ? JSON.parse(seen.getString(v.stage)) : []
+    let dim = String(player.level.dimension)
+    if (spots.some(s => s[0] == dim && (s[1] - player.x) * (s[1] - player.x) + (s[2] - player.z) * (s[2] - player.z)
+      < v.apart * v.apart)) return
+    spots.push([dim, Math.round(player.x), Math.round(player.z)])
+    if (spots.length >= v.count) {
+      seen.remove(v.stage)
+      questAddStage(player, v.stage)
+      player.setStatusMessage(Text.yellow('Quest updated.'))
+    } else {
+      seen.putString(v.stage, JSON.stringify(spots))
+      player.setStatusMessage(Text.gray('A new ' + v.label + ' (' + spots.length + ' / ' + v.count + ')'))
+    }
+  })
+}
+
+function npcWeaponMatches(w, held, direct) {
+  if (w.charAt(0) == '#') return !held.empty && Ingredient.of(w).test(held)
+  return String(held.id) == w || (direct != null && String(direct.type) == w)
+}
+
+function npcCountKillWith(player, entity, source) {
+  let entries = npcEntries('killwith')
+  if (!entries.length) return
+  let direct = null
+  try { direct = source.getDirectEntity() } catch (e) { direct = null }
+  if (direct && direct.isPlayer && direct.isPlayer()) direct = null
+  let held = player.mainHandItem
+  let type = String(entity.type)
+  let counts = npcData(player, 'fqKillWith')
+  entries.forEach(k => {
+    if (player.tags.contains(k.stage) || (k.entities.length && k.entities.indexOf(type) < 0)
+      || !k.weapons.some(w => npcWeaponMatches(w, held, direct)) || !questOpen(player, k)) return
+    let n = counts.getInt(k.stage) + 1
+    if (n >= k.count) {
+      counts.remove(k.stage)
+      questAddStage(player, k.stage)
+      player.setStatusMessage(Text.yellow('Quest updated.'))
+    } else {
+      counts.putInt(k.stage, n)
+      player.setStatusMessage(Text.gray(n + ' / ' + k.count))
+    }
+  })
+}
+
 function npcTickPlaces(player) {
   npcEntries('be').forEach(b => {
     if (player.tags.contains(b.stage) || !npcBeFits(player, b.where) || !questOpen(player, b)) return
@@ -1232,7 +1336,7 @@ function npcTickWaystones(player) {
 // challenge. pearls: ender pearls can't be thrown. Grappling hooks are always allowed.
 
 const NPC_BAN_WORDS = { teleport: 'teleporting', mounts: 'riding', elytra: 'gliding', pearls: 'ender pearls',
-  hurt: 'getting hit', ground: 'touching the ground' }
+  hurt: 'getting hit', ground: 'touching the ground', seen: 'being spotted' }
 const NPC_GROUND_GRACE_MS = 4000   // "no ground": time to take off after Start
 const NPC_TELEPORT_ITEMS = ['waystones:warp_scroll', 'waystones:bound_scroll', 'waystones:return_scroll',
   'waystones:warp_stone', 'minecraft:chorus_fruit']
@@ -1279,6 +1383,7 @@ function npcBrokenBan(player, ch, rec) {
     let grounded = typeof player.onGround == 'function' ? player.onGround() : player.onGround
     if (grounded && !player.isInWater() && !player.isPassenger()) return 'You touched the ground.'
   }
+  if (no.indexOf('seen') >= 0 && npcSeen(player)) return 'You were spotted.'
   if (no.indexOf('teleport') >= 0) {
     let dx = player.x - rec.getDouble('x'), dy = player.y - rec.getDouble('y'), dz = player.z - rec.getDouble('z')
     if (rec.getString('dim') != String(player.level.dimension)
@@ -1288,6 +1393,18 @@ function npcBrokenBan(player, ch, rec) {
   }
   npcRememberSpot(player, rec)
   return null
+}
+
+// "seen": any mob within 32 blocks has the player as its target (it noticed you and is coming for you)
+let $NpcMob = Java.loadClass('net.minecraft.world.entity.Mob')
+function npcSeen(player) {
+  let box = new $NpcAABB(player.x - 32, player.y - 16, player.z - 32, player.x + 32, player.y + 16, player.z + 32)
+  let found = false
+  player.level.getEntitiesOfClass($NpcMob, box).forEach(m => {
+    let t = m.getTarget()
+    if (t && String(t.uuid) == String(player.uuid)) found = true
+  })
+  return found
 }
 
 function npcFailChallenge(player, ch, why) {
@@ -1342,6 +1459,8 @@ PlayerEvents.tick(event => {
   if (player.tickCount % 100 == 50) npcTickTames(player)
   if (player.tickCount % 100 == 75) npcTickWaystones(player)
   if (player.tickCount % 100 == 25) npcTickMilestones(player)
+  if (player.tickCount % 100 == 40) npcTickHave(player)
+  if (player.tickCount % 100 == 60) npcTickVisits(player)
   if (player.tickCount % 600 == 300 && !npcEntries('timed').some(ch => (ch.goal.kind == 'course')
     && npcData(player, 'fqTimed').contains(ch.stage))) npcClearCourse(player)
 })
@@ -1365,6 +1484,7 @@ EntityEvents.death(event => {
   let player = source.player
   if (!player) return
   npcCountSpellKill(player, entity, source)
+  npcCountKillWith(player, entity, source)
   let running = npcData(player, 'fqTimed')
   let type = String(entity.type)
   npcEntries('timed').forEach(ch => {

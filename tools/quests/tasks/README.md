@@ -250,6 +250,7 @@ task first (T11, T18, T25, T28): other chapters link to its anchors. Counts are 
 | TR4 | - | 0 | Task TR for only: `discovery_land`, `discovery_sea`, `discovery_sky_and_underground`, `small_favours`, `odd_jobs`, `village_errands` |
 | TK | - | 0 | Real rewards beside keepsakes, every chapter (see "Task TK" below) |
 | TC | - | 0 | Courses and multi-stop legs for the stand-ins that need them (see "Task TC" below) |
+| TN | - | 0 | Item details, different places, kills with a weapon, unseen, offerings (see "Task TN" below). Run after TC, not at the same time |
 | T11 | 2 | 17 | `main_story` (act2, 17) |
 | T12 | 2 | 29 | `skill_attack` (act2, 7); `skill_defense` (act2, 8); `skill_range` (act2, 7); `skill_taming` (act2, 7) |
 | T13 | 2 | 33 | `skill_agility` (act2, 7); `skill_crafting` (act2, 10); `magic` (act2, 16) |
@@ -321,6 +322,30 @@ After each chapter: rebuild it, `python make_quests.py`, `python lint_quests.py 
 "vanilla gear reward" warnings. At the end: `python coverage.py --check`, then one commit per task
 (`Quests TR1: richer rewards in <chapters>`), pushed. Report, spoiler-free: how many quests' rewards changed per
 chapter, how many choice rewards and relics you added, and the commit hash.
+
+## Task TN: item details, different places, weapon kills, unseen, offerings
+
+The engine has new tasks (README): `have` (carrying an item with details: enchantments, a specific potion),
+`visits` (being inside N *different* structures of a kind), `killwith` (kills with a given weapon or thrown
+weapon), timed `no: ["seen"]` (no mob may notice you: stricter stealth than `hurt`), and the existing `use` with
+`holding` + `consume` (put an item on a block: offerings on an altar, cargo back in a wagon, a fish on a mount).
+Go through `src/plans/followups.md` "Engine needed" and rewrite every stand-in these can now do properly, in place
+(keep ids, story, rewards and the other tasks), deleting each line you clear. Examples of fits: "a book with two named
+enchantments", "brewing fire resistance specifically", "three different wells", "logbook pages in several different
+ships", "any fortified village", "a kill with each thrown weapon", "fire spells to be the only way" (that one is
+`spellkill`), "walking past a watcher unseen", "looking without knocking", "leaving gold at the shrines", "cargo placed
+back in the wagons", "mounting actual catches".
+
+- `use` needs the block to really be there: check `src/structure_contents.json` for blocks in structures, as the brief
+  says ("Build on what's really there"); the puzzle check must pass.
+- `seen` goes on a timed challenge (`hold`, `structure` or `course` goal) instead of `hurt` where the story is about not
+  being noticed.
+- `killwith` "with" can be a thrown weapon's entity id (look it up in registry.json entities) as well as the item.
+
+After each chapter: rebuild it, `python make_quests.py`, `python lint_quests.py <chapter>`. At the end
+`python coverage.py --check`, the puzzle check if you added `use` steps at structures, `python make_quests.py` once
+more, and one commit (`Quests TN: item details, places, weapon kills, unseen`), pushed. Report, spoiler-free: lines
+cleared per chapter, how many remain, and the hash.
 
 ## Task TC: courses and legs
 

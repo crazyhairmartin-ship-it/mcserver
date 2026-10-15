@@ -550,7 +550,7 @@ def build_encounter(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, proble
 
 
 # shortcuts a timed challenge can switch off (kubejs/server_scripts/quest_npcs.js)
-TIMED_BANS = ('teleport', 'mounts', 'elytra', 'pearls', 'hurt', 'ground')  # never grappling hooks: Dylan wants them allowed
+TIMED_BANS = ('teleport', 'mounts', 'elytra', 'pearls', 'hurt', 'ground', 'seen')  # never grappling hooks: Dylan wants them allowed
 # where a course's checkpoints go, and their usual spacing and size
 COURSE_DEFAULTS = {'water': {'spread': [20, 45], 'radius': 5}, 'ground': {'spread': [15, 35], 'radius': 4},
                    'roofs': {'spread': [6, 16], 'radius': 2.5}, 'air': {'spread': [30, 70], 'radius': 7}}
@@ -1034,13 +1034,22 @@ def ids_list(value):
     return [] if value in (None, 'any') else (value if isinstance(value, list) else [value])
 
 
+EVENT_TASKS = ('make', 'trade', 'sleep', 'interact', 'have', 'visits', 'killwith')
+
+
 def build_event_task(t, kind, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     """Tasks counted from game events while the step is open:
     make:     {"make": "minecraft:cake" (or list), "count": 3, "how": "craft"|"smelt"|"brew"|"any"}  items made
     trade:    {"trade": "any" | villager profession | mob id, "item": result id (optional), "count": 2}  trades done
     sleep:    {"sleep": 1}  nights slept through (waking in the morning)
     interact: {"interact": mob id (or list), "holding": item id, "consume": true, "count": 2}  right-click that many
-              different mobs of that kind holding the item (give a collar, feed, saddle, name...)"""
+              different mobs of that kind holding the item (give a collar, feed, saddle, name...)
+    have:     {"have": item id, "count": 1, "enchant": {id: min level}, "potion": "minecraft:fire_resistance",
+              "consume": false}  carrying items with those details (an enchanted book with both, a specific potion)
+    visits:   {"visits": structure id / "#group" / list, "count": 3, "apart": 150, "label": "a well"}  being inside
+              that many different ones (each at least "apart" blocks from the others)
+    killwith: {"killwith": mob id / list / "any", "with": item id / "#tag" / list, "count": 6}  kills where the
+              weapon in hand, or the thrown thing that hit, matches (a thrown spear's entity id counts too)"""
     reg = ctx['registry']
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.{kind}{n}', 'type': kind,
              'count': int(t.get('count', 1)), 'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
@@ -1061,6 +1070,32 @@ def build_event_task(t, kind, chapter, qid, n, quest_id, prev_tasks, ctx, where,
     elif kind == 'sleep':
         entry['count'] = int(t['sleep'])
         default = 'Sleep through the night'
+    elif kind == 'have':
+        reg.check('items', t['have'], where, t.get('unchecked', False))
+        enchants = t.get('enchant', {})
+        for e in enchants:
+            reg.check('enchantments', e, where, t.get('unchecked', False))
+        entry.update(item=t['have'], enchant={k: int(v) for k, v in enchants.items()}, potion=t.get('potion', ''),
+                     consume=bool(t.get('consume', False)))
+        default = 'Have it with you'
+    elif kind == 'visits':
+        structures = expand_structures(t['visits'], reg, where, problems)
+        if not structures:
+            problems.error(where, '"visits" needs a structure id, "#group" or a list')
+        apart = int(t.get('apart', 150))
+        if apart < 32:
+            problems.error(where, '"apart" must be at least 32 blocks (one structure can be big)')
+        entry.update(structures=structures, apart=apart, label=t.get('label', 'one'))
+        default = f'Visit {entry["count"]} different places'
+    elif kind == 'killwith':
+        mobs = [] if t['killwith'] == 'any' else ids_list(t['killwith'])
+        for m in mobs:
+            reg.check('entities', m, where, t.get('unchecked', False))
+        weapons = ids_list(t.get('with'))
+        if not weapons:
+            problems.error(where, '"killwith" needs "with": an item id, "#tag" or entity id, or a list')
+        entry.update(entities=mobs, weapons=weapons)
+        default = 'Defeat them'
     else:
         mobs = ids_list(t['interact'])
         for m in mobs:
@@ -1367,8 +1402,8 @@ def main():
                                              problems)
                     if entry:
                         givers.append(entry)
-                elif isinstance(t, dict) and any(k in t for k in ('make', 'trade', 'sleep', 'interact')):
-                    kind = next(k for k in ('make', 'trade', 'sleep', 'interact') if k in t)
+                elif isinstance(t, dict) and any(k in t for k in EVENT_TASKS):
+                    kind = next(k for k in EVENT_TASKS if k in t)
                     task, entry = build_event_task(t, kind, name, qid, n, quest['id'], [x['id'] for x in tasks], ctx,
                                                    twhere, problems)
                     if entry:
