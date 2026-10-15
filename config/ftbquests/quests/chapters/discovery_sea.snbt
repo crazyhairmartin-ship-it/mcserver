@@ -342,6 +342,7 @@
 			y: -8.25d
 		}
 		{
+			dependencies: ["54C450BB48CA2E5F"]
 			description: ["The sea fortress Typhon rises from the ocean, its guns still manned. Board her, fight up the decks and hold her bridge until her crew breaks."]
 			icon: "minecraft:crossbow"
 			id: "451F4B388C6B4C11"

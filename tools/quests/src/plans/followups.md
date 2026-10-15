@@ -80,7 +80,9 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - discovery_sky_and_underground:biome_deep_dark: needs collecting a sensor without a shrieker going off; written as being in the biome and carrying a sensor
 - discovery_sky_and_underground:biome_dripstone: needs a cauldron filled by dripping; written as placing a cauldron
 - discovery_sky_and_underground:echo_shards: needs dying on purpose and following the compass back; written as shards and a compass crafted
+- main_story:act2_monument_prep: needs specific potions and a Respiration-enchanted helmet; written as potions, a helmet and an enchanting table
+- main_story:act2_sealed_doors: needs both rune copies carried as items; written as talking to the Arcane Order
+- main_story:act2_sculptor: needs the pillar trial climb; written as the boss fight at the Monastery
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start
-- discovery_sea:typhon: restore after main_story:act2_finale

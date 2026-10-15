@@ -279,6 +279,9 @@
     {
       "id": "typhon",
       "title": "The Typhon",
+      "after": [
+        "main_story:act2_finale"
+      ],
       "text": [
         "The sea fortress Typhon rises from the ocean, its guns still manned. Board her, fight up the decks and hold her bridge until her crew breaks."
       ],

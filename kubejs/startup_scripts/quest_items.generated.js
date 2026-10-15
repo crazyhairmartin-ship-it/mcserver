@@ -3,6 +3,8 @@
 StartupEvents.registry('item', event => {
   event.create("quest_a_rival_appears_1").displayName("Grandfather, the Old Carp").texture("minecraft:item/cod").maxStackSize(1).tooltip("A prize catch").glow(true)
   event.create("quest_act1_temple_1").displayName("Temple Tablet").texture("minecraft:item/brick").maxStackSize(1).tooltip("A carved tablet: a hooded iron giant").glow(true)
+  event.create("quest_act2_prison_scout_1").displayName("Door Runes (Prison)").texture("minecraft:item/paper").maxStackSize(1).tooltip("Quest item").glow(true)
+  event.create("quest_act2_pyramid_scout_2").displayName("Door Runes (Pyramid)").texture("minecraft:item/paper").maxStackSize(1).tooltip("Quest item").glow(true)
   event.create("quest_airship_boarding_1").displayName("the Captain's Hoard").texture("minecraft:item/gold_ingot").maxStackSize(1).tooltip("Quest item").glow(true)
   event.create("quest_asylum_samples_0").displayName("an Asylum Sample").texture("minecraft:item/glass_bottle").maxStackSize(1).tooltip("Taken from the apothecary's wards").glow(true)
   event.create("quest_bells_of_the_bandit_towers_1").displayName("Ledger Page").texture("minecraft:item/paper").maxStackSize(1).tooltip("A page of the bandits' accounts").glow(true)

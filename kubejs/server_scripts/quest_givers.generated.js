@@ -2433,6 +2433,424 @@ global.QUEST_GIVERS = [
     "prev_tasks": []
   },
   {
+    "quest": "main_story:act2_start",
+    "stage": "fq.main_story.act2_start.enc2",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "We hid. Something rises from below, hungry.",
+      "It drains the wardens, one by one."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "2CF0262A21E6E0BC",
+    "prev_tasks": [
+      "3882D16A78E3CB5B",
+      "22D59BEA8F63D667"
+    ],
+    "name": "Forest Spirit",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:allay",
+    "profession": ""
+  },
+  {
+    "quest": "main_story:act2_twilight_branch",
+    "stage": "fq.main_story.act2_twilight_branch.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:naga",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:naga_courtyard"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Naga",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "44FE786A162C6714",
+    "requires": [],
+    "quest_id": "2E61B7DC6F2E334C",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act2_twilight_branch",
+    "stage": "fq.main_story.act2_twilight_branch.spawn1",
+    "type": "spawn",
+    "entity": "twilightforest:lich",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:lich_tower"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Lich",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "2DF033BD9DA329D3",
+    "requires": [],
+    "quest_id": "2E61B7DC6F2E334C",
+    "prev_tasks": [
+      "44FE786A162C6714"
+    ]
+  },
+  {
+    "quest": "main_story:act2_frostmaw_tale",
+    "stage": "fq.main_story.act2_frostmaw_tale.talk0",
+    "type": "talk",
+    "lines": [
+      "A white beast took my flock. Tracks like pits in the snow.",
+      "The spirits call it Frostmaw. Find it before winter does."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "villager",
+    "profession": "minecraft:shepherd",
+    "quest_id": "4EA93027D88D63FC",
+    "open_task": ""
+  },
+  {
+    "quest": "main_story:act2_frostmaw_trail",
+    "stage": "fq.main_story.act2_frostmaw_trail.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:campfire"
+    ],
+    "counts": [
+      4
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "65EA247F8A444F33",
+    "prev_tasks": [
+      "6DF26B8399BEC6A4",
+      "3E8CFF953EC328C5"
+    ]
+  },
+  {
+    "quest": "main_story:act2_frostmaw",
+    "stage": "fq.main_story.act2_frostmaw.spawn0",
+    "type": "spawn",
+    "entity": "mowziesmobs:frostmaw",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mowziesmobs:frostmaw_spawn"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Frostmaw",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "3466A988BBB85A30",
+    "requires": [],
+    "quest_id": "69E2AB2FBC514710",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act2_ice_crystal",
+    "stage": "fq.main_story.act2_ice_crystal.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "The veins match the drain. It comes from deep underground.",
+      "Find a way below, child."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "750C5064ACDCE7E1",
+    "prev_tasks": [
+      "5E89023BFF1B8601"
+    ],
+    "name": "Sister Wren",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "minecraft:cleric"
+  },
+  {
+    "quest": "main_story:act2_cave_map",
+    "stage": "fq.main_story.act2_cave_map.talk0",
+    "type": "talk",
+    "lines": [
+      "Caves below the caves. I've charted a cabin.",
+      "Take the map. Mind the dark."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "villager",
+    "profession": "minecraft:cartographer",
+    "quest_id": "56C16665BEA3E3A3",
+    "open_task": ""
+  },
+  {
+    "quest": "main_story:act2_monument_prep",
+    "stage": "fq.main_story.act2_monument_prep.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:enchanting_table"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "368452D848D18731",
+    "prev_tasks": [
+      "43EABD798DCED20D",
+      "1B6BB0378D32CF08"
+    ]
+  },
+  {
+    "quest": "main_story:act2_elder_guardian",
+    "stage": "fq.main_story.act2_elder_guardian.spawn1",
+    "type": "spawn",
+    "entity": "minecraft:elder_guardian",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betteroceanmonuments:ocean_monument"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Elder Guardian",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "4B1238C6FDAD913F",
+    "requires": [],
+    "quest_id": "33C44C59D49D268C",
+    "prev_tasks": [
+      "3195EAA0922CA8EF"
+    ]
+  },
+  {
+    "quest": "main_story:act2_pyramid_scout",
+    "stage": "fq.main_story.act2_pyramid_scout.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:koboleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:cursed_pyramid"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Pyramid Koboletons",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "3617849146FC0C4A",
+    "requires": [],
+    "quest_id": "4E665BBF1895D066",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act2_pyramid_scout",
+    "stage": "fq.main_story.act2_pyramid_scout.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:kobolediator",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:cursed_pyramid"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Kobolediator",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "4ED9F159E6852226",
+    "requires": [],
+    "quest_id": "4E665BBF1895D066",
+    "prev_tasks": [
+      "3617849146FC0C4A"
+    ]
+  },
+  {
+    "quest": "main_story:act2_pyramid_scout",
+    "stage": "fq.main_story.act2_pyramid_scout.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:cursed_pyramid"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_act2_pyramid_scout_2",
+    "found": "Runes of the Door of Seal, copied in charcoal.",
+    "requires": [],
+    "quest_id": "4E665BBF1895D066",
+    "prev_tasks": [
+      "3617849146FC0C4A",
+      "4ED9F159E6852226"
+    ]
+  },
+  {
+    "quest": "main_story:act2_prison_scout",
+    "stage": "fq.main_story.act2_prison_scout.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:aptrgangr",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:frosted_prison"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Gatekeeper",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "54A18FB921D8A7D4",
+    "requires": [],
+    "quest_id": "47E8450D01DCAD06",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act2_prison_scout",
+    "stage": "fq.main_story.act2_prison_scout.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:frosted_prison"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_act2_prison_scout_1",
+    "found": "Runes of the Door of Seal, frost-rimed.",
+    "requires": [],
+    "quest_id": "47E8450D01DCAD06",
+    "prev_tasks": [
+      "54A18FB921D8A7D4"
+    ]
+  },
+  {
+    "quest": "main_story:act2_sealed_doors",
+    "stage": "fq.main_story.act2_sealed_doors.talk0",
+    "type": "talk",
+    "lines": [
+      "Two copies of the same seal. Eight sleepers, then.",
+      "None can be broken yet. Keep these runes safe."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "org",
+    "org": "arcane",
+    "professions": [
+      "minecraft:librarian",
+      "irons_spellbooks:priest"
+    ],
+    "org_name": "Arcane Order",
+    "quest_id": "1D075C45F4D42C29",
+    "open_task": ""
+  },
+  {
+    "quest": "main_story:act2_monastery_climb",
+    "stage": "fq.main_story.act2_monastery_climb.timed0",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "mowziesmobs:monastery"
+      ],
+      "label": "the Monastery",
+      "away": 150
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "The storm is closing in. Climb!"
+    ],
+    "start": "Begin the climb",
+    "requires": [],
+    "quest_id": "79DB10A064D45B55",
+    "prev_tasks": [],
+    "name": ""
+  },
+  {
+    "quest": "main_story:act2_sculptor",
+    "stage": "fq.main_story.act2_sculptor.spawn0",
+    "type": "spawn",
+    "entity": "mowziesmobs:sculptor",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mowziesmobs:monastery"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Sculptor",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "766583606D7CE26B",
+    "requires": [],
+    "quest_id": "1CE4D0BF214CF309",
+    "prev_tasks": []
+  },
+  {
+    "quest": "main_story:act2_finale",
+    "stage": "fq.main_story.act2_finale.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:obsidian"
+    ],
+    "counts": [
+      10
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "54C450BB48CA2E5F",
+    "prev_tasks": [
+      "039ECDF2D3FAF826"
+    ]
+  },
+  {
     "quest": "milestones:easy_enchant",
     "stage": "fq.milestones.easy_enchant.build0",
     "type": "build",

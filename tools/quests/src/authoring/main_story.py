@@ -1,6 +1,6 @@
 """Chapter: main_story, Prologue and Act I (first release). Plan: src/plans/quests/main_story.json.
 Later acts are added to this file in later releases (append only: quest ids are permanent)."""
-from common import chapter, quest, talk_char, talk_org, talk_villager, item, reward_item, skill, give
+from common import chapter, quest, talk_char, talk_org, talk_villager, item, reward_item, skill, give, encounter
 
 PROLOGUE = [
     quest("prologue_silent_wood", "The Silent Wood", icon="minecraft:oak_sapling", after=["start:clerics_worry"],
@@ -172,5 +172,188 @@ ACT1 = [
           rewards=[reward_item("minecraft:diamond"), skill("magic", 150)]),
 ]
 
+
+def boss(entity, at, name, title, **extra):
+    """A boss kill: the boss is brought in when none is there."""
+    spawn = {"at": {"structure": at}, "wave": 1, "ensure": True, "name": name}
+    spawn.update(extra)
+    return {"kill": entity, "spawn": spawn, "title": title}
+
+
+def fight(entity, count, at, name, title, wave=4, **extra):
+    spawn = {"at": {"structure": at}, "wave": wave, "name": name}
+    spawn.update(extra)
+    return {"kill": entity, "count": count, "spawn": spawn, "title": title}
+
+
+def search(at, count, name, found, texture="minecraft:item/paper", title=None):
+    return {"search": {"at": {"structure": at}, "count": count,
+                       "item": {"name": name, "texture": texture}, "found": found},
+            "title": title or ("Search for " + name)}
+
+
+def enc(lines, title=None, **spec):
+    t = encounter(lines, **spec)
+    if title:
+        t["title"] = title
+    return t
+
+
+ACT2 = [
+    quest("act2_start", "Where the Spirits Went", icon="twilightforest:magic_map", after=["act1_finale"],
+          text=["Step through into the Twilight Forest and find its quest grove. The forest spirits Notch set "
+                "to guard the woods fled here, and they know what is draining the wardens."],
+          tasks=[{"dimension": "twilightforest:twilight_forest", "title": "Step into the Twilight Forest"},
+                 {"structure": "twilightforest:quest_grove", "title": "Find the quest grove where the spirits hide"},
+                 enc(["We hid. Something rises from below, hungry.", "It drains the wardens, one by one."],
+                     entity="minecraft:allay", name="Forest Spirit", title="Hear the hiding spirits")],
+          rewards=[reward_item("twilightforest:magic_map"), skill("magic", 160)]),
+
+    quest("act2_twilight_branch", "The Twilight Calls (Part 1)", icon="twilightforest:naga_trophy",
+          after=["act2_start"],
+          text=["The spirits ask you to lift the first curses on their forest: the Naga in its courtyard, and the "
+                "Lich in its tower. The Twilight Forest questline holds the rest of this realm."],
+          tasks=[boss("twilightforest:naga", "twilightforest:naga_courtyard", "The Naga",
+                      "Defeat the Naga coiled in its courtyard"),
+                 boss("twilightforest:lich", "twilightforest:lich_tower", "The Lich",
+                      "Defeat the Lich in its tower")],
+          rewards=[reward_item("twilightforest:naga_scale", 6), reward_item("twilightforest:naga_trophy"),
+                   skill("attack", 350)]),
+
+    quest("act2_frostmaw_tale", "Ice Where None Should Be", icon="minecraft:snowball", after=["act2_start"],
+          text=["Reece's shepherd lost a flock to a white beast in the snowy hills. The spirits name it Frostmaw, a "
+                "warden of winter woken too early."],
+          tasks=[talk_villager("minecraft:shepherd", ["A white beast took my flock. Tracks like pits in the snow.",
+                                                      "The spirits call it Frostmaw. Find it before winter does."],
+                               title="Hear the shepherd's loss")],
+          rewards=[reward_item("minecraft:leather_boots", name="Winterwalkers", lore=["Frost-resistant boots."],
+                               enchant={"minecraft:frost_walker": 1}), skill("defense", 160)]),
+
+    quest("act2_frostmaw_trail", "Tracks in the Snow", icon="minecraft:campfire", after=["act2_frostmaw_tale"],
+          text=["Follow broken ice and frozen carcasses across the snow to where Frostmaw sleeps, and leave a ring "
+                "of lit campfires at its den so it cannot freeze you."],
+          tasks=[{"biome": "minecraft:snowy_plains", "title": "Follow the frozen carcasses into the snow"},
+                 {"structure": "mowziesmobs:frostmaw_spawn", "title": "Find Frostmaw's den"},
+                 {"build": {"blocks": {"minecraft:campfire": 4}, "radius": 10}, "title": "Light a ring of campfires at the den"}],
+          rewards=[reward_item("minecraft:fire_charge", 8), skill("range", 200)]),
+
+    quest("act2_frostmaw", "Frostmaw", icon="mowziesmobs:frostmaw_spawn_egg", shape="diamond", size=1.5,
+          after=["act2_frostmaw_trail"],
+          text=["Wake Frostmaw and defeat it without letting its ice breath freeze you to the ground."],
+          tasks=[boss("mowziesmobs:frostmaw", "mowziesmobs:frostmaw_spawn", "Frostmaw", "Defeat Frostmaw at its den")],
+          rewards=[reward_item("minecraft:golden_apple", 3), skill("defense", 400)]),
+
+    quest("act2_ice_crystal", "The Cold Heart", icon="mowziesmobs:ice_crystal", after=["act2_frostmaw"],
+          text=["Frostmaw leaves an Ice Crystal behind, flecked with dark veins. As you pick it up, Sister Wren "
+                "arrives with a letter: the veins are proof that the drain comes from deep underground."],
+          tasks=[item("mowziesmobs:ice_crystal", title="Pick up the Ice Crystal Frostmaw left behind"),
+                 enc(["The veins match the drain. It comes from deep underground.", "Find a way below, child."],
+                     character="wren", title="Hear Sister Wren's news")],
+          rewards=[reward_item("mowziesmobs:frostmaw_plushie"), skill("magic", 200)]),
+
+    quest("act2_cave_map", "A Map of the Underworld", icon="alexscaves:cave_map", after=["act2_ice_crystal"],
+          text=["A cartographer sells the way below: an Alex's Caves cave map. Follow it to your first cave biome. "
+                "The Underworld questline takes over there."],
+          tasks=[talk_villager("minecraft:cartographer", ["Caves below the caves. I've charted a cabin.",
+                                                          "Take the map. Mind the dark."],
+                               title="Buy a cave map from a cartographer"),
+                 item("alexscaves:cave_map", title="Carry the cave map"),
+                 {"structure": "alexscaves:underground_cabin", "title": "Follow the map to the underground cabin"}],
+          rewards=[reward_item("alexscaves:bioluminescent_torch", 16), skill("mining", 250)]),
+
+    quest("act2_caves_beat", "Roots of the Drain", icon="alexscaves:amber", after=["act2_cave_map"],
+          text=["In the Primordial Caves and the Forlorn Hollows, amber and pure darkness hum with the same dark "
+                "pulse as the crystal. Gather both as proof."],
+          tasks=[{"structure": "alexscaves:dino_bowl", "title": "Find the Primordial Caves"},
+                 {"structure": "alexscaves:forlorn_canyon", "title": "Find the Forlorn Hollows"},
+                 item("alexscaves:amber", 4, title="Gather amber humming with the pulse"),
+                 item("alexscaves:pure_darkness", 4, title="Gather pure darkness humming with the pulse")],
+          rewards=[reward_item("minecraft:iron_pickaxe", name="Hollow Delver", lore=["For the Forlorn Hollows."],
+                               enchant={"minecraft:efficiency": 3}), skill("mining", 300)]),
+
+    quest("act2_monument_prep", "Breath of the Deep", icon="minecraft:turtle_helmet", after=["act2_ice_crystal"],
+          text=["An ocean monument holds a warden, and you will need to breathe. Brew water breathing and night "
+                "vision for the dive, and enchant a helmet for the depths."],
+          tasks=[item("minecraft:potion", 2, consume=True, title="Brew potions to breathe and see underwater"),
+                 item("minecraft:diamond_helmet", title="Bring a helmet to enchant for the depths"),
+                 {"build": {"blocks": {"minecraft:enchanting_table": 1}, "radius": 8},
+                  "title": "Set an enchanting table to prepare the helmet"}],
+          rewards=[reward_item("minecraft:prismarine_shard", 16), reward_item("minecraft:turtle_helmet"),
+                   skill("magic", 250)]),
+
+    quest("act2_elder_guardian", "The Elder of the Sea", icon="minecraft:heart_of_the_sea",
+          after=["act2_monument_prep"],
+          text=["Dive into an ocean monument and defeat one of its Elder Guardians, the ocean's own warden, half "
+                "drained already."],
+          tasks=[{"structure": "betteroceanmonuments:ocean_monument", "title": "Dive to the ocean monument"},
+                 boss("minecraft:elder_guardian", "betteroceanmonuments:ocean_monument", "The Elder Guardian",
+                      "Defeat the monument's Elder Guardian")],
+          rewards=[reward_item("minecraft:sponge", 4), reward_item("minecraft:heart_of_the_sea"), skill("defense", 400)]),
+
+    quest("act2_pyramid_scout", "The Sealed Pyramid", icon="cataclysm:koboleton_bone", after=["act2_caves_beat"],
+          text=["Scout a Cursed Pyramid in the desert: clear its outer halls of Koboletons and defeat a "
+                "Kobolediator for Ancient Metal. Copy the runes on its sealed inner door while you are there."],
+          tasks=[fight("cataclysm:koboleton", 6, "cataclysm:cursed_pyramid", "Pyramid Koboletons",
+                       "Clear the pyramid's outer halls"),
+                 fight("cataclysm:kobolediator", 1, "cataclysm:cursed_pyramid", "The Kobolediator",
+                       "Defeat the Kobolediator for Ancient Metal", wave=1),
+                 search("cataclysm:cursed_pyramid", 1, "Door Runes (Pyramid)", "Runes of the Door of Seal, copied in charcoal.",
+                        title="Copy the runes on the sealed inner door")],
+          rewards=[reward_item("cataclysm:ancient_metal_nugget", 8), skill("attack", 350)]),
+
+    quest("act2_prison_scout", "The Frosted Prison", icon="cataclysm:aptrgangr_head", after=["act2_pyramid_scout"],
+          text=["Scout a Frosted Prison in the snowy plains and defeat an Aptrgangr guarding its gate for Black "
+                "Steel. The inner door is sealed and something vast sleeps behind it. Copy the runes on it too."],
+          tasks=[boss("cataclysm:aptrgangr", "cataclysm:frosted_prison", "The Gatekeeper",
+                      "Defeat the Aptrgangr guarding the gate"),
+                 search("cataclysm:frosted_prison", 1, "Door Runes (Prison)", "Runes of the Door of Seal, frost-rimed.",
+                        title="Copy the runes on the sealed inner door")],
+          rewards=[reward_item("cataclysm:black_steel_ingot", 2), skill("attack", 380)]),
+
+    quest("act2_sealed_doors", "Doors That Will Not Open", icon="minecraft:writable_book",
+          after=["act2_prison_scout"],
+          text=["Bring both copies of the Door of Seal runes to the Arcane Order's librarian: eight seals, eight "
+                "sleepers, and none can be broken yet."],
+          tasks=[talk_org("arcane", ["Two copies of the same seal. Eight sleepers, then.",
+                                     "None can be broken yet. Keep these runes safe."],
+                          title="Show the rune copies to the Arcane Order")],
+          rewards=[reward_item("minecraft:writable_book", name="Runed Tablet", lore=["The Door of Seal, copied twice."]),
+                   skill("magic", 300)]),
+
+    quest("act2_scout_steel", "Steel From the Sleepers", icon="spartancataclysm:ancient_metal_greatsword",
+          after=["act2_sealed_doors"],
+          text=["The guardians' metal is sound, and the sleepers will be hard to hurt. Forge a Cataclysm weapon from "
+                "the Ancient Metal or Black Steel you took."],
+          tasks=[item("spartancataclysm:ancient_metal_greatsword", crafted=True,
+                      title="Forge a weapon from the guardians' metal")],
+          rewards=[reward_item("minecraft:grindstone"), skill("attack", 380)]),
+
+    quest("act2_monastery_climb", "The Peak Above the Clouds", icon="grapplemod:grapplinghook",
+          after=["act2_elder_guardian", "act2_scout_steel"],
+          text=["The last Overworld warden waits at a mountaintop Monastery. Climb the peak with ParCool moves and "
+                "a grappling hook before the storm closes in."],
+          tasks=[{"timed": {"seconds": 600, "goal": {"structure": "mowziesmobs:monastery", "label": "the Monastery", "away": 150},
+                            "lines": ["The storm is closing in. Climb!"], "start": "Begin the climb",
+                            "no": ["teleport", "mounts"]}, "title": "Climb to the Monastery before the storm"}],
+          rewards=[reward_item("grapplemod:grapplinghook"), skill("agility", 380)]),
+
+    quest("act2_sculptor", "The Sculptor", icon="mowziesmobs:sculptor_spawn_egg", shape="diamond", size=1.5,
+          after=["act2_monastery_climb"],
+          text=["Climb the Sculptor's pillar trial while it reshapes the stone beneath you, then defeat it."],
+          tasks=[boss("mowziesmobs:sculptor", "mowziesmobs:monastery", "The Sculptor",
+                      "Defeat the Sculptor in its trial")],
+          rewards=[reward_item("minecraft:diamond", 5), skill("agility", 400)]),
+
+    quest("act2_finale", "The Red Glow", icon="minecraft:obsidian", shape="diamond", size=1.75,
+          after=["act2_sculptor", "act2_frostmaw", "act2_twilight_branch"],
+          text=["From the peak you see a red scar on the horizon: a ruined portal. Repair or build a Nether portal "
+                "and step into the Nether for the first time."],
+          tasks=[item("minecraft:obsidian", 10, title="Gather obsidian for the portal frame"),
+                 {"build": {"blocks": {"minecraft:obsidian": 10}, "radius": 8}, "title": "Raise the portal frame"},
+                 {"dimension": "minecraft:the_nether", "title": "Step into the Nether"}],
+          rewards=[reward_item("minecraft:magma_cream", 4), reward_item("minecraft:golden_carrot", 8),
+                   skill("agility", 300)]),
+]
+
 chapter("main_story", "The Silent Forest", "The main story", "minecraft:written_book", "story", 0,
-        PROLOGUE + ACT1)
+        PROLOGUE + ACT1 + ACT2)

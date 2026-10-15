@@ -85,7 +85,7 @@ Q = [
                    reward_item("minecraft:enchanted_book", name="Sea Spear", enchant={"minecraft:impaling": 3}),
                    skill("attack", 250)]),
 
-    quest("typhon", "The Typhon", icon="minecraft:crossbow",
+    quest("typhon", "The Typhon", icon="minecraft:crossbow", after=["main_story:act2_finale"],
           discover={"structure": "dungeons_arise:typhon"},
           text=["The sea fortress Typhon rises from the ocean, its guns still manned. Board her, fight up the decks "
                 "and hold her bridge until her crew breaks."],

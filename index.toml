@@ -114,7 +114,7 @@ hash = "fbf559181d47d8d83c81cbd1245a278a75b3281dc01acea9b39b05ecea0ac075"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/discovery_sea.snbt"
-hash = "196b06dcdea190f2173c3919b4aedbc78fd503434c61101749cf584648ff9597"
+hash = "167aa11abf35ebc5cce9d644e97635c21b48ac3219309fd5a4739fab0b2a6bcc"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/discovery_sky_and_underground.snbt"
@@ -126,7 +126,7 @@ hash = "da7d5a92e71f7165ca9d3c5114e3d0d3a3caa435ed75e3276f5669ed59f607ad"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
-hash = "57924525dc2111147d3c069bb5a482216d267f0c1e2ec293daf8bfa96f23ae43"
+hash = "64142945d04a06715eb39d4b9bf668d96db66c05c9c14e59a17b5051027c0f18"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/milestones.snbt"
@@ -2789,7 +2789,7 @@ hash = "77546c4cc0ec84840f5fd7ab0b845a72406755c619b84f89740a3f8047957af8"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "a7c2d2938c100a5ad00cbc9c6494dd2992771026f03f1a10bd924d29d2437e06"
+hash = "5da0b4fcf4fccedfd3a092c0a043ecdcc0d73f44e8301f6e27fa3e3b6a51362c"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2873,7 +2873,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "447124ca6130d38eb5731d2747b81706b029bb82b22794c4da22751c3b1b11ac"
+hash = "ee6c442ab65a0ce8afec2dba062a321e937414994ba3c58d6718cea801ae2391"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"

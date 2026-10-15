@@ -782,6 +782,724 @@
       "icon": "minecraft:diamond",
       "shape": "diamond",
       "size": 1.75
+    },
+    {
+      "id": "act2_start",
+      "title": "Where the Spirits Went",
+      "after": [
+        "act1_finale"
+      ],
+      "text": [
+        "Step through into the Twilight Forest and find its quest grove. The forest spirits Notch set to guard the woods fled here, and they know what is draining the wardens."
+      ],
+      "tasks": [
+        {
+          "dimension": "twilightforest:twilight_forest",
+          "title": "Step into the Twilight Forest"
+        },
+        {
+          "structure": "twilightforest:quest_grove",
+          "title": "Find the quest grove where the spirits hide"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:allay",
+            "name": "Forest Spirit",
+            "then": "talk",
+            "lines": [
+              "We hid. Something rises from below, hungry.",
+              "It drains the wardens, one by one."
+            ]
+          },
+          "title": "Hear the hiding spirits"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:magic_map"
+        },
+        {
+          "skill": "magic",
+          "xp": 160
+        }
+      ],
+      "icon": "twilightforest:magic_map"
+    },
+    {
+      "id": "act2_twilight_branch",
+      "title": "The Twilight Calls (Part 1)",
+      "after": [
+        "act2_start"
+      ],
+      "text": [
+        "The spirits ask you to lift the first curses on their forest: the Naga in its courtyard, and the Lich in its tower. The Twilight Forest questline holds the rest of this realm."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:naga",
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:naga_courtyard"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Naga"
+          },
+          "title": "Defeat the Naga coiled in its courtyard"
+        },
+        {
+          "kill": "twilightforest:lich",
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:lich_tower"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Lich"
+          },
+          "title": "Defeat the Lich in its tower"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:naga_scale",
+          "count": 6
+        },
+        {
+          "item": "twilightforest:naga_trophy"
+        },
+        {
+          "skill": "attack",
+          "xp": 350
+        }
+      ],
+      "icon": "twilightforest:naga_trophy"
+    },
+    {
+      "id": "act2_frostmaw_tale",
+      "title": "Ice Where None Should Be",
+      "after": [
+        "act2_start"
+      ],
+      "text": [
+        "Reece's shepherd lost a flock to a white beast in the snowy hills. The spirits name it Frostmaw, a warden of winter woken too early."
+      ],
+      "tasks": [
+        {
+          "talk": "villager",
+          "profession": "minecraft:shepherd",
+          "lines": [
+            "A white beast took my flock. Tracks like pits in the snow.",
+            "The spirits call it Frostmaw. Find it before winter does."
+          ],
+          "title": "Hear the shepherd's loss"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather_boots",
+          "name": "Winterwalkers",
+          "lore": [
+            "Frost-resistant boots."
+          ],
+          "enchant": {
+            "minecraft:frost_walker": 1
+          }
+        },
+        {
+          "skill": "defense",
+          "xp": 160
+        }
+      ],
+      "icon": "minecraft:snowball"
+    },
+    {
+      "id": "act2_frostmaw_trail",
+      "title": "Tracks in the Snow",
+      "after": [
+        "act2_frostmaw_tale"
+      ],
+      "text": [
+        "Follow broken ice and frozen carcasses across the snow to where Frostmaw sleeps, and leave a ring of lit campfires at its den so it cannot freeze you."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:snowy_plains",
+          "title": "Follow the frozen carcasses into the snow"
+        },
+        {
+          "structure": "mowziesmobs:frostmaw_spawn",
+          "title": "Find Frostmaw's den"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:campfire": 4
+            },
+            "radius": 10
+          },
+          "title": "Light a ring of campfires at the den"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:fire_charge",
+          "count": 8
+        },
+        {
+          "skill": "range",
+          "xp": 200
+        }
+      ],
+      "icon": "minecraft:campfire"
+    },
+    {
+      "id": "act2_frostmaw",
+      "title": "Frostmaw",
+      "after": [
+        "act2_frostmaw_trail"
+      ],
+      "text": [
+        "Wake Frostmaw and defeat it without letting its ice breath freeze you to the ground."
+      ],
+      "tasks": [
+        {
+          "kill": "mowziesmobs:frostmaw",
+          "spawn": {
+            "at": {
+              "structure": "mowziesmobs:frostmaw_spawn"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "Frostmaw"
+          },
+          "title": "Defeat Frostmaw at its den"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_apple",
+          "count": 3
+        },
+        {
+          "skill": "defense",
+          "xp": 400
+        }
+      ],
+      "icon": "mowziesmobs:frostmaw_spawn_egg",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act2_ice_crystal",
+      "title": "The Cold Heart",
+      "after": [
+        "act2_frostmaw"
+      ],
+      "text": [
+        "Frostmaw leaves an Ice Crystal behind, flecked with dark veins. As you pick it up, Sister Wren arrives with a letter: the veins are proof that the drain comes from deep underground."
+      ],
+      "tasks": [
+        {
+          "item": "mowziesmobs:ice_crystal",
+          "title": "Pick up the Ice Crystal Frostmaw left behind"
+        },
+        {
+          "encounter": {
+            "character": "wren",
+            "then": "talk",
+            "lines": [
+              "The veins match the drain. It comes from deep underground.",
+              "Find a way below, child."
+            ]
+          },
+          "title": "Hear Sister Wren's news"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "mowziesmobs:frostmaw_plushie"
+        },
+        {
+          "skill": "magic",
+          "xp": 200
+        }
+      ],
+      "icon": "mowziesmobs:ice_crystal"
+    },
+    {
+      "id": "act2_cave_map",
+      "title": "A Map of the Underworld",
+      "after": [
+        "act2_ice_crystal"
+      ],
+      "text": [
+        "A cartographer sells the way below: an Alex's Caves cave map. Follow it to your first cave biome. The Underworld questline takes over there."
+      ],
+      "tasks": [
+        {
+          "talk": "villager",
+          "profession": "minecraft:cartographer",
+          "lines": [
+            "Caves below the caves. I've charted a cabin.",
+            "Take the map. Mind the dark."
+          ],
+          "title": "Buy a cave map from a cartographer"
+        },
+        {
+          "item": "alexscaves:cave_map",
+          "title": "Carry the cave map"
+        },
+        {
+          "structure": "alexscaves:underground_cabin",
+          "title": "Follow the map to the underground cabin"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexscaves:bioluminescent_torch",
+          "count": 16
+        },
+        {
+          "skill": "mining",
+          "xp": 250
+        }
+      ],
+      "icon": "alexscaves:cave_map"
+    },
+    {
+      "id": "act2_caves_beat",
+      "title": "Roots of the Drain",
+      "after": [
+        "act2_cave_map"
+      ],
+      "text": [
+        "In the Primordial Caves and the Forlorn Hollows, amber and pure darkness hum with the same dark pulse as the crystal. Gather both as proof."
+      ],
+      "tasks": [
+        {
+          "structure": "alexscaves:dino_bowl",
+          "title": "Find the Primordial Caves"
+        },
+        {
+          "structure": "alexscaves:forlorn_canyon",
+          "title": "Find the Forlorn Hollows"
+        },
+        {
+          "item": "alexscaves:amber",
+          "count": 4,
+          "title": "Gather amber humming with the pulse"
+        },
+        {
+          "item": "alexscaves:pure_darkness",
+          "count": 4,
+          "title": "Gather pure darkness humming with the pulse"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:iron_pickaxe",
+          "name": "Hollow Delver",
+          "lore": [
+            "For the Forlorn Hollows."
+          ],
+          "enchant": {
+            "minecraft:efficiency": 3
+          }
+        },
+        {
+          "skill": "mining",
+          "xp": 300
+        }
+      ],
+      "icon": "alexscaves:amber"
+    },
+    {
+      "id": "act2_monument_prep",
+      "title": "Breath of the Deep",
+      "after": [
+        "act2_ice_crystal"
+      ],
+      "text": [
+        "An ocean monument holds a warden, and you will need to breathe. Brew water breathing and night vision for the dive, and enchant a helmet for the depths."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:potion",
+          "count": 2,
+          "consume": true,
+          "title": "Brew potions to breathe and see underwater"
+        },
+        {
+          "item": "minecraft:diamond_helmet",
+          "title": "Bring a helmet to enchant for the depths"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:enchanting_table": 1
+            },
+            "radius": 8
+          },
+          "title": "Set an enchanting table to prepare the helmet"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:prismarine_shard",
+          "count": 16
+        },
+        {
+          "item": "minecraft:turtle_helmet"
+        },
+        {
+          "skill": "magic",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:turtle_helmet"
+    },
+    {
+      "id": "act2_elder_guardian",
+      "title": "The Elder of the Sea",
+      "after": [
+        "act2_monument_prep"
+      ],
+      "text": [
+        "Dive into an ocean monument and defeat one of its Elder Guardians, the ocean's own warden, half drained already."
+      ],
+      "tasks": [
+        {
+          "structure": "betteroceanmonuments:ocean_monument",
+          "title": "Dive to the ocean monument"
+        },
+        {
+          "kill": "minecraft:elder_guardian",
+          "spawn": {
+            "at": {
+              "structure": "betteroceanmonuments:ocean_monument"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Elder Guardian"
+          },
+          "title": "Defeat the monument's Elder Guardian"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:sponge",
+          "count": 4
+        },
+        {
+          "item": "minecraft:heart_of_the_sea"
+        },
+        {
+          "skill": "defense",
+          "xp": 400
+        }
+      ],
+      "icon": "minecraft:heart_of_the_sea"
+    },
+    {
+      "id": "act2_pyramid_scout",
+      "title": "The Sealed Pyramid",
+      "after": [
+        "act2_caves_beat"
+      ],
+      "text": [
+        "Scout a Cursed Pyramid in the desert: clear its outer halls of Koboletons and defeat a Kobolediator for Ancient Metal. Copy the runes on its sealed inner door while you are there."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:koboleton",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:cursed_pyramid"
+            },
+            "wave": 4,
+            "name": "Pyramid Koboletons"
+          },
+          "title": "Clear the pyramid's outer halls"
+        },
+        {
+          "kill": "cataclysm:kobolediator",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:cursed_pyramid"
+            },
+            "wave": 1,
+            "name": "The Kobolediator"
+          },
+          "title": "Defeat the Kobolediator for Ancient Metal"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "cataclysm:cursed_pyramid"
+            },
+            "count": 1,
+            "item": {
+              "name": "Door Runes (Pyramid)",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "Runes of the Door of Seal, copied in charcoal."
+          },
+          "title": "Copy the runes on the sealed inner door"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:ancient_metal_nugget",
+          "count": 8
+        },
+        {
+          "skill": "attack",
+          "xp": 350
+        }
+      ],
+      "icon": "cataclysm:koboleton_bone"
+    },
+    {
+      "id": "act2_prison_scout",
+      "title": "The Frosted Prison",
+      "after": [
+        "act2_pyramid_scout"
+      ],
+      "text": [
+        "Scout a Frosted Prison in the snowy plains and defeat an Aptrgangr guarding its gate for Black Steel. The inner door is sealed and something vast sleeps behind it. Copy the runes on it too."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:aptrgangr",
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:frosted_prison"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Gatekeeper"
+          },
+          "title": "Defeat the Aptrgangr guarding the gate"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "cataclysm:frosted_prison"
+            },
+            "count": 1,
+            "item": {
+              "name": "Door Runes (Prison)",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "Runes of the Door of Seal, frost-rimed."
+          },
+          "title": "Copy the runes on the sealed inner door"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:black_steel_ingot",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 380
+        }
+      ],
+      "icon": "cataclysm:aptrgangr_head"
+    },
+    {
+      "id": "act2_sealed_doors",
+      "title": "Doors That Will Not Open",
+      "after": [
+        "act2_prison_scout"
+      ],
+      "text": [
+        "Bring both copies of the Door of Seal runes to the Arcane Order's librarian: eight seals, eight sleepers, and none can be broken yet."
+      ],
+      "tasks": [
+        {
+          "talk": "org",
+          "org": "arcane",
+          "lines": [
+            "Two copies of the same seal. Eight sleepers, then.",
+            "None can be broken yet. Keep these runes safe."
+          ],
+          "title": "Show the rune copies to the Arcane Order"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "Runed Tablet",
+          "lore": [
+            "The Door of Seal, copied twice."
+          ]
+        },
+        {
+          "skill": "magic",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:writable_book"
+    },
+    {
+      "id": "act2_scout_steel",
+      "title": "Steel From the Sleepers",
+      "after": [
+        "act2_sealed_doors"
+      ],
+      "text": [
+        "The guardians' metal is sound, and the sleepers will be hard to hurt. Forge a Cataclysm weapon from the Ancient Metal or Black Steel you took."
+      ],
+      "tasks": [
+        {
+          "item": "spartancataclysm:ancient_metal_greatsword",
+          "crafted": true,
+          "title": "Forge a weapon from the guardians' metal"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:grindstone"
+        },
+        {
+          "skill": "attack",
+          "xp": 380
+        }
+      ],
+      "icon": "spartancataclysm:ancient_metal_greatsword"
+    },
+    {
+      "id": "act2_monastery_climb",
+      "title": "The Peak Above the Clouds",
+      "after": [
+        "act2_elder_guardian",
+        "act2_scout_steel"
+      ],
+      "text": [
+        "The last Overworld warden waits at a mountaintop Monastery. Climb the peak with ParCool moves and a grappling hook before the storm closes in."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 600,
+            "goal": {
+              "structure": "mowziesmobs:monastery",
+              "label": "the Monastery",
+              "away": 150
+            },
+            "lines": [
+              "The storm is closing in. Climb!"
+            ],
+            "start": "Begin the climb",
+            "no": [
+              "teleport",
+              "mounts"
+            ]
+          },
+          "title": "Climb to the Monastery before the storm"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "grapplemod:grapplinghook"
+        },
+        {
+          "skill": "agility",
+          "xp": 380
+        }
+      ],
+      "icon": "grapplemod:grapplinghook"
+    },
+    {
+      "id": "act2_sculptor",
+      "title": "The Sculptor",
+      "after": [
+        "act2_monastery_climb"
+      ],
+      "text": [
+        "Climb the Sculptor's pillar trial while it reshapes the stone beneath you, then defeat it."
+      ],
+      "tasks": [
+        {
+          "kill": "mowziesmobs:sculptor",
+          "spawn": {
+            "at": {
+              "structure": "mowziesmobs:monastery"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Sculptor"
+          },
+          "title": "Defeat the Sculptor in its trial"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:diamond",
+          "count": 5
+        },
+        {
+          "skill": "agility",
+          "xp": 400
+        }
+      ],
+      "icon": "mowziesmobs:sculptor_spawn_egg",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "act2_finale",
+      "title": "The Red Glow",
+      "after": [
+        "act2_sculptor",
+        "act2_frostmaw",
+        "act2_twilight_branch"
+      ],
+      "text": [
+        "From the peak you see a red scar on the horizon: a ruined portal. Repair or build a Nether portal and step into the Nether for the first time."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:obsidian",
+          "count": 10,
+          "title": "Gather obsidian for the portal frame"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:obsidian": 10
+            },
+            "radius": 8
+          },
+          "title": "Raise the portal frame"
+        },
+        {
+          "dimension": "minecraft:the_nether",
+          "title": "Step into the Nether"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:obsidian",
+      "shape": "diamond",
+      "size": 1.75
     }
   ]
 }

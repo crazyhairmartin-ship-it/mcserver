@@ -888,6 +888,778 @@
 			x: 25.5d
 			y: 0.0d
 		}
+		{
+			dependencies: ["3365AF8ACD0C3DDB"]
+			description: ["Step through into the Twilight Forest and find its quest grove. The forest spirits Notch set to guard the woods fled here, and they know what is draining the wardens."]
+			icon: "twilightforest:magic_map"
+			id: "2CF0262A21E6E0BC"
+			rewards: [
+				{
+					id: "45C0FFB172B69397"
+					item: "twilightforest:magic_map"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 160"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "57828669234DC614"
+					silent: true
+					title: "+160 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "twilightforest:twilight_forest"
+					id: "3882D16A78E3CB5B"
+					title: "Step into the Twilight Forest"
+					type: "dimension"
+				}
+				{
+					id: "22D59BEA8F63D667"
+					structure: "twilightforest:quest_grove"
+					title: "Find the quest grove where the spirits hide"
+					type: "structure"
+				}
+				{
+					id: "3F8F6B6D9EF660F2"
+					stage: "fq.main_story.act2_start.enc2"
+					title: "Hear the hiding spirits"
+					type: "gamestage"
+				}
+			]
+			title: "Where the Spirits Went"
+			x: 27.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2CF0262A21E6E0BC"]
+			description: ["The spirits ask you to lift the first curses on their forest: the Naga in its courtyard, and the Lich in its tower. The Twilight Forest questline holds the rest of this realm."]
+			icon: "twilightforest:naga_trophy"
+			id: "2E61B7DC6F2E334C"
+			rewards: [
+				{
+					count: 6
+					id: "45F2A1F9A70EC854"
+					item: "twilightforest:naga_scale"
+					type: "item"
+				}
+				{
+					id: "2EC2FAFA05E4C889"
+					item: "twilightforest:naga_trophy"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 350"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "624BDA1D7E04073B"
+					silent: true
+					title: "+350 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:naga"
+					id: "44FE786A162C6714"
+					title: "Defeat the Naga coiled in its courtyard"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "twilightforest:lich"
+					id: "2DF033BD9DA329D3"
+					title: "Defeat the Lich in its tower"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Twilight Calls (Part 1)"
+			x: 28.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["2CF0262A21E6E0BC"]
+			description: ["Reece's shepherd lost a flock to a white beast in the snowy hills. The spirits name it Frostmaw, a warden of winter woken too early."]
+			icon: "minecraft:snowball"
+			id: "4EA93027D88D63FC"
+			rewards: [
+				{
+					id: "7C13769C6F6ADD92"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_boots"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:frost_walker"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Frost-resistant boots.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Winterwalkers\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 160"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "2A9047ECD13A8474"
+					silent: true
+					title: "+160 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "64C251295B25C325"
+					stage: "fq.main_story.act2_frostmaw_tale.talk0"
+					title: "Hear the shepherd's loss"
+					type: "gamestage"
+				}
+			]
+			title: "Ice Where None Should Be"
+			x: 28.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["4EA93027D88D63FC"]
+			description: ["Follow broken ice and frozen carcasses across the snow to where Frostmaw sleeps, and leave a ring of lit campfires at its den so it cannot freeze you."]
+			icon: "minecraft:campfire"
+			id: "65EA247F8A444F33"
+			rewards: [
+				{
+					count: 8
+					id: "53B41906964EDED8"
+					item: "minecraft:fire_charge"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 200"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "1309DD435EAF7ED0"
+					silent: true
+					title: "+200 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:snowy_plains"
+					id: "6DF26B8399BEC6A4"
+					title: "Follow the frozen carcasses into the snow"
+					type: "biome"
+				}
+				{
+					id: "3E8CFF953EC328C5"
+					structure: "mowziesmobs:frostmaw_spawn"
+					title: "Find Frostmaw's den"
+					type: "structure"
+				}
+				{
+					id: "790A97E276E9BE7B"
+					stage: "fq.main_story.act2_frostmaw_trail.build2"
+					title: "Light a ring of campfires at the den"
+					type: "gamestage"
+				}
+			]
+			title: "Tracks in the Snow"
+			x: 30.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65EA247F8A444F33"]
+			description: ["Wake Frostmaw and defeat it without letting its ice breath freeze you to the ground."]
+			icon: "mowziesmobs:frostmaw_spawn_egg"
+			id: "69E2AB2FBC514710"
+			rewards: [
+				{
+					count: 3
+					id: "6EF966B05712E22A"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 400"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "6E4503B6F791979C"
+					silent: true
+					title: "+400 Defense XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "mowziesmobs:frostmaw"
+					id: "3466A988BBB85A30"
+					title: "Defeat Frostmaw at its den"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Frostmaw"
+			x: 31.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["69E2AB2FBC514710"]
+			description: ["Frostmaw leaves an Ice Crystal behind, flecked with dark veins. As you pick it up, Sister Wren arrives with a letter: the veins are proof that the drain comes from deep underground."]
+			icon: "mowziesmobs:ice_crystal"
+			id: "750C5064ACDCE7E1"
+			rewards: [
+				{
+					id: "21C12CA5EA945299"
+					item: "mowziesmobs:frostmaw_plushie"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 200"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "1D18ADECD66E197D"
+					silent: true
+					title: "+200 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5E89023BFF1B8601"
+					item: "mowziesmobs:ice_crystal"
+					title: "Pick up the Ice Crystal Frostmaw left behind"
+					type: "item"
+				}
+				{
+					id: "39D3BDFEC920DBDC"
+					stage: "fq.main_story.act2_ice_crystal.enc1"
+					title: "Hear Sister Wren's news"
+					type: "gamestage"
+				}
+			]
+			title: "The Cold Heart"
+			x: 33.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["750C5064ACDCE7E1"]
+			description: ["A cartographer sells the way below: an Alex's Caves cave map. Follow it to your first cave biome. The Underworld questline takes over there."]
+			icon: "alexscaves:cave_map"
+			id: "56C16665BEA3E3A3"
+			rewards: [
+				{
+					count: 16
+					id: "7A8B423B472B8685"
+					item: "alexscaves:bioluminescent_torch"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 250"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "5B97141C55098AF5"
+					silent: true
+					title: "+250 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "33E80BECCA5EB7CD"
+					stage: "fq.main_story.act2_cave_map.talk0"
+					title: "Buy a cave map from a cartographer"
+					type: "gamestage"
+				}
+				{
+					id: "5EB6CE611D426CD2"
+					item: "alexscaves:cave_map"
+					title: "Carry the cave map"
+					type: "item"
+				}
+				{
+					id: "443B8376B583369E"
+					structure: "alexscaves:underground_cabin"
+					title: "Follow the map to the underground cabin"
+					type: "structure"
+				}
+			]
+			title: "A Map of the Underworld"
+			x: 34.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["56C16665BEA3E3A3"]
+			description: ["In the Primordial Caves and the Forlorn Hollows, amber and pure darkness hum with the same dark pulse as the crystal. Gather both as proof."]
+			icon: "alexscaves:amber"
+			id: "77D128162D25784B"
+			rewards: [
+				{
+					id: "621E9519F6ED2364"
+					item: {
+						Count: 1b
+						id: "minecraft:iron_pickaxe"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 3s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"For the Forlorn Hollows.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Hollow Delver\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 300"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "4F326C23BBBDE97E"
+					silent: true
+					title: "+300 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "268F158A6B062EDE"
+					structure: "alexscaves:dino_bowl"
+					title: "Find the Primordial Caves"
+					type: "structure"
+				}
+				{
+					id: "72F56644C4ABA979"
+					structure: "alexscaves:forlorn_canyon"
+					title: "Find the Forlorn Hollows"
+					type: "structure"
+				}
+				{
+					count: 4L
+					id: "317F6C383E85248F"
+					item: "alexscaves:amber"
+					title: "Gather amber humming with the pulse"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "69AA186CE7F36CD6"
+					item: "alexscaves:pure_darkness"
+					title: "Gather pure darkness humming with the pulse"
+					type: "item"
+				}
+			]
+			title: "Roots of the Drain"
+			x: 36.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["750C5064ACDCE7E1"]
+			description: ["An ocean monument holds a warden, and you will need to breathe. Brew water breathing and night vision for the dive, and enchant a helmet for the depths."]
+			icon: "minecraft:turtle_helmet"
+			id: "368452D848D18731"
+			rewards: [
+				{
+					count: 16
+					id: "140BD59AF42C861C"
+					item: "minecraft:prismarine_shard"
+					type: "item"
+				}
+				{
+					id: "7958628BCB9FB4A3"
+					item: "minecraft:turtle_helmet"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 250"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "7D0DBFF2FE5055D1"
+					silent: true
+					title: "+250 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 2L
+					id: "43EABD798DCED20D"
+					item: "minecraft:potion"
+					title: "Brew potions to breathe and see underwater"
+					type: "item"
+				}
+				{
+					id: "1B6BB0378D32CF08"
+					item: "minecraft:diamond_helmet"
+					title: "Bring a helmet to enchant for the depths"
+					type: "item"
+				}
+				{
+					id: "38CEB1D4DB686531"
+					stage: "fq.main_story.act2_monument_prep.build2"
+					title: "Set an enchanting table to prepare the helmet"
+					type: "gamestage"
+				}
+			]
+			title: "Breath of the Deep"
+			x: 34.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["368452D848D18731"]
+			description: ["Dive into an ocean monument and defeat one of its Elder Guardians, the ocean's own warden, half drained already."]
+			icon: "minecraft:heart_of_the_sea"
+			id: "33C44C59D49D268C"
+			rewards: [
+				{
+					count: 4
+					id: "4E60FEB5ACD43090"
+					item: "minecraft:sponge"
+					type: "item"
+				}
+				{
+					id: "1E1C21D12E016F68"
+					item: "minecraft:heart_of_the_sea"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 400"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "2BEFB2E69FA255A3"
+					silent: true
+					title: "+400 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3195EAA0922CA8EF"
+					structure: "betteroceanmonuments:ocean_monument"
+					title: "Dive to the ocean monument"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:elder_guardian"
+					id: "4B1238C6FDAD913F"
+					title: "Defeat the monument's Elder Guardian"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Elder of the Sea"
+			x: 36.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["77D128162D25784B"]
+			description: ["Scout a Cursed Pyramid in the desert: clear its outer halls of Koboletons and defeat a Kobolediator for Ancient Metal. Copy the runes on its sealed inner door while you are there."]
+			icon: "cataclysm:koboleton_bone"
+			id: "4E665BBF1895D066"
+			rewards: [
+				{
+					count: 8
+					id: "33F54C74E5BA09C0"
+					item: "cataclysm:ancient_metal_nugget"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 350"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "2B85904E3453A3A4"
+					silent: true
+					title: "+350 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:koboleton"
+					id: "3617849146FC0C4A"
+					title: "Clear the pyramid's outer halls"
+					type: "kill"
+					value: 6L
+				}
+				{
+					entity: "cataclysm:kobolediator"
+					id: "4ED9F159E6852226"
+					title: "Defeat the Kobolediator for Ancient Metal"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "4BEF5401BF91B32D"
+					item: "kubejs:quest_act2_pyramid_scout_2"
+					title: "Copy the runes on the sealed inner door"
+					type: "item"
+				}
+			]
+			title: "The Sealed Pyramid"
+			x: 37.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4E665BBF1895D066"]
+			description: ["Scout a Frosted Prison in the snowy plains and defeat an Aptrgangr guarding its gate for Black Steel. The inner door is sealed and something vast sleeps behind it. Copy the runes on it too."]
+			icon: "cataclysm:aptrgangr_head"
+			id: "47E8450D01DCAD06"
+			rewards: [
+				{
+					count: 2
+					id: "35D2025D24999ED7"
+					item: "cataclysm:black_steel_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 380"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "4219A6583F260869"
+					silent: true
+					title: "+380 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:aptrgangr"
+					id: "54A18FB921D8A7D4"
+					title: "Defeat the Aptrgangr guarding the gate"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "4598BD213A42EF50"
+					item: "kubejs:quest_act2_prison_scout_1"
+					title: "Copy the runes on the sealed inner door"
+					type: "item"
+				}
+			]
+			title: "The Frosted Prison"
+			x: 39.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["47E8450D01DCAD06"]
+			description: ["Bring both copies of the Door of Seal runes to the Arcane Order's librarian: eight seals, eight sleepers, and none can be broken yet."]
+			icon: "minecraft:writable_book"
+			id: "1D075C45F4D42C29"
+			rewards: [
+				{
+					id: "165FB4DDAF31B7F1"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"The Door of Seal, copied twice.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Runed Tablet\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 300"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "158F7BD591538F74"
+					silent: true
+					title: "+300 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "167B4AC956CF435C"
+					stage: "fq.main_story.act2_sealed_doors.talk0"
+					title: "Show the rune copies to the Arcane Order"
+					type: "gamestage"
+				}
+			]
+			title: "Doors That Will Not Open"
+			x: 40.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1D075C45F4D42C29"]
+			description: ["The guardians' metal is sound, and the sleepers will be hard to hurt. Forge a Cataclysm weapon from the Ancient Metal or Black Steel you took."]
+			icon: "spartancataclysm:ancient_metal_greatsword"
+			id: "53BDB02F9759E411"
+			rewards: [
+				{
+					id: "2BED2FDD16F11748"
+					item: "minecraft:grindstone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 380"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "5AA041CAF309F771"
+					silent: true
+					title: "+380 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "134B7732E0005453"
+					item: "spartancataclysm:ancient_metal_greatsword"
+					only_from_crafting: true
+					title: "Forge a weapon from the guardians' metal"
+					type: "item"
+				}
+			]
+			title: "Steel From the Sleepers"
+			x: 42.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"33C44C59D49D268C"
+				"53BDB02F9759E411"
+			]
+			description: ["The last Overworld warden waits at a mountaintop Monastery. Climb the peak with ParCool moves and a grappling hook before the storm closes in."]
+			icon: "grapplemod:grapplinghook"
+			id: "79DB10A064D45B55"
+			rewards: [
+				{
+					id: "68DDF9DB10264139"
+					item: "grapplemod:grapplinghook"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 380"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "43119D3DB78CA8FC"
+					silent: true
+					title: "+380 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "67983B453D015DBF"
+					stage: "fq.main_story.act2_monastery_climb.timed0"
+					title: "Climb to the Monastery before the storm"
+					type: "gamestage"
+				}
+			]
+			title: "The Peak Above the Clouds"
+			x: 43.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["79DB10A064D45B55"]
+			description: ["Climb the Sculptor's pillar trial while it reshapes the stone beneath you, then defeat it."]
+			icon: "mowziesmobs:sculptor_spawn_egg"
+			id: "1CE4D0BF214CF309"
+			rewards: [
+				{
+					count: 5
+					id: "20B5AD3F4708DFB2"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 400"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "16862C8200D562DC"
+					silent: true
+					title: "+400 Agility XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "mowziesmobs:sculptor"
+					id: "766583606D7CE26B"
+					title: "Defeat the Sculptor in its trial"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Sculptor"
+			x: 45.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1CE4D0BF214CF309"
+				"69E2AB2FBC514710"
+				"2E61B7DC6F2E334C"
+			]
+			description: ["From the peak you see a red scar on the horizon: a ruined portal. Repair or build a Nether portal and step into the Nether for the first time."]
+			icon: "minecraft:obsidian"
+			id: "54C450BB48CA2E5F"
+			rewards: [
+				{
+					count: 4
+					id: "40E0C8DC9C09A37B"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "26901A6D24C47088"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "2FF974CC3AABED4A"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.75d
+			tasks: [
+				{
+					count: 10L
+					id: "039ECDF2D3FAF826"
+					item: "minecraft:obsidian"
+					title: "Gather obsidian for the portal frame"
+					type: "item"
+				}
+				{
+					id: "00639BF352F3FE69"
+					stage: "fq.main_story.act2_finale.build1"
+					title: "Raise the portal frame"
+					type: "gamestage"
+				}
+				{
+					dimension: "minecraft:the_nether"
+					id: "1B809F8CA6F3A982"
+					title: "Step into the Nether"
+					type: "dimension"
+				}
+			]
+			title: "The Red Glow"
+			x: 46.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["The main story"]
 	title: "The Silent Forest"
