@@ -36,8 +36,9 @@
 				}
 				{
 					id: "08EC85EAD58FC37E"
-					title: "I waited out the night"
-					type: "checkmark"
+					stage: "fq.main_story.prologue_silent_wood.be1"
+					title: "Wait at the forest's edge after dark"
+					type: "gamestage"
 				}
 			]
 			title: "The Silent Wood"
@@ -100,8 +101,9 @@
 				}
 				{
 					id: "0E39B10F2543565B"
-					title: "I built the shrine"
-					type: "checkmark"
+					stage: "fq.main_story.prologue_shrine.build5"
+					title: "Build the wayside shrine"
+					type: "gamestage"
 				}
 			]
 			title: "A Shrine for the Quiet"
@@ -154,8 +156,9 @@
 				}
 				{
 					id: "184959EB6CE6D30E"
-					title: "My home is built"
-					type: "checkmark"
+					stage: "fq.main_story.prologue_home.build4"
+					title: "Build your home: a bed, a chest and a door of your own"
+					type: "gamestage"
 				}
 			]
 			title: "Somewhere to Come Back To"
@@ -190,8 +193,11 @@
 			tasks: [
 				{
 					id: "6782D4DE816C79DA"
-					title: "I found a fallen adventurer"
-					type: "checkmark"
+					observe_type: "block"
+					timer: 20L
+					title: "Find a fallen adventurer"
+					to_observe: "realmrpg_skeletons:hunted_skeleton"
+					type: "observation"
 				}
 			]
 			title: "The Fallen Adventurer"
@@ -403,8 +409,9 @@
 				}
 				{
 					id: "00A9B4EE5AFC6B1C"
-					title: "I saw the mural"
-					type: "checkmark"
+					item: "kubejs:quest_act1_temple_1"
+					title: "Find what the temple remembers of the iron giant"
+					type: "item"
 				}
 			]
 			title: "Sand and Vine"

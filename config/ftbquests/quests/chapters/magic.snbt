@@ -116,11 +116,10 @@
 					type: "gamestage"
 				}
 				{
-					advancement: "minecraft:story/enchant_item"
-					criterion: ""
 					id: "6B45307D2C151B2C"
-					title: "Enchant an item"
-					type: "advancement"
+					stage: "fq.magic.an_honest_table.use2"
+					title: "Enchant your first tool at the table"
+					type: "gamestage"
 				}
 			]
 			title: "An Honest Table"

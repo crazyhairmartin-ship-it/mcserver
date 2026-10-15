@@ -39,7 +39,12 @@ Q = [
           text=["Find a forager's outpost in the wilds and copy the notes its last keeper left on the herbs of that "
                 "region."],
           tasks=[{"structure": "#forager_outposts", "title": "Find a forager's outpost"},
-                 {"checkmark": "I copied the notes"}],
+                 {"search": {"at": {"structure": ["structory_towers:foraging_outpost", "structory_towers:nomad_outpost",
+                                                   "structory_towers:taiga_outpost"]}, "count": 1,
+                             "item": {"name": "Keeper's Herb Notes", "tooltip": "Herbs of the region, in a careful hand",
+                                      "texture": "minecraft:item/paper"},
+                             "found": "The last keeper's notes on the herbs hereabouts."},
+                  "title": "Find the keeper's notes"}],
           rewards=[skill("forage", 150)]),
 
     quest("lavender_sleep", "Lavender for the Sleepless", icon="herbalbrews:lavender_tea", after=["first_tea"],

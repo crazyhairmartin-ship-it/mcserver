@@ -295,8 +295,9 @@
 				}
 				{
 					id: "43B1C3632E54951B"
-					title: "I marked three game trails"
-					type: "checkmark"
+					item: "kubejs:quest_firewatch_2"
+					title: "Take the watcher's trail map from the tower"
+					type: "item"
 				}
 			]
 			title: "The Lookout"

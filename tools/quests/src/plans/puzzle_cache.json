@@ -49,12 +49,63 @@
    "containers": 1
   }
  },
+ "dungeons_arise:heavenly_challenger": {
+  "copies": 3,
+  "lines": [
+   "fotfverify dungeons_arise:heavenly_challenger copy 1 at -2752,1104 pieces=39 containers=10",
+   "fotfverify dungeons_arise:heavenly_challenger copy 2 at -896,-6624 pieces=39 containers=10",
+   "fotfverify dungeons_arise:heavenly_challenger copy 3 at 2032,9616 pieces=39 containers=10"
+  ],
+  "mins": {
+   "containers": 10
+  }
+ },
+ "dungeons_arise:heavenly_conqueror": {
+  "copies": 3,
+  "lines": [
+   "fotfverify dungeons_arise:heavenly_conqueror copy 1 at -1904,2912 pieces=16 containers=16",
+   "fotfverify dungeons_arise:heavenly_conqueror copy 2 at 2928,1920 pieces=16 containers=16",
+   "fotfverify dungeons_arise:heavenly_conqueror copy 3 at 2880,-5648 pieces=16 containers=16"
+  ],
+  "mins": {
+   "containers": 16
+  }
+ },
+ "dungeons_arise:heavenly_rider": {
+  "copies": 3,
+  "lines": [
+   "fotfverify dungeons_arise:heavenly_rider copy 1 at -2816,1968 pieces=18 containers=9",
+   "fotfverify dungeons_arise:heavenly_rider copy 2 at 2912,-2880 pieces=18 containers=9",
+   "fotfverify dungeons_arise:heavenly_rider copy 3 at 1024,3888 pieces=18 containers=9"
+  ],
+  "mins": {
+   "containers": 9
+  }
+ },
+ "dungeons_arise:lighthouse": {
+  "copies": 0,
+  "lines": [],
+  "mins": {
+   "containers": 0
+  }
+ },
  "dungeons_arise:shiraz_palace": {
   "copies": 3,
   "lines": [],
   "mins": {
    "#minecraft:campfires": 25,
    "containers": 134
+  }
+ },
+ "dungeons_arise:small_blimp": {
+  "copies": 3,
+  "lines": [
+   "fotfverify dungeons_arise:small_blimp copy 1 at -848,1008 pieces=4 containers=0",
+   "fotfverify dungeons_arise:small_blimp copy 2 at 2000,1920 pieces=9 containers=5",
+   "fotfverify dungeons_arise:small_blimp copy 3 at -2816,-816 pieces=9 containers=5"
+  ],
+  "mins": {
+   "containers": 0
   }
  },
  "dungeons_arise:undead_pirate_ship": {
@@ -106,6 +157,40 @@
    "containers": 4
   }
  },
+ "mss:castle_tower": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mss:castle_tower copy 1 at -2144,-2832 pieces=2 containers=35",
+   "fotfverify mss:castle_tower copy 2 at 1168,-2064 pieces=2 containers=35",
+   "fotfverify mss:castle_tower copy 3 at -4448,928 pieces=2 containers=35"
+  ],
+  "mins": {
+   "containers": 35
+  }
+ },
+ "mss:desert_pyramid": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mss:desert_pyramid copy 1 at -1360,-20224 pieces=3 containers=9 minecraft:light_gray_candle=7",
+   "fotfverify mss:desert_pyramid copy 2 at -22592,6528 pieces=3 containers=9 minecraft:light_gray_candle=7",
+   "fotfverify mss:desert_pyramid copy 3 at -5760,23808 pieces=3 containers=9 minecraft:light_gray_candle=7"
+  ],
+  "mins": {
+   "containers": 9,
+   "minecraft:light_gray_candle": 7
+  }
+ },
+ "mss:volcano": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mss:volcano copy 1 at 624,1760 pieces=6 containers=22",
+   "fotfverify mss:volcano copy 2 at -6288,-3104 pieces=6 containers=22",
+   "fotfverify mss:volcano copy 3 at 432,-2672 pieces=6 containers=22"
+  ],
+  "mins": {
+   "containers": 22
+  }
+ },
  "mvs:azelea_house": {
   "copies": 3,
   "lines": [],
@@ -141,6 +226,61 @@
    "containers": 4
   }
  },
+ "nova_structures:bunker": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:bunker copy 1 at -1152,64 pieces=8 containers=6",
+   "fotfverify nova_structures:bunker copy 2 at 2832,944 pieces=10 containers=10",
+   "fotfverify nova_structures:bunker copy 3 at -3168,208 pieces=27 containers=6"
+  ],
+  "mins": {
+   "containers": 6
+  }
+ },
+ "nova_structures:firewatch_tower_birch": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:firewatch_tower_birch copy 1 at -5104,6032 pieces=1 containers=1",
+   "fotfverify nova_structures:firewatch_tower_birch copy 2 at 5824,9728 pieces=1 containers=1",
+   "fotfverify nova_structures:firewatch_tower_birch copy 3 at -12800,-7776 pieces=1 containers=1"
+  ],
+  "mins": {
+   "containers": 1
+  }
+ },
+ "nova_structures:firewatch_tower_cherry": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:firewatch_tower_cherry copy 1 at 6032,-10736 pieces=1 containers=1",
+   "fotfverify nova_structures:firewatch_tower_cherry copy 2 at -3008,-13440 pieces=1 containers=1",
+   "fotfverify nova_structures:firewatch_tower_cherry copy 3 at 6064,26928 pieces=1 containers=1"
+  ],
+  "mins": {
+   "containers": 1
+  }
+ },
+ "nova_structures:firewatch_tower_dark_oak": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:firewatch_tower_dark_oak copy 1 at -1184,2608 pieces=1 containers=1",
+   "fotfverify nova_structures:firewatch_tower_dark_oak copy 2 at -416,4112 pieces=1 containers=1",
+   "fotfverify nova_structures:firewatch_tower_dark_oak copy 3 at -6336,-3888 pieces=1 containers=1"
+  ],
+  "mins": {
+   "containers": 1
+  }
+ },
+ "nova_structures:underground_house": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:underground_house copy 1 at -592,-608 pieces=9 containers=6",
+   "fotfverify nova_structures:underground_house copy 2 at 3344,992 pieces=9 containers=6",
+   "fotfverify nova_structures:underground_house copy 3 at -3728,352 pieces=9 containers=7"
+  ],
+  "mins": {
+   "containers": 6
+  }
+ },
  "structory:old_manor": {
   "copies": 3,
   "lines": [],
@@ -153,6 +293,49 @@
   "lines": [],
   "mins": {
    "containers": 8
+  }
+ },
+ "structory_towers:foraging_outpost": {
+  "copies": 2,
+  "lines": [
+   "fotfverify structory_towers:foraging_outpost copy 1 at -880,5248 pieces=2 containers=8",
+   "fotfverify structory_towers:foraging_outpost copy 2 at 1504,-4768 pieces=2 containers=8"
+  ],
+  "mins": {
+   "containers": 8
+  }
+ },
+ "structory_towers:lighthouse": {
+  "copies": 3,
+  "lines": [
+   "fotfverify structory_towers:lighthouse copy 1 at -8608,6128 pieces=2 containers=6",
+   "fotfverify structory_towers:lighthouse copy 2 at -4208,-10736 pieces=2 containers=6",
+   "fotfverify structory_towers:lighthouse copy 3 at -9312,2672 pieces=2 containers=6"
+  ],
+  "mins": {
+   "containers": 6
+  }
+ },
+ "structory_towers:nomad_outpost": {
+  "copies": 3,
+  "lines": [
+   "fotfverify structory_towers:nomad_outpost copy 1 at 752,4736 pieces=2 containers=9",
+   "fotfverify structory_towers:nomad_outpost copy 2 at 8624,-10592 pieces=2 containers=9",
+   "fotfverify structory_towers:nomad_outpost copy 3 at -10032,-9472 pieces=2 containers=9"
+  ],
+  "mins": {
+   "containers": 9
+  }
+ },
+ "structory_towers:taiga_outpost": {
+  "copies": 3,
+  "lines": [
+   "fotfverify structory_towers:taiga_outpost copy 1 at 4784,1280 pieces=2 containers=9",
+   "fotfverify structory_towers:taiga_outpost copy 2 at -5504,4624 pieces=2 containers=9",
+   "fotfverify structory_towers:taiga_outpost copy 3 at 3952,8464 pieces=2 containers=9"
+  ],
+  "mins": {
+   "containers": 9
   }
  },
  "structory_towers:warped_greatsword": {

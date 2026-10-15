@@ -38,10 +38,9 @@
 				}
 				{
 					id: "106DBA1E32961A80"
-					stat: "minecraft:fish_caught"
-					title: "Catch five fish"
-					type: "stat"
-					value: 5
+					stage: "fq.skill_fishing.sign_up.timed1"
+					title: "Land five fish before the evening bell"
+					type: "gamestage"
 				}
 			]
 			title: "Entry Form"
@@ -185,10 +184,9 @@
 			tasks: [
 				{
 					id: "4DD28C90BDE213C0"
-					stat: "minecraft:fish_caught"
-					title: "Catch a hundred fish"
-					type: "stat"
-					value: 100
+					stage: "fq.skill_fishing.hundred_fish.stats0"
+					title: "Bring your lifetime tally to a hundred"
+					type: "gamestage"
 				}
 			]
 			title: "Tally Book"
@@ -357,8 +355,9 @@
 				}
 				{
 					id: "0EA153F23B8F9928"
-					title: "I read the records"
-					type: "checkmark"
+					item: "kubejs:quest_lighthouse_ledger_2"
+					title: "Find the record book"
+					type: "item"
 				}
 			]
 			title: "The Keeper's Ledger"
@@ -429,8 +428,9 @@
 			tasks: [
 				{
 					id: "4A7DBD2AC8E4AB81"
-					title: "I brought the heirloom rod up"
-					type: "checkmark"
+					stage: "fq.skill_fishing.dropped_rod.be0"
+					title: "Dive to the bottom of the deepest lake"
+					type: "gamestage"
 				}
 			]
 			title: "The Rod at the Bottom"

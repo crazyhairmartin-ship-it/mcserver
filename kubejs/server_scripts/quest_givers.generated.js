@@ -2013,6 +2013,69 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "main_story:prologue_silent_wood",
+    "stage": "fq.main_story.prologue_silent_wood.be1",
+    "type": "be",
+    "where": {
+      "sky": true,
+      "night": true
+    },
+    "requires": [],
+    "quest_id": "1E031F30EF3B80F4",
+    "prev_tasks": [
+      "0212B1D709D06419"
+    ]
+  },
+  {
+    "quest": "main_story:prologue_shrine",
+    "stage": "fq.main_story.prologue_shrine.build5",
+    "type": "build",
+    "keys": [
+      "#minecraft:candles",
+      "#minecraft:flowers",
+      "minecraft:mossy_cobblestone"
+    ],
+    "counts": [
+      2,
+      3,
+      4
+    ],
+    "radius": 6,
+    "requires": [],
+    "quest_id": "594B5DC615A7020F",
+    "prev_tasks": [
+      "65B33306E3537604",
+      "3C85A2A31241F3ED",
+      "081D99692E971363",
+      "011ABE0F543917EB",
+      "558FB0A010385B4F"
+    ]
+  },
+  {
+    "quest": "main_story:prologue_home",
+    "stage": "fq.main_story.prologue_home.build4",
+    "type": "build",
+    "keys": [
+      "#minecraft:beds",
+      "minecraft:chest",
+      "#minecraft:doors"
+    ],
+    "counts": [
+      1,
+      1,
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "19E7A43D59702336",
+    "prev_tasks": [
+      "25E27A40D4822D9E",
+      "13A7A7B307C030E0",
+      "1DB01CC96FEFEA6E",
+      "5BDF2057124FD5E2"
+    ]
+  },
+  {
     "quest": "main_story:prologue_dungeon",
     "stage": "",
     "type": "task_drop",
@@ -2061,6 +2124,27 @@ global.QUEST_GIVERS = [
     "character": "wren",
     "quest_id": "63C3DB46B7298A13",
     "open_task": ""
+  },
+  {
+    "quest": "main_story:act1_temple",
+    "stage": "fq.main_story.act1_temple.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterdeserttemples:desert_temple",
+        "betterjungletemples:jungle_temple"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_act1_temple_1",
+    "found": "Among the offerings lies a carved tablet: a hooded giant of iron.",
+    "requires": [],
+    "quest_id": "3DA7EB8B804B1AA7",
+    "prev_tasks": [
+      "6AF763B1FE83B6B9"
+    ]
   },
   {
     "quest": "main_story:act1_wrought_practice",
@@ -2392,6 +2476,7 @@ global.QUEST_GIVERS = [
     "type": "skill_level",
     "level": 10,
     "tree": "any",
+    "spent": false,
     "requires": [],
     "quest_id": "6B3ACCE5356186A1",
     "prev_tasks": []
@@ -2954,6 +3039,17 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "start:skill_trees",
+    "stage": "fq.start.skill_trees.skill0",
+    "type": "skill_level",
+    "level": 1,
+    "tree": "any",
+    "spent": true,
+    "requires": [],
+    "quest_id": "5DC7AF18441E83F8",
+    "prev_tasks": []
+  },
+  {
     "quest": "start:skill_tonic",
     "stage": "fq.start.skill_tonic.talk0",
     "type": "talk",
@@ -2969,6 +3065,19 @@ global.QUEST_GIVERS = [
     "character": "wren",
     "quest_id": "5A699077A3F4DE05",
     "open_task": ""
+  },
+  {
+    "quest": "start:waystone_reece",
+    "stage": "fq.start.waystone_reece.waystones1",
+    "type": "waystones",
+    "count": 1,
+    "wild": true,
+    "total": false,
+    "requires": [],
+    "quest_id": "67959C699393E730",
+    "prev_tasks": [
+      "2B18EC3E28A2999F"
+    ]
   },
   {
     "quest": "start:gravestone",
@@ -4143,26 +4252,6 @@ global.QUEST_GIVERS = [
     ]
   },
   {
-    "quest": "discovery_sky_and_underground:the_drifting_blimp",
-    "stage": "fq.discovery_sky_and_underground.the_drifting_blimp.search0",
-    "type": "search",
-    "at": {
-      "kind": "structure",
-      "structures": [
-        "dungeons_arise:small_blimp"
-      ],
-      "label": "the destination"
-    },
-    "count": 1,
-    "item": "kubejs:quest_the_drifting_blimp_0",
-    "found": "Engine notes, oil-stained and annotated.",
-    "requires": [],
-    "quest_id": "49DBB6F82798AC78",
-    "prev_tasks": [
-      "32BF748E824999B2"
-    ]
-  },
-  {
     "quest": "discovery_sky_and_underground:highest_point",
     "stage": "fq.discovery_sky_and_underground.highest_point.be0",
     "type": "be",
@@ -4461,6 +4550,29 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "skill_fishing:sign_up",
+    "stage": "fq.skill_fishing.sign_up.timed1",
+    "type": "timed",
+    "seconds": 1200,
+    "goal": {
+      "kind": "stat",
+      "stat": "minecraft:fish_caught",
+      "count": 5
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "Five fish before the evening bell, plain rod. Off you go."
+    ],
+    "start": "Cast off",
+    "requires": [],
+    "quest_id": "3D40B5D6E6756BA4",
+    "prev_tasks": [
+      "5B028C055AE8B646"
+    ],
+    "name": ""
+  },
+  {
     "quest": "skill_fishing:a_rival_appears",
     "stage": "fq.skill_fishing.a_rival_appears.enc0",
     "type": "encounter",
@@ -4520,6 +4632,18 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "skill_fishing:hundred_fish",
+    "stage": "fq.skill_fishing.hundred_fish.stats0",
+    "type": "stats",
+    "stats": [
+      "minecraft:fish_caught"
+    ],
+    "count": 100,
+    "requires": [],
+    "quest_id": "60955F52DA61EE39",
+    "prev_tasks": []
+  },
+  {
     "quest": "skill_fishing:river_heat",
     "stage": "",
     "type": "task_drop",
@@ -4533,6 +4657,40 @@ global.QUEST_GIVERS = [
     "open_task": "",
     "lines": [],
     "name": ""
+  },
+  {
+    "quest": "skill_fishing:lighthouse_ledger",
+    "stage": "fq.skill_fishing.lighthouse_ledger.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "dungeons_arise:lighthouse",
+        "structory_towers:lighthouse"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_lighthouse_ledger_2",
+    "found": "The keeper's record book, the season's catches in neat columns.",
+    "requires": [],
+    "quest_id": "67AF7FA20EFCA433",
+    "prev_tasks": [
+      "4DD0C956D8A86FA8",
+      "517B3E86B92D0CF8"
+    ]
+  },
+  {
+    "quest": "skill_fishing:dropped_rod",
+    "stage": "fq.skill_fishing.dropped_rod.be0",
+    "type": "be",
+    "where": {
+      "below_y": 45,
+      "in_water": true
+    },
+    "requires": [],
+    "quest_id": "049497D318092D53",
+    "prev_tasks": []
   },
   {
     "quest": "village_errands:water_from_three_wells",
@@ -5551,6 +5709,23 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "village_errands:parcel_for_the_sky",
+    "stage": "fq.village_errands.parcel_for_the_sky.talk2",
+    "type": "talk",
+    "lines": [
+      "A parcel? Up here? Well I never.",
+      "Here, my mark. Tell the Couriers they're mad, and thank you."
+    ],
+    "requires": [
+      "fq.village_errands.parcel_for_the_sky"
+    ],
+    "name": "",
+    "match": "villager",
+    "profession": "any",
+    "quest_id": "0A8E45C817D55342",
+    "open_task": "02F558BB2F72200B"
+  },
+  {
     "quest": "village_errands:sky_village_fall",
     "stage": "fq.village_errands.sky_village_fall",
     "type": "org",
@@ -6015,6 +6190,28 @@ global.QUEST_GIVERS = [
       "minecraft:cleric"
     ],
     "org_name": "Herbalists"
+  },
+  {
+    "quest": "skill_foraging:outpost_notes",
+    "stage": "fq.skill_foraging.outpost_notes.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "structory_towers:foraging_outpost",
+        "structory_towers:nomad_outpost",
+        "structory_towers:taiga_outpost"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_outpost_notes_1",
+    "found": "The last keeper's notes on the herbs hereabouts.",
+    "requires": [],
+    "quest_id": "3DCB80E25404D919",
+    "prev_tasks": [
+      "5564CF71A3EC5903"
+    ]
   },
   {
     "quest": "skill_foraging:lavender_sleep",
@@ -6801,6 +6998,37 @@ global.QUEST_GIVERS = [
     "profession": ""
   },
   {
+    "quest": "skill_range:firewatch",
+    "stage": "fq.skill_range.firewatch.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:firewatch_tower_birch",
+        "nova_structures:firewatch_tower_cherry",
+        "nova_structures:firewatch_tower_dark_oak",
+        "nova_structures:firewatch_tower_forest",
+        "nova_structures:firewatch_tower_jungle",
+        "nova_structures:firewatch_tower_mangrove",
+        "nova_structures:firewatch_tower_savanna",
+        "nova_structures:firewatch_tower_swamp",
+        "nova_structures:firewatch_tower_taiga",
+        "structory:firetower",
+        "structory_towers:small_firetower"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_firewatch_2",
+    "found": "The watcher's old trail map, three game trails inked on it.",
+    "requires": [],
+    "quest_id": "37A041AF59989C0B",
+    "prev_tasks": [
+      "606B6D279CA53E5A",
+      "01E919B05F2117C1"
+    ]
+  },
+  {
     "quest": "skill_range:longbow",
     "stage": "fq.skill_range.longbow.timed2",
     "type": "timed",
@@ -7447,7 +7675,7 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "skill_agility:great_bridge_run",
-    "stage": "fq.skill_agility.great_bridge_run.timed1",
+    "stage": "fq.skill_agility.great_bridge_run.timed0",
     "type": "timed",
     "seconds": 180,
     "goal": {
@@ -7536,9 +7764,7 @@ global.QUEST_GIVERS = [
     "start": "Cross the bridge",
     "requires": [],
     "quest_id": "63C735790EF433DD",
-    "prev_tasks": [
-      "0A384D226FC496B2"
-    ],
+    "prev_tasks": [],
     "name": ""
   },
   {
@@ -7899,6 +8125,25 @@ global.QUEST_GIVERS = [
     "quest_id": "336CE4ED79FDECC3",
     "prev_tasks": [
       "093AAAE33E96D1E6"
+    ]
+  },
+  {
+    "quest": "magic:an_honest_table",
+    "stage": "fq.magic.an_honest_table.use2",
+    "type": "use",
+    "keys": [
+      "minecraft:enchanting_table"
+    ],
+    "count": 1,
+    "at": null,
+    "within": 0,
+    "holding": "",
+    "consume": false,
+    "requires": [],
+    "quest_id": "336CE4ED79FDECC3",
+    "prev_tasks": [
+      "093AAAE33E96D1E6",
+      "6AF8AF3FB7C0E2C2"
     ]
   },
   {

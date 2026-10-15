@@ -1386,8 +1386,9 @@
 				}
 				{
 					id: "52BD3AC8FD5A2B15"
-					title: "I collected the signature"
-					type: "checkmark"
+					stage: "fq.village_errands.parcel_for_the_sky.talk2"
+					title: "Get the sky villager's signature"
+					type: "gamestage"
 				}
 			]
 			title: "A Parcel for the Sky"

@@ -54,7 +54,11 @@ Q = [
                             "See the trails? Deer to the east, boar by the stream, something big in the north.",
                             "Mark them. The lodge will want the map."],
                            entity="minecraft:villager", name="Tower Watcher", where={"above_y": 60}),
-                 {"checkmark": "I marked three game trails"}],
+                 {"search": {"at": {"structure": "#firewatch_towers"}, "count": 1,
+                             "item": {"name": "Watcher's Trail Map", "tooltip": "Three game trails, inked from the top",
+                                      "texture": "minecraft:item/map"},
+                             "found": "The watcher's old trail map, three game trails inked on it."},
+                  "title": "Take the watcher's trail map from the tower"}],
           rewards=[reward_item("minecraft:spyglass"), skill("range", 150)]),
 
     quest("longbow", "The Longbow", icon="spartanweaponry:iron_longbow", after=["firewatch"],

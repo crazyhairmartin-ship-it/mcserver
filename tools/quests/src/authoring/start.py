@@ -16,7 +16,7 @@ Q = [
           text=["The Field Guide explains everything the forest has to offer. Lost it? Type /guide for a new one.",
                 "Somewhere in it there's a page on the quiet forest. Someone pressed a leaf between its pages and "
                 "left Reece in a hurry."],
-          tasks=[{"checkmark": "I found the pressed leaf"}],
+          tasks=[item("patchouli:guide_book", title="Keep the Field Guide with you")],
           rewards=[reward_item("minecraft:wooden_pickaxe"), reward_item("minecraft:wooden_axe"),
                    reward_item("minecraft:lantern")]),
 
@@ -32,7 +32,7 @@ Q = [
           text=["Reece trains its people in skills: mining, farming, fishing, fighting and more. Almost everything "
                 "you do earns skill XP.",
                 "Press K to open your skill trees, earn your first point in any tree and spend it."],
-          tasks=[{"checkmark": "I spent my first skill point"}],
+          tasks=[{"skill_level": 1, "tree": "any", "spent": True, "title": "Spend your first skill point"}],
           rewards=[skill(t, 15) for t in ("mining", "forage", "farm", "fish", "cook", "craft", "attack", "range",
                                           "defense", "agility", "magic", "taming")]),
 
@@ -58,7 +58,7 @@ Q = [
                 "out in the wild.",
                 "Waystones let you warp between any you've found."],
           tasks=[{"place": "reece", "title": "Attune to Reece's waystone"},
-                 {"checkmark": "I found a second waystone"}],
+                 {"waystones": 1, "wild": True, "title": "Find and attune a waystone out in the wild"}],
           rewards=[reward_item("waystones:return_scroll"), reward_item("waystones:warp_dust", 4)]),
 
     quest("backpack", "Room to Carry", icon="sophisticatedbackpacks:backpack", after=["first_timber"],

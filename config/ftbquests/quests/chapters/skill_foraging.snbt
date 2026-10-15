@@ -277,8 +277,9 @@
 				}
 				{
 					id: "7D82A15A6079E731"
-					title: "I copied the notes"
-					type: "checkmark"
+					item: "kubejs:quest_outpost_notes_1"
+					title: "Find the keeper's notes"
+					type: "item"
 				}
 			]
 			title: "The Forager's Outpost"

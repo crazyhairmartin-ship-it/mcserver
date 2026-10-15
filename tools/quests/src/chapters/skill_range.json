@@ -241,7 +241,19 @@
           }
         },
         {
-          "checkmark": "I marked three game trails"
+          "search": {
+            "at": {
+              "structure": "#firewatch_towers"
+            },
+            "count": 1,
+            "item": {
+              "name": "Watcher's Trail Map",
+              "tooltip": "Three game trails, inked from the top",
+              "texture": "minecraft:item/map"
+            },
+            "found": "The watcher's old trail map, three game trails inked on it."
+          },
+          "title": "Take the watcher's trail map from the tower"
         }
       ],
       "rewards": [

@@ -29,7 +29,7 @@ Q = [
           tasks=[{"place": "reece"},
                  {"build": {"blocks": {"minecraft:enchanting_table": 1, "minecraft:bookshelf": 15}, "radius": 8},
                   "title": "Build an enchanting table ringed with bookshelves"},
-                 {"advancement": "minecraft:story/enchant_item", "title": "Enchant an item"}],
+                 {"use": "minecraft:enchanting_table", "title": "Enchant your first tool at the table"}],
           rewards=[reward_item("minecraft:lapis_lazuli", 16), skill("magic", 100)]),
 
     quest("reroll_the_fates", "Reroll the Fates", icon="minecraft:enchanted_book", after=["an_honest_table"],

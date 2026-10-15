@@ -21,7 +21,11 @@
           "title": "Go to the forest"
         },
         {
-          "checkmark": "I waited out the night"
+          "be": {
+            "night": true,
+            "sky": true
+          },
+          "title": "Wait at the forest's edge after dark"
         }
       ],
       "rewards": [
@@ -61,7 +65,15 @@
           "item": "minecraft:lily_of_the_valley"
         },
         {
-          "checkmark": "I built the shrine"
+          "build": {
+            "blocks": {
+              "#minecraft:candles": 2,
+              "#minecraft:flowers": 3,
+              "minecraft:mossy_cobblestone": 4
+            },
+            "radius": 6
+          },
+          "title": "Build the wayside shrine"
         }
       ],
       "rewards": [
@@ -100,7 +112,15 @@
           "count": 2
         },
         {
-          "checkmark": "My home is built"
+          "build": {
+            "blocks": {
+              "#minecraft:beds": 1,
+              "minecraft:chest": 1,
+              "#minecraft:doors": 1
+            },
+            "radius": 10
+          },
+          "title": "Build your home: a bed, a chest and a door of your own"
         }
       ],
       "rewards": [
@@ -127,7 +147,9 @@
       ],
       "tasks": [
         {
-          "checkmark": "I found a fallen adventurer"
+          "observe": "realmrpg_skeletons:hunted_skeleton",
+          "ticks": 20,
+          "title": "Find a fallen adventurer"
         }
       ],
       "rewards": [
@@ -305,7 +327,19 @@
           "title": "Reach a temple's inner chamber"
         },
         {
-          "checkmark": "I saw the mural"
+          "search": {
+            "at": {
+              "structure": "#temples"
+            },
+            "count": 1,
+            "item": {
+              "name": "Temple Tablet",
+              "tooltip": "A carved tablet: a hooded iron giant",
+              "texture": "minecraft:item/brick"
+            },
+            "found": "Among the offerings lies a carved tablet: a hooded giant of iron."
+          },
+          "title": "Find what the temple remembers of the iron giant"
         }
       ],
       "rewards": [

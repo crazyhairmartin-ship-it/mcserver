@@ -805,7 +805,7 @@ def build_skill_level(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, prob
     if tree != 'any' and tree not in ctx['skills']:
         problems.error(where, f'unknown skill tree {tree!r} (one of {", ".join(sorted(ctx["skills"]))}, or "any")')
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.skill{n}', 'type': 'skill_level',
-             'level': level, 'tree': tree, 'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
+             'level': level, 'tree': tree, 'spent': bool(t.get('spent', False)), 'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
     what = 'a skill' if tree == 'any' else ctx['skills'][tree][0]
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],
             'title': t.get('title', f'Reach level {level} in {what}')}
@@ -882,8 +882,8 @@ def build_search(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems)
 
 def build_be(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
     """A "be" task: the player stands somewhere that matches every condition given (checked every 5 seconds):
-    {"be": {"biomes": [...], "dimension": id, "above_y": 192, "below_y": 0, "in_water": true, "sky": true}}
-    ("sky": open sky above them)."""
+    {"be": {"biomes": [...], "dimension": id, "above_y": 192, "below_y": 0, "in_water": true, "sky": true,
+    "night": true}} ("sky": open sky above them; "night": after dusk, before dawn)."""
     spec = t['be']
     if not isinstance(spec, dict) or not spec:
         problems.error(where, '"be" needs conditions: biomes, dimension, above_y, below_y, in_water, sky')
@@ -892,7 +892,7 @@ def build_be(t, chapter, qid, n, quest_id, prev_tasks, ctx, where, problems):
         ctx['registry'].check('biomes', b, where, t.get('unchecked', False))
     if spec.get('dimension'):
         ctx['registry'].check('dimensions', spec['dimension'], where)
-    cond = {k: spec[k] for k in ('biomes', 'dimension', 'above_y', 'below_y', 'in_water', 'sky') if k in spec}
+    cond = {k: spec[k] for k in ('biomes', 'dimension', 'above_y', 'below_y', 'in_water', 'sky', 'night') if k in spec}
     entry = {'quest': f'{chapter}:{qid}', 'stage': f'{giver_stage(chapter, qid)}.be{n}', 'type': 'be', 'where': cond,
              'requires': [], 'quest_id': quest_id, 'prev_tasks': list(prev_tasks)}
     task = {'id': fid('task', chapter, qid, str(n)), 'type': 'gamestage', 'stage': entry['stage'],

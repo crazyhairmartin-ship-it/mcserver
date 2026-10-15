@@ -298,7 +298,9 @@ Q = [
                  {"timed": {"seconds": 1200, "goal": {"structure": "skyvillages:skyvillage", "label": "the sky village"},
                             "lines": ["Twenty minutes to reach the sky village. No teleporting."],
                             "start": "Set off", "no": ["teleport", "elytra"]}, "title": "Reach the sky village in time"},
-                 {"checkmark": "I collected the signature"}],
+                 {"talk": "villager", "profession": "any", "lines": ["A parcel? Up here? Well I never.",
+                                                              "Here, my mark. Tell the Couriers they're mad, and thank you."],
+                  "title": "Get the sky villager's signature"}],
           rewards=[reward_item("endermail:stamp", 6), skill("agility", 200)]),
 
     quest("sky_village_fall", "The Long Way Down", icon="beachparty:beach_parasol", after=["parcel_for_the_sky"],

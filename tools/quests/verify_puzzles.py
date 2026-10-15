@@ -12,7 +12,8 @@ Results are remembered in src/plans/puzzle_cache.json per structure and block, s
 when everything is already known, no server is needed and it finishes at once. When something is new it starts the
 test server itself (docker compose in ../server-test, at the pack's current commit), but only if nobody is on the live
 server (starting it can disconnect players), and stops it again afterwards if it started it. --chapters limits the
-report to those chapters; --recheck forgets the cache for them. Structures in a #group are checked through their first
+report to those chapters; --recheck forgets the cache for them; --players-ok starts the test server even with players
+on live (only when Dylan has said that's fine). Structures in a #group are checked through their first
 three members.
 """
 import argparse
@@ -91,6 +92,7 @@ def main():
     ap.add_argument('--copies', type=int, default=3)
     ap.add_argument('--chapters', default='')
     ap.add_argument('--recheck', action='store_true')
+    ap.add_argument('--players-ok', action='store_true', help='start the test server even with players on live (Dylan said so)')
     args = ap.parse_args()
     only = {c for c in args.chapters.split(',') if c}
 
@@ -122,7 +124,7 @@ def main():
         started = False
         if not test_running():
             players = live_players()
-            if players != 0:
+            if players != 0 and not args.players_ok:
                 print(f'not starting the test server: {players} player(s) on live (it can disconnect them). '
                       'Run this again when the live server is empty.')
                 needed = {}

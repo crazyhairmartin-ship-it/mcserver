@@ -81,8 +81,9 @@
 			tasks: [
 				{
 					id: "1B133B2B4D460192"
-					title: "I found the pressed leaf"
-					type: "checkmark"
+					item: "patchouli:guide_book"
+					title: "Keep the Field Guide with you"
+					type: "item"
 				}
 			]
 			title: "Read the Field Guide"
@@ -256,8 +257,9 @@
 			tasks: [
 				{
 					id: "4B61B66D27680A67"
-					title: "I spent my first skill point"
-					type: "checkmark"
+					stage: "fq.start.skill_trees.skill0"
+					title: "Spend your first skill point"
+					type: "gamestage"
 				}
 			]
 			title: "Every Hand Learns"
@@ -369,8 +371,9 @@
 				}
 				{
 					id: "73FEAFCAB8229CB8"
-					title: "I found a second waystone"
-					type: "checkmark"
+					stage: "fq.start.waystone_reece.waystones1"
+					title: "Find and attune a waystone out in the wild"
+					type: "gamestage"
 				}
 			]
 			title: "The Stone That Remembers"

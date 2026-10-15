@@ -55,7 +55,8 @@
       ],
       "tasks": [
         {
-          "checkmark": "I found the pressed leaf"
+          "item": "patchouli:guide_book",
+          "title": "Keep the Field Guide with you"
         }
       ],
       "rewards": [
@@ -125,7 +126,10 @@
       ],
       "tasks": [
         {
-          "checkmark": "I spent my first skill point"
+          "skill_level": 1,
+          "tree": "any",
+          "spent": true,
+          "title": "Spend your first skill point"
         }
       ],
       "rewards": [
@@ -256,7 +260,9 @@
           "title": "Attune to Reece's waystone"
         },
         {
-          "checkmark": "I found a second waystone"
+          "waystones": 1,
+          "wild": true,
+          "title": "Find and attune a waystone out in the wild"
         }
       ],
       "rewards": [

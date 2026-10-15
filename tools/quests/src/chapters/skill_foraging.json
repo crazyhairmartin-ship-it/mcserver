@@ -200,7 +200,23 @@
           "title": "Find a forager's outpost"
         },
         {
-          "checkmark": "I copied the notes"
+          "search": {
+            "at": {
+              "structure": [
+                "structory_towers:foraging_outpost",
+                "structory_towers:nomad_outpost",
+                "structory_towers:taiga_outpost"
+              ]
+            },
+            "count": 1,
+            "item": {
+              "name": "Keeper's Herb Notes",
+              "tooltip": "Herbs of the region, in a careful hand",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "The last keeper's notes on the herbs hereabouts."
+          },
+          "title": "Find the keeper's notes"
         }
       ],
       "rewards": [

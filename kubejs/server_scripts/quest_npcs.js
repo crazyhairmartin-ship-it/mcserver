@@ -787,6 +787,10 @@ function npcBeFits(player, w) {
   if (!npcConditionsMet(player, w)) return false
   if (w.in_water && !player.inWater) return false
   if (w.sky && !player.block.canSeeSky) return false
+  if (w.night) {
+    let t = Number(player.level.dayTime) % 24000
+    if (t < 13000 || t > 23000) return false
+  }
   return true
 }
 
@@ -817,10 +821,18 @@ function npcTickPlaces(player) {
   })
 }
 
+function npcSpentPoints(player) {
+  if (!$NpcSkillsAPI) return false
+  let spent = false
+  $NpcSkillsAPI.streamCategories().toList().forEach(cat => { if (cat.getSpentPoints(player) > 0) spent = true })
+  return spent
+}
+
 function npcTickMilestones(player) {
   npcTickPlaces(player)
   npcEntries('skill_level').forEach(k => {
     if (player.tags.contains(k.stage) || !questOpen(player, k) || npcSkillLevel(player, k.tree) < k.level) return
+    if (k.spent && !npcSpentPoints(player)) return
     questAddStage(player, k.stage)
     player.tell(Text.yellow('Milestone reached. Quest updated.'))
   })

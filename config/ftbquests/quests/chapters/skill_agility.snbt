@@ -373,12 +373,7 @@
 			tasks: [
 				{
 					id: "0A384D226FC496B2"
-					title: "I found the old stone bridge"
-					type: "checkmark"
-				}
-				{
-					id: "766DDDCC2C7D18C9"
-					stage: "fq.skill_agility.great_bridge_run.timed1"
+					stage: "fq.skill_agility.great_bridge_run.timed0"
 					title: "Reach the far village before dusk"
 					type: "gamestage"
 				}

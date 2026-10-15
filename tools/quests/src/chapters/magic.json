@@ -88,8 +88,8 @@
           "title": "Build an enchanting table ringed with bookshelves"
         },
         {
-          "advancement": "minecraft:story/enchant_item",
-          "title": "Enchant an item"
+          "use": "minecraft:enchanting_table",
+          "title": "Enchant your first tool at the table"
         }
       ],
       "rewards": [

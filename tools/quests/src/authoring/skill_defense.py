@@ -43,8 +43,7 @@ Q = [
           text=["Some villages have no guards at all. Give a willing villager a sword to make a guard, then arm a "
                 "second with a crossbow and armour."],
           tasks=[{"advancement": "minecraft:adventure/recruit_guard", "title": "Make a villager a guard"},
-                 item("minecraft:crossbow", crafted=True), item("minecraft:iron_chestplate"),
-                 {"checkmark": "I armed a second guard"}],
+                 item("minecraft:crossbow", crafted=True), item("minecraft:iron_chestplate")],
           rewards=[reward_item("minecraft:iron_helmet"), reward_item("minecraft:iron_leggings"),
                    reward_item("minecraft:iron_boots"), skill("defense", 150)]),
 

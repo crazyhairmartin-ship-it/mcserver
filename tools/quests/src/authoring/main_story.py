@@ -8,7 +8,7 @@ PROLOGUE = [
                 "out one night.",
                 "No fairies dance. The butterflies are gone. And something has scored the bark of the oldest tree."],
           tasks=[{"biome": "minecraft:forest", "title": "Go to the forest"},
-                 {"checkmark": "I waited out the night"}],
+                 {"be": {"night": True, "sky": True}, "title": "Wait at the forest's edge after dark"}],
           rewards=[give('minecraft:potion{Potion:"minecraft:night_vision"}', "A night vision potion")]),
 
     quest("prologue_shrine", "A Shrine for the Quiet", icon="minecraft:candle", after=["prologue_silent_wood"],
@@ -17,20 +17,22 @@ PROLOGUE = [
                 "Build it wherever feels right."],
           tasks=[item("minecraft:mossy_cobblestone", 16), item("minecraft:candle", 4), item("minecraft:cornflower"),
                  item("minecraft:allium"), item("minecraft:lily_of_the_valley"),
-                 {"checkmark": "I built the shrine"}],
+                 {"build": {"blocks": {"#minecraft:candles": 2, "#minecraft:flowers": 3, "minecraft:mossy_cobblestone": 4},
+                            "radius": 6}, "title": "Build the wayside shrine"}],
           rewards=[reward_item("minecraft:candle", 8), skill("forage", 60)]),
 
     quest("prologue_home", "Somewhere to Come Back To", icon="minecraft:red_bed", after=["prologue_silent_wood"],
           text=["You can't sleep in a sleeping bag forever. Build your first home near Reece, with a bed, a chest, a "
                 "table and chairs."],
           tasks=[item("minecraft:red_bed"), item("minecraft:chest"), item("handcrafted:oak_table"),
-                 item("handcrafted:oak_chair", 2), {"checkmark": "My home is built"}],
+                 item("handcrafted:oak_chair", 2), {"build": {"blocks": {"#minecraft:beds": 1, "minecraft:chest": 1, "#minecraft:doors": 1}, "radius": 10},
+                  "title": "Build your home: a bed, a chest and a door of your own"}],
           rewards=[reward_item("another_furniture:oak_chair", 2), skill("craft", 60)]),
 
     quest("prologue_fallen", "The Fallen Adventurer", icon="minecraft:skeleton_skull", after=["prologue_shrine"],
           text=["Out in the wild lie the remains of adventurers who never came home, still in their rusted gear.",
                 "Find one. Something in the forest's silence points that way."],
-          tasks=[{"checkmark": "I found a fallen adventurer"}],
+          tasks=[{"observe": "realmrpg_skeletons:hunted_skeleton", "ticks": 20, "title": "Find a fallen adventurer"}],
           rewards=[reward_item("minecraft:stone_sword"), skill("agility", 60)]),
 
     quest("prologue_dungeon", "What the Dark Keeps", icon="minecraft:spawner", after=["prologue_fallen"],
@@ -74,7 +76,11 @@ ACT1 = [
           text=["Search a desert or jungle temple. Get past its traps to the inner chamber, where a mural shows a "
                 "hooded iron giant."],
           tasks=[{"structure": "#temples", "title": "Reach a temple's inner chamber"},
-                 {"checkmark": "I saw the mural"}],
+                 {"search": {"at": {"structure": "#temples"}, "count": 1,
+                             "item": {"name": "Temple Tablet", "tooltip": "A carved tablet: a hooded iron giant",
+                                      "texture": "minecraft:item/brick"},
+                             "found": "Among the offerings lies a carved tablet: a hooded giant of iron."},
+                  "title": "Find what the temple remembers of the iron giant"}],
           rewards=[reward_item("minecraft:gold_ingot", 6), skill("agility", 80)]),
 
     quest("act1_mineshaft", "The Echo in the Shaft", icon="minecraft:rail", after=["act1_start"],

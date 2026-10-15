@@ -512,7 +512,7 @@
 			y: -5.25d
 		}
 		{
-			description: ["A small blimp floats unmanned above the hills. Climb aboard, read the pilot's engine notes and use them to build your own aircraft."]
+			description: ["A small blimp floats unmanned above the hills. The pilot scratched engine notes into the cabin walls; climb aboard, study them, and use them to build your own aircraft."]
 			icon: "immersive_aircraft:airship"
 			id: "49DBB6F82798AC78"
 			invisible: true
@@ -549,9 +549,9 @@
 				}
 				{
 					id: "7553D2CE401D9253"
-					item: "kubejs:quest_the_drifting_blimp_0"
-					title: "Search the blimp for the pilot's notes"
-					type: "item"
+					structure: "dungeons_arise:small_blimp"
+					title: "Climb aboard and study the pilot's notes"
+					type: "structure"
 				}
 				{
 					id: "5C81BBFCFD60B68E"

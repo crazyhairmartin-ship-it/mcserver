@@ -19,7 +19,9 @@ Q = [
                                         "pulled me clean off the jetty. I kept hold. I'm still holding, in a way.",
                                         "Five fish, any kind, plain rod. Show me you can land them and you're in.",
                                         "The season's a long line, my friend. Bring patience, and tie good knots."]),
-                 {"stat": "minecraft:fish_caught", "count": 5, "title": "Catch five fish"}],
+                 {"timed": {"seconds": 1200, "goal": {"stat": "minecraft:fish_caught", "count": 5},
+                            "lines": ["Five fish before the evening bell, plain rod. Off you go."],
+                            "start": "Cast off"}, "title": "Land five fish before the evening bell"}],
           rewards=[reward_item("aquaculture:worm", 16), skill("fish", 60)]),
 
     quest("bait_and_tackle", "Bait and Tackle", icon="aquaculture:tackle_box", after=["sign_up"],
@@ -48,7 +50,7 @@ Q = [
 
     quest("hundred_fish", "Tally Book", icon="minecraft:writable_book", after=["opening_cup"],
           text=["The society keeps a lifetime tally for every member. A hundred fish ranks you for the summer heats."],
-          tasks=[{"stat": "minecraft:fish_caught", "count": 100, "title": "Catch a hundred fish"}],
+          tasks=[{"stats": ["minecraft:fish_caught"], "count": 100, "title": "Bring your lifetime tally to a hundred"}],
           rewards=[reward_item("aquaculture:iron_hook"), skill("fish", 150)]),
 
     quest("river_heat", "The River Heat", icon="aquaculture:brown_trout", after=["opening_cup"],
@@ -73,7 +75,11 @@ Q = [
           text=["The season's record book is kept at a lighthouse on the coast. Take the keeper a fresh cod meal and "
                 "read the records, including one of Silas's that looks forged."],
           tasks=[{"structure": "#lighthouses", "title": "Find a lighthouse"},
-                 item("lilis_lucky_lures:cooked_cod_meal", consume=True), {"checkmark": "I read the records"}],
+                 item("lilis_lucky_lures:cooked_cod_meal", consume=True), {"search": {"at": {"structure": "#lighthouses"}, "count": 1,
+                             "item": {"name": "Season's Record Book", "tooltip": "One of Silas's entries looks forged",
+                                      "texture": "minecraft:item/book"},
+                             "found": "The keeper's record book, the season's catches in neat columns."},
+                  "title": "Find the record book"}],
           rewards=[skill("fish", 150)]),
 
     quest("beach_weigh_in", "Beach Weigh-in", icon="lilis_lucky_lures:grilled_tropical_fish",
@@ -88,7 +94,7 @@ Q = [
           signature="artifacts:snorkel",
           text=["The society's heirloom rod went over the side of a boat in the deepest lake around. Silas swears it "
                 "wasn't him. Dive down and get it back; the old diver's snorkel is yours afterwards."],
-          tasks=[{"checkmark": "I brought the heirloom rod up"}],
+          tasks=[{"be": {"in_water": True, "below_y": 45}, "title": "Dive to the bottom of the deepest lake"}],
           rewards=[reward_item("artifacts:snorkel"), skill("fish", 200)]),
 ]
 

@@ -84,8 +84,7 @@ Q = [
     quest("great_bridge_run", "Before the Light Goes", icon="minecraft:stone_bricks", after=["waystone_route"],
           text=["A parcel of medicine must cross a great ravine bridge to a village on the far side before dusk. "
                 "Find the old stone bridge and make the crossing on the clock."],
-          tasks=[{"checkmark": "I found the old stone bridge"},
-                 {"timed": {"seconds": 180, "goal": {"structure": "#villages", "label": "the village across the bridge",
+          tasks=[{"timed": {"seconds": 180, "goal": {"structure": "#villages", "label": "the village across the bridge",
                                                      "away": 100},
                             "lines": ["The light is going. Run for the far side!"],
                             "start": "Cross the bridge", "no": NO_SHORTCUTS}, "title": "Reach the far village before dusk"}],

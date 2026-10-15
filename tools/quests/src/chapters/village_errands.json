@@ -1238,7 +1238,13 @@
           "title": "Reach the sky village in time"
         },
         {
-          "checkmark": "I collected the signature"
+          "talk": "villager",
+          "profession": "any",
+          "lines": [
+            "A parcel? Up here? Well I never.",
+            "Here, my mark. Tell the Couriers they're mad, and thank you."
+          ],
+          "title": "Get the sky villager's signature"
         }
       ],
       "rewards": [

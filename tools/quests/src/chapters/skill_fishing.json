@@ -23,9 +23,18 @@
           ]
         },
         {
-          "stat": "minecraft:fish_caught",
-          "count": 5,
-          "title": "Catch five fish"
+          "timed": {
+            "seconds": 1200,
+            "goal": {
+              "stat": "minecraft:fish_caught",
+              "count": 5
+            },
+            "lines": [
+              "Five fish before the evening bell, plain rod. Off you go."
+            ],
+            "start": "Cast off"
+          },
+          "title": "Land five fish before the evening bell"
         }
       ],
       "rewards": [
@@ -169,9 +178,11 @@
       ],
       "tasks": [
         {
-          "stat": "minecraft:fish_caught",
+          "stats": [
+            "minecraft:fish_caught"
+          ],
           "count": 100,
-          "title": "Catch a hundred fish"
+          "title": "Bring your lifetime tally to a hundred"
         }
       ],
       "rewards": [
@@ -311,7 +322,19 @@
           "consume": true
         },
         {
-          "checkmark": "I read the records"
+          "search": {
+            "at": {
+              "structure": "#lighthouses"
+            },
+            "count": 1,
+            "item": {
+              "name": "Season's Record Book",
+              "tooltip": "One of Silas's entries looks forged",
+              "texture": "minecraft:item/book"
+            },
+            "found": "The keeper's record book, the season's catches in neat columns."
+          },
+          "title": "Find the record book"
         }
       ],
       "rewards": [
@@ -364,7 +387,11 @@
       ],
       "tasks": [
         {
-          "checkmark": "I brought the heirloom rod up"
+          "be": {
+            "in_water": true,
+            "below_y": 45
+          },
+          "title": "Dive to the bottom of the deepest lake"
         }
       ],
       "rewards": [

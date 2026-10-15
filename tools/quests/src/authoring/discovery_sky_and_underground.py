@@ -117,10 +117,9 @@ Q = [
 
     quest("the_drifting_blimp", "The Drifting Blimp", icon="immersive_aircraft:airship",
           discover={"structure": "dungeons_arise:small_blimp"},
-          text=["A small blimp floats unmanned above the hills. Climb aboard, read the pilot's engine notes and use "
-                "them to build your own aircraft."],
-          tasks=[search("dungeons_arise:small_blimp", 1, "Pilot's Engine Notes", "Engine notes, oil-stained and annotated.",
-                        title="Search the blimp for the pilot's notes"),
+          text=["A small blimp floats unmanned above the hills. The pilot scratched engine notes into the cabin walls; "
+                "climb aboard, study them, and use them to build your own aircraft."],
+          tasks=[{"structure": "dungeons_arise:small_blimp", "title": "Climb aboard and study the pilot's notes"},
                  item("immersive_aircraft:engine", crafted=True, title="Build an engine from the pilot's notes"),
                  item("immersive_aircraft:airship", crafted=True, title="Build your own airship")],
           rewards=[reward_item("immersive_aircraft:propeller", 2), reward_item("immersive_aircraft:hull", 4),
