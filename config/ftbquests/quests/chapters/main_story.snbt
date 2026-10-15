@@ -1457,22 +1457,26 @@
 			]
 			tasks: [
 				{
-					consume_items: true
-					count: 2L
 					id: "43EABD798DCED20D"
-					item: "minecraft:potion"
-					title: "Brew potions to breathe and see underwater"
-					type: "item"
+					stage: "fq.main_story.act2_monument_prep.have0"
+					title: "Brew water breathing for the dive"
+					type: "gamestage"
 				}
 				{
 					id: "1B6BB0378D32CF08"
-					item: "minecraft:diamond_helmet"
-					title: "Bring a helmet to enchant for the depths"
-					type: "item"
+					stage: "fq.main_story.act2_monument_prep.have1"
+					title: "Brew night vision for the dark water"
+					type: "gamestage"
 				}
 				{
 					id: "38CEB1D4DB686531"
-					stage: "fq.main_story.act2_monument_prep.build2"
+					stage: "fq.main_story.act2_monument_prep.have2"
+					title: "Enchant a helmet for the depths"
+					type: "gamestage"
+				}
+				{
+					id: "1D86475BE32DFA86"
+					stage: "fq.main_story.act2_monument_prep.build3"
 					title: "Set an enchanting table to prepare the helmet"
 					type: "gamestage"
 				}

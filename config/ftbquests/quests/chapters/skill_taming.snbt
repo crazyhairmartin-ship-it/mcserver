@@ -627,9 +627,9 @@
 				}
 				{
 					id: "210C6C87B0C6D58D"
-					item: "domesticationinnovation:collar_tag"
-					only_from_crafting: true
-					type: "item"
+					stage: "fq.skill_taming.pet_enchanting.have1"
+					title: "Enchant a collar tag"
+					type: "gamestage"
 				}
 				{
 					id: "2B778FB8A95F93CE"
@@ -691,8 +691,15 @@
 				}
 				{
 					id: "650AAFDA2777A302"
-					title: "The young have grown"
-					type: "checkmark"
+					stage: "fq.skill_taming.eggs_to_hatch.born4"
+					title: "Hatch a duckling at the sanctuary"
+					type: "gamestage"
+				}
+				{
+					id: "07F44BFA0D411A3E"
+					stage: "fq.skill_taming.eggs_to_hatch.raise5"
+					title: "Keep the duckling safe until it is grown"
+					type: "gamestage"
 				}
 			]
 			title: "Eggs to Hatch"
@@ -1486,11 +1493,22 @@
 					type: "item"
 				}
 				{
-					count: 3L
 					id: "1C69DD36C2D3D5C2"
-					item: "minecraft:enchanted_book"
-					title: "Gather collar enchantments to keep pets safe in the void"
-					type: "item"
+					stage: "fq.skill_taming.end_ready_pets.have1"
+					title: "Gather a Void Cloud enchantment"
+					type: "gamestage"
+				}
+				{
+					id: "1ECA899490D764FF"
+					stage: "fq.skill_taming.end_ready_pets.have2"
+					title: "Gather a Tethered Teleport enchantment"
+					type: "gamestage"
+				}
+				{
+					id: "3AD0008BBFD1BE6C"
+					stage: "fq.skill_taming.end_ready_pets.have3"
+					title: "Gather a Fireproof enchantment"
+					type: "gamestage"
 				}
 			]
 			title: "Pets for the Void"

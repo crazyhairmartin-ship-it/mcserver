@@ -503,9 +503,15 @@
 					type: "gamestage"
 				}
 				{
-					count: 2L
 					id: "48B61D4A0AD26FCC"
-					item: "kubejs:quest_ships_ghost_1"
+					stage: "fq.end.ships_ghost.visits1"
+					title: "Board two different mega ships"
+					type: "gamestage"
+				}
+				{
+					count: 2L
+					id: "22CF1FE297CE4014"
+					item: "kubejs:quest_ships_ghost_2"
 					title: "Collect logbook pages from the mega ships"
 					type: "item"
 				}
@@ -1079,7 +1085,13 @@
 			tasks: [
 				{
 					id: "5D9B18E3B0277F84"
-					item: "kubejs:quest_salvage_the_scraps_0"
+					stage: "fq.end.salvage_the_scraps.visits0"
+					title: "Find three different scrap heaps"
+					type: "gamestage"
+				}
+				{
+					id: "6651C01074B7EFED"
+					item: "kubejs:quest_salvage_the_scraps_1"
 					title: "Sift a scrap heap for the void's leftovers"
 					type: "item"
 				}

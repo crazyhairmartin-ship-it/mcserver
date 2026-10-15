@@ -176,13 +176,9 @@
 				}
 				{
 					id: "137D0AED09AC00E2"
-					item: "minecraft:enchanted_book"
-					type: "item"
-				}
-				{
-					id: "328288C55B8C6F8D"
-					title: "I made the book without wasting ten levels"
-					type: "checkmark"
+					stage: "fq.magic.reroll_the_fates.have1"
+					title: "Make a book with Unbreaking and Efficiency"
+					type: "gamestage"
 				}
 			]
 			title: "Reroll the Fates"

@@ -2691,7 +2691,53 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "main_story:act2_monument_prep",
-    "stage": "fq.main_story.act2_monument_prep.build2",
+    "stage": "fq.main_story.act2_monument_prep.have0",
+    "type": "have",
+    "count": 1,
+    "requires": [],
+    "quest_id": "368452D848D18731",
+    "prev_tasks": [],
+    "item": "minecraft:potion",
+    "enchant": {},
+    "potion": "minecraft:water_breathing",
+    "consume": true
+  },
+  {
+    "quest": "main_story:act2_monument_prep",
+    "stage": "fq.main_story.act2_monument_prep.have1",
+    "type": "have",
+    "count": 1,
+    "requires": [],
+    "quest_id": "368452D848D18731",
+    "prev_tasks": [
+      "43EABD798DCED20D"
+    ],
+    "item": "minecraft:potion",
+    "enchant": {},
+    "potion": "minecraft:night_vision",
+    "consume": true
+  },
+  {
+    "quest": "main_story:act2_monument_prep",
+    "stage": "fq.main_story.act2_monument_prep.have2",
+    "type": "have",
+    "count": 1,
+    "requires": [],
+    "quest_id": "368452D848D18731",
+    "prev_tasks": [
+      "43EABD798DCED20D",
+      "1B6BB0378D32CF08"
+    ],
+    "item": "minecraft:diamond_helmet",
+    "enchant": {
+      "minecraft:respiration": 1
+    },
+    "potion": "",
+    "consume": false
+  },
+  {
+    "quest": "main_story:act2_monument_prep",
+    "stage": "fq.main_story.act2_monument_prep.build3",
     "type": "build",
     "keys": [
       "minecraft:enchanting_table"
@@ -2704,7 +2750,8 @@ global.QUEST_GIVERS = [
     "quest_id": "368452D848D18731",
     "prev_tasks": [
       "43EABD798DCED20D",
-      "1B6BB0378D32CF08"
+      "1B6BB0378D32CF08",
+      "38CEB1D4DB686531"
     ]
   },
   {
@@ -3001,7 +3048,7 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "hurt"
+      "seen"
     ],
     "waves": [],
     "lines": [
@@ -3327,7 +3374,7 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "hurt"
+      "seen"
     ],
     "waves": [],
     "lines": [
@@ -4597,7 +4644,7 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "hurt"
+      "seen"
     ],
     "waves": [],
     "lines": [
@@ -5807,6 +5854,26 @@ global.QUEST_GIVERS = [
     "prev_tasks": []
   },
   {
+    "quest": "twilight:scepters",
+    "stage": "fq.twilight.scepters.killwith1",
+    "type": "killwith",
+    "count": 6,
+    "requires": [],
+    "quest_id": "0744B5BB2B4CB7DB",
+    "prev_tasks": [
+      "35A7DD3D95A99A0E"
+    ],
+    "entities": [
+      "minecraft:zombie"
+    ],
+    "weapons": [
+      "twilightforest:lifedrain_scepter",
+      "twilightforest:zombie_scepter",
+      "twilightforest:twilight_scepter",
+      "twilightforest:fortification_scepter"
+    ]
+  },
+  {
     "quest": "twilight:cursed_swamp",
     "stage": "fq.twilight.cursed_swamp.enc1",
     "type": "encounter",
@@ -5966,6 +6033,19 @@ global.QUEST_GIVERS = [
     "prev_tasks": [
       "294456F22B106A0C"
     ]
+  },
+  {
+    "quest": "twilight:fire_swamp",
+    "stage": "fq.twilight.fire_swamp.have0",
+    "type": "have",
+    "count": 2,
+    "requires": [],
+    "quest_id": "77DB75B8DC8ECF55",
+    "prev_tasks": [],
+    "item": "minecraft:potion",
+    "enchant": {},
+    "potion": "minecraft:fire_resistance",
+    "consume": true
   },
   {
     "quest": "twilight:fire_swamp",
@@ -7002,7 +7082,7 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "hurt"
+      "seen"
     ],
     "waves": [],
     "lines": [
@@ -7741,6 +7821,44 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "discovery_sea:mangrove_maze",
+    "stage": "fq.discovery_sea.mangrove_maze.timed2",
+    "type": "timed",
+    "seconds": 90,
+    "goal": {
+      "kind": "course",
+      "on": "water",
+      "count": 6,
+      "spread": [
+        10,
+        20
+      ],
+      "radius": 4.0,
+      "loop": false,
+      "height": [
+        6,
+        20
+      ]
+    },
+    "start_in": null,
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Mind the roots."
+    ],
+    "start": "Start the route",
+    "requires": [],
+    "quest_id": "5BD426F02B08B543",
+    "prev_tasks": [
+      "4B97465CF652D47B",
+      "570B3E5443A11EC8",
+      "329CC2D9FA16C134"
+    ],
+    "name": ""
+  },
+  {
     "quest": "skill_farming:coop_share",
     "stage": "fq.skill_farming.coop_share",
     "type": "org",
@@ -8156,6 +8274,54 @@ global.QUEST_GIVERS = [
     "character": "marta",
     "quest_id": "299C582EBF677CE4",
     "open_task": ""
+  },
+  {
+    "quest": "discovery_sky_and_underground:sky_hopper",
+    "stage": "fq.discovery_sky_and_underground.sky_hopper.visits0",
+    "type": "visits",
+    "count": 5,
+    "requires": [],
+    "quest_id": "64B419A29206B9EC",
+    "prev_tasks": [],
+    "structures": [
+      "mss:arena",
+      "mss:birch_river",
+      "mss:calcite_house",
+      "mss:castle_ruin",
+      "mss:castle_tower",
+      "mss:cherry_river",
+      "mss:desert_pyramid",
+      "mss:desert_well",
+      "mss:diorite_house",
+      "mss:frozen_pond",
+      "mss:jungle",
+      "mss:large_tower",
+      "mss:leaf_hollow",
+      "mss:mangrove",
+      "mss:muddy_water_hole",
+      "mss:mushroom",
+      "mss:nether_portal",
+      "mss:palm_island",
+      "mss:red_sand",
+      "mss:small_deepslate_house",
+      "mss:small_oak_house",
+      "mss:small_pond",
+      "mss:small_tower",
+      "mss:spruce_huts",
+      "mss:taiga",
+      "mss:tree_1",
+      "mss:tree_2",
+      "mss:tree_3",
+      "mss:tree_4",
+      "mss:tree_5",
+      "mss:tree_6",
+      "mss:tree_7",
+      "mss:tree_8",
+      "mss:volcano",
+      "mss:white_house"
+    ],
+    "apart": 100,
+    "label": "island"
   },
   {
     "quest": "discovery_sky_and_underground:volcano_in_the_sky",
@@ -8882,7 +9048,7 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "hurt"
+      "seen"
     ],
     "waves": [],
     "lines": [
@@ -9259,6 +9425,56 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "nether:shrine_offerings",
+    "stage": "fq.nether.shrine_offerings.use1",
+    "type": "use",
+    "keys": [
+      "minecraft:red_candle"
+    ],
+    "count": 1,
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mns:shrine"
+      ],
+      "label": "the destination"
+    },
+    "within": 0,
+    "holding": "minecraft:gold_ingot",
+    "consume": true,
+    "requires": [],
+    "quest_id": "4DA4A328EA16B7F4",
+    "prev_tasks": [
+      "6127405D9FE7D45E"
+    ]
+  },
+  {
+    "quest": "nether:shrine_offerings",
+    "stage": "fq.nether.shrine_offerings.use3",
+    "type": "use",
+    "keys": [
+      "minecraft:soul_campfire"
+    ],
+    "count": 1,
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mns:smoking_shrine"
+      ],
+      "label": "the destination"
+    },
+    "within": 0,
+    "holding": "minecraft:gold_ingot",
+    "consume": true,
+    "requires": [],
+    "quest_id": "4DA4A328EA16B7F4",
+    "prev_tasks": [
+      "6127405D9FE7D45E",
+      "7AD2ACFB8C4D866D",
+      "4730E9FCF3F138CB"
+    ]
+  },
+  {
     "quest": "nether:soul_valley_graves",
     "stage": "fq.nether.soul_valley_graves.spawn1",
     "type": "spawn",
@@ -9447,7 +9663,7 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "hurt"
+      "seen"
     ],
     "waves": [],
     "lines": [
@@ -9476,7 +9692,7 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "hurt"
+      "seen"
     ],
     "waves": [],
     "lines": [
@@ -9777,15 +9993,21 @@ global.QUEST_GIVERS = [
     "quest": "skill_fishing:buoy_race",
     "stage": "fq.skill_fishing.buoy_race.timed1",
     "type": "timed",
-    "seconds": 180,
+    "seconds": 90,
     "goal": {
-      "kind": "structure",
-      "structures": [
-        "beachparty:beach_hut",
-        "dungeons_arise:fishing_hut"
+      "kind": "course",
+      "on": "water",
+      "count": 8,
+      "spread": [
+        15,
+        30
       ],
-      "label": "the far jetty",
-      "away": 60
+      "radius": 5.0,
+      "loop": true,
+      "height": [
+        6,
+        20
+      ]
     },
     "start_in": null,
     "no": [
@@ -10229,6 +10451,44 @@ global.QUEST_GIVERS = [
     ],
     "org_name": "Herbalists",
     "pool": "herbalists_errands"
+  },
+  {
+    "quest": "village_errands:water_from_three_wells",
+    "stage": "fq.village_errands.water_from_three_wells.visits0",
+    "type": "visits",
+    "count": 3,
+    "requires": [],
+    "quest_id": "389891129FD341F6",
+    "prev_tasks": [
+      "55441845C73F3CCF"
+    ],
+    "structures": [
+      "dungeons_arise:wishing_well",
+      "mss:desert_well",
+      "mvs:acacia_well",
+      "mvs:birch_well",
+      "mvs:dark_oak_well",
+      "mvs:desert_well",
+      "mvs:jungle_well",
+      "mvs:mushroom_well",
+      "mvs:oak_well",
+      "mvs:rare_well",
+      "mvs:rocky_well",
+      "mvs:small_copper_well",
+      "mvs:small_tower_well",
+      "mvs:small_well",
+      "mvs:snowy_well",
+      "mvs:spruce_well",
+      "mvs:well",
+      "nova_structures:well_birch",
+      "nova_structures:well_dark_oak",
+      "nova_structures:well_jungle",
+      "nova_structures:well_oak",
+      "nova_structures:well_savana",
+      "nova_structures:well_spruce"
+    ],
+    "apart": 150,
+    "label": "well"
   },
   {
     "quest": "village_errands:make_a_wish",
@@ -10682,7 +10942,7 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "hurt"
+      "seen"
     ],
     "waves": [],
     "lines": [
@@ -11778,7 +12038,30 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "end:ships_ghost",
-    "stage": "fq.end.ships_ghost.search1",
+    "stage": "fq.end.ships_ghost.visits1",
+    "type": "visits",
+    "count": 2,
+    "requires": [],
+    "quest_id": "73A18C5D3FFB9388",
+    "prev_tasks": [
+      "73BC0F115E3DB2F4"
+    ],
+    "structures": [
+      "mes:mega_ship",
+      "mes:mega_ship_basic",
+      "mes:mega_ship_crashed",
+      "mes:mega_ship_crashed_2",
+      "mes:mega_ship_crashed_deepslate",
+      "mes:mega_ship_deepslate",
+      "mes:mega_ship_deepslate_2",
+      "mes:mega_ship_deepslate_3"
+    ],
+    "apart": 100,
+    "label": "ship"
+  },
+  {
+    "quest": "end:ships_ghost",
+    "stage": "fq.end.ships_ghost.search2",
     "type": "search",
     "at": {
       "kind": "structure",
@@ -11795,12 +12078,13 @@ global.QUEST_GIVERS = [
       "label": "the destination"
     },
     "count": 2,
-    "item": "kubejs:quest_ships_ghost_1",
+    "item": "kubejs:quest_ships_ghost_2",
     "found": "A page of the captain's log, brittle with age.",
     "requires": [],
     "quest_id": "73A18C5D3FFB9388",
     "prev_tasks": [
-      "73BC0F115E3DB2F4"
+      "73BC0F115E3DB2F4",
+      "48B61D4A0AD26FCC"
     ]
   },
   {
@@ -11911,7 +12195,7 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "hurt"
+      "seen"
     ],
     "waves": [],
     "lines": [
@@ -12086,7 +12370,21 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "end:salvage_the_scraps",
-    "stage": "fq.end.salvage_the_scraps.search0",
+    "stage": "fq.end.salvage_the_scraps.visits0",
+    "type": "visits",
+    "count": 3,
+    "requires": [],
+    "quest_id": "5E7C41F7910D5F11",
+    "prev_tasks": [],
+    "structures": [
+      "mes:endscraps"
+    ],
+    "apart": 60,
+    "label": "scrap heap"
+  },
+  {
+    "quest": "end:salvage_the_scraps",
+    "stage": "fq.end.salvage_the_scraps.search1",
     "type": "search",
     "at": {
       "kind": "structure",
@@ -12096,11 +12394,13 @@ global.QUEST_GIVERS = [
       "label": "the destination"
     },
     "count": 1,
-    "item": "kubejs:quest_salvage_the_scraps_0",
+    "item": "kubejs:quest_salvage_the_scraps_1",
     "found": "Something the void left behind.",
     "requires": [],
     "quest_id": "5E7C41F7910D5F11",
-    "prev_tasks": []
+    "prev_tasks": [
+      "5D9B18E3B0277F84"
+    ]
   },
   {
     "quest": "end:the_end_tower",
@@ -14181,6 +14481,97 @@ global.QUEST_GIVERS = [
     "open_task": ""
   },
   {
+    "quest": "skill_attack:weapon_master",
+    "stage": "fq.skill_attack.weapon_master.killwith5",
+    "type": "killwith",
+    "count": 3,
+    "requires": [],
+    "quest_id": "3D5FF4AABFF1C57F",
+    "prev_tasks": [
+      "1A8F575B316C277A",
+      "160ECDD2CCABB82D",
+      "636A18EA1108B6EF",
+      "5EF23089634C86B0",
+      "023F2C8BD2265DCC"
+    ],
+    "entities": [
+      "minecraft:zombie"
+    ],
+    "weapons": [
+      "spartanweaponry:iron_halberd"
+    ]
+  },
+  {
+    "quest": "skill_attack:weapon_master",
+    "stage": "fq.skill_attack.weapon_master.killwith6",
+    "type": "killwith",
+    "count": 3,
+    "requires": [],
+    "quest_id": "3D5FF4AABFF1C57F",
+    "prev_tasks": [
+      "1A8F575B316C277A",
+      "160ECDD2CCABB82D",
+      "636A18EA1108B6EF",
+      "5EF23089634C86B0",
+      "023F2C8BD2265DCC",
+      "1207ABC3EDC7ED70"
+    ],
+    "entities": [
+      "minecraft:zombie"
+    ],
+    "weapons": [
+      "spartanweaponry:iron_rapier"
+    ]
+  },
+  {
+    "quest": "skill_attack:weapon_master",
+    "stage": "fq.skill_attack.weapon_master.killwith7",
+    "type": "killwith",
+    "count": 3,
+    "requires": [],
+    "quest_id": "3D5FF4AABFF1C57F",
+    "prev_tasks": [
+      "1A8F575B316C277A",
+      "160ECDD2CCABB82D",
+      "636A18EA1108B6EF",
+      "5EF23089634C86B0",
+      "023F2C8BD2265DCC",
+      "1207ABC3EDC7ED70",
+      "2BFB41AE1E7EC26E"
+    ],
+    "entities": [
+      "minecraft:zombie"
+    ],
+    "weapons": [
+      "spartanweaponry:iron_warhammer"
+    ]
+  },
+  {
+    "quest": "skill_attack:weapon_master",
+    "stage": "fq.skill_attack.weapon_master.killwith8",
+    "type": "killwith",
+    "count": 3,
+    "requires": [],
+    "quest_id": "3D5FF4AABFF1C57F",
+    "prev_tasks": [
+      "1A8F575B316C277A",
+      "160ECDD2CCABB82D",
+      "636A18EA1108B6EF",
+      "5EF23089634C86B0",
+      "023F2C8BD2265DCC",
+      "1207ABC3EDC7ED70",
+      "2BFB41AE1E7EC26E",
+      "2E2609B321B24F5F"
+    ],
+    "entities": [
+      "minecraft:zombie"
+    ],
+    "weapons": [
+      "spartanweaponry:iron_javelin",
+      "spartanweaponry:javelin"
+    ]
+  },
+  {
     "quest": "skill_attack:fortress_contract",
     "stage": "fq.skill_attack.fortress_contract.spawn1",
     "type": "spawn",
@@ -14709,6 +15100,69 @@ global.QUEST_GIVERS = [
     "quest_id": "28D94C2FF4C50692",
     "prev_tasks": [
       "4A50582BDE0BC097"
+    ]
+  },
+  {
+    "quest": "skill_range:throwing_steel",
+    "stage": "fq.skill_range.throwing_steel.killwith3",
+    "type": "killwith",
+    "count": 2,
+    "requires": [],
+    "quest_id": "42C48A36F4BC3C7D",
+    "prev_tasks": [
+      "4D02DCCBE6FD70D8",
+      "678E3549580D102B",
+      "56256E31E79BA2CB"
+    ],
+    "entities": [
+      "minecraft:zombie"
+    ],
+    "weapons": [
+      "spartanweaponry:iron_throwing_knife",
+      "spartanweaponry:throwing_knife"
+    ]
+  },
+  {
+    "quest": "skill_range:throwing_steel",
+    "stage": "fq.skill_range.throwing_steel.killwith4",
+    "type": "killwith",
+    "count": 2,
+    "requires": [],
+    "quest_id": "42C48A36F4BC3C7D",
+    "prev_tasks": [
+      "4D02DCCBE6FD70D8",
+      "678E3549580D102B",
+      "56256E31E79BA2CB",
+      "59D097A1E3088062"
+    ],
+    "entities": [
+      "minecraft:zombie"
+    ],
+    "weapons": [
+      "spartanweaponry:iron_tomahawk",
+      "spartanweaponry:tomahawk"
+    ]
+  },
+  {
+    "quest": "skill_range:throwing_steel",
+    "stage": "fq.skill_range.throwing_steel.killwith5",
+    "type": "killwith",
+    "count": 2,
+    "requires": [],
+    "quest_id": "42C48A36F4BC3C7D",
+    "prev_tasks": [
+      "4D02DCCBE6FD70D8",
+      "678E3549580D102B",
+      "56256E31E79BA2CB",
+      "59D097A1E3088062",
+      "2C0ADE646A029AD4"
+    ],
+    "entities": [
+      "minecraft:zombie"
+    ],
+    "weapons": [
+      "spartanweaponry:iron_javelin",
+      "spartanweaponry:javelin"
     ]
   },
   {
@@ -16519,13 +16973,39 @@ global.QUEST_GIVERS = [
     "quest": "skill_agility:rooftop_basics",
     "stage": "fq.skill_agility.rooftop_basics.timed1",
     "type": "timed",
-    "seconds": 45,
+    "seconds": 60,
     "goal": {
-      "kind": "stat",
-      "stat": "minecraft:jump",
-      "count": 25
+      "kind": "course",
+      "on": "roofs",
+      "count": 6,
+      "spread": [
+        6,
+        16
+      ],
+      "radius": 2.5,
+      "loop": false,
+      "height": [
+        6,
+        20
+      ]
     },
-    "start_in": null,
+    "start_in": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
     "no": [
       "teleport",
       "mounts"
@@ -16701,13 +17181,96 @@ global.QUEST_GIVERS = [
     "quest": "skill_agility:rooftop_route",
     "stage": "fq.skill_agility.rooftop_route.timed1",
     "type": "timed",
-    "seconds": 90,
+    "seconds": 100,
     "goal": {
-      "kind": "stat",
-      "stat": "minecraft:jump",
-      "count": 50
+      "kind": "course",
+      "on": "roofs",
+      "count": 11,
+      "spread": [
+        6,
+        16
+      ],
+      "radius": 2.5,
+      "loop": false,
+      "height": [
+        6,
+        20
+      ]
     },
-    "start_in": null,
+    "start_in": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "a village"
+    },
     "no": [
       "teleport",
       "mounts",
@@ -16871,11 +17434,21 @@ global.QUEST_GIVERS = [
     "quest": "skill_agility:first_grapple",
     "stage": "fq.skill_agility.first_grapple.timed1",
     "type": "timed",
-    "seconds": 60,
+    "seconds": 80,
     "goal": {
-      "kind": "stat",
-      "stat": "minecraft:sprint_one_cm",
-      "count": 20000
+      "kind": "course",
+      "on": "ground",
+      "count": 9,
+      "spread": [
+        20,
+        40
+      ],
+      "radius": 4.0,
+      "loop": false,
+      "height": [
+        6,
+        20
+      ]
     },
     "start_in": null,
     "no": [
@@ -17004,17 +17577,29 @@ global.QUEST_GIVERS = [
     "quest": "skill_agility:water_run",
     "stage": "fq.skill_agility.water_run.timed1",
     "type": "timed",
-    "seconds": 240,
+    "seconds": 60,
     "goal": {
+      "kind": "course",
+      "on": "water",
+      "count": 7,
+      "spread": [
+        20,
+        45
+      ],
+      "radius": 5.0,
+      "loop": false,
+      "height": [
+        6,
+        20
+      ]
+    },
+    "start_in": {
       "kind": "structure",
       "structures": [
-        "beachparty:beach_hut",
-        "dungeons_arise:fishing_hut"
+        "ctov:medium/village_beach"
       ],
-      "label": "the far pier",
-      "away": 80
+      "label": "the beach village"
     },
-    "start_in": null,
     "no": [
       "teleport",
       "mounts"
@@ -17305,81 +17890,21 @@ global.QUEST_GIVERS = [
     "quest": "skill_agility:drakkar_race",
     "stage": "fq.skill_agility.drakkar_race.timed2",
     "type": "timed",
-    "seconds": 420,
+    "seconds": 150,
     "goal": {
-      "kind": "structure",
-      "structures": [
-        "ctov:large/village_beach",
-        "ctov:large/village_christmas",
-        "ctov:large/village_dark_forest",
-        "ctov:large/village_desert",
-        "ctov:large/village_desert_oasis",
-        "ctov:large/village_jungle",
-        "ctov:large/village_jungle_tree",
-        "ctov:large/village_mesa",
-        "ctov:large/village_mesa_fortified",
-        "ctov:large/village_mountain",
-        "ctov:large/village_mountain_alpine",
-        "ctov:large/village_mushroom",
-        "ctov:large/village_plains",
-        "ctov:large/village_plains_fortified",
-        "ctov:large/village_savanna",
-        "ctov:large/village_savanna_na",
-        "ctov:large/village_snowy_igloo",
-        "ctov:large/village_swamp",
-        "ctov:large/village_swamp_fortified",
-        "ctov:large/village_taiga",
-        "ctov:large/village_taiga_fortified",
-        "ctov:medium/village_beach",
-        "ctov:medium/village_christmas",
-        "ctov:medium/village_dark_forest",
-        "ctov:medium/village_desert",
-        "ctov:medium/village_desert_oasis",
-        "ctov:medium/village_jungle",
-        "ctov:medium/village_jungle_tree",
-        "ctov:medium/village_mesa",
-        "ctov:medium/village_mesa_fortified",
-        "ctov:medium/village_mountain",
-        "ctov:medium/village_mountain_alpine",
-        "ctov:medium/village_mushroom",
-        "ctov:medium/village_plains",
-        "ctov:medium/village_plains_fortified",
-        "ctov:medium/village_savanna",
-        "ctov:medium/village_savanna_na",
-        "ctov:medium/village_snowy_igloo",
-        "ctov:medium/village_swamp",
-        "ctov:medium/village_swamp_fortified",
-        "ctov:medium/village_taiga",
-        "ctov:medium/village_taiga_fortified",
-        "ctov:small/village_beach",
-        "ctov:small/village_christmas",
-        "ctov:small/village_dark_forest",
-        "ctov:small/village_desert",
-        "ctov:small/village_desert_oasis",
-        "ctov:small/village_jungle",
-        "ctov:small/village_jungle_tree",
-        "ctov:small/village_mesa",
-        "ctov:small/village_mesa_fortified",
-        "ctov:small/village_mountain",
-        "ctov:small/village_mountain_alpine",
-        "ctov:small/village_mushroom",
-        "ctov:small/village_plains",
-        "ctov:small/village_plains_fortified",
-        "ctov:small/village_savanna",
-        "ctov:small/village_savanna_na",
-        "ctov:small/village_snowy_igloo",
-        "ctov:small/village_swamp",
-        "ctov:small/village_swamp_fortified",
-        "ctov:small/village_taiga",
-        "ctov:small/village_taiga_fortified",
-        "minecraft:village_desert",
-        "minecraft:village_plains",
-        "minecraft:village_savanna",
-        "minecraft:village_snowy",
-        "minecraft:village_taiga"
+      "kind": "course",
+      "on": "water",
+      "count": 10,
+      "spread": [
+        30,
+        60
       ],
-      "label": "the course's end",
-      "away": 200
+      "radius": 7.0,
+      "loop": false,
+      "height": [
+        6,
+        20
+      ]
     },
     "start_in": null,
     "no": [
@@ -17430,79 +17955,234 @@ global.QUEST_GIVERS = [
     "type": "timed",
     "seconds": 1200,
     "goal": {
-      "kind": "structure",
-      "structures": [
-        "ctov:large/village_beach",
-        "ctov:large/village_christmas",
-        "ctov:large/village_dark_forest",
-        "ctov:large/village_desert",
-        "ctov:large/village_desert_oasis",
-        "ctov:large/village_jungle",
-        "ctov:large/village_jungle_tree",
-        "ctov:large/village_mesa",
-        "ctov:large/village_mesa_fortified",
-        "ctov:large/village_mountain",
-        "ctov:large/village_mountain_alpine",
-        "ctov:large/village_mushroom",
-        "ctov:large/village_plains",
-        "ctov:large/village_plains_fortified",
-        "ctov:large/village_savanna",
-        "ctov:large/village_savanna_na",
-        "ctov:large/village_snowy_igloo",
-        "ctov:large/village_swamp",
-        "ctov:large/village_swamp_fortified",
-        "ctov:large/village_taiga",
-        "ctov:large/village_taiga_fortified",
-        "ctov:medium/village_beach",
-        "ctov:medium/village_christmas",
-        "ctov:medium/village_dark_forest",
-        "ctov:medium/village_desert",
-        "ctov:medium/village_desert_oasis",
-        "ctov:medium/village_jungle",
-        "ctov:medium/village_jungle_tree",
-        "ctov:medium/village_mesa",
-        "ctov:medium/village_mesa_fortified",
-        "ctov:medium/village_mountain",
-        "ctov:medium/village_mountain_alpine",
-        "ctov:medium/village_mushroom",
-        "ctov:medium/village_plains",
-        "ctov:medium/village_plains_fortified",
-        "ctov:medium/village_savanna",
-        "ctov:medium/village_savanna_na",
-        "ctov:medium/village_snowy_igloo",
-        "ctov:medium/village_swamp",
-        "ctov:medium/village_swamp_fortified",
-        "ctov:medium/village_taiga",
-        "ctov:medium/village_taiga_fortified",
-        "ctov:small/village_beach",
-        "ctov:small/village_christmas",
-        "ctov:small/village_dark_forest",
-        "ctov:small/village_desert",
-        "ctov:small/village_desert_oasis",
-        "ctov:small/village_jungle",
-        "ctov:small/village_jungle_tree",
-        "ctov:small/village_mesa",
-        "ctov:small/village_mesa_fortified",
-        "ctov:small/village_mountain",
-        "ctov:small/village_mountain_alpine",
-        "ctov:small/village_mushroom",
-        "ctov:small/village_plains",
-        "ctov:small/village_plains_fortified",
-        "ctov:small/village_savanna",
-        "ctov:small/village_savanna_na",
-        "ctov:small/village_snowy_igloo",
-        "ctov:small/village_swamp",
-        "ctov:small/village_swamp_fortified",
-        "ctov:small/village_taiga",
-        "ctov:small/village_taiga_fortified",
-        "minecraft:village_desert",
-        "minecraft:village_plains",
-        "minecraft:village_savanna",
-        "minecraft:village_snowy",
-        "minecraft:village_taiga"
-      ],
-      "label": "the third village",
-      "away": 300
+      "kind": "legs",
+      "legs": [
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "the first village",
+          "away": 300
+        },
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "the second village",
+          "away": 300
+        },
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "the third village",
+          "away": 300
+        }
+      ]
     },
     "start_in": null,
     "no": [
@@ -17545,7 +18225,8 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "teleport"
+      "teleport",
+      "ground"
     ],
     "waves": [],
     "lines": [
@@ -17712,6 +18393,258 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "skill_agility:sharestone_network",
+    "stage": "fq.skill_agility.sharestone_network.timed2",
+    "type": "timed",
+    "seconds": 1200,
+    "goal": {
+      "kind": "legs",
+      "legs": [
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "a village on the route",
+          "away": 300
+        },
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "another village",
+          "away": 300
+        },
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "a third village",
+          "away": 300
+        }
+      ]
+    },
+    "start_in": null,
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "A stop in every village, before the day is out."
+    ],
+    "start": "Set out",
+    "requires": [],
+    "quest_id": "6E962F01BDBAC611",
+    "prev_tasks": [
+      "1FE513F816FF7216",
+      "4DADA936DEACA5CB"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:sharestone_network",
     "stage": "fq.skill_agility.sharestone_network.build3",
     "type": "build",
     "keys": [
@@ -17737,84 +18670,390 @@ global.QUEST_GIVERS = [
     "type": "timed",
     "seconds": 1200,
     "goal": {
-      "kind": "structure",
-      "structures": [
-        "ctov:large/village_beach",
-        "ctov:large/village_christmas",
-        "ctov:large/village_dark_forest",
-        "ctov:large/village_desert",
-        "ctov:large/village_desert_oasis",
-        "ctov:large/village_jungle",
-        "ctov:large/village_jungle_tree",
-        "ctov:large/village_mesa",
-        "ctov:large/village_mesa_fortified",
-        "ctov:large/village_mountain",
-        "ctov:large/village_mountain_alpine",
-        "ctov:large/village_mushroom",
-        "ctov:large/village_plains",
-        "ctov:large/village_plains_fortified",
-        "ctov:large/village_savanna",
-        "ctov:large/village_savanna_na",
-        "ctov:large/village_snowy_igloo",
-        "ctov:large/village_swamp",
-        "ctov:large/village_swamp_fortified",
-        "ctov:large/village_taiga",
-        "ctov:large/village_taiga_fortified",
-        "ctov:medium/village_beach",
-        "ctov:medium/village_christmas",
-        "ctov:medium/village_dark_forest",
-        "ctov:medium/village_desert",
-        "ctov:medium/village_desert_oasis",
-        "ctov:medium/village_jungle",
-        "ctov:medium/village_jungle_tree",
-        "ctov:medium/village_mesa",
-        "ctov:medium/village_mesa_fortified",
-        "ctov:medium/village_mountain",
-        "ctov:medium/village_mountain_alpine",
-        "ctov:medium/village_mushroom",
-        "ctov:medium/village_plains",
-        "ctov:medium/village_plains_fortified",
-        "ctov:medium/village_savanna",
-        "ctov:medium/village_savanna_na",
-        "ctov:medium/village_snowy_igloo",
-        "ctov:medium/village_swamp",
-        "ctov:medium/village_swamp_fortified",
-        "ctov:medium/village_taiga",
-        "ctov:medium/village_taiga_fortified",
-        "ctov:small/village_beach",
-        "ctov:small/village_christmas",
-        "ctov:small/village_dark_forest",
-        "ctov:small/village_desert",
-        "ctov:small/village_desert_oasis",
-        "ctov:small/village_jungle",
-        "ctov:small/village_jungle_tree",
-        "ctov:small/village_mesa",
-        "ctov:small/village_mesa_fortified",
-        "ctov:small/village_mountain",
-        "ctov:small/village_mountain_alpine",
-        "ctov:small/village_mushroom",
-        "ctov:small/village_plains",
-        "ctov:small/village_plains_fortified",
-        "ctov:small/village_savanna",
-        "ctov:small/village_savanna_na",
-        "ctov:small/village_snowy_igloo",
-        "ctov:small/village_swamp",
-        "ctov:small/village_swamp_fortified",
-        "ctov:small/village_taiga",
-        "ctov:small/village_taiga_fortified",
-        "minecraft:village_desert",
-        "minecraft:village_plains",
-        "minecraft:village_savanna",
-        "minecraft:village_snowy",
-        "minecraft:village_taiga"
-      ],
-      "label": "the circuit's last village",
-      "away": 800
+      "kind": "legs",
+      "legs": [
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "the first village",
+          "away": 300
+        },
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "the second village",
+          "away": 300
+        },
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "the third village",
+          "away": 300
+        },
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "the fourth village",
+          "away": 300
+        },
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "the fifth village",
+          "away": 300
+        }
+      ]
     },
     "start_in": null,
     "no": [
       "teleport",
-      "mounts"
+      "mounts",
+      "ground"
     ],
     "waves": [],
     "lines": [
@@ -17832,157 +19071,116 @@ global.QUEST_GIVERS = [
     "quest": "skill_agility:grand_relay",
     "stage": "fq.skill_agility.grand_relay.timed1",
     "type": "timed",
-    "seconds": 900,
+    "seconds": 1200,
     "goal": {
-      "kind": "structure",
-      "structures": [
-        "ctov:large/village_beach",
-        "ctov:large/village_christmas",
-        "ctov:large/village_dark_forest",
-        "ctov:large/village_desert",
-        "ctov:large/village_desert_oasis",
-        "ctov:large/village_jungle",
-        "ctov:large/village_jungle_tree",
-        "ctov:large/village_mesa",
-        "ctov:large/village_mesa_fortified",
-        "ctov:large/village_mountain",
-        "ctov:large/village_mountain_alpine",
-        "ctov:large/village_mushroom",
-        "ctov:large/village_plains",
-        "ctov:large/village_plains_fortified",
-        "ctov:large/village_savanna",
-        "ctov:large/village_savanna_na",
-        "ctov:large/village_snowy_igloo",
-        "ctov:large/village_swamp",
-        "ctov:large/village_swamp_fortified",
-        "ctov:large/village_taiga",
-        "ctov:large/village_taiga_fortified",
-        "ctov:medium/village_beach",
-        "ctov:medium/village_christmas",
-        "ctov:medium/village_dark_forest",
-        "ctov:medium/village_desert",
-        "ctov:medium/village_desert_oasis",
-        "ctov:medium/village_jungle",
-        "ctov:medium/village_jungle_tree",
-        "ctov:medium/village_mesa",
-        "ctov:medium/village_mesa_fortified",
-        "ctov:medium/village_mountain",
-        "ctov:medium/village_mountain_alpine",
-        "ctov:medium/village_mushroom",
-        "ctov:medium/village_plains",
-        "ctov:medium/village_plains_fortified",
-        "ctov:medium/village_savanna",
-        "ctov:medium/village_savanna_na",
-        "ctov:medium/village_snowy_igloo",
-        "ctov:medium/village_swamp",
-        "ctov:medium/village_swamp_fortified",
-        "ctov:medium/village_taiga",
-        "ctov:medium/village_taiga_fortified",
-        "ctov:small/village_beach",
-        "ctov:small/village_christmas",
-        "ctov:small/village_dark_forest",
-        "ctov:small/village_desert",
-        "ctov:small/village_desert_oasis",
-        "ctov:small/village_jungle",
-        "ctov:small/village_jungle_tree",
-        "ctov:small/village_mesa",
-        "ctov:small/village_mesa_fortified",
-        "ctov:small/village_mountain",
-        "ctov:small/village_mountain_alpine",
-        "ctov:small/village_mushroom",
-        "ctov:small/village_plains",
-        "ctov:small/village_plains_fortified",
-        "ctov:small/village_savanna",
-        "ctov:small/village_savanna_na",
-        "ctov:small/village_snowy_igloo",
-        "ctov:small/village_swamp",
-        "ctov:small/village_swamp_fortified",
-        "ctov:small/village_taiga",
-        "ctov:small/village_taiga_fortified",
-        "minecraft:village_desert",
-        "minecraft:village_plains",
-        "minecraft:village_savanna",
-        "minecraft:village_snowy",
-        "minecraft:village_taiga"
-      ],
-      "label": "the first leg's village",
-      "away": 200
+      "kind": "legs",
+      "legs": [
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach",
+            "ctov:large/village_christmas",
+            "ctov:large/village_dark_forest",
+            "ctov:large/village_desert",
+            "ctov:large/village_desert_oasis",
+            "ctov:large/village_jungle",
+            "ctov:large/village_jungle_tree",
+            "ctov:large/village_mesa",
+            "ctov:large/village_mesa_fortified",
+            "ctov:large/village_mountain",
+            "ctov:large/village_mountain_alpine",
+            "ctov:large/village_mushroom",
+            "ctov:large/village_plains",
+            "ctov:large/village_plains_fortified",
+            "ctov:large/village_savanna",
+            "ctov:large/village_savanna_na",
+            "ctov:large/village_snowy_igloo",
+            "ctov:large/village_swamp",
+            "ctov:large/village_swamp_fortified",
+            "ctov:large/village_taiga",
+            "ctov:large/village_taiga_fortified",
+            "ctov:medium/village_beach",
+            "ctov:medium/village_christmas",
+            "ctov:medium/village_dark_forest",
+            "ctov:medium/village_desert",
+            "ctov:medium/village_desert_oasis",
+            "ctov:medium/village_jungle",
+            "ctov:medium/village_jungle_tree",
+            "ctov:medium/village_mesa",
+            "ctov:medium/village_mesa_fortified",
+            "ctov:medium/village_mountain",
+            "ctov:medium/village_mountain_alpine",
+            "ctov:medium/village_mushroom",
+            "ctov:medium/village_plains",
+            "ctov:medium/village_plains_fortified",
+            "ctov:medium/village_savanna",
+            "ctov:medium/village_savanna_na",
+            "ctov:medium/village_snowy_igloo",
+            "ctov:medium/village_swamp",
+            "ctov:medium/village_swamp_fortified",
+            "ctov:medium/village_taiga",
+            "ctov:medium/village_taiga_fortified",
+            "ctov:small/village_beach",
+            "ctov:small/village_christmas",
+            "ctov:small/village_dark_forest",
+            "ctov:small/village_desert",
+            "ctov:small/village_desert_oasis",
+            "ctov:small/village_jungle",
+            "ctov:small/village_jungle_tree",
+            "ctov:small/village_mesa",
+            "ctov:small/village_mesa_fortified",
+            "ctov:small/village_mountain",
+            "ctov:small/village_mountain_alpine",
+            "ctov:small/village_mushroom",
+            "ctov:small/village_plains",
+            "ctov:small/village_plains_fortified",
+            "ctov:small/village_savanna",
+            "ctov:small/village_savanna_na",
+            "ctov:small/village_snowy_igloo",
+            "ctov:small/village_swamp",
+            "ctov:small/village_swamp_fortified",
+            "ctov:small/village_taiga",
+            "ctov:small/village_taiga_fortified",
+            "minecraft:village_desert",
+            "minecraft:village_plains",
+            "minecraft:village_savanna",
+            "minecraft:village_snowy",
+            "minecraft:village_taiga"
+          ],
+          "label": "the first leg's village",
+          "away": 300
+        },
+        {
+          "kind": "structure",
+          "structures": [
+            "ctov:large/village_beach"
+          ],
+          "label": "the bay's far village",
+          "away": 300
+        },
+        {
+          "kind": "structure",
+          "structures": [
+            "skyvillages:skyvillage"
+          ],
+          "label": "the sky village",
+          "away": 300
+        }
+      ]
     },
     "start_in": null,
     "no": [
-      "teleport",
-      "mounts"
+      "teleport"
     ],
     "waves": [],
     "lines": [
-      "The grand relay. First leg on foot!"
+      "The grand relay. Three stops, one day!"
     ],
     "start": "Start the relay",
     "requires": [],
     "quest_id": "328C19D4F0D690BE",
     "prev_tasks": [
       "38ABC61436445688"
-    ],
-    "name": ""
-  },
-  {
-    "quest": "skill_agility:grand_relay",
-    "stage": "fq.skill_agility.grand_relay.timed2",
-    "type": "timed",
-    "seconds": 900,
-    "goal": {
-      "kind": "structure",
-      "structures": [
-        "ctov:large/village_beach"
-      ],
-      "label": "the bay's far village",
-      "away": 200
-    },
-    "start_in": null,
-    "no": [
-      "teleport"
-    ],
-    "waves": [],
-    "lines": [
-      "Second leg, by ship!"
-    ],
-    "start": "Sail the second leg",
-    "requires": [],
-    "quest_id": "328C19D4F0D690BE",
-    "prev_tasks": [
-      "38ABC61436445688",
-      "08A61B76B111CFDA"
-    ],
-    "name": ""
-  },
-  {
-    "quest": "skill_agility:grand_relay",
-    "stage": "fq.skill_agility.grand_relay.timed3",
-    "type": "timed",
-    "seconds": 900,
-    "goal": {
-      "kind": "structure",
-      "structures": [
-        "skyvillages:skyvillage"
-      ],
-      "label": "the sky village",
-      "away": 200
-    },
-    "start_in": null,
-    "no": [
-      "teleport"
-    ],
-    "waves": [],
-    "lines": [
-      "Last leg, by air!"
-    ],
-    "start": "Fly the last leg",
-    "requires": [],
-    "quest_id": "328C19D4F0D690BE",
-    "prev_tasks": [
-      "38ABC61436445688",
-      "08A61B76B111CFDA",
-      "5F7ED5D2EAD62E23"
     ],
     "name": ""
   },
@@ -18080,7 +19278,7 @@ global.QUEST_GIVERS = [
     "stage": "fq.magic.reroll_the_fates.talk0",
     "type": "talk",
     "lines": [
-      "Two enchantments on one book, wasting no more than ten levels.",
+      "Unbreaking and Efficiency on one book, wasting no more than ten levels.",
       "Fortune favours the frugal."
     ],
     "requires": [],
@@ -18089,6 +19287,24 @@ global.QUEST_GIVERS = [
     "character": "orrin",
     "quest_id": "7DD119EF0502B52C",
     "open_task": ""
+  },
+  {
+    "quest": "magic:reroll_the_fates",
+    "stage": "fq.magic.reroll_the_fates.have1",
+    "type": "have",
+    "count": 1,
+    "requires": [],
+    "quest_id": "7DD119EF0502B52C",
+    "prev_tasks": [
+      "03C4202B8567ABD7"
+    ],
+    "item": "minecraft:enchanted_book",
+    "enchant": {
+      "minecraft:unbreaking": 1,
+      "minecraft:efficiency": 1
+    },
+    "potion": "",
+    "consume": false
   },
   {
     "quest": "magic:the_priest",
@@ -18597,7 +19813,7 @@ global.QUEST_GIVERS = [
     },
     "start_in": null,
     "no": [
-      "hurt"
+      "seen"
     ],
     "waves": [],
     "lines": [
@@ -19309,6 +20525,24 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "skill_taming:pet_enchanting",
+    "stage": "fq.skill_taming.pet_enchanting.have1",
+    "type": "have",
+    "count": 1,
+    "requires": [],
+    "quest_id": "3E29F1CF1159CD62",
+    "prev_tasks": [
+      "7907E1774C8E9680"
+    ],
+    "item": "domesticationinnovation:collar_tag",
+    "enchant": {
+      "domesticationinnovation:health_boost": 1,
+      "domesticationinnovation:defusal": 1
+    },
+    "potion": "",
+    "consume": false
+  },
+  {
+    "quest": "skill_taming:pet_enchanting",
     "stage": "fq.skill_taming.pet_enchanting.interact2",
     "type": "interact",
     "count": 1,
@@ -19323,6 +20557,43 @@ global.QUEST_GIVERS = [
     ],
     "holding": "domesticationinnovation:collar_tag",
     "consume": true
+  },
+  {
+    "quest": "skill_taming:eggs_to_hatch",
+    "stage": "fq.skill_taming.eggs_to_hatch.born4",
+    "type": "born",
+    "count": 1,
+    "requires": [],
+    "quest_id": "5B7B7BC386A0C1A4",
+    "prev_tasks": [
+      "70342E6F4C0D420E",
+      "6F70457A8A232726",
+      "2B823E4034E4E9D8",
+      "6F0823D9803D5A7C"
+    ],
+    "entities": [
+      "naturalist:duck"
+    ],
+    "radius": 16
+  },
+  {
+    "quest": "skill_taming:eggs_to_hatch",
+    "stage": "fq.skill_taming.eggs_to_hatch.raise5",
+    "type": "raise",
+    "count": 1,
+    "requires": [],
+    "quest_id": "5B7B7BC386A0C1A4",
+    "prev_tasks": [
+      "70342E6F4C0D420E",
+      "6F70457A8A232726",
+      "2B823E4034E4E9D8",
+      "6F0823D9803D5A7C",
+      "650AAFDA2777A302"
+    ],
+    "entities": [
+      "naturalist:duck"
+    ],
+    "radius": 16
   },
   {
     "quest": "skill_taming:dragonfly_rider",
@@ -19815,6 +21086,60 @@ global.QUEST_GIVERS = [
       "0E8FDE11BD42FF57",
       "3D2467C7D32B605E"
     ]
+  },
+  {
+    "quest": "skill_taming:end_ready_pets",
+    "stage": "fq.skill_taming.end_ready_pets.have1",
+    "type": "have",
+    "count": 1,
+    "requires": [],
+    "quest_id": "2C1BACD6482038BA",
+    "prev_tasks": [
+      "7BB8F7E876C433BD"
+    ],
+    "item": "minecraft:enchanted_book",
+    "enchant": {
+      "domesticationinnovation:void_cloud": 1
+    },
+    "potion": "",
+    "consume": false
+  },
+  {
+    "quest": "skill_taming:end_ready_pets",
+    "stage": "fq.skill_taming.end_ready_pets.have2",
+    "type": "have",
+    "count": 1,
+    "requires": [],
+    "quest_id": "2C1BACD6482038BA",
+    "prev_tasks": [
+      "7BB8F7E876C433BD",
+      "1C69DD36C2D3D5C2"
+    ],
+    "item": "minecraft:enchanted_book",
+    "enchant": {
+      "domesticationinnovation:tethered_teleport": 1
+    },
+    "potion": "",
+    "consume": false
+  },
+  {
+    "quest": "skill_taming:end_ready_pets",
+    "stage": "fq.skill_taming.end_ready_pets.have3",
+    "type": "have",
+    "count": 1,
+    "requires": [],
+    "quest_id": "2C1BACD6482038BA",
+    "prev_tasks": [
+      "7BB8F7E876C433BD",
+      "1C69DD36C2D3D5C2",
+      "1ECA899490D764FF"
+    ],
+    "item": "minecraft:enchanted_book",
+    "enchant": {
+      "domesticationinnovation:fireproof": 1
+    },
+    "potion": "",
+    "consume": false
   },
   {
     "quest": "skill_taming:pet_show",

@@ -1318,11 +1318,10 @@
 					type: "structure"
 				}
 				{
-					consume_items: true
 					id: "7AD2ACFB8C4D866D"
-					item: "minecraft:gold_ingot"
+					stage: "fq.nether.shrine_offerings.use1"
 					title: "Leave a gold ingot at the shrine"
-					type: "item"
+					type: "gamestage"
 				}
 				{
 					id: "4730E9FCF3F138CB"
@@ -1331,11 +1330,10 @@
 					type: "structure"
 				}
 				{
-					consume_items: true
 					id: "159A28D504EE8A17"
-					item: "minecraft:gold_ingot"
+					stage: "fq.nether.shrine_offerings.use3"
 					title: "Leave a gold ingot at the smoking shrine"
-					type: "item"
+					type: "gamestage"
 				}
 			]
 			title: "Offerings at the Shrines"

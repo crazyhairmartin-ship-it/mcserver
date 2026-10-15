@@ -904,11 +904,28 @@
 					type: "item"
 				}
 				{
-					entity: "minecraft:zombie"
 					id: "1207ABC3EDC7ED70"
-					title: "Put each weapon through its paces on the dead"
-					type: "kill"
-					value: 12L
+					stage: "fq.skill_attack.weapon_master.killwith5"
+					title: "Make a kill with the halberd"
+					type: "gamestage"
+				}
+				{
+					id: "2BFB41AE1E7EC26E"
+					stage: "fq.skill_attack.weapon_master.killwith6"
+					title: "Make a kill with the rapier"
+					type: "gamestage"
+				}
+				{
+					id: "2E2609B321B24F5F"
+					stage: "fq.skill_attack.weapon_master.killwith7"
+					title: "Make a kill with the warhammer"
+					type: "gamestage"
+				}
+				{
+					id: "6D5E841EED80E23B"
+					stage: "fq.skill_attack.weapon_master.killwith8"
+					title: "Make a kill with the javelin"
+					type: "gamestage"
 				}
 			]
 			title: "Master of Arms"

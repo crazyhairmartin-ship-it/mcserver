@@ -1306,8 +1306,14 @@
 					type: "gamestage"
 				}
 				{
-					count: 2L
 					id: "6AEEA6AC5657655A"
+					stage: "fq.discovery_sea.mangrove_maze.timed2"
+					title: "Row the route through the roots"
+					type: "gamestage"
+				}
+				{
+					count: 2L
+					id: "6E5FE8C7BF894BD3"
 					item: "minecraft:mangrove_propagule"
 					title: "Gather propagules on the far side"
 					type: "item"

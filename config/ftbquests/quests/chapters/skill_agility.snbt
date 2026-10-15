@@ -1476,9 +1476,9 @@
 				}
 				{
 					id: "3BB24DA64382ED61"
-					structure: "#fotf:groups/villages"
-					title: "Take them out to a village on the route"
-					type: "structure"
+					stage: "fq.skill_agility.sharestone_network.timed2"
+					title: "Take them out to three villages on the route in a day"
+					type: "gamestage"
 				}
 				{
 					id: "38507BCA32FBBD44"
@@ -1608,19 +1608,7 @@
 				{
 					id: "08A61B76B111CFDA"
 					stage: "fq.skill_agility.grand_relay.timed1"
-					title: "Run the first leg over the rooftops"
-					type: "gamestage"
-				}
-				{
-					id: "5F7ED5D2EAD62E23"
-					stage: "fq.skill_agility.grand_relay.timed2"
-					title: "Sail the second leg across the bay"
-					type: "gamestage"
-				}
-				{
-					id: "38CA3D0AB840022A"
-					stage: "fq.skill_agility.grand_relay.timed3"
-					title: "Fly the last leg to the sky village"
+					title: "Carry the parcel through all three stops in a day"
 					type: "gamestage"
 				}
 			]

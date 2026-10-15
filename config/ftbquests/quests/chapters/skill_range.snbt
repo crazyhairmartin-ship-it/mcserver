@@ -258,11 +258,22 @@
 					type: "item"
 				}
 				{
-					entity: "minecraft:zombie"
 					id: "59D097A1E3088062"
-					title: "Make kills with your thrown steel"
-					type: "kill"
-					value: 6L
+					stage: "fq.skill_range.throwing_steel.killwith3"
+					title: "Kill with a thrown knife"
+					type: "gamestage"
+				}
+				{
+					id: "2C0ADE646A029AD4"
+					stage: "fq.skill_range.throwing_steel.killwith4"
+					title: "Kill with a thrown tomahawk"
+					type: "gamestage"
+				}
+				{
+					id: "2A9096816C69266B"
+					stage: "fq.skill_range.throwing_steel.killwith5"
+					title: "Kill with a thrown javelin"
+					type: "gamestage"
 				}
 			]
 			title: "Thrown Steel"

@@ -552,7 +552,7 @@
 			tasks: [
 				{
 					id: "7FA46619BC6D505F"
-					structure: "ctov:large/village_plains_fortified"
+					structure: "#fotf:groups/fortified_villages"
 					title: "Travel to a walled village"
 					type: "structure"
 				}

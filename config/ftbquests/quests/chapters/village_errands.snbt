@@ -40,9 +40,9 @@
 				}
 				{
 					id: "5BF885B6461DA623"
-					structure: "#fotf:groups/wells"
-					title: "Find a well to draw water from"
-					type: "structure"
+					stage: "fq.village_errands.water_from_three_wells.visits0"
+					title: "Draw water at three different wells"
+					type: "gamestage"
 				}
 				{
 					consume_items: true
@@ -915,7 +915,7 @@
 				}
 				{
 					id: "14F29E9065B73027"
-					structure: "ctov:medium/village_plains_fortified"
+					structure: "#fotf:groups/fortified_villages"
 					title: "Travel to a fortified village"
 					type: "structure"
 				}

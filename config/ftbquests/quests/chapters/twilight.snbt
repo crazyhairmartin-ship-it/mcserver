@@ -946,11 +946,10 @@
 					type: "item"
 				}
 				{
-					entity: "minecraft:zombie"
 					id: "3A49549487AB23C7"
+					stage: "fq.twilight.scepters.killwith1"
 					title: "Test the sceptre against the dead"
-					type: "kill"
-					value: 6L
+					type: "gamestage"
 				}
 			]
 			title: "The Lich's Sceptres"
@@ -1412,12 +1411,10 @@
 			]
 			tasks: [
 				{
-					consume_items: true
-					count: 2L
 					id: "11617C571362C00D"
-					item: "minecraft:potion"
+					stage: "fq.twilight.fire_swamp.have0"
 					title: "Brew fire resistance to cross the fire jets"
-					type: "item"
+					type: "gamestage"
 				}
 				{
 					id: "6D0C79879FA20E32"

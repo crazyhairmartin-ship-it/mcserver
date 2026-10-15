@@ -92,33 +92,9 @@
 			tasks: [
 				{
 					id: "186764E21AC19D07"
-					structure: "mss:small_tower"
-					title: "Land on a small tower island"
-					type: "structure"
-				}
-				{
-					id: "2215DA68CF20ED9E"
-					structure: "mss:spruce_huts"
-					title: "Land on the spruce huts island"
-					type: "structure"
-				}
-				{
-					id: "2E8C0A32A7C5F58C"
-					structure: "mss:small_oak_house"
-					title: "Land on a small house island"
-					type: "structure"
-				}
-				{
-					id: "52F16B51421DD8F7"
-					structure: "mss:taiga"
-					title: "Land on a taiga forest island"
-					type: "structure"
-				}
-				{
-					id: "6CC24CD6E3C78AB6"
-					structure: "mss:jungle"
-					title: "Land on a jungle island"
-					type: "structure"
+					stage: "fq.discovery_sky_and_underground.sky_hopper.visits0"
+					title: "Land on five different islands"
+					type: "gamestage"
 				}
 			]
 			title: "Sky Hopper"
