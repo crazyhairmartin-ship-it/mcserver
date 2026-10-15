@@ -1,0 +1,165 @@
+{
+ "beachparty:ritual_circle": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 1
+  }
+ },
+ "betterdeserttemples:desert_temple": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "#minecraft:buttons": 6,
+   "containers": 38
+  }
+ },
+ "betterjungletemples:jungle_temple": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 5
+  }
+ },
+ "betterwitchhuts:witch_circle": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "minecraft:water_cauldron": 1
+  }
+ },
+ "dungeons_arise:abandoned_temple": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "#minecraft:campfires": 1
+  }
+ },
+ "dungeons_arise:bandit_towers": {
+  "copies": 2,
+  "lines": [],
+  "mins": {
+   "containers": 493
+  }
+ },
+ "dungeons_arise:ceryneian_hind": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 1
+  }
+ },
+ "dungeons_arise:shiraz_palace": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "#minecraft:campfires": 25,
+   "containers": 134
+  }
+ },
+ "dungeons_arise:undead_pirate_ship": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 28
+  }
+ },
+ "minecraft:shipwreck": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 2
+  }
+ },
+ "minecraft:shipwreck_beached": {
+  "copies": 1,
+  "lines": [],
+  "mins": {
+   "containers": 2
+  }
+ },
+ "mos:atlantis_tribune": {
+  "copies": 2,
+  "lines": [],
+  "mins": {
+   "containers": 21
+  }
+ },
+ "mos:prismarine_dog_statue": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 1
+  }
+ },
+ "mos:ruined_castle": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 2
+  }
+ },
+ "mos:ruined_church": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 4
+  }
+ },
+ "mvs:azelea_house": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 17
+  }
+ },
+ "mvs:cathedral": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "minecraft:bell": 2
+  }
+ },
+ "mvs:deepslate_house": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 26
+  }
+ },
+ "mvs:desert_house": {
+  "copies": 2,
+  "lines": [],
+  "mins": {
+   "containers": 4
+  }
+ },
+ "mvs:gallows": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 4
+  }
+ },
+ "structory:old_manor": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 17
+  }
+ },
+ "structory_towers:engineer_tower": {
+  "copies": 1,
+  "lines": [],
+  "mins": {
+   "containers": 8
+  }
+ },
+ "structory_towers:warped_greatsword": {
+  "copies": 3,
+  "lines": [],
+  "mins": {
+   "containers": 1
+  }
+ }
+}

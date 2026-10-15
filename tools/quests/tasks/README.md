@@ -146,20 +146,19 @@ python lint_quests.py <chapter> [<chapter> ...]
 Errors must be fixed. Warnings must be fixed, or (only when no task in the README can do it) logged in
 `src/plans/followups.md` and mentioned in your report. Then look at your diff once more against the design rules above.
 
-**Puzzle check** (if your slice has `use` or `search` steps at structures): first make sure nobody is on the live
-server (`docker exec server-mc-1 rcon-cli list` must say 0 players; starting the test server can disconnect players,
-so if anyone is on, skip this and say so in your report). Then from `pack/`:
+**Puzzle check** (if your slice has `use` or `search` steps at structures). Once per session, after the session's
+last task is written (not after each task), from `pack/`:
 
 ```
-cd ../server-test && PACK_REF=$(git -C ../pack rev-parse HEAD) docker compose up -d && cd ../pack
-# wait until `docker logs fotf-test 2>&1 | grep "Done ("` shows a line (a few minutes)
-python tools/quests/verify_puzzles.py 3
-cd ../server-test && docker compose stop && cd ../pack
+python tools/quests/verify_puzzles.py --chapters <chapter>,<chapter>
 ```
 
-It generates three copies of each puzzle's structure and writes `tools/quests/src/plans/puzzle_check.md`. Any step
-marked SHORT or NOT FOUND must change: lower the count to what every copy had, switch to `search`, or have the player
-bring and place the block first (a `build` step before the `use`). Re-run until every step is OK.
+It remembers what it has already checked, so it only generates structures for new puzzle steps (and finishes at once
+when there are none). When it does need the test server it starts and stops it itself, but only if nobody is on the
+live server; if someone is, it says so and checks nothing: say so in your report. It writes
+`tools/quests/src/plans/puzzle_check.md`. Any step marked SHORT or NOT FOUND must change: lower the count to what every
+copy had, switch to `search`, or have the player bring and place the block first (a `build` step before the `use`).
+Re-run until every step is OK, then commit the fixes (and `puzzle_cache.json`) with the last task.
 
 ### Commit
 
