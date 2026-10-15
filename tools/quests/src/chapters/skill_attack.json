@@ -693,18 +693,20 @@
           "title": "Clear the nesters off the aviary's tiers"
         },
         {
-          "search": {
-            "at": {
-              "structure": "dungeons_arise:aviary"
-            },
-            "count": 1,
+          "drop": {
+            "from": [
+              "minecraft:vex"
+            ],
+            "chance": 0.5,
             "item": {
               "name": "the Aviary Trinket",
-              "texture": "minecraft:item/piston"
-            },
-            "found": "A spring-loaded trinket, left at the top."
+              "texture": "minecraft:item/piston",
+              "tooltip": "A spring-loaded trinket"
+            }
           },
-          "title": "Search the top for the piston-spring trinket"
+          "count": 1,
+          "consume": false,
+          "title": "Take the Aviary Trinket"
         }
       ],
       "rewards": [

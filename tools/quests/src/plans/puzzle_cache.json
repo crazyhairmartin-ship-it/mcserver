@@ -60,11 +60,29 @@
    "containers": 114
   }
  },
+ "ctov:large/village_plains_fortified": {
+  "copies": 3,
+  "lines": [
+   "fotfverify ctov:large/village_plains_fortified copy 1 at -3424,-432 pieces=274 containers=65",
+   "fotfverify ctov:large/village_plains_fortified copy 2 at 2800,-3488 pieces=327 containers=82",
+   "fotfverify ctov:large/village_plains_fortified copy 3 at 5440,9392 pieces=292 containers=88"
+  ],
+  "mins": {
+   "containers": 65
+  }
+ },
  "dungeons_arise:abandoned_temple": {
   "copies": 3,
   "lines": [],
   "mins": {
    "#minecraft:campfires": 1
+  }
+ },
+ "dungeons_arise:aviary": {
+  "copies": 0,
+  "lines": [],
+  "mins": {
+   "containers": 0
   }
  },
  "dungeons_arise:bandit_towers": {
@@ -79,6 +97,17 @@
   "lines": [],
   "mins": {
    "containers": 1
+  }
+ },
+ "dungeons_arise:greenwood_pub": {
+  "copies": 3,
+  "lines": [
+   "fotfverify dungeons_arise:greenwood_pub copy 1 at 4816,-5760 pieces=91 containers=127",
+   "fotfverify dungeons_arise:greenwood_pub copy 2 at -8576,-1888 pieces=82 containers=105",
+   "fotfverify dungeons_arise:greenwood_pub copy 3 at -1872,6736 pieces=60 containers=75"
+  ],
+  "mins": {
+   "containers": 75
   }
  },
  "dungeons_arise:heavenly_challenger": {
@@ -140,11 +169,65 @@
    "containers": 0
   }
  },
+ "dungeons_arise:thornborn_towers": {
+  "copies": 3,
+  "lines": [
+   "fotfverify dungeons_arise:thornborn_towers copy 1 at 3984,-4672 pieces=164 containers=88",
+   "fotfverify dungeons_arise:thornborn_towers copy 2 at -5696,-6656 pieces=205 containers=103",
+   "fotfverify dungeons_arise:thornborn_towers copy 3 at 4848,10576 pieces=182 containers=116"
+  ],
+  "mins": {
+   "containers": 88
+  }
+ },
  "dungeons_arise:undead_pirate_ship": {
   "copies": 3,
   "lines": [],
   "mins": {
    "containers": 28
+  }
+ },
+ "irons_spellbooks:evoker_fort": {
+  "copies": 3,
+  "lines": [
+   "fotfverify irons_spellbooks:evoker_fort copy 1 at -1216,1904 pieces=13 containers=14",
+   "fotfverify irons_spellbooks:evoker_fort copy 2 at 4400,1440 pieces=10 containers=27",
+   "fotfverify irons_spellbooks:evoker_fort copy 3 at -3904,320 pieces=11 containers=18"
+  ],
+  "mins": {
+   "containers": 14
+  }
+ },
+ "irons_spellbooks:ice_spider_den": {
+  "copies": 3,
+  "lines": [
+   "fotfverify irons_spellbooks:ice_spider_den copy 1 at 288,128 pieces=27 containers=19",
+   "fotfverify irons_spellbooks:ice_spider_den copy 2 at 4256,-944 pieces=31 containers=14",
+   "fotfverify irons_spellbooks:ice_spider_den copy 3 at -2208,-2352 pieces=33 containers=15"
+  ],
+  "mins": {
+   "containers": 14
+  }
+ },
+ "irons_spellbooks:impaled_icebreaker": {
+  "copies": 3,
+  "lines": [
+   "fotfverify irons_spellbooks:impaled_icebreaker copy 2 at 3648,208 pieces=1 containers=4",
+   "fotfverify irons_spellbooks:impaled_icebreaker copy 3 at -4736,-2064 pieces=1 containers=4"
+  ],
+  "mins": {
+   "containers": 4
+  }
+ },
+ "minecraft:ancient_city": {
+  "copies": 3,
+  "lines": [
+   "fotfverify minecraft:ancient_city copy 1 at 848,2112 pieces=86 containers=22",
+   "fotfverify minecraft:ancient_city copy 2 at 2496,800 pieces=80 containers=26",
+   "fotfverify minecraft:ancient_city copy 3 at -4528,1184 pieces=87 containers=30"
+  ],
+  "mins": {
+   "containers": 22
   }
  },
  "minecraft:shipwreck": {
@@ -210,6 +293,17 @@
   "mins": {
    "containers": 9,
    "minecraft:light_gray_candle": 7
+  }
+ },
+ "mss:small_oak_house": {
+  "copies": 3,
+  "lines": [
+   "fotfverify mss:small_oak_house copy 1 at -1872,-2256 pieces=1 containers=6",
+   "fotfverify mss:small_oak_house copy 2 at 3408,1440 pieces=1 containers=6",
+   "fotfverify mss:small_oak_house copy 3 at -7552,-1424 pieces=1 containers=6"
+  ],
+  "mins": {
+   "containers": 6
   }
  },
  "mss:volcano": {
@@ -302,6 +396,28 @@
    "containers": 1
   }
  },
+ "nova_structures:ruin_town": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:ruin_town copy 1 at 1472,1680 pieces=105 containers=20",
+   "fotfverify nova_structures:ruin_town copy 2 at -5008,2160 pieces=197 containers=14",
+   "fotfverify nova_structures:ruin_town copy 3 at 432,2912 pieces=171 containers=18"
+  ],
+  "mins": {
+   "containers": 14
+  }
+ },
+ "nova_structures:stray_fort": {
+  "copies": 3,
+  "lines": [
+   "fotfverify nova_structures:stray_fort copy 1 at -1424,1056 pieces=134 containers=55",
+   "fotfverify nova_structures:stray_fort copy 2 at -752,2176 pieces=173 containers=71",
+   "fotfverify nova_structures:stray_fort copy 3 at 10848,400 pieces=159 containers=68"
+  ],
+  "mins": {
+   "containers": 55
+  }
+ },
  "nova_structures:underground_house": {
   "copies": 3,
   "lines": [
@@ -375,6 +491,34 @@
   "lines": [],
   "mins": {
    "containers": 1
+  }
+ },
+ "twilightforest:hedge_maze": {
+  "copies": 0,
+  "lines": [],
+  "mins": {
+   "containers": 0
+  }
+ },
+ "twilightforest:labyrinth": {
+  "copies": 0,
+  "lines": [],
+  "mins": {
+   "containers": 0
+  }
+ },
+ "twilightforest:lich_tower": {
+  "copies": 0,
+  "lines": [],
+  "mins": {
+   "containers": 0
+  }
+ },
+ "twilightforest:mushroom_tower": {
+  "copies": 0,
+  "lines": [],
+  "mins": {
+   "containers": 0
   }
  }
 }

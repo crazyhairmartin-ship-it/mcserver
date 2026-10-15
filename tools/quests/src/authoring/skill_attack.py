@@ -141,8 +141,7 @@ ACT2 = [
           text=["Something nests high in an aviary, swooping on anyone below. Climb up and clear it the quick way: "
                 "knock its occupants off the edge. A piston-spring trinket waits at the top."],
           tasks=[fight("minecraft:vex", 6, "dungeons_arise:aviary", "Aviary Nesters", "Clear the nesters off the aviary's tiers"),
-                 search("dungeons_arise:aviary", 1, "the Aviary Trinket", "A spring-loaded trinket, left at the top.",
-                        texture="minecraft:item/piston", title="Search the top for the piston-spring trinket")],
+                 sample("the Aviary Trinket", ["minecraft:vex"], 0.5, texture="minecraft:item/piston", tooltip="A spring-loaded trinket")],
           rewards=[reward_item("artifacts:pocket_piston"), skill("attack", 300)]),
 
     quest("weapon_master", "Master of Arms", icon="spartanweaponry:diamond_halberd", after=["arena_ladder"],

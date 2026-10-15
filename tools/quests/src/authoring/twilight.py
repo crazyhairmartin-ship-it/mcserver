@@ -104,8 +104,7 @@ ACT2 = [
           text=["A giant mushroom tower rises in the Mushroom Forest. Find the way up through its caps and stems to "
                 "the loot at the top."],
           tasks=[{"structure": "twilightforest:mushroom_tower", "title": "Find the giant mushroom tower"},
-                 search("twilightforest:mushroom_tower", 1, "the Tower's Hoard", "A glow of loot at the tower's top.",
-                        title="Climb the caps and stems to the loot at the top")],
+                 item("twilightforest:torchberries", 4, title="Climb the caps and stems to the loot at the top")],
           rewards=[reward_item("twilightforest:torchberries", 4), skill("agility", 230)]),
 
     quest("hedge_maze", "Thorns in the Hedge", icon="minecraft:oak_leaves", after=["naga"],
@@ -116,8 +115,7 @@ ACT2 = [
                             "waves": [{"entity": "twilightforest:hedge_spider", "count": 3, "every": 40}],
                             "lines": ["The walls are crawling. Reach the centre quickly."], "start": "Run the maze"},
                   "title": "Fight through the hedge spiders before the swarm closes in"},
-                 search("twilightforest:hedge_maze", 1, "the Centre Chests' Prize", "A chest at the maze's heart.",
-                        title="Open the chests at the maze's centre")],
+                 sample("a Centre Chest Key", ["twilightforest:hedge_spider"], 0.5, texture="minecraft:item/tripwire_hook", tooltip="Opens the chests at the maze's heart")],
           rewards=[reward_item("twilightforest:crumble_horn"), skill("agility", 250)]),
 
     quest("lich_tower", "The Lich's Spire", icon="twilightforest:lich_banner_pattern", after=["naga"],
@@ -136,8 +134,7 @@ ACT2 = [
 
     quest("scepters", "The Lich's Sceptres", icon="twilightforest:lifedrain_scepter", after=["lich"],
           text=["Among the Lich's treasures lie four sceptres. Claim one and use it in battle against the undead."],
-          tasks=[search("twilightforest:lich_tower", 1, "a Lich's Sceptre", "A sceptre in the Lich's treasure.",
-                        texture="minecraft:item/stick", title="Claim a sceptre from the Lich's treasures"),
+          tasks=[item("twilightforest:lifedrain_scepter", title="Claim a sceptre from the Lich's treasures"),
                  {"kill": "minecraft:zombie", "count": 6, "title": "Test the sceptre against the dead"}],
           rewards=[reward_item("minecraft:ender_pearl", 8), reward_item("minecraft:rotten_flesh", 16), skill("magic", 330)]),
 
@@ -161,8 +158,7 @@ ACT2 = [
                 "Mazebreaker Pickaxe or Ore Magnet in its vaults."],
           tasks=[{"structure": "twilightforest:labyrinth", "title": "Find the entrance to the labyrinth"},
                  fight("twilightforest:maze_slime", 6, "twilightforest:labyrinth", "Maze Slimes", "Clear the maze slimes from the halls"),
-                 search("twilightforest:labyrinth", 1, "a Vault Treasure", "A trapped vault gives up its prize.",
-                        title="Open a trapped vault")],
+                 sample("a Vault Key", ["twilightforest:maze_slime"], 0.4, texture="minecraft:item/tripwire_hook", tooltip="Opens a trapped vault")],
           rewards=[reward_item("twilightforest:maze_map"), skill("mining", 330)]),
 
     quest("minotaurs", "Horns in the Dark", icon="twilightforest:diamond_minotaur_axe", after=["labyrinth"],

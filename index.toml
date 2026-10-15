@@ -146,7 +146,7 @@ hash = "17104a09af2dda3826675c368c38440299a5529fc8b2ee710efa1d268c350e3b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_attack.snbt"
-hash = "a7db3cdf4ad9b72f7df43d10ba93c7950d44d96ca1190ffeac60c906c1ec1e97"
+hash = "d57b20821ed0afb8c7e235ce472d42817ecd134625f64c3c3a6abf3dd15440c1"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_cooking.snbt"
@@ -194,7 +194,7 @@ hash = "0710d554395be561c1607f4e6342fd414c740f622d2a93d7e1bbd7193a8929af"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/twilight.snbt"
-hash = "97833f2c037452bf4c1548b5107f0ac96bd2474aa7cc4e423be517243db835df"
+hash = "912b70349f4e6c6bdbbe8258e33c13ba826c584a538b65e27d433bab79e7c6dd"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/village_errands.snbt"
@@ -2797,7 +2797,7 @@ hash = "77546c4cc0ec84840f5fd7ab0b845a72406755c619b84f89740a3f8047957af8"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "be42020360581036675efb1dd7857e9c8b71e8b351c4ef250b500f553e42db38"
+hash = "34c6f265ad5a439ca219ebebc8083ace230ddd54a52749cb264ccc18f2280a2f"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
@@ -2881,7 +2881,7 @@ hash = "534daa4f869a15fe2935d98a5cecdefd616381fc416be79b862974fda44739d7"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_items.generated.js"
-hash = "39849bc91be483141f2b2b09c9d7ca13e9203c35f9a33862e698329f3eac7311"
+hash = "8fffd8ffb148575218ffc2f2f9ad921f00fb3a93aa0d1d05774a98caa0983770"
 
 [[files]]
 file = "kubejs/startup_scripts/trimmed_items.js"

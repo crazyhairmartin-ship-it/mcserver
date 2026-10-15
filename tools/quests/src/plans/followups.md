@@ -84,7 +84,7 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - main_story:act2_sealed_doors: needs both rune copies carried as items; written as talking to the Arcane Order
 - main_story:act2_sculptor: needs the pillar trial climb; written as the boss fight at the Monastery
 - skill_attack:arena_ladder: needs three rising bouts without leaving the sand; written as three spawned fights
-- skill_attack:cliff_nest: needs knocking occupants off the edge; written as a spawned fight and a search
+- skill_attack:cliff_nest: needs knocking occupants off the edge; written as a spawned fight and a quest-drop trinket
 - skill_attack:weapon_master: needs a kill with each weapon; written as crafting all four and twelve zombie kills
 - skill_attack:hunter_trail: needs a compass page and the journal's haunts; written as three fallen adventurers observed
 - skill_defense:illusioner: needs picking the real one among copies; written as the illusioner boss fight
@@ -139,11 +139,11 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - twilight:raven_feather: needs sneaking up on ravens; written as a forest biome and raven feathers carried
 - twilight:hollow_hill: needs raiding its chests (hollow hills have unknown contents); written as the hill structure and steeleaf carried
 - twilight:quest_grove: needs the ram's reward; written as sixteen wool colours consumed
-- twilight:mushroom_tower: needs climbing the caps and stems (tower contents unknown); written as a search at the tower
-- twilight:hedge_maze: needs reaching the centre and escaping in ten minutes; written as a timed spider fight then a search
-- twilight:scepters: needs a choice of four sceptres used in battle; written as a search and zombie kills
+- twilight:mushroom_tower: needs climbing the caps and stems (no containers found); written as torchberries carried
+- twilight:hedge_maze: needs reaching the centre and escaping in ten minutes; written as a timed spider fight and a quest-drop key
+- twilight:scepters: needs a choice of four sceptres used in battle; written as the lifedrain sceptre carried and zombie kills
 - twilight:cursed_swamp: needs mosquitoes and hunger; written as a swamp biome and a swarm encounter
-- twilight:labyrinth: needs the Mazebreaker Pickaxe or Ore Magnet in a vault; written as a search of a trapped vault
+- twilight:labyrinth: needs the Mazebreaker Pickaxe or Ore Magnet in a vault; written as a quest-drop vault key
 - twilight:minotaurs: needs a Minotaur axe from them; written as a quest drop
 - twilight:meef: needs raw meef hunted; written as cooked stroganoff carried
 - twilight:uncrafting: needs breaking down an enchanted item; written as using the table

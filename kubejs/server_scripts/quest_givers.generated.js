@@ -4206,26 +4206,6 @@ global.QUEST_GIVERS = [
     "prev_tasks": []
   },
   {
-    "quest": "twilight:mushroom_tower",
-    "stage": "fq.twilight.mushroom_tower.search1",
-    "type": "search",
-    "at": {
-      "kind": "structure",
-      "structures": [
-        "twilightforest:mushroom_tower"
-      ],
-      "label": "the destination"
-    },
-    "count": 1,
-    "item": "kubejs:quest_mushroom_tower_1",
-    "found": "A glow of loot at the tower's top.",
-    "requires": [],
-    "quest_id": "2450BA6C33B4AC45",
-    "prev_tasks": [
-      "5C9574E9363CE217"
-    ]
-  },
-  {
     "quest": "twilight:hedge_maze",
     "stage": "fq.twilight.hedge_maze.timed1",
     "type": "timed",
@@ -4256,24 +4236,18 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "twilight:hedge_maze",
-    "stage": "fq.twilight.hedge_maze.search2",
-    "type": "search",
-    "at": {
-      "kind": "structure",
-      "structures": [
-        "twilightforest:hedge_maze"
-      ],
-      "label": "the destination"
-    },
-    "count": 1,
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "twilightforest:hedge_spider"
+    ],
+    "chance": 0.5,
     "item": "kubejs:quest_hedge_maze_2",
-    "found": "A chest at the maze's heart.",
     "requires": [],
     "quest_id": "3782A9007B2ADBC1",
-    "prev_tasks": [
-      "0A8B03704AFA7954",
-      "3D72BE7262131A6D"
-    ]
+    "open_task": "",
+    "lines": [],
+    "name": ""
   },
   {
     "quest": "twilight:lich_tower",
@@ -4321,24 +4295,6 @@ global.QUEST_GIVERS = [
     "task_id": "506424B61BEE6763",
     "requires": [],
     "quest_id": "528B3E77711E941F",
-    "prev_tasks": []
-  },
-  {
-    "quest": "twilight:scepters",
-    "stage": "fq.twilight.scepters.search0",
-    "type": "search",
-    "at": {
-      "kind": "structure",
-      "structures": [
-        "twilightforest:lich_tower"
-      ],
-      "label": "the destination"
-    },
-    "count": 1,
-    "item": "kubejs:quest_scepters_0",
-    "found": "A sceptre in the Lich's treasure.",
-    "requires": [],
-    "quest_id": "0744B5BB2B4CB7DB",
     "prev_tasks": []
   },
   {
@@ -4404,24 +4360,18 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "twilight:labyrinth",
-    "stage": "fq.twilight.labyrinth.search2",
-    "type": "search",
-    "at": {
-      "kind": "structure",
-      "structures": [
-        "twilightforest:labyrinth"
-      ],
-      "label": "the destination"
-    },
-    "count": 1,
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "twilightforest:maze_slime"
+    ],
+    "chance": 0.4,
     "item": "kubejs:quest_labyrinth_2",
-    "found": "A trapped vault gives up its prize.",
     "requires": [],
     "quest_id": "3E36F63D918A1B72",
-    "prev_tasks": [
-      "2E61CA50F55973E9",
-      "323BCC8B4370998E"
-    ]
+    "open_task": "",
+    "lines": [],
+    "name": ""
   },
   {
     "quest": "twilight:minotaurs",
@@ -9553,23 +9503,18 @@ global.QUEST_GIVERS = [
   },
   {
     "quest": "skill_attack:cliff_nest",
-    "stage": "fq.skill_attack.cliff_nest.search1",
-    "type": "search",
-    "at": {
-      "kind": "structure",
-      "structures": [
-        "dungeons_arise:aviary"
-      ],
-      "label": "the destination"
-    },
-    "count": 1,
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:vex"
+    ],
+    "chance": 0.5,
     "item": "kubejs:quest_cliff_nest_1",
-    "found": "A spring-loaded trinket, left at the top.",
     "requires": [],
     "quest_id": "72137117F9CF645C",
-    "prev_tasks": [
-      "281674808279AEA0"
-    ]
+    "open_task": "",
+    "lines": [],
+    "name": ""
   },
   {
     "quest": "skill_attack:weapon_master",

@@ -712,8 +712,9 @@
 					type: "structure"
 				}
 				{
+					count: 4L
 					id: "5308A6C7DDC0D547"
-					item: "kubejs:quest_mushroom_tower_1"
+					item: "twilightforest:torchberries"
 					title: "Climb the caps and stems to the loot at the top"
 					type: "item"
 				}
@@ -759,7 +760,7 @@
 				{
 					id: "23F11F49CC1D9485"
 					item: "kubejs:quest_hedge_maze_2"
-					title: "Open the chests at the maze's centre"
+					title: "Take a Centre Chest Key"
 					type: "item"
 				}
 			]
@@ -881,7 +882,7 @@
 			tasks: [
 				{
 					id: "35A7DD3D95A99A0E"
-					item: "kubejs:quest_scepters_0"
+					item: "twilightforest:lifedrain_scepter"
 					title: "Claim a sceptre from the Lich's treasures"
 					type: "item"
 				}
@@ -1019,7 +1020,7 @@
 				{
 					id: "642F3982AE123B67"
 					item: "kubejs:quest_labyrinth_2"
-					title: "Open a trapped vault"
+					title: "Take a Vault Key"
 					type: "item"
 				}
 			]

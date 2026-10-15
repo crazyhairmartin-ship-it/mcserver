@@ -541,17 +541,8 @@
           "title": "Find the giant mushroom tower"
         },
         {
-          "search": {
-            "at": {
-              "structure": "twilightforest:mushroom_tower"
-            },
-            "count": 1,
-            "item": {
-              "name": "the Tower's Hoard",
-              "texture": "minecraft:item/paper"
-            },
-            "found": "A glow of loot at the tower's top."
-          },
+          "item": "twilightforest:torchberries",
+          "count": 4,
           "title": "Climb the caps and stems to the loot at the top"
         }
       ],
@@ -603,18 +594,20 @@
           "title": "Fight through the hedge spiders before the swarm closes in"
         },
         {
-          "search": {
-            "at": {
-              "structure": "twilightforest:hedge_maze"
-            },
-            "count": 1,
+          "drop": {
+            "from": [
+              "twilightforest:hedge_spider"
+            ],
+            "chance": 0.5,
             "item": {
-              "name": "the Centre Chests' Prize",
-              "texture": "minecraft:item/paper"
-            },
-            "found": "A chest at the maze's heart."
+              "name": "a Centre Chest Key",
+              "texture": "minecraft:item/tripwire_hook",
+              "tooltip": "Opens the chests at the maze's heart"
+            }
           },
-          "title": "Open the chests at the maze's centre"
+          "count": 1,
+          "consume": false,
+          "title": "Take a Centre Chest Key"
         }
       ],
       "rewards": [
@@ -718,17 +711,7 @@
       ],
       "tasks": [
         {
-          "search": {
-            "at": {
-              "structure": "twilightforest:lich_tower"
-            },
-            "count": 1,
-            "item": {
-              "name": "a Lich's Sceptre",
-              "texture": "minecraft:item/stick"
-            },
-            "found": "A sceptre in the Lich's treasure."
-          },
+          "item": "twilightforest:lifedrain_scepter",
           "title": "Claim a sceptre from the Lich's treasures"
         },
         {
@@ -856,18 +839,20 @@
           "title": "Clear the maze slimes from the halls"
         },
         {
-          "search": {
-            "at": {
-              "structure": "twilightforest:labyrinth"
-            },
-            "count": 1,
+          "drop": {
+            "from": [
+              "twilightforest:maze_slime"
+            ],
+            "chance": 0.4,
             "item": {
-              "name": "a Vault Treasure",
-              "texture": "minecraft:item/paper"
-            },
-            "found": "A trapped vault gives up its prize."
+              "name": "a Vault Key",
+              "texture": "minecraft:item/tripwire_hook",
+              "tooltip": "Opens a trapped vault"
+            }
           },
-          "title": "Open a trapped vault"
+          "count": 1,
+          "consume": false,
+          "title": "Take a Vault Key"
         }
       ],
       "rewards": [
