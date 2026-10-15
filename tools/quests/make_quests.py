@@ -273,6 +273,23 @@ def item_value(r, reg, where, problems):
     return {'id': item, 'Count': B(1), 'tag': tag}
 
 
+def trophy_target(tasks):
+    """The creature a hunt is about: the last single target in the quest (a boss, a named spawn of one, a kill of
+    one, or a named kill encounter). Quests like that get its trophy (Dylan, 2026-10-15)."""
+    found = None
+    for t in tasks:
+        if not isinstance(t, dict):
+            continue
+        if isinstance(t.get('kill'), str):
+            sp = t.get('spawn') if isinstance(t.get('spawn'), dict) else {}
+            if sp.get('ensure') or (sp.get('name') and sp.get('wave', 4) == 1) or int(t.get('count', 1)) == 1:
+                found = t['kill']
+        e = t.get('encounter')
+        if isinstance(e, dict) and e.get('then') == 'kill' and e.get('entity') and e.get('name'):
+            found = e['entity']
+    return found
+
+
 def table_entries(name, rewards, reg, where, problems):
     """Reward table entries from [{"item": ..., "count", "weight", plus name/lore/enchant/unbreakable}]."""
     entries = []
@@ -327,6 +344,15 @@ def build_reward(r, ids, ctx, where, problems):
             problems.error(where, f'unknown reward table {r["table"]!r} (tools/quests/src/reward_tables/)')
             return None
         reward.update(type='random', table_id=L(int(ctx['tables'][r['table']], 16)))
+    elif 'trophy' in r:
+        # Jonn's Trophies: a little statue of the mob on a stand (size and base from the mod's config)
+        ent = r['trophy']
+        reg.check('entities', ent, where, r.get('unchecked', False))
+        if not isinstance(ent, str) or ':' not in ent:
+            return None
+        ns, path = ent.split(':', 1)
+        reward.update(type='item', item={'id': 'trophymanager:trophy', 'Count': B(1), 'tag': {
+            'TrophyType': 'entity', 'TrophyEntity': {'entityType': ent}, 'Name': f'entity.{ns}.{path}'}})
     elif 'choice' in r and isinstance(r['choice'], list):
         # the player picks one of these: the generator makes a reward table for the quest
         name = 'choice_' + '_'.join(ids).lower()
@@ -1364,7 +1390,13 @@ def main():
                 problems.error(where, 'a quest needs at least one task')
             quest['tasks'] = tasks
             rewards = []
-            for n, r in enumerate(q.get('rewards', [])):
+            src_rewards = list(q.get('rewards', []))
+            if q.get('trophy', True) is not False \
+                    and not any(isinstance(r, dict) and 'trophy' in r for r in src_rewards):
+                target = q['trophy'] if isinstance(q.get('trophy'), str) else trophy_target(q.get('tasks', []))
+                if target:
+                    src_rewards.append({'trophy': target})
+            for n, r in enumerate(src_rewards):
                 reward = build_reward(r, ('reward', name, qid, str(n)), ctx, f'{where} > reward {n + 1}', problems)
                 if reward:
                     rewards.append(reward)

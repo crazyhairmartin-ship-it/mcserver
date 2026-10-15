@@ -533,6 +533,21 @@
 					title: "+300 Attack XP"
 					type: "command"
 				}
+				{
+					id: "34EADA839716D7E6"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.friendsandfoes.mauler"
+							TrophyEntity: {
+								entityType: "friendsandfoes:mauler"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -610,6 +625,21 @@
 					title: "+280 Attack XP"
 					type: "command"
 				}
+				{
+					id: "2E470477C15D5432"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexsmobs.skelewag"
+							TrophyEntity: {
+								entityType: "alexsmobs:skelewag"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -657,6 +687,21 @@
 					title: "+280 Attack XP"
 					type: "command"
 				}
+				{
+					id: "398998727F8BC099"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.witch"
+							TrophyEntity: {
+								entityType: "minecraft:witch"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -702,6 +747,21 @@
 					silent: true
 					title: "+350 Attack XP"
 					type: "command"
+				}
+				{
+					id: "3C4A017825BCFFA8"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.ravager"
+							TrophyEntity: {
+								entityType: "minecraft:ravager"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -1041,6 +1101,21 @@
 					title: "+520 Attack XP"
 					type: "command"
 				}
+				{
+					id: "5C68F66A0C9FBB94"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.cataclysm.ignited_revenant"
+							TrophyEntity: {
+								entityType: "cataclysm:ignited_revenant"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -1080,6 +1155,21 @@
 					silent: true
 					title: "+540 Attack XP"
 					type: "command"
+				}
+				{
+					id: "2CF2BF8DA3B51453"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.vindicator"
+							TrophyEntity: {
+								entityType: "minecraft:vindicator"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -1173,6 +1263,21 @@
 					silent: true
 					title: "+700 Attack XP"
 					type: "command"
+				}
+				{
+					id: "27E93753D17C4315"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.ravager"
+							TrophyEntity: {
+								entityType: "minecraft:ravager"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -1336,6 +1441,21 @@
 					title: "+850 Attack XP"
 					type: "command"
 				}
+				{
+					id: "15411E0E82A17730"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.cataclysm.coralssus"
+							TrophyEntity: {
+								entityType: "cataclysm:coralssus"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -1384,6 +1504,21 @@
 					silent: true
 					title: "+900 Attack XP"
 					type: "command"
+				}
+				{
+					id: "453CAEA8D5B364C5"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.cataclysm.royal_draugr"
+							TrophyEntity: {
+								entityType: "cataclysm:royal_draugr"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [

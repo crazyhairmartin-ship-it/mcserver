@@ -385,6 +385,21 @@
 					title: "+280 Defense XP"
 					type: "command"
 				}
+				{
+					id: "2C4AF96ADC790D4F"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.friendsandfoes.iceologer"
+							TrophyEntity: {
+								entityType: "friendsandfoes:iceologer"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -460,6 +475,21 @@
 					silent: true
 					title: "+280 Defense XP"
 					type: "command"
+				}
+				{
+					id: "6EF78C24F54EA821"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.illusioner"
+							TrophyEntity: {
+								entityType: "minecraft:illusioner"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -895,6 +925,21 @@
 					title: "+520 Defense XP"
 					type: "command"
 				}
+				{
+					id: "2A8E0EAD9E838FD0"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.friendsandfoes.wildfire"
+							TrophyEntity: {
+								entityType: "friendsandfoes:wildfire"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -988,6 +1033,21 @@
 					silent: true
 					title: "+550 Defense XP"
 					type: "command"
+				}
+				{
+					id: "4CC94A1A239D4753"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.evoker"
+							TrophyEntity: {
+								entityType: "minecraft:evoker"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -1173,6 +1233,21 @@
 					silent: true
 					title: "+850 Defense XP"
 					type: "command"
+				}
+				{
+					id: "20E72153C484FF3A"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.cataclysm.kobolediator"
+							TrophyEntity: {
+								entityType: "cataclysm:kobolediator"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [

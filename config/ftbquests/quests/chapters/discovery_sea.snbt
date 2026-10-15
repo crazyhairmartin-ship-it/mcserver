@@ -557,6 +557,21 @@
 					title: "+150 Fishing XP"
 					type: "command"
 				}
+				{
+					id: "7C3FBE7560C55195"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.drowned"
+							TrophyEntity: {
+								entityType: "minecraft:drowned"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{

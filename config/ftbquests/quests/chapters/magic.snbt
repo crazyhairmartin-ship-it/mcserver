@@ -461,6 +461,21 @@
 					title: "+220 Magic XP"
 					type: "command"
 				}
+				{
+					id: "2F69CFA1B3843CC9"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.irons_spellbooks.pyromancer"
+							TrophyEntity: {
+								entityType: "irons_spellbooks:pyromancer"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -985,6 +1000,21 @@
 					title: "+300 Magic XP"
 					type: "command"
 				}
+				{
+					id: "4D563BBA96A7A212"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.irons_spellbooks.cryomancer"
+							TrophyEntity: {
+								entityType: "irons_spellbooks:cryomancer"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -1407,6 +1437,21 @@
 					title: "+380 Magic XP"
 					type: "command"
 				}
+				{
+					id: "40B5E5F2CFEC27BD"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.irons_spellbooks.archevoker"
+							TrophyEntity: {
+								entityType: "irons_spellbooks:archevoker"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -1701,6 +1746,21 @@
 					silent: true
 					title: "+600 Magic XP"
 					type: "command"
+				}
+				{
+					id: "5A8AB59625894CFD"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.irons_spellbooks.dead_king"
+							TrophyEntity: {
+								entityType: "irons_spellbooks:dead_king"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"
@@ -2294,6 +2354,21 @@
 					silent: true
 					title: "+1500 Magic XP"
 					type: "command"
+				}
+				{
+					id: "14FC13C7A42FCDBF"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.irons_spellbooks.fire_boss"
+							TrophyEntity: {
+								entityType: "irons_spellbooks:fire_boss"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"

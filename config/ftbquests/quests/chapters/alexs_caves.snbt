@@ -613,6 +613,21 @@
 					title: "+350 Attack XP"
 					type: "command"
 				}
+				{
+					id: "085BED874FC80370"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexscaves.tremorsaurus"
+							TrophyEntity: {
+								entityType: "alexscaves:tremorsaurus"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -987,6 +1002,21 @@
 					title: "+250 Mining XP"
 					type: "command"
 				}
+				{
+					id: "0293E31996F186F4"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexscaves.corrodent"
+							TrophyEntity: {
+								entityType: "alexscaves:corrodent"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -1106,6 +1136,21 @@
 					title: "+300 Attack XP"
 					type: "command"
 				}
+				{
+					id: "7E9FA15CE5FB46B2"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexscaves.watcher"
+							TrophyEntity: {
+								entityType: "alexscaves:watcher"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -1138,6 +1183,21 @@
 					silent: true
 					title: "+400 Attack XP"
 					type: "command"
+				}
+				{
+					id: "092AD2BA0F0199FC"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexscaves.forsaken"
+							TrophyEntity: {
+								entityType: "alexscaves:forsaken"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -1415,6 +1475,21 @@
 					silent: true
 					title: "+300 Magic XP"
 					type: "command"
+				}
+				{
+					id: "635054BEA3AFE4B5"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexscaves.licowitch"
+							TrophyEntity: {
+								entityType: "alexscaves:licowitch"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -1750,6 +1825,21 @@
 					title: "+650 Attack XP"
 					type: "command"
 				}
+				{
+					id: "509C9386D597CF66"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexscaves.luxtructosaurus"
+							TrophyEntity: {
+								entityType: "alexscaves:luxtructosaurus"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			shape: "diamond"
 			size: 1.5d
@@ -1879,6 +1969,21 @@
 					title: "+380 Attack XP"
 					type: "command"
 				}
+				{
+					id: "06C8E2703B760829"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexscaves.mine_guardian"
+							TrophyEntity: {
+								entityType: "alexscaves:mine_guardian"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -2003,6 +2108,21 @@
 					silent: true
 					title: "+500 Fishing XP"
 					type: "command"
+				}
+				{
+					id: "0B9CF9CDD7446F5F"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexscaves.hullbreaker"
+							TrophyEntity: {
+								entityType: "alexscaves:hullbreaker"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			shape: "diamond"

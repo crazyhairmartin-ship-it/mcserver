@@ -35,6 +35,21 @@
 					title: "+200 Attack XP"
 					type: "command"
 				}
+				{
+					id: "79D2775646461ED2"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.vindicator"
+							TrophyEntity: {
+								entityType: "minecraft:vindicator"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -324,6 +339,21 @@
 					silent: true
 					title: "+500 Defense XP"
 					type: "command"
+				}
+				{
+					id: "41AA82C9FCAB693A"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.vindicator"
+							TrophyEntity: {
+								entityType: "minecraft:vindicator"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -1363,6 +1393,21 @@
 					silent: true
 					title: "+220 Attack XP"
 					type: "command"
+				}
+				{
+					id: "231C15B7945E07DA"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.artifacts.mimic"
+							TrophyEntity: {
+								entityType: "artifacts:mimic"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -2817,6 +2862,21 @@
 					silent: true
 					title: "+220 Cooking XP"
 					type: "command"
+				}
+				{
+					id: "44473E424FC53A35"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.brewery.beer_elemental"
+							TrophyEntity: {
+								entityType: "brewery:beer_elemental"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [

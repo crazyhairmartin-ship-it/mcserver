@@ -468,6 +468,21 @@
 					title: "+200 Fishing XP"
 					type: "command"
 				}
+				{
+					id: "464E8B3439C64E93"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.drowned"
+							TrophyEntity: {
+								entityType: "minecraft:drowned"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			shape: "diamond"
 			size: 1.25d

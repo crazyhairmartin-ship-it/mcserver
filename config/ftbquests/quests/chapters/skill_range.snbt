@@ -392,6 +392,21 @@
 					title: "+220 Range XP"
 					type: "command"
 				}
+				{
+					id: "28712772FF55F4F3"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexsmobs.grizzly_bear"
+							TrophyEntity: {
+								entityType: "alexsmobs:grizzly_bear"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -600,6 +615,21 @@
 					title: "+320 Range XP"
 					type: "command"
 				}
+				{
+					id: "2044F329F2215615"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.naturalist.rhino"
+							TrophyEntity: {
+								entityType: "naturalist:rhino"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -661,6 +691,21 @@
 					title: "+340 Range XP"
 					type: "command"
 				}
+				{
+					id: "69C4BCD977E2EF4B"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexsmobs.tiger"
+							TrophyEntity: {
+								entityType: "alexsmobs:tiger"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -699,6 +744,21 @@
 					silent: true
 					title: "+320 Range XP"
 					type: "command"
+				}
+				{
+					id: "32F622B79418D047"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexsmobs.anaconda"
+							TrophyEntity: {
+								entityType: "alexsmobs:anaconda"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -744,6 +804,21 @@
 					silent: true
 					title: "+360 Range XP"
 					type: "command"
+				}
+				{
+					id: "42B9D71741D3516A"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexsmobs.froststalker"
+							TrophyEntity: {
+								entityType: "alexsmobs:froststalker"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -934,6 +1009,21 @@
 					title: "+480 Range XP"
 					type: "command"
 				}
+				{
+					id: "4D9F6CE21E0F72BA"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexsmobs.bone_serpent"
+							TrophyEntity: {
+								entityType: "alexsmobs:bone_serpent"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -978,6 +1068,21 @@
 					silent: true
 					title: "+500 Range XP"
 					type: "command"
+				}
+				{
+					id: "0C38BBF7C25E7C5D"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexsmobs.warped_mosco"
+							TrophyEntity: {
+								entityType: "alexsmobs:warped_mosco"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -1218,6 +1323,21 @@
 					title: "+780 Range XP"
 					type: "command"
 				}
+				{
+					id: "4A3ED254B99D4F5D"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.naturalist.rhino"
+							TrophyEntity: {
+								entityType: "naturalist:rhino"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
@@ -1262,6 +1382,21 @@
 					silent: true
 					title: "+800 Range XP"
 					type: "command"
+				}
+				{
+					id: "2E6DEDC11737FAD8"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.alexsmobs.tarantula_hawk"
+							TrophyEntity: {
+								entityType: "alexsmobs:tarantula_hawk"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -1310,6 +1445,21 @@
 					silent: true
 					title: "+850 Range XP"
 					type: "command"
+				}
+				{
+					id: "149EE18DC5553C90"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.naturalist.deer"
+							TrophyEntity: {
+								entityType: "naturalist:deer"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [
@@ -1361,6 +1511,21 @@
 					silent: true
 					title: "+900 Range XP"
 					type: "command"
+				}
+				{
+					id: "5D34B83A95B7EE19"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.cataclysm.amethyst_crab"
+							TrophyEntity: {
+								entityType: "cataclysm:amethyst_crab"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
 				}
 			]
 			tasks: [

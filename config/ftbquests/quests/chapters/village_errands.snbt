@@ -958,6 +958,21 @@
 					title: "+140 Defense XP"
 					type: "command"
 				}
+				{
+					id: "502D5E29AF4EBB25"
+					item: {
+						Count: 1b
+						id: "trophymanager:trophy"
+						tag: {
+							Name: "entity.minecraft.pillager"
+							TrophyEntity: {
+								entityType: "minecraft:pillager"
+							}
+							TrophyType: "entity"
+						}
+					}
+					type: "item"
+				}
 			]
 			tasks: [
 				{
