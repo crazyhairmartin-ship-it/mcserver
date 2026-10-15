@@ -211,7 +211,7 @@ Q = [
           text=["The witches of the swamp villa are holding a tea party, and their recipe book lies open on the "
                 "table. Copy it unseen, and brew their strangest potion yourself."],
           tasks=[{"checkmark": "I copied the witches' recipe book unseen"},
-                 item("minecraft:splash_potion", title="Brew the witches' strangest potion")],
+                 {"make": "minecraft:splash_potion", "how": "brew", "title": "Brew the witches' strangest potion"}],
           rewards=[reward_item("minecraft:splash_potion", 3), reward_item("minecraft:cauldron"), skill("magic", 220)]),
 
     quest("old_manor_ghost", "The Old Manor", icon="supplementaries:key",

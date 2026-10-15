@@ -361,7 +361,7 @@ ACT3 = [
           text=["The Candy Cavity's gum worms are rideable, if you can hook one. Hook a gum worm with a candy cane "
                 "hook and ride it."],
           tasks=[item("alexscaves:candy_cane_hook", crafted=True, title="Craft a candy cane hook"),
-                 {"observe": "alexscaves:gum_worm", "ticks": 40, "title": "Hook a gum worm and ride it"}],
+                 {"interact": "alexscaves:gum_worm", "holding": "alexscaves:candy_cane_hook", "title": "Hook a gum worm with the candy cane hook"}],
           rewards=[reward_item("alexscaves:candy_cane_hook"), skill("agility", 400)]),
 
     quest("four_worlds", "Four Worlds Below", icon="alexscaves:cave_codex", after=["primordial_caves", "abyssal_chasm", "forlorn_hollows", "candy_cavity"],

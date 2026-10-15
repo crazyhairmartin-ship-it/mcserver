@@ -34,7 +34,7 @@ Q = [
           text=["A dragon's skeleton lies on the sea floor, its ribs rising like a reef. The Anglers' Society swear "
                 "it was a sea serpent, and want proof: one of its bones."],
           tasks=[{"be": {"in_water": True, "below_y": 45}, "title": "Dive down to the skeleton's skull"},
-                 item("minecraft:bone_block", 2, title="Take bone from the skeleton as proof")],
+                 {"mine": "minecraft:bone_block", "count": 2, "title": "Break bone from the skeleton as proof"}],
           rewards=[reward_item("minecraft:bone_block", 8), reward_item("minecraft:nautilus_shell"),
                    skill("fish", 150)]),
 
@@ -222,7 +222,8 @@ Q = [
                 "strung between two palms is the best way to rest."],
           tasks=[item("beachparty:coconut", title="Crack open a coconut"),
                  item("comforts:hammock_red", crafted=True, title="Make a hammock to rest in"),
-                 {"build": {"blocks": {"comforts:hammock_red": 1}, "radius": 10}, "title": "Hang it between palms"}],
+                 {"build": {"blocks": {"comforts:hammock_red": 1}, "radius": 10}, "title": "Hang it between palms"},
+                 {"sleep": 1, "title": "Sleep the night away in the hammock"}],
           rewards=[reward_item("beachparty:coconut", 4), reward_item("comforts:hammock_green"), skill("forage", 120)]),
 
     quest("rocky_reef", "The Rocky Reef", icon="regions_unexplored:hyacinth_flowers",

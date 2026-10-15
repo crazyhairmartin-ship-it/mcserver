@@ -116,7 +116,7 @@ Q = [
                  encounter(["Poison... then withering... I can't feel my legs.", "You cured me? Thank you."],
                            entity="minecraft:villager", name="Poisoned Courier",
                            where={"biomes": ["minecraft:swamp", "minecraft:mangrove_swamp"]}),
-                 {"checkmark": "I brewed a cure for each ailment"}],
+                 {"make": "minecraft:potion", "how": "brew", "count": 2, "title": "Brew a cure for each ailment"}],
           rewards=[reward_item("artifacts:antidote_vessel"), skill("magic", 260)]),
 
     quest("witch_ingredients", "Hags' Pantry", icon="minecraft:glowstone_dust", after=["mangrove_hut"],

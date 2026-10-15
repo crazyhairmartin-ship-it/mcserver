@@ -202,7 +202,7 @@ Q = [
           text=["The deep dark: silence, sculk and something listening. The Arcane Order want a sculk sensor from "
                 "it, taken without setting off a shrieker."],
           tasks=[{"be": {"biomes": ["minecraft:deep_dark"]}, "title": "Creep through the deep dark"},
-                 item("minecraft:sculk_sensor", title="Take a sculk sensor without waking a shrieker")],
+                 {"mine": "minecraft:sculk_sensor", "title": "Cut a sculk sensor loose without waking a shrieker"}],
           rewards=[reward_item("minecraft:sculk", 8), skill("mining", 300)]),
 
     quest("biome_lush_caves", "Lush Caves", icon="minecraft:glow_berries",
