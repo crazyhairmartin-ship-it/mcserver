@@ -41,7 +41,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.minecraft.vindicator"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "minecraft:vindicator"
 							}
@@ -346,7 +350,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.minecraft.vindicator"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "minecraft:vindicator"
 							}
@@ -1400,7 +1408,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.artifacts.mimic"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "artifacts:mimic"
 							}
@@ -2869,7 +2881,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.brewery.beer_elemental"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "brewery:beer_elemental"
 							}

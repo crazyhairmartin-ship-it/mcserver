@@ -619,7 +619,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.alexscaves.tremorsaurus"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "alexscaves:tremorsaurus"
 							}
@@ -1008,7 +1012,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.alexscaves.corrodent"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "alexscaves:corrodent"
 							}
@@ -1142,7 +1150,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.alexscaves.watcher"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "alexscaves:watcher"
 							}
@@ -1190,7 +1202,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.alexscaves.forsaken"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "alexscaves:forsaken"
 							}
@@ -1482,7 +1498,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.alexscaves.licowitch"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "alexscaves:licowitch"
 							}
@@ -1831,7 +1851,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.alexscaves.luxtructosaurus"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "alexscaves:luxtructosaurus"
 							}
@@ -1975,7 +1999,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.alexscaves.mine_guardian"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "alexscaves:mine_guardian"
 							}
@@ -2115,7 +2143,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.alexscaves.hullbreaker"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "alexscaves:hullbreaker"
 							}

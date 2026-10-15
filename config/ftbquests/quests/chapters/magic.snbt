@@ -467,7 +467,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.irons_spellbooks.pyromancer"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "irons_spellbooks:pyromancer"
 							}
@@ -1006,7 +1010,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.irons_spellbooks.cryomancer"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "irons_spellbooks:cryomancer"
 							}
@@ -1443,7 +1451,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.irons_spellbooks.archevoker"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "irons_spellbooks:archevoker"
 							}
@@ -1753,7 +1765,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.irons_spellbooks.dead_king"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "irons_spellbooks:dead_king"
 							}
@@ -2361,7 +2377,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.irons_spellbooks.fire_boss"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "irons_spellbooks:fire_boss"
 							}

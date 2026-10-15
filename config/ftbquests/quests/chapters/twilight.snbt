@@ -411,7 +411,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.naga"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:naga"
 							}
@@ -877,7 +881,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.lich"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:lich"
 							}
@@ -976,7 +984,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.swarm_spider"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:swarm_spider"
 							}
@@ -1166,7 +1178,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.minoshroom"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:minoshroom"
 							}
@@ -1491,7 +1507,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.hydra"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:hydra"
 							}
@@ -1586,7 +1606,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.hostile_wolf"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:hostile_wolf"
 							}
@@ -1766,7 +1790,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.knight_phantom"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:knight_phantom"
 							}
@@ -1982,7 +2010,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.ur_ghast"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:ur_ghast"
 							}
@@ -2165,7 +2197,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.winter_wolf"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:winter_wolf"
 							}
@@ -2274,7 +2310,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.alpha_yeti"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:alpha_yeti"
 							}
@@ -2421,7 +2461,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.twilightforest.snow_queen"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "twilightforest:snow_queen"
 							}

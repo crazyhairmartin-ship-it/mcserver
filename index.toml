@@ -110,15 +110,15 @@ hash = "c94780874e812c548ff6974d0136e831e576e8b482b0dd0bc573c007b3e31425"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/alexs_caves.snbt"
-hash = "d5cfa09a804f13a2deaf42eb221eced7bd9f07b9e519c0ee4b34262f51a5a154"
+hash = "74cd02f7fb8136a9fed3085710347bcb27a17acf63816981d2be04bccf15a528"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/discovery_land.snbt"
-hash = "d408f288f708d18631dd773244ead7c0e9a11c0575ca868ac0a11f4c867934d9"
+hash = "fd816588b3f244a9b2f349016a893c382feb02db71ce59df20ffbb02568c5be2"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/discovery_sea.snbt"
-hash = "155e256ec4db12bae46062e4628d51e960f3afc3e936167f5b6b1e0c0cbf7948"
+hash = "a5a7e8fff21b29ea1e47f58da49761eaf14968652f163bf794e12ed44915637f"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/discovery_sky_and_underground.snbt"
@@ -130,11 +130,11 @@ hash = "03c0f4034e971dde400597b3f53cc62d2320fb0d69206b4de0dd39d712fe45a5"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/magic.snbt"
-hash = "b3ecd5f86aa5c321ad783f569aea526e6ff261bd650cf67c2b37a4834501979b"
+hash = "f3180db2c9610348d6097a88eecfe62cc93a79a22366e48d868fbf0ee5b4a6af"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/main_story.snbt"
-hash = "acc78bb118a22938c1ea46226f8222e9abe7c30ff89630793ecbffdb4877539a"
+hash = "01cd2ccbe5d543fee6beb145ec481c1394992f94ac849d68de7c0f4569c5ab31"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/milestones.snbt"
@@ -154,7 +154,7 @@ hash = "4399f2a4b8cdacc1e2568cae9a29114752fd99e6a933a34c7d6d3607da5d7c91"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_attack.snbt"
-hash = "2277a2bb286c3f27027299a15002b42df0bd4b1b4672af3406216d05828cfca3"
+hash = "e4ddca10ad6aef6ea7a8b581a5342051249fd1ab9fa706b1be1a79bc3e2b15c0"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_cooking.snbt"
@@ -166,7 +166,7 @@ hash = "13ac6951c56982ba706533212e75e2bbce3619276589841e99f0fcb926cade91"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_defense.snbt"
-hash = "65165097f4712b48fd2e1ab9ccdcb6987991ff78439fe7cdace81608993e18b0"
+hash = "91117e6b26f4efef947c1ad31f25fcdb46752188716bc7a9f93cfb0358bb6100"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_farming.snbt"
@@ -186,7 +186,7 @@ hash = "c0c51537b5a5b2c1b396359edad8304153caa62908a645ce648d52dee5b5d860"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_range.snbt"
-hash = "33ed47edd70da5cde33df149d95bb5d32ae368c7fd5531df7a85308cd8fcab63"
+hash = "0e9b02d3397261059eb8b9184f58e67bc1412a62554e406125ec25b56ad3507e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_taming.snbt"
@@ -194,7 +194,7 @@ hash = "b295ff50da883a274fc2cb8cdb8aafc27aded1e30744258bde7463b2b936bba5"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/small_favours.snbt"
-hash = "788aa1e1ca9d2c3a1a7e79f0cc7367d4cd127a64f3db3c582da4118a2d46f70f"
+hash = "1a15c460845821b011feecf37d8bbbb57469ced4c82e291761de484f5e8d0a2b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/start.snbt"
@@ -202,11 +202,11 @@ hash = "0710d554395be561c1607f4e6342fd414c740f622d2a93d7e1bbd7193a8929af"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/twilight.snbt"
-hash = "8e1d348c6d32a7a1d84993dc32cc93f8c09d7ffff13473c721a3ace7330498c0"
+hash = "b232917e4d8fc96efe1a69f69bbb00f0b5e2cfb0aa1cc069c8dead480f5f277e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/village_errands.snbt"
-hash = "a8e049a23d2fdf21bacd4988b89b84ab953821ce296d0b0ac42221a90d66316e"
+hash = "fd5d706c225e9b6b86f8ec4a129b605084e033befa03ea997c5d203a83c8e019"
 
 [[files]]
 file = "config/ftbquests/quests/data.snbt"
@@ -662,6 +662,10 @@ hash = "ae5b5a2d93492777ad7716ab24863db75ad759555d03900b57bf471103d8d7a9"
 [[files]]
 file = "defaultconfigs/parcool-server.toml"
 hash = "5faffed10b0e2b55cc310686dd65b19baede0fe31228be8ebf4e99f9397abf1b"
+
+[[files]]
+file = "defaultconfigs/trophymanager-server.toml"
+hash = "1526d4814c09a3962d0118d67c623ef5e899c14b6bfe8a7a372f006046923484"
 
 [[files]]
 file = "kubejs/assets/alexscaves/lang/en_us.json"

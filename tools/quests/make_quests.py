@@ -42,6 +42,10 @@ class D(float):
     """A double (written 1.0d)."""
 
 
+class F(float):
+    """A float (written 0.5f)."""
+
+
 class L(int):
     """A long (written 4L)."""
 
@@ -64,6 +68,8 @@ def snbt(value, indent=0):
         return 'true' if value else 'false'
     if isinstance(value, D):
         return f'{float(value)!r}d'
+    if isinstance(value, F):
+        return f'{float(value)!r}f'
     if isinstance(value, L):
         return f'{int(value)}L'
     if isinstance(value, B):
@@ -351,8 +357,11 @@ def build_reward(r, ids, ctx, where, problems):
         if not isinstance(ent, str) or ':' not in ent:
             return None
         ns, path = ent.split(':', 1)
+        # every field set: a trophy without BaseBlock crashes chunk saving (seen on the test server, 2026-10-15).
+        # Players can resize it by right-clicking it once placed.
         reward.update(type='item', item={'id': 'trophymanager:trophy', 'Count': B(1), 'tag': {
-            'TrophyType': 'entity', 'TrophyEntity': {'entityType': ent}, 'Name': f'entity.{ns}.{path}'}})
+            'TrophyType': 'entity', 'TrophyEntity': {'entityType': ent}, 'Name': f'entity.{ns}.{path}',
+            'BaseBlock': 'minecraft:smooth_stone_slab', 'Scale': F(0.5), 'OffsetY': D(0.5), 'RotX': F(0.0)}})
     elif 'choice' in r and isinstance(r['choice'], list):
         # the player picks one of these: the generator makes a reward table for the quest
         name = 'choice_' + '_'.join(ids).lower()

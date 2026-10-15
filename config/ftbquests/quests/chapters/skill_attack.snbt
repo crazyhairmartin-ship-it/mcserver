@@ -539,7 +539,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.friendsandfoes.mauler"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "friendsandfoes:mauler"
 							}
@@ -631,7 +635,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.alexsmobs.skelewag"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "alexsmobs:skelewag"
 							}
@@ -693,7 +701,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.minecraft.witch"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "minecraft:witch"
 							}
@@ -754,7 +766,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.minecraft.ravager"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "minecraft:ravager"
 							}
@@ -1107,7 +1123,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.cataclysm.ignited_revenant"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "cataclysm:ignited_revenant"
 							}
@@ -1162,7 +1182,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.minecraft.vindicator"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "minecraft:vindicator"
 							}
@@ -1270,7 +1294,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.minecraft.ravager"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "minecraft:ravager"
 							}
@@ -1447,7 +1475,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.cataclysm.coralssus"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "cataclysm:coralssus"
 							}
@@ -1511,7 +1543,11 @@
 						Count: 1b
 						id: "trophymanager:trophy"
 						tag: {
+							BaseBlock: "minecraft:smooth_stone_slab"
 							Name: "entity.cataclysm.royal_draugr"
+							OffsetY: 0.5d
+							RotX: 0.0f
+							Scale: 0.5f
 							TrophyEntity: {
 								entityType: "cataclysm:royal_draugr"
 							}

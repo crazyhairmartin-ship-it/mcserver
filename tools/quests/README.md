@@ -161,6 +161,7 @@ boss's drop or its advancement, so beating the boss early doesn't tick the quest
 | `{"xp": 100}` / `{"levels": 3}` | Vanilla XP points / levels |
 | `{"table": "village_favours"}` | One random roll from `src/reward_tables/village_favours.json` |
 | `{"choice": [{"item": ...}, {"item": ...}], "title": "Choose one"}` | The player picks one of 2-4 options (each with the usual item fields: count, name, lore, enchant, unbreakable). The generator makes the table |
+| `{"trophy": "alexsmobs:grizzly_bear"}` | That creature's trophy (Jonn's Trophies: a statue on a stand, resizable by right-click). Added automatically to every hunt: a quest whose tasks have a boss, a named spawn of one, a kill of one or a named kill encounter gets the last such target's trophy. Set the quest's `"trophy"` to a mob id to choose another, or `false` for none |
 | `{"choice": "forest_relics"}` | The player picks one item from that table in `src/reward_tables/` |
 | `{"command": "/say hi {p}", "title": "A surprise"}` | Runs a command as the server (`{p}` is the player) |
 | `{"stage": "my_stage"}` | Adds a stage |
