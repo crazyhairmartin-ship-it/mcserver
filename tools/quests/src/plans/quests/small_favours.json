@@ -16,7 +16,7 @@
       "after": [
         "start:welcome"
       ],
-      "summary": "Bram the baker in Reece would gladly give you a crusty loaf for the road, if he had any flour. The windmill on the edge of town has stopped; would you go and see what's wrong with it?",
+      "summary": "Bram the baker in Reece would gladly give you a crusty loaf for the road, if he had any flour. The water wheel on the edge of town has stopped; would you go and see what's wrong with it?",
       "mods": [
         "bakery"
       ],
@@ -27,7 +27,7 @@
     },
     {
       "id": "sf_torn_sails",
-      "title": "Torn Sails",
+      "title": "The Snapped Belt",
       "tier": "prologue",
       "types": [
         "talk"
@@ -35,7 +35,7 @@
       "after": [
         "sf_out_of_flour"
       ],
-      "summary": "Miller Hesk's sails tore in last night's storm and he can't grind a thing until they're mended. New sails need canvas, and canvas means Nell the weaver.",
+      "summary": "Miller Hesk's water wheel lost its drive belt in last night's flood and he can't grind a thing until it's replaced. A new belt needs canvas, and canvas means Nell the weaver.",
       "mods": [
         "farmersdelight"
       ],
@@ -80,7 +80,7 @@
     },
     {
       "id": "sf_unwinding",
-      "title": "Shuttle, Canvas, Sails",
+      "title": "Shuttle, Canvas, Belt",
       "tier": "prologue",
       "types": [
         "deliver",
@@ -89,7 +89,7 @@
       "after": [
         "sf_old_birch"
       ],
-      "summary": "Olsen carves the shuttle, Nell weaves the canvas, and Hesk can finally refit his sails. Carry each piece on to the next pair of hands.",
+      "summary": "Olsen carves the shuttle, Nell weaves the canvas, and Hesk can finally refit his belt. Carry each piece on to the next pair of hands.",
       "mods": [
         "farmersdelight",
         "handcrafted"

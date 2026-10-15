@@ -6,12 +6,12 @@ from common import enc, fight, boss, search, sample, talk_org, talk_villager, ta
 REECE = [
     quest("sf_out_of_flour", "Just a Loaf", icon="bakery:crusty_bread", after=["start:welcome"],
           text=["Bram the baker would gladly give you a loaf for the road, if he had any flour."],
-          tasks=[talk_char("bram", ["A loaf for the road? There's no flour! It's a catastrophe!", "The windmill's stopped. Ask Hesk what's wrong? You're a hero!"])],
+          tasks=[talk_char("bram", ["A loaf for the road? There's no flour! It's a catastrophe!", "The water wheel's stopped. Ask Hesk what's wrong? You're a hero!"])],
           rewards=[reward_item("bakery:bread_with_jam")]),
 
-    quest("sf_torn_sails", "Torn Sails", icon="minecraft:white_wool", after=["sf_out_of_flour"],
-          text=["Miller Hesk is standing under his windmill, looking at it."],
-          tasks=[talk_char("hesk", ["Sorry. The storm tore the sails. I can't grind a thing.", "New sails need canvas. Canvas means Nell. Would you ask her? Sorry."])],
+    quest("sf_torn_sails", "The Snapped Belt", icon="minecraft:white_wool", after=["sf_out_of_flour"],
+          text=["Miller Hesk is standing by his still water wheel, looking at it."],
+          tasks=[talk_char("hesk", ["Sorry. The flood snapped the drive belt. I can't grind a thing.", "A new belt needs canvas. Canvas means Nell. Would you ask her? Sorry."])],
           rewards=[skill("farm", 30)]),
 
     quest("sf_broken_shuttle", "The Broken Shuttle", icon="farmersdelight:straw", after=["sf_torn_sails"],
@@ -26,11 +26,11 @@ REECE = [
                  item("minecraft:birch_log", 8, consume=True)],
           rewards=[reward_item("minecraft:honeycomb", 3), skill("forage", 50)]),
 
-    quest("sf_unwinding", "Shuttle, Canvas, Sails", icon="farmersdelight:canvas", after=["sf_old_birch"],
+    quest("sf_unwinding", "Shuttle, Canvas, Belt", icon="farmersdelight:canvas", after=["sf_old_birch"],
           text=["Now everything can happen in the right order. Take the shuttle to Nell, and the canvas to Hesk."],
           tasks=[talk_char("nell", ["Exactly right, to the hair. Infuriating. Canvas, folded in eight.", "Take it to Hesk."],
                            title="Bring Nell the shuttle"),
-                 talk_char("hesk", ["Canvas? Oh, thank you. Give me an hour.", "There. Sails on, mill turning. One bag of flour. Sorry if it isn't enough."],
+                 talk_char("hesk", ["Canvas? Oh, thank you. Give me an hour.", "There. Belt on, wheel turning. One bag of flour. Sorry if it isn't enough."],
                            title="Bring Hesk the canvas")],
           rewards=[skill("craft", 60)]),
 

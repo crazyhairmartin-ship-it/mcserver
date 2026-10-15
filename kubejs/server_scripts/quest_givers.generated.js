@@ -4878,7 +4878,7 @@ global.QUEST_GIVERS = [
     "type": "talk",
     "lines": [
       "A loaf for the road? There's no flour! It's a catastrophe!",
-      "The windmill's stopped. Ask Hesk what's wrong? You're a hero!"
+      "The water wheel's stopped. Ask Hesk what's wrong? You're a hero!"
     ],
     "requires": [],
     "name": "",
@@ -4892,8 +4892,8 @@ global.QUEST_GIVERS = [
     "stage": "fq.small_favours.sf_torn_sails.talk0",
     "type": "talk",
     "lines": [
-      "Sorry. The storm tore the sails. I can't grind a thing.",
-      "New sails need canvas. Canvas means Nell. Would you ask her? Sorry."
+      "Sorry. The flood snapped the drive belt. I can't grind a thing.",
+      "A new belt needs canvas. Canvas means Nell. Would you ask her? Sorry."
     ],
     "requires": [],
     "name": "",
@@ -4953,7 +4953,7 @@ global.QUEST_GIVERS = [
     "type": "talk",
     "lines": [
       "Canvas? Oh, thank you. Give me an hour.",
-      "There. Sails on, mill turning. One bag of flour. Sorry if it isn't enough."
+      "There. Belt on, wheel turning. One bag of flour. Sorry if it isn't enough."
     ],
     "requires": [
       "fq.small_favours.sf_unwinding.talk0"
@@ -20358,7 +20358,7 @@ global.QUEST_CHARACTERS = {
     "personality": "Meek, quiet miller. Speaks softly, trails off, apologises constantly and hates to be any trouble. A little afraid of Nell.",
     "idle": [
       "Oh. Hello. Sorry. I didn't see you there.",
-      "The mill turns when the wind does. I just stand here.",
+      "The wheel turns when the river does. I just stand here.",
       "I don't like to be any trouble.",
       "Nell says I sweep wrong. She's probably right."
     ],

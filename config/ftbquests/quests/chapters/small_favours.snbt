@@ -34,7 +34,7 @@
 		}
 		{
 			dependencies: ["3961E48F6276ED87"]
-			description: ["Miller Hesk is standing under his windmill, looking at it."]
+			description: ["Miller Hesk is standing by his still water wheel, looking at it."]
 			icon: "minecraft:white_wool"
 			id: "43BE52B6F054011C"
 			rewards: [
@@ -56,7 +56,7 @@
 					type: "gamestage"
 				}
 			]
-			title: "Torn Sails"
+			title: "The Snapped Belt"
 			x: 1.5d
 			y: -1.5d
 		}
@@ -166,7 +166,7 @@
 					type: "gamestage"
 				}
 			]
-			title: "Shuttle, Canvas, Sails"
+			title: "Shuttle, Canvas, Belt"
 			x: 6.0d
 			y: -1.5d
 		}
