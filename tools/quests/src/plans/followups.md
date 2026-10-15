@@ -184,6 +184,13 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - nether:devils_rest: needs the riddle; written as an ender eye offered
 - nether:the_soul_forge: needs looking without knocking; written as a hurt-free approach
 - nether:arena_of_embers: needs listening at the doors; written as a hurt-free approach
+- twilight:fire_swamp: needs brewing fire resistance specifically; written as potions consumed and crossing the biome
+- twilight:magic_trees: needs the four named rare saplings; written as a dark wood sapling carried and planted
+- twilight:knightmetal: needs goblin knights as the source; written as helmet crabs, shards and ingots
+- twilight:knight_phantoms: needs the phantoms rising one after another; written as six spawned in waves
+- twilight:dark_tower: needs triggering builder blocks to climb; written as the tower and a borer fight
+- twilight:carminite: needs destroying reactors; written as golems fought, carminite carried and a reactor core
+- twilight:ur_ghast: needs breaking reactors when it retreats; written as the boss fight at the tower
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

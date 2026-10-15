@@ -1243,6 +1243,743 @@
 			x: 16.5d
 			y: 0.75d
 		}
+		{
+			dependencies: [
+				"54C450BB48CA2E5F"
+				"5CE377C7E76FA26B"
+			]
+			description: ["The forest calls again. The Minoshroom's death has cleared the Fire Swamp's smoke, and the Dark Forest has begun to stir."]
+			icon: "twilightforest:twilight_oak_sapling"
+			id: "47D0059CACD6B964"
+			rewards: [
+				{
+					count: 4
+					id: "354C62A1F81E9A2D"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "7FB42384276B1489"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "twilightforest:twilight_forest"
+					id: "30CB0BC8111FE0ED"
+					title: "Return to the Twilight Forest"
+					type: "dimension"
+				}
+				{
+					biome: "twilightforest:fire_swamp"
+					id: "518036CF6BF05AD3"
+					title: "Find the Fire Swamp the clearing smoke reveals"
+					type: "biome"
+				}
+			]
+			title: "Back to the Dusk"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["47D0059CACD6B964"]
+			description: ["Fire jets and lava pools fill the Fire Swamp. Brew fire resistance and push through to the Hydra's lair."]
+			icon: "twilightforest:fiery_blood"
+			id: "77DB75B8DC8ECF55"
+			rewards: [
+				{
+					count: 4
+					id: "3B3D81831FC7A6CB"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 300"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "5CE00A23904BDA00"
+					silent: true
+					title: "+300 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 2L
+					id: "11617C571362C00D"
+					item: "minecraft:potion"
+					title: "Brew fire resistance to cross the fire jets"
+					type: "item"
+				}
+				{
+					id: "6D0C79879FA20E32"
+					stage: "fq.twilight.fire_swamp.be1"
+					title: "Push through the Fire Swamp"
+					type: "gamestage"
+				}
+			]
+			title: "Through the Fire Swamp"
+			x: 19.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["77DB75B8DC8ECF55"]
+			description: ["Find the lair cut into the swamp's hill, and the Hydra waiting inside."]
+			icon: "twilightforest:hydra_trophy"
+			id: "113A673073318547"
+			rewards: [
+				{
+					count: 2
+					id: "3B5E0C4427991339"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "26D7DF90986B6750"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "03D675381324B5F3"
+					structure: "twilightforest:hydra_lair"
+					title: "Find the lair cut into the swamp's hill"
+					type: "structure"
+				}
+			]
+			title: "The Hydra's Lair"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["113A673073318547"]
+			description: ["The Hydra spits fire and mortars. Strike its heads when they open, before they regrow, until the body falls."]
+			icon: "twilightforest:hydra_chop"
+			id: "2CC9432A1DACBAA8"
+			rewards: [
+				{
+					count: 4
+					id: "4830F3D99B04A2F0"
+					item: "twilightforest:hydra_chop"
+					type: "item"
+				}
+				{
+					count: 2
+					id: "63FA3E43D1EB58FD"
+					item: "twilightforest:fiery_blood"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 500"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "650F57A7B2D5966E"
+					silent: true
+					title: "+500 Range XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "twilightforest:hydra"
+					id: "450145A387CA2A9B"
+					title: "Defeat the Hydra in its lair"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Three Heads Burning"
+			x: 22.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2CC9432A1DACBAA8"]
+			description: ["Combine fiery blood with iron to forge fiery ingots, the hottest metal of the realm."]
+			icon: "twilightforest:fiery_ingot"
+			id: "12D43FA23F6399FE"
+			rewards: [
+				{
+					count: 2
+					id: "193B3774EC87D6D5"
+					item: "twilightforest:fiery_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 400"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "20B2DFD79FC252E6"
+					silent: true
+					title: "+400 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "0F8AB75E77D7AD15"
+					item: "twilightforest:fiery_blood"
+					title: "Carry the Hydra's fiery blood"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "390BCD50D16AAADF"
+					item: "twilightforest:fiery_ingot"
+					only_from_crafting: true
+					title: "Forge fiery ingots with iron"
+					type: "item"
+				}
+			]
+			title: "Fire in the Metal"
+			x: 24.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["2CC9432A1DACBAA8"]
+			description: ["The Dark Forest is lit by nothing. Brave its blindness and the goblins, redcaps and hostile wolves that roam it."]
+			icon: "twilightforest:darkwood_sapling"
+			id: "7DB8ADE6AD52F040"
+			rewards: [
+				{
+					count: 8
+					id: "60EF96C9BB77BCEA"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 400"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "45F7C494E47D04ED"
+					silent: true
+					title: "+400 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "twilightforest:dark_forest"
+					id: "7892C04CD2E3232C"
+					title: "Walk into the Dark Forest"
+					type: "biome"
+				}
+				{
+					id: "7EDD2D78DA15B7EF"
+					stage: "fq.twilight.dark_forest.enc1"
+					title: "Fight off what hunts in the dark"
+					type: "gamestage"
+				}
+			]
+			title: "Under the Black Canopy"
+			x: 24.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["7DB8ADE6AD52F040"]
+			description: ["Rare saplings of the Tree of Time, Tree of Transformation, Miner's Tree and Sorting Tree hide in the Dark Forest. Grow one and set its heart working."]
+			icon: "twilightforest:darkwood_sapling"
+			id: "0E581E0948AE6C61"
+			rewards: [
+				{
+					count: 2
+					id: "0C01484912073E8D"
+					item: "twilightforest:darkwood_sapling"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 350"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "4D5A595D905B875E"
+					silent: true
+					title: "+350 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 2L
+					id: "57BC1FD882E549E0"
+					item: "twilightforest:darkwood_sapling"
+					title: "Take a rare sapling from the Dark Forest"
+					type: "item"
+				}
+				{
+					id: "2FD9A096AAD5982E"
+					stage: "fq.twilight.magic_trees.build1"
+					title: "Plant it and set its heart working"
+					type: "gamestage"
+				}
+			]
+			title: "Seeds of Wonder"
+			x: 25.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["7DB8ADE6AD52F040"]
+			description: ["Beneath the Dark Forest lies the Knight Stronghold. Find the trapdoor in, past goblin knights and helmet crabs."]
+			icon: "twilightforest:armor_shard"
+			id: "181B9FFBB5CF63B3"
+			rewards: [
+				{
+					count: 2
+					id: "42E856BDFE97A4C7"
+					item: "minecraft:lantern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 320"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "21AE4488EC04033F"
+					silent: true
+					title: "+320 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5B4D42C0537AB4E4"
+					structure: "twilightforest:knight_stronghold"
+					title: "Find the trapdoor into the Knight Stronghold"
+					type: "structure"
+				}
+			]
+			title: "The Phantom Stronghold"
+			x: 25.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["181B9FFBB5CF63B3"]
+			description: ["Collect armour shards from goblin knights and the stronghold's chests and press them into knightmetal ingots."]
+			icon: "twilightforest:armor_shard"
+			id: "665194F22DE46F15"
+			rewards: [
+				{
+					count: 2
+					id: "00AC54C301FDED60"
+					item: "twilightforest:knightmetal_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 400"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "633B81383580D2BC"
+					silent: true
+					title: "+400 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:helmet_crab"
+					id: "3DACE73341104626"
+					title: "Clear the stronghold's helmet crabs"
+					type: "kill"
+					value: 4L
+				}
+				{
+					count: 6L
+					id: "50466530E501243E"
+					item: "twilightforest:armor_shard"
+					title: "Collect armour shards from the knights and chests"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3D692BBCE7125032"
+					item: "twilightforest:knightmetal_ingot"
+					only_from_crafting: true
+					title: "Press the shards into knightmetal ingots"
+					type: "item"
+				}
+			]
+			title: "Shards of Armour"
+			x: 27.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["181B9FFBB5CF63B3"]
+			description: ["In the stronghold's throne room six Knight Phantoms rise one after another. Outlast them all."]
+			icon: "twilightforest:knight_phantom_trophy"
+			id: "674B7E4040B508FE"
+			rewards: [
+				{
+					count: 2
+					id: "09C564DC946230FE"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 500"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "1FB90EDBAF65C88F"
+					silent: true
+					title: "+500 Defense XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "twilightforest:knight_phantom"
+					id: "3469A2403F163DB2"
+					title: "Outlast all six Knight Phantoms in the throne room"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "Six Phantom Knights"
+			x: 27.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["665194F22DE46F15"]
+			description: ["The phantoms' metal was made for heavy weapons. Craft a Block and Chain or a Knightmetal Shield."]
+			icon: "twilightforest:block_and_chain"
+			id: "375FFFEF4A9A3B25"
+			rewards: [
+				{
+					count: 4
+					id: "6327E760B7BEDC01"
+					item: "twilightforest:knightmetal_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 450"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "1BD14B412446197B"
+					silent: true
+					title: "+450 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4B3C0EF1568F9E0F"
+					item: "twilightforest:block_and_chain"
+					only_from_crafting: true
+					title: "Craft a Block and Chain from knightmetal"
+					type: "item"
+				}
+			]
+			title: "Block and Chain"
+			x: 28.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["665194F22DE46F15"]
+			description: ["Use knightmetal for a Spartan weapon: a knightmetal longsword, lance or warhammer."]
+			icon: "spartantwilight:knightmetal_longsword"
+			id: "7ADE7F9FD2379C12"
+			rewards: [
+				{
+					count: 4
+					id: "197658F3D3F16034"
+					item: "spartantwilight:knightmetal_javelin"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 420"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "1D43463FF5DE2CE9"
+					silent: true
+					title: "+420 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "33243A2CFC5F00E6"
+					item: "spartantwilight:knightmetal_longsword"
+					only_from_crafting: true
+					title: "Forge a knightmetal longsword"
+					type: "item"
+				}
+			]
+			title: "Knightly Arms"
+			x: 28.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["674B7E4040B508FE"]
+			description: ["At the Dark Forest's centre stands a towerwood spire. Climb past towerwood borers, ghastguards and carminite golems, triggering the builder blocks to climb."]
+			icon: "twilightforest:carminite"
+			id: "66A59A96ACF5AEF3"
+			rewards: [
+				{
+					count: 4
+					id: "5167B4F5254010BF"
+					item: "twilightforest:carminite"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 380"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "490C0B47A5F85BA2"
+					silent: true
+					title: "+380 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "526922D92FEF8710"
+					structure: "twilightforest:dark_tower"
+					title: "Find the towerwood spire at the Dark Forest's centre"
+					type: "structure"
+				}
+				{
+					entity: "twilightforest:towerwood_borer"
+					id: "4D3D313F85BEB456"
+					title: "Fight the towerwood borers on the way up"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "The Dark Tower"
+			x: 28.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["66A59A96ACF5AEF3"]
+			description: ["Harvest carminite from ghastlings and golems and destroy the carminite reactors that keep the tower's defences alive."]
+			icon: "twilightforest:carminite_builder"
+			id: "407BED3177E66905"
+			rewards: [
+				{
+					id: "02CAE2385BD24BBE"
+					item: "twilightforest:carminite_builder"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 380"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "32AE6B5087DA920B"
+					silent: true
+					title: "+380 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "twilightforest:carminite_golem"
+					id: "4290688D504DA658"
+					title: "Break the tower's carminite golems"
+					type: "kill"
+					value: 3L
+				}
+				{
+					count: 4L
+					id: "201E30DCB9C25772"
+					item: "twilightforest:carminite"
+					title: "Harvest carminite from the ghastlings and golems"
+					type: "item"
+				}
+				{
+					id: "364F9C3B5F1AA143"
+					item: "twilightforest:carminite_reactor"
+					title: "Destroy a carminite reactor and take its core"
+					type: "item"
+				}
+			]
+			title: "Carminite Hearts"
+			x: 30.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["407BED3177E66905"]
+			description: ["Atop the tower the Ur-Ghast cries fire. Break the reactors when it retreats, then strike it down."]
+			icon: "twilightforest:fiery_tears"
+			id: "4C1D7942C52E0A32"
+			rewards: [
+				{
+					count: 2
+					id: "7AD4087123257A81"
+					item: "twilightforest:fiery_tears"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "4FA1279062C1B674"
+					item: "minecraft:arrow"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 520"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "69B014B5E621D019"
+					silent: true
+					title: "+520 Range XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "twilightforest:ur_ghast"
+					id: "5706ED59A933F504"
+					title: "Strike down the Ur-Ghast atop the tower"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Tears of the Ur-Ghast"
+			x: 31.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4C1D7942C52E0A32"
+				"12D43FA23F6399FE"
+			]
+			description: ["With fiery tears and blood, finish a full suit of fiery armour or a fiery sword and pickaxe."]
+			icon: "twilightforest:fiery_chestplate"
+			id: "55FBDC8DC3C8F802"
+			rewards: [
+				{
+					count: 4
+					id: "363D967954A3B78E"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 450"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "76B28BE93B1DC6D3"
+					silent: true
+					title: "+450 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "39B9AA1B47B852EC"
+					item: "twilightforest:fiery_sword"
+					only_from_crafting: true
+					title: "Forge a fiery sword"
+					type: "item"
+				}
+				{
+					id: "7EB13B3D02A28558"
+					item: "twilightforest:fiery_pickaxe"
+					only_from_crafting: true
+					title: "Forge a fiery pickaxe"
+					type: "item"
+				}
+			]
+			title: "The Fiery Set"
+			x: 33.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["55FBDC8DC3C8F802"]
+			description: ["Forge a fiery Spartan weapon, a greatsword, scythe or heavy crossbow that sets enemies alight."]
+			icon: "spartantwilight:fiery_greatsword"
+			id: "4EED5968C0ACBEBB"
+			rewards: [
+				{
+					count: 4
+					id: "7DA2F23C1E0AE576"
+					item: "spartantwilight:fiery_throwing_knife"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 520"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "2E52FFA46766653C"
+					silent: true
+					title: "+520 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "02C61B12D90D4FE8"
+					item: "spartantwilight:fiery_greatsword"
+					only_from_crafting: true
+					title: "Forge a fiery greatsword"
+					type: "item"
+				}
+			]
+			title: "Weapons of Flame"
+			x: 34.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"2CC9432A1DACBAA8"
+				"674B7E4040B508FE"
+				"4C1D7942C52E0A32"
+			]
+			description: ["The forest's middle lands are free. Add the Hydra, Knight Phantom and Ur-Ghast trophies to your hall."]
+			icon: "twilightforest:charm_of_life_2"
+			id: "54D5B6FBA0DD0230"
+			rewards: [
+				{
+					id: "344EC6BD7F0D530F"
+					item: "twilightforest:charm_of_life_2"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 500"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "6A60FC301BCDDDD6"
+					silent: true
+					title: "+500 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "41917B2A42D5FF4D"
+					item: "twilightforest:hydra_trophy"
+					title: "Hang the Hydra's trophy"
+					type: "item"
+				}
+				{
+					id: "7082D33C547F7C9C"
+					item: "twilightforest:knight_phantom_trophy"
+					title: "Hang the Knight Phantom's trophy"
+					type: "item"
+				}
+				{
+					id: "473408A63E2E0FB3"
+					item: "twilightforest:ur_ghast_trophy"
+					title: "Hang the Ur-Ghast's trophy"
+					type: "item"
+				}
+			]
+			title: "Six Trophies"
+			x: 33.0d
+			y: 0.75d
+		}
 	]
 	subtitle: ["The spirits' realm"]
 	title: "The Twilight Forest"

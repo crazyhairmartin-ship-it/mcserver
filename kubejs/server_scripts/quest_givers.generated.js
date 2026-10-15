@@ -4823,6 +4823,214 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "twilight:fire_swamp",
+    "stage": "fq.twilight.fire_swamp.be1",
+    "type": "be",
+    "where": {
+      "biomes": [
+        "twilightforest:fire_swamp"
+      ]
+    },
+    "requires": [],
+    "quest_id": "77DB75B8DC8ECF55",
+    "prev_tasks": [
+      "11617C571362C00D"
+    ]
+  },
+  {
+    "quest": "twilight:hydra",
+    "stage": "fq.twilight.hydra.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:hydra",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:hydra_lair"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Hydra",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "450145A387CA2A9B",
+    "requires": [],
+    "quest_id": "2CC9432A1DACBAA8",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:dark_forest",
+    "stage": "fq.twilight.dark_forest.enc1",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*Eyes glint between the trunks.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7DB8ADE6AD52F040",
+    "prev_tasks": [
+      "7892C04CD2E3232C"
+    ],
+    "name": "Dark Pack Leader",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": null,
+    "glow": false,
+    "where": {
+      "biomes": [
+        "twilightforest:dark_forest"
+      ]
+    },
+    "entity": "twilightforest:hostile_wolf",
+    "profession": ""
+  },
+  {
+    "quest": "twilight:magic_trees",
+    "stage": "fq.twilight.magic_trees.build1",
+    "type": "build",
+    "keys": [
+      "twilightforest:darkwood_sapling"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "0E581E0948AE6C61",
+    "prev_tasks": [
+      "57BC1FD882E549E0"
+    ]
+  },
+  {
+    "quest": "twilight:knightmetal",
+    "stage": "fq.twilight.knightmetal.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:helmet_crab",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:knight_stronghold"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Stronghold Crabs",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "3DACE73341104626",
+    "requires": [],
+    "quest_id": "665194F22DE46F15",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:knight_phantoms",
+    "stage": "fq.twilight.knight_phantoms.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:knight_phantom",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:knight_stronghold"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Phantom Knights",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "3469A2403F163DB2",
+    "requires": [],
+    "quest_id": "674B7E4040B508FE",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:dark_tower",
+    "stage": "fq.twilight.dark_tower.spawn1",
+    "type": "spawn",
+    "entity": "twilightforest:towerwood_borer",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:dark_tower"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Tower Borers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "4D3D313F85BEB456",
+    "requires": [],
+    "quest_id": "66A59A96ACF5AEF3",
+    "prev_tasks": [
+      "526922D92FEF8710"
+    ]
+  },
+  {
+    "quest": "twilight:carminite",
+    "stage": "fq.twilight.carminite.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:carminite_golem",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:dark_tower"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Tower Golems",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "4290688D504DA658",
+    "requires": [],
+    "quest_id": "407BED3177E66905",
+    "prev_tasks": []
+  },
+  {
+    "quest": "twilight:ur_ghast",
+    "stage": "fq.twilight.ur_ghast.spawn0",
+    "type": "spawn",
+    "entity": "twilightforest:ur_ghast",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "twilightforest:dark_tower"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Ur-Ghast",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "5706ED59A933F504",
+    "requires": [],
+    "quest_id": "4C1D7942C52E0A32",
+    "prev_tasks": []
+  },
+  {
     "quest": "alexs_caves:rumours_below",
     "stage": "fq.alexs_caves.rumours_below.talk0",
     "type": "talk",

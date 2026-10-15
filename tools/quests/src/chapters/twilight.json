@@ -1061,6 +1061,644 @@
         }
       ],
       "icon": "twilightforest:naga_trophy"
+    },
+    {
+      "id": "return_to_dusk",
+      "title": "Back to the Dusk",
+      "after": [
+        "main_story:act2_finale",
+        "trophies_one"
+      ],
+      "text": [
+        "The forest calls again. The Minoshroom's death has cleared the Fire Swamp's smoke, and the Dark Forest has begun to stir."
+      ],
+      "tasks": [
+        {
+          "dimension": "twilightforest:twilight_forest",
+          "title": "Return to the Twilight Forest"
+        },
+        {
+          "biome": "twilightforest:fire_swamp",
+          "title": "Find the Fire Swamp the clearing smoke reveals"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "twilightforest:twilight_oak_sapling"
+    },
+    {
+      "id": "fire_swamp",
+      "title": "Through the Fire Swamp",
+      "after": [
+        "return_to_dusk"
+      ],
+      "text": [
+        "Fire jets and lava pools fill the Fire Swamp. Brew fire resistance and push through to the Hydra's lair."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:potion",
+          "count": 2,
+          "consume": true,
+          "title": "Brew fire resistance to cross the fire jets"
+        },
+        {
+          "be": {
+            "biomes": [
+              "twilightforest:fire_swamp"
+            ]
+          },
+          "title": "Push through the Fire Swamp"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "skill": "magic",
+          "xp": 300
+        }
+      ],
+      "icon": "twilightforest:fiery_blood"
+    },
+    {
+      "id": "hydra_lair",
+      "title": "The Hydra's Lair",
+      "after": [
+        "fire_swamp"
+      ],
+      "text": [
+        "Find the lair cut into the swamp's hill, and the Hydra waiting inside."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:hydra_lair",
+          "title": "Find the lair cut into the swamp's hill"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_apple",
+          "count": 2
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "twilightforest:hydra_trophy"
+    },
+    {
+      "id": "hydra",
+      "title": "Three Heads Burning",
+      "after": [
+        "hydra_lair"
+      ],
+      "text": [
+        "The Hydra spits fire and mortars. Strike its heads when they open, before they regrow, until the body falls."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:hydra",
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:hydra_lair"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Hydra"
+          },
+          "title": "Defeat the Hydra in its lair"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:hydra_chop",
+          "count": 4
+        },
+        {
+          "item": "twilightforest:fiery_blood",
+          "count": 2
+        },
+        {
+          "skill": "range",
+          "xp": 500
+        }
+      ],
+      "icon": "twilightforest:hydra_chop",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "fiery_ingot",
+      "title": "Fire in the Metal",
+      "after": [
+        "hydra"
+      ],
+      "text": [
+        "Combine fiery blood with iron to forge fiery ingots, the hottest metal of the realm."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:fiery_blood",
+          "count": 2,
+          "title": "Carry the Hydra's fiery blood"
+        },
+        {
+          "item": "twilightforest:fiery_ingot",
+          "count": 2,
+          "crafted": true,
+          "title": "Forge fiery ingots with iron"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:fiery_ingot",
+          "count": 2
+        },
+        {
+          "skill": "craft",
+          "xp": 400
+        }
+      ],
+      "icon": "twilightforest:fiery_ingot"
+    },
+    {
+      "id": "dark_forest",
+      "title": "Under the Black Canopy",
+      "after": [
+        "hydra"
+      ],
+      "text": [
+        "The Dark Forest is lit by nothing. Brave its blindness and the goblins, redcaps and hostile wolves that roam it."
+      ],
+      "tasks": [
+        {
+          "biome": "twilightforest:dark_forest",
+          "title": "Walk into the Dark Forest"
+        },
+        {
+          "encounter": {
+            "entity": "twilightforest:hostile_wolf",
+            "name": "Dark Pack Leader",
+            "where": {
+              "biomes": [
+                "twilightforest:dark_forest"
+              ]
+            },
+            "then": "kill",
+            "lines": [
+              "*Eyes glint between the trunks.*"
+            ]
+          },
+          "title": "Fight off what hunts in the dark"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 8
+        },
+        {
+          "skill": "defense",
+          "xp": 400
+        }
+      ],
+      "icon": "twilightforest:darkwood_sapling"
+    },
+    {
+      "id": "magic_trees",
+      "title": "Seeds of Wonder",
+      "after": [
+        "dark_forest"
+      ],
+      "text": [
+        "Rare saplings of the Tree of Time, Tree of Transformation, Miner's Tree and Sorting Tree hide in the Dark Forest. Grow one and set its heart working."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:darkwood_sapling",
+          "count": 2,
+          "title": "Take a rare sapling from the Dark Forest"
+        },
+        {
+          "build": {
+            "blocks": {
+              "twilightforest:darkwood_sapling": 1
+            },
+            "radius": 10
+          },
+          "title": "Plant it and set its heart working"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:darkwood_sapling",
+          "count": 2
+        },
+        {
+          "skill": "forage",
+          "xp": 350
+        }
+      ],
+      "icon": "twilightforest:darkwood_sapling"
+    },
+    {
+      "id": "knight_stronghold",
+      "title": "The Phantom Stronghold",
+      "after": [
+        "dark_forest"
+      ],
+      "text": [
+        "Beneath the Dark Forest lies the Knight Stronghold. Find the trapdoor in, past goblin knights and helmet crabs."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:knight_stronghold",
+          "title": "Find the trapdoor into the Knight Stronghold"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:lantern",
+          "count": 2
+        },
+        {
+          "skill": "agility",
+          "xp": 320
+        }
+      ],
+      "icon": "twilightforest:armor_shard"
+    },
+    {
+      "id": "knightmetal",
+      "title": "Shards of Armour",
+      "after": [
+        "knight_stronghold"
+      ],
+      "text": [
+        "Collect armour shards from goblin knights and the stronghold's chests and press them into knightmetal ingots."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:helmet_crab",
+          "count": 4,
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:knight_stronghold"
+            },
+            "wave": 4,
+            "name": "Stronghold Crabs"
+          },
+          "title": "Clear the stronghold's helmet crabs"
+        },
+        {
+          "item": "twilightforest:armor_shard",
+          "count": 6,
+          "title": "Collect armour shards from the knights and chests"
+        },
+        {
+          "item": "twilightforest:knightmetal_ingot",
+          "count": 2,
+          "crafted": true,
+          "title": "Press the shards into knightmetal ingots"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:knightmetal_ingot",
+          "count": 2
+        },
+        {
+          "skill": "craft",
+          "xp": 400
+        }
+      ],
+      "icon": "twilightforest:armor_shard"
+    },
+    {
+      "id": "knight_phantoms",
+      "title": "Six Phantom Knights",
+      "after": [
+        "knight_stronghold"
+      ],
+      "text": [
+        "In the stronghold's throne room six Knight Phantoms rise one after another. Outlast them all."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:knight_phantom",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:knight_stronghold"
+            },
+            "wave": 1,
+            "name": "Phantom Knights"
+          },
+          "title": "Outlast all six Knight Phantoms in the throne room"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_apple",
+          "count": 2
+        },
+        {
+          "skill": "defense",
+          "xp": 500
+        }
+      ],
+      "icon": "twilightforest:knight_phantom_trophy",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "block_and_chain",
+      "title": "Block and Chain",
+      "after": [
+        "knightmetal"
+      ],
+      "text": [
+        "The phantoms' metal was made for heavy weapons. Craft a Block and Chain or a Knightmetal Shield."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:block_and_chain",
+          "crafted": true,
+          "title": "Craft a Block and Chain from knightmetal"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:knightmetal_ingot",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 450
+        }
+      ],
+      "icon": "twilightforest:block_and_chain"
+    },
+    {
+      "id": "spartan_knightmetal",
+      "title": "Knightly Arms",
+      "after": [
+        "knightmetal"
+      ],
+      "text": [
+        "Use knightmetal for a Spartan weapon: a knightmetal longsword, lance or warhammer."
+      ],
+      "tasks": [
+        {
+          "item": "spartantwilight:knightmetal_longsword",
+          "crafted": true,
+          "title": "Forge a knightmetal longsword"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartantwilight:knightmetal_javelin",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 420
+        }
+      ],
+      "icon": "spartantwilight:knightmetal_longsword"
+    },
+    {
+      "id": "dark_tower",
+      "title": "The Dark Tower",
+      "after": [
+        "knight_phantoms"
+      ],
+      "text": [
+        "At the Dark Forest's centre stands a towerwood spire. Climb past towerwood borers, ghastguards and carminite golems, triggering the builder blocks to climb."
+      ],
+      "tasks": [
+        {
+          "structure": "twilightforest:dark_tower",
+          "title": "Find the towerwood spire at the Dark Forest's centre"
+        },
+        {
+          "kill": "twilightforest:towerwood_borer",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:dark_tower"
+            },
+            "wave": 4,
+            "name": "Tower Borers"
+          },
+          "title": "Fight the towerwood borers on the way up"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:carminite",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 380
+        }
+      ],
+      "icon": "twilightforest:carminite"
+    },
+    {
+      "id": "carminite",
+      "title": "Carminite Hearts",
+      "after": [
+        "dark_tower"
+      ],
+      "text": [
+        "Harvest carminite from ghastlings and golems and destroy the carminite reactors that keep the tower's defences alive."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:carminite_golem",
+          "count": 3,
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:dark_tower"
+            },
+            "wave": 4,
+            "name": "Tower Golems"
+          },
+          "title": "Break the tower's carminite golems"
+        },
+        {
+          "item": "twilightforest:carminite",
+          "count": 4,
+          "title": "Harvest carminite from the ghastlings and golems"
+        },
+        {
+          "item": "twilightforest:carminite_reactor",
+          "title": "Destroy a carminite reactor and take its core"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:carminite_builder"
+        },
+        {
+          "skill": "mining",
+          "xp": 380
+        }
+      ],
+      "icon": "twilightforest:carminite_builder"
+    },
+    {
+      "id": "ur_ghast",
+      "title": "Tears of the Ur-Ghast",
+      "after": [
+        "carminite"
+      ],
+      "text": [
+        "Atop the tower the Ur-Ghast cries fire. Break the reactors when it retreats, then strike it down."
+      ],
+      "tasks": [
+        {
+          "kill": "twilightforest:ur_ghast",
+          "spawn": {
+            "at": {
+              "structure": "twilightforest:dark_tower"
+            },
+            "wave": 1,
+            "ensure": true,
+            "name": "The Ur-Ghast"
+          },
+          "title": "Strike down the Ur-Ghast atop the tower"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:fiery_tears",
+          "count": 2
+        },
+        {
+          "item": "minecraft:arrow",
+          "count": 64
+        },
+        {
+          "skill": "range",
+          "xp": 520
+        }
+      ],
+      "icon": "twilightforest:fiery_tears",
+      "shape": "diamond",
+      "size": 1.5
+    },
+    {
+      "id": "fiery_gear",
+      "title": "The Fiery Set",
+      "after": [
+        "ur_ghast",
+        "fiery_ingot"
+      ],
+      "text": [
+        "With fiery tears and blood, finish a full suit of fiery armour or a fiery sword and pickaxe."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:fiery_sword",
+          "crafted": true,
+          "title": "Forge a fiery sword"
+        },
+        {
+          "item": "twilightforest:fiery_pickaxe",
+          "crafted": true,
+          "title": "Forge a fiery pickaxe"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "skill": "craft",
+          "xp": 450
+        }
+      ],
+      "icon": "twilightforest:fiery_chestplate"
+    },
+    {
+      "id": "spartan_fiery",
+      "title": "Weapons of Flame",
+      "after": [
+        "fiery_gear"
+      ],
+      "text": [
+        "Forge a fiery Spartan weapon, a greatsword, scythe or heavy crossbow that sets enemies alight."
+      ],
+      "tasks": [
+        {
+          "item": "spartantwilight:fiery_greatsword",
+          "crafted": true,
+          "title": "Forge a fiery greatsword"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartantwilight:fiery_throwing_knife",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 520
+        }
+      ],
+      "icon": "spartantwilight:fiery_greatsword"
+    },
+    {
+      "id": "trophies_two",
+      "title": "Six Trophies",
+      "after": [
+        "hydra",
+        "knight_phantoms",
+        "ur_ghast"
+      ],
+      "text": [
+        "The forest's middle lands are free. Add the Hydra, Knight Phantom and Ur-Ghast trophies to your hall."
+      ],
+      "tasks": [
+        {
+          "item": "twilightforest:hydra_trophy",
+          "title": "Hang the Hydra's trophy"
+        },
+        {
+          "item": "twilightforest:knight_phantom_trophy",
+          "title": "Hang the Knight Phantom's trophy"
+        },
+        {
+          "item": "twilightforest:ur_ghast_trophy",
+          "title": "Hang the Ur-Ghast's trophy"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "twilightforest:charm_of_life_2"
+        },
+        {
+          "skill": "agility",
+          "xp": 500
+        }
+      ],
+      "icon": "twilightforest:charm_of_life_2"
     }
   ]
 }

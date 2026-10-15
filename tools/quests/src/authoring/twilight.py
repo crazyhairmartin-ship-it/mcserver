@@ -2,6 +2,7 @@
 The spirits of the forest speak through signs and the trophies of fallen guardians; each guardian lifts a curse and opens
 the next land. Act III and IV quests are appended in later tasks."""
 from common import chapter, quest, talk_org, item, reward_item, skill, enc, fight, boss, search, sample
+from common import enc, fight, boss, search, sample, talk_org, talk_villager, talk_char, item, reward_item, skill, encounter, giver_org  # noqa: F401
 
 WOOLS = ["white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray", "light_gray", "cyan", "purple",
          "blue", "brown", "green", "red", "black"]
@@ -200,4 +201,122 @@ ACT2 = [
                    skill("agility", 350)]),
 ]
 
-chapter("twilight", "The Twilight Forest", "The spirits' realm", "twilightforest:twilight_oak_sapling", "realms", 0, ACT2)
+ACT3 = [
+    quest("return_to_dusk", "Back to the Dusk", icon="twilightforest:twilight_oak_sapling",
+          after=["main_story:act2_finale", "trophies_one"],
+          text=["The forest calls again. The Minoshroom's death has cleared the Fire Swamp's smoke, and the Dark "
+                "Forest has begun to stir."],
+          tasks=[{"dimension": "twilightforest:twilight_forest", "title": "Return to the Twilight Forest"},
+                 {"biome": "twilightforest:fire_swamp", "title": "Find the Fire Swamp the clearing smoke reveals"}],
+          rewards=[reward_item("minecraft:magma_cream", 4), skill("agility", 300)]),
+
+    quest("fire_swamp", "Through the Fire Swamp", icon="twilightforest:fiery_blood", after=["return_to_dusk"],
+          text=["Fire jets and lava pools fill the Fire Swamp. Brew fire resistance and push through to the Hydra's "
+                "lair."],
+          tasks=[item("minecraft:potion", 2, consume=True, title="Brew fire resistance to cross the fire jets"),
+                 {"be": {"biomes": ["twilightforest:fire_swamp"]}, "title": "Push through the Fire Swamp"}],
+          rewards=[reward_item("minecraft:magma_cream", 4), skill("magic", 300)]),
+
+    quest("hydra_lair", "The Hydra's Lair", icon="twilightforest:hydra_trophy", after=["fire_swamp"],
+          text=["Find the lair cut into the swamp's hill, and the Hydra waiting inside."],
+          tasks=[{"structure": "twilightforest:hydra_lair", "title": "Find the lair cut into the swamp's hill"}],
+          rewards=[reward_item("minecraft:golden_apple", 2), skill("agility", 300)]),
+
+    quest("hydra", "Three Heads Burning", icon="twilightforest:hydra_chop", shape="diamond", size=1.5, after=["hydra_lair"],
+          text=["The Hydra spits fire and mortars. Strike its heads when they open, before they regrow, until the "
+                "body falls."],
+          tasks=[boss("twilightforest:hydra", "twilightforest:hydra_lair", "The Hydra", "Defeat the Hydra in its lair")],
+          rewards=[reward_item("twilightforest:hydra_chop", 4), reward_item("twilightforest:fiery_blood", 2), skill("range", 500)]),
+
+    quest("fiery_ingot", "Fire in the Metal", icon="twilightforest:fiery_ingot", after=["hydra"],
+          text=["Combine fiery blood with iron to forge fiery ingots, the hottest metal of the realm."],
+          tasks=[item("twilightforest:fiery_blood", 2, title="Carry the Hydra's fiery blood"),
+                 item("twilightforest:fiery_ingot", 2, crafted=True, title="Forge fiery ingots with iron")],
+          rewards=[reward_item("twilightforest:fiery_ingot", 2), skill("craft", 400)]),
+
+    quest("dark_forest", "Under the Black Canopy", icon="twilightforest:darkwood_sapling", after=["hydra"],
+          text=["The Dark Forest is lit by nothing. Brave its blindness and the goblins, redcaps and hostile wolves "
+                "that roam it."],
+          tasks=[{"biome": "twilightforest:dark_forest", "title": "Walk into the Dark Forest"},
+                 enc(["*Eyes glint between the trunks.*"], then="kill", entity="twilightforest:hostile_wolf", name="Dark Pack Leader",
+                     title="Fight off what hunts in the dark", where={"biomes": ["twilightforest:dark_forest"]})],
+          rewards=[reward_item("minecraft:golden_carrot", 8), skill("defense", 400)]),
+
+    quest("magic_trees", "Seeds of Wonder", icon="twilightforest:darkwood_sapling", after=["dark_forest"],
+          text=["Rare saplings of the Tree of Time, Tree of Transformation, Miner's Tree and Sorting Tree hide in "
+                "the Dark Forest. Grow one and set its heart working."],
+          tasks=[item("twilightforest:darkwood_sapling", 2, title="Take a rare sapling from the Dark Forest"),
+                 {"build": {"blocks": {"twilightforest:darkwood_sapling": 1}, "radius": 10}, "title": "Plant it and set its heart working"}],
+          rewards=[reward_item("twilightforest:darkwood_sapling", 2), skill("forage", 350)]),
+
+    quest("knight_stronghold", "The Phantom Stronghold", icon="twilightforest:armor_shard", after=["dark_forest"],
+          text=["Beneath the Dark Forest lies the Knight Stronghold. Find the trapdoor in, past goblin knights and "
+                "helmet crabs."],
+          tasks=[{"structure": "twilightforest:knight_stronghold", "title": "Find the trapdoor into the Knight Stronghold"}],
+          rewards=[reward_item("minecraft:lantern", 2), skill("agility", 320)]),
+
+    quest("knightmetal", "Shards of Armour", icon="twilightforest:armor_shard", after=["knight_stronghold"],
+          text=["Collect armour shards from goblin knights and the stronghold's chests and press them into "
+                "knightmetal ingots."],
+          tasks=[fight("twilightforest:helmet_crab", 4, "twilightforest:knight_stronghold", "Stronghold Crabs", "Clear the stronghold's helmet crabs"),
+                 item("twilightforest:armor_shard", 6, title="Collect armour shards from the knights and chests"),
+                 item("twilightforest:knightmetal_ingot", 2, crafted=True, title="Press the shards into knightmetal ingots")],
+          rewards=[reward_item("twilightforest:knightmetal_ingot", 2), skill("craft", 400)]),
+
+    quest("knight_phantoms", "Six Phantom Knights", icon="twilightforest:knight_phantom_trophy", shape="diamond", size=1.5,
+          after=["knight_stronghold"],
+          text=["In the stronghold's throne room six Knight Phantoms rise one after another. Outlast them all."],
+          tasks=[fight("twilightforest:knight_phantom", 6, "twilightforest:knight_stronghold", "Phantom Knights",
+                       "Outlast all six Knight Phantoms in the throne room", wave=1)],
+          rewards=[reward_item("minecraft:golden_apple", 2), skill("defense", 500)]),
+
+    quest("block_and_chain", "Block and Chain", icon="twilightforest:block_and_chain", after=["knightmetal"],
+          text=["The phantoms' metal was made for heavy weapons. Craft a Block and Chain or a Knightmetal Shield."],
+          tasks=[item("twilightforest:block_and_chain", crafted=True, title="Craft a Block and Chain from knightmetal")],
+          rewards=[reward_item("twilightforest:knightmetal_ingot", 4), skill("attack", 450)]),
+
+    quest("spartan_knightmetal", "Knightly Arms", icon="spartantwilight:knightmetal_longsword", after=["knightmetal"],
+          text=["Use knightmetal for a Spartan weapon: a knightmetal longsword, lance or warhammer."],
+          tasks=[item("spartantwilight:knightmetal_longsword", crafted=True, title="Forge a knightmetal longsword")],
+          rewards=[reward_item("spartantwilight:knightmetal_javelin", 4), skill("craft", 420)]),
+
+    quest("dark_tower", "The Dark Tower", icon="twilightforest:carminite", after=["knight_phantoms"],
+          text=["At the Dark Forest's centre stands a towerwood spire. Climb past towerwood borers, ghastguards and "
+                "carminite golems, triggering the builder blocks to climb."],
+          tasks=[{"structure": "twilightforest:dark_tower", "title": "Find the towerwood spire at the Dark Forest's centre"},
+                 fight("twilightforest:towerwood_borer", 6, "twilightforest:dark_tower", "Tower Borers", "Fight the towerwood borers on the way up")],
+          rewards=[reward_item("twilightforest:carminite", 4), skill("agility", 380)]),
+
+    quest("carminite", "Carminite Hearts", icon="twilightforest:carminite_builder", after=["dark_tower"],
+          text=["Harvest carminite from ghastlings and golems and destroy the carminite reactors that keep the "
+                "tower's defences alive."],
+          tasks=[fight("twilightforest:carminite_golem", 3, "twilightforest:dark_tower", "Tower Golems", "Break the tower's carminite golems"),
+                 item("twilightforest:carminite", 4, title="Harvest carminite from the ghastlings and golems"),
+                 item("twilightforest:carminite_reactor", title="Destroy a carminite reactor and take its core")],
+          rewards=[reward_item("twilightforest:carminite_builder"), skill("mining", 380)]),
+
+    quest("ur_ghast", "Tears of the Ur-Ghast", icon="twilightforest:fiery_tears", shape="diamond", size=1.5, after=["carminite"],
+          text=["Atop the tower the Ur-Ghast cries fire. Break the reactors when it retreats, then strike it down."],
+          tasks=[boss("twilightforest:ur_ghast", "twilightforest:dark_tower", "The Ur-Ghast", "Strike down the Ur-Ghast atop the tower")],
+          rewards=[reward_item("twilightforest:fiery_tears", 2), reward_item("minecraft:arrow", 64), skill("range", 520)]),
+
+    quest("fiery_gear", "The Fiery Set", icon="twilightforest:fiery_chestplate", after=["ur_ghast", "fiery_ingot"],
+          text=["With fiery tears and blood, finish a full suit of fiery armour or a fiery sword and pickaxe."],
+          tasks=[item("twilightforest:fiery_sword", crafted=True, title="Forge a fiery sword"),
+                 item("twilightforest:fiery_pickaxe", crafted=True, title="Forge a fiery pickaxe")],
+          rewards=[reward_item("minecraft:magma_cream", 4), skill("craft", 450)]),
+
+    quest("spartan_fiery", "Weapons of Flame", icon="spartantwilight:fiery_greatsword", after=["fiery_gear"],
+          text=["Forge a fiery Spartan weapon, a greatsword, scythe or heavy crossbow that sets enemies alight."],
+          tasks=[item("spartantwilight:fiery_greatsword", crafted=True, title="Forge a fiery greatsword")],
+          rewards=[reward_item("spartantwilight:fiery_throwing_knife", 4), skill("attack", 520)]),
+
+    quest("trophies_two", "Six Trophies", icon="twilightforest:charm_of_life_2", after=["hydra", "knight_phantoms", "ur_ghast"],
+          text=["The forest's middle lands are free. Add the Hydra, Knight Phantom and Ur-Ghast trophies to your hall."],
+          tasks=[item("twilightforest:hydra_trophy", title="Hang the Hydra's trophy"),
+                 item("twilightforest:knight_phantom_trophy", title="Hang the Knight Phantom's trophy"),
+                 item("twilightforest:ur_ghast_trophy", title="Hang the Ur-Ghast's trophy")],
+          rewards=[reward_item("twilightforest:charm_of_life_2"), skill("agility", 500)]),
+]
+
+chapter("twilight", "The Twilight Forest", "The spirits' realm", "twilightforest:twilight_oak_sapling", "realms", 0, ACT2 + ACT3)
