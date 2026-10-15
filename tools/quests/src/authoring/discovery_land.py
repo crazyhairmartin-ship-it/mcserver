@@ -360,7 +360,7 @@ Q = [
           discover={"stat": "minecraft:walk_one_cm", "count": 100000},
           text=["Activating a wild waystone starts something. The Couriers say there's a whole network of them, "
                 "each one remembers the others."],
-          tasks=[{"waystones": 5, "wild": True, "title": "Attune five waystones in the wild"},
+          tasks=[{"waystones": 5, "wild": True, "total": True, "title": "Attune five waystones in the wild"},
                  item("waystones:warp_scroll", crafted=True, title="Make a warp scroll"),
                  {"checkmark": "I used the warp scroll"}],
           rewards=[reward_item("waystones:warp_scroll", 4), reward_item("waystones:return_scroll"),

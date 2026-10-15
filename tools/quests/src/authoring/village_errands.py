@@ -302,7 +302,7 @@ Q = [
           giver=errand("couriers", ["It takes our runners half a day to reach the next village on foot.",
                                     "If both villages' waystones were linked, they could cross in a blink."]),
           text=["The Couriers want two villages' waystones linked, so that runners can cross between them in a blink."],
-          tasks=[{"waystones": 2, "title": "Attune this village's waystone and the next one's"},
+          tasks=[{"waystones": 2, "total": True, "title": "Attune this village's waystone and the next one's"},
                  item("waystones:warp_stone", title="Carry a warp stone between them")],
           rewards=[reward_item("waystones:warp_stone"), skill("agility", 90)]),
 

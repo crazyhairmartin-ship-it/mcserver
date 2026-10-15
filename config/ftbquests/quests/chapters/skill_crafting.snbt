@@ -122,11 +122,6 @@
 				}
 				{
 					id: "77F9499B9174F64A"
-					item: "minecraft:iron_axe"
-					type: "item"
-				}
-				{
-					id: "0B8EF71CD02B30DE"
 					item: "minecraft:iron_pickaxe"
 					type: "item"
 				}
@@ -134,7 +129,7 @@
 					command: "/puffish_skills experience add {p} puffish_skills:craft 130"
 					elevate_perms: true
 					icon: "minecraft:crafting_table"
-					id: "03F5B1904DE59B1A"
+					id: "0B8EF71CD02B30DE"
 					silent: true
 					title: "+130 Crafting XP"
 					type: "command"
@@ -1680,38 +1675,10 @@
 					type: "item"
 				}
 				{
-					id: "59329E5344A5D5EA"
-					item: {
-						Count: 1b
-						id: "minecraft:netherite_axe"
-						tag: {
-							Enchantments: [
-								{
-									id: "minecraft:efficiency"
-									lvl: 5s
-								}
-								{
-									id: "minecraft:unbreaking"
-									lvl: 3s
-								}
-								{
-									id: "minecraft:mending"
-									lvl: 1s
-								}
-							]
-							display: {
-								Lore: ["{\"text\": \"The founder's masterwork.\", \"color\": \"gray\", \"italic\": true}"]
-								Name: "{\"text\": \"The Founder's Axe\", \"color\": \"gold\", \"italic\": false}"
-							}
-						}
-					}
-					type: "item"
-				}
-				{
 					command: "/puffish_skills experience add {p} puffish_skills:craft 1000"
 					elevate_perms: true
 					icon: "minecraft:crafting_table"
-					id: "11515CB28459B70E"
+					id: "59329E5344A5D5EA"
 					silent: true
 					title: "+1000 Crafting XP"
 					type: "command"

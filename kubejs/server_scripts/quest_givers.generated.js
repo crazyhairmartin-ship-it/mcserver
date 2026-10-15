@@ -1194,7 +1194,7 @@ global.QUEST_GIVERS = [
     "type": "waystones",
     "count": 5,
     "wild": true,
-    "total": false,
+    "total": true,
     "requires": [],
     "quest_id": "3A407C701179F305",
     "prev_tasks": [
@@ -5328,7 +5328,7 @@ global.QUEST_GIVERS = [
     "type": "waystones",
     "count": 1,
     "wild": true,
-    "total": false,
+    "total": true,
     "requires": [],
     "quest_id": "67959C699393E730",
     "prev_tasks": [
@@ -11275,7 +11275,7 @@ global.QUEST_GIVERS = [
     "type": "waystones",
     "count": 2,
     "wild": false,
-    "total": false,
+    "total": true,
     "requires": [],
     "quest_id": "37FE4B10C2BAC817",
     "prev_tasks": [
@@ -13445,7 +13445,7 @@ global.QUEST_GIVERS = [
     "type": "talk",
     "lines": [
       "Master of the guild. About time.",
-      "The founder's tools, reforged. Don't let them rust."
+      "The founder's pickaxe, reforged. Don't let it rust."
     ],
     "requires": [],
     "name": "",
@@ -16467,7 +16467,7 @@ global.QUEST_GIVERS = [
     "type": "waystones",
     "count": 3,
     "wild": true,
-    "total": false,
+    "total": true,
     "requires": [],
     "quest_id": "1A3C75E1E67C28EC",
     "prev_tasks": []

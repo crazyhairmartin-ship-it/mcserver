@@ -61,9 +61,6 @@
           "item": "minecraft:wooden_pickaxe"
         },
         {
-          "item": "minecraft:wooden_axe"
-        },
-        {
           "item": "minecraft:lantern"
         }
       ],
@@ -257,6 +254,7 @@
         {
           "waystones": 1,
           "wild": true,
+          "total": true,
           "title": "Find and attune a waystone out in the wild"
         }
       ],
@@ -411,16 +409,7 @@
       ],
       "rewards": [
         {
-          "item": "minecraft:leather_helmet"
-        },
-        {
           "item": "minecraft:leather_chestplate"
-        },
-        {
-          "item": "minecraft:leather_leggings"
-        },
-        {
-          "item": "minecraft:leather_boots"
         }
       ],
       "icon": "minecraft:leather_chestplate"
@@ -634,12 +623,6 @@
         },
         {
           "item": "minecraft:shield"
-        },
-        {
-          "item": "minecraft:book"
-        },
-        {
-          "item": "minecraft:lead"
         }
       ],
       "icon": "minecraft:filled_map"

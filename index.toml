@@ -162,11 +162,11 @@ hash = "4eda6367fb3950f615ddcf7d5fa3e6bc2dc4d58c82556c21556728ed6078f03e"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_crafting.snbt"
-hash = "4d21f4051b1526282ae16e5a14bbb208ade73d352ab78383e54223cad31d2a26"
+hash = "eeb690e3501b10c1a80e872c7b7373aea137de2586994d076f765900d57fa840"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_defense.snbt"
-hash = "f4526778d3d229af0d141abd99f58d24cad55d997966dc70b68f84689900d0ff"
+hash = "19f9ebf5c27c286c5c330becb09c4c7684a79db2a5cf042334f416799af61d8b"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/skill_farming.snbt"
@@ -198,7 +198,7 @@ hash = "bda9119ef91ee36470081a2b1da7100d0fc80b89327bb0ec72b0300b71a3b630"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/start.snbt"
-hash = "0710d554395be561c1607f4e6342fd414c740f622d2a93d7e1bbd7193a8929af"
+hash = "b0fdbcaacabbeea9e90cddf41ee05de683e4e81b73bc7ab2deba1df1197e62d7"
 
 [[files]]
 file = "config/ftbquests/quests/chapters/twilight.snbt"
@@ -2805,7 +2805,7 @@ hash = "77546c4cc0ec84840f5fd7ab0b845a72406755c619b84f89740a3f8047957af8"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
-hash = "261edbd1557c47aee1f69544c3f8139d67bd7999ba2d521151884aba823513ee"
+hash = "22ad135d70beedb39a78d600ea27aba5d443d031e2c4a2f84b120cd7b8481a34"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"

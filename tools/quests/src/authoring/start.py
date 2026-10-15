@@ -13,8 +13,7 @@ Q = [
                 "Somewhere in it there's a page on the quiet forest. Someone pressed a leaf between its pages and "
                 "left Reece in a hurry."],
           tasks=[item("patchouli:guide_book", title="Keep the Field Guide with you")],
-          rewards=[reward_item("minecraft:wooden_pickaxe"), reward_item("minecraft:wooden_axe"),
-                   reward_item("minecraft:lantern")]),
+          rewards=[reward_item("minecraft:wooden_pickaxe"), reward_item("minecraft:lantern")]),
 
     quest("reece_tour", "Old Streets, New Roofs", icon="minecraft:bell", after=["welcome"],
           text=["Reece is bigger than it looks. Walk its streets: the smithy, the farms and the market square, and "
@@ -51,7 +50,7 @@ Q = [
                 "out in the wild.",
                 "Waystones let you warp between any you've found."],
           tasks=[{"place": "reece", "title": "Attune to Reece's waystone"},
-                 {"waystones": 1, "wild": True, "title": "Find and attune a waystone out in the wild"}],
+                 {"waystones": 1, "wild": True, "total": True, "title": "Find and attune a waystone out in the wild"}],
           rewards=[reward_item("waystones:return_scroll"), reward_item("waystones:warp_dust", 4)]),
 
     quest("backpack", "Room to Carry", icon="sophisticatedbackpacks:backpack", after=["first_timber"],
@@ -84,8 +83,7 @@ Q = [
           tasks=[talk_villager("minecraft:leatherworker", ["Armour at a dance? Absolutely not.",
                                                             "Bring me wool and I'll make you something proper."]),
                  item("minecraft:white_wool", 8, consume=True)],
-          rewards=[reward_item("minecraft:leather_helmet"), reward_item("minecraft:leather_chestplate"),
-                   reward_item("minecraft:leather_leggings"), reward_item("minecraft:leather_boots")]),
+          rewards=[reward_item("minecraft:leather_chestplate")]),
 
     quest("natures_compass", "Which Way the Wind Blows", icon="minecraft:compass", after=["waystone_reece"],
           text=["A Nature's Compass points to any biome you name. Craft one and use it to find somewhere you've "
@@ -128,8 +126,7 @@ Q = [
                  talk_org("watch", ["Keep your eyes open at dusk."]),
                  talk_org("arcane", ["Magic is just knowledge nobody's written down yet."]),
                  talk_org("sanctuary", ["Every animal deserves somewhere safe."])],
-          rewards=[reward_item("minecraft:map"), reward_item("minecraft:shield"), reward_item("minecraft:book"),
-                   reward_item("minecraft:lead")]),
+          rewards=[reward_item("minecraft:map"), reward_item("minecraft:shield")]),
 
     quest("clerics_worry", "The Cleric's Worry", icon="minecraft:candle", shape="diamond", size=1.25,
           after=["field_guide", "guilds_of_the_field"],

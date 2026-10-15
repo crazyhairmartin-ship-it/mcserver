@@ -68,7 +68,7 @@ Q = [
     quest("waystone_route", "Marking the Route", icon="waystones:waystone", after=["post_office"],
           text=["Old couriers left waystones along the roads. Find and attune three wild waystones between Reece "
                 "and the neighbouring villages, so later runs can start halfway."],
-          tasks=[{"waystones": 3, "wild": True, "title": "Attune three wild waystones"}],
+          tasks=[{"waystones": 3, "wild": True, "total": True, "title": "Attune three wild waystones"}],
           rewards=[reward_item("waystones:warp_scroll", 4), skill("agility", 140)]),
 
     quest("great_bridge_run", "Before the Light Goes", icon="minecraft:stone_bricks", after=["waystone_route"],

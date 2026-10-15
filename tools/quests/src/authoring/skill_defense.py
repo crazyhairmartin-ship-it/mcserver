@@ -37,8 +37,7 @@ Q = [
                 "second with a crossbow and armour."],
           tasks=[{"advancement": "minecraft:adventure/recruit_guard", "title": "Make a villager a guard"},
                  item("minecraft:crossbow", crafted=True), item("minecraft:iron_chestplate")],
-          rewards=[reward_item("minecraft:iron_helmet"), reward_item("minecraft:iron_leggings"),
-                   reward_item("minecraft:iron_boots"), skill("defense", 150)]),
+          rewards=[reward_item("minecraft:iron_helmet"), skill("defense", 150)]),
 
     quest("tower_shield", "Behind the Wall of Iron", icon="spartanshields:iron_tower_shield",
           after=["arm_a_guard"],
