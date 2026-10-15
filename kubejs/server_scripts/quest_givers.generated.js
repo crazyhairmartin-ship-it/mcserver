@@ -10494,6 +10494,91 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_crafting:winter_festival",
+    "stage": "fq.skill_crafting.winter_festival.build1",
+    "type": "build",
+    "keys": [
+      "snowyspirit:wreath",
+      "snowyspirit:glow_lights_prismatic",
+      "snowyspirit:gingerbread"
+    ],
+    "counts": [
+      2,
+      4,
+      8
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "5D62E0609A7F97FE",
+    "prev_tasks": [
+      "1AB3461859860301"
+    ]
+  },
+  {
+    "quest": "skill_crafting:nether_lamps",
+    "stage": "fq.skill_crafting.nether_lamps.build3",
+    "type": "build",
+    "keys": [
+      "torchmaster:dreadlamp",
+      "torchmaster:feral_flare_lantern"
+    ],
+    "counts": [
+      1,
+      2
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "556B92507F323A28",
+    "prev_tasks": [
+      "5F6C1331AA59F243",
+      "1B6DB589A8E39FC2",
+      "4A4CD62D277B8263"
+    ]
+  },
+  {
+    "quest": "skill_crafting:tower_lift",
+    "stage": "fq.skill_crafting.tower_lift.build4",
+    "type": "build",
+    "keys": [
+      "supplementaries:pulley_block",
+      "supplementaries:crank",
+      "supplementaries:cog_block"
+    ],
+    "counts": [
+      2,
+      1,
+      2
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "2E2A2BC28A1CF89C",
+    "prev_tasks": [
+      "0F9131E48277BDF1",
+      "75674DCB16EABD43",
+      "1B2A5D83FB384E3F",
+      "3E5011A66A985F61"
+    ]
+  },
+  {
+    "quest": "skill_crafting:sea_bridge",
+    "stage": "fq.skill_crafting.sea_bridge.build1",
+    "type": "build",
+    "keys": [
+      "mcwbridges:balustrade_stone_bricks_bridge",
+      "mcwbridges:andesite_bridge_pier"
+    ],
+    "counts": [
+      16,
+      4
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "03295F5CB3250378",
+    "prev_tasks": [
+      "30D7D9A91E48AD29"
+    ]
+  },
+  {
     "quest": "skill_attack:the_board",
     "stage": "fq.skill_attack.the_board.talk0",
     "type": "talk",
@@ -13557,6 +13642,356 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_agility:catch_a_cloud",
+    "stage": "fq.skill_agility.catch_a_cloud.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "skyvillages:skyvillage"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_catch_a_cloud_2",
+    "found": "A cloud, caught in glass on the highest roof.",
+    "requires": [],
+    "quest_id": "0D02BBEBD98EBD5E",
+    "prev_tasks": [
+      "1EFDC62317746A75",
+      "792BA29A4D6CC14C"
+    ]
+  },
+  {
+    "quest": "skill_agility:sky_post_office",
+    "stage": "fq.skill_agility.sky_post_office.build1",
+    "type": "build",
+    "keys": [
+      "endermail:locker"
+    ],
+    "counts": [
+      1
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "51CD4A9508F40CEB",
+    "prev_tasks": [
+      "7FE35BAA8D97B73F"
+    ]
+  },
+  {
+    "quest": "skill_agility:sky_post_office",
+    "stage": "fq.skill_agility.sky_post_office.enc3",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "A parcel! For us! And here is our first letter down."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "51CD4A9508F40CEB",
+    "prev_tasks": [
+      "7FE35BAA8D97B73F",
+      "5993DFBB6D5928E5",
+      "5BFCDDDEAE57CB9A"
+    ],
+    "name": "Sky Postmaster",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_agility:drakkar_race",
+    "stage": "fq.skill_agility.drakkar_race.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Our drakkar's faster! Race us down the coast!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "0A61183BF2BDA9CD",
+    "prev_tasks": [
+      "2822BB78E072E8EA"
+    ],
+    "name": "Rival Courier",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "skill_agility:drakkar_race",
+    "stage": "fq.skill_agility.drakkar_race.timed2",
+    "type": "timed",
+    "seconds": 420,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "the course's end",
+      "away": 200
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Buoy to buoy. Beat their drakkar!"
+    ],
+    "start": "Start the race",
+    "requires": [],
+    "quest_id": "0A61183BF2BDA9CD",
+    "prev_tasks": [
+      "2822BB78E072E8EA",
+      "1BC9A65B69C00676"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:galley_convoy",
+    "stage": "fq.skill_agility.galley_convoy.spawn2",
+    "type": "spawn",
+    "entity": "minecraft:pillager",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "towns_and_towers:pillager_outpost_ocean"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Convoy Raiders",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "5F903D097FDDF1F0",
+    "requires": [],
+    "quest_id": "4725B50CA621F526",
+    "prev_tasks": [
+      "653DB5416CEE4841",
+      "403ED8F4A986F955"
+    ]
+  },
+  {
+    "quest": "skill_agility:airmail_day",
+    "stage": "fq.skill_agility.airmail_day.timed2",
+    "type": "timed",
+    "seconds": 1200,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "the third village",
+      "away": 300
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Three villages before sunset. Fly!"
+    ],
+    "start": "Take off",
+    "requires": [],
+    "quest_id": "3B8AA0CE04D6CE92",
+    "prev_tasks": [
+      "147FC01C8F056AC1",
+      "70B3A7DA033979C3"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:wings_of_the_post",
+    "stage": "fq.skill_agility.wings_of_the_post.timed2",
+    "type": "timed",
+    "seconds": 900,
+    "goal": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Glide home. Don't touch the ground."
+    ],
+    "start": "Launch",
+    "requires": [],
+    "quest_id": "0D381375D366D4CA",
+    "prev_tasks": [
+      "431447EF8A01900F",
+      "6285FC3D597D1A03"
+    ],
+    "name": ""
+  },
+  {
     "quest": "magic:the_order_calls",
     "stage": "fq.magic.the_order_calls",
     "type": "org",
@@ -14262,6 +14697,131 @@ global.QUEST_GIVERS = [
       "1CFEFE9340578ABB",
       "0C93BEC8D385D3CA",
       "158696BDBE5EE488"
+    ]
+  },
+  {
+    "quest": "magic:graves_below",
+    "stage": "fq.magic.graves_below.talk0",
+    "type": "talk",
+    "lines": [
+      "The dead are being raised. The logbook names the stair.",
+      "Come. I'll show you the graves."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "agathe",
+    "quest_id": "5C5D3545A64FC521",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:the_catacombs",
+    "stage": "fq.magic.the_catacombs.spellkill1",
+    "type": "spellkill",
+    "entities": [
+      "irons_spellbooks:catacombs_zombie",
+      "minecraft:skeleton",
+      "minecraft:zombie"
+    ],
+    "school": "holy",
+    "count": 10,
+    "requires": [],
+    "quest_id": "4B70B5A1CA24E5EE",
+    "prev_tasks": [
+      "64E4974DAF020E29"
+    ]
+  },
+  {
+    "quest": "magic:necromancers",
+    "stage": "fq.magic.necromancers.spawn0",
+    "type": "spawn",
+    "entity": "irons_spellbooks:necromancer",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:catacombs"
+      ],
+      "label": "the destination"
+    },
+    "wave": 3,
+    "name": "Catacomb Necromancers",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "06C0E0963AE3BB13",
+    "requires": [],
+    "quest_id": "0319230C8626F358",
+    "prev_tasks": []
+  },
+  {
+    "quest": "magic:the_dead_king",
+    "stage": "fq.magic.the_dead_king.spawn0",
+    "type": "spawn",
+    "entity": "irons_spellbooks:dead_king",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:catacombs"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Dead King",
+    "health": null,
+    "glow": false,
+    "ensure": true,
+    "boost": null,
+    "task_id": "2F222FB393E30402",
+    "requires": [],
+    "quest_id": "045FA32BE743726C",
+    "prev_tasks": []
+  },
+  {
+    "quest": "magic:blood_school",
+    "stage": "fq.magic.blood_school.cast1",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:blood",
+    "count": 1,
+    "requires": [],
+    "quest_id": "1D6B700C0BC1F128",
+    "prev_tasks": [
+      "31541AD9AE6FFBDA"
+    ]
+  },
+  {
+    "quest": "magic:citadel_map",
+    "stage": "fq.magic.citadel_map.talk0",
+    "type": "talk",
+    "lines": [
+      "Furled maps? I sell two. Citadel and battleground."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "villager",
+    "profession": "minecraft:cartographer",
+    "quest_id": "56F63F338DD9F6A2",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:nether_citadel",
+    "stage": "fq.magic.nether_citadel.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "irons_spellbooks:citadel"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_nether_citadel_1",
+    "found": "Inscriptions about the Flamebearer, in the cinderous vault.",
+    "requires": [],
+    "quest_id": "41DBE986C41A932C",
+    "prev_tasks": [
+      "6D200AA6942E36A1"
     ]
   },
   {

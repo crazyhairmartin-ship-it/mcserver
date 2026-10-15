@@ -1503,6 +1503,390 @@
 			x: 12.0d
 			y: 1.5d
 		}
+		{
+			dependencies: [
+				"40A6CB9EE0244838"
+				"1D96E8F9421E2B6A"
+			]
+			description: ["Sister Agathe reads the translated logbook and goes pale. She leads you to an old graveyard where the stair down to the catacombs was found."]
+			icon: "minecraft:skeleton_skull"
+			id: "5C5D3545A64FC521"
+			rewards: [
+				{
+					count: 3
+					id: "0C96DD5E27A4CCFB"
+					item: "minecraft:splash_potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 400"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "51987E65DF03E952"
+					silent: true
+					title: "+400 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7C17F9D01E7FB221"
+					stage: "fq.magic.graves_below.talk0"
+					title: "Show the logbook to Sister Agathe"
+					type: "gamestage"
+				}
+				{
+					id: "5B53BB92D5685657"
+					structure: "#fotf:groups/graveyards"
+					title: "Follow Agathe to the graveyard with the stair"
+					type: "structure"
+				}
+			]
+			title: "The Graves Below"
+			x: 13.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5C5D3545A64FC521"]
+			description: ["Descend into Iron's catacombs and clear its corridors of the risen dead. Only holy magic lays them to rest."]
+			icon: "irons_spellbooks:holy_rune"
+			id: "4B70B5A1CA24E5EE"
+			rewards: [
+				{
+					id: "36481BE99BDEBB26"
+					item: "irons_spellbooks:holy_rune"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 420"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "5298AA0404BC9007"
+					silent: true
+					title: "+420 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "64E4974DAF020E29"
+					structure: "irons_spellbooks:catacombs"
+					title: "Descend the stair into the catacombs"
+					type: "structure"
+				}
+				{
+					id: "41820485EF2886B8"
+					stage: "fq.magic.the_catacombs.spellkill1"
+					title: "Lay the risen dead to rest with holy magic"
+					type: "gamestage"
+				}
+			]
+			title: "The Catacombs"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4B70B5A1CA24E5EE"]
+			description: ["Necromancers keep raising the dead faster than you can kill them. Hunt three and take the bone key one of them carries."]
+			icon: "irons_spellbooks:bone_key"
+			id: "0319230C8626F358"
+			rewards: [
+				{
+					id: "5740A990E4B9ACE6"
+					item: "irons_spellbooks:scroll_blood"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 440"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "31C9B87196648DC6"
+					silent: true
+					title: "+440 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "irons_spellbooks:necromancer"
+					id: "06C0E0963AE3BB13"
+					title: "Hunt the necromancers raising the dead"
+					type: "kill"
+					value: 3L
+				}
+				{
+					id: "066AFDFD5D5BC9A6"
+					item: "irons_spellbooks:bone_key"
+					title: "Take the bone key one of them carries"
+					type: "item"
+				}
+			]
+			title: "The Necromancers"
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0319230C8626F358"]
+			description: ["The bone key opens the catacombs' vaults, where pieces of a phylactery are hidden. Gather the shards for Agathe before anyone else does."]
+			icon: "irons_spellbooks:dead_king_phylactery_shard"
+			id: "36147814B9C2F2C2"
+			rewards: [
+				{
+					id: "6A39AD3F225F913D"
+					item: "irons_spellbooks:blood_vial"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 460"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "23DD58DE0C502E86"
+					silent: true
+					title: "+460 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "5C24D84ECD3E6D2C"
+					item: "irons_spellbooks:dead_king_phylactery_shard"
+					title: "Gather the phylactery's shards from the vaults"
+					type: "item"
+				}
+			]
+			title: "Shards of the Phylactery"
+			x: 18.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["0319230C8626F358"]
+			description: ["In the heart of the catacombs the Dead King sits on his throne. Wake him and end his reign. Agathe waits at the stair."]
+			icon: "irons_spellbooks:music_disc_dead_king_lullaby"
+			id: "045FA32BE743726C"
+			rewards: [
+				{
+					id: "270C1FD34E21C30B"
+					item: "irons_spellbooks:music_disc_dead_king_lullaby"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 600"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "3C26998127D5F59C"
+					silent: true
+					title: "+600 Magic XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.5d
+			tasks: [
+				{
+					entity: "irons_spellbooks:dead_king"
+					id: "2F222FB393E30402"
+					title: "End the Dead King's reign on his throne"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Dead King"
+			x: 18.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["36147814B9C2F2C2"]
+			description: ["Orrin forbids blood magic. Pip insists you should understand it to fight it. Craft a blood rune and cast a blood spell in secret."]
+			icon: "irons_spellbooks:blood_rune"
+			id: "1D6B700C0BC1F128"
+			rewards: [
+				{
+					id: "02A781B9DBE17567"
+					item: "irons_spellbooks:bloody_vellum"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 480"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "39555EBC9BC2F649"
+					silent: true
+					title: "+480 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "31541AD9AE6FFBDA"
+					item: "irons_spellbooks:blood_rune"
+					only_from_crafting: true
+					title: "Craft a blood rune in secret"
+					type: "item"
+				}
+				{
+					id: "58C491DEBF07C5A0"
+					stage: "fq.magic.blood_school.cast1"
+					title: "Cast a blood spell where Orrin cannot see"
+					type: "gamestage"
+				}
+			]
+			title: "The Forbidden School"
+			x: 19.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["36147814B9C2F2C2"]
+			description: ["An enchanting table grown from crimson wood stands somewhere in the Nether. Enchant a book there with your own levels."]
+			icon: "minecraft:enchanting_table"
+			id: "40D6A562AFDC6D5E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "2BD9BB3ABDB725B1"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:protection"
+									lvl: 3s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Crimson Gift\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 460"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "7E24111ED4568720"
+					silent: true
+					title: "+460 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "70F8C1F26B83F124"
+					structure: "mvs:crimson_enchanting_table"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "2707BD99B62C37EB"
+					item: "minecraft:book"
+					title: "Bring a book to enchant at the crimson table"
+					type: "item"
+				}
+				{
+					id: "60634074CDEB54A7"
+					points: false
+					title: "Spend your own levels at the crimson table"
+					type: "xp"
+					value: 15L
+				}
+			]
+			title: "The Crimson Enchanter"
+			x: 19.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["36147814B9C2F2C2"]
+			description: ["The phylactery points to a fire-forged citadel in the Nether. Find or buy the furled maps to the Nether citadel and the ancient battleground."]
+			icon: "irons_spellbooks:furled_map_citadel"
+			id: "56F63F338DD9F6A2"
+			rewards: [
+				{
+					count: 2
+					id: "75B2D3C7ACA1734C"
+					item: "irons_spellbooks:netherward_tincture"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 440"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "5B783CB2090D857D"
+					silent: true
+					title: "+440 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1ED47C656791D20D"
+					stage: "fq.magic.citadel_map.talk0"
+					title: "Ask a cartographer for the furled maps"
+					type: "gamestage"
+				}
+				{
+					id: "70AFA4862A54C187"
+					item: "irons_spellbooks:furled_map_citadel"
+					title: "Find or buy the Nether citadel's map"
+					type: "item"
+				}
+				{
+					id: "2F91C3BE55E37F5A"
+					item: "irons_spellbooks:furled_map_ancient"
+					title: "Find or buy the ancient battleground's map"
+					type: "item"
+				}
+			]
+			title: "The Ancient Map"
+			x: 19.5d
+			y: 1.5d
+		}
+		{
+			dependencies: [
+				"56F63F338DD9F6A2"
+				"54C450BB48CA2E5F"
+			]
+			description: ["Reach Iron's Nether citadel among the bastions, find the cinderous vault and read the inscriptions about the Flamebearer."]
+			icon: "irons_spellbooks:fire_cloth"
+			id: "41DBE986C41A932C"
+			rewards: [
+				{
+					count: 4
+					id: "583D2556CAF32D95"
+					item: "irons_spellbooks:fire_cloth"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 500"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "7802226FCD1B3565"
+					silent: true
+					title: "+500 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6D200AA6942E36A1"
+					structure: "irons_spellbooks:citadel"
+					title: "Reach the Nether citadel among the bastions"
+					type: "structure"
+				}
+				{
+					id: "6938C0C681AE5113"
+					item: "kubejs:quest_nether_citadel_1"
+					title: "Read the inscriptions in the cinderous vault"
+					type: "item"
+				}
+			]
+			title: "The Nether Citadel"
+			x: 21.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Magic path"]
 	title: "The Arcane Order"

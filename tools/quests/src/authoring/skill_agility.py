@@ -218,4 +218,68 @@ ACT2 = [
           rewards=[reward_item("artifacts:helium_flamingo"), skill("agility", 380)]),
 ]
 
-chapter("skill_agility", "The Couriers", "Agility path", "minecraft:leather_boots", "skills", 9, Q + ACT2)
+ACT3 = [
+    quest("catch_a_cloud", "Bottle a Cloud", icon="artifacts:cloud_in_a_bottle", after=["runaway_float"],
+          signature="artifacts:cloud_in_a_bottle",
+          text=["The sky villagers say the best clouds gather above their highest roof. Climb the sky village to its "
+                "very top and bottle one, the old way."],
+          tasks=[{"structure": "skyvillages:skyvillage", "title": "Climb to the sky village"},
+                 item("minecraft:glass_bottle", title="Bring an empty bottle for the cloud"),
+                 search("skyvillages:skyvillage", 1, "a Bottled Cloud", "A cloud, caught in glass on the highest roof.",
+                        texture="minecraft:item/glass_bottle", title="Climb to the highest roof and bottle a cloud")],
+          rewards=[reward_item("artifacts:cloud_in_a_bottle"), skill("agility", 420)]),
+
+    quest("sky_post_office", "Post Office in the Clouds", icon="endermail:locker", after=["catch_a_cloud"],
+          text=["The sky village has never had a post office. Set up an Ender Mail locker there, then carry the first "
+                "ground-mail up and the first sky-mail down."],
+          tasks=[{"structure": "skyvillages:skyvillage", "title": "Go up to the sky village"},
+                 {"build": {"blocks": {"endermail:locker": 1}, "radius": 12}, "title": "Set up a locker for the sky village's first post office"},
+                 item("endermail:package", consume=True, title="Carry the first ground-mail up"),
+                 enc(["A parcel! For us! And here is our first letter down."], entity="minecraft:villager", name="Sky Postmaster",
+                     title="Hand over the mail and take the first sky-mail")],
+          rewards=[reward_item("endermail:package_controller"), skill("agility", 440)]),
+
+    quest("drakkar_race", "Oars Against the Wind", icon="smallships:oak_drakkar", after=["ships_at_sea", "main_story:act3_start"],
+          text=["A rival harbour's couriers say their drakkar is faster than anything the Couriers sail. Build your "
+                "own drakkar and beat them along the coast course, buoy to buoy."],
+          tasks=[item("smallships:oak_drakkar", crafted=True, title="Build a drakkar to race"),
+                 enc(["Our drakkar's faster! Race us down the coast!"], entity="minecraft:villager", name="Rival Courier",
+                     title="Take up the rival harbour's challenge"),
+                 {"timed": {"seconds": 420, "goal": {"structure": "#villages", "label": "the course's end", "away": 200},
+                            "lines": ["Buoy to buoy. Beat their drakkar!"], "start": "Start the race", "no": ["teleport"]},
+                  "title": "Sail the coast course ahead of the rival drakkar"}],
+          rewards=[reward_item("minecraft:white_wool", 16), reward_item("minecraft:white_banner", name="The Rivals' Banner"),
+                   skill("agility", 440)]),
+
+    quest("galley_convoy", "Convoy to the Sea Town", icon="smallships:oak_galley", after=["drakkar_race"],
+          text=["A merchant convoy must reach a beach village across the gulf through waters a pillager ship and a "
+                "pirate wreck patrol. Captain a galley and keep the cargo cog afloat all the way."],
+          tasks=[item("smallships:oak_galley", crafted=True, title="Build a galley to captain the convoy"),
+                 item("smallships:oak_cog", crafted=True, title="Build the cargo cog to protect"),
+                 fight("minecraft:pillager", 6, "towns_and_towers:pillager_outpost_ocean", "Convoy Raiders", "Beat off the pillager ship as the convoy passes"),
+                 {"structure": "ctov:large/village_beach", "title": "Bring the convoy into the beach village"}],
+          rewards=[reward_item("smallships:cannon_ball", 8), reward_item("minecraft:emerald", 12), skill("agility", 460)]),
+
+    quest("airmail_day", "Three Villages, One Day", icon="immersive_aircraft:biplane", after=["first_flight"],
+          text=["Build a biplane and run the airmail: three villages, three parcels, one day from sunrise to "
+                "sunset."],
+          tasks=[item("immersive_aircraft:biplane", crafted=True, title="Build a biplane for the airmail"),
+                 item("fotfmail:letter", 3, consume=True, title="Load three parcels of airmail"),
+                 {"timed": {"seconds": 1200, "goal": {"structure": "#villages", "label": "the third village", "away": 300},
+                            "lines": ["Three villages before sunset. Fly!"], "start": "Take off", "no": ["teleport"]},
+                  "title": "Fly the airmail to three villages before sunset"}],
+          rewards=[reward_item("immersive_aircraft:enhanced_propeller"), skill("agility", 460)]),
+
+    quest("wings_of_the_post", "Feathers Not Engines", icon="icarus:red_feathered_wings", after=["sky_post_office"],
+          text=["Juniper's grandfather flew the post on homemade wings. Craft a pair of Icarus feathered wings and "
+                "glide from the sky village back down to Reece without touching the ground."],
+          tasks=[item("icarus:red_feathered_wings", crafted=True, title="Craft a pair of feathered wings"),
+                 {"structure": "skyvillages:skyvillage", "title": "Climb back up to the sky village"},
+                 {"timed": {"seconds": 900, "goal": {"place": "reece"},
+                            "lines": ["Glide home. Don't touch the ground."], "start": "Launch", "no": ["teleport"]},
+                  "title": "Glide from the sky village down to Reece"}],
+          rewards=[reward_item("icarus:red_feathered_wings", name="The Couriers' Wings", lore=["Juniper's grandfather's colours."]),
+                   skill("agility", 480)]),
+]
+
+chapter("skill_agility", "The Couriers", "Agility path", "minecraft:leather_boots", "skills", 9, Q + ACT2 + ACT3)

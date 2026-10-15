@@ -292,4 +292,73 @@ ACT2 = [
           rewards=[reward_item("irons_spellbooks:epic_ink", 2), skill("magic", 400)]),
 ]
 
-chapter("magic", "The Arcane Order", "Magic path", "irons_spellbooks:iron_spell_book", "skills", 10, Q + ACT2)
+ACT3 = [
+    quest("graves_below", "The Graves Below", icon="minecraft:skeleton_skull", after=["translate_logbook", "main_story:act3_start"],
+          text=["Sister Agathe reads the translated logbook and goes pale. She leads you to an old graveyard where "
+                "the stair down to the catacombs was found."],
+          tasks=[talk_char("agathe", ["The dead are being raised. The logbook names the stair.", "Come. I'll show you the graves."],
+                           title="Show the logbook to Sister Agathe"),
+                 {"structure": "#graveyards", "title": "Follow Agathe to the graveyard with the stair"}],
+          rewards=[reward_item("minecraft:splash_potion", 3), skill("magic", 400)]),
+
+    quest("the_catacombs", "The Catacombs", icon="irons_spellbooks:holy_rune", after=["graves_below"],
+          text=["Descend into Iron's catacombs and clear its corridors of the risen dead. Only holy magic lays them "
+                "to rest."],
+          tasks=[{"structure": "irons_spellbooks:catacombs", "title": "Descend the stair into the catacombs"},
+                 {"spellkill": ["irons_spellbooks:catacombs_zombie", "minecraft:skeleton", "minecraft:zombie"], "school": "holy", "count": 10,
+                  "title": "Lay the risen dead to rest with holy magic"}],
+          rewards=[reward_item("irons_spellbooks:holy_rune"), skill("magic", 420)]),
+
+    quest("necromancers", "The Necromancers", icon="irons_spellbooks:bone_key", after=["the_catacombs"],
+          text=["Necromancers keep raising the dead faster than you can kill them. Hunt three and take the bone key "
+                "one of them carries."],
+          tasks=[fight("irons_spellbooks:necromancer", 3, "irons_spellbooks:catacombs", "Catacomb Necromancers", "Hunt the necromancers raising the dead", wave=3),
+                 item("irons_spellbooks:bone_key", title="Take the bone key one of them carries")],
+          rewards=[reward_item("irons_spellbooks:scroll_blood"), skill("magic", 440)]),
+
+    quest("phylactery_shards", "Shards of the Phylactery", icon="irons_spellbooks:dead_king_phylactery_shard", after=["necromancers"],
+          text=["The bone key opens the catacombs' vaults, where pieces of a phylactery are hidden. Gather the "
+                "shards for Agathe before anyone else does."],
+          tasks=[item("irons_spellbooks:dead_king_phylactery_shard", 3, title="Gather the phylactery's shards from the vaults")],
+          rewards=[reward_item("irons_spellbooks:blood_vial"), skill("magic", 460)]),
+
+    quest("the_dead_king", "The Dead King", icon="irons_spellbooks:music_disc_dead_king_lullaby", shape="diamond", size=1.5,
+          after=["necromancers"],
+          text=["In the heart of the catacombs the Dead King sits on his throne. Wake him and end his reign. "
+                "Agathe waits at the stair."],
+          tasks=[boss("irons_spellbooks:dead_king", "irons_spellbooks:catacombs", "The Dead King", "End the Dead King's reign on his throne")],
+          rewards=[reward_item("irons_spellbooks:music_disc_dead_king_lullaby"), skill("magic", 600)]),
+
+    quest("blood_school", "The Forbidden School", icon="irons_spellbooks:blood_rune", after=["phylactery_shards"],
+          text=["Orrin forbids blood magic. Pip insists you should understand it to fight it. Craft a blood rune "
+                "and cast a blood spell in secret."],
+          tasks=[item("irons_spellbooks:blood_rune", crafted=True, title="Craft a blood rune in secret"),
+                 {"cast": {"school": "irons_spellbooks:blood"}, "count": 1, "title": "Cast a blood spell where Orrin cannot see"}],
+          rewards=[reward_item("irons_spellbooks:bloody_vellum"), skill("magic", 480)]),
+
+    quest("crimson_enchanter", "The Crimson Enchanter", icon="minecraft:enchanting_table", after=["phylactery_shards"],
+          discover={"structure": "mvs:crimson_enchanting_table"},
+          text=["An enchanting table grown from crimson wood stands somewhere in the Nether. Enchant a book there "
+                "with your own levels."],
+          tasks=[item("minecraft:book", consume=True, title="Bring a book to enchant at the crimson table"),
+                 {"levels": 15, "title": "Spend your own levels at the crimson table"}],
+          rewards=[reward_item("minecraft:enchanted_book", name="Crimson Gift", enchant={"minecraft:protection": 3}), skill("magic", 460)]),
+
+    quest("citadel_map", "The Ancient Map", icon="irons_spellbooks:furled_map_citadel", after=["phylactery_shards"],
+          text=["The phylactery points to a fire-forged citadel in the Nether. Find or buy the furled maps to the "
+                "Nether citadel and the ancient battleground."],
+          tasks=[talk_villager("minecraft:cartographer", ["Furled maps? I sell two. Citadel and battleground."], title="Ask a cartographer for the furled maps"),
+                 item("irons_spellbooks:furled_map_citadel", title="Find or buy the Nether citadel's map"),
+                 item("irons_spellbooks:furled_map_ancient", title="Find or buy the ancient battleground's map")],
+          rewards=[reward_item("irons_spellbooks:netherward_tincture", 2), skill("magic", 440)]),
+
+    quest("nether_citadel", "The Nether Citadel", icon="irons_spellbooks:fire_cloth", after=["citadel_map", "main_story:act2_finale"],
+          text=["Reach Iron's Nether citadel among the bastions, find the cinderous vault and read the inscriptions "
+                "about the Flamebearer."],
+          tasks=[{"structure": "irons_spellbooks:citadel", "title": "Reach the Nether citadel among the bastions"},
+                 search("irons_spellbooks:citadel", 1, "the Flamebearer Inscriptions", "Inscriptions about the Flamebearer, in the cinderous vault.",
+                        title="Read the inscriptions in the cinderous vault")],
+          rewards=[reward_item("irons_spellbooks:fire_cloth", 4), skill("magic", 500)]),
+]
+
+chapter("magic", "The Arcane Order", "Magic path", "irons_spellbooks:iron_spell_book", "skills", 10, Q + ACT2 + ACT3)

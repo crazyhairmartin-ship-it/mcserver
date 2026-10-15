@@ -212,6 +212,20 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_taming:pegasus: needs flying it home; written as taming and returning to Reece
 - skill_taming:stolen_pet: needs a pet's glow trail; written as the lantern and an escort of a wolf
 - skill_taming:poachers: needs defending with the player's pets; written as a timed hold and a key search
+- skill_agility:catch_a_cloud: needs bottling a cloud on the highest roof; written as a search of the sky village
+- skill_agility:drakkar_race: needs a buoy course against a rival drakkar; written as a timed sail to a distant village
+- skill_agility:galley_convoy: needs keeping the cargo cog afloat; written as both ships built, a raider fight and reaching the village
+- skill_agility:airmail_day: needs three villages in one day; written as one timed flight to a distant village
+- skill_agility:wings_of_the_post: needs gliding without touching the ground; written as a timed run to Reece
+- skill_crafting:winter_festival: needs wrapping a present for every villager; written as a decoration build and presents carried
+- skill_crafting:nether_lamps: needs the camp to stay free of spawns; written as a lamp and lantern build
+- skill_crafting:tower_lift: needs the lift to run; written as a machinery build
+- skill_crafting:wireless_workshop: needs pulling items from anywhere in Reece; written as crafting the terminal and being in Reece
+- skill_crafting:sea_bridge: needs piers in deep water; written as a balustrade bridge and pier build
+- magic:the_catacombs: needs the dead to be laid to rest by holy magic; written as holy-school spell kills
+- magic:phylactery_shards: needs shards hidden in vaults (catacomb contents unknown); written as shards carried
+- magic:crimson_enchanter: needs enchanting at the crimson table; written as a book and levels
+- magic:citadel_map: needs buying or finding both maps; written as a cartographer talk and the maps carried
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

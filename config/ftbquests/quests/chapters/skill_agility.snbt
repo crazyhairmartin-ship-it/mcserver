@@ -595,7 +595,7 @@
 			]
 			title: "Stuck on the Ledge"
 			x: 9.0d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: ["0302FE0BC6665E28"]
@@ -734,7 +734,7 @@
 			]
 			title: "Powder Road"
 			x: 9.0d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["22D48084AF1569B5"]
@@ -787,7 +787,7 @@
 			]
 			title: "Speed Climb"
 			x: 10.5d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["0A62ED1B9A79ED78"]
@@ -999,6 +999,330 @@
 			]
 			title: "The Float That Got Away"
 			x: 13.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["0098B2EA179D5FE9"]
+			description: ["The sky villagers say the best clouds gather above their highest roof. Climb the sky village to its very top and bottle one, the old way."]
+			icon: "artifacts:cloud_in_a_bottle"
+			id: "0D02BBEBD98EBD5E"
+			rewards: [
+				{
+					id: "131E673A3C128CAA"
+					item: "artifacts:cloud_in_a_bottle"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 420"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "0B24A715A7770D7E"
+					silent: true
+					title: "+420 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1EFDC62317746A75"
+					structure: "skyvillages:skyvillage"
+					title: "Climb to the sky village"
+					type: "structure"
+				}
+				{
+					id: "792BA29A4D6CC14C"
+					item: "minecraft:glass_bottle"
+					title: "Bring an empty bottle for the cloud"
+					type: "item"
+				}
+				{
+					id: "26BA46C77C63D94A"
+					item: "kubejs:quest_catch_a_cloud_2"
+					title: "Climb to the highest roof and bottle a cloud"
+					type: "item"
+				}
+			]
+			title: "Bottle a Cloud"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0D02BBEBD98EBD5E"]
+			description: ["The sky village has never had a post office. Set up an Ender Mail locker there, then carry the first ground-mail up and the first sky-mail down."]
+			icon: "endermail:locker"
+			id: "51CD4A9508F40CEB"
+			rewards: [
+				{
+					id: "19CFAF9A35534971"
+					item: "endermail:package_controller"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 440"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "3ECE7356589F0165"
+					silent: true
+					title: "+440 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7FE35BAA8D97B73F"
+					structure: "skyvillages:skyvillage"
+					title: "Go up to the sky village"
+					type: "structure"
+				}
+				{
+					id: "5993DFBB6D5928E5"
+					stage: "fq.skill_agility.sky_post_office.build1"
+					title: "Set up a locker for the sky village's first post office"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					id: "5BFCDDDEAE57CB9A"
+					item: "endermail:package"
+					title: "Carry the first ground-mail up"
+					type: "item"
+				}
+				{
+					id: "64B2A941DEDBA126"
+					stage: "fq.skill_agility.sky_post_office.enc3"
+					title: "Hand over the mail and take the first sky-mail"
+					type: "gamestage"
+				}
+			]
+			title: "Post Office in the Clouds"
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"000C51639004CD8D"
+				"1D96E8F9421E2B6A"
+			]
+			description: ["A rival harbour's couriers say their drakkar is faster than anything the Couriers sail. Build your own drakkar and beat them along the coast course, buoy to buoy."]
+			icon: "smallships:oak_drakkar"
+			id: "0A61183BF2BDA9CD"
+			rewards: [
+				{
+					count: 16
+					id: "6C51928E1F35E2C3"
+					item: "minecraft:white_wool"
+					type: "item"
+				}
+				{
+					id: "268856236ECF764D"
+					item: {
+						Count: 1b
+						id: "minecraft:white_banner"
+						tag: {
+							display: {
+								Name: "{\"text\": \"The Rivals' Banner\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 440"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "2C79F334B5EDB3E5"
+					silent: true
+					title: "+440 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2822BB78E072E8EA"
+					item: "smallships:oak_drakkar"
+					only_from_crafting: true
+					title: "Build a drakkar to race"
+					type: "item"
+				}
+				{
+					id: "1BC9A65B69C00676"
+					stage: "fq.skill_agility.drakkar_race.enc1"
+					title: "Take up the rival harbour's challenge"
+					type: "gamestage"
+				}
+				{
+					id: "241C75F28B2219EF"
+					stage: "fq.skill_agility.drakkar_race.timed2"
+					title: "Sail the coast course ahead of the rival drakkar"
+					type: "gamestage"
+				}
+			]
+			title: "Oars Against the Wind"
+			x: 9.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["0A61183BF2BDA9CD"]
+			description: ["A merchant convoy must reach a beach village across the gulf through waters a pillager ship and a pirate wreck patrol. Captain a galley and keep the cargo cog afloat all the way."]
+			icon: "smallships:oak_galley"
+			id: "4725B50CA621F526"
+			rewards: [
+				{
+					count: 8
+					id: "640CE8E96992ABB7"
+					item: "smallships:cannon_ball"
+					type: "item"
+				}
+				{
+					count: 12
+					id: "0B0C6F33F7F47030"
+					item: "minecraft:emerald"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 460"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "43FC447EFDB97AA8"
+					silent: true
+					title: "+460 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "653DB5416CEE4841"
+					item: "smallships:oak_galley"
+					only_from_crafting: true
+					title: "Build a galley to captain the convoy"
+					type: "item"
+				}
+				{
+					id: "403ED8F4A986F955"
+					item: "smallships:oak_cog"
+					only_from_crafting: true
+					title: "Build the cargo cog to protect"
+					type: "item"
+				}
+				{
+					entity: "minecraft:pillager"
+					id: "5F903D097FDDF1F0"
+					title: "Beat off the pillager ship as the convoy passes"
+					type: "kill"
+					value: 6L
+				}
+				{
+					id: "4641DC7FDE9536C0"
+					structure: "ctov:large/village_beach"
+					title: "Bring the convoy into the beach village"
+					type: "structure"
+				}
+			]
+			title: "Convoy to the Sea Town"
+			x: 10.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["65740190CEF18C11"]
+			description: ["Build a biplane and run the airmail: three villages, three parcels, one day from sunrise to sunset."]
+			icon: "immersive_aircraft:biplane"
+			id: "3B8AA0CE04D6CE92"
+			rewards: [
+				{
+					id: "45491467E85583EA"
+					item: "immersive_aircraft:enhanced_propeller"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 460"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "538AD78C26761A39"
+					silent: true
+					title: "+460 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "147FC01C8F056AC1"
+					item: "immersive_aircraft:biplane"
+					only_from_crafting: true
+					title: "Build a biplane for the airmail"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 3L
+					id: "70B3A7DA033979C3"
+					item: "fotfmail:letter"
+					title: "Load three parcels of airmail"
+					type: "item"
+				}
+				{
+					id: "4AE216159EE51861"
+					stage: "fq.skill_agility.airmail_day.timed2"
+					title: "Fly the airmail to three villages before sunset"
+					type: "gamestage"
+				}
+			]
+			title: "Three Villages, One Day"
+			x: 13.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["51CD4A9508F40CEB"]
+			description: ["Juniper's grandfather flew the post on homemade wings. Craft a pair of Icarus feathered wings and glide from the sky village back down to Reece without touching the ground."]
+			icon: "icarus:red_feathered_wings"
+			id: "0D381375D366D4CA"
+			rewards: [
+				{
+					id: "1FE77B20F9AD61F9"
+					item: {
+						Count: 1b
+						id: "icarus:red_feathered_wings"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Juniper's grandfather's colours.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Couriers' Wings\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 480"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "007A52F4332A9AF3"
+					silent: true
+					title: "+480 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "431447EF8A01900F"
+					item: "icarus:red_feathered_wings"
+					only_from_crafting: true
+					title: "Craft a pair of feathered wings"
+					type: "item"
+				}
+				{
+					id: "6285FC3D597D1A03"
+					structure: "skyvillages:skyvillage"
+					title: "Climb back up to the sky village"
+					type: "structure"
+				}
+				{
+					id: "670CC95DA932C789"
+					stage: "fq.skill_agility.wings_of_the_post.timed2"
+					title: "Glide from the sky village down to Reece"
+					type: "gamestage"
+				}
+			]
+			title: "Feathers Not Engines"
+			x: 18.0d
 			y: 0.0d
 		}
 	]

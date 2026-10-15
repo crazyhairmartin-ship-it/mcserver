@@ -420,7 +420,7 @@
 			]
 			title: "Somewhere to Sit"
 			x: 6.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["54AF1AAD5BD9EF61"]
@@ -662,7 +662,7 @@
 			]
 			title: "Two Rooms, One Judge"
 			x: 10.5d
-			y: -2.25d
+			y: -3.0d
 		}
 		{
 			dependencies: ["08A0E2C9723F44FE"]
@@ -708,7 +708,7 @@
 			]
 			title: "Raise the Ruin"
 			x: 10.5d
-			y: -0.75d
+			y: -1.5d
 		}
 		{
 			dependencies: [
@@ -776,7 +776,7 @@
 			]
 			title: "The Warehouse"
 			x: 10.5d
-			y: 0.75d
+			y: 0.0d
 		}
 		{
 			dependencies: ["71201033D00144CC"]
@@ -817,7 +817,7 @@
 			]
 			title: "The Sorting Room"
 			x: 12.0d
-			y: -1.5d
+			y: -2.25d
 		}
 		{
 			dependencies: ["5C4B9AE89F3BFA27"]
@@ -1040,7 +1040,7 @@
 			]
 			title: "Dressed for the Guild"
 			x: 12.0d
-			y: 0.0d
+			y: -0.75d
 		}
 		{
 			dependencies: ["27C05E87C55AAEB2"]
@@ -1101,7 +1101,7 @@
 			]
 			title: "Ginger in the Snow"
 			x: 10.5d
-			y: 2.25d
+			y: 1.5d
 		}
 		{
 			dependencies: ["7CF4315F67878925"]
@@ -1149,7 +1149,272 @@
 			]
 			title: "Downhill"
 			x: 12.0d
-			y: 1.5d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"593AA868E8686119"
+				"1D96E8F9421E2B6A"
+			]
+			description: ["The guild runs the winter festival in a festive village: hang wreaths and glow lights, wrap presents for every villager and set up the gingerbread stalls before the first night."]
+			icon: "snowyspirit:wreath"
+			id: "5D62E0609A7F97FE"
+			rewards: [
+				{
+					count: 8
+					id: "24CB45FBC295BCE6"
+					item: "snowyspirit:glow_lights_prismatic"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "60DF162F8328F6F7"
+					item: "snowyspirit:eggnog"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 450"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "023CD4C1027CF051"
+					silent: true
+					title: "+450 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1AB3461859860301"
+					structure: "ctov:large/village_christmas"
+					title: "Go to the festive village"
+					type: "structure"
+				}
+				{
+					id: "5AC90365318E0452"
+					stage: "fq.skill_crafting.winter_festival.build1"
+					title: "Hang wreaths and lights and set up the gingerbread stalls"
+					type: "gamestage"
+				}
+				{
+					count: 4L
+					id: "519474E690E7D2D2"
+					item: "supplementaries:present"
+					title: "Wrap presents for the villagers"
+					type: "item"
+				}
+			]
+			title: "The Winter Festival"
+			x: 13.5d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"3D982BEAFBC96859"
+				"1D96E8F9421E2B6A"
+			]
+			description: ["The guild wants a safe workshop camp in the Nether. Make a dreadlamp and feral flare lanterns and light the camp so it stays free of spawns."]
+			icon: "torchmaster:dreadlamp"
+			id: "556B92507F323A28"
+			rewards: [
+				{
+					count: 2
+					id: "712FD5F553690AD1"
+					item: "torchmaster:frozen_pearl"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 460"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "5430EEEA54E5F218"
+					silent: true
+					title: "+460 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5F6C1331AA59F243"
+					item: "torchmaster:dreadlamp"
+					only_from_crafting: true
+					title: "Make a dreadlamp for the camp"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "1B6DB589A8E39FC2"
+					item: "torchmaster:feral_flare_lantern"
+					only_from_crafting: true
+					title: "Make feral flare lanterns for the camp"
+					type: "item"
+				}
+				{
+					id: "4A4CD62D277B8263"
+					structure: "#fotf:groups/nether_outposts"
+					title: "Choose a camp site near a Nether outpost"
+					type: "structure"
+				}
+				{
+					id: "30DF9E00A9BDDDE8"
+					stage: "fq.skill_crafting.nether_lamps.build3"
+					title: "Light the camp so it stays free of spawns"
+					type: "gamestage"
+				}
+			]
+			title: "Lamps for the Dark Side"
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["08A0E2C9723F44FE"]
+			description: ["The engineer's tower had a lift. Fix it with pulleys, cranks and cog blocks so it runs from the cellar to the roof."]
+			icon: "supplementaries:pulley_block"
+			id: "2E2A2BC28A1CF89C"
+			rewards: [
+				{
+					id: "4F50FD1BD91296CF"
+					item: "furniture:blueprints"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 470"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "4028B36B8A448C4D"
+					silent: true
+					title: "+470 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0F9131E48277BDF1"
+					structure: "structory_towers:engineer_tower"
+					title: "Return to the engineer's tower"
+					type: "structure"
+				}
+				{
+					count: 2L
+					id: "75674DCB16EABD43"
+					item: "supplementaries:pulley_block"
+					title: "Bring pulleys for the lift"
+					type: "item"
+				}
+				{
+					id: "1B2A5D83FB384E3F"
+					item: "supplementaries:crank"
+					title: "Bring a crank to turn it"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "3E5011A66A985F61"
+					item: "supplementaries:cog_block"
+					title: "Bring cog blocks to carry the load"
+					type: "item"
+				}
+				{
+					id: "20765C76CD0B695A"
+					stage: "fq.skill_crafting.tower_lift.build4"
+					title: "Fit the lift's machinery from cellar to roof"
+					type: "gamestage"
+				}
+			]
+			title: "Restart the Lift"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2915087534960C16"]
+			description: ["The warehouse has outgrown walking. Build a wireless terminal and pull items from the network from anywhere in Reece."]
+			icon: "obscuras_storage:wireless_terminal"
+			id: "05759EB72D85EE9F"
+			rewards: [
+				{
+					id: "41C8BDE05E891869"
+					item: "obscuras_storage:adv_wireless_terminal"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 480"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "24AD6EA75389D8A9"
+					silent: true
+					title: "+480 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5F0A55AF9E1F94FE"
+					item: "obscuras_storage:wireless_terminal"
+					only_from_crafting: true
+					title: "Build a wireless terminal"
+					type: "item"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "479AFDEFAD517D9F"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Use it from anywhere in Reece"
+					type: "location"
+				}
+			]
+			title: "Anywhere in the Workshop"
+			x: 13.5d
+			y: 0.75d
+		}
+		{
+			dependencies: [
+				"1476629AEB8CE6D4"
+				"2847870C90887544"
+			]
+			description: ["A fishing hamlet on an island off the coast wants a stone balustrade bridge to the mainland, long enough to need piers in deep water."]
+			icon: "mcwbridges:balustrade_stone_bricks_bridge"
+			id: "03295F5CB3250378"
+			rewards: [
+				{
+					count: 32
+					id: "1E6F6DCDA582E7C4"
+					item: "minecraft:prismarine"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "077BA0675E332A19"
+					item: "minecraft:cod"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 500"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "314C10619081D270"
+					silent: true
+					title: "+500 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "30D7D9A91E48AD29"
+					structure: "#fotf:groups/villages"
+					title: "Go to the coastal fishing village"
+					type: "structure"
+				}
+				{
+					id: "05EBB6510F84281D"
+					stage: "fq.skill_crafting.sea_bridge.build1"
+					title: "Span the water to the island with a balustrade bridge on piers"
+					type: "gamestage"
+				}
+			]
+			title: "Bridge to the Island"
+			x: 12.0d
+			y: 2.25d
 		}
 	]
 	subtitle: ["Crafting path"]

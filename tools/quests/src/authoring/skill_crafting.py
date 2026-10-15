@@ -224,4 +224,52 @@ ACT2 = [
           rewards=[reward_item("snowyspirit:candy_cane_block", 4), skill("craft", 360)]),
 ]
 
-chapter("skill_crafting", "The Crafters' Guild", "Crafting path", "minecraft:crafting_table", "skills", 5, Q + ACT2)
+ACT3 = [
+    quest("winter_festival", "The Winter Festival", icon="snowyspirit:wreath", after=["sled_race", "main_story:act3_start"],
+          text=["The guild runs the winter festival in a festive village: hang wreaths and glow lights, wrap presents "
+                "for every villager and set up the gingerbread stalls before the first night."],
+          tasks=[{"structure": "ctov:large/village_christmas", "title": "Go to the festive village"},
+                 {"build": {"blocks": {"snowyspirit:wreath": 2, "snowyspirit:glow_lights_prismatic": 4, "snowyspirit:gingerbread": 8},
+                            "radius": 12}, "title": "Hang wreaths and lights and set up the gingerbread stalls"},
+                 item("supplementaries:present", 4, title="Wrap presents for the villagers")],
+          rewards=[reward_item("snowyspirit:glow_lights_prismatic", 8), reward_item("snowyspirit:eggnog", 4), skill("craft", 450)]),
+
+    quest("nether_lamps", "Lamps for the Dark Side", icon="torchmaster:dreadlamp", after=["megatorch", "main_story:act3_start"],
+          text=["The guild wants a safe workshop camp in the Nether. Make a dreadlamp and feral flare lanterns and "
+                "light the camp so it stays free of spawns."],
+          tasks=[item("torchmaster:dreadlamp", crafted=True, title="Make a dreadlamp for the camp"),
+                 item("torchmaster:feral_flare_lantern", 2, crafted=True, title="Make feral flare lanterns for the camp"),
+                 {"structure": "#nether_outposts", "title": "Choose a camp site near a Nether outpost"},
+                 {"build": {"blocks": {"torchmaster:dreadlamp": 1, "torchmaster:feral_flare_lantern": 2}, "radius": 10},
+                  "title": "Light the camp so it stays free of spawns"}],
+          rewards=[reward_item("torchmaster:frozen_pearl", 2), skill("craft", 460)]),
+
+    quest("tower_lift", "Restart the Lift", icon="supplementaries:pulley_block", after=["engineers_blueprints"],
+          text=["The engineer's tower had a lift. Fix it with pulleys, cranks and cog blocks so it runs from the "
+                "cellar to the roof."],
+          tasks=[{"structure": "structory_towers:engineer_tower", "title": "Return to the engineer's tower"},
+                 item("supplementaries:pulley_block", 2, title="Bring pulleys for the lift"),
+                 item("supplementaries:crank", title="Bring a crank to turn it"),
+                 item("supplementaries:cog_block", 2, title="Bring cog blocks to carry the load"),
+                 {"build": {"blocks": {"supplementaries:pulley_block": 2, "supplementaries:crank": 1, "supplementaries:cog_block": 2},
+                            "radius": 12}, "title": "Fit the lift's machinery from cellar to roof"}],
+          rewards=[reward_item("furniture:blueprints"), skill("craft", 470)]),
+
+    quest("wireless_workshop", "Anywhere in the Workshop", icon="obscuras_storage:wireless_terminal", after=["sorting_room"],
+          text=["The warehouse has outgrown walking. Build a wireless terminal and pull items from the network from "
+                "anywhere in Reece."],
+          tasks=[item("obscuras_storage:wireless_terminal", crafted=True, title="Build a wireless terminal"),
+                 {"place": "reece", "title": "Use it from anywhere in Reece"}],
+          rewards=[reward_item("obscuras_storage:adv_wireless_terminal"), skill("craft", 480)]),
+
+    quest("sea_bridge", "Bridge to the Island", icon="mcwbridges:balustrade_stone_bricks_bridge",
+          after=["washed_out_bridge", "ruined_town"],
+          text=["A fishing hamlet on an island off the coast wants a stone balustrade bridge to the mainland, long "
+                "enough to need piers in deep water."],
+          tasks=[{"structure": "#villages", "title": "Go to the coastal fishing village"},
+                 {"build": {"blocks": {"mcwbridges:balustrade_stone_bricks_bridge": 16, "mcwbridges:andesite_bridge_pier": 4},
+                            "radius": 12}, "title": "Span the water to the island with a balustrade bridge on piers"}],
+          rewards=[reward_item("minecraft:prismarine", 32), reward_item("minecraft:cod", 16), skill("craft", 500)]),
+]
+
+chapter("skill_crafting", "The Crafters' Guild", "Crafting path", "minecraft:crafting_table", "skills", 5, Q + ACT2 + ACT3)
