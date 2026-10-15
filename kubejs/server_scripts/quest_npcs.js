@@ -393,16 +393,24 @@ function npcLayCourse(player, goal) {
 
 function npcCourseMarkers(player, cps, index) {
   let tag = 'fq_course.' + player.uuid
-  player.server.runCommandSilent('kill @e[type=minecraft:text_display,tag=' + tag + ']')
-  // the next checkpoint and the one after it, so the route ahead is visible
+  npcClearCourse(player)
+  // the next checkpoint (gold) and the one after it (grey): a glowing block, whose outline shows through anything,
+  // with its number floating above
   for (let i = index; i < Math.min(cps.length, index + 2); i++) {
     let c = cps[i]
-    let text = JSON.stringify({ text: String(i + 1), color: i == index ? 'gold' : 'gray', bold: true })
-    player.server.runCommandSilent('execute in ' + player.level.dimension + ' run summon minecraft:text_display '
-      + c[0] + ' ' + (c[1] + 1.5) + ' ' + c[2] + " {text:'" + text + "',billboard:\"center\",see_through:1b,"
-      + 'background:0,brightness:{sky:15,block:15},Tags:["fq_course","' + tag + '"],'
+    let next = i == index
+    let at = 'execute in ' + player.level.dimension + ' run summon '
+    let tags = 'Tags:["fq_course","' + tag + '"]'
+    player.server.runCommandSilent(at + 'minecraft:block_display ' + c[0] + ' ' + c[1] + ' ' + c[2]
+      + ' {block_state:{Name:"' + (next ? 'minecraft:gold_block' : 'minecraft:light_gray_concrete') + '"},'
+      + 'Glowing:1b,glow_color_override:' + (next ? 16755200 : 11184810) + ',brightness:{sky:15,block:15},' + tags + ','
+      + 'transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[-0.75f,-0.75f,-0.75f],'
+      + 'scale:[1.5f,1.5f,1.5f]}}')
+    let text = JSON.stringify({ text: String(i + 1), color: next ? 'gold' : 'gray', bold: true })
+    player.server.runCommandSilent(at + 'minecraft:text_display ' + c[0] + ' ' + (c[1] + 2) + ' ' + c[2]
+      + " {text:'" + text + "',billboard:\"center\",background:0,brightness:{sky:15,block:15}," + tags + ','
       + 'transformation:{left_rotation:[0f,0f,0f,1f],right_rotation:[0f,0f,0f,1f],translation:[0f,0f,0f],'
-      + 'scale:[6f,6f,6f]}}')
+      + 'scale:[5f,5f,5f]}}')
   }
 }
 
@@ -411,7 +419,7 @@ function npcSound(player, sound, pitch) {
 }
 
 function npcClearCourse(player) {
-  player.server.runCommandSilent('kill @e[type=minecraft:text_display,tag=fq_course.' + player.uuid + ']')
+  player.server.runCommandSilent('kill @e[tag=fq_course.' + player.uuid + ']')
 }
 
 // did the path from (ax, ay, az) to the player come within r of checkpoint c?
@@ -438,7 +446,7 @@ function npcPointer(player, x, z) {
 function npcTickCourse(player, ch, rec) {
   let goal = ch.goal
   if (goal.kind == 'course') {
-    let cps = JSON.parse(rec.getString('cps'))
+    let cps = JSON.parse(String(rec.getString('cps')))
     let i = rec.getInt('cp')
     let flat = goal.on == 'water' || goal.on == 'ground' || goal.on == 'roofs'
     while (i < cps.length && npcPassed(player, rec.getDouble('px'), rec.getDouble('py'), rec.getDouble('pz'), cps[i],
@@ -479,7 +487,7 @@ function npcCourseLabel(player, ch, rec) {
     let leg = goal.legs[Math.min(rec.getInt('leg'), goal.legs.length - 1)]
     return 'Reach ' + leg.label + ' (' + (rec.getInt('leg') + 1) + ' / ' + goal.legs.length + ')'
   }
-  let cps = JSON.parse(rec.getString('cps'))
+  let cps = JSON.parse(String(rec.getString('cps')))
   let i = Math.min(rec.getInt('cp'), cps.length - 1)
   let c = cps[i]
   let dist = Math.round(Math.sqrt((c[0] - player.x) * (c[0] - player.x) + (c[2] - player.z) * (c[2] - player.z)))
@@ -537,7 +545,7 @@ function npcChallengeProgress(player, ch, rec) {
   if (goal.kind == 'kill') return [rec.getInt('count'), goal.count]
   if (goal.kind == 'stat') return [npcStatValue(player, goal.stat) - rec.getInt('base'), goal.count]
   if (goal.kind == 'hold') return [0, 1]   // done when the time runs out (npcTickChallenges)
-  if (goal.kind == 'course') return [rec.getInt('cp'), JSON.parse(rec.getString('cps')).length]
+  if (goal.kind == 'course') return [rec.getInt('cp'), JSON.parse(String(rec.getString('cps'))).length]
   if (goal.kind == 'legs') return [rec.getInt('leg'), goal.legs.length]
   // "away": the destination only counts this far from where the timer started (the next village, not this one)
   let far = !goal.away || npcHoldDistance(player, rec) >= goal.away
@@ -1056,7 +1064,7 @@ function npcTickVisits(player) {
     if (player.tags.contains(v.stage) || !questOpen(player, v)
       || !npcInStructure(player.level, player.x, player.y, player.z, v.structures)) return
     if (!seen) seen = npcData(player, 'fqVisits')
-    let spots = seen.contains(v.stage) ? JSON.parse(seen.getString(v.stage)) : []
+    let spots = seen.contains(v.stage) ? JSON.parse(String(seen.getString(v.stage))) : []
     let dim = String(player.level.dimension)
     if (spots.some(s => s[0] == dim && (s[1] - player.x) * (s[1] - player.x) + (s[2] - player.z) * (s[2] - player.z)
       < v.apart * v.apart)) return
@@ -1120,7 +1128,7 @@ function npcTickGrowth(player) {
   player.level.getEntitiesOfClass($NpcMob, box).forEach(m => mobs.push(m))
   let data = npcData(player, 'fqGrowth')
   open.forEach(g => {
-    let rec = data.contains(g.stage) ? JSON.parse(data.getString(g.stage)) : { n: 0, ids: [] }
+    let rec = data.contains(g.stage) ? JSON.parse(String(data.getString(g.stage))) : { n: 0, ids: [] }
     let changed = false
     mobs.forEach(m => {
       if (g.entities.indexOf(String(m.type)) < 0) return
