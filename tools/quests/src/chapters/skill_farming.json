@@ -1053,6 +1053,138 @@
       ],
       "icon": "artifacts:villager_hat",
       "signature": "artifacts:villager_hat"
+    },
+    {
+      "id": "festival_grounds",
+      "title": "The Festival Grounds",
+      "after": [
+        "main_story:act5_start",
+        "market_stall"
+      ],
+      "text": [
+        "Build the Harvest Festival grounds in Reece: a long table, bunting, hay bales, a stage for the band and the prize table under a barn roof."
+      ],
+      "tasks": [
+        {
+          "place": "reece"
+        },
+        {
+          "build": {
+            "blocks": {
+              "handcrafted:oak_table": 4,
+              "supplementaries:bunting": 6,
+              "minecraft:hay_block": 8,
+              "minecraft:oak_stairs": 8,
+              "minecraft:oak_planks": 40
+            },
+            "radius": 12
+          },
+          "title": "Build the festival grounds, stage and barn-roofed prize table"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:white_banner",
+          "name": "The Festival Banner"
+        },
+        {
+          "skill": "farm",
+          "xp": 850
+        }
+      ],
+      "icon": "minecraft:hay_block"
+    },
+    {
+      "id": "harvest_festival",
+      "title": "The Harvest Festival",
+      "after": [
+        "festival_grounds"
+      ],
+      "text": [
+        "Festival night: bring the feast's produce, the wine and the cheese, and the co-op's leader opens the Harvest Festival in Reece with every village you fed in the hard winter."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:bread",
+          "count": 32,
+          "consume": true,
+          "title": "Bring the feast's bread"
+        },
+        {
+          "item": "vinery:red_wine",
+          "count": 2,
+          "consume": true,
+          "title": "Bring the festival's wine"
+        },
+        {
+          "item": "meadow:piece_of_cheese",
+          "count": 4,
+          "consume": true,
+          "title": "Bring the festival's cheese"
+        },
+        {
+          "talk": "character",
+          "character": "marta",
+          "lines": [
+            "The Harvest Festival! Everyone you fed is here! Have a crown!"
+          ],
+          "title": "Open the Harvest Festival with Marta"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:leather_helmet",
+          "name": "The Festival Crown",
+          "lore": [
+            "A straw hat for a harvest queen."
+          ]
+        },
+        {
+          "skill": "farm",
+          "xp": 950
+        }
+      ],
+      "icon": "minecraft:wheat"
+    },
+    {
+      "id": "harvest_moon",
+      "title": "Harvest Moon",
+      "after": [
+        "harvest_festival"
+      ],
+      "text": [
+        "The co-op's leader names you Master Grower and gives you the hoe that cut the first sheaf."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "marta",
+          "lines": [
+            "Master Grower! The hoe that cut the first sheaf. Oh, I'm crying!"
+          ],
+          "title": "Be named Master Grower by Marta"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_hoe",
+          "name": "Harvest Moon",
+          "lore": [
+            "It cut the first sheaf."
+          ],
+          "enchant": {
+            "minecraft:fortune": 3,
+            "minecraft:efficiency": 5,
+            "minecraft:unbreaking": 3,
+            "minecraft:mending": 1
+          }
+        },
+        {
+          "skill": "farm",
+          "xp": 1000
+        }
+      ],
+      "icon": "minecraft:netherite_hoe"
     }
   ]
 }

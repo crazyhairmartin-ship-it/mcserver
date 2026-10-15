@@ -240,4 +240,28 @@ ACT4 = [
           rewards=[reward_item("brewery:brewfest_regalia"), skill("cook", 780)]),
 ]
 
-chapter("skill_cooking", "The Tavern Keepers", "Cooking path", "farmersdelight:cooking_pot", "skills", 3, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("banquet", "The Grand Banquet", icon="minecraft:cake", after=["main_story:act5_start", "feast_blocks", "netherite_brewery"],
+          text=["Every keeper on the tavern network comes to Reece for a grand banquet. Cook a dish from every "
+                "kitchen you've worked, with wine and beer to match."],
+          tasks=[{"place": "reece"},
+                 item("farmersdelight:beef_stew", 4, consume=True, title="Serve a Farmer's Delight stew"),
+                 item("bakery:strawberry_cake", consume=True, title="Serve a Bakery cake"),
+                 item("candlelight:lasagne", consume=True, title="Serve a Candlelight lasagne"),
+                 item("cornexpansion:grandmas_cornbread", consume=True, title="Serve Corn Expansion cornbread"),
+                 item("meadow:fondue", consume=True, title="Serve a Meadow fondue"),
+                 item("vinery:red_wine", consume=True, title="Pour a Vinery wine"),
+                 item("brewery:beer_wheat", consume=True, title="Pour a Brewery beer")],
+          rewards=[reward_item("farmersdelight:cooking_pot"), skill("cook", 850)]),
+
+    quest("last_course", "The Last Course", icon="spartanweaponry:netherite_dagger", after=["banquet"],
+          text=["The tavern keepers name you Head of the Table and give you the knife every keeper's mentor passed "
+                "down."],
+          tasks=[talk_char("bess", ["Head of the Table. You've earned it.", "Take the knife. Don't cut yourself, love."],
+                           title="Be named Head of the Table by Bess")],
+          rewards=[reward_item("spartanweaponry:netherite_dagger", name="The Last Course", lore=["Passed down from mentor to mentor."],
+                               enchant={"minecraft:sharpness": 5, "minecraft:looting": 3, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
+                   skill("cook", 1000)]),
+]
+
+chapter("skill_cooking", "The Tavern Keepers", "Cooking path", "farmersdelight:cooking_pot", "skills", 3, Q + ACT2 + ACT3 + ACT4 + ACT5)

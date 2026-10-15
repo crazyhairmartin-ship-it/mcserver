@@ -217,4 +217,31 @@ ACT4 = [
           rewards=[reward_item("artifacts:villager_hat"), skill("farm", 720)]),
 ]
 
-chapter("skill_farming", "The Growers' Co-op", "Farming path", "minecraft:wheat", "skills", 1, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("festival_grounds", "The Festival Grounds", icon="minecraft:hay_block", after=["main_story:act5_start", "market_stall"],
+          text=["Build the Harvest Festival grounds in Reece: a long table, bunting, hay bales, a stage for the band "
+                "and the prize table under a barn roof."],
+          tasks=[{"place": "reece"},
+                 {"build": {"blocks": {"handcrafted:oak_table": 4, "supplementaries:bunting": 6, "minecraft:hay_block": 8, "minecraft:oak_stairs": 8,
+                                       "minecraft:oak_planks": 40}, "radius": 12},
+                  "title": "Build the festival grounds, stage and barn-roofed prize table"}],
+          rewards=[reward_item("minecraft:white_banner", name="The Festival Banner"), skill("farm", 850)]),
+
+    quest("harvest_festival", "The Harvest Festival", icon="minecraft:wheat", after=["festival_grounds"],
+          text=["Festival night: bring the feast's produce, the wine and the cheese, and the co-op's leader opens "
+                "the Harvest Festival in Reece with every village you fed in the hard winter."],
+          tasks=[item("minecraft:bread", 32, consume=True, title="Bring the feast's bread"),
+                 item("vinery:red_wine", 2, consume=True, title="Bring the festival's wine"),
+                 item("meadow:piece_of_cheese", 4, consume=True, title="Bring the festival's cheese"),
+                 talk_char("marta", ["The Harvest Festival! Everyone you fed is here! Have a crown!"], title="Open the Harvest Festival with Marta")],
+          rewards=[reward_item("minecraft:leather_helmet", name="The Festival Crown", lore=["A straw hat for a harvest queen."]), skill("farm", 950)]),
+
+    quest("harvest_moon", "Harvest Moon", icon="minecraft:netherite_hoe", after=["harvest_festival"],
+          text=["The co-op's leader names you Master Grower and gives you the hoe that cut the first sheaf."],
+          tasks=[talk_char("marta", ["Master Grower! The hoe that cut the first sheaf. Oh, I'm crying!"], title="Be named Master Grower by Marta")],
+          rewards=[reward_item("minecraft:netherite_hoe", name="Harvest Moon", lore=["It cut the first sheaf."],
+                               enchant={"minecraft:fortune": 3, "minecraft:efficiency": 5, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
+                   skill("farm", 1000)]),
+]
+
+chapter("skill_farming", "The Growers' Co-op", "Farming path", "minecraft:wheat", "skills", 1, Q + ACT2 + ACT3 + ACT4 + ACT5)

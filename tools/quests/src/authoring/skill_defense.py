@@ -239,4 +239,30 @@ ACT4 = [
           rewards=[reward_item("artifacts:chorus_totem"), skill("defense", 760)]),
 ]
 
-chapter("skill_defense", "The Village Watch", "Defense path", "minecraft:shield", "skills", 8, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("occupied_village", "Take Back the Village", icon="cataclysm:ancient_metal_ingot", after=["last_stand_end", "main_story:act5_start"],
+          text=["A desert village has been taken by koboletons and their Kobolediator. Drive them out and give the "
+                "villagers their homes back."],
+          tasks=[{"structure": "cataclysm:desert_occupied_village", "title": "Reach the occupied desert village"},
+                 fight("cataclysm:koboleton", 8, "cataclysm:desert_occupied_village", "Occupying Koboletons", "Drive the koboletons out", wave=4),
+                 fight("cataclysm:kobolediator", 1, "cataclysm:desert_occupied_village", "The Kobolediator", "Drive out the Kobolediator", wave=1)],
+          rewards=[reward_item("cataclysm:ancient_metal_ingot", 4), skill("defense", 850)]),
+
+    quest("abandoned_village", "The Village That Fell", icon="minecraft:bell", after=["occupied_village"],
+          text=["Not every village was saved. Walk the abandoned village Cataclysm's monsters left, and bring its "
+                "broken watch bell to Reece as a reminder."],
+          tasks=[{"structure": "cataclysm:abandoned_village", "title": "Walk the abandoned village the monsters left"},
+                 item("minecraft:bell", title="Take its broken watch bell"),
+                 {"place": "reece", "title": "Bring the bell to Reece as a reminder"}],
+          rewards=[reward_item("minecraft:bell"), skill("defense", 900)]),
+
+    quest("bulwark", "Captain of the Watch", icon="spartanshields:netherite_tower_shield", after=["abandoned_village"],
+          text=["Hale hangs up his sword and names you Captain of the Watch, handing over the shield that has stood "
+                "at Reece's gate since it was founded."],
+          tasks=[talk_char("hale", ["Captain of the Watch. Don't let it go to your head.", "The gate's shield is yours. ...Tell Marta I said hello."],
+                           title="Take the captaincy and the gate's shield from Hale")],
+          rewards=[reward_item("spartanshields:netherite_tower_shield", name="The Bulwark of Reece", lore=["Stood at the gate since it was founded."],
+                               enchant={"minecraft:unbreaking": 3, "minecraft:mending": 1}), skill("defense", 1000)]),
+]
+
+chapter("skill_defense", "The Village Watch", "Defense path", "minecraft:shield", "skills", 8, Q + ACT2 + ACT3 + ACT4 + ACT5)

@@ -2095,6 +2095,267 @@
 			x: 25.5d
 			y: 0.75d
 		}
+		{
+			dependencies: [
+				"152C29866CE2995E"
+				"7E4E9B0F1E370B80"
+			]
+			description: ["Brew legendary ink in the alchemist cauldron and inscribe a legendary scroll of your own choosing."]
+			icon: "irons_spellbooks:legendary_ink"
+			id: "0D16B432B9D3C210"
+			rewards: [
+				{
+					id: "3172423A1FBBD738"
+					item: "irons_spellbooks:legendary_ink"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 850"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "6093CDBB0293792E"
+					silent: true
+					title: "+850 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "48E092D764FF0B9C"
+					item: "irons_spellbooks:legendary_ink"
+					only_from_crafting: true
+					title: "Brew legendary ink in the alchemist cauldron"
+					type: "item"
+				}
+				{
+					id: "4BD4E53350761CBF"
+					item: "irons_spellbooks:scroll"
+					only_from_crafting: true
+					title: "Inscribe a legendary scroll of your own choosing"
+					type: "item"
+				}
+			]
+			title: "Legendary Ink"
+			x: 27.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"0D16B432B9D3C210"
+				"0AD0FA9726AD9791"
+			]
+			description: ["Bring Orrin, Agathe and Pip together in the library tower with the citadel inscriptions and the phylactery shards. Together they work out who the Flamebearer was, and why his echo still burns."]
+			icon: "irons_spellbooks:dead_king_phylactery_shard"
+			id: "3FED656E95589191"
+			rewards: [
+				{
+					id: "693036754506F0F6"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Who the Flamebearer was.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Statue's Design\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 900"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "0E5E71BDF32DF2F5"
+					silent: true
+					title: "+900 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					count: 3L
+					id: "46938BEEAEF93327"
+					item: "irons_spellbooks:dead_king_phylactery_shard"
+					title: "Bring the phylactery shards"
+					type: "item"
+				}
+				{
+					id: "2FC4049BBA0872FE"
+					stage: "fq.magic.flamebearers_trail.talk1"
+					title: "Gather Orrin in the library tower"
+					type: "gamestage"
+				}
+				{
+					id: "2DA74C489A161BD5"
+					stage: "fq.magic.flamebearers_trail.talk2"
+					title: "Gather Agathe in the library tower"
+					type: "gamestage"
+				}
+				{
+					id: "58F7D03AA39537B6"
+					stage: "fq.magic.flamebearers_trail.talk3"
+					title: "Gather Pip in the library tower"
+					type: "gamestage"
+				}
+			]
+			title: "The Flamebearer's Trail"
+			x: 28.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3FED656E95589191"]
+			description: ["Craft the Tyros Statue from pyrium and raise it on an altar far from Reece, the summoning place Orrin chose."]
+			icon: "irons_spellbooks:tyros_statue"
+			id: "29B89AF6F1D30F71"
+			rewards: [
+				{
+					count: 4
+					id: "4E36EC6123685E17"
+					item: "irons_spellbooks:greater_healing_potion"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 1100"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "63A0C4C49F85C09A"
+					silent: true
+					title: "+1100 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "171B7774F64B80E6"
+					item: "irons_spellbooks:tyros_statue"
+					only_from_crafting: true
+					title: "Craft the Tyros Statue from pyrium"
+					type: "item"
+				}
+				{
+					id: "1F968A06D24F424F"
+					stage: "fq.magic.tyros_statue.build1"
+					title: "Raise it on an altar far from Reece"
+					type: "gamestage"
+				}
+			]
+			title: "The Statue of Tyros"
+			x: 30.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["29B89AF6F1D30F71"]
+			description: ["Wake the Echo of Tyros, First Flamebearer, and lay the flame to rest, with Orrin, Agathe and Pip watching from a safe distance."]
+			icon: "irons_spellbooks:music_disc_flame_still_burns"
+			id: "3CE48564BAA5985E"
+			rewards: [
+				{
+					id: "65545C9249AC4CE6"
+					item: "irons_spellbooks:music_disc_flame_still_burns"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 1500"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "2708BC4CC92021B1"
+					silent: true
+					title: "+1500 Magic XP"
+					type: "command"
+				}
+			]
+			shape: "diamond"
+			size: 1.75d
+			tasks: [
+				{
+					entity: "irons_spellbooks:fire_boss"
+					id: "49DA29D92A11B15F"
+					title: "Lay the Echo of Tyros to rest"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Echo of Tyros"
+			x: 31.5d
+			y: -0.75d
+		}
+		{
+			dependencies: [
+				"29B89AF6F1D30F71"
+				"09135267C326D560"
+			]
+			description: ["Orrin hands you his life's work to finish: bind a legendary spellbook with a page from every school you've mastered, and the Order names you its next Archmage."]
+			icon: "irons_spellbooks:legendary_spell_book"
+			id: "083B945E1B3FDDF2"
+			rewards: [
+				{
+					id: "7508EB694687E2E9"
+					item: {
+						Count: 1b
+						id: "irons_spellbooks:legendary_spell_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Orrin's life's work, finished.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Flamebearer's Codex\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 1300"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "116C2D26CBC9AB1F"
+					silent: true
+					title: "+1300 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "11A7C81C00D4D6B3"
+					item: "irons_spellbooks:legendary_spell_book"
+					only_from_crafting: true
+					title: "Bind a legendary spellbook"
+					type: "item"
+				}
+				{
+					id: "57AAE1E933EB6232"
+					stage: "fq.magic.the_flamebearers_codex.cast1"
+					title: "Cast a fire page"
+					type: "gamestage"
+				}
+				{
+					id: "65A55ADB39E70606"
+					stage: "fq.magic.the_flamebearers_codex.cast2"
+					title: "Cast an ice page"
+					type: "gamestage"
+				}
+				{
+					id: "71B677D8145455D0"
+					stage: "fq.magic.the_flamebearers_codex.cast3"
+					title: "Cast a holy page"
+					type: "gamestage"
+				}
+				{
+					id: "2254506F22F9409C"
+					stage: "fq.magic.the_flamebearers_codex.cast4"
+					title: "Cast an eldritch page"
+					type: "gamestage"
+				}
+				{
+					id: "054586859EDFA2B9"
+					stage: "fq.magic.the_flamebearers_codex.talk5"
+					title: "Be named the Order's next Archmage by Orrin"
+					type: "gamestage"
+				}
+			]
+			title: "The Flamebearer's Codex"
+			x: 31.5d
+			y: 0.75d
+		}
 	]
 	subtitle: ["Magic path"]
 	title: "The Arcane Order"

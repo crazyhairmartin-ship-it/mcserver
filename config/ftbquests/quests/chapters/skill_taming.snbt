@@ -1596,6 +1596,118 @@
 			x: 6.0d
 			y: 3.0d
 		}
+		{
+			dependencies: [
+				"4458555BAD71CF43"
+				"7E4E9B0F1E370B80"
+			]
+			description: ["The great battles have driven animals out of their homes. Find the frightened ones wandering far from home and lead them to the sanctuary with your herd."]
+			icon: "minecraft:lead"
+			id: "76F76A36D1C232D0"
+			rewards: [
+				{
+					count: 16
+					id: "051FDE6365265505"
+					item: "minecraft:bone"
+					type: "item"
+				}
+				{
+					count: 32
+					id: "39ECD26DE069A4CB"
+					item: "minecraft:wheat"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 850"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "4482DB04FD92D7B0"
+					silent: true
+					title: "+850 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "51E81B90317FDE1D"
+					stage: "fq.skill_taming.after_the_storm.enc0"
+					title: "Lead the frightened fawn to the sanctuary"
+					type: "gamestage"
+				}
+				{
+					id: "187BED69F3433095"
+					stage: "fq.skill_taming.after_the_storm.enc1"
+					title: "Lead the lost kit to the sanctuary"
+					type: "gamestage"
+				}
+				{
+					id: "23C0295B92439A81"
+					stage: "fq.skill_taming.after_the_storm.enc2"
+					title: "Lead the singed pup to the sanctuary"
+					type: "gamestage"
+				}
+			]
+			title: "After the Storm"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"76F76A36D1C232D0"
+				"31102AC2F67357E5"
+				"0AA362F1D26DA6C1"
+				"030967CC3DC485A3"
+			]
+			description: ["Fern names you Keeper and gives you the sanctuary's oldest gift, stitched for you."]
+			icon: "minecraft:saddle"
+			id: "6F068B87A10AF814"
+			rewards: [
+				{
+					id: "201365FF97D789E6"
+					item: {
+						Count: 1b
+						id: "minecraft:saddle"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The sanctuary's oldest gift.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Thistlewood Saddle\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 1000"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "11BE791653EA4875"
+					silent: true
+					title: "+1000 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "249C7993E42EB2BC"
+					stage: "fq.skill_taming.taming_capstone.talk0"
+					title: "Be named Keeper of the Sanctuary by Fern"
+					type: "gamestage"
+				}
+			]
+			title: "Keeper of the Sanctuary"
+			x: 13.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Taming path"]
 	title: "The Sanctuary"

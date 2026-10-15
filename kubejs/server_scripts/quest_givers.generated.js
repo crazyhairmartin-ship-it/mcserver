@@ -4771,6 +4771,21 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_mining:guildmaster",
+    "stage": "fq.skill_mining.guildmaster.talk0",
+    "type": "talk",
+    "lines": [
+      "Master of Rescues, aye. The oldest pick, reforged.",
+      "Dinnae lose it, lass."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "dagna",
+    "quest_id": "411D9F686653FA4E",
+    "open_task": ""
+  },
+  {
     "quest": "small_favours:sf_out_of_flour",
     "stage": "fq.small_favours.sf_out_of_flour.talk0",
     "type": "talk",
@@ -7858,6 +7873,59 @@ global.QUEST_GIVERS = [
     "profession": ""
   },
   {
+    "quest": "skill_farming:festival_grounds",
+    "stage": "fq.skill_farming.festival_grounds.build1",
+    "type": "build",
+    "keys": [
+      "handcrafted:oak_table",
+      "supplementaries:bunting",
+      "minecraft:hay_block",
+      "minecraft:oak_stairs",
+      "minecraft:oak_planks"
+    ],
+    "counts": [
+      4,
+      6,
+      8,
+      8,
+      40
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "76F1961A9ED92A3B",
+    "prev_tasks": [
+      "352FB0C9F0160D71"
+    ]
+  },
+  {
+    "quest": "skill_farming:harvest_festival",
+    "stage": "fq.skill_farming.harvest_festival.talk3",
+    "type": "talk",
+    "lines": [
+      "The Harvest Festival! Everyone you fed is here! Have a crown!"
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "marta",
+    "quest_id": "5990CCD01B26DF20",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_farming:harvest_moon",
+    "stage": "fq.skill_farming.harvest_moon.talk0",
+    "type": "talk",
+    "lines": [
+      "Master Grower! The hoe that cut the first sheaf. Oh, I'm crying!"
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "marta",
+    "quest_id": "299C582EBF677CE4",
+    "open_task": ""
+  },
+  {
     "quest": "discovery_sky_and_underground:volcano_in_the_sky",
     "stage": "fq.discovery_sky_and_underground.volcano_in_the_sky.search1",
     "type": "search",
@@ -9785,6 +9853,78 @@ global.QUEST_GIVERS = [
     "open_task": "",
     "lines": [],
     "name": ""
+  },
+  {
+    "quest": "skill_fishing:championship",
+    "stage": "fq.skill_fishing.championship.enc1",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Hold the net? Of course! I'm an ally now! Don't tell Halloway."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "7B1ACCC288D279E8",
+    "prev_tasks": [
+      "11D15327DF064707"
+    ],
+    "name": "Silas Pike",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:villager",
+    "profession": "minecraft:fisherman"
+  },
+  {
+    "quest": "skill_fishing:championship",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "fishing"
+    ],
+    "chance": 0.08,
+    "item": "kubejs:quest_championship_2",
+    "requires": [],
+    "quest_id": "7B1ACCC288D279E8",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_fishing:tidecaller",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "fishing"
+    ],
+    "chance": 0.1,
+    "item": "kubejs:quest_tidecaller_1",
+    "requires": [],
+    "quest_id": "66DDF2F4FB70B20B",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_fishing:tidecaller",
+    "stage": "fq.skill_fishing.tidecaller.talk2",
+    "type": "talk",
+    "lines": [
+      "A deepling's catch. Nobody's ever landed one.",
+      "The society's own rod is yours."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "halloway",
+    "quest_id": "66DDF2F4FB70B20B",
+    "open_task": ""
   },
   {
     "quest": "village_errands:water_from_three_wells",
@@ -12116,6 +12256,21 @@ global.QUEST_GIVERS = [
     "profession": ""
   },
   {
+    "quest": "skill_cooking:last_course",
+    "stage": "fq.skill_cooking.last_course.talk0",
+    "type": "talk",
+    "lines": [
+      "Head of the Table. You've earned it.",
+      "Take the knife. Don't cut yourself, love."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "bess",
+    "quest_id": "707D8EE78BE1A79D",
+    "open_task": ""
+  },
+  {
     "quest": "skill_foraging:field_journal",
     "stage": "fq.skill_foraging.field_journal",
     "type": "org",
@@ -12394,6 +12549,36 @@ global.QUEST_GIVERS = [
       "1A93A4BCD799E60A",
       "4FB8E10D2CC2C37C"
     ]
+  },
+  {
+    "quest": "skill_foraging:almanac",
+    "stage": "fq.skill_foraging.almanac.talk5",
+    "type": "talk",
+    "lines": [
+      "Pressed from all three dimensions? Oh, I'm so... oh. Oh my.",
+      "I'll have it copied for every village. Sorry. Thank you."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "rue",
+    "quest_id": "439D3AA608856931",
+    "open_task": ""
+  },
+  {
+    "quest": "skill_foraging:greenwarden",
+    "stage": "fq.skill_foraging.greenwarden.talk0",
+    "type": "talk",
+    "lines": [
+      "Greenwarden of the wild lands. I worry you'll do it wonderfully.",
+      "The axe is only for dead wood. Please."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "rue",
+    "quest_id": "4BF59FD4C1D34F25",
+    "open_task": ""
   },
   {
     "quest": "skill_crafting:apprentice_papers",
@@ -12974,6 +13159,46 @@ global.QUEST_GIVERS = [
     "prev_tasks": [
       "035FD912B883B71E"
     ]
+  },
+  {
+    "quest": "skill_crafting:rebuild_after_cataclysm",
+    "stage": "fq.skill_crafting.rebuild_after_cataclysm.build1",
+    "type": "build",
+    "keys": [
+      "minecraft:sandstone",
+      "#minecraft:doors",
+      "#minecraft:beds",
+      "handcrafted:oak_table",
+      "handcrafted:oak_chair"
+    ],
+    "counts": [
+      40,
+      3,
+      3,
+      2,
+      4
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "75E19235C9345E23",
+    "prev_tasks": [
+      "249AFD741332CFCF"
+    ]
+  },
+  {
+    "quest": "skill_crafting:crafting_capstone",
+    "stage": "fq.skill_crafting.crafting_capstone.talk0",
+    "type": "talk",
+    "lines": [
+      "Master of the guild. About time.",
+      "The founder's tools, reforged. Don't let them rust."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "odile",
+    "quest_id": "531AFC0ECED02B42",
+    "open_task": ""
   },
   {
     "quest": "skill_attack:the_board",
@@ -13829,6 +14054,133 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "skill_attack:cursed_contracts",
+    "stage": "fq.skill_attack.cursed_contracts.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:the_prowler",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:ancient_factory"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Factory Prowler",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "380556F0655DCFB5",
+    "requires": [],
+    "quest_id": "6C1C0EAEC3DEF492",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_attack:cursed_contracts",
+    "stage": "fq.skill_attack.cursed_contracts.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:ender_golem",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:ruined_citadel"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Citadel Golem",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "187E5872292D302D",
+    "requires": [],
+    "quest_id": "6C1C0EAEC3DEF492",
+    "prev_tasks": [
+      "380556F0655DCFB5"
+    ]
+  },
+  {
+    "quest": "skill_attack:cursed_contracts",
+    "stage": "fq.skill_attack.cursed_contracts.spawn2",
+    "type": "spawn",
+    "entity": "cataclysm:coralssus",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:sunken_city"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Coralssus",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "18BF0CB12D6F1A38",
+    "requires": [],
+    "quest_id": "6C1C0EAEC3DEF492",
+    "prev_tasks": [
+      "380556F0655DCFB5",
+      "187E5872292D302D"
+    ]
+  },
+  {
+    "quest": "skill_attack:draugr_hunt",
+    "stage": "fq.skill_attack.draugr_hunt.spawn0",
+    "type": "spawn",
+    "entity": "cataclysm:royal_draugr",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:frosted_prison"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "A Royal Draugr",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "526E01FA654414BE",
+    "requires": [],
+    "quest_id": "01416955BEB512FA",
+    "prev_tasks": []
+  },
+  {
+    "quest": "skill_attack:draugr_hunt",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "cataclysm:royal_draugr"
+    ],
+    "chance": 0.8,
+    "item": "kubejs:quest_draugr_hunt_1",
+    "requires": [],
+    "quest_id": "01416955BEB512FA",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "skill_attack:ash_verdict",
+    "stage": "fq.skill_attack.ash_verdict.talk0",
+    "type": "talk",
+    "lines": [
+      "The last contract. My name, retired.",
+      "Take the blade, and the office. Hunt well."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "corvin",
+    "quest_id": "1A9C1079BDC577FE",
+    "open_task": ""
+  },
+  {
     "quest": "skill_range:lodge_oath",
     "stage": "fq.skill_range.lodge_oath.talk2",
     "type": "talk",
@@ -14536,6 +14888,85 @@ global.QUEST_GIVERS = [
     },
     "entity": "alexsmobs:tarantula_hawk",
     "profession": ""
+  },
+  {
+    "quest": "skill_range:white_stag",
+    "stage": "fq.skill_range.white_stag.enc2",
+    "type": "encounter",
+    "then": "kill",
+    "lines": [
+      "*Pale antlers among the snow-laden firs.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "04DBA0DB251FBA11",
+    "prev_tasks": [
+      "08AF3860A4C2EBA3",
+      "6905721D0F2E0B7E"
+    ],
+    "name": "The White Stag",
+    "distance": [
+      24,
+      40
+    ],
+    "minutes": 20.0,
+    "boost": {
+      "health": 2.0,
+      "damage": 1.5,
+      "speed": 1.0,
+      "scale": 1.25
+    },
+    "health": 80,
+    "glow": true,
+    "where": {
+      "biomes": [
+        "minecraft:snowy_taiga",
+        "minecraft:taiga",
+        "minecraft:grove"
+      ]
+    },
+    "entity": "naturalist:deer",
+    "profession": ""
+  },
+  {
+    "quest": "skill_range:crystal_crabs",
+    "stage": "fq.skill_range.crystal_crabs.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:amethyst_crab",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:amethyst_nest"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "Nest Crabs",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "446672BAE303892F",
+    "requires": [],
+    "quest_id": "65CB842A1713227A",
+    "prev_tasks": [
+      "58F4A7CB52495241"
+    ]
+  },
+  {
+    "quest": "skill_range:huntmaster",
+    "stage": "fq.skill_range.huntmaster.talk0",
+    "type": "talk",
+    "lines": [
+      "Every legend on the wall. Huntmaster.",
+      "Take the lodge's own bow."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "orla",
+    "quest_id": "532EB2F0CFF7A1BA",
+    "open_task": ""
   },
   {
     "quest": "skill_defense:enlist",
@@ -15453,6 +15884,72 @@ global.QUEST_GIVERS = [
       "4694709DF0735260"
     ],
     "name": ""
+  },
+  {
+    "quest": "skill_defense:occupied_village",
+    "stage": "fq.skill_defense.occupied_village.spawn1",
+    "type": "spawn",
+    "entity": "cataclysm:koboleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:desert_occupied_village"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Occupying Koboletons",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "6CF4EA3992211DE2",
+    "requires": [],
+    "quest_id": "35E5E0187C48632B",
+    "prev_tasks": [
+      "440769C6384C3022"
+    ]
+  },
+  {
+    "quest": "skill_defense:occupied_village",
+    "stage": "fq.skill_defense.occupied_village.spawn2",
+    "type": "spawn",
+    "entity": "cataclysm:kobolediator",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:desert_occupied_village"
+      ],
+      "label": "the destination"
+    },
+    "wave": 1,
+    "name": "The Kobolediator",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "317CB20D47185A4D",
+    "requires": [],
+    "quest_id": "35E5E0187C48632B",
+    "prev_tasks": [
+      "440769C6384C3022",
+      "6CF4EA3992211DE2"
+    ]
+  },
+  {
+    "quest": "skill_defense:bulwark",
+    "stage": "fq.skill_defense.bulwark.talk0",
+    "type": "talk",
+    "lines": [
+      "Captain of the Watch. Don't let it go to your head.",
+      "The gate's shield is yours. ...Tell Marta I said hello."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "hale",
+    "quest_id": "0AC3E9B8793EA182",
+    "open_task": ""
   },
   {
     "quest": "skill_agility:sign_the_roster",
@@ -16903,6 +17400,176 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "skill_agility:grand_relay",
+    "stage": "fq.skill_agility.grand_relay.timed1",
+    "type": "timed",
+    "seconds": 900,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach",
+        "ctov:large/village_christmas",
+        "ctov:large/village_dark_forest",
+        "ctov:large/village_desert",
+        "ctov:large/village_desert_oasis",
+        "ctov:large/village_jungle",
+        "ctov:large/village_jungle_tree",
+        "ctov:large/village_mesa",
+        "ctov:large/village_mesa_fortified",
+        "ctov:large/village_mountain",
+        "ctov:large/village_mountain_alpine",
+        "ctov:large/village_mushroom",
+        "ctov:large/village_plains",
+        "ctov:large/village_plains_fortified",
+        "ctov:large/village_savanna",
+        "ctov:large/village_savanna_na",
+        "ctov:large/village_snowy_igloo",
+        "ctov:large/village_swamp",
+        "ctov:large/village_swamp_fortified",
+        "ctov:large/village_taiga",
+        "ctov:large/village_taiga_fortified",
+        "ctov:medium/village_beach",
+        "ctov:medium/village_christmas",
+        "ctov:medium/village_dark_forest",
+        "ctov:medium/village_desert",
+        "ctov:medium/village_desert_oasis",
+        "ctov:medium/village_jungle",
+        "ctov:medium/village_jungle_tree",
+        "ctov:medium/village_mesa",
+        "ctov:medium/village_mesa_fortified",
+        "ctov:medium/village_mountain",
+        "ctov:medium/village_mountain_alpine",
+        "ctov:medium/village_mushroom",
+        "ctov:medium/village_plains",
+        "ctov:medium/village_plains_fortified",
+        "ctov:medium/village_savanna",
+        "ctov:medium/village_savanna_na",
+        "ctov:medium/village_snowy_igloo",
+        "ctov:medium/village_swamp",
+        "ctov:medium/village_swamp_fortified",
+        "ctov:medium/village_taiga",
+        "ctov:medium/village_taiga_fortified",
+        "ctov:small/village_beach",
+        "ctov:small/village_christmas",
+        "ctov:small/village_dark_forest",
+        "ctov:small/village_desert",
+        "ctov:small/village_desert_oasis",
+        "ctov:small/village_jungle",
+        "ctov:small/village_jungle_tree",
+        "ctov:small/village_mesa",
+        "ctov:small/village_mesa_fortified",
+        "ctov:small/village_mountain",
+        "ctov:small/village_mountain_alpine",
+        "ctov:small/village_mushroom",
+        "ctov:small/village_plains",
+        "ctov:small/village_plains_fortified",
+        "ctov:small/village_savanna",
+        "ctov:small/village_savanna_na",
+        "ctov:small/village_snowy_igloo",
+        "ctov:small/village_swamp",
+        "ctov:small/village_swamp_fortified",
+        "ctov:small/village_taiga",
+        "ctov:small/village_taiga_fortified",
+        "minecraft:village_desert",
+        "minecraft:village_plains",
+        "minecraft:village_savanna",
+        "minecraft:village_snowy",
+        "minecraft:village_taiga"
+      ],
+      "label": "the first leg's village",
+      "away": 200
+    },
+    "no": [
+      "teleport",
+      "mounts"
+    ],
+    "waves": [],
+    "lines": [
+      "The grand relay. First leg on foot!"
+    ],
+    "start": "Start the relay",
+    "requires": [],
+    "quest_id": "328C19D4F0D690BE",
+    "prev_tasks": [
+      "38ABC61436445688"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:grand_relay",
+    "stage": "fq.skill_agility.grand_relay.timed2",
+    "type": "timed",
+    "seconds": 900,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "ctov:large/village_beach"
+      ],
+      "label": "the bay's far village",
+      "away": 200
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Second leg, by ship!"
+    ],
+    "start": "Sail the second leg",
+    "requires": [],
+    "quest_id": "328C19D4F0D690BE",
+    "prev_tasks": [
+      "38ABC61436445688",
+      "08A61B76B111CFDA"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:grand_relay",
+    "stage": "fq.skill_agility.grand_relay.timed3",
+    "type": "timed",
+    "seconds": 900,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "skyvillages:skyvillage"
+      ],
+      "label": "the sky village",
+      "away": 200
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Last leg, by air!"
+    ],
+    "start": "Fly the last leg",
+    "requires": [],
+    "quest_id": "328C19D4F0D690BE",
+    "prev_tasks": [
+      "38ABC61436445688",
+      "08A61B76B111CFDA",
+      "5F7ED5D2EAD62E23"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "skill_agility:courier_capstone",
+    "stage": "fq.skill_agility.courier_capstone.talk0",
+    "type": "talk",
+    "lines": [
+      "The post office keys. And the oldest treasure.",
+      "Run well. Stamp everything."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "juniper",
+    "quest_id": "7088FC005EE911AB",
+    "open_task": ""
+  },
+  {
     "quest": "magic:the_order_calls",
     "stage": "fq.magic.the_order_calls",
     "type": "org",
@@ -17775,6 +18442,144 @@ global.QUEST_GIVERS = [
     ]
   },
   {
+    "quest": "magic:flamebearers_trail",
+    "stage": "fq.magic.flamebearers_trail.talk1",
+    "type": "talk",
+    "lines": [
+      "The shards and the inscriptions. Together at last."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "orrin",
+    "quest_id": "3FED656E95589191",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:flamebearers_trail",
+    "stage": "fq.magic.flamebearers_trail.talk2",
+    "type": "talk",
+    "lines": [
+      "The Flamebearer's echo still burns. We know why."
+    ],
+    "requires": [
+      "fq.magic.flamebearers_trail.talk1"
+    ],
+    "name": "",
+    "match": "character",
+    "character": "agathe",
+    "quest_id": "3FED656E95589191",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:flamebearers_trail",
+    "stage": "fq.magic.flamebearers_trail.talk3",
+    "type": "talk",
+    "lines": [
+      "I knew it! I borrowed the right book!"
+    ],
+    "requires": [
+      "fq.magic.flamebearers_trail.talk1",
+      "fq.magic.flamebearers_trail.talk2"
+    ],
+    "name": "",
+    "match": "character",
+    "character": "pip",
+    "quest_id": "3FED656E95589191",
+    "open_task": ""
+  },
+  {
+    "quest": "magic:tyros_statue",
+    "stage": "fq.magic.tyros_statue.build1",
+    "type": "build",
+    "keys": [
+      "irons_spellbooks:tyros_statue",
+      "minecraft:obsidian"
+    ],
+    "counts": [
+      1,
+      8
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "29B89AF6F1D30F71",
+    "prev_tasks": [
+      "171B7774F64B80E6"
+    ]
+  },
+  {
+    "quest": "magic:the_flamebearers_codex",
+    "stage": "fq.magic.the_flamebearers_codex.cast1",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:fire",
+    "count": 1,
+    "requires": [],
+    "quest_id": "083B945E1B3FDDF2",
+    "prev_tasks": [
+      "11A7C81C00D4D6B3"
+    ]
+  },
+  {
+    "quest": "magic:the_flamebearers_codex",
+    "stage": "fq.magic.the_flamebearers_codex.cast2",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:ice",
+    "count": 1,
+    "requires": [],
+    "quest_id": "083B945E1B3FDDF2",
+    "prev_tasks": [
+      "11A7C81C00D4D6B3",
+      "57AAE1E933EB6232"
+    ]
+  },
+  {
+    "quest": "magic:the_flamebearers_codex",
+    "stage": "fq.magic.the_flamebearers_codex.cast3",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:holy",
+    "count": 1,
+    "requires": [],
+    "quest_id": "083B945E1B3FDDF2",
+    "prev_tasks": [
+      "11A7C81C00D4D6B3",
+      "57AAE1E933EB6232",
+      "65A55ADB39E70606"
+    ]
+  },
+  {
+    "quest": "magic:the_flamebearers_codex",
+    "stage": "fq.magic.the_flamebearers_codex.cast4",
+    "type": "cast",
+    "spell": "",
+    "school": "irons_spellbooks:eldritch",
+    "count": 1,
+    "requires": [],
+    "quest_id": "083B945E1B3FDDF2",
+    "prev_tasks": [
+      "11A7C81C00D4D6B3",
+      "57AAE1E933EB6232",
+      "65A55ADB39E70606",
+      "71B677D8145455D0"
+    ]
+  },
+  {
+    "quest": "magic:the_flamebearers_codex",
+    "stage": "fq.magic.the_flamebearers_codex.talk5",
+    "type": "talk",
+    "lines": [
+      "My life's work, finished. The next Archmage."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "orrin",
+    "quest_id": "083B945E1B3FDDF2",
+    "open_task": ""
+  },
+  {
     "quest": "skill_taming:stray_wolf",
     "stage": "fq.skill_taming.stray_wolf",
     "type": "org",
@@ -18575,6 +19380,155 @@ global.QUEST_GIVERS = [
     "where": {},
     "entity": "minecraft:villager",
     "profession": ""
+  },
+  {
+    "quest": "skill_taming:after_the_storm",
+    "stage": "fq.skill_taming.after_the_storm.enc0",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "*A terrified fawn, far from any wood.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "76F76A36D1C232D0",
+    "prev_tasks": [],
+    "name": "Frightened Fawn",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "naturalist:deer",
+    "profession": "",
+    "to": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_taming:after_the_storm",
+    "stage": "fq.skill_taming.after_the_storm.enc1",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "*A shivering fox kit, lost.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "76F76A36D1C232D0",
+    "prev_tasks": [
+      "51E81B90317FDE1D"
+    ],
+    "name": "Lost Kit",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:fox",
+    "profession": "",
+    "to": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_taming:after_the_storm",
+    "stage": "fq.skill_taming.after_the_storm.enc2",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "*A singed wolf pup, limping.*"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "76F76A36D1C232D0",
+    "prev_tasks": [
+      "51E81B90317FDE1D",
+      "187BED69F3433095"
+    ],
+    "name": "Singed Pup",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:wolf",
+    "profession": "",
+    "to": {
+      "kind": "place",
+      "box": {
+        "dimension": "minecraft:overworld",
+        "min": [
+          3290,
+          37,
+          -4188
+        ],
+        "max": [
+          3418,
+          133,
+          -4060
+        ]
+      },
+      "label": "Reece"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "skill_taming:taming_capstone",
+    "stage": "fq.skill_taming.taming_capstone.talk0",
+    "type": "talk",
+    "lines": [
+      "Keeper of the Sanctuary. The animals chose you.",
+      "The oldest gift. Stitched for you."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "fern",
+    "quest_id": "6F068B87A10AF814",
+    "open_task": ""
   }
 ]
 global.QUEST_CHARACTERS = {

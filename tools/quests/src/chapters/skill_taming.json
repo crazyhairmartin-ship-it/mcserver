@@ -1291,6 +1291,118 @@
         }
       ],
       "icon": "butterflies:bottled_butterfly_ice"
+    },
+    {
+      "id": "after_the_storm",
+      "title": "After the Storm",
+      "after": [
+        "the_full_herd",
+        "main_story:act5_start"
+      ],
+      "text": [
+        "The great battles have driven animals out of their homes. Find the frightened ones wandering far from home and lead them to the sanctuary with your herd."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "naturalist:deer",
+            "name": "Frightened Fawn",
+            "to": {
+              "place": "reece"
+            },
+            "then": "escort",
+            "lines": [
+              "*A terrified fawn, far from any wood.*"
+            ]
+          },
+          "title": "Lead the frightened fawn to the sanctuary"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:fox",
+            "name": "Lost Kit",
+            "to": {
+              "place": "reece"
+            },
+            "then": "escort",
+            "lines": [
+              "*A shivering fox kit, lost.*"
+            ]
+          },
+          "title": "Lead the lost kit to the sanctuary"
+        },
+        {
+          "encounter": {
+            "entity": "minecraft:wolf",
+            "name": "Singed Pup",
+            "to": {
+              "place": "reece"
+            },
+            "then": "escort",
+            "lines": [
+              "*A singed wolf pup, limping.*"
+            ]
+          },
+          "title": "Lead the singed pup to the sanctuary"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone",
+          "count": 16
+        },
+        {
+          "item": "minecraft:wheat",
+          "count": 32
+        },
+        {
+          "skill": "taming",
+          "xp": 850
+        }
+      ],
+      "icon": "minecraft:lead"
+    },
+    {
+      "id": "taming_capstone",
+      "title": "Keeper of the Sanctuary",
+      "after": [
+        "after_the_storm",
+        "pet_show",
+        "butterfly_atlas",
+        "familiar_bond"
+      ],
+      "text": [
+        "Fern names you Keeper and gives you the sanctuary's oldest gift, stitched for you."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "fern",
+          "lines": [
+            "Keeper of the Sanctuary. The animals chose you.",
+            "The oldest gift. Stitched for you."
+          ],
+          "title": "Be named Keeper of the Sanctuary by Fern"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:saddle",
+          "name": "The Thistlewood Saddle",
+          "lore": [
+            "The sanctuary's oldest gift."
+          ],
+          "enchant": {
+            "minecraft:unbreaking": 3,
+            "minecraft:mending": 1
+          }
+        },
+        {
+          "skill": "taming",
+          "xp": 1000
+        }
+      ],
+      "icon": "minecraft:saddle"
     }
   ]
 }

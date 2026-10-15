@@ -234,4 +234,27 @@ ACT4 = [
           rewards=[reward_item("minecraft:chorus_flower", 8), skill("forage", 720)]),
 ]
 
-chapter("skill_foraging", "The Herbalists", "Foraging path", "minecraft:oak_sapling", "skills", 4, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("almanac", "The Complete Almanac", icon="minecraft:writable_book", after=["main_story:act5_start", "end_flora"],
+          text=["Finish the field journal: plants pressed from all three dimensions, handed to the Head Herbalist "
+                "in Reece to be copied for every village."],
+          tasks=[item("minecraft:poppy", title="Press an Overworld flower"),
+                 item("minecraft:crimson_fungus", title="Press a Nether fungus"),
+                 item("minecraft:chorus_flower", title="Press an End flower"),
+                 item("biomesoplenty:burning_blossom", title="Press a burning blossom"),
+                 item("regions_unexplored:blue_snowbelle", title="Press a blue snowbelle"),
+                 talk_char("rue", ["Pressed from all three dimensions? Oh, I'm so... oh. Oh my.", "I'll have it copied for every village. Sorry. Thank you."],
+                           title="Hand the field journal to the Head Herbalist")],
+          rewards=[reward_item("minecraft:writable_book", name="The Complete Almanac", lore=["Bound in leather with your name on it."]), skill("forage", 850)]),
+
+    quest("greenwarden", "Greenwarden", icon="minecraft:netherite_axe", after=["almanac"],
+          text=["The Head Herbalist names you Greenwarden of the wild lands and gives you the axe the order uses "
+                "only on dead wood."],
+          tasks=[talk_char("rue", ["Greenwarden of the wild lands. I worry you'll do it wonderfully.", "The axe is only for dead wood. Please."],
+                           title="Be named Greenwarden by Mother Rue")],
+          rewards=[reward_item("minecraft:netherite_axe", name="Greenwarden", lore=["Only for dead wood."], unbreakable=True,
+                               enchant={"minecraft:efficiency": 5, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
+                   skill("forage", 1000)]),
+]
+
+chapter("skill_foraging", "The Herbalists", "Foraging path", "minecraft:oak_sapling", "skills", 4, Q + ACT2 + ACT3 + ACT4 + ACT5)

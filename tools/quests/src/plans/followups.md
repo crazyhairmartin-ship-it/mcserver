@@ -294,5 +294,20 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - main_story:act5_leviathan: needs the sacrifice placed on the altar; written as the boss fight at the Sunken City
 - main_story:act5_last_preparations: needs every organisation to send gifts; written as three org talks in Reece
 - main_story:final_boss: needs Ignis to be present when the other sleepers are down; written as a boss spawn at the Burning Arena
+- skill_attack:cursed_contracts: needs three posters in Ash's hand; written as three spawned fights at the named places
+- skill_defense:abandoned_village: needs the watch bell brought to Reece; written as a bell carried and reaching Reece
+- skill_range:white_stag: needs a three-biome track; written as two biome steps, an encounter kill and antlers carried
+- skill_taming:after_the_storm: needs leading animals by land, sea and air; written as three escorts to Reece
+- skill_agility:grand_relay: needs racing runners from every village in one day; written as three timed legs
+- skill_crafting:rebuild_after_cataclysm: needs leading the guild to the village; written as a village build
+- magic:flamebearers_trail: needs the three characters brought together in the tower; written as talks with each and the shards carried
+- magic:echo_of_tyros: needs the statue summoning the echo; written as killing the fire boss entity
+- magic:the_flamebearers_codex: needs a page from every school mastered; written as four school casts and a legendary book
+- skill_cooking:banquet: needs a dish from every kitchen; written as seven dishes and drinks consumed in Reece
+- skill_farming:festival_grounds: needs the whole grounds; written as a furniture and bunting build
+- skill_fishing:championship: needs every village's best; written as Silas and the golden sturgeon drop
+- skill_fishing:tidecaller: needs a catch nobody has landed; written as a deepling's catch quest drop
+- skill_foraging:almanac: needs sixty plants; written as five pressed plants
+- skill_mining:mother_lode: needs the whole set; written as nine blocks carried
 
 ## Links to restore

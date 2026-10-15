@@ -400,4 +400,47 @@ ACT4 = [
           rewards=[reward_item("irons_spellbooks:scroll_eldritch"), skill("magic", 800)]),
 ]
 
-chapter("magic", "The Arcane Order", "Magic path", "irons_spellbooks:iron_spell_book", "skills", 10, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("legendary_ink", "Legendary Ink", icon="irons_spellbooks:legendary_ink", after=["eldritch_pages", "main_story:act5_start"],
+          text=["Brew legendary ink in the alchemist cauldron and inscribe a legendary scroll of your own choosing."],
+          tasks=[item("irons_spellbooks:legendary_ink", crafted=True, title="Brew legendary ink in the alchemist cauldron"),
+                 item("irons_spellbooks:scroll", crafted=True, title="Inscribe a legendary scroll of your own choosing")],
+          rewards=[reward_item("irons_spellbooks:legendary_ink"), skill("magic", 850)]),
+
+    quest("flamebearers_trail", "The Flamebearer's Trail", icon="irons_spellbooks:dead_king_phylactery_shard", after=["legendary_ink", "netherite_mage"],
+          text=["Bring Orrin, Agathe and Pip together in the library tower with the citadel inscriptions and the "
+                "phylactery shards. Together they work out who the Flamebearer was, and why his echo still burns."],
+          tasks=[item("irons_spellbooks:dead_king_phylactery_shard", 3, title="Bring the phylactery shards"),
+                 talk_char("orrin", ["The shards and the inscriptions. Together at last."], title="Gather Orrin in the library tower"),
+                 talk_char("agathe", ["The Flamebearer's echo still burns. We know why."], title="Gather Agathe in the library tower"),
+                 talk_char("pip", ["I knew it! I borrowed the right book!"], title="Gather Pip in the library tower")],
+          rewards=[reward_item("minecraft:writable_book", name="The Statue's Design", lore=["Who the Flamebearer was."]), skill("magic", 900)]),
+
+    quest("tyros_statue", "The Statue of Tyros", icon="irons_spellbooks:tyros_statue", after=["flamebearers_trail"],
+          text=["Craft the Tyros Statue from pyrium and raise it on an altar far from Reece, the summoning place "
+                "Orrin chose."],
+          tasks=[item("irons_spellbooks:tyros_statue", crafted=True, title="Craft the Tyros Statue from pyrium"),
+                 {"build": {"blocks": {"irons_spellbooks:tyros_statue": 1, "minecraft:obsidian": 8}, "radius": 10},
+                  "title": "Raise it on an altar far from Reece"}],
+          rewards=[reward_item("irons_spellbooks:greater_healing_potion", 4), skill("magic", 1100)]),
+
+    quest("echo_of_tyros", "Echo of Tyros", icon="irons_spellbooks:music_disc_flame_still_burns", shape="diamond", size=1.75, after=["tyros_statue"],
+          text=["Wake the Echo of Tyros, First Flamebearer, and lay the flame to rest, with Orrin, Agathe and Pip "
+                "watching from a safe distance."],
+          tasks=[{"kill": "irons_spellbooks:fire_boss", "title": "Lay the Echo of Tyros to rest"}],
+          rewards=[reward_item("irons_spellbooks:music_disc_flame_still_burns"), skill("magic", 1500)]),
+
+    quest("the_flamebearers_codex", "The Flamebearer's Codex", icon="irons_spellbooks:legendary_spell_book", after=["tyros_statue", "spell_slot"],
+          text=["Orrin hands you his life's work to finish: bind a legendary spellbook with a page from every school "
+                "you've mastered, and the Order names you its next Archmage."],
+          tasks=[item("irons_spellbooks:legendary_spell_book", crafted=True, title="Bind a legendary spellbook"),
+                 {"cast": {"school": "irons_spellbooks:fire"}, "count": 1, "title": "Cast a fire page"},
+                 {"cast": {"school": "irons_spellbooks:ice"}, "count": 1, "title": "Cast an ice page"},
+                 {"cast": {"school": "irons_spellbooks:holy"}, "count": 1, "title": "Cast a holy page"},
+                 {"cast": {"school": "irons_spellbooks:eldritch"}, "count": 1, "title": "Cast an eldritch page"},
+                 talk_char("orrin", ["My life's work, finished. The next Archmage."], title="Be named the Order's next Archmage by Orrin")],
+          rewards=[reward_item("irons_spellbooks:legendary_spell_book", name="The Flamebearer's Codex", lore=["Orrin's life's work, finished."]),
+                   skill("magic", 1300)]),
+]
+
+chapter("magic", "The Arcane Order", "Magic path", "irons_spellbooks:iron_spell_book", "skills", 10, Q + ACT2 + ACT3 + ACT4 + ACT5)

@@ -237,4 +237,29 @@ ACT4 = [
           rewards=[reward_item("minecraft:shulker_shell", 4), skill("attack", 780)]),
 ]
 
-chapter("skill_attack", "The Bounty Office", "Attack path", "minecraft:iron_sword", "skills", 6, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("cursed_contracts", "The Cursed Contracts", icon="cataclysm:witherite_ingot", after=["void_contract", "main_story:act5_start"],
+          text=["Three wanted posters in Ash's own hand: the Prowler in the Ancient Factory, the Ender Golem at the "
+                "Ruined Citadel and the Coralssus in the Sunken City."],
+          tasks=[fight("cataclysm:the_prowler", 1, "cataclysm:ancient_factory", "The Factory Prowler", "Take down the Prowler in the Ancient Factory", wave=1),
+                 fight("cataclysm:ender_golem", 1, "cataclysm:ruined_citadel", "The Citadel Golem", "Take down the Ender Golem at the Ruined Citadel", wave=1),
+                 fight("cataclysm:coralssus", 1, "cataclysm:sunken_city", "The Coralssus", "Take down the Coralssus in the Sunken City", wave=1)],
+          rewards=[reward_item("cataclysm:witherite_ingot", 2), reward_item("cataclysm:coral_chunk", 4), skill("attack", 850)]),
+
+    quest("draugr_hunt", "Draugr Season", icon="cataclysm:black_steel_ingot", after=["cursed_contracts"],
+          text=["The Frosted Prison's draugr walk the snows. Hunt a royal draugr and take its crown as proof."],
+          tasks=[fight("cataclysm:royal_draugr", 1, "cataclysm:frosted_prison", "A Royal Draugr", "Hunt a royal draugr in the snows", wave=1),
+                 sample("the Royal Draugr's Crown", ["cataclysm:royal_draugr"], 0.8, texture="minecraft:item/gold_ingot", tooltip="Proof for Ash")],
+          rewards=[reward_item("cataclysm:black_steel_ingot", 4), skill("attack", 900)]),
+
+    quest("ash_verdict", "The Last Contract", icon="spartanweaponry:netherite_longsword", after=["draugr_hunt"],
+          text=["With every poster in the office torn down, Ash gives you the last one: his own name, retired. He "
+                "hands over his blade and the office with it."],
+          tasks=[talk_char("corvin", ["The last contract. My name, retired.", "Take the blade, and the office. Hunt well."],
+                           title="Take Ash's last contract and his blade")],
+          rewards=[reward_item("spartanweaponry:netherite_longsword", name="Ash's Verdict", lore=["The last contract."],
+                               enchant={"minecraft:sharpness": 5, "minecraft:looting": 3, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
+                   skill("attack", 1000)]),
+]
+
+chapter("skill_attack", "The Bounty Office", "Attack path", "minecraft:iron_sword", "skills", 6, Q + ACT2 + ACT3 + ACT4 + ACT5)

@@ -1214,6 +1214,165 @@
 			x: 22.5d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"79D6CDFC1981BCE7"
+				"7E4E9B0F1E370B80"
+			]
+			description: ["Three wanted posters in Ash's own hand: the Prowler in the Ancient Factory, the Ender Golem at the Ruined Citadel and the Coralssus in the Sunken City."]
+			icon: "cataclysm:witherite_ingot"
+			id: "6C1C0EAEC3DEF492"
+			rewards: [
+				{
+					count: 2
+					id: "2E89B31CDA055F6B"
+					item: "cataclysm:witherite_ingot"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "618FD316A4EE11EA"
+					item: "cataclysm:coral_chunk"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 850"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "61CB7E0AC64120C8"
+					silent: true
+					title: "+850 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:the_prowler"
+					id: "380556F0655DCFB5"
+					title: "Take down the Prowler in the Ancient Factory"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "cataclysm:ender_golem"
+					id: "187E5872292D302D"
+					title: "Take down the Ender Golem at the Ruined Citadel"
+					type: "kill"
+					value: 1L
+				}
+				{
+					entity: "cataclysm:coralssus"
+					id: "18BF0CB12D6F1A38"
+					title: "Take down the Coralssus in the Sunken City"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "The Cursed Contracts"
+			x: 24.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6C1C0EAEC3DEF492"]
+			description: ["The Frosted Prison's draugr walk the snows. Hunt a royal draugr and take its crown as proof."]
+			icon: "cataclysm:black_steel_ingot"
+			id: "01416955BEB512FA"
+			rewards: [
+				{
+					count: 4
+					id: "7D9671461EAE721C"
+					item: "cataclysm:black_steel_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 900"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "4F088E3863D8B690"
+					silent: true
+					title: "+900 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "cataclysm:royal_draugr"
+					id: "526E01FA654414BE"
+					title: "Hunt a royal draugr in the snows"
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "09F3CC66B3584D60"
+					item: "kubejs:quest_draugr_hunt_1"
+					title: "Take the Royal Draugr's Crown"
+					type: "item"
+				}
+			]
+			title: "Draugr Season"
+			x: 25.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["01416955BEB512FA"]
+			description: ["With every poster in the office torn down, Ash gives you the last one: his own name, retired. He hands over his blade and the office with it."]
+			icon: "spartanweaponry:netherite_longsword"
+			id: "1A9C1079BDC577FE"
+			rewards: [
+				{
+					id: "61995D2D71B885F5"
+					item: {
+						Count: 1b
+						id: "spartanweaponry:netherite_longsword"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 5s
+								}
+								{
+									id: "minecraft:looting"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The last contract.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Ash's Verdict\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 1000"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "2E80E2681326D4AC"
+					silent: true
+					title: "+1000 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5E9DE89F7AF374BC"
+					stage: "fq.skill_attack.ash_verdict.talk0"
+					title: "Take Ash's last contract and his blade"
+					type: "gamestage"
+				}
+			]
+			title: "The Last Contract"
+			x: 27.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Attack path"]
 	title: "The Bounty Office"

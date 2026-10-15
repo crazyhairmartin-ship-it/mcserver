@@ -1377,6 +1377,138 @@
 			x: 19.5d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"7E4E9B0F1E370B80"
+				"1EEF5766472E240A"
+			]
+			description: ["Finish the field journal: plants pressed from all three dimensions, handed to the Head Herbalist in Reece to be copied for every village."]
+			icon: "minecraft:writable_book"
+			id: "439D3AA608856931"
+			rewards: [
+				{
+					id: "7DEE9E26ACA3B813"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Bound in leather with your name on it.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Complete Almanac\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 850"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "13DBAD4F72577BFC"
+					silent: true
+					title: "+850 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "033E6A4945F0A173"
+					item: "minecraft:poppy"
+					title: "Press an Overworld flower"
+					type: "item"
+				}
+				{
+					id: "4FE76D844CB16A94"
+					item: "minecraft:crimson_fungus"
+					title: "Press a Nether fungus"
+					type: "item"
+				}
+				{
+					id: "54A050DAE0D712CD"
+					item: "minecraft:chorus_flower"
+					title: "Press an End flower"
+					type: "item"
+				}
+				{
+					id: "65AD2975E21E139E"
+					item: "biomesoplenty:burning_blossom"
+					title: "Press a burning blossom"
+					type: "item"
+				}
+				{
+					id: "306143D9FD1363CE"
+					item: "regions_unexplored:blue_snowbelle"
+					title: "Press a blue snowbelle"
+					type: "item"
+				}
+				{
+					id: "7B047DA7F47ACE23"
+					stage: "fq.skill_foraging.almanac.talk5"
+					title: "Hand the field journal to the Head Herbalist"
+					type: "gamestage"
+				}
+			]
+			title: "The Complete Almanac"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["439D3AA608856931"]
+			description: ["The Head Herbalist names you Greenwarden of the wild lands and gives you the axe the order uses only on dead wood."]
+			icon: "minecraft:netherite_axe"
+			id: "4BF59FD4C1D34F25"
+			rewards: [
+				{
+					id: "6D8E28FAA2AC12EC"
+					item: {
+						Count: 1b
+						id: "minecraft:netherite_axe"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 5s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							Unbreakable: 1b
+							display: {
+								Lore: ["{\"text\": \"Only for dead wood.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Greenwarden\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 1000"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "39C15D465B4F9AD0"
+					silent: true
+					title: "+1000 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "23FF68EA7D7F1296"
+					stage: "fq.skill_foraging.greenwarden.talk0"
+					title: "Be named Greenwarden by Mother Rue"
+					type: "gamestage"
+				}
+			]
+			title: "Greenwarden"
+			x: 22.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Foraging path"]
 	title: "The Herbalists"

@@ -1089,6 +1089,157 @@
 			x: 27.0d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"09F9BD148C5FF73B"
+				"7E4E9B0F1E370B80"
+			]
+			description: ["A desert village has been taken by koboletons and their Kobolediator. Drive them out and give the villagers their homes back."]
+			icon: "cataclysm:ancient_metal_ingot"
+			id: "35E5E0187C48632B"
+			rewards: [
+				{
+					count: 4
+					id: "498CA4E73E645EDF"
+					item: "cataclysm:ancient_metal_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 850"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "3FD425C77665D440"
+					silent: true
+					title: "+850 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "440769C6384C3022"
+					structure: "cataclysm:desert_occupied_village"
+					title: "Reach the occupied desert village"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:koboleton"
+					id: "6CF4EA3992211DE2"
+					title: "Drive the koboletons out"
+					type: "kill"
+					value: 8L
+				}
+				{
+					entity: "cataclysm:kobolediator"
+					id: "317CB20D47185A4D"
+					title: "Drive out the Kobolediator"
+					type: "kill"
+					value: 1L
+				}
+			]
+			title: "Take Back the Village"
+			x: 28.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["35E5E0187C48632B"]
+			description: ["Not every village was saved. Walk the abandoned village Cataclysm's monsters left, and bring its broken watch bell to Reece as a reminder."]
+			icon: "minecraft:bell"
+			id: "35773AF5A26C25AC"
+			rewards: [
+				{
+					id: "5A575FAAA52FB19A"
+					item: "minecraft:bell"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 900"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "72717EE6F84BD909"
+					silent: true
+					title: "+900 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "123648B048500D4F"
+					structure: "cataclysm:abandoned_village"
+					title: "Walk the abandoned village the monsters left"
+					type: "structure"
+				}
+				{
+					id: "7B2F761EF90CA283"
+					item: "minecraft:bell"
+					title: "Take its broken watch bell"
+					type: "item"
+				}
+				{
+					dimension: "minecraft:overworld"
+					id: "0DC810E3EC2CB296"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Bring the bell to Reece as a reminder"
+					type: "location"
+				}
+			]
+			title: "The Village That Fell"
+			x: 30.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["35773AF5A26C25AC"]
+			description: ["Hale hangs up his sword and names you Captain of the Watch, handing over the shield that has stood at Reece's gate since it was founded."]
+			icon: "spartanshields:netherite_tower_shield"
+			id: "0AC3E9B8793EA182"
+			rewards: [
+				{
+					id: "36467F6414E1D903"
+					item: {
+						Count: 1b
+						id: "spartanshields:netherite_tower_shield"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Stood at the gate since it was founded.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Bulwark of Reece\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:defense 1000"
+					elevate_perms: true
+					icon: "minecraft:shield"
+					id: "4466AFBA2E841BC3"
+					silent: true
+					title: "+1000 Defense XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "45BA3F60DEC2E59D"
+					stage: "fq.skill_defense.bulwark.talk0"
+					title: "Take the captaincy and the gate's shield from Hale"
+					type: "gamestage"
+				}
+			]
+			title: "Captain of the Watch"
+			x: 31.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Defense path"]
 	title: "The Village Watch"

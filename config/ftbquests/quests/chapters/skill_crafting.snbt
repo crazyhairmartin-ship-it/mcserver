@@ -1585,6 +1585,148 @@
 			x: 6.0d
 			y: 1.5d
 		}
+		{
+			dependencies: [
+				"23131BF9240EF997"
+				"7E4E9B0F1E370B80"
+			]
+			description: ["With the monster in the desert gone, the occupied village it held can be rebuilt. Lead the guild there, repair its houses and furnish them for the survivors coming home."]
+			icon: "handcrafted:oak_table"
+			id: "75E19235C9345E23"
+			rewards: [
+				{
+					id: "75EC5015EB246872"
+					item: {
+						Count: 1b
+						id: "minecraft:bell"
+						tag: {
+							display: {
+								Name: "{\"text\": \"The Survivors' Heirloom\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 850"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "19A8F46B596680BC"
+					silent: true
+					title: "+850 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "249AFD741332CFCF"
+					structure: "cataclysm:desert_occupied_village"
+					title: "Lead the guild to the freed desert village"
+					type: "structure"
+				}
+				{
+					id: "3672FF8C6E97089C"
+					stage: "fq.skill_crafting.rebuild_after_cataclysm.build1"
+					title: "Repair its houses and furnish them for the survivors"
+					type: "gamestage"
+				}
+			]
+			title: "After the Ruin"
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"75E19235C9345E23"
+				"27F9761C38CFD621"
+				"5D62E0609A7F97FE"
+			]
+			description: ["Odile steps aside and names you master of the guild, handing over the founder's tools reforged for you."]
+			icon: "minecraft:netherite_pickaxe"
+			id: "531AFC0ECED02B42"
+			rewards: [
+				{
+					id: "07BE3F1DD7EA0BF3"
+					item: {
+						Count: 1b
+						id: "minecraft:netherite_pickaxe"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 5s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+								{
+									id: "minecraft:fortune"
+									lvl: 3s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The founder's masterwork.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Founder's Pickaxe\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					id: "59329E5344A5D5EA"
+					item: {
+						Count: 1b
+						id: "minecraft:netherite_axe"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 5s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The founder's masterwork.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Founder's Axe\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 1000"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "11515CB28459B70E"
+					silent: true
+					title: "+1000 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5CCEC8940E048F68"
+					stage: "fq.skill_crafting.crafting_capstone.talk0"
+					title: "Be named Master of the Guild by Odile"
+					type: "gamestage"
+				}
+			]
+			title: "Master of the Guild"
+			x: 18.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Crafting path"]
 	title: "The Crafters' Guild"

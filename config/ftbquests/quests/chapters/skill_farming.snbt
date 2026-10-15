@@ -1290,6 +1290,185 @@
 			x: 13.5d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"7E4E9B0F1E370B80"
+				"7392BE863EF12BB2"
+			]
+			description: ["Build the Harvest Festival grounds in Reece: a long table, bunting, hay bales, a stage for the band and the prize table under a barn roof."]
+			icon: "minecraft:hay_block"
+			id: "76F1961A9ED92A3B"
+			rewards: [
+				{
+					id: "46AF730D68E6D942"
+					item: {
+						Count: 1b
+						id: "minecraft:white_banner"
+						tag: {
+							display: {
+								Name: "{\"text\": \"The Festival Banner\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 850"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "26CE345F078B40EE"
+					silent: true
+					title: "+850 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "352FB0C9F0160D71"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					id: "4D6612D4CF7366C9"
+					stage: "fq.skill_farming.festival_grounds.build1"
+					title: "Build the festival grounds, stage and barn-roofed prize table"
+					type: "gamestage"
+				}
+			]
+			title: "The Festival Grounds"
+			x: 15.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["76F1961A9ED92A3B"]
+			description: ["Festival night: bring the feast's produce, the wine and the cheese, and the co-op's leader opens the Harvest Festival in Reece with every village you fed in the hard winter."]
+			icon: "minecraft:wheat"
+			id: "5990CCD01B26DF20"
+			rewards: [
+				{
+					id: "0F72F91A650D84B0"
+					item: {
+						Count: 1b
+						id: "minecraft:leather_helmet"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"A straw hat for a harvest queen.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Festival Crown\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 950"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "795114DF186F44AB"
+					silent: true
+					title: "+950 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 32L
+					id: "062DA681E3801317"
+					item: "minecraft:bread"
+					title: "Bring the feast's bread"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 2L
+					id: "019EDAEFC8444062"
+					item: "vinery:red_wine"
+					title: "Bring the festival's wine"
+					type: "item"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "5E54ADA3078F7233"
+					item: "meadow:piece_of_cheese"
+					title: "Bring the festival's cheese"
+					type: "item"
+				}
+				{
+					id: "4712B1F124C2656F"
+					stage: "fq.skill_farming.harvest_festival.talk3"
+					title: "Open the Harvest Festival with Marta"
+					type: "gamestage"
+				}
+			]
+			title: "The Harvest Festival"
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5990CCD01B26DF20"]
+			description: ["The co-op's leader names you Master Grower and gives you the hoe that cut the first sheaf."]
+			icon: "minecraft:netherite_hoe"
+			id: "299C582EBF677CE4"
+			rewards: [
+				{
+					id: "1BB7EDDE30EEC494"
+					item: {
+						Count: 1b
+						id: "minecraft:netherite_hoe"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:fortune"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:efficiency"
+									lvl: 5s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"It cut the first sheaf.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Harvest Moon\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 1000"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "06136512728827DF"
+					silent: true
+					title: "+1000 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2327EEA4E201C70E"
+					stage: "fq.skill_farming.harvest_moon.talk0"
+					title: "Be named Master Grower by Marta"
+					type: "gamestage"
+				}
+			]
+			title: "Harvest Moon"
+			x: 18.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Farming path"]
 	title: "The Growers' Co-op"

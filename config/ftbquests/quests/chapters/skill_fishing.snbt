@@ -1344,6 +1344,135 @@
 			x: 28.5d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"71EECF65FBBC86CA"
+				"7E4E9B0F1E370B80"
+			]
+			description: ["Every village sends its best to the grand championship, fished from a boat by the sea-dragon bones. The title goes to whoever lands the legendary golden sturgeon. Fish until it bites. Silas, now an ally, holds your net."]
+			icon: "aquaculture:neptunium_ingot"
+			id: "7B1ACCC288D279E8"
+			rewards: [
+				{
+					id: "4CFCEB3C10F29119"
+					item: {
+						Count: 1b
+						id: "minecraft:gold_block"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Won by the sea-dragon bones.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Championship Cup\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 900"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "2BB88DE6BEA6C234"
+					silent: true
+					title: "+900 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "11D15327DF064707"
+					structure: "#fotf:groups/sea_dragon_bones"
+					title: "Take your boat to the sea-dragon bones"
+					type: "structure"
+				}
+				{
+					id: "34AE36B53534D42F"
+					stage: "fq.skill_fishing.championship.enc1"
+					title: "Have Silas hold your net"
+					type: "gamestage"
+				}
+				{
+					id: "202AC0236531E626"
+					item: "kubejs:quest_championship_2"
+					title: "Land the legendary golden sturgeon"
+					type: "item"
+				}
+			]
+			title: "The Grand Championship"
+			x: 30.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7B1ACCC288D279E8"]
+			description: ["The Commodore's last challenge: cast a line in the black water over the Sunken City, where the Leviathan sleeps, and bring back a deepling's catch nobody has ever landed. She hands you the society's own rod."]
+			icon: "aquaculture:neptunium_fishing_rod"
+			id: "66DDF2F4FB70B20B"
+			rewards: [
+				{
+					id: "4FD6C33A27E210F4"
+					item: {
+						Count: 1b
+						id: "aquaculture:neptunium_fishing_rod"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:luck_of_the_sea"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:lure"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The society's own rod.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Tidecaller\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:fish 1000"
+					elevate_perms: true
+					icon: "minecraft:fishing_rod"
+					id: "2111C5F20F2A04E9"
+					silent: true
+					title: "+1000 Fishing XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3D4356272008B2FA"
+					structure: "cataclysm:sunken_city"
+					title: "Cast over the black water above the Sunken City"
+					type: "structure"
+				}
+				{
+					id: "34E777D87BE59256"
+					item: "kubejs:quest_tidecaller_1"
+					title: "Land a deepling's catch nobody has landed"
+					type: "item"
+				}
+				{
+					id: "67CECF961B2BF86C"
+					stage: "fq.skill_fishing.tidecaller.talk2"
+					title: "Show the Commodore your impossible catch"
+					type: "gamestage"
+				}
+			]
+			title: "The Last Cast"
+			x: 31.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Fishing path"]
 	title: "The Anglers' Society"

@@ -240,4 +240,33 @@ ACT4 = [
           rewards=[reward_item("alexsmobs:tarantula_hawk_wing"), skill("range", 800)]),
 ]
 
-chapter("skill_range", "The Hunters' Lodge", "Range path", "minecraft:bow", "skills", 7, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("white_stag", "The White Stag", icon="artifacts:golden_hook", after=["grey_widow", "main_story:act5_start"],
+          signature="artifacts:golden_hook",
+          text=["The last legend: a white stag seen once a generation. Track it across three biomes, and when it "
+                "falls, hang its antlers on the lodge's golden hook, which Vance then gives to you."],
+          tasks=[{"biome": "minecraft:forest", "title": "Pick up the white stag's trail in the forest"},
+                 {"biome": "minecraft:taiga", "title": "Follow it across the taiga"},
+                 enc(["*Pale antlers among the snow-laden firs.*"], then="kill", entity="naturalist:deer", name="The White Stag", health=80, glow=True,
+                     title="Bring down the white stag", where={"biomes": ["minecraft:snowy_taiga", "minecraft:taiga", "minecraft:grove"]}),
+                 item("naturalist:antler", title="Hang its antlers on the lodge's golden hook")],
+          rewards=[reward_item("artifacts:golden_hook"), skill("range", 850)]),
+
+    quest("crystal_crabs", "Crabs of Amethyst", icon="cataclysm:amethyst_crab_shell", after=["white_stag"],
+          text=["Something has been crystallising beaches. Find the amethyst nest and bring down its amethyst crab "
+                "from range."],
+          tasks=[{"structure": "cataclysm:amethyst_nest", "title": "Find the amethyst nest"},
+                 fight("cataclysm:amethyst_crab", 2, "cataclysm:amethyst_nest", "Nest Crabs", "Bring down the amethyst crab from range", wave=1),
+                 item("cataclysm:amethyst_crab_shell", title="Take an amethyst crab shell")],
+          rewards=[reward_item("cataclysm:amethyst_crab_shell"), skill("range", 900)]),
+
+    quest("huntmaster", "Huntmaster", icon="spartanweaponry:netherite_longbow", after=["crystal_crabs"],
+          text=["With every legend on the wall and a thousand kills at range, Vance names you Huntmaster and gives "
+                "you the lodge's own bow."],
+          tasks=[talk_char("orla", ["Every legend on the wall. Huntmaster.", "Take the lodge's own bow."], title="Be named Huntmaster by Orla")],
+          rewards=[reward_item("spartanweaponry:netherite_longbow", name="Vance's Whisper", lore=["The lodge's own bow."],
+                               enchant={"minecraft:power": 5, "minecraft:infinity": 1, "minecraft:unbreaking": 3, "minecraft:flame": 1}),
+                   skill("range", 1000)]),
+]
+
+chapter("skill_range", "The Hunters' Lodge", "Range path", "minecraft:bow", "skills", 7, Q + ACT2 + ACT3 + ACT4 + ACT5)

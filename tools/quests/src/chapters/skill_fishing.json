@@ -1218,6 +1218,122 @@
         }
       ],
       "icon": "minecraft:lantern"
+    },
+    {
+      "id": "championship",
+      "title": "The Grand Championship",
+      "after": [
+        "semi_final",
+        "main_story:act5_start"
+      ],
+      "text": [
+        "Every village sends its best to the grand championship, fished from a boat by the sea-dragon bones. The title goes to whoever lands the legendary golden sturgeon. Fish until it bites. Silas, now an ally, holds your net."
+      ],
+      "tasks": [
+        {
+          "structure": "#sea_dragon_bones",
+          "title": "Take your boat to the sea-dragon bones"
+        },
+        {
+          "encounter": {
+            "character": "silas",
+            "then": "talk",
+            "lines": [
+              "Hold the net? Of course! I'm an ally now! Don't tell Halloway."
+            ]
+          },
+          "title": "Have Silas hold your net"
+        },
+        {
+          "drop": {
+            "from": [
+              "fishing"
+            ],
+            "chance": 0.08,
+            "item": {
+              "name": "The Golden Sturgeon",
+              "texture": "minecraft:item/salmon",
+              "tooltip": "The championship's legend"
+            }
+          },
+          "consume": false,
+          "title": "Land the legendary golden sturgeon"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_block",
+          "name": "The Championship Cup",
+          "lore": [
+            "Won by the sea-dragon bones."
+          ]
+        },
+        {
+          "skill": "fish",
+          "xp": 900
+        }
+      ],
+      "icon": "aquaculture:neptunium_ingot"
+    },
+    {
+      "id": "tidecaller",
+      "title": "The Last Cast",
+      "after": [
+        "championship"
+      ],
+      "text": [
+        "The Commodore's last challenge: cast a line in the black water over the Sunken City, where the Leviathan sleeps, and bring back a deepling's catch nobody has ever landed. She hands you the society's own rod."
+      ],
+      "tasks": [
+        {
+          "structure": "cataclysm:sunken_city",
+          "title": "Cast over the black water above the Sunken City"
+        },
+        {
+          "drop": {
+            "from": [
+              "fishing"
+            ],
+            "chance": 0.1,
+            "item": {
+              "name": "A Deepling's Catch",
+              "texture": "minecraft:item/cod",
+              "tooltip": "Never landed before"
+            }
+          },
+          "consume": false,
+          "title": "Land a deepling's catch nobody has landed"
+        },
+        {
+          "talk": "character",
+          "character": "halloway",
+          "lines": [
+            "A deepling's catch. Nobody's ever landed one.",
+            "The society's own rod is yours."
+          ],
+          "title": "Show the Commodore your impossible catch"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "aquaculture:neptunium_fishing_rod",
+          "name": "Tidecaller",
+          "lore": [
+            "The society's own rod."
+          ],
+          "enchant": {
+            "minecraft:luck_of_the_sea": 3,
+            "minecraft:lure": 3,
+            "minecraft:unbreaking": 3,
+            "minecraft:mending": 1
+          }
+        },
+        {
+          "skill": "fish",
+          "xp": 1000
+        }
+      ],
+      "icon": "aquaculture:neptunium_fishing_rod"
     }
   ]
 }

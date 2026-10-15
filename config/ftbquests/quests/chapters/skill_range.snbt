@@ -1240,6 +1240,166 @@
 			x: 24.0d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"18932F20DE9B7A29"
+				"7E4E9B0F1E370B80"
+			]
+			description: ["The last legend: a white stag seen once a generation. Track it across three biomes, and when it falls, hang its antlers on the lodge's golden hook, which Vance then gives to you."]
+			icon: "artifacts:golden_hook"
+			id: "04DBA0DB251FBA11"
+			rewards: [
+				{
+					id: "54971C768D541368"
+					item: "artifacts:golden_hook"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 850"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "77AF2AA9804D18F1"
+					silent: true
+					title: "+850 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:forest"
+					id: "08AF3860A4C2EBA3"
+					title: "Pick up the white stag's trail in the forest"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:taiga"
+					id: "6905721D0F2E0B7E"
+					title: "Follow it across the taiga"
+					type: "biome"
+				}
+				{
+					id: "7E7CA18C17961A51"
+					stage: "fq.skill_range.white_stag.enc2"
+					title: "Bring down the white stag"
+					type: "gamestage"
+				}
+				{
+					id: "47507196C02194E0"
+					item: "naturalist:antler"
+					title: "Hang its antlers on the lodge's golden hook"
+					type: "item"
+				}
+			]
+			title: "The White Stag"
+			x: 25.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["04DBA0DB251FBA11"]
+			description: ["Something has been crystallising beaches. Find the amethyst nest and bring down its amethyst crab from range."]
+			icon: "cataclysm:amethyst_crab_shell"
+			id: "65CB842A1713227A"
+			rewards: [
+				{
+					id: "1D97B7CAE7A8F762"
+					item: "cataclysm:amethyst_crab_shell"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 900"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "41B81A3AD06A352E"
+					silent: true
+					title: "+900 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "58F4A7CB52495241"
+					structure: "cataclysm:amethyst_nest"
+					title: "Find the amethyst nest"
+					type: "structure"
+				}
+				{
+					entity: "cataclysm:amethyst_crab"
+					id: "446672BAE303892F"
+					title: "Bring down the amethyst crab from range"
+					type: "kill"
+					value: 2L
+				}
+				{
+					id: "59411F6275C079AF"
+					item: "cataclysm:amethyst_crab_shell"
+					title: "Take an amethyst crab shell"
+					type: "item"
+				}
+			]
+			title: "Crabs of Amethyst"
+			x: 27.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["65CB842A1713227A"]
+			description: ["With every legend on the wall and a thousand kills at range, Vance names you Huntmaster and gives you the lodge's own bow."]
+			icon: "spartanweaponry:netherite_longbow"
+			id: "532EB2F0CFF7A1BA"
+			rewards: [
+				{
+					id: "4DC88895DE295935"
+					item: {
+						Count: 1b
+						id: "spartanweaponry:netherite_longbow"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:power"
+									lvl: 5s
+								}
+								{
+									id: "minecraft:infinity"
+									lvl: 1s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:flame"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The lodge's own bow.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Vance's Whisper\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 1000"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "1196D7D4B178B730"
+					silent: true
+					title: "+1000 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0AC99FCDC487ABB7"
+					stage: "fq.skill_range.huntmaster.talk0"
+					title: "Be named Huntmaster by Orla"
+					type: "gamestage"
+				}
+			]
+			title: "Huntmaster"
+			x: 28.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Range path"]
 	title: "The Hunters' Lodge"

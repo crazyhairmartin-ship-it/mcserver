@@ -268,4 +268,24 @@ ACT4 = [
           rewards=[reward_item("minecraft:oak_sign", name="The Memorial Plaque", lore=["Named for you."]), skill("mining", 800)]),
 ]
 
-chapter("skill_mining", "The Miners' Guild", "Mining path", "minecraft:iron_pickaxe", "skills", 0, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("mother_lode", "The Mother Lode", icon="minecraft:netherite_block", after=["main_story:act5_start", "memorial"],
+          text=["A guildmaster's test: bring a block of every metal and gem the guild works."],
+          tasks=[item("minecraft:coal_block", title="Bring a block of coal"), item("minecraft:copper_block", title="Bring a block of copper"),
+                 item("minecraft:iron_block", title="Bring a block of iron"), item("minecraft:gold_block", title="Bring a block of gold"),
+                 item("minecraft:redstone_block", title="Bring a block of redstone"), item("minecraft:lapis_block", title="Bring a block of lapis"),
+                 item("minecraft:emerald_block", title="Bring a block of emerald"), item("minecraft:diamond_block", title="Bring a block of diamond"),
+                 item("minecraft:netherite_block", title="Bring a block of netherite")],
+          rewards=[reward_item("minecraft:beacon"), skill("mining", 900)]),
+
+    quest("guildmaster", "Lifeline", icon="minecraft:netherite_pickaxe", after=["mother_lode"],
+          text=["The Guildmaster in Reece names you Master of Rescues and hands over the guild's oldest pick, "
+                "reforged."],
+          tasks=[talk_char("dagna", ["Master of Rescues, aye. The oldest pick, reforged.", "Dinnae lose it, lass."],
+                           title="Be named Master of Rescues by Dagna")],
+          rewards=[reward_item("minecraft:netherite_pickaxe", name="Lifeline", lore=["The guild's oldest pick, reforged."],
+                               enchant={"minecraft:efficiency": 5, "minecraft:fortune": 3, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
+                   skill("mining", 1000)]),
+]
+
+chapter("skill_mining", "The Miners' Guild", "Mining path", "minecraft:iron_pickaxe", "skills", 0, Q + ACT2 + ACT3 + ACT4 + ACT5)

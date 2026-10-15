@@ -1163,6 +1163,162 @@
         }
       ],
       "icon": "minecraft:shulker_shell"
+    },
+    {
+      "id": "cursed_contracts",
+      "title": "The Cursed Contracts",
+      "after": [
+        "void_contract",
+        "main_story:act5_start"
+      ],
+      "text": [
+        "Three wanted posters in Ash's own hand: the Prowler in the Ancient Factory, the Ender Golem at the Ruined Citadel and the Coralssus in the Sunken City."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:the_prowler",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:ancient_factory"
+            },
+            "wave": 1,
+            "name": "The Factory Prowler"
+          },
+          "title": "Take down the Prowler in the Ancient Factory"
+        },
+        {
+          "kill": "cataclysm:ender_golem",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:ruined_citadel"
+            },
+            "wave": 1,
+            "name": "The Citadel Golem"
+          },
+          "title": "Take down the Ender Golem at the Ruined Citadel"
+        },
+        {
+          "kill": "cataclysm:coralssus",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:sunken_city"
+            },
+            "wave": 1,
+            "name": "The Coralssus"
+          },
+          "title": "Take down the Coralssus in the Sunken City"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:witherite_ingot",
+          "count": 2
+        },
+        {
+          "item": "cataclysm:coral_chunk",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 850
+        }
+      ],
+      "icon": "cataclysm:witherite_ingot"
+    },
+    {
+      "id": "draugr_hunt",
+      "title": "Draugr Season",
+      "after": [
+        "cursed_contracts"
+      ],
+      "text": [
+        "The Frosted Prison's draugr walk the snows. Hunt a royal draugr and take its crown as proof."
+      ],
+      "tasks": [
+        {
+          "kill": "cataclysm:royal_draugr",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:frosted_prison"
+            },
+            "wave": 1,
+            "name": "A Royal Draugr"
+          },
+          "title": "Hunt a royal draugr in the snows"
+        },
+        {
+          "drop": {
+            "from": [
+              "cataclysm:royal_draugr"
+            ],
+            "chance": 0.8,
+            "item": {
+              "name": "the Royal Draugr's Crown",
+              "texture": "minecraft:item/gold_ingot",
+              "tooltip": "Proof for Ash"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take the Royal Draugr's Crown"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:black_steel_ingot",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 900
+        }
+      ],
+      "icon": "cataclysm:black_steel_ingot"
+    },
+    {
+      "id": "ash_verdict",
+      "title": "The Last Contract",
+      "after": [
+        "draugr_hunt"
+      ],
+      "text": [
+        "With every poster in the office torn down, Ash gives you the last one: his own name, retired. He hands over his blade and the office with it."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "corvin",
+          "lines": [
+            "The last contract. My name, retired.",
+            "Take the blade, and the office. Hunt well."
+          ],
+          "title": "Take Ash's last contract and his blade"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanweaponry:netherite_longsword",
+          "name": "Ash's Verdict",
+          "lore": [
+            "The last contract."
+          ],
+          "enchant": {
+            "minecraft:sharpness": 5,
+            "minecraft:looting": 3,
+            "minecraft:unbreaking": 3,
+            "minecraft:mending": 1
+          }
+        },
+        {
+          "skill": "attack",
+          "xp": 1000
+        }
+      ],
+      "icon": "spartanweaponry:netherite_longsword"
     }
   ]
 }

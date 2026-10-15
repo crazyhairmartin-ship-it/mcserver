@@ -264,4 +264,31 @@ ACT4 = [
           rewards=[reward_item("aquaculture:neptunium_helmet"), skill("fish", 780)]),
 ]
 
-chapter("skill_fishing", "The Anglers' Society", "Fishing path", "minecraft:fishing_rod", "skills", 2, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("championship", "The Grand Championship", icon="aquaculture:neptunium_ingot", after=["semi_final", "main_story:act5_start"],
+          text=["Every village sends its best to the grand championship, fished from a boat by the sea-dragon bones. "
+                "The title goes to whoever lands the legendary golden sturgeon. Fish until it bites. Silas, now an "
+                "ally, holds your net."],
+          tasks=[{"structure": "#sea_dragon_bones", "title": "Take your boat to the sea-dragon bones"},
+                 enc(["Hold the net? Of course! I'm an ally now! Don't tell Halloway."], character="silas", title="Have Silas hold your net"),
+                 {"drop": {"from": ["fishing"], "chance": 0.08,
+                           "item": {"name": "The Golden Sturgeon", "texture": "minecraft:item/salmon", "tooltip": "The championship's legend"}},
+                  "consume": False, "title": "Land the legendary golden sturgeon"}],
+          rewards=[reward_item("minecraft:gold_block", name="The Championship Cup", lore=["Won by the sea-dragon bones."]), skill("fish", 900)]),
+
+    quest("tidecaller", "The Last Cast", icon="aquaculture:neptunium_fishing_rod", after=["championship"],
+          text=["The Commodore's last challenge: cast a line in the black water over the Sunken City, where the "
+                "Leviathan sleeps, and bring back a deepling's catch nobody has ever landed. She hands you the "
+                "society's own rod."],
+          tasks=[{"structure": "cataclysm:sunken_city", "title": "Cast over the black water above the Sunken City"},
+                 {"drop": {"from": ["fishing"], "chance": 0.1,
+                           "item": {"name": "A Deepling's Catch", "texture": "minecraft:item/cod", "tooltip": "Never landed before"}},
+                  "consume": False, "title": "Land a deepling's catch nobody has landed"},
+                 talk_char("halloway", ["A deepling's catch. Nobody's ever landed one.", "The society's own rod is yours."],
+                           title="Show the Commodore your impossible catch")],
+          rewards=[reward_item("aquaculture:neptunium_fishing_rod", name="Tidecaller", lore=["The society's own rod."],
+                               enchant={"minecraft:luck_of_the_sea": 3, "minecraft:lure": 3, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
+                   skill("fish", 1000)]),
+]
+
+chapter("skill_fishing", "The Anglers' Society", "Fishing path", "minecraft:fishing_rod", "skills", 2, Q + ACT2 + ACT3 + ACT4 + ACT5)

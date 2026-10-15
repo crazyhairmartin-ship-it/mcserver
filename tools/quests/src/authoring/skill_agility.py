@@ -323,4 +323,30 @@ ACT4 = [
           rewards=[reward_item("minecraft:firework_rocket", 32), skill("agility", 760)]),
 ]
 
-chapter("skill_agility", "The Couriers", "Agility path", "minecraft:leather_boots", "skills", 9, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("grand_relay", "The Grand Relay", icon="minecraft:white_banner", after=["galley_convoy", "airship_logbook", "wings_and_armour", "main_story:act5_start"],
+          text=["The Couriers' great race: one parcel around the whole network in a single day, on foot over "
+                "rooftops, by ship across the bay and by air to the sky village, against the best runners from every "
+                "village."],
+          tasks=[item("endermail:package", consume=True, title="Take the relay parcel"),
+                 {"timed": {"seconds": 900, "goal": {"structure": "#villages", "label": "the first leg's village", "away": 200},
+                            "lines": ["The grand relay. First leg on foot!"], "start": "Start the relay", "no": ["teleport", "mounts"]},
+                  "title": "Run the first leg over the rooftops"},
+                 {"timed": {"seconds": 900, "goal": {"structure": "ctov:large/village_beach", "label": "the bay's far village", "away": 200},
+                            "lines": ["Second leg, by ship!"], "start": "Sail the second leg", "no": ["teleport"]},
+                  "title": "Sail the second leg across the bay"},
+                 {"timed": {"seconds": 900, "goal": {"structure": "skyvillages:skyvillage", "label": "the sky village", "away": 200},
+                            "lines": ["Last leg, by air!"], "start": "Fly the last leg", "no": ["teleport"]},
+                  "title": "Fly the last leg to the sky village"}],
+          rewards=[reward_item("minecraft:white_banner", name="The Relay Pennant"), skill("agility", 900)]),
+
+    quest("courier_capstone", "Seven Leagues", icon="minecraft:netherite_boots", after=["grand_relay", "sharestone_network"],
+          text=["Juniper hands you the post office keys and the Couriers' oldest treasure, reforged for you."],
+          tasks=[talk_char("juniper", ["The post office keys. And the oldest treasure.", "Run well. Stamp everything."],
+                           title="Take the post office keys and the oldest treasure from Juniper")],
+          rewards=[reward_item("minecraft:netherite_boots", name="Juniper's Seven-League Boots", lore=["The Couriers' oldest treasure."],
+                               enchant={"minecraft:feather_falling": 4, "minecraft:depth_strider": 3, "minecraft:soul_speed": 3,
+                                        "minecraft:unbreaking": 3, "minecraft:mending": 1}), skill("agility", 1000)]),
+]
+
+chapter("skill_agility", "The Couriers", "Agility path", "minecraft:leather_boots", "skills", 9, Q + ACT2 + ACT3 + ACT4 + ACT5)

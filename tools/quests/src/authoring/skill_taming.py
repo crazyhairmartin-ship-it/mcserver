@@ -286,4 +286,25 @@ ACT4 = [
           rewards=[reward_item("alexscaves:gelatin_pink", 4), skill("taming", 760)]),
 ]
 
-chapter("skill_taming", "The Sanctuary", "Taming path", "minecraft:bone", "skills", 11, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("after_the_storm", "After the Storm", icon="minecraft:lead", after=["the_full_herd", "main_story:act5_start"],
+          text=["The great battles have driven animals out of their homes. Find the frightened ones wandering far "
+                "from home and lead them to the sanctuary with your herd."],
+          tasks=[enc(["*A terrified fawn, far from any wood.*"], then="escort", entity="naturalist:deer", name="Frightened Fawn",
+                     to={"place": "reece"}, title="Lead the frightened fawn to the sanctuary"),
+                 enc(["*A shivering fox kit, lost.*"], then="escort", entity="minecraft:fox", name="Lost Kit",
+                     to={"place": "reece"}, title="Lead the lost kit to the sanctuary"),
+                 enc(["*A singed wolf pup, limping.*"], then="escort", entity="minecraft:wolf", name="Singed Pup",
+                     to={"place": "reece"}, title="Lead the singed pup to the sanctuary")],
+          rewards=[reward_item("minecraft:bone", 16), reward_item("minecraft:wheat", 32), skill("taming", 850)]),
+
+    quest("taming_capstone", "Keeper of the Sanctuary", icon="minecraft:saddle",
+          after=["after_the_storm", "pet_show", "butterfly_atlas", "familiar_bond"],
+          text=["Fern names you Keeper and gives you the sanctuary's oldest gift, stitched for you."],
+          tasks=[talk_char("fern", ["Keeper of the Sanctuary. The animals chose you.", "The oldest gift. Stitched for you."],
+                           title="Be named Keeper of the Sanctuary by Fern")],
+          rewards=[reward_item("minecraft:saddle", name="The Thistlewood Saddle", lore=["The sanctuary's oldest gift."],
+                               enchant={"minecraft:unbreaking": 3, "minecraft:mending": 1}), skill("taming", 1000)]),
+]
+
+chapter("skill_taming", "The Sanctuary", "Taming path", "minecraft:bone", "skills", 11, Q + ACT2 + ACT3 + ACT4 + ACT5)

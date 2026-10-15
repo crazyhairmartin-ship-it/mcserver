@@ -1475,6 +1475,156 @@
 			x: 16.5d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"7E4E9B0F1E370B80"
+				"62E97EC99BC6DD25"
+				"5D9E4111B6100B45"
+			]
+			description: ["Every keeper on the tavern network comes to Reece for a grand banquet. Cook a dish from every kitchen you've worked, with wine and beer to match."]
+			icon: "minecraft:cake"
+			id: "6DB29D744BE91A25"
+			rewards: [
+				{
+					id: "3AA930B2298465C2"
+					item: "farmersdelight:cooking_pot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 850"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "1FE8EE6A40F30C51"
+					silent: true
+					title: "+850 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					dimension: "minecraft:overworld"
+					id: "66A9B5F83C2FFB60"
+					ignore_dimension: false
+					position: [I; 3290, 37, -4188]
+					size: [I; 128, 96, 128]
+					title: "Travel to Reece"
+					type: "location"
+				}
+				{
+					consume_items: true
+					count: 4L
+					id: "5762045D4CC64F7E"
+					item: "farmersdelight:beef_stew"
+					title: "Serve a Farmer's Delight stew"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "7DAB8F8934C5237C"
+					item: "bakery:strawberry_cake"
+					title: "Serve a Bakery cake"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "004A79A705F4B35F"
+					item: "candlelight:lasagne"
+					title: "Serve a Candlelight lasagne"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "2213A826FECB4A59"
+					item: "cornexpansion:grandmas_cornbread"
+					title: "Serve Corn Expansion cornbread"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "4F8944B23DBF86A2"
+					item: "meadow:fondue"
+					title: "Serve a Meadow fondue"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "094D46420275BBB6"
+					item: "vinery:red_wine"
+					title: "Pour a Vinery wine"
+					type: "item"
+				}
+				{
+					consume_items: true
+					id: "47C99E40C620F83E"
+					item: "brewery:beer_wheat"
+					title: "Pour a Brewery beer"
+					type: "item"
+				}
+			]
+			title: "The Grand Banquet"
+			x: 18.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["6DB29D744BE91A25"]
+			description: ["The tavern keepers name you Head of the Table and give you the knife every keeper's mentor passed down."]
+			icon: "spartanweaponry:netherite_dagger"
+			id: "707D8EE78BE1A79D"
+			rewards: [
+				{
+					id: "3D58D05592C72395"
+					item: {
+						Count: 1b
+						id: "spartanweaponry:netherite_dagger"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 5s
+								}
+								{
+									id: "minecraft:looting"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"Passed down from mentor to mentor.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Last Course\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 1000"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "2C2A621946E2F5BD"
+					silent: true
+					title: "+1000 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4DD956C17CB783D9"
+					stage: "fq.skill_cooking.last_course.talk0"
+					title: "Be named Head of the Table by Bess"
+					type: "gamestage"
+				}
+			]
+			title: "The Last Course"
+			x: 19.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Cooking path"]
 	title: "The Tavern Keepers"

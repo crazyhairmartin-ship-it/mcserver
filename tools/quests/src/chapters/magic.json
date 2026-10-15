@@ -1814,6 +1814,229 @@
         }
       ],
       "icon": "irons_spellbooks:scroll_eldritch"
+    },
+    {
+      "id": "legendary_ink",
+      "title": "Legendary Ink",
+      "after": [
+        "eldritch_pages",
+        "main_story:act5_start"
+      ],
+      "text": [
+        "Brew legendary ink in the alchemist cauldron and inscribe a legendary scroll of your own choosing."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:legendary_ink",
+          "crafted": true,
+          "title": "Brew legendary ink in the alchemist cauldron"
+        },
+        {
+          "item": "irons_spellbooks:scroll",
+          "crafted": true,
+          "title": "Inscribe a legendary scroll of your own choosing"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:legendary_ink"
+        },
+        {
+          "skill": "magic",
+          "xp": 850
+        }
+      ],
+      "icon": "irons_spellbooks:legendary_ink"
+    },
+    {
+      "id": "flamebearers_trail",
+      "title": "The Flamebearer's Trail",
+      "after": [
+        "legendary_ink",
+        "netherite_mage"
+      ],
+      "text": [
+        "Bring Orrin, Agathe and Pip together in the library tower with the citadel inscriptions and the phylactery shards. Together they work out who the Flamebearer was, and why his echo still burns."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:dead_king_phylactery_shard",
+          "count": 3,
+          "title": "Bring the phylactery shards"
+        },
+        {
+          "talk": "character",
+          "character": "orrin",
+          "lines": [
+            "The shards and the inscriptions. Together at last."
+          ],
+          "title": "Gather Orrin in the library tower"
+        },
+        {
+          "talk": "character",
+          "character": "agathe",
+          "lines": [
+            "The Flamebearer's echo still burns. We know why."
+          ],
+          "title": "Gather Agathe in the library tower"
+        },
+        {
+          "talk": "character",
+          "character": "pip",
+          "lines": [
+            "I knew it! I borrowed the right book!"
+          ],
+          "title": "Gather Pip in the library tower"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:writable_book",
+          "name": "The Statue's Design",
+          "lore": [
+            "Who the Flamebearer was."
+          ]
+        },
+        {
+          "skill": "magic",
+          "xp": 900
+        }
+      ],
+      "icon": "irons_spellbooks:dead_king_phylactery_shard"
+    },
+    {
+      "id": "tyros_statue",
+      "title": "The Statue of Tyros",
+      "after": [
+        "flamebearers_trail"
+      ],
+      "text": [
+        "Craft the Tyros Statue from pyrium and raise it on an altar far from Reece, the summoning place Orrin chose."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:tyros_statue",
+          "crafted": true,
+          "title": "Craft the Tyros Statue from pyrium"
+        },
+        {
+          "build": {
+            "blocks": {
+              "irons_spellbooks:tyros_statue": 1,
+              "minecraft:obsidian": 8
+            },
+            "radius": 10
+          },
+          "title": "Raise it on an altar far from Reece"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:greater_healing_potion",
+          "count": 4
+        },
+        {
+          "skill": "magic",
+          "xp": 1100
+        }
+      ],
+      "icon": "irons_spellbooks:tyros_statue"
+    },
+    {
+      "id": "echo_of_tyros",
+      "title": "Echo of Tyros",
+      "after": [
+        "tyros_statue"
+      ],
+      "text": [
+        "Wake the Echo of Tyros, First Flamebearer, and lay the flame to rest, with Orrin, Agathe and Pip watching from a safe distance."
+      ],
+      "tasks": [
+        {
+          "kill": "irons_spellbooks:fire_boss",
+          "title": "Lay the Echo of Tyros to rest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:music_disc_flame_still_burns"
+        },
+        {
+          "skill": "magic",
+          "xp": 1500
+        }
+      ],
+      "icon": "irons_spellbooks:music_disc_flame_still_burns",
+      "shape": "diamond",
+      "size": 1.75
+    },
+    {
+      "id": "the_flamebearers_codex",
+      "title": "The Flamebearer's Codex",
+      "after": [
+        "tyros_statue",
+        "spell_slot"
+      ],
+      "text": [
+        "Orrin hands you his life's work to finish: bind a legendary spellbook with a page from every school you've mastered, and the Order names you its next Archmage."
+      ],
+      "tasks": [
+        {
+          "item": "irons_spellbooks:legendary_spell_book",
+          "crafted": true,
+          "title": "Bind a legendary spellbook"
+        },
+        {
+          "cast": {
+            "school": "irons_spellbooks:fire"
+          },
+          "count": 1,
+          "title": "Cast a fire page"
+        },
+        {
+          "cast": {
+            "school": "irons_spellbooks:ice"
+          },
+          "count": 1,
+          "title": "Cast an ice page"
+        },
+        {
+          "cast": {
+            "school": "irons_spellbooks:holy"
+          },
+          "count": 1,
+          "title": "Cast a holy page"
+        },
+        {
+          "cast": {
+            "school": "irons_spellbooks:eldritch"
+          },
+          "count": 1,
+          "title": "Cast an eldritch page"
+        },
+        {
+          "talk": "character",
+          "character": "orrin",
+          "lines": [
+            "My life's work, finished. The next Archmage."
+          ],
+          "title": "Be named the Order's next Archmage by Orrin"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "irons_spellbooks:legendary_spell_book",
+          "name": "The Flamebearer's Codex",
+          "lore": [
+            "Orrin's life's work, finished."
+          ]
+        },
+        {
+          "skill": "magic",
+          "xp": 1300
+        }
+      ],
+      "icon": "irons_spellbooks:legendary_spell_book"
     }
   ]
 }

@@ -1130,6 +1130,131 @@
       ],
       "icon": "artifacts:chorus_totem",
       "signature": "artifacts:chorus_totem"
+    },
+    {
+      "id": "occupied_village",
+      "title": "Take Back the Village",
+      "after": [
+        "last_stand_end",
+        "main_story:act5_start"
+      ],
+      "text": [
+        "A desert village has been taken by koboletons and their Kobolediator. Drive them out and give the villagers their homes back."
+      ],
+      "tasks": [
+        {
+          "structure": "cataclysm:desert_occupied_village",
+          "title": "Reach the occupied desert village"
+        },
+        {
+          "kill": "cataclysm:koboleton",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:desert_occupied_village"
+            },
+            "wave": 4,
+            "name": "Occupying Koboletons"
+          },
+          "title": "Drive the koboletons out"
+        },
+        {
+          "kill": "cataclysm:kobolediator",
+          "count": 1,
+          "spawn": {
+            "at": {
+              "structure": "cataclysm:desert_occupied_village"
+            },
+            "wave": 1,
+            "name": "The Kobolediator"
+          },
+          "title": "Drive out the Kobolediator"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "cataclysm:ancient_metal_ingot",
+          "count": 4
+        },
+        {
+          "skill": "defense",
+          "xp": 850
+        }
+      ],
+      "icon": "cataclysm:ancient_metal_ingot"
+    },
+    {
+      "id": "abandoned_village",
+      "title": "The Village That Fell",
+      "after": [
+        "occupied_village"
+      ],
+      "text": [
+        "Not every village was saved. Walk the abandoned village Cataclysm's monsters left, and bring its broken watch bell to Reece as a reminder."
+      ],
+      "tasks": [
+        {
+          "structure": "cataclysm:abandoned_village",
+          "title": "Walk the abandoned village the monsters left"
+        },
+        {
+          "item": "minecraft:bell",
+          "title": "Take its broken watch bell"
+        },
+        {
+          "place": "reece",
+          "title": "Bring the bell to Reece as a reminder"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bell"
+        },
+        {
+          "skill": "defense",
+          "xp": 900
+        }
+      ],
+      "icon": "minecraft:bell"
+    },
+    {
+      "id": "bulwark",
+      "title": "Captain of the Watch",
+      "after": [
+        "abandoned_village"
+      ],
+      "text": [
+        "Hale hangs up his sword and names you Captain of the Watch, handing over the shield that has stood at Reece's gate since it was founded."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "hale",
+          "lines": [
+            "Captain of the Watch. Don't let it go to your head.",
+            "The gate's shield is yours. ...Tell Marta I said hello."
+          ],
+          "title": "Take the captaincy and the gate's shield from Hale"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanshields:netherite_tower_shield",
+          "name": "The Bulwark of Reece",
+          "lore": [
+            "Stood at the gate since it was founded."
+          ],
+          "enchant": {
+            "minecraft:unbreaking": 3,
+            "minecraft:mending": 1
+          }
+        },
+        {
+          "skill": "defense",
+          "xp": 1000
+        }
+      ],
+      "icon": "spartanshields:netherite_tower_shield"
     }
   ]
 }

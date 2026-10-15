@@ -1485,6 +1485,150 @@
 			x: 21.0d
 			y: 0.0d
 		}
+		{
+			dependencies: [
+				"7E4E9B0F1E370B80"
+				"392EAABA4719230C"
+			]
+			description: ["A guildmaster's test: bring a block of every metal and gem the guild works."]
+			icon: "minecraft:netherite_block"
+			id: "250E1CCB930DD3FA"
+			rewards: [
+				{
+					id: "1886C0B0094440CD"
+					item: "minecraft:beacon"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 900"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "7C2D180426FB97AC"
+					silent: true
+					title: "+900 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7D3E9397006EBA0E"
+					item: "minecraft:coal_block"
+					title: "Bring a block of coal"
+					type: "item"
+				}
+				{
+					id: "5F88C2A45C93FCF4"
+					item: "minecraft:copper_block"
+					title: "Bring a block of copper"
+					type: "item"
+				}
+				{
+					id: "4C9FF7B8A5BEC61B"
+					item: "minecraft:iron_block"
+					title: "Bring a block of iron"
+					type: "item"
+				}
+				{
+					id: "46EC7D78ACB17C32"
+					item: "minecraft:gold_block"
+					title: "Bring a block of gold"
+					type: "item"
+				}
+				{
+					id: "2B4D759C7B8A5A50"
+					item: "minecraft:redstone_block"
+					title: "Bring a block of redstone"
+					type: "item"
+				}
+				{
+					id: "456BDAAF50D43EF8"
+					item: "minecraft:lapis_block"
+					title: "Bring a block of lapis"
+					type: "item"
+				}
+				{
+					id: "3E07FEE4BFF5E62A"
+					item: "minecraft:emerald_block"
+					title: "Bring a block of emerald"
+					type: "item"
+				}
+				{
+					id: "52F010B6C98E90EC"
+					item: "minecraft:diamond_block"
+					title: "Bring a block of diamond"
+					type: "item"
+				}
+				{
+					id: "2C260B8799C4F8C4"
+					item: "minecraft:netherite_block"
+					title: "Bring a block of netherite"
+					type: "item"
+				}
+			]
+			title: "The Mother Lode"
+			x: 22.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["250E1CCB930DD3FA"]
+			description: ["The Guildmaster in Reece names you Master of Rescues and hands over the guild's oldest pick, reforged."]
+			icon: "minecraft:netherite_pickaxe"
+			id: "411D9F686653FA4E"
+			rewards: [
+				{
+					id: "644786470041D9DC"
+					item: {
+						Count: 1b
+						id: "minecraft:netherite_pickaxe"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:efficiency"
+									lvl: 5s
+								}
+								{
+									id: "minecraft:fortune"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The guild's oldest pick, reforged.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Lifeline\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 1000"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "11BDE0147A2EE274"
+					silent: true
+					title: "+1000 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "040DF24846D52ACD"
+					stage: "fq.skill_mining.guildmaster.talk0"
+					title: "Be named Master of Rescues by Dagna"
+					type: "gamestage"
+				}
+			]
+			title: "Lifeline"
+			x: 24.0d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Mining path"]
 	title: "The Miners' Guild"

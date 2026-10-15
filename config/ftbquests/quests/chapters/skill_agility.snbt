@@ -1529,6 +1529,138 @@
 			x: 0.0d
 			y: 0.75d
 		}
+		{
+			dependencies: [
+				"4725B50CA621F526"
+				"14F0096CD204A27F"
+				"70B7E5DEEAB4027F"
+				"7E4E9B0F1E370B80"
+			]
+			description: ["The Couriers' great race: one parcel around the whole network in a single day, on foot over rooftops, by ship across the bay and by air to the sky village, against the best runners from every village."]
+			icon: "minecraft:white_banner"
+			id: "328C19D4F0D690BE"
+			rewards: [
+				{
+					id: "5038062F07E1D766"
+					item: {
+						Count: 1b
+						id: "minecraft:white_banner"
+						tag: {
+							display: {
+								Name: "{\"text\": \"The Relay Pennant\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 900"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "109B43C74167008C"
+					silent: true
+					title: "+900 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					id: "38ABC61436445688"
+					item: "endermail:package"
+					title: "Take the relay parcel"
+					type: "item"
+				}
+				{
+					id: "08A61B76B111CFDA"
+					stage: "fq.skill_agility.grand_relay.timed1"
+					title: "Run the first leg over the rooftops"
+					type: "gamestage"
+				}
+				{
+					id: "5F7ED5D2EAD62E23"
+					stage: "fq.skill_agility.grand_relay.timed2"
+					title: "Sail the second leg across the bay"
+					type: "gamestage"
+				}
+				{
+					id: "38CA3D0AB840022A"
+					stage: "fq.skill_agility.grand_relay.timed3"
+					title: "Fly the last leg to the sky village"
+					type: "gamestage"
+				}
+			]
+			title: "The Grand Relay"
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"328C19D4F0D690BE"
+				"6E962F01BDBAC611"
+			]
+			description: ["Juniper hands you the post office keys and the Couriers' oldest treasure, reforged for you."]
+			icon: "minecraft:netherite_boots"
+			id: "7088FC005EE911AB"
+			rewards: [
+				{
+					id: "7105F04DF1A05A63"
+					item: {
+						Count: 1b
+						id: "minecraft:netherite_boots"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:feather_falling"
+									lvl: 4s
+								}
+								{
+									id: "minecraft:depth_strider"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:soul_speed"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:unbreaking"
+									lvl: 3s
+								}
+								{
+									id: "minecraft:mending"
+									lvl: 1s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"The Couriers' oldest treasure.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Juniper's Seven-League Boots\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 1000"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "4387B061034C01FD"
+					silent: true
+					title: "+1000 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "13ECB2F7192F36E2"
+					stage: "fq.skill_agility.courier_capstone.talk0"
+					title: "Take the post office keys and the oldest treasure from Juniper"
+					type: "gamestage"
+				}
+			]
+			title: "Seven Leagues"
+			x: 22.5d
+			y: 0.0d
+		}
 	]
 	subtitle: ["Agility path"]
 	title: "The Couriers"

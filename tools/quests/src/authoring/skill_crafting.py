@@ -302,4 +302,26 @@ ACT4 = [
           rewards=[reward_item("sophisticatedbackpacks:advanced_tool_swapper_upgrade"), skill("craft", 760)]),
 ]
 
-chapter("skill_crafting", "The Crafters' Guild", "Crafting path", "minecraft:crafting_table", "skills", 5, Q + ACT2 + ACT3 + ACT4)
+ACT5 = [
+    quest("rebuild_after_cataclysm", "After the Ruin", icon="handcrafted:oak_table", after=["guild_hall", "main_story:act5_start"],
+          text=["With the monster in the desert gone, the occupied village it held can be rebuilt. Lead the guild "
+                "there, repair its houses and furnish them for the survivors coming home."],
+          tasks=[{"structure": "cataclysm:desert_occupied_village", "title": "Lead the guild to the freed desert village"},
+                 {"build": {"blocks": {"minecraft:sandstone": 40, "#minecraft:doors": 3, "#minecraft:beds": 3, "handcrafted:oak_table": 2, "handcrafted:oak_chair": 4},
+                            "radius": 12}, "title": "Repair its houses and furnish them for the survivors"}],
+          rewards=[reward_item("minecraft:bell", name="The Survivors' Heirloom"), skill("craft", 850)]),
+
+    quest("crafting_capstone", "Master of the Guild", icon="minecraft:netherite_pickaxe",
+          after=["rebuild_after_cataclysm", "endless_pack", "winter_festival"],
+          text=["Odile steps aside and names you master of the guild, handing over the founder's tools reforged for "
+                "you."],
+          tasks=[talk_char("odile", ["Master of the guild. About time.", "The founder's tools, reforged. Don't let them rust."],
+                           title="Be named Master of the Guild by Odile")],
+          rewards=[reward_item("minecraft:netherite_pickaxe", name="The Founder's Pickaxe", lore=["The founder's masterwork."],
+                               enchant={"minecraft:efficiency": 5, "minecraft:unbreaking": 3, "minecraft:mending": 1, "minecraft:fortune": 3}),
+                   reward_item("minecraft:netherite_axe", name="The Founder's Axe", lore=["The founder's masterwork."],
+                               enchant={"minecraft:efficiency": 5, "minecraft:unbreaking": 3, "minecraft:mending": 1}),
+                   skill("craft", 1000)]),
+]
+
+chapter("skill_crafting", "The Crafters' Guild", "Crafting path", "minecraft:crafting_table", "skills", 5, Q + ACT2 + ACT3 + ACT4 + ACT5)
