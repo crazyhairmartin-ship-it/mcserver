@@ -121,10 +121,16 @@
         },
         {
           "timed": {
-            "seconds": 45,
+            "seconds": 60,
             "goal": {
-              "stat": "minecraft:jump",
-              "count": 25
+              "course": {
+                "on": "roofs",
+                "checkpoints": 6
+              }
+            },
+            "start_in": {
+              "place": "reece",
+              "label": "Reece"
             },
             "lines": [
               "Up and over. Roofs, not roads.",
@@ -366,10 +372,16 @@
         },
         {
           "timed": {
-            "seconds": 90,
+            "seconds": 100,
             "goal": {
-              "stat": "minecraft:jump",
-              "count": 50
+              "course": {
+                "on": "roofs",
+                "checkpoints": 11
+              }
+            },
+            "start_in": {
+              "structure": "#villages",
+              "label": "a village"
             },
             "lines": [
               "The line runs the whole village. Gaps, drops, all of it.",
@@ -519,10 +531,16 @@
         },
         {
           "timed": {
-            "seconds": 60,
+            "seconds": 80,
             "goal": {
-              "stat": "minecraft:sprint_one_cm",
-              "count": 20000
+              "course": {
+                "on": "ground",
+                "checkpoints": 9,
+                "spread": [
+                  20,
+                  40
+                ]
+              }
             },
             "lines": [
               "Flags along the canyon. Swing, don't walk."
@@ -663,11 +681,16 @@
         },
         {
           "timed": {
-            "seconds": 240,
+            "seconds": 60,
             "goal": {
-              "structure": "#fishing_huts",
-              "label": "the far pier",
-              "away": 80
+              "course": {
+                "on": "water",
+                "checkpoints": 7
+              }
+            },
+            "start_in": {
+              "structure": "ctov:medium/village_beach",
+              "label": "the beach village"
             },
             "lines": [
               "No boats. The hourglass is running."
@@ -1120,11 +1143,17 @@
         },
         {
           "timed": {
-            "seconds": 420,
+            "seconds": 150,
             "goal": {
-              "structure": "#villages",
-              "label": "the course's end",
-              "away": 200
+              "course": {
+                "on": "water",
+                "checkpoints": 10,
+                "spread": [
+                  30,
+                  60
+                ],
+                "radius": 7
+              }
             },
             "lines": [
               "Buoy to buoy. Beat their drakkar!"
@@ -1231,9 +1260,23 @@
           "timed": {
             "seconds": 1200,
             "goal": {
-              "structure": "#villages",
-              "label": "the third village",
-              "away": 300
+              "legs": [
+                {
+                  "structure": "#villages",
+                  "label": "the first village",
+                  "away": 300
+                },
+                {
+                  "structure": "#villages",
+                  "label": "the second village",
+                  "away": 300
+                },
+                {
+                  "structure": "#villages",
+                  "label": "the third village",
+                  "away": 300
+                }
+              ]
             },
             "lines": [
               "Three villages before sunset. Fly!"
@@ -1287,7 +1330,8 @@
             ],
             "start": "Launch",
             "no": [
-              "teleport"
+              "teleport",
+              "ground"
             ]
           },
           "title": "Glide from the sky village down to Reece"
@@ -1442,8 +1486,36 @@
           "title": "Craft warp plates for the network"
         },
         {
-          "structure": "#villages",
-          "title": "Take them out to a village on the route"
+          "timed": {
+            "seconds": 1200,
+            "goal": {
+              "legs": [
+                {
+                  "structure": "#villages",
+                  "label": "a village on the route",
+                  "away": 300
+                },
+                {
+                  "structure": "#villages",
+                  "label": "another village",
+                  "away": 300
+                },
+                {
+                  "structure": "#villages",
+                  "label": "a third village",
+                  "away": 300
+                }
+              ]
+            },
+            "lines": [
+              "A stop in every village, before the day is out."
+            ],
+            "start": "Set out",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Take them out to three villages on the route in a day"
         },
         {
           "build": {
@@ -1486,9 +1558,33 @@
           "timed": {
             "seconds": 1200,
             "goal": {
-              "structure": "#villages",
-              "label": "the circuit's last village",
-              "away": 800
+              "legs": [
+                {
+                  "structure": "#villages",
+                  "label": "the first village",
+                  "away": 300
+                },
+                {
+                  "structure": "#villages",
+                  "label": "the second village",
+                  "away": 300
+                },
+                {
+                  "structure": "#villages",
+                  "label": "the third village",
+                  "away": 300
+                },
+                {
+                  "structure": "#villages",
+                  "label": "the fourth village",
+                  "away": 300
+                },
+                {
+                  "structure": "#villages",
+                  "label": "the fifth village",
+                  "away": 300
+                }
+              ]
             },
             "lines": [
               "The full circuit, no landing."
@@ -1496,7 +1592,8 @@
             "start": "Start the circuit",
             "no": [
               "teleport",
-              "mounts"
+              "mounts",
+              "ground"
             ]
           },
           "title": "Fly the courier circuit without landing"
@@ -1540,58 +1637,35 @@
         },
         {
           "timed": {
-            "seconds": 900,
+            "seconds": 1200,
             "goal": {
-              "structure": "#villages",
-              "label": "the first leg's village",
-              "away": 200
+              "legs": [
+                {
+                  "structure": "#villages",
+                  "label": "the first leg's village",
+                  "away": 300
+                },
+                {
+                  "structure": "ctov:large/village_beach",
+                  "label": "the bay's far village",
+                  "away": 300
+                },
+                {
+                  "structure": "skyvillages:skyvillage",
+                  "label": "the sky village",
+                  "away": 300
+                }
+              ]
             },
             "lines": [
-              "The grand relay. First leg on foot!"
+              "The grand relay. Three stops, one day!"
             ],
             "start": "Start the relay",
             "no": [
-              "teleport",
-              "mounts"
-            ]
-          },
-          "title": "Run the first leg over the rooftops"
-        },
-        {
-          "timed": {
-            "seconds": 900,
-            "goal": {
-              "structure": "ctov:large/village_beach",
-              "label": "the bay's far village",
-              "away": 200
-            },
-            "lines": [
-              "Second leg, by ship!"
-            ],
-            "start": "Sail the second leg",
-            "no": [
               "teleport"
             ]
           },
-          "title": "Sail the second leg across the bay"
-        },
-        {
-          "timed": {
-            "seconds": 900,
-            "goal": {
-              "structure": "skyvillages:skyvillage",
-              "label": "the sky village",
-              "away": 200
-            },
-            "lines": [
-              "Last leg, by air!"
-            ],
-            "start": "Fly the last leg",
-            "no": [
-              "teleport"
-            ]
-          },
-          "title": "Fly the last leg to the sky village"
+          "title": "Carry the parcel through all three stops in a day"
         }
       ],
       "rewards": [

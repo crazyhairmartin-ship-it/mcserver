@@ -1084,6 +1084,30 @@
           "title": "Row into the mangrove roots"
         },
         {
+          "timed": {
+            "seconds": 90,
+            "goal": {
+              "course": {
+                "on": "water",
+                "checkpoints": 6,
+                "spread": [
+                  10,
+                  20
+                ],
+                "radius": 4
+              }
+            },
+            "lines": [
+              "Mind the roots."
+            ],
+            "start": "Start the route",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Row the route through the roots"
+        },
+        {
           "item": "minecraft:mangrove_propagule",
           "count": 2,
           "title": "Gather propagules on the far side"

@@ -105,7 +105,7 @@ ACT2 = [
                 "before him. The race-master's flippers go to the winner."],
           tasks=[enc(["Race me! No boats! I'll be at the jetty before you're wet!"], character="silas",
                      title="Take up Silas's challenge"),
-                 {"timed": {"seconds": 180, "goal": {"structure": "#fishing_huts", "label": "the far jetty", "away": 60},
+                 {"timed": {"seconds": 90, "goal": {"course": {"on": "water", "checkpoints": 8, "spread": [15, 30], "loop": True}},
                             "lines": ["No boats. Around the buoys and back!"], "start": "Start the swim",
                             "no": ["teleport", "mounts"]}, "title": "Swim the harbour course before Silas"}],
           rewards=[reward_item("artifacts:flippers"), skill("fish", 280)]),

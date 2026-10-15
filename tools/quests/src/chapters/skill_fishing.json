@@ -461,11 +461,17 @@
         },
         {
           "timed": {
-            "seconds": 180,
+            "seconds": 90,
             "goal": {
-              "structure": "#fishing_huts",
-              "label": "the far jetty",
-              "away": 60
+              "course": {
+                "on": "water",
+                "checkpoints": 8,
+                "spread": [
+                  15,
+                  30
+                ],
+                "loop": true
+              }
             },
             "lines": [
               "No boats. Around the buoys and back!"

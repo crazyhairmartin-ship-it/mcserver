@@ -15,13 +15,10 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_taming:pet_enchanting: needs a check for enchanted collar tags; written as a checkmark
 - skill_taming:butterfly_house: needs releasing butterflies in a build; written as a build, a caterpillar jar and a checkmark
 - skill_taming:eggs_to_hatch: needs hatching and raising young; written as collecting eggs and a checkmark
-- skill_agility:rooftop_basics: needs ParCool moves and a marked rooftop line; written as a timed minecraft:jump count in Reece
 - skill_agility:carry_the_chest: needs Carry On pickups; written as checkmarks
 - skill_agility:storm_cliff_parcel: needs a delivery down the cliff path to the cove; written as an encounter and a checkmark
 - skill_agility:post_office: needs sending a package between lockers; written as crafted items, a locker build and a checkmark (packing tape is trimmed from the pack)
-- skill_agility:rooftop_route: needs a timed rooftop route in a village; written as a timed minecraft:jump count
 - skill_agility:tower_zipline: needs a rigged ParCool zipline; written as a build of two iron zipline hooks
-- skill_agility:first_grapple: needs a timed canyon course; written as a timed sprint
 - skill_crafting:sacks_and_jars: needs sorting stock into containers; written as crafting them
 - skill_crafting:megatorch: needs a night with no spawns in the ring; written as a build and a timed hold
 - magic:reroll_the_fates: needs a check for a book with two named enchantments; written as carrying an enchanted book and a checkmark
@@ -63,7 +60,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - discovery_sea:drowned_village: needs learning the village's name; written as two searches and a checkmark
 - discovery_sea:beach_discs: needs every Beachparty disc played; written as four discs carried and a radio use
 - discovery_sea:dune_beach: needs seashells and sea stars (no ids); written as dune grass and a nautilus shell
-- discovery_sea:mangrove_maze: needs a boat route through the roots; written as a rowboat and being in the water
 - discovery_sky_and_underground:islands_in_the_sky: needs discovering a floating island by sighting it; written as a discover on carrying a spyglass
 - discovery_sky_and_underground:sky_hopper: needs any five different islands; written as five specific island structures
 - discovery_sky_and_underground:pyramid_aloft: needs a tomb lock puzzle; written as kindling the candles and a search
@@ -88,7 +84,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_taming:fairy_meadow: needs catching fairies; written as observing each colour and carrying bottles
 - skill_taming:falconry: needs flying the eagle to bring back a rabbit; written as taming and crafting the glove and hood
 - skill_taming:elephant_caravan: needs the trader as well as the elephant; written as escorting the elephant
-- skill_agility:water_run: needs a lake crossing to a specific pier; written as a timed run to the nearest fishing hut with no mounts
 - skill_agility:monastery_climb: needs a motor upgrade for the hook (trimmed from the pack); written with the plain grappling hook and wall-run boots
 - skill_agility:runaway_float: needs a drifted float; written as a search of a floating house
 - skill_crafting:rival_carpenter: needs a villagers' vote; written as furnishing a room
@@ -111,7 +106,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_farming:outpost_crows: needs defending the field through a night; written as a timed hold with waves
 - skill_farming:livestock_fair: needs showing a best pair of each; written as breeding each kind
 - skill_farming:hard_winter: needs a deadline in in-game days; written as a timed run of 15 minutes
-- skill_fishing:buoy_race: needs a buoy course around the harbour; written as a timed swim to a far hut with no mounts
 - skill_fishing:jungle_heat: needs the heat to be in a river; written as a jungle biome and fish carried
 - skill_fishing:reef_survey: needs a living aquarium built; written as buckets and a raw seahorse
 - skill_foraging:magnolia_bloom: needs pink magnolia flowers (none as an item); written as magnolia leaves
@@ -198,10 +192,7 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_taming:stolen_pet: needs a pet's glow trail; written as the lantern and an escort of a wolf
 - skill_taming:poachers: needs defending with the player's pets; written as a timed hold and a key search
 - skill_agility:catch_a_cloud: needs bottling a cloud on the highest roof; written as a search of the sky village
-- skill_agility:drakkar_race: needs a buoy course against a rival drakkar; written as a timed sail to a distant village
 - skill_agility:galley_convoy: needs keeping the cargo cog afloat; written as both ships built, a raider fight and reaching the village
-- skill_agility:airmail_day: needs three villages in one day; written as one timed flight to a distant village
-- skill_agility:wings_of_the_post: needs gliding without touching the ground; written as a timed run to Reece
 - skill_crafting:winter_festival: needs wrapping a present for every villager; written as a decoration build and presents carried
 - skill_crafting:nether_lamps: needs the camp to stay free of spawns; written as a lamp and lantern build
 - skill_crafting:tower_lift: needs the lift to run; written as a machinery build
@@ -258,8 +249,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_taming:pet_show: needs the pet judged against the sheepdog; written as a village bed build and a judge encounter
 - skill_taming:butterfly_atlas: needs the rarest butterflies; written as three bottled butterflies
 - skill_agility:cargo_airship: needs a full hold; written as supplies consumed and a timed flight
-- skill_agility:sharestone_network: needs a stop in every village; written as one village build
-- skill_agility:wings_and_armour: needs five villages without landing; written as a timed flight to a far village
 - skill_crafting:guild_hall: needs the whole hall; written as a furniture and terminal build
 - magic:eldritch_pages: needs learning a spell from the manuscript; written as the manuscript carried and an eldritch cast
 - skill_cooking:feast_blocks: needs carrying the feast whole to the wedding; written as dishes consumed and a village
@@ -280,7 +269,6 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - skill_defense:abandoned_village: needs the watch bell brought to Reece; written as a bell carried and reaching Reece
 - skill_range:white_stag: needs a three-biome track; written as two biome steps, an encounter kill and antlers carried
 - skill_taming:after_the_storm: needs leading animals by land, sea and air; written as three escorts to Reece
-- skill_agility:grand_relay: needs racing runners from every village in one day; written as three timed legs
 - skill_crafting:rebuild_after_cataclysm: needs leading the guild to the village; written as a village build
 - magic:flamebearers_trail: needs the three characters brought together in the tower; written as talks with each and the shards carried
 - magic:echo_of_tyros: needs the statue summoning the echo; written as killing the fire boss entity
