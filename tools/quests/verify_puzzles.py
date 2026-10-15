@@ -30,6 +30,18 @@ CACHE = os.path.join(ROOT, 'tools', 'quests', 'src', 'plans', 'puzzle_cache.json
 TEST_DIR = os.path.join(os.path.dirname(ROOT), 'server-test')
 LOG = os.path.join(TEST_DIR, 'data', 'logs', 'latest.log')
 CONTAINER = 'fotf-test'
+STRUCTURES = os.path.join(ROOT, 'tools', 'quests', 'structures.json')
+DIMENSIONS = {'Overworld': 'minecraft:overworld', 'Nether': 'minecraft:the_nether', 'End': 'minecraft:the_end',
+              'Twilight Forest': 'twilightforest:twilight_forest'}
+
+
+def dimension_of(sid):
+    """Where a structure generates (structures.json), so it's located in the right dimension."""
+    try:
+        dims = json.load(open(STRUCTURES, encoding='utf-8')).get(sid, {}).get('dimensions') or ['Overworld']
+    except (OSError, ValueError):
+        dims = ['Overworld']
+    return DIMENSIONS.get(dims[0], 'minecraft:overworld')
 
 
 def givers():
@@ -72,7 +84,8 @@ def verify(sid, keys, copies):
     """Run /fotfverify and read its result lines from the test server's log (rcon replies can arrive late and get
     mixed up with the next command's while big structures generate)."""
     start = os.path.getsize(LOG) if os.path.exists(LOG) else 0
-    subprocess.Popen(['docker', 'exec', CONTAINER, 'rcon-cli', '--', f'fotfverify "{sid}" {copies} {",".join(keys)}'],
+    cmd = f'execute in {dimension_of(sid)} run fotfverify "{sid}" {copies} {",".join(keys)}'
+    subprocess.Popen(['docker', 'exec', CONTAINER, 'rcon-cli', '--', cmd],
                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     marker = 'fotfverify ' + sid + ' '
     deadline = time.time() + 1200
@@ -115,8 +128,9 @@ def main():
     for _, _, sids, keys, _ in checks:
         for sid in sids:
             known = cache.get(sid, {}).get('mins', {})
+            not_found = not cache.get(sid, {}).get('copies')
             for k in keys:
-                if args.recheck or k not in known:
+                if args.recheck or k not in known or not_found:
                     needed.setdefault(sid, set()).add(k)
 
     if needed:

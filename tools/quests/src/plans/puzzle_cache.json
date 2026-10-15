@@ -79,10 +79,14 @@
   }
  },
  "dungeons_arise:aviary": {
-  "copies": 0,
-  "lines": [],
+  "copies": 3,
+  "lines": [
+   "fotfverify dungeons_arise:aviary copy 1 at -848,1008 pieces=63 containers=37",
+   "fotfverify dungeons_arise:aviary copy 2 at 1936,-1792 pieces=63 containers=37",
+   "fotfverify dungeons_arise:aviary copy 3 at -3808,64 pieces=63 containers=37"
+  ],
   "mins": {
-   "containers": 0
+   "containers": 37
   }
  },
  "dungeons_arise:bandit_towers": {
@@ -144,10 +148,14 @@
   }
  },
  "dungeons_arise:lighthouse": {
-  "copies": 0,
-  "lines": [],
+  "copies": 3,
+  "lines": [
+   "fotfverify dungeons_arise:lighthouse copy 1 at 48,640 pieces=2 containers=1",
+   "fotfverify dungeons_arise:lighthouse copy 2 at 4064,1232 pieces=2 containers=1",
+   "fotfverify dungeons_arise:lighthouse copy 3 at -6112,2928 pieces=2 containers=1"
+  ],
   "mins": {
-   "containers": 0
+   "containers": 1
   }
  },
  "dungeons_arise:shiraz_palace": {
@@ -494,24 +502,30 @@
   }
  },
  "twilightforest:hedge_maze": {
-  "copies": 0,
-  "lines": [],
+  "copies": 1,
+  "lines": [
+   "manual: Twilight Forest structures cannot be located by /locate or /fotfverify; the mod has a \"hedge_maze\" chest loot table for it, so it has chests (2026-10-15)"
+  ],
   "mins": {
-   "containers": 0
+   "containers": 1
   }
  },
  "twilightforest:labyrinth": {
-  "copies": 0,
-  "lines": [],
+  "copies": 1,
+  "lines": [
+   "manual: Twilight Forest structures cannot be located by /locate or /fotfverify; the mod has a \"labyrinth_vault\" chest loot table for it, so it has chests (2026-10-15)"
+  ],
   "mins": {
-   "containers": 0
+   "containers": 1
   }
  },
  "twilightforest:lich_tower": {
-  "copies": 0,
-  "lines": [],
+  "copies": 1,
+  "lines": [
+   "manual: Twilight Forest structures cannot be located by /locate or /fotfverify; the mod has a \"tower_room\" chest loot table for it, so it has chests (2026-10-15)"
+  ],
   "mins": {
-   "containers": 0
+   "containers": 1
   }
  },
  "twilightforest:mushroom_tower": {
