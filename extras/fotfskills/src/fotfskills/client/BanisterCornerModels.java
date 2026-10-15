@@ -32,6 +32,7 @@ import net.minecraftforge.registries.ForgeRegistries;
  */
 public final class BanisterCornerModels {
     private static final float BAND = 0.25f;
+    private static final float NEAR_POST = 9.0f / 16;   // between the two posts (5.5 and 10.5 px)
     private static final float POST_SHIFT = 2.5f / 16;
     private static final float EPS = 1.0e-4f;
 
@@ -116,9 +117,9 @@ public final class BanisterCornerModels {
         }
 
         /**
-         * Inner corner: the side banister's rail stops at the straight banister's rail, and anything of it reaching into
-         * that rail goes (its end cap, and the post nearest the corner, which would poke through the straight
-         * banister's rail and post).
+         * Inner corner: the side banister's rail stops at the straight banister's rail, and the half of it nearest the
+         * corner loses everything else (its end cap and the post nearest the corner, which would poke through the
+         * straight banister's rail and post).
          */
         private BakedQuad trimmed(BakedQuad q) {
             int axis = axis(facing);
@@ -127,8 +128,12 @@ public final class BanisterCornerModels {
             if (ext > 0.5f) {
                 return write(q, positive(facing) ? QuadGeometry.clip(f, axis, 0, 1 - BAND) : QuadGeometry.clip(f, axis, BAND, 1));
             }
-            boolean intoRail = positive(facing) ? QuadGeometry.reaches(f, axis, 1 - BAND, 1) : QuadGeometry.reaches(f, axis, 0, BAND);
-            return intoRail ? null : q;
+            // the whole post nearest the corner goes, every face of it: dropping only the faces that reach the rail left
+            // its inner face standing as a thin plank (Dylan's screenshot, 2026-10-15). TF's posts sit at 2.5-5.5 and
+            // 10.5-13.5 px, so the near one is everything past NEAR_POST.
+            boolean nearCorner = positive(facing) ? QuadGeometry.reaches(f, axis, NEAR_POST, 1)
+                : QuadGeometry.reaches(f, axis, 0, 1 - NEAR_POST);
+            return nearCorner ? null : q;
         }
 
         /** Outer corner: only the side's corner of the straight banister, with its nearer post moved into the corner. */
