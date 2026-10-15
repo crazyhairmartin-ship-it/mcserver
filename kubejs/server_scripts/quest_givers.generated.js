@@ -6701,6 +6701,819 @@ global.QUEST_GIVERS = [
     "name": ""
   },
   {
+    "quest": "nether:through_the_flames",
+    "stage": "fq.nether.through_the_flames.talk0",
+    "type": "talk",
+    "lines": [
+      "You lit a portal? Take my journal. Never sleep down there.",
+      "Fire resistance first. Questions later."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "vesna",
+    "quest_id": "3DCFC0B89256C1E3",
+    "open_task": ""
+  },
+  {
+    "quest": "nether:through_the_flames",
+    "stage": "fq.nether.through_the_flames.timed2",
+    "type": "timed",
+    "seconds": 600,
+    "goal": {
+      "kind": "hold",
+      "radius": 150.0
+    },
+    "no": [],
+    "waves": [],
+    "lines": [
+      "Ten minutes. Don't sleep. Don't wander far."
+    ],
+    "start": "Survive ten minutes",
+    "requires": [],
+    "quest_id": "3DCFC0B89256C1E3",
+    "prev_tasks": [
+      "4C66DE1FAF7E9333",
+      "1A294FB35485DC93"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "nether:forward_camp",
+    "stage": "fq.nether.forward_camp.build0",
+    "type": "build",
+    "keys": [
+      "minecraft:obsidian",
+      "minecraft:chest",
+      "minecraft:crafting_table",
+      "waystones:waystone"
+    ],
+    "counts": [
+      6,
+      1,
+      1,
+      1
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "0FC85B0F0A0A2537",
+    "prev_tasks": []
+  },
+  {
+    "quest": "nether:forward_camp",
+    "stage": "fq.nether.forward_camp.waystones1",
+    "type": "waystones",
+    "count": 1,
+    "wild": false,
+    "total": false,
+    "requires": [],
+    "quest_id": "0FC85B0F0A0A2537",
+    "prev_tasks": [
+      "0A9F249A8C58FC50"
+    ]
+  },
+  {
+    "quest": "nether:rods_for_the_eyes",
+    "stage": "fq.nether.rods_for_the_eyes.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:blaze",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterfortresses:fortress"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Spawner Blazes",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "44FF9B02B1708E77",
+    "requires": [],
+    "quest_id": "27D01F161162EFD5",
+    "prev_tasks": []
+  },
+  {
+    "quest": "nether:skulls_on_the_wall",
+    "stage": "fq.nether.skulls_on_the_wall.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:wither_skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterfortresses:fortress"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Bridge Wither Skeletons",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "027AB2C899B44186",
+    "requires": [],
+    "quest_id": "660C2D51279315D9",
+    "prev_tasks": []
+  },
+  {
+    "quest": "nether:wart_harvest",
+    "stage": "fq.nether.wart_harvest.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:soul_sand",
+      "minecraft:nether_wart"
+    ],
+    "counts": [
+      4,
+      4
+    ],
+    "radius": 8,
+    "requires": [],
+    "quest_id": "05EBC2CE596ED724",
+    "prev_tasks": [
+      "2253EE27D61E6C65",
+      "02D35EDF2C6274FE"
+    ]
+  },
+  {
+    "quest": "nether:lost_trader",
+    "stage": "fq.nether.lost_trader.enc0",
+    "type": "encounter",
+    "then": "escort",
+    "lines": [
+      "Hoglins! My pack! Take me home, please!"
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "65E50793B068C22C",
+    "prev_tasks": [],
+    "name": "Stray Trader",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:piglin",
+    "profession": "",
+    "to": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:piglin_camp"
+      ],
+      "label": "the piglin camp"
+    },
+    "thanks": []
+  },
+  {
+    "quest": "nether:outstation_ledger",
+    "stage": "fq.nether.outstation_ledger.search2",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:piglin_outstation"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_outstation_ledger_2",
+    "found": "A ledger with two sets of figures.",
+    "requires": [],
+    "quest_id": "0FC11D29D4019B0B",
+    "prev_tasks": [
+      "78EBEDBCEA94B22C",
+      "161361C3F2F9FE56"
+    ]
+  },
+  {
+    "quest": "nether:bastion_quiet",
+    "stage": "fq.nether.bastion_quiet.timed0",
+    "type": "timed",
+    "seconds": 420,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:bastion_remnant"
+      ],
+      "label": "the treasure room",
+      "away": 40
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Quiet feet. If a brute lands a blow, you're seen."
+    ],
+    "start": "Creep in",
+    "requires": [],
+    "quest_id": "344CB4FAE01DDF3C",
+    "prev_tasks": [],
+    "name": ""
+  },
+  {
+    "quest": "nether:bastion_quiet",
+    "stage": "fq.nether.bastion_quiet.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "minecraft:bastion_remnant"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_bastion_quiet_1",
+    "found": "Gilded blackstone and a snout banner.",
+    "requires": [],
+    "quest_id": "344CB4FAE01DDF3C",
+    "prev_tasks": [
+      "78F2F593E55C3E7F"
+    ]
+  },
+  {
+    "quest": "nether:lava_dock",
+    "stage": "fq.nether.lava_dock.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:nether_port"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_lava_dock_0",
+    "found": "A scorched log, last entry smudged.",
+    "requires": [],
+    "quest_id": "7DA3896407AFF541",
+    "prev_tasks": [
+      "3163CBE3D505854F"
+    ]
+  },
+  {
+    "quest": "nether:strider_crossing",
+    "stage": "fq.nether.strider_crossing.timed2",
+    "type": "timed",
+    "seconds": 240,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "betterfortresses:fortress",
+        "mns:mega_fortress",
+        "mns:nether_tower",
+        "nova_structures:nether_keep",
+        "nova_structures:nether_skeleton_tower_basalt",
+        "nova_structures:nether_skeleton_tower_crimson",
+        "nova_structures:nether_skeleton_tower_soul",
+        "nova_structures:nether_skeleton_tower_warped",
+        "nova_structures:piglin_camp",
+        "nova_structures:skeleton_camp_crimson",
+        "nova_structures:skeleton_camp_soul",
+        "nova_structures:skeleton_camp_warped",
+        "nova_structures:skeleton_camp_waste",
+        "structory_towers:nether/fortress_tower"
+      ],
+      "label": "the far shore",
+      "away": 200
+    },
+    "no": [
+      "teleport"
+    ],
+    "waves": [],
+    "lines": [
+      "Four minutes across the lava. Ride!"
+    ],
+    "start": "Cross the lava ocean",
+    "requires": [],
+    "quest_id": "11D0CD9B6B438CBA",
+    "prev_tasks": [
+      "2222617BF21EC9CD",
+      "36A59DBA3A474B59"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "nether:the_keep",
+    "stage": "fq.nether.the_keep.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:wither_skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:nether_keep"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Keep Garrison",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "1A5C149DD1590C58",
+    "requires": [],
+    "quest_id": "2D9F51F0B7A09A8E",
+    "prev_tasks": []
+  },
+  {
+    "quest": "nether:the_keep",
+    "stage": "fq.nether.the_keep.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:nether_keep"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_the_keep_1",
+    "found": "The keep's strongbox, heavy with gold.",
+    "requires": [],
+    "quest_id": "2D9F51F0B7A09A8E",
+    "prev_tasks": [
+      "1A5C149DD1590C58"
+    ]
+  },
+  {
+    "quest": "nether:fortress_tower_lookout",
+    "stage": "fq.nether.fortress_tower_lookout.photo2",
+    "type": "photo",
+    "target": {
+      "kind": "structure",
+      "structures": [
+        "betterfortresses:fortress"
+      ],
+      "label": "the destination"
+    },
+    "requires": [],
+    "quest_id": "37F49E3B5DAA915E",
+    "prev_tasks": [
+      "540007AF27A763DB",
+      "6A448112254A0E8B"
+    ]
+  },
+  {
+    "quest": "nether:mega_fortress",
+    "stage": "fq.nether.mega_fortress.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:wither_skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mns:mega_fortress"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Mega-Fortress Garrison",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "4580A707DA344C18",
+    "requires": [],
+    "quest_id": "719CDC4F1AAD5721",
+    "prev_tasks": []
+  },
+  {
+    "quest": "nether:mega_fortress",
+    "stage": "fq.nether.mega_fortress.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mns:mega_fortress"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_mega_fortress_1",
+    "found": "A treasure chest at the top, banner-hung.",
+    "requires": [],
+    "quest_id": "719CDC4F1AAD5721",
+    "prev_tasks": [
+      "4580A707DA344C18"
+    ]
+  },
+  {
+    "quest": "nether:giant_skull",
+    "stage": "fq.nether.giant_skull.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mns:giant_skull"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_giant_skull_1",
+    "found": "Carvings inside the skull show a direction.",
+    "requires": [],
+    "quest_id": "1FA0701247887E56",
+    "prev_tasks": [
+      "083781BB9AB9500B",
+      "13C3E4BE58363165"
+    ]
+  },
+  {
+    "quest": "nether:giants_sword",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:magma_cube"
+    ],
+    "chance": 0.4,
+    "item": "kubejs:quest_giants_sword_1",
+    "requires": [],
+    "quest_id": "1E8FDE5CD6FFDE8E",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "nether:ghost_train",
+    "stage": "fq.nether.ghost_train.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "All aboard... cargo scattered... can't depart..."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "69C2E033EA8501D0",
+    "prev_tasks": [
+      "58B6E69C7217BC09"
+    ],
+    "name": "Spectral Conductor",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {},
+    "entity": "minecraft:allay",
+    "profession": ""
+  },
+  {
+    "quest": "nether:ghost_train",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "minecraft:wither_skeleton"
+    ],
+    "chance": 0.4,
+    "item": "kubejs:quest_ghost_train_1",
+    "requires": [],
+    "quest_id": "69C2E033EA8501D0",
+    "open_task": "58B6E69C7217BC09",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "nether:nether_houses",
+    "stage": "fq.nether.nether_houses.search0",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mns:medium_house"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_nether_houses_0",
+    "found": "A note, left on a table in a hurry.",
+    "requires": [],
+    "quest_id": "3B4D0358521EB9A6",
+    "prev_tasks": []
+  },
+  {
+    "quest": "nether:nether_houses",
+    "stage": "fq.nether.nether_houses.search1",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mns:medium_house_2"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_nether_houses_1",
+    "found": "A second note, torn and burnt at the edge.",
+    "requires": [],
+    "quest_id": "3B4D0358521EB9A6",
+    "prev_tasks": [
+      "215853A51BB95292"
+    ]
+  },
+  {
+    "quest": "nether:copper_tower",
+    "stage": "fq.nether.copper_tower.build2",
+    "type": "build",
+    "keys": [
+      "minecraft:lightning_rod"
+    ],
+    "counts": [
+      2
+    ],
+    "radius": 12,
+    "requires": [],
+    "quest_id": "4917482F1F6789D6",
+    "prev_tasks": [
+      "67136652214A7A76",
+      "189666BE49E2B5DB"
+    ]
+  },
+  {
+    "quest": "nether:copper_tower",
+    "stage": "fq.nether.copper_tower.search3",
+    "type": "search",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mns:copper_tower"
+      ],
+      "label": "the destination"
+    },
+    "count": 1,
+    "item": "kubejs:quest_copper_tower_3",
+    "found": "The vault door swings open.",
+    "requires": [],
+    "quest_id": "4917482F1F6789D6",
+    "prev_tasks": [
+      "67136652214A7A76",
+      "189666BE49E2B5DB",
+      "4DC2D12102014E63"
+    ]
+  },
+  {
+    "quest": "nether:arena_of_ash",
+    "stage": "fq.nether.arena_of_ash.timed1",
+    "type": "timed",
+    "seconds": 300,
+    "goal": {
+      "kind": "hold",
+      "radius": 20.0
+    },
+    "no": [],
+    "waves": [
+      {
+        "entity": "minecraft:blaze",
+        "count": 2,
+        "every": 30
+      },
+      {
+        "entity": "minecraft:wither_skeleton",
+        "count": 2,
+        "every": 40
+      },
+      {
+        "entity": "minecraft:magma_cube",
+        "count": 2,
+        "every": 50
+      }
+    ],
+    "lines": [
+      "Three waves. Five minutes. Don't leave the sand."
+    ],
+    "start": "Fight the arena",
+    "requires": [],
+    "quest_id": "1F6F8C2D1EE04D1C",
+    "prev_tasks": [
+      "7D99B5681A01E080"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "nether:soul_valley_graves",
+    "stage": "fq.nether.soul_valley_graves.spawn1",
+    "type": "spawn",
+    "entity": "alexsmobs:soul_vulture",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "mns:grave_yard"
+      ],
+      "label": "the destination"
+    },
+    "wave": 2,
+    "name": "Grave Vultures",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "2C5FCA8146C50643",
+    "requires": [],
+    "quest_id": "40DDB0D910236D92",
+    "prev_tasks": [
+      "1D80F585C90AAD4E"
+    ]
+  },
+  {
+    "quest": "nether:soul_valley_graves",
+    "stage": "",
+    "type": "task_drop",
+    "from": [
+      "alexsmobs:soul_vulture"
+    ],
+    "chance": 0.6,
+    "item": "kubejs:quest_soul_valley_graves_2",
+    "requires": [],
+    "quest_id": "40DDB0D910236D92",
+    "open_task": "",
+    "lines": [],
+    "name": ""
+  },
+  {
+    "quest": "nether:mosquito_season",
+    "stage": "fq.nether.mosquito_season.spawn0",
+    "type": "spawn",
+    "entity": "alexsmobs:crimson_mosquito",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "nova_structures:piglin_camp"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Camp Mosquitoes",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "699D7AF7376166EF",
+    "requires": [],
+    "quest_id": "2C648D5CBB6670CA",
+    "prev_tasks": []
+  },
+  {
+    "quest": "nether:stranded_vintner",
+    "stage": "fq.nether.stranded_vintner.enc0",
+    "type": "encounter",
+    "then": "talk",
+    "lines": [
+      "Stranded since the rumour! Bring me crimson and warped grape seeds."
+    ],
+    "arrive": "",
+    "requires": [],
+    "quest_id": "041699F477ECEA8A",
+    "prev_tasks": [],
+    "name": "Stranded Vintner",
+    "distance": [
+      8,
+      16
+    ],
+    "minutes": 20.0,
+    "boost": null,
+    "health": null,
+    "glow": false,
+    "where": {
+      "dimension": "minecraft:the_nether"
+    },
+    "entity": "minecraft:villager",
+    "profession": ""
+  },
+  {
+    "quest": "nether:nether_vineyard",
+    "stage": "fq.nether.nether_vineyard.build0",
+    "type": "build",
+    "keys": [
+      "nethervinery:crimson_grapevine_pot",
+      "nethervinery:warped_grapevine_pot"
+    ],
+    "counts": [
+      1,
+      1
+    ],
+    "radius": 10,
+    "requires": [],
+    "quest_id": "2D2CB6B52DF2A1CC",
+    "prev_tasks": []
+  },
+  {
+    "quest": "nether:netherite_nectar",
+    "stage": "fq.nether.netherite_nectar.talk3",
+    "type": "talk",
+    "lines": [
+      "Thirty years. Finally a decent drink.",
+      "Ghastly, blaze, netherite. You've done it."
+    ],
+    "requires": [],
+    "name": "",
+    "match": "character",
+    "character": "vesna",
+    "quest_id": "1ED9DD878CA6B6D7",
+    "open_task": ""
+  },
+  {
+    "quest": "nether:debris_dive",
+    "stage": "fq.nether.debris_dive.be0",
+    "type": "be",
+    "where": {
+      "dimension": "minecraft:the_nether",
+      "below_y": 20
+    },
+    "requires": [],
+    "quest_id": "39C831D6A0365A25",
+    "prev_tasks": []
+  },
+  {
+    "quest": "nether:nether_dungeons",
+    "stage": "fq.nether.nether_dungeons.spawn0",
+    "type": "spawn",
+    "entity": "minecraft:wither_skeleton",
+    "at": {
+      "kind": "structure",
+      "structures": [
+        "betterdungeons:small_nether_dungeon"
+      ],
+      "label": "the destination"
+    },
+    "wave": 4,
+    "name": "Dungeon Skeletons",
+    "health": null,
+    "glow": false,
+    "ensure": false,
+    "boost": null,
+    "task_id": "448EED97B0AA9CDE",
+    "requires": [],
+    "quest_id": "6A5A8986D1F449EA",
+    "prev_tasks": [
+      "64BC914FEA2A65B3"
+    ]
+  },
+  {
+    "quest": "nether:the_soul_forge",
+    "stage": "fq.nether.the_soul_forge.timed0",
+    "type": "timed",
+    "seconds": 240,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:soul_black_smith"
+      ],
+      "label": "the forge's edge",
+      "away": 25
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Look. Don't knock. Don't get hit."
+    ],
+    "start": "Creep close",
+    "requires": [],
+    "quest_id": "6E8B3E8057914058",
+    "prev_tasks": [
+      "490101AC50F33507"
+    ],
+    "name": ""
+  },
+  {
+    "quest": "nether:arena_of_embers",
+    "stage": "fq.nether.arena_of_embers.timed0",
+    "type": "timed",
+    "seconds": 240,
+    "goal": {
+      "kind": "structure",
+      "structures": [
+        "cataclysm:burning_arena"
+      ],
+      "label": "the sealed doors",
+      "away": 25
+    },
+    "no": [
+      "hurt"
+    ],
+    "waves": [],
+    "lines": [
+      "Listen at the doors. Don't get hit."
+    ],
+    "start": "Creep close",
+    "requires": [],
+    "quest_id": "0C45CF71D832D927",
+    "prev_tasks": [
+      "0230CA0E5A38FEE4"
+    ],
+    "name": ""
+  },
+  {
     "quest": "skill_fishing:sign_up",
     "stage": "fq.skill_fishing.sign_up.talk0",
     "type": "talk",

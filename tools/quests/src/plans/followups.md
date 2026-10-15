@@ -170,6 +170,20 @@ wasn't written. Format and rules: tools/quests/tasks/README.md. An Opus session 
 - small_favours:sf_cracked_stamp: needs the arm-wrestle; written as surviving a brute's waves for a minute
 - small_favours:sf_sleeping_chief: needs playing a drum by his bed; written as a crafted drum and a chief encounter
 - small_favours:sf_permit_granted: needs the actual stamped permit; written as paper consumed and a gatekeeper talk
+- nether:through_the_flames: needs surviving ten minutes anywhere; written as a timed hold within 150 blocks
+- nether:forward_camp: needs blast-proof walling; written as an obsidian build and a lit waystone
+- nether:golden_manners: needs bartering with piglins; written as the barter results carried
+- nether:bastion_quiet: needs not being turned on by the brutes; written as a hurt-free timed crossing and a vault search
+- nether:strider_crossing: needs crossing 300 blocks of lava; written as a timed run to the far shore
+- nether:giants_sword: needs the sword to be climbed (no containers); written as a quest drop from magma cubes
+- nether:ghost_train: needs cargo placed back in the wagons; written as scattered cargo as quest drops
+- nether:warped_dome: needs catching a toad; written as observing one
+- nether:shrine_offerings: needs leaving gold at the shrines (candle and campfire counts are too rare); written as gold consumed at each
+- nether:wishing_in_fire: needs fishing coins from a lava well; written as gold nuggets carried
+- nether:uncharted_regions: needs a sample from each biome; written as standing in each
+- nether:devils_rest: needs the riddle; written as an ender eye offered
+- nether:the_soul_forge: needs looking without knocking; written as a hurt-free approach
+- nether:arena_of_embers: needs listening at the doors; written as a hurt-free approach
 
 ## Links to restore
 - discovery_land:return_to_the_ruins: restore after main_story:act5_start

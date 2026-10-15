@@ -1,0 +1,1815 @@
+{
+  "title": "The Nether",
+  "subtitle": "A frontier expedition",
+  "icon": "minecraft:netherrack",
+  "group": "realms",
+  "order": 2,
+  "quests": [
+    {
+      "id": "through_the_flames",
+      "title": "Through the Flames",
+      "after": [
+        "main_story:act2_finale"
+      ],
+      "text": [
+        "Vesna hears you lit a portal and hands over her old field journal with one rule: never sleep down there. Step through and survive your first ten minutes in the Nether."
+      ],
+      "tasks": [
+        {
+          "talk": "character",
+          "character": "vesna",
+          "lines": [
+            "You lit a portal? Take my journal. Never sleep down there.",
+            "Fire resistance first. Questions later."
+          ],
+          "title": "Take Vesna's field journal"
+        },
+        {
+          "dimension": "minecraft:the_nether",
+          "title": "Step through into the Nether"
+        },
+        {
+          "timed": {
+            "seconds": 600,
+            "goal": {
+              "hold": {
+                "radius": 150
+              }
+            },
+            "lines": [
+              "Ten minutes. Don't sleep. Don't wander far."
+            ],
+            "start": "Survive ten minutes"
+          },
+          "title": "Survive your first ten minutes in the Nether"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "item": "minecraft:writable_book",
+          "name": "Vesna's Field Journal",
+          "lore": [
+            "Never sleep down there."
+          ]
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:netherrack"
+    },
+    {
+      "id": "forward_camp",
+      "title": "Forward Camp",
+      "after": [
+        "through_the_flames"
+      ],
+      "text": [
+        "Wall in your portal with blast-proof stone, and add a chest, a crafting table and a lit waystone so you always have a way home."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "minecraft:obsidian": 6,
+              "minecraft:chest": 1,
+              "minecraft:crafting_table": 1,
+              "waystones:waystone": 1
+            },
+            "radius": 8
+          },
+          "title": "Wall in the portal and set up camp"
+        },
+        {
+          "waystones": 1,
+          "title": "Light the waystone so you always have a way home"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "waystones:warp_stone"
+        },
+        {
+          "item": "minecraft:cobbled_deepslate",
+          "count": 64
+        },
+        {
+          "skill": "craft",
+          "xp": 300
+        }
+      ],
+      "icon": "waystones:waystone"
+    },
+    {
+      "id": "the_long_halls",
+      "title": "The Long Halls",
+      "after": [
+        "forward_camp"
+      ],
+      "text": [
+        "Vesna's journal sketches a fortress nothing like the old maps. Find one of the rebuilt Nether fortresses and walk its great halls to the central keep."
+      ],
+      "tasks": [
+        {
+          "structure": "betterfortresses:fortress",
+          "title": "Find a rebuilt Nether fortress and walk its great halls"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 320
+        }
+      ],
+      "icon": "minecraft:nether_bricks"
+    },
+    {
+      "id": "rods_for_the_eyes",
+      "title": "Rods for the Eyes",
+      "after": [
+        "the_long_halls"
+      ],
+      "text": [
+        "Every locator eye in the pack starts with blaze powder. Bring back blaze rods from the fortress spawners, without dying to the fireballs."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:blaze",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "betterfortresses:fortress"
+            },
+            "wave": 4,
+            "name": "Spawner Blazes"
+          },
+          "title": "Fight the fortress's blazes for their rods"
+        },
+        {
+          "item": "minecraft:blaze_rod",
+          "count": 16,
+          "title": "Bring back blaze rods for the eyes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 4
+        },
+        {
+          "item": "minecraft:shield"
+        },
+        {
+          "skill": "attack",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:blaze_rod"
+    },
+    {
+      "id": "skulls_on_the_wall",
+      "title": "Skulls on the Wall",
+      "after": [
+        "the_long_halls"
+      ],
+      "text": [
+        "Wither skeletons patrol the fortress bridges. Vesna wants three of their skulls for something she won't name yet. Hunt them with a Looting blade."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:wither_skeleton",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "betterfortresses:fortress"
+            },
+            "wave": 4,
+            "name": "Bridge Wither Skeletons"
+          },
+          "title": "Hunt the wither skeletons on the fortress bridges"
+        },
+        {
+          "item": "minecraft:wither_skeleton_skull",
+          "count": 3,
+          "title": "Bring Vesna three skulls"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Hunter's Greed",
+          "enchant": {
+            "minecraft:looting": 2
+          }
+        },
+        {
+          "item": "minecraft:soul_lantern",
+          "count": 4
+        },
+        {
+          "skill": "attack",
+          "xp": 380
+        }
+      ],
+      "icon": "minecraft:wither_skeleton_skull"
+    },
+    {
+      "id": "wart_harvest",
+      "title": "The Wart Garden",
+      "after": [
+        "the_long_halls"
+      ],
+      "text": [
+        "Someone tends a nether wart farm out in the wastes, and nobody knows who. Harvest from it, start your own soul-sand patch at camp, and brew three potions of fire resistance."
+      ],
+      "tasks": [
+        {
+          "structure": "mns:nether_wart_farm",
+          "title": "Find the wart garden tended by nobody"
+        },
+        {
+          "item": "minecraft:nether_wart",
+          "count": 8,
+          "title": "Harvest warts from the garden"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:soul_sand": 4,
+              "minecraft:nether_wart": 4
+            },
+            "radius": 8
+          },
+          "title": "Start your own soul-sand patch at camp"
+        },
+        {
+          "item": "minecraft:potion",
+          "count": 3,
+          "consume": true,
+          "title": "Brew three potions of fire resistance"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:brewing_stand"
+        },
+        {
+          "item": "minecraft:blaze_powder",
+          "count": 8
+        },
+        {
+          "skill": "farm",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:nether_wart"
+    },
+    {
+      "id": "golden_manners",
+      "title": "Golden Manners",
+      "after": [
+        "forward_camp"
+      ],
+      "text": [
+        "Wear gold and barter with piglins until they've given you an ender pearl, obsidian and string. Vesna bets you'll be robbed at least once."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:golden_helmet",
+          "title": "Wear gold so the piglins will trade"
+        },
+        {
+          "item": "minecraft:ender_pearl",
+          "title": "Barter for an ender pearl"
+        },
+        {
+          "item": "minecraft:obsidian",
+          "count": 2,
+          "title": "Barter for obsidian"
+        },
+        {
+          "item": "minecraft:string",
+          "count": 4,
+          "title": "Barter for string"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_carrot",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:golden_helmet"
+    },
+    {
+      "id": "lost_trader",
+      "title": "The Lost Trader",
+      "after": [
+        "golden_manners"
+      ],
+      "text": [
+        "A piglin with a merchant's pack has strayed from his camp and the hoglins are closing in. Keep him alive back to the piglin camp, where his chief owes you a favour."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:piglin",
+            "name": "Stray Trader",
+            "to": {
+              "structure": "nova_structures:piglin_camp",
+              "label": "the piglin camp"
+            },
+            "then": "escort",
+            "lines": [
+              "Hoglins! My pack! Take me home, please!"
+            ]
+          },
+          "title": "Walk the stray trader home to the piglin camp"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ender_pearl",
+          "count": 4
+        },
+        {
+          "item": "minecraft:fire_charge",
+          "count": 8
+        },
+        {
+          "item": "minecraft:crying_obsidian",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 320
+        }
+      ],
+      "icon": "minecraft:gold_ingot"
+    },
+    {
+      "id": "outstation_ledger",
+      "title": "The Outstation Ledger",
+      "after": [
+        "lost_trader"
+      ],
+      "text": [
+        "The chief sends you with a sack of gold to the piglin outstation near the bastions. Deliver it, and find the ledger hidden there proving the brutes are skimming."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:gold_ingot",
+          "count": 16,
+          "consume": true,
+          "title": "Carry the chief's sack of gold"
+        },
+        {
+          "structure": "nova_structures:piglin_outstation",
+          "title": "Deliver the gold to the outstation"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:piglin_outstation"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Skimming Ledger",
+              "texture": "minecraft:item/writable_book"
+            },
+            "found": "A ledger with two sets of figures."
+          },
+          "title": "Find the ledger proving the brutes are skimming"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_block",
+          "count": 4
+        },
+        {
+          "item": "minecraft:netherite_scrap"
+        },
+        {
+          "skill": "agility",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:writable_book"
+    },
+    {
+      "id": "bastion_quiet",
+      "title": "Quiet Feet in the Bastion",
+      "after": [
+        "outstation_ledger"
+      ],
+      "text": [
+        "The ledger names a bastion's treasure room. Get in, lift the gilded blackstone and a banner from the vault, and get out without the brutes ever turning on you."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 420,
+            "goal": {
+              "structure": "minecraft:bastion_remnant",
+              "label": "the treasure room",
+              "away": 40
+            },
+            "lines": [
+              "Quiet feet. If a brute lands a blow, you're seen."
+            ],
+            "start": "Creep in",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Creep in to the treasure room without the brutes noticing"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "minecraft:bastion_remnant"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Vault's Gilded Haul",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "Gilded blackstone and a snout banner."
+          },
+          "title": "Lift the gilded haul from the vault"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_upgrade_smithing_template"
+        },
+        {
+          "item": "minecraft:gilded_blackstone",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 360
+        }
+      ],
+      "icon": "minecraft:gilded_blackstone"
+    },
+    {
+      "id": "lava_dock",
+      "title": "The Lava Dock",
+      "after": [
+        "the_long_halls"
+      ],
+      "text": [
+        "A harbour on a lava sea, with moorings and cranes and no sailors. Read the harbourmaster's last log."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:nether_port"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Harbourmaster's Log",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A scorched log, last entry smudged."
+          },
+          "title": "Read the harbourmaster's last log"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:saddle"
+        },
+        {
+          "item": "minecraft:warped_fungus_on_a_stick"
+        },
+        {
+          "skill": "agility",
+          "xp": 320
+        }
+      ],
+      "icon": "minecraft:saddle",
+      "discover": {
+        "structure": "nova_structures:nether_port"
+      }
+    },
+    {
+      "id": "strider_crossing",
+      "title": "Strider Crossing",
+      "after": [
+        "lava_dock"
+      ],
+      "text": [
+        "The harbourmaster's log mentions a route across the lava ocean. Saddle a strider and cross the lava inside four minutes."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:saddle",
+          "title": "Take a saddle for a strider"
+        },
+        {
+          "item": "minecraft:warped_fungus_on_a_stick",
+          "title": "Take a fungus on a stick to steer it"
+        },
+        {
+          "timed": {
+            "seconds": 240,
+            "goal": {
+              "structure": "#nether_outposts",
+              "label": "the far shore",
+              "away": 200
+            },
+            "lines": [
+              "Four minutes across the lava. Ride!"
+            ],
+            "start": "Cross the lava ocean",
+            "no": [
+              "teleport"
+            ]
+          },
+          "title": "Cross the lava ocean on a strider in four minutes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_scrap"
+        },
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "skill": "agility",
+          "xp": 380
+        }
+      ],
+      "icon": "minecraft:warped_fungus_on_a_stick"
+    },
+    {
+      "id": "the_keep",
+      "title": "The Keep at the Edge",
+      "after": [
+        "the_long_halls"
+      ],
+      "text": [
+        "A Nether keep sits near the fortress roads, held by blaze-guarded skeletons. Clear its walls and claim the keep's chest."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:wither_skeleton",
+          "count": 5,
+          "spawn": {
+            "at": {
+              "structure": "nova_structures:nether_keep"
+            },
+            "wave": 4,
+            "name": "Keep Garrison"
+          },
+          "title": "Clear the keep's walls of its garrison"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "nova_structures:nether_keep"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Keep's Chest",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "The keep's strongbox, heavy with gold."
+          },
+          "title": "Claim the keep's chest"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:diamond",
+          "count": 3
+        },
+        {
+          "item": "minecraft:golden_apple"
+        },
+        {
+          "skill": "attack",
+          "xp": 360
+        }
+      ],
+      "icon": "minecraft:gold_block"
+    },
+    {
+      "id": "four_watchtowers",
+      "title": "Four Watchtowers",
+      "after": [
+        "the_keep"
+      ],
+      "text": [
+        "Skeleton towers and camps watch over every biome. Reach a tower or camp in the crimson forest, the warped forest, the soul valleys and the wastes."
+      ],
+      "tasks": [
+        {
+          "structure": "nova_structures:nether_skeleton_tower_crimson",
+          "title": "Reach a tower in the crimson forest"
+        },
+        {
+          "structure": "nova_structures:nether_skeleton_tower_warped",
+          "title": "Reach a tower in the warped forest"
+        },
+        {
+          "structure": "nova_structures:skeleton_camp_soul",
+          "title": "Reach a camp in the soul valley"
+        },
+        {
+          "structure": "nova_structures:skeleton_camp_waste",
+          "title": "Reach a camp in the wastes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone_block",
+          "count": 8
+        },
+        {
+          "item": "minecraft:spyglass"
+        },
+        {
+          "skill": "range",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:bone_block"
+    },
+    {
+      "id": "fortress_tower_lookout",
+      "title": "From the Fortress Tower",
+      "after": [
+        "four_watchtowers"
+      ],
+      "text": [
+        "Climb a fortress tower and look out from its top. Mark down any fortress, bastion or skull on the horizon in Vesna's journal."
+      ],
+      "tasks": [
+        {
+          "structure": "structory_towers:nether/fortress_tower",
+          "title": "Climb a fortress tower"
+        },
+        {
+          "item": "camerapture:camera",
+          "title": "Bring a camera to mark the horizon"
+        },
+        {
+          "photo": {
+            "structure": "betterfortresses:fortress"
+          },
+          "title": "Photograph a fortress on the horizon"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "explorerscompass:explorerscompass"
+        },
+        {
+          "item": "minecraft:paper",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 340
+        }
+      ],
+      "icon": "camerapture:camera"
+    },
+    {
+      "id": "mega_fortress",
+      "title": "The Mega Fortress",
+      "after": [
+        "fortress_tower_lookout"
+      ],
+      "text": [
+        "One of the mega fortresses dwarfs even the rebuilt halls. Fight through its towers to the treasure at the top."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:wither_skeleton",
+          "count": 8,
+          "spawn": {
+            "at": {
+              "structure": "mns:mega_fortress"
+            },
+            "wave": 4,
+            "name": "Mega-Fortress Garrison"
+          },
+          "title": "Fight through the mega fortress's towers"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mns:mega_fortress"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Mega Fortress's Treasure",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A treasure chest at the top, banner-hung."
+          },
+          "title": "Claim the treasure at the top"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_scrap",
+          "count": 2
+        },
+        {
+          "item": "spartanweaponry:diamond_halberd"
+        },
+        {
+          "skill": "attack",
+          "xp": 420
+        }
+      ],
+      "icon": "minecraft:nether_bricks"
+    },
+    {
+      "id": "bridges_of_ash",
+      "title": "Bridges of Ash",
+      "after": [
+        "fortress_tower_lookout"
+      ],
+      "text": [
+        "Ancient bridges span the lava lakes. Cross three of them and note who built them. The stonework doesn't match any fortress."
+      ],
+      "tasks": [
+        {
+          "structure": "mns:bridge_1",
+          "title": "Cross the first lava-lake bridge"
+        },
+        {
+          "structure": "mns:bridge_2",
+          "title": "Cross the second lava-lake bridge"
+        },
+        {
+          "structure": "mns:bridge_3",
+          "title": "Cross the third lava-lake bridge"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:stone_bricks"
+    },
+    {
+      "id": "giant_skull",
+      "title": "The Giant's Skull",
+      "after": [
+        "bridges_of_ash"
+      ],
+      "text": [
+        "A skull the size of a house lies half-buried in the wastes, with a second one in the sand. Find both, then work out from the carvings which way the giant was facing when it fell."
+      ],
+      "tasks": [
+        {
+          "structure": "mns:sandy_skull",
+          "title": "Find the second skull half-buried in the sand"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mns:giant_skull"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Skull's Carved Notes",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "Carvings inside the skull show a direction."
+          },
+          "title": "Read the carvings inside the first skull"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:bone_meal",
+          "count": 16
+        },
+        {
+          "item": "minecraft:bone",
+          "name": "Giant's Tooth",
+          "lore": [
+            "From a skull the size of a house."
+          ]
+        },
+        {
+          "skill": "agility",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:bone",
+      "discover": {
+        "structure": "mns:giant_skull"
+      }
+    },
+    {
+      "id": "giants_sword",
+      "title": "The Giant's Sword",
+      "after": [
+        "giant_skull"
+      ],
+      "text": [
+        "The carvings point to a crimson forest where a colossal sword stands buried to the hilt. Climb it and recover what's lodged at the guard."
+      ],
+      "tasks": [
+        {
+          "structure": "mns:sword",
+          "title": "Find the colossal sword in the crimson forest"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:magma_cube"
+            ],
+            "chance": 0.4,
+            "item": {
+              "name": "a Relic from the Guard",
+              "texture": "minecraft:item/gold_nugget",
+              "tooltip": "Lodged at the sword's guard"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take a Relic from the Guard"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "spartanweaponry:diamond_greatsword",
+          "name": "The Giant's Edge",
+          "lore": [
+            "From a sword buried to the hilt."
+          ],
+          "enchant": {
+            "minecraft:sharpness": 3
+          }
+        },
+        {
+          "skill": "attack",
+          "xp": 420
+        }
+      ],
+      "icon": "spartanweaponry:diamond_greatsword"
+    },
+    {
+      "id": "ghost_train",
+      "title": "The Ghost Train",
+      "after": [
+        "bridges_of_ash"
+      ],
+      "text": [
+        "A train sits on rails to nowhere in the Nether. Its spectral conductor wants the scattered cargo back in the wagons before it can 'depart'."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:allay",
+            "name": "Spectral Conductor",
+            "then": "talk",
+            "lines": [
+              "All aboard... cargo scattered... can't depart..."
+            ]
+          },
+          "title": "Meet the train's spectral conductor"
+        },
+        {
+          "drop": {
+            "from": [
+              "minecraft:wither_skeleton"
+            ],
+            "chance": 0.4,
+            "item": {
+              "name": "Scattered Cargo",
+              "texture": "minecraft:item/chest_minecart",
+              "tooltip": "Put it back in the wagons"
+            }
+          },
+          "count": 3,
+          "consume": false,
+          "title": "Take Scattered Cargo"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_nugget",
+          "count": 64
+        },
+        {
+          "item": "minecraft:soul_lantern",
+          "name": "Conductor's Lantern"
+        },
+        {
+          "skill": "agility",
+          "xp": 360
+        }
+      ],
+      "icon": "minecraft:rail",
+      "discover": {
+        "structure": "mns:train"
+      }
+    },
+    {
+      "id": "nether_houses",
+      "title": "Who Lives Here?",
+      "after": [
+        "ghost_train"
+      ],
+      "text": [
+        "Small houses stand in the Nether, furnished and empty. Search two of them and piece together, from the notes left inside, what happened to the family."
+      ],
+      "tasks": [
+        {
+          "search": {
+            "at": {
+              "structure": "mns:medium_house"
+            },
+            "count": 1,
+            "item": {
+              "name": "a Family Note",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A note, left on a table in a hurry."
+          },
+          "title": "Search the first empty house"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mns:medium_house_2"
+            },
+            "count": 1,
+            "item": {
+              "name": "a Second Family Note",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "A second note, torn and burnt at the edge."
+          },
+          "title": "Search the second empty house"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "furniture:oak_bench",
+          "count": 2
+        },
+        {
+          "skill": "craft",
+          "xp": 320
+        }
+      ],
+      "icon": "furniture:oak_bench"
+    },
+    {
+      "id": "warped_dome",
+      "title": "Under the Warped Dome",
+      "after": [
+        "bridges_of_ash"
+      ],
+      "text": [
+        "A glass dome shelters a warped garden and a pool full of warped toads. Gather shroomlights and twisting vines, and catch a warped toad."
+      ],
+      "tasks": [
+        {
+          "structure": "mns:warped_dome",
+          "title": "Find the warped dome"
+        },
+        {
+          "item": "minecraft:shroomlight",
+          "count": 4,
+          "title": "Gather shroomlights from the garden"
+        },
+        {
+          "item": "minecraft:twisting_vines",
+          "count": 4,
+          "title": "Gather twisting vines from the garden"
+        },
+        {
+          "observe": "alexsmobs:warped_toad",
+          "ticks": 40,
+          "title": "Catch sight of a warped toad in the pool"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:shroomlight",
+          "count": 8
+        },
+        {
+          "skill": "taming",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:shroomlight"
+    },
+    {
+      "id": "copper_tower",
+      "title": "The Copper Tower",
+      "after": [
+        "warped_dome"
+      ],
+      "text": [
+        "A copper tower in a realm without rain. Restore its oxidised lightning rods at the top and the vault door at the base opens."
+      ],
+      "tasks": [
+        {
+          "structure": "mns:copper_tower",
+          "title": "Find the copper tower"
+        },
+        {
+          "item": "minecraft:lightning_rod",
+          "count": 2,
+          "title": "Bring new lightning rods"
+        },
+        {
+          "build": {
+            "blocks": {
+              "minecraft:lightning_rod": 2
+            },
+            "radius": 12
+          },
+          "title": "Replace the oxidised rods at the top"
+        },
+        {
+          "search": {
+            "at": {
+              "structure": "mns:copper_tower"
+            },
+            "count": 1,
+            "item": {
+              "name": "the Vault's Contents",
+              "texture": "minecraft:item/paper"
+            },
+            "found": "The vault door swings open."
+          },
+          "title": "Open the vault at the base"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:copper_block",
+          "count": 8
+        },
+        {
+          "item": "friendsandfoes:copper_golem_head"
+        },
+        {
+          "skill": "craft",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:copper_block"
+    },
+    {
+      "id": "arena_of_ash",
+      "title": "Arena of Ash",
+      "after": [
+        "mega_fortress"
+      ],
+      "text": [
+        "In one of the Nether arenas, survive three waves of blazes, wither skeletons and magma cubes for five minutes. Win in the dragon arena and Vesna buys the drinks."
+      ],
+      "tasks": [
+        {
+          "structure": "mns:large_arena",
+          "title": "Enter the Nether arena"
+        },
+        {
+          "timed": {
+            "seconds": 300,
+            "goal": {
+              "hold": {
+                "radius": 20
+              }
+            },
+            "waves": [
+              {
+                "entity": "minecraft:blaze",
+                "count": 2,
+                "every": 30
+              },
+              {
+                "entity": "minecraft:wither_skeleton",
+                "count": 2,
+                "every": 40
+              },
+              {
+                "entity": "minecraft:magma_cube",
+                "count": 2,
+                "every": 50
+              }
+            ],
+            "lines": [
+              "Three waves. Five minutes. Don't leave the sand."
+            ],
+            "start": "Fight the arena"
+          },
+          "title": "Survive the arena's waves for five minutes"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:golden_apple",
+          "count": 2
+        },
+        {
+          "skill": "attack",
+          "xp": 480
+        }
+      ],
+      "icon": "minecraft:blaze_powder"
+    },
+    {
+      "id": "shrine_offerings",
+      "title": "Offerings at the Shrines",
+      "after": [
+        "through_the_flames"
+      ],
+      "text": [
+        "Small shrines dot the wastes, some still smoking. Leave a gold ingot at a shrine and at a smoking shrine, and see what the realm gives back."
+      ],
+      "tasks": [
+        {
+          "structure": "mns:shrine",
+          "title": "Find a small shrine"
+        },
+        {
+          "item": "minecraft:gold_ingot",
+          "consume": true,
+          "title": "Leave a gold ingot at the shrine"
+        },
+        {
+          "structure": "mns:smoking_shrine",
+          "title": "Find a smoking shrine"
+        },
+        {
+          "item": "minecraft:gold_ingot",
+          "consume": true,
+          "title": "Leave a gold ingot at the smoking shrine"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:fire_charge",
+          "count": 8
+        },
+        {
+          "item": "minecraft:quartz",
+          "count": 8
+        },
+        {
+          "item": "minecraft:ghast_tear"
+        },
+        {
+          "skill": "agility",
+          "xp": 300
+        }
+      ],
+      "icon": "minecraft:red_candle"
+    },
+    {
+      "id": "wishing_in_fire",
+      "title": "Wishing in Fire",
+      "after": [
+        "through_the_flames"
+      ],
+      "text": [
+        "A well in the Nether, full of lava instead of water. Fish out the coins at its bottom with a fire-resistant hand."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:gold_nugget",
+          "count": 8,
+          "title": "Fish the coins out of the lava well"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:gold_nugget",
+          "count": 16
+        },
+        {
+          "item": "minecraft:rabbit_foot"
+        },
+        {
+          "skill": "agility",
+          "xp": 100
+        }
+      ],
+      "icon": "minecraft:gold_nugget",
+      "discover": {
+        "structure": "mns:medium_crimson_well"
+      }
+    },
+    {
+      "id": "soul_valley_graves",
+      "title": "The Soul Valley Graves",
+      "after": [
+        "four_watchtowers"
+      ],
+      "text": [
+        "A graveyard in the soul sand valley is circled by soul vultures. Find it, and take a soul heart from one of the vultures."
+      ],
+      "tasks": [
+        {
+          "structure": "mns:grave_yard",
+          "title": "Find the soul valley's graveyard"
+        },
+        {
+          "kill": "alexsmobs:soul_vulture",
+          "count": 2,
+          "spawn": {
+            "at": {
+              "structure": "mns:grave_yard"
+            },
+            "wave": 2,
+            "name": "Grave Vultures"
+          },
+          "title": "Bring down the vultures circling the graves"
+        },
+        {
+          "drop": {
+            "from": [
+              "alexsmobs:soul_vulture"
+            ],
+            "chance": 0.6,
+            "item": {
+              "name": "a Soul Heart",
+              "texture": "minecraft:item/ghast_tear",
+              "tooltip": "Taken from a vulture"
+            }
+          },
+          "count": 1,
+          "consume": false,
+          "title": "Take a Soul Heart"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:soul_torch",
+          "count": 16
+        },
+        {
+          "item": "minecraft:enchanted_book",
+          "name": "Soul Strider",
+          "enchant": {
+            "minecraft:soul_speed": 2
+          }
+        },
+        {
+          "skill": "attack",
+          "xp": 380
+        }
+      ],
+      "icon": "minecraft:soul_torch"
+    },
+    {
+      "id": "mosquito_season",
+      "title": "Mosquito Season",
+      "after": [
+        "soul_valley_graves"
+      ],
+      "text": [
+        "Crimson mosquitoes are draining the piglins' hoglins. Swat ten and bring a mosquito proboscis to the camp chief."
+      ],
+      "tasks": [
+        {
+          "kill": "alexsmobs:crimson_mosquito",
+          "count": 10,
+          "spawn": {
+            "at": {
+              "structure": "nova_structures:piglin_camp"
+            },
+            "wave": 4,
+            "name": "Camp Mosquitoes"
+          },
+          "title": "Swat the mosquitoes draining the piglins' hoglins"
+        },
+        {
+          "item": "alexsmobs:mosquito_proboscis",
+          "title": "Bring a proboscis to the camp chief"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "alexsmobs:mosquito_repellent_stew",
+          "count": 4
+        },
+        {
+          "skill": "range",
+          "xp": 340
+        }
+      ],
+      "icon": "alexsmobs:mosquito_proboscis"
+    },
+    {
+      "id": "realm_survey",
+      "title": "A Survey of Hell",
+      "after": [
+        "four_watchtowers"
+      ],
+      "text": [
+        "Vesna's journal has blank pages for every biome she never saw. Stand in each of them and fill the survey."
+      ],
+      "tasks": [
+        {
+          "biome": "minecraft:crimson_forest",
+          "title": "Stand in the crimson forest"
+        },
+        {
+          "biome": "minecraft:warped_forest",
+          "title": "Stand in the warped forest"
+        },
+        {
+          "biome": "minecraft:basalt_deltas",
+          "title": "Stand in the basalt deltas"
+        },
+        {
+          "biome": "minecraft:soul_sand_valley",
+          "title": "Stand in the soul sand valley"
+        },
+        {
+          "biome": "biomesoplenty:visceral_heap",
+          "title": "Stand in the visceral heap"
+        },
+        {
+          "biome": "biomesoplenty:withered_abyss",
+          "title": "Stand in the withered abyss"
+        },
+        {
+          "biome": "biomesoplenty:crystalline_chasm",
+          "title": "Stand in the crystalline chasm"
+        },
+        {
+          "biome": "biomesoplenty:undergrowth",
+          "title": "Stand in the undergrowth"
+        },
+        {
+          "biome": "biomesoplenty:erupting_inferno",
+          "title": "Stand in the erupting inferno"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "naturescompass:naturescompass"
+        },
+        {
+          "skill": "forage",
+          "xp": 320
+        }
+      ],
+      "icon": "naturescompass:naturescompass"
+    },
+    {
+      "id": "uncharted_regions",
+      "title": "Uncharted Regions",
+      "after": [
+        "realm_survey"
+      ],
+      "text": [
+        "Rumours of glowing meadows and redstone pits. Visit the infernal holt, the glistering meadow, the mycotoxic undergrowth, the blackstone basin and the redstone abyss, and fill Vesna's journal."
+      ],
+      "tasks": [
+        {
+          "biome": "regions_unexplored:infernal_holt",
+          "title": "Stand in the infernal holt"
+        },
+        {
+          "biome": "regions_unexplored:glistering_meadow",
+          "title": "Stand in the glistering meadow"
+        },
+        {
+          "biome": "regions_unexplored:mycotoxic_undergrowth",
+          "title": "Stand in the mycotoxic undergrowth"
+        },
+        {
+          "biome": "regions_unexplored:blackstone_basin",
+          "title": "Stand in the blackstone basin"
+        },
+        {
+          "biome": "regions_unexplored:redstone_abyss",
+          "title": "Stand in the redstone abyss"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "sophisticatedbackpacks:backpack"
+        },
+        {
+          "skill": "forage",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:shroomlight"
+    },
+    {
+      "id": "stranded_vintner",
+      "title": "The Stranded Vintner",
+      "after": [
+        "realm_survey"
+      ],
+      "text": [
+        "A winemaker who followed a rumour through a ruined portal is stranded in the crimson forest. He'll teach you Nether winemaking if you gather crimson and warped grape seeds for him."
+      ],
+      "tasks": [
+        {
+          "encounter": {
+            "entity": "minecraft:villager",
+            "name": "Stranded Vintner",
+            "where": {
+              "dimension": "minecraft:the_nether"
+            },
+            "then": "talk",
+            "lines": [
+              "Stranded since the rumour! Bring me crimson and warped grape seeds."
+            ]
+          },
+          "title": "Find the vintner stuck in the crimson forest"
+        },
+        {
+          "item": "nethervinery:crimson_grape_seeds",
+          "count": 4,
+          "title": "Gather crimson grape seeds for the vintner"
+        },
+        {
+          "item": "nethervinery:warped_grape_seeds",
+          "count": 4,
+          "title": "Gather warped grape seeds for the vintner"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "nethervinery:crimson_grapevine_pot"
+        },
+        {
+          "item": "nethervinery:warped_grapevine_pot"
+        },
+        {
+          "skill": "farm",
+          "xp": 320
+        }
+      ],
+      "icon": "nethervinery:crimson_grape_seeds"
+    },
+    {
+      "id": "nether_vineyard",
+      "title": "A Vineyard in Hell",
+      "after": [
+        "stranded_vintner"
+      ],
+      "text": [
+        "Plant crimson and warped grapes at your forward camp and harvest a crate of each, then build an apple press and fermentation barrel from Nether wood."
+      ],
+      "tasks": [
+        {
+          "build": {
+            "blocks": {
+              "nethervinery:crimson_grapevine_pot": 1,
+              "nethervinery:warped_grapevine_pot": 1
+            },
+            "radius": 10
+          },
+          "title": "Plant crimson and warped grapes at your camp"
+        },
+        {
+          "item": "nethervinery:crimson_grape_crate",
+          "title": "Harvest a crate of crimson grapes"
+        },
+        {
+          "item": "nethervinery:warped_grape_crate",
+          "title": "Harvest a crate of warped grapes"
+        },
+        {
+          "item": "nethervinery:crimson_apple_press",
+          "crafted": true,
+          "title": "Build a press from Nether wood"
+        },
+        {
+          "item": "nethervinery:crimson_fermentation_barrel",
+          "crafted": true,
+          "title": "Build a fermentation barrel"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "nethervinery:crimson_wine_rack_mid"
+        },
+        {
+          "skill": "farm",
+          "xp": 340
+        }
+      ],
+      "icon": "nethervinery:crimson_grape"
+    },
+    {
+      "id": "netherite_nectar",
+      "title": "Netherite Nectar",
+      "after": [
+        "nether_vineyard"
+      ],
+      "text": [
+        "Ferment Ghastly Grenache, Blazewine Pinot and the vintner's prize Netherite Nectar, and deliver a bottle of each to Vesna in Reece, who has waited thirty years for a decent drink."
+      ],
+      "tasks": [
+        {
+          "item": "nethervinery:ghastly_grenache",
+          "title": "Ferment Ghastly Grenache"
+        },
+        {
+          "item": "nethervinery:blazewine_pinot",
+          "title": "Ferment Blazewine Pinot"
+        },
+        {
+          "item": "nethervinery:netherite_nectar",
+          "title": "Ferment the vintner's prize Netherite Nectar"
+        },
+        {
+          "talk": "character",
+          "character": "vesna",
+          "lines": [
+            "Thirty years. Finally a decent drink.",
+            "Ghastly, blaze, netherite. You've done it."
+          ],
+          "title": "Deliver a bottle of each to Vesna"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "nethervinery:lava_fizz",
+          "count": 2
+        },
+        {
+          "item": "minecraft:netherite_scrap"
+        },
+        {
+          "skill": "cook",
+          "xp": 400
+        }
+      ],
+      "icon": "nethervinery:netherite_nectar"
+    },
+    {
+      "id": "debris_dive",
+      "title": "Deep Debris",
+      "after": [
+        "skulls_on_the_wall"
+      ],
+      "text": [
+        "Down at the bottom of the Nether, mine eight ancient debris. Vesna explains the trick with beds and tells you never to tell her how it went."
+      ],
+      "tasks": [
+        {
+          "be": {
+            "below_y": 20,
+            "dimension": "minecraft:the_nether"
+          },
+          "title": "Dig down to the bottom of the Nether"
+        },
+        {
+          "item": "minecraft:ancient_debris",
+          "count": 8,
+          "title": "Mine eight ancient debris"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:netherite_upgrade_smithing_template"
+        },
+        {
+          "skill": "mining",
+          "xp": 400
+        }
+      ],
+      "icon": "minecraft:ancient_debris"
+    },
+    {
+      "id": "the_burning_citadel",
+      "title": "The Burning Citadel",
+      "after": [
+        "arena_of_ash"
+      ],
+      "text": [
+        "Fire that walks, and shields that circle it: a citadel in the wastes is held by something Vesna only calls 'the crowned flame'. Look at it from a safe distance."
+      ],
+      "tasks": [
+        {
+          "observe": "friendsandfoes:wildfire",
+          "ticks": 40,
+          "title": "Watch the crowned flame from a safe distance"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:magma_cream",
+          "count": 4
+        },
+        {
+          "item": "minecraft:snowball",
+          "count": 16
+        },
+        {
+          "skill": "agility",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:fire_charge",
+      "discover": {
+        "structure": "friendsandfoes:citadel"
+      }
+    },
+    {
+      "id": "nether_dungeons",
+      "title": "Small Places, Sharp Teeth",
+      "after": [
+        "through_the_flames"
+      ],
+      "text": [
+        "You've stumbled on a small Nether dungeon. Clear its spawner before it floods the passage."
+      ],
+      "tasks": [
+        {
+          "kill": "minecraft:wither_skeleton",
+          "count": 6,
+          "spawn": {
+            "at": {
+              "structure": "betterdungeons:small_nether_dungeon"
+            },
+            "wave": 4,
+            "name": "Dungeon Skeletons"
+          },
+          "title": "Clear the dungeon's spawner of its skeletons"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:quartz",
+          "count": 16
+        },
+        {
+          "skill": "attack",
+          "xp": 250
+        }
+      ],
+      "icon": "minecraft:spawner",
+      "discover": {
+        "structure": "betterdungeons:small_nether_dungeon"
+      }
+    },
+    {
+      "id": "devils_rest",
+      "title": "The Devil's Rest",
+      "after": [
+        "through_the_flames"
+      ],
+      "text": [
+        "A horned statue squats over the lava, and people say it grants a wish to anyone who answers its riddle. The answer, the carvings hint, is an eye that sees nothing."
+      ],
+      "tasks": [
+        {
+          "item": "minecraft:ender_eye",
+          "consume": true,
+          "title": "Offer the answer to the statue's riddle"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:ghast_tear"
+        },
+        {
+          "item": "minecraft:writable_book",
+          "name": "The Devil's Riddle",
+          "lore": [
+            "An eye that sees nothing."
+          ]
+        },
+        {
+          "skill": "magic",
+          "xp": 320
+        }
+      ],
+      "icon": "minecraft:ghast_tear",
+      "discover": {
+        "structure": "mvs:nether_devil"
+      }
+    },
+    {
+      "id": "the_soul_forge",
+      "title": "The Soul Forge",
+      "after": [
+        "debris_dive"
+      ],
+      "text": [
+        "An anvil the size of a hall, ringing in the soul sand valley. Look but don't knock: whatever works the forge is not for now. Vesna will remember the way."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 240,
+            "goal": {
+              "structure": "cataclysm:soul_black_smith",
+              "label": "the forge's edge",
+              "away": 25
+            },
+            "lines": [
+              "Look. Don't knock. Don't get hit."
+            ],
+            "start": "Creep close",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Creep close enough to look, and leave unseen"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:soul_lantern",
+          "count": 4
+        },
+        {
+          "skill": "mining",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:soul_lantern",
+      "discover": {
+        "structure": "cataclysm:soul_black_smith"
+      }
+    },
+    {
+      "id": "arena_of_embers",
+      "title": "The Arena of Embers",
+      "after": [
+        "the_soul_forge"
+      ],
+      "text": [
+        "In the deepest wastes, a sealed arena burns with blue fire. Listen at its doors. Even Vesna won't go nearer."
+      ],
+      "tasks": [
+        {
+          "timed": {
+            "seconds": 240,
+            "goal": {
+              "structure": "cataclysm:burning_arena",
+              "label": "the sealed doors",
+              "away": 25
+            },
+            "lines": [
+              "Listen at the doors. Don't get hit."
+            ],
+            "start": "Creep close",
+            "no": [
+              "hurt"
+            ]
+          },
+          "title": "Creep to the sealed doors and listen"
+        }
+      ],
+      "rewards": [
+        {
+          "item": "minecraft:blaze_rod",
+          "count": 8
+        },
+        {
+          "skill": "agility",
+          "xp": 340
+        }
+      ],
+      "icon": "minecraft:blaze_rod",
+      "discover": {
+        "structure": "cataclysm:burning_arena"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2033 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "nether"
+	group: "4B9B0BA0827F5A44"
+	icon: "minecraft:netherrack"
+	id: "20C8627B6ED3DAEC"
+	order_index: 12
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: ["54C450BB48CA2E5F"]
+			description: ["Vesna hears you lit a portal and hands over her old field journal with one rule: never sleep down there. Step through and survive your first ten minutes in the Nether."]
+			icon: "minecraft:netherrack"
+			id: "3DCFC0B89256C1E3"
+			rewards: [
+				{
+					count: 4
+					id: "2710091C785FCAF2"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					id: "2568A57B360A58F2"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"Never sleep down there.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Vesna's Field Journal\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "78555DE8F89B3E85"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4C66DE1FAF7E9333"
+					stage: "fq.nether.through_the_flames.talk0"
+					title: "Take Vesna's field journal"
+					type: "gamestage"
+				}
+				{
+					dimension: "minecraft:the_nether"
+					id: "1A294FB35485DC93"
+					title: "Step through into the Nether"
+					type: "dimension"
+				}
+				{
+					id: "236E330887B396A6"
+					stage: "fq.nether.through_the_flames.timed2"
+					title: "Survive your first ten minutes in the Nether"
+					type: "gamestage"
+				}
+			]
+			title: "Through the Flames"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3DCFC0B89256C1E3"]
+			description: ["Wall in your portal with blast-proof stone, and add a chest, a crafting table and a lit waystone so you always have a way home."]
+			icon: "waystones:waystone"
+			id: "0FC85B0F0A0A2537"
+			rewards: [
+				{
+					id: "492E839F94B99359"
+					item: "waystones:warp_stone"
+					type: "item"
+				}
+				{
+					count: 64
+					id: "55C30049841B3ECE"
+					item: "minecraft:cobbled_deepslate"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 300"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "739B8780F74030C0"
+					silent: true
+					title: "+300 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0A9F249A8C58FC50"
+					stage: "fq.nether.forward_camp.build0"
+					title: "Wall in the portal and set up camp"
+					type: "gamestage"
+				}
+				{
+					id: "68FABCAA46DB3B91"
+					stage: "fq.nether.forward_camp.waystones1"
+					title: "Light the waystone so you always have a way home"
+					type: "gamestage"
+				}
+			]
+			title: "Forward Camp"
+			x: 1.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["0FC85B0F0A0A2537"]
+			description: ["Vesna's journal sketches a fortress nothing like the old maps. Find one of the rebuilt Nether fortresses and walk its great halls to the central keep."]
+			icon: "minecraft:nether_bricks"
+			id: "4F1237079F9DBE0F"
+			rewards: [
+				{
+					count: 8
+					id: "4D332B661C53E05C"
+					item: "minecraft:gold_ingot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 320"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "0F726BA99B8435D1"
+					silent: true
+					title: "+320 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6BE69933E580A948"
+					structure: "betterfortresses:fortress"
+					title: "Find a rebuilt Nether fortress and walk its great halls"
+					type: "structure"
+				}
+			]
+			title: "The Long Halls"
+			x: 3.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["4F1237079F9DBE0F"]
+			description: ["Every locator eye in the pack starts with blaze powder. Bring back blaze rods from the fortress spawners, without dying to the fireballs."]
+			icon: "minecraft:blaze_rod"
+			id: "27D01F161162EFD5"
+			rewards: [
+				{
+					count: 4
+					id: "50BBFA3436BFD5BD"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					id: "22E65F7C4BCE44FF"
+					item: "minecraft:shield"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 340"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "1B10E7E726FDF7CD"
+					silent: true
+					title: "+340 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:blaze"
+					id: "44FF9B02B1708E77"
+					title: "Fight the fortress's blazes for their rods"
+					type: "kill"
+					value: 8L
+				}
+				{
+					count: 16L
+					id: "0D8BE35D469992F8"
+					item: "minecraft:blaze_rod"
+					title: "Bring back blaze rods for the eyes"
+					type: "item"
+				}
+			]
+			title: "Rods for the Eyes"
+			x: 4.5d
+			y: -3.75d
+		}
+		{
+			dependencies: ["4F1237079F9DBE0F"]
+			description: ["Wither skeletons patrol the fortress bridges. Vesna wants three of their skulls for something she won't name yet. Hunt them with a Looting blade."]
+			icon: "minecraft:wither_skeleton_skull"
+			id: "660C2D51279315D9"
+			rewards: [
+				{
+					id: "778A11415569EE96"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:looting"
+									lvl: 2s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Hunter's Greed\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					count: 4
+					id: "3C2306E3C92BA6CF"
+					item: "minecraft:soul_lantern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 380"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "5220B3628FDAFD99"
+					silent: true
+					title: "+380 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:wither_skeleton"
+					id: "027AB2C899B44186"
+					title: "Hunt the wither skeletons on the fortress bridges"
+					type: "kill"
+					value: 6L
+				}
+				{
+					count: 3L
+					id: "60EB173A3E5951A0"
+					item: "minecraft:wither_skeleton_skull"
+					title: "Bring Vesna three skulls"
+					type: "item"
+				}
+			]
+			title: "Skulls on the Wall"
+			x: 4.5d
+			y: -2.25d
+		}
+		{
+			dependencies: ["4F1237079F9DBE0F"]
+			description: ["Someone tends a nether wart farm out in the wastes, and nobody knows who. Harvest from it, start your own soul-sand patch at camp, and brew three potions of fire resistance."]
+			icon: "minecraft:nether_wart"
+			id: "05EBC2CE596ED724"
+			rewards: [
+				{
+					id: "16AA8B691894747E"
+					item: "minecraft:brewing_stand"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "253E8A3D00B21791"
+					item: "minecraft:blaze_powder"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 300"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "5A3F9791BD890A11"
+					silent: true
+					title: "+300 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2253EE27D61E6C65"
+					structure: "mns:nether_wart_farm"
+					title: "Find the wart garden tended by nobody"
+					type: "structure"
+				}
+				{
+					count: 8L
+					id: "02D35EDF2C6274FE"
+					item: "minecraft:nether_wart"
+					title: "Harvest warts from the garden"
+					type: "item"
+				}
+				{
+					id: "1A464C8C92569894"
+					stage: "fq.nether.wart_harvest.build2"
+					title: "Start your own soul-sand patch at camp"
+					type: "gamestage"
+				}
+				{
+					consume_items: true
+					count: 3L
+					id: "4D81DD05471DFF67"
+					item: "minecraft:potion"
+					title: "Brew three potions of fire resistance"
+					type: "item"
+				}
+			]
+			title: "The Wart Garden"
+			x: 4.5d
+			y: -0.75d
+		}
+		{
+			dependencies: ["0FC85B0F0A0A2537"]
+			description: ["Wear gold and barter with piglins until they've given you an ender pearl, obsidian and string. Vesna bets you'll be robbed at least once."]
+			icon: "minecraft:golden_helmet"
+			id: "63EDA87ABB31C6B2"
+			rewards: [
+				{
+					count: 8
+					id: "6640FC3E1F844D96"
+					item: "minecraft:golden_carrot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "47B39B2D4329845B"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "46DBCEA4278958B2"
+					item: "minecraft:golden_helmet"
+					title: "Wear gold so the piglins will trade"
+					type: "item"
+				}
+				{
+					id: "08A99BC969B24D0B"
+					item: "minecraft:ender_pearl"
+					title: "Barter for an ender pearl"
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "13063828F676EC73"
+					item: "minecraft:obsidian"
+					title: "Barter for obsidian"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "23150DF80FBCBEDB"
+					item: "minecraft:string"
+					title: "Barter for string"
+					type: "item"
+				}
+			]
+			title: "Golden Manners"
+			x: 3.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["63EDA87ABB31C6B2"]
+			description: ["A piglin with a merchant's pack has strayed from his camp and the hoglins are closing in. Keep him alive back to the piglin camp, where his chief owes you a favour."]
+			icon: "minecraft:gold_ingot"
+			id: "65E50793B068C22C"
+			rewards: [
+				{
+					count: 4
+					id: "461322B17D662A0B"
+					item: "minecraft:ender_pearl"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "00F7D505C13881A6"
+					item: "minecraft:fire_charge"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "6A65076528884E8B"
+					item: "minecraft:crying_obsidian"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 320"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "17D2F1C0B412EC26"
+					silent: true
+					title: "+320 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7CEC805310700299"
+					stage: "fq.nether.lost_trader.enc0"
+					title: "Walk the stray trader home to the piglin camp"
+					type: "gamestage"
+				}
+			]
+			title: "The Lost Trader"
+			x: 4.5d
+			y: 0.75d
+		}
+		{
+			dependencies: ["65E50793B068C22C"]
+			description: ["The chief sends you with a sack of gold to the piglin outstation near the bastions. Deliver it, and find the ledger hidden there proving the brutes are skimming."]
+			icon: "minecraft:writable_book"
+			id: "0FC11D29D4019B0B"
+			rewards: [
+				{
+					count: 4
+					id: "692812F17D104DA6"
+					item: "minecraft:gold_block"
+					type: "item"
+				}
+				{
+					id: "3A8E6DD963CDF4B0"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 340"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "58765B14B49106FA"
+					silent: true
+					title: "+340 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					consume_items: true
+					count: 16L
+					id: "78EBEDBCEA94B22C"
+					item: "minecraft:gold_ingot"
+					title: "Carry the chief's sack of gold"
+					type: "item"
+				}
+				{
+					id: "161361C3F2F9FE56"
+					structure: "nova_structures:piglin_outstation"
+					title: "Deliver the gold to the outstation"
+					type: "structure"
+				}
+				{
+					id: "16844993F98843E5"
+					item: "kubejs:quest_outstation_ledger_2"
+					title: "Find the ledger proving the brutes are skimming"
+					type: "item"
+				}
+			]
+			title: "The Outstation Ledger"
+			x: 6.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["0FC11D29D4019B0B"]
+			description: ["The ledger names a bastion's treasure room. Get in, lift the gilded blackstone and a banner from the vault, and get out without the brutes ever turning on you."]
+			icon: "minecraft:gilded_blackstone"
+			id: "344CB4FAE01DDF3C"
+			rewards: [
+				{
+					id: "4CBFBC6FB2595458"
+					item: "minecraft:netherite_upgrade_smithing_template"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "0EB6F0244298335C"
+					item: "minecraft:gilded_blackstone"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 360"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "0ABCC1257C6F2774"
+					silent: true
+					title: "+360 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "78F2F593E55C3E7F"
+					stage: "fq.nether.bastion_quiet.timed0"
+					title: "Creep in to the treasure room without the brutes noticing"
+					type: "gamestage"
+				}
+				{
+					id: "189D96EAD6CE3A34"
+					item: "kubejs:quest_bastion_quiet_1"
+					title: "Lift the gilded haul from the vault"
+					type: "item"
+				}
+			]
+			title: "Quiet Feet in the Bastion"
+			x: 7.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["4F1237079F9DBE0F"]
+			description: ["A harbour on a lava sea, with moorings and cranes and no sailors. Read the harbourmaster's last log."]
+			icon: "minecraft:saddle"
+			id: "7DA3896407AFF541"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "4E73C355CFAAB5FB"
+					item: "minecraft:saddle"
+					type: "item"
+				}
+				{
+					id: "2E2E723934AC2A0C"
+					item: "minecraft:warped_fungus_on_a_stick"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 320"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "53ED489ABA986AA1"
+					silent: true
+					title: "+320 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3163CBE3D505854F"
+					structure: "nova_structures:nether_port"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "5A8AB7E54C86E8E4"
+					item: "kubejs:quest_lava_dock_0"
+					title: "Read the harbourmaster's last log"
+					type: "item"
+				}
+			]
+			title: "The Lava Dock"
+			x: 4.5d
+			y: 2.25d
+		}
+		{
+			dependencies: ["7DA3896407AFF541"]
+			description: ["The harbourmaster's log mentions a route across the lava ocean. Saddle a strider and cross the lava inside four minutes."]
+			icon: "minecraft:warped_fungus_on_a_stick"
+			id: "11D0CD9B6B438CBA"
+			rewards: [
+				{
+					id: "2EF2C5407FCBAC81"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					count: 4
+					id: "2E3BE6C08745DA31"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 380"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "02190EFA19A0E3EA"
+					silent: true
+					title: "+380 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2222617BF21EC9CD"
+					item: "minecraft:saddle"
+					title: "Take a saddle for a strider"
+					type: "item"
+				}
+				{
+					id: "36A59DBA3A474B59"
+					item: "minecraft:warped_fungus_on_a_stick"
+					title: "Take a fungus on a stick to steer it"
+					type: "item"
+				}
+				{
+					id: "58366F4770DB87D7"
+					stage: "fq.nether.strider_crossing.timed2"
+					title: "Cross the lava ocean on a strider in four minutes"
+					type: "gamestage"
+				}
+			]
+			title: "Strider Crossing"
+			x: 6.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["4F1237079F9DBE0F"]
+			description: ["A Nether keep sits near the fortress roads, held by blaze-guarded skeletons. Clear its walls and claim the keep's chest."]
+			icon: "minecraft:gold_block"
+			id: "2D9F51F0B7A09A8E"
+			rewards: [
+				{
+					count: 3
+					id: "6437874106696DA3"
+					item: "minecraft:diamond"
+					type: "item"
+				}
+				{
+					id: "78B5225D80CADD51"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 360"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "56B81B8D3413C10B"
+					silent: true
+					title: "+360 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:wither_skeleton"
+					id: "1A5C149DD1590C58"
+					title: "Clear the keep's walls of its garrison"
+					type: "kill"
+					value: 5L
+				}
+				{
+					id: "56A83EB9E23C0312"
+					item: "kubejs:quest_the_keep_1"
+					title: "Claim the keep's chest"
+					type: "item"
+				}
+			]
+			title: "The Keep at the Edge"
+			x: 4.5d
+			y: 3.75d
+		}
+		{
+			dependencies: ["2D9F51F0B7A09A8E"]
+			description: ["Skeleton towers and camps watch over every biome. Reach a tower or camp in the crimson forest, the warped forest, the soul valleys and the wastes."]
+			icon: "minecraft:bone_block"
+			id: "77FE86EE23B8E4A1"
+			rewards: [
+				{
+					count: 8
+					id: "78C6AE3A0C5B1CFE"
+					item: "minecraft:bone_block"
+					type: "item"
+				}
+				{
+					id: "0463D17CAFD352A7"
+					item: "minecraft:spyglass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 300"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "5A5F309568DC7726"
+					silent: true
+					title: "+300 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "4FDFFC9FACB67BAE"
+					structure: "nova_structures:nether_skeleton_tower_crimson"
+					title: "Reach a tower in the crimson forest"
+					type: "structure"
+				}
+				{
+					id: "449E0133A98ED07F"
+					structure: "nova_structures:nether_skeleton_tower_warped"
+					title: "Reach a tower in the warped forest"
+					type: "structure"
+				}
+				{
+					id: "5FA73D78407385FF"
+					structure: "nova_structures:skeleton_camp_soul"
+					title: "Reach a camp in the soul valley"
+					type: "structure"
+				}
+				{
+					id: "55881F590F4109FE"
+					structure: "nova_structures:skeleton_camp_waste"
+					title: "Reach a camp in the wastes"
+					type: "structure"
+				}
+			]
+			title: "Four Watchtowers"
+			x: 6.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["77FE86EE23B8E4A1"]
+			description: ["Climb a fortress tower and look out from its top. Mark down any fortress, bastion or skull on the horizon in Vesna's journal."]
+			icon: "camerapture:camera"
+			id: "37F49E3B5DAA915E"
+			rewards: [
+				{
+					id: "3509A93D4F3F20BA"
+					item: "explorerscompass:explorerscompass"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "0CFDD39DD6F426DC"
+					item: "minecraft:paper"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 340"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "5D1BCD06B186D542"
+					silent: true
+					title: "+340 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "540007AF27A763DB"
+					structure: "structory_towers:nether/fortress_tower"
+					title: "Climb a fortress tower"
+					type: "structure"
+				}
+				{
+					id: "6A448112254A0E8B"
+					item: "camerapture:camera"
+					title: "Bring a camera to mark the horizon"
+					type: "item"
+				}
+				{
+					id: "48C5A05D4A58B9CC"
+					stage: "fq.nether.fortress_tower_lookout.photo2"
+					title: "Photograph a fortress on the horizon"
+					type: "gamestage"
+				}
+			]
+			title: "From the Fortress Tower"
+			x: 7.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["37F49E3B5DAA915E"]
+			description: ["One of the mega fortresses dwarfs even the rebuilt halls. Fight through its towers to the treasure at the top."]
+			icon: "minecraft:nether_bricks"
+			id: "719CDC4F1AAD5721"
+			rewards: [
+				{
+					count: 2
+					id: "3727D619470E3853"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					id: "7807FFA7D8B8E8C4"
+					item: "spartanweaponry:diamond_halberd"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 420"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "3151D0D0BB6737BE"
+					silent: true
+					title: "+420 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "minecraft:wither_skeleton"
+					id: "4580A707DA344C18"
+					title: "Fight through the mega fortress's towers"
+					type: "kill"
+					value: 8L
+				}
+				{
+					id: "2EEFC0093ED2F1F0"
+					item: "kubejs:quest_mega_fortress_1"
+					title: "Claim the treasure at the top"
+					type: "item"
+				}
+			]
+			title: "The Mega Fortress"
+			x: 9.0d
+			y: -3.75d
+		}
+		{
+			dependencies: ["37F49E3B5DAA915E"]
+			description: ["Ancient bridges span the lava lakes. Cross three of them and note who built them. The stonework doesn't match any fortress."]
+			icon: "minecraft:stone_bricks"
+			id: "1C823DAC3182F71B"
+			rewards: [
+				{
+					count: 8
+					id: "6FA974D2B6D47BD3"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 340"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "32AB22FB74FEF574"
+					silent: true
+					title: "+340 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "66F7249DE59F7719"
+					structure: "mns:bridge_1"
+					title: "Cross the first lava-lake bridge"
+					type: "structure"
+				}
+				{
+					id: "590C0BF5FA7DA77D"
+					structure: "mns:bridge_2"
+					title: "Cross the second lava-lake bridge"
+					type: "structure"
+				}
+				{
+					id: "388E0D283C93F577"
+					structure: "mns:bridge_3"
+					title: "Cross the third lava-lake bridge"
+					type: "structure"
+				}
+			]
+			title: "Bridges of Ash"
+			x: 9.0d
+			y: -2.25d
+		}
+		{
+			dependencies: ["1C823DAC3182F71B"]
+			description: ["A skull the size of a house lies half-buried in the wastes, with a second one in the sand. Find both, then work out from the carvings which way the giant was facing when it fell."]
+			icon: "minecraft:bone"
+			id: "1FA0701247887E56"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "7D5CAEA50142229F"
+					item: "minecraft:bone_meal"
+					type: "item"
+				}
+				{
+					id: "04122A9F6ECFAC18"
+					item: {
+						Count: 1b
+						id: "minecraft:bone"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"From a skull the size of a house.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"Giant's Tooth\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 340"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "42EA88BEEAEA76CB"
+					silent: true
+					title: "+340 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "083781BB9AB9500B"
+					structure: "mns:giant_skull"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "13C3E4BE58363165"
+					structure: "mns:sandy_skull"
+					title: "Find the second skull half-buried in the sand"
+					type: "structure"
+				}
+				{
+					id: "20D4456AADB33A19"
+					item: "kubejs:quest_giant_skull_1"
+					title: "Read the carvings inside the first skull"
+					type: "item"
+				}
+			]
+			title: "The Giant's Skull"
+			x: 10.5d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1FA0701247887E56"]
+			description: ["The carvings point to a crimson forest where a colossal sword stands buried to the hilt. Climb it and recover what's lodged at the guard."]
+			icon: "spartanweaponry:diamond_greatsword"
+			id: "1E8FDE5CD6FFDE8E"
+			rewards: [
+				{
+					id: "17F0FBC21CD60DF8"
+					item: {
+						Count: 1b
+						id: "spartanweaponry:diamond_greatsword"
+						tag: {
+							Enchantments: [
+								{
+									id: "minecraft:sharpness"
+									lvl: 3s
+								}
+							]
+							display: {
+								Lore: ["{\"text\": \"From a sword buried to the hilt.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Giant's Edge\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 420"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "2B622B682EA5781F"
+					silent: true
+					title: "+420 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0CB521DF97CCC96D"
+					structure: "mns:sword"
+					title: "Find the colossal sword in the crimson forest"
+					type: "structure"
+				}
+				{
+					id: "319700A41C11EB51"
+					item: "kubejs:quest_giants_sword_1"
+					title: "Take a Relic from the Guard"
+					type: "item"
+				}
+			]
+			title: "The Giant's Sword"
+			x: 12.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["1C823DAC3182F71B"]
+			description: ["A train sits on rails to nowhere in the Nether. Its spectral conductor wants the scattered cargo back in the wagons before it can 'depart'."]
+			icon: "minecraft:rail"
+			id: "69C2E033EA8501D0"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 64
+					id: "72967114C5D2155F"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+				{
+					id: "48D1960506542ABE"
+					item: {
+						Count: 1b
+						id: "minecraft:soul_lantern"
+						tag: {
+							display: {
+								Name: "{\"text\": \"Conductor's Lantern\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 360"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "46C9C88244EACE24"
+					silent: true
+					title: "+360 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "58B6E69C7217BC09"
+					structure: "mns:train"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "2644ADC51F74F1F5"
+					stage: "fq.nether.ghost_train.enc0"
+					title: "Meet the train's spectral conductor"
+					type: "gamestage"
+				}
+				{
+					count: 3L
+					id: "72FE70ADB64938E0"
+					item: "kubejs:quest_ghost_train_1"
+					title: "Take Scattered Cargo"
+					type: "item"
+				}
+			]
+			title: "The Ghost Train"
+			x: 10.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["69C2E033EA8501D0"]
+			description: ["Small houses stand in the Nether, furnished and empty. Search two of them and piece together, from the notes left inside, what happened to the family."]
+			icon: "furniture:oak_bench"
+			id: "3B4D0358521EB9A6"
+			rewards: [
+				{
+					count: 2
+					id: "51AF51B9F533DE6B"
+					item: "furniture:oak_bench"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 320"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "688544924FEEA03F"
+					silent: true
+					title: "+320 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "215853A51BB95292"
+					item: "kubejs:quest_nether_houses_0"
+					title: "Search the first empty house"
+					type: "item"
+				}
+				{
+					id: "10C9DBA69B949FBC"
+					item: "kubejs:quest_nether_houses_1"
+					title: "Search the second empty house"
+					type: "item"
+				}
+			]
+			title: "Who Lives Here?"
+			x: 12.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["1C823DAC3182F71B"]
+			description: ["A glass dome shelters a warped garden and a pool full of warped toads. Gather shroomlights and twisting vines, and catch a warped toad."]
+			icon: "minecraft:shroomlight"
+			id: "681149DC101DEA98"
+			rewards: [
+				{
+					count: 8
+					id: "2A1CB1B20DD4DFBA"
+					item: "minecraft:shroomlight"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:taming 250"
+					elevate_perms: true
+					icon: "minecraft:lead"
+					id: "7D19DBE74D5FD239"
+					silent: true
+					title: "+250 Taming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "36D4A558143CE293"
+					structure: "mns:warped_dome"
+					title: "Find the warped dome"
+					type: "structure"
+				}
+				{
+					count: 4L
+					id: "7811B7B5FACC0B51"
+					item: "minecraft:shroomlight"
+					title: "Gather shroomlights from the garden"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "1121AE8AEB4951D0"
+					item: "minecraft:twisting_vines"
+					title: "Gather twisting vines from the garden"
+					type: "item"
+				}
+				{
+					id: "3611A6CB24B0750E"
+					observe_type: "entity_type"
+					timer: 40L
+					title: "Catch sight of a warped toad in the pool"
+					to_observe: "alexsmobs:warped_toad"
+					type: "observation"
+				}
+			]
+			title: "Under the Warped Dome"
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["681149DC101DEA98"]
+			description: ["A copper tower in a realm without rain. Restore its oxidised lightning rods at the top and the vault door at the base opens."]
+			icon: "minecraft:copper_block"
+			id: "4917482F1F6789D6"
+			rewards: [
+				{
+					count: 8
+					id: "20FD9204D7F3E287"
+					item: "minecraft:copper_block"
+					type: "item"
+				}
+				{
+					id: "051A365B602F56EC"
+					item: "friendsandfoes:copper_golem_head"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:craft 340"
+					elevate_perms: true
+					icon: "minecraft:crafting_table"
+					id: "0CCB26B486D2FE25"
+					silent: true
+					title: "+340 Crafting XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "67136652214A7A76"
+					structure: "mns:copper_tower"
+					title: "Find the copper tower"
+					type: "structure"
+				}
+				{
+					count: 2L
+					id: "189666BE49E2B5DB"
+					item: "minecraft:lightning_rod"
+					title: "Bring new lightning rods"
+					type: "item"
+				}
+				{
+					id: "4DC2D12102014E63"
+					stage: "fq.nether.copper_tower.build2"
+					title: "Replace the oxidised rods at the top"
+					type: "gamestage"
+				}
+				{
+					id: "00E93996B14A1451"
+					item: "kubejs:quest_copper_tower_3"
+					title: "Open the vault at the base"
+					type: "item"
+				}
+			]
+			title: "The Copper Tower"
+			x: 12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["719CDC4F1AAD5721"]
+			description: ["In one of the Nether arenas, survive three waves of blazes, wither skeletons and magma cubes for five minutes. Win in the dragon arena and Vesna buys the drinks."]
+			icon: "minecraft:blaze_powder"
+			id: "1F6F8C2D1EE04D1C"
+			rewards: [
+				{
+					count: 2
+					id: "406B30B9B97F5DDB"
+					item: "minecraft:golden_apple"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 480"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "68874F634F6DC333"
+					silent: true
+					title: "+480 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "7D99B5681A01E080"
+					structure: "mns:large_arena"
+					title: "Enter the Nether arena"
+					type: "structure"
+				}
+				{
+					id: "4B654ED71DA77333"
+					stage: "fq.nether.arena_of_ash.timed1"
+					title: "Survive the arena's waves for five minutes"
+					type: "gamestage"
+				}
+			]
+			title: "Arena of Ash"
+			x: 10.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3DCFC0B89256C1E3"]
+			description: ["Small shrines dot the wastes, some still smoking. Leave a gold ingot at a shrine and at a smoking shrine, and see what the realm gives back."]
+			icon: "minecraft:red_candle"
+			id: "4DA4A328EA16B7F4"
+			rewards: [
+				{
+					count: 8
+					id: "2877709F6D4F0380"
+					item: "minecraft:fire_charge"
+					type: "item"
+				}
+				{
+					count: 8
+					id: "1E28F35D912FE64A"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					id: "19865C7084B91AFF"
+					item: "minecraft:ghast_tear"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 300"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "20FFC128DCCBB853"
+					silent: true
+					title: "+300 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6127405D9FE7D45E"
+					structure: "mns:shrine"
+					title: "Find a small shrine"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "7AD2ACFB8C4D866D"
+					item: "minecraft:gold_ingot"
+					title: "Leave a gold ingot at the shrine"
+					type: "item"
+				}
+				{
+					id: "4730E9FCF3F138CB"
+					structure: "mns:smoking_shrine"
+					title: "Find a smoking shrine"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "159A28D504EE8A17"
+					item: "minecraft:gold_ingot"
+					title: "Leave a gold ingot at the smoking shrine"
+					type: "item"
+				}
+			]
+			title: "Offerings at the Shrines"
+			x: 1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["3DCFC0B89256C1E3"]
+			description: ["A well in the Nether, full of lava instead of water. Fish out the coins at its bottom with a fire-resistant hand."]
+			icon: "minecraft:gold_nugget"
+			id: "00E5CB0BC6778F8E"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "34BCE5E192107CCC"
+					item: "minecraft:gold_nugget"
+					type: "item"
+				}
+				{
+					id: "2BC5CA3EDC8783E7"
+					item: "minecraft:rabbit_foot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 100"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "549E789259FC0BE5"
+					silent: true
+					title: "+100 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "17EA6675B691F4D0"
+					structure: "mns:medium_crimson_well"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					count: 8L
+					id: "64A8AD23E5A1CE34"
+					item: "minecraft:gold_nugget"
+					title: "Fish the coins out of the lava well"
+					type: "item"
+				}
+			]
+			title: "Wishing in Fire"
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["77FE86EE23B8E4A1"]
+			description: ["A graveyard in the soul sand valley is circled by soul vultures. Find it, and take a soul heart from one of the vultures."]
+			icon: "minecraft:soul_torch"
+			id: "40DDB0D910236D92"
+			rewards: [
+				{
+					count: 16
+					id: "09FA60DACEAFE882"
+					item: "minecraft:soul_torch"
+					type: "item"
+				}
+				{
+					id: "2E6C1F1AE45C06D6"
+					item: {
+						Count: 1b
+						id: "minecraft:enchanted_book"
+						tag: {
+							StoredEnchantments: [
+								{
+									id: "minecraft:soul_speed"
+									lvl: 2s
+								}
+							]
+							display: {
+								Name: "{\"text\": \"Soul Strider\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 380"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "4A361D99F39D5047"
+					silent: true
+					title: "+380 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "1D80F585C90AAD4E"
+					structure: "mns:grave_yard"
+					title: "Find the soul valley's graveyard"
+					type: "structure"
+				}
+				{
+					entity: "alexsmobs:soul_vulture"
+					id: "2C5FCA8146C50643"
+					title: "Bring down the vultures circling the graves"
+					type: "kill"
+					value: 2L
+				}
+				{
+					id: "7E8117377324C37B"
+					item: "kubejs:quest_soul_valley_graves_2"
+					title: "Take a Soul Heart"
+					type: "item"
+				}
+			]
+			title: "The Soul Valley Graves"
+			x: 7.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["40DDB0D910236D92"]
+			description: ["Crimson mosquitoes are draining the piglins' hoglins. Swat ten and bring a mosquito proboscis to the camp chief."]
+			icon: "alexsmobs:mosquito_proboscis"
+			id: "2C648D5CBB6670CA"
+			rewards: [
+				{
+					count: 4
+					id: "6CB77D6B8D4050FA"
+					item: "alexsmobs:mosquito_repellent_stew"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:range 340"
+					elevate_perms: true
+					icon: "minecraft:bow"
+					id: "4A5E2C9C4A5C3742"
+					silent: true
+					title: "+340 Range XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					entity: "alexsmobs:crimson_mosquito"
+					id: "699D7AF7376166EF"
+					title: "Swat the mosquitoes draining the piglins' hoglins"
+					type: "kill"
+					value: 10L
+				}
+				{
+					id: "623B2117DC6C867B"
+					item: "alexsmobs:mosquito_proboscis"
+					title: "Bring a proboscis to the camp chief"
+					type: "item"
+				}
+			]
+			title: "Mosquito Season"
+			x: 9.0d
+			y: -0.75d
+		}
+		{
+			dependencies: ["77FE86EE23B8E4A1"]
+			description: ["Vesna's journal has blank pages for every biome she never saw. Stand in each of them and fill the survey."]
+			icon: "naturescompass:naturescompass"
+			id: "20591AB8CC19C7B2"
+			rewards: [
+				{
+					id: "1B650FC197484D0E"
+					item: "naturescompass:naturescompass"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 320"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "62725DC0302AD744"
+					silent: true
+					title: "+320 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "minecraft:crimson_forest"
+					id: "60BDF5F1D724A4BC"
+					title: "Stand in the crimson forest"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:warped_forest"
+					id: "55D96F171FF6DDF1"
+					title: "Stand in the warped forest"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:basalt_deltas"
+					id: "533695DF17268E5E"
+					title: "Stand in the basalt deltas"
+					type: "biome"
+				}
+				{
+					biome: "minecraft:soul_sand_valley"
+					id: "023BFB5851AF0766"
+					title: "Stand in the soul sand valley"
+					type: "biome"
+				}
+				{
+					biome: "biomesoplenty:visceral_heap"
+					id: "44724EA4FD642716"
+					title: "Stand in the visceral heap"
+					type: "biome"
+				}
+				{
+					biome: "biomesoplenty:withered_abyss"
+					id: "78A2D662A999E6E7"
+					title: "Stand in the withered abyss"
+					type: "biome"
+				}
+				{
+					biome: "biomesoplenty:crystalline_chasm"
+					id: "46B8773AB39D80F3"
+					title: "Stand in the crystalline chasm"
+					type: "biome"
+				}
+				{
+					biome: "biomesoplenty:undergrowth"
+					id: "6EE35D7E9944609A"
+					title: "Stand in the undergrowth"
+					type: "biome"
+				}
+				{
+					biome: "biomesoplenty:erupting_inferno"
+					id: "1B65C637084CC535"
+					title: "Stand in the erupting inferno"
+					type: "biome"
+				}
+			]
+			title: "A Survey of Hell"
+			x: 7.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["20591AB8CC19C7B2"]
+			description: ["Rumours of glowing meadows and redstone pits. Visit the infernal holt, the glistering meadow, the mycotoxic undergrowth, the blackstone basin and the redstone abyss, and fill Vesna's journal."]
+			icon: "minecraft:shroomlight"
+			id: "43C779932D69A60F"
+			rewards: [
+				{
+					id: "1E84F17C65DABBD1"
+					item: "sophisticatedbackpacks:backpack"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:forage 340"
+					elevate_perms: true
+					icon: "minecraft:iron_axe"
+					id: "32440F7CC8627FA3"
+					silent: true
+					title: "+340 Foraging XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					biome: "regions_unexplored:infernal_holt"
+					id: "1119105FDBBC7A0B"
+					title: "Stand in the infernal holt"
+					type: "biome"
+				}
+				{
+					biome: "regions_unexplored:glistering_meadow"
+					id: "4E2CBED39E96129C"
+					title: "Stand in the glistering meadow"
+					type: "biome"
+				}
+				{
+					biome: "regions_unexplored:mycotoxic_undergrowth"
+					id: "1DF457BD08D78409"
+					title: "Stand in the mycotoxic undergrowth"
+					type: "biome"
+				}
+				{
+					biome: "regions_unexplored:blackstone_basin"
+					id: "56C0255FD767EB95"
+					title: "Stand in the blackstone basin"
+					type: "biome"
+				}
+				{
+					biome: "regions_unexplored:redstone_abyss"
+					id: "2DCF33B5287EE861"
+					title: "Stand in the redstone abyss"
+					type: "biome"
+				}
+			]
+			title: "Uncharted Regions"
+			x: 9.0d
+			y: 0.75d
+		}
+		{
+			dependencies: ["20591AB8CC19C7B2"]
+			description: ["A winemaker who followed a rumour through a ruined portal is stranded in the crimson forest. He'll teach you Nether winemaking if you gather crimson and warped grape seeds for him."]
+			icon: "nethervinery:crimson_grape_seeds"
+			id: "041699F477ECEA8A"
+			rewards: [
+				{
+					id: "0E4D7C2161F1C2EC"
+					item: "nethervinery:crimson_grapevine_pot"
+					type: "item"
+				}
+				{
+					id: "00F0C30D98CB462C"
+					item: "nethervinery:warped_grapevine_pot"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 320"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "5D50987BB7B22D7C"
+					silent: true
+					title: "+320 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "3E63DFE44948DA12"
+					stage: "fq.nether.stranded_vintner.enc0"
+					title: "Find the vintner stuck in the crimson forest"
+					type: "gamestage"
+				}
+				{
+					count: 4L
+					id: "2D350330C23245D8"
+					item: "nethervinery:crimson_grape_seeds"
+					title: "Gather crimson grape seeds for the vintner"
+					type: "item"
+				}
+				{
+					count: 4L
+					id: "7E768272EAF92C27"
+					item: "nethervinery:warped_grape_seeds"
+					title: "Gather warped grape seeds for the vintner"
+					type: "item"
+				}
+			]
+			title: "The Stranded Vintner"
+			x: 9.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["041699F477ECEA8A"]
+			description: ["Plant crimson and warped grapes at your forward camp and harvest a crate of each, then build an apple press and fermentation barrel from Nether wood."]
+			icon: "nethervinery:crimson_grape"
+			id: "2D2CB6B52DF2A1CC"
+			rewards: [
+				{
+					id: "26508666F263A522"
+					item: "nethervinery:crimson_wine_rack_mid"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:farm 340"
+					elevate_perms: true
+					icon: "minecraft:iron_hoe"
+					id: "52FDAC4CA4B1380A"
+					silent: true
+					title: "+340 Farming XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "6582BFD375A08A96"
+					stage: "fq.nether.nether_vineyard.build0"
+					title: "Plant crimson and warped grapes at your camp"
+					type: "gamestage"
+				}
+				{
+					id: "3C10BBE4DF449DE1"
+					item: "nethervinery:crimson_grape_crate"
+					title: "Harvest a crate of crimson grapes"
+					type: "item"
+				}
+				{
+					id: "1FEEB98B35079579"
+					item: "nethervinery:warped_grape_crate"
+					title: "Harvest a crate of warped grapes"
+					type: "item"
+				}
+				{
+					id: "323E511090783A79"
+					item: "nethervinery:crimson_apple_press"
+					only_from_crafting: true
+					title: "Build a press from Nether wood"
+					type: "item"
+				}
+				{
+					id: "45CD78F849B6F672"
+					item: "nethervinery:crimson_fermentation_barrel"
+					only_from_crafting: true
+					title: "Build a fermentation barrel"
+					type: "item"
+				}
+			]
+			title: "A Vineyard in Hell"
+			x: 10.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["2D2CB6B52DF2A1CC"]
+			description: ["Ferment Ghastly Grenache, Blazewine Pinot and the vintner's prize Netherite Nectar, and deliver a bottle of each to Vesna in Reece, who has waited thirty years for a decent drink."]
+			icon: "nethervinery:netherite_nectar"
+			id: "1ED9DD878CA6B6D7"
+			rewards: [
+				{
+					count: 2
+					id: "28BDE20610CF5B9A"
+					item: "nethervinery:lava_fizz"
+					type: "item"
+				}
+				{
+					id: "43D3CAEC20150337"
+					item: "minecraft:netherite_scrap"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:cook 400"
+					elevate_perms: true
+					icon: "farmersdelight:cooking_pot"
+					id: "4585837EECD5DB80"
+					silent: true
+					title: "+400 Cooking XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "2A343C5A5221B021"
+					item: "nethervinery:ghastly_grenache"
+					title: "Ferment Ghastly Grenache"
+					type: "item"
+				}
+				{
+					id: "13A530998B5CE7D9"
+					item: "nethervinery:blazewine_pinot"
+					title: "Ferment Blazewine Pinot"
+					type: "item"
+				}
+				{
+					id: "0334F4AAFF93BF3B"
+					item: "nethervinery:netherite_nectar"
+					title: "Ferment the vintner's prize Netherite Nectar"
+					type: "item"
+				}
+				{
+					id: "3728D047AD7B7AE2"
+					stage: "fq.nether.netherite_nectar.talk3"
+					title: "Deliver a bottle of each to Vesna"
+					type: "gamestage"
+				}
+			]
+			title: "Netherite Nectar"
+			x: 12.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["660C2D51279315D9"]
+			description: ["Down at the bottom of the Nether, mine eight ancient debris. Vesna explains the trick with beds and tells you never to tell her how it went."]
+			icon: "minecraft:ancient_debris"
+			id: "39C831D6A0365A25"
+			rewards: [
+				{
+					id: "4F7D03245575AAF2"
+					item: "minecraft:netherite_upgrade_smithing_template"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 400"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "42B4E320E3E3D528"
+					silent: true
+					title: "+400 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "07394A525705A2B2"
+					stage: "fq.nether.debris_dive.be0"
+					title: "Dig down to the bottom of the Nether"
+					type: "gamestage"
+				}
+				{
+					count: 8L
+					id: "7AE5060621646F53"
+					item: "minecraft:ancient_debris"
+					title: "Mine eight ancient debris"
+					type: "item"
+				}
+			]
+			title: "Deep Debris"
+			x: 6.0d
+			y: 2.25d
+		}
+		{
+			dependencies: ["1F6F8C2D1EE04D1C"]
+			description: ["Fire that walks, and shields that circle it: a citadel in the wastes is held by something Vesna only calls 'the crowned flame'. Look at it from a safe distance."]
+			icon: "minecraft:fire_charge"
+			id: "4C47E730BE29CB01"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "5A8A67633B6D4BFB"
+					item: "minecraft:magma_cream"
+					type: "item"
+				}
+				{
+					count: 16
+					id: "34CD939690802735"
+					item: "minecraft:snowball"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 340"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "7AA06C08F2CF8812"
+					silent: true
+					title: "+340 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "19C8B8390731D7FD"
+					structure: "friendsandfoes:citadel"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "2522ED8046BAFFC0"
+					observe_type: "entity_type"
+					timer: 40L
+					title: "Watch the crowned flame from a safe distance"
+					to_observe: "friendsandfoes:wildfire"
+					type: "observation"
+				}
+			]
+			title: "The Burning Citadel"
+			x: 12.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["3DCFC0B89256C1E3"]
+			description: ["You've stumbled on a small Nether dungeon. Clear its spawner before it floods the passage."]
+			icon: "minecraft:spawner"
+			id: "6A5A8986D1F449EA"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 16
+					id: "7DAE1749F3A186CF"
+					item: "minecraft:quartz"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:attack 250"
+					elevate_perms: true
+					icon: "minecraft:iron_sword"
+					id: "43D5F256E97C8C2E"
+					silent: true
+					title: "+250 Attack XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "64BC914FEA2A65B3"
+					structure: "betterdungeons:small_nether_dungeon"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					entity: "minecraft:wither_skeleton"
+					id: "448EED97B0AA9CDE"
+					title: "Clear the dungeon's spawner of its skeletons"
+					type: "kill"
+					value: 6L
+				}
+			]
+			title: "Small Places, Sharp Teeth"
+			x: 1.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["3DCFC0B89256C1E3"]
+			description: ["A horned statue squats over the lava, and people say it grants a wish to anyone who answers its riddle. The answer, the carvings hint, is an eye that sees nothing."]
+			icon: "minecraft:ghast_tear"
+			id: "26C631269308A4D9"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					id: "7B48CA6E6E777021"
+					item: "minecraft:ghast_tear"
+					type: "item"
+				}
+				{
+					id: "785080B1FA89574F"
+					item: {
+						Count: 1b
+						id: "minecraft:writable_book"
+						tag: {
+							display: {
+								Lore: ["{\"text\": \"An eye that sees nothing.\", \"color\": \"gray\", \"italic\": true}"]
+								Name: "{\"text\": \"The Devil's Riddle\", \"color\": \"gold\", \"italic\": false}"
+							}
+						}
+					}
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:magic 320"
+					elevate_perms: true
+					icon: "minecraft:enchanted_book"
+					id: "397CEE351307B514"
+					silent: true
+					title: "+320 Magic XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "5D33D482DAE72BF8"
+					structure: "mvs:nether_devil"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					consume_items: true
+					id: "5647A702D215E00A"
+					item: "minecraft:ender_eye"
+					title: "Offer the answer to the statue's riddle"
+					type: "item"
+				}
+			]
+			title: "The Devil's Rest"
+			x: 1.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["39C831D6A0365A25"]
+			description: ["An anvil the size of a hall, ringing in the soul sand valley. Look but don't knock: whatever works the forge is not for now. Vesna will remember the way."]
+			icon: "minecraft:soul_lantern"
+			id: "6E8B3E8057914058"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 4
+					id: "4DE80814FC521EEC"
+					item: "minecraft:soul_lantern"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:mining 340"
+					elevate_perms: true
+					icon: "minecraft:iron_pickaxe"
+					id: "56306B47164E4A1D"
+					silent: true
+					title: "+340 Mining XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "490101AC50F33507"
+					structure: "cataclysm:soul_black_smith"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "6EA0B25F98640B6E"
+					stage: "fq.nether.the_soul_forge.timed0"
+					title: "Creep close enough to look, and leave unseen"
+					type: "gamestage"
+				}
+			]
+			title: "The Soul Forge"
+			x: 7.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["6E8B3E8057914058"]
+			description: ["In the deepest wastes, a sealed arena burns with blue fire. Listen at its doors. Even Vesna won't go nearer."]
+			icon: "minecraft:blaze_rod"
+			id: "0C45CF71D832D927"
+			invisible: true
+			invisible_until_tasks: 1
+			rewards: [
+				{
+					count: 8
+					id: "45D7555188D8A190"
+					item: "minecraft:blaze_rod"
+					type: "item"
+				}
+				{
+					command: "/puffish_skills experience add {p} puffish_skills:agility 340"
+					elevate_perms: true
+					icon: "minecraft:feather"
+					id: "72AAA6FF2F644404"
+					silent: true
+					title: "+340 Agility XP"
+					type: "command"
+				}
+			]
+			tasks: [
+				{
+					id: "0230CA0E5A38FEE4"
+					structure: "cataclysm:burning_arena"
+					title: "Discovered"
+					type: "structure"
+				}
+				{
+					id: "681E16E6AC8D0E9D"
+					stage: "fq.nether.arena_of_embers.timed0"
+					title: "Creep to the sealed doors and listen"
+					type: "gamestage"
+				}
+			]
+			title: "The Arena of Embers"
+			x: 9.0d
+			y: 3.75d
+		}
+	]
+	subtitle: ["A frontier expedition"]
+	title: "The Nether"
+}
