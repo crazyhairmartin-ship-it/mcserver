@@ -23,6 +23,7 @@ const WATCHER_RUN_MIN = 15                         // it runs at least this far 
 const WATCHER_RUN_MAX_SECONDS = 20                 // and never longer than this
 const WATCHER_LIGHT = 13                           // its lantern's light level (an invisible light block at its head)
 const WATCHER_SHIFTS = 4                           // a shifter moves this many times while you look away
+const WATCHER_SHIFT_TICKS = 10                     // out of your view this long (half a second) and it moves
 
 let $WatcherUUID = Java.loadClass('java.util.UUID')
 let $WatcherCompound = Java.loadClass('net.minecraft.nbt.CompoundTag')
@@ -277,6 +278,16 @@ function watcherTick(player, everySecond) {
     watcherStep(player, w, d)
     d.putInt('walk', d.getInt('walk') - 1)
   }
+  if (d.getString('mood') == 'shift' && d.getBoolean('seen') && d.getInt('shifts') < WATCHER_SHIFTS) {
+    let unseen = watcherLookAngle(player, w.x, w.y + 1.5, w.z) > 70 || !player.hasLineOfSight(w)
+    d.putInt('unseen', unseen ? d.getInt('unseen') + 1 : 0)
+    if (d.getInt('unseen') >= WATCHER_SHIFT_TICKS) {
+      watcherShift(player, w, d)
+      d.putInt('unseen', 0)
+      d.putInt('away', 0)
+      return
+    }
+  }
   if (!everySecond) return
   // watching: turned toward the player (between a wanderer's strolls)
   if (d.getInt('walk') == 0) watcherFace(player, w, player.x, player.z)
@@ -295,11 +306,6 @@ function watcherTick(player, everySecond) {
   if (mood == 'wander' && d.getInt('walk') == 0) {
     d.putInt('pause', d.getInt('pause') - 1)
     if (d.getInt('pause') <= 0) watcherStroll(player, w, d)
-  }
-  if (mood == 'shift' && d.getBoolean('seen') && d.getInt('away') >= 2 && d.getInt('shifts') < WATCHER_SHIFTS) {
-    watcherShift(player, w, d)
-    d.putInt('away', 0)
-    return
   }
   if ((d.getBoolean('seen') && d.getInt('away') >= WATCHER_IGNORED_SECONDS) || secs > WATCHER_MAX_SECONDS) {
     watcherRemove(player, d)                               // ignored: it's simply not there any more
