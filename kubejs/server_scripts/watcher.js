@@ -128,7 +128,7 @@ function watcherSpawn(player, d, mood) {
     if (y == null) continue
     let tag = 'fq_watcher.' + player.uuid
     player.server.runCommandSilent('execute in minecraft:overworld run summon player_mobs:player_mob ' + x + ' ' + y + ' ' + z
-      + ' {Username:"' + WATCHER_SKIN_NAME + '",CustomName:'{"text":"' + WATCHER_NAME + '"}',NoAI:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:0b,CanPickUpLoot:0b,'
+      + ' {Username:"' + WATCHER_SKIN_NAME + '",CustomName:\'{"text":"' + WATCHER_NAME + '"}\',NoAI:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:0b,CanPickUpLoot:0b,'
       + 'HandItems:[{id:"minecraft:lantern",Count:1b},{}],HandDropChances:[0f,0f],ArmorDropChances:[0f,0f,0f,0f],'
       + 'DeathLootTable:"minecraft:empty",'
       + 'Tags:["fq_watcher","' + tag + '"]}')
