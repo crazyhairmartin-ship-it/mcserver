@@ -84,13 +84,23 @@ function watcherMoodRight(player) {
   return true
 }
 
-// standing room on the ground near (x, z), around height y
+// can it walk through this block (air, grass, flowers, snow layers: anything without collision)? Water and lava aren't
+// passable: it never wades. Grass and flowers counted as walls once, so it never moved (2026-10-16).
+function watcherPassable(level, x, y, z) {
+  let b = level.getBlock(x, y, z)
+  let id = String(b.id)
+  if (id.endsWith('air')) return true
+  if (id == 'minecraft:water' || id == 'minecraft:lava') return false
+  try { return !b.blockState.blocksMotion() } catch (e) { return false }
+}
+
+// standing room on the ground near (x, z), around height y: the first solid block from above, with room for a body
 function watcherGround(level, x, y, z) {
   for (let dy = 16; dy >= -16; dy--) {
     let below = String(level.getBlock(x, y + dy - 1, z).id)
-    if (below.endsWith('air') || below.indexOf('leaves') >= 0) continue
     if (below == 'minecraft:water' || below == 'minecraft:lava') return null
-    if (!String(level.getBlock(x, y + dy, z).id).endsWith('air') || !String(level.getBlock(x, y + dy + 1, z).id).endsWith('air')) return null
+    if (below.indexOf('leaves') >= 0 || watcherPassable(level, x, y + dy - 1, z)) continue
+    if (!watcherPassable(level, x, y + dy, z) || !watcherPassable(level, x, y + dy + 1, z)) return null
     return y + dy
   }
   return null
@@ -274,10 +284,23 @@ function watcherTick(player, everySecond) {
   }
 }
 
+const WATCHER_DEBUG = true   // TEMPORARY (2026-10-16): log state while testing why it didn't react
+
 PlayerEvents.tick(event => {
   let player = event.player
-  if (player.level.clientSide || player.spectator) return
   let tick = player.server.tickCount
+  if (WATCHER_DEBUG && tick % 40 == 3) {
+    let d = watcherData(player)
+    if (d.contains('id')) {
+      let w = watcherEntity(player, d)
+      console.info('WATCHER ' + player.username + ' spectator=' + player.spectator + ' state=' + d.getString('state')
+        + ' mood=' + d.getString('mood') + ' found=' + (w != null)
+        + (w ? ' dist=' + Math.round(Math.sqrt((w.x - player.x) * (w.x - player.x) + (w.z - player.z) * (w.z - player.z)))
+          + ' angle=' + Math.round(watcherLookAngle(player, w.x, w.y + 1.5, w.z)) + ' los=' + player.hasLineOfSight(w) : '')
+        + ' stare=' + d.getInt('stare') + ' away=' + d.getInt('away') + ' walk=' + d.getInt('walk'))
+    }
+  }
+  if (player.level.clientSide || player.isSpectator()) return
   watcherTick(player, tick % 20 == 7)
 })
 
