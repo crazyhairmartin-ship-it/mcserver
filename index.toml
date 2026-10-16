@@ -3837,6 +3837,11 @@ hash = "3d96144ec0466e2231e8ec1752c7fcc045070616dd5805b16d594482f897e880"
 metafile = true
 
 [[files]]
+file = "mods/sound-physics-remastered.pw.toml"
+hash = "ee2d9154be68ef20293596a3f65810111fd35a802f1e8292e9ba8872de463a14"
+metafile = true
+
+[[files]]
 file = "mods/spark.pw.toml"
 hash = "735935fb0f43b7556f601967421a1c9fac83f402940af1ce5481afb0f8a91363"
 metafile = true
@@ -3929,6 +3934,11 @@ metafile = true
 [[files]]
 file = "mods/when-dungeons-arise.pw.toml"
 hash = "0cb70caa22009a495a64a4332480b5ae80cb7fc7ba34c0a48ab8aff7df20b4f7"
+metafile = true
+
+[[files]]
+file = "mods/whisperwoods.pw.toml"
+hash = "3521a08891eb0a771a0fd3d513dae10a0acde59c7d06bd2f52c5743995ae2d5e"
 metafile = true
 
 [[files]]
