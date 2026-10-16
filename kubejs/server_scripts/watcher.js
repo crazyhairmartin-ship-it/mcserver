@@ -112,7 +112,7 @@ function watcherLookAngle(player, x, y, z) {
   return Math.acos(Math.max(-1, Math.min(1, dot))) * 57.29577951308232
 }
 
-function watcherSpawn(player, d) {
+function watcherSpawn(player, d, mood) {
   let level = player.level
   let yaw = (player.yaw + 90) / 57.29577951308232   // facing direction as an angle in x/z
   for (let attempt = 0; attempt < 12; attempt++) {
@@ -141,7 +141,7 @@ function watcherSpawn(player, d) {
     d.putInt('stare', 0)
     d.putInt('away', 0)
     d.putBoolean('seen', false)
-    d.putString('mood', Math.random() < 0.5 ? 'wander' : 'shift')
+    d.putString('mood', mood || (Math.random() < 0.5 ? 'wander' : 'shift'))
     d.putInt('walk', 0)
     d.putInt('pause', 3 + Math.floor(Math.random() * 4))
     d.putInt('shifts', 0)
@@ -191,10 +191,11 @@ function watcherShift(player, w, d) {
   let dist = Math.sqrt(dx * dx + dz * dz) || 1
   let bearing = Math.atan2(dz, dx)
   for (let attempt = 0; attempt < 10; attempt++) {
-    let a = bearing + (Math.random() - 0.5) * 1.2
-    let r = Math.max(WATCHER_APPROACH + 6, dist - Math.random() * 10)
+    let a = bearing + (Math.random() < 0.5 ? 1 : -1) * (0.25 + Math.random() * 0.5)   // 15-45 degrees to a side
+    let r = Math.max(WATCHER_APPROACH + 4, dist - 5 - Math.random() * 7)                  // 5-12 blocks closer
     let x = Math.floor(player.x + Math.cos(a) * r) + 0.5
     let z = Math.floor(player.z + Math.sin(a) * r) + 0.5
+    if ((x - w.x) * (x - w.x) + (z - w.z) * (z - w.z) < 64) continue                    // a move you'd notice
     let y = watcherGround(player.level, Math.floor(x), Math.floor(w.y), Math.floor(z))
     if (y == null) continue
     let ox = w.x, oy = w.y, oz = w.z
@@ -316,10 +317,12 @@ global.watcherTest = player => {
   if (!player) return 0
   let d = watcherData(player)
   if (d.contains('id')) watcherRemove(player, d)
-  if (!watcherSpawn(player, d)) {
+  let mood = d.getString('lastTest') == 'shift' ? 'wander' : 'shift'   // alternate, so each can be tried
+  d.putString('lastTest', mood)
+  if (!watcherSpawn(player, d, mood)) {
     player.tell(Text.gray('No spot to stand in view. Face somewhere open and try again.'))
     return 0
   }
-  player.tell(Text.gray('Something is watching you.'))
+  player.tell(Text.gray('Something is watching you. (' + (mood == 'shift' ? 'moves when you look away' : 'wanders') + ')'))
   return 1
 }
