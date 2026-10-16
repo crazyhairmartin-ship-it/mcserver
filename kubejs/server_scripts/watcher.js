@@ -226,13 +226,17 @@ function watcherFlee(player, w, d) {
     let yaw = Math.atan2(-Math.cos(a), Math.sin(a)) * 57.29577951308232
     player.server.runCommandSilent('tp ' + w.uuid + ' ' + nx + ' ' + y + ' ' + nz + ' ' + yaw + ' 0')
     watcherLight(player, w, d)
-    return
+    d.putInt('stuck', 0)
+    return true
   }
+  d.putInt('stuck', d.getInt('stuck') + 1)                // no way out this tick
+  return false
 }
 
 function watcherLeave(player, w, d) {
   d.putDouble('lean', (Math.random() - 0.5) * 0.6)                 // a little to one side, kept while it runs
   d.putString('state', 'leave')
+  d.putInt('stuck', 0)
   d.putLong('since', Date.now())
   d.putDouble('fromX', w.x)
   d.putDouble('fromZ', w.z)
@@ -266,6 +270,7 @@ function watcherTick(player, everySecond) {
       return
     }
     watcherFlee(player, w, d)                            // it runs, always away from the player
+    if (d.getInt('stuck') >= 5) watcherRemove(player, d)   // cornered: it simply isn't there any more
     return
   }
   if (d.getInt('walk') > 0) {                              // a wanderer mid-stroll
