@@ -1,0 +1,13 @@
+name = "Player Mobs"
+filename = "PlayerMobs-1.20.1-4.1.0.37.jar"
+side = "both"
+
+[download]
+hash-format = "sha1"
+hash = "cbf1e62ca1b0688ca63b8ebec7e8ba73ddf89295"
+mode = "metadata:curseforge"
+
+[update]
+[update.curseforge]
+file-id = 5780869
+project-id = 430513

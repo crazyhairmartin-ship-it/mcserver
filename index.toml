@@ -3722,6 +3722,11 @@ hash = "ff455d3439b8e4ffbf78dc1e8998c1b59200bd10c74c77f9fe90e98f606e0f0d"
 metafile = true
 
 [[files]]
+file = "mods/player-mobs.pw.toml"
+hash = "7582696c61b38bd3428ffec2ea20a324e5b4f303bfd37c87a0a855b0edc8b8ba"
+metafile = true
+
+[[files]]
 file = "mods/playeranimator.pw.toml"
 hash = "765987a78e5d8c782d0da2de99998b43b5907d6c41347d3804045ad109e4a586"
 metafile = true
@@ -3934,11 +3939,6 @@ metafile = true
 [[files]]
 file = "mods/when-dungeons-arise.pw.toml"
 hash = "0cb70caa22009a495a64a4332480b5ae80cb7fc7ba34c0a48ab8aff7df20b4f7"
-metafile = true
-
-[[files]]
-file = "mods/whisperwoods.pw.toml"
-hash = "3521a08891eb0a771a0fd3d513dae10a0acde59c7d06bd2f52c5743995ae2d5e"
 metafile = true
 
 [[files]]
