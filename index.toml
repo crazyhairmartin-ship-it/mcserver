@@ -3825,6 +3825,11 @@ hash = "8a2bb37831521a06e723796797baa606c121a721f9e86f4aae4c7ce4ba8a8ea1"
 metafile = true
 
 [[files]]
+file = "mods/skylines.pw.toml"
+hash = "b799ddf8d74dac6cb163e313f7d1ea4d3676b64a1ccf58da6d1d24aebf566df5"
+metafile = true
+
+[[files]]
 file = "mods/small-ships.pw.toml"
 hash = "a2641c9187ec8485df45b2fb25c901f835da50ffe4d9601e4ecc81fc9036eb55"
 metafile = true
