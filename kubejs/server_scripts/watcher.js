@@ -212,12 +212,26 @@ function watcherShift(player, w, d) {
   }
 }
 
+// running off: every tick, straight away from where the player is now (with the small side lean it picked), and when
+// that's blocked the nearest angles that are still away from them; never back toward the player
+const WATCHER_FLEE_TURNS = [0, 0.45, -0.45, 0.9, -0.9, 1.3, -1.3]
+
+function watcherFlee(player, w, d) {
+  let away = Math.atan2(w.z - player.z, w.x - player.x) + d.getDouble('lean')
+  for (let i = 0; i < WATCHER_FLEE_TURNS.length; i++) {
+    let a = away + WATCHER_FLEE_TURNS[i]
+    let nx = w.x + Math.cos(a) * WATCHER_RUN, nz = w.z + Math.sin(a) * WATCHER_RUN
+    let y = watcherGround(player.level, Math.floor(nx), Math.floor(w.y), Math.floor(nz))
+    if (y == null || Math.abs(y - w.y) > 1.2) continue
+    let yaw = Math.atan2(-Math.cos(a), Math.sin(a)) * 57.29577951308232
+    player.server.runCommandSilent('tp ' + w.uuid + ' ' + nx + ' ' + y + ' ' + nz + ' ' + yaw + ' 0')
+    watcherLight(player, w, d)
+    return
+  }
+}
+
 function watcherLeave(player, w, d) {
-  let dx = w.x - player.x, dz = w.z - player.z
-  let len = Math.sqrt(dx * dx + dz * dz) || 1
-  let a = Math.atan2(dz / len, dx / len) + (Math.random() - 0.5) * 0.8   // away from the player, a little to one side
-  d.putDouble('ax', Math.cos(a))
-  d.putDouble('az', Math.sin(a))
+  d.putDouble('lean', (Math.random() - 0.5) * 0.6)                 // a little to one side, kept while it runs
   d.putString('state', 'leave')
   d.putLong('since', Date.now())
   d.putDouble('fromX', w.x)
@@ -251,7 +265,7 @@ function watcherTick(player, everySecond) {
       watcherRemove(player, d)
       return
     }
-    watcherStep(player, w, d, WATCHER_RUN)               // it runs
+    watcherFlee(player, w, d)                            // it runs, always away from the player
     return
   }
   if (d.getInt('walk') > 0) {                              // a wanderer mid-stroll
