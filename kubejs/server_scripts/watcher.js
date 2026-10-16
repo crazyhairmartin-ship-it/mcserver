@@ -10,6 +10,7 @@
 // its skin: the account whose skin it wears. Player Mobs looks skins up by account name on each player's game, so
 // a skin has to belong to a real account (a MineSkin profile in the NBT is ignored, 2026-10-16)
 const WATCHER_SKIN_NAME = '__Herobrine__'
+const WATCHER_NAME = 'Herobrine'                   // the name it shows (the skin account stays as above)
 const WATCHER_GAP_MIN_MS = 45 * 60 * 1000          // between sightings, per player
 const WATCHER_GAP_MAX_MS = 120 * 60 * 1000
 const WATCHER_DIST = [40, 60]                      // how far away it appears
@@ -127,7 +128,7 @@ function watcherSpawn(player, d, mood) {
     if (y == null) continue
     let tag = 'fq_watcher.' + player.uuid
     player.server.runCommandSilent('execute in minecraft:overworld run summon player_mobs:player_mob ' + x + ' ' + y + ' ' + z
-      + ' {Username:"' + WATCHER_SKIN_NAME + '",NoAI:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:0b,CanPickUpLoot:0b,'
+      + ' {Username:"' + WATCHER_SKIN_NAME + '",CustomName:'{"text":"' + WATCHER_NAME + '"}',NoAI:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:0b,CanPickUpLoot:0b,'
       + 'HandItems:[{id:"minecraft:lantern",Count:1b},{}],HandDropChances:[0f,0f],ArmorDropChances:[0f,0f,0f,0f],'
       + 'DeathLootTable:"minecraft:empty",'
       + 'Tags:["fq_watcher","' + tag + '"]}')
