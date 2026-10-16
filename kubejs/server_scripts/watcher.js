@@ -15,9 +15,9 @@ const WATCHER_GAP_MIN_MS = 45 * 60 * 1000          // between sightings, per pla
 const WATCHER_GAP_MAX_MS = 120 * 60 * 1000
 const WATCHER_DIST = [40, 60]                      // how far away it appears
 const WATCHER_APPROACH = 24                        // closer than this and it leaves
-const WATCHER_STARE_SECONDS = 3                    // look right at it this long and it leaves
-const WATCHER_IGNORED_SECONDS = 20                 // seen, then out of view this long: it fades
-const WATCHER_MAX_SECONDS = 150                    // never stays longer than this
+const WATCHER_ALONE = 100                          // nobody within this many blocks: it's gone
+// It only leaves when someone (anyone) walks toward it or nobody is near it any more (Dylan, 2026-10-16): no fading
+// when ignored, no time limit, and staring at it doesn't make it leave.
 const WATCHER_STEP = 0.11                          // blocks per tick when walking (about a stroll)
 const WATCHER_RUN = 0.28                           // blocks per tick when it runs off (about a sprint)
 const WATCHER_RUN_MIN = 15                         // it runs at least this far before it can vanish from sight
@@ -298,7 +298,7 @@ function watcherTick(player, everySecond) {
   if (angle < 50 && visible) d.putBoolean('seen', true)
   d.putInt('stare', angle < 4 && visible ? d.getInt('stare') + 1 : 0)
   d.putInt('away', angle > 80 ? d.getInt('away') + 1 : 0)
-  if (dist < WATCHER_APPROACH || d.getInt('stare') >= WATCHER_STARE_SECONDS) {
+  if (watcherNearest(player, w) < WATCHER_APPROACH) {      // anyone walks up to it: it runs
     d.putInt('walk', 0)
     watcherLeave(player, w, d)
     return
@@ -308,9 +308,21 @@ function watcherTick(player, everySecond) {
     d.putInt('pause', d.getInt('pause') - 1)
     if (d.getInt('pause') <= 0) watcherStroll(player, w, d)
   }
-  if ((d.getBoolean('seen') && d.getInt('away') >= WATCHER_IGNORED_SECONDS) || secs > WATCHER_MAX_SECONDS) {
-    watcherRemove(player, d)                               // ignored: it's simply not there any more
+  if (watcherNearest(player, w) > WATCHER_ALONE) {
+    watcherRemove(player, d)                               // nobody around: it's simply not there any more
   }
+}
+
+// the distance from it to the nearest player in its dimension
+function watcherNearest(player, w) {
+  let best = 1e9
+  let dim = String(w.level.dimension)
+  player.server.players.forEach(p => {
+    if (String(p.level.dimension) != dim) return
+    let dd = Math.sqrt((p.x - w.x) * (p.x - w.x) + (p.z - w.z) * (p.z - w.z))
+    if (dd < best) best = dd
+  })
+  return best
 }
 
 const WATCHER_DEBUG = true   // TEMPORARY (2026-10-16): log state while testing why it didn't react
