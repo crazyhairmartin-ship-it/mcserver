@@ -2,7 +2,7 @@
 // far off, turned toward you. Each one is a wanderer (strolls along the treeline, stops, stares again) or a shifter
 // (perfectly still while watched; look away and it's somewhere else, sometimes closer). It carries a lantern that
 // really lights its surroundings: an invisible light block at its head, moved with it and removed when it goes.
-// Walk toward it or stare at it and it turns and walks away; once you lose sight of it,
+// Walk toward it or stare at it and it turns and runs; once you lose sight of it,
 // it's gone. Ignore it and it fades when you look away. It never attacks, can't be hurt, breaks nothing and drops
 // nothing. The model is Player Mobs' player_mob with its AI off (natural spawns are off:
 // kubejs/data/player_mobs/forge/biome_modifier). /watcher test (ops) brings one now, ignoring time and place.
@@ -16,6 +16,7 @@ const WATCHER_STARE_SECONDS = 3                    // look right at it this long
 const WATCHER_IGNORED_SECONDS = 20                 // seen, then out of view this long: it fades
 const WATCHER_MAX_SECONDS = 150                    // never stays longer than this
 const WATCHER_STEP = 0.11                          // blocks per tick when walking (about a stroll)
+const WATCHER_RUN = 0.28                           // blocks per tick when it runs off (about a sprint)
 const WATCHER_LIGHT = 13                           // its lantern's light level (an invisible light block at its head)
 const WATCHER_SHIFTS = 4                           // a shifter moves this many times while you look away
 
@@ -53,9 +54,15 @@ function watcherLight(player, w, d) {
     + ' minecraft:light[level=' + WATCHER_LIGHT + ']') > 0) d.putString('lightAt', at)
 }
 
+// gone without dying: a /kill made it drop its lantern and a head (Player Mobs drops the skin's head on death)
+function watcherDiscardAll(player) {
+  let tag = 'fq_watcher.' + player.uuid
+  player.level.getEntities().forEach(e => { if (e.tags.contains(tag)) e.discard() })
+}
+
 function watcherRemove(player, d) {
   watcherClearLight(player, d)
-  player.server.runCommandSilent('kill @e[tag=fq_watcher.' + player.uuid + ']')
+  watcherDiscardAll(player)
   d.remove('id')
   d.remove('state')
   d.putLong('next', Date.now() + WATCHER_GAP_MIN_MS + Math.random() * (WATCHER_GAP_MAX_MS - WATCHER_GAP_MIN_MS))
@@ -107,7 +114,8 @@ function watcherSpawn(player, d) {
     let tag = 'fq_watcher.' + player.uuid
     player.server.runCommandSilent('execute in minecraft:overworld run summon player_mobs:player_mob ' + x + ' ' + y + ' ' + z
       + ' {Username:"' + skin + '",NoAI:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:0b,CanPickUpLoot:0b,'
-      + 'HandItems:[{id:"minecraft:lantern",Count:1b},{}],HandDropChances:[0f,0f],'
+      + 'HandItems:[{id:"minecraft:lantern",Count:1b},{}],HandDropChances:[0f,0f],ArmorDropChances:[0f,0f,0f,0f],'
+      + 'DeathLootTable:"minecraft:empty",'
       + 'Tags:["fq_watcher","' + tag + '"]}')
     let found = null
     level.getEntities().forEach(e => { if (!found && e.tags.contains(tag)) found = e })
@@ -136,9 +144,9 @@ function watcherFace(player, w, tx, tz) {
   player.server.runCommandSilent('execute as ' + w.uuid + ' at @s run tp @s ~ ~ ~ facing ' + tx + ' ' + (w.y + 1.6) + ' ' + tz)
 }
 
-function watcherStep(player, w, d) {
-  let ax = d.getDouble('ax'), az = d.getDouble('az')       // walking away along this direction
-  let nx = w.x + ax * WATCHER_STEP, nz = w.z + az * WATCHER_STEP
+function watcherStep(player, w, d, speed) {
+  let ax = d.getDouble('ax'), az = d.getDouble('az')       // walking along this direction
+  let nx = w.x + ax * (speed || WATCHER_STEP), nz = w.z + az * (speed || WATCHER_STEP)
   let y = watcherGround(player.level, Math.floor(nx), Math.floor(w.y), Math.floor(nz))
   if (y == null || Math.abs(y - w.y) > 1.2) {             // blocked or a drop: turn a little and try next tick
     let a = Math.atan2(az, ax) + (Math.random() < 0.5 ? 0.6 : -0.6)
@@ -220,11 +228,11 @@ function watcherTick(player, everySecond) {
   let dist = Math.sqrt((w.x - player.x) * (w.x - player.x) + (w.z - player.z) * (w.z - player.z))
   if (state == 'leave') {
     // walks off; gone the moment you can't see it, or after a while regardless
-    if (secs > 25 || (secs > 0.5 && !player.hasLineOfSight(w)) || (secs > 12 && watcherLookAngle(player, w.x, w.y + 1, w.z) > 70)) {
+    if (secs > 15 || (secs > 0.5 && !player.hasLineOfSight(w)) || (secs > 12 && watcherLookAngle(player, w.x, w.y + 1, w.z) > 70)) {
       watcherRemove(player, d)
       return
     }
-    watcherStep(player, w, d)
+    watcherStep(player, w, d, WATCHER_RUN)               // it runs
     return
   }
   if (d.getInt('walk') > 0) {                              // a wanderer mid-stroll
