@@ -1,5 +1,7 @@
 // The Watcher (2026-10-16): now and then, at dusk or night out in the wild, a figure that looks like a player stands
-// far off, turned toward you. Walk toward it or stare at it and it turns and walks away; once you lose sight of it,
+// far off, turned toward you. Each one is a wanderer (strolls along the treeline, stops, stares again) or a shifter
+// (perfectly still while watched; look away and it's somewhere else, sometimes closer), and some hold a torch.
+// Walk toward it or stare at it and it turns and walks away; once you lose sight of it,
 // it's gone. Ignore it and it fades when you look away. It never attacks, can't be hurt, breaks nothing and drops
 // nothing. The model is Player Mobs' player_mob with its AI off (natural spawns are off:
 // kubejs/data/player_mobs/forge/biome_modifier). /watcher test (ops) brings one now, ignoring time and place.
@@ -12,7 +14,9 @@ const WATCHER_APPROACH = 24                        // closer than this and it le
 const WATCHER_STARE_SECONDS = 3                    // look right at it this long and it leaves
 const WATCHER_IGNORED_SECONDS = 20                 // seen, then out of view this long: it fades
 const WATCHER_MAX_SECONDS = 150                    // never stays longer than this
-const WATCHER_STEP = 0.11                          // blocks per tick when walking away (about a stroll)
+const WATCHER_STEP = 0.11                          // blocks per tick when walking (about a stroll)
+const WATCHER_TORCH_CHANCE = 1 / 3                 // sometimes it holds a torch (shaders light it)
+const WATCHER_SHIFTS = 4                           // a shifter moves this many times while you look away
 
 let $WatcherUUID = Java.loadClass('java.util.UUID')
 let $WatcherCompound = Java.loadClass('net.minecraft.nbt.CompoundTag')
@@ -83,6 +87,7 @@ function watcherSpawn(player, d) {
     let tag = 'fq_watcher.' + player.uuid
     player.server.runCommandSilent('execute in minecraft:overworld run summon player_mobs:player_mob ' + x + ' ' + y + ' ' + z
       + ' {Username:"' + skin + '",NoAI:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:0b,CanPickUpLoot:0b,'
+      + (Math.random() < WATCHER_TORCH_CHANCE ? 'HandItems:[{id:"minecraft:torch",Count:1b},{}],HandDropChances:[0f,0f],' : '')
       + 'Tags:["fq_watcher","' + tag + '"]}')
     let found = null
     level.getEntities().forEach(e => { if (!found && e.tags.contains(tag)) found = e })
@@ -97,6 +102,10 @@ function watcherSpawn(player, d) {
     d.putInt('stare', 0)
     d.putInt('away', 0)
     d.putBoolean('seen', false)
+    d.putString('mood', Math.random() < 0.5 ? 'wander' : 'shift')
+    d.putInt('walk', 0)
+    d.putInt('pause', 3 + Math.floor(Math.random() * 4))
+    d.putInt('shifts', 0)
     return true
   }
   return false
@@ -119,6 +128,44 @@ function watcherStep(player, w, d) {
   }
   let yaw = Math.atan2(-ax, az) * 57.29577951308232
   player.server.runCommandSilent('tp ' + w.uuid + ' ' + nx + ' ' + y + ' ' + nz + ' ' + yaw + ' 0')
+}
+
+// a wanderer picks a stroll along the treeline: across the player's view, nudged to keep its distance
+function watcherStroll(player, w, d) {
+  let dx = w.x - player.x, dz = w.z - player.z
+  let dist = Math.sqrt(dx * dx + dz * dz) || 1
+  let side = Math.random() < 0.5 ? 1 : -1
+  let ox = dx / dist, oz = dz / dist                        // outward from the player
+  let bias = dist < 38 ? 0.5 : dist > 58 ? -0.5 : (Math.random() - 0.5) * 0.4
+  let ax = -oz * side + ox * bias, az = ox * side + oz * bias
+  let len = Math.sqrt(ax * ax + az * az) || 1
+  d.putDouble('ax', ax / len)
+  d.putDouble('az', az / len)
+  d.putInt('walk', Math.floor((3 + Math.random() * 4) / WATCHER_STEP))   // 3-7 blocks
+  d.putInt('pause', 3 + Math.floor(Math.random() * 5))
+}
+
+// a shifter moves somewhere else in the player's view while they look away (sometimes a little closer)
+function watcherShift(player, w, d) {
+  let dx = w.x - player.x, dz = w.z - player.z
+  let dist = Math.sqrt(dx * dx + dz * dz) || 1
+  let bearing = Math.atan2(dz, dx)
+  for (let attempt = 0; attempt < 10; attempt++) {
+    let a = bearing + (Math.random() - 0.5) * 1.2
+    let r = Math.max(WATCHER_APPROACH + 6, dist - Math.random() * 10)
+    let x = Math.floor(player.x + Math.cos(a) * r) + 0.5
+    let z = Math.floor(player.z + Math.sin(a) * r) + 0.5
+    let y = watcherGround(player.level, Math.floor(x), Math.floor(w.y), Math.floor(z))
+    if (y == null) continue
+    let ox = w.x, oy = w.y, oz = w.z
+    player.server.runCommandSilent('tp ' + w.uuid + ' ' + x + ' ' + y + ' ' + z)
+    if (player.hasLineOfSight(w)) {                       // somewhere they'll see it when they look back
+      watcherFace(player, w, player.x, player.z)
+      d.putInt('shifts', d.getInt('shifts') + 1)
+      return
+    }
+    player.server.runCommandSilent('tp ' + w.uuid + ' ' + ox + ' ' + oy + ' ' + oz)
+  }
 }
 
 function watcherLeave(player, w, d) {
@@ -157,17 +204,34 @@ function watcherTick(player, everySecond) {
     watcherStep(player, w, d)
     return
   }
+  if (d.getInt('walk') > 0) {                              // a wanderer mid-stroll
+    watcherStep(player, w, d)
+    d.putInt('walk', d.getInt('walk') - 1)
+  }
   if (!everySecond) return
-  // watching: turned toward the player, perfectly still
-  watcherFace(player, w, player.x, player.z)
+  // watching: turned toward the player (between a wanderer's strolls)
+  if (d.getInt('walk') == 0) watcherFace(player, w, player.x, player.z)
   let angle = watcherLookAngle(player, w.x, w.y + 1.5, w.z)
   let visible = player.hasLineOfSight(w)
   if (angle < 50 && visible) d.putBoolean('seen', true)
   d.putInt('stare', angle < 4 && visible ? d.getInt('stare') + 1 : 0)
   d.putInt('away', angle > 80 ? d.getInt('away') + 1 : 0)
   if (dist < WATCHER_APPROACH || d.getInt('stare') >= WATCHER_STARE_SECONDS) {
+    d.putInt('walk', 0)
     watcherLeave(player, w, d)
-  } else if ((d.getBoolean('seen') && d.getInt('away') >= WATCHER_IGNORED_SECONDS) || secs > WATCHER_MAX_SECONDS) {
+    return
+  }
+  let mood = d.getString('mood')
+  if (mood == 'wander' && d.getInt('walk') == 0) {
+    d.putInt('pause', d.getInt('pause') - 1)
+    if (d.getInt('pause') <= 0) watcherStroll(player, w, d)
+  }
+  if (mood == 'shift' && d.getBoolean('seen') && d.getInt('away') >= 2 && d.getInt('shifts') < WATCHER_SHIFTS) {
+    watcherShift(player, w, d)
+    d.putInt('away', 0)
+    return
+  }
+  if ((d.getBoolean('seen') && d.getInt('away') >= WATCHER_IGNORED_SECONDS) || secs > WATCHER_MAX_SECONDS) {
     watcherRemove(player, d)                               // ignored: it's simply not there any more
   }
 }
