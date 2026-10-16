@@ -2660,6 +2660,10 @@ file = "kubejs/data/naturalist/tags/worldgen/biome/has_vulture.json"
 hash = "22de1fb4f119f67cbae6882d8ee8c0b66255812f60b1b2cc89dcddfe9cbdb094"
 
 [[files]]
+file = "kubejs/data/player_mobs/forge/biome_modifier/add_player_mobs_spawns.json"
+hash = "a75d5d611e58e3c80bbf0244f82a8a8351c4e8c4aa0f3a1c56da5343aa6d5ae5"
+
+[[files]]
 file = "kubejs/data/skyvillages/structures/waystones/waystone_0_fabric.nbt"
 hash = "e4d473c52dc7f21e798c17afb2ca0878403db4e607af689a3f022bb9883f25b8"
 
@@ -2982,6 +2986,10 @@ hash = "a020fbcfad25cb9f85481ab086209bb80f221c80f5ad9f7e24c33ae1750d3cd2"
 [[files]]
 file = "kubejs/server_scripts/unify_duplicates.js"
 hash = "c345005684bd913b4aab90222c7407471ef26a49a3d541db3b4aa0a5173b0cee"
+
+[[files]]
+file = "kubejs/server_scripts/watcher.js"
+hash = "abbd8f9c5300464dd7e2cf013be098d33398f3b7d46096ba501967eebf5f1430"
 
 [[files]]
 file = "kubejs/server_scripts/whale_boat_guard.js"
