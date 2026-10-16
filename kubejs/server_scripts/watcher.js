@@ -71,7 +71,7 @@ function watcherLookAngle(player, x, y, z) {
 
 function watcherSpawn(player, d) {
   let level = player.level
-  let yaw = (player.getYRot() + 90) / 57.29577951308232   // facing direction as an angle in x/z
+  let yaw = (player.yaw + 90) / 57.29577951308232   // facing direction as an angle in x/z
   for (let attempt = 0; attempt < 12; attempt++) {
     let a = yaw + (Math.random() - 0.5) * 1.6            // within ~45 degrees of where they face
     let dist = WATCHER_DIST[0] + Math.random() * (WATCHER_DIST[1] - WATCHER_DIST[0])
