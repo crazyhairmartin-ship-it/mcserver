@@ -7,13 +7,9 @@
 // nothing. The model is Player Mobs' player_mob with its AI off (natural spawns are off:
 // kubejs/data/player_mobs/forge/biome_modifier). /watcher test (ops) brings one now, ignoring time and place.
 
-// its skin: Dylan's Herobrine skin, signed by Mojang through MineSkin
-// (https://mineskin.org/skins/26c74452378743788a78aeac10e1232f); Player Mobs takes it as a ready-made profile
-const WATCHER_SKIN = {
-  id: '[I;1209024396,1145784482,-1152972298,-603621532]',
-  value: 'ewogICJ0aW1lc3RhbXAiIDogMTc3NTc1MjAzNTE2MywKICAicHJvZmlsZUlkIiA6ICI2M2VkZjY1ZDcxNmE0NGZmYmUzOWU5MWVkMmNiMjM3YyIsCiAgInByb2ZpbGVOYW1lIiA6ICJ2aWxlX3NsYXZlbWFzdGVyIiwKICAic2lnbmF0dXJlUmVxdWlyZWQiIDogdHJ1ZSwKICAidGV4dHVyZXMiIDogewogICAgIlNLSU4iIDogewogICAgICAidXJsIiA6ICJodHRwOi8vdGV4dHVyZXMubWluZWNyYWZ0Lm5ldC90ZXh0dXJlLzg5ZmNhN2NmOWFkNWQ1NTllNWVlOWRkYmYzZWY4MTUwYWFkMTljNjhiZTI2MzQ2YTU5MzQ2NDkyZGI0YjBmZjEiCiAgICB9CiAgfQp9',
-  signature: 'itZ+iMwZgG0jIqCAk/NbOM1EFoNHTjmKDWignyu5P39maCAkZ2laFaN9ZJSFFx9huo7HkZn1JyNz7UTD57hCt/FfJq1UjA5LbZKPyBwrkehU/7rJy5Xs3/h0vK2HjuV6ADswFwew6QFWYIfJodqVyAKTjuWgx/Bc5Iw3wS0rOQncK2ai4uN8M0esskUhRWaiGzHwONGLgonRPg9oY3b2PyZWwPvP+0Ebhv7kMeGHiQeWicWYMsWavUaZuOlqs0gspwxvFIc5SUFhsDZYBjysza2lJeHIPfV0J9QDmcpll7WE3romnCMiPevJH+nTBQ/TdoIZdNPVEveNs3UzeH3fb9ZMiHLwYsTNJHND2RMvAKd6YkdljOzBmpZ6hLmMCLGbMnu4EHj8Ppfkof1Jk3QMANTxzJTxYztfKYdhY9MZUwkRV7aTMgMB4Y6zaV97xaQVPnaCz2TjfORzjMZW0KhfJ+sEuXvf2cV7wOr7gH4lUNKhvj0+cML4oP3y5c5CewPNv8EdXXOZzL8EAZ82XdbLtrB3UR1m1RFlvqbjG0IaJJFPbghky7GR9frjlyYg8CB8MF+6iExy62DDSlAFutq6mLi5aGzNM0Qha+IDIm8pJOxtfYNlhue6JYTGcXHq5UtXRrCBwly+Q+QwSrQn2nLKr/zL/wmY7hYhJDNWaO59KNI='
-}
+// its skin: the account whose skin it wears. Player Mobs looks skins up by account name on each player's game, so
+// a skin has to belong to a real account (a MineSkin profile in the NBT is ignored, 2026-10-16)
+const WATCHER_SKIN_NAME = '__Herobrine__'
 const WATCHER_GAP_MIN_MS = 45 * 60 * 1000          // between sightings, per player
 const WATCHER_GAP_MAX_MS = 120 * 60 * 1000
 const WATCHER_DIST = [40, 60]                      // how far away it appears
@@ -128,8 +124,7 @@ function watcherSpawn(player, d) {
     if (y == null) continue
     let tag = 'fq_watcher.' + player.uuid
     player.server.runCommandSilent('execute in minecraft:overworld run summon player_mobs:player_mob ' + x + ' ' + y + ' ' + z
-      + ' {Username:"Herobrine",Profile:{Name:"Herobrine",Id:' + WATCHER_SKIN.id + ',Properties:{textures:[{Value:"'
-      + WATCHER_SKIN.value + '",Signature:"' + WATCHER_SKIN.signature + '"}]}},NoAI:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:0b,CanPickUpLoot:0b,'
+      + ' {Username:"' + WATCHER_SKIN_NAME + '",NoAI:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:0b,CanPickUpLoot:0b,'
       + 'HandItems:[{id:"minecraft:lantern",Count:1b},{}],HandDropChances:[0f,0f],ArmorDropChances:[0f,0f,0f,0f],'
       + 'DeathLootTable:"minecraft:empty",'
       + 'Tags:["fq_watcher","' + tag + '"]}')
