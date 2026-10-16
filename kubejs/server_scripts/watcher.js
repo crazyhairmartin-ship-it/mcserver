@@ -19,6 +19,8 @@ const WATCHER_IGNORED_SECONDS = 20                 // seen, then out of view thi
 const WATCHER_MAX_SECONDS = 150                    // never stays longer than this
 const WATCHER_STEP = 0.11                          // blocks per tick when walking (about a stroll)
 const WATCHER_RUN = 0.28                           // blocks per tick when it runs off (about a sprint)
+const WATCHER_RUN_MIN = 15                         // it runs at least this far before it can vanish from sight
+const WATCHER_RUN_MAX_SECONDS = 20                 // and never longer than this
 const WATCHER_LIGHT = 13                           // its lantern's light level (an invisible light block at its head)
 const WATCHER_SHIFTS = 4                           // a shifter moves this many times while you look away
 
@@ -218,6 +220,8 @@ function watcherLeave(player, w, d) {
   d.putDouble('az', Math.sin(a))
   d.putString('state', 'leave')
   d.putLong('since', Date.now())
+  d.putDouble('fromX', w.x)
+  d.putDouble('fromZ', w.z)
 }
 
 function watcherTick(player, everySecond) {
@@ -240,7 +244,10 @@ function watcherTick(player, everySecond) {
   let dist = Math.sqrt((w.x - player.x) * (w.x - player.x) + (w.z - player.z) * (w.z - player.z))
   if (state == 'leave') {
     // walks off; gone the moment you can't see it, or after a while regardless
-    if (secs > 15 || (secs > 0.5 && !player.hasLineOfSight(w)) || (secs > 12 && watcherLookAngle(player, w.x, w.y + 1, w.z) > 70)) {
+    let ran = Math.sqrt((w.x - d.getDouble('fromX')) * (w.x - d.getDouble('fromX')) + (w.z - d.getDouble('fromZ')) * (w.z - d.getDouble('fromZ')))
+    let farEnough = ran >= WATCHER_RUN_MIN
+    if (secs > WATCHER_RUN_MAX_SECONDS || (farEnough && !player.hasLineOfSight(w))
+      || (farEnough && watcherLookAngle(player, w.x, w.y + 1, w.z) > 70)) {
       watcherRemove(player, d)
       return
     }
