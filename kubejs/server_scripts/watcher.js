@@ -187,16 +187,19 @@ PlayerEvents.loggedOut(event => {
 ServerEvents.commandRegistry(event => {
   let { commands: Commands } = event
   event.register(Commands.literal('watcher').requires(src => src.hasPermission(2))
-    .then(Commands.literal('test').executes(ctx => {
-      let player = ctx.source.player
-      if (!player) return 0
-      let d = watcherData(player)
-      if (d.contains('id')) watcherRemove(player, d)
-      if (!watcherSpawn(player, d)) {
-        player.tell(Text.gray('No spot to stand in view. Face somewhere open and try again.'))
-        return 0
-      }
-      player.tell(Text.gray('Something is watching you.'))
-      return 1
-    })))
+    .then(Commands.literal('test').executes(ctx => global.watcherTest(ctx.source.player))))
 })
+
+// the command calls through global, so `kubejs reload server_scripts` updates it (commands themselves only
+// re-register on a restart)
+global.watcherTest = player => {
+  if (!player) return 0
+  let d = watcherData(player)
+  if (d.contains('id')) watcherRemove(player, d)
+  if (!watcherSpawn(player, d)) {
+    player.tell(Text.gray('No spot to stand in view. Face somewhere open and try again.'))
+    return 0
+  }
+  player.tell(Text.gray('Something is watching you.'))
+  return 1
+}
