@@ -1,6 +1,7 @@
 // The Watcher (2026-10-16): now and then, at dusk or night out in the wild, a figure that looks like a player stands
 // far off, turned toward you. Each one is a wanderer (strolls along the treeline, stops, stares again) or a shifter
-// (perfectly still while watched; look away and it's somewhere else, sometimes closer), and some hold a torch.
+// (perfectly still while watched; look away and it's somewhere else, sometimes closer). It carries a lantern that
+// really lights its surroundings: an invisible light block at its head, moved with it and removed when it goes.
 // Walk toward it or stare at it and it turns and walks away; once you lose sight of it,
 // it's gone. Ignore it and it fades when you look away. It never attacks, can't be hurt, breaks nothing and drops
 // nothing. The model is Player Mobs' player_mob with its AI off (natural spawns are off:
@@ -15,7 +16,7 @@ const WATCHER_STARE_SECONDS = 3                    // look right at it this long
 const WATCHER_IGNORED_SECONDS = 20                 // seen, then out of view this long: it fades
 const WATCHER_MAX_SECONDS = 150                    // never stays longer than this
 const WATCHER_STEP = 0.11                          // blocks per tick when walking (about a stroll)
-const WATCHER_TORCH_CHANCE = 1 / 3                 // sometimes it holds a torch (shaders light it)
+const WATCHER_LIGHT = 13                           // its lantern's light level (an invisible light block at its head)
 const WATCHER_SHIFTS = 4                           // a shifter moves this many times while you look away
 
 let $WatcherUUID = Java.loadClass('java.util.UUID')
@@ -34,7 +35,26 @@ function watcherEntity(player, d) {
   try { return player.level.getEntity($WatcherUUID.fromString(d.getString('id'))) } catch (e) { return null }
 }
 
+// the lantern's light: an invisible minecraft:light block in the air at its head, only ever placed in air and only
+// ever removed if it's still our light block (so nothing else is touched)
+function watcherClearLight(player, d) {
+  if (!d.contains('lightAt')) return
+  let p = d.getString('lightAt').split(' ')
+  player.server.runCommandSilent('execute in minecraft:overworld if block ' + p.join(' ') + ' minecraft:light run setblock '
+    + p.join(' ') + ' minecraft:air')
+  d.remove('lightAt')
+}
+
+function watcherLight(player, w, d) {
+  let at = Math.floor(w.x) + ' ' + (Math.floor(w.y) + 1) + ' ' + Math.floor(w.z)
+  if (d.getString('lightAt') == at) return
+  watcherClearLight(player, d)
+  if (player.server.runCommandSilent('execute in minecraft:overworld if block ' + at + ' minecraft:air run setblock ' + at
+    + ' minecraft:light[level=' + WATCHER_LIGHT + ']') > 0) d.putString('lightAt', at)
+}
+
 function watcherRemove(player, d) {
+  watcherClearLight(player, d)
   player.server.runCommandSilent('kill @e[tag=fq_watcher.' + player.uuid + ']')
   d.remove('id')
   d.remove('state')
@@ -87,7 +107,7 @@ function watcherSpawn(player, d) {
     let tag = 'fq_watcher.' + player.uuid
     player.server.runCommandSilent('execute in minecraft:overworld run summon player_mobs:player_mob ' + x + ' ' + y + ' ' + z
       + ' {Username:"' + skin + '",NoAI:1b,Invulnerable:1b,Silent:1b,PersistenceRequired:0b,CanPickUpLoot:0b,'
-      + (Math.random() < WATCHER_TORCH_CHANCE ? 'HandItems:[{id:"minecraft:torch",Count:1b},{}],HandDropChances:[0f,0f],' : '')
+      + 'HandItems:[{id:"minecraft:lantern",Count:1b},{}],HandDropChances:[0f,0f],'
       + 'Tags:["fq_watcher","' + tag + '"]}')
     let found = null
     level.getEntities().forEach(e => { if (!found && e.tags.contains(tag)) found = e })
@@ -128,6 +148,7 @@ function watcherStep(player, w, d) {
   }
   let yaw = Math.atan2(-ax, az) * 57.29577951308232
   player.server.runCommandSilent('tp ' + w.uuid + ' ' + nx + ' ' + y + ' ' + nz + ' ' + yaw + ' 0')
+  watcherLight(player, w, d)
 }
 
 // a wanderer picks a stroll along the treeline: across the player's view, nudged to keep its distance
@@ -161,6 +182,7 @@ function watcherShift(player, w, d) {
     player.server.runCommandSilent('tp ' + w.uuid + ' ' + x + ' ' + y + ' ' + z)
     if (player.hasLineOfSight(w)) {                       // somewhere they'll see it when they look back
       watcherFace(player, w, player.x, player.z)
+      watcherLight(player, w, d)
       d.putInt('shifts', d.getInt('shifts') + 1)
       return
     }
@@ -187,6 +209,7 @@ function watcherTick(player, everySecond) {
   }
   if (!w) {
     if (!everySecond) return
+    if (d.contains('lightAt')) watcherClearLight(player, d)
     if (!d.contains('next')) d.putLong('next', Date.now() + 20 * 60 * 1000 + Math.random() * 40 * 60 * 1000)
     if (Date.now() < d.getLong('next') || !watcherMoodRight(player)) return
     if (!watcherSpawn(player, d)) d.putLong('next', Date.now() + 60 * 1000)   // nowhere to stand: try again soon
@@ -211,6 +234,7 @@ function watcherTick(player, everySecond) {
   if (!everySecond) return
   // watching: turned toward the player (between a wanderer's strolls)
   if (d.getInt('walk') == 0) watcherFace(player, w, player.x, player.z)
+  watcherLight(player, w, d)
   let angle = watcherLookAngle(player, w.x, w.y + 1.5, w.z)
   let visible = player.hasLineOfSight(w)
   if (angle < 50 && visible) d.putBoolean('seen', true)
