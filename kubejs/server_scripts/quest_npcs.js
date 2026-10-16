@@ -1510,7 +1510,7 @@ EntityEvents.hurt('minecraft:player', event => {
 
 PlayerEvents.tick(event => {
   let player = event.player
-  if (player.level.clientSide) return
+  if (player.level.clientSide || !questsActive(player)) return
   // the server's tick counter: an entity's tickCount field reads as undefined from scripts here, which switched
   // every check below off until 2026-10-15
   let tick = player.server.tickCount

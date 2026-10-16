@@ -48,7 +48,42 @@ function questHasAll(player, stages) {
 
 // A talk step only answers while its quest is open: earlier quests done, the quest itself not finished, and (for a
 // quest that's discovered or handed out) its first task done. Asked of FTB Quests directly.
+// ---- the pause switch: /quests off hides the whole quest system from everyone but ops (progress is kept) ----
+// Paused players get the "fq_paused" stage, which the client sees (startup_scripts/quest_book_lock.js keeps the quest
+// book shut for them).
+function questsActive(player) {
+  return !player.server.persistentData.getBoolean('fqQuestsOff') || player.hasPermissions(2)
+}
+
+function questSyncPause(player) {
+  if (questsActive(player)) player.stages.remove('fq_paused')
+  else player.stages.add('fq_paused')
+}
+
+PlayerEvents.loggedIn(event => questSyncPause(event.player))
+
+ServerEvents.commandRegistry(event => {
+  let { commands: Commands } = event
+  let set = (ctx, off) => {
+    let server = ctx.source.server
+    server.persistentData.putBoolean('fqQuestsOff', off)
+    server.players.forEach(p => questSyncPause(p))
+    ctx.source.sendSuccess(Text.of(off ? 'Quests are hidden for everyone but ops (progress is kept).'
+      : 'Quests are on for everyone.'), true)
+    return 1
+  }
+  event.register(Commands.literal('quests').requires(src => src.hasPermission(2))
+    .then(Commands.literal('off').executes(ctx => set(ctx, true)))
+    .then(Commands.literal('on').executes(ctx => set(ctx, false)))
+    .then(Commands.literal('status').executes(ctx => {
+      ctx.source.sendSuccess(Text.of(ctx.source.server.persistentData.getBoolean('fqQuestsOff')
+        ? 'Quests are hidden for everyone but ops.' : 'Quests are on for everyone.'), false)
+      return 1
+    })))
+})
+
 function questOpen(player, giver) {
+  if (!questsActive(player)) return false
   if (!giver.quest_id || !$QuestFile || !$QuestFile.INSTANCE) return true
   try {
     let file = $QuestFile.INSTANCE
@@ -161,7 +196,7 @@ function questOfferFor(player, target) {
 // Talk to villagers and mobs.
 ItemEvents.entityInteracted(event => {
   let { player, target } = event
-  if (String(event.hand) != 'MAIN_HAND' || player.level.clientSide) return
+  if (String(event.hand) != 'MAIN_HAND' || player.level.clientSide || !questsActive(player)) return
   if (target.tags.contains('fq_enc')) return            // encounters are handled in quest_npcs.js
   let character = target.tags.contains('fq_npc')
   if (!player.crouching && !character) return
@@ -204,7 +239,7 @@ function questCharacterId(target) {
 // Quest items from drops (or found anywhere) start quests when read.
 ItemEvents.rightClicked(event => {
   let { player, item } = event
-  if (player.level.clientSide) return
+  if (player.level.clientSide || !questsActive(player)) return
   let id = String(item.id)
   let giver = questGivers().find(g => (g.type == 'drop' || g.type == 'item') && g.item == id)
   if (!giver) return
@@ -223,7 +258,7 @@ ItemEvents.rightClicked(event => {
 EntityEvents.death(event => {
   let { entity, source } = event
   let player = source.player
-  if (!player || entity.level.clientSide) return
+  if (!player || entity.level.clientSide || !questsActive(player)) return
   let type = String(entity.type)
   questGivers().forEach(giver => {
     if (giver.type == 'task_drop' && giver.from.indexOf(type) >= 0 && questHasAll(player, giver.requires)

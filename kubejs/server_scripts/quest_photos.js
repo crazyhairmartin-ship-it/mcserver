@@ -40,7 +40,7 @@ function photoSubjectFits(player, target) {
 PlayerEvents.inventoryChanged(event => {
   let player = event.player
   let item = event.item
-  if (player.level.clientSide || String(item.id) != 'camerapture:picture' || !photoIsNew(player, item)) return
+  if (player.level.clientSide || !questsActive(player) || String(item.id) != 'camerapture:picture' || !photoIsNew(player, item)) return
   npcEntries('photo').forEach(ph => {
     if (player.tags.contains(ph.stage) || !questOpen(player, ph) || !photoSubjectFits(player, ph.target)) return
     questAddStage(player, ph.stage)

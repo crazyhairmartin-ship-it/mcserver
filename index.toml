@@ -2929,7 +2929,7 @@ hash = "f1bda30ac7d99268862fc9fcd3fd1672277eca31aa665a221f4c0362dc1a3ec7"
 
 [[files]]
 file = "kubejs/server_scripts/quest_ambient.js"
-hash = "39c9e57b0b2229eccfda2e846bf678f58a9d039066e527f9061b2eb6725c8cc0"
+hash = "4a222ca42cf774949f3641073c499c97a656cdd5de894773e4ba548c0565ab0d"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.generated.js"
@@ -2937,15 +2937,15 @@ hash = "8b0c0ada9dd7aedd7d7b6bfb0a4ff07e4c86d76f64a1b61f1521fc78195cc313"
 
 [[files]]
 file = "kubejs/server_scripts/quest_givers.js"
-hash = "252cdfadf0ecf10514482f05692dfd858ac99f3c853d59ef8e76dc8f902e08cf"
+hash = "e5241245746ef76e5367de5776adb30d06076e32bd4e185b8059ae6e95449a89"
 
 [[files]]
 file = "kubejs/server_scripts/quest_npcs.js"
-hash = "af4a1df8cbcb0a21c5195f999dd464d051fa7a6c823c6fe46fc8779c4ec7678b"
+hash = "ef21eb7086d54c1e54e85d8f2a5a3b87eff1997bb42e3c9a8cf49df954bbdb4a"
 
 [[files]]
 file = "kubejs/server_scripts/quest_photos.js"
-hash = "042d45d47c0077c7f3a2bd1bebd16d4b40ffab7a60f1a9c8d94efc17701f1ed5"
+hash = "2d6cae6ec47ffffb9f22ccb6a0fadc74d775c6f7662da1c809b677f81530d28f"
 
 [[files]]
 file = "kubejs/server_scripts/quest_shops.js"
@@ -3002,6 +3002,10 @@ hash = "8401f71d28bcb037ad3787668b01e855e49f61d2983bc9f78455b2eac57cfbe7"
 [[files]]
 file = "kubejs/startup_scripts/protect_boats.js"
 hash = "0ac3f4830ae662594212d16289846b25c7cd89bd61c79263da0082127c66aeb4"
+
+[[files]]
+file = "kubejs/startup_scripts/quest_book_lock.js"
+hash = "a5f62a3a84c454baf9280bc27fbe7e25cec26093f3c398fe63de392c1601779c"
 
 [[files]]
 file = "kubejs/startup_scripts/quest_breeding.js"
