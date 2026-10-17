@@ -65,7 +65,7 @@ global.fillSea = (player, arg) => {
         queue.push(n)
       })
     }
-    fillSeaUndo[id] = placed
+    if (placed.length) fillSeaUndo[id] = placed   // a fill that placed nothing keeps the last undo
     player.tell(placed.length ? Text.green('Flooded ' + placed.length + ' blocks of this cave up to sea level. !fillsea undo takes them out.')
       : Text.gray('Nothing to fill here: you\'re above sea level.'))
     return 1
@@ -83,7 +83,7 @@ global.fillSea = (player, arg) => {
       }
     }
   }
-  fillSeaUndo[id] = placed
+  if (placed.length) fillSeaUndo[id] = placed   // a fill that placed nothing keeps the last undo
   player.tell(placed.length ? Text.green('Placed ' + placed.length + ' water blocks. /fillsea undo (or !fillsea undo) takes them out.')
     : Text.gray('Nothing to fill here: the ground is at or above sea level, or it\'s all covered.'))
   return 1
