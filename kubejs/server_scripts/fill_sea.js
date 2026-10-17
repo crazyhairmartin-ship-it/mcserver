@@ -111,6 +111,23 @@ PlayerEvents.chat(event => {
 
 let fillSeaQueue = []
 
+// /trigger fillsea (built into Minecraft, no restart or chat needed): "/trigger fillsea" fills 30 blocks around you,
+// "/trigger fillsea set 20" a radius of 20, "/trigger fillsea set 99" undoes the last fill. Ops only.
+ServerEvents.tick(event => {
+  let server = event.server
+  if (server.tickCount % 10 != 0) return
+  server.runCommandSilent('scoreboard objectives add fillsea trigger')      // once; harmless after that
+  server.players.forEach(p => {
+    if (!p.hasPermissions(2)) return
+    let u = String(p.uuid)
+    let v = server.runCommandSilent('scoreboard players get ' + u + ' fillsea')
+    server.runCommandSilent('scoreboard players enable ' + u + ' fillsea')
+    if (!(v > 0)) return
+    server.runCommandSilent('scoreboard players set ' + u + ' fillsea 0')
+    fillSeaQueue.push({ uuid: u, arg: v == 99 ? 'undo' : v == 1 ? null : String(v) })
+  })
+})
+
 ServerEvents.tick(event => {
   if (!fillSeaQueue.length) return
   let job = fillSeaQueue.shift()
