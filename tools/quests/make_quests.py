@@ -17,6 +17,7 @@ Ids of items, mobs, biomes, structures, advancements and dimensions are checked 
 import difflib
 import hashlib
 import json
+import math
 import os
 import re
 import shutil
@@ -1206,13 +1207,25 @@ def auto_layout(quests, deps):
 
     for q in quests:
         d(q)
+    # standalone quests (nothing before or after them in this chapter) go in a compact grid in book order, below the
+    # chains: in one column they made Discovery 117 rows tall (Dylan couldn't find anything, 2026-10-17)
+    has_after = {p for q in quests for p in deps.get(q, []) if p in quests}
+    alone = [q for q in quests if depth[q] == 0 and q not in has_after]
+    if len(alone) < 6:
+        alone = []
+    chained = [q for q in quests if q not in alone]
     columns = {}
-    for q in quests:
+    for q in chained:
         columns.setdefault(depth[q], []).append(q)
     pos = {}
     for col, members in columns.items():
         for i, q in enumerate(members):
             pos[q] = (col * 1.5, (i - (len(members) - 1) / 2) * 1.5)
+    if alone:
+        width = max(4, math.ceil(math.sqrt(len(alone) * 1.6)))
+        top = (max(y for _, y in pos.values()) + 2.25) if pos else 0
+        for i, q in enumerate(alone):
+            pos[q] = ((i % width) * 1.5, top + (i // width) * 1.5)
     return pos
 
 

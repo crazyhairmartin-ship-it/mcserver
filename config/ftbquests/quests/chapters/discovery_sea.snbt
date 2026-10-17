@@ -58,7 +58,7 @@
 			]
 			title: "Bones of the Deep"
 			x: 0.0d
-			y: -15.75d
+			y: 0.0d
 		}
 		{
 			description: ["A tribune of white stone stands on the deep sea floor beside drowned Atlantean ruins. Its sockets are empty. Light them with sea lanterns, and the vault sealed beneath it should open."]
@@ -128,8 +128,8 @@
 				}
 			]
 			title: "The Tribune of Atlantis"
-			x: 0.0d
-			y: -14.25d
+			x: 1.5d
+			y: 0.0d
 		}
 		{
 			description: ["An arch of prismarine stands on the sea floor with an empty socket. A conduit set in it should light the waters around."]
@@ -182,8 +182,8 @@
 				}
 			]
 			title: "The Conduit Arch"
-			x: 0.0d
-			y: -12.75d
+			x: 3.0d
+			y: 0.0d
 		}
 		{
 			description: ["A map you found marks a spot on the coast with an X. Dig where it points and bring home what a pirate buried."]
@@ -229,8 +229,8 @@
 				}
 			]
 			title: "X Marks the Spot"
-			x: 0.0d
-			y: -11.25d
+			x: 4.5d
+			y: 0.0d
 		}
 		{
 			description: ["Every wreck has a captain's chest, and every captain kept a log. Search the wrecks for the pages of their logs and piece together their last voyage."]
@@ -276,8 +276,8 @@
 				}
 			]
 			title: "Wreck Diver"
-			x: 0.0d
-			y: -9.75d
+			x: 6.0d
+			y: 0.0d
 		}
 		{
 			description: ["Sunken ruins are thick with drowned. One of them wears a medallion, and a cleric on shore would like to know whose."]
@@ -353,8 +353,8 @@
 				}
 			]
 			title: "Drowned Halls"
-			x: 0.0d
-			y: -8.25d
+			x: 7.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["54C450BB48CA2E5F"]
@@ -403,7 +403,7 @@
 			]
 			title: "The Typhon"
 			x: 0.0d
-			y: -6.75d
+			y: 1.5d
 		}
 		{
 			description: ["The sunken ship Ceryneian Hind carried a golden figurehead of a deer. Its three pieces are scattered through the flooded holds."]
@@ -463,8 +463,8 @@
 				}
 			]
 			title: "The Golden Hind"
-			x: 0.0d
-			y: -5.25d
+			x: 1.5d
+			y: 1.5d
 		}
 		{
 			description: ["Sunken wreckage lies in the shallows, still good timber. Salvage planks, rope and cloth from it and build your own cog."]
@@ -526,8 +526,8 @@
 				}
 			]
 			title: "Salvage Rights"
-			x: 0.0d
-			y: -3.75d
+			x: 3.0d
+			y: 1.5d
 		}
 		{
 			description: ["An ocean tower's light has gone out, and its keeper walks the shallows as a drowned. Put him to rest and relight the lamp at the top."]
@@ -605,8 +605,8 @@
 				}
 			]
 			title: "The Drowned Keeper"
-			x: 0.0d
-			y: -2.25d
+			x: 4.5d
+			y: 1.5d
 		}
 		{
 			description: ["The beach bar's bartender is swamped, and his customers are thirsty and impatient. Mix four cocktails and serve them before the customers give up."]
@@ -679,8 +679,8 @@
 				}
 			]
 			title: "Last Orders at the Beach Bar"
-			x: 0.0d
-			y: -0.75d
+			x: 6.0d
+			y: 1.5d
 		}
 		{
 			description: ["A circle of torches and shells on the beach. The old fishers say that if you place a seashell on each stone at sunset and play a beach disc on a radio, the sea gives something back."]
@@ -742,8 +742,8 @@
 				}
 			]
 			title: "The Ritual Circle"
-			x: 0.0d
-			y: 0.75d
+			x: 7.5d
+			y: 1.5d
 		}
 		{
 			description: ["A prismarine statue of a dog still waits for its master on the sea floor. Tame a wolf, bring it to the statue and give it the statue's collar."]
@@ -795,7 +795,7 @@
 			]
 			title: "The Faithful Hound"
 			x: 0.0d
-			y: 2.25d
+			y: 3.0d
 		}
 		{
 			description: ["A garden of coral and kelp grows inside sunken walls. Gather five kinds of coral, then plant a reef of your own."]
@@ -871,8 +871,8 @@
 				}
 			]
 			title: "The Underwater Garden"
-			x: 0.0d
-			y: 3.75d
+			x: 1.5d
+			y: 3.0d
 		}
 		{
 			description: ["A castle, a church and houses lie under the waves where a village once stood. Its church bell and the castle's crest would tell you its name."]
@@ -928,8 +928,8 @@
 				}
 			]
 			title: "The Drowned Village"
-			x: 0.0d
-			y: 5.25d
+			x: 3.0d
+			y: 3.0d
 		}
 		{
 			description: ["An overgrown disc on the beach is the first of a set. Collect the others and play them on a radio."]
@@ -1003,8 +1003,8 @@
 				}
 			]
 			title: "Songs of the Beach"
-			x: 0.0d
-			y: 6.75d
+			x: 4.5d
+			y: 3.0d
 		}
 		{
 			description: ["A warm ocean, full of colour. The Anglers' Society want reef fish in buckets to stock a tank."]
@@ -1045,8 +1045,8 @@
 				}
 			]
 			title: "The Coral Reef"
-			x: 0.0d
-			y: 8.25d
+			x: 6.0d
+			y: 3.0d
 		}
 		{
 			description: ["A deep frozen ocean of icebergs and polar bears. Cross it, and fish through a hole in the ice, as the old Anglers do."]
@@ -1093,8 +1093,8 @@
 				}
 			]
 			title: "The Frozen Sea"
-			x: 0.0d
-			y: 9.75d
+			x: 7.5d
+			y: 3.0d
 		}
 		{
 			description: ["A tropical island with palms and sand. The Crafters' guild would love a coconut, and a hammock strung between two palms is the best way to rest."]
@@ -1159,7 +1159,7 @@
 			]
 			title: "Island Life"
 			x: 0.0d
-			y: 11.25d
+			y: 4.5d
 		}
 		{
 			description: ["A rocky reef, with glowing plants clinging to the stones. The Herbalists would pay for hyacinth flowers from it."]
@@ -1206,8 +1206,8 @@
 				}
 			]
 			title: "The Rocky Reef"
-			x: 0.0d
-			y: 12.75d
+			x: 1.5d
+			y: 4.5d
 		}
 		{
 			description: ["The dune beach has seashells and sea stars along the tide line. The Anglers collect them for their trophy cases."]
@@ -1254,8 +1254,8 @@
 				}
 			]
 			title: "The Dunes"
-			x: 0.0d
-			y: 14.25d
+			x: 3.0d
+			y: 4.5d
 		}
 		{
 			description: ["A mangrove swamp, its roots forming a maze. The Couriers want to know if a boat can get through without touching the bank."]
@@ -1320,8 +1320,8 @@
 				}
 			]
 			title: "The Mangrove Maze"
-			x: 0.0d
-			y: 15.75d
+			x: 4.5d
+			y: 4.5d
 		}
 	]
 	subtitle: ["Salt, wrecks and drowned things"]

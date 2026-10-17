@@ -28,7 +28,7 @@
 			]
 			title: "Take a Seat"
 			x: 0.0d
-			y: -8.25d
+			y: 0.0d
 		}
 		{
 			description: ["Name a piece of cobblestone 'Gerald' at an anvil and keep him in your inventory for seven days."]
@@ -49,8 +49,8 @@
 				}
 			]
 			title: "Gerald"
-			x: 0.0d
-			y: -6.75d
+			x: 1.5d
+			y: 0.0d
 		}
 		{
 			description: ["Hit a target dummy one hundred times. It doesn't mind."]
@@ -76,8 +76,8 @@
 				}
 			]
 			title: "Bonk"
-			x: 0.0d
-			y: -5.25d
+			x: 3.0d
+			y: 0.0d
 		}
 		{
 			description: ["Wear a carved pumpkin on your head for a whole day and night."]
@@ -103,8 +103,8 @@
 				}
 			]
 			title: "Pumpkin Head"
-			x: 0.0d
-			y: -3.75d
+			x: 4.5d
+			y: 0.0d
 		}
 		{
 			description: ["Build a cake tower three tiers high, and don't eat any of it."]
@@ -125,8 +125,8 @@
 				}
 			]
 			title: "Too Much Cake"
-			x: 0.0d
-			y: -2.25d
+			x: 6.0d
+			y: 0.0d
 		}
 		{
 			description: ["Dye sixteen sheep sixteen different colours and get them in one pen."]
@@ -148,7 +148,7 @@
 			]
 			title: "Every Colour"
 			x: 0.0d
-			y: -0.75d
+			y: 1.5d
 		}
 		{
 			description: ["Make some soap and wash the dye off something that really didn't need washing."]
@@ -169,8 +169,8 @@
 				}
 			]
 			title: "Squeaky Clean"
-			x: 0.0d
-			y: 0.75d
+			x: 1.5d
+			y: 1.5d
 		}
 		{
 			description: ["Play a whole song on an instrument in a village square. Nobody claps."]
@@ -191,8 +191,8 @@
 				}
 			]
 			title: "Busker"
-			x: 0.0d
-			y: 2.25d
+			x: 3.0d
+			y: 1.5d
 		}
 		{
 			description: ["Ride a pig across a river with a carrot on a stick, and stay dry."]
@@ -213,8 +213,8 @@
 				}
 			]
 			title: "Pig Ferry"
-			x: 0.0d
-			y: 3.75d
+			x: 4.5d
+			y: 1.5d
 		}
 		{
 			description: ["Put a flower pot with a flower in it on the very highest block of a village."]
@@ -235,8 +235,8 @@
 				}
 			]
 			title: "Summit Flower"
-			x: 0.0d
-			y: 5.25d
+			x: 6.0d
+			y: 1.5d
 		}
 		{
 			description: ["Stand outside, uncovered, through a whole thunderstorm."]
@@ -258,7 +258,7 @@
 			]
 			title: "Rain Dance"
 			x: 0.0d
-			y: 6.75d
+			y: 3.0d
 		}
 		{
 			description: ["Get five ducks to stand in a straight line. Leads allowed."]
@@ -279,8 +279,8 @@
 				}
 			]
 			title: "Ducks in a Row"
-			x: 0.0d
-			y: 8.25d
+			x: 1.5d
+			y: 3.0d
 		}
 	]
 	subtitle: ["Pointless, and proud of it"]

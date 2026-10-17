@@ -55,7 +55,7 @@
 			]
 			title: "Water from Three Wells"
 			x: 0.0d
-			y: -19.5d
+			y: 4.5d
 		}
 		{
 			description: ["A young Herbalist lost her lucky coin in a wishing well and cannot bear to be without it."]
@@ -106,8 +106,8 @@
 				}
 			]
 			title: "Make a Wish"
-			x: 0.0d
-			y: -18.0d
+			x: 1.5d
+			y: 4.5d
 		}
 		{
 			description: ["A Herbalist is out of honey, and the bee dome in the birch woods has plenty."]
@@ -166,8 +166,8 @@
 				}
 			]
 			title: "Honey from the Dome"
-			x: 0.0d
-			y: -16.5d
+			x: 3.0d
+			y: 4.5d
 		}
 		{
 			description: ["The Growers' co-op wants to know how desert wells never run dry, and what grows beside them."]
@@ -220,8 +220,8 @@
 				}
 			]
 			title: "Desert Water"
-			x: 0.0d
-			y: -15.0d
+			x: 4.5d
+			y: 4.5d
 		}
 		{
 			description: ["A desert farmer needs water for a new field and the only working pump is out in the dunes."]
@@ -286,8 +286,8 @@
 				}
 			]
 			title: "The Pump Still Works"
-			x: 0.0d
-			y: -13.5d
+			x: 6.0d
+			y: 4.5d
 		}
 		{
 			dependencies: ["5F1A80228546C8A0"]
@@ -481,8 +481,8 @@
 				}
 			]
 			title: "The Flour Run"
-			x: 0.0d
-			y: -12.0d
+			x: 7.5d
+			y: 4.5d
 		}
 		{
 			description: ["A Crafters' guild mason wants the village square to have a stone fountain like the old ones."]
@@ -534,8 +534,8 @@
 				}
 			]
 			title: "Restore the Fountain"
-			x: 0.0d
-			y: -10.5d
+			x: 9.0d
+			y: 4.5d
 		}
 		{
 			description: ["The Crafters' guild needs old stone with a history to it for the chapel repairs."]
@@ -596,7 +596,7 @@
 			]
 			title: "Salvage"
 			x: 0.0d
-			y: -9.0d
+			y: 6.0d
 		}
 		{
 			description: ["A tavern keeper heard that the roadside stalls sell spices unavailable in town and wants a taste."]
@@ -669,7 +669,7 @@
 			]
 			title: "The Travelling Market"
 			x: 0.0d
-			y: -7.5d
+			y: -1.5d
 		}
 		{
 			description: ["A tavern keeper insists food tastes better cooked outdoors, and wants a meal from a wild fire camp."]
@@ -716,8 +716,8 @@
 				}
 			]
 			title: "Cook over an Open Fire"
-			x: 0.0d
-			y: -6.0d
+			x: 1.5d
+			y: 6.0d
 		}
 		{
 			description: ["The village butcher cannot sit without a rude noise, and the whole village laughs. Somebody is responsible."]
@@ -779,8 +779,8 @@
 				}
 			]
 			title: "Something Smells Funny"
-			x: 0.0d
-			y: -4.5d
+			x: 3.0d
+			y: 6.0d
 		}
 		{
 			description: ["The Village Watch fear raiders are camped in the old castle ruins and need someone to look without being seen."]
@@ -824,8 +824,8 @@
 				}
 			]
 			title: "Scout the Castle"
-			x: 0.0d
-			y: -3.0d
+			x: 4.5d
+			y: 6.0d
 		}
 		{
 			description: ["The Village Watch found an abandoned camp with the fire still warm, and fear for the campers."]
@@ -881,8 +881,8 @@
 				}
 			]
 			title: "Who Left the Camp?"
-			x: 0.0d
-			y: -1.5d
+			x: 6.0d
+			y: 6.0d
 		}
 		{
 			description: ["The Village Watch's captain wants to learn from a fortified village, and the best lesson is to help hold its wall."]
@@ -933,8 +933,8 @@
 				}
 			]
 			title: "Behind the Walls"
-			x: 0.0d
-			y: 0.0d
+			x: 7.5d
+			y: 6.0d
 		}
 		{
 			description: ["The Village Watch want the bandit who robbed a merchant brought to justice before he vanishes."]
@@ -999,8 +999,8 @@
 				}
 			]
 			title: "Justice"
-			x: 0.0d
-			y: 1.5d
+			x: 9.0d
+			y: 6.0d
 		}
 		{
 			description: ["An Arcane Order librarian wants copies of the carvings on fallen statues, which may be some of the oldest writing around."]
@@ -1083,7 +1083,7 @@
 			]
 			title: "Statue Rubbings"
 			x: 0.0d
-			y: 3.0d
+			y: 7.5d
 		}
 		{
 			description: ["The Anglers' Society talk of a fisherman who left his village for a boat, and keeps the best bait."]
@@ -1138,7 +1138,7 @@
 			]
 			title: "The Outcast Fisherman"
 			x: 0.0d
-			y: 4.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["1A2F47855344A58E"]
@@ -1322,8 +1322,8 @@
 				}
 			]
 			title: "The Lost Cart"
-			x: 0.0d
-			y: 6.0d
+			x: 1.5d
+			y: 7.5d
 		}
 		{
 			description: ["A courier is mapping the wild ruins so that travellers do not wander into them after dark."]
@@ -1380,7 +1380,7 @@
 				}
 			]
 			title: "Ruins on the Map"
-			x: 0.0d
+			x: 3.0d
 			y: 7.5d
 		}
 		{
@@ -1434,7 +1434,7 @@
 			]
 			title: "A Parcel for the Sky"
 			x: 0.0d
-			y: 9.0d
+			y: 1.5d
 		}
 		{
 			dependencies: ["0A8E45C817D55342"]
@@ -1538,8 +1538,8 @@
 				}
 			]
 			title: "Map the Region"
-			x: 0.0d
-			y: 10.5d
+			x: 4.5d
+			y: 7.5d
 		}
 		{
 			description: ["A courier has a letter for a villager in the next village along the road."]
@@ -1598,8 +1598,8 @@
 				}
 			]
 			title: "Letter to Another Village"
-			x: 0.0d
-			y: 12.0d
+			x: 6.0d
+			y: 7.5d
 		}
 		{
 			description: ["The Couriers want two villages' waystones linked, so that runners can cross between them in a blink."]
@@ -1644,8 +1644,8 @@
 				}
 			]
 			title: "Linking the Villages"
-			x: 0.0d
-			y: 13.5d
+			x: 7.5d
+			y: 7.5d
 		}
 		{
 			description: ["The Couriers have never reached the village in the sparse jungle and would like to know what they trade."]
@@ -1697,8 +1697,8 @@
 				}
 			]
 			title: "The Jungle Village"
-			x: 0.0d
-			y: 15.0d
+			x: 9.0d
+			y: 7.5d
 		}
 		{
 			description: ["A Sanctuary keeper's horse ran off to a wild horse pen, and she is frightened rather than bad."]
@@ -1765,7 +1765,7 @@
 			]
 			title: "The Runaway Horse"
 			x: 0.0d
-			y: 16.5d
+			y: 9.0d
 		}
 		{
 			description: ["Foxes have taken over a hut in the taiga, and a Sanctuary keeper wants a kit raised safely."]
@@ -1817,8 +1817,8 @@
 				}
 			]
 			title: "The Fox in the Hut"
-			x: 0.0d
-			y: 18.0d
+			x: 1.5d
+			y: 9.0d
 		}
 		{
 			description: ["The Sanctuary keepers want a sled team for winter deliveries, and need to see how wolves pull."]
@@ -1876,8 +1876,8 @@
 				}
 			]
 			title: "Sled Dogs"
-			x: 0.0d
-			y: 19.5d
+			x: 3.0d
+			y: 9.0d
 		}
 	]
 	subtitle: ["Small jobs for the people around you"]

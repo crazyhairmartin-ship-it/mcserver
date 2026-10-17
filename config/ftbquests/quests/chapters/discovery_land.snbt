@@ -85,7 +85,7 @@
 			]
 			title: "The Toll Road"
 			x: 0.0d
-			y: -58.5d
+			y: 3.75d
 		}
 		{
 			description: ["The bandits who hold these towers keep a ledger of every caravan they've robbed, torn into pages and hidden among their stores so no one man can sell them out. Fight off the archers and find the pages: the villages they robbed will want to know."]
@@ -139,8 +139,8 @@
 				}
 			]
 			title: "The Bandits' Ledger"
-			x: 0.0d
-			y: -57.0d
+			x: 1.5d
+			y: 3.75d
 		}
 		{
 			description: ["A giant aviary stands open on the mountainside with its keepers long gone. Birds are still caged inside, and they will starve."]
@@ -192,8 +192,8 @@
 				}
 			]
 			title: "The Great Cage"
-			x: 0.0d
-			y: -55.5d
+			x: 3.0d
+			y: 3.75d
 		}
 		{
 			description: ["The bathhouse's pools still steam, and something lurks under the water. Someone drowned here, and the bath master's ledger says who and why."]
@@ -246,8 +246,8 @@
 				}
 			]
 			title: "Steam and Shadows"
-			x: 0.0d
-			y: -54.0d
+			x: 4.5d
+			y: 3.75d
 		}
 		{
 			description: ["The foundry's furnaces have gone cold but its guardians still walk the floor, keeping the master smith's plans. Take the plans, and forge what they describe."]
@@ -306,8 +306,8 @@
 				}
 			]
 			title: "The Foundry's Last Blueprint"
-			x: 0.0d
-			y: -52.5d
+			x: 6.0d
+			y: 3.75d
 		}
 		{
 			description: ["Keep Kayra's garrison went mad and still holds its walls. Fight up through the gatehouse to the lord of the keep, then hold his throne room against the last of his men."]
@@ -393,8 +393,8 @@
 				}
 			]
 			title: "The Siege of Keep Kayra"
-			x: 0.0d
-			y: -51.0d
+			x: 7.5d
+			y: 3.75d
 		}
 		{
 			description: ["The mechanical nest hums with things that aren't quite alive. Its guardians carry a mainspring: the heart of the hive. A Crafters' guild mason would very much like to study it."]
@@ -452,8 +452,8 @@
 				}
 			]
 			title: "The Clockwork Hive"
-			x: 0.0d
-			y: -49.5d
+			x: 9.0d
+			y: 3.75d
 		}
 		{
 			description: ["The plague asylum's wards still hold the sick and what feeds on them. The Herbalists want samples from its apothecary, and a cure brewed from the notes."]
@@ -506,8 +506,8 @@
 				}
 			]
 			title: "Samples from the Asylum"
-			x: 0.0d
-			y: -48.0d
+			x: 10.5d
+			y: 3.75d
 		}
 		{
 			description: ["Shiraz Palace kept a fire burning in every court, and the old scholars wrote that the treasury answers only to a palace whose fires are lit. Relight the dead court fires and search for the treasury's seal among the palace stores."]
@@ -559,8 +559,8 @@
 				}
 			]
 			title: "The Palace Treasury"
-			x: 0.0d
-			y: -46.5d
+			x: 12.0d
+			y: 3.75d
 		}
 		{
 			description: ["Thorns have swallowed the Thornborn Towers from the roots up, and the vines fight back. Climb to the top and bring down a cutting of the first thorn."]
@@ -631,8 +631,8 @@
 				}
 			]
 			title: "The Thornborn Ascent"
-			x: 0.0d
-			y: -45.0d
+			x: 13.5d
+			y: 3.75d
 		}
 		{
 			description: ["Every wall of the infested temple hides silverfish. Reach the inner sanctum and smash its brood stones before the swarm closes the way out."]
@@ -691,8 +691,8 @@
 				}
 			]
 			title: "Swarming Stones"
-			x: 0.0d
-			y: -43.5d
+			x: 15.0d
+			y: 3.75d
 		}
 		{
 			description: ["An abandoned temple of the old order still keeps its sacred fire pit. The inscriptions name four offerings to be burned there before the reliquary will open."]
@@ -780,8 +780,8 @@
 				}
 			]
 			title: "The Old Order's Temple"
-			x: 0.0d
-			y: -42.0d
+			x: 16.5d
+			y: 3.75d
 		}
 		{
 			description: ["A village built inside giant mushrooms trades in caps and spores. Their people will teach you to grow the mushrooms, if you bring back a full set of blocks."]
@@ -852,7 +852,7 @@
 			]
 			title: "The Spore Folk"
 			x: 0.0d
-			y: -40.5d
+			y: 5.25d
 		}
 		{
 			description: ["The scorched mines burn, and the last shift never came up. Find the trapped miners through the heat and get them out before the next collapse."]
@@ -898,8 +898,8 @@
 				}
 			]
 			title: "Fire in the Hole"
-			x: 0.0d
-			y: -39.0d
+			x: 1.5d
+			y: 5.25d
 		}
 		{
 			description: ["The coliseum's stands are empty, but its gates still open for a challenger. A note pinned to the gate sends you to the Bounty Office, who know who runs the fights now."]
@@ -938,8 +938,8 @@
 				}
 			]
 			title: "Empty Stands"
-			x: 0.0d
-			y: -37.5d
+			x: 3.0d
+			y: 5.25d
 		}
 		{
 			description: ["The witches of the swamp villa are holding a tea party, and their recipe book lies open on the table. Copy it unseen, and brew their strangest potion yourself."]
@@ -989,8 +989,8 @@
 				}
 			]
 			title: "Tea at the Witch Villa"
-			x: 0.0d
-			y: -36.0d
+			x: 4.5d
+			y: 5.25d
 		}
 		{
 			description: ["The old manor's doors lock behind you. The family who lived here hid four keys among the house's stores before they fled, and the last of them opens the study where their final letter waits."]
@@ -1041,8 +1041,8 @@
 				}
 			]
 			title: "The Old Manor"
-			x: 0.0d
-			y: -34.5d
+			x: 6.0d
+			y: 5.25d
 		}
 		{
 			description: ["An ancient temple sits on a mountain peak above the clouds. The shepherds below say that once, four fires burned at its corners and the whole valley could see it. Bring fire back to the peak."]
@@ -1097,8 +1097,8 @@
 				}
 			]
 			title: "The Temple on the Peak"
-			x: 0.0d
-			y: -33.0d
+			x: 7.5d
+			y: 5.25d
 		}
 		{
 			description: ["The relic temple's altar is empty. Jungle thieves took the relic, and their trail leads to a nearby ruin."]
@@ -1162,8 +1162,8 @@
 				}
 			]
 			title: "The Sacred Relic"
-			x: 0.0d
-			y: -31.5d
+			x: 9.0d
+			y: 5.25d
 		}
 		{
 			description: ["A giant warped sword is driven into the shattered hills, as if dropped from the Nether. The forger's mark on its hilt names who made it."]
@@ -1208,8 +1208,8 @@
 				}
 			]
 			title: "The Sword in the Hill"
-			x: 0.0d
-			y: -30.0d
+			x: 10.5d
+			y: 5.25d
 		}
 		{
 			description: ["A cathedral stands alone in the wilds, its bell tower cracked. Climb the tower and ring the bell; a cleric will arrive to say why the town around it never got built."]
@@ -1259,8 +1259,8 @@
 				}
 			]
 			title: "The Cathedral"
-			x: 0.0d
-			y: -28.5d
+			x: 12.0d
+			y: 5.25d
 		}
 		{
 			description: ["Warped wood houses and towers stand in the Overworld where nothing warped should grow. The Arcane Order suspect a leak from the Nether, and want a sample."]
@@ -1313,8 +1313,8 @@
 				}
 			]
 			title: "Wrong Side of the Portal"
-			x: 0.0d
-			y: -27.0d
+			x: 13.5d
+			y: 5.25d
 		}
 		{
 			description: ["A ruined beacon still has its pyramid, half-robbed by looters. Replace the missing blocks and light it again, so the beam can be seen from miles away."]
@@ -1362,8 +1362,8 @@
 				}
 			]
 			title: "A Beacon Gone Dark"
-			x: 0.0d
-			y: -25.5d
+			x: 15.0d
+			y: 5.25d
 		}
 		{
 			description: ["A desert ruin has a chest sitting out in the open, unguarded. The chest bites. Beat the mimic, and the real loot is under the sand where it sat."]
@@ -1438,8 +1438,8 @@
 				}
 			]
 			title: "Too Good to Be True"
-			x: 0.0d
-			y: -24.0d
+			x: 16.5d
+			y: 5.25d
 		}
 		{
 			description: ["The desert temple's tomb is sealed, and its corridors are trapped. The builders left hidden switches for their own way in. Press them, mind the plates, and find what the pharaoh was buried with."]
@@ -1505,7 +1505,7 @@
 			]
 			title: "The Pharaoh's Vault"
 			x: 0.0d
-			y: -22.5d
+			y: 6.75d
 		}
 		{
 			description: ["A jungle temple's halls are full of dart traps and crushing floors. A carving at the entrance gives a warning and a deadline: be at the treasure room before the floors close."]
@@ -1570,8 +1570,8 @@
 				}
 			]
 			title: "Traps of the Jungle Temple"
-			x: 0.0d
-			y: -21.0d
+			x: 1.5d
+			y: 6.75d
 		}
 		{
 			description: ["On one of the old river bridges you find the builder's plaque: it asks that someone build one more. Cross another river with a bridge of your own."]
@@ -1618,8 +1618,8 @@
 				}
 			]
 			title: "The Bridge Builder"
-			x: 0.0d
-			y: -19.5d
+			x: 3.0d
+			y: 6.75d
 		}
 		{
 			description: ["A ruined portal stands half-collapsed with crying obsidian in its frame. Rebuild the frame, but don't light it yet: the Arcane Order want a word first."]
@@ -1677,8 +1677,8 @@
 				}
 			]
 			title: "The Broken Gate"
-			x: 0.0d
-			y: -18.0d
+			x: 4.5d
+			y: 6.75d
 		}
 		{
 			description: ["Under an igloo's carpet, a ladder leads to a cell holding a zombie villager. Cure him with weakness and a golden apple, and he will tell you whose igloo it was."]
@@ -1722,8 +1722,8 @@
 				}
 			]
 			title: "The Igloo's Basement"
-			x: 0.0d
-			y: -16.5d
+			x: 6.0d
+			y: 6.75d
 		}
 		{
 			description: ["Activating a wild waystone starts something. The Couriers say there's a whole network of them, each one remembers the others."]
@@ -1781,8 +1781,8 @@
 				}
 			]
 			title: "Stones That Remember"
-			x: 0.0d
-			y: -15.0d
+			x: 7.5d
+			y: 6.75d
 		}
 		{
 			description: ["Frozen spires and an abandoned village in the snow, built by no people anyone knows. Something very large sleeps far below. Note it, copy the writing, and leave it alone for now."]
@@ -1846,7 +1846,7 @@
 			]
 			title: "Frostbitten Ruins"
 			x: 0.0d
-			y: -13.5d
+			y: -1.5d
 		}
 		{
 			description: ["A desert village has been occupied by scouts of something that digs, and a dig site nearby goes deeper than it should. Drive the scouts off, read the foreman's notes, and leave the pit alone."]
@@ -1894,7 +1894,7 @@
 			]
 			title: "Occupied Dunes"
 			x: 0.0d
-			y: -12.0d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -2013,8 +2013,8 @@
 				}
 			]
 			title: "The Ominous Woods"
-			x: 0.0d
-			y: -10.5d
+			x: 9.0d
+			y: 6.75d
 		}
 		{
 			description: ["You've found a volcano, smoking and black. The Miners' Guild would pay for lava, black sand and magma from its crater."]
@@ -2073,8 +2073,8 @@
 				}
 			]
 			title: "The Mountain That Smokes"
-			x: 0.0d
-			y: -9.0d
+			x: 10.5d
+			y: 6.75d
 		}
 		{
 			description: ["A single mushroom house stands far from anywhere with its door ajar and its owner missing. A trail of spores leads from the doorstep into the cave behind, where spiders have him cornered."]
@@ -2127,8 +2127,8 @@
 				}
 			]
 			title: "The Lonely Cap"
-			x: 0.0d
-			y: -7.5d
+			x: 12.0d
+			y: 6.75d
 		}
 		{
 			description: ["An abandoned chapel stands silent: its bell was carried off years ago and the candles have burnt out. Someone in the forest has been listening for it ever since."]
@@ -2201,8 +2201,8 @@
 				}
 			]
 			title: "The Chapel in the Pines"
-			x: 0.0d
-			y: -6.0d
+			x: 13.5d
+			y: 6.75d
 		}
 		{
 			description: ["Villagers cast out of their village live in a shack on their own. They'd like to go home, if anyone would carry their apology."]
@@ -2262,8 +2262,8 @@
 				}
 			]
 			title: "The Outcasts"
-			x: 0.0d
-			y: -4.5d
+			x: 15.0d
+			y: 6.75d
 		}
 		{
 			description: ["Northern ruins carry runes on their standing stones, and the old scholars of the Arcane Order pay well for a good rubbing. Bring paper and charcoal, and take one."]
@@ -2328,8 +2328,8 @@
 				}
 			]
 			title: "Northern Runes"
-			x: 0.0d
-			y: -3.0d
+			x: 16.5d
+			y: 6.75d
 		}
 		{
 			description: ["The engineer left plans for a machine half-built: a working piston door. His notes list the parts."]
@@ -2390,7 +2390,7 @@
 			]
 			title: "The Engineer's Plans"
 			x: 0.0d
-			y: -1.5d
+			y: 8.25d
 		}
 		{
 			description: ["The desert outpost keeps a water barrel and a logbook of travellers who never arrived. The next oasis is a hard walk across the dunes, and the barrel only holds so much."]
@@ -2440,8 +2440,8 @@
 				}
 			]
 			title: "The Mirage"
-			x: 0.0d
-			y: 0.0d
+			x: 1.5d
+			y: 8.25d
 		}
 		{
 			description: ["A notice on the gallows names a thief who swore he was innocent. The real culprit dropped a coin purse nearby, and the Village Watch could clear the dead man's name."]
@@ -2487,8 +2487,8 @@
 				}
 			]
 			title: "Gallows Hill"
-			x: 0.0d
-			y: 1.5d
+			x: 3.0d
+			y: 8.25d
 		}
 		{
 			description: ["A monument to a felled forest stands on bare ground. Plant a sapling of every vanilla tree around it and bone-meal them up, and the grove will return."]
@@ -2542,8 +2542,8 @@
 				}
 			]
 			title: "Grove of Remembrance"
-			x: 0.0d
-			y: 3.0d
+			x: 4.5d
+			y: 8.25d
 		}
 		{
 			description: ["Lonely houses stand empty along the roads, tables still set. A diary, torn into pages, is scattered through them. Gather its pages to learn where the families went."]
@@ -2589,8 +2589,8 @@
 				}
 			]
 			title: "Nobody's Home"
-			x: 0.0d
-			y: 4.5d
+			x: 6.0d
+			y: 8.25d
 		}
 		{
 			description: ["A witch's circle of stones stands in the swamp. A potion is carved into its stones, and the old tales say a witch's familiar answers when it is poured at the centre."]
@@ -2647,8 +2647,8 @@
 				}
 			]
 			title: "The Circle of Stones"
-			x: 0.0d
-			y: 6.0d
+			x: 7.5d
+			y: 8.25d
 		}
 		{
 			description: ["Obelisks in the desert carry the same carvings in different orders. One symbol appears on every one, and the old tales say it points to a cache."]
@@ -2702,8 +2702,8 @@
 				}
 			]
 			title: "Reading the Obelisks"
-			x: 0.0d
-			y: 7.5d
+			x: 9.0d
+			y: 8.25d
 		}
 		{
 			description: ["Trail ruins hide their past under suspicious gravel. Brush out four different pottery sherds and fit them on a decorated pot to read the story they tell."]
@@ -2778,8 +2778,8 @@
 				}
 			]
 			title: "Shards of the Trail"
-			x: 0.0d
-			y: 9.0d
+			x: 10.5d
+			y: 8.25d
 		}
 		{
 			description: ["The village bakery's baker is behind on orders for the festival. Bake a strawberry cake, a baguette and a tray of cupcakes and deliver them."]
@@ -2846,8 +2846,8 @@
 				}
 			]
 			title: "Fresh from the Oven"
-			x: 0.0d
-			y: 10.5d
+			x: 12.0d
+			y: 8.25d
 		}
 		{
 			description: ["A brewfest tent stands in the plains with a contest board. Brew three beers, enter them, and beat the brewfest regulars and the Beer Elemental they keep in the cellar."]
@@ -2932,8 +2932,8 @@
 				}
 			]
 			title: "Brewfest"
-			x: 0.0d
-			y: 12.0d
+			x: 13.5d
+			y: 8.25d
 		}
 		{
 			description: ["The alpine chalet's cook makes fondue for climbers, but the cheese cellar is empty. Bring cheese of three kinds from Meadow's animals and cook the fondue together."]
@@ -2999,8 +2999,8 @@
 				}
 			]
 			title: "Fondue at the Chalet"
-			x: 0.0d
-			y: 13.5d
+			x: 15.0d
+			y: 8.25d
 		}
 		{
 			description: ["An alpine observation post has a list of animals to sight pinned to its sill. Photograph three of them for the survey."]
@@ -3056,8 +3056,8 @@
 				}
 			]
 			title: "The Observation Post"
-			x: 0.0d
-			y: 15.0d
+			x: 16.5d
+			y: 8.25d
 		}
 		{
 			description: ["A cottage in the woods with a garden gone wild. The wandering gardener who lives there wants her beds replanted, and will give a cutting of each."]
@@ -3128,7 +3128,7 @@
 			]
 			title: "The Gardener's Cottage"
 			x: 0.0d
-			y: 16.5d
+			y: 9.75d
 		}
 		{
 			description: ["A gingerbread house in the snow, and a gingerbread golem that won't let anyone eat the walls. Bake it some gingerbread cookies and eggnog to win it over."]
@@ -3189,8 +3189,8 @@
 				}
 			]
 			title: "The Gingerbread House"
-			x: 0.0d
-			y: 18.0d
+			x: 1.5d
+			y: 9.75d
 		}
 		{
 			description: ["A lonely grave where two butterflies always circle. The legend carved on it asks for two matching butterflies to be set free at the grave."]
@@ -3243,8 +3243,8 @@
 				}
 			]
 			title: "The Butterfly Lovers"
-			x: 0.0d
-			y: 19.5d
+			x: 3.0d
+			y: 9.75d
 		}
 		{
 			description: ["A skeleton in armour lies where an adventurer fell. Take the name tag and gear found on it to the nearest village and tell the family, who will want to know."]
@@ -3312,8 +3312,8 @@
 				}
 			]
 			title: "Bring Them Home"
-			x: 0.0d
-			y: 21.0d
+			x: 4.5d
+			y: 9.75d
 		}
 		{
 			description: ["A cherry grove in bloom, pink petals drifting through the air. The Herbalists would love a sample of its petals, its saplings and its bees' honey."]
@@ -3367,7 +3367,7 @@
 			]
 			title: "Petals on the Wind"
 			x: 0.0d
-			y: 22.5d
+			y: 1.5d
 		}
 		{
 			description: ["You've landed on a mushroom island. A mushroom idol stands on some of them, and the mooshrooms give stew instead of milk."]
@@ -3419,8 +3419,8 @@
 				}
 			]
 			title: "Mooshroom Shores"
-			x: 0.0d
-			y: 24.0d
+			x: 6.0d
+			y: 9.75d
 		}
 		{
 			description: ["A field of lavender hums with bees. The Herbalists say a calming tea from it settles the nerves of the whole village."]
@@ -3468,8 +3468,8 @@
 				}
 			]
 			title: "Lavender Haze"
-			x: 0.0d
-			y: 25.5d
+			x: 7.5d
+			y: 9.75d
 		}
 		{
 			description: ["You've stumbled into the rare Origin Valley, where the world looks as it did long ago. The Field Guide would love a block of its old grass and a rose."]
@@ -3515,8 +3515,8 @@
 				}
 			]
 			title: "Where It All Began"
-			x: 0.0d
-			y: 27.0d
+			x: 9.0d
+			y: 9.75d
 		}
 		{
 			description: ["The alpha grove is all old-style leaves and grass, like a memory of the world before. Bring back its saplings and leaves before you forget what it looked like."]
@@ -3564,8 +3564,8 @@
 				}
 			]
 			title: "Alpha Grove"
-			x: 0.0d
-			y: 28.5d
+			x: 10.5d
+			y: 9.75d
 		}
 		{
 			description: ["A mystic grove glows with strange flowers. A fairy shows itself among them if you wait quietly, and will lead you to its ring."]
@@ -3604,8 +3604,8 @@
 				}
 			]
 			title: "The Mystic Grove"
-			x: 0.0d
-			y: 30.0d
+			x: 12.0d
+			y: 9.75d
 		}
 		{
 			description: ["A redwood forest, with trees taller than any tower. The Crafters' guild wants wood from one of the giants, and a climb to the top is the only way to reach the good branches."]
@@ -3662,8 +3662,8 @@
 				}
 			]
 			title: "Giants of the Forest"
-			x: 0.0d
-			y: 31.5d
+			x: 13.5d
+			y: 9.75d
 		}
 		{
 			description: ["Hot springs steam in the cold air. Soak in the thermal water until you're fully healed, and take a bottle home for a sore friend."]
@@ -3708,8 +3708,8 @@
 				}
 			]
 			title: "Hot Springs"
-			x: 0.0d
-			y: 33.0d
+			x: 15.0d
+			y: 9.75d
 		}
 		{
 			description: ["A snowblossom grove, white petals in the snow. The Herbalists want leaves and a sapling to see if it will grow in the village."]
@@ -3756,8 +3756,8 @@
 				}
 			]
 			title: "Snowblossom"
-			x: 0.0d
-			y: 34.5d
+			x: 16.5d
+			y: 9.75d
 		}
 		{
 			description: ["A dried-out wasteland, nothing living in it. A single dead tree stands at its heart, and the Couriers want to know if the way across is safe."]
@@ -3804,7 +3804,7 @@
 			]
 			title: "The Wasteland"
 			x: 0.0d
-			y: 36.0d
+			y: 11.25d
 		}
 		{
 			description: ["A pumpkin patch stretches to the horizon. The Growers' co-op would love your biggest pumpkins, and the children want a jack o'lantern."]
@@ -3852,8 +3852,8 @@
 				}
 			]
 			title: "The Pumpkin Patch"
-			x: 0.0d
-			y: 37.5d
+			x: 1.5d
+			y: 11.25d
 		}
 		{
 			description: ["Baobabs rise from the savanna like upside-down trees. The Crafters' guild would love some of their wood, and the herds that pass beneath are worth a look."]
@@ -3894,8 +3894,8 @@
 				}
 			]
 			title: "Under the Baobabs"
-			x: 0.0d
-			y: 39.0d
+			x: 3.0d
+			y: 11.25d
 		}
 		{
 			description: ["White chalk cliffs rise above the sea. Climb from the beach to the top without a fall, and bring chalk for the Crafters' guild."]
@@ -3936,8 +3936,8 @@
 				}
 			]
 			title: "White Cliffs"
-			x: 0.0d
-			y: 40.5d
+			x: 4.5d
+			y: 11.25d
 		}
 		{
 			description: ["Stone spires jut from the land like needles. Stand on top of the tallest you can find and look across the world."]
@@ -3983,8 +3983,8 @@
 				}
 			]
 			title: "Among the Spires"
-			x: 0.0d
-			y: 42.0d
+			x: 6.0d
+			y: 11.25d
 		}
 		{
 			description: ["A magnolia woodland in bloom, with a shining meadow beyond it. The Herbalists want its flowers and the meadow's glistening grass."]
@@ -4031,8 +4031,8 @@
 				}
 			]
 			title: "Magnolia in Bloom"
-			x: 0.0d
-			y: 43.5d
+			x: 7.5d
+			y: 11.25d
 		}
 		{
 			description: ["An ashen woodland, burnt long ago. Bring back some ash and a surviving sapling to see if the soil can heal."]
@@ -4079,8 +4079,8 @@
 				}
 			]
 			title: "Ashen Woods"
-			x: 0.0d
-			y: 45.0d
+			x: 9.0d
+			y: 11.25d
 		}
 		{
 			description: ["A desert of towering saguaro cacti. The Growers' co-op would like a cutting of each cactus and a joshua tree sapling, if you don't hug the cactus."]
@@ -4127,8 +4127,8 @@
 				}
 			]
 			title: "Land of Cacti"
-			x: 0.0d
-			y: 46.5d
+			x: 10.5d
+			y: 11.25d
 		}
 		{
 			description: ["The mountains here climb far higher than they should. Stand above the clouds on foot and look down at the world."]
@@ -4172,8 +4172,8 @@
 				}
 			]
 			title: "Above the Clouds"
-			x: 0.0d
-			y: 48.0d
+			x: 12.0d
+			y: 11.25d
 		}
 		{
 			description: ["Rivers here cut deep valleys. Follow one down to where it meets the sea and fish at its mouth, where the Anglers say the biggest fish gather."]
@@ -4220,8 +4220,8 @@
 				}
 			]
 			title: "The Deep Valley"
-			x: 0.0d
-			y: 49.5d
+			x: 13.5d
+			y: 11.25d
 		}
 		{
 			description: ["Spikes of ice rise from a frozen plain. The Miners' Guild want packed ice from the top of a spike, which only a pick with silk touch will take."]
@@ -4262,8 +4262,8 @@
 				}
 			]
 			title: "Ice Spikes"
-			x: 0.0d
-			y: 51.0d
+			x: 15.0d
+			y: 11.25d
 		}
 		{
 			description: ["The badlands are banded in every colour of clay. The Crafters' guild want a sample of each colour from the canyon walls."]
@@ -4332,8 +4332,8 @@
 				}
 			]
 			title: "The Painted Badlands"
-			x: 0.0d
-			y: 52.5d
+			x: 16.5d
+			y: 11.25d
 		}
 		{
 			dependencies: ["7A4288F150FC0A4E"]
@@ -4424,7 +4424,7 @@
 			]
 			title: "A Song from Somewhere"
 			x: 0.0d
-			y: 54.0d
+			y: 12.75d
 		}
 		{
 			description: ["A bottle of antique ink from a chest. Ink a map with it and the map should show an old landmark that isn't on newer maps."]
@@ -4474,8 +4474,8 @@
 				}
 			]
 			title: "Antique Ink"
-			x: 0.0d
-			y: 55.5d
+			x: 1.5d
+			y: 12.75d
 		}
 		{
 			description: ["A lone key from a dungeon chest, with a tag that names a safe. Find the safe in a ruin nearby, and open it."]
@@ -4526,8 +4526,8 @@
 				}
 			]
 			title: "The Strange Key"
-			x: 0.0d
-			y: 57.0d
+			x: 3.0d
+			y: 12.75d
 		}
 		{
 			description: ["A sniffer egg, warm to the touch. Hatch it on moss, raise the sniffer, and plant the first ancient seed it digs up."]
@@ -4581,8 +4581,8 @@
 				}
 			]
 			title: "An Ancient Egg"
-			x: 0.0d
-			y: 58.5d
+			x: 4.5d
+			y: 12.75d
 		}
 	]
 	subtitle: ["Strange places on the road"]
