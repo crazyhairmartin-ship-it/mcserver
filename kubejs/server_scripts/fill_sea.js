@@ -75,5 +75,14 @@ PlayerEvents.chat(event => {
   let msg = String(event.message).trim()
   if (msg != '!fillsea' && msg.indexOf('!fillsea ') != 0) return
   event.cancel()
-  global.fillSea(event.player, msg.split(/\s+/)[1] || null)
+  // chat arrives on a background thread; world changes must happen on the server thread (it silently did nothing)
+  let player = event.player, arg = msg.split(/\s+/)[1] || null
+  player.server.scheduleInTicks(1, () => {
+    try {
+      global.fillSea(player, arg)
+    } catch (e) {
+      console.error('fillsea failed: ' + e)
+      player.tell(Text.red('fillsea failed: ' + e))
+    }
+  })
 })
