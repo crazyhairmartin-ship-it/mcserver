@@ -103,14 +103,25 @@ PlayerEvents.chat(event => {
   let msg = String(event.message).trim()
   if (msg != '!fillsea' && msg.indexOf('!fillsea ') != 0) return
   event.cancel()
-  // chat arrives on a background thread; world changes must happen on the server thread (it silently did nothing)
-  let player = event.player, arg = msg.split(/\s+/)[1] || null
-  player.server.scheduleInTicks(1, () => {
-    try {
-      global.fillSea(player, arg)
-    } catch (e) {
-      console.error('fillsea failed: ' + e)
-      player.tell(Text.red('fillsea failed: ' + e))
-    }
-  })
+  // chat arrives on a background thread and world changes from there silently do nothing, so the request is queued
+  // and the server tick (always the main thread) runs it
+  fillSeaQueue.push({ uuid: String(event.player.uuid), arg: msg.split(/\s+/)[1] || null })
+  console.info('fillsea: queued "' + msg + '" for ' + event.player.username)
+})
+
+let fillSeaQueue = []
+
+ServerEvents.tick(event => {
+  if (!fillSeaQueue.length) return
+  let job = fillSeaQueue.shift()
+  let player = null
+  event.server.players.forEach(p => { if (String(p.uuid) == job.uuid) player = p })
+  if (!player) return
+  console.info('fillsea: running for ' + player.username + ' (' + (job.arg || 'default') + ')')
+  try {
+    global.fillSea(player, job.arg)
+  } catch (e) {
+    console.error('fillsea failed: ' + e)
+    player.tell(Text.red('fillsea failed: ' + e))
+  }
 })
