@@ -1,6 +1,7 @@
 // /fillsea [radius] and /fillsea undo (ops; also "!fillsea" in chat, which works without a restart): fills a circle
 // around the player with water source blocks up to sea level (surface at Y=62), wherever the column is open to the
-// sky from the ground up (caves, buildings and overhangs stay dry). Only air and walk-through plants are replaced.
+// sky from the ground up (caves, buildings and overhangs stay dry). Underground, it floods the cave you stand in
+// instead (only the space connected to you). Only air and walk-through plants are replaced.
 // Undo removes the last fill's water (only blocks that are still water). Dylan, 2026-10-16.
 
 const FILLSEA_TOP = 62                 // the overworld water surface (sea level 63)
@@ -42,6 +43,33 @@ global.fillSea = (player, arg) => {
   if (!(r >= 1 && r <= FILLSEA_MAX)) { player.tell(Text.red('Radius must be 1-' + FILLSEA_MAX + '.')); return 0 }
   let cx = Math.floor(player.x), cz = Math.floor(player.z)
   let placed = []
+  // underground (rock overhead): fill the open space connected to where the player stands, within the radius, up to
+  // sea level; other caves inside the circle stay dry (Dylan was flooding a cave, 2026-10-17)
+  if (level.getHeight($FillHeightmap.MOTION_BLOCKING_NO_LEAVES, cx, cz) > FILLSEA_TOP + 1) {
+    let sy = Math.min(Math.floor(player.y), FILLSEA_TOP)
+    let seen = {}, queue = [[cx, sy, cz]]
+    seen[cx + ',' + sy + ',' + cz] = true
+    while (queue.length && placed.length < FILLSEA_LIMIT) {
+      let c = queue.pop()
+      let b = level.getBlock(c[0], c[1], c[2])
+      if (!fillSeaReplaceable(b)) continue
+      b.set('minecraft:water')
+      placed.push(c)
+      ;[[1, 0, 0], [-1, 0, 0], [0, 0, 1], [0, 0, -1], [0, -1, 0], [0, 1, 0]].forEach(dv => {
+        let n = [c[0] + dv[0], c[1] + dv[1], c[2] + dv[2]]
+        if (n[1] > FILLSEA_TOP || n[1] <= level.minBuildHeight
+          || (n[0] - cx) * (n[0] - cx) + (n[2] - cz) * (n[2] - cz) > r * r) return
+        let k = n[0] + ',' + n[1] + ',' + n[2]
+        if (seen[k]) return
+        seen[k] = true
+        queue.push(n)
+      })
+    }
+    fillSeaUndo[id] = placed
+    player.tell(placed.length ? Text.green('Flooded ' + placed.length + ' blocks of this cave up to sea level. !fillsea undo takes them out.')
+      : Text.gray('Nothing to fill here: you\'re above sea level.'))
+    return 1
+  }
   for (let x = cx - r; x <= cx + r && placed.length < FILLSEA_LIMIT; x++) {
     for (let z = cz - r; z <= cz + r; z++) {
       if ((x - cx) * (x - cx) + (z - cz) * (z - cz) > r * r) continue
