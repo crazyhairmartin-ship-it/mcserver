@@ -119,12 +119,13 @@ ServerEvents.tick(event => {
   server.runCommandSilent('scoreboard objectives add fillsea trigger')      // once; harmless after that
   server.players.forEach(p => {
     if (!p.hasPermissions(2)) return
-    let u = String(p.uuid)
-    let v = server.runCommandSilent('scoreboard players get ' + u + ' fillsea')
-    server.runCommandSilent('scoreboard players enable ' + u + ' fillsea')
+    // by name: Native Nicknames makes the scoreboard name the nickname, and a UUID resolves to the real account name
+    let name = String(p.username)
+    let v = server.runCommandSilent('scoreboard players get ' + name + ' fillsea')
+    server.runCommandSilent('scoreboard players enable ' + name + ' fillsea')
     if (!(v > 0)) return
-    server.runCommandSilent('scoreboard players set ' + u + ' fillsea 0')
-    fillSeaQueue.push({ uuid: u, arg: v == 99 ? 'undo' : v == 1 ? null : String(v) })
+    server.runCommandSilent('scoreboard players set ' + name + ' fillsea 0')
+    fillSeaQueue.push({ uuid: String(p.uuid), arg: v == 99 ? 'undo' : v == 1 ? null : String(v) })
   })
 })
 
