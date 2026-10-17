@@ -17,6 +17,7 @@ let $NpcResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocat
 
 const NPC_ENCOUNTER_RETRY_MS = 2 * 60 * 1000    // after an encounter leaves or is lost, wait before bringing it back
 const NPC_CHALLENGE_PROMPT_MS = 5 * 60 * 1000   // remind about an unstarted challenge at most this often
+const NPC_CHALLENGE_PROMPT_RANGE = 64           // ... and only this close to where it first became ready
 
 function npcData(player, key) {
   let data = player.persistentData
@@ -144,6 +145,7 @@ ServerEvents.commandRegistry(event => {
       return npcStartChallenge(player, 'fq.test.course.' + Arguments.STRING.getResult(ctx, 'on')) ? 1 : 0
     })))
   event.register(Commands.literal('quest')
+    .then(Commands.literal('challenges').executes(ctx => global.questListChallenges(ctx.source.player)))
     .then(Commands.literal('challenge').then(Commands.argument('stage', Arguments.STRING.create(event))
       .executes(ctx => {
         let player = ctx.source.player
@@ -636,10 +638,34 @@ function npcTickChallenge(player, ch, running, prompted, now) {
       return
     }
     if (ch.test || now - prompted.getLong(ch.stage) < NPC_CHALLENGE_PROMPT_MS || !questOpen(player, ch)) return
+    // reminders stay where the challenge became ready (where the quest brought you): the first one records the spot,
+    // later ones only come within NPC_CHALLENGE_PROMPT_RANGE of it (Dylan got them anywhere, 2026-10-17)
+    let spots = npcData(player, 'fqTimedSpot')
+    let here = String(player.level.dimension) + ' ' + Math.round(player.x) + ' ' + Math.round(player.z)
+    if (spots.contains(ch.stage)) {
+      let s = String(spots.getString(ch.stage)).split(' ')
+      let dx = Number(s[1]) - player.x, dz = Number(s[2]) - player.z
+      if (s[0] != String(player.level.dimension) || dx * dx + dz * dz > NPC_CHALLENGE_PROMPT_RANGE * NPC_CHALLENGE_PROMPT_RANGE) return
+    } else {
+      spots.putString(ch.stage, here)
+    }
     prompted.putLong(ch.stage, now)
     player.tell(Text.of([Text.gold('A challenge is ready. '),
       Text.green('[' + ch.start + ']').clickRunCommand('/quest challenge ' + ch.stage).hover('Start the timer')]))
   }
+}
+
+// /quest challenges: the challenges ready for you, each with its Start link, wherever you are
+global.questListChallenges = player => {
+  if (!player) return 0
+  let ready = npcEntries('timed').filter(ch => !ch.test && !player.tags.contains(ch.stage) && questOpen(player, ch))
+  if (!ready.length) {
+    player.tell(Text.gray('No challenges are ready right now.'))
+    return 1
+  }
+  ready.forEach(ch => player.tell(Text.of([Text.gold('A challenge is ready. '),
+    Text.green('[' + ch.start + ']').clickRunCommand('/quest challenge ' + ch.stage).hover('Start the timer')])))
+  return 1
 }
 
 // ---- escorts (encounter "then": "escort") ----
