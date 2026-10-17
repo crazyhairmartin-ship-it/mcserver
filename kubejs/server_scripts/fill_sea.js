@@ -15,7 +15,9 @@ let fillSeaUndo = {}                    // player uuid -> [[x, y, z], ...] of th
 function fillSeaReplaceable(block) {
   let id = String(block.id)
   if (id.endsWith('air')) return true
-  if (id == 'minecraft:water' || id == 'minecraft:lava' || id.indexOf('waterlogged') >= 0) return false
+  // flowing water becomes a source too, so a fill settles water that ran off an earlier one (2026-10-17)
+  if (id == 'minecraft:water') return String(block.properties.level) != '0'
+  if (id == 'minecraft:lava' || id.indexOf('waterlogged') >= 0) return false
   try { return !block.blockState.blocksMotion() && !block.blockState.liquid() } catch (e) { return false }
 }
 
