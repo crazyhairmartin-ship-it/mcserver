@@ -18,6 +18,7 @@ let $NpcResourceLocation = Java.loadClass('net.minecraft.resources.ResourceLocat
 const NPC_ENCOUNTER_RETRY_MS = 2 * 60 * 1000    // after an encounter leaves or is lost, wait before bringing it back
 const NPC_CHALLENGE_PROMPT_MS = 5 * 60 * 1000   // remind about an unstarted challenge at most this often
 const NPC_CHALLENGE_PROMPT_RANGE = 64           // ... and only this close to where it first became ready
+const NPC_CHALLENGE_PROMPTS = 3                 // ... and at most this many times per challenge
 
 function npcData(player, key) {
   let data = player.persistentData
@@ -640,6 +641,9 @@ function npcTickChallenge(player, ch, running, prompted, now) {
     if (ch.test || now - prompted.getLong(ch.stage) < NPC_CHALLENGE_PROMPT_MS || !questOpen(player, ch)) return
     // reminders stay where the challenge became ready (where the quest brought you): the first one records the spot,
     // later ones only come within NPC_CHALLENGE_PROMPT_RANGE of it (Dylan got them anywhere, 2026-10-17)
+    // and at most NPC_CHALLENGE_PROMPTS reminders in all; after that /quest challenges lists it
+    let told = npcData(player, 'fqTimedTold')
+    if (told.getInt(ch.stage) >= NPC_CHALLENGE_PROMPTS) return
     let spots = npcData(player, 'fqTimedSpot')
     let here = String(player.level.dimension) + ' ' + Math.round(player.x) + ' ' + Math.round(player.z)
     if (spots.contains(ch.stage)) {
@@ -650,6 +654,7 @@ function npcTickChallenge(player, ch, running, prompted, now) {
       spots.putString(ch.stage, here)
     }
     prompted.putLong(ch.stage, now)
+    told.putInt(ch.stage, told.getInt(ch.stage) + 1)
     player.tell(Text.of([Text.gold('A challenge is ready. '),
       Text.green('[' + ch.start + ']').clickRunCommand('/quest challenge ' + ch.stage).hover('Start the timer')]))
   }
