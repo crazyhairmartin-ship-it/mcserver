@@ -628,6 +628,10 @@ file = "config/sophisticatedcore-client.toml"
 hash = "a02244dde2f77ca6abc99a959c4377e90780c97de9b5dab9ed09191e80285426"
 
 [[files]]
+file = "config/sound_physics_remastered/soundphysics.properties"
+hash = "a73b89bd4c8fac413f28ebe4dd3deef76d6cbc61861d7948ff1ec55eb483bf6d"
+
+[[files]]
 file = "config/supplementaries-common.toml"
 hash = "2a1146367ad3f1dba0ed6029e96f08f5acff5436e5b1cf690390f143e21f0ee3"
 
