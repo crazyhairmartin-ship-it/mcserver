@@ -624,6 +624,10 @@ file = "config/sidebar_buttons.json"
 hash = "8c94be0e1e893d3af099f0221ff93cf2a205a69bab1ce5a97d9689083ec299ae"
 
 [[files]]
+file = "config/skylines-common.toml"
+hash = "7f8dc5bf860303a737653b38258f58280ef42bc3c2772894d1a4934be8b6b603"
+
+[[files]]
 file = "config/sophisticatedcore-client.toml"
 hash = "a02244dde2f77ca6abc99a959c4377e90780c97de9b5dab9ed09191e80285426"
 

@@ -1,0 +1,26 @@
+# Sample the real terrain for players' skylines (the server needs the mod; singleplayer always has it).
+sampling = true
+
+# Directions sampled around the horizon. More = finer silhouettes, more work per update.
+# Range: 64 ~ 1024
+directions = 128
+
+# Height samples per direction and layer (at increasing distances within the layer).
+# Range: 1 ~ 12
+samplesPerLayer = 4
+
+# Most silhouette layers a player may ask for (each layer is more sampling work).
+# Range: 2 ~ 8
+maxLayers = 4
+
+# Farthest a player's layers may reach (blocks); also used for players who don't ask.
+# Range: 800 ~ 12000
+farDistance = 3200
+
+# Re-sample after a player has moved this many blocks.
+# Range: 16 ~ 2048
+moveDistance = 384
+
+# Re-sample at least this often (seconds), even when standing still.
+# Range: 5 ~ 3600
+refreshSeconds = 300
