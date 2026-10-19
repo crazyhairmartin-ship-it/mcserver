@@ -1,5 +1,5 @@
 # Sample the real terrain for players' skylines (the server needs the mod; singleplayer always has it).
-sampling = true
+sampling = false
 
 # Directions sampled around the horizon. More = finer silhouettes, more work per update.
 # Range: 64 ~ 1024
