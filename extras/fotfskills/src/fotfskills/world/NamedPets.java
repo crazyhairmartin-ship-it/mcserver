@@ -29,7 +29,8 @@ import net.minecraftforge.registries.ForgeRegistries;
  * name (remembered in the pet's persistent data, so loading a chunk doesn't redo it).
  */
 public final class NamedPets {
-    private static final String APPLIED = "FotfNamedPet";
+    // "2": re-applied once after the jump/step fix (2026-10-19), so pets named before it get it too
+    private static final String APPLIED = "FotfNamedPet2";
     private static final List<Entity> QUEUE = new ArrayList<>();
     private static Map<String, Map<String, Look>> looks;
 
@@ -82,6 +83,14 @@ public final class NamedPets {
         }
         if (look.scale() > 0) {
             run(server, "scale set pehkui:base " + look.scale() + " " + uuid);
+            // a smaller base scale also shrinks its jump and step, so at 0.75 Beast couldn't jump one block (Dylan,
+            // 2026-10-19): scale those back up so it moves like a normal-size pet, and keep all three over restarts
+            double back = 1.0 / look.scale();
+            run(server, "scale set pehkui:jump_height " + back + " " + uuid);
+            run(server, "scale set pehkui:step_height " + back + " " + uuid);
+            for (String type : new String[] {"pehkui:base", "pehkui:jump_height", "pehkui:step_height"}) {
+                run(server, "scale persist set " + type + " true " + uuid);
+            }
         }
     }
 
