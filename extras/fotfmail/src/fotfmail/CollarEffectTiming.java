@@ -26,7 +26,13 @@ public final class CollarEffectTiming {
     /** Whether a pet's idle-hidden effects should show this frame. */
     public static boolean isActive(LivingEntity pet) {
         int now = pet.f_19797_;
-        boolean active = pet.f_20916_ > 0 || TameableUtils.getPetAttackTarget(pet) != null;
+        // only a real fight counts: a target that's alive, close and not the owner. Domestication Innovation's synced
+        // target could be stale (dead, gone, or an old id now pointing at some other entity), which kept the hands
+        // showing all the time and drew stray small ones elsewhere on screen (Dylan, 2026-10-25)
+        net.minecraft.world.entity.Entity target = TameableUtils.getPetAttackTarget(pet);
+        boolean fighting = target != null && target.m_6084_() && target != pet
+                && target.m_20280_(pet) < 24 * 24 && target != TameableUtils.getOwnerOf(pet);
+        boolean active = pet.f_20916_ > 0 || fighting;
         if (active) {
             LAST_ACTIVE.put(pet, now);
             return true;
