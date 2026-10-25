@@ -116,7 +116,7 @@ Q = [
           tasks=[item("naturalist:duck_egg", 2), item("naturalist:tortoise_egg"), item("naturalist:snail_eggs"),
                  {"place": "reece"}, {"born": "naturalist:duck", "title": "Hatch a duckling at the sanctuary"},
                  {"raise": "naturalist:duck", "title": "Keep the duckling safe until it is grown"}],
-          rewards=[reward_item("naturalist:bug_net"), skill("taming", 240)]),
+          rewards=[reward_item("naturalist:capture_net"), skill("taming", 240)]),
 
     quest("dragonfly_rider", "Shimmering Wings", icon="crittersandcompanions:iron_dragonfly_armor",
           after=["critter_census"],

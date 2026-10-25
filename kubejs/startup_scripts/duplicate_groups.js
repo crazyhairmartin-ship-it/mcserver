@@ -46,5 +46,6 @@ global.DUPLICATE_GROUPS = [
 
 // Items with nothing left to do in this pack (hidden from JEI only).
 global.HIDDEN_ITEMS = [
-  'naturalist:bug_net', // Naturalist butterflies are disabled; Bok's Butterfly Net + Supplementaries jars cover every bug
+  // (naturalist:bug_net was here; Naturalist 2.0 replaced it with the Capture Net, which catches snails, crabs, ants and
+  // more, so it stays visible, 2026-10-25)
 ]
