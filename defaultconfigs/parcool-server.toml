@@ -291,7 +291,7 @@
 
 [game]
 	#Enable Skilltree, if disabled all actions are available without learning
-	enable_skill_tree = true
+	enable_skill_tree = false
 	#Enable Skilltree Gui, if disabled the skilltree ui is redirected into other ui
 	enable_skill_tree_ui = true
 	#Whether you take damage when you use some actions like WallSlide without traceur's gloves
