@@ -1,13 +1,13 @@
 name = "Friends&Foes (Forge/NeoForge)"
-filename = "friendsandfoes-forge-mc1.20.1-3.0.9.jar"
+filename = "friendsandfoes-forge-5.0.3+mc1.20.1.jar"
 side = "both"
 
 [download]
 hash-format = "sha1"
-hash = "f8c84d824c433e7e6e9f44ae6d4885925a08087f"
+hash = "f4077d7aeb69bf682cf4ee144ed0e3f13d98433c"
 mode = "metadata:curseforge"
 
 [update]
 [update.curseforge]
-file-id = 6354624
+file-id = 9253548
 project-id = 602059

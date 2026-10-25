@@ -1,13 +1,13 @@
 name = "Book of Familiars"
-filename = "bookoffamiliars-forge-1.20.1-2.2.1.jar"
+filename = "bookoffamiliars-forge-1.20.1-2.2.2.jar"
 side = "both"
 
 [download]
-url = "https://cdn.modrinth.com/data/iMn5Yv5Q/versions/8fV1VLsL/bookoffamiliars-forge-1.20.1-2.2.1.jar"
+url = "https://cdn.modrinth.com/data/iMn5Yv5Q/versions/yaIzmlzs/bookoffamiliars-forge-1.20.1-2.2.2.jar"
 hash-format = "sha512"
-hash = "4274564b84ec144d792a74cc6e4bf96ac333b8559ce30838ca6b3e2a0e0f1c0ef64ca723c96f8fbfb9d792e0adb677b252781fab0190916e9f360f2d369b2ca8"
+hash = "4160de8e004326c84bb7eb0c43f6e23dee02823a99c0b045ea92c7ebcad06cd8f80f8ecb3e910d35a7da373628b57e0d3ba00118ec63d8bccf27404533307dac"
 
 [update]
 [update.modrinth]
 mod-id = "iMn5Yv5Q"
-version = "8fV1VLsL"
+version = "yaIzmlzs"
