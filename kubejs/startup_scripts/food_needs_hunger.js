@@ -31,9 +31,9 @@ const FOOD_NEEDS_HUNGER = [
 ItemEvents.modification(event => {
   FOOD_NEEDS_HUNGER.forEach(id => {
     event.modify(id, item => {
-      item.foodProperties = food => {
+      item.setFoodProperties(food => {
         food.alwaysEdible(false)
-      }
+      })
     })
   })
 })
