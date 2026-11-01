@@ -37,6 +37,7 @@ import net.minecraftforge.registries.RegistryObject;
  * - Aquaculture's tackle box opens from the hand (HandTackleBox), e.g. from a boat.
  * - Stoves heat Farmer's Delight pots and skillets even when unlit (StoveHeat).
  * - Artifacts' Angler's Hat works on Aquaculture rods (mixin/AnglersHatAquaRodMixin).
+ * - Farm & Charm's Baker's Stove only shows flames while burning (mixin/BakersStoveLitMixin).
  *
  * Compiled against SRG-named Minecraft (see build.sh), so vanilla methods appear as m_XXXX_.
  */

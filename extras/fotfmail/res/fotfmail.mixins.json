@@ -20,7 +20,8 @@
     "LecternLetterMenuMixin",
     "TackleBoxContainerMixin",
     "HeatableStoveMixin",
-    "AnglersHatAquaRodMixin"
+    "AnglersHatAquaRodMixin",
+    "BakersStoveLitMixin"
   ],
   "injectors": {
     "defaultRequire": 1
