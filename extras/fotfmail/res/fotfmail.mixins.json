@@ -34,6 +34,7 @@
     "ScreenAccessor",
     "AbstractContainerScreenAccessor",
     "UnicornKeyBindingsMixin",
-    "LecternScreenMixin"
+    "LecternScreenMixin",
+    "StorageHighlightShadowMixin"
   ]
 }

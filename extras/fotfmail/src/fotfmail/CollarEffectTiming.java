@@ -2,6 +2,7 @@ package fotfmail;
 
 import com.github.alexthe668.domesticationinnovation.server.enchantment.DIEnchantmentRegistry;
 import com.github.alexthe668.domesticationinnovation.server.entity.TameableUtils;
+import java.lang.reflect.Method;
 import java.util.Map;
 import java.util.WeakHashMap;
 import net.minecraft.world.entity.LivingEntity;
@@ -21,6 +22,37 @@ public final class CollarEffectTiming {
 
     public static boolean isHiddenWhenIdle(Enchantment enchantment) {
         return enchantment == DIEnchantmentRegistry.SHADOW_HANDS || enchantment == DIEnchantmentRegistry.BLAZING_PROTECTION;
+    }
+
+    private static Object iris;           // Oculus' IrisApi, when it's installed
+    private static Method shadowPass;     // IrisApi.isRenderingShadowPass()
+    private static boolean irisLooked;
+
+    /**
+     * With shaders on, Oculus draws the world a second time for its shadow map, and Domestication Innovation's
+     * overlays drawn in that pass show up as small stray Shadow Hands fixed on screen in front of everything
+     * (Dylan, 2026-11-01). They're skipped in that pass only, so the real ones still show. Oculus is client-only and
+     * optional (not on the server or the RP6), so its API is looked up by name.
+     */
+    public static boolean inShaderShadowPass() {
+        if (!irisLooked) {
+            irisLooked = true;
+            try {
+                Class<?> api = Class.forName("net.irisshaders.iris.api.v0.IrisApi");
+                iris = api.getMethod("getInstance").invoke(null);
+                shadowPass = api.getMethod("isRenderingShadowPass");
+            } catch (ReflectiveOperationException | LinkageError e) {
+                iris = null;
+            }
+        }
+        if (iris == null) {
+            return false;
+        }
+        try {
+            return (Boolean) shadowPass.invoke(iris);
+        } catch (ReflectiveOperationException e) {
+            return false;
+        }
     }
 
     /** Whether a pet's idle-hidden effects should show this frame. */
