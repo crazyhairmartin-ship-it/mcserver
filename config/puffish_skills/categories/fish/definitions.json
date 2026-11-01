@@ -649,7 +649,7 @@
   },
   "treasure_hunter_1": {
     "title": "Treasure Hunter",
-    "description": "Treasure odds x2 and a rarer loot table",
+    "description": "+2 Luck: better treasure and fish odds (stacks with Luck of the Sea)",
     "icon": {
       "type": "item",
       "data": {
@@ -678,7 +678,7 @@
   },
   "treasure_hunter_2": {
     "title": "Treasure Hunter",
-    "description": "Treasure odds x2 and a rarer loot table",
+    "description": "+4 Luck: better treasure and fish odds (stacks with Luck of the Sea)",
     "icon": {
       "type": "item",
       "data": {
@@ -707,7 +707,7 @@
   },
   "treasure_hunter_3": {
     "title": "Treasure Hunter",
-    "description": "Treasure odds x2 and a rarer loot table",
+    "description": "+6 Luck: better treasure and fish odds (stacks with Luck of the Sea)",
     "icon": {
       "type": "item",
       "data": {

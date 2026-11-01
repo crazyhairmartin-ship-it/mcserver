@@ -36,6 +36,7 @@ import net.minecraftforge.registries.RegistryObject;
  * - Tamed jumping spiders heal from spider eyes and rotten flesh (SpiderSnacks).
  * - Aquaculture's tackle box opens from the hand (HandTackleBox), e.g. from a boat.
  * - Stoves heat Farmer's Delight pots and skillets even when unlit (StoveHeat).
+ * - Artifacts' Angler's Hat works on Aquaculture rods (mixin/AnglersHatAquaRodMixin).
  *
  * Compiled against SRG-named Minecraft (see build.sh), so vanilla methods appear as m_XXXX_.
  */

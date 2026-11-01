@@ -19,7 +19,8 @@
     "LecternBlockEntityMixin",
     "LecternLetterMenuMixin",
     "TackleBoxContainerMixin",
-    "HeatableStoveMixin"
+    "HeatableStoveMixin",
+    "AnglersHatAquaRodMixin"
   ],
   "injectors": {
     "defaultRequire": 1
