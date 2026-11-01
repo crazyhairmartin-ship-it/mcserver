@@ -11,4 +11,6 @@ ServerEvents.tags('block', event => {
     'candlelight:allows_cooking', 'herbalbrews:allows_cooking', 'meadow:allows_cooking', 'bakery:allows_cooking'
   ]
   heatLists.forEach(tag => event.add(tag, stoves))
+  // Stoves heat Farmer's Delight pots and skillets even when unlit (fotfmail StoveHeat)
+  event.add('fotf:stoves', stoves)
 })

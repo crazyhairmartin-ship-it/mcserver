@@ -35,6 +35,7 @@ import net.minecraftforge.registries.RegistryObject;
  *   to a mailbox, and a received package disappears once it's emptied.
  * - Tamed jumping spiders heal from spider eyes and rotten flesh (SpiderSnacks).
  * - Aquaculture's tackle box opens from the hand (HandTackleBox), e.g. from a boat.
+ * - Stoves heat Farmer's Delight pots and skillets even when unlit (StoveHeat).
  *
  * Compiled against SRG-named Minecraft (see build.sh), so vanilla methods appear as m_XXXX_.
  */
