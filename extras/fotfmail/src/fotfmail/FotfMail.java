@@ -34,6 +34,7 @@ import net.minecraftforge.registries.RegistryObject;
  * - Packages: chest + stamp; the package screen has a recipient box and Send button (SendPackagePacket) that send it
  *   to a mailbox, and a received package disappears once it's emptied.
  * - Tamed jumping spiders heal from spider eyes and rotten flesh (SpiderSnacks).
+ * - Aquaculture's tackle box opens from the hand (HandTackleBox), e.g. from a boat.
  *
  * Compiled against SRG-named Minecraft (see build.sh), so vanilla methods appear as m_XXXX_.
  */
@@ -60,6 +61,7 @@ public class FotfMail {
                 PackageInfoPacket::handle, Optional.of(NetworkDirection.PLAY_TO_CLIENT));
         MinecraftForge.EVENT_BUS.addListener(FotfMail::onRightClickBlock);
         MinecraftForge.EVENT_BUS.addListener(Mail::onServerTick);
+        MinecraftForge.EVENT_BUS.addListener(HandTackleBox::onRightClickItem);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGHEST, true, PlayerInteractEvent.EntityInteractSpecific.class,
                 SpiderSnacks::onInteractAt);
         MinecraftForge.EVENT_BUS.addListener(EventPriority.HIGHEST, true, PlayerInteractEvent.EntityInteract.class,
