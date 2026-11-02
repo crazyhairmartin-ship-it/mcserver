@@ -38,6 +38,7 @@ import net.minecraftforge.registries.RegistryObject;
  * - Stoves heat Farmer's Delight pots and skillets even when unlit (StoveHeat).
  * - Artifacts' Angler's Hat works on Aquaculture rods (mixin/AnglersHatAquaRodMixin).
  * - Farm & Charm's Baker's Stove only shows flames while burning (mixin/BakersStoveLitMixin).
+ * - Obscura's Inventory Interface finds its connector over any connected cable (mixin/InterfaceSearchMixin).
  *
  * Compiled against SRG-named Minecraft (see build.sh), so vanilla methods appear as m_XXXX_.
  */

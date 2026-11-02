@@ -21,7 +21,8 @@
     "TackleBoxContainerMixin",
     "HeatableStoveMixin",
     "AnglersHatAquaRodMixin",
-    "BakersStoveLitMixin"
+    "BakersStoveLitMixin",
+    "InterfaceSearchMixin"
   ],
   "injectors": {
     "defaultRequire": 1
