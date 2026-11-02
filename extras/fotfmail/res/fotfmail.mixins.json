@@ -22,7 +22,9 @@
     "HeatableStoveMixin",
     "AnglersHatAquaRodMixin",
     "BakersStoveLitMixin",
-    "InterfaceSearchMixin"
+    "InterfaceSearchMixin",
+    "InventoryConnectorAccessor",
+    "CableConnectorRelinkMixin"
   ],
   "injectors": {
     "defaultRequire": 1
