@@ -34,6 +34,9 @@ public final class FotfSkills {
         XpSources.register();
         fotfskills.perk.ModItems.register(net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus());
         fotfskills.world.RemovedBlocks.register(net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus());
+        if (ModList.get().isLoaded("fays_fairies")) {
+            fotfskills.pet.FairySpawns.register(net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus());
+        }
         PerkReward.register();
         fotfskills.perk.LevelUps.register();
         MinecraftForge.EVENT_BUS.register(new fotfskills.perk.FotfCommands());
